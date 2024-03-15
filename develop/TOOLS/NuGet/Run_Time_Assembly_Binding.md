@@ -14,7 +14,7 @@ uid: Run_Time_Assembly_Binding
 >
 > Make sure that the version of package "B" you installed is the same version as the version of package "B" that package "A" depends on. Otherwise you could experience run-time issues as explained in more detail below.
 
-This happens when code reaches a method that is present in a different DLL.
+This happens when code reaches a method that is present in a different assembly.
 
 At run-time, assemblies are loaded the moment they are needed in the code. When the Just-In-Time (JIT) compiler compiles the intermediate language (IL) to native code, it sees which types are referenced. The JIT compiler will then determine the assemblies that define these types, and these will be loaded.
 
@@ -24,7 +24,7 @@ For DataMiner, because protocol.xml and script.xml are compiled in DataMiner its
 
 To better understand this, imagine the following example: You have a custom solution using the Class Library, and you are using that custom solution in an Automation script. When the script is compiled, it will try to find the Class Library DLLs when it encounters a Class Library method. This means that if those DLLs are not present, it will only throw an exception at run-time. It may also throw exceptions if the DLLs with the right version are not present. For example, if V1 is needed, but V3 is present, it can throw an exception.
 
-Typically, unification is performed (using [BindingRedirect](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/bindingredirect-element) elements in the [configuration file](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/)). A binding redirect could then for example state that assembly V1 should be redirected to V3. This is called "unification" of assemblies. In DataMiner, this approach is currently not supported as by default all QActions run in the same SLScripting process in a single AppDomain. Instead, all versions of the required DLLs are provided in their subfolders within the DllImports folder. As no unification is performed, this could lead to versioning issues (see also [Best Practices for Assembly Loading](https://learn.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading#avoid_loading_multiple_versions)).
+Typically, unification is performed (using [BindingRedirect](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/bindingredirect-element) elements in the [configuration file](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/)). A binding redirect could then for example state that assembly V1 should be redirected to V3. This is called "unification" of assemblies. In DataMiner, this approach is currently not supported as by default all QActions run in the same SLScripting process in a single AppDomain. Instead, all versions of the required DLLs are provided in their subfolders within the `DllImport` folder. As no unification is performed, this could lead to versioning issues (see also [Best Practices for Assembly Loading](https://learn.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading#avoid_loading_multiple_versions)).
 
 ## Example
 
