@@ -10,6 +10,21 @@ uid: General_Main_Release_10.4.0_CU2
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+### Breaking changes
+
+#### DOM string fields will now be filtered case-insensitively [ID_38950]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, DOM string fields would be filtered case-sensitively. From now on, those fields will by default be filtered case-insensitively.
+
+> [!NOTE]
+> If necessary, this default filter behavior can be overruled in code by using `StringComparison.Ordinal`. See the following snippet.
+>
+> ```csharp
+> var filter = DomInstanceExposers.FieldValues.DomInstanceField(_stringFieldDescriptor.ID).Contains("test", StringComparison.Ordinal)
+> ```
+
 ### Enhancements
 
 #### Elasticsearch re-indexing tool [ID_37994]

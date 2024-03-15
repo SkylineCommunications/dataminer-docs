@@ -9,14 +9,6 @@ uid: General_Main_Release_10.5.0_changes
 
 ## Changes
 
-### Breaking changes
-
-#### DOM string fields will now be filtered case-insensitively [ID_38950]
-
-<!-- MR 10.5.0 - FR 10.4.5 -->
-
-Up to now, DOM string fields would be filtered case-sensitively. From now on, those fields will by default be filtered case-insensitively.
-
 ### Enhancements
 
 #### Security enhancements [ID_37349] [ID_38052] [ID_38263] [ID_38951]

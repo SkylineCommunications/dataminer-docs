@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| [38950](xref:General_Feature_Release_10.4.5#dom-string-fields-will-now-be-filtered-case-insensitively-id_38950) | DataMiner 10.4.0 [CU2]/10.4.5 | DOM string fields will now by default be filtered case-insensitively. |
 | [39027](xref:Web_apps_Feature_Release_10.4.5#low-code-apps-parameters-of-a-script-action-linked-to-an-empty-feed-will-now-be-filled-with-an-empty-array-id_39027) | DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 | From now on, linking a script parameter to an empty feed will fill it with an empty array. |
 | [38193](xref:General_Feature_Release_10.4.3#nats-all-processes-will-now-use-the-dataminermessagebrokerapi-nuget-package-id_38193) | DataMiner 10.4.0/10.4.3 | Prerequisite VerifyNatsIsRunning will fail when downgrading to prior version. |
 | [38154](xref:General_Feature_Release_10.4.3#microsoft-entra-id-enhanced-user-and-group-import-id_38154) | DataMiner 10.3.0 [CU12]/10.4.3 | Microsoft Entra ID: User name format has changed from `{organization}\{givenName}.{surname}` to `{domain}\{username}` based on the `userPrincipalName`. |
