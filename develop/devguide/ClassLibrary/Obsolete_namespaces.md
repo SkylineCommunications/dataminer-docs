@@ -1,5 +1,6 @@
 ---
 uid: Obsolete_namespaces
+keywords: convert obsolete namespaces
 ---
 
 # Obsolete namespaces
