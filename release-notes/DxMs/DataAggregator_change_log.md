@@ -4,6 +4,12 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39086]
+
+The Cloud Node ID is now used to uniquely identify each DxM instance in a cluster and report back DxM health stats for remote monitoring of systems connected to dataminer.services.
+
+In addition, the Node ID is now also used as an identifier when registering with APIGateway.
+
 #### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID_38981]
 
 The DataAggregator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
@@ -25,7 +31,7 @@ This includes:
 - Extra information added to the Help command (*-h* or *--help*).
 - Change of how the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users already using it.
 
-#### 31 January 2024 - New Feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
+#### 31 January 2024 - New feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
 
 Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors. This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
 
