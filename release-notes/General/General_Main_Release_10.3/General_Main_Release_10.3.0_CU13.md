@@ -216,3 +216,9 @@ Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically re
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
 
 When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
+
+#### SLDataMiner could stop working when a MIB file was being generated for a protocol that contained parameters with discrete values [ID_39120]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When a MIB file was being generated for a protocol that contained parameters with discrete values, in some cases, SLDataMiner could stop working.
