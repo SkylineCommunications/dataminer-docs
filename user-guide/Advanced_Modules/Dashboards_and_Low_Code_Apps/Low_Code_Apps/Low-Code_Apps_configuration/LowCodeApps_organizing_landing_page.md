@@ -34,3 +34,6 @@ To do so:
          "AllowEdit":[]
       }
    }
+
+> [!NOTE]
+> From DataMiner 10.2.9/10.3.0 onwards, these different sections will also be displayed in the apps pane in DataMiner Cube.<!-- RN 33944 -->
