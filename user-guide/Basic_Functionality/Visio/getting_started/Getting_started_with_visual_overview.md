@@ -20,16 +20,14 @@ uid: Getting_started_with_visual_overview
 - [Page and shape options](xref:Overview_of_page_and_shape_options)
 - [Placeholders](xref:Placeholders_for_variables_in_shape_data_values)
 
-## Want to become a Visual Overview expert?
+## Training
 
-The [Visual Overview course](https://community.dataminer.services/courses/visio/) contains training videos on several aspects of the subject, including tips and tricks, demos and hands-on exercises to turn you into a Visual Overview design master.
+The [Visual Overview course](https://community.dataminer.services/courses/visio/) contains training videos on several aspects of the subject, including tips and tricks, demos, and hands-on exercises to turn you into a Visual Overview design master.
 
-## Looking for examples?
+## Examples
 
 Our [Ziine demo system](xref:ZiineDemoSystem) contains examples of many basic shapes. You can also download the Visio file that is used there in order to analyze it. Navigate to the DataMiner Agent using DataMiner Cube and open the *Visual Overview Design Examples* view.
 
 ## Looking to solve a problem?
 
-The DataMiner Help contains numerous pages on [Visio drawings](xref:visio). See if you can find your answer there or try the very useful search function.
-
-If you cannot find the answer you are looking for, then post your question on the [DataMiner Dojo Questions](https://community.dataminer.services/questions/) page and get help from the right people.
+If you cannot find the answer you are looking for within this documentation, post a question on the [DataMiner Dojo Questions](https://community.dataminer.services/questions/) page and get help from experts.
