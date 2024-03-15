@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.4
 ---
 
-# General Feature Release 10.4.4 – Preview
+# General Feature Release 10.4.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.4.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [GQI: Full logging [ID_38870]](#gqi-full-logging-id_38870)
 
 ## New features
 
