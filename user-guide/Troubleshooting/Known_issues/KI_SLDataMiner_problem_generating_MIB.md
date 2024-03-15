@@ -16,7 +16,7 @@ Generating a MIB file from a protocol caused an error in SLDataMiner.
 
 ## Fix
 
-Install DataMiner 10.3.0 [CU13], 10.4.0 [CU1], or 10.4.4.
+Install DataMiner 10.3.0 [CU13], 10.4.0 [CU1], or 10.4.4.<!-- RN 39120 -->
 
 ## Issue description
 
