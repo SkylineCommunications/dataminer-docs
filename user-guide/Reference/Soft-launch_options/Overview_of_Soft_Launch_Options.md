@@ -43,6 +43,13 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 - **Minimum version**: 9.5.12
 - **Release version**: 10.0.0/10.0.2 ([RN 24095](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-behavioral-anomaly-detection-and-suggestion-events-id_15723id_15914id_15916id_15951id_15952id_15976id_16001id_16050id_16163id_17279id_17462id_19224id_24095id_24126id_24147))
 
+### AnomalyFeedback
+
+Allows you to provide positive or negative feedback on anomaly suggestion events and alarms. This feedback is stored in the *ai_anomalyfeedback* table in the indexing database and is used to enhance anomaly event generation.
+
+- **Minimum version**: 10.4.4<!--RN 38980-->
+- **Release version**: To be determined
+
 ### APIDeployment
 
 > [!NOTE]
