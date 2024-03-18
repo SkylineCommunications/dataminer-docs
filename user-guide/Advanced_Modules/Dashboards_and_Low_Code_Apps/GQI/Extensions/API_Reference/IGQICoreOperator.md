@@ -21,3 +21,4 @@ Represents any **operator** in the core framework.
 ## Derived types
 
 - [IGQIFilterOperator](xref:GQI_IGQIFilterOperator)
+- [IGQISortOperator](xref:GQI_IGQISortOperator)

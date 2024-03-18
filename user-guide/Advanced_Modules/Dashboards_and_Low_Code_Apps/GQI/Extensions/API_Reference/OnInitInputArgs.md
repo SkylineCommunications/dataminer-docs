@@ -16,3 +16,4 @@ Contains functionality and general query information for user-definable data sou
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | DMS | [GQIDMS](xref:GQI_GQIDMS) | Object that can be used to interact with the DMS. |
+| Factory | [IGQIFactory](xref:GQI_IGQIFactory) | Object with methods to create other objects that can be used to interact with the core GQI framework. Available from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37806 --> |
