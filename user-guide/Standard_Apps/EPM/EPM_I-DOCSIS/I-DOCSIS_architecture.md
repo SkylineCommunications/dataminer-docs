@@ -10,8 +10,23 @@ The EPM Solution makes use of the following components:
 - [Back-end connectors](#back-end-connectors): These connectors take care of technology-specific aggregation of the data from the collector connectors.
 - [Front-end connector](#front-end-connector): This connector takes care of technology-agnostic data presentation. It allows users to view KPIs and other information based on the data received from the back-end connectors.
 - [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution.
-
+<!--
 ![EPM architecture](~/user-guide/images/EPM_docsis_architecture.png)
+-->
+```mermaid
+%%{init: {'flowchart':{'curve':'monotoneY'}}}%%
+flowchart TB
+  subgraph I-DOCSIS Architecture
+    direction TB
+    style Front-End fill:#00aff0
+    style Back-End fill:#00517d
+    style CM-Collector fill:#898989
+    style CCAP fill:#898989
+    Front-End(Front End) <--> Back-End(Back End)
+    Back-End(Back End) <--> CM-Collector(CM Collector)
+    Back-End(Back End) <--> CCAP(CCAP Collector)
+  end
+```
 
 ## Collector connectors
 

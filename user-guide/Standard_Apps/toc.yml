@@ -97,6 +97,8 @@ items:
                 topicUid: I-DOCSIS_maps_deployment_one_backend
               - name: Systems with multiple back-end elements
                 topicUid: I-DOCSIS_maps_deployment_multiple_backends
+          - name: EPM I-DOCSIS Passives Integration
+            topicUid: I-DOCSIS_passives_integration
           - name: EPM I-DOCSIS upgrade
             topicUid: I-DOCSIS_upgrade
           - name: Creating a new CCAP/CM pair
