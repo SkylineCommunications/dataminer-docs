@@ -11,6 +11,9 @@ You can find a quick overview of specific CI/CD tooling offered by Skyline Commu
 > [!NOTE]
 > You can also apply the instructions in this tutorial (with limited syntax changes) to use other CI/CD technology, such as Jenkins, GitLab, Concourse, Azure DevOps, etc.
 
+> [!TIP]
+> See also: [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 Expected duration: 20 minutes.
 
 ## Prerequisites
