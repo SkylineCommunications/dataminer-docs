@@ -6,70 +6,35 @@ uid: DataMiner_interfaces
 
 Your DataMiner System can interface with a multitude of client applications, ranging from the standard DataMiner web clients to third-party tools.
 
-## Graphical overview
+There are four main categories of DataMiner interfaces:
 
-As shown in the following illustration, there are four main categories of DataMiner interfaces.
+- **Private interfaces**: Used for the standard DataMiner client applications, including DataMiner Cube and the DataMiner web apps.
 
-![](~/user-guide/images/3rd_party_System_Interfacing_REV003.jpg)
+  > [!TIP]
+  > See also: [IP communication within a DMS](xref:Configuring_the_IP_network_ports#graphical-representation-of-ip-communication-within-a-dms)
 
+- **Standard public interfaces**: By default, every DataMiner System has a number of standard public interfaces that allow:
 
+  - Forwarding of SNMP notifications to third-party SNMP managers (HP OpenView, IBM NetCool, etc.).
 
-## Private interfaces
+  - Performing SNMP Get and SNMP Set requests on individual controls and readings of devices.
 
-Every DataMiner System ships with a number of private interfaces to connect to the standard DataMiner client applications.
+  - Exchange of information via TCP-IP sockets.
 
-### Standard DataMiner web client (connecting via .NET Remoting or XML Web Services)
+  - Offload of database records via SQL or NoSQL (Cassandra).
 
-- DataMiner Cube
+  - Web Services APIs (SOAP XML, XML-RPC).
 
-### Standard DataMiner mobile client (connecting via the DataMiner Web Services APIs)
+- **Optional public interfaces**: Optionally, a DataMiner System can be configured to connect to third-party applications via
 
-- DataMiner Monitoring & Control app (device-independent)
+  - Web Services APIs (SOAP XML, XML-RPC, JSON)
 
-### Standard DataMiner tools (connecting via .NET Remoting or XML Web Services)
+  - EGMC2
 
-- Alerter
+- **Custom interfaces**: On top of all available private and public interfaces, highly specialized, custom interfaces can be developed to allow your DataMiner System to integrate seamlessly into your existing infrastructure.
 
-### HTML-based reporting tools (connecting via HTML)
+  > [!TIP]
+  > For more information, contact [Skyline Sales](mailto:sales%40skyline.be).
 
-- DMS Reports
-
-- DMS Dashboards
-
-### Custom apps, developed in-house (connecting via .NET Remoting or XML Web Services)
-
-- Carrier Management
-
-- IP Network Management
-
-- Battery Management
-
-- ...
-
-## Standard public interfaces
-
-By default, every DataMiner System has a number of standard public interfaces that allow:
-
-- Forwarding of SNMP notifications to third-party SNMP managers (HP OpenView, IBM NetCool, etc.).
-
-- Performing SNMP Get and SNMP Set requests on individual controls and readings of devices.
-
-- Exchange of information via TCP-IP sockets.
-
-- Offload of database records via SQL or NoSQL (Cassandra).
-
-- Web Services APIs (SOAP XML, XML-RPC).
-
-## Optional public interfaces
-
-Optionally, your DataMiner System can be configured to connect to third-party applications via
-
-- Web Services APIs (SOAP XML, XML-RPC, JSON)
-
-- EGMC2
-
-## Custom interfaces
-
-On top of all available private and public interfaces, highly specialized, custom interfaces can be developed to allow your DataMiner System to integrate seamlessly into your existing infrastructure.
-
-For more information, contact [Skyline Sales](mailto:sales%40skyline.be).
+<!--To be replaced:
+ ![Overview DataMiner interfaces](~/user-guide/images/3rd_party_System_Interfacing_REV003.jpg) -->

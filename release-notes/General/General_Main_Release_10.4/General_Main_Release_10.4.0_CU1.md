@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU1
 ---
 
-# General Main Release 10.4.0 CU1 - Preview
+# General Main Release 10.4.0 CU1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -165,6 +165,12 @@ In case of issues that need investigating, you can temporarily lower the minimum
 
 A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
 
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
+
 ### Fixes
 
 #### SLLogCollector: Minor issues [ID_38011]
@@ -247,6 +253,12 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 
 When you had updated the anomaly configuration for a DVE element, SLAnalytics would not process the changes correctly, causing incorrect behavioral anomaly alarms to be generated.
 
+#### Redundancy groups: Problem when loading derived elements [ID_38670]
+
+<!-- MR 10.4.0 [CU1] - FR TBD -->
+
+In some rare cases, errors could occur in SLDataMiner and SLDMS when loading derived elements for a redundancy group.
+
 #### DataMiner upgrade: Some folders would not get cleaned up when performing an upgrade [ID_38672]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -287,6 +299,12 @@ From now on, the legend will always show the layers in the order in which they w
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
+
+#### Problem with SLProtocol when it was not able to reach the StorageModule service during startup [ID_38824]
+
+<!-- MR 10.4.0 [CU1] - FR TBD -->
+
+In some cases, during startup, SLProtocol would stop working when it was not able to reach the StorageModule service.
 
 #### Automation: Problem when sending an email to a user or group [ID_38844]
 
@@ -335,8 +353,28 @@ From now on, when a DataMiner backup is executed with the database backup option
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
 
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
 #### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.
+
+#### Problem with SLDataMiner when retrieving users from a user group due to LDAP setting ReferralConfigured='false' [ID_39058]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
+
+#### SLDataMiner could stop working when a MIB file was being generated for a protocol that contained parameters with discrete values [ID_39120]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When a MIB file was being generated for a protocol that contained parameters with discrete values, in some cases, SLDataMiner could stop working.

@@ -210,6 +210,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLDataMiner crashes because of subgroup query failure
+            topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: IDP Discovery no longer working after upgrade
@@ -250,6 +252,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Error in SLDataMiner when generating MIB file
+            topicUid: KI_SLDataMiner_problem_generating_MIB
           - name: NATS configuration not updated after adding DMA to DMS
             topicUid: KI_NATS_config_not_updated_after_adding_DMA
           - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite

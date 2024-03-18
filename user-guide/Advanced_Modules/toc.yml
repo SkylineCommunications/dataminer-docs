@@ -299,6 +299,8 @@ items:
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
+              - name: Creating a parameter table connected to an element feed
+                topicUid: Creating_a_parameter_table_connected_to_an_element_feed
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -626,6 +628,8 @@ items:
                     topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
                     topicUid: GQI_IGQIInputArguments
+                  - name: IGQIOptimizableOperator
+                    topicUid: GQI_IGQIOptimizableOperator
                   - name: IGQIOnDestroy
                     topicUid: GQI_IGQIOnDestroy
                   - name: IGQIOnInit
@@ -662,6 +666,8 @@ items:
             topicUid: Query_updates
           - name: Importing a query
             topicUid: Importing_a_query
+      - name: Logging
+        topicUid: Dashboards_and_Low_Code_Apps_Logging
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
   - name: DMS Dashboards (legacy)

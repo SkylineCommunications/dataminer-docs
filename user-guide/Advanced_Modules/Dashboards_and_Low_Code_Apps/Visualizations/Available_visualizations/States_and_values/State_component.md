@@ -17,6 +17,8 @@ To configure the component:
 
    - Column parameter feeds are supported from DataMiner 10.0.12 onwards.
 
+   - From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
+
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
    > [!NOTE]

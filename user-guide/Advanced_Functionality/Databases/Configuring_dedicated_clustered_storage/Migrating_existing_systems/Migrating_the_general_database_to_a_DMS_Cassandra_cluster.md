@@ -55,6 +55,11 @@ During the migration, each DMA will go through the following stages:
 
 If your system does not use an indexing database yet or if it already uses a OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
 
+1. If there are Failover pairs in the DataMiner System, make sure the currently active Agent in each pair is the top Agent in the Failover configuration screen.
+
+   > [!TIP]
+   > See also: [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
+
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
 1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
@@ -110,6 +115,11 @@ If your system does not use an indexing database yet or if it already uses a Ope
 > To migrate to a DMS with Cassandra cluster and OpenSearch cluster, it is not possible to use this procedure. An alternative procedure will become available for this in the future.
 
 In case your DataMiner System contains bespoke Elasticsearch data or SRM data, use the procedure below.
+
+1. If there are Failover pairs in the DataMiner System, make sure the currently active Agent in each pair is the top Agent in the Failover configuration screen.
+
+   > [!TIP]
+   > See also: [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 
 1. Follow the step-by-step guide on [taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
 

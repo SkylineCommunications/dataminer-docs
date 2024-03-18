@@ -419,7 +419,7 @@ Example:
 <Chains>
   ...
    <Chain name="Example Hide Room/Rack">
-      <Field name="Location" options="MaxDiagramsOnRow:3;ShowCPEChilds;etails:1000-KPI|1500;displayInFilter;tabs:1000-KPI|1500|1600" pid="1002">
+      <Field name="Location" options="MaxDiagramsOnRow:3;ShowCPEChilds;details:1000-KPI|1500;displayInFilter;tabs:1000-KPI|1500|1600" pid="1002">
          <DiagramTitleFormat>{rowDK} (temp:{pid:1004})</DiagramTitleFormat>
          <DiagramPids>1004,1006</DiagramPids>
       </Field>

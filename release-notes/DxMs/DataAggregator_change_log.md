@@ -4,9 +4,62 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39086]
+
+The Cloud Node ID is now used to uniquely identify each DxM instance in a cluster and report back DxM health stats for remote monitoring of systems connected to dataminer.services.
+
+In addition, the Node ID is now also used as an identifier when registering with APIGateway.
+
+#### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID_38981]
+
+The DataAggregator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
 #### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
 
 In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
+
+#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID_38654]
+
+Beautiful Soup is a commonly used library that makes it easy to scrape information from web pages and as such it has been made part of the installer. The DataAggregator installer now includes the bs4 pip package and its dependencies.
+
+#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID_38682]
+
+Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrator) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
+
+This includes:
+
+- Extra information added to the Help command (*-h* or *--help*).
+- Change of how the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users already using it.
+
+#### 31 January 2024 - New feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
+
+Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors. This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
+
+This feature requires the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) option and will display an alphabetically sorted list of your data sources.
+
+###### Include Python environment with Data Aggregator installer [ID_38064]
+
+The Data Aggregator installer now includes the Python environment, so that this no longer needs to be configured after installation, and the feature can be used out of the box.
+
+In addition, several Python libraries are included in the installation. To install more, see [Installing extra Python packages](xref:Data_Sources_Setup#installing-extra-python-packages).
+
+##### Enforce authentication when accessing Data Aggregator DxM web interface via reverse proxy [ID_38275]
+
+To improve security, users now need to authenticate themselves to have access to Data Aggregator's web interface.
+
+##### API Gateway module registration [ID_38570]
+
+Data Aggregator will now register itself with API Gateway, allowing for an overview of all node instances.
+
+##### Extend Data Aggregator to have a CRUD API for Data Sources [ID_37309]
+
+Up to now, the API exposed by Data Aggregator only allowed the ability to start, stop, and check the status of existing jobs.
+
+An enhancement has been made to give better control over creating, updating, and deleting data sources and jobs. With this change, the available operations now allow users to fully manage their data sources and jobs without having to configure them in the *appsettings.custom.json* file manually.
+
+##### Allow Data Aggregator to run Python and PowerShell scripts [ID_37272]
+
+Previously Data Aggregator could only run GQI queries, but this has now been extended to support Python and PowerShell as well.
 
 #### 17 January 2024 - Enhancement - Logging now mentions the DMA handling a GQI query [ID_37511]
 

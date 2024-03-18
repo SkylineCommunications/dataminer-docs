@@ -4,7 +4,7 @@ uid: DashboardParameterFeed
 
 # Parameter feed
 
-This dashboard feed allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
+This feed component allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
 
 > [!NOTE]
 >
