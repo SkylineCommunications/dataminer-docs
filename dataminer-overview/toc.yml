@@ -151,6 +151,8 @@ items:
           topicUid: Proactive_Support
         - name: Support services terms
           topicUid: Support_services_terms
+        - name: User Operations Support
+          topicUid: User_operations_support
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:
