@@ -172,6 +172,6 @@ A *ModelHostException* could be thrown while checking whether the DataMiner Syst
 
 #### STaaS: Database queries could time out [ID_39081]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-When a database query was performed against a STaaS database, in some cases, the query could timeout, leading to no results being returned.
+When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.

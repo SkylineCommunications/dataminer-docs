@@ -158,3 +158,9 @@ When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incor
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a service created via an SRM booking got into an error state because it had been assigned a name that was already being used by another object, it would not be possible to delete it as it would be considered invalid.
+
+#### STaaS: Database queries could time out [ID_39081]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.
