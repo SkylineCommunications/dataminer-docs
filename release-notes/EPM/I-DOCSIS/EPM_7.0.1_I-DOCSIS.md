@@ -57,7 +57,7 @@ Several improvements have been implemented in the Generic DOCSIS CM Collector co
 
 #### Maps cluster color not matching household color [ID_38847]
 
-If no alarm is present, the CPE household icons are no longer displayed in green by default, as this caused a disparity with the cluster color, shown as gray. The icons now show the correct alarm severity of the object.
+If no alarm is present, the CPE household icons are no longer displayed in green by default, as this caused a disparity with the cluster color, shown as gray. The markers now show the correct alarm severity of the object.
 
 #### DS Linecard Percentage CM Ping Uncorrectable KPI showed incorrect value [ID_38888]
 
