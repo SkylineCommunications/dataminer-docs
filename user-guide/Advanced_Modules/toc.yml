@@ -628,6 +628,8 @@ items:
                     topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
                     topicUid: GQI_IGQIInputArguments
+                  - name: IGQILogger
+                    topicUid: GQI_IGQILogger
                   - name: IGQIOptimizableOperator
                     topicUid: GQI_IGQIOptimizableOperator
                   - name: IGQIOnDestroy
