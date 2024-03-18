@@ -4,6 +4,36 @@ uid: Run_Time_Assembly_Binding
 
 # Run-time assembly binding
 
+## Introduction
+
+At run-time, assemblies are loaded the moment they are needed by the executing code. When the Just-In-Time (JIT) compiler compiles the intermediate language (IL) to native code, it sees which types are referenced. The JIT compiler will then determine the assemblies that define these types, and these will be loaded.
+
+The .NET Framework follows specific steps while trying to locate an assembly at run-time. For more information about the internals of assembly loading in the .NET Framework, refer to [How the Runtime Locates Assemblies](https://learn.microsoft.com/en-us/dotnet/framework/deployment/how-the-runtime-locates-assemblies). Custom paths to be searched for while locating an assembly can be specified via the [AssemblyResolve](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.assemblyresolve?view=netframework-4.8) event. This event is triggered on an AppDomain level and the event provides information about the assembly that the runtime is trying to resolve. This event is triggered when the run-time could not find the assembly in any of the previous steps the runtime executes during assembly resolving.
+
+In DataMiner, for SLScripting, this event is implemented in such a way that it will search in the `C:\Skyline DataMiner\ProtocolScripts`, `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts/DllImport` folders and also in any of the folders denoted by the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute of a QAction (or the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags in Automation scripts).
+
+As mentioned in section <xref:Compilation_Time_Assembly_Binding>, the manifest of a compiled assembly denotes the name and version of any assemblies it has a direct dependency on. At run-time, when the .NET runtime is about to execute code from such a referenced assembly, the runtime will try to find and load that assembly.
+
+## Multiple versions of the same assembly
+
+When developing, you can run into a situation where you reference different versions of the same assembly. For example, suppose you use NuGet A which depends on NuGet X version 1.0.1 (which contains assembly X version 1.0.1.0). Now suppose you also use another NuGet B which also references NuGet X but version 1.0.2 (which contains assembly X with version 1.0.2.0). Now when you compile the program in e.g. Visual Studio, the `bin` folder will only contain one version of NuGet X (e.g. assembly X with version 1.0.2.0). The runtime, on the other hand, will search for the specific version that is mentioned in the assembly manifest so at some point it could look for version 1.0.1.0 (because assembly A that executes was compiled against that version) which it will not be able to find as only the 1.0.2.0 version is present in the bin folder.
+
+```mermaid
+flowchart TB
+    subgraph AppDomain SLScripting
+    a1[MyProtocol.1.0.0.0.QAction.1.dll]-->a2[NuGet A,v1.0.1]-->a3[NuGet X,v1.0.1 assembly X v1.0.1.0]
+    b2[NuGet B v1.0.1]-->b3[NuGet X,v1.0.2 assembly X v1.0.2.0]
+    a1-->b2
+    end
+
+```
+
+For strong-named assemblies, this problem is typically alleviated by making use of [BindingRedirect](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/bindingredirect-element) elements in the [configuration file](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/)). A binding redirect could then for example state that assembly X version 1.0.1.0 should be redirected to version 1.0.2.0. For non-strong-named assemblies, the version is disregarded when the assembly is located next to the executable.
+
+In DataMiner, the binding redirect approach is not feasible, as by default there is only on SLScripting process and therefore a binding redirect that would be needed for a specific connector could have an impact on another connector. Also, for non-strong-named assemblies, the referenced assemblies are typically not stored in the same folder as the SLScripting executable (which is located in the `C:\Skyline DataMiner\Files`) folder and the QAction assemblies and their references are stored in the `C:\Skyline DataMiner\ProtocolScripts` folder (or a subfolder thereof).
+
+Because of this, no unification is performed. Instead of providing a single version, all used versions of the required assemblies are provided. This has the downside that it could lead to versioning issues (see also [Best Practices for Assembly Loading](https://learn.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading#avoid_loading_multiple_versions)). To avoid issues at run-time, you should therefore make sure to follow the following rule:
+
 > [!IMPORTANT]
 > In scenarios where all of the following is applicable:
 >
@@ -12,25 +42,21 @@ uid: Run_Time_Assembly_Binding
 > - NuGet package "A" exposes types from NuGet package "B".
 > - You use types from package "B" through package "A" (e.g. calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
 >
-> Make sure that the version of package "B" you installed is the same version as the version of package "B" that package "A" depends on. Otherwise you could experience run-time issues as explained in more detail below.
-
-This happens when code reaches a method that is present in a different assembly.
-
-At run-time, assemblies are loaded the moment they are needed in the code. When the Just-In-Time (JIT) compiler compiles the intermediate language (IL) to native code, it sees which types are referenced. The JIT compiler will then determine the assemblies that define these types, and these will be loaded.
-
-This means that at that point it will look for any dependencies. To find those assemblies, it will look through all the "hintpaths", which are directories that could contain those DLLs.
-
-For DataMiner, because protocol.xml and script.xml are compiled in DataMiner itself, we add all the possible places such dependency DLLs may be present using the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags in scripts or [dllImport](xref:Protocol.QActions.QAction-dllImport) attributes in QActions.
-
-To better understand this, imagine the following example: You have a custom solution using the Class Library, and you are using that custom solution in an Automation script. When the script is compiled, it will try to find the Class Library DLLs when it encounters a Class Library method. This means that if those DLLs are not present, it will only throw an exception at run-time. It may also throw exceptions if the DLLs with the right version are not present. For example, if V1 is needed, but V3 is present, it can throw an exception.
-
-Typically, unification is performed (using [BindingRedirect](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/bindingredirect-element) elements in the [configuration file](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/)). A binding redirect could then for example state that assembly V1 should be redirected to V3. This is called "unification" of assemblies. In DataMiner, this approach is currently not supported as by default all QActions run in the same SLScripting process in a single AppDomain. Instead, all versions of the required DLLs are provided in their subfolders within the `DllImport` folder. As no unification is performed, this could lead to versioning issues (see also [Best Practices for Assembly Loading](https://learn.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading#avoid_loading_multiple_versions)).
+> Make sure that the version of package "B" you installed is the same version as the version of package "B" that package "A" depends on. Otherwise, you could experience run-time issues as explained in more detail below.
 
 ## Example
 
-Suppose you are creating an API to be used in a connector (releasing your API as a NuGet package), and that the API uses the class library NuGet package version 1.3.0.1.
+Suppose you are creating a NuGet package that contains an API (MyApi) that can be used in a protocol. Also, suppose your API NuGet uses the class library NuGet package, version 1.3.0.1.
+In other words, the API has a dependency on version 1.3.0.1 of the class library:
 
-Let us assume that the API defines the following method in a public class named *Example*:
+```mermaid
+flowchart LR
+    a1[MyAPI v1.0.0.1] --> a2[Class library v1.3.0.1]
+```
+
+The assembly manifest of the compiled assembly MyAPI will therefore contain an entry denoting the Class library v1.3.0.1 reference.
+
+Let us also assume that the API defines the following method in a public class named *Example*:
 
 ```csharp
 public void Install(IDms dms);
@@ -38,7 +64,8 @@ public void Install(IDms dms);
 
 Now the *Install* method has an argument of type *IDms*, which is defined in the class library package version 1.3.0.1. In other words, the API exposes a type used from the class library v1.3.0.1.
 
-When this API is used from a connector that uses the class library NuGet version 1.3.0.1, everything will work fine:
+When this API is used from a protocol QAction that that uses class library NuGet version 1.3.0.1, everything will work fine:
+I.e. the created dms object if of type ClassLibrary v1.3.0.1, this is the type that is expected by the Install method of the API.
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -46,7 +73,17 @@ Example example = new Example();
 example.Install(dms);
 ```
 
-However, if the class library version used in the QAction is different, this will lead to issues. Suppose the QAction in the connector references class library version 1.3.0.2:
+```mermaid
+flowchart TB
+    classDef greenstroke stroke:#0f0
+    subgraph AppDomain SLScripting
+    a1[MyProtocol.1.0.0.0.QAction.1.dll]-->a2[MyAPI.dll v1.0.01]-->a3[ClassLibrary.dll v1.3.0.1]:::greenstroke
+    d1[ClassLibrary.dll v1.3.0.1]:::greenstroke
+    a1-->d1
+    end
+```
+
+However, if the class library version used in the QAction is different, this will lead to issues. Suppose the QAction in the protocol references class library version 1.3.0.2:
 
 ```csharp
 IDms dms = protocol.GetDms(); // An instance of IDms from 1.3.0.2 is created.
@@ -57,6 +94,16 @@ example.Install(dms); // An instance of IDms v1.3.0.1 is expected, but v1.3.0.2 
 This will result in a *MissingMethodException* being thrown: `System.MissingMethodException: Method not found: 'Void Example.Install(IDms)'`.
 
 Even though the signature of the method gives the impression that this method is actually present, the exception gets thrown because the versions of the assemblies in which the types are defined are different: The *protocol.GetDms* method in the connecter constructs an *IDms* instance from assembly v1.3.0.2, while the *Install* method expects an instance of assembly v1.3.0.1 and therefore throws a *MissingMethodException*.
+
+```mermaid
+flowchart TB
+    classDef redstroke stroke:#f00
+    subgraph AppDomain SLScripting
+    a1[MyProtocol.1.0.0.0.QAction.1.dll]-->a2[MyAPI.dll v1.0.01]-->a3[ClassLibrary.dll v1.3.0.1]:::redstroke
+    d1[ClassLibrary.dll v1.3.0.2]:::redstroke
+    a1-->d1
+    end
+```
 
 Another type of exception you could observe when mixing different versions is an *InvalidCastException*. The element log would then contain a message as follows:
 

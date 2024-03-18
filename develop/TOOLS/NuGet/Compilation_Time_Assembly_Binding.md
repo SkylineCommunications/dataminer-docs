@@ -4,12 +4,27 @@ uid: Compilation_Time_Assembly_Binding
 
 # Compilation-time assembly binding
 
-This happens at the following times:
+In DataMiner, compilation of C# code is executed:
 
-- During Visual Studio building.
-- Right before the first execution of the QAction (if the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used, the QAction is compiled immediately).
-- When an Automation script is uploaded or its library script changes.
+- Protocol C# QActions: Right before the first execution of the QAction (or,if the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used, the QAction is compiled immediately).
+- Automation script C# exe blocks: When an Automation script is uploaded or its library script changes.
 
 To compile, the compiler only requires the directly referenced assemblies. The compiler does not know about transitive dependencies for that assembly.
 
-To better understand this, imagine the following example: You have a custom solution using the Class Library, and you are using that custom solution in an Automation script. During compile time of the script, it will search for the custom solution DLL and verify for errors. It will not care about whether Class Library DLLs are present. It will not report any errors that may happen because the Class Library is or is not present.
+To better understand this, imagine the following example. Suppose you have a custom solution (MyAPI) using the Class Library, and you are using that custom solution in a QAction of a protocol.
+In order to be able to compile the protocol, the compiler will need a reference to the the assembly of the custom solution (MyAPI.dll). It does not require a reference to the ClassLibrary.dll assembly as this is a transitive reference. (Note, however, if you would use types from the ClassLibrary assembly in QAction1, then you would also need to provide a reference to ClassLibrary. Otherwise, the compilationo would fail.)
+
+```mermaid
+flowchart TB
+    style a3 stroke-dasharray: 5 5
+    subgraph AppDomain SLScripting
+    a1[MyProtocol.1.0.0.0.QAction.1.dll]-->a2[MyAPI.dll v1.0.01]-->a3[ClassLibrary.dll v1.3.0.1]
+    end
+```
+
+In a protocol, you can add an assembly reference via the [dllImport](xref:Protocol.QActions.QAction-dllImport) attributes. In Automation scripts, you can add a reference via the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tag. Note that some assembly references are added by default. For more information, refer to the documentation of the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute (for protocol QActions) or [Adding C# code to a script in Cube](xref:Adding_CSharp_code_to_an_Automation_script#adding-c-code-to-a-script-in-cube) for Automation script C# exe blocks.
+
+> [!IMPORTANT]
+> Although a reference is not needed at compile time, the assembly is needed at run-time. For more information, refer to [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+
+The [assembly manifest](https://learn.microsoft.com/en-us/dotnet/standard/assembly/manifest) of the compiled assembly will contain information about the immediate referenced assemblies, where each reference includes, among other things, the name and version of the referenced assembly.
