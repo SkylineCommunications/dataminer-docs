@@ -78,13 +78,30 @@ For example:
 
 Use this option to immediately display a specific alarm card.
 
-Specify the DMA ID and root alarm ID.
+Format 1: DMA ID / Root Alarm ID
 
 Example:
 
 ```txt
 http://MyDMA1/DataMinerCube/DataMinerCube.xbap?alarm=48/6713
 ```
+
+Format 2: DMA ID / Element ID / Root Alarm ID
+
+Example:
+
+```txt
+http://MyDMA1/DataMinerCube/DataMinerCube.xbap?alarm=48/123/6713
+```
+
+Format 3: Root Alarm ID
+
+Example:
+
+```txt
+http://MyDMA1/DataMinerCube/DataMinerCube.xbap?alarm=6713
+```
+
 
 > [!NOTE]
 > To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the top-right corner of the properties window.
