@@ -25,7 +25,7 @@ This component allows you to visualize data as a grid.
 
    - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition.
 
-   - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component<!--RN 37269-->.
+   - *Data retrieval > Update data*: Allows the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)).<!--RN 37269-->.
 
    - *Initial Selection*: If enabled, the first item is selected by default. This is the value that will be applied in the grid when the dashboard is opened, unless a custom URL is used specifying a different value. Disabled by default.
 

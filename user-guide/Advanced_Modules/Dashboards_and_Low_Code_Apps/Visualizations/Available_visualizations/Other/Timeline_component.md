@@ -87,7 +87,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      >
      > Note that modifying the time range displayed in the time range component will not update the time range displayed in the timeline component, unless it has been linked to that time range component in the *Default time range* settings.
 
-   - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for the queries executed by the selected component. Disabled by default.
+   - *Data retrieval > Update data*: Allows the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). Disabled by default.
 
      > [!NOTE]
      > If you enable this setting, real-time updates will only be applied for the data sources and operators listed on the [Query updates](xref:Query_updates) page. Prior to DataMiner 10.4.0/10.4.3<!-- RN 37372 -->, data will only be updated every 30 seconds, and this will only be applied for GQI queries using the [Get parameter table by ID](xref:Get_parameter_table_by_ID) data source.
