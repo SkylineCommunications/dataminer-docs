@@ -16,6 +16,9 @@ From DataMiner 10.2.9/10.3.0 onwards, you can also access the Dashboards app fro
 > [!NOTE]
 > We recommend that you use Google Chrome to access the Dashboards app. Microsoft Edge, Mozilla Firefox, and Safari are also supported.
 
+> [!TIP]
+> In many browsers, it is possible to install the Dashboards app as a standalone app on your computer, using the install button on the right side of the browser address bar. You can then for instance pin the app to your taskbar or add a desktop shortcut to quickly open it.
+
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise that you use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
