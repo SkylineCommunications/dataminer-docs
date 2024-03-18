@@ -11,7 +11,7 @@ uid: EPM_7.0.1_I-DOCSIS
 
 #### Channel Utilization added for US/DS Service Group [ID_38849]
 
-When you open the ​Upstream or Downstream Service Group entities in the Topology app, the Channel Utilization average of the associated channels is now displayed in the data section.
+When you open the ​Upstream or Downstream Service Group chains in the Topology app, the Channel Utilization average of the associated channels is now displayed in the data section.
 
 #### Skyline EPM Platform: New default values for US/DS SNR threshold [ID_39054]
 
