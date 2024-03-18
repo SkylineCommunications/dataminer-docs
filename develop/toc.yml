@@ -4,6 +4,8 @@ items:
   items:
   - name: Connectors
     items:
+    - name: Getting started with data source integrations
+      topicUid: Getting_started_with_data_source_integrations
     - name: Introduction
       topicUid: Introduction
     - name: Connector fundamentals
