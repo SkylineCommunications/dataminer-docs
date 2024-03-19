@@ -41,6 +41,22 @@ Currently, DIS is using [Validator version 1.1.1](https://github.com/SkylineComm
 
 ### Enhancements
 
+#### Life cycle policy: DataMiner 10.2 is now the minimum supported version [ID_39148]
+
+DataMiner 10.2 has become the minimum supported version for DIS and CI/CD. See [DataMiner support life cycle policy](xref:Software_support_life_cycles#dataminer-support-life-cycle-policy).
+
+- When you create new projects (scripts, QActions, etc.), these will now use Microsoft .NET Framework 4.8.
+
+  - The info banner that checked the .NET Framework version will now fix other projects so they are also set to .NET Framework 4.8.
+  
+  - In Microsoft Visual Studio, DIS will no longer need .NET Framework 4.6.2 Targeting Pack installed.
+
+- When validating a connector, the Validator will now use DataMiner 10.2 as baseline for the minimum supported version.
+
+- When you create a new connector solution in Visual Studio 2019, the `MinimumRequiredVersion` tag will be prefilled with DataMiner 10.2 CU0.
+
+  In Visual Studio 2022, this will be done via the Visual Studio templates.
+
 #### MIB Browser: Enhanced processing of MIBs containing hyphens inside comments [ID_37962]
 
 According to the ASN.1 specification, a comment in a MIB starts with a pair of adjacent hyphens ("--") and ends with the next pair of adjacent hyphens or at the end of the line, whichever occurs first.
