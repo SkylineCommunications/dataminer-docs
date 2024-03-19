@@ -190,6 +190,15 @@ Also, in some cases, a *Timeline* component or a *Time range* component would no
 
 Tables in PDF files would incorrectly get added a scroll bar.
 
+#### Dashboards app & Low-Code Apps: Focus order of buttons in popup windows would be incorrect [ID_39080]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, the focus order of buttons in popup windows would be incorrect. From now on, when a popup window contains an action button, it will get the focus. If no action button is present, then the first non-danger button will get the focus.
+
+> [!NOTE]
+> Danger buttons will never get the focus.
+
 #### Dashboards app & Low-Code Apps: Protocol versions of mediation protocols would incorrectly not be production versions [ID_39094]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
