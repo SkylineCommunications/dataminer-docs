@@ -28,25 +28,23 @@ The *Report Ticket* page allows you to report a new ticket:
 
 1. On the *Registration* tab, fill in the following information:
 
-   - *Customer*
+   - *Customer*, this is a mandatory field. The customer for the logged user is selected by default.
 
-   - *Project Type*
+   - *Project Type*, this field is used to filter the projects by type. In case there is a **Maintenance Contract** project available for the logged user it will be selected by default.
 
-   - *Project*
+   - *Project*, this is a mandatory field. In case there is a **Maintenance Contract** project available with status **In Progress** it will be selected by default.
 
-   - *Additional Contacts*
-
-   - *24/7 Intervention*: Yes/No
+   - *Additional Contacts*, this field is optional. Is possible to add an email per line. The confirmation email will have the specified contacts in cc.
 
 1. When all the necessary information is filled in, click *Next* in the lower right corner.
 
 1. On the *Ticket Details* tab, fill in the following information:
 
-   - *Title*
+   - *Title*, this is a mandatory field. Please specify the title of the ticket.
 
-   - *Description*
+   - *Description*, this is a mandatory field. Please specify a detailed description of the ticket.
 
-   - *Impact*
+   - *Impact*, this is a mandatory field. Please select the impact from the list. In case **Other** is selected as impact and additional required field will show to specify the impact details.
 
    - *This issue is affecting a Production System*: Yes/No
 
@@ -62,9 +60,9 @@ The *Report Ticket* page allows you to report a new ticket:
 
    - *Log Collection*: Select how logs will be collected for the ticket.
 
-     - *Automatic (via Cloud)*: Select this option if the DataMiner System is connected to dataminer.services.
+     - *Automatic (via Cloud)*: Select this option if the DataMiner System is connected to dataminer.services. Requires the selection of at least one cloud system.
 
-     - *Manual*: If you select this option, you will need to upload a Log Collector package.
+     - *Manual*: If you select this option, you will need to upload a [Log Collector package](xref:Collecting_data_to_report_an_issue_to_TechSupport). Requires the selection of at least one system.
 
      - *None (not recommended)*
 
