@@ -75,7 +75,7 @@ Tickets for Support can be generated through the [User Operations Support](xref:
 
 Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through Skyline's dataminer.services.
 
-The User can always consult the status of their tickets on Skyline's [User Operations Support](xref:User_operations_support). The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
+The User can always consult the status of their tickets using Skyline's [User Operations Support](xref:User_operations_support) web application. The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
 
 To be able to assist the User in an efficient manner, when generating a ticket or calling Skyline's helpdesk, the User is required to provide the following information: (a) a general description of the operating environment, (b) a list of all hardware components, operating systems, and networks, (c) a reproducible test case, and (d) any log files, trace and systems files. The User's failure to provide this information may prevent Skyline from identifying and fixing the Issue.
 
