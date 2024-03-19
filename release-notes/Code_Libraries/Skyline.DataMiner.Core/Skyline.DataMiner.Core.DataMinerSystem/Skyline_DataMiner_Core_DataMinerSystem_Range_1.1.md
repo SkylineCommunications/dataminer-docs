@@ -9,9 +9,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.1.6
 
-#### New Feature - Serial Connections will now be read on retrieval of the element
+#### New feature - Serial connections will now be read on element retrieval
 
-When an IDmsElement is retrieved, the connections will now contain the serial connections as well.
+When an IDmsElement is retrieved, the connections will now include the serial connections as well.
 
 Element creation with serial connections is not supported yet.
 
