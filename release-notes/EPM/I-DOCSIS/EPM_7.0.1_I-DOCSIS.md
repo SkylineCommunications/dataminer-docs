@@ -43,10 +43,6 @@ To use this feature, click the timestamp at the top of the dashboard. This will 
 
 ## Changes
 
-#### EPM_I_DOCSIS_SetThresholdsTableToCollectors script ID updated [ID_39040]
-
-The ID of the *EPM_I_DOCSIS_SetThresholdsTableToCollectors* script has been updated to prevent possible conflicts with other script IDs.
-
 ### Enhancements
 
 #### Generic DOCSIS CM Collector performance improvement [ID_39069]
@@ -66,3 +62,7 @@ It could occur that the *DS Linecard Percentage CM Ping Uncorrectable* KPI incor
 #### System.IO.IOException when copying or writing a file [ID_38889]
 
 In some cases, when the I-DOCSIS Solution tried to copy or write a file, a System.IO.IOException could be thrown. The relevant QActions have now been updated to handle this error.
+
+#### EPM_I_DOCSIS_SetThresholdsTableToCollectors script ID conflict [ID_39040]
+
+Up to now, a conflict could occur between the script ID of the *EPM_I_DOCSIS_SetThresholdsTableToCollectors* script and that of other scripts. In the Automation log file, this would be logged as "Execute ID 1 is used by another script". The script has now been updated to prevent this.
