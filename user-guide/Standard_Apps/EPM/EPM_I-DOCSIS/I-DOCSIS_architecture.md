@@ -16,15 +16,15 @@ The EPM Solution makes use of the following components:
 ```mermaid
 %%{init: {'flowchart':{'curve':'monotoneY'}}}%%
 flowchart TB
-  subgraph I-DOCSIS Architecture
+  subgraph I-DOCSIS architecture
     direction TB
     style Front-End fill:#00aff0
     style Back-End fill:#00517d
     style CM-Collector fill:#898989
     style CCAP fill:#898989
-    Front-End(Front End) <--> Back-End(Back End)
-    Back-End(Back End) <--> CM-Collector(CM Collector)
-    Back-End(Back End) <--> CCAP(CCAP Collector)
+    Front-End(front end) <--> Back-End(back end)
+    Back-End(back end) <--> CM-Collector(CM collector)
+    Back-End(back end) <--> CCAP(CCAP collector)
   end
 ```
 
