@@ -31,7 +31,7 @@ items:
         topicUid: EPM_1.0.1_GPON
   - name: I-DOCSIS
     items:
-      - name: EPM 7.0.1 I-DOCSIS - preview
+      - name: EPM 7.0.1 I-DOCSIS
         topicUid: EPM_7.0.1_I-DOCSIS
       - name: EPM 7.0.0 I-DOCSIS
         topicUid: EPM_7.0.0_I-DOCSIS
