@@ -66,6 +66,12 @@ Example: `[var:testvar,WaitForValue]`
 
 Up to now, when you opened a web application by clicking an icon in the *Apps* pane of Cube's sidebar, you had to log in to that app when you had not yet logged in to another app that was open in the browser. From now on, you will be logged in automatically.
 
+#### System Center - Agents: Warning when adding or removing agents on systems that have the NATSForceManualConfig option enabled [ID_39070]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When you add or remove an agent on a DataMiner System that has the *NATSForceManualConfig* option enabled, a warning message will now appear, saying that the NATS configuration will have to be updated.
+
 ### Fixes
 
 #### Resources app: Resource would incorrectly be marked as modified when capability values were set to NaN [ID_38699]
