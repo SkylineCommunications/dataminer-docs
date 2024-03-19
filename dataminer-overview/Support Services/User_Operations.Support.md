@@ -33,23 +33,23 @@ This section allows to report a new ticket.
 
 On this tab is possible to specify the following:
 
-- Customer
-- Project Type
-- Project
-- Additional Contacts
+- Customer, this is a mandatory field. The customer for the logged user is selected by default.
+- Project Type, this field is used to filter the projects by type. In case there is a **Maintenance Contract** project available for the logged user it will be selected by default.
+- Project, this is a mandatory field. In case there is a **Maintenance Contract** project available with status **In Progress** it will be selected by default.
+- Additional Contacts, this field is optional. Is possible to add an email per line. The confirmation email will have the specified contacts in cc.
 
 ### Ticket Details Tab
 
 On this tab is possible to specify the following:
 
-- Title
-- Description
-- Impact
-- Affecting Production
-- Related systems. Allows to select cloud connected systems and manual input.
-- Log Collection:
-  - Automatic (via Cloud)
-  - Manual (will require to upload a Log Collector Package)
+- Title, this is a mandatory field. Please specify the title of the ticket.
+- Description, this is a mandatory field. Please specify a detailed description of the ticket.
+- Impact, this is a mandatory field. Please select the impact from the list. In case **Other** is selected as impact and additional required field will show to specify the impact details.
+- Affecting Production, this is a mandatory field. Please specify if the ticket is related to a production system.
+- Related systems. Allows to specify which systems are related with the ticket. Is possible to select cloud connected systems or to manually specify them.
+- Log Collection.
+  - Automatic (via Cloud). Requires the selection of at least one cloud system.
+  - Manual (will require to upload a [Log Collector Package](xref:Collecting_data_to_report_an_issue_to_TechSupport)). Requires the selection of at least one system.
   - Non (Not Recommended)
 
 ### Attachments Tab
