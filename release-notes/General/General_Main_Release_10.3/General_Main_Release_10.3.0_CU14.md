@@ -79,7 +79,7 @@ From now on, if an error occurs when the function manager was not able to read t
 
 #### Problem with SLProtocol due to incorrect redundant connection [ID_39114]
 
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.4 [CU0] -->
 
 The redundant polling feature allows SLProtocol to select another connection when the main connection goes into a timeout.
 
