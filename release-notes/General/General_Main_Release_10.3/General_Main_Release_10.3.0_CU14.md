@@ -90,3 +90,9 @@ In some cases, when SLProtocol selected a connection with a type different from 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When you opened a visual overview in a web app, in some cases, a `Connection could not be fully established` error would appear.
+
+#### No emails could be sent as long as SLASPConnection was not fully initialized [ID_39137]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
