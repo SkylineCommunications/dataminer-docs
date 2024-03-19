@@ -133,14 +133,6 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
 
-#### Problem with user accounts [ID_38182]
-
-<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
-
-In some cases, user accounts could become corrupted.
-
-Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
-
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
