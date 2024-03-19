@@ -43,6 +43,12 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 
 A number of security enhancements have been made.
 
+#### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

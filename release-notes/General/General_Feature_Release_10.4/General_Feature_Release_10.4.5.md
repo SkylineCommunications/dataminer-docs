@@ -119,6 +119,12 @@ A number of security enhancements have been made.
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
