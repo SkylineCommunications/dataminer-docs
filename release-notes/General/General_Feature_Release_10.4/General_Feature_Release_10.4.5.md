@@ -131,6 +131,12 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### STaaS: Text of storage service health status alarm has been made clearer [ID_39154]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Whenever the health of the storage service changes, an alarm mentioning the current health status is generated. The text of this health status alarm has now been made clearer.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]

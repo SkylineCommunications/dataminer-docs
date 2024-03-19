@@ -373,6 +373,14 @@ Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically re
 
 When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
 
+#### Problem with SLProtocol due to incorrect redundant connection [ID_39114]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+The redundant polling feature allows SLProtocol to select another connection when the main connection goes into a timeout.
+
+In some cases, when SLProtocol selected a connection with a type different from that of the main connection, an error could occur. From now on, when SLProtocol has to select another connection when the main connection goes into a timeout, it will only take into account connections with a type equal to that of the main connection.
+
 #### SLDataMiner could stop working when a MIB file was being generated for a protocol that contained parameters with discrete values [ID_39120]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
