@@ -76,15 +76,31 @@ For example:
 
 ### alarm=
 
-Use this option to immediately display a specific alarm card.
+Use this option to immediately display a specific alarm card. Different formats are supported, depending on the DataLiner version:
 
-Specify the DMA ID and root alarm ID.
+- DMA ID / root alarm ID
 
-Example:
+  Example:
 
-```txt
-http://MyDMA1/DataMinerCube/DataMinerCube.xbap?alarm=48/6713
-```
+  ```txt
+  alarm=48/6713
+  ```
+
+- DMA ID / element ID / root alarm ID (supported from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards).<!-- RN 39126 -->
+
+  Example:
+
+  ```txt
+  alarm=48/123/6713
+  ```
+
+- Root alarm ID only
+
+  Example:
+
+  ```txt
+  alarm=6713
+  ```
 
 > [!NOTE]
 > To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the top-right corner of the properties window.
