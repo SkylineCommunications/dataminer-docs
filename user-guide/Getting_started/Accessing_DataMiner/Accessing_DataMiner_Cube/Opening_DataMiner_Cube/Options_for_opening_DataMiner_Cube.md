@@ -76,7 +76,7 @@ For example:
 
 ### alarm=
 
-Use this option to immediately display a specific alarm card. Different formats are supported, depending on the DataLiner version:
+Use this option to immediately display a specific alarm card. Different formats are supported, depending on the DataMiner version:
 
 - DMA ID / root alarm ID
 
