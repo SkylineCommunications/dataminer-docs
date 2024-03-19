@@ -28,6 +28,8 @@ view=View2 element=365 app=help
 Examples for the browser application:
 
 ```txt
+http://MyDMA1/DataminerCube/dataminercube.xbap?element=MyElement&view=MyView
+http://MyDMA1/Dataminercube/dataminercube.xbap?app=Protocols%20%26%20Templates
 DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
 DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 ```
@@ -40,7 +42,7 @@ If you use the *=element*, *=service* or *=view* option to open an element, serv
 
 To do so, add the following:
 
-- A colon, followed by “*data*” or “*d*” for a data page or “*visual*” or “*v*” for a visual page.
+- A colon, followed by "*data*" or "*d*" for a data page or "*visual*" or "*v*" for a visual page.
 
   If the page is not grouped under the data or visual pages, only add a colon.
 
@@ -53,25 +55,25 @@ For example:
 - To open the subpage “ping” of the data page “performance” of the element with ID 48/70:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70:data:performance/ping
+  element=48/70:data:performance/ping
   ```
 
 - To open the page “help” of the element with ID 48/70:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70::help
+  element=48/70::help
   ```
 
 - To open the data page “Australia service” of the service with ID 48/105:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?service=48/105:d:Australia Service
+  service=48/105:d:Australia Service
   ```
 
 - To open the page “aggregation” of the view “SLC”:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?view=SLC::aggregation
+  view=SLC::aggregation
   ```
 
 ### alarm=
@@ -114,11 +116,8 @@ If you want to open several modules, separate the module names by means of pipe 
 Examples:
 
 ```txt
-http://MyDMA1/Dataminercube/dataminercube.xbap?app=about
-http://MyDMA1/Dataminercube/dataminercube.xbap?app=Protocols%20%26%20Templates|Asset%20Manager
-DataminerCube.exe app=about
-DataminerCube.exe app="Reports & Dashboards"
-DataminerCube.exe app=settings"|"logging
+app=about
+app="Protocols & Templates"|"Asset Manager"
 ```
 
 ### autoslide=
@@ -128,8 +127,7 @@ Use this option if you want DataMiner Cube to automatically move to the next wor
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?autoslide=30
-DataminerCube.exe autoslide=15
+autoslide=30
 ```
 
 To disable the autoslide mode, reconnect without the autoslide option.
@@ -161,7 +159,7 @@ The buffer should be specified in one of the following three ways:
 Example:
 
 ```txt
-http://MyDMA1/Dataminercube/dataminercube.xbap?element=34/105&buffer=3:trace1
+element=34/105&buffer=3:trace1
 ```
 
 ### chain=
@@ -173,12 +171,12 @@ Example:
 - To open the element with ID 169/2 and open the chain with name “Physical”:
 
     ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?ELEMENT=169%2F2&chain=physical
+    element=169/2 chain=physical
     ```
 
 > [!NOTE]
 >
-> - It is advisable to also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
+> - We recommend that you also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
 > - The chain name is not case-sensitive.
 
 ### debug=true
