@@ -161,7 +161,7 @@ Example:
 
 If you specify this option in a two-port serial, SNMP or HTTP protocol, the element will automatically switch to the second port when it goes in timeout.
 
-*Feature introduced in DataMiner 8.0.7 (RN 7076).*
+Before DataMiner version 10.3 CU14, 10.4 CU3 and 10.4.4 (RN 39114), the second connection was required to be of the same type as the main connection. However, starting from these versions, DataMiner will automatically choose the second connection with the same type as the main connection in the event of a timeout.
 
 ### smartIpHeader
 
