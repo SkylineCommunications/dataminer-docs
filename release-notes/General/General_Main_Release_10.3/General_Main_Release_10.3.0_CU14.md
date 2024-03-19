@@ -85,8 +85,8 @@ The redundant polling feature allows SLProtocol to select another connection whe
 
 In some cases, when SLProtocol selected a connection with a type different from that of the main connection, an error could occur. From now on, when SLProtocol has to select another connection when the main connection goes into a timeout, it will only take into account connections with a type equal to that of the main connection.
 
-#### Problem with SLHelper when mobile visual overviews had to be sent to multiple Cube clients [ID_39133]
+#### Visual Overview: 'Connection could not be fully established' error when viewing visual overviews in a web app [ID_39133]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-In some cases, an error could occur in SLHelper when it had to send mobile visual overviews to multiple Cube clients.
+When you opened a visual overview in a web app, in some cases, a `Connection could not be fully established` error would appear.
