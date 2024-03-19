@@ -170,3 +170,11 @@ From now on, if an error occurs when the function manager was not able to read t
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.
+
+#### Problem with SLProtocol due to incorrect redundant connection [ID_39114]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The redundant polling feature allows SLProtocol to select another connection when the main connection goes into a timeout.
+
+In some cases, when SLProtocol selected a connection with a type different from that of the main connection, an error could occur. From now on, when SLProtocol has to select another connection when the main connection goes into a timeout, it will only take into account connections with a type equal to that of the main connection.
