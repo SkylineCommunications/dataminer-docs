@@ -72,6 +72,18 @@ Up to now, when you opened a web application by clicking an icon in the *Apps* p
 
 When you add or remove an agent on a DataMiner System that has the *NATSForceManualConfig* option enabled, a warning message will now appear, saying that the NATS configuration will have to be updated.
 
+#### URL argument 'alarm=' now also supports values in DmaId/ElementId/RootAlarmId format [ID_39126]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When you open DataMiner Cube with the URL argument *alarm=* to immediately display a specific alarm card, it is now possible to specify the alarm in *DmaId/ElementId/RootAlarmId* format.
+
+Example:
+
+```txt
+alarm=48/123/6713
+```
+
 ### Fixes
 
 #### Resources app: Resource would incorrectly be marked as modified when capability values were set to NaN [ID_38699]
