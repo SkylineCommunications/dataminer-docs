@@ -33,7 +33,7 @@ New default values have been added for the upstream and downstream SNR threshold
   - QAM64: 15.0 dB
   - QAM256: 27.0 dB
 
-When a Skyline EPM Platform element is first initialized, it will now set default values for the Upstream QAM Channel Threshold and Downstream QAM Channel Threshold. In case the element already has values in the tables, you can add the default values with a button. This button is located on the Thresholds Settings page next to the *Execute* button.
+When the Skyline EPM Platform element is first initialized, it will now set default values for the Upstream QAM Channel Threshold and Downstream QAM Channel Threshold. In case the element already has values in the tables, you can add the default values with a button. This button is located on the Thresholds Settings page next to the *Execute* button.
 
 #### New time picker for QAM DS and US Channels dashboards [ID_39074]
 
@@ -57,7 +57,7 @@ If no alarm is present, the CPE household icons are no longer displayed in green
 
 #### DS Linecard Percentage CM Ping Uncorrectable KPI showed incorrect value [ID_38888]
 
-It could occur that the *DS Linecard Percentage CM Ping Uncorrectable* KPI incorrectly showed 0% for all entities, because it used an incorrect parameter to make the calculation. The correct parameter (*Total Number of CM*) will now be used instead.
+It could occur that the *DS Linecard Percentage CM Ping Uncorrectable* KPI incorrectly showed 0% for all entities, because it used an incorrect parameter (*Number Ping OK*, with PID 1243013) to make the calculation. The correct parameter (*Total Number of CM*) will now be used instead.
 
 #### System.IO.IOException when copying or writing a file [ID_38889]
 
