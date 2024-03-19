@@ -38,7 +38,7 @@ For example:
 > - Once the [Data Aggregator setup](xref:Data_Aggregator_install_setup) is complete, if you browse to the configured URL and port, a web UI is displayed where you can start the queries manually, cancel ongoing queries, and check information such as the time it takes to finish a query, the total number of rows, and the number of rows received per second.
 > - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
 > - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
-> - To connect to the debug page, add the path `/debug` to the URL. For example, if the URL was defined as `http://127.0.0.1:5000`, then to access to the debug page use the following URL: `http://127.0.0.1:5000/debug`.
+> - To go to the debug page, add `/debug` to the URL. For example, if the URL was defined as `http://127.0.0.1:5000`, you can access the debug page at `http://127.0.0.1:5000/debug`.
 
 ## Multi-DMS connection
 
