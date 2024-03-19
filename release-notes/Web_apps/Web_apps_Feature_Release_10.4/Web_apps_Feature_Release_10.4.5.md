@@ -184,6 +184,12 @@ When you had set the default range of a *Timeline* component or a *Time range* c
 
 Also, in some cases, a *Timeline* component or a *Time range* component would not get visually updated when the default range was set to a different value.
 
+#### Dashboards app: Tables in PDF files would incorrectly get added a scroll bar [ID_39059]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Tables in PDF files would incorrectly get added a scroll bar.
+
 #### Dashboards app & Low-Code Apps: Protocol versions of mediation protocols would incorrectly not be production versions [ID_39094]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
