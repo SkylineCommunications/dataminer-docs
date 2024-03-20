@@ -6,7 +6,7 @@ uid: User_operations_support
 
 With the User Operations Support application, you can both keep track of existing tickets and create new ones.
 
-The application is available at <https://operations.skyline.be/>
+The application is available at <https://operations.skyline.be/>. You can log in in the [same way as for dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 ## Ticket Overview page
 
@@ -28,25 +28,25 @@ The *Report Ticket* page allows you to report a new ticket:
 
 1. On the *Registration* tab, fill in the following information:
 
-   - *Customer*, this is a mandatory field. The customer for the logged user is selected by default.
+   - *Customer*: Mandatory field. The customer matching the logged-in user is selected by default.
 
-   - *Project Type*, this field is used to filter the projects by type. In case there is a **Maintenance Contract** project available for the logged user it will be selected by default.
+   - *Project Type*: This field is used to filter the projects by type. In case there is a maintenance contract project available for the logged-in user, it will be selected by default.
 
-   - *Project*, this is a mandatory field. In case there is a **Maintenance Contract** project available with status **In Progress** it will be selected by default.
+   - *Project*: Mandatory field. In case there is a maintenance contract project available with status *In Progress*, it will be selected by default.
 
-   - *Additional Contacts*, this field is optional. Is possible to add an email per line. The confirmation email will have the specified contacts in cc.
+   - *Additional Contacts*: Optional. In this field, you can add an email per line. When the ticket is created, the confirmation email will have the specified contacts in CC.
 
 1. When all the necessary information is filled in, click *Next* in the lower right corner.
 
 1. On the *Ticket Details* tab, fill in the following information:
 
-   - *Title*, this is a mandatory field. Please specify the title of the ticket.
+   - *Title*: Mandatory field. Specify a title for the ticket.
 
-   - *Description*, this is a mandatory field. Please specify a detailed description of the ticket.
+   - *Description*: Mandatory field. Add a detailed description of the issue.
 
-   - *Impact*, this is a mandatory field. Please select the impact from the list. In case **Other** is selected as impact and additional required field will show to specify the impact details.
+   - *Impact*: Mandatory field. Select the impact in the dropdown list. If you select *Other*, you will need to specify the impact details in an additional field.
 
-   - *This issue is affecting a Production System*: Yes/No
+   - *This issue is affecting a Production System*: Select *Yes* or *No*.
 
    - *Systems*:
 
@@ -58,9 +58,9 @@ The *Report Ticket* page allows you to report a new ticket:
 
      - If you have accidentally added a system that should not be included for the ticket, you can remove it using the garbage can icon on the right.
 
-   - *Log Collection*: Select how logs will be collected for the ticket.
+   - *Log Collection*: Select how logs will be collected for the ticket:
 
-     - *Automatic (via Cloud)*: Select this option if the DataMiner System is connected to dataminer.services. Requires the selection of at least one cloud system.
+     - *Automatic (via Cloud)*: Select this option if logs can be collected via dataminer.services. Only select this option if at least one of the systems specified under *Systems* is connected to dataminer.services.
 
      - *Manual*: If you select this option, you will need to upload a [Log Collector package](xref:Collecting_data_to_report_an_issue_to_TechSupport). Requires the selection of at least one system.
 
