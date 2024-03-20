@@ -177,6 +177,14 @@ From now on, if an error occurs when the function manager was not able to read t
 
 When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.
 
+#### Protocols: Compliancies element would not get parsed correctly when it contained comments [ID_39085]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, the `<Compliancies>` element of a *protocol.xml* file would not get parsed correctly when it contains HTML comments.
+
+As a result, DataMiner would fail to open the protocol and create elements with it.
+
 #### Visual Overview: 'Connection could not be fully established' error when viewing visual overviews in a web app [ID_39133]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
