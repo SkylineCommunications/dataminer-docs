@@ -1,8 +1,8 @@
 ---
-uid: Support_Responsibilities
+uid: Support_Level_Roles
 ---
 
-# Support responsibilities
+# Support level roles
 
 ## First Line Support
 
@@ -26,7 +26,7 @@ Second Line Support consists of **specialized, fully trained DataMiner experts**
 
 ## Third Line Support
 
-Third Line Support is **always provided by Skyline**. They are senior system experts with several years of system experience and a proven track record capable of performing detailed system-wide diagnostics on all relevant levels (application, OS, network infrastructure, etc.).
+Third Line Support is provided by **senior system experts** with several years of system experience and a proven track record capable of performing detailed system-wide diagnostics on all relevant levels (application, OS, network infrastructure, etc.).
 
 Their responsibilities include:
 
