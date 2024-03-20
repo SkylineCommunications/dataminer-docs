@@ -57,15 +57,15 @@ For more information on these interfaces, see:
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI` folder:
+GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\Metrics` folder:
 
-- Individual GQI requests:
+- Duration of the individual GQI requests:
 
   - Request type (e.g. GenIfOpenSessionRequest)
   - User ID (e.g. SKYLINE2\FirstName)
   - Duration (in ms)
 
-- First session pages (when `SessionOptions.OptimizeType` is "NextPage"):
+- Duration of the first page of a session (when `SessionOptions.OptimizeType` is "NextPage"):
 
   - [Query name](#query-name)
   - User ID
@@ -75,7 +75,7 @@ GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI`
   > [!NOTE]
   > For queries that retrieve data page by page on demand.
 
-- All session pages (when `SessionOptions.OptimizeType` is "AllData"):
+- Total duration of all the pages of a session (when `SessionOptions.OptimizeType` is "AllData"):
 
   - [Query name](#query-name)
   - User ID
