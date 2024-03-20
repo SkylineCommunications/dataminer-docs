@@ -8,8 +8,6 @@ The Automation workflow should run on repositories containing an [Automation scr
 
 It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
 
-At present, this workflow will not work on solutions containing SDK-style projects. It instead expects the legacy project style, which DIS provides automatically.
-
 This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
 
 > [!NOTE]
@@ -86,6 +84,9 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 ### Analyze
 
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
+
+> [!NOTE]
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
 
 ### Quality gate
 
