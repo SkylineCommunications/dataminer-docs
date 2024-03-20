@@ -203,7 +203,7 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimiz
     private IGQISortOperator Redirect(IGQISortOperator sortOperator)
     {
         // Check if we need to do some redirecting
-        if (!sortOperator.Fields.Any(sort => sort.Column.Equals(_fromColumn)))
+        if (!sortOperator.Fields.Any(field => field.Column.Equals(_fromColumn)))
             return sortOperator; // No redirect necessary
     
         // Construct the redirected sort fields based on the original sort fields
