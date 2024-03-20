@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Param next attribute not working correctly](xref:KI_Param_next_not_working) | From DataMiner 10.4.1 onwards | | March 20, 2024 |
 | [SLDataMiner crashes because of subgroup query failure](xref:KI_SLDataMiner_crashes_because_of_subgroup_query_failure) | From DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 onwards | | March 11, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
 | [IDP Discovery no longer working after upgrade](xref:KI_IDP_Discovery_not_working) | From DataMiner 10.4.0/10.4.3 onwards | | February 26, 2024 |
