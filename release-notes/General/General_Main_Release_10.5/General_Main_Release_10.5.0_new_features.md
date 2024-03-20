@@ -92,6 +92,26 @@ The following requests now have an optional `QueryName` property:
 > - When the GQI log level is set to "Debug", the full query will be logged instead of the query name.
 > - When an exception is thrown during a request, and the GQI log level is set to at least "Error" (which is the case by default), the query (if any) will also be logged alongside the error.
 
+#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+It is now possible to define a custom sort order for GQI columns by implementing a custom operator that "redirects" the sort operation on one column to another.
+
+New features added to allow this include:
+
+- Comparing `IGQIColumn` objects
+
+- Inspecting a sort operator appended to a custom operator via the `IGQISortOperator` interface
+
+  - List of sort fields (of type `IGQISortField`)
+  - Each sort field exposes a sort column (`IGQIColumn`) and a sort direction (`GQISortDirection`)
+
+- An `IGQIFactory` property is now exposed on the `OnInitInputArgs`, which provides factory functions to generate
+
+  - a new `IGQISortField`
+  - a new `IGQISortOperator`
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
