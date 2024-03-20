@@ -41,6 +41,10 @@ In the *Node Segment* and *Service Groups* folders in the Dashboards app, a new 
 
 To use this feature, click the timestamp at the top of the dashboard. This will open a window where you can select the desired start and end times. When you do so, the trend graph will automatically update to display the information for the selected time period. To close the pop-up window, click outside of the window.
 
+#### Harmonic CableOs CCAP support added [ID_39188]
+
+​The I-DOCSIS Solution can now poll and show information from Harmonic CableOs CCAP devices. Using the *AddNewCcapCmPair* script, you can create a collector pair for these devices. After a polling cycle, these will then be shown in the EPM topology.
+
 ## Changes
 
 ### Enhancements
