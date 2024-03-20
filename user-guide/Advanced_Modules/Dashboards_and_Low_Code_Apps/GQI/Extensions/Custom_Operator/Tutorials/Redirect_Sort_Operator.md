@@ -57,7 +57,7 @@ In terms of our IP address example, we want to change the sort operation on our 
 
 ## Step 1: Provide a column with the ranking
 
-Depending on the specific use case, the column might readily available in the data source. However, in our example we'll implement a new custom operator that will add a new column and fill it with a rank based on the IP address.
+Depending on the specific use case, the column might be readily available in the data source. However, in our example we'll implement a new custom operator that will add a new column and fill it with a rank based on the IP address.
 
 :::code language="csharp" source="./SLC-GQIO-IPAddressSortRank.cs":::
 
