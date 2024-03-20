@@ -119,6 +119,14 @@ A number of security enhancements have been made.
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Protocols: Newly installed connector will automatically be promoted to production version [ID_38987]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Up to now, after you had installed a connector for the first time, you typically had to promote it to "production version" afterwards. From now on, when you install a connector for the first time, DataMiner will automatically promote it to "production version".
+
+For example, when I install *MyConnector 1.0.0.1* for the first time, it will automatically be promoted to "production version", but when I later deploy *MyConnector 1.0.0.2*, version 1.0.0.1 will remain the production version.
+
 #### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
