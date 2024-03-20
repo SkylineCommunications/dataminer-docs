@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.5
 
 ### Enhancements
 
+#### Visual Overview: Enhanced performance when processing property updates [ID_38458]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when processing property updates.
+
 #### Alarm Console: Newly opened suggestion events tab will now include 'Service impact', 'Services' and 'RCA level' columns by default [ID_38732]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
