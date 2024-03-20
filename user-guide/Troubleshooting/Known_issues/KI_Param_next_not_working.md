@@ -6,7 +6,7 @@ uid: KI_Param_next_not_working
 
 ## Affected versions
 
-- Feature release versions from DataMiner 10.4.1 onwards.
+Feature release versions from DataMiner 10.4.1 onwards.
 
 > [!NOTE]
 > This issue has been discovered in DataMiner 10.4.1. However, the exact DataMiner versions where it can occur are still being investigated.
