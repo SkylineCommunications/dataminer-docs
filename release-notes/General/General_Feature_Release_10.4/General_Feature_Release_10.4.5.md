@@ -189,6 +189,12 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### SLAnalytics will no longer go into timeout for an hour when it fails to insert or update a small amount of data [ID_39109]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When SLAnalytics fails to insert or update data in the database, by default, it will go into timeout for an hour. From now on, it will only go into timeout for an hour when it fails to insert or update a large data set. When it fails to insert or update a small amount of data, it will now go into timeout for a shorter period of time.
+
 #### STaaS: Text of storage service health status alarm has been made clearer [ID_39154]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
