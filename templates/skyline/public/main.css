@@ -158,7 +158,7 @@ h4 {
   line-height: 1.2;
 }
 
-article h4{
+article h4 {
   font-weight: 600;
 }	
 
@@ -470,7 +470,12 @@ code {
 	color: #eef2f5;
 }
 
-li {
+article ul, article ol {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+article ul li, article ol li {
   margin-top: 1px;
   margin-bottom: 1px;
 }
