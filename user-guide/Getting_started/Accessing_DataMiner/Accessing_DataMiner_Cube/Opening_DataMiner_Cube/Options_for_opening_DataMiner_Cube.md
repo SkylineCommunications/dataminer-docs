@@ -10,7 +10,7 @@ To combine different options, use a **space as separator** in the desktop app.
 
 > [!NOTE]
 >
-> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&".
+> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&". Note that the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 > - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use the **cube:// protocol** to connect to a specific host. For example:
 >
 >   - cube://mydma?element=MyElement
@@ -52,25 +52,25 @@ To do so, add the following:
 
 For example:
 
-- To open the subpage “ping” of the data page “performance” of the element with ID 48/70:
+- To open the subpage "ping" of the data page "performance" of the element with ID 48/70:
 
   ```txt
   element=48/70:data:performance/ping
   ```
 
-- To open the page “help” of the element with ID 48/70:
+- To open the page "help" of the element with ID 48/70:
 
   ```txt
   element=48/70::help
   ```
 
-- To open the data page “Australia service” of the service with ID 48/105:
+- To open the data page "Australia service" of the service with ID 48/105:
 
   ```txt
   service=48/105:d:Australia Service
   ```
 
-- To open the page “aggregation” of the view “SLC”:
+- To open the page "aggregation" of the view "SLC":
 
   ```txt
   view=SLC::aggregation
@@ -134,7 +134,7 @@ To disable the autoslide mode, reconnect without the autoslide option.
 
 ### buffer=
 
-Use this option along with the “*element=*” option to immediately show the buffer of a Spectrum Analyzer element.
+Use this option along with the "*element=*" option to immediately show the buffer of a Spectrum Analyzer element.
 
 The buffer should be specified in one of the following three ways:
 
@@ -164,11 +164,11 @@ element=34/105&buffer=3:trace1
 
 ### chain=
 
-Use this option to open a CPE Manager element to a particular chain.
+Use this option to open an EPM Manager element to a particular chain.
 
 Example:
 
-- To open the element with ID 169/2 and open the chain with name “Physical”:
+- To open the element with ID 169/2 and open the chain with name "Physical":
 
     ```txt
     element=169/2 chain=physical
@@ -176,7 +176,7 @@ Example:
 
 > [!NOTE]
 >
-> - We recommend that you also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
+> - We recommend that you also pass the element ID. If no element ID is specified, the first element of type "element manager" will be used.
 > - The chain name is not case-sensitive.
 
 ### debug=true
@@ -187,33 +187,33 @@ For example, the GUID of service definitions is only shown in the Services app i
 
 ### dte_filtername=filtervalue
 
-Use this option to open a CPE Manager element with a particular filter.
+Use this option to open an EPM Manager element with a particular filter.
 
-- “filtername” is the name of the filter without spaces. The name is not case sensitive.
+- "filtername" is the name of the filter without spaces. The name is not case sensitive.
 
-- “filtervalue” is the value of the filter.
+- "filtervalue" is the value of the filter.
 
 Example:
 
-- To open the element with ID 169/2, open the first chain with a “Node” filter, and load Node “DBL900”:
+- To open the element with ID 169/2, open the first chain with a "Node" filter, and load node "DBL900":
 
     ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?ELEMENT=169%2F2&dte_Node=DLB900
+    element=169/2 dte_Node=DLB900
     ```
 
-- To open the element with ID 169/2, open the first chain with a “Node” filter and an “MTA” filter, and if there is only one MTA that matches the filter then load the MTA that contains the string “ABCD987”:
+- To open the element with ID 169/2, open the first chain with a "Node" filter and an "MTA" filter, and if there is only one MTA that matches the filter then load the MTA that contains the string "ABCD987":
 
     ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?ELEMENT=169%2F2&dte_Node=DLB900&dte_MTA=*ABCD987*
+    element=169/2 dte_Node=DLB900 dte_MTA=*ABCD987*
     ```
 
 > [!NOTE]
 >
-> - We recommend that you also pass the element ID and chain. If no element ID is specified, the first element of type “element manager” will be used. If no chain is specified, the first chain containing the specified filter will be used.
+> - We recommend that you also pass the element ID and chain. If no element ID is specified, the first element of type "element manager" will be used. If no chain is specified, the first chain containing the specified filter will be used.
 > - When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
 > - If only one row matches the filter, an object will be loaded.
-> - If the filter value is a key prefix, add an asterisk (“\*”) to the filter value.
-> - URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
+> - If the filter value is a key prefix, add an asterisk ("\*") to the filter value.
+> - If you want to use this argument for the browser app, the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 
 > [!TIP]
 > See also: [Experience and Performance Management](xref:EPM)
@@ -222,8 +222,8 @@ Example:
 
 Use this option to specify an element to be opened in a card right after startup. You can specify the element by:
 
-- ElementID,
-- DmaID/ElementID, or
+- Element ID,
+- DMA ID/Element ID, or
 - Element name
 
 If you want to open several elements, separate them by means of pipe characters.
@@ -231,11 +231,10 @@ If you want to open several elements, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&element=MyElement
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=MyElement|MyOtherElement
-DataminerCube.exe host=MyDMA2 element=154
-DataminerCube.exe host=MyDMA2 element=MyElement"|"MyOtherElement
-DataminerCube.exe host=MyDMA2 element="My element|My other element"
+element=154
+element=231/154
+element=MyElement|MyOtherElement
+element="My element|My other element"
 ```
 
 ### host=
@@ -245,39 +244,8 @@ Use this option to specify the IP address or hostname of the DMA to which you wa
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2
-DataminerCube.exe host=MyDMA2
+host=MyDMA2
 ```
-
-### lat=
-
-Use this option along with the “long” URL parameter when a link to a DataMiner map is specified, in order to override the initial center latitude and longitude defined in the map configuration.
-
-For example:
-
-```txt
-http://localhost/maps/map.aspx?config=ExampleConfig&lat=42&long=12.30
-```
-
-Available from DataMiner 9.5.1 onwards.
-
-> [!TIP]
-> See also: [long=](#long)
-
-### long=
-
-Use this option along with the “lat” URL parameter when a link to a DataMiner map is specified, in order to override the initial center latitude and longitude defined in the map configuration.
-
-For example:
-
-```txt
-http://localhost/maps/map.aspx?config=ExampleConfig&lat=42&long=12.30
-```
-
-Available from DataMiner 9.5.1 onwards.
-
-> [!TIP]
-> See also: [lat=](#lat)
 
 ### measpt=
 
