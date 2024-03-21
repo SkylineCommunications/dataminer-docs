@@ -93,9 +93,20 @@ When selecting the row in the table, you should see the following result:
 
 ## Step 4: Run the discovery
 
+1. Go to *Inventory* > *Discovered*.
+1. At the top you'll find the *Actions* section.
+1. Select the `Local` scan range in the dropdown.
+1. Click on *Discover*.
 
+The discovery will now run over the scan range and try to find devices that match with the CI Type that is configured in the scan range.
+
+After a couple of seconds, you see a row appear in the *Discovered Elements* table at the bottom.
+
+![Inventory > Discovered - Row in table](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Discovery_0.png)
 
 ## Step 5: Provision the discovered element(s)
+
+Click on row in discovered elements table
 
 Oh, popup with missing protocol version
 Deploy from catalog if missing on system
