@@ -18,6 +18,9 @@ When you authenticate, make sure to pass along the name and version of the clien
 > [!NOTE]
 > If the connection is not used for 5 minutes, the session will end. You will then need to connect again to request a new connection ID.
 
+> [!TIP]
+> The client application should invoke the Connect method once, retaining the same connection-ID for all subsequent web method calls. Should the connection-ID become invalid, the WebAPIs will raise an error ("No connection available"), which the client application can identify and subsequently reconnect, allowing for the API call to be retried. This approach eliminates the necessity of initiating a Connect operation prior to each call to the WebAPIs.
+
 ## Interfaces and WSDL files
 
 The DataMiner Web Services (v1) are accessible via the following interfaces.
