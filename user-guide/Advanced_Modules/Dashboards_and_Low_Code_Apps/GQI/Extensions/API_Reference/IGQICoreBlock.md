@@ -38,4 +38,4 @@ Available from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37806 -->
 
 #### Parameters
 
-- **out** [IGQISortOperator](xref:GQI_IGQISortOperator) `sortOperator`: A reference to this block if it represents a sort operation, otherwise null.
+- **out** [IGQISortOperator](xref:GQI_IGQISortOperator) `sortOperator`: A reference to this block if it represents a sort operation; otherwise null.

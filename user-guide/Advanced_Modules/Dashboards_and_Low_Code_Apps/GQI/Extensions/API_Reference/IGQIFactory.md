@@ -9,8 +9,7 @@ uid: GQI_IGQIFactory
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-This interface provides various methods to create objects that can be used to communicate with the core GQI framework.
-An implementation of this interface can be obtained via the [Factory property](xref:GQI_OnInitInputArgs#properties) on the OnInitInputArgs passed in the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) life cycle method.
+This interface provides various methods to create objects that can be used to communicate with the core GQI framework. An implementation of this interface can be obtained via the [Factory property](xref:GQI_OnInitInputArgs#properties) on the *OnInitInputArgs* passed in the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) life cycle method.
 
 Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39136 -->
 
@@ -18,7 +17,7 @@ Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39136 -->
 
 ### IGQISortField CreateSortField(IGQIColumn, GQISortDirection = GQISortDirection.Ascending)
 
-Creates an [IGQISortField](xref:GQI_IGQISortField) that defines a column to sort on along with a sort direction. One or more of these sort fields can be used to [construct an IGQISortOperator](#igqisortoperator-createsortoperatorparams-igqisortfield).
+Creates an [IGQISortField](xref:GQI_IGQISortField) that defines a column to sort on, along with a sort direction. One or more of these sort fields can be used to [construct an IGQISortOperator](#igqisortoperator-createsortoperatorparams-igqisortfield).
 
 #### Parameters
 
@@ -39,4 +38,4 @@ Creates an [IGQISortOperator](xref:GQI_IGQISortOperator) that defines a sort ope
 
 #### Returns
 
-An implementation of [IGQISortOperator](xref:GQI_IGQISortOperator) that represents a sort operation on the given sort fields; or null when there are no sort fields.
+An implementation of [IGQISortOperator](xref:GQI_IGQISortOperator) that represents a sort operation on the given sort fields, or null when there are no sort fields.
