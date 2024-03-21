@@ -20,7 +20,7 @@ This error is sometimes thrown by a tool made by [Team Security](mailto:squad.cr
 
 As this isn't a consistent error, you can just rebuild the pipeline again. The proper way to do this is by going to the 'old' UI of Jenkins and use the *Build Now* button. The *Rerun* button on 'Ocean Blue' UI of Jenkins is not a full rebuild. Certain parts will be cached which could give unexpected issues when running the pipeline.
 
-![Build Now button in Jenkins](~\develop\images\CICD_Troubleshooting_JenkinsFailures_Rebuild.png)
+![Build Now button in Jenkins](~/develop/images/CICD_Troubleshooting_JenkinsFailures_Rebuild.png)
 
 ## Quality Gate
 
