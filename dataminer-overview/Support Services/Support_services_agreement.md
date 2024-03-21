@@ -8,7 +8,7 @@ uid: Support_services_terms
 
 This document sets out the terms of Skyline's Support Services for its Software (the "**Terms**").
 
-These Terms apply on all orders for Support Services placed at Skyline by the User. The User accepts these Terms when placing Support Services orders at Skyline. Any deviations from these Terms shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
+These Terms apply on all orders for Support Services placed at Skyline by the User.
 
 ## Definitions
 
