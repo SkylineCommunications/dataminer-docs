@@ -32,6 +32,8 @@ Expected duration: XX minutes.
 - [Step 1: Deploy IDP from the Catalog](#step-1-deploy-idp-from-the-catalog)
 - [Step 2: Configure discovery profile](#step-2-configure-discovery-profile)
 - [Step 3: Configure scan range](#step-3-configure-scan-range)
+- [Step 4: Run the discovery](#step-4-run-the-discovery)
+- [Step 5: Provision the discovered element(s)](#step-5-provision-the-discovered-elements)
 
 ## Step 1: Deploy IDP from the Catalog
 
@@ -106,10 +108,47 @@ After a couple of seconds, you see a row appear in the *Discovered Elements* tab
 
 ## Step 5: Provision the discovered element(s)
 
-Click on row in discovered elements table
+1. Select the row in the *Discovered Elements* table.
+1. Click the *Provision* button.
 
-Oh, popup with missing protocol version
-Deploy from catalog if missing on system
-and/or set to production
+Depending on which connectors are already on the system or if they have been set to production or not, different results will be shown.
 
-## Step 6: profit! 
+- [Microsoft Platform connector is not available or is not set as production](#microsoft-platform-connector-is-not-available-or-is-not-set-as-production)
+- [Microsoft Platform connector is available and set as production](#microsoft-platform-connector-is-available-and-set-as-production)
+
+### Microsoft Platform connector is not available or is not set as production
+
+![Provisioning popup - Missing version](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_MissingVersion.png)
+
+#### Microsoft Platform connector is not available
+
+1. Click the *Open Catalog* button.
+
+   - If a popup appears that requires permission to open the link, click *Yes*.
+
+1. On the Catalog page, go to *Versions*
+1. Search for the latest version in the 1.1.3.x range (e.g.: 1.1.3.20)
+1. Deploy that version to your DataMiner system.
+1. Proceed with [Microsoft Plaform connector is not set as production](#microsoft-plaform-connector-is-not-set-as-production)
+
+#### Microsoft Plaform connector is not set as production
+
+1. On DataMiner, go to the [Protocols & Templates](xref:protocols) module.
+1. [Set the version to production](xref:Promoting_a_protocol_version_to_production_version).
+1. Go back to the popup and click *Refresh*.
+
+    - In case the script timed out, you can click the *Provision* button again.
+
+1. Proceed with [Microsoft Platform connector is available and set as production](#microsoft-platform-connector-is-available-and-set-as-production)
+
+### Microsoft Platform connector is available and set as production
+
+![Provisioning popup - Success](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_Success.png)
+
+1. Click *Provision*.
+1. After a few seconds, you'll see a new element being created in the surveyor.
+
+Congratulations, you have provisioned your first element with IDP!
+
+> [!NOTE]
+> To be granted DevOps points, take a screenshot of this successful run and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
