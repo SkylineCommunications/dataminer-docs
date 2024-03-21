@@ -55,6 +55,12 @@ Because of a number of enhancements, overall performance has increased when fill
 
 Because of a number of enhancements, overall performance of SLAnalytics has increased when processing database operations, especially small insert or update operations.
 
+#### SLNet: Enhanced task processing [ID_39131]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
