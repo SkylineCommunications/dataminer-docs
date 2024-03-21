@@ -125,6 +125,8 @@ items:
             topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
           - name: Chat notifications
             topicUid: ChatOps_Tutorials_Chat_Notification
+          - name: Adaptive Card notifications with custom buttons
+            topicUid: ChatOps_Tutorials_Custom_Buttons
   - name: Advanced configuration
     items:
       - name: Customizing the dataminer.services endpoint configuration
