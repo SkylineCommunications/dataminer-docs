@@ -14,7 +14,7 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 1. To configure a header bar for the panel, follow the same steps as to configure this for a page. See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).
 
-1. Click the pencil icon to configure the components on the panel. Configuring these components is done in the same way as configuring components in the Dashboards app. See [Configuring dashboard components](xref:Configuring_dashboard_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
+1. Click the pencil icon to configure the components on the panel. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
 
 > [!NOTE]
 >
@@ -23,4 +23,7 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 > - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Duplicate*. <!-- RN 36097 -->
 
 > [!TIP]
-> See also: [Using panels in DataMiner Low-Code Apps](https://community.dataminer.services/video/using-panels-in-dataminer-low-code-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Tutorials — Creating and showing a panel](xref:Tutorial_Apps_Panel)
+> - [Using panels in DataMiner Low-Code Apps](https://community.dataminer.services/video/using-panels-in-dataminer-low-code-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

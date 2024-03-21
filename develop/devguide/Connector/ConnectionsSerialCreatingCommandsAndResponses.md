@@ -16,7 +16,7 @@ For example, consider the following implementation of a GET request as defined i
 >
 > - For HTTP communication DataMiner supports HTTP connections. The use of this connection is recommended for HTTP communication. The HTTP protocol is used just as an example as HTTP is a widely known protocol.
 > - Command and response parameters are typically not displayed or monitored.
-> - An example protocol "SLC SDF Serial - Creating commands and responses" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Serial - Creating commands and responses" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## Header and trailer
 
@@ -86,7 +86,7 @@ By default, the following behavior is applicable in serial drivers:
 
 For example, consider the following logic being implemented in a protocol. In this case, the command is composed of 2 parameters: one fixed ("Get") and one with dynamic content.
 
-![alt text](../../images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.jpg "Executing a command via a timer")
+![alt text](../../images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png "Executing a command via a timer")
 
 When the timer goes off, group 1 will be added to the group execution queue. Now suppose parameter 2 holds value "A" at this time.
 
@@ -364,8 +364,8 @@ From DataMiner 10.0.3 (RN 24442) onwards, it is possible for the field that spec
 
 ![alt text](../../images/RN24442.svg "Responses with dynamically defined length")
 
- > [!NOTE]
-> An example protocol "SLC SDF Serial Response Matching" is available in the Protocol Development Guide Companion Files.
+> [!NOTE]
+> An example protocol "Skyline Example Serial Response Matching" is available in the [SkylineCommunications/SLC-C-Example_Serial-Response-Matching](https://github.com/SkylineCommunications/SLC-C-Example_Serial-Response-Matching) GitHub repository.
 
 ## Cyclic Redundancy Check (CRC)
 
@@ -500,7 +500,7 @@ The byte or bytes in question need to be stored in a parameter of type "group" w
 </Param>
 ```
 
-Note that the parameter specifies big endian. This way, the bytes in the group parameter are ordered the same way as you would see when capturing the response (See Protocol.Params.Param.Interprete.StartPosition).
+Note that the parameter specifies big endian. This way, the bytes in the group parameter are ordered the same way as you would see when capturing the response (See [Protocol.Params.Param.Interprete.StartPosition](xref:Protocol.Params.Param.Interprete.StartPosition)).
 
 Parameters of type "read bit" can then be defined to read out the value at certain bit positions and will refer to the parameter of type "group" and define which bit(s) must be read out using the StartPosition and NbrOfBits child tags.
 

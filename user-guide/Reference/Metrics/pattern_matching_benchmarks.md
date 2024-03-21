@@ -8,7 +8,7 @@ uid: pattern_matching_benchmarks
 
 - Intel Core i7-8700
 - 6 cores
-- 16GB RAM
+- 16 GB RAM
 - SSD
 - Windows 10
 

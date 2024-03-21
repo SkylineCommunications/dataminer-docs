@@ -6,7 +6,10 @@ uid: NTNotifyTypesOverview
 
 > [!WARNING]
 > The table below gives an overview of all the defined NT Notify types. This is part of the internal communication between DataMiner processes. Notify types for which no additional documentation is provided should therefore not be used.
-> These types are shared between the SLDataMiner and SLProtocol processes, but many of them are only supported by one of the two processes. Their documentation should mention if they are to be used with a NotifyProtocol, a NotifyDataMiner, or both.
+> These types are shared between the SLDataMiner and SLProtocol processes, but many of them are only supported by one of the two processes. Their documentation should mention if they are to be used with a [NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), a [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object))([Queued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object))), or both.
+
+> [!NOTE]
+> The [NotifyType](xref:Skyline.DataMiner.Net.Messages.NotifyType) enum is located in the [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace.
 
 |ID|Name|Description|
 |--- |--- |--- |
@@ -73,14 +76,14 @@ uid: NTNotifyTypesOverview
 |60|<xref:NT_GET_DATA>|Gets the raw data of the specified item.|
 |61|NT_DELETE_PROPERTY||
 |62|<xref:NT_EDIT_PROPERTY>|Edits a property.|
-|63|NT_CONNECTIONS_TO_REMOVE||
+|63|NT_CONNECTIONS_TO_REMOVE|Deprecated. No longer available from DataMiner 10.4.1/10.5.0 onwards.<!-- RN 37595 -->|
 |64|NT_SET_DMSREVISION_TIME||
 |65|NT_REDUNDANT_TRIGGER||
 |66|NT_SET_DERIVED_ELEMENT||
 |67|NT_REDUNDANCY_GROUP|Creates a redundancy group.|
 |68|NT_RENEW_DESCRIPTION_XML||
 |69|<xref:NT_GET_VALUE>|Gets the value of the specified parameter.|
-|70|NT_ADD_DESCRIPTION_FILE||
+|70|NT_ADD_DESCRIPTION_FILE|**Deprecated since DataMiner 10.3.4.**|
 |71|<xref:NT_DELETE_REDUNDANCY_GROUP>|Removes a redundancy group.|
 |72|NT_NOTIFY_SERVICE_STATUS||
 |73|<xref:NT_GET_PARAMETER>|Gets a parameter value.|
@@ -96,15 +99,15 @@ uid: NTNotifyTypesOverview
 |83|NT_ADD_CLIENT||
 |84|NT_SET_PARAMETER_BY_NAME||
 |85|<xref:NT_GET_PARAMETER_BY_NAME>|Gets the value of the parameter with the specified name.|
-|86|NT_SET_PARAMETER_BY_DATA||
-|87|<xref:NT_GET_PARAMETER_BY_DATA>|Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file.|
-|88|<xref:NT_GET_ITEM_DATA>|Gets the value stored for the specified parameter in the ElementData.xml file.|
-|89|<xref:NT_SET_ITEM_DATA>|Sets the values stored for the specified parameters in the ElementData.xml file.|
+|86|NT_SET_PARAMETER_BY_DATA|**Deprecated since DataMiner 10.3.4.**|
+|87|<xref:NT_GET_PARAMETER_BY_DATA>|Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
+|88|<xref:NT_GET_ITEM_DATA>|Gets the value stored for the specified parameter in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
+|89|<xref:NT_SET_ITEM_DATA>|Sets the values stored for the specified parameters in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
 |90|NT_AGENT_FOUND||
 |91|NT_CHANGE_ALARM_COLOR||
 |92|NT_SET_KEY||
 |93|NT_DMA_REMOTE_BACKUP_SETTINGS||
-|94|NT_GET_XML_COOKIE||
+|94|NT_GET_XML_COOKIE|**Deprecated since DataMiner 10.3.4.**|
 |95|NT_GET_DMA_DOCUMENTS||
 |96|NT_GET_TASK_INFO||
 |97|NT_ADD_ELEMENT_TYPES||
@@ -212,7 +215,7 @@ uid: NTNotifyTypesOverview
 |199|NT_GET_DRS_STATE||
 |200|<xref:NT_ADD_NEW_ELEMENT>|Creates an element on the DMA executing this method call.|
 |201|NT_FAILOVER_SYNC||
-|202|NT_RELOAD_ELEMENT||
+|202|NT_RELOAD_ELEMENT|**Deprecated since DataMiner 10.3.4.**|
 |203|<xref:NT_GET_SUBVIEWS>|Gets the names and IDs of all child views of a view.|
 |204|NT_SET_STATIC_IP||
 |205|NT_CHANGE_SECONDARY_IP||

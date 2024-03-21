@@ -2,10 +2,13 @@
 uid: General_Main_Release_10.3.0_CU8
 ---
 
-# General Main Release 10.3.0 CU8 – Preview
+# General Main Release 10.3.0 CU8
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> As of DataMiner version 10.3.0[CU8]/10.3.11, Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service and Amazon OpenSearch Service will no longer be supported. We recommend moving to [Storage as a Service](xref:STaaS). Note that using a self-hosted OpenSearch database remains supported.
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -30,6 +33,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 >
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
+
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 
 #### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
 
@@ -76,6 +85,18 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
 
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When changes are made to one of the following NATS configuration files, from now on, the old version of that file will be saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
+
+- `C:\Skyline DataMiner\SLCloud.xml`
+- `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
+- `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
+
+This will allow you to trace changes made to these configuration files when issues arise.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -98,21 +119,13 @@ In some cases, the NATS connection could fail due to payloads being too large. A
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
-
-Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
-
 #### Problem when restarting DataMiner [ID_37112]
 
-<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
-#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143] [ID_37509]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -123,7 +136,9 @@ Up to now, this setting would incorrectly be interpreted as the total number of 
 From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
 
 > [!NOTE]
-> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+>
+> - A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+> - When you upgrade to this DataMiner version, an upgrade action will automatically divide the number of backups to be kept by the number of DataMiner Agents in the DMS if the number of backups to be kept is set to more than 3 and if there are at least two DMAs in the DMS. Note that this upgrade action will do nothing if, in the backup settings, you specified that all DMAs in the DMS have to store their backups on the same network path.
 
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 
@@ -177,20 +192,39 @@ When an element with multiple SSH connections was restarted, in some cases, it w
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
 
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
+
 #### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when stopping a feature [ID_37329]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
+
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
+
+<!-- RN 37402: MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.

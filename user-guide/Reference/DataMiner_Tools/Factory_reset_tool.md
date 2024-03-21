@@ -12,7 +12,9 @@ From DataMiner 10.0.12 onwards, this tool is available on each DMA server in the
 > There is no automatic backup of the DMA before the factory reset is performed. Make sure you have taken any backups you need before you run this tool.
 
 > [!NOTE]
-> The factory reset will also remove all known users of the DataMiner System, so you will only be able to log in with the built-in Administrator account afterwards.
+>
+> - The factory reset will also **remove all known users** of the DataMiner System, so you will only be able to log in with the built-in Administrator account afterwards.
+> - The factory reset tool will not modify settings related to the connection to dataminer.services. This means that the DMA **will still be connected to dataminer.services** after you have executed the factory reset.
 
 Optionally, you can run the tool with the `–y` input argument in order to skip prompts that ask you for permission to run specific actions.
 
@@ -108,3 +110,6 @@ This tool can be run with the following arguments:
 - `–timeout <ms>`: Timeout (milliseconds). If execution takes longer than the specified timeout, the program is killed.
 
   Default: int.MaxValue (~2 billion)
+
+> [!NOTE]
+> When *SLDataGateway.Tools.Database.exe* is run from the factory reset tool, it runs with the arguments `-k -d -f`.

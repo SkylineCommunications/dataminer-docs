@@ -4,6 +4,9 @@ uid: Creating_a_dashboard_with_a_dynamic_list_layout
 
 # Creating a dashboard with a dynamic list layout
 
+> [!IMPORTANT]
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+
 If you configure a dashboard to have a dynamic list layout, the components added to the *List Item Template* zone will be repeated.
 
 To create a dashboard with dynamic list layout:

@@ -15,14 +15,14 @@ To specify an amplitude correction:
 
 1. On a spectrum analyzer card, go to the *Measurement points* tab and select *Edit measurement point*.
 
-2. In the tree view on the left, select a measurement point.
+1. In the tree view on the left, select a measurement point.
 
-3. Open the *Advanced* section and click *Add amplitude correction*.
+1. Open the *Advanced* section and click *Add amplitude correction*.
 
-4. Fill in the offset in dBm.
+1. Fill in the offset in dBm.
 
-5. Fill in the frequency, and determine its unit of measure. By default, the latter is MHz. However, you can click the underlined *MHz* field to choose a different unit of measure for the frequency: Hz, kHz, or GHz.
+1. Fill in the frequency, and determine its unit of measure. By default, the latter is MHz. However, you can click the underlined *MHz* field to choose a different unit of measure for the frequency: Hz, kHz, or GHz.
 
-6. To specify another amplitude correction, click *Add amplitude correction* again and proceed according to steps 4 and 5.
+1. To specify another amplitude correction, click *Add amplitude correction* again and proceed according to steps 4 and 5.
 
-7. Click *Apply* to apply your changes.
+1. Click *Apply* to apply your changes.

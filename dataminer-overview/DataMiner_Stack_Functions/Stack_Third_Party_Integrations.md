@@ -12,22 +12,19 @@ uid: Stack_Third_Party_Integrations
 
 Integrate various ticketing systems (e.g. Jira, Remedy, etc.) in a reliable manner.
 
-> [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> [!NOTE]
+> Ticketing Gateway is being retired. Ticketing systems can now be fully integrated using [Low-Code/No-Code Apps](xref:Stack_Data_Visualization#no-code-apps).
 
 ## Mobile Gateway
 
 Application-specific network security for mobile application infrastructures.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed info, see [DataMiner Mobile Gateway](xref:MobileGateway)
 
 ## Notifications
 
 Get notified when specific events occur.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed info, see [Configuring user notifications](xref:Configuring_user_notifications)

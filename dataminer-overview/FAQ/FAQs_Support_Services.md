@@ -22,13 +22,21 @@ uid: FAQs_Support_Services
   
 - **What happens when my renewal of my support plan is overdue (Perpetual-Use plan only)?**
 
-  By default, support plan contracts renew automatically every year, unless they have been stopped by the user in advance of the anniversary date of the agreement (for more details, see [Pricing - Term](xref:Support_services_terms#pricing---term).
+  By default, support plan contracts renew automatically every year, unless they have been stopped by the user in advance of the anniversary date of the agreement. For more details, see [Pricing - Term](xref:Support_services_terms#pricing---term).
 
   In case the support plan has not been deactivated, and the user failed to renew the program in time by sending a valid PO, on the day after the anniversary date of the agreement, the service (i.e. Continuity or Evolve plan) will automatically be stopped along with all related services linked to it. As a user, you can still continue to consult content and resources on the Dojo Community portal.
 
-- **What happens if I don't have active support on a perpetual support plan?**
+- **What happens if I do not have active support on a perpetual support plan?**
 
-  - You don't have access to the Skyline IOC technical support team.
+  - You do not have access to the Skyline IOC technical support team.
   - Your platform is exposed to technical & security vulnerabilities.
   - New purchased connectors added to your DataMiner platform are at risk to not be (fully) supported because an outdated DataMiner software version is in use.
   - You have the option to get support for the DataMiner core & connectors (except for upgrades). This is charged as [professional credit services](https://community.dataminer.services/professional-service-credits/).
+
+- **What defines the APA percentage**
+
+  The Annual Price Adjustment Percentage (APA%) will be determined by reference to the official inflation rates of Belgium, as publicly available on websites such as [tradingeconomics.com](https://tradingeconomics.com/belgium/inflation-cpi). The choice of Belgium as the relevant reference for this calculation is predicated on the significant volume of support services and the development of new software from Skyline's headquarters located in Belgium.
+
+  On an annual basis, Skyline's leadership team will assess the official inflation trends by considering the preceding six months' data metrics and forecasting the trend for the subsequent six months. Subsequently, the APA% will be finalized and established as the new baseline for pricing in support renewals, encompassing the forthcoming period.
+
+  The revised APA% rate will be formally communicated and integrated into the support renewal process, commencing three months prior to the anniversary date of the users' ongoing support plan.

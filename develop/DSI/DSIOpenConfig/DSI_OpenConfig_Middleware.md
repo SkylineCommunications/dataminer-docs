@@ -11,7 +11,7 @@ The purpose of the OpenConfig middleware is to make it possible to **easily cons
 
 In order to use the OpenConfig middleware, you will need to have the following setup:
 
-- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.3 or higher.
+- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.0/10.3.3 or higher.
 
 - The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) is installed on at least one of the DataMiner Agents in the cluster.
 
@@ -156,7 +156,7 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. There is no option to disable this. When this is not the desired behavior, you will need to fall back to insecure HTTP.
+> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. If you are running **CommunicationGateway 1.2.2** or higher, you can optionally skip certificate validation for certain whitelisted hosts with the [SkipVerifyHosts](xref:Skipping_certificate_validation_when_consuming_gRPC_services) option. Use this with caution, as improper certificate validation can lead to a range of different security threats such as man-in-the-middle attacks.
 
 ### Disconnecting
 
@@ -250,6 +250,14 @@ client.Set("system/config/login-banner", "Hello DataMiner!");
 
 In OpenConfig, the read-write objects are commonly stored under the */config* path, while the readable counterpart with the current value is stored under the */state* path.
 
+### Deleting a value in the YANG path
+
+In the background, this uses the `Set` RPC with delete arguments. For more info on the `Set` RPC, see [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+
+```csharp
+client.Delete("system/config/login-banner");
+```
+
 ### Subscribing to a YANG path
 
 You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#subscribe).
@@ -291,13 +299,21 @@ client.Subscribe(subscriptionName, new[] { "interfaces/interface/state" }, Handl
 Now anytime a `leaf` changes, it will send out a notification with the new value.
 
 > [!NOTE]
-> There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
+>
+> - There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
+> - Data sources may have limits as to the number of maximum subscriptions per connection. It is therefore recommended that you bundle the different YANG paths you are interested in into the same subscription as much as possible. Because one subscription is tied to how frequently updates are sent out, this typically means bundling all *SAMPLE* subscriptions per interval and all *ON_CHANGE* subscriptions.
 
 ### Accessing a specific instance
 
 If you need to access a specific instance in a `container`, you can use [ ] to specify the instance. For example: `interfaces/interface[name='Ethernet1']/state`
 
 Using this path will result in only reading or writing the *Ethernet1* instance of the *interfaces/interface/state* `container`.
+
+### Specifying a path origin
+
+You can specify a *Path.Origin* as string by adding it as a prefix followed by `:/` before the actual path. For example: `eos_native:/Sysdb/ptp/status/parentDS`
+
+Using this path will result in reading or writing with *Path.Origin* specified as *eos_native* of the *Sysdb/ptp/status/parentDS* `container`.
 
 ### Troubleshooting
 
@@ -311,7 +327,7 @@ The logging of the CommunicationGateway DxM can be found under `C:\ProgramData\S
 
 The [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper) is an object that sits between your device and the DataMiner connector. It will automatically parse the incoming notifications and populate DataMiner parameters or tables with the data.
 
-#### Map a YANG path to a parameter
+#### Mapping a YANG path to a parameter
 
 ```csharp
 IDataMapper dataMapper = new DataMinerConnectorDataMapper(
@@ -342,7 +358,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 ```
 
 > [!IMPORTANT]
-> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known.
+> If you use **OpenConfig middleware version range 1.x.x**, when configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it, but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known. If you use **OpenConfig middleware version 2.0.0** or higher, you no longer need to add the YANG module name to the column path. However, we still strongly recommended adding the YANG module name as a prefix to have a unique identifier when a value needs to be mapped with a column.
 
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 
@@ -405,6 +421,14 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
 }
 ```
 
+##### Complex value
+
+When values are not a basic type, e.g. a string array, this will be passed as JSON string by the DataMapper. This way, the OnRawValueChange can be used to fully custom process this JSON value and set the parameter as desired. When this method is not implemented, the parameter will be set as JSON string.
+
+##### Boolean value
+
+In case the incoming value is of type boolean, the object that is passed to the OnRawValueChange can be cast as *bool*. However, as executing `protocol.SetParameter(parameterId, true);` results in a *-1* value, the DataMapper will set the parameter with a value of *1* in case the boolean is *true* or a value of *0* in case the boolean is *false*.
+
 #### Displaying octets as rates
 
 In case you are retrieving octets, it can be desirable to display those as rates. The [RateCalculator](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.RateCalculator) property on a [DataMinerConnectorDataGridColumn](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn) can be used for this.
@@ -439,7 +463,7 @@ The `CustomRates` method will take care of the rate calculation and will set the
 > [!TIP]
 > In this scenario, you will typically want to map the `RateColumnParameterId` to a default value so it gets populated when there is insufficient information to calculate the rate.
 
-#### Trigger an action when another column changes
+#### Triggering an action when another column changes
 
 There might be scenarios where you want to execute a specific action when a certain column changed. An example of this is to regenerate the display key when the interface description changes.
 
@@ -470,3 +494,28 @@ public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs trigger
 }
 
 ```
+
+#### Adding a state column
+
+By default, rows are automatically removed. You can change this behavior by adding a column to keep track of the state.
+
+1. Add a numeric parameter of ColumnOption type *retrieved* with discrete values *1=Updated*, *2=Equal*, *3=New*, *4=Deleted*, *5=Recreated*.
+
+1. Add a DataMinerConnectorDataGridColumn to the DataMinerConnectorDataGrid using the constructor that needs the parameter ID as first argument and the DataMinerConnectorDataGridColumnType that is set to *State* as second argument.
+
+   ```csharp
+   new DataMinerConnectorDataGridColumn(Parameter.Interfacesstate.Pid.interfacesstaterowstate, Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State)
+   ```
+
+Rows will no  longer be automatically removed  when a state column is added to the data grid. To activate automatic removal again, set the `IsAutoDelete` property of the state column to *true*.
+
+You can manually remove rows that have the deleted state by calling one of the following methods on the `DataMapper`:
+
+```csharp
+dataMapper.RemoveMissingRowForPid(tablePid, primaryKey); // Removes the row with this primary key when it has the deleted state.
+dataMapper.RemoveMissingRowsForPid(tablePid, primaryKeys); // Removes the rows of these primary keys in the collection when they have the deleted state.
+dataMapper.RemoveMissingRowsForPid(tablePid);  // Removes all the rows that have the deleted state.
+```
+
+> [!NOTE]
+> The state *Equal* is already defined but is not used yet. At present, it will have the state *Updated* even when all values are equal.

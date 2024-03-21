@@ -20,8 +20,6 @@ Currently, the pipeline consists of the following stages:
 
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
-- [Sync DIS version](#sync-dis-version)
-
 - [Build on latest feature release](#build-on-latest-feature-release)
 
 - [Convert solution to XML](#convert-solution-to-xml)
@@ -74,17 +72,19 @@ During this stage, the solution is configured to build against a recent version 
 
 ## Validate possible dependency NuGets
 
-For solutions that consist of legacy-style projects, this stage checks whether projects use the obsolete packages.config package management format.
+For solutions that consist of legacy-style projects:
 
-For solutions that consist of SDK-style projects, this stage is not executed as packageReference is the only supported package management format for this type of project.
+    - Checks whether projects use the obsolete packages.config package management format.
+    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
+
+For solutions that consist of SDK-style projects:
+
+    - Does **not** check whether projects use the obsolete packages.config package management format, as packageReference is the only supported package management format for this type of project.
+    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 ## Sync DataMiner feature release DLLs
 
 This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if it has, Jenkins will make sure to use that feature release to build against from that point onwards.
-
-## Sync DIS version
-
-This stage ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
 
 ## Build on latest feature release
 
@@ -186,4 +186,12 @@ The report also contains an overall quality score, which is calculated using the
 
 - Number of Major Issue reported by SonarQube
 
-![Overall quality score calculation](~/develop/images/PipelineEquation2.png)
+$$ overallQualityScore = 100 - \left(60a + 30b + 10c\right) $$
+
+, where,
+
+$$ a = {sonarQubeBlockerIssueCount \over { 1 + sonarQubeBlockerIssueCount}} $$,
+
+$$ b = {sonarQubeCriticalIssueCount \over { 1 + sonarQubeCriticalIssueCount}} $$,
+
+$$ c = {sonarQubeMajorIssueCount \over { 1 + sonarQubeMajorIssueCount}} $$

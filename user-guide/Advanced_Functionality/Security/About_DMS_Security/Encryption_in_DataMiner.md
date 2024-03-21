@@ -45,7 +45,7 @@ Here we can distinguish several communication flows:
 
 ### DataMiner Cube
 
-DataMiner Cube will communicate with the DataMiner back end over .NET Remoting. By default, this is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel.
+DataMiner Cube will communicate with the DataMiner back end over .NET Remoting by default. This is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to configure DataMiner so [gRPC is used instead of .NET Remoting](xref:DataMiner_hardening_guide#secure-cube-server-communication).
 
 ### DataMiner Web Apps & API
 
@@ -53,7 +53,7 @@ By default, the DataMiner Web Apps (Reports, Dashboards, Monitoring, etc.) are s
 
 ### Inter-DataMiner
 
-When a DataMiner System consists of multiple DataMiner nodes, inter-node communication flows through a .NET Remoting channel. By default, this is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel.
+When a DataMiner System consists of multiple DataMiner nodes, inter-node communication flows through a .NET Remoting channel by default. This is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to [configure DataMiner to use gRPC instead of .Net Remoting](xref:DataMiner_hardening_guide#grpc).
 
 ### Data acquisition
 
@@ -66,6 +66,10 @@ Depending on the type of device, DataMiner supports different communication prot
 | HTTP(S) | We recommend interfacing with devices or APIs over [HTTPS](xref:ConnectionsHttpHttps), which uses TLS encryption. |
 | TCP/IP | DataMiner can poll devices over a TLS-encrypted TCP/IP channel. See [Enabling TLS encryption](xref:Enabling_TLS_encryption). |
 
+### Storage as a Service
+
+For DataMiner Systems configured to use [STaaS](xref:STaaS), all communication between DataMiner and the database is TLS-encrypted by default, since it makes use of the [the connection towards dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
+
 ### Cassandra
 
 For DataMiner Systems configured to use a Cassandra database, it is possible to [enable TLS encryption between DataMiner and the Cassandra cluster](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection). Please refer to the official Cassandra documentation on [enabling TLS encryption](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/configuration/secureSSLClientToNode.html).
@@ -73,7 +77,14 @@ For DataMiner Systems configured to use a Cassandra database, it is possible to 
 We recommend changing the default Cassandra credentials.
 
 > [!NOTE]
-> For more information, see [Securing the Cassandra general database](xref:Security_Cassandra_general).
+> For more information, see [Securing the Cassandra general database](xref:Cassandra_authentication).
+
+### OpenSearch
+
+For DataMiner Systems configured to use an OpenSearch database, we recommend enabling HTTPS. Please refer to the official OpenSearch documentation on [enabling TLS encryption](https://opensearch.org/docs/latest/security/configuration/tls/).
+
+> [!NOTE]
+> For more information, see [Securing the OpenSearch database](xref:Security_OpenSearch).
 
 ### Elasticsearch
 
@@ -90,6 +101,23 @@ Please refer to the official NATS documentation on [enabling TLS encryption](htt
 
 ## Encryption at rest
 
-DataMiner only encrypts passwords at rest, all other data is not encrypted by default. This behavior is not configurable in DataMiner. Note that it is possible to [enable Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) to encrypt all data on disk.
+DataMiner only encrypts passwords at rest, all other data is not encrypted by default. This behavior is not configurable in DataMiner.
 
-When your DataMiner System is configured to use a Cassandra database, we recommend enabling the [transparent_encryption_options](https://docs.datastax.com/en/security/6.7/security/secEncryptTDE.html), effectively encrypting all your database data at rest.
+> [!NOTE]
+> To encrypt all data on disk, you can [enable Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings).
+
+### Storage as a Service
+
+DataMiner Storage as a Service (STaaS) makes use of existing secure storage solutions of Microsoft Azure, which means that all data is encrypted at rest.
+
+### Cassandra
+
+If you are using Cassandra enterprise edition, we recommend enabling the [transparent_encryption_options](https://docs.datastax.com/en/security/6.7/security/secEncryptTDE.html), effectively encrypting all your database data at rest. This option is not available in Apache Cassandra, so we recommend enabling disk encryption on the operating system level for this.
+
+### OpenSearch
+
+OpenSearch does not have the option to encrypt data at rest. For this reason, we recommend enabling disk encryption on the operating system level.
+
+### ElasticSearch
+
+ElasticSearch does not have the option to encrypt data at rest. For this reason, we recommend enabling disk encryption on the operating system level.

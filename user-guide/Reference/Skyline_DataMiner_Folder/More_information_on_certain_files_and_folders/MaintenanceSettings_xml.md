@@ -12,9 +12,6 @@ In the file *MaintenanceSettings.xml*, you can specify a number of general syste
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
-> [!NOTE]
-> Up to DataMiner 9.5.4, if this file is missing, DataMiner will not be able to connect with the database. From DataMiner 9.5.5 onwards, if the file is missing, a database connection will be made with the default values.
-
 ## Example
 
 This is an example of a *MaintenanceSettings.xml* file:
@@ -129,13 +126,18 @@ In this tag, you can add the following attributes to control how timeout alarms 
 
 ### AlarmSettings.AlarmsPerParameter
 
-In the *AlarmsPerParameter* tag, you can specify the maximum number of alarms that are allowed in an alarm tree. Default: 20 alarms.
+The value of the *AlarmsPerParameter* tag determines the maximum number of alarms that can be included in an alarm tree. If there are more alarms in an alarm tree, by default a notice will be displayed in the Alarm Console.
 
-This tag can have the following attributes:
+> [!NOTE]
+>
+> - SLNet limits the alarm trees in the cache and in history queries based on this tag. If no value is specified in this tag, SLNet uses a default of 20. In addition, because in old DataMiner versions the default was 100, if the value in this tag is 100, SLNet will read it as 20 instead.
+> - SLDataMiner is responsible for generating notices if there are too many alarms in an alarm tree. If no value is specified in this tag, SLDataMiner uses a default of 100.
 
-- The *client* attribute, which determines how many alarms in an alarm tree are saved in the Cube cache. It determines the number of alarms shown in Cube when you view the alarm tree in a new tab, when you reconnect to Cube or when you restart the element.
+This tag can also have the following attributes:
 
-- The *recurring* attribute, which can have the following values:
+- **client**: Determines how many alarms in an alarm tree are saved in the Cube cache. This determines how many alarms are shown in Cube when you view the alarm tree in a new tab, when you reconnect to Cube, or when you restart the element.
+
+- **recurring**:
 
   | Value | Description |
   |--|--|
@@ -146,11 +148,8 @@ This tag can have the following attributes:
 For example:
 
 ```xml
-<AlarmsPerParameter recurring="TRUE" client="20">60</AlarmsPerParameter>
+<AlarmsPerParameter recurring="TRUE" client="30">60</AlarmsPerParameter>
 ```
-
-> [!NOTE]
-> In older DataMiner versions, the default value of this tag was 100. To keep this old default value from being used in case *MaintenanceSettings.xml* was created with this value, now if 100 is filled in, DataMiner will automatically use the new default of 20.
 
 ### AlarmSettings.Blinking
 
@@ -303,7 +302,7 @@ When you specify multiple conditions, they will be combined into one expression 
 
 ### DELTUpgrades
 
-From DataMiner 9.5.1 onwards, this tag allows you to configure the automatic cleanup of DELT-related packages in the folder *C:\\Skyline DataMiner\\Upgrades\\*.
+This tag allows you to configure the automatic cleanup of DELT-related packages in the folder *C:\\Skyline DataMiner\\Upgrades\\*.
 
 The tag contains a number of *\<Delete>* subtags, which each specify a particular deletion mode with a *mode* attribute and a corresponding value with a *value* attribute.
 
@@ -339,7 +338,7 @@ Default: 20 MB
 
 ### Filtering.SlElement
 
-From DataMiner 9.0.1 onwards, the order of operations in a table filter of type "fullFilter" (used in protocols and in the web services) can be determined by means of parentheses, e.g. “*fullfilter=PK \>= 0 AND (101 == 10 OR 101 \> 20) AND (205 EXACT Service)*”.
+The order of operations in a table filter of type "fullFilter" (used in protocols and in the web services) can be determined by means of parentheses, e.g. “*fullfilter=PK \>= 0 AND (101 == 10 OR 101 \> 20) AND (205 EXACT Service)*”.
 
 However, in case you encounter issues with such filters because of this new filtering parsing behavior, it is possible to return to the previous behavior by adding the following tags and values in *MaintenanceSettings.xml*:
 
@@ -412,7 +411,7 @@ In this tag, you can specify the maximum size (in MB) of the DataMiner recycle b
 >
 > - Whatever the maximum size specified in this tag, the maximum number of files in the recycle bin is limited to 5000.
 > - The default recycle bin size is 100 MB.
-> - From DataMiner 9.0.5 onwards, the recycle bin is cleaned to the maximum size and number of files every hour. In previous versions, this was done at DMA startup and when a recycle action took place.
+> - The recycle bin is cleaned to the maximum size and number of files every hour.
 
 ### Replication.ConnectionMinDelayBeforeRetry
 
@@ -547,7 +546,7 @@ This deprecated tag was used to specify the number of records as from which a sp
 
 In this tag, the settings of the DataMiner WatchDog process are specified. This process monitors other DataMiner processes and takes action when a process disappears or an anomaly is detected.
 
-From DataMiner 9.0.1 onwards, it is possible to configure Watchdog to:
+You can configure Watchdog to:
 
 - Initiate a Failover switch in case of a runtime error, by specifying the value “*switch*” in the tag. Optionally, to exclude certain threads from initiating a Failover switch, add the *\<FailoverOnRTE>* subtag and specify the threads in *\<SkipRTE>* subtags.
 
@@ -556,7 +555,7 @@ From DataMiner 9.0.1 onwards, it is possible to configure Watchdog to:
     > - If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as “offline”.
     > - If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to “Manual” in the Failover settings.
 
-- Initiate an element restart in case of a runtime error on an element-related SLProtocol thread, by adding the attribute *restartElementOnProtocolRTE*, and setting it to “*true*”.
+- Initiate an element restart in case of a runtime error on an element-related SLProtocol thread, by adding the attribute *restartElementOnProtocolRTE*, and setting it to *true*.
 
 > [!NOTE]
 >

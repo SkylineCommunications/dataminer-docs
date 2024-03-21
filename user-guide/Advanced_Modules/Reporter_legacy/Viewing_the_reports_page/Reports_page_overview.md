@@ -22,6 +22,6 @@ To change the time span represented in the graphs, click a time span at the top 
 - Month to date
 
 > [!NOTE]
-> - In the lower right corner next to each of the graphs an “i” icon is displayed. Hover the mouse over the icon for more information about the graph.
-> - The Heatmap report type is only available in DataMiner Systems that exclusively use a Cassandra database.
 >
+> - In the lower right corner next to each of the graphs an “i” icon is displayed. Hover the mouse pointer over the icon for more information about the graph.
+> - The Heatmap report type is only available in DataMiner Systems that use a Cassandra database or equivalent.

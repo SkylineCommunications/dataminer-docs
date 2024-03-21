@@ -12,6 +12,8 @@ For more information, see [Working with cards in DataMiner Cube](xref:Working_wi
 
 At the top of each card, there can be several buttons:
 
+![Header bar buttons](~/user-guide/images/Card_Header_Bar.png)<br/>*Card pane in DataMiner 10.4.1*
+
 | Button | Description |
 |--------|-------------|
 | ![Hamburger button](~/user-guide/images/CubeXCardBurger.png) | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu). |
@@ -22,4 +24,4 @@ At the top of each card, there can be several buttons:
 | ![Fullscreenbutton](~/user-guide/images/CubeMaximize.png) | Fullscreen button. Displayed in the top-right corner of a data page, a visual page, or a trending page. Expands the page over the entire Cube UI. To exit this fullscreen mode, click the button again. |
 
 > [!NOTE]
-> To move back and forward between the Visual Overview pages of different cards, use the *Back* and *Forward* options in the right-click menu.
+> To move back and forward between the Visual Overview pages of different cards, use the *Back* and *Forward* options in the right-click menu of the page.

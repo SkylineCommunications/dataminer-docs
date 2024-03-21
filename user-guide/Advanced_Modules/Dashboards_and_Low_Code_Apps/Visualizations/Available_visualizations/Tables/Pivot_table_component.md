@@ -14,7 +14,7 @@ From DataMiner 9.6.13 onwards, it is possible to export this status report to CS
 
 To configure the component, from DataMiner 9.6.12 onwards:
 
-1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    This component requires a parameter feed based on *Protocol* or *Element*, or a group of parameters from a *Parameter* feed component.
 
@@ -50,17 +50,17 @@ To configure the component, from DataMiner 9.6.12 onwards:
      > [!NOTE]
      > Using the sort settings in conjunction with the *Limit* setting, you can create a top X or bottom X list.
 
-1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 To configure the component, up to DataMiner 9.6.11:
 
-1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    This component requires a parameter feed based on *Protocol* or *Element*.
 
 1. If you add a table parameter, also add the table indices. To do so:
 
-   1. Hover the mouse over the component and click the groups icon ( ![Groups icon](~/user-guide/images/NewRD_Groups.png) ).
+   1. Hover the mouse pointer over the component and click the groups icon ( ![Groups icon](~/user-guide/images/NewRD_Groups.png) ).
 
    2. Drag the *indices* group from the *Data* tab to the component.
 
@@ -85,4 +85,4 @@ To configure the component, up to DataMiner 9.6.11:
    > [!NOTE]
    > For each added parameter, a “real-time” indication is also added in the *Settings* pane. This is not a configurable option, but only an indication that the component displays real-time information.
 
-1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).

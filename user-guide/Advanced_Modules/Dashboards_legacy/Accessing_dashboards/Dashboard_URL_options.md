@@ -4,6 +4,9 @@ uid: Dashboard_URL_options
 
 # Dashboard URL options
 
+> [!IMPORTANT]
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+
 When you go directly to a dashboard in a browser using a dashboard URL, you can add options to the dashboard URL to change the way the dashboard is displayed or to determine the dashboard feed. These options are simply added after the URL, and some options can also be combined.
 
 The following sections provide more information on dashboard URL options:

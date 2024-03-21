@@ -6,7 +6,7 @@ uid: KI_SLElement_CPU_high_during_CC_migration
 
 ## Affected versions
 
-From DataMiner 10.1.0/10.1.2 onwards.
+DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0.
 
 ## Cause
 
@@ -14,7 +14,7 @@ During the live migration to a Cassandra Cluster setup, calls to SLElement are u
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.2.0 [CU10]/10.3.1<!--RN 34668-->.
 
 ## Issue description
 

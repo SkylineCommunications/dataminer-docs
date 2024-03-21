@@ -10,7 +10,7 @@ uid: history_set_benchmarks
 
 - Intel Xeon E5-2620 v4
 - 2 sockets
-- 32GB RAM
+- 32 GB RAM
 - Windows Server 2012 R2
 
 ### Metrics 3-6

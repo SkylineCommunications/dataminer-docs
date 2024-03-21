@@ -14,7 +14,7 @@ When a booking was created silently, the *Auto Select Resource* node property wa
 
 ## Fix
 
-No fix is available yet.
+Install SRM 1.2.30 CU3<!--RN 35998-->.
 
 ## Workaround
 

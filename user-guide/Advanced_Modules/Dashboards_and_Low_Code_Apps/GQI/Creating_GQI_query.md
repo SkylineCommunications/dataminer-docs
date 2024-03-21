@@ -9,9 +9,9 @@ From DataMiner 10.0.13 onwards, a special type of data feed is available, using 
 > [!TIP]
 > See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/video/building-queries-with-dataminer-generic-query-interface-gqi/) ![Video](~/user-guide/images/video_Duo.png)
 
-You can create a query as follows:
+## Creating a query
 
-1. In edit mode, select the dashboard component for which you want to use a query as a data input. At present, this is supported for Bar chart, Pie chart, State, and Table components.
+1. In edit mode, select the dashboard component for which you want to use a query as a data input.
 
 1. In the data pane, select *Queries* and click the + icon to add a new query.
 
@@ -34,6 +34,10 @@ You can create a query as follows:
 > - From DataMiner 10.1.4 onwards, you can import a query from a different dashboard in the DMS. For more information, see [Importing a query](xref:Importing_a_query)
 > - Using the Data Aggregator module, you can schedule GQI queries to run periodically at fixed times, dates, or intervals. For more information, see [Data Aggregator](xref:Data_Aggregator_DxM).
 
+## Duplicating a query
+
+From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the data pane and then select *Duplicate*.
+
 ## Notes on GQI queries
 
 Please note the following regarding query data input:
@@ -47,3 +51,5 @@ Please note the following regarding query data input:
 - From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query feed, any view, service, or element linked to that row is also exposed as a feed. In practice, this means that a feed will be available in the *feeds* section of the data pane that will change based on the selection in the table.
 
 - From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range feed by selecting the *From feed* checkbox.
+
+- From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37505-->, the culture used in your GQI query matches the client culture of the web app. Prior to DataMiner 10.3.0 [CU9]/10.3.12, the invariant culture is used.

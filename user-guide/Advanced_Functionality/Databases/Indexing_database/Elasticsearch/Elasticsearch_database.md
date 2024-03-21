@@ -4,13 +4,11 @@ uid: Elasticsearch_database
 
 # Elasticsearch
 
-The default indexing database used by DataMiner is Elasticsearch.
+If you choose self-hosted storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you need an indexing database in order to have access to all DataMiner features. While [OpenSearch](xref:OpenSearch_database) is the recommended indexing database, this is not supported prior to DataMiner 10.3.0/10.3.3. In earlier DataMiner versions, Elasticsearch is used, but as Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic, this is **not recommended**.
 
-If you use a **dedicated clustered storage** setup, you need to set up an [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine). As an alternative to the Elasticsearch database, from DataMiner 10.3.0/10.3.3 onwards, [OpenSearch](xref:OpenSearch_database) and the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service) are also supported.
+In a **dedicated clustered storage** setup, once you have configured a Cassandra-compatible database service, you need to set up the indexing database cluster to complete your setup. If you use Elasticsearch, we recommend installing [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
 
-If you use a setup with **storage per DMA**, you should also [deploy an Elasticsearch database](xref:Configuring_indexing_database_per_DMS) to gain access to DataMiner features such as GQI, SRM, and DOM.
-
-In this section of the documentation, you will also find instructions on how to [manually connect a DMA to an existing Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster) in the *DB.xml* file, [configure Elasticsearch backups](xref:Configuring_Elasticsearch_backups), and [remove an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_remove).
+In a setup with **storage per DMA**, setting up an indexing database is not mandatory, but it is highly recommended, as otherwise you will not have access to several DataMiner features.
 
 > [!NOTE]
 >
@@ -20,5 +18,5 @@ In this section of the documentation, you will also find instructions on how to 
 > [!TIP]
 > See also:
 >
+> - [Migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch)
 > - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
-> - [Expert Hub – Elasticsearch](https://community.dataminer.services/expert-hub-elastic/) on DataMiner Dojo

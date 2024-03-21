@@ -4,6 +4,9 @@ uid: Data_Aggregator_queries
 
 # Configuring GQI queries for Data Aggregator
 
+> [!IMPORTANT]
+> After configuring GQI queries for Data Aggregator, a one-time migration process using the [Data Aggregator Migrator](xref:Data_Aggregator_Migrator) is required when upgrading from version 2.x.x to 3.0.0 or higher.
+
 Every GQI query you want to execute must be saved in a separate file in JSON format.
 
 To get a correctly configured query, you can make use of the DataMiner Dashboards app:
@@ -25,6 +28,9 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
 1. Convert the query using the *ConvertQueryToProtoJson* web method:
 
    `POST https://dataminer.company.local/API/v1/Internal.asmx/ConvertQueryToProtoJson`
+
+   > [!NOTE]
+   > Replace `dataminer.company.local` with the hostname or IP address of your DataMiner Agent.
 
    with payload:
 

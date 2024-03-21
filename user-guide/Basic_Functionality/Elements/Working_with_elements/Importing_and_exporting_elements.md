@@ -21,8 +21,6 @@ uid: Importing_and_exporting_elements
 
 1. In the lower left corner of the *Import* window, select *Import comma-separated file*.
 
-   Prior to DataMiner 9.6.3, select the option *Import elements from CSV*.
-
 1. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
 > [!NOTE]
@@ -32,6 +30,7 @@ uid: Importing_and_exporting_elements
 > - For more information on how you can modify an exported CSV file for later import, see [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
 > - For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
 > - As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
+> - For elements communicating via SNMPv3, some fields in the CSV file have a different meaning. See [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
 
 ### Duplicate name check
 
@@ -88,6 +87,9 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
    - *print*: exports the element information to a printer.
 
+   > [!NOTE]
+   > Private information, such as SNMPv3 authentication and encryption passwords, will not be exported for security reasons. 
+
 1. Click *Export*.
 
 1. Depending on the type of export you selected, you will still need to:
@@ -102,12 +104,47 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
 When altering an exported CSV file in a third-party application like Microsoft Excel, in order to import the altered file into a DMS afterwards, take the following into account:
 
-- When changing existing elements, do not change the DataMiner ID or the element ID.
+- After an import operation, an element will be **restarted** if relevant information related to that element has been changed.
 
-- When you import a CSV file into MS Excel, remember that tabs will be automatically removed. MS Excel does not support the use of tabs inside cell values. If you want tabs to survive an import operation, replace each tab by *\\t*.
+- When changing existing elements, **do not change the DataMiner ID or the element ID**.
 
-- You cannot delete existing elements by importing a CSV file.
+- You **cannot delete** existing elements by importing a CSV file.
 
-- Import operations are asynchronous. The DataMiner client will send the imported file to the DMA to which it is connected. That DMA will then process the file when appropriate. To check the progress of an import operation, consult the list of information events.
+- When you import a CSV file into MS **Excel**, remember that **tabs will be automatically removed**. MS Excel does not support the use of tabs inside cell values. If you want tabs to survive an import operation, replace each tab by *\\t*.
 
-- After an import operation, an element will only be restarted if relevant information related to that element has been changed.
+- For elements communicating via SNMPv3, some fields in the CSV file have a different meaning:
+
+  | Field name    | SNMPv3 parameter                                                             |
+  |---------------|------------------------------------------------------------------------------|
+  | Parity        | Authentication algorithm (MD5, SHA-1, SHA-224, SHA-256, SHA-384, or SHA-512) |
+  | Data Bits     | Username                                                                     |
+  | Stop Bits     | Security level and protocol (noAuthNoPriv, authNoPriv, or authPriv)          |
+  | Flow Control  | Encryption algorithm (DES, AES-128, AES-192, or AES-256)                     |
+  | Get Community | Authentication password                                                      |
+  | Set Community | Encryption password                                                          |
+
+- Import operations are **asynchronous**. The DataMiner client will send the imported file to the DMA to which it is connected. That DMA will then process the file when appropriate. To check the progress of an import operation, consult the list of information events.
+
+- The **ProtocolType** column in the CSV file contains a numeric value that corresponds to the communication type that is defined in the protocol XML. When there are multiple connections defined in the protocol, the values are separated by a comma. This is the mapping:
+
+  | Protocol Type | Description                        |
+  |---------------|------------------------------------|
+  | 0             | Undefined                          |
+  | 1             | SNMP                               |
+  | 2             | Serial                             |
+  | 3             | Smart-serial                       |
+  | 4             | Virtual                            |
+  | 5             | GPIB                               |
+  | 6             | OPC                                |
+  | 7             | SLA                                |
+  | 8             | SNMPv2                             |
+  | 9             | SNMPv3                             |
+  | 10            | HTTP                               |
+  | 11            | Service                            |
+  | 12            | Serial-single                      |
+  | 13            | Smart-serial-single                |
+  | 14            | Smart-serial-raw                   |
+  | 15            | Smart-serial-raw-single            |
+  | 16            | Websocket                          |
+  | 17            | Virtual-function                   |
+  | 18            | Auto-generated                     |

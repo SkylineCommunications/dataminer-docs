@@ -97,6 +97,8 @@ items:
                 topicUid: I-DOCSIS_maps_deployment_one_backend
               - name: Systems with multiple back-end elements
                 topicUid: I-DOCSIS_maps_deployment_multiple_backends
+          - name: EPM I-DOCSIS passives integration
+            topicUid: I-DOCSIS_passives_integration
           - name: EPM I-DOCSIS upgrade
             topicUid: I-DOCSIS_upgrade
           - name: Creating a new CCAP/CM pair
@@ -104,26 +106,6 @@ items:
           - name: Available parameters in I-DOCSIS
             topicUid: I-DOCSIS_parameters
             items:
-              - name: Network
-                topicUid: I-DOCSIS_parameters_network
-              - name: Market
-                topicUid: I-DOCSIS_parameters_market
-              - name: Hub
-                topicUid: I-DOCSIS_parameters_hub
-              - name: CCAP Core (CMTS)
-                topicUid: I-DOCSIS_parameters_ccap_core
-              - name: Linecard
-                topicUid: I-DOCSIS_parameters_linecard
-              - name: DS Port
-                topicUid: I-DOCSIS_parameters_ds_port
-              - name: US Port
-                topicUid: I-DOCSIS_parameters_us_port
-              - name: DS Service Group
-                topicUid: I-DOCSIS_parameters_ds_service_group
-              - name: US Service Group
-                topicUid: I-DOCSIS_parameters_us_service_group
-              - name: Service Group (Fiber Node)
-                topicUid: I-DOCSIS_parameters_service_group_fiber_node
               - name: Node Segment
                 topicUid: I-DOCSIS_parameters_node_segment
               - name: CM DS QAM CH
@@ -214,6 +196,73 @@ items:
             topicUid: CI_Types1
           - name: Using your IS-04 registry to provision DataMiner with IDP
             topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+  - name: Monitoring & Management Solutions
+    topicUid: Monitoring_Solutions
+    items:
+      - name: DataMiner Asset Management application
+        topicUid: Asset_Management
+        items:
+          - name: Installing the Asset Management app
+            topicUid: Installing_Asset_Management
+          - name: Working with the Asset Management app
+            topicUid: Working_with_Asset_Management
+      - name: DataMiner Huawei Manager dashboard
+        topicUid: Huawei_Manager_Dashboard
+        items:
+          - name: Installing the Huawei Manager dashboard
+            topicUid: Installing_Huawei_Manager_Dashboard
+          - name: Working with the Huawei Manager dashboard
+            topicUid: Working_with_Huawei_Manager_dashboard
+      - name: DataMiner Ping Monitoring
+        topicUid: PingMonitoring
+        items:
+          - name: Installing the Ping Monitoring tool
+            topicUid: Installing_Ping_Monitoring
+          - name: Working with the Ping Monitoring tool
+            topicUid: Working_with_Ping_Monitoring
+      - name: DataMiner Planned Maintenance (PLM) tool
+        topicUid: DataMiner_PLM_Tool_Overview
+        items:
+          - name: Installing the PLM tool
+            topicUid: Installing_PLM_tool
+          - name: Using the PLM tool
+            items:
+              - name: The PLM tool user interface
+                topicUid: The_PLM_user_interface
+              - name: Configuring resources
+                topicUid: PLM_tool_configuring_resources
+              - name: Configuring maintenance events
+                items:
+                  - name: Adding a maintenance event
+                    topicUid: Adding_maintenance_event
+                  - name: Editing a maintenance event
+                    topicUid: Editing_maintenance_event
+                  - name: Deleting a maintenance event
+                    topicUid: Deleting_maintenance_event
+              - name: Planned Maintenance records
+                topicUid: PLM_Records
+      - name: Remote PHY Monitoring
+        topicUid: Remote_PHY_Monitoring
+        items:
+          - name: Installing Remote PHY Monitoring
+            topicUid: Remote_PHY_Monitoring_Installation
+          - name: Remote PHY Monitoring components
+            topicUid: Remote_PHY_Monitoring_components
+          - name: Restricting access to Remote PHY Monitoring
+            topicUid: Remote_PHY_Monitoring_Access_Restriction
+      - name: Smart Trap Processor
+        topicUid: Smart_Trap_Processor_Overview
+        items:
+          - name: Installing the Smart Trap Processor
+            topicUid: Installing_Smart_Trap_Processor
+          - name: Using the Smart Trap Processor
+            items:
+              - name: The Smart Trap Processor user interface
+                topicUid: The_SmartTrapProcessor_user_interface
+              - name: Configuring processing rules
+                topicUid: Processor_configuration
+              - name: Monitoring processed traps
+                topicUid: Monitoring_Processed_Traps
   - name: Process Automation framework
     topicUid: PA_index
     items:
@@ -277,7 +326,6 @@ items:
           - name: Overview of the DataMiner PTP app UI
             topicUid: Overview_of_the_DataMiner_PTP_app_UI
   - name: Service & Resource Management Framework
-    topicUid: About_SRM
     items:
       - name: About SRM
         topicUid: About_SRM
@@ -341,7 +389,6 @@ items:
           - name: Additional configuration for Resource Orchestration
             topicUid: config_resource_orchestration
       - name: Booking Manager app
-        topicUid: Booking_Manager_user_interface
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
@@ -355,7 +402,6 @@ items:
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
-        topicUid: SRM_logging_config
         items:
           - name: Configuring SRM logging
             topicUid: SRM_logging_config
@@ -373,7 +419,6 @@ items:
           - name: Configuring SRM alarm monitoring
             topicUid: SRM_alarm_monitoring
           - name: Advanced configuration for Service Orchestration
-            topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
@@ -447,7 +492,6 @@ items:
               - name: Applying a profile to an unmapped resource
                 topicUid: SRM_apply_profile_to_unmatched_resource
           - name: Launching default wizards from custom scripts
-            topicUid: SRM_launching_booking_wizard
             items:
               - name: Launching the standard Booking Wizard from a custom script
                 topicUid: SRM_launching_booking_wizard

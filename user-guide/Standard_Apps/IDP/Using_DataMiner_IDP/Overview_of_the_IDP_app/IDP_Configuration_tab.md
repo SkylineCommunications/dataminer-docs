@@ -8,7 +8,7 @@ This tab consists of several subtabs, as detailed below.
 
 ## Summary
 
-This tab provides an overview of the elements of which the CI Type has *Take Backup* and/or *Configuration Update* enabled (via *Processes* > *Automation*). The overview includes the CI Type, element name and IP address for each element, as well as the update progress of the last backup that was copied to the configuration archive, and the date and time when the last configuration change was detected.
+This tab provides an overview of the elements of which the CI Type has *Take Backup* and/or *Configuration Update* enabled (via *Admin* > *Activities*, or *Processes* > *Automation* in older IDP versions). The overview includes the CI Type, element name and IP address for each element, as well as the update progress of the last backup that was copied to the configuration archive, and the date and time when the last configuration change was detected.
 
 Above the overview, the following buttons are available:
 
@@ -26,7 +26,7 @@ On this tab, you can view a list of configuration backups, either based on a sel
 
 Clicking the *Search* icon opens a wizard where you can specify these search criteria. Searching is possible by CI Type, by element name or by time range (UTC), or a combination of these. When you select a configuration backup in the table, you can also use the following buttons above the table:
 
-- *Show content*: Displays the content of the selected configuration backup to the right of the list. Above the content, a drop-down box allows you to select whether the *Full Configuration Backup* should be displayed or the *Core Configuration Only*. This last option allows you to focus on the information that is most important for the configuration.
+- *Show content*: Displays the content of the selected configuration backup to the right of the list. Above the content, a dropdown box allows you to select whether the *Full Configuration Backup* should be displayed or the *Core Configuration Only*. This last option allows you to focus on the information that is most important for the configuration.
 
 - *Compare*: Starts a configuration comparison with the selected file as one of the files to be compared.
 
@@ -45,7 +45,7 @@ This tab allows you to compare two configuration files. To do so:
 
 1. Use the buttons above the table to select the configuration files to show on the left side and on the right side of the comparison, and click the *Compare* button to start comparing them.
 
-With the drop-down box in the top-right corner, you can select whether you want to compare the *Full Configuration Backup* or the *Core Configuration Only*. This last option allows you to focus on the information that is most relevant for comparison.
+With the dropdown box in the top-right corner, you can select whether you want to compare the *Full Configuration Backup* or the *Core Configuration Only*. This last option allows you to focus on the information that is most relevant for comparison.
 
 If you started a comparison from the *Summary* or *Backups* subtab, the file you selected there will automatically be selected as the left file in the comparison.
 

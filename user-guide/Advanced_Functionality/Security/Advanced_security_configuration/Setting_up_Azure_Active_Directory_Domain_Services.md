@@ -4,7 +4,7 @@ uid: Setting_up_Azure_Active_Directory_Domain_Services
 
 # Setting up Azure Active Directory Domain Services
 
-The recommended way to connect your DataMiner System with Azure AD is via SAML. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML). However, if this is not possible, you also have the possibility to connect via LDAP. To do so, you will first need to deploy the Azure AD Domain Services and then configure the DNS servers.
+The recommended way to connect your DataMiner System with Microsoft Entra ID (formerly known as Azure AD) is via SAML. See [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML). However, if this is not possible, you also have the possibility to connect via LDAP. To do so, you will first need to deploy the Azure AD Domain Services and then configure the DNS servers.
 
 ### Deploying the Azure AD DS
 
@@ -76,7 +76,7 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
 
     4. Under *Member of*, select *Domain*, enter the domain name, and click OK.
 
-    5. Log in with a user account that has permission to add Windows servers to the domain (Azure AD).
+    5. Log in with a user account that has permission to add Windows servers to the domain (Entra ID).
 
         > [!NOTE]
         > If the login fails, DO NOT try again. If you do, the server will be locked. Instead, on the Azure Portal, go to the user account in question, make sure the user has an email address under *Contact Info*, and reset the password of the user account. After resetting the password, go back to the Windows server and try to log in again.
@@ -90,9 +90,9 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
     8. Follow the wizard, and in the *Features* step, select all tools under *Remote Server Administration Tools* > *Role Administration Tools* > *AD DS and AD LDS Tools*, and click *Install*.
 
 > [!NOTE]
-> - To manage the domain users on the Windows server, make sure you are logged in with an administrator of the domain (Azure AD), click *Start* and open *Active Directory Users and Computers*.
-> - In case logging in to the Windows server using RDP with the credentials of an Azure AD account fails, this can have the following reasons:
+> - To manage the domain users on the Windows server, make sure you are logged in with an administrator of the domain (Entra ID), click *Start* and open *Active Directory Users and Computers*.
+> - In case logging in to the Windows server using RDP with the credentials of an Entra ID account fails, this can have the following reasons:
 >     - The user does not have permission to access the server remotely. To fix this, in the control panel, go to Remote settings, click *Select Users*, and add the user to the list of users who are allowed to access the server remotely.
->     - The Azure AD user does not have an email address. To fix this, on the Azure portal, go to *Users*, and make sure all users have an email address under *Contact Info*. Users also need an email address to be able to log on to DataMiner.
+>     - The Entra ID user does not have an email address. To fix this, on the Azure portal, go to *Users*, and make sure all users have an email address under *Contact Info*. Users also need an email address to be able to log on to DataMiner.
 >     - The user’s password has not been reset yet. On the Azure portal, go to the user account in question and reset its password.
 >

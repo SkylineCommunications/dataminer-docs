@@ -69,7 +69,7 @@ To do so:
 > [!TIP]
 > See also:
 >
-> - [Securing the DataMiner web server](xref:Webserver_security)
+> - [Securing the DataMiner web server](xref:HTTP_Headers)
 > - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
 > - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
 > - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
@@ -179,7 +179,7 @@ The following auto-detect methods can be specified:
 
 - **I can no longer launch DataMiner Cube from the DataMiner Cube start window**
 
-    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Opening_the_desktop_app).
+    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Using_the_desktop_app).
 
 - **The webpage could not be found (HTTP 404 error)**
 

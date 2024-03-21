@@ -214,8 +214,7 @@ The chart legend would incorrectly show the primary key of a parameter instead o
 
 #### Dashboards app: Problem when opening a dashboard of which the URL was longer than 2048 characters [ID_36382] [ID_36510]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
-<!-- Not added to MR 10.4.0 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.7 -->
 
 When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error.
 
@@ -291,7 +290,7 @@ Table actions would incorrectly not be triggered when the key of the GQI data so
 
 #### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU12] - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 

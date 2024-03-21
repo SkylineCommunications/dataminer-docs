@@ -40,26 +40,35 @@ For a script, the correct license is **MIT**.
 
 ## Repository naming convention
 
-The repository name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
+If the repository is private, the name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
+
+> [!IMPORTANT]
+> If the repository is **public**, **do not use a customer acronym** in the repository name. Instead, use the **Skyline acronym "SLC"**.
 
 - For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use the Skyline Communications acronym (SLC).
 
 - The following **item types** are currently supported (this list is to be extended):
 
-  - C (Connectors)
-  - V (Visio files)
-  - S (Solutions)
-  - F (Functions)
-  - AS (Automation Scripts)
-  - PLS (Profile-Load Scripts)
-  - PA (Process Automation)
-  - LSO (Life Service Orchestration)
-  - D (Dashboards)
-  - CF (Companion Files)
-  - T (Tests)
-  - GQIDS (GQI data source)
-  - GQIO (GQI operator)
-  - UDAPI (User-Defined APIs)
+  | Syntax | Description |
+  |--|--|
+  | AS | Automation Scripts. Note that specific types of Automation scripts, such as GQI data sources, user-definable APIs, regression tests, etc., have their own syntax. |
+  | C | Connectors |
+  | CF | Companion Files |
+  | CHATOPS | ChatOps extension |
+  | D | Dashboards |
+  | DISMACRO |DIS Macro |
+  | DOC | Documentation |
+  | F | Functions |
+  | GQIDS | GQI data source |
+  | GQIO | GQI operator |
+  | LSO | Life cycle Service Orchestration |
+  | PA | Process Automation |
+  | PLS | Profile-Load Scripts |
+  | S | Solutions |
+  | SC | Scripted Connector |
+  | T | Tests: regression tests, integration tests, performance tests, etc. |
+  | UDAPI | User-Defined APIs |
+  | V | Visio files |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -96,6 +105,10 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-UI-test
 - dataminer-bot
 - dataminer-user-defined-api
+- dataminer-doc
+- dataminer-dis-macro
+- dataminer-chatops
+- dataminer-nuget
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
@@ -137,4 +150,32 @@ For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommu
 
 An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action) is publicly available on GitHub to deploy from a GitHub repository.
 
-Refer to [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a_GitHub_repository) for more information.
+Refer to [Marketplace deployment action](xref:Marketplace_deployment_action) for more information.
+
+## Ensuring Dependabot can access the private GitHub NuGet registry
+
+If a repository uses NuGet packages that are stored in Skyline's internal GitHub NuGet registry, Dependabot will not see those automatically.
+
+Below is an example of a Dependabot configuration file that will check every day if there are any NuGet packages to update. The "PRIVATE_NUGET_USERNAME" and "PRIVATE_NUGET_PASSWORD" secrets are only available to Dependabot.
+
+```yml
+version: 2
+registries:
+  public:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
+  slc-github:
+    type: nuget-feed
+    url: https://nuget.pkg.github.com/SkylineCommunications/index.json
+    username: ${{ secrets.PRIVATE_NUGET_USERNAME }}
+    password: ${{ secrets.PRIVATE_NUGET_PASSWORD }}
+updates:
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    registries: "*" # Which registries to use, * for all of them
+    schedule:
+      interval: "daily"
+```
+
+> [!TIP]
+> For more information about the configuration file, see [Configuration options for the dependabot.yml file](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file).

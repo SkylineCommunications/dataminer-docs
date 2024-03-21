@@ -28,7 +28,7 @@ A protocol typically contains a number of parameters that will be displayed (e.g
 - <xref:UIComponentsTreeControl>
 
 > [!NOTE]
-> An example protocol "SLC SDF UI Components" is available in the Protocol Development Guide Companion Files.
+> An example protocol "SLC SDF UI Components" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## See also
 

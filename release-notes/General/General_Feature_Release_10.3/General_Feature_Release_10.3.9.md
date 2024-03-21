@@ -571,3 +571,9 @@ When, for a particular parameter, the `options` attribute of the `<Type>` elemen
 `An error occurred when applying SSH connection settings from parameters. Not implemented (hr = 0x80004001)`
 
 Moreover, when additional logging was activated for SLPort, an `Attempted to set SSH options on a non-SSH connection` error would be added to the same log file, followed by an unreadable value (representing the IP address), which could even cause a fatal error to occur in SLPort.
+
+#### Problem when the NATS library called the error handling event [ID_37028]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When the NATS library called the error handling event, in some cases, it would pass a `nullptr` for the subscription parameter. As a result, an exception would be thrown, potentially causing the hosting process to stop working.

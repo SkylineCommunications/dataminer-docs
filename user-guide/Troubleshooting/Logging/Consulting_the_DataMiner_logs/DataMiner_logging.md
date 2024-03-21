@@ -103,6 +103,7 @@ Some items in the list are of particular note:
 | Cassandra Migration | Log file of the migration of the general database to Cassandra. Contains among others the settings used for the migration. See [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra). |
 | Connectivity | Log file regarding the DataMiner Connectivity Framework. |
 | Correlation | Log file of the next-generation Correlation engine of the DMA. To facilitate troubleshooting, it is possible to activate verbose Correlation logging with the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme caution. See [Activating verbose Correlation logging](xref:SLNetClientTest_activating_verbose_correlation_logging). |
+| Database Connection | Log file related to the connection to the various databases (e.g. general database, offload database, indexing database, etc.) |
 | Database DataMiner | Log file with the traffic between the database and the SLDataMiner process of the DMA. |
 | Database SLNet | Log file with the traffic between the database and the SLNet process of the DMA. Contains among others the username of a user that initiated a manual DMA Failover. |
 | DMS | Log file with the traffic between the DMA and its peers in the DMS. Contains among others the file synchronization process. |
@@ -121,4 +122,6 @@ Some items in the list are of particular note:
 | Watchdog | Log file with the details of runtime errors detected by the SLWatchdog process. For more information, see [Watchdog logging](xref:Watchdog_logging) |
 
 > [!NOTE]
-> Some of the mentioned log files refer to advanced DataMiner modules that are not part of the DataMiner system by default.
+>
+> - For each of these log files, a corresponding TXT file is located in the `C:\Skyline DataMiner\Logging\` folder. The name of the TXT file is often the same as the name mentioned in Cube, but with an "SL" prefix. However, this is not always the case. If you select a log file in Cube, the corresponding TXT file name will be displayed at the top.
+> - Some of the mentioned log files refer to advanced DataMiner modules that are not part of the DataMiner system by default.

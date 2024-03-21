@@ -33,3 +33,4 @@ Main features:
 | 4.0.x | Adds support for uploading files using the FileSelector widget. Compatible with **DataMiner 10.1.8** and higher. |
 | 5.0.x | Adds support for a focus lost event on many widgets. Compatible with **DataMiner 10.1.10** and higher. |
 | 6.0.x | Adds support for button styles. Compatible with **DataMiner 10.3.1** and higher. |
+| 7.0.x | Adds support for downloading files using the DownloadButton widget. Compatible with **DataMiner 10.3.7** and higher. |

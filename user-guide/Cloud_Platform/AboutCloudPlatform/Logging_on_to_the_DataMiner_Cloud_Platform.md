@@ -10,7 +10,7 @@ If you are a customer or a DataMiner Strategic Partner, you will need to authent
 
 ### Guests
 
-It is also possible to access dataminer.services as a guest, i.e. someone who is neither a customer nor a DataMiner Strategic Partner. Guests can access a number of dataminer.services modules, such as the Dojo Community. While any email address can be used, we also strongly encourage guests to register with their corporate email address. After all, this is a professional community where members use their real name to build trust and network with others members. Also, using your corporate email address will allow you to keep your existing dataminer.services account should you ever become a customer or DataMiner Strategic Partner.
+It is also possible to access dataminer.services as a guest, i.e. someone who is neither a customer nor a DataMiner Strategic Partner. Guests can access a number of dataminer.services modules, such as the Dojo Community. While you can use any email address as a guest, we strongly encourage you to register with your corporate email address. Among others, this will allow you to keep your existing dataminer.services account should you ever become a customer or DataMiner Strategic Partner.
 
 ### Logging on
 

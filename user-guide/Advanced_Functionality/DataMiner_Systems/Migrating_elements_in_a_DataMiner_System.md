@@ -12,18 +12,18 @@ To do so:
 
 1. Go to the *Status* tab.
 
-    In the *Status* tab, you can see an overview of the DMAs in the DMS, with the number of elements per DMA and several other parameters such as the processor load and the free disk space of each DMA.
+   In the *Status* tab, you can see an overview of the DMAs in the DMS, with the number of elements per DMA and several other parameters such as the processor load and the free disk space of each DMA.
 
 1. In the lower right corner of the *Status* tab, click the *Migrate* button.
 
-    This will open the *Element migration* window, which lists the available elements in a table on the left and the possible destination DMAs on the right.     The following information in the table may be useful to help you decide which elements should be migrated:
+   This will open the *Element migration* window, which lists the available elements in a table on the left and the possible destination DMAs on the right.
 
-    | Column | Description |
-    |--------|-------------|
-    | Weight | Number from 1 to 10, indicating the impact of the element on the DMA hosting it. This is a relative weight for each DMA, so comparing the weight only makes sense between elements hosted on the same DMA.<br>The weight can be interpreted as the percentage of parameter sets originating from this element. Less than 10 percent will result in a weight of 1, between 10 and 20 percent will result in weight 2, etc. |
-    | Change | The number of parameter changes that enter in SLElement.exe. For a single parameter, this is every change; for a table, this reflects the way it is updated by the protocol. If the table is updated in bulk, this will be counted as one change, if it is updated cell by cell, the counter will be much higher. |
-    | Polling | Represents the "change" value multiplied by 2. |
-    | Agent | The DMA currently hosting the element. |
+   > [!NOTE]
+   >
+   > - If you want to estimate the impact of an element on a DMA in order to decided whether it should be migrated or not, you can use the [DataMiner Size tool](xref:DataMinerSizeTool).
+   > - Not all elements are included in the migration window:
+   >   - If you do not have permission to access and edit certain elements, these elements will not be included.
+   >   - Spectrum elements, SLAs, DVE elements, and virtual elements in redundancy groups are never included.
 
 1. In the *Element migration* window, in the list on the left, select the elements you want to migrate from one DMA to another.
 
@@ -31,7 +31,7 @@ To do so:
 
 1. Click the *Migrate* button at the bottom of the window.
 
-    After you confirm the migration in a confirmation box, the progress of the migration process will be indicated. When the migration is complete, a pop-up message will indicate if it was successful.
+   After you confirm the migration in a confirmation box, the progress of the migration process will be indicated. When the migration is complete, a pop-up message will indicate if it was successful.
 
 > [!NOTE]
 >

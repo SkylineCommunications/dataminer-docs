@@ -6,6 +6,12 @@ uid: Preparing_to_upgrade_a_DataMiner_Agent
 
 This section of the documentation contains detailed information on how to best prepare to upgrade a DataMiner Agent. To ensure a successful upgrade of your DMA, we strongly recommend that you read through the content of this page.
 
+## Check for known issues and breaking changes
+
+From time to time, issues are detected that might impact a DataMiner System if a particular DataMiner version is installed. Before you upgrade, we therefore recommend that you first check the [Known issues page](xref:Known_issues) to identify if your system might be affected by such an issue.
+
+Make sure you also check the [Breaking changes page](xref:Breaking_changes) to see if any breaking changes will affect your system when you upgrade.
+
 ## Uploading upgrade packages before an upgrade
 
 We highly recommend that you upload the upgrade package before the actual maintenance window, as this is low risk and does not require a restart of your system, but it will indicate whether all conditions and requirements to upgrade your DataMiner Agent are met, vastly reducing the chance of problems occurring during the eventual upgrade.
@@ -36,11 +42,19 @@ Prerequisites are small self-contained apps that run during the upload phase of 
 
 The following prerequisites are currently available:
 
+- [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type): Verifies whether the system has successfully switched to an [indexing database](xref:Indexing_Database). From DataMiner 10.4.0/10.4.1 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify NATS is Running](xref:VerifyNatsIsRunning): Verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents. From DataMiner 10.2.0 [CU14]/10.2.7 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): Scans the DataMiner System for any legacy reports and legacy dashboards. From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the [*APIDeployment* soft-launch option](xref:Overview_of_Soft_Launch_Options#apideployment) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Service Automatic Properties](xref:BPA_Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 

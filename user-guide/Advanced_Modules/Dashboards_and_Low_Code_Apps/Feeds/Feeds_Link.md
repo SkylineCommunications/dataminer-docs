@@ -36,7 +36,9 @@ To create feed references inside textual settings, use the following syntax:
 > You can find the name of each part in the *FEEDS* data source of the edit panel's *DATA* tab.
 
 > [!NOTE]
-> Any part of this syntax that contain spaces should be enclosed in double quotation marks.
+>
+> - Any parts of this syntax that contain spaces should be enclosed in double quotation marks.
+> - All parts of this syntax are case-sensitive.
 
 ## Example
 

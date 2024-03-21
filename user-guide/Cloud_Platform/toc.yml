@@ -4,6 +4,8 @@ items:
     items:
       - name: Logging on to dataminer.services
         topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
+      - name: dataminer.services home page
+        topicUid: dataminer_services_home_page
       - name: Linking your DataMiner account to your dataminer.services account
         topicUid: Linking_your_DataMiner_and_DCP_account
       - name: Cloud data storage policies
@@ -55,16 +57,13 @@ items:
           - name: Statuses
             topicUid: Statuses
   - name: DataMiner Catalog
-    topicUid: Catalog
     items:
       - name: About the Catalog module
         topicUid: About_the_Catalog_module
-      - name: Accessing the Catalog module
-        topicUid: Accessing_the_Catalog_module
-      - name: Looking up a DataMiner connector
-        topicUid: Looking_up_a_DataMiner_connector
-      - name: Deploying a DataMiner connector to your system
-        topicUid: Deploying_A_DataMiner_Connector_to_your_system
+      - name: Looking up an item in the Catalog
+        topicUid: Looking_up_an_item_in_the_catalog
+      - name: Deploying a Catalog item
+        topicUid: Deploying_a_catalog_item
   - name: DataMiner Sharing
     topicUid: Sharing
     items:
@@ -74,30 +73,15 @@ items:
         topicUid: Managing_your_shares
   - name: Remote access
     topicUid: Cloud_Remote_Access
+    items:
+      - name: Finding the remote access URL
+        topicUid: Cloud_Remote_Access_URL
+      - name: Accessing DataMiner web apps remotely
+        topicUid: Accessing_web_apps_remotely
+      - name: Accessing your DMS remotely with DataMiner Cube
+        topicUid: Accessing_DMS_remotely_with_Cube
   - name: DataMiner Community
     topicUid: Community
-    items:
-      - name: About the Community module
-        topicUid: About_the_Community_module
-      - name: Accessing the Community module
-        topicUid: Accessing_the_Community_module
-      - name: Overview of the DataMiner Dojo website
-        topicUid: Overview_of_the_DataMiner_Dojo_website
-        items:
-          - name: Blog
-            topicUid: Blog
-          - name: Questions
-            topicUid: Questions
-          - name: Learning
-            topicUid: Learning
-          - name: Resources
-            topicUid: Resources
-          - name: Expert hubs
-            topicUid: Expert_hubs
-          - name: Discover
-            topicUid: Discover
-          - name: More
-            topicUid: More
   - name: DataMiner Admin app
     topicUid: CloudAdminApp
     items:
@@ -135,10 +119,17 @@ items:
         topicUid: DataMiner_Teams_bot
       - name: Chat integration
         topicUid: Microsoft_Teams_Chat_Integration
+      - name: Tutorials
+        items:
+          - name: Hello World
+            topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
+          - name: Chat notifications
+            topicUid: ChatOps_Tutorials_Chat_Notification
   - name: Advanced configuration
-    topicUid: Custom_cloud_endpoint_configuration
     items:
       - name: Customizing the dataminer.services endpoint configuration
         topicUid: Custom_cloud_endpoint_configuration
       - name: Disabling reports and notifications offloading
         topicUid: Disable_Offloading_Reports_and_Notifications
+      - name: Disconnecting from dataminer.services
+        topicUid: Disconnecting_from_dataminer.services

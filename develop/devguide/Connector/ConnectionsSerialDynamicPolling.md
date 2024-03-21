@@ -6,17 +6,20 @@ uid: ConnectionsSerialDynamicPolling
 
 It is possible to dynamically change the used polling IP and port.
 
+> [!IMPORTANT]
+> We highly recommend configuring the connection type as [*serial single*]( xref:ConnectionsSerialSerialSingle). This ensures that each connection is assigned a dedicated socket in SLPort. If multiple smart-serial or serial elements hosted on the same DMA are configured to share the same IP address and port, they will all use the new IP address if one of them changes the IP address dynamically.
+
 Create a parameter that has the “dynamic ip” option defined.
 
 ```xml
 <Param id="400" trending="false" save="true">
-   <Name>Dynamic polling IP</Name>
+   <Name>DynamicPollingIP</Name>
   ...
    <Type options="dynamic ip 1">read</Type>
    <Interprete>
       <RawType>other</RawType>
-      <LengthType>next param</LengthType>
       <Type>string</Type>
+      <LengthType>next param</LengthType>
    </Interprete>
   ...
 </Param>

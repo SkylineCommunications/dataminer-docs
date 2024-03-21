@@ -13,8 +13,7 @@ uid: Stack_DOM
 Automate complex business processes.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [Process Automation framework](xref:PA_index).
 
 ## Object Modeling
 
@@ -24,14 +23,13 @@ Data modeling involves the process of creating logical representations of the da
 
 The **DataMiner Object Model (DOM)** enables the quick modeling and management of any type of **administrative or business-related data** within your DataMiner System, such as ticketing and jobs information, planned maintenance records, product catalog data, contractual and customer records, and more.
 
-All defined DOM instances are stored in an Elasticsearch database to ensure optimal performance and scalability.
-
 > [!TIP]
 > For more information:
 >
 > - [Stateful DOM – Extend your administrative data models with more powerful, automated flows](https://community.dataminer.services/stateful-doms-extend-your-administrative-data-models-with-more-powerful-automated-flows/)
 > - [Introduction to Stateful DataMiner Object Models](https://community.dataminer.services/video/introduction-to-stateful-dataminer-object-models-1-3/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Model and Create an Object](https://community.dataminer.services/video/model-and-create-an-object-2-3//) ![Video](~/user-guide/images/video_Duo.png)
+> - Kata session: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/video/kata-15-getting-started-with-dataminer-object-models/) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [DataMiner Object Models (DOM)](xref:DOM)
 
 ## Planned Maintenance
@@ -39,5 +37,4 @@ All defined DOM instances are stored in an Elasticsearch database to ensure opti
 Planning, documenting, or scheduling any maintenance activity.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [The DataMiner Planned Maintenance (PLM) tool](xref:DataMiner_PLM_Tool_Overview).

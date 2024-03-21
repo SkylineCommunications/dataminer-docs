@@ -8,10 +8,7 @@ uid: Deploying_and_Configuring_the_PA_Framework
 
 Before you move on to the PA development and deployment, make sure your DataMiner platform has the necessary resources and specifications for a smooth execution of SRM workflows, as SRM is an essential prerequisite for the PA framework. You can find the expected requirements on the [DataMiner Compute Requirements page](xref:DataMiner_Compute_Requirements).
 
-Your DataMiner System will also need to use an [Elasticsearch database](xref:Elasticsearch_database).
-
-> [!TIP]
-> For more information on how to install Elasticsearch on your DMA, click [here](xref:Installing_Elasticsearch_via_DataMiner).
+Your DataMiner System will also need to use [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
 
 ## Making DOM data available
 
@@ -28,7 +25,7 @@ To install the SRM framework:
 
 1. Ensure that a DataMiner version is installed that is compatible with the SRM framework, and the platform meets the hardware requirements.
 
-   - Make sure the DataMiner System uses an Elasticsearch database.
+   - Make sure the DataMiner System uses [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
 
    - Check the SRM release notes to see which minimum DataMiner version is required.
 
@@ -36,7 +33,7 @@ To install the SRM framework:
 
 1. Download the latest SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
@@ -50,7 +47,7 @@ To install the PA framework:
 
 1. Ensure that a DataMiner version is installed that is compatible with the PA framework, and the platform meets the hardware requirements.
 
-   - Make sure the DataMiner System uses an Elasticsearch database.
+   - Make sure the DataMiner System uses [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
 
    - Check the Process Automation release notes to see which minimum DataMiner version is required and make sure this version is installed.
 
@@ -58,7 +55,7 @@ To install the PA framework:
 
 1. Contact Skyline Communications to receive the latest PA package.
 
-1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.

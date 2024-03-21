@@ -1,4 +1,10 @@
 items:
+  - name: DIS 2.47
+    topicUid: DIS_2.47
+  - name: DIS 2.46
+    topicUid: DIS_2.46
+  - name: DIS 2.45
+    topicUid: DIS_2.45
   - name: DIS 2.44
     topicUid: DIS_2.44
   - name: DIS 2.43

@@ -4,18 +4,14 @@ uid: Options_for_opening_DataMiner_Cube
 
 # Arguments for DataMiner Cube
 
-You can pass a number of arguments when starting DataMiner Cube, as detailed below.
+It is possible to [connect to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments). Below you can find an overview of the different arguments, as well as some examples of how you can use these.
 
-- In the desktop app, from DataMiner 10.0.9 onwards, you can do so as detailed under [Connecting to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments)).
-
-- In the legacy browser app, you can pass these arguments by adding them to the URL.
-
-- To combine different options, use a space as separator in the desktop app, or "&" in the browser app.
+To combine different options, use a **space as separator** in the desktop app.
 
 > [!NOTE]
 >
-> - Prior to DataMiner 10.0.9, these arguments can only be passed along in the desktop app if you installed the application using an .msi file.
-> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use the cube:// protocol to connect to a specific host. For example:
+> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&".
+> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use the **cube:// protocol** to connect to a specific host. For example:
 >
 >   - cube://mydma?element=MyElement
 >   - cube://10.11.12.13?view=12
@@ -32,13 +28,8 @@ view=View2 element=365 app=help
 Examples for the browser application:
 
 ```txt
-DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
-DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
-```
-
-Examples for the desktop application (prior to DataMiner 10.0.9, using a command line):
-
-```txt
+http://MyDMA1/DataminerCube/dataminercube.xbap?element=MyElement&view=MyView
+http://MyDMA1/Dataminercube/dataminercube.xbap?app=Protocols%20%26%20Templates
 DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
 DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 ```
@@ -47,11 +38,11 @@ DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 
 ### Opening a card on a particular page
 
-From DataMiner 9.6.3 onwards, if you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
+If you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
 
 To do so, add the following:
 
-- A colon, followed by “*data*” or “*d*” for a data page or “*visual*” or “*v*” for a visual page.
+- A colon, followed by "*data*" or "*d*" for a data page or "*visual*" or "*v*" for a visual page.
 
   If the page is not grouped under the data or visual pages, only add a colon.
 
@@ -64,38 +55,54 @@ For example:
 - To open the subpage “ping” of the data page “performance” of the element with ID 48/70:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70:data:performance/ping
+  element=48/70:data:performance/ping
   ```
 
 - To open the page “help” of the element with ID 48/70:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70::help
+  element=48/70::help
   ```
 
 - To open the data page “Australia service” of the service with ID 48/105:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?service=48/105:d:Australia Service
+  service=48/105:d:Australia Service
   ```
 
 - To open the page “aggregation” of the view “SLC”:
 
   ```txt
-  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?view=SLC::aggregation
+  view=SLC::aggregation
   ```
 
 ### alarm=
 
-Use this option to immediately display a specific alarm card.
+Use this option to immediately display a specific alarm card. Different formats are supported, depending on the DataMiner version:
 
-Specify the DMA ID and root alarm ID.
+- DMA ID / root alarm ID
 
-Example:
+  Example:
 
-```txt
-http://MyDMA1/DataMinerCube/DataMinerCube.xbap?alarm=48/6713
-```
+  ```txt
+  alarm=48/6713
+  ```
+
+- DMA ID / element ID / root alarm ID (supported from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards).<!-- RN 39126 -->
+
+  Example:
+
+  ```txt
+  alarm=48/123/6713
+  ```
+
+- Root alarm ID only
+
+  Example:
+
+  ```txt
+  alarm=6713
+  ```
 
 > [!NOTE]
 > To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the top-right corner of the properties window.
@@ -109,11 +116,8 @@ If you want to open several modules, separate the module names by means of pipe 
 Examples:
 
 ```txt
-http://MyDMA1/Dataminercube/dataminercube.xbap?app=about
-http://MyDMA1/Dataminercube/dataminercube.xbap?app=Protocols%20%26%20Templates|Asset%20Manager
-DataminerCube.exe app=about
-DataminerCube.exe app="Reports & Dashboards"
-DataminerCube.exe app=settings"|"logging
+app=about
+app="Protocols & Templates"|"Asset Manager"
 ```
 
 ### autoslide=
@@ -123,8 +127,7 @@ Use this option if you want DataMiner Cube to automatically move to the next wor
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?autoslide=30
-DataminerCube.exe autoslide=15
+autoslide=30
 ```
 
 To disable the autoslide mode, reconnect without the autoslide option.
@@ -156,7 +159,7 @@ The buffer should be specified in one of the following three ways:
 Example:
 
 ```txt
-http://MyDMA1/Dataminercube/dataminercube.xbap?element=34/105&buffer=3:trace1
+element=34/105&buffer=3:trace1
 ```
 
 ### chain=
@@ -168,19 +171,19 @@ Example:
 - To open the element with ID 169/2 and open the chain with name “Physical”:
 
     ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?ELEMENT=169%2F2&chain=physical
+    element=169/2 chain=physical
     ```
 
 > [!NOTE]
 >
-> - It is advisable to also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
+> - We recommend that you also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
 > - The chain name is not case-sensitive.
 
 ### debug=true
 
 This option allows you to view functionality that can be useful for debugging, but which is otherwise hidden in the UI.
 
-For example, from DataMiner 9.6.0/9.5.3 onwards, the GUID of service definitions is only shown in the Services app if you use the *debug=true* argument.
+For example, the GUID of service definitions is only shown in the Services app if you use the *debug=true* argument.
 
 ### dte_filtername=filtervalue
 
@@ -396,6 +399,12 @@ DataminerCube.exe host=MyDMA2 service=MyService"|"MyOtherService
 
 > [!NOTE]
 > In order to open an SLA element, use the *element=* option.
+
+### UseInitialArgumentsAfterDisconnect=true
+
+This argument will make sure that all other specified arguments will be applied again when Cube has to reconnect for some reason.
+
+Available from DataMiner 10.2.0 [CU22], 10.3.0 [CU10], and 10.4.1 onwards.<!-- RN 37888 -->
 
 ### view=
 

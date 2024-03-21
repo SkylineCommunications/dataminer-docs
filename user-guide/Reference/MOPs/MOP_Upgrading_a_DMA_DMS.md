@@ -85,7 +85,7 @@ The procedure below details how you can implement a DataMiner upgrade in an exis
    - Make sure all Agents in the DataMiner System meet the minimum requirements before you upgrade (e.g. install a .NET Framework upgrade if necessary).
    - If you are upgrading a DataMiner System that consists of **more than one Agent**, make sure the **All Agents in cluster** option is selected.
    - If you are upgrading a DMA that is part of a **Failover** pair, check the *Advanced Failover* options and make sure the **Upgrade main and backup Agent simultaneously** option is selected. This is especially important if the upgrade is a major change, but it is also highly recommended otherwise.
-   - When you have selected the upgrade packages, **first click *Upload only*** and verify if the packages have been uploaded correctly. Only start the upgrade after you have successfully verified this.
+   - When you have selected the upgrade packages, **first click *Upload only*** and verify if the packages have been uploaded correctly. Only start the upgrade after you have successfully verified this. Note that if a package contains [prerequisites](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisites), these will also run when you upload the package.
 
 1. When the upgrade is ready, verify that each DMA in the DataMiner System is running and check the key functionalities identified during the [Establish the details for the upgrade](#establish-the-details-for-the-upgrade) step.
 

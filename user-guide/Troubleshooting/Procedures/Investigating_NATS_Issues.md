@@ -115,6 +115,9 @@ A few details to pay attention to:
 
 ### nats-server.config
 
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nats-server.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+
 #### Cluster of 3 or more DMAs
 
 This is an example of **nats-server.config** in a NATS cluster of 3 or more Agents:
@@ -191,7 +194,7 @@ The following values can vary in each DMS:
 
 #### Cluster of 2 DMAs
 
-This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0[CU17]/10.3.0[CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0[CU17]/10.3.0[CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
+This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
 
 ##### [From DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 onwards](#tab/tabid-4)
 
@@ -235,7 +238,7 @@ streaming: {
 server_name: MyServerName
 ```
 
-##### [Prior to DataMiner 10.2.0[CU6]/10.2.8](#tab/tabid-3)
+##### [Prior to DataMiner 10.2.0 [CU6]/10.2.8](#tab/tabid-3)
 
 ```txt
 port: 4222 # Port for client connections
@@ -292,7 +295,8 @@ server_name: MyServerName
 ```  
 
 > [!NOTE]
-> - From DataMiner 10.1.0 \[CU12]/10.2.3 onwards, STAN is no longer used by the core processes because of performance issues. The streaming configuration can therefore be simplified as follows:
+>
+> - From DataMiner 10.1.0 [CU12]/10.2.3 onwards, STAN is no longer used by the core processes because of performance issues. The streaming configuration can therefore be simplified as follows:
 >
 > ```txt
 > streaming: {
@@ -303,9 +307,12 @@ server_name: MyServerName
 
 ### nas.config
 
-There should only be one primary NAS in each DMS, with the configuration detailed below. Every other NAS should be configured as a secondary, except in a cluster of exactly 2 Agents.
+Starting from DataMiner 10.3.0 [CU11]/10.4.0/10.4.2<!-- RN 38089 -->, DataMiner configures every node as a primary NAS. This prevents startup issues in case the primary NAS is not fully started up (yet) or its hosting port is blocked. DataMiner synchronizes all credential files, so each NAS will use the same set of credentials.
 
-In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
+Prior to DataMiner 10.3.0 [CU11]/10.4.0/10.4.2, DataMiner configures a single primary NAS in each DMS, with the configuration detailed below. Every other NAS is configured as a secondary, except in a cluster of exactly 2 Agents. In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
 
 #### Primary NAS
 
@@ -325,6 +332,8 @@ store: {
 ```
 
 #### Secondary NAS
+
+Only applicable up to DataMiner 10.3.0 [CU11]/10.4.0/10.4.2<!-- RN 38089 -->.
 
 ```txt
 http: {
@@ -346,9 +355,11 @@ To trigger a NATS reset:
 
 1. Use SLNetClientTest tool to connect to any DMA in the cluster. For more information, see [SLNetClientTest tool](xref:SLNetClientTest_tool).
 
-1. In the *Build Message* tab, select the message *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest*.
+1. In the *Build Message* tab (1), select the message *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* (2).
 
-1. Leave all fields set to the default values (*IsDistributed* = false) and click *Send Message*.
+1. Leave all fields set to the default values (*IsDistributed* = false) and click *Send Message* (3).
+
+![NATS reset](~/user-guide/images/NATS_reset.png)
 
 This will recalculate the NAS and NATS configs in the entire cluster, so any faulty configurations are cleaned up automatically.
 
@@ -381,7 +392,34 @@ This will result in Agent 2 receiving different information about the same clust
 
 ## Check if port is already in use
 
-NATS uses port 9090 by default. If another program is already using this port, you will notice the following behavior:
+### Port 4222, 6222, and 8222
+
+NATS uses port 4222, 6222, and 8222. If another program is already bound to one of these ports, you will notice the following behavior:
+
+- DataMiner fails to start
+- NATS is stopped
+- The log file at *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.log* can contain the following:
+
+  `Error listening on port: 0.0.0.0:4222, "listen tcp 0.0.0.0:4222: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."`
+
+In this case, the port may already be bound by one of the DataMiner processes. This will usually only happen with port 4222. To fix this:
+
+1. Run the following command in a command prompt window: `netstat -aon | findstr 4222`.
+
+1. If you identify a process using any of the ports found in the logging, open Windows Task Manager to find the process corresponding with the PID found with above command.
+
+1. Kill the process or stop the service hosting that process.
+
+1. Start the NATS service
+
+1. Restart the killed process or service hosting that process.
+
+> [!NOTE]
+> This is caused by a bug in the [nats client library](https://github.com/nats-io/nats.net). When the [pull request](https://github.com/nats-io/nats.net/pull/850) to fix this has been merged, the DataMiner processes will be updated so this port lock situation no longer occurs.
+
+### Port 9090
+
+Nats Account Server (NAS) uses port 9090 by default. If another program is already using this port, you will notice the following behavior:
 
 - DataMiner fails to start.
 
@@ -408,7 +446,7 @@ Check whether Keysight Agilent IO Libraries or a different third-party software 
 
 1. If you identify a process using port 9090, open Windows Task Manager to find the process PID, e.g. *kdi-controller.exe*.
 
-### Manually configuring a custom port for NATS
+#### Manually configuring a custom port for NAS
 
 To resolve this issue, manually configure a custom port for NATS that is not yet in use, e.g. port 9091.
 
@@ -507,6 +545,7 @@ The NATS clustering configuration is managed by the *NATSCustodian* class in SLN
 
 > [!NOTE]
 > When configuration is mentioned in this section, the actual NATS/NAS configuration is meant:
+>
 > - NAS configuration file: `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
 > - NATS configuration file: `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
 
@@ -526,10 +565,13 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
   1. The filestore and raft logging are cleaned up (`..\NATS\nats-streaming-server\fileStore` and `..\NATS\nats-streaming-server\raftLog`). This is done to remove any references and cached data from the previous cluster configuration.
 
-  1. The **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
+  1. From DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 onwards<!-- RN 38089 -->, all nodes are configured as a primary NAS. This prevents corner cases where the primary NAS is not started (yet) or its host has the necessary port blocked. DataMiner syncs all credential files in the cluster, so each NAS will use the same set of credentials. In older DataMiner versions, the **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
 
   1. The cluster ID is set using the DMS cluster name, transformed to Base64 string. This transformation is done to prevent special symbols in the cluster ID.
 
   1. *SLCloud.xml* is updated with the new configuration.
 
 This algorithm is run on all DMAs at the same time and will only change the configuration of the local NAS/NATS/DMA. It is therefore important that all DMAs in your cluster are online and reachable when you run the NATS reset.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.

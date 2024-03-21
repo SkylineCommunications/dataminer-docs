@@ -6,11 +6,17 @@ uid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
 
 Below, you can find how you can configure DataMiner IDP to use an NMOS IS-04 registry, so that the registered IS-04 nodes are provisioned in the DMS.
 
+> [!IMPORTANT]
+> From IDP 1.5.0 onwards, the IS-04 scripts are not included in the IDP package.
+
 ## Installation
 
 - Make sure your DataMiner System has been upgraded to the correct minimum version required for the version of Process Automation that you intend to use, or preferably, simply upgrade to the [latest DataMiner feature release](https://community.dataminer.services/downloads/).
 
 - Install [DataMiner IDP with Process Automation](xref:Installing_DataMiner_IDP).
+
+  > [!IMPORTANT]
+  > IS-04 workflows are no longer supported as of Process Automation 1.3. To follow the procedure below, make sure you use an earlier version of Process Automation.
 
 - Make sure a DataMiner element is available that uses the connector [AMWA NMOS IS-04 Registry](https://catalog.dataminer.services/result/driver/6923). During element creation, the *IP address/host* of the connection *HTTP Connection Main* must be set to the IP address of the IS-04 registry.
 

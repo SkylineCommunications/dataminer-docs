@@ -16,7 +16,9 @@ uid: Duplicating_a_dashboard
 
    You can also create folders at this point, by hovering the mouse pointer over the folder in the tree view where you want to create a folder and clicking the + icon. Then specify the folder name and click the check mark icon.
 
-1. Click *OK*.
+1. In the *Security* box, select whether other users should be able to view and edit the dashboard.
+
+1. Click *Create* or *OK*, depending on your DataMiner version<!--RN 38278-->.
 
 > [!NOTE]
 > The following characters are not allowed in the name of a dashboard or dashboard folder: / \\ : ; \* ? \< \> \| °

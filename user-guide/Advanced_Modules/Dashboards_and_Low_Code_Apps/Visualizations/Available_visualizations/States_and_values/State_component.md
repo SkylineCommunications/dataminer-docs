@@ -11,11 +11,13 @@ This component displays the state, name and, if applicable, the value of a DataM
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
    - Column parameter feeds are supported from DataMiner 10.0.12 onwards.
+
+   - From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
@@ -36,7 +38,7 @@ To configure the component:
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - In case the component displays more than one item, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 

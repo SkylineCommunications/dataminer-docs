@@ -4,6 +4,9 @@ uid: DMS_SET_PARAMETER
 
 # DMS_SET_PARAMETER (28)
 
+> [!WARNING]
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+
 Sets the value of a specified parameter.
 
 ```csharp
@@ -42,10 +45,14 @@ catch (Exception ex)
 - type (int): Specifies the notify type. To perform a DMS_SET_PARAMETER call, set this to 28.
 - subType (int): Specifies the sub type. Not applicable for DMS_SET_PARAMETER calls. Set this to 0.
 - parameterDetails (uint[]): Array containing following items:
+
   - parameterDetails [0]: DataMiner Agent ID
   - parameterDetails [1]: Element ID
   - parameterDetails [2]: Parameter ID
+
 - valueDetails (object[]): Array containing following items:
+
   - valueDetails[0]: User cookie string
   - valueDetails[1]: Parameter value to set
+
 - result (object): Holds the returned element

@@ -59,6 +59,23 @@ From DataMiner 10.2.0/10.2.2 onwards, you can generate a URL to easily share a d
 
 To do so:
 
+### [From DataMiner 10.3.0 [CU12]/10.4.3 onwards](#tab/tabid-1)
+
+1. In the list of dashboards on the left, select the dashboard<!--RN 38278-->.
+
+1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
+
+1. To get a URL that only shows the dashboard without the rest of the app, enable the *Embed* option.
+
+1. To get an uncompressed version of the URL, enable the *Use uncompressed URL parameters* option.
+
+   > [!NOTE]
+   > This option can for instance be useful if you want to embed the dashboard in a Visio drawing and use placeholders in the URL. See [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
+
+1. To the right of the URL, click the *Copy link* button.
+
+### [Prior to DataMiner 10.3.0 [CU12]/10.4.3](#tab/tabid-2)
+
 1. In the list of dashboards on the left, select the dashboard.
 
 1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
@@ -69,7 +86,12 @@ To do so:
 
 1. To get an uncompressed version of the URL, select *Use uncompressed URL parameters*.
 
+   > [!NOTE]
+   > This option can for instance be useful if you want to embed the dashboard in a Visio drawing and use placeholders in the URL. See [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
+
 1. To the right of the URL, click the *Copy* button.
+
+***
 
 ## Sharing a dashboard as a PDF report via email
 

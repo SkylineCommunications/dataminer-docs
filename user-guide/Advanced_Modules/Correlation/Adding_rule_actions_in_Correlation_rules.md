@@ -10,26 +10,26 @@ In the *Actions* section of the details pane, specify the actions that will be e
 
 There are several possible types of actions:
 
-- Acknowledging a base alarm (from DataMiner 9.5.6 onwards). See [Acknowledging a base alarm](xref:Acknowledging_a_base_alarm).
+- Acknowledging a base alarm. See [Acknowledging a base alarm](xref:Acknowledging_a_base_alarm).
 
 - Creating a ticket (soft-launch option). See [Creating a ticket](xref:Creating_a_ticket).
 
-- Escalating an event (from DataMiner 9.5.6 onwards). See [Escalating an event](xref:Escalating_an_event).
+- Escalating an event. See [Escalating an event](xref:Escalating_an_event).
 
 - Creating a new, correlated alarm. See [Triggering a correlated alarm](xref:Triggering_a_correlated_alarm).
 
 - Running an Automation script. See [Running an Automation script from a Correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule).
 
-- Sending an email (from DataMiner 9.5.6 onwards). See [Sending an email](xref:Sending_an_email).
+- Sending an email. See [Sending an email](xref:Sending_an_email).
 
-- Sending a text message (from DataMiner 9.5.6 onwards). See [Sending a text message](xref:Sending_a_text_message).
+- Sending a text message. See [Sending a text message](xref:Sending_a_text_message).
 
 - Setting a parameter. See [Triggering a parameter set](xref:Triggering_a_parameter_set).
 
 These actions can be combined, so that they will be triggered in a particular order. To change the order of the actions:
 
-- Hover the mouse over the actions and move them up or down in the list using the upward or downward triangles.
+- Hover the mouse pointer over the actions and move them up or down in the list using the upward or downward triangles.
 
 To delete an action:
 
-- Hover the mouse over the action and click the X.
+- Hover the mouse pointer over the action and click the X.

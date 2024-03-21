@@ -6,7 +6,7 @@ uid: Overview_Collaboration
 
 *Collaborate within the entire service supply chain.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.jpg)
 
 ## Dashboard Share
 
@@ -31,7 +31,7 @@ uid: Overview_Collaboration
 >
 > - [New cloud services that enable faster support are on the way!](https://community.dataminer.services/new-cloud-services-that-enable-faster-support-are-on-the-way/)
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
-> - [CCA Support Services](xref:CCA_Support_Services)
+> - [Proactive Support](xref:Proactive_Support)
 > - [Remote Access User Guide](xref:Cloud_Remote_Access)
 
 ## ChatOps
@@ -42,6 +42,7 @@ uid: Overview_Collaboration
 > See also:
 >
 > - [Let us enhance your DataMiner ChatOps experience!](https://community.dataminer.services/let-us-enhance-your-dataminer-chatops-experience/)
+> - [Kata #6: Custom ChatOps operator](https://community.dataminer.services/video/kata-6-custom-chatops-operator/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [ChatOps User Guide](xref:ChatOps)
 > - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
 > - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)

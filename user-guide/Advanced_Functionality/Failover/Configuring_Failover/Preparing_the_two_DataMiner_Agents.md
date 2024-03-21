@@ -31,9 +31,6 @@ The backup DMA must be a newly installed DataMiner Agent.
 
 - The backup DMA may not be a member of a DMS cluster.
 
-> [!NOTE]
-> When you set up a new pair of Failover DMAs, the entire general database of the main DMA will be copied to the backup DMA. However, if you are working with DataMiner Agents prior to version 7.5.0, you must make sure that the database on the backup DMA is an exact copy of the one on the primary DMA. For more information on restoring a DMA database, see [Restoring the database only](xref:Restoring_the_database_only).
-
 ## Additional IP addresses or hostname
 
 When Failover is configured, one or two additional IP addresses are needed, depending on the number of network interfaces of the DMAs. These will be used as the virtual IP addresses of the primary or the backup DMA, depending on which of the two is online. If the DMAs only have one network interface, only one additional IP address is needed.
@@ -47,6 +44,9 @@ Addresses: 10.11.5.52
 ```
 
 > [!IMPORTANT]
-> If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 >
-> As the setup of the certificates can be highly situational, for example in case proxies are involved, check with your IT services if you are not sure how to generate and deploy TLS/SSL certificates.
+> - If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+>
+>   As the setup of the certificates can be highly situational, for example in case proxies are involved, check with your IT services if you are not sure how to generate and deploy TLS/SSL certificates.
+>
+> - If a DMS already contains a DMA that was added based on its hostname or a Failover pair based on hostname, any Failover pairs you add to that DMS have to be configured based on hostname. Similarly, if a DMS already contains a Failover pair with virtual IP addresses, other Failover pairs in that same DMS also have to be configured with virtual IP addresses. This way you avoid mixing two different environments in one DMS. From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards, such a mix of environments is not allowed.<!--RN 37075-->

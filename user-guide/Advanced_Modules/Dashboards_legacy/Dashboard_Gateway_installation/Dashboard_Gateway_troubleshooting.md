@@ -4,6 +4,9 @@ uid: Dashboard_Gateway_troubleshooting
 
 # Dashboard Gateway troubleshooting
 
+> [!IMPORTANT]
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+
 The following issues may occur when you try to access the Dashboard Gateway:
 
 - **Message: Connection Lost. Failed to set up a connection with the DataMiner Agent: DataMiner is not running.**

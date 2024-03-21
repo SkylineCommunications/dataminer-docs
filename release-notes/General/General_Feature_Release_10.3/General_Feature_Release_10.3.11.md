@@ -2,27 +2,51 @@
 uid: General_Feature_Release_10.3.11
 ---
 
-# General Feature Release 10.3.11 – Preview
+# General Feature Release 10.3.11
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
-
-> [!IMPORTANT]
-> When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
+>
+> - When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
+> - As of DataMiner version 10.3.0[CU8]/10.3.11, Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service and Amazon OpenSearch Service will no longer be supported. We recommend moving to [Storage as a Service](xref:STaaS). Note that using a self-hosted OpenSearch database remains supported.
 
 > [!TIP]
 >
-> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.10](xref:Cube_Feature_Release_10.3.10).
-> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.10](xref:Web_apps_Feature_Release_10.3.10).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.11](xref:Cube_Feature_Release_10.3.11).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.11](xref:Web_apps_Feature_Release_10.3.11).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
-
-## Highlights
-
-*No highlights have been added to this section yet.*
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The proactive cap detection feature has been extended to dynamic alarm thresholds.
+
+As a result, proactive detection will now predict when a parameter will cross one of the following bounds:
+
+- A high and/or low data range value specified in the protocol.
+- A (by default) critical alarm limit of type normal specified in the alarm template.
+- A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
+- A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
+
+#### Smart-serial communication now supports dynamic polling [ID_37404]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
+
+To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
+
+`<Type options="dynamic ip">read</Type>`
+
+> [!IMPORTANT]
+>
+> - Dynamic polling is only supported when the connection acts as a client. When you create the element, do not assign an IP address like "127.0.0.1", "any", etc. to it. If you do, the element will act as a server, and there is no way to make the element act as a client without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error to occur.
+> - We strongly advise you to always set the connection type to "smart-serial single" so the connection is assigned a dedicated socket in SLPort. If two or more smart-serial elements hosted on the same DMA are assigned the same IP address and port via the element wizard, they will share the same connection in SLPort. This means that, if one of these elements changes the IP address dynamically, the other ones will also start using the new IP address.
 
 ## Changes
 
@@ -71,7 +95,8 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 #### Security enhancements [ID_37267] [ID_37291] [ID_37335] [ID_37345]
 
-<!-- RN 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
+<!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
 <!-- RN 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
 <!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -101,6 +126,14 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
 
+#### Improved alarm grouping for DVE child elements [ID_37275]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Alarm grouping for DVE child elements has been improved. As change points are generated on DVE parent elements, previously these were not taken into account for the grouping of alarms for the DVE child elements. Now the change points of the DVE parent element will be taken into account for the DVE child elements as well.
+
+However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
+
 #### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -112,6 +145,33 @@ A number of enhancements have been made to the trend prediction models, especial
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
+
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When changes are made to one of the following NATS configuration files, from now on, the old version of that file will be saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
+
+- `C:\Skyline DataMiner\SLCloud.xml`
+- `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
+- `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
+
+This will allow you to trace changes made to these configuration files when issues arise.
+
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
 ### Fixes
 
@@ -129,15 +189,7 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
-
-Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
-
-#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143] [ID_37509]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -148,7 +200,15 @@ Up to now, this setting would incorrectly be interpreted as the total number of 
 From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
 
 > [!NOTE]
-> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+>
+> - A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+> - When you upgrade to this DataMiner version, an upgrade action will automatically divide the number of backups to be kept by the number of DataMiner Agents in the DMS if the number of backups to be kept is set to more than 3 and if there are at least two DMAs in the DMS. Note that this upgrade action will do nothing if, in the backup settings, you specified that all DMAs in the DMS have to store their backups on the same network path.
+
+#### Problem in different native processes when interacting with message broker calls [ID_37150]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
+
+In some cases, an error could occur in different native processes when interacting with message broker calls.
 
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_37165]
 
@@ -216,6 +276,12 @@ When SLLogCollector takes memory dumps, it stores them in a temporary folder bef
 
 An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
 
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
@@ -228,6 +294,12 @@ When an element with multiple SSH connections was restarted, in some cases, it w
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
 
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
+
 #### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
@@ -236,18 +308,38 @@ An error could occur in the SLAnalytics process due to some features not startin
 
 #### SLAnalytics: Problem when stopping a feature [ID_37329]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
-
-<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
-
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
+
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
+
+<!-- RN 37402: MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When Elasticsearch table columns were aggregated via GQI, the aggregation columns would all share the same incorrect column ID.

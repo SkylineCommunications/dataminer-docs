@@ -4,13 +4,13 @@ uid: Installing_DM_using_the_DM_installer
 
 # Installing DataMiner using the DataMiner Installer
 
-> [!TIP]
-> Not familiar with DataMiner? See [Basic concepts](xref:BasicConcepts).
-
-The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
+The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation.
 
 > [!NOTE]
 > The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
+
+> [!IMPORTANT]
+> Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
 
 ## Before you run the installer
 
@@ -27,6 +27,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure that no anti-virus software will interfere with the DataMiner installer and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).
 
+1. Make sure you have a Windows account with administrator rights. If you intend to use a DataMiner installer older than version 10.2, this must be the server's local Administrator account. For later installers, any account with administrator rights will suffice.
+
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
@@ -36,7 +38,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure you are logged into Windows with the correct user account:
 
-   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*. 
+   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*.
    - If you are using a DataMiner installer older than version 10.2, use the server's local Administrator account. Do not use a regular user account with administrative rights.
 
 1. Double-click the setup executable.
@@ -77,11 +79,11 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
 
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
-- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- Either deploy [Storage as a Service](xref:STaaS) to make use of cloud-native storage hosted by Skyline or, if you wish to host the DataMiner storage yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
-> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights in DataMiner. To grant others access to the newly installed DMA, log in to Cube using the same Windows account as was used to install DataMiner, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
 
 > [!NOTE]
 >
@@ -108,15 +110,14 @@ At this point, the basic installation is complete. However, to be able to make f
      > [!NOTE]
      > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench).
+   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is **End of Life** as of DataMiner version 10.4.X (Q4 2023), this option is **not recommended**.
 
      > [!NOTE]
-     > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
-     > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
+     >
+     > - MySQL is no longer included in the 10.2.0 DataMiner installer.
+     > - If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
 
    - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
-
-     On Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
 
      > [!NOTE]
      > The DataMiner 10.2 installer no longer supports WinPCap. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.
@@ -147,11 +148,11 @@ At this point, the basic installation is complete. However, to be able to make f
 At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
 
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
-- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- Either deploy [Storage as a Service](xref:STaaS) to make use of storage nodes that are fully hosted by Skyline or, if you wish to host the storage nodes yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
-> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
 
 > [!NOTE]
 > To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
