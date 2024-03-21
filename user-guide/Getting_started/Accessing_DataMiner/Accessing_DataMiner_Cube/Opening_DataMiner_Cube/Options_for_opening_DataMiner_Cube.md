@@ -258,7 +258,7 @@ To open several measurement points, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&measpt=1
+element=34/105 measpt=1
 ```
 
 > [!NOTE]
@@ -266,7 +266,7 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&measpt=1
 
 ### options=
 
-Use this option along with *preset=*, in order to load a spectrum preset in the Spectrum Analyzer element(s) opened right after startup.*options=* is required in order to specify the preset options.
+Use this option along with *preset=*, in order to load a spectrum preset in the Spectrum Analyzer element(s) opened right after startup.*options=* is used in order to specify the preset options.
 
 Spectrum preset options have to be specified as the sum of the following hexadecimal values:
 
@@ -284,7 +284,7 @@ Spectrum preset options have to be specified as the sum of the following hexadec
 Example:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&preset=abc&options=0x208
+element=34/105 preset=abc options=0x208
 ```
 
 ### preset=
