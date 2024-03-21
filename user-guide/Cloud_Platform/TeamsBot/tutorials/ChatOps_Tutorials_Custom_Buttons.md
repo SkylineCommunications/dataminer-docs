@@ -23,7 +23,7 @@ Estimated duration: 15 minutes.
 - [Step 2: Deploy the CustomCommand Examples package from the Catalog](#step-2-deploy-the-customcommand-examples-package-from-the-catalog)
 - [Step 3: Fetch the Teams and channels of a Team](#step-3-fetch-the-teams-and-channels-of-a-team)
 - [Step 4: Adjust the existing Correlation rule triggered by a specific alarm to send a channel notification with custom buttons in an Adaptive Card instead](#step-4-adjust-the-existing-correlation-rule-triggered-by-a-specific-alarm-to-send-a-channel-notification-with-custom-buttons-in-an-adaptive-card-instead)
-- [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notifications)
+- [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notification)
 
 ## Step 1: Follow the chat notifications tutorial
 
@@ -73,7 +73,7 @@ In step 5 we will trigger a custom command from this package with a button that 
 
    ![ChatIntegration Examples Send Channel Notification](~/user-guide/images/chatops_notification_02_003.png)
 
-## Step 4: Adjust the existing Correlation rule triggered by a specific alarm to send a channel notification with custom buttons in an Adaptive Card
+## Step 4: Adjust the existing Correlation rule triggered by a specific alarm to send a channel notification with custom buttons in an Adaptive Card instead
 
 1. Adjust the earlier configured Correlation rule from [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-3-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) so it will execute the *Send Channel Notification Asking To Take Ownership of an Alarm* script instead and configure the inputs with the Team and channel of that Team that we fetched before in step 3. 
 
