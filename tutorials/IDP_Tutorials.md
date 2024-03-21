@@ -11,4 +11,4 @@ IDP stands for Infrastructure, Discovery and Provisioning. More information can 
 
 | Name | Description |
 |--|--|
-| [Discover IDP](xref:IDP_Tutorial_Introduction) | Install IDP and start a simple discovery. |
+| [Getting started with IDP and onboarding equipment](xref:IDP_Tutorial_DiscoveryAndProvisioning) | Install IDP and onboard new equipment. |
