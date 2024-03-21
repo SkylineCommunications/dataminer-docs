@@ -10,7 +10,7 @@ This technique is available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39136 -
 
 Expected duration: 15 minutes.
 
-## When do I need a custom sort order?
+## When do you need a custom sort order?
 
 By default, every column in a GQI result can be sorted. However, because GQI is so generic, the sort order you use may not be suited for all types of data.
 
@@ -23,7 +23,7 @@ For example, a column containing text is sorted alphabetically by default, which
 | 192.168.11.1 |
 | 192.168.7.1  |
 
-Rather, we would prefer the address to be sorted by the value of their respective octets, like so:
+In this case, the addresses would better be sorted by the value of their respective octets, like so:
 
 | IP address   |
 |--------------|
@@ -32,17 +32,17 @@ Rather, we would prefer the address to be sorted by the value of their respectiv
 | 192.168.0.1  |
 | 192.168.11.1 |
 
-We will keep using this example in the rest of the tutorial.
+This example will be used in the rest of the tutorial.
 
-## How will we achieve this?
+## How will this be achieved?
 
-We can define a custom sort order for the IP address column by implementing a custom operator that "redirects" the sort operation on one column to another.
+You can define a custom sort order for the IP address column by implementing a custom operator that "redirects" the sort operation on one column to another.
 
-First of all, what do we mean by "redirecting" a sort operator? It means we want to change an incoming sort operator in our query, and modify it so it sorts on a different column. More concretely, if someone sorts the query on column A, we want to intercept this with a custom operator to change it to a sort operation on column B.
+First of all, what is meant by "redirecting" a sort operator? It means changing an incoming sort operator in your query, and modifying it so it sorts on a different column. More concretely, if someone sorts the query on column A, you can intercept this with a custom operator to change it to a sort operation on column B.
 
 ![Redirect sort operation diagram](~/user-guide/images/GQI_redirect_sort.png)
 
-Looking at our IP address example, we want to change the sort operation on our IP address column to another column that contains an "IP address ranking". This IP address ranking will be a column that, when sorted using the default GQI sort order, will result in the desired order for our IP address column.
+Looking at the IP address example, you can change the sort operation on the IP address column to another column that contains an "IP address ranking". This IP address ranking will be a column that, when sorted using the default GQI sort order, will result in the desired order for your IP address column.
 
 ## Overview
 
@@ -56,13 +56,13 @@ Looking at our IP address example, we want to change the sort operation on our I
 
 ## Step 1: Provide a column with the ranking
 
-Depending on the specific use case, the column might be readily available in the data source. However, in our example we will implement a new custom operator that will add a new column and fill it with a rank based on the IP address.
+Depending on the specific use case, the column might be readily available in the data source. However, in the example at hand, you can implement a new custom operator that will add a new column and fill it with a rank based on the IP address.
 
 [!code-csharp[](SLC-GQIO-IPAddressSortRank.cs)]
 
 ## Step 2: Create a new custom operator to redirect sort operations
 
-We create a new custom operator called `SortRedirector` and give it the display name "Redirect sort". We already added all the necessary `using` statements at the top. In the following steps, we will be added the rest of the code.
+Create a new custom operator called `SortRedirector` and give it the display name "Redirect sort". In the code below, the necessary `using` statements have already been added. In the following steps, you will be adding the rest of the code.
 
 ```csharp
 using Skyline.DataMiner.Analytics.GenericInterface;
@@ -78,12 +78,12 @@ public sealed class SortRedirector
 
 ## Step 3: Provide column arguments
 
-In order to redirect from one column to another, we will need to know which columns. Therefore, we will implement the [IGQIInputArguments](xref:GQI_IGQIInputArguments) interface to give us life cycle methods where we can define some custom arguments and retrieve their value.
+In order to redirect from one column to another, you will need to know which columns. Implement the [IGQIInputArguments](xref:GQI_IGQIInputArguments) interface to have life cycle methods in which you can define some custom arguments and retrieve their value.
 
-We will need 2 arguments:
+2 arguments are needed:
 
-- A column dropdown argument to select the column from which we want to redirect the sorting away.
-- A column dropdown argument to select the column to which we want to redirect the sorting to.
+- A column dropdown argument to select the column from which you want to redirect the sorting away.
+- A column dropdown argument to select the column to which you want to redirect the sorting to.
 
 ```csharp
 public sealed class SortRedirector : IGQIInputArguments
@@ -121,11 +121,11 @@ public sealed class SortRedirector : IGQIInputArguments
 
 ## Step 4: Provide the necessary dependencies
 
-Since operators in GQI are immutable, we will need to create our own new instance of the sort operator if we want to modify the original one.
+Since operators in GQI are immutable, you will need to create your own new instance of the sort operator if you want to modify the original one.
 
 The way to do this, is by using the [Factory](xref:GQI_OnInitInputArgs#properties) property on the [OnInitInputArgs](xref:GQI_OnInitInputArgs).This gives us access to the [IGQIFactory](xref:GQI_IGQIFactory) interface that provides methods to construct a new sort operator.
 
-So, in order to get access to the [OnInitInputArgs](xref:GQI_OnInitInputArgs), we need to implement the [IGQIOnInit](xref:GQI_IGQIOnInit) interface for our custom operator:
+So, in order to get access to the [OnInitInputArgs](xref:GQI_OnInitInputArgs), you need to implement the [IGQIOnInit](xref:GQI_IGQIOnInit) interface for your custom operator:
 
 ```csharp
 public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit
@@ -139,7 +139,7 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit
 
     public OnInitOutputArgs OnInit(OnInitInputArgs args)
     {
-        // Save the factory in our local field for later use
+        // Save the factory in your local field for later use
         _gqi = args.Factory;
         return default;
     }
@@ -148,13 +148,13 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit
 
 ## Step 5: Implement the sort redirection on a high level
 
-Now that we are all set up, it is time to implement the main logic of our sort redirector. This logic will be triggered by the [Optimize](xref:GQI_IGQIOptimizableOperator#igqiquerynode-optimizeigqioperatornode-currentnode-igqicoreoperator-nextoperator) life cycle method of the [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) interface.
+Now that you are all set up, it is time to implement the main logic of your sort redirector. This logic will be triggered by the [Optimize](xref:GQI_IGQIOptimizableOperator#igqiquerynode-optimizeigqioperatornode-currentnode-igqicoreoperator-nextoperator) life cycle method of the [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) interface.
 
 The high-level optimization logic will go like this:
 
 1. If the next operator is not a sort operator, just forward it.
 1. Otherwise, if it is a sort operator, redirect it from the `fromColumn` to the `toColumn`.
-1. Forward our redirected sort operator.
+1. Forward your redirected sort operator.
 
 Now, let us implement this:
 
@@ -174,7 +174,7 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimiz
     
     private IGQISortOperator Redirect(IGQISortOperator sortOperator)
     {
-        // We still need to implement the redirect details here
+        // The redirect details still need to be implemented here.
     }
 }
 ```
@@ -187,16 +187,16 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimiz
 
 ## Step 6: Implement the sort redirection details
 
-It is now time to put the icing on the cake and finalize our sort redirector with the final details.
+It is now time to put the icing on the cake and finalize your sort redirector with the final details.
 
-For this, it is important to know that a sort operator in GQI consists of sort fields, and that each sort field defines a sorting on a specific column together with a sort direction. So, for our redirection algorithm, we will need to consider every sort field separately, and keep the ones we do not care about intact.
+For this, it is important to know that a sort operator in GQI consists of sort fields, and that each sort field defines a sorting on a specific column together with a sort direction. So, for your redirection algorithm, you will need to consider every sort field separately, and keep the ones you do not care about intact.
 
 The algorithm goes as follows:
 
-1. If the sort operator contains no sort field for our `fromColumn`, we can return the original sort operator. No changes are required.
+1. If the sort operator contains no sort field for your `fromColumn`, you can return the original sort operator. No changes are required.
 1. Otherwise, construct an array of redirected sort fields where each sort field is determined as follows:
 
-    1. If the sort field is not for our `fromColumn`, keep it as it is.
+    1. If the sort field is not for your `fromColumn`, keep it as it is.
     1. Otherwise, construct a new sort field for `toColumn` with the same sort direction.
 
 1. Construct and return a new sort operator based on the redirected sort fields.
@@ -208,7 +208,7 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimiz
     
     private IGQISortOperator Redirect(IGQISortOperator sortOperator)
     {
-        // Check if we need to do some redirecting
+        // Check if you need to do some redirecting
         if (!sortOperator.Fields.Any(field => field.Column.Equals(_fromColumn)))
             return sortOperator; // No redirect necessary
     
@@ -238,7 +238,7 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimiz
 
 ## Step 7: Build a query using the new custom operator
 
-Now that the implement is finished, we can test and use our sort redirector in a query:
+Now that the implement is finished, you can test and use your sort redirector in a query:
 
 1. Add the data source containing the IP addresses. This can be any CSV source, parameter table, etc.
 1. Append the *Rank IP address* custom operator that creates the rank column if that column does not exist yet.
