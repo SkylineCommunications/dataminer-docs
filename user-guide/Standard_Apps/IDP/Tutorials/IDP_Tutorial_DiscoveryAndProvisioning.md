@@ -5,7 +5,7 @@ keywords: idp tutorial, idp kata
 
 # Getting started with IDP and onboarding new equipment
 
-This tutorial will show you how to install IDP and onboard new equiment. 
+This tutorial will show you how to install IDP and onboard new equiment.
 
 Expected duration: 20 minutes.
 
