@@ -66,6 +66,12 @@ Example: `[var:testvar,WaitForValue]`
 > If the variable name contains commas, by default, the text before the first valid option will be considered the name of the variable. For example, in the placeholder `[var:my,var,WaitForValue,NotValidOption]`, "my,var" will be considered the name of the variable.
 > This default behavior can be overruled by using a `[sep]` placeholder. For example, in the placeholder `[cardvar:[sep:,$]test,var$WaitForValue]`, "test,var" will be considered the name of the variable.
 
+#### Enhanced performance when loading properties in a view card [ID_38942]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when loading properties in a view card.
+
 #### Sidebar: Users will now be logged in automatically when opening an app from the Apps pane [ID_39057]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
