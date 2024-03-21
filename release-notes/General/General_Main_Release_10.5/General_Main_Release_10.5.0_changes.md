@@ -172,11 +172,11 @@ Up to now, after you had installed a connector for the first time, you typically
 
 For example, when I install *MyConnector 1.0.0.1* for the first time, it will automatically be promoted to "production version", but when I later deploy *MyConnector 1.0.0.2*, version 1.0.0.1 will remain the production version.
 
-#### SLAnalytics will no longer go into timeout for an hour when it fails to insert or update a small amount of data [ID_39109]
+#### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-When SLAnalytics fails to insert or update data in the database, by default, it will go into timeout for an hour. From now on, it will only go into timeout for an hour when it fails to insert or update a large data set. When it fails to insert or update a small amount of data, it will now go into timeout for a shorter period of time.
+Because of a number of enhancements, overall performance of SLAnalytics has increased when processing database operations, especially small insert or update operations.
 
 ### Fixes
 
