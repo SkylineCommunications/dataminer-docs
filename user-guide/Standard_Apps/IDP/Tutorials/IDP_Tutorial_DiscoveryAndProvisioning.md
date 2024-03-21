@@ -67,7 +67,7 @@ Discovery profiles define which information and how it should be retrieved from 
 1. On the left, select *Scan Ranges*.
 1. On the right, click the *New* button.
 
-    You should now see the following screen:
+    You now see the following screen:
 
    ![Scan Range Wizard - Start](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_0.png)
 
@@ -89,7 +89,7 @@ Discovery profiles define which information and how it should be retrieved from 
 
 1. Click the *Save* button.
 
-When selecting the row in the table, you should see the following result:
+When selecting the row in the table, you see the following result:
 
 ![Scan Ranges table - Row in table](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_3.png)
 
@@ -146,9 +146,13 @@ Depending on which connectors are already on the system or if they have been set
 ![Provisioning popup - Success](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_Success.png)
 
 1. Click *Provision*.
+1. Click *Finish*.
 1. After a few seconds, you'll see a new element being created in the surveyor.
+1. Go to *Inventory* > *Managed*.
+
+In the *Managed Elements* table you can see that a new row has been added with the information of the newly created element.
 
 Congratulations, you have provisioned your first element with IDP!
 
 > [!NOTE]
-> To be granted DevOps points, take a screenshot of this successful run and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
+> To be granted DevOps points, take a screenshot of the newly created element and the *Managed Elements* table and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
