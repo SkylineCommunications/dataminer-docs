@@ -7,7 +7,7 @@ keywords: idp tutorial, idp kata
 
 This tutorial will show you how to install IDP and onboard new equiment. 
 
-Expected duration: XX minutes.
+Expected duration: 20 minutes.
 
 <!-- TODO: Uncomment and fill in with correct info when Kata is released.
 > [!TIP]
@@ -59,6 +59,8 @@ Discovery profiles define which information and how it should be retrieved from 
    ![Discovery Profile Wizard - Filled in credentials](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_0.png)
 
 1. Click the *Save* button.
+
+When selecting the row in the table, you see the following result:
 
 ![Discovery Profiles Table - Filled in credentials](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_1.png)
 
