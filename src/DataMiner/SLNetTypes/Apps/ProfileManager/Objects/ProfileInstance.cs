@@ -12,82 +12,79 @@ using Skyline.DataMiner.Net.SRM.Capacities;
 namespace Skyline.DataMiner.Net.Profiles
 {
 	/// <summary>
-	/// Represents a Profile Manager profile instance.
+	/// Represents a Profile Helper profile instance.
 	/// </summary>
 	/// <example>
 	/// <para>Creating, retrieving, updating and deleting a profile instance.</para>
 	/// <code>
-	/// using Skyline.DataMiner.Automation;
-	/// using Skyline.DataMiner.Net.IManager.Helper;
-	/// using Skyline.DataMiner.Net.Profiles;
 	/// using System;
-	/// using System.Linq;
+    /// using System.Linq;
+    /// using Skyline.DataMiner.Automation;
+    /// using Skyline.DataMiner.Net.Messages.SLDataGateway;
+    /// using Skyline.DataMiner.Net.Profiles;
+    /// using Parameter = Skyline.DataMiner.Net.Profiles.Parameter;
 	/// 
 	/// public class Script
-	/// {
-	/// 	ProfileManagerHelper Helper;
-	/// 	
-	///		public Script()
-	///		{
-	///			Helper = new ProfileManagerHelper();
-	///			Helper.RequestResponseEvent += Helper_RequestResponseEvent;
-	///		}
-	///		
-	///		private void Helper_RequestResponseEvent(object sender, IManagerRequestResponseEventArgs e)
-	///		{
-	///			e.responseMessage = Engine.SLNet.SendSingleResponseMessage(e.requestMessage);
-	///		}
-	///		
-	///		public void Run(Engine engine)
-	///		{
-	///			ProfileInstance pi = CreateProfileInstance();
-	///			pi = RetrieveProfileInstance(pi.ID);
-	///			pi = UpdateProfileInstance(pi);
-	///			pi = DeleteProfileInstance(pi.ID);
-	///		}
-	///		
-	///		private ProfileInstance DeleteProfileInstance(Guid iD)
-	///		{
-	///			return Helper.RemoveProfileInstances(new ProfileInstance(iD)).FirstOrDefault();
-	///		}
-	///		
-	///		private ProfileInstance UpdateProfileInstance(ProfileInstance pi)
-	///		{
-	///			pi.Name = "Another Name";
-	///			pi.Description = "Another Description";
-	///			
-	///			return Helper.AddOrUpdateProfileInstance(pi);
-	///		}
-	///		
-	///		private ProfileInstance RetrieveProfileInstance(Guid iD)
-	///		{
-	///			return Helper.GetProfileInstances(new ProfileInstance(iD)).FirstOrDefault();
-	///		}
-	///		
-	///		private ProfileInstance CreateProfileInstance()
-	///		{
-	///			ProfileInstance pi = new ProfileInstance();
-	///			pi.AppliesTo = CreateProfileDefinition(); //Create a profiledefinition (same method as in ProfileDefinition CRUD)
-	///			//pi.BasedOn.Add(...); ProfileInstance can be based upon another ProfileInstance (inheritance)
-	///			pi.Description = "A description";
-	///			pi.Name = "A Name";
-	///			pi.Values = new ProfileParameterEntry[]
-	///			{
-	///				new ProfileParameterEntry()
-	///				{
-	///					Parameter = CreateParameter(),
-	///					Remarks = "This is a thing",
-	///					Value = new ParameterValue()
-	///					{
-	///						DoubleValue = 12345,
-	///						Type = ParameterValue.ValueType.Double
-	///					}
-	///				}
-	///			};
-	///			
-	///			return Helper.AddOrUpdateProfileInstance(pi);
-	///		}
-	///	}
+    /// {
+    ///    private ProfileHelper helper;
+    ///
+    ///    public void Run(Engine engine)
+    ///    {
+    ///        helper = new ProfileHelper(engine.SendSLNetMessages);
+    ///        ProfileInstance pi = CreateProfileInstance();
+    ///        pi = RetrieveProfileInstance(pi.ID);
+    ///        pi = UpdateProfileInstance(pi);
+    ///        pi = DeleteProfileInstance(pi.ID);
+    ///    }
+    ///
+    ///    private ProfileInstance DeleteProfileInstance(Guid iD)
+    ///    {
+    ///        var profileInstance = RetrieveProfileInstance(iD);
+    ///        helper.ProfileInstances.Delete(profileInstance);
+    ///
+    ///        return profileInstance;
+    ///    }
+    ///
+    ///    private ProfileInstance UpdateProfileInstance(ProfileInstance pi)
+    ///    {
+    ///        pi.Name = "Another Name";
+    ///        pi.Description = "Another Description";
+    ///
+    ///        return helper.ProfileInstances.Update(pi);
+    ///    }
+    ///
+    ///    private ProfileInstance RetrieveProfileInstance(Guid iD)
+    ///    {
+    ///        var exposer = ProfileInstanceExposers.ID.Equal(iD);
+    ///        var profileInstance = helper.ProfileInstances.Read(exposer);
+    ///        return profileInstance.FirstOrDefault();
+    ///    }
+    ///
+    ///    private ProfileInstance CreateProfileInstance()
+    ///    {
+    ///        ProfileInstance pi = new ProfileInstance();
+    ///        pi.AppliesTo = new ProfileDefinition();
+    ///        // pi.BasedOn.Add(...); ProfileInstance can be based upon another ProfileInstance (inheritance)
+    ///
+    ///        pi.Description = "A description";
+    ///        pi.Name = "A Name";
+    ///        pi.Values = new ProfileParameterEntry[]
+    ///        {
+    ///               new ProfileParameterEntry
+    ///               {
+    ///                   Parameter = new Parameter(),
+    ///                   Remarks = "Example double parameter",
+    ///                   Value = new ParameterValue
+    ///                   {
+    ///                       DoubleValue = 12345,
+    ///                       Type = ParameterValue.ValueType.Double,
+    ///                   },
+    ///               },
+    ///        };
+    ///
+    ///        return helper.ProfileInstances.Create(pi);
+    ///    }
+	/// }
 	/// </code>
 	/// </example>
 	[Serializable]
@@ -473,3 +470,5 @@ namespace Skyline.DataMiner.Net.Profiles
 		}
 	}
 }
+
+
