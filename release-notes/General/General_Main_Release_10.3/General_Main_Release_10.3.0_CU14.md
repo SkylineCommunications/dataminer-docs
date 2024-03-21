@@ -96,3 +96,9 @@ When you opened a visual overview in a web app, in some cases, a `Connection cou
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
+
+#### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID_39164]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.
