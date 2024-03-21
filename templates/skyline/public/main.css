@@ -283,7 +283,6 @@ footer {
   color: var(--color-foreground);
 }
 
-
 .sidefilter {
   background-color: var(--color-background);
   border-left: none;
@@ -469,6 +468,11 @@ code {
 .icons > a:hover
 {
 	color: #eef2f5;
+}
+
+li {
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
