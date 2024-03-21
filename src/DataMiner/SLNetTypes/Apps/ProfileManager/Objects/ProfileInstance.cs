@@ -84,6 +84,7 @@ namespace Skyline.DataMiner.Net.Profiles
     ///
     ///        return helper.ProfileInstances.Create(pi);
     ///    }
+	/// }
 	/// </code>
 	/// </example>
 	[Serializable]
