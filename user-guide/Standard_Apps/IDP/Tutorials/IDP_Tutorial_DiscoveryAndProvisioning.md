@@ -19,7 +19,7 @@ Expected duration: 20 minutes.
 - A DataMiner System using DataMiner 10.3.0-CU0 or higher that is
 
   - [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-  - running on a Microsoft server.
+  - running on a Microsoft Windows server.
 
 > [!IMPORTANT]
 > If you are using a DataMiner version lower than 10.4.0 or 10.4.3, install the [IDP Migration](https://community.dataminer.services/download/idp-migration/) package first.
@@ -152,7 +152,7 @@ Depending on which connectors are already on the system or if they have been set
 1. After a few seconds, you'll see a new element being created in the surveyor.
 1. Go to *Inventory* > *Managed*.
 
-In the *Managed Elements* table you can see that a new row has been added with the information of the newly created element.
+In the *Managed Elements* table you can see that a new row has been added with the information of the newly created element. If you go to the element, you'll see the parameters being filled in as the data is being polled from your local system.
 
 Congratulations, you have provisioned your first element with IDP!
 
