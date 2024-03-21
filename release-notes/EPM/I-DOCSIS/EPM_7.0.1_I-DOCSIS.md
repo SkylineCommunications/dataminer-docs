@@ -53,6 +53,18 @@ To use this feature, click the timestamp at the top of the dashboard. This will 
 
 Several improvements have been implemented in the Generic DOCSIS CM Collector connector to increase performance.
 
+#### Default values added for upstream SNR threshold CCAPs [ID_39207]
+
+New default values have been added for the upstream SNR threshold. When a CCAP element is first initialized, it will now set these default values for the Upstream QAM Channel Threshold:
+
+- "Other" Modulation: 20.0 dB
+- QPSK: 15.0 dB
+- QAM8: 15.0 dB
+- QAM16: 15.0 dB
+- QAM32: 19.0 dB
+- QAM64: 21.0 dB
+- QAM128: 24.0 dB
+
 ### Fixes
 
 #### Maps cluster color not matching household color [ID_38847]
@@ -70,3 +82,7 @@ In some cases, when the I-DOCSIS Solution tried to copy or write a file, a Syste
 #### EPM_I_DOCSIS_SetThresholdsTableToCollectors script ID conflict [ID_39040]
 
 Up to now, a conflict could occur between the script ID of the *EPM_I_DOCSIS_SetThresholdsTableToCollectors* script and that of other scripts. In the Automation log file, this would be logged as "Execute ID 1 is used by another script". The script has now been updated to prevent this.
+
+#### Parameter status values in Cable Modem table shown as not initialized [ID_39206]
+
+When there were no valid values for the status of the parameters Rx Power Status, Tx Power Status, SNR Status, Post-FEC Status, Group Delay Status, Reflection Status, Reflection Distance Status, or Group Delay Reflection Status, it could occur that these columns in the Cable Modem table showed "Not Initialized" instead of the correct value "N/A". This has been corrected by adding an exception when the rows are initialized.
