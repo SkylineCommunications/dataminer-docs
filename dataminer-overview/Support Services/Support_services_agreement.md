@@ -8,7 +8,7 @@ uid: Support_services_terms
 
 This document sets out the terms of Skyline's Support Services for its Software (the "**Terms**").
 
-These Terms apply on all orders for Support Services placed at Skyline by the User. The User accepts these Terms when placing Support Services orders at Skyline. Any deviations from these Terms shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
+These Terms apply on all orders for Support Services placed at Skyline by the User.
 
 ## Definitions
 
@@ -69,13 +69,13 @@ The User shall ensure that they have an industry-standard and uninterrupted remo
 
 ## Ticket generation
 
-When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User can at their choice [open a ticket for Support or call Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
+When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User should open a ticket for Support using the [User Operations Support web application](https://operations.skyline.be/Home/CreateTicket). More details about this can be found in the [User Operations Support documentation](xref:User_operations_support).
 
-Tickets for Support can be generated through dataminer.services.
+If for some reason the User cannot access the User Operations Support web application and create a ticket, they can also [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 
-Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through Skyline's dataminer.services.
+Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through the [User Operations Support web application](https://operations.skyline.be/Home/CreateTicket).
 
-The User can always consult the status of their tickets on Skyline's dataminer.services. The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
+The User can always consult the status of their tickets using Skyline's [User Operations Support web application](https://operations.skyline.be/). More details about this can be found in the [User Operations Support documentation](xref:User_operations_support). The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
 
 To be able to assist the User in an efficient manner, when generating a ticket or calling Skyline's helpdesk, the User is required to provide the following information: (a) a general description of the operating environment, (b) a list of all hardware components, operating systems, and networks, (c) a reproducible test case, and (d) any log files, trace and systems files. The User's failure to provide this information may prevent Skyline from identifying and fixing the Issue.
 

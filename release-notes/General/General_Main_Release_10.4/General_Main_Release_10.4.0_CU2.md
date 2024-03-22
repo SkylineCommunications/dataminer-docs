@@ -102,6 +102,12 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 
 A number of security enhancements have been made.
 
+#### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
@@ -119,6 +125,24 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 > - When the current status is "yellow", SLDataGateway will not switch to file offload mode.
 > - Whenever the health of the storage service changes, an alarm mentioning the current health status is generated.
 
+#### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance of SLAnalytics has increased when processing database operations, especially small insert or update operations.
+
+#### SLNet: Enhanced task processing [ID_39131]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
+
+#### STaaS: Text of storage service health status alarm has been made clearer [ID_39154]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Whenever the health of the storage service changes, an alarm mentioning the current health status is generated. The text of this health status alarm has now been made clearer.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -126,14 +150,6 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.1 -->
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
-
-#### Problem with user accounts [ID_38182]
-
-<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
-
-In some cases, user accounts could become corrupted.
-
-Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
@@ -159,8 +175,42 @@ When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incor
 
 When a service created via an SRM booking got into an error state because it had been assigned a name that was already being used by another object, it would not be possible to delete it as it would be considered invalid.
 
+#### Service & Resource Management: Problem when the function manager was not able to read the functions.xml file in C:\\Skyline DataMiner\\ServiceManager [ID_38925]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, in some cases, a run-time error could occur when the function manager was not able to read the *functions.xml* file in `C:\Skyline DataMiner\ServiceManager`.
+
+From now on, if an error occurs when the function manager was not able to read that file, an entry will be added to the *SLFunctionManager.txt* log file, and if the error occurred because the file was locked by another process, the log entry will include the name of the process.
+
 #### STaaS: Database queries could time out [ID_39081]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.
+
+#### Protocols: Compliancies element would not get parsed correctly when it contained comments [ID_39085]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, the `<Compliancies>` element of a *protocol.xml* file would not get parsed correctly when it contains HTML comments.
+
+As a result, DataMiner would fail to open the protocol and create elements with it.
+
+#### Visual Overview: 'Connection could not be fully established' error when viewing visual overviews in a web app [ID_39133]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you opened a visual overview in a web app, in some cases, a `Connection could not be fully established` error would appear.
+
+#### No emails could be sent as long as SLASPConnection was not fully initialized [ID_39137]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
+
+#### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID_39164]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.

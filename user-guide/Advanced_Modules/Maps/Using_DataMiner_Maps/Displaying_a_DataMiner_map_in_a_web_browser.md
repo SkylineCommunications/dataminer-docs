@@ -15,14 +15,24 @@ uid: Displaying_a_DataMiner_map_in_a_web_browser
 1. Press ENTER.
 
 > [!TIP]
-> See also:
-> [Switching map configurations by means of JavaScript](xref:Switching_map_configurations_by_means_of_JavaScript)
+> See also: [Switching map configurations by means of JavaScript](xref:Switching_map_configurations_by_means_of_JavaScript)
 
-Example: If you want to display a DataMiner map using the settings specified in a configuration file named *mymap.xml*, enter the following address in the address bar of your web browser:
+> [!NOTE]
+> You can override the initial center latitude and longitude defined in the map configuration using the "lat" and "long" URL arguments.
 
-```txt
-http://MyDma/maps/map.aspx?config=mymap
-```
+Examples:
+
+- To display a DataMiner map using the settings specified in a configuration file named *mymap.xml*, enter the following address in the address bar of your web browser:
+
+  ```txt
+  http://MyDma/maps/map.aspx?config=mymap
+  ```
+
+- To display a map using the settings specified in a configuration file named *ExampleConfig.xml*, but with a custom center latitude and longitude:
+
+  ```txt
+  http://MyDma/maps/map.aspx?config=ExampleConfig&lat=42&long=12.30
+  ```
 
 ## Displaying a DataMiner Map in a Visio file
 

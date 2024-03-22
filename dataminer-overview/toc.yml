@@ -170,6 +170,8 @@ items:
           topicUid: Support_services_terms
         - name: Partner support lines
           topicUid: Partner_support_lines
+        - name: User Operations Support application
+          topicUid: User_operations_support
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:

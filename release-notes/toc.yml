@@ -24,7 +24,6 @@ items:
             topicUid: DIS_RNs_index
             href: DIS/toc.yml
           - name: EPM release notes
-            topicUid: EPM_6.1.6_D-DOCSIS
             href: EPM/toc.yml
           - name: IDP release notes
             topicUid: IDP_1.5.0
@@ -36,7 +35,6 @@ items:
             topicUid: PA_1.3.1
             href: PA/toc.yml
           - name: PTP release notes
-            topicUid: PTP_1.1.3
             href: PTP/toc.yml
           - name: SRM release notes
             href: SRM/toc.yml
