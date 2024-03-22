@@ -32,9 +32,9 @@ If this error is shown in your workflow, you will need to check the *SonarCloud 
 
 #### 'Analyze' step - You are running CI analysis while Automatic Analysis is enabled. Please consider disabling one or the other
 
-This setting is unfortunately only accessible for people with admin rights on SonarCloud. A [repository](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.SonarCloudFixer) has been set up that, every 10 minutes, checks if there are any projects with *Automatic Analysis* enabled and disables it.
+This setting is only accessible for people with admin rights on SonarCloud. However, a [SonarCloudFixer repository](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.SonarCloudFixer) has been set up that checks every 10 minutes whether *Automatic Analysis* is enabled in any projects and, if so, disables it.
 
-After the setting is disabled, run your workflow again to verify if everything is ok.
+Once the setting is disabled, run your workflow again to verify if everything is OK.
 
 #### 'Sonar Quality Gate check' step - Quality Gate not set for the project. Please configure the Quality Gate in SonarQube or remove sonarqube-quality-gate action from the workflow
 
