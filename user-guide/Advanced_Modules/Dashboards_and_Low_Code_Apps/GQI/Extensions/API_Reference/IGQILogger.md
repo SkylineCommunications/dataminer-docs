@@ -9,21 +9,15 @@ uid: GQI_IGQILogger
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-Contains functionality to log messages and exceptions. The log files will be placed within the `C:\Skyline DataMiner\Logging\GQI\Extensions` folder.
+Contains functionality to log messages and exceptions. The log files will be placed within the `C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources` or `C:\Skyline DataMiner\Logging\GQI\Custom operators` folder.
+
+Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39043 -->
 
 ## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| MinimumLogLevel | GQILogLevel | Set or get the current minimum log level. The default value is `Information`. |
-
-GQILogLevel exposes the following log levels:
-- **Verbose**: Detailed information for debugging, usually not used in production.
-- **Debug**: Internal system events for debugging and troubleshooting.
-- **Information**: General operational messages to track application behavior.
-- **Warning** Indicates potential issues that may need attention.
-- **Error**: Signals unexpected failures or malfunctions in the application.
-- **Fatal**: Critical errors requiring immediate action, often leading to application termination.
+| MinimumLogLevel | [GQILogLevel](xref:GQI_GQILogLevel) | Get or set the minimum log level. The default is `GQILogLevel.Information`. |
 
 ## Methods
 
@@ -32,48 +26,72 @@ GQILogLevel exposes the following log levels:
 
 ### void Verbose(string message)
 
-Outputs extensive information about a running block of code, useful for thorough debugging but typically disabled in production to avoid excessive logging.
+Log a message with the [GQILogLevel.Verbose](xref:GQI_GQILogLevel) level.
+
+Should be used to output extensive information about a running block of code that is useful for thorough debugging but that should not be available in production.
 
 ### void Verbose(Exception exception, string message)
 
-Outputs extensive information about a running block of code, useful for thorough debugging but typically disabled in production to avoid excessive logging.
+Log a message with the [GQILogLevel.Verbose](xref:GQI_GQILogLevel) level.
+
+Should be used to output extensive information about a running block of code that is useful for thorough debugging but that should not be available in production.
 
 ### void Debug(string message)
 
-Logs internal system events that aid in debugging and troubleshooting, providing insights into the application's execution flow.
+Log a message with the [GQILogLevel.Debug](xref:GQI_GQILogLevel) level.
+
+Should be used to log internal system events that aid in debugging and troubleshooting, providing insights into the application's execution flow.
 
 ### void Debug(Exception exception, string message)
 
-Logs internal system events that aid in debugging and troubleshooting, providing insights into the application's execution flow.
+Log a message with the [GQILogLevel.Debug](xref:GQI_GQILogLevel) level.
+
+Should be used to log internal system events that aid in debugging and troubleshooting, providing insights into the application's execution flow.
 
 ### void Information(string message)
 
-Records general operational messages to track the behavior of the application during runtime.
+Log a message with the [GQILogLevel.Information](xref:GQI_GQILogLevel) level.
+
+Should be used to record general operational messages to track the behavior of the application during runtime.
 
 ### void Information(Exception exception, string message)
 
-Records general operational messages to track the behavior of the application during runtime.
+Log a message with the [GQILogLevel.Information](xref:GQI_GQILogLevel) level.
+
+Should be used to record general operational messages to track the behavior of the application during runtime.
 
 ### void Warning(string message)
 
-Logs potential issues or situations that may require attention, indicating unexpected behavior without halting the application.
+Log a message with the [GQILogLevel.Warning](xref:GQI_GQILogLevel) level.
+
+Should be used to log potential issues or situations that may require attention, indicating unexpected behavior without halting the application.
 
 ### void Warning(Exception exception, string message)
 
-Logs potential issues or situations that may require attention, indicating unexpected behavior without halting the application.
+Log a message with the [GQILogLevel.Warning](xref:GQI_GQILogLevel) level.
+
+Should be used to log potential issues or situations that may require attention, indicating unexpected behavior without halting the application.
 
 ### void Error(string message)
 
-Records unexpected failures or malfunctions in the application, signaling issues that need to be addressed.
+Log a message with the [GQILogLevel.Error](xref:GQI_GQILogLevel) level.
+
+Should be used to record unexpected failures or malfunctions in the application, signaling issues that need to be addressed.
 
 ### void Error(Exception exception, string message)
 
-Records unexpected failures or malfunctions in the application, signaling issues that need to be addressed.
+Log a message with the [GQILogLevel.Error](xref:GQI_GQILogLevel) level.
+
+Should be used to record unexpected failures or malfunctions in the application, signaling issues that need to be addressed.
 
 ### void Fatal(string message)
 
-Logs critical errors that result in the termination of the application or loss of essential functionality, requiring immediate action to resolve.
+Log a message with the [GQILogLevel.Fatal](xref:GQI_GQILogLevel) level.
+
+Should be used to log critical errors that result in the termination of the application or loss of essential functionality, requiring immediate action to resolve.
 
 ### void Fatal(Exception exception, string message)
 
-Logs critical errors that result in the termination of the application or loss of essential functionality, requiring immediate action to resolve.
+Log a message with the [GQILogLevel.Fatal](xref:GQI_GQILogLevel) level.
+
+Should be used to log critical errors that result in the termination of the application or loss of essential functionality, requiring immediate action to resolve.
