@@ -20,7 +20,7 @@ Expected duration: 15 minutes.
 
 <!--
 > [!TIP]
-> See also: [Kata #X: Validator Contribution](https://community.dataminer.services/courses/kata-X) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #23: Contributing to the DIS Validator](https://community.dataminer.services/courses/kata-23) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 -->
 
 ## Prerequisites
