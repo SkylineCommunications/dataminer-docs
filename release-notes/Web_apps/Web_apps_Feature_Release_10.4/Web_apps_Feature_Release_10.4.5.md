@@ -153,6 +153,12 @@ Up to now, when two states were able to transition to each other, an infinite lo
 
 When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
 
+#### Dashboards app & Low-Code Apps - Interactive Automation scripts: Values would not get updated when the focus changed [ID_38838]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in an interactive Automation script run from a dashboard or a low-code app, you had changed a value, that value would incorrectly not get updated when the focus changed.
+
 #### Dashboards app: Problem with Dropdown components on shared dashboards [ID_38953]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
