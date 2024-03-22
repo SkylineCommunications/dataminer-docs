@@ -218,3 +218,9 @@ When, in the *DATA* pane, you opened the *PARAMETERS* section, set the *From* bo
 When a web app loses its WebSocket connection, a `Connection has been interrupted` message is displayed in the app's subheader. In some cases, that message would incorrectly not disappear once the WebSocket connection was restored.
 
 From now on, a message will also be displayed in the app's subheader when not all messages received when the app was disconnected could be recovered. That same message will ask the user to refresh the app.
+
+#### Dashboards app & Low-Code Apps: 'Select a visualization' button would not be displayed [ID_39194]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in edit mode, you clicked a component or hovered the mouse pointer over it, in some cases, the *Select a visualization* button would incorrectly not be displayed.
