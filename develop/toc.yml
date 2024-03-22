@@ -5308,6 +5308,12 @@ items:
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
+    - name: CI/CD Troubleshooting
+      items:
+        - name: GitHub failures
+          topicUid: CICD_Troubleshooting_GitHubFailures
+        - name: Jenkins failures
+          topicUid: CICD_Troubleshooting_JenkinsFailures
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:

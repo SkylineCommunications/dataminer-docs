@@ -16,7 +16,9 @@ Most methods require a connection string, which is a token identifier received u
 When you authenticate, make sure to pass along the name and version of the client application as provided by Skyline Communications as part of the DataMiner software license.
 
 > [!NOTE]
-> If the connection is not used for 5 minutes, the session will end. You will then need to connect again to request a new connection ID.
+>
+> - If the connection is not used for 5 minutes, the session will end. You will then need to connect again to request a new connection ID.
+> - The client application should invoke the Connect method once, retaining the same connection ID for all subsequent web method calls. Should the connection ID become invalid, the Web APIs will raise an error ("No connection available"), which the client application can identify so it can subsequently reconnect, allowing the API call to be retried. This approach eliminates the necessity of initiating a Connect operation prior to each call to the Web APIs.
 
 ## Interfaces and WSDL files
 

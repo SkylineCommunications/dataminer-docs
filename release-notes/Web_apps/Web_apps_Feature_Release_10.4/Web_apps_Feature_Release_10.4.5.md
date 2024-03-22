@@ -153,6 +153,12 @@ Up to now, when two states were able to transition to each other, an infinite lo
 
 When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
 
+#### Dashboards app & Low-Code Apps - Interactive Automation scripts: Values would not get updated when the focus changed [ID_38838]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in an interactive Automation script run from a dashboard or a low-code app, you had changed a value, that value would incorrectly not get updated when the focus changed.
+
 #### Dashboards app: Problem with Dropdown components on shared dashboards [ID_38953]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -212,3 +218,9 @@ When, in the *DATA* pane, you opened the *PARAMETERS* section, set the *From* bo
 When a web app loses its WebSocket connection, a `Connection has been interrupted` message is displayed in the app's subheader. In some cases, that message would incorrectly not disappear once the WebSocket connection was restored.
 
 From now on, a message will also be displayed in the app's subheader when not all messages received when the app was disconnected could be recovered. That same message will ask the user to refresh the app.
+
+#### Dashboards app & Low-Code Apps: 'Select a visualization' button would not be displayed [ID_39194]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in edit mode, you clicked a component or hovered the mouse pointer over it, the *Select a visualization* button would incorrectly not be displayed when you dragged query row data from the feed section onto the dashboard or the low-code panel you were editing.

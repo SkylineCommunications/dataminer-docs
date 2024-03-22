@@ -49,6 +49,18 @@ A number of security enhancements have been made.
 
 Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
 
+#### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance of SLAnalytics has increased when processing database operations, especially small insert or update operations.
+
+#### SLNet: Enhanced task processing [ID_39131]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
