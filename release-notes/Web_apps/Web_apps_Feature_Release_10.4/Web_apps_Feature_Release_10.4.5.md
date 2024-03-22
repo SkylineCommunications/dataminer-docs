@@ -223,4 +223,4 @@ From now on, a message will also be displayed in the app's subheader when not al
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When, in edit mode, you clicked a component or hovered the mouse pointer over it, in some cases, the *Select a visualization* button would incorrectly not be displayed.
+When, in edit mode, you clicked a component or hovered the mouse pointer over it, the *Select a visualization* button would incorrectly not be displayed when you dragged query row data from the feed section onto the dashboard or the low-code panel you were editing.
