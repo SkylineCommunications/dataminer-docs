@@ -4,9 +4,9 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
-#### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI shows the jobs when DataAPI softlaunch flag is not enabled [ID_39159]
+#### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI also shows jobs when DataAPI soft-launch option is not enabled [ID_39159]
 
-The debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) now shows the jobs even when the DataAPI softlaunch flag is not enabled.
+The debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) now also shows the jobs even when the *DataAPI* soft-launch option is not enabled.
 
 #### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39086]
 
