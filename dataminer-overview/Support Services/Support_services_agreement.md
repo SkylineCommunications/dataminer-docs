@@ -73,7 +73,7 @@ When the User encounters an Issue with the Software or wishes to receive Support
 
 If for some reason the User cannot access the User Operations Support web application and create a ticket, they can also [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 
-Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through Skyline's dataminer.services.
+Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through the [User Operations Support web application](https://operations.skyline.be/Home/CreateTicket).
 
 The User can always consult the status of their tickets using Skyline's [User Operations Support web application](https://operations.skyline.be/). More details about this can be found in the [User Operations Support documentation](xref:User_operations_support). The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
 
