@@ -38,11 +38,11 @@ This example will be used in the rest of the tutorial.
 
 You can define a custom sort order for the IP address column by implementing a custom operator that "redirects" the sort operation on one column to another.
 
-First of all, what is meant by "redirecting" a sort operator? It means changing an incoming sort operator in your query, and modifying it so it sorts on a different column. More concretely, if someone sorts the query on column A, you can intercept this with a custom operator to change it to a sort operation on column B.
+"Redirecting" a sort operator means changing an incoming sort operator in your query, and modifying it so it sorts on a different column. For example, if someone sorts a query on column A, you can intercept this with a custom operator to change it to a sort operation on column B.
 
 ![Redirect sort operation diagram](~/user-guide/images/GQI_redirect_sort.png)
 
-Looking at the IP address example, you can change the sort operation on the IP address column to another column that contains an "IP address ranking". This IP address ranking will be a column that, when sorted using the default GQI sort order, will result in the desired order for your IP address column.
+For the IP address example, you can change the sort operation on the IP address column to another column that contains an "IP address ranking". This IP address ranking will be a column that, when sorted using the default GQI sort order, will result in the desired order for your IP address column.
 
 ## Overview
 
@@ -80,10 +80,10 @@ public sealed class SortRedirector
 
 In order to redirect from one column to another, you will need to know which columns. Implement the [IGQIInputArguments](xref:GQI_IGQIInputArguments) interface to have life cycle methods in which you can define some custom arguments and retrieve their value.
 
-2 arguments are needed:
+Two arguments are needed:
 
 - A column dropdown argument to select the column from which you want to redirect the sorting away.
-- A column dropdown argument to select the column to which you want to redirect the sorting to.
+- A column dropdown argument to select the column to which you want to redirect the sorting.
 
 ```csharp
 public sealed class SortRedirector : IGQIInputArguments
@@ -123,7 +123,7 @@ public sealed class SortRedirector : IGQIInputArguments
 
 Since operators in GQI are immutable, you will need to create your own new instance of the sort operator if you want to modify the original one.
 
-The way to do this, is by using the [Factory](xref:GQI_OnInitInputArgs#properties) property on the [OnInitInputArgs](xref:GQI_OnInitInputArgs).This gives us access to the [IGQIFactory](xref:GQI_IGQIFactory) interface that provides methods to construct a new sort operator.
+The way to do this is by using the [Factory](xref:GQI_OnInitInputArgs#properties) property on the [OnInitInputArgs](xref:GQI_OnInitInputArgs). This gives you access to the [IGQIFactory](xref:GQI_IGQIFactory) interface that provides methods to construct a new sort operator.
 
 So, in order to get access to the [OnInitInputArgs](xref:GQI_OnInitInputArgs), you need to implement the [IGQIOnInit](xref:GQI_IGQIOnInit) interface for your custom operator:
 
@@ -156,7 +156,7 @@ The high-level optimization logic will go like this:
 1. Otherwise, if it is a sort operator, redirect it from the `fromColumn` to the `toColumn`.
 1. Forward your redirected sort operator.
 
-Now, let us implement this:
+This is how you can implement this:
 
 ```csharp
 public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimizableOperator
@@ -194,9 +194,11 @@ For this, it is important to know that a sort operator in GQI consists of sort f
 The algorithm goes as follows:
 
 1. If the sort operator contains no sort field for your `fromColumn`, you can return the original sort operator. No changes are required.
+
 1. Otherwise, construct an array of redirected sort fields where each sort field is determined as follows:
 
     1. If the sort field is not for your `fromColumn`, keep it as it is.
+
     1. Otherwise, construct a new sort field for `toColumn` with the same sort direction.
 
 1. Construct and return a new sort operator based on the redirected sort fields.
@@ -240,11 +242,16 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit, IGQIOptimiz
 
 Now that the implement is finished, you can test and use your sort redirector in a query:
 
-1. Add the data source containing the IP addresses. This can be any CSV source, parameter table, etc.
+1. Add the data source containing the IP addresses.
+
+   This can be any CSV source, parameter table, etc.
+
 1. Append the *Rank IP address* custom operator that creates the rank column if that column does not exist yet.
+
 1. Append the *Redirect sort* custom operator:
 
     1. For the *Redirect from column* argument, select the IP address column.
+
     1. For the *Redirect to column* argument, select the IP address rank column.
 
 1. Append a sort operator that sorts the query on the IP address column.
