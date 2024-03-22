@@ -4,6 +4,10 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI shows the jobs when DataAPI softlaunch flag is not enabled [ID_39159]
+
+The debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) now shows the jobs even when the DataAPI softlaunch flag is not enabled.
+
 #### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39086]
 
 The Cloud Node ID is now used to uniquely identify each DxM instance in a cluster and report back DxM health stats for remote monitoring of systems connected to dataminer.services.
