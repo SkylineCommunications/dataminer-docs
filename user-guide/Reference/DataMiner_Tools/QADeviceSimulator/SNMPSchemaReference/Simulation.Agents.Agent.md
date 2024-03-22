@@ -23,11 +23,11 @@ Contains the agents that should be available when the simulation file is spun up
 |DatabaseLogging |[0, 1] |empty |No longer used. |
 |UseExceptions |[0, 1] |empty |No longer used. |
 |GetCommunity |[0, 1] |*public* |The community string for read access. For example: `public`. |
-|SetCommunity |[0, 1] |*private* |The community string for write access. For example: `private` |
-|EngineID |[0, 1] |empty |The agent's engine ID for SNMPv3 communication. Can also be written as **engineID**. Example: `80.00.22.FF.04.51.41.00.0C` |
-|UserName |[0, 1] |empty |The SNMPv3 user name. Can also be written as **userName**. Example: `setUsers`.|
+|SetCommunity |[0, 1] |*private* |The community string for write access. For example: `private`. |
+|EngineID |[0, 1] |empty |The agent's engine ID for SNMPv3 communication. Can also be written as **engineID**. For example: `80.00.22.FF.04.51.41.00.0C`. |
+|UserName |[0, 1] |empty |The SNMPv3 user name. Can also be written as **userName**. For example: `setUsers`.|
 |AuthenticationAlgorithm |[0, 1] |empty |The SNMPv3 authentication algorithm. Expected values are `HMAC-SHA`, `HMAC-MD5`, or empty. This field is not case-sensitive. This attribute can also be written as **authenticationAlgorithm**. |
 |EncryptionAlgorithm |[0, 1] |empty |The SNMPv3 encryption algorithm. Expected values are `AES128`, `DES`, or empty. This field is not case-sensitive. This attribute can also be written as **encryptionAlgorithm**. |
-|AuthenticationPassword | [0, 1] |empty |The authentication password when an authentication algorithm is used. This attribute can also be written as **authenticationPassword**. Example: `password`. |
-|EncryptionPassword |[0, 1] |empty |The encryption password when an encryption algorithm is used. This attribute can also be written as **encryptionPassword**. Example: `password`. |
+|AuthenticationPassword | [0, 1] |empty |The authentication password when an authentication algorithm is used. This attribute can also be written as **authenticationPassword**. For example: `password`. |
+|EncryptionPassword |[0, 1] |empty |The encryption password when an encryption algorithm is used. This attribute can also be written as **encryptionPassword**. For example: `password`. |
 |ContextName |[0, 1] |empty |Can also be written as **contextName**. |
