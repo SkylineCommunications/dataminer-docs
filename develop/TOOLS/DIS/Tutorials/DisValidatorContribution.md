@@ -281,7 +281,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
     
          // Verify valid decimals.
          var decimalsTag = param.Display?.Decimals;
-         if (foundDateTime && decimalsTag?.Value != 8)
+         if (decimalsTag?.Value != 8)
          {
             var positionNode = decimalsTag ?? (IReadable)displayTag;
             results.Add(Error.InvalidTagForDateTime(this, param, positionNode, param.Id.RawValue));
