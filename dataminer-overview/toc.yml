@@ -168,6 +168,8 @@ items:
           topicUid: Proactive_Support
         - name: Support services terms
           topicUid: Support_services_terms
+        - name: Partner support lines
+          topicUid: Partner_support_lines
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:
