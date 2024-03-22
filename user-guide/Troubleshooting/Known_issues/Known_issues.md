@@ -10,12 +10,12 @@ uid: Known_issues
 | [Param next attribute not working correctly](xref:KI_Param_next_not_working) | From DataMiner 10.4.1 onwards | | March 20, 2024 |
 | [SLDataMiner crashes because of subgroup query failure](xref:KI_SLDataMiner_crashes_because_of_subgroup_query_failure) | From DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 onwards | | March 11, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
-| [IDP Discovery no longer working after upgrade](xref:KI_IDP_Discovery_not_working) | From DataMiner 10.4.0/10.4.3 onwards | | February 26, 2024 |
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | | February 2, 2024 |
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Error in SLDataMiner when generating MIB file](xref:KI_SLDataMiner_problem_generating_MIB) | DataMiner 10.4.2 and 10.4.3<br>DataMiner 10.4.0 [CU0]<br>DataMiner 10.3.0 [CU11] and [CU12]| DataMiner 10.3.0 [CU13], 10.4.0 [CU1], or 10.4.4.| March 15, 2024 |
+| [IDP Discovery no longer working after upgrade](xref:KI_IDP_Discovery_not_working) | From DataMiner 10.4.0/10.4.3 onwards | IDP 1.5.0 | February 26, 2024 |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Downgrade fails because of VerifyNatsIsRunning.dll prerequisite](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | From DataMiner 10.4.0/10.4.3 onwards | [Requires configuration](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | January 23, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 onwards | DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
