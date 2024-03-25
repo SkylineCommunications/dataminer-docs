@@ -5,7 +5,7 @@ keywords: idp tutorial, idp kata
 
 # Getting started with IDP and onboarding new equipment
 
-This tutorial will show you how to install IDP and onboard new equiment. We will onboard the Microsoft server that runs DataMiner as it is easy accessible equipment.
+This tutorial will show you how to install IDP and onboard new equipment. By way of example, the Microsoft server running DataMiner will be onboarded, as this is easily accessible equipment.
 
 Expected duration: 20 minutes.
 
@@ -16,43 +16,52 @@ Expected duration: 20 minutes.
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.3.0-CU0 or higher that is
+The DataMiner System used for this tutorial has to meet the following requirements:
 
-  - [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-  - running on a Microsoft Windows server.
+- DataMiner is installed on a machine running a Windows Server version (e.g. Windows Server 2022).
+- The DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- The DataMiner version is 10.3.0 [CU0] or higher.
 
 > [!IMPORTANT]
-> If you are using a DataMiner version lower than 10.4.0 or 10.4.3, install the [IDP Migration](https://community.dataminer.services/download/idp-migration/) package first.
+> If you are using a DataMiner version lower than 10.4.0 or 10.4.3, install the [IDP Migration](https://community.dataminer.services/download/idp-migration/) package before you start the tutorial.
 
 > [!NOTE]
 > If you use a [DaaS system](xref:Creating_a_DMS_in_the_cloud), these prerequisites are automatically met.
 
 ## Overview
 
-- [Step 1: Deploy IDP from the Catalog](#step-1-deploy-idp-from-the-catalog)
+- [Step 1: Deploy IDP from the DataMiner Catalog](#step-1-deploy-idp-from-the-dataminer-catalog)
 - [Step 2: Configure discovery profile](#step-2-configure-discovery-profile)
 - [Step 3: Configure scan range](#step-3-configure-scan-range)
 - [Step 4: Run the discovery](#step-4-run-the-discovery)
 - [Step 5: Provision the discovered element(s)](#step-5-provision-the-discovered-elements)
 
-## Step 1: Deploy IDP from the Catalog
+## Step 1: Deploy IDP from the DataMiner Catalog
 
 1. [Deploy the IDP package from the Catalog](xref:Installing_DataMiner_IDP#deploying-the-idp-package).
-1. Go to your DataMiner system, you'll notice that IDP will be automatically installed and set up for you.
+
+1. Connect to your DataMiner System in DataMiner Cube.
+
+You will notice that IDP will be automatically installed and set up for you.
 
 ## Step 2: Configure discovery profile
 
-Discovery profiles define which information should be retrieved from the device. Some devices require authentication, which needs to be filled in upfront.
+Discovery profiles define which information should be retrieved from the device. Some devices require authentication, which needs to be filled in up front.
 
 1. Open the IDP app.
+
 1. Go to *Admin* > *Discovery*.
-1. On the right, in the *Dicovery Profiles* table, select the row with the name `Default - Microsoft Platform`.
+
+1. On the right, in the *Discovery Profiles* table, select the row with the name `Default - Microsoft Platform`.
+
 1. Click the *Edit* button.
+
 1. Fill in the *Credentials* settings.
 
-    - As this tutorial is done with a DaaS system, the default username and password will be used that are configured during creation of the DaaS system.
-    - **Username**: `Admin`
-    - **Password**: `*****`
+   As this tutorial is done with a DaaS system, the default username and password will be used that are configured during creation of the DaaS system.
+
+   - **Username**: `Admin`
+   - **Password**: `*****`
 
    ![Discovery Profile Wizard - Filled in credentials](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_0.png)
 
@@ -129,9 +138,9 @@ Depending on which connectors are already on the system or if they have been set
 1. On the Catalog page, go to *Versions*
 1. Search for the latest version in the 1.1.3.x range (e.g.: 1.1.3.20)
 1. Deploy that version to your DataMiner system.
-1. Proceed with [Microsoft Plaform connector is not set as production](#microsoft-plaform-connector-is-not-set-as-production)
+1. Proceed with [Microsoft Platform connector is not set as production](#microsoft-plaform-connector-is-not-set-as-production)
 
-#### Microsoft Plaform connector is not set as production
+#### Microsoft Platform connector is not set as production
 
 1. On DataMiner, go to the [Protocols & Templates](xref:protocols) module.
 1. [Set the version to production](xref:Promoting_a_protocol_version_to_production_version).
@@ -150,7 +159,7 @@ Depending on which connectors are already on the system or if they have been set
 1. After a few seconds, you'll see a new element being created in the surveyor.
 1. Go to *Inventory* > *Managed*.
 
-In the *Managed Elements* table you can see that a new row has been added with the information of the newly created element. If you go to the element, you'll see the parameters being filled in as the data is being polled from your local system.
+In the *Managed Elements* table you can see that a new row has been added with the information of the newly created element. If you go to the element, you will see the parameters being filled in as the data is being polled from your local system.
 
 Congratulations, you have provisioned your first element with IDP!
 

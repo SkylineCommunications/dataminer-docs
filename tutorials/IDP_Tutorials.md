@@ -3,9 +3,9 @@ uid: IDP_Tutorials
 keywords: idp
 ---
 
-# IDP
+# DataMiner IDP tutorials
 
-IDP stands for Infrastructure, Discovery and Provisioning. More information can be found [here](xref:SolIDP).
+[DataMiner IDP](xref:SolIDP) is used to discover and provision inventory in the network.
 
 ## Tutorials
 
