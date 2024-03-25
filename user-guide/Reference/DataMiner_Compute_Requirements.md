@@ -82,6 +82,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
+> To be able to upgrade to DataMiner 10.4.3, you will first need to install [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer).
 
 ### Microsoft Visual C++
 
