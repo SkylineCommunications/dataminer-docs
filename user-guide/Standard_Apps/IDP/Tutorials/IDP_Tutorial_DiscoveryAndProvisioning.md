@@ -138,7 +138,7 @@ Depending on which connectors are already on the system or if they have been set
 1. On the Catalog page, go to *Versions*
 1. Search for the latest version in the 1.1.3.x range (e.g.: 1.1.3.20)
 1. Deploy that version to your DataMiner system.
-1. Proceed with [Microsoft Platform connector is not set as production](#microsoft-plaform-connector-is-not-set-as-production)
+1. Proceed with [Microsoft Platform connector is not set as production](#microsoft-platform-connector-is-not-set-as-production)
 
 #### Microsoft Platform connector is not set as production
 
