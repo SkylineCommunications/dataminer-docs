@@ -37,9 +37,7 @@ Expected duration: 20 minutes.
 
 ## Step 1: Deploy IDP from the Catalog
 
-1. Go to [catalog.dataminer.services](https://catalog.dataminer.services).
-1. Search for the [IDP package](https://catalog.dataminer.services/details/package/3163).
-1. Deploy the package on your DataMiner system.
+1. [Deploy the IDP package from the Catalog](xref:Installing_DataMiner_IDP#deploying-the-idp-package).
 1. Go to your DataMiner system, you'll notice that IDP will be automatically installed and set up for you.
 
 ## Step 2: Configure discovery profile
