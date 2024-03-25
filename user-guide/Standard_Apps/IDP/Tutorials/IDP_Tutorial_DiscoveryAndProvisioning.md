@@ -5,7 +5,7 @@ keywords: idp tutorial, idp kata
 
 # Getting started with IDP and onboarding new equipment
 
-This tutorial will show you how to install IDP and onboard new equiment.
+This tutorial will show you how to install IDP and onboard new equiment. We will onboard the Microsoft server that runs DataMiner as it is easy accessible equipment.
 
 Expected duration: 20 minutes.
 
@@ -44,9 +44,9 @@ Expected duration: 20 minutes.
 
 ## Step 2: Configure discovery profile
 
-Discovery profiles define which information and how it should be retrieved from the device. Some devices require authentication, which needs to be filled in upfront.
+Discovery profiles define which information should be retrieved from the device. Some devices require authentication, which needs to be filled in upfront.
 
-1. Go to the *DataMiner IDP* element.
+1. Open the IDP app.
 1. Go to *Admin* > *Discovery*.
 1. On the right, in the *Dicovery Profiles* table, select the row with the name `Default - Microsoft Platform`.
 1. Click the *Edit* button.
