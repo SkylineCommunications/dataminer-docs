@@ -50,7 +50,7 @@ Discovery profiles define which information should be retrieved from the device.
 1. Click the *Edit* button.
 1. Fill in the *Credentials* settings.
 
-    - As this tutorial is done with a DaaS system, the default Admin user will be used.
+    - As this tutorial is done with a DaaS system, the default username and password will be used that are configured during creation of the DaaS system.
     - **Username**: `Admin`
     - **Password**: `*****`
 
