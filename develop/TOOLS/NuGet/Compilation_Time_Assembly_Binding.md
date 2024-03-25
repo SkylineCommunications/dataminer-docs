@@ -12,7 +12,7 @@ In DataMiner, compilation of C# code is executed:
 To compile, the compiler only requires the directly referenced assemblies. The compiler does not know about transitive dependencies for that assembly.
 
 To better understand this, imagine the following example. Suppose you have a custom solution (MyAPI) using the Class Library, and you are using that custom solution in a QAction of a protocol.
-In order to be able to compile the protocol, the compiler will need a reference to the the assembly of the custom solution (MyAPI.dll). It does not require a reference to the ClassLibrary.dll assembly as this is a transitive reference. (Note, however, if you would use types from the ClassLibrary assembly in QAction1, then you would also need to provide a reference to ClassLibrary. Otherwise, the compilationo would fail.)
+In order to be able to compile the protocol, the compiler will need a reference to the assembly of the custom solution (MyAPI.dll). It does not require a reference to the ClassLibrary.dll assembly as this is a transitive reference. (Note, however, if you would use types from the ClassLibrary assembly in QAction1, then you would also need to provide a reference to ClassLibrary. Otherwise, the compilation would fail.)
 
 ```mermaid
 flowchart TB
