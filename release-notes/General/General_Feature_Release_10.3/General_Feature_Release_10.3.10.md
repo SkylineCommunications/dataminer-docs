@@ -144,7 +144,7 @@ After each DataMiner upgrade, up to now, the DataMiner upgrade package would be 
 From now on, after each DataMiner upgrade or DataMiner start-up, this folder will be cleaned up.
 
 - When a DataMiner upgrade was successful, only the `progress.log` file for that particular upgrade will be kept.
-- When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisites](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisites) will also be kept for debugging purposes.
+- When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisite checks](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisite-checks) will also be kept for debugging purposes.
 
 #### Security enhancements [ID_37064] [ID_37094]
 

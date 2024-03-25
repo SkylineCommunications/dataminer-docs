@@ -16,7 +16,7 @@ uid: Upgrading_a_DataMiner_Agent
 >
 > - Make sure your system meets the necessary [**system requirements**](xref:DataMiner_Compute_Requirements). Among others, upgrading to the **latest .NET version** is highly recommended.
 > - To ensure a successful upgrade of your DMA, see [**Preparing to upgrade a DataMiner Agent**](xref:Preparing_to_upgrade_a_DataMiner_Agent).
-> - In case you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [**upgrade paths**](xref:Upgrade_Paths).
+> - In case you are not upgrading to the DataMiner version that immediately follows your current version, follow the instructions for [upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#best-practices-when-upgrading-across-major-versions).
 > - It is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 
 > [!NOTE]
@@ -30,7 +30,7 @@ It is possible to upgrade or update a DMA via the Update Center within DataMiner
 
 For detailed steps, go to [Upgrading a DataMiner Agent in the Update Center](xref:Upgrading_a_DataMiner_Agent_in_the_Update_Center).
 
-Note that this is not recommended for an upgrade to a major DataMiner version that is several versions higher than the current version, e.g. from 9.6 to 10.3. In that case, use the Taskbar Utility or System Center and refer to our [upgrade paths](xref:Upgrade_Paths).
+Note that this is not recommended for an upgrade to a major DataMiner version that is several versions higher than the current version, e.g. from 9.6 to 10.3. In that case, use the Taskbar Utility or System Center and refer to the instructions for [upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#best-practices-when-upgrading-across-major-versions).
 
 ## Upgrading a DataMiner Agent using DataMiner Taskbar Utility
 
