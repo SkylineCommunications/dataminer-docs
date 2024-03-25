@@ -6,12 +6,12 @@ uid: Options_for_opening_DataMiner_Cube
 
 It is possible to [connect to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments). Below you can find an overview of the different arguments, as well as some examples of how you can use these.
 
-To combine different options, use a **space as separator** in the desktop app.
+To combine different options, use a **space as separator**.
 
 > [!NOTE]
 >
-> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&". Note that the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
-> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use the **cube:// protocol** to connect to a specific host. For example:
+> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&" instead of a space. Note that the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
+> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use **cube:// protocol** to connect to a specific host. For example:
 >
 >   - cube://mydma?element=MyElement
 >   - cube://10.11.12.13?view=12
@@ -25,7 +25,7 @@ view="My special view" element=MyElement
 view=View2 element=365 app=help
 ```
 
-Examples for the browser application:
+Examples for the legacy browser application:
 
 ```txt
 http://MyDMA1/DataminerCube/dataminercube.xbap?element=MyElement&view=MyView
@@ -38,11 +38,11 @@ DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 
 ### Opening a card on a particular page
 
-If you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
+If you use the *element=*, *service=* or *view=* option to open an element, service, or view card at startup, you can have this card opened on a particular page.
 
 To do so, add the following:
 
-- A colon, followed by "*data*" or "*d*" for a data page or "*visual*" or "*v*" for a visual page.
+- A colon, followed by "*data*" or "*d*" for a data page, or followed by "*visual*" or "*v*" for a visual page.
 
   If the page is not grouped under the data or visual pages, only add a colon.
 
@@ -134,27 +134,27 @@ To disable the autoslide mode, reconnect without the autoslide option.
 
 ### buffer=
 
-Use this option along with the "*element=*" option to immediately show the buffer of a Spectrum Analyzer element.
+Use this option along with the *element=* option to immediately show the buffer of a Spectrum Analyzer element.
 
 The buffer should be specified in one of the following three ways:
 
 - Monitor trace variable:
 
-    ```txt
-    buffer=monitorID:traceVariable
-    ```
+  ```txt
+  buffer=monitorID:traceVariable
+  ```
 
 - Monitor trace variable with monitor script using measurement point:
 
-    ```txt
-    buffer=monitorID:traceVariable:measurementpointID
-    ```
+  ```txt
+  buffer=monitorID:traceVariable:measurementpointID
+  ```
 
 - Monitor trace variable with monitor script using measurement point and input preset:
 
-    ```txt
-    buffer=monitorID:traceVariable:measurementpointID:presetName
-    ```
+  ```txt
+  buffer=monitorID:traceVariable:measurementpointID:presetName
+  ```
 
 Example:
 
@@ -197,15 +197,15 @@ Example:
 
 - To open the element with ID 169/2, open the first chain with a "Node" filter, and load node "DBL900":
 
-    ```txt
-    element=169/2 dte_Node=DLB900
-    ```
+  ```txt
+  element=169/2 dte_Node=DLB900
+  ```
 
 - To open the element with ID 169/2, open the first chain with a "Node" filter and an "MTA" filter, and if there is only one MTA that matches the filter then load the MTA that contains the string "ABCD987":
 
-    ```txt
-    element=169/2 dte_Node=DLB900 dte_MTA=*ABCD987*
-    ```
+  ```txt
+  element=169/2 dte_Node=DLB900 dte_MTA=*ABCD987*
+  ```
 
 > [!NOTE]
 >
@@ -236,6 +236,9 @@ element=231/154
 element=MyElement|MyOtherElement
 element="My element|My other element"
 ```
+
+> [!NOTE]
+> To open an SLA element, also use the *element=* option.
 
 ### host=
 
@@ -296,23 +299,23 @@ Unlike the inline preset option (see below), the regular preset option must alwa
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&preset=mypreset (public)&options=0x208
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105|34/106|34/107&preset=mypreset (public)&options=0x00
+element=34/105 preset="mypreset (public)" options=0x208
+element=34/105|34/106|34/107 preset="mypreset (public)" options=0x00
 ```
 
 > [!NOTE]
 >
-> - Take care when specifying more than one element in the URL. If you used a URL like the one in the second example above, all three elements would be opened in their own card, but as only the first one is a Spectrum Analyzer element, only that element would load the specified preset.
-> - Only public presets can be used, and their *(public)* suffix must be included in the URL.
+> - If you specify more than one element, like in the second example above, all elements will be opened with their own card, but if only the first one is a Spectrum Analyzer element, only that element will load the specified preset.
+> - Only public presets can be used, and their *(public)* suffix must be mentioned.
 
 ### preset=inline
 
-The *preset=* option can also be used for inline presets, in which case it works differently from the regular *preset=* option, though it should also always be combined with *element=*.
+The *preset=* option can also be used for inline presets. This works differently from the regular *preset=* option, but it should also always be combined with *element=*.
 
 Example:
 
 ```txt
-http://MyDMA/dataminercube.xbap?element=element&measpt=-1&preset=inline:freqstart:450000;freqstop:500000000
+element=35/105 measpt=-1 preset=inline:freqstart:450000;freqstop:500000000
 ```
 
 Syntax:
@@ -358,15 +361,13 @@ If you want to open several services, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?service=541
-http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&service=MyService|MyOtherService
-DataminerCube.exe host=MyDMA2 service=MyService-
-DataminerCube.exe host=MyDMA2 service="My service"
-DataminerCube.exe host=MyDMA2 service=MyService"|"MyOtherService
+service=MyService
+service="My service"
+service=MyService|MyOtherService
 ```
 
 > [!NOTE]
-> In order to open an SLA element, use the *element=* option.
+> To open an SLA element, use the *element=* option.
 
 ### UseInitialArgumentsAfterDisconnect=true
 
@@ -376,21 +377,16 @@ Available from DataMiner 10.2.0 [CU22], 10.3.0 [CU10], and 10.4.1 onwards.<!-- R
 
 ### view=
 
-Use this option to specify the view to be opened in a card right after startup. You can specify the view by:
-
-- ViewID, or
-- View name
+Use this option to specify the view to be opened in a card right after startup. You can specify the view by **view ID** or by **view name**.
 
 If you want to open several views, separate them by means of pipe characters.
 
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&view=MyView
-http://MyDMA1/DataminerCube/dataminercube.xbap?view=MyView|MyOtherView
-DataminerCube.exe host=MyDMA2 view=MyView
-DataminerCube.exe host=MyDMA2 view="My view"
-DataminerCube.exe host=MyDMA2 view=MyView"|"MyOtherView
+view=MyView
+view="My view"
+view=MyView|MyOtherView
 ```
 
 ### workspace=
@@ -400,8 +396,7 @@ Use this option to specify the name of the workspace to be opened right after st
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?workspace=Classic
-DataminerCube.exe workspace=Classic
+workspace=Classic
 ```
 
 > [!NOTE]
