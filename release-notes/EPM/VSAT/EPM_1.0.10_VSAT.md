@@ -40,6 +40,17 @@ The following parameters have been added to the Terminals table of the Intelsat 
 - Terminal Operational State
 - Terminal Board Temperature
 
+#### Intelsat Flex Platform VSAT: Additional hidden KPIs in Terminals table [ID_39218]
+
+The following parameters from the REST API have been added to the Terminals table of the Intelsat Flex Platform VSAT connector:
+
+- Free Time Slots Allocated
+- Time Slots Allocated
+- Time Slots Allocated (Nom Carrier)
+- Temperature
+
+However, note that these are currently still hidden, because no data is returned for these from the NMS.
+
 ## Changes
 
 ### Enhancements
