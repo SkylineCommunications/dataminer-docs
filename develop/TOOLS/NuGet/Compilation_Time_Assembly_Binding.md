@@ -6,7 +6,7 @@ uid: Compilation_Time_Assembly_Binding
 
 In DataMiner, compilation of C# code is executed:
 
-- Protocol C# QActions: Right before the first execution of the QAction (or,if the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used, the QAction is compiled immediately).
+- Protocol C# QActions: Right before the first execution of the QAction (If the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used, the QAction is compiled as soon as you create an element that uses this protocol for the first time).
 - Automation script C# exe blocks: When an Automation script is uploaded or its library script changes.
 
 To compile, the compiler only requires the directly referenced assemblies. The compiler does not know about transitive dependencies for that assembly.
@@ -22,9 +22,9 @@ flowchart TB
     end
 ```
 
-In a protocol, you can add an assembly reference via the [dllImport](xref:Protocol.QActions.QAction-dllImport) attributes. In Automation scripts, you can add a reference via the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tag. Note that some assembly references are added by default. For more information, refer to the documentation of the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute (for protocol QActions) or [Adding C# code to a script in Cube](xref:Adding_CSharp_code_to_an_Automation_script#adding-c-code-to-a-script-in-cube) for Automation script C# exe blocks.
+In a protocol XML, you can add an assembly reference via the [dllImport](xref:Protocol.QActions.QAction-dllImport) attributes. In Automation script XML, you can add a reference via the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tag (In solution-based development you do not add these. Instead, you add refereences to the csproj file which are then converted by DIS to entries in the `dllImport` attribute or [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags). Note that some assembly references are added by default. For more information, refer to the documentation of the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute (for protocol QActions) or [Adding C# code to a script in Cube](xref:Adding_CSharp_code_to_an_Automation_script#adding-c-code-to-a-script-in-cube) for Automation script C# exe blocks.
 
 > [!IMPORTANT]
-> Although a reference is not needed at compile time, the assembly is needed at run-time. For more information, refer to [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+> Although a reference might not be needed at compile time, the assembly is needed at run-time. For more information, refer to [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
 
 The [assembly manifest](https://learn.microsoft.com/en-us/dotnet/standard/assembly/manifest) of the compiled assembly will contain information about the immediate referenced assemblies, where each reference includes, among other things, the name and version of the referenced assembly.

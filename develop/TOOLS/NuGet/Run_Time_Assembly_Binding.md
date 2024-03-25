@@ -10,7 +10,25 @@ At run-time, assemblies are loaded the moment they are needed by the executing c
 
 The .NET Framework follows specific steps while trying to locate an assembly at run-time. For more information about the internals of assembly loading in the .NET Framework, refer to [How the Runtime Locates Assemblies](https://learn.microsoft.com/en-us/dotnet/framework/deployment/how-the-runtime-locates-assemblies). Custom paths to be searched for while locating an assembly can be specified via the [AssemblyResolve](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.assemblyresolve?view=netframework-4.8) event. This event is triggered on an AppDomain level and the event provides information about the assembly that the runtime is trying to resolve. This event is triggered when the run-time could not find the assembly in any of the previous steps the runtime executes during assembly resolving.
 
-In DataMiner, for SLScripting, this event is implemented in such a way that it will search in the `C:\Skyline DataMiner\ProtocolScripts`, `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts/DllImport` folders and also in any of the folders denoted by the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute of a QAction (or the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags in Automation scripts).
+In the SLScripting process of DataMiner, this event is implemented in such a way that it will search in the `C:\Skyline DataMiner\ProtocolScripts\DllImport`, `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts` folders and also in any of the folders denoted by the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute of a QAction.
+
+The order in which the folders are searched in is as follows:
+
+1. `C:\Skyline DataMiner\ProtocolScripts\DllImport`
+1. `C:\Skyline DataMiner\Files`
+1. `C:\Skyline DataMiner\ProtocolScripts`
+1. A subfolder of `C:\Skyline DataMiner\ProtocolScripts\DllImport` corresponding with the folders mentioned in the `dllImport` attribute (e.g in case `dllImport` contains `newtonsoft.json\13.0.3\lib\net45\Newtonsoft.Json.dll`, the `C:\Skyline DataMiner\ProtocolScripts\DllImport\newtonsoft.json\13.0.3\lib\net45` folder is added as a hint path.)
+1. A subfolder of `C:\Skyline DataMiner\ProtocolScripts` corresponding with the folders mentioned in the `dllImport` attribute (e.g in case `dllImport` contains `newtonsoft.json\13.0.3\lib\net45\Newtonsoft.Json.dll`, the `C:\Skyline DataMiner\ProtocolScripts\newtonsoft.json\13.0.3\lib\net45` folder is added as a hint path.)
+
+In case the `dllImport` mentions multiple entries, a hint path entry is added for each entry if not yet added to the hint path list.
+Note that because there is by default a single SLScripting process, the hint path list will contain all distinct directories of all the values encountered in all the `dllImport` attribute of each QActions in all the protocols.
+
+For Automation scripts (which get executed by the SLAutomation process), the following folders are searched:
+
+1. `C:\Skyline DataMiner\ProtocolScripts\DllImport`
+1. `C:\Skyline DataMiner\Files`
+1. `C:\Skyline DataMiner\ProtocolScripts`
+1. The directory of an assembly mentioned in the in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the Automation scripts.
 
 As mentioned in section <xref:Compilation_Time_Assembly_Binding>, the manifest of a compiled assembly denotes the name and version of any assemblies it has a direct dependency on. At run-time, when the .NET runtime is about to execute code from such a referenced assembly, the runtime will try to find and load that assembly.
 
