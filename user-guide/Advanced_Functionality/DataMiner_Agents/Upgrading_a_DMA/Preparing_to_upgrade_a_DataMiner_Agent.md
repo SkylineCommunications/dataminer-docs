@@ -67,6 +67,8 @@ If you are not upgrading to the DataMiner version that immediately follows your 
 
 **Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
 
+![Upgrading across major versions](~/user-guide/images/Upgrading_across_major_versions.png)
+
 > [!IMPORTANT]
 >
 > - There is one exception to this rule: if you are upgrading from a version prior to DataMiner 10.1.x to 10.2.x or higher, **skip DataMiner 10.1** and proceed directly to the subsequent major version instead (i.e. DataMiner 10.2).
