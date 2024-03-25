@@ -16,10 +16,10 @@ uid: General_Main_Release_10.4.0_CU2
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, DOM string fields would be filtered case-sensitively. From now on, those fields will by default be filtered case-insensitively.
+Up to now, DOM string fields were filtered case-sensitively. From now on, these fields will by default be filtered case-insensitively.
 
 > [!NOTE]
-> If necessary, this default filter behavior can be overruled in code by using `StringComparison.Ordinal`. See the following snippet.
+> If necessary, you can overrule this default filter behavior in code by using `StringComparison.Ordinal`. See the following snippet:
 >
 > ```csharp
 > var filter = DomInstanceExposers.FieldValues.DomInstanceField(_stringFieldDescriptor.ID).Contains("test", StringComparison.Ordinal)
@@ -51,6 +51,12 @@ This tool accepts the following arguments:
 | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
 
 If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.
+
+#### Enhanced performance when editing properties in bulk [ID_38255]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Performance has increased when properties of elements, services, or views are edited in bulk.
 
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
 

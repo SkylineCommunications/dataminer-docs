@@ -20,6 +20,21 @@ uid: General_Feature_Release_10.4.5
 
 *No highlights have been selected yet.*
 
+## Breaking changes
+
+#### DOM string fields will now be filtered case-insensitively [ID_38950]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, DOM string fields were filtered case-sensitively. From now on, these fields will by default be filtered case-insensitively.
+
+> [!NOTE]
+> If necessary, you can overrule this default filter behavior in code by using `StringComparison.Ordinal`. See the following snippet:
+>
+> ```csharp
+> var filter = DomInstanceExposers.FieldValues.DomInstanceField(_stringFieldDescriptor.ID).Contains("test", StringComparison.Ordinal)
+> ```
+
 ## New features
 
 #### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID_38851]
@@ -125,22 +140,13 @@ New features added to allow this include:
 
 ## Changes
 
-### Breaking changes
+### Enhancements
 
-#### DOM string fields will now be filtered case-insensitively [ID_38950]
+#### Enhanced performance when editing properties in bulk [ID_38255]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, DOM string fields would be filtered case-sensitively. From now on, those fields will by default be filtered case-insensitively.
-
-> [!NOTE]
-> If necessary, this default filter behavior can be overruled in code by using `StringComparison.Ordinal`. See the following snippet.
->
-> ```csharp
-> var filter = DomInstanceExposers.FieldValues.DomInstanceField(_stringFieldDescriptor.ID).Contains("test", StringComparison.Ordinal)
-> ```
-
-### Enhancements
+Performance has increased when properties of elements, services, or views are edited in bulk.
 
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
 
