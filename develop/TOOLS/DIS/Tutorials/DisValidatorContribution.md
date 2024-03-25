@@ -292,6 +292,12 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    }
    ```
 
+1. You will notice that `IReadable` isn't found by default. You need to add an extra using at the top of the file:
+
+```csharp
+using Skyline.DataMiner.CICD.Models.Protocol.Read;
+```
+
 ## Step 7: Verify your code
 
 1. Run your new tests. Check whether all tests pass.
