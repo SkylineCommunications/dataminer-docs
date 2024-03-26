@@ -14,3 +14,8 @@ Add the following two additional shape data fields to a shape that opens a card 
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SetVar           | *VariableName*:*Value*<br> “VariableName” is the name of the session variable, and “Value” is the value that should be assigned to it when the shape is clicked. |
 | Options          | *NewCardVariable*                                                                                                                                                                                   |
+
+
+> [!NOTE]
+>
+> - This feature is not operational within Mobile Visual Overviews (such as in the Monitoring app, Dashboards and Low code apps).
