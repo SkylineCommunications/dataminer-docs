@@ -77,6 +77,14 @@ Because of a number of enhancements, overall performance of SLAnalytics has incr
 
 Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
 
+#### MySql.Data.dll updated to version 8.3.0 [ID_39152]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The *MySql.Data.dll* file, stored in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\Files\x64` folders, has been updated from version 6.9.12 to version 8.3.0.
+
+The connection string will now include `allowloadlocalinfile=True` as this required setting needs to be enabled on both the client side and the server side of the database connection.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
