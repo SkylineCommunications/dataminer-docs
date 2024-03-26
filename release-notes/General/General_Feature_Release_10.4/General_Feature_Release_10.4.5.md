@@ -223,6 +223,12 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when starting the Resource Manager module, especially on systems with a large number of permanent bookings.
+
 #### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
