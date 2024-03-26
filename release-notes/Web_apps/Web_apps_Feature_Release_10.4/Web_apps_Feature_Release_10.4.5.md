@@ -219,6 +219,15 @@ When a web app loses its WebSocket connection, a `Connection has been interrupte
 
 From now on, a message will also be displayed in the app's subheader when not all messages received when the app was disconnected could be recovered. That same message will ask the user to refresh the app.
 
+#### Dashboards app & Low-Code Apps - Time range component: Custom time zone would not be used when selecting 'Now' in the time picker [ID_39171]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you had set a custom time zone for web apps, that time zone would incorrectly not be used when you selected *Now* in the time picker of a *Time range* component.
+
+> [!TIP]
+> See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
+
 #### Dashboards app & Low-Code Apps: 'Select a visualization' button would not be displayed [ID_39194]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
