@@ -179,6 +179,14 @@ The connection string will now include `allowloadlocalinfile=True` as this requi
 
 Whenever the health of the storage service changes, an alarm mentioning the current health status is generated. The text of this health status alarm has now been made clearer.
 
+#### No more DataMiner startup beep [ID_39176]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The DataMiner startup beep has been removed.
+
+On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

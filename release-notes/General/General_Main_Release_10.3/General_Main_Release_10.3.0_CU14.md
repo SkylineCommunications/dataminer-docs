@@ -91,6 +91,14 @@ The *MySql.Data.dll* file, stored in the `C:\Skyline DataMiner\Files` and `C:\Sk
 
 The connection string will now include `allowloadlocalinfile=True` as this required setting needs to be enabled on both the client side and the server side of the database connection.
 
+#### No more DataMiner startup beep [ID_39176]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The DataMiner startup beep has been removed.
+
+On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
