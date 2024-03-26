@@ -383,6 +383,14 @@ From now on, the legend will always show the layers in the order in which they w
 
 On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
 
+#### BPA test 'Check agent presence in NATS' could throw an incorrect error when the local NATS process had been running for a long time [ID_38776]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When the local NATS process had been running for a long time, in some cases, the *Check agent presence in NATS* BPA test could incorrectly throw the following error:
+
+`Failed to execute NATS server test, the local NATS server might be offline.`
+
 #### Automation: Problem when sending an email to a user or group [ID_38844]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
