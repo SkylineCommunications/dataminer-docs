@@ -22,7 +22,7 @@ If you do not use the recommended [Storage as a Service (STaaS)](xref:STaaS) set
 
 We recommend running DataMiner, Cassandra, and OpenSearch on **dedicated machines**. If you want to use cloud storage instead, we recommend switching to [Storage as a Service (STaaS)](xref:STaaS). Setups with Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service are considered deprecated as of DataMiner 10.3.0 [CU9]/10.3.12.
 
-An on-premises **OpenSearch** cluster should consist of **at least 3 nodes**, running on **Linux** machines. While it is possible to use one single OpenSearch node, this means you will miss out on the replication features.
+An on-premises **OpenSearch** cluster must have an **uneven number of nodes**, running on **Linux** machines. This means if you want to leverage replication or have a redundant system you need **at least 3 nodes**.
 
 Instead of OpenSearch, you can also use **Elasticsearch**. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**.
 
@@ -31,7 +31,7 @@ For a **Cassandra** cluster, any number of nodes can be used, ideally running on
 ![Recommended setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines](~/user-guide/images/Recommended-Setup-1.png)<br>
 *Recommended on-premises setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines*
 
-In a development environment with **limited load**, it is possible to host DataMiner, Cassandra, and OpenSearch on **one Windows machine**. In this case, OpenSearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments.
+In a development environment with **limited load**, it is possible to host DataMiner, Cassandra, and OpenSearch on **one Windows machine**. In this case, OpenSearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments. For Cassandra it is recommended to use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) as only old versions of Cassandra (< 4.x) are supported on Windows. Keep in mind that with [Storage as a Service (STaaS)](xref:STaaS) you can save out a lot of CPU and memory. Especially for smaller setups.
 
 ![Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)<br>
 *Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine*
@@ -40,7 +40,7 @@ In a development environment with **limited load**, it is possible to host DataM
 
 In case you have more than one DataMiner Agent, you can scale both on DataMiner level and on database level. If you want to use cloud storage instead, we recommend switching to [Storage as a Service (STaaS)](xref:STaaS). Setups with Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service are considered deprecated as of DataMiner 10.3.0 [CU9]/10.3.12.
 
-An **OpenSearch** cluster should ideally consist of **at least 3 nodes**, running on **Linux** machines. While it is possible to use one single OpenSearch node, this means you will miss out on the replication features. Running two nodes is not supported.
+An on-premises **OpenSearch** cluster must have an **uneven number of nodes**, running on **Linux** machines. This means if you want to leverage replication or have a redundant system you need **at least 3 nodes**.
 
 Instead of OpenSearch, you can also use **Elasticsearch**. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**. It is also possible to host a DataMiner and Elasticsearch node on the same machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. Note that in that case it is not required to install an Elasticsearch node on every single DataMiner node. While compute resources can be shared, logically there still is a separate DataMiner node cluster and Elasticsearch cluster.
 
@@ -74,13 +74,11 @@ While hosting Elasticsearch and DataMiner nodes on the same machine is already n
 
 ## Failover setups (with geo-redundancy)
 
-To achieve geo-redundancy and reduce latency between DMAs deployed across the globe, typically data center setups are used. In case you need a setup with multiple data centers deployed worldwide, please contact Skyline.
+To achieve geo-redundancy and reduce latency between DMAs deployed across the globe, typically data center setups are used. In case you need a setup with multiple data centers deployed worldwide, please contact Skyline. For geo-redundant systems we require a **stable network connection between the sites that has low latency**. Setting up an OpenSearch/Elasticsearch cluster across high-latency nodes is not advised, as this could compromise proper functionality. This means that it is not possible to simply take OpenSearch/Elasticsearch nodes and spread them out over two or more locations if there is high latency between those locations. This restriction specifically applies to latency between the openSearch/Elasticsearch nodes, not between the DataMiner nodes and the OpenSearch/Elasticsearch nodes.
 
-Failover setups with Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service are considered deprecated as of DataMiner 10.3.0 [CU9]/10.3.12.
+Failover setups with Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service are considered deprecated as of DataMiner 10.3.0 [CU9]/10.3.12. If you want to use cloud storage instead, we recommend switching to [Storage as a Service (STaaS)](xref:STaaS) in which we have geo-redundant options.
 
-Note that **setting up an OpenSearch/Elasticsearch cluster across high-latency nodes is not advised**, as this could compromise proper functionality. This means that it is not possible to simply take OpenSearch/Elasticsearch nodes and spread them out over two or more locations if there is high latency between those locations. This restriction specifically applies to latency between the openSearch/Elasticsearch nodes, not between the DataMiner nodes and the OpenSearch/Elasticsearch nodes. This is why we recommend that instead data is offloaded to multiple OpenSearch clusters.
+The figure below illustrates the recommended minimum setup for geo-redundancy with on-premises machines. For Cassandra, the built-in [NetworkTopologyStrategy](https://cassandra.apache.org/doc/4.0/cassandra/cql/ddl.html#networktopologystrategy) is used in order to configure geo-redundancy. For OpenSearch, we configure one cluster for which the nodes are spread over two data centers and there one tie-breaker in a third site (can be hosted in the cloud).
 
-The figure below illustrates the recommended minimum setup for geo-redundancy with on-premises machines. For Cassandra, the built-in [NetworkTopologyStrategy](https://cassandra.apache.org/doc/4.0/cassandra/cql/ddl.html#networktopologystrategy) is used in order to configure geo-redundancy. For OpenSearch, data can be pushed to multiple separate, geo-redundant OpenSearch clusters (from DataMiner 10.3.0/10.3.3 onwards). When one of the database clusters is temporarily unavailable, DataMiner will offload the data towards files to prevent data loss. Note that with this option, if there is an inconsistency between the two OpenSearch clusters, it will not be synced.
-
-![Recommended minimum setup for a geo-redundant system](~/user-guide/images/setup-for-a-geo-redundant-system.png)<br>
+![Recommended minimum setup for a geo-redundant system](~/user-guide/images/min-setup-for-geo-redunant-system.png)<br>
 *Recommended minimum setup for a geo-redundant system*
