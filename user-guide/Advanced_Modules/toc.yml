@@ -1314,3 +1314,5 @@ items:
             topicUid: UD_APIs_Hello_world_tutorial
           - name: Retrieving elements in alarm
             topicUid: UD_APIs_Elements_in_alarm_tutorial
+      - name: Events
+        topicUid: UD_APIs_Events
