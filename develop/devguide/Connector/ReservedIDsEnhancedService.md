@@ -16,3 +16,4 @@ uid: ReservedIDsEnhancedService
 - Param 14 is used to forward history properties
 - Param 198-199 is "monitor_active_alarms"
 - Param 200 is a table (columns 201-213) for the active alarms (RN12978)
+More information on the implementation of these parameters can be found here [Service](xref:ConnectionsService)
