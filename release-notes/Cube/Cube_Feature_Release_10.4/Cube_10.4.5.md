@@ -84,6 +84,12 @@ Up to now, when you opened a web application by clicking an icon in the *Apps* p
 
 When you add or remove an agent on a DataMiner System that has the *NATSForceManualConfig* option enabled, a warning message will now appear, saying that the NATS configuration will have to be updated.
 
+#### Log entries added to SLClient.txt will now include the ConnectionID dimension [ID_39118]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Each time a Cube client adds a log entry to the *SLClient.txt* log file of the DataMiner Agent in question, it will now include the *ConnectionID* dimension, which will allow the corresponding connection to be traced.
+
 #### URL argument 'alarm=' now also supports values in DmaId/ElementId/RootAlarmId format [ID_39126]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
