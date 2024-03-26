@@ -102,6 +102,12 @@ Example:
 alarm=48/123/6713
 ```
 
+#### Visual Overview: Passing session variables when navigating to elements using an application protocol [ID_39167]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, in Visual Overview, it will also be possible to pass session variables when navigating to an element using an application protocol (e.g. SRM Booking Manager).
+
 ### Fixes
 
 #### Resources app: Resource would incorrectly be marked as modified when capability values were set to NaN [ID_38699]
