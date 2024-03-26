@@ -203,6 +203,14 @@ SLLogCollector now uses Microsoft .NET 4.8.0.
 
 Also, an number of enhancements have been made to improve overall exception handling and to prevent the tool from timing out on servers without internet access.
 
+#### SLLogCollector: Enhancements [ID_38975]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, SLLogCollector will also log when it was not able to find any DataMiner processes or include memory dumps.
+
+Also, it will no longer attempt to read log files when it was not able to find the `C:\Skyline DataMiner\` folder.
+
 #### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
