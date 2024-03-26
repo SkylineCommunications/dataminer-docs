@@ -88,10 +88,10 @@ Should be used to record unexpected failures or malfunctions in the application,
 
 Log a message with the [GQILogLevel.Fatal](xref:GQI_GQILogLevel) level.
 
-Should be used to log critical errors that result in the termination of the application or loss of essential functionality, requiring immediate action to resolve.
+Should be used to log critical errors that result in the loss of essential functionality, requiring immediate action to resolve.
 
 ### void Fatal(Exception exception, string message)
 
 Log a message with the [GQILogLevel.Fatal](xref:GQI_GQILogLevel) level.
 
-Should be used to log critical errors that result in the termination of the application or loss of essential functionality, requiring immediate action to resolve.
+Should be used to log critical errors that result in the loss of essential functionality, requiring immediate action to resolve.
