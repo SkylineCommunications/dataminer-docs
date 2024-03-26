@@ -22,5 +22,5 @@ Please note the following regarding suggestion events:
 - Depending on the DataMiner version, different limitations are in place as to how many suggestion events can be generated for anomalous behavioral changes:
 
   - From DataMiner 10.4.0 [CU1]/10.4.4 onwards<!-- RN 38674 -->, at most 50 new suggestion events per hour per type of anomaly (i.e. level shift, trend change, flatline, or variance change) can be generated per DataMiner Agent. There is no limit to the maximum number of anomaly alarm events, i.e. alarm events for parameters that have explicit [anomaly alarm monitoring configured in the alarm template](xref:Configuring_anomaly_detection_alarms).
-  - From DataMiner 10.2.11/10.3.0 onwards, suggestion events are only created for the most significant changes, and there is a limitation on the number of open suggestion events related to behavioral anomaly detection. There can be at most 500 open anomaly suggestion events per hosting DataMiner Agent.
+  - From DataMiner 10.2.11/10.3.0 onwards, suggestion events are only created for the most significant changes, and per hosting DataMiner Agent there can be at most 500 open suggestion events related to behavioral anomaly detection.
   - Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled.
