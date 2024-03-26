@@ -1,16 +1,17 @@
 ---
 uid: DOM_Making_DOM_Stateful
 ---
-# Making DOM Stateful
 
-This tutorial shows how you can make your DOM model state-aware. This allows a DOM instance to behave differently according to each state it transitions to. It allows to define for each state:
+# Making a DOM module state-aware
 
-- which fields are **visible** to the user
-- which fields are **read-only** for the user
-- which fields are **mandatory**
-- to which state you can **transition**
-- what **actions** are allow on each state
-- what **buttons** to show on the form
+This tutorial shows how you can make your DOM module state-aware. This allows a DOM instance to behave differently depending on the state it transitions to. The following things can be defined for each state:
+
+- Which fields are **visible** to the user.
+- Which fields are **read-only** for the user.
+- Which fields are **mandatory**.
+- To which state the instance can **transition**.
+- What **actions** are allowed.
+- What **buttons** to show on the form.
 
 The content and screenshots for this tutorial were created in DataMiner version 10.4.3.
 
@@ -29,217 +30,255 @@ Expected duration: 20 minutes
 
 ## Overview
 
-- [Making DOM Stateful](#making-dom-stateful)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
-  - [Step 2: Deploy Kata DOM package](#step-2-deploy-kata-dom-package)
-  - [Step 3: Defining the states on a DOM definition](#step-3-defining-the-states-on-a-dom-definition)
-  - [Step 4: Defining the state transitions](#step-4-defining-the-state-transitions)
-  - [Step 5: Defining actions to trigger state transitions](#step-5-defining-actions-to-trigger-state-transitions)
-  - [Step 6: Defining a form button to trigger the action](#step-6-defining-a-form-button-to-trigger-the-action)
-  - [Step 7: Validate states, transitions, buttons in the low-code app](#step-7-validate-states-transitions-buttons-in-the-low-code-app)
+- [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
+- [Step 2: Deploy the Kata DOM package](#step-2-deploy-the-kata-dom-package)
+- [Step 3: Define states on a DOM definition](#step-3-define-states-on-a-dom-definition)
+- [Step 4: Define the state transitions](#step-4-define-the-state-transitions)
+- [Step 5: Define actions to trigger state transitions](#step-5-define-actions-to-trigger-state-transitions)
+- [Step 6: Define a form button to trigger the action](#step-6-define-a-form-button-to-trigger-the-action)
+- [Step 7: Validate states, transitions, and buttons in the low-code app](#step-7-validate-states-transitions-and-buttons-in-the-low-code-app)
 
 ## Step 1: Deploy the DOM Editor script
 
+> [!NOTE]
+> If you have already followed the previous tutorial, [Getting started with DOM](xref:DOM_Getting_Started_With_DOM), this script has already been deployed, so you can skip to [step 2](#step-2-deploy-the-kata-dom-package).
+
 1. Go to <https://catalog.dataminer.services/details/automation-script/3195>.
 
-1. Click the *Deploy* button to deploy the DOM Editor script to your DMA.
+1. Click the *Deploy* button to deploy the DOM Editor package to your DMA.
 
-1. When succesful you should see the following scripts appear on your DMA:
+1. [Open DataMiner Cube](xref:Using_the_desktop_app), go to *Apps* > *Automation*, and check whether the following scripts have become available:
 
-![Dom Editor Scripts](~/user-guide/images/DOM_Making_DOM_Stateful_domeditorscripts.png)
+   ![Dom Editor scripts](~/user-guide/images/DOM_Making_DOM_Stateful_domeditorscripts.png)
 
-## Step 2: Deploy Kata DOM package
+   When these are available, the package has been successfully deployed.
+
+## Step 2: Deploy the Kata DOM package
 
 1. Go to <https://catalog.dataminer.services/details/package/5995>.
 
-1. Click the *Deploy* button to deploy the DOM Editor script to your DMA.
+1. Click the *Deploy* button to deploy the Kata DOM package to your DMA.
 
-1. When successful you should see the Event Management low-code app appear.
+1. Go to the DataMiner landing page and check whether the Event Management low-code app has become available.
 
-## Step 3: Defining the states on a DOM definition
+   If this app is available, the package has been successfully deployed.
 
-Now that you have deployed the DOM Editor to your DMA, you can use it to edit the existing DOM definition called Event:
+   > [!TIP]
+   > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps).
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app) and go to *Apps* > *Automation*.
+## Step 3: Define states on a DOM definition
 
-1. In the Automation module, search for a script called **DOM Editor** and select it.
+Now that you have deployed the DOM Editor to your DMA, you can use it to edit the existing DOM definition called *Event*:
 
-   ![Dom Editor Script](~/user-guide/images/DOM_Getting_Started_script.png)
+1. In the Automation module in DataMiner Cube, search for the **Dom Editor** script and select it.
 
 1. Click the *Execute* button in the lower right corner to launch this script, and then click *Execute now*.
 
-   You should now see the following window, where you should find a module called **eventmanagement**
+   ![Dom Editor script](~/user-guide/images/DOM_Getting_Started_script.png)
 
-   ![Dom Editor Modules](~/user-guide/images/DOM_Making_DOM_Stateful_modules.png)
+   The following window will be shown, where you should find a module called *eventmanagement*:
 
-1. Next to the **eventmanagement** module name, click *Edit*  to open the details of the module.
+   ![Dom Editor modules](~/user-guide/images/DOM_Making_DOM_Stateful_modules.png)
 
-1. Click *Behavior Definitions* to go to the behavior definitions overview for this module. This is where you can manage anything related to states of a DOM definition
+1. Next to the *eventmanagement* module name, click *Edit* to open the details of the module.
 
-   ![Dom Editor Behavior Definitions](~/user-guide/images/DOM_Making_DOM_Stateful_behavior_definitions_click.png)
+1. Create a new behavior definition:
 
-1. Click *New* to create a new behavior definition.
+   1. Click *Behavior Definitions* to go to the behavior definitions overview for this module.
 
-   ![Dom Editor Behavior Definitions New](~/user-guide/images/DOM_Making_DOM_Stateful_Behavior_Definitions.png)
+      ![Dom Editor behavior definitions](~/user-guide/images/DOM_Making_DOM_Stateful_behavior_definitions_click.png)
 
-1. In the *Name* box, enter `event behavior`.
+      This overview is where you can manage everything related to states of a DOM definition.
 
-   ![Dom Editor New Event Behavior Definition](~/user-guide/images/DOM_Making_DOM_Stateful_event_behavior.png)
+   1. Click *New*.
 
-1. Confirm with *Apply*.
+      ![Dom Editor new behavior definition](~/user-guide/images/DOM_Making_DOM_Stateful_Behavior_Definitions.png)
 
-1. Next we want to start defining some statuses for the Event DOM definition. To do that click *Statuses*
+   1. In the *Name* box, enter `event behavior`.
 
-   ![Dom Editor Statuses](~/user-guide/images/DOM_Making_DOM_Stateful_statuses_click.png)
+      ![Dom Editor new event behavior definition](~/user-guide/images/DOM_Making_DOM_Stateful_event_behavior.png)
 
-1. Click *New* to create a new status
+   1. Confirm by clicking *Apply*.
 
-   ![Dom Editor New Status](~/user-guide/images/DOM_Making_DOM_Stateful_new_status.png)
+1. Define states for the Event DOM definition:
 
-1. In the *Display Name* box, enter `Request`
+   1. Click *Statuses*.
 
-   ![Dom Editor New Status](~/user-guide/images/DOM_Making_DOM_Stateful_status_request.png)
+      ![Dom Editor statuses](~/user-guide/images/DOM_Making_DOM_Stateful_statuses_click.png)
 
-1. Click *Back* and repeat the same steps to create the statuses **Scheduled, In progress, Done**
+   1. Click *New* to create a new state.
 
-1. Finally click *Back* again to go the the event behavior and click *Apply*
+      ![Dom Editor new status](~/user-guide/images/DOM_Making_DOM_Stateful_new_status.png)
 
-   ![Dom Editor Apply Behavior](~/user-guide/images/DOM_Making_DOM_Stateful_behavior_apply.png)
+   1. In the *Display Name* box, enter `Request`.
 
-1. Click *Statuses* to go to the overview of created states
+      ![Dom Editor new status name](~/user-guide/images/DOM_Making_DOM_Stateful_status_request.png)
 
-1. Click *Edit* next to the Request state
+   1. Click *Back* and repeat the previous two steps to create the states `Scheduled`, `In progress`, and `Done`.
 
-   ![Dom Editor Edit Request Status](~/user-guide/images/DOM_Making_DOM_Stateful_edit_request.png)
+   1. Finally, click *Back* again to go the event behavior page, and click *Apply*.
 
-1. Click *Section Definition Links*
+      ![Dom Editor apply behavior](~/user-guide/images/DOM_Making_DOM_Stateful_behavior_apply.png)
 
-   ![Dom Editor Section Definition Links](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_click.png)
+1. Click *Statuses* to go to the overview of the created states.
 
-1. Click *Add*
+1. Define which sections and fields should be linked to the states you have defined:
 
-   ![Dom Editor Add Section Definition Link](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_add.png)
+   1. Next to the *Request* state, click *Edit*.
 
-1. Here we need to define which sections and fields we are going to link to the state `Request`. Automatically it already links the **Event Info** section. Next we need to define which field of this section we want to add. Click *Field Descriptors* to do that.
+      ![Dom Editor edit request state](~/user-guide/images/DOM_Making_DOM_Stateful_edit_request.png)
 
-   ![Dom Editor Add Section Link](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_field_descriptors.png)
+   1. Click *Section Definition Links*.
 
-1. Click the `+` button **4 times** to add the 4 fields of the section to the state Request
+      ![Dom Editor section definition links](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_click.png)
 
-   ![Dom Editor State Add Field](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_field_descriptors.png)
+   1. Click *Add*.
 
-1. You should end up with the following 4 fields added
+      ![Dom Editor add section definition link](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_add.png)
 
-   ![Dom Editor State All Fields](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_all_fields_added.png)
+      This will show a page where you can define the sections and fields linked to the state `Request`. The *Event Info* section will automatically be linked already.
 
-1. In the state Request we do not want to show the *Notes* field, so uncheck the **visible** checkbox next to the Notes field
+   1. Click *Field Descriptors* to define a field to add to the *Event Info* section.
 
-   ![Dom Editor Hide Notes Field](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_hide_notes_field.png)
+      ![Dom Editor add section link](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_field_descriptors.png)
 
-1. Click *Back* three times to end up back to the overview of the different states. Repeat the same procedure for the states *Scheduled, In progress and Done*. For the *Scheduled* state put all fields in *read-only*, for the remain states you can choose which fields to display, make required or read-only
+   1. Click the `+` button **4 times** to add the 4 fields of the section to the *Request* state.
 
-1. When done, click *Back* until returning to the event behavior page and don't forget to click *Apply*
+      ![Dom Editor state add field](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_add_field_descriptor.png)
 
-1. Click *OK* and *Back* to arrive back at the module page, next *click* on *Definitions*
+      You should end up with the following 4 fields added:
 
-   ![Dom Editor Definitions](~/user-guide/images/DOM_Making_DOM_Stateful_definitions_click.png)
+      ![Dom Editor state all fields](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_all_fields_added.png)
 
-1. Next to the **Event** definition name, click *Edit*  to open the details of the DOM Definition.
+   1. For the *Notes* field, clear the selection from the *Visible* checkbox.
 
-1. In drop-down Behavior select the behavior, which we just created above, called **event behavior**
+      ![Dom Editor hide Notes field](~/user-guide/images/DOM_Making_DOM_Stateful_section_definition_link_hide_notes_field.png)
 
-1. Click *Apply* and *Ok* and *Back* to arrive at module level
+      This way, the *Notes* field will not be shown for the *Request* state.
 
-## Step 4: Defining the state transitions
+   1. Click *Back* three times to go back to the overview of the different states.
 
-1. Click *Behavior Definitions*
+   1. Repeat the steps above for the states *Scheduled*, *In progress*, and *Done*.
 
-1. Click *Edit* next to `event behavior`
+      - For the *Scheduled* state, set all fields to *read-only*.
 
-1. Click *Transitions* to open the page to define the transitions between the different states
+      - For the remaining states, you can choose which fields to display, make required, or set to read-only.
 
-   ![Dom Editor Transitions](~/user-guide/images/DOM_Making_DOM_Stateful_transitions_click.png)
+   1. When this is done for all states, click *Back* until you are back at the event behavior page.
 
-1. Define the following 3 transitions
+   1. Click *Apply*.
 
-      |ID|From|To|
-      |--- |----|----|
-      |request_to_scheduled|Request|Scheduled|
-      |scheduled_to_in progress|Scheduled|In progress|
-      |in progress_to_done|In progress|Done|
+1. Click *OK* and *Back* to go back to the *eventmanagement* module page.
 
-   ![Dom Editor 3 Transitions](~/user-guide/images/DOM_Making_DOM_Stateful_3_transitions.png)
+1. Click *Definitions*.
 
-1. Click *Back* and *Apply*
+   ![Dom Editor definitions](~/user-guide/images/DOM_Making_DOM_Stateful_definitions_click.png)
 
-## Step 5: Defining actions to trigger state transitions
+1. Next to the *Event* definition name, click *Edit* to open the details of the DOM definition.
 
-1. Click *Actions* to open the page for adding actions
+1. In the *Behavior* dropdown box, select the behavior you created above, i.e. *event behavior*.
 
-   ![Dom Editor Actions](~/user-guide/images/DOM_Making_DOM_Stateful_actions_click.png)
+1. Click *Apply*, *OK*, and *Back* to go back to module level.
 
-1. Cick *Add* to add a new action
+## Step 4: Define the state transitions
 
-1. Enter the following details of the action
+1. Click *Behavior Definitions*.
 
-   1. Enter `schedule` as the ID
+1. Next to *event behavior*, click *Edit* .
 
-   1. Enter `Event Button` in the Script field. This is the automation script that is going to be called when this actions is triggered
-   
-   ![Dom Editor Add Action](~/user-guide/images/DOM_Making_DOM_Stateful_add_action.png)
+1. Click *Transitions* to open the page where you can define the transitions between the different states.
 
-1. Click *Back*, *Back* and *Apply*
+   ![Dom Editor transitions](~/user-guide/images/DOM_Making_DOM_Stateful_transitions_click.png)
 
-## Step 6: Defining a form button to trigger the action
+1. Define the following transitions:
 
-1. Click *Buttons* to open the page for adding buttons
+   | ID                       | From        | To          |
+   |--------------------------|-------------|-------------|
+   | request_to_scheduled     | Request     | Scheduled   |
+   | scheduled_to_in progress | Scheduled   | In progress |
+   | in progress_to_done      | In progress | Done        |
 
-   ![Dom Editor Buttons](~/user-guide/images/DOM_Making_DOM_Stateful_buttons_click.png)
+   ![Dom Editor 3 transitions](~/user-guide/images/DOM_Making_DOM_Stateful_3_transitions.png)
 
-1. Cick *Add* to add a new button
+1. Click *Back* and *Apply*.
 
-1. Enter the following details of the button
+## Step 5: Define actions to trigger state transitions
 
-   1. Enter `schedule` as the ID
+1. Click *Actions* to open the page where you can add actions.
 
-   1. Enter `Schedule` as the Text
+   ![Dom Editor actions](~/user-guide/images/DOM_Making_DOM_Stateful_actions_click.png)
 
-   1. Under **Actions** click the **+** button and select `schedule` from the drop-down
+1. Click *Add* to add a new action.
 
-   1. Under **Condition > Type**, select `Status`
+1. Enter the following details for the action:
 
-   1. Under Valid Statuses , click *Add*, select `Request` from the drop-down. This means that the button will only appear on the form in case the event instance is in the state `Request`, it will not be visible in the other states (Scheduled, In progress, Done)
+   1. In the *ID* box, enter `schedule`.
 
-   ![Dom Editor Add Button](~/user-guide/images/DOM_Making_DOM_Stateful_add_button.png)
+   1. In the *Script* box, enter `Event Button`.
 
-1. Click *Back*, *Back* and *Apply*
+      This is the Automation script that will be called when this action is triggered.
 
-## Step 7: Validate states, transitions, buttons in the low-code app
+   ![Dom Editor add action](~/user-guide/images/DOM_Making_DOM_Stateful_add_action.png)
 
-1. Open up the low-code app called **Event Management**
+1. Click *Back*, *Back*, and *Apply*.
 
-   ![App Empty](~/user-guide/images/DOM_Making_DOM_Statefel_app_empty.png)
+## Step 6: Define a form button to trigger the action
 
-1. Click *New* to open up the Event form panel on the right-hand side
+1. Click *Buttons* to open the page where you can add buttons.
 
-1. Enter a random name of an event into the *Event name* field
+   ![Dom Editor buttons](~/user-guide/images/DOM_Making_DOM_Stateful_buttons_click.png)
 
-   ![App Form](~/user-guide/images/DOM_Making_DOM_Stateful_form.png)
+1. Click *Add* to add a new button.
 
-1. Click *Save* which close the panel
+1. Configure the following details for the button:
 
-1. Click the *pencil* icon next to the event you have just created to open the panel again
+   1. In the *ID* box, enter `schedule`.
 
-1. Notice that the stepper component on top shows that the event is in `Request` state:
+   1. In the *Text* box, enter `Schedule`.
 
-   ![App Stepper in Request state](~/user-guide/images/DOM_Making_DOM_Stateful_stapper_request.png)
+   1. Under *Actions*, click the **+** button, and select *schedule* in the dropdown box.
 
-1. On the bottom right of the form, click the *Schedule* button
+      This is the action you created in [step 5](#step-5-define-actions-to-trigger-state-transitions).
 
-   ![App Stepper Schedule button](~/user-guide/images/DOM_Making_DOM_Stateful_Schedule_button.png)
+   1. Under *Condition* > *Type*, select *Status*.
 
-1. Now you should see the stepper component move from **Request** to **Scheduled**. Also notice that the form will have changed to read only as we specified when defining the states.
+   1. Under *Valid Statuses*, click *Add*, and then select *Request* in the dropdown box.
 
-   ![App Stepper Event in Schedule state](~/user-guide/images/DOM_Making_DOM_Stateful_event_scheduled.png)
+      With this configuration, the button will only be shown on the form when the event instance is in the *Request* state. It will not be visible for the other states (*Scheduled*, *In progress*, and *Done*).
+
+   ![Dom Editor add button](~/user-guide/images/DOM_Making_DOM_Stateful_add_button.png)
+
+1. Click *Back*, *Back*, and *Apply*.
+
+## Step 7: Validate states, transitions, and buttons in the low-code app
+
+1. Open the **Event Management** low-code app.
+
+   ![Empty Event Management app](~/user-guide/images/DOM_Making_DOM_Statefel_app_empty.png)
+
+   > [!TIP]
+   > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps).
+
+1. Click *New* to open the event form panel on the right-hand side.
+
+1. In the *Event name* field, enter a random name for an event.
+
+   ![App form](~/user-guide/images/DOM_Making_DOM_Stateful_form.png)
+
+1. Click *Save*.
+
+   This will close the panel.
+
+1. Click the *pencil* icon next to the event you have just created to open the panel again.
+
+   You will see that the stepper component at the top shows that the event is in the *Request* state:
+
+   ![App stepper in Request state](~/user-guide/images/DOM_Making_DOM_Stateful_stapper_request.png)
+
+1. In the lower right corner of the form, click the *Schedule* button.
+
+   ![App Schedule button](~/user-guide/images/DOM_Making_DOM_Stateful_Schedule_button.png)
+
+   You will see the stepper component move from **Request** to **Scheduled**. The form will also change to read-only, as you configured this when defining the states.
+
+   ![App stepper event in Schedule state](~/user-guide/images/DOM_Making_DOM_Stateful_event_scheduled.png)
