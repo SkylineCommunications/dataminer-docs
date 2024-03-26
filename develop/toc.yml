@@ -863,6 +863,8 @@ items:
         topicUid: NT_GET_AVAILABLE_FILES
       - name: NT_ADD_FILE
         topicUid: NT_ADD_FILE
+      - name: NT_REMOVE_DOCUMENT
+        topicUid: NT_REMOVE_DOCUMENT
       - name: NT_MAKE_ALARM
         topicUid: NT_MAKE_ALARM
       - name: NT_DATAMINER_INFO
