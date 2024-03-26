@@ -12,6 +12,13 @@ uid: General_Main_Release_10.3.0_CU14
 
 ### Enhancements
 
+#### Security enhancements [ID_37345] [ID_38904]
+
+<!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
+<!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+A number of security enhancements have been made.
+
 #### APIGateway now runs on .NET 8 and allows you to enable kernel response buffering [ID_38710]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -36,12 +43,13 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
-#### Security enhancements [ID_37345] [ID_38904]
+#### SLLogCollector: Enhancements [ID_38966]
 
-<!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
-<!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-A number of security enhancements have been made.
+SLLogCollector now uses Microsoft .NET 4.8.0.
+
+Also, an number of enhancements have been made to improve overall exception handling and to prevent the tool from timing out on servers without internet access.
 
 #### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
 

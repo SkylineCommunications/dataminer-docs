@@ -195,6 +195,14 @@ A number of security enhancements have been made.
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### SLLogCollector: Enhancements [ID_38966]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+SLLogCollector now uses Microsoft .NET 4.8.0.
+
+Also, an number of enhancements have been made to improve overall exception handling and to prevent the tool from timing out on servers without internet access.
+
 #### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
