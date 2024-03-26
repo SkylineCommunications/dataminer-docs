@@ -146,6 +146,8 @@ For detailed information about the changes included in those versions, refer to 
 
 The ad hoc data source now supports real-time updates.
 
+For this purpose, the [IGQIUpdateable](xref:GQI_IGQIUpdateable) interface must be implemented in the data source.
+
 #### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->

@@ -148,6 +148,8 @@ In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFie
 
 The ad hoc data source now supports real-time updates.
 
+For this purpose, the [IGQIUpdateable](xref:GQI_IGQIUpdateable) interface must be implemented in the data source.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
