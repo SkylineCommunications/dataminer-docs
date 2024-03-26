@@ -9,9 +9,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.1.7
 
-#### Fix - Advanced settings on service elements are updated
+#### Fix - Advanced settings on service elements updated
 
-When the IDmsService.Update() method is used, changes in the AdvancedSettings property are now taken in account.
+When the *IDmsService.Update()* method is used, changes in the *AdvancedSettings* property are now taken into account.
 
 ### 1.1.1.6
 
