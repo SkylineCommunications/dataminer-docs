@@ -58,7 +58,7 @@ Discovery profiles define which information should be retrieved from the device.
 
 1. Fill in the *Credentials* settings.
 
-   As this tutorial is done with a DaaS system, the default username and password will be used that are configured during creation of the DaaS system.
+   As this tutorial is done with a DaaS system, the default username and password will be used that are configured during creation of the DaaS system. If you are not using a DaaS system, use a user that is [allowed WMI calls](https://serverfault.com/questions/28520/which-permissions-rights-does-a-user-need-to-have-wmi-access-on-remote-machines) to the local system.
 
    - **Username**: `Admin`
    - **Password**: `*****`
