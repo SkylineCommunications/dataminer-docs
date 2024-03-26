@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.7
+
+#### Fix - Advanced settings on service elements updated
+
+When the *IDmsService.Update()* method is used, changes in the *AdvancedSettings* property are now taken into account.
+
 ### 1.1.1.6
 
 #### New feature - Serial connections will now be read on element retrieval
