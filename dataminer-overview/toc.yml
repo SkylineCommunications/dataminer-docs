@@ -69,6 +69,15 @@ items:
           topicUid: Stack_SLA_Management
         - name: Third-Party Integrations
           topicUid: Stack_Third_Party_Integrations
+    - name: dataminer.MediaOps
+      topicUid: Overview_dataminer_MediaOps
+      items:
+        - name: MediaOps apps
+          topicUid: 
+        - name: MediaOps data model
+          topicUid: 
+        - name: MediaOps supported connectors
+          topicUid:
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
