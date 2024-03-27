@@ -46,6 +46,12 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
+
 #### STaaS: SLDataGateway will now periodically check the health of the storage service [ID_39068]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->

@@ -31,6 +31,12 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
+
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
