@@ -280,6 +280,12 @@ The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
 
+#### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
+
 ### Fixes
 
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]

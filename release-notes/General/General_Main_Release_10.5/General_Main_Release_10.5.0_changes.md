@@ -177,6 +177,12 @@ When the factory reset tool (*SLReset.exe*) is run, from now on, it will also re
 
 These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
 
+#### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
