@@ -228,6 +228,12 @@ Up to now, when you had set a custom time zone for web apps, that time zone woul
 > [!TIP]
 > See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
 
+#### Dashboards app: Not possible to duplicate a dashboard with the same name to another folder [ID_39190]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, you were not allowed to duplicate a dashboard with the same name to a different folder. From now on, you will be allowed to do so.
+
 #### Dashboards app & Low-Code Apps: 'Select a visualization' button would not be displayed [ID_39194]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
