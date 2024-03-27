@@ -228,6 +228,15 @@ Up to now, when you had set a custom time zone for web apps, that time zone woul
 > [!TIP]
 > See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
 
+#### Dashboards app & Low-Code Apps - Table, Grid, Timeline & Maps components: Template previews would not show the background color of the component [ID_39183]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In the *Template Editor*, up to now, template previews would not show the background color of the component. As this could lead to confusion when previewing templates without background shapes, all previews will now have the same background color as the component in which they will be used.
+
+> [!NOTE]
+> At present, the *Maps* component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 #### Dashboards app: Not possible to duplicate a dashboard with the same name to another folder [ID_39190]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
