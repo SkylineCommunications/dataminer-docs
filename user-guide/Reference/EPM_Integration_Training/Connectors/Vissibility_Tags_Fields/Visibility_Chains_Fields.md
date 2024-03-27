@@ -1,5 +1,5 @@
 ---
-uid: ConnectorsVissibilityChainsFields
+uid: ConnectorsVisChainsFields
 ---
 
 # Visibility of Chains and Fields

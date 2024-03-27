@@ -8,7 +8,7 @@ uid: EpmIntegrationTrainingConnectors
 - [Table Structure](xref:)
 - [View Tables](xref:)
 - [Required Tags](xref:ConnectorsRequiredTags)
-- [Visibility Chains and Fields](xref:ConnectorsVissibilityChainsFields)
+- [Visibility Chains and Fields](xref:ConnectorsVisChainsFields)
 - [Topology Relations](xref:ConnectorsTopologyRelations)
 - [Alarms](xref:ConnectorsAlarms)
 - [Aggregation Actions](xref:)
