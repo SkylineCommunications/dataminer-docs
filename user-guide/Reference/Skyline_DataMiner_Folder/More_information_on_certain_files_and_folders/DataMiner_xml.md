@@ -332,6 +332,9 @@ Example:
   ...
 </DataMiner>
 ```
+<!--- RN34525 --->
+Since 10.2 CU10 and 10.3.1, the number of  distribution traps is be limited to 250,000. When the processing queue of distribution traps contains 250,000 traps, new traps will be rejected until the number of traps in the queue has dropped to 100,000. These the boundaries are fixed and cannot be configured.
+
 
 ### DataMiner.Telnet
 
