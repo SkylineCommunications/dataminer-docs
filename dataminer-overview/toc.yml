@@ -74,10 +74,25 @@ items:
       items:
         - name: MediaOps apps
           topicUid: Overview_MediaOps_Apps
+          items:
+          - name: Virtual Signal Groups
+            topicUid: Overview_MediaOps_Virtual_Signal_Groups
+          - name: Control Surface
+            topicUid: Overview_MediaOps_Control_Surface
+          - name: Flow Engineering
+            topicUid: Overview_MediaOps_Flow_Engineering
+          - name: Flow Monitoring
+            topicUid: Overview_MediaOps_Flow_Monitoring
+          - name: Scheduling
+            topicUid: Overview_MediaOps_Scheduling
+          - name: Workflow Designer
+            topicUid: Overview_MediaOps_Workflow_Designer
+          - name: Cost and Billing
+            topicUid: Overview_MediaOps_Cost_and_Billing
+          - name: People and Organizations
+            topicUid: Overview_MediaOps_People_and_Organization
         - name: MediaOps data model
-          topicUid: 
-        - name: MediaOps supported connectors
-          topicUid:
+          topicUid: Overview_MediaOps_Data_Model
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:

@@ -43,9 +43,9 @@ uid: Part1GettingStarted
 </div>
 
 <div class="row"> 
-  <div class="column">
+<!--   <div class="column">
     <a href="/user-guide/dataminer_MediaOps/dataminer_MediaOps.html" title="dataminer.MediaOps" target="_self"><img src="~/user-guide/images/dataminer_MediaOps.svg" style="width:100%"></a>
-  </div>
+  </div> -->
   <div class="column">
     <a href="/user-guide/Standard_Apps/Standard_Apps.html" title="Standard apps" target="_self"><img src="~/user-guide/images/Docs_StandardApps_Frameworks_Solutions.svg" style="width:100%"></a>
   </div>

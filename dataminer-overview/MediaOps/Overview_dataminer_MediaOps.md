@@ -33,7 +33,7 @@ In essence, dataminer.MediaOps revolutionizes media operations by combining mode
 
 ### What can you do with dataminer.MediaOps?
 
-Dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), downloadable from the dataminer.services catalog<!-- Not yet downloadable??? TBD -->, that can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It also can be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
+Dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), downloadable from the dataminer.services catalog<!-- TBD: is it available yet? if not, we'll have to rephrase this -->, that can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It also can be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
 
 The use cases offered by Dataminer.MediaOps are listed below. The solution's focus spans from inventory management to planning and reservation, to live operations, up to finishing events and managing costs and billing.
 
@@ -61,20 +61,12 @@ This list will continue to grow over time as new releases become available for D
 
 - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system.
 
-<!-- ## dataminer.MediaOps apps
+## dataminer.MediaOps apps
 
-dataminer.MediaOps is [available for download in the DataMiner Catalog](xref:), and comes with a set of low-code apps that expose the MediaOps functionality to end users. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific projects.
+dataminer.MediaOps is available for download in the DataMiner Catalog<!-- TBD: is it available yet? if not, we'll have to rephrase this -->, and comes with a set of low-code apps that expose the MediaOps functionality to end users. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific projects.
 
-For an overview of the different applications available in the package, see [MediaOps apps](xref:).
+For an overview of the different applications available in the package, see [MediaOps apps](xref:Overview_MediaOps_Apps).
 
 ## Data model
 
-The different MediaOps apps are built on a common data model. For a description of this data model, see [MediaOps data model](xref:).
-
-## Supported connectors
-
-Certain functionalities within the MediaOps solution require a specific integration with DataMiner connectors in order to work with the underlying products. For more information and a list of the currently supported connectors, see [MediaOps connectors](xref:)
-
-## Install package
-
-For detailed information on the different MediaOps packages, see [MediaOps install package](xref:). -->
+The different MediaOps apps are built on a common data model. For a description of this data model, see [MediaOps data model](xref:Overview_MediaOps_Data_Model).

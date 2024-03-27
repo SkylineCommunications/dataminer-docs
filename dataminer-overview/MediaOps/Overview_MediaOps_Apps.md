@@ -38,7 +38,7 @@ The Virtual Signal Groups app is used to manage the database of all sources and 
 
 Individual signals can be bundled into virtual signal groups, which can then be used by operators to route a large number of signals, potentially coming from different devices and with a main and a backup, in one click. The app also allows you to organize sources and destinations into areas and domains so you can find them more easily, for example when you are looking from a control surface.
 
-For more detailed information about this application, see [Virtual Signal Groups application](xref:).
+For more detailed information about this application, see [Virtual Signal Groups application](xref:Overview_MediaOps_Virtual_Signal_Groups).
 
 ## Control Surface
 
@@ -48,7 +48,7 @@ The MediaOps control surfaces allow users to build their own user interfaces whe
 
 Users can use this sample app as is, they can take use it as a starting point and further customize it, or they can build their own control surface from scratch.
 
-For more detailed information about this application, see [Control Surface application](xref:).
+For more detailed information about this application, see [Control Surface application](xref:Overview_MediaOps_Control_Surface).
 
 ## Flow Engineering
 
@@ -62,7 +62,7 @@ Unlike the other apps listed on this page, Flow Engineering is not an applicatio
 
 - **Flow documentation**: The result of the path calculation is also stored, so it can be used for [monitoring](#flow-monitoring) and other purposes.
 
-For more detailed information about this application, see: [Flow Engineering application](xref:).
+For more detailed information about this application, see: [Flow Engineering application](xref:Overview_MediaOps_Flow_Engineering).
 
 ## Flow Monitoring
 
@@ -74,11 +74,11 @@ The goal of the Flow Monitoring app is to provide visibility on the path of all 
 
 - **As-is flow paths** show the flows as reported by the elements in the DataMiner System. These therefore reflect the actual current state of the flows in the network. These can then be compared to the as-engineered paths to see if the actual state of the network corresponds to the desired state. To be able to reconstruct the as-is path, elements in the path need to report the incoming and outgoing flows on the underlying product in a standardized format. This is therefore only supported for elements that are integrated with the MediaOps solution.
 
-For more detailed information about this application, see [Flow Monitoring application](xref:).
+For more detailed information about this application, see [Flow Monitoring application](xref:Overview_MediaOps_Flow_Monitoring).
 
 ## Scheduling
 
-![Scheduling app icon](~/Solutions/images/MediaOps_ICON_7.png)
+![Scheduling app icon](~/dataminer-overview/images/MediaOps_ICON_7.png)
 
 The Scheduling application is a comprehensive solution for the scheduling and orchestration of resources and workflows. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options. The full life cycle of a job can be managed with tools created for requestors, booking teams, or operational teams.
 
@@ -89,7 +89,7 @@ Among others, the app includes the following features:
 - Easily spotting when a job needs additional input prior to the job's start.
 - Generating cost and billing information based on assign contracts and actual usage of the resource.
 
-For more detailed information about this application, see [Scheduling application](xref:).
+For more detailed information about this application, see [Scheduling application](xref:Overview_MediaOps_Scheduling).
 
 ## Workflow Designer
 
@@ -104,26 +104,26 @@ Additionally, a workflow describes:
 - Whether or not resources and capacity are reserved.
 - If and how the service needs to be monitored.
 
-For more detailed information about this application, see [Workflow Designer application](xref:).
+For more detailed information about this application, see [Workflow Designer application](xref:Overview_MediaOps_Workflow_Designer).
 
 ## Cost and Billing
 
-![Cost and Billing app icon](/Solutions/images/Cost-Billing/cost-billing-dm-logo.png)
+![Cost and Billing app icon](~/dataminer-overview/images/cost-billing-dm-logo.png)
 
 Cost and Billing is a robust application designed to streamline financial operations within a media environment. It consists of several modules.
 
-Its **Contract** module offers a comprehensive framework for managing agreements, defining validity periods, and incorporating flexible billing options. Users can apply discounts during billing calculations and navigate intricate details like speed order fees, providing choices between fixed or incremental charges based on the job's booking confirmation. The app's versatility extends to cancellation fees, allowing users to opt for fixed or incremental charges. Billing flexibility is further enhanced by the app's capability to facilitate billing based on workflows, resources, or a combination of both. Additionally, the app enables precise customization through default and specific rate card assignments to workflows, resources, and resource pools.
+Its **Contracts** module offers a comprehensive framework for managing agreements, defining validity periods, and incorporating flexible billing options. Users can apply discounts during billing calculations and navigate intricate details like speed order fees, providing choices between fixed or incremental charges based on the job's booking confirmation. The app's versatility extends to cancellation fees, allowing users to opt for fixed or incremental charges. Billing flexibility is further enhanced by the app's capability to facilitate billing based on workflows, resources, or a combination of both. Additionally, the app enables precise customization through default and specific rate card assignments to workflows, resources, and resource pools.
 
 Within the **Rate Cards** module, the app seamlessly associates with job nodes, such as workflows, resources, and resource pools, offering detailed charging mechanisms based on usage duration. The module also allows users to specify the currency for billing or cost descriptions, ensuring accuracy in financial transactions. The inclusion of rates based on various time units or single use adds granularity to the billing structure, making the Cost and Billing app a comprehensive financial management tool.
 
 The **Currencies** module efficiently manages multiple currencies. This functionality facilitates seamless currency conversion for precise billing and cost calculations across nodes with different rate cards, ensuring a globally adaptable and efficient financial ecosystem.
 
-For more detailed information about this application, see [Cost and Billing application](xref:).
+For more detailed information about this application, see [Cost and Billing application](xref:Overview_MediaOps_Cost_and_Billing).
 
 ## People and Organizations
 
-![People and Organizations app icon](/Solutions/images/People-Organizations/DM_PeopleOrganizations.png)
+![People and Organizations app icon](~/dataminer-overview/images/DM_PeopleOrganizations.png)
 
 Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier. You can also streamline organization management by overseeing categories, contracts, billing contacts, and company affiliation — all from a single intuitive interface.
 
-For more detailed information about this application, see [People and Organizations application](xref:).
+For more detailed information about this application, see [People and Organizations application](xref:Overview_MediaOps_People_and_Organization).
