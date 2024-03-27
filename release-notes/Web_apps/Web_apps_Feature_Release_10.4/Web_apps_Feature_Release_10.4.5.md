@@ -153,6 +153,12 @@ Up to now, when two states were able to transition to each other, an infinite lo
 
 When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
 
+#### Dashboards app & Low-Code Apps - Interactive Automation scripts: Values would not get updated when the focus changed [ID_38838]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in an interactive Automation script run from a dashboard or a low-code app, you had changed a value, that value would incorrectly not get updated when the focus changed.
+
 #### Dashboards app: Problem with Dropdown components on shared dashboards [ID_38953]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -184,6 +190,21 @@ When you had set the default range of a *Timeline* component or a *Time range* c
 
 Also, in some cases, a *Timeline* component or a *Time range* component would not get visually updated when the default range was set to a different value.
 
+#### Dashboards app: Tables in PDF files would incorrectly get added a scroll bar [ID_39059]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Tables in PDF files would incorrectly get added a scroll bar.
+
+#### Dashboards app & Low-Code Apps: Focus order of buttons in popup windows would be incorrect [ID_39080]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, the focus order of buttons in popup windows would be incorrect. From now on, when a popup window contains an action button, it will get the focus. If no action button is present, then the first non-danger button will get the focus.
+
+> [!NOTE]
+> Danger buttons will never get the focus.
+
 #### Dashboards app & Low-Code Apps: Protocol versions of mediation protocols would incorrectly not be production versions [ID_39094]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -197,3 +218,53 @@ When, in the *DATA* pane, you opened the *PARAMETERS* section, set the *From* bo
 When a web app loses its WebSocket connection, a `Connection has been interrupted` message is displayed in the app's subheader. In some cases, that message would incorrectly not disappear once the WebSocket connection was restored.
 
 From now on, a message will also be displayed in the app's subheader when not all messages received when the app was disconnected could be recovered. That same message will ask the user to refresh the app.
+
+#### Dashboards app & Low-Code Apps - Time range component: Custom time zone would not be used when selecting 'Now' in the time picker [ID_39171]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you had set a custom time zone for web apps, that time zone would incorrectly not be used when you selected *Now* in the time picker of a *Time range* component.
+
+> [!TIP]
+> See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
+
+#### Dashboards app & Low-Code Apps - Table, Grid, Timeline & Maps components: Template previews would not show the background color of the component [ID_39183]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In the *Template Editor*, up to now, template previews would not show the background color of the component. As this could lead to confusion when previewing templates without background shapes, all previews will now have the same background color as the component in which they will be used.
+
+> [!NOTE]
+> At present, the *Maps* component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+#### Dashboards app: Not possible to duplicate a dashboard with the same name to another folder [ID_39190]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, you were not allowed to duplicate a dashboard with the same name to a different folder. From now on, you will be allowed to do so.
+
+#### Dashboards app & Low-Code Apps: 'Select a visualization' button would not be displayed [ID_39194]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in edit mode, you clicked a component or hovered the mouse pointer over it, the *Select a visualization* button would incorrectly not be displayed when you dragged query row data from the feed section onto the dashboard or the low-code panel you were editing.
+
+#### Web apps - Color picker: Moving the color slider would not be possible when the color was set to RGB 0/0/0 [ID_39227]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you opened the color picker and the color was set to a grey color (i.e. RGB 0/0/0), it would not be possible to select another color by moving the color slider.
+
+#### Low-Code Apps: Refreshing an app would cause it to redirect the user to the root page instead of the authentication page [ID_39231]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you refreshed a low-code app while the connection was lost, the app would incorrectly redirect you to the root page (e.g. `https://myDma/root/`) instead of the app's authentication page.
+
+#### Low-Code Apps: Draft version of an app could incorrectly be opened via the URL of the published version [ID_39242]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, it would incorrectly be possible to open a draft version of a low-code app via the URL of the published version, even when that draft version had not yet been published.
+
+From now on, for example, it will be possible to navigate to `https://{MYDMA}/app/draft/{APPID}/Page?v=4`, but no longer to `https://{MYDMA}/app/{APPID}/Page?v=4`.

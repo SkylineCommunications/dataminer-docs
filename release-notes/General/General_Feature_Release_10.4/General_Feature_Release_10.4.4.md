@@ -148,6 +148,8 @@ In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFie
 
 The ad hoc data source now supports real-time updates.
 
+For this purpose, the [IGQIUpdateable](xref:GQI_IGQIUpdateable) interface must be implemented in the data source.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -383,6 +385,14 @@ From now on, the legend will always show the layers in the order in which they w
 
 On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
 
+#### BPA test 'Check agent presence in NATS' could throw an incorrect error when the local NATS process had been running for a long time [ID_38776]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When the local NATS process had been running for a long time, in some cases, the *Check agent presence in NATS* BPA test could incorrectly throw the following error:
+
+`Failed to execute NATS server test, the local NATS server might be offline.`
+
 #### Automation: Problem when sending an email to a user or group [ID_38844]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
@@ -457,6 +467,14 @@ Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically re
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
 
 When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
+
+#### Problem with SLProtocol due to incorrect redundant connection [ID_39114]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+The redundant polling feature allows SLProtocol to select another connection when the main connection goes into a timeout.
+
+In some cases, when SLProtocol selected a connection with a type different from that of the main connection, an error could occur. From now on, when SLProtocol has to select another connection when the main connection goes into a timeout, it will only take into account connections with a type equal to that of the main connection.
 
 #### SLDataMiner could stop working when a MIB file was being generated for a protocol that contained parameters with discrete values [ID_39120]
 

@@ -16,6 +16,9 @@ From DataMiner 10.2.9/10.3.0 onwards, you can also access each of the published 
 > - To view the Low-Code Apps module, you need the user permission [Modules > User-definable apps > View apps](xref:DataMiner_user_permissions#modules--user-definable-apps--view-apps).
 > - Draft apps are not shown by default. To view them, click the cogwheel button and activate *Show draft applications*.
 
+> [!TIP]
+> In many browsers, it is possible to install a low-code app as a standalone app on your computer, using the install button on the right side of the browser address bar. You can then for instance pin the app to your taskbar or add a desktop shortcut to quickly open it. Note that currently only one low-code app can be installed this way at a time.
+
 ## Accessing the Low-Code Apps via dataminer.services
 
 If you have been granted remote access to a DataMiner System via dataminer.services, you can connect as follows:

@@ -14,7 +14,6 @@ Example:
 
 `dynamicThreadPool:306`
 
-
 PID 306 is the destination parameter.
 
 *Feature introduced in DataMiner 8.0.5.4 (RN 6520).*
@@ -180,24 +179,26 @@ Configures the use of a counting semaphore to spread the row processing more equ
 
 Expected format: pollingRate:\<interval\>,\<maxCount\>,\<releaseCount\>
 
--<interval>: Specifies the interval (in ms) at which the semaphore object's current count will be increased. The minimum supported value is 15.
--<maxCount>: Specifies the max count of the semaphore.
--<releaseCount>: Specifies the release count. This is the value by which the semaphore object's current count will be increased.
+- **interval**: Specifies the interval (in ms) at which the semaphore object's current count will be increased. The minimum supported value is 15.
+- **maxCount**: Specifies the max count of the semaphore.
+- **releaseCount**: Specifies the release count. This is the value by which the semaphore object's current count will be increased.
 
-In case the maxCount or releaseCount are not specified, both will be set to 10 by default.
+In case the *maxCount* or *releaseCount* are not specified, both will be set to 10 by default.
 
 > [!NOTE]
-> It is advisable to set the maxCount and releaseCount to the same value.
+> It is advisable to set the *maxCount* and *releaseCount* to the same value.
 
-Suppose a table contains 10 000 rows and the "each" option is set to 100 000 ms; this means that the timer should execute 10 000 rows/100 s = 100 rows per second. When pollingrate is not defined, this means that at the start of each second, 100 rows are launched at the same time (in bulk).
+Example:
 
-The polling rate ensures that these 100 rows are more equally spread over the second pollingrateinter-val(ms),pollingratemaxcount,pollingratereleasecount pollingrate:15,3,3 (every 15 ms, release 3 threads).
+Suppose a table contains 10 000 rows and the "each" option is set to 100 000 ms; this means that the timer should execute 10 000 rows/100 s = 100 rows per second. When *pollingRate* is not defined, this means that at the start of each second, 100 rows are launched at the same time (in bulk).
+
+The polling rate ensures that these 100 rows are more equally spread over the 1-second period `pollingRate:15,3,3` (every 15 ms, release 3 threads).
 
 ## qaction
 
 Expected format: qaction:\<qactionId\>
 
-- \<qactionId\>: Specifies the ID of the QAction.
+- **qactionId**: Specifies the ID of the QAction.
 
 The ID of the QAction that is activated by the timer. The triggers attribute of the QAction tag needs to be empty, and the option row="true" needs to be added.
 
@@ -214,7 +215,7 @@ Example:
 
 Expected format: qactionBefore:\<qactionId\>
 
-- \<qactionId\>: Specifies the ID of the QAction.
+- **qactionId**: Specifies the ID of the QAction.
 
 Run this QAction before executing the ping (in combination with the ping option). The triggers attribute of the QAction tag needs to be empty, and the option row="true" needs to be added.
 
@@ -228,7 +229,7 @@ Example:
 
 Expected format: qactionAfter:\<qactionId\>
 
-- \<qactionId\>: Specifies the ID of the QAction.
+- **qactionId**: Specifies the ID of the QAction.
 
 Run this QAction after the response enters. The QAction triggers attribute needs to be empty and the option row="true" can be added.
 

@@ -26,9 +26,9 @@ uid: FAQs_Support_Services
 
   In case the support plan has not been deactivated, and the user failed to renew the program in time by sending a valid PO, on the day after the anniversary date of the agreement, the service (i.e. Continuity or Evolve plan) will automatically be stopped along with all related services linked to it. As a user, you can still continue to consult content and resources on the Dojo Community portal.
 
-- **What happens if I don't have active support on a perpetual support plan?**
+- **What happens if I do not have active support on a perpetual support plan?**
 
-  - You don't have access to the Skyline IOC technical support team.
+  - You do not have access to the Skyline IOC technical support team.
   - Your platform is exposed to technical & security vulnerabilities.
   - New purchased connectors added to your DataMiner platform are at risk to not be (fully) supported because an outdated DataMiner software version is in use.
   - You have the option to get support for the DataMiner core & connectors (except for upgrades). This is charged as [professional credit services](https://community.dataminer.services/professional-service-credits/).

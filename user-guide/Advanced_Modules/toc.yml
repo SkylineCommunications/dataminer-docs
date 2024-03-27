@@ -592,6 +592,8 @@ items:
                         topicUid: Creating_Duration_Operator
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
+                      - name: Providing a custom sort order
+                        topicUid: GQI_Redirect_Sort_Tutorial
               - name: API reference
                 items:
                   - name: GenIfRowMetadata
@@ -614,6 +616,8 @@ items:
                     topicUid: GQI_GQIPage
                   - name: GQIRow
                     topicUid: GQI_GQIRow
+                  - name: GQISortDirection
+                    topicUid: GQI_GQISortDirection
                   - name: IGQIColumn
                     topicUid: GQI_IGQIColumn
                   - name: IGQIColumnOperator
@@ -624,6 +628,8 @@ items:
                     topicUid: GQI_IGQICoreOperator
                   - name: IGQIDataSource
                     topicUid: GQI_IGQIDataSource
+                  - name: IGQIFactory
+                    topicUid: GQI_IGQIFactory
                   - name: IGQIFilterOperator
                     topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
@@ -646,6 +652,10 @@ items:
                     topicUid: GQI_IGQIQueryNode
                   - name: IGQIRowOperator
                     topicUid: GQI_IGQIRowOperator
+                  - name: IGQISortField
+                    topicUid: GQI_IGQISortField
+                  - name: IGQISortOperator
+                    topicUid: GQI_IGQISortOperator
                   - name: IGQIUpdateable
                     topicUid: GQI_IGQIUpdateable
                   - name: IGQIUpdater
@@ -849,6 +859,8 @@ items:
         items:
           - name: Getting started with DOM
             topicUid: DOM_Getting_Started_With_DOM
+          - name: Making DOM objects state-aware
+            topicUid: DOM_Making_DOM_Stateful
           - name: Creating a basic DOM setup
             topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor

@@ -4,6 +4,8 @@ items:
   items:
   - name: Connectors
     items:
+    - name: Getting started with data source integrations
+      topicUid: Getting_started_with_data_source_integrations
     - name: Introduction
       topicUid: Introduction
     - name: Connector fundamentals
@@ -861,6 +863,8 @@ items:
         topicUid: NT_GET_AVAILABLE_FILES
       - name: NT_ADD_FILE
         topicUid: NT_ADD_FILE
+      - name: NT_REMOVE_DOCUMENT
+        topicUid: NT_REMOVE_DOCUMENT
       - name: NT_MAKE_ALARM
         topicUid: NT_MAKE_ALARM
       - name: NT_DATAMINER_INFO
@@ -5306,6 +5310,12 @@ items:
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
+    - name: CI/CD Troubleshooting
+      items:
+        - name: GitHub failures
+          topicUid: CICD_Troubleshooting_GitHubFailures
+        - name: Jenkins failures
+          topicUid: CICD_Troubleshooting_JenkinsFailures
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:

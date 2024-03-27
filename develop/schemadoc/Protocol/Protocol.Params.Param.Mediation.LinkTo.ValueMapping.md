@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping
 
 # ValueMapping element
 
-Defines a value mapping.
+Specifies a conversion of a value on the device protocol to a different value on the base protocol. This functionality can be used to map a discrete value on the device protocol (remoteValue) to an equivalent discrete represented by a different value on the base protocol.
 
 ## Parent
 

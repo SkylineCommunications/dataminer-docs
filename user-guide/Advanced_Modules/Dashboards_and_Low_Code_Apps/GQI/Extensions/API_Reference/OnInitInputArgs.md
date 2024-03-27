@@ -17,3 +17,4 @@ Contains functionality and general query information for ad hod data sources and
 | -------- | ---- | ----------- |
 | DMS | [GQIDMS](xref:GQI_GQIDMS) | Object that can be used to interact with the DMS. |
 | Logger | [IGQILogger](xref:GQI_IGQILogger) | Object that can be used to log messages and exceptions. Available from DataMiner 10.4.5/10.5.0 onwards. |
+| Factory | [IGQIFactory](xref:GQI_IGQIFactory) | Object with methods to create other objects that can be used to interact with the core GQI framework. Available from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37806 --> |

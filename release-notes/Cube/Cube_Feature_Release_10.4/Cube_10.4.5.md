@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.5
 
 ### Enhancements
 
+#### Visual Overview: Enhanced performance when processing property updates [ID_38458]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when processing property updates.
+
 #### Alarm Console: Newly opened suggestion events tab will now include 'Service impact', 'Services' and 'RCA level' columns by default [ID_38732]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
@@ -60,11 +66,47 @@ Example: `[var:testvar,WaitForValue]`
 > If the variable name contains commas, by default, the text before the first valid option will be considered the name of the variable. For example, in the placeholder `[var:my,var,WaitForValue,NotValidOption]`, "my,var" will be considered the name of the variable.
 > This default behavior can be overruled by using a `[sep]` placeholder. For example, in the placeholder `[cardvar:[sep:,$]test,var$WaitForValue]`, "test,var" will be considered the name of the variable.
 
+#### Enhanced performance when loading properties in a view card [ID_38942]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when loading properties in a view card.
+
 #### Sidebar: Users will now be logged in automatically when opening an app from the Apps pane [ID_39057]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 Up to now, when you opened a web application by clicking an icon in the *Apps* pane of Cube's sidebar, you had to log in to that app when you had not yet logged in to another app that was open in the browser. From now on, you will be logged in automatically.
+
+#### System Center - Agents: Warning when adding or removing agents on systems that have the NATSForceManualConfig option enabled [ID_39070]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When you add or remove an agent on a DataMiner System that has the *NATSForceManualConfig* option enabled, a warning message will now appear, saying that the NATS configuration will have to be updated.
+
+#### Log entries added to SLClient.txt will now include the ConnectionID dimension [ID_39118]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Each time a Cube client adds a log entry to the *SLClient.txt* log file of the DataMiner Agent in question, it will now include the *ConnectionID* dimension, which will allow the corresponding connection to be traced.
+
+#### URL argument 'alarm=' now also supports values in DmaId/ElementId/RootAlarmId format [ID_39126]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When you open DataMiner Cube with the URL argument *alarm=* to immediately display a specific alarm card, it is now possible to specify the alarm in *DmaId/ElementId/RootAlarmId* format.
+
+Example:
+
+```txt
+alarm=48/123/6713
+```
+
+#### Visual Overview: Passing session variables when navigating to elements using an application protocol [ID_39167]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, in Visual Overview, it will also be possible to pass session variables when navigating to an element using an application protocol (e.g. SRM Booking Manager).
 
 ### Fixes
 
@@ -81,3 +123,9 @@ From now on, when the *Resources* app of Cube detects that the Min and Max capab
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 When, in DataMiner Cube, you closed the Services app, in some cases, Cube could leak memory.
+
+#### Visual Overview: Problem when executing Automation scripts linked to a CPE card after clicking the 'Back' button [ID_39090]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in DataMiner Cube, you navigated to a CPE card by clicking the *Back* button, Automation scripts linked to the page would not be executed correctly when they used CPE-specific placeholders like `FieldID` linked to variables. The Automation script popup would open, showing empty variables.

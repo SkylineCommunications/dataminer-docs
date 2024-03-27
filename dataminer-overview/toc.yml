@@ -168,6 +168,10 @@ items:
           topicUid: Proactive_Support
         - name: Support services terms
           topicUid: Support_services_terms
+        - name: Partner support lines
+          topicUid: Partner_support_lines
+        - name: User Operations Support application
+          topicUid: User_operations_support
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:
@@ -193,6 +197,10 @@ items:
           topicUid: Deal_Registration
         - name: Bidding DataMiner
           topicUid: Bidding_DataMiner
+        - name: Partner responsibilities
+          items:
+            - name: Support level roles
+              topicUid: Support_Level_Roles
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:

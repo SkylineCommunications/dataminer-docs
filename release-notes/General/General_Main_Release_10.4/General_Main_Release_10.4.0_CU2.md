@@ -16,10 +16,10 @@ uid: General_Main_Release_10.4.0_CU2
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, DOM string fields would be filtered case-sensitively. From now on, those fields will by default be filtered case-insensitively.
+Up to now, DOM string fields were filtered case-sensitively. From now on, these fields will by default be filtered case-insensitively.
 
 > [!NOTE]
-> If necessary, this default filter behavior can be overruled in code by using `StringComparison.Ordinal`. See the following snippet.
+> If necessary, you can overrule this default filter behavior in code by using `StringComparison.Ordinal`. See the following snippet:
 >
 > ```csharp
 > var filter = DomInstanceExposers.FieldValues.DomInstanceField(_stringFieldDescriptor.ID).Contains("test", StringComparison.Ordinal)
@@ -51,6 +51,12 @@ This tool accepts the following arguments:
 | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
 
 If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.
+
+#### Enhanced performance when editing properties in bulk [ID_38255]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Performance has increased when properties of elements, services, or views are edited in bulk.
 
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
 
@@ -102,11 +108,39 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 
 A number of security enhancements have been made.
 
+#### SLLogCollector: Enhancements [ID_38966]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+SLLogCollector now uses Microsoft .NET 4.8.0.
+
+Also, an number of enhancements have been made to improve overall exception handling and to prevent the tool from timing out on servers without internet access.
+
+#### SLLogCollector: Enhancements [ID_38975]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, SLLogCollector will also log when it was not able to find any DataMiner processes or include memory dumps.
+
+Also, it will no longer attempt to read log files when it was not able to find the `C:\Skyline DataMiner\` folder.
+
+#### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
+
+#### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when starting the Resource Manager module, especially on systems with a large number of permanent bookings.
 
 #### STaaS: SLDataGateway will now periodically check the health of the storage service [ID_39068]
 
@@ -119,6 +153,46 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 > - When the current status is "yellow", SLDataGateway will not switch to file offload mode.
 > - Whenever the health of the storage service changes, an alarm mentioning the current health status is generated.
 
+#### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance of SLAnalytics has increased when processing database operations, especially small insert or update operations.
+
+#### SLNet: Enhanced task processing [ID_39131]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
+
+#### MySql.Data.dll updated to version 8.3.0 [ID_39152]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The *MySql.Data.dll* file, stored in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\Files\x64` folders, has been updated from version 6.9.12 to version 8.3.0.
+
+The connection string will now include `allowloadlocalinfile=True` as this required setting needs to be enabled on both the client side and the server side of the database connection.
+
+#### STaaS: Text of storage service health status alarm has been made clearer [ID_39154]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Whenever the health of the storage service changes, an alarm mentioning the current health status is generated. The text of this health status alarm has now been made clearer.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced flatline detection accuracy [ID_39160]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, the accuracy of the flatline detection algorithm has improved.
+
+#### No more DataMiner startup beep [ID_39176]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The DataMiner startup beep has been removed.
+
+On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -127,13 +201,13 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
 
-#### Problem with user accounts [ID_38182]
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
-<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
-In some cases, user accounts could become corrupted.
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
-Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
@@ -159,8 +233,48 @@ When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incor
 
 When a service created via an SRM booking got into an error state because it had been assigned a name that was already being used by another object, it would not be possible to delete it as it would be considered invalid.
 
+#### Service & Resource Management: Problem when the function manager was not able to read the functions.xml file in C:\\Skyline DataMiner\\ServiceManager [ID_38925]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, in some cases, a run-time error could occur when the function manager was not able to read the *functions.xml* file in `C:\Skyline DataMiner\ServiceManager`.
+
+From now on, if an error occurs when the function manager was not able to read that file, an entry will be added to the *SLFunctionManager.txt* log file, and if the error occurred because the file was locked by another process, the log entry will include the name of the process.
+
 #### STaaS: Database queries could time out [ID_39081]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.
+
+#### Protocols: Compliancies element would not get parsed correctly when it contained comments [ID_39085]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, the `<Compliancies>` element of a *protocol.xml* file would not get parsed correctly when it contains HTML comments.
+
+As a result, DataMiner would fail to open the protocol and create elements with it.
+
+#### Visual Overview: 'Connection could not be fully established' error when viewing visual overviews in a web app [ID_39133]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you opened a visual overview in a web app, in some cases, a `Connection could not be fully established` error would appear.
+
+#### No emails could be sent as long as SLASPConnection was not fully initialized [ID_39137]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
+
+#### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID_39164]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.
+
+#### Problem with SLProtocol when processing a matrix parameter update [ID_39178]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, an error could occur in SLProtocol when processing a matrix parameter update.

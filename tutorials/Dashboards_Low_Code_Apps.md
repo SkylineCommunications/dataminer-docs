@@ -39,6 +39,7 @@ keywords: low-code, low code, lowcode
 | [Creating a minus operator](xref:Creating_Minus_Operator) | Create a custom operator that subtracts two values and adds the result to a table, e.g. to calculate your profits based on sales and costs. |
 | [Creating a duration operator](xref:Creating_Duration_Operator) | Create a custom operator that calculates the duration based on two datetime values. |
 | [Optimizing your custom operator](xref:Custom_Operator_Tutorial) | Optimize your custom operator while keeping an eye out for common pitfalls. |
+| [Providing a custom sort order](xref:GQI_Redirect_Sort_Tutorial) | Implement a custom GQI column sort order using a custom operator. |
 | [Forwarding dummy data to the GQI](xref:Ad_hoc_Tutorials) | Go through an example script that forwards dummy data to the GQI. |
 | [Building a GQI data source that fetches satellites](xref:Ad_hoc_Tutorials_Satellites) | Go through an example script that forwards satellites data to the GQI. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |

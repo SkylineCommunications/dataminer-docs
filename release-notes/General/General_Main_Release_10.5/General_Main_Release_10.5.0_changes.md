@@ -146,6 +146,8 @@ For detailed information about the changes included in those versions, refer to 
 
 The ad hoc data source now supports real-time updates.
 
+For this purpose, the [IGQIUpdateable](xref:GQI_IGQIUpdateable) interface must be implemented in the data source.
+
 #### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
@@ -163,6 +165,23 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
+
+#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
+
+- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+
+These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
+
+#### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
 
 ### Fixes
 
