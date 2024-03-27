@@ -33,7 +33,7 @@ In essence, dataminer.MediaOps revolutionizes media operations by combining mode
 
 ### What can you do with dataminer.MediaOps?
 
-Dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](#dataminermediaops-apps), downloadable from the dataminer.services catalog, that can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It also can be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
+Dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), downloadable from the dataminer.services catalog<!-- Not yet downloadable??? TBD -->, that can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It also can be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
 
 The use cases offered by Dataminer.MediaOps are listed below. The solution's focus spans from inventory management to planning and reservation, to live operations, up to finishing events and managing costs and billing.
 
@@ -41,7 +41,7 @@ This list will continue to grow over time as new releases become available for D
 
 - **Inventory**: The management of various inventories includes the creation and oversight of technical resources and pools, facility and personnel resource management, and satellite transponder slot resource management. Media operations also involve the management of incoming and outgoing signals (signal database), which can optionally sync with IS-04 registries, the management of IP multicast address ranges (integrated with IPAM systems), and general asset management including asset discovery and integration with CMDBs, among other tasks.
 
-- **Plan**: Every operation requires planning functions. Examples include planning production events, news events, OU lines over satellite, fiber, or internet (SRT – RIST), and planning asset and file ingest. Planning is essential not only on the content creation and ingest side but also on the content delivery side of the business, encompassing multiplatform channel delivery for OTT, IPTV, cable TV, DTH, DTT, and more. Beyond media teams, ICT teams also require planning tools for maintenance such as software updates, repairs, infrastructure setup, remote field installation, and commissioning. Every team plans workflows, and all teams access the same resources. dataminer.MediaOps is here to share inventory information in a collaborative manner, but also to ensure that no resource conflicts arise.
+- **Plan**: Every operation requires planning functions. Examples include planning production events, news events, OU lines over satellite, fiber, or internet (SRT – RIST), and planning asset and file ingest. Planning is essential not only on the content creation and ingest side but also on the content delivery side of the business, encompassing multi-platform channel delivery for OTT, IPTV, cable TV, DTH, DTT, and more. Beyond media teams, ICT teams also require planning tools for maintenance such as software updates, repairs, infrastructure setup, remote field installation, and commissioning. Every team plans workflows, and all teams access the same resources. dataminer.MediaOps is here to share inventory information in a collaborative manner, but also to ensure that no resource conflicts arise.
 
 - **Reserve**: Reservation closely aligns with planning and involves making reservations on resources as per the plans to avoid conflicts. This includes both instant reservations and future reservations to ensure resource availability and suitability, thereby creating a predictable and deterministic operation. Reservations can be made on various technical resources, technical capacities, personnel, facilities and rooms, satellite transponder slots, file transcoders in the cloud, file quality analysis functions in the cloud, and more.
 
@@ -61,7 +61,7 @@ This list will continue to grow over time as new releases become available for D
 
 - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system.
 
-## dataminer.MediaOps apps
+<!-- ## dataminer.MediaOps apps
 
 dataminer.MediaOps is [available for download in the DataMiner Catalog](xref:), and comes with a set of low-code apps that expose the MediaOps functionality to end users. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific projects.
 
@@ -77,4 +77,4 @@ Certain functionalities within the MediaOps solution require a specific integrat
 
 ## Install package
 
-For detailed information on the different MediaOps packages, see [MediaOps install package](xref:).
+For detailed information on the different MediaOps packages, see [MediaOps install package](xref:). -->
