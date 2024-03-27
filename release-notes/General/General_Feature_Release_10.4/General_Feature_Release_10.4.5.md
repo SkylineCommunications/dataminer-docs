@@ -255,6 +255,12 @@ The connection string will now include `allowloadlocalinfile=True` as this requi
 
 Whenever the health of the storage service changes, an alarm mentioning the current health status is generated. The text of this health status alarm has now been made clearer.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced flatline detection accuracy [ID_39160]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, the accuracy of the flatline detection algorithm has improved.
+
 #### No more DataMiner startup beep [ID_39176]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
