@@ -107,6 +107,14 @@ On virtual machines, beep commands are bypassed, and on physical machines, this 
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
 
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
+
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
