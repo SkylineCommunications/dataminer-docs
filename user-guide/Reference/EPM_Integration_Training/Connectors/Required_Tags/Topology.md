@@ -1,5 +1,5 @@
 ---
-uid: connectorsRequiredTagsTopology
+uid: ConnectorsRequiredTagsTopology
 ---
 
 # Topology

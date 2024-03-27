@@ -1,5 +1,5 @@
 ---
-uid: epmIntegrationTrainingConnectors
+uid: EpmIntegrationTrainingConnectors
 ---
 
 # Reference
@@ -7,10 +7,10 @@ uid: epmIntegrationTrainingConnectors
 - [Introduction](xref:)
 - [Table Structure](xref:)
 - [View Tables](xref:)
-- [Required Tags](xref:Required_Tags)
-- [Visibility Chains and Fields](xref:Visibility_Chains_Fields)
-- [Topology Relations](xref:Topology_Relations)
-- [Alarms](xref:Alarms)
+- [Required Tags](xref:ConnectorsRequiredTags)
+- [Visibility Chains and Fields](xref:ConnectorsVissibilityChainsFields)
+- [Topology Relations](xref:ConnectorsTopologyRelations)
+- [Alarms](xref:ConnectorsAlarms)
 - [Aggregation Actions](xref:)
 - [Merge Actions](xref:)
 - [View Impact Option](xref:)

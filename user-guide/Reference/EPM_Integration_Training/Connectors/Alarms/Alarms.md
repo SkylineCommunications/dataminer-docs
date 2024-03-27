@@ -1,5 +1,5 @@
 ---
-uid: connectorsAlarms
+uid: ConnectorsAlarms
 ---
 # Alarms
 

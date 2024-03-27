@@ -1,5 +1,5 @@
 ---
-uid: connectorsRequiredTagsGeneralInformation
+uid: ConnectorsRequiredTagsGeneralInformation
 ---
 
 # EPM Manager Connector Configuration

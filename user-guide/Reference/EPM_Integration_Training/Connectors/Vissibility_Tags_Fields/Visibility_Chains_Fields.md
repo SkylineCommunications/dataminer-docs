@@ -1,6 +1,7 @@
 ---
-uid: connectorsVissibilityChainsFields
+uid: ConnectorsVissibilityChainsFields
 ---
+
 # Visibility of Chains and Fields
 
 Within the EPM Manager connector, it is possble to configure the visibility of a Chain or a Field.

@@ -1,7 +1,7 @@
 ---
-uid: epmIntegrationTraining
+uid: Epm_Integration_Training
 ---
 
 # Reference
 
-- [Connectors](xref:Connectors)
+- [Connectors](xref:EpmIntegrationTrainingConnectors)

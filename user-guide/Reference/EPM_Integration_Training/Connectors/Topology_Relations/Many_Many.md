@@ -1,5 +1,5 @@
 ---
-uid: connectorsTopologyRelationsManuMany
+uid: ConnectorsTopologyRelationsManyMany
 ---
 # Many to Many Relation
 

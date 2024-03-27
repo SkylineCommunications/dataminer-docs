@@ -1,5 +1,5 @@
 ---
-uid: connectorsRequiredTagsChainsAndFields
+uid: ConnectorsRequiredTagsChainsAndFields
 ---
 
 # Chains and Fields

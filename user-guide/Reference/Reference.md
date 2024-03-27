@@ -10,6 +10,8 @@ uid: Part7Reference
 
 - [Skyline DataMiner folder](xref:Overview_of_the_files_found_in_the_root_folder)
 
+- [EPM Integration Training](xref:Epm_Integration_Training)
+
 - [Tools](xref:DataminerTools)
 
 - [Naming of elements, services, views, etc.](xref:NamingConventions)
