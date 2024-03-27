@@ -260,3 +260,11 @@ When you opened the color picker and the color was set to a grey color (i.e. RGB
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When you refreshed a low-code app while the connection was lost, the app would incorrectly redirect you to the root page (e.g. `https://myDma/root/`) instead of the app's authentication page.
+
+#### Low-Code Apps: Draft version of an app could incorrectly be opened via the URL of the published version [ID_39242]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, it would incorrectly be possible to open a draft version of a low-code app via the URL of the published version, even when that draft version had not yet been published.
+
+From now on, for example, it will be possible to navigate to `https://{MYDMA}/app/draft/{APPID}/Page?v=4`, but no longer to `https://{MYDMA}/app/{APPID}/Page?v=4`.
