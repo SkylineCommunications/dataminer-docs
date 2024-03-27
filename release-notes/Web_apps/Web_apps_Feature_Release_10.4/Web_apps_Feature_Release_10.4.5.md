@@ -245,3 +245,9 @@ When, in edit mode, you clicked a component or hovered the mouse pointer over it
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When you opened the color picker and the color was set to a grey color (i.e. RGB 0/0/0), it would not be possible to select another color by moving the color slider.
+
+#### Low-Code Apps: Refreshing an app would cause it to redirect the user to the root page instead of the authentication page [ID_39231]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you refreshed a low-code app while the connection was lost, the app would incorrectly redirect you to the root page (e.g. `https://myDma/root/`) instead of the app's authentication page.
