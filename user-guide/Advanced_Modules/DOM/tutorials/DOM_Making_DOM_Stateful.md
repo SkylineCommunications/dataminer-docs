@@ -2,9 +2,9 @@
 uid: DOM_Making_DOM_Stateful
 ---
 
-# Making a DOM module state-aware
+# Making a DOM objects state-aware
 
-This tutorial shows how you can make your DOM module state-aware. This allows a DOM instance to behave differently depending on the state it transitions to. The following things can be defined for each state:
+This tutorial shows how you can make your DOM objects state-aware. This allows a DOM instance to behave differently depending on the state it transitions to. The following things can be defined for each state:
 
 - Which fields are **visible** to the user.
 - Which fields are **read-only** for the user.
@@ -18,7 +18,9 @@ The content and screenshots for this tutorial were created in DataMiner version 
 Expected duration: 20 minutes
 
 > [!TIP]
-> See also: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/courses/kata-15/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> This tutorial is covered in the following Kata : [Kata #24: Making DOM objects state-aware](https://community.dataminer.services/courses/kata-24/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+>  
+> If you are new to Dataminer Objects Model (DOM), start with the following one: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/courses/kata-15/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -30,13 +32,16 @@ Expected duration: 20 minutes
 
 ## Overview
 
-- [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
-- [Step 2: Deploy the Kata DOM package](#step-2-deploy-the-kata-dom-package)
-- [Step 3: Define states on a DOM definition](#step-3-define-states-on-a-dom-definition)
-- [Step 4: Define the state transitions](#step-4-define-the-state-transitions)
-- [Step 5: Define actions to trigger state transitions](#step-5-define-actions-to-trigger-state-transitions)
-- [Step 6: Define a form button to trigger the action](#step-6-define-a-form-button-to-trigger-the-action)
-- [Step 7: Validate states, transitions, and buttons in the low-code app](#step-7-validate-states-transitions-and-buttons-in-the-low-code-app)
+- [Making a DOM objects state-aware](#making-a-dom-objects-state-aware)
+  - [Prerequisites](#prerequisites)
+  - [Overview](#overview)
+  - [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
+  - [Step 2: Deploy the Kata DOM package](#step-2-deploy-the-kata-dom-package)
+  - [Step 3: Define states on a DOM definition](#step-3-define-states-on-a-dom-definition)
+  - [Step 4: Define the state transitions](#step-4-define-the-state-transitions)
+  - [Step 5: Define actions to trigger state transitions](#step-5-define-actions-to-trigger-state-transitions)
+  - [Step 6: Define a form button to trigger the action](#step-6-define-a-form-button-to-trigger-the-action)
+  - [Step 7: Validate states, transitions, and buttons in the low-code app](#step-7-validate-states-transitions-and-buttons-in-the-low-code-app)
 
 ## Step 1: Deploy the DOM Editor script
 
