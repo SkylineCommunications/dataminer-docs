@@ -166,6 +166,17 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
+
+- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+
+These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]

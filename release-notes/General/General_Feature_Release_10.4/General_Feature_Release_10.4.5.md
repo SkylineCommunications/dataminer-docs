@@ -229,6 +229,17 @@ A number of enhancements have been made with regard to the behavioral anomaly de
 
 Because of a number of enhancements, overall performance has increased when starting the Resource Manager module, especially on systems with a large number of permanent bookings.
 
+#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
+
+- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+
+These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
+
 #### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
