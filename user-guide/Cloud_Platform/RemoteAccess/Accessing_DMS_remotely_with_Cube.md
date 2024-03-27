@@ -15,6 +15,7 @@ From DataMiner 10.3.0/10.3.2 onwards, you can use DataMiner Cube to access your 
 - You have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
 - You [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software).
 - Your user account has been granted access to the DataMiner System.
+- You have the [APIGateway](xref:DataMinerExtensionModules#apigateway) installed and running.
 
 > [!IMPORTANT]
 > At present, the following **limitation** applies: If a DMS has **SAML** authentication configured, you will not be able to access the DMS remotely with Cube.
