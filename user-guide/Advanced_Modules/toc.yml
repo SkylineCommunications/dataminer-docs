@@ -857,6 +857,8 @@ items:
         items:
           - name: Getting started with DOM
             topicUid: DOM_Getting_Started_With_DOM
+          - name: Making DOM objects state-aware
+            topicUid: DOM_Making_DOM_Stateful
           - name: Creating a basic DOM setup
             topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor
