@@ -339,3 +339,9 @@ Up to now, an error would occur when a DataMiner module (e.g. Automation, Schedu
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.
+
+#### Problem with SLProtocol when processing a matrix parameter update [ID_39178]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, an error could occur in SLProtocol when processing a matrix parameter update.
