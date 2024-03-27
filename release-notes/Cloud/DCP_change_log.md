@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement -  	Improvements for DxM deployments from the Admin app [ID_39268]
+
+When attempting to upgrade or install a DxM, a check is performed if all the system requirements are met. If there are some missing requirements that are detected, the action is disabled, a warning is shown and more information can be found on how to resolve the issue when clicking the warning.
+
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
 You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
