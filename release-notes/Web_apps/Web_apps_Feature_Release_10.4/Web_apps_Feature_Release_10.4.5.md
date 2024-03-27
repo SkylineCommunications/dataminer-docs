@@ -239,3 +239,9 @@ Up to now, you were not allowed to duplicate a dashboard with the same name to a
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When, in edit mode, you clicked a component or hovered the mouse pointer over it, the *Select a visualization* button would incorrectly not be displayed when you dragged query row data from the feed section onto the dashboard or the low-code panel you were editing.
+
+#### Web apps - Color picker: Moving the color slider would not be possible when the color was set to RGB 0/0/0 [ID_39227]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you opened the color picker and the color was set to a grey color (i.e. RGB 0/0/0), it would not be possible to select another color by moving the color slider.
