@@ -274,3 +274,9 @@ When you refreshed a low-code app while the connection was lost, the app would i
 Up to now, it would incorrectly be possible to open a draft version of a low-code app via the URL of the published version, even when that draft version had not yet been published.
 
 From now on, for example, it will be possible to navigate to `https://{MYDMA}/app/draft/{APPID}/Page?v=4`, but no longer to `https://{MYDMA}/app/{APPID}/Page?v=4`.
+
+#### Low-Code Apps: Feeds would incorrectly not be reset when you previewed a low-code app [ID_39276]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you previewed a low-code app, all feeds would incorrectly not be reset. From now on, all feeds will be properly reset when you preview a low-code app.
