@@ -8,8 +8,6 @@ uid: Support_services_terms
 
 This document sets out the terms of Skyline's Support Services for its Software (the "**Terms**").
 
-These Terms apply on all orders for Support Services placed at Skyline by the User.
-
 ## Definitions
 
 For the purpose of these Terms, the following terms shall have the meanings indicated below:
@@ -99,34 +97,11 @@ Skyline shall have no obligation of any kind to provide Support for Issues cause
 
 If Skyline determines that an Issue is a User-Generated Issue, Skyline will notify the User as soon as reasonably possible. If the User requests Support for the User-Generated Issue via a confirming email, Skyline shall have the right to invoice the User at Skyline's then current time and materials rates for any such Support provided by Skyline.
 
-## Pricing - Term
-
-Except if agreed otherwise in writing, these Terms are effective on the date indicated on Skyline's proposal for Support Services and shall continue in effect for a period of 1 year.
-
-Skyline will provide the User with a renewal proposal for the Support Services no later than three (3) months prior to the end date or anniversary date of the Terms.
-
-Unless the User provides Skyline with a written notice no later than thirty (30) days prior to the end date or anniversary date of the Terms of their wish not to renew the Terms, these Terms shall automatically be renewed for successive periods of 1 year, and Skyline shall invoice the amount of the renewal proposal to the User.
-
-All amounts due to Skyline are payable up front before the provision of any Support Services. Early termination of the Support Services by the User does not entitle the User to a refund.
-
-## Data protection
-
-To the extent that Skyline processes personal data on behalf of the User in performing the Support Services, Skyline shall process such personal data only for the purpose of the Support Services and shall take appropriate technical and organizational measures to protect such personal data against unauthorized or unlawful processing to prevent accidental loss, destruction, damage, alteration or disclosure. Skyline may employ its employees, affiliates and third parties worldwide in the performance of Support Services provided that Skyline shall remain primary responsible to the User. This may involve a transfer of personal data outside of the European Economic Area if at least one of the following conditions is satisfied:
-
-- the personal data is transferred to a country that is recognized by the European Commission as providing an adequate level of protection in relation to the data that is transferred, or
-- a processing agreement that incorporates the standard model contractual clauses for data transfers approved by the European Commission is executed between the applicable parties.
-
 ## Various
 
 All Support Services are provided in the English language. Other languages may be possible but are not guaranteed and are provided on a best effort basis.
 
-These Terms are always supplementary to and conditional upon the acceptance of Skyline's end-user license agreement for Skyline's Software ("**EULA**") or any other license agreement(s) concluded between the Parties.
-
 ## Schedule 1: Support Plan
-
-### Precedence
-
-In the event of conflict between the Support Services Terms and this Schedule 1 – Continuity, then the provisions of this Schedule 1 – Continuity shall prevail in relation to the clauses contained in the Support Services Terms.
 
 ### Issue priorities
 
