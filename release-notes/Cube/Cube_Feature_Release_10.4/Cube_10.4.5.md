@@ -28,6 +28,12 @@ uid: Cube_Feature_Release_10.4.5
 
 Because of a number of enhancements, overall performance has increased when processing property updates.
 
+#### Visual Overview: Enhanced performance when loading embedded visual overviews [ID_38541]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when loading embedded visual overviews.
+
 #### Alarm Console: Newly opened suggestion events tab will now include 'Service impact', 'Services' and 'RCA level' columns by default [ID_38732]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
@@ -141,3 +147,15 @@ When, in DataMiner Cube, you navigated to a CPE card by clicking the *Back* butt
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 In Visual Overview, in some cases, a null reference exception could be thrown when you closed a page.
+
+#### An error could occur while Cube was in alarm storm mode [ID_39252]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+While DataMiner Cube was in alarm storm mode, in some cases, an exception could be thrown.
+
+#### Alarm Console - Automatic incident tracking: Problem when double-clicking an alarm group header [ID_39266]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in the Alarm Console, you double-clicked an alarm group header, in some cases, a null reference exception could be thrown.

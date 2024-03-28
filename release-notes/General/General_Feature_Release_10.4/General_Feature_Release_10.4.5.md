@@ -46,6 +46,30 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+
+| Type of file to be retrieved | Request | Response |
+|---|---|---|
+| ASCII text files (e.g. log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
+| Binary files (e.g. zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
+
+Both requests have the following arguments:
+
+- The name of the file to be retrieved (with or without extension, with or without full path)
+- The ID of the DataMiner Agent
+
+Restrictions:
+
+- The user must have administrative privileges or must be granted the *SDLogging* permission.
+- The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
+- The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
+- The file name passed in the requests must be the name of an existing file.
+- The file path passed in the requests must be a valid, existing path.
+
 #### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -143,6 +167,33 @@ New features added to allow this include:
 
   - a new `IGQISortField`
   - a new `IGQISortOperator`
+
+#### Storage as a Service: Proxy support [ID_39221]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Storage as Service (STaaS) now supports the use of a proxy server.
+
+When you configure a proxy server in the *Db.xml* file, all traffic towards STaaS will pass through the proxy instead of going directly to the cloud.
+
+Example of a *Db.xml* file in which a proxy server has been configured:
+
+```xml
+<?xml version="1.0"?>
+<DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+  <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+    <Proxy>
+      <Address></Address>
+      <Port></Port>
+      <UserName></UserName>
+      <Password></Password>
+    </Proxy>
+  </DataBase>
+</DataBases>
+```
+
+> [!NOTE]
+> The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 
 ## Changes
 
@@ -298,6 +349,28 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
 
+#### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID_39256]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+The number of open suggestion events related to behavioral anomalies will now be limited to 500 for the entire DataMiner System.
+
+In other words, you will no longer have more than 500 suggestion events related to behavioral anomalies in the suggestion events tab of the Alarm Console.
+
+#### DxMs upgraded [ID_39278]
+
+<!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.6.8
+- DataMiner CoreGateway: version 2.14.6
+- DataMiner FieldControl: version 2.10.5
+- DataMiner Orchestrator: version 1.5.8
+- DataMiner SupportAssistant: version 1.6.8
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
@@ -406,3 +479,13 @@ Example of the `<Connections>` syntax that caused the *Communication Info* table
    </Connection>
 </Connections>
 ```
+
+#### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID_39184]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When SLDataMiner has finished initializing the elements, SLDMS starts loading them.
+
+Up to now, when SLDMS failed to load an element, it would stop loading the rest of them. As a result, SLNet would be unaware of the existence of some elements, causing them to not show up in DataMiner client applications without any error whatsoever.
+
+From now on, when SLDMS fails to load an element, it will continue to load the rest of the elements, and generate an error for each element that could not be loaded.
