@@ -248,7 +248,7 @@ Any errors that occur during a migration process will be displayed in a pop-up w
   1. Initialize the Agents again and continue with the migration procedure, as detailed above.
 
   > [!CAUTION]
-  > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
+  > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool, and something is not clear.
 
 - If **TLS** is enabled on the Elasticsearch or OpenSearch nodes and **some Agents do not initialize**, you can check the connection to the Elasticsearch/OpenSearch nodes as follows:
 

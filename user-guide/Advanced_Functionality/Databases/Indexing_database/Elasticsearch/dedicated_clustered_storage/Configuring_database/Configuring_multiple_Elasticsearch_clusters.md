@@ -175,7 +175,7 @@ To configure this setup:
      > [!NOTE]
      > The prefix has a maximum length of 20 characters.
 
-   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. You can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. You can specify an IP address with a custom port, e.g. `10.5.100.1:5555`. If no port is provided, the default port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
 
    - **User**: Username with which the DMA has to log on to Elasticsearch.
 
