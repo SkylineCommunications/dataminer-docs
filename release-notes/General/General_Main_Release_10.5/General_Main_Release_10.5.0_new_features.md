@@ -35,14 +35,16 @@ Also, a number of client messages have been adapted to support passing this new 
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-SLNetTypes now exposes two new request-response operations that will allow you to retrieve a text file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
 
-- `GetLogTextFileStringContentRequestMessage` and `GetLogTextFileStringContentResponseMessage`
-- `GetLogTextFileBinaryContentRequestMessage` and `GetLogTextFileBinaryContentResponseMessage`
+| Type of file to be retrieved | Request | Response |
+|---|---|---|
+| ASCII text files (e.g. log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
+| Binary files (e.g. zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
 
 Both requests have the following arguments:
 
-- The name of the file to be retrieved
+- The name of the file to be retrieved (with or without extension, with or without full path)
 - The ID of the DataMiner Agent
 
 Restrictions:
@@ -51,6 +53,7 @@ Restrictions:
 - The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
 - The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
 - The file name passed in the requests must be the name of an existing file.
+- The file path passed in the requests must be a valid, existing path.
 
 #### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
 
