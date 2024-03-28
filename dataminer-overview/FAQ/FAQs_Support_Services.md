@@ -26,7 +26,7 @@ uid: FAQs_Support_Services
 
   Skyline will provide you with a renewal proposal for the support services at least three months prior to the end date of your support plan. Unless you provide Skyline with a written notice of your wish not to renew the support plan no later than thirty days prior to the end date of the plan, it is automatically renewed for another year, and Skyline will invoice the amount of the renewal proposal. All amounts due to Skyline are payable up front before the provision of any support services. If you terminate the support services early, this does not entitle you to a refund.
 
-  In case the support plan has not been deactivated, and you fail to timely issue pay your invoice(s) or a PO (if required), on the day after the end date of the plan, the service may be stopped along with all related services linked to it. However, you can still continue to consult content and resources on the Dojo Community portal.
+  In case the support plan has not been deactivated, and you fail to pay your invoice(s) or issue a PO (if required) in time, on the day after the end date of the plan, the service may be stopped along with all related services linked to it. However, you can still continue to consult content and resources on the Dojo Community portal.
 
 - **What happens if I do not have active support on a perpetual support plan?**
 
