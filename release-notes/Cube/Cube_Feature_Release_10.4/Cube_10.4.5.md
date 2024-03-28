@@ -147,3 +147,9 @@ In Visual Overview, in some cases, a null reference exception could be thrown wh
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 While DataMiner Cube was in alarm storm mode, in some cases, an exception could be thrown.
+
+#### Alarm Console - Automatic incident tracking: Problem when double-clicking an alarm group header [ID_39266]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in the Alarm Console, you double-clicked an alarm group header, in some cases, a null reference exception could be thrown.
