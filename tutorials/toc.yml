@@ -12,6 +12,8 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
+      - name: DataMiner IDP tutorials
+        topicUid: IDP_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
         topicUid: DIS_Tutorials
       - name: DataMiner Object Manager (DOM) tutorials
