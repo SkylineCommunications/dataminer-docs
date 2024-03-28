@@ -196,6 +196,10 @@ items:
             topicUid: CI_Types1
           - name: Using your IS-04 registry to provision DataMiner with IDP
             topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+      - name: Tutorials
+        items:
+          - name: Getting started with IDP and onboarding new equipment
+            topicUid: IDP_Tutorial_DiscoveryAndProvisioning
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
