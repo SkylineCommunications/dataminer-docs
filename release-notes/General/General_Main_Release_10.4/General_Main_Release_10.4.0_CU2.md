@@ -199,6 +199,14 @@ On virtual machines, beep commands are bypassed, and on physical machines, this 
 
 Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
 
+#### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID_39256]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+The number of open suggestion events related to behavioral anomalies will now be limited to 500 for the entire DataMiner System.
+
+In other words, you will no longer have more than 500 suggestion events related to behavioral anomalies in the suggestion events tab of the Alarm Console.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
