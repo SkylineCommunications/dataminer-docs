@@ -6,21 +6,27 @@ uid: Cloud_Connection_Issues
 
 If you encounter issues with [dataminer.services](xref:AboutCloudPlatform) features that may be caused by connection issues, follow the actions below in the specified order:
 
-1. [Check the status on dataminer.services](#check-the-status-on-dataminerservices)
+1. [Check the connection status on dataminer.services](#check-the-status-on-dataminerservices)
 1. [Check the status of the DMS](#check-the-status-of-the-dms)
-1. [Check the status of the CloudGateway](#check-the-status-of-the-cloudgateway)
+1. [Check the status of the CloudGateway DxM](#check-the-status-of-the-cloudgateway-dxm)
 1. [Check the cloud session](#check-the-cloud-session)
 1. [Contact support](#contact-support)
 
 ## Check the status on dataminer.services
 
-By navigating to [dataminer.services](https://dataminer.services/), the connection status can be checked per DMS in an organization. A green status indicates that the cloud connection is valid, an orange status indicates that the Cloud Gateway can not reach the DataMiner System but that the cloud connection is valid and a red status indicates that there is no valid cloud connection.
+When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status per DMS in your organization:
 
-If the status is orange, please verify that DataMiner is up and running and has the proper configuration, see: [Check the status of the DMS](#check-the-status-of-the-dms). 
+- An **orange** status indicates that the Cloud Gateway cannot reach the DataMiner System, but the dataminer.services connection is valid.
 
-If the status is red, continue with [Check the status of the CloudGateway](#check-the-status-of-the-cloudgateway).
+  If the status is orange, verify whether the DataMiner Agents are up and running and have the proper configuration. See [Check the status of the DMS](#check-the-status-of-the-dms).
 
-If the status is green, but you are still encountering issues with [dataminer.services](xref:AboutCloudPlatform) features, please refer to [Investigating dataminer.services feature issues](xref:Investigating_Dataminerservices_Feature_Issues).
+- A **red** status indicates that there is no valid connection to dataminer.services.
+
+  If the status is red, [check the status of the CloudGateway DxM](#check-the-status-of-the-cloudgateway-dxm).
+
+- A **green** status indicates that the dataminer.services connection is valid.
+
+  If the status is green, but you are still encountering issues with [dataminer.services](xref:AboutCloudPlatform) features, refer to [Investigating dataminer.services feature issues](xref:Investigating_Dataminerservices_Feature_Issues).
 
 ## Check the status of the DMS
 
@@ -47,21 +53,19 @@ For each DMA that should be connected, verify whether the DMA is operational and
 
    - If the page does not load correctly, this indicates a problem with the DMA host. Restart the DMA to resolve this. You can do so using the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility).
 
-## Check the status of the CloudGateway
+## Check the status of the CloudGateway DxM
 
-If the connection status is shown as red on [dataminer.services](https://dataminer.services/), validate that at least one CloudGateway is running in the cluster and that it can establish a connection towards dataminer.services.
+If the connection status is shown as red on [dataminer.services](https://dataminer.services/), validate that at least one CloudGateway instance is running in the cluster and that it can establish a connection towards dataminer.services:
 
-You can see this as follows:
+1. On the DMA servers, go to the Windows *Services* configuration window.
 
-   1. On the DMA server(s), go to the Windows *Services* configuration window.
+1. Check whether the *DataMiner CloudGateway* service has the status *Running*.
 
-   1. Check whether the *DataMiner CloudGateway* service has the status *Running*.
-   
-   1. If the status is not *Running*, right-click the service and select *Start*.
+1. If the status is not *Running*, right-click the service and select *Start*.
 
-If there is a CloudGateway running, but the cloud connection is still not valid, please validate whether your network complies with the requirements for connecting to dataminer.services using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\Dataminer CloudGateway\`. More information on the requirements can be found 
+If there is a CloudGateway instance running, but the dataminer.services connection is still not valid, validate whether your network complies with the requirements for connecting to dataminer.services using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\Dataminer CloudGateway\`. More information on the requirements can be found 
 
-If results indicate that the network and firewall configuration are OK, please proceed to [Check the cloud session](#check-the-cloud-session).
+If results indicate that the network and firewall configuration are OK, [check the cloud session](#check-the-cloud-session).
 
 ## Check the cloud session
 
@@ -76,7 +80,6 @@ Manually renewing the cloud identity can be necessary if dataminer.services coul
    > [!NOTE]
    > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* or *Admin* role](xref:Changing_the_role_of_a_DCP_user) in the DMS.
 
-
 ## Contact support
 
-If the connection issues still persist, please contact [tech support](https://skyline.be/contact/tech-support).
+If the connection issues still persist, contact [tech support](https://skyline.be/contact/tech-support).
