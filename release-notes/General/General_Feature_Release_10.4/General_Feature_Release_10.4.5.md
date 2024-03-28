@@ -168,6 +168,33 @@ New features added to allow this include:
   - a new `IGQISortField`
   - a new `IGQISortOperator`
 
+#### Storage as a Service: Proxy support [ID_39221]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Storage as Service (STaaS) now supports the use of a proxy server.
+
+When you configure a proxy server in the *Db.xml* file, all traffic towards STaaS will pass through the proxy instead of going directly to the cloud.
+
+Example of a *Db.xml* file in which a proxy server has been configured:
+
+```xml
+<?xml version="1.0"?>
+<DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+  <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+    <Proxy>
+      <Address></Address>
+      <Port></Port>
+      <UserName></UserName>
+      <Password></Password>
+    </Proxy>
+  </DataBase>
+</DataBases>
+```
+
+> [!NOTE]
+> The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
+
 ## Changes
 
 ### Enhancements
