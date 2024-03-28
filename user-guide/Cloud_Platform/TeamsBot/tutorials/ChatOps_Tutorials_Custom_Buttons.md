@@ -35,15 +35,23 @@ In step 5 we will trigger a custom command from this package with a button that 
 
 1. Browse to <https://catalog.dataminer.services/details/package/5863>.
 
-   ![CustomCommand Examples page in Catalog](~/user-guide/images/chatops_notification_01_001.png)
+   ![CustomCommand Examples page in Catalog](~/user-guide/images/chatops_notification_part_02_02_001.png)
 
 1. Click *Deploy* and choose your target DMS.
 
 1. Verify that the package was correctly installed by accessing the scripts in DataMiner Cube.
 
-   ![CustomCommand Examples scripts](~/user-guide/images/chatops_notification_01_002.png)
+   ![CustomCommand Examples scripts](~/user-guide/images/chatops_notification_part_02_02_002.png)
+   
+   ![Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_003.png)
 
-1. Make sure that you fill in the organization ID and DMS ID in the *Take Ownership of Alarm* script. You can find these IDs in the URL by opening the DMS overview in the [Admin app](https://admin.dataminer.services). An example is provided in the Automation script.
+1. Find the IDs of your system in the URL by opening the DMS overview in the [Admin app](https://admin.dataminer.services). Use the top right organization selector to pick your organization, and the left side menu to select your DMS.
+
+   ![How to find IDs in Admin app](~/user-guide/images/chatops_notification_part_02_02_004.gif)
+
+1. Make sure that you fill in the organization ID '*organizationId*' and DMS ID '*dmsId*' in the *Take Ownership of Alarm* script. 
+
+   ![Take Ownership of Alarm CustomCommand Example script with IDs filled in](~/user-guide/images/chatops_notification_part_02_02_005.png)
 
 ## Step 3: Fetch the Teams and channels of a Team
 
