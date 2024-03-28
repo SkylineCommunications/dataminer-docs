@@ -31,8 +31,8 @@ The DataMiner System used for this tutorial has to meet the following requiremen
 ## Overview
 
 - [Step 1: Deploy IDP from the DataMiner Catalog](#step-1-deploy-idp-from-the-dataminer-catalog)
-- [Step 2: Configure discovery profile](#step-2-configure-discovery-profile)
-- [Step 3: Configure scan range](#step-3-configure-scan-range)
+- [Step 2: Configure the discovery profile](#step-2-configure-the-discovery-profile)
+- [Step 3: Configure the scan range](#step-3-configure-the-scan-range)
 - [Step 4: Run the discovery](#step-4-run-the-discovery)
 - [Step 5: Provision the discovered element(s)](#step-5-provision-the-discovered-elements)
 
@@ -44,9 +44,9 @@ The DataMiner System used for this tutorial has to meet the following requiremen
 
 You will notice that IDP will be automatically installed and set up for you.
 
-## Step 2: Configure discovery profile
+## Step 2: Configure the discovery profile
 
-Discovery profiles define which information should be retrieved from the device. Some devices require authentication, which needs to be filled in up front.
+Discovery profiles define which information should be retrieved from the device. Some devices require authentication, which means credentials have to be filled in in the discovery profile. This is also the case here.
 
 1. Open the IDP app.
 
@@ -58,110 +58,139 @@ Discovery profiles define which information should be retrieved from the device.
 
 1. Fill in the *Credentials* settings.
 
-   As this tutorial is done with a DaaS system, the default username and password will be used that are configured during creation of the DaaS system. If you are not using a DaaS system, use a user that is [allowed WMI calls](https://serverfault.com/questions/28520/which-permissions-rights-does-a-user-need-to-have-wmi-access-on-remote-machines) to the local system.
+   - If you are using a DaaS system, use the default username and password that were configured during the creation of the DaaS system.
 
-   - **Username**: `Admin`
-   - **Password**: `*****`
+     - **Username**: `Admin`
 
-   ![Discovery Profile Wizard - Filled in credentials](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_0.png)
+     - **Password**: `*****`
 
-1. Click the *Save* button.
+   - If you are not using a DaaS system, use the credentials of a user with [WMI access](https://serverfault.com/questions/28520/which-permissions-rights-does-a-user-need-to-have-wmi-access-on-remote-machines) to the local system.
 
-When selecting the row in the table, you see the following result:
-
-![Discovery Profiles Table - Filled in credentials](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_1.png)
-
-## Step 3: Configure scan range
-
-1. On the left, select *Scan Ranges*.
-1. On the right, click the *New* button.
-
-    You now see the following screen:
-
-   ![Scan Range Wizard - Start](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_0.png)
-
-    Fill in the fields:
-
-      - **Name**: `Local`
-      - **IP Ranges**: `127.0.0.1` for both fields.
-
-        - The IP Range will be the range that IDP will use to discover devices in.
-
-   ![Scan Range Wizard - Filled in first screen](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_1.png)
-
-1. Click the *Next* button.
-
-    1. Select `CI Type` in the dropdown
-    1. Select `Default - Microsoft Platform` as the selected CI Type.
-
-   ![Scan Range Wizard - Filled in second screen](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_2.png)
+   ![Discovery Profile wizard](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_0.png)
 
 1. Click the *Save* button.
 
-When selecting the row in the table, you see the following result:
+When you select the row in the table now, you will see the following result:
 
-![Scan Ranges table - Row in table](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_3.png)
+![Discovery profile configuration result](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_1.png)
+
+## Step 3: Configure the scan range
+
+1. Still on the *Admin* > *Discovery* page, select *Scan Ranges* on the left.
+
+1. Click the *New* button.
+
+   This will open the following window:
+
+   ![Scan Range wizard - Start](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_0.png)
+
+1. In the *Name* field, specify `Local`.
+
+1. In both *IP Ranges* fields, fill in `127.0.0.1`.
+
+   ![Scan Range wizard - First step](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_1.png)
+
+   The range you have specified is the IP range IDP will use to discover devices in.
+
+1. Click *Next*.
+
+1. In the *Discover Devices by* box, select *CI Type*.
+
+1. Under *Selected CI Types*, select *Default - Microsoft Platform*.
+
+   ![Scan Range wizard - Second step](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_2.png)
+
+1. Click *Save*.
+
+When you select the row in the table now, you will see the following result:
+
+![Scan range configuration result](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_3.png)
 
 ## Step 4: Run the discovery
 
 1. Go to *Inventory* > *Discovered*.
-1. At the top you'll find the *Actions* section.
-1. Select the `Local` scan range in the dropdown.
-1. Click on *Discover*.
 
-The discovery will now run over the scan range and try to find devices that match with the CI Type that is configured in the scan range.
+1. In the *Actions* section at the top, select the *Local* scan range in the dropdown box.
 
-After a couple of seconds, you see a row appear in the *Discovered Elements* table at the bottom.
+1. Click the *Discover* button.
 
-![Inventory > Discovered - Row in table](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Discovery_0.png)
+IDP will now check the scan range to try to discover devices that match the CI Type configured for this scan range.
+
+After a couple of seconds, a row will be added in the *Discovered Elements* table at the bottom of the page:
+
+![Discovery result](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Discovery_0.png)
 
 ## Step 5: Provision the discovered element(s)
 
 1. Select the row in the *Discovered Elements* table.
+
 1. Click the *Provision* button.
 
-Depending on which connectors are already on the system or if they have been set to production or not, different results will be shown.
+Depending on whether the Microsoft Platform connector is already in the system and whether it already has a version set to production, different results can be shown:
 
 - [Microsoft Platform connector is not available or is not set as production](#microsoft-platform-connector-is-not-available-or-is-not-set-as-production)
 - [Microsoft Platform connector is available and set as production](#microsoft-platform-connector-is-available-and-set-as-production)
 
 ### Microsoft Platform connector is not available or is not set as production
 
-![Provisioning popup - Missing version](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_MissingVersion.png)
+If the Microsoft Platform connector is not available in the system yet, or if no production version has been set, you will see this window:
 
-#### Microsoft Platform connector is not available
+![Pop-up window when version is missing](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_MissingVersion.png)
 
-1. Click the *Open Catalog* button.
+Proceed as follows:
 
-   - If a popup appears that requires permission to open the link, click *Yes*.
+1. In the Cube apps pane in the sidebar, select *Protocols & Templates*.
 
-1. On the Catalog page, go to *Versions*
-1. Search for the latest version in the 1.1.3.x range (e.g.: 1.1.3.20)
-1. Deploy that version to your DataMiner system.
-1. Proceed with [Microsoft Platform connector is not set as production](#microsoft-platform-connector-is-not-set-as-production)
+1. In the *Protocols & service protocols* column of the Protocols & Templates module, check whether *Microsoft Platform* is listed.
 
-#### Microsoft Platform connector is not set as production
+1. If it is **not** listed:
 
-1. On DataMiner, go to the [Protocols & Templates](xref:protocols) module.
-1. [Set the version to production](xref:Promoting_a_protocol_version_to_production_version).
-1. Go back to the popup and click *Refresh*.
+   1. In the IDP pop-up window displayed above, click *Open Catalog*.
 
-    - In case the script timed out, you can click the *Provision* button again.
+   1. If you are asked for permission to open the link, click *Yes*.
 
-1. Proceed with [Microsoft Platform connector is available and set as production](#microsoft-platform-connector-is-available-and-set-as-production)
+   1. On the Catalog page, go to *Versions*.
+
+   1. Look up the latest version in the 1.1.3.x range (e.g. 1.1.3.20).
+
+   1. Click *Deploy* to deploy that version to your DataMiner System.
+
+1. If *Microsoft Platform* is listed, or if you have just added it as detailed above:
+
+   1. In the Protocols & Templates module, look up the above-mentioned version in the *Versions* column.
+
+   1. Right-click the version and select *Set as production*.
+
+   1. Go back to the IDP pop-up window and click *Refresh*.
+
+      > [!NOTE]
+      > In case the script has timed out, you can click the *Provision* button again.
+
+1. Continue in the same way as detailed below for [Microsoft Platform connector is available and set as production](#microsoft-platform-connector-is-available-and-set-as-production).
 
 ### Microsoft Platform connector is available and set as production
 
-![Provisioning popup - Success](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_Success.png)
+If the Microsoft Platform is available and a production version has been set, you will see this window:
+
+![Pop-up window when version is found](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Provisioning_Success.png)
+
+Proceed as follows:
 
 1. Click *Provision*.
-1. Click *Finish*.
-1. After a few seconds, you'll see a new element being created in the surveyor.
-1. Go to *Inventory* > *Managed*.
 
-In the *Managed Elements* table you can see that a new row has been added with the information of the newly created element. If you go to the element, you will see the parameters being filled in as the data is being polled from your local system.
+1. Click *Finish*.
+
+   After a few seconds, you will see that a new element is being added in the Surveyor.
+
+1. To check the result in the IDP app, go to *Inventory* > *Managed*.
+
+   In the *Managed Elements* table, you will see that a new row has been added with the information of the newly created element.
+
+1. Select the new element in the Surveyor.
+
+   You will see the parameter values getting filled in as data is being polled from your system.
 
 Congratulations, you have provisioned your first element with IDP!
 
 > [!NOTE]
-> To be granted DevOps points, take a screenshot of the newly created element and the *Managed Elements* table and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
+> To be granted DevOps points for taking this tutorial, take a screenshot of the newly created element and the *Managed Elements* table and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
