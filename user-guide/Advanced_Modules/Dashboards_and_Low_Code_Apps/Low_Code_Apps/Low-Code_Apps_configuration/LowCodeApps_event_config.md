@@ -117,7 +117,7 @@ Examples:
 
 - If you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*. Or from DataMiner 10.2.10/10.3.0 onwards, you can select *Fetch the data* for any component that uses query data as input, so that users can manually refresh the displayed data.
 
-- From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35933 -->, if you add a line chart component and a button component, you can configure this action on the button and select the option *Set timespan*, so that users can use the button to set the timespan for the line chart. The action has two arguments, To and From, which can be either set to a static value or linked to a numeric value feed.
+- From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35933 -->, if you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*, so that users can use the button to set the viewport for the line chart. The action has two arguments, To and From, which can be either set to a static value or linked to a numeric value feed.
 
 ## Showing a context menu
 
