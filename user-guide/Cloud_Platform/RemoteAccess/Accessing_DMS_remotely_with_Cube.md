@@ -11,6 +11,7 @@ From DataMiner 10.3.0/10.3.2 onwards, you can use DataMiner Cube to access your 
 - The DataMiner System uses DataMiner 10.3.0/10.3.2 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - The DataMiner System has been [configured to use HTTPS](xref:Setting_up_HTTPS_on_a_DMA).
 - The DataMiner Cube connection settings have been configured to use gRPC (see [ConnectionSettings.txt](xref:ConnectionSettings_txt)).
+- The [APIGateway DxM](xref:DataMinerExtensionModules#apigateway) is installed and running on the DMA you are connecting to.
 - [Remote access is enabled](xref:Controlling_remote_access) for the DMS.
 - You have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
 - You [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software).
