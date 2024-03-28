@@ -57,12 +57,30 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it to look like this:
 
-   ```xml
-   <?xml version="1.0"?>
-   <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
-      <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
-   </DataBases>
-   ```
+   - Settings without Proxy:
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
+      </DataBases>
+      ```
+
+   - Settings with Proxy, **requires DataMiner 10.4.5 [CU0] or higher** (fill in the required fields, leave blank or remove if they do not apply):
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+            <Proxy>
+               <Address>[Enter Address Here]</Address>
+               <Port>[Enter Port Here]</Port>
+               <UserName>[Enter UserName Here]</UserName>
+               <Password>[Enter Password Here]</Password>
+            </Proxy>
+         </DataBase>
+      </DataBases>
+      ```
 
 1. Restart DataMiner to begin using STaaS.
 
@@ -120,6 +138,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
 - Migration from a MySQL setup is not yet supported.
+- Migration using a proxy is not yet supported.
 
 In addition, the following **other limitations** currently apply:
 
@@ -135,7 +154,7 @@ In addition, the following **other limitations** currently apply:
 
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
 
-- Proxy and DMZ setups are currently not supported.
+- DMZ setups are currently not supported.
 
 - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag on logger tables is not supported.
 
