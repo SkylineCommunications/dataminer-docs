@@ -187,10 +187,12 @@ items:
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
-      - name: Investigating dataminer.services connection issues
-        topicUid: Cloud_Connection_Issues
-      - name: Investigating dataminer.services feature issues
-        topicUid: Investigating_Dataminerservices_Feature_Issues
+      - name: Investigating dataminer.services issues
+        items:
+        - name: Investigating dataminer.services connection issues
+          topicUid: Cloud_Connection_Issues
+        - name: Investigating dataminer.services feature issues
+          topicUid: Investigating_Dataminerservices_Feature_Issues
       - name: Investigating NATS issues
         topicUid: Investigating_NATS_Issues
       - name: Investigating OpenSearch issues

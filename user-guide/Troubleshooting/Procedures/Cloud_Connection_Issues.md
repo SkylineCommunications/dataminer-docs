@@ -63,9 +63,9 @@ If the connection status is shown as red on [dataminer.services](https://datamin
 
 1. If the status is not *Running*, right-click the service and select *Start*.
 
-If there is a CloudGateway instance running, but the dataminer.services connection is still not valid, validate whether your network complies with the requirements for connecting to dataminer.services using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\Dataminer CloudGateway\`. More information on the requirements can be found [here](xref:Connect_to_cloud_requirements).
+If there is a CloudGateway instance running, but the dataminer.services connection is still not valid, validate whether your network complies with the [requirements for connecting to dataminer.services](xref:Connect_to_cloud_requirements) by using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\DataMiner CloudGateway\` on the DMA server.
 
-If results indicate that the network and firewall configuration are OK, [check the cloud session](#check-the-cloud-session).
+If the results indicate that the network and firewall configuration are OK, [check the cloud session](#check-the-cloud-session).
 
 ## Check the cloud session
 

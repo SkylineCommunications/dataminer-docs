@@ -47,4 +47,4 @@ By default, the **internal** communication within the DMS uses TCP port 5100; ho
 
 ## Contact support
 
-If the connection issues still persist, contact [tech support](https://skyline.be/contact/tech-support).
+If you have tried the procedures above, but the issues still persist, contact [tech support](https://skyline.be/contact/tech-support).
