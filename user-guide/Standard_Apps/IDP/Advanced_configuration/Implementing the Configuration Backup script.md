@@ -195,3 +195,7 @@ Next, DataMiner IDP will connect to the path and transfer the files to the DataM
 
 > [!NOTE]
 > XML and TXT extensions are visualized by default. You can change this on the [Admin > Configuration > Backup page](xref:Configuration#backup).
+
+## Tutorials
+
+* [Getting started with configuration backup](xref:IDP_Tutorial_TakeConfigurationBackup)
