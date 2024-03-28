@@ -125,18 +125,19 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900]
+#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
+<!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.6.6
-- DataMiner CoreGateway: version 2.14.4.15849
-- DataMiner FieldControl: version 2.10.3.14011
-- DataMiner Orchestrator: version 1.5.6
-- DataMiner SupportAssistant: version 1.6.6
+- DataMiner ArtifactDeployer: version 1.6.8
+- DataMiner CoreGateway: version 2.14.6
+- DataMiner FieldControl: version 2.10.5
+- DataMiner Orchestrator: version 1.5.8
+- DataMiner SupportAssistant: version 1.6.8
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 

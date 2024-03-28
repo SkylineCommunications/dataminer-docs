@@ -357,6 +357,20 @@ The number of open suggestion events related to behavioral anomalies will now be
 
 In other words, you will no longer have more than 500 suggestion events related to behavioral anomalies in the suggestion events tab of the Alarm Console.
 
+#### DxMs upgraded [ID_39278]
+
+<!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.6.8
+- DataMiner CoreGateway: version 2.14.6
+- DataMiner FieldControl: version 2.10.5
+- DataMiner Orchestrator: version 1.5.8
+- DataMiner SupportAssistant: version 1.6.8
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
