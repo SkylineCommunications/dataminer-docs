@@ -31,6 +31,27 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a text file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+
+- `GetLogTextFileStringContentRequestMessage` and `GetLogTextFileStringContentResponseMessage`
+- `GetLogTextFileBinaryContentRequestMessage` and `GetLogTextFileBinaryContentResponseMessage`
+
+Both requests have the following arguments:
+
+- The name of the file to be retrieved
+- The ID of the DataMiner Agent
+
+Restrictions:
+
+- The user must have administrative privileges or must be granted the *SDLogging* permission.
+- The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
+- The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
+- The file name passed in the requests must be the name of an existing file.
+
 #### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
