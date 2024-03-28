@@ -9,10 +9,6 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 28 March 2024 - Fix - Catalog - Links in organization overview not working correctly [ID_39204]
-
-Links in the DataMiner Systems table of the organization overview will now correctly navigate to the right location.
-
 #### 28 March 2024 - Fix - Catalog - Typos in error when no DMS is found [ID_39232]
 
 When no DMS is found for an organization, the displayed error will now no longer contain any typos.
@@ -20,6 +16,15 @@ When no DMS is found for an organization, the displayed error will now no longer
 #### 28 March 2024 - Enhancement - Admin - Adjusted visibility credits section organization overview [ID_39214]
 
 Regular members of an organization will now no longer be able to see the credits section of the organization overview.
+
+#### 28 March 2024 - New Feature - Catalog - Trial deployments [ID_39205]
+
+It is now possible for users without a license for a connector to deploy a trial version.
+These trial versions should not be used in production environments as stated in the Terms and Agreements.
+
+#### 28 March 2024 - Fix - Catalog - Links in organization overview not working correctly [ID_39204]
+
+Links in the DataMiner Systems table of the organization overview will now correctly navigate to the right location.
 
 #### 28 March 2024 - Enhancement - Catalog - Filter on public and/or private items [ID_39026]
 
