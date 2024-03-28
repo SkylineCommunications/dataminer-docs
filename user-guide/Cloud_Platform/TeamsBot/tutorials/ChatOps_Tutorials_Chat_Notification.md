@@ -60,3 +60,5 @@ Estimated duration: 15 minutes.
 1. Trigger an alarm and verify that the notification is received in a Teams chat.
 
    ![ChatIntegration Examples Teams chat](~/user-guide/images/chatops_notification_03_003.png)
+
+Good job! That went easy, right? Continue with [Adaptive Card notifications with custom buttons](xref:ChatOps_Tutorials_Custom_Buttons) which is a slightly more advanced tutorial following up from here where you will learn on how to enable powerful two-way interactions using buttons with custom commands.
