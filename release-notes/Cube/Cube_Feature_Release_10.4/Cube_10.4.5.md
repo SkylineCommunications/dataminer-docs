@@ -141,3 +141,9 @@ When, in DataMiner Cube, you navigated to a CPE card by clicking the *Back* butt
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 In Visual Overview, in some cases, a null reference exception could be thrown when you closed a page.
+
+#### An error could occur while Cube was in alarm storm mode [ID_39252]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+While DataMiner Cube was in alarm storm mode, in some cases, an exception could be thrown.
