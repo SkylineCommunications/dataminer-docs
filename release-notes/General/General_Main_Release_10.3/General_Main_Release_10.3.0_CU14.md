@@ -99,6 +99,12 @@ The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
 
+#### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID_39213]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
