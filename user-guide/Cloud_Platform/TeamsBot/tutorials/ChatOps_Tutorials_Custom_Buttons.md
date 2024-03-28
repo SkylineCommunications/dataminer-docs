@@ -51,7 +51,9 @@ In step 5 we will trigger a custom command from this package with a button that 
 
 1. Make sure that you fill in the organization ID '*organizationId*' and DMS ID '*dmsId*' in the *Take Ownership of Alarm* script. 
 
-   ![Take Ownership of Alarm CustomCommand Example script with IDs filled in](~/user-guide/images/chatops_notification_part_02_02_005.png)
+   ![How to fill in the IDs in the Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_005.gif)
+
+   ![Take Ownership of Alarm CustomCommand Example script with IDs filled in](~/user-guide/images/chatops_notification_part_02_02_006.png)
 
 ## Step 3: Fetch the Teams and channels of a Team
 
