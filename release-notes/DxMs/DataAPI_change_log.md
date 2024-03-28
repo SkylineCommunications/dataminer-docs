@@ -7,13 +7,13 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-#### 27 March 2024 - Fix - DataAPI 1.1.2 - Remove foreign key columns from trended parameters [ID_39196]
+#### 27 March 2024 - Fix - DataAPI 1.1.2 - Foreign key columns removed from trended parameters [ID_39196]
 
 *DataAPI* no longer enables trending for foreign key columns.
 
-#### 27 March 2024 - Enhancement - DataAPI 1.1.2 - Add protocol namespace in the auto-generated connectors [ID_39198]
+#### 27 March 2024 - Enhancement - DataAPI 1.1.2 - Protocol namespace added in auto-generated connectors [ID_39198]
 
-*DataAPI* adds the protocol namespace `http://www.skyline.be/protocol` when a new connector is generated.
+*DataAPI* now adds the protocol namespace `http://www.skyline.be/protocol` when a new connector is generated.
 
 #### 15 March 2024 - New feature - DataAPI 1.1.1 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39051]
 
