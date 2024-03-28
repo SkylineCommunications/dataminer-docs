@@ -9,6 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 28 March 2024 - Fix - Catalog - No DMS found error should no longer have any typo's [ID_39204]
+
+Links in the dataminer system table on the organization overview should now correctly navigate to the correct location.
+
+#### 28 March 2024 - Fix - Catalog - No DMS found error should no longer have any typo's [ID_39232]
+
+When no dms is found for your organization the error should now be correctly displayed without any typo's.
+
+#### 28 March 2024 - Fix - Admin - Credits section on the organization overview [ID_39214]
+
+Regular members of an organization will no longer see the credits section on the Organization overview.
+
+#### 28 March 2024 - Enhancement - Catalog - Filter on public and/or private items [ID_39026]
+
+On the *Browse* page of the Catalog, you can now filter catalog items so you see only public items, only private items, or both public and private items.
+
+#### 28 March 2024 - Enhancement - Admin - Audit Organization Keys [ID_39023]
+
+It is now possible for admin users to see the permissions of organization keys on the audit detail page.
+
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
 The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
