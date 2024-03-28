@@ -284,3 +284,21 @@ When SNMP++ was being used to communicate with a device, commands would incorrec
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 In some cases, an error could occur in SLProtocol when processing a matrix parameter update.
+
+#### The 'Communication Info' table would incorrectly not get loaded into the element [ID_39181]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in a connector, you had used the following `<Connections>` syntax, in some cases, the *Communication Info* table would incorrectly not get loaded into the element.
+
+Example of the `<Connections>` syntax that caused the *Communication Info* table to not get loaded into the element:
+
+```xml
+<Connections>
+   <Connection id="0" name="IPDRData">
+      <SmartSerial>
+      ...
+      </SmartSerial>
+   </Connection>
+</Connections>
+```

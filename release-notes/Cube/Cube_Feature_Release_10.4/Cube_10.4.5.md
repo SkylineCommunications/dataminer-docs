@@ -124,6 +124,12 @@ From now on, when the *Resources* app of Cube detects that the Min and Max capab
 
 When, in DataMiner Cube, you closed the Services app, in some cases, Cube could leak memory.
 
+#### Memory leak when opening trend graphs [ID_39041]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When you opened a trend graph, in some cases, Cube could leak memory.
+
 #### Visual Overview: Problem when executing Automation scripts linked to a CPE card after clicking the 'Back' button [ID_39090]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
