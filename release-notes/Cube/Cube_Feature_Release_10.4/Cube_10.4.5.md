@@ -159,3 +159,9 @@ While DataMiner Cube was in alarm storm mode, in some cases, an exception could 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 When, in the Alarm Console, you double-clicked an alarm group header, in some cases, a null reference exception could be thrown.
+
+#### Cube would not be able to connect to a DMA when both had 'Country or region' set to 'Saudi Arabia' [ID_39271]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When both the DataMiner Cube client and the DataMiner Agent had *Country or region* set to "Saudi Arabia" and *Regional format* set to "Arabic (Saudi Arabia)", up to now, DataMiner Cube would not be able to connect to the DataMiner Agent.
