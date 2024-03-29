@@ -105,6 +105,12 @@ On virtual machines, beep commands are bypassed, and on physical machines, this 
 
 Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
 
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The maximum number of concurrent GQI queries has now been increased from 20 to 100.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
