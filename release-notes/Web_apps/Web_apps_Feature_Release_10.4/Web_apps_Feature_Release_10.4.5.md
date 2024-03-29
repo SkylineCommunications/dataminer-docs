@@ -65,6 +65,54 @@ Client metric logging is employed to record different performance and issue indi
 > [!TIP]
 > For more information, see [Dashboards and Low-Code Apps logging](xref:Dashboards_and_Low_Code_Apps_Logging).
 
+#### Low-Code Apps - Timeline component: Interactive timeline events and component actions [ID_39254]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When setting up a Timeline component, you can now configure actions to be performed when certain events occur in the component.
+
+##### Events
+
+The following events are supported:
+
+| Event | Action that triggers the event |
+|---|---|
+| Range select | Selecting a section of the timeline using the right mouse button. |
+| Item resize  | Extending or shrinking an item on the timeline. |
+| Item move    | Changing the time slot of an item on the timeline. |
+| Group change | Moving an item on the timeline to another group. |
+
+> [!NOTE]
+>
+> - The above-mentioned events can only be triggered when they have actions configured. For example, an item will only be resized when at least one action has been configured for the *Item resize* event.
+> - While the *Range select* event is timeline-based, other events can have a different configuration for each query on the timeline. For example, if there are multiple queries on the timeline, and you move an item belonging to a certain query, the timeline will look at the configuration of actions for the *On move* event of that specific query to decide what actions to execute.
+
+> [!TIP]
+> When interacting with the timeline, you can now use the following keys:
+>
+> - *ESCAPE*: When you click this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
+> - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
+> - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, then keep this key pressed.
+
+##### Actions
+
+When a Timeline component is used in a low-code app, it is now also possible to configure the following component actions:
+
+| Action | Function |
+|--------|----------|
+| Fetch the data | Fetches the data for the component.<br>This action was already available as from Dataminer 10.2.10/10.3.0 for all components using query data as input. |
+| Highlight time range | Highlights a range on the timeline component.<br>The highlighted section will expose a feed in the form of a *Timespan* object. If multiple sections are highlighted, the feed will contain an array of *Timespan* objects. |
+| Clear highlights | Clears all highlights set by *Highlight time range* actions.<br>Prior to DataMiner 10.4.5, highlights could already be configured using the *Highlight range* setting. This setting is still available and can be used in combination with highlights set by actions. Its behavior remains the same: a highlight set by the *Highlight range* setting will not expose a feed and it will not be cleared by the *Clear highlight* action. |
+| Set viewport | Sets the viewport of the timeline to a certain time range. |
+ 
+> [!NOTE]
+> Before, it was already possible to [link the value of certain inputs to a feed](xref:LowCodeApps_event_config). From now on, you will be able to link these values to information provided by the event in a similar way. All timeline events expose information relevant to the event in question. The following information is provided for each event:
+>
+> - *Range select*: Provides a *from* and a *to* property, both of type *Timespan*.
+> - *Item resize*: Provides an old and a new *Timespan* pair, indicating the start and the end of the item before and after the resize event. it also provides information about the resized item in the form of a *Query row* object.
+> - *Item move*: Provides the same information as the *Item resize* event.
+> - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
+
 ## Changes
 
 ### Breaking changes
