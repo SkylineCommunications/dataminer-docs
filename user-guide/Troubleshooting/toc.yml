@@ -207,6 +207,8 @@ items:
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
+      - name: Re-registering DataMiner services and DLLs
+        topicUid: Re-registering_DataMiner_services_and_DLLs
       - name: Sharing dashboard window does not disappear
         topicUid: Sharing_dashboard_window_does_not_disappear
   - name: Known issues
