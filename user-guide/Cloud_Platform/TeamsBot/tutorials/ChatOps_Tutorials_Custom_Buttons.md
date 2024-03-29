@@ -77,13 +77,13 @@ In step 5 we will trigger a custom command from this package with a button that 
 
 1. Adjust the earlier configured Correlation rule from [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-3-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) so it will execute the *Send Channel Notification Asking To Take Ownership of an Alarm* script instead and configure the inputs with the Team and channel of that Team that we fetched before in step 3. 
 
-   ![ChatIntegration Examples Correlation Rule](~/user-guide/images/chatops_notification_part_02_04_001.png)
+   ![Configure the Correlation Rule](~/user-guide/images/chatops_notification_part_02_04_001.png)
 
-   ![ChatIntegration Examples Correlation Rule](~/user-guide/images/chatops_notification_part_02_04_002.png)
+   ![Configure the Correlation Rule with the Send Channel Notification Asking To Take Ownership of an Alarm script](~/user-guide/images/chatops_notification_part_02_04_002.png)
 
 1. Trigger an alarm and verify that the notification is received in the channel.
 
-   ![ChatIntegration Examples Teams chat](~/user-guide/images/chatops_notification_part_02_04_003.png)
+   ![The Send Channel Notification Asking To Take Ownership of an Alarm notification received in the channel](~/user-guide/images/chatops_notification_part_02_04_003.png)
 
 ## Step 5: Use the custom buttons from the notification
 
@@ -93,6 +93,6 @@ In step 5 we will trigger a custom command from this package with a button that 
    - Show [element name]: This button will make the DataMiner bot show more information on the element.
    - Show all alarms on [element name]: This button will make the DataMiner bot show all alarms of the element, if any.
 
-   ![ChatIntegration Examples Teams chat](~/user-guide/images/chatops_notification_part_02_03_003.png)
+   ![Use the custom button of the Adaptive Card and Take Ownership of the alarm as an example](~/user-guide/images/chatops_notification_part_02_05_001.gif)
 
 1. As you noticed, the *Take ownership* custom command enables you to easily interact with the notification. The response of the custom command can contain an adaptive card with buttons again, which enables you to create user flows, while at the same time it can also still send a notification in another channel or private chat. Taking leverage of this functionality quickly becomes very powerful.
