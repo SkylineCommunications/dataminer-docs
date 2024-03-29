@@ -7,7 +7,7 @@ keywords: idp tutorial, idp kata
 
 This tutorial will show you how to install IDP and onboard new equipment. By way of example, the Microsoft server running DataMiner will be onboarded, as this is easily accessible equipment.
 
-Expected duration: 20 minutes.
+Expected duration: 15 minutes.
 
 <!-- TODO: Uncomment and fill in with correct info when Kata is released.
 > [!TIP]
@@ -31,10 +31,9 @@ The DataMiner System used for this tutorial has to meet the following requiremen
 ## Overview
 
 - [Step 1: Deploy IDP from the DataMiner Catalog](#step-1-deploy-idp-from-the-dataminer-catalog)
-- [Step 2: Configure the discovery profile](#step-2-configure-the-discovery-profile)
-- [Step 3: Configure the scan range](#step-3-configure-the-scan-range)
-- [Step 4: Run the discovery](#step-4-run-the-discovery)
-- [Step 5: Provision the discovered element(s)](#step-5-provision-the-discovered-elements)
+- [Step 2: Configure the scan range](#step-2-configure-the-scan-range)
+- [Step 3: Run the discovery](#step-3-run-the-discovery)
+- [Step 4: Provision the discovered element(s)](#step-4-provision-the-discovered-elements)
 
 ## Step 1: Deploy IDP from the DataMiner Catalog
 
@@ -44,39 +43,13 @@ The DataMiner System used for this tutorial has to meet the following requiremen
 
 You will notice that IDP will be automatically installed and set up for you.
 
-## Step 2: Configure the discovery profile
-
-Discovery profiles define which information should be retrieved from the device. Some devices require authentication, which means credentials have to be filled in in the discovery profile. This is also the case here.
+## Step 2: Configure the scan range
 
 1. Open the IDP app.
 
 1. Go to *Admin* > *Discovery*.
 
-1. On the right, in the *Discovery Profiles* table, select the row with the name `Default - Microsoft Platform`.
-
-1. Click the *Edit* button.
-
-1. Fill in the *Credentials* settings.
-
-   - If you are using a DaaS system, use the default username and password that were configured during the creation of the DaaS system.
-
-     - **Username**: `Admin`
-
-     - **Password**: `*****`
-
-   - If you are not using a DaaS system, use the credentials of a user with [WMI access](https://serverfault.com/questions/28520/which-permissions-rights-does-a-user-need-to-have-wmi-access-on-remote-machines) to the local system.
-
-   ![Discovery Profile wizard](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_0.png)
-
-1. Click the *Save* button.
-
-When you select the row in the table now, you will see the following result:
-
-![Discovery profile configuration result](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_DiscoveryProfile_1.png)
-
-## Step 3: Configure the scan range
-
-1. Still on the *Admin* > *Discovery* page, select *Scan Ranges* on the left.
+1. Select *Scan Ranges* on the left.
 
 1. Click the *New* button.
 
@@ -106,7 +79,7 @@ When you select the row in the table now, you will see the following result:
 
 ![Scan range configuration result](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_ScanRange_3.png)
 
-## Step 4: Run the discovery
+## Step 3: Run the discovery
 
 1. Go to *Inventory* > *Discovered*.
 
@@ -120,7 +93,7 @@ After a couple of seconds, a row will be added in the *Discovered Elements* tabl
 
 ![Discovery result](~/user-guide/images/IDP_Tutorial_DiscoveryAndProvisioning_Discovery_0.png)
 
-## Step 5: Provision the discovered element(s)
+## Step 4: Provision the discovered element(s)
 
 1. Select the row in the *Discovered Elements* table.
 
