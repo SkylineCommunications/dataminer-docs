@@ -104,7 +104,7 @@ When a Timeline component is used in a low-code app, it is now also possible to 
 | Highlight time range | Highlights a range on the timeline component.<br>The highlighted section will expose a feed in the form of a *Timespan* object. If multiple sections are highlighted, the feed will contain an array of *Timespan* objects. |
 | Clear highlights | Clears all highlights set by *Highlight time range* actions.<br>Prior to DataMiner 10.4.5, highlights could already be configured using the *Highlight range* setting. This setting is still available and can be used in combination with highlights set by actions. Its behavior remains the same: a highlight set by the *Highlight range* setting will not expose a feed and it will not be cleared by the *Clear highlight* action. |
 | Set viewport | Sets the viewport of the timeline to a certain time range. |
- 
+
 > [!NOTE]
 > Before, it was already possible to [link the value of certain inputs to a feed](xref:LowCodeApps_event_config). From now on, you will be able to link these values to information provided by the event in a similar way. All timeline events expose information relevant to the event in question. The following information is provided for each event:
 >

@@ -136,6 +136,17 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### Enhanced performance when loading DVEs and virtual functions, changing production protocols and uploading protocols [ID_39034]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased in the following situations:
+
+- When loading stopped and activated parent elements that generate DVEs or virtual functions when a DMA starts up or when a Failover agent goes online.
+- When changing the production protocol or when uploading a protocol being used by existing elements.
+
+Also, when DataMiner Cube is connecting to a DataMiner Agent that is starting up or going online, users will now receive more detailed information on the progress of virtual elements being loaded.
+
 #### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
