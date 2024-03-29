@@ -21,7 +21,7 @@ The order in which the folders are searched in is as follows:
 1. A subfolder of `C:\Skyline DataMiner\ProtocolScripts` corresponding with the folders mentioned in the `dllImport` attribute (e.g in case `dllImport` contains `newtonsoft.json\13.0.3\lib\net45\Newtonsoft.Json.dll`, the `C:\Skyline DataMiner\ProtocolScripts\newtonsoft.json\13.0.3\lib\net45` folder is added as a hint path.)
 
 In case the `dllImport` mentions multiple entries, a hint path entry is added for each entry if not yet added to the hint path list.
-Note that because there is by default a single SLScripting process, the hint path list will contain all distinct directories of all the values encountered in all the `dllImport` attribute of each QActions in all the protocols.
+Note that because there is by default a single SLScripting process, the hint path list will contain all distinct directories of all the values encountered in the `dllImport` attribute of each QAction in all the protocols.
 
 For Automation scripts (which get executed by the SLAutomation process), the following folders are searched:
 
