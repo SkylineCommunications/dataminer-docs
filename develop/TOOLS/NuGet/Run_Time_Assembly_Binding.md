@@ -28,7 +28,7 @@ For Automation scripts (which get executed by the SLAutomation process), the fol
 1. `C:\Skyline DataMiner\ProtocolScripts\DllImport`
 1. `C:\Skyline DataMiner\Files`
 1. `C:\Skyline DataMiner\ProtocolScripts`
-1. The directory of an assembly mentioned in the in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the Automation scripts.
+1. The directory of an assembly mentioned in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the Automation scripts.
 
 As mentioned in section <xref:Compilation_Time_Assembly_Binding>, the manifest of a compiled assembly denotes the name and version of any assemblies it has a direct dependency on. At run-time, when the .NET runtime is about to execute code from such a referenced assembly, the runtime will try to find and load that assembly.
 
