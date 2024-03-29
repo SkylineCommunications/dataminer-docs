@@ -4,11 +4,11 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to disable Remote Access & Live Sharing locally from the app settings [ID_39113]
+#### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID_39113]
 
-It is now possible to disable features like Remote Access and Live Sharing locally in the app settings file of the CloudGateway DxM. 
+It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM. 
 
-You can do so by overriding *RemoteAccessAndSharing:IsDisabled* in the app settings with *true*. To do so, on each server where DataMiner CloudGateway is installed, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create or adjust the override *appsettings.custom.json* with the following contents:
+To do so, set *RemoteAccessAndSharing:IsDisabled* to *true* in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify *appsettings.custom.json* with the following configuration:
 
 ```json
 {
