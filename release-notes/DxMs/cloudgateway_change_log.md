@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 13 March 2024 - Enhancement - CloudGateway 2.13.8 - Added posibility to block Remote Access & Live Sharing locally from the app settings [ID_39113]
+#### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to disable Remote Access & Live Sharing locally from the app settings [ID_39113]
 
 It is now possible to disable features like Remote Access and Live Sharing locally in the app settings file of the CloudGateway DxM. 
 

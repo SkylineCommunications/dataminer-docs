@@ -4,6 +4,20 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
+#### 29 March 2024 - Enhancement - FieldControl 2.10.6 - Added the possibility to disable the Bot features locally from the app settings [ID_39113]
+
+It is now possible to disable the Bot feature locally in the app settings file of the FieldControl DxM. 
+
+You can do so by overriding *Bot:IsDisabled* in the app settings with *true*. To do so, on each server where DataMiner FieldControl is installed, in the folder `C:\Program Files\Skyline Communications\DataMiner FieldControl`, create or adjust the override *appsettings.custom.json* with the following contents:
+
+```json
+{
+   "Bot": {
+      "IsDisabled": true
+   }
+}
+```
+
 #### 13 March 2024 - Enhancement - FieldControl 2.10.5 - Dependencies updated [ID_39049]
 
 Several dependencies have been updated.
