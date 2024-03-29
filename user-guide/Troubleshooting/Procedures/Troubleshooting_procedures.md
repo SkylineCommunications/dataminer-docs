@@ -24,6 +24,8 @@ uid: Troubleshooting_procedures
 
 - [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
 
+- [Re-registering DataMiner services and DLLs](xref:Re-registering_DataMiner_services_and_DLLs)
+
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
 
 > [!TIP]
