@@ -222,13 +222,3 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
-
-#### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID_39184]
-
-<!-- MR 10.5.0 - FR 10.4.5 -->
-
-When SLDataMiner has finished initializing the elements, SLDMS starts loading them.
-
-Up to now, when SLDMS failed to load an element, it would stop loading the rest of them. As a result, SLNet would be unaware of the existence of some elements, causing them to not show up in DataMiner client applications without any error whatsoever.
-
-From now on, when SLDMS fails to load an element, it will continue to load the rest of the elements, and generate an error for each element that could not be loaded.

@@ -482,7 +482,7 @@ Example of the `<Connections>` syntax that caused the *Communication Info* table
 
 #### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID_39184]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 When SLDataMiner has finished initializing the elements, SLDMS starts loading them.
 

@@ -310,3 +310,13 @@ Example of the `<Connections>` syntax that caused the *Communication Info* table
    </Connection>
 </Connections>
 ```
+
+#### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID_39184]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+When SLDataMiner has finished initializing the elements, SLDMS starts loading them.
+
+Up to now, when SLDMS failed to load an element, it would stop loading the rest of them. As a result, SLNet would be unaware of the existence of some elements, causing them to not show up in DataMiner client applications without any error whatsoever.
+
+From now on, when SLDMS fails to load an element, it will continue to load the rest of the elements, and generate an error for each element that could not be loaded.
