@@ -106,12 +106,15 @@ When a Timeline component is used in a low-code app, it is now also possible to 
 | Set viewport | Sets the viewport of the timeline to a certain time range. |
 
 > [!NOTE]
-> Before, it was already possible to [link the value of certain inputs to a feed](xref:LowCodeApps_event_config). From now on, you will be able to link these values to information provided by the event in a similar way. All timeline events expose information relevant to the event in question. The following information is provided for each event:
 >
-> - *Range select*: Provides a *from* and a *to* property, both of type *Timespan*.
-> - *Item resize*: Provides an old and a new *Timespan* pair, indicating the start and the end of the item before and after the resize event. it also provides information about the resized item in the form of a *Query row* object.
-> - *Item move*: Provides the same information as the *Item resize* event.
-> - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
+> - Before, it was already possible to [link the value of certain inputs to a feed](xref:LowCodeApps_event_config). From now on, you will be able to link these values to information provided by the event in a similar way. All timeline events expose information relevant to the event in question. The following information is provided for each event:
+>
+>   - *Range select*: Provides a *from* and a *to* property, both of type *Timespan*.
+>   - *Item resize*: Provides an old and a new *Timespan* pair, indicating the start and the end of the item before and after the resize event. it also provides information about the resized item in the form of a *Query row* object.
+>   - *Item move*: Provides the same information as the *Item resize* event.
+>   - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
+>
+> - The existing *Line & area chart* component action *Set timespan* has now been renamed *Set viewport* in order to be consistent with the *Set viewport* action described above.
 
 ## Changes
 
