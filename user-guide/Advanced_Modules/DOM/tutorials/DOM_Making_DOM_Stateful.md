@@ -17,9 +17,8 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 Expected duration: 20 minutes
 
-<!-- Uncomment this section when the link to the Kata is available:
 > [!TIP]
-> This tutorial is covered in the following Kata : [Kata #24: Making DOM objects state-aware](https://community.dataminer.services/courses/kata-24/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #24: Making DOM objects state-aware](https://community.dataminer.services/courses/kata-24/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 >
 > If you are new to DataMiner Object Models (DOM), first watch [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/courses/kata-15/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
 
