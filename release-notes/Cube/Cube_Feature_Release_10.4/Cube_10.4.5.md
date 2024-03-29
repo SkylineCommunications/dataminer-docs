@@ -160,6 +160,12 @@ In Visual Overview, in some cases, a null reference exception could be thrown wh
 
 While DataMiner Cube was in alarm storm mode, in some cases, an exception could be thrown.
 
+#### Problem when the statistics of a view were updated while a ticket associated with an element in that view was updated [ID_39257]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When the statistics of a view were updated while, at the same time, one of the tickets associated with an element in that view was updated, in some rare cases, an error could occur, causing DataMiner Cube to stop working.
+
 #### Alarm Console - Automatic incident tracking: Problem when double-clicking an alarm group header [ID_39266]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
