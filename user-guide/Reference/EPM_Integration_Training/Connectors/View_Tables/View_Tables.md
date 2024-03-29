@@ -32,8 +32,8 @@ The Frontend is able to display all of the infromation in the system with View t
 ### Important ColumnOption options
 - [View=](https://docs.dataminer.services/develop/schemadoc/Protocol/ColumnOptionOptionsOverview.html#view-1): the columnPid where the information exists that will be shown in this column.
 
---NOTE
-There are options to view information outside of the element using the remoteView syntax view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a large amount of entities, more than 20k entities will cause increased load in SLNet. This is because Dataminer handles those subscriptions by requesting all of the collector elements.
+> [!NOTE]
+>There are options to view information outside of the element using the remoteView syntax `view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx`. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a large amount of entities, more than 20k entities will cause increased load in SLNet. This is because Dataminer handles those subscriptions by requesting all of the collector elements.
 
 
 ### Example

@@ -11,8 +11,9 @@ Because of the way the EPM architecture is structured it allows us to calculate 
 
 You are able to see what all of the options do in the documentation
 Aggregation actions are used when aggregating data from within the same element i.e. the BE’s will aggregate the Region KPI’s from the Sub-Region table since all the information is in the element. 
--	The groupBy option is not necessary  if a valid relation is found but is added to reduce load.
--	NOTE: for recursive and many to many relations, aggregations may be done by removing the groupBy option.
+
+> [!NOTE] 
+> For recursive and many to many relations, aggregations may be done by removing the groupBy option, the groupBy option is not necessary  if a valid relation is found but is added to reduce load.
 
 # Merge Actions
 If KPI data is located outside of the element, i.e. Network KPI’s (located at the FE) aggregated from the Region KPI’s (located at the BE level), then [merge](https://docs.dataminer.services/develop/devguide/Connector/Actions/ActionMerge.html) actions are used.
