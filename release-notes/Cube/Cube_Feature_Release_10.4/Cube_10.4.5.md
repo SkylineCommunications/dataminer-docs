@@ -114,6 +114,12 @@ alarm=48/123/6713
 
 From now on, in Visual Overview, it will also be possible to pass session variables when navigating to an element using an application protocol (e.g. SRM Booking Manager).
 
+#### Visual Overview - SPI logging: Log entries reporting page load timeouts will now show more accurate load times [ID_39222]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When a visual overview page does not load within two minutes, a log entry of type SPI will report a timeout indicating how long it took to load the page in question. From now on, the page load times indicated in SPI log entries will be more accurate, especially in case of large Visio files.
+
 ### Fixes
 
 #### Resources app: Resource would incorrectly be marked as modified when capability values were set to NaN [ID_38699]
