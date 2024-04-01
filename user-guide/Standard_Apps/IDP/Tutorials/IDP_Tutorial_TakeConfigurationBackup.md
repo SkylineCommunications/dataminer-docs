@@ -102,7 +102,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
 ### Duplicate the example configuration backup script
 
-1. Navigate to *Automation*
+1. Navigate to *Automation* application
 1. Expand the folder until you reach *DataMiner Solutions* > *IDP* > *CI Type Management* > *Configuration Management* > *Backup*
 1. Duplicate the script *IDP_Example_Custom_ConfigurationBackup* and rename it
 
@@ -112,7 +112,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
 1. Open the script
 1. Navigate to the function *GetDeviceFullBackupAsText*
-1. Change the function to retrieve the values from parameters 502 (*System Contact*) and 504 (*System Location*)
+1. Change the function to retrieve the values from parameters 502 (*System Contact*) and 504 (*System Location*). Note that these parameters are from the suggested connector. If you have chosen another connector, you should adapt these parameters accordingly.
 
     ```csharp
     private static string GetDeviceFullBackupAsText(IActionableElement element)
