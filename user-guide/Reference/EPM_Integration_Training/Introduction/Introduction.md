@@ -1,3 +1,7 @@
+---
+uid: EpmIntegrationTrainingIntroduction
+---
+
 # What is EPM?
 
 **EPM** stands for Experience and Performance Management. These solutions poll large amounts of data and display all relevant information in one manager.

@@ -1,3 +1,7 @@
+---
+uid: EpmIntegrationTrainingOtherOptions
+---
+
 # View Impact
 EPM provides the ability to link EPM Objects to views using the [viewImpact](https://docs.dataminer.services/develop/schemadoc/Protocol/ColumnOptionOptionsOverview.html#viewimpact) table column option. 
 
