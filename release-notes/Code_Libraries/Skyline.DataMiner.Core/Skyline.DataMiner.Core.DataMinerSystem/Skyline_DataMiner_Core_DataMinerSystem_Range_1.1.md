@@ -9,15 +9,15 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.1.8
 
-#### Fix - View settings on service elements are correctly updated
+#### Fix - View settings on service elements correctly updated
 
-When the *IDmsService.Update()* method is used, the service won't be moved to the root view anymore.
+When the *IDmsService.Update()* method is used, the service will no longer be moved to the root view.
 
-#### New feature - AsWriteable() method has been added to properties
+#### New feature - AsWriteable() method added to properties
 
-*IDmsProperty* now has the *AsWritable()* method and *IsWritable* property. If the property is not writable, then the method will throw an InvalidOperationException.
+*IDmsProperty* now has the *AsWritable()* method and *IsWritable* property. If the property is not writable, the method will throw an InvalidOperationException.
 
-See an example on [Setting a property and renaming the element](xref:ClassLibraryExamples#setting-a-property-and-renaming-the-element)
+For an example, see [Setting a property and renaming the element](xref:ClassLibraryExamples#setting-a-property-and-renaming-the-element)
 
 ### 1.1.1.7
 
