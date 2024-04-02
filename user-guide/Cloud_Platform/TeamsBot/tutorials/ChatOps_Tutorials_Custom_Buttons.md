@@ -17,7 +17,7 @@ Estimated duration: 15 minutes.
 ## Overview
 
 - [Step 1: Make sure you followed the Chat notifications tutorial](#step-1-follow-the-chat-notifications-tutorial)
-- [Step 2: Deploy the CustomCommand Examples package from the Catalog](#step-2-deploy-the-customcommand-examples-package-from-the-catalog)
+- [Step 2: Deploy the CustomCommand Examples package from the Catalog and configure the scripts](#step-2-deploy-the-customcommand-examples-package-from-the-catalog-and-configure-theiscripts)
 - [Step 3: Fetch the Teams and channels of a Team](#step-3-fetch-the-teams-and-channels-of-a-team)
 - [Step 4: Adjust the existing Correlation rule triggered by a specific alarm to send a channel notification with custom buttons in an Adaptive Card instead](#step-4-adjust-the-existing-correlation-rule-triggered-by-a-specific-alarm-to-send-a-channel-notification-with-custom-buttons-in-an-adaptive-card-instead)
 - [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notification)
@@ -26,9 +26,9 @@ Estimated duration: 15 minutes.
 
 1. Browse to [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification) and follow the tutorial as we follow up on that one from here.
 
-## Step 2: Deploy the CustomCommand Examples package from the Catalog
+## Step 2: Deploy the CustomCommand Examples package from the Catalog and configure the scripts
 
-In step 5 we will trigger a custom command from this package with a button that we added to an Adaptive Card notification, so we need to deploy this package first.
+In step 5 we will trigger a custom command from this package with a button that we added to an Adaptive Card notification, so we need to deploy this package first. Learn more about this package [here](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples/README.md)
 
 1. Browse to <https://catalog.dataminer.services/details/package/5863>.
 
