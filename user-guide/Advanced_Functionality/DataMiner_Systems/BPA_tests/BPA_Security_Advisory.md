@@ -45,7 +45,7 @@ The DataMiner Agent is set up and configured according to the DataMiner hardenin
 ### Error
 
 One or more of the parts of the system covered by this BPA is not in it's most secure configuration.
-The PBA will indicate what can be improved.
+The BPA will indicate what can be improved.
 
 ## Mitigation
 
