@@ -108,6 +108,9 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 In addition, the following **other limitations** currently apply:
 
+- TTL is only supported for trending datatypes. The TTL values are not configurable and changing the values in CUBE will not have any effect.
+  The values are: RTTrending - 7 days, AvgTrendShort - approximately 3 months, AvgTrendMedium - 2 years, and AvgTrendLong - 10 years.
+
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
