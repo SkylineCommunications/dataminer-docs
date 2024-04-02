@@ -31,21 +31,143 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
-#### SLAnalytics - Behavioral anomaly detection: Server-side changes to allow user feedback [ID_38980]
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.5.0 - FR 10.4.5 -->
 
-A number of server-side changes have been made to allow users to provide positive or negative feedback on anomaly suggestion events and alarms.
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
 
-This feedback will be taken into account by the behavior anomaly detection algorithm in order to enhance anomaly event generation, which up to now was based solely on the change point history of the parameter in question.
+| Type of file to be retrieved | Request | Response |
+|---|---|---|
+| ASCII text files (e.g. log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
+| Binary files (e.g. zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
 
-All user feedback will be stored in a new table named *ai_anomalyfeedback*, which will be added to every Elasticsearch/OpenSearch database.
+Both requests have the following arguments:
+
+- The name of the file to be retrieved (with or without extension, with or without full path)
+- The ID of the DataMiner Agent
+
+Restrictions:
+
+- The user must have administrative privileges or must be granted the *SDLogging* permission.
+- The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
+- The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
+- The file name passed in the requests must be the name of an existing file.
+- The file path passed in the requests must be a valid, existing path.
+
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
+
+#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
+
+For more information on these interfaces, see:
+
+- [IGQIOnInit interface](xref:GQI_IGQIOnInit)
+- [IGQIOnDestroy interface](xref:GQI_IGQIOnDestroy)
+
+#### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\Metrics` folder:
+
+- Duration of the individual GQI requests:
+
+  - Request type (e.g. GenIfOpenSessionRequest)
+  - User ID (e.g. SKYLINE2\FirstName)
+  - Duration (in ms)
+
+- Duration of the first page of a session (when `SessionOptions.OptimizeType` is "NextPage"):
+
+  - [Query name](#query-name)
+  - User ID
+  - Number of rows fetched
+  - Duration (in ms)
+
+  > [!NOTE]
+  > For queries that retrieve data page by page on demand.
+
+- Total duration of all the pages of a session (when `SessionOptions.OptimizeType` is "AllData"):
+
+  - [Query name](#query-name)
+  - User ID
+  - Total number of rows fetched across all pages
+  - Number of pages
+  - Total duration (in ms), i.e. the accumulated time of the individual pages
+
+  > [!NOTE]
+  > For queries that retrieve all data at once.
+
+##### Query name
+
+In each GQI request that contains a query, clients can now provide an optional query name. This query name will be used in metrics and logging, and can be used to indicate the origin of the query.
+
+The following requests now have an optional `QueryName` property:
+
+- GenIfCapabilitiesRequest
+- GenIfColumnFetchRequest
+- GenIfDataFetchRequest
+- GenIfMigrateQueryRequest
+- GenIfOpenSessionRequest
 
 > [!NOTE]
 >
-> - Until further notice, this feature will require the *AnomalyFeedback* soft-launch option to be enabled.
-> - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
-> - Currently, this feature is not yet supported by any of the DataMiner client apps.
+> - When the GQI log level is set to "Debug", the full query will be logged instead of the query name.
+> - When an exception is thrown during a request, and the GQI log level is set to at least "Error" (which is the case by default), the query (if any) will also be logged alongside the error.
+
+#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+It is now possible to define a custom sort order for GQI columns by implementing a custom operator that "redirects" the sort operation on one column to another.
+
+New features added to allow this include:
+
+- Comparing `IGQIColumn` objects
+
+- Inspecting a sort operator appended to a custom operator via the `IGQISortOperator` interface
+
+  - List of sort fields (of type `IGQISortField`)
+  - Each sort field exposes a sort column (`IGQIColumn`) and a sort direction (`GQISortDirection`)
+
+- An `IGQIFactory` property is now exposed on the `OnInitInputArgs`, which provides factory functions to generate
+
+  - a new `IGQISortField`
+  - a new `IGQISortOperator`
+
+#### Storage as a Service: Proxy support [ID_39221]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Storage as Service (STaaS) now supports the use of a proxy server.
+
+When you configure a proxy server in the *Db.xml* file, all traffic towards STaaS will pass through the proxy instead of going directly to the cloud.
+
+Example of a *Db.xml* file in which a proxy server has been configured:
+
+```xml
+<?xml version="1.0"?>
+<DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+  <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+    <Proxy>
+      <Address></Address>
+      <Port></Port>
+      <UserName></UserName>
+      <Password></Password>
+    </Proxy>
+  </DataBase>
+</DataBases>
+```
+
+> [!NOTE]
+> The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 
 ### Protocols
 
@@ -299,28 +421,3 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 |---------|----------|
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
 | Health Stats (SLProtocol) > Details... | Show all details of a specific element. |
-
-#### Elasticsearch re-indexing tool [ID_37994]
-
-<!-- MR 10.5.0 - FR 10.4.4 -->
-
-Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
-
-1. Taking a snapshot of the Elasticsearch 6.8.22 cluster.
-1. Copying the snapshot to an Elasticsearch 7.10.0 cluster, and restoring it.
-1. Re-indexing the data and taking another snapshot.
-1. Copying the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster, and restoring it
-
-To perform step 3, a command-line re-indexing tool has been developed: *ReIndexElasticSearchIndexes.exe*.
-
-This tool accepts the following arguments:
-
-| Argument | Description |
-|----------|-------------|
-| -Node or -N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
-| -User or -U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
-| -Password or -P | The user password |
-| -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
-| -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
-
-If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.

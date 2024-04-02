@@ -20,7 +20,7 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
 
 - Data API:
 
-  - Rejects requests with payloads exceeding 1 MB.
+  - Rejects requests with payloads exceeding 1 MB.<!-- RN 37817 -->
 
   - Rejects requests from external systems.
 

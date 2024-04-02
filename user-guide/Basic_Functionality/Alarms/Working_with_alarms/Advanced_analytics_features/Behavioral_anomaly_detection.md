@@ -19,4 +19,8 @@ Please note the following regarding suggestion events:
 
 - Suggestion events generated to indicate a behavioral anomaly are automatically cleared 2 hours after their creation time or their last update time. From DataMiner 10.2.11/10.3.0 onwards, they are also cleared in case a new behavioral change is detected that ends the previous anomalous behavioral change. For example, when an alarm was created for an anomalous level increase at 1 PM, and a behavioral change point is detected at 2 PM when the level drops again, then the alarm created at 1 PM will be closed at 2 PM.
 
-- Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled. From DataMiner 10.2.11/10.3.0 onwards, they are only created for the most significant changes. There is also a maximum of 500 suggestion events related to behavioral anomaly detection at the same time.
+- Depending on the DataMiner version, different limitations are in place as to how many suggestion events can be generated for anomalous behavioral changes:
+
+  - From DataMiner 10.4.0 [CU1]/10.4.4 onwards<!-- RN 38674 -->, at most 50 new suggestion events per hour per type of anomaly (i.e. level shift, trend change, flatline, or variance change) can be generated per DataMiner Agent. There is no limit to the maximum number of anomaly alarm events, i.e. alarm events for parameters that have explicit [anomaly alarm monitoring configured in the alarm template](xref:Configuring_anomaly_detection_alarms).
+  - From DataMiner 10.2.11/10.3.0 onwards, suggestion events are only created for the most significant changes, and per hosting DataMiner Agent there can be at most 500 open suggestion events related to behavioral anomaly detection.
+  - Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled.

@@ -44,7 +44,7 @@ To do so:
 
 ## Installing extra Python packages
 
-When you install the *DataAggregator* module, Python 3.12.0 is automatically installed as well. You can find the dedicated *Python* folder at `C:\Program Files\Skyline Communications\DataMiner DataAggregator\python`.
+When you install the *DataAggregator* module, Python 3.12.0 is automatically installed as well. You can find the dedicated *Python* folder at `C:\Program Files\Skyline Communications\DataMiner DataAggregator\python`.<!-- RN 38064 -->
 
 The `Scripts` folder contains `pip.exe`, which can be used to install Python packages. Installed packages are added to the `Lib\site-packages` folder.
 

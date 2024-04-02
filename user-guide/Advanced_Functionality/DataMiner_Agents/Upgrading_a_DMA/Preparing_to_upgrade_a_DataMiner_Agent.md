@@ -4,15 +4,17 @@ uid: Preparing_to_upgrade_a_DataMiner_Agent
 
 # Preparing to upgrade a DataMiner Agent
 
-This section of the documentation contains detailed information on how to best prepare to upgrade a DataMiner Agent. To ensure a successful upgrade of your DMA, we strongly recommend that you read through the content of this page.
+This section of the documentation contains detailed information on how to prepare to upgrade a DataMiner Agent. To ensure a successful upgrade of your DMA, we strongly recommend that you read through the content of this page.
 
-## Check for known issues and breaking changes
+## Best practices
+
+### Check for known issues and breaking changes
 
 From time to time, issues are detected that might impact a DataMiner System if a particular DataMiner version is installed. Before you upgrade, we therefore recommend that you first check the [Known issues page](xref:Known_issues) to identify if your system might be affected by such an issue.
 
 Make sure you also check the [Breaking changes page](xref:Breaking_changes) to see if any breaking changes will affect your system when you upgrade.
 
-## Uploading upgrade packages before an upgrade
+### Upload upgrade packages before an upgrade
 
 We highly recommend that you upload the upgrade package before the actual maintenance window, as this is low risk and does not require a restart of your system, but it will indicate whether all conditions and requirements to upgrade your DataMiner Agent are met, vastly reducing the chance of problems occurring during the eventual upgrade.
 
@@ -33,14 +35,92 @@ To upload an upgrade package:
    Upload has been completed successfully.
    ```
 
+> [!NOTE]
+> When you upload a package, several [prerequisite checks](#prerequisite-checks) will be executed, so that you will immediately get informed if certain conditions or requirements for the update are not met yet.
+
 > [!TIP]
 > To be safe, upload the package at least a week before executing the upgrade.
 
-## Prerequisites
+### Have a backup at the ready
 
-Prerequisites are small self-contained apps that run during the upload phase of a DataMiner upgrade. Their purpose is to detect whether all the necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisites detect that this is not the case, the upgrade will be canceled.
+We recommend making a backup of your DataMiner System before executing an upgrade, in case unexpected issues should occur.
 
-The following prerequisites are currently available:
+Making a backup can be done with a VM snapshot or DataMiner.
+
+#### VM snapshot
+
+[Take a virtual machine (VM) snapshot](xref:MOP_Downgrading_a_DMS#for-a-downgrade-with-vm-snapshot-restore) of the upgraded machines shortly before the update. This will allow a speedy rollback of the DataMiner System.
+
+> [!TIP]
+> For more information on how to downgrade your DMS using a VM snapshot restore, see [Downgrade with VM snapshot restore](xref:MOP_Downgrading_a_DMS#downgrade-with-vm-snapshot-restore-preferred).
+
+> [!NOTE]
+> The timing for a VM snapshot restore depends on your specific setup.
+
+#### DataMiner backup
+
+Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMiner Cube, as explained in [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent). This will allow a speedy rollback of the DataMiner System by installing the upgrade package of the previous DataMiner version.
+
+### Best practices when upgrading across major versions
+
+If you are not upgrading to the DataMiner version that immediately follows your current version, always follow this general guideline:
+
+**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+
+![Upgrading across major versions](~/user-guide/images/Upgrading_across_major_versions.png)
+
+> [!IMPORTANT]
+>
+> - There is one exception to this rule: if you are upgrading from a version prior to DataMiner 10.1.x to 10.2.x or higher, **skip DataMiner 10.1** and proceed directly to the subsequent major version instead (i.e. DataMiner 10.2).
+> - If you are upgrading from DataMiner 9.6.0/9.6.x or a DataMiner 10.0.0 main release version prior to DataMiner 10.0.0 [CU19], upgrade to [DataMiner 10.0.0 [CU19]](https://community.dataminer.services/download/dataminer-main-release-10-0-0-0-11025-cu19/) as the next major version.
+
+> [!TIP]
+> See [Example upgrade path](#example-upgrade-path).
+
+#### Upgrade prerequisites
+
+If you are about to upgrade across major versions, before proceeding with the upgrade, **ensure the following requirements are met**:
+
+- Depending on the target DataMiner version, make sure the corresponding Microsoft .NET and ASP.NET Core packages are installed:
+
+  | DataMiner version | Microsoft .NET | ASP.NET Core |
+  |--|--|--|
+  | DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 and higher | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) |
+  | DataMiner 10.3.9/10.4.1/10.4.2 | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
+  | DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards<br/>DataMiner 10.3.3 to 10.3.8 | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe)<br/>[ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
+  | DataMiner 10.3.0 [CU0] up to [CU2]<br/>DataMiner 10.2.0/10.2.x | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe) |
+
+- Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only) are opened, as explained in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+
+  > [!TIP]
+  > See also: [Checking the required open ports in a DMS](xref:MOP_Checking_the_required_open_ports_in_a_DMS)
+
+- If you are upgrading from DataMiner 10.0.0/10.0.x to DataMiner 10.2.0/10.2.x, download [VerifyClusterPorts.dmupgrade from DataMiner Dojo](https://community.dataminer.services/download/verifyclusterports-dmupgrade/) and run it before installing DataMiner 10.2.0/10.2.x.
+
+  > [!IMPORTANT]
+  > If you do not run this package before executing the upgrade, the upgrade will fail. This is because DataMiner 10.3 assumes that NAS/NATS services are running, but they are not running in DataMiner 10.0.
+
+#### Example upgrade path
+
+To upgrade from DataMiner 9.6.0 to DataMiner 10.3.0:
+
+1. Install Microsoft .NET 4.8, ASP.NET Core 5.0.11, and ASP.NET Core 6.0.13.
+
+1. Open IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only).
+
+1. Install DataMiner 10.0.0 [CU19].
+
+1. Download VerifyClusterPorts.dmupgrade and run it.
+
+1. Install DataMiner 10.2.0.
+
+1. Install DataMiner 10.3.0.
+
+## Prerequisite checks
+
+When you upload a DataMiner upgrade, several prerequisite checks are automatically executed. These will verify whether all the necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisite checks detect that this is not the case, the upgrade will be canceled.
+
+The following prerequisite checks are currently available:
 
 - [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
 
@@ -64,23 +144,3 @@ The following prerequisites are currently available:
 
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package. However, you should only do so if there is a clear reason to assume that the prerequisites do not work because of a bug in the software and they are consequently failing without a proper reason. If you bypass these checks in any other circumstances, and this results in a DataMiner issue, this is **not covered by support**.
-
-## Having a backup at the ready
-
-We recommend making a backup of your DataMiner System before executing an upgrade, in case unexpected issues should occur.
-
-Making a backup can be done with a VM snapshot or DataMiner.
-
-### VM snapshot
-
-[Take a virtual machine (VM) snapshot](xref:MOP_Downgrading_a_DMS#for-a-downgrade-with-vm-snapshot-restore) of the upgraded machines shortly before the update. This will allow a speedy rollback of the DataMiner System.
-
-> [!TIP]
-> For more information on how to downgrade your DMS using a VM snapshot restore, see [Downgrade with VM snapshot restore](xref:MOP_Downgrading_a_DMS#downgrade-with-vm-snapshot-restore-preferred).
-
-> [!NOTE]
-> The timing for a VM snapshot restore depends on your specific setup.
-
-### DataMiner backup
-
-Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMiner Cube, as explained in [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent). This will allow a speedy rollback of the DataMiner System by installing the upgrade package of the previous DataMiner version.

@@ -30,7 +30,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Formal certification**: Optionally, you can go for the paid [formal certification](xref:Overview_Training_certification) of some of your DataMiner skills. Upon obtaining your certification, you will be rewarded with extra points (500 to 1000 points).
 
-- **Contributing to the DataMiner documentation**: DataMiner Devops Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.
+- **Contributing to the DataMiner documentation**: DataMiner DevOps Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.
 
   Point system:
 

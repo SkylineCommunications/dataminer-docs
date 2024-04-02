@@ -8,6 +8,9 @@ This tutorial explains how to start from a blank Visio file and edit basic eleme
 
 Expected duration: 15 minutes
 
+> [!TIP]
+> See also: [Kata #21: Visual Overview design basics](https://community.dataminer.services/courses/kata-21/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) that has a Microsoft Platform element.
@@ -128,7 +131,7 @@ In DataMiner Cube, you should see two colored shapes, one of which displays the 
 
 1. Save your Visio file.
 
-In DataMiner Cube, only your ellipse will now be colored with the alarm state of the element, and only that shape will be clickable. The *pretty hover* option will ensure that the highlighted area of the ellipse moves with he ellipse, not its outer rectangle.
+In DataMiner Cube, only your ellipse will now be colored with the alarm state of the element, and only that shape will be clickable. The *pretty hover* option will ensure that the highlighted area of the ellipse moves with the ellipse, not its outer rectangle.
 
 ![End result](~/user-guide/images/Endresult.webp)
 

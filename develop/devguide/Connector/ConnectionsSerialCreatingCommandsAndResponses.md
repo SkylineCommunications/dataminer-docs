@@ -86,7 +86,7 @@ By default, the following behavior is applicable in serial drivers:
 
 For example, consider the following logic being implemented in a protocol. In this case, the command is composed of 2 parameters: one fixed ("Get") and one with dynamic content.
 
-![alt text](../../images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.jpg "Executing a command via a timer")
+![alt text](../../images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png "Executing a command via a timer")
 
 When the timer goes off, group 1 will be added to the group execution queue. Now suppose parameter 2 holds value "A" at this time.
 

@@ -127,7 +127,7 @@ For each status, you can configure the requirements of a specific field. This is
 
 > [!NOTE]
 >
-> - From DataMiner version 10.3.0/10.3.3 onwards, the `DomStatusSectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition` and status. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomBehaviorDefinitions` with multiple `Sections`.
+> - From DataMiner version 10.3.0/10.3.3 onwards, the `DomStatusSectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition` and status. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomBehaviorDefinitions` with multiple `Sections`. Note that when fields are used in multiple sections, they are not available in GQI queries.
 > - Removing an existing `Section` is not allowed if that `Section` contains a field that is marked as *ReadOnly*, as you would otherwise remove a read-only value. If you want to allow this behavior, but you would like to avoid users assigning a new field value themselves, use the *ClientReadOnly* boolean, available from DataMiner 10.3.0/10.3.3 onwards (see below).
 
 A `DomStatusFieldDescriptorLink` has the following properties:

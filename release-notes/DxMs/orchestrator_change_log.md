@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 13 March 2024 - Enhancement - Orchestrator 1.5.8 - Dependencies updated [ID_39047]
+
+Several dependencies have been updated.
+
 #### 4 March 2024 - Enhancement - Orchestrator 1.5.7 - Improved installer robustness [ID_38938]
 
 The Orchestrator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.

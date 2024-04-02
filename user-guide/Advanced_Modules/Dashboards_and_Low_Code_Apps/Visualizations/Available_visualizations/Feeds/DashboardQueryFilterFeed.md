@@ -9,7 +9,7 @@ uid: DashboardQueryFilterFeed
 
 Available from DataMiner 10.3.9/10.4.0 onwards. Prior to this, the component is available in soft launch from DataMiner 10.0.4 onwards, if the soft-launch option ReportsAndDashboardsPTP is enabled.
 
-This dashboard feed allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query result.
+This feed component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query result.
 
 ## Configuring the component
 

@@ -4,6 +4,8 @@ items:
   items:
   - name: Connectors
     items:
+    - name: Getting started with data source integrations
+      topicUid: Getting_started_with_data_source_integrations
     - name: Introduction
       topicUid: Introduction
     - name: Connector fundamentals
@@ -861,6 +863,8 @@ items:
         topicUid: NT_GET_AVAILABLE_FILES
       - name: NT_ADD_FILE
         topicUid: NT_ADD_FILE
+      - name: NT_REMOVE_DOCUMENT
+        topicUid: NT_REMOVE_DOCUMENT
       - name: NT_MAKE_ALARM
         topicUid: NT_MAKE_ALARM
       - name: NT_DATAMINER_INFO
@@ -5180,6 +5184,10 @@ items:
   items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
+  - name: Tutorials
+    items:
+     - name: Setting up a GitHub workflow for connectors
+       topicUid: CICD_Tutorial_Connector
   - name: CI/CD using command line
     items:
     - name: Command line examples
@@ -5302,6 +5310,12 @@ items:
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
+    - name: CI/CD Troubleshooting
+      items:
+        - name: GitHub failures
+          topicUid: CICD_Troubleshooting_GitHubFailures
+        - name: Jenkins failures
+          topicUid: CICD_Troubleshooting_JenkinsFailures
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
@@ -5392,14 +5406,18 @@ items:
           - name: Contributing to Validator code
             topicUid: DisTutorials_ValidatorContributions
         - name: Troubleshooting
-          topicUid: Troubleshooting
+          topicUid: DIS_Troubleshooting
           items:
-            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
-              topicUid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
-            - name: Could not find SLScripting process, is DataMiner running?
-              topicUid: Could_not_find_SLScripting_process_is_DataMiner_running
-            - name: Clicking the Publish button causes an error
-              topicUid: Clicking_the_Publish_button_causes_an_error
+            - name: Retrieving information in case a problem occurs
+              topicUid: DIS_Troubleshooting_RetrieveInformation
+            - name: Licensing problem
+              topicUid: DIS_Troubleshooting_LicenseIssue
+            - name: DIS Inject problems
+              topicUid: DIS_Troubleshooting_DisInject
+            - name: Package creation problems
+              topicUid: DIS_Troubleshooting_CompilationFailure
+            - name: Publishing problems
+              topicUid: DIS_Troubleshooting_UploadFailure
         - name: DIS reference
           topicUid: DIS_reference
           items:
@@ -5631,5 +5649,20 @@ items:
   items:
     - name: Unit testing
       topicUid: Unit_testing
+      items:
+      - name: Creating unit tests using the MSTestv2 framework in Visual Studio
+        topicUid: Unit_tests_MSTestv2_framework
+      - name: Using isolation frameworks
+        topicUid: Using_isolation_frameworks
+      - name: Writing testable code
+        topicUid: Writing_testable_code
+      - name: FluentAssertions
+        topicUid: FluentAssertions
+      - name: Data-driven tests
+        topicUid: Data_driven_tests
+      - name: Test life cycle attributes
+        topicUid: Test_life_cycle_attributes
+      - name: Using files in unit tests
+        topicUid: Using_files_in_unit_tests
     - name: XML documentation comments
       topicUid: Xml_Documentation_Comments

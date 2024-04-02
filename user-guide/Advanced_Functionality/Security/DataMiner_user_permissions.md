@@ -466,6 +466,9 @@ Permission to delete Automation scripts.
 
 Permission to execute Automation scripts.
 
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, you also need the permission [Modules > Automation > UI Available](#modules--automation--ui-available) to execute Automation scripts<!--RN 38529-->.
+
 ### Modules \> Bookings
 
 > [!NOTE]

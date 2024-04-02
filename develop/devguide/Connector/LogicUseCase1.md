@@ -25,7 +25,8 @@ The diagram will cover only one SLProtocol process. At runtime, multiple process
 
 Every protocol has at least one entry point. The number of entry points is defined by the number of connections. These entry points are used to handle requests from ANY type of queue. As an entry point is only capable of handling one request at a time, other requests will have to wait their turn until the entry point is done processing its current request.
 
-Note: By default, each of these entry points will link to the main queue that is processed via the protocol thread. With an extra feature defined in the protocol definition, it is possible to create extra queues for a specific entry point (connection).
+> [!NOTE]
+> By default, each of these entry points will link to the main queue that is processed via the protocol thread. With an extra feature defined in the protocol definition, it is possible to create extra queues for a specific entry point (connection).
 
 Imagine the protocol definition has 2 connections defined. By adding the feature below, three queues can be used to process logic in parallel of each other.
 

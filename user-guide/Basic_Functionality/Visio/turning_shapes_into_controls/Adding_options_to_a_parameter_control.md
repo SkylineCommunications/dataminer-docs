@@ -114,6 +114,7 @@ ColumnWidths:100,50,100,a
 >
 > - The width of an "autosize" column will not be recalculated when cell content changes, nor when the user scrolls the list (in order to avoid flickering). However, it will be recalculated when rows are added or removed.
 > - The autosize behavior of a column will be disabled if that column is resized manually. To re-enable the autosize behavior, the user has to double-click the column resize icon.
+> - When this option is used, the *Save layout* option will be unavailable in the table context menu.
 
 ### CustomColors
 

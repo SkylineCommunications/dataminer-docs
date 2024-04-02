@@ -12,15 +12,23 @@ uid: Stack_Open_Framework
 
 Create RESTful APIs on the fly, tailored to your use case.
 
+Select or create an Automation script, and with only a few clicks, you can publish that script as a RESTful API. DataMiner provides an API endpoint and manages the tokens to authenticate with any third-party system in a secure and easy manner.
+
 > [!TIP]
-> For detailed information, see [User-Defined APIs](xref:UD_APIs).
+> For more information:
+>
+> - [DataMiner User-Definable APIs - Solution Use Case](https://community.dataminer.services/use-case/dataminer-user-definable-apis-webhooks/)
+> - User Guide: [User-Defined APIs](xref:UD_APIs).
 
 ## Northbound APIs
 
-The DataMiner Web Services API is north bound accessible for third-party applications.
+The DataMiner Web Services API is northbound accessible for third-party applications.
 
 > [!TIP]
-> For detailed information, see [Using the Web Services](xref:Using_the_Web_Services_v1)
+> More information is available in the user guide:
+>
+> - [DataMiner interfaces](xref:DataMiner_interfaces)
+> - [Using the Web Services](xref:Using_the_Web_Services_v1)
 
 ## Data Offloading
 

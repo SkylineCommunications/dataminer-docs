@@ -2,21 +2,13 @@
 uid: Cube_Feature_Release_10.4.4
 ---
 
-# DataMiner Cube Feature Release 10.4.4 – Preview
+# DataMiner Cube Feature Release 10.4.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.4](xref:General_Feature_Release_10.4.4).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No features have been added yet.*
 
 ## Changes
 
@@ -134,7 +126,7 @@ When you opened the Settings window, in some cases, Cube could leak memory.
 
 #### Alarm Console: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID_38899]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.4 -->
 
 Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
 
@@ -171,3 +163,9 @@ When you opened an EPM card using the topology selector, in some cases, Cube cou
 When you added a history tab on February 29, the name of the tab would be incorrect.
 
 For example, when on February 29 you added a history tab listing all alarms generated during the last year, the name of the tab would incorrectly be "Last 366 days" rather than "Year to date".
+
+#### Visual Overview: Memory leak when shapes were configured to display pages of a Visio drawing [ID_39103]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+In some cases, DataMiner Cube could leak memory when viewing a visual overview in which shapes were configured to display pages of a Visio drawing.

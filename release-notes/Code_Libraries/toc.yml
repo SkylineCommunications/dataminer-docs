@@ -15,6 +15,8 @@ items:
       topicUid: Skyline_DataMiner_DataSources_OpenConfig_2.0.0
     - name: Skyline DataMiner DataSources OpenConfig 1.0.3
       topicUid: Skyline_DataMiner_DataSources_OpenConfig_1.0.3
+    - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi 4.0.0
+      topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.0.0
   - name: Class Library release notes (deprecated)
     items:
     - name: Class Library Range 1.4

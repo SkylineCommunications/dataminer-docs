@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU13
 ---
 
-# General Main Release 10.3.0 CU13 – Preview
+# General Main Release 10.3.0 CU13
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -76,6 +76,12 @@ At installation, the APIGateway service will now be configured to restart itself
 <!-- MR 10.3.0 [CU13] - FR 10.4.4 -->
 
 Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
+
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
 
 ### Fixes
 
@@ -191,8 +197,36 @@ From now on, it will no longer be possible to upload a protocol of which the val
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
 
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
 #### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.
+
+#### Problem with SLDataMiner when retrieving users from a user group due to LDAP setting ReferralConfigured='false' [ID_39058]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
+
+#### Problem with SLProtocol due to incorrect redundant connection [ID_39114]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+The redundant polling feature allows SLProtocol to select another connection when the main connection goes into a timeout.
+
+In some cases, when SLProtocol selected a connection with a type different from that of the main connection, an error could occur. From now on, when SLProtocol has to select another connection when the main connection goes into a timeout, it will only take into account connections with a type equal to that of the main connection.
+
+#### SLDataMiner could stop working when a MIB file was being generated for a protocol that contained parameters with discrete values [ID_39120]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When a MIB file was being generated for a protocol that contained parameters with discrete values, in some cases, SLDataMiner could stop working.

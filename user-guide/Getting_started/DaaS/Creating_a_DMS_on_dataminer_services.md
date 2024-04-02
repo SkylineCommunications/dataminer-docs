@@ -34,9 +34,6 @@ uid: Creating_a_DMS_on_dataminer_services
 
 1. Enter a username and password for your DataMiner account.
 
-   > [!IMPORTANT]
-   > Do not use an ampersand ("&") in your password. This is currently not supported.
-
 1. Select the box next to *I agree to the terms of service*.
 
 1. Click *Deploy*.

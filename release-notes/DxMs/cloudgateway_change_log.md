@@ -4,6 +4,28 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID_39113]
+
+It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM. 
+
+To do so, set *RemoteAccessAndSharing:IsDisabled* to *true* in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify *appsettings.custom.json* with the following configuration:
+
+```json
+{
+   "RemoteAccessAndSharing": {
+      "IsDisabled": true
+   }
+}
+```
+
+#### 13 March 2024 - Fix - CloudGateway 2.13.7 - Issues with dataminer.services features when DMA alias contained spaces [ID_39106]
+
+Since CloudGateway 2.11.0 (and CoreGateway 2.13.0), dataminer.services features like Remote Access and Catalog deployments did not work correctly if the [DMA alias defined in DataMiner.xml](xref:Changing_the_name_of_a_DMA#configuring-an-alias-in-dataminerxml) contained one or more spaces. This issue has been resolved.
+
+#### 13 March 2024 - Enhancement - CloudGateway 2.13.7 - Dependencies updated [ID_39045]
+
+Several dependencies have been updated.
+
 #### 4 March 2024 - Enhancement - CloudGateway 2.13.6 - Improved installer robustness [ID_38907] [ID_38936]
 
 The CloudGateway installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
