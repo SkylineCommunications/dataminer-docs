@@ -18,7 +18,7 @@ The Paneda multiplexer looks at the multiplexing compartment for each provider.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 61967b0c (Rev.113)     |
+| 1.0.0.x   | h-2024-02-09           |
 
 ### System Info
 
