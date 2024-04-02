@@ -141,16 +141,14 @@ When you encounter this issue, you will find entries similar to the examples bel
 
 To resolve this issue, use the following workaround:
 
-1. [Open SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
-
-1. [Connect to the DMA with SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool)
+1. [Open SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool) on the DMA.
 
 1. Select *Offline Tools* > *CcaGateway (offline)* > *Renew cloud session* and complete the renew process.
 
    > [!NOTE]
    > As the renewal of the Service Principal (SP) token is managed by a cloud service, it can take a few minutes before the renewal is fully synced.
 
-1. Wait a few minutes and then restart the DMA.The issue should be resolved now.
+1. Wait a few minutes and then restart the DMA. The issue should be resolved now.
 
 > [!NOTE]
 > If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
