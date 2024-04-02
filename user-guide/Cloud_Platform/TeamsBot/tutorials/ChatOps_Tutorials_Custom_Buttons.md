@@ -8,9 +8,6 @@ This tutorial, as a follow up on [Chat notifications](xref:ChatOps_Tutorials_Cha
 
 Estimated duration: 15 minutes.
 
-> [!TIP]
-> See also: [Kata #63: Custom ChatOps operator: two-way interactions using buttons in Adaptive Cards](https://community.dataminer.services/courses/kata-63/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## Prerequisites
 
 - [A DataMiner System connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
