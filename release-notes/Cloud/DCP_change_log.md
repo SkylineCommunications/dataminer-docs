@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 14 March - Admin - Organization overview overhaul [ID_38960]
+
+The user interface of the Organization overview page has been adjusted to be more in line with upcoming design changes.
+
+It will now include an overview of all DataMiner Systems in a table, which will include the name, URL, and status of each DataMiner System.
+
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
 You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
