@@ -4,7 +4,7 @@ uid: DashboardTimeRangeFeed
 
 # Time range feed
 
-This dashboard feed allows the user to specify a time range.
+This feed component allows the user to specify a time range.
 
 To configure the component:
 

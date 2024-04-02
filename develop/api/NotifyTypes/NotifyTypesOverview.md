@@ -9,7 +9,7 @@ uid: NTNotifyTypesOverview
 > These types are shared between the SLDataMiner and SLProtocol processes, but many of them are only supported by one of the two processes. Their documentation should mention if they are to be used with a [NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), a [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object))([Queued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object))), or both.
 
 > [!NOTE]
-> The NotifyType enum is located in the [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace. 
+> The [NotifyType](xref:Skyline.DataMiner.Net.Messages.NotifyType) enum is located in the [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace.
 
 |ID|Name|Description|
 |--- |--- |--- |
@@ -116,7 +116,7 @@ uid: NTNotifyTypesOverview
 |100|NT_GET_SUBJECT_AND_COMMENT||
 |101|NT_SET_SUBJECT_AND_COMMENT||
 |102|NT_REMOVE_FILE||
-|103|NT_REMOVE_DOCUMENT|See NT_REMOVE_DOCUMENT (103).|
+|103|<xref:NT_REMOVE_DOCUMENT>|Removes the specified document from the Documents folder.|
 |104|NT_SET_SECURITY_INFO||
 |105|NT_THREAD_CHECK||
 |106|<xref:NT_MAKE_ALARM>|Creates an alarm.|

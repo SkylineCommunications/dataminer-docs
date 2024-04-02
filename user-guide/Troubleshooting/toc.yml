@@ -183,12 +183,20 @@ items:
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
+      - name: Cassandra does not start up after a server restart
+        topicUid: Cassandra_not_starting_up_after_server_restart
       - name: Collecting DataMiner Cube memory dumps
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
-      - name: Investigating dataminer.services connection issues
-        topicUid: Cloud_Connection_Issues
+      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
+        topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Investigating dataminer.services issues
+        items:
+        - name: Investigating dataminer.services connection issues
+          topicUid: Cloud_Connection_Issues
+        - name: Investigating dataminer.services feature issues
+          topicUid: Investigating_Dataminerservices_Feature_Issues
       - name: Investigating NATS issues
         topicUid: Investigating_NATS_Issues
       - name: Investigating OpenSearch issues
@@ -197,23 +205,23 @@ items:
         topicUid: Investigating_Web_Issues
       - name: Keeping a DMA from running out of disk space
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
-      - name: Sharing dashboard window does not disappear
-        topicUid: Sharing_dashboard_window_does_not_disappear
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
-      - name: Cassandra does not start up after a server restart
-        topicUid: Cassandra_not_starting_up_after_server_restart
-      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-        topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Re-registering DataMiner services and DLLs
+        topicUid: Re-registering_DataMiner_services_and_DLLs
+      - name: Sharing dashboard window does not disappear
+        topicUid: Sharing_dashboard_window_does_not_disappear
   - name: Known issues
     topicUid: Known_issues
     items:
       - name: Current issues
         items:
+          - name: Param next attribute not working correctly
+            topicUid: KI_Param_next_not_working
+          - name: SLDataMiner crashes because of subgroup query failure
+            topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
-          - name: IDP Discovery no longer working after upgrade
-            topicUid: KI_IDP_Discovery_not_working
           - name: Port exhaustion because of NATS reconnection attempts
             topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
           - name: One or multiple Analytics features fail to start
@@ -250,6 +258,10 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Error in SLDataMiner when generating MIB file
+            topicUid: KI_SLDataMiner_problem_generating_MIB
+          - name: IDP Discovery no longer working after upgrade
+            topicUid: KI_IDP_Discovery_not_working
           - name: NATS configuration not updated after adding DMA to DMS
             topicUid: KI_NATS_config_not_updated_after_adding_DMA
           - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite

@@ -134,13 +134,12 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637] [ID_38514]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37540] [ID_37637] [ID_38514]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
-<!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 <!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
 <!-- 38514: MR 10.4.0 - FR 10.4.3 -->
@@ -1249,14 +1248,6 @@ When, while automatic incident tracking was running, you manually created an inc
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
-
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
-
-<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
-
-Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
-
-From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
 #### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
 

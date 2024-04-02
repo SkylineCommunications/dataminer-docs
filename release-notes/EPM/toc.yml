@@ -31,6 +31,8 @@ items:
         topicUid: EPM_1.0.1_GPON
   - name: I-DOCSIS
     items:
+      - name: EPM 7.0.1 I-DOCSIS
+        topicUid: EPM_7.0.1_I-DOCSIS
       - name: EPM 7.0.0 I-DOCSIS
         topicUid: EPM_7.0.0_I-DOCSIS
       - name: EPM 6.1.10 I-DOCSIS
@@ -75,7 +77,9 @@ items:
         topicUid: EPM_5.0.0_I-DOCSIS
   - name: VSAT
     items:
-      - name: EPM 1.0.9 VSAT - preview
+      - name: EPM 1.0.10 VSAT - preview
+        topicUid: EPM_1.0.10_VSAT
+      - name: EPM 1.0.9 VSAT
         topicUid: EPM_1.0.9_VSAT
       - name: EPM 1.0.8 VSAT
         topicUid: EPM_1.0.8_VSAT

@@ -24,6 +24,8 @@ To prepare the destination server, there are several possibilities:
 
   1. From the *C:\\Skyline DataMiner\\Webpages\\Reports\\templates* directory, delete all report templates. In other words, delete all content EXCEPT the *Template.inc.asp* file and the *styles* subdirectory.
 
+  1. From the *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data* directory, delete the *NodeId.txt* file.
+
   1. Delete all content from the following directories:
 
      - Skyline DataMiner\\Correlation

@@ -1,7 +1,6 @@
 items:
   - name: Data Aggregator release notes
-    topicUid: DataAggregator_2.0.0
-    href: DataAggregator/toc.yml
+    topicUid: DataAggregator_change_log
   - name: Communication Gateway release notes
     topicUid: CommunicationGateway_2.0.2
     href: CommunicationGateway/toc.yml
@@ -22,3 +21,5 @@ items:
     topicUid: orchestrator_change_log
   - name: Support Assistant release notes
     topicUid: supportassistant_change_log
+  - name: Data API release notes - preview
+    topicUid: DataAPI_change_log

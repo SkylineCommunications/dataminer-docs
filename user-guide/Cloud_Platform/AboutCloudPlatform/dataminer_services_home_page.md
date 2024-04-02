@@ -4,7 +4,11 @@ uid: dataminer_services_home_page
 
 # The dataminer.services home page
 
-If you browse to <https://dataminer.services> and [log on](xref:Logging_on_to_the_DataMiner_Cloud_Platform), the dataminer.services home page will be displayed.
+To access the dataminer.services home page:
+
+- Go directly to the link <https://dataminer.services> and [log on](xref:Logging_on_to_the_DataMiner_Cloud_Platform), or
+
+- In DataMiner Cube, go to the System Center > *Cloud* page and select *Open dataminer.services* (Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38715-->).
 
 ## dataminer.services apps
 

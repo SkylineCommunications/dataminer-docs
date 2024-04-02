@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 13 March 2024 - Enhancement - SupportAssistant 1.6.8 - Dependencies updated [ID_39050]
+
+Several dependencies have been updated.
+
 #### 4 March 2024 - Enhancement - SupportAssistant 1.6.7 - Improved installer robustness [ID_38945]
 
 The SupportAssistant installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.

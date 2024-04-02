@@ -69,19 +69,6 @@ items:
             topicUid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
           - name: Upgrading a DataMiner Agent in System Center
             topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
-          - name: Upgrade paths
-            topicUid: Upgrade_Paths
-            items:
-              - name: DataMiner 9.6.0/9.6.x to 10.2.0/10.2.x
-                topicUid: Upgrade_path_960-96x_to_1020-102x
-              - name: DataMiner 9.6.x to 10.3.0/10.3.x
-                topicUid: Upgrade_path_960-96x_to_1030-103x
-              - name: DataMiner 10.0.0/10.0.x to 10.2.0/10.2.x
-                topicUid: Upgrade_path_1000-100x_to_1020-102x
-              - name: DataMiner 10.0.0/10.0.x to 10.3.0/10.3.x
-                topicUid: Upgrade_path_1000-100x_to_1030-103x
-              - name: DataMiner 10.1.0/10.1.x to 10.2.0/10.2.x
-                topicUid: Upgrade_path_1010-101x_to_1020-102x
           - name: Upgrading the DataMiner web apps
             topicUid: Upgrading_Downgrading_Webapps
           - name: Checking the upgrade history of a DataMiner Agent
@@ -156,6 +143,8 @@ items:
         items:
           - name: Cassandra DB Size
             topicUid: BPA_Cassandra_DB_Size
+          - name: Check Agent Presence Test In NATS
+            topicUid: BPA_Check_Agent_Presence
           - name: Check Antivirus DLLs
             topicUid: BPA_Check_Antivirus_DLLs
           - name: Check Cluster SLNet Connections
@@ -366,6 +355,8 @@ items:
                 topicUid: Resources_migration_to_elastic
               - name: Migrating SRM profiles to the indexing database
                 topicUid: Profile_migration_to_elastic
+              - name: Migrating from Elasticsearch to OpenSearch
+                topicUid: Migrating_from_Elasticsearch_to_OpenSearch
           - name: Common database settings
             items:
               - name: Specifying TTL overrides
@@ -527,7 +518,9 @@ items:
             topicUid: Configuring_RADIUS_settings
           - name: Setting up Azure Active Directory Domain Services
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
-          - name: Enabling TLS encryption
+          - name: Securing NATS
+            topicUid: Security_NATS
+          - name: Enabling TLS encryption for serial communication
             topicUid: Enabling_TLS_encryption
           - name: Skipping certificate validation when consuming gRPC services
             topicUid: Skipping_certificate_validation_when_consuming_gRPC_services

@@ -44,6 +44,7 @@ The overview below lists all data sources that currently have update support. If
 
 | Data source | Support level |
 | ----------- | -------- |
+| [Get ad hoc data](xref:Get_ad_hoc_data) | [Real-time events](#query-update-support) |
 | [Get parameter table by ID](xref:Get_parameter_table_by_ID) | [Real-time events](#query-update-support) |
 | [Get views](xref:Get_views) | [Real-time events](#query-update-support) |
 
