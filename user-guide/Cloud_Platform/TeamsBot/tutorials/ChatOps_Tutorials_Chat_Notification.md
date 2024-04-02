@@ -23,7 +23,9 @@ Estimated duration: 15 minutes.
 - [Step 2: Fetch the private chat for a user and send a notification](#step-2-fetch-the-private-chat-for-a-user-and-send-a-notification)
 - [Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#step-3-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
 
-## Step 1: Deploy the ChatIntegration Examples package from the Catalog
+## Step 1: Deploy the Chat Integration Examples package from the Catalog
+
+Learn more about this package [here](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md).
 
 1. Browse to <https://catalog.dataminer.services/details/package/5860>.
 
