@@ -27,3 +27,10 @@ uid: Monitoring_Solutions
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/user-guide/images/Smart_Trap_Processor.svg" style="width:100%"></a>
   </div>  
 </div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/DITT/Dataminer_IT_Tool_Overview.html" title="IT Tools" target="_self"><img src="~/user-guide/images/Working_with_Monitoring_app.svg" style="width:100%"></a>
+  </div>  
+</div>
+
