@@ -6,7 +6,7 @@ uid: CloudConnectionVerification
 
 To make sure you can get the most out of having your DataMiner System connected to dataminer.services, you need to get your organization verified on dataminer.services. This verification ensures that you have access to all the current and upcoming new dataminer.services features.
 
-Current benefits include access to the Catalog in order to install protocols directly from the dataminer.services using the artifact deployer (available starting from Cloud Pack v2.4).
+Benefits include access to the licensed connectors in the Catalog for systems with a perpetual license. The Catalog allows you to install connectors directly from dataminer.services using the artifact deployer (available starting from Cloud Pack v2.4). Systems with a subscription license can access all connectors.
 
 To get your organization verified on dataminer.services:
 
