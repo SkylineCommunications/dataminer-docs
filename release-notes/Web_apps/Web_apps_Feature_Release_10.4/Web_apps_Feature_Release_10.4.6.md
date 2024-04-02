@@ -49,3 +49,11 @@ From now on, when you open the template editor, the *Save* button will be unavai
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When a *Time range* component had custom quick pick buttons configured, up to now, those buttons would no longer be visible after you had refreshed the dashboard using the *Refresh* button in the dashboard subheader.
+
+#### Dashboards app & Low-Code Apps - Node edge graph component: Data would incorrectly get fetched multiple times [ID_39299]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a *Node edge graph* component contained multiple queries, including one that was linked to a feed, in some rare cases, the data would incorrectly get fetched multiple times.
+
+Also, when a *Node edge graph* component was rendered for the first time, the edge arrows would incorrectly not appear.
