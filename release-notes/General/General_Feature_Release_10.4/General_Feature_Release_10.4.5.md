@@ -360,6 +360,34 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
 
+#### GQI: Enhanced error handling [ID_39226]
+
+<!-- MR 10.5.0 - FR 10.4.5 [CU0] -->
+
+In order to enhance the way in which specific GQI errors are handled, the following new `GenIfException` types have been introduced:
+
+- `GenIfSecurityException` will be thrown when a request cannot be satisfied because the action is not allowed.
+- `GenIfAggregateException` will be thrown when a request caused multiple independent exceptions.
+
+Also, error handling has changed for the following GQI requests:
+
+- `GenIfCloseSessionRequest`
+
+  This request can be used to close multiple sessions at the same time. However, up to now, it would only close sessions until an error occurred, leaving the remaining sessions open. From now on, if an exception occurs for more than one session, a `GenIfAggregateException` will be thrown containing the individual exceptions.
+
+- `GenIfSessionHeartbeatRequest`
+
+  This request can be used to send a heartbeat to multiple sessions at the same time in order to keep them alive.
+
+  Similar to the `GenIfCloseSessionRequest`, up to now, it would only send a heartbeat to the first sessions in the request until an error occurred. In some cases, this could cause sessions to expire unexpectedly.
+
+As to logging, behavior has changed with respect to exceptions:
+
+- `GenIfAggregate` will log each individual exception separately.
+- `GenIfSessionException` will be logged as a warning without stack trace.
+- `GenIfSecurityException` will be logged as a warning without stack trace.
+- Any other error will be logged as error with stack trace.
+
 #### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID_39256]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
