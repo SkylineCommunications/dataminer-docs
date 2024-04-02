@@ -64,35 +64,40 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 - **Number CCAP Core**: Calculated. The total number of associated CCAP cores.
 
 - **Number Service Group**: Calculated. The total number of associated service groups.
-  
-    - Service groups are retrieved from the docsIf3MdNodeStatusTable (OID 1.3.6.1.4.1.4491.2.1.20.1.12) polled from the CCAP.
+
+  Service groups are retrieved from the *docsIf3MdNodeStatusTable* (OID 1.3.6.1.4.1.4491.2.1.20.1.12) polled from the CCAP.
 
 - **Number CM**: Calculated. The total number of associated CMs.
 
-  - Cable Modem's are retrieved from the docsIf3CmtsCmRegStatusTable (OID 1.3.6.1.4.1.4491.2.1.20.1.3) polled from the CCAP.
+  Cable modems are retrieved from the *docsIf3CmtsCmRegStatusTable* (OID 1.3.6.1.4.1.4491.2.1.20.1.3) polled from the CCAP.
 
 - **Number CM Offline**: Calculated. The total number of associated CMs that do not have an operational status.
 
-  - Calculated by aggregating the number of CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (8 Operational = Online, any other value = Offline).
+  Calculated by aggregating the number of CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (8 Operational = Online, any other value = Offline).
 
 - **Percentage CM Offline**: Calculated. The percentage of associated offline CMs, from the CCAP perspective.
 
-  - Calculated based on the CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (8 Operational = Online, any other value = Offline).
+  Calculated based on the CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (8 Operational = Online, any other value = Offline).
 
 - **Number CM DOCSIS 2.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 2.0 range.
-  - Polled directly from the Cable Modem using the docsIfDocsisBaseCapability (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
+
+  Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
 - **Number CM DOCSIS 3.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.0 range.
-  - Polled directly from the Cable Modem using the docsIfDocsisBaseCapability (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
+
+  Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
 - **Number CM DOCSIS 3.1**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.1 range.
-  - Polled directly from the Cable Modem using the docsIfDocsisBaseCapability (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
+
+  Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
 - **Number CM DOCSIS 1.x**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 1.x range.
-  - Polled directly from the Cable Modem using the docsIfDocsisBaseCapability (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
+
+  Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
 - **Number CM DOCSIS Other**: Calculated. The total number of associated cable modems that are unable to report their DOCSIS version or for which the DOCSIS version is outside of the known range.
-  -  Polled directly from the Cable Modem using the docsIfDocsisBaseCapability (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
+
+  Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
 - **Number CM Ping Unreachable**: Calculated. The number of associated CMs that report the ping status "Unreachable".
 
@@ -105,13 +110,17 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all associated CMs. Only CMs that can be reached via ping count towards this KPI.
 
 - **Number QAM DS Channels**: Calculated. The total number of associated downstream channels.
-  - Mapping of Channels to Fiber Nodes are done using the clabTopoChFnCfgTable (OID 1.3.6.1.4.1.4491.4.2.1.2) polled from the CCAP.
+
+  Mapping of channels to fiber nodes is done using the *clabTopoChFnCfgTable* (OID 1.3.6.1.4.1.4491.4.2.1.2) polled from the CCAP.
 
 - **Number QAM US Channels**: Calculated. The total number of associated upstream channels.
-  - Mapping of Channels to Fiber Nodes are done using the clabTopoChFnCfgTable (OID 1.3.6.1.4.1.4491.4.2.1.2) polled from the CCAP.
+
+  Mapping of channels to fiber nodes is done using the *clabTopoChFnCfgTable* (OID 1.3.6.1.4.1.4491.4.2.1.2) polled from the CCAP.
 
 - **Percentage DS Utilization**: Calculated. The average channel utilization of associated downstream channels.
-  - Individual Channel utilization values are retrieved from the docsIfCmtsChannelUtilizationTable (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
+
+  Individual channel utilization values are retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
 
 - **Percentage US Utilization**: Calculated. The average channel utilization of associated upstream channels.
-  - Individual Channel utilization values are retrieved from the docsIfCmtsChannelUtilizationTable (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
+
+  Individual channel utilization values are retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
