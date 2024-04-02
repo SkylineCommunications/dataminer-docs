@@ -101,7 +101,6 @@ These are the main steps of the setup:
   
   discovery.type: zen
   
-  node.max_local_storage_nodes: 3
   indices.query.bool.max_clause_count: 2147483647
 
   ```
