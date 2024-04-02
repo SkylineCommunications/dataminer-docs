@@ -52,5 +52,5 @@ The following default values and limitations apply:
 > [!NOTE]
 >
 > - The TTL settings are stored in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml).
-> - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in Cube. The changes are only applied for new records. For example, if a record is saved with TTL set to 150 days, it will be only be removed after 150 days, even if the TTL configuration in Cube is later changed to 100 days.
+> - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in Cube. The changes are only applied for new records. For example, if a record is saved with TTL set to 150 days, it will only be removed after 150 days, even if the TTL configuration in Cube is later changed to 100 days.
 > - To prevent the [year 2038 problem](xref:Year_2038_Problem_for_Cassandra) for Cassandra, from DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 onwards, the maximum allowed TTL for databases is limited to 10 years.
