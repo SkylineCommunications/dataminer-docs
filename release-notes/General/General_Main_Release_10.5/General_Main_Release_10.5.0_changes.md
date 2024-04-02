@@ -167,6 +167,12 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when activating function DVEs.
+
 #### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

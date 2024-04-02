@@ -28,7 +28,11 @@ uid: General_Feature_Release_10.4.6
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
 ### Fixes
 
