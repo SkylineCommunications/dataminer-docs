@@ -44,6 +44,16 @@ You can also start an upgrade from the Agents page in DataMiner Cube’s System 
 
 For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
+## Upgrading across major versions
+
+If you are not upgrading to the DataMiner version that immediately follows your current version, always follow this general guideline:
+
+**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+
+![Upgrading across major versions](~/user-guide/images/Upgrading_across_major_versions.png)
+
+Follow the instructions under [Best practices when upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#best-practices-when-upgrading-across-major-versions).
+
 ## Other types of upgrades
 
 The DataMiner platform consists of many components (core processes, DataMiner Extension Modules (DxMs), web API, web apps, etc.). While the sections above are related to a standard DataMiner upgrade, which includes most of these components, some components can be upgraded separately.

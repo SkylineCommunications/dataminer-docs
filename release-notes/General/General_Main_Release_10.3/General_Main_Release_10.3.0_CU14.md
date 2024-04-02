@@ -12,6 +12,13 @@ uid: General_Main_Release_10.3.0_CU14
 
 ### Enhancements
 
+#### Security enhancements [ID_37345] [ID_38904]
+
+<!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
+<!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+A number of security enhancements have been made.
+
 #### APIGateway now runs on .NET 8 and allows you to enable kernel response buffering [ID_38710]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -36,18 +43,33 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
-#### Security enhancements [ID_37345] [ID_38904]
+#### SLLogCollector: Enhancements [ID_38966]
 
-<!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
-<!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-A number of security enhancements have been made.
+SLLogCollector now uses Microsoft .NET 4.8.0.
+
+Also, an number of enhancements have been made to improve overall exception handling and to prevent the tool from timing out on servers without internet access.
+
+#### SLLogCollector: Enhancements [ID_38975]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, SLLogCollector will also log when it was not able to find any DataMiner processes or include memory dumps.
+
+Also, it will no longer attempt to read log files when it was not able to find the `C:\Skyline DataMiner\` folder.
 
 #### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
+
+#### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when starting the Resource Manager module, especially on systems with a large number of permanent bookings.
 
 #### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
 
@@ -61,6 +83,34 @@ Because of a number of enhancements, overall performance of SLAnalytics has incr
 
 Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
 
+#### MySql.Data.dll updated to version 8.3.0 [ID_39152]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The *MySql.Data.dll* file, stored in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\Files\x64` folders, has been updated from version 6.9.12 to version 8.3.0.
+
+The connection string will now include `allowloadlocalinfile=True` as this required setting needs to be enabled on both the client side and the server side of the database connection.
+
+#### No more DataMiner startup beep [ID_39176]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The DataMiner startup beep has been removed.
+
+On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
+
+#### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID_39213]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
+
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The maximum number of concurrent GQI queries has now been increased from 20 to 100.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -68,6 +118,14 @@ Because of a number of enhancements, overall processing of tasks in SLNet has be
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.1 -->
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
+
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
@@ -114,3 +172,27 @@ Up to now, an error would occur when a DataMiner module (e.g. Automation, Schedu
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.
+
+#### Problem with SLProtocol when processing a matrix parameter update [ID_39178]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, an error could occur in SLProtocol when processing a matrix parameter update.
+
+#### The 'Communication Info' table would incorrectly not get loaded into the element [ID_39181]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in a connector, you had used the following `<Connections>` syntax, in some cases, the *Communication Info* table would incorrectly not get loaded into the element.
+
+Example of the `<Connections>` syntax that caused the *Communication Info* table to not get loaded into the element:
+
+```xml
+<Connections>
+   <Connection id="0" name="IPDRData">
+      <SmartSerial>
+      ...
+      </SmartSerial>
+   </Connection>
+</Connections>
+```

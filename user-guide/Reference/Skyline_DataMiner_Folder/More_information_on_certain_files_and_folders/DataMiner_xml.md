@@ -333,6 +333,9 @@ Example:
 </DataMiner>
 ```
 
+> [!NOTE]
+> From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the number of distribution traps is limited to 250,000. When the processing queue of distribution traps contains 250,000 traps, new traps will be rejected until the number of traps in the queue has dropped to 100,000. These limits are fixed and cannot be configured.<!--- RN34525 --->
+
 ### DataMiner.Telnet
 
 Available from DataMiner 9.5.6 onwards. Can be used to activate or deactivate the Telnet interface for a DMA using the attribute active=”true” or active=”false”, respectively.
