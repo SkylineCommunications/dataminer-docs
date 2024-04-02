@@ -4,7 +4,7 @@ uid: Overview_MediaOps_Apps
 
 # MediaOps apps
 
-dataMiner.MediaOps is available in the DataMiner Catalog as a package that contains multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+dataMiner.MediaOps will soon be available in the DataMiner Catalog<!-- TBD: update when available --> as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
 
 Below is an overview of the out-of-the-box DataMiner applications included in the dataminer.MediaOps installation package.
 
@@ -73,7 +73,7 @@ For more detailed information about this application, see [Scheduling applicatio
 
 ![Workflow Designer app icon](~/dataminer-overview/images/DM_WorkflowDesigner.png)
 
-The workflow designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when creating a connection between a source and a destination, when executing a certain job, when delivering a type of service, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed ad hoc (from a control surface) or based on a schedule (for example by scheduling a job in the [Scheduling app](#scheduling)).
+The workflow designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when a connection is created between a source and a destination, when a certain job is executed, when a type of service is delivered, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed ad hoc (from a control surface) or based on a schedule (for example by scheduling a job in the [Scheduling app](#scheduling)).
 
 Additionally, a workflow describes:
 
@@ -92,7 +92,7 @@ Cost and Billing is a robust application designed to streamline financial operat
 
 Its **Contracts** module offers a comprehensive framework for managing agreements, defining validity periods, and incorporating flexible billing options. Users can apply discounts during billing calculations and navigate intricate details like speed order fees, providing choices between fixed or incremental charges based on the job's booking confirmation. The app's versatility extends to cancellation fees, allowing users to opt for fixed or incremental charges. Billing flexibility is further enhanced by the app's capability to facilitate billing based on workflows, resources, or a combination of both. Additionally, the app enables precise customization through default and specific rate card assignments to workflows, resources, and resource pools.
 
-Within the **Rate Cards** module, the app seamlessly associates with job nodes, such as workflows, resources, and resource pools, offering detailed charging mechanisms based on usage duration. The module also allows users to specify the currency for billing or cost descriptions, ensuring accuracy in financial transactions. The inclusion of rates based on various time units or single use adds granularity to the billing structure, making the Cost and Billing app a comprehensive financial management tool.
+Within the **Rate Cards** module, the app seamlessly associates with job nodes, such as workflows, resources, and resource pools, offering detailed charging mechanisms based on usage duration. The module also allows users to specify the currency for billing or cost descriptions, ensuring accuracy in financial transactions. The inclusion of rates based on various time units or single usage adds granularity to the billing structure, making the Cost and Billing app a comprehensive financial management tool.
 
 The **Currencies** module efficiently manages multiple currencies. This functionality facilitates seamless currency conversion for precise billing and cost calculations across nodes with different rate cards, ensuring a globally adaptable and efficient financial ecosystem.
 
