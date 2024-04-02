@@ -69,30 +69,33 @@ items:
           topicUid: Stack_SLA_Management
         - name: Third-Party Integrations
           topicUid: Stack_Third_Party_Integrations
-    - name: dataminer.MediaOps
-      topicUid: Overview_dataminer_MediaOps
+    - name: DataMiner Solutions
+      topicUid: Overview_DataMiner_Solutions
       items:
-        - name: MediaOps apps
-          topicUid: Overview_MediaOps_Apps
+        - name: dataminer.MediaOps
+          topicUid: Overview_dataminer_MediaOps
           items:
-          - name: Virtual Signal Groups
-            topicUid: Overview_MediaOps_Virtual_Signal_Groups
-          - name: Control Surface
-            topicUid: Overview_MediaOps_Control_Surface
-          - name: Flow Engineering
-            topicUid: Overview_MediaOps_Flow_Engineering
-          - name: Flow Monitoring
-            topicUid: Overview_MediaOps_Flow_Monitoring
-          - name: Scheduling
-            topicUid: Overview_MediaOps_Scheduling
-          - name: Workflow Designer
-            topicUid: Overview_MediaOps_Workflow_Designer
-          - name: Cost and Billing
-            topicUid: Overview_MediaOps_Cost_and_Billing
-          - name: People and Organizations
-            topicUid: Overview_MediaOps_People_and_Organization
-        - name: MediaOps data model
-          topicUid: Overview_MediaOps_Data_Model
+            - name: MediaOps apps
+              topicUid: Overview_MediaOps_Apps
+              items:
+                - name: Virtual Signal Groups
+                  topicUid: Overview_MediaOps_Virtual_Signal_Groups
+                - name: Control Surface
+                  topicUid: Overview_MediaOps_Control_Surface
+                - name: Flow Engineering
+                  topicUid: Overview_MediaOps_Flow_Engineering
+                - name: Flow Monitoring
+                  topicUid: Overview_MediaOps_Flow_Monitoring
+                - name: Scheduling
+                  topicUid: Overview_MediaOps_Scheduling
+                - name: Workflow Designer
+                  topicUid: Overview_MediaOps_Workflow_Designer
+                - name: Cost and Billing
+                  topicUid: Overview_MediaOps_Cost_and_Billing
+                - name: People and Organizations
+                  topicUid: Overview_MediaOps_People_and_Organization
+            - name: Supported connectors
+              topicUid: Overview_MediaOps_supported_connectors
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:

@@ -28,7 +28,7 @@ We are working on adding more information to this section soon, so check back fo
     <a href="/dataminer-overview/DataMiner_Stack_Functions/Overview_stack_functions.html" title="DataMiner stack functions" target="_self"><img src="~/dataminer-overview/images/Stack_Functions.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer-overview/MediaOps/Overview_dataminer_MediaOps.html" title="dataminer.MediaOps" target="_self"><img src="~/dataminer-overview/images/dataminer_MediaOps.svg" style="width:100%"></a>
+    <a href="/dataminer-overview/DataMiner_Solutions/Overview_DataMiner_Solutions.html" title="DataMiner Solutions" target="_self"><img src="~/dataminer-overview/images/dataminer_MediaOps.svg" style="width:100%"></a>
   </div>
 </div>
 
