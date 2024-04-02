@@ -24,6 +24,6 @@ When you have configured a RADIUS server:
 
 - The RADIUS server will respond to each logon attempt with an Accept, Reject or Challenge response. In case of a Challenge response, additional user input must be sent in order to complete the authentication.
 
-> [!NOTE]
-> Each RADIUS user needs a corresponding DMA user with the same name.
+> [!IMPORTANT]
+> RADIUS users first need to be imported via LDAP. See [Configuring LDAP settings](xref:Configuring_LDAP_settings) on how to do this.
 >
