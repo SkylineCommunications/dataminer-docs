@@ -1,3 +1,7 @@
+---
+uid: EpmIntegrationTrainingViewTables
+---
+
 # View Tables
 The Frontend is able to display all of the infromation in the system with View tables. The primary way to do so is through the use of the [directView](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.ArrayOptions-options.html#directview) option since the Frontend and Backend elements use the same driver so the table structures are identical. Below is an example of a directView table:
 

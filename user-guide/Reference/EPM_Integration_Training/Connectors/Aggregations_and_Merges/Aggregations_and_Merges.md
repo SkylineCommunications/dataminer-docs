@@ -1,3 +1,7 @@
+---
+uid: EpmIntegrationTrainingAggregations
+---
+
 # Aggregate Actions
 Because of the way the EPM architecture is structured it allows us to calculate many aggregated KPI's. These KPI's are calculated by using [aggregation](https://docs.dataminer.services/develop/devguide/Connector/Actions/ActionAggregate.html) actions.
 

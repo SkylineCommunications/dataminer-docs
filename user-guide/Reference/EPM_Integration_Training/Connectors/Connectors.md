@@ -4,15 +4,9 @@ uid: EpmIntegrationTrainingConnectors
 
 # Reference
 
-- [Introduction](xref:)
-- [Table Structure](xref:)
-- [View Tables](xref:)
-- [Required Tags](xref:ConnectorsRequiredTags)
-- [Visibility Chains and Fields](xref:ConnectorsVisChainsFields)
-- [Topology Relations](xref:ConnectorsTopologyRelations)
+- [Aggregations and Merges](xref:EpmIntegrationTrainingAggregations)
 - [Alarms](xref:ConnectorsAlarms)
-- [Aggregation Actions](xref:)
-- [Merge Actions](xref:)
-- [View Impact Option](xref:)
-- [Title Box Data Section](xref:)
-- [Linking Collector Data to EPM Object](xref:)
+- [Required Tags](xref:ConnectorsRequiredTags)
+- [Topology Relations](xref:ConnectorsTopologyRelations)
+- [View Tables](xref:EpmIntegrationTrainingViewTables)
+- [Visibility Chains and Fields](xref:ConnectorsVisChainsFields)
