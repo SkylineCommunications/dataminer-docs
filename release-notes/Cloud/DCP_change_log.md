@@ -17,10 +17,9 @@ When no DMS is found for an organization, the displayed error will now no longer
 
 Regular members of an organization will now no longer be able to see the credits section of the organization overview.
 
-#### 28 March 2024 - New Feature - Catalog - Trial deployments [ID_39205]
+#### 28 March 2024 - New feature - Catalog - Trial deployments [ID_39205]
 
-It is now possible for users without a license for a connector to deploy a trial version.
-These trial versions should not be used in production environments as stated in the Terms and Agreements.
+It is now possible for users without a license for a connector to deploy a trial version. These trial versions should not be used in production environments, as stated in the terms and agreements.
 
 #### 28 March 2024 - Fix - Catalog - Links in organization overview not working correctly [ID_39204]
 
