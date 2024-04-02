@@ -97,6 +97,8 @@ items:
                 topicUid: I-DOCSIS_maps_deployment_one_backend
               - name: Systems with multiple back-end elements
                 topicUid: I-DOCSIS_maps_deployment_multiple_backends
+          - name: EPM I-DOCSIS GQI Integration
+            topicUid: I-DOCSIS_GQI_Integration
           - name: EPM I-DOCSIS passives integration
             topicUid: I-DOCSIS_passives_integration
           - name: EPM I-DOCSIS upgrade

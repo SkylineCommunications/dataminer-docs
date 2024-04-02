@@ -108,7 +108,7 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
   - OID: D3.0: 1.3.6.1.4.1.4491.2.1.20.1.4.1.9
   - OID: D2.0: 1.3.6.1.2.1.10.127.1.3.3.1.17
 
-- **US QAM Ch Utilization**
+- **US QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
 
 - **US QAM Ch NMTER**: Calculated. The NMTER value of the channel. Only available for DOCSIS 3.x.
 
