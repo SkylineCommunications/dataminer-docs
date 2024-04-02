@@ -28,7 +28,7 @@ Estimated duration: 15 minutes.
 
 ## Step 2: Deploy the CustomCommand Examples package from the Catalog and configure the scripts
 
-In step 5 we will trigger a custom command from this package with a button that we added to an Adaptive Card notification, so we need to deploy this package first. Learn more about this package [here](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples/README.md)
+In step 5 we will trigger a custom command from this package with a button that we added to an Adaptive Card notification, so we need to deploy this package first. Learn more about this package [here](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples/README.md).
 
 1. Browse to <https://catalog.dataminer.services/details/package/5863>.
 
