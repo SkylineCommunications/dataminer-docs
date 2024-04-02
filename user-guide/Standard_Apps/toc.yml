@@ -198,6 +198,8 @@ items:
             topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
       - name: Tutorials
         items:
+          - name: Getting started with IDP and onboarding new equipment
+            topicUid: IDP_Tutorial_DiscoveryAndProvisioning
           - name: Getting started with configuration backup
             topicUid: IDP_Tutorial_TakeConfigurationBackup
   - name: Monitoring & Management Solutions

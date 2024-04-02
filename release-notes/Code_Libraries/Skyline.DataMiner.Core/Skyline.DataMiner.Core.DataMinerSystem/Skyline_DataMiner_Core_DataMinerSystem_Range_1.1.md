@@ -7,6 +7,18 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.8
+
+#### Fix - View settings on service elements correctly updated
+
+When the *IDmsService.Update()* method is used, the service will no longer be moved to the root view.
+
+#### New feature - AsWriteable() method added to properties
+
+*IDmsProperty* now has the *AsWritable()* method and *IsWritable* property. If the property is not writable, the method will throw an InvalidOperationException.
+
+For an example, see [Setting a property and renaming the element](xref:ClassLibraryExamples#setting-a-property-and-renaming-the-element)
+
 ### 1.1.1.7
 
 #### Fix - Advanced settings on service elements updated

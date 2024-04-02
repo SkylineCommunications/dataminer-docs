@@ -136,6 +136,17 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### Enhanced performance when loading DVEs and virtual functions, changing production protocols and uploading protocols [ID_39034]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased in the following situations:
+
+- When loading stopped and activated parent elements that generate DVEs or virtual functions when a DMA starts up or when a Failover agent goes online.
+- When changing the production protocol or when uploading a protocol being used by existing elements.
+
+Also, when DataMiner Cube is connecting to a DataMiner Agent that is starting up or going online, users will now receive more detailed information on the progress of virtual elements being loaded.
+
 #### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -192,6 +203,26 @@ Because of a number of enhancements, the accuracy of the flatline detection algo
 The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
+
+#### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID_39213]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
+
+#### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID_39256]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+The number of open suggestion events related to behavioral anomalies will now be limited to 500 for the entire DataMiner System.
+
+In other words, you will no longer have more than 500 suggestion events related to behavioral anomalies in the suggestion events tab of the Alarm Console.
+
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The maximum number of concurrent GQI queries has now been increased from 20 to 100.
 
 ### Fixes
 
@@ -278,3 +309,31 @@ When SNMP++ was being used to communicate with a device, commands would incorrec
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 In some cases, an error could occur in SLProtocol when processing a matrix parameter update.
+
+#### The 'Communication Info' table would incorrectly not get loaded into the element [ID_39181]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in a connector, you had used the following `<Connections>` syntax, in some cases, the *Communication Info* table would incorrectly not get loaded into the element.
+
+Example of the `<Connections>` syntax that caused the *Communication Info* table to not get loaded into the element:
+
+```xml
+<Connections>
+   <Connection id="0" name="IPDRData">
+      <SmartSerial>
+      ...
+      </SmartSerial>
+   </Connection>
+</Connections>
+```
+
+#### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID_39184]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+When SLDataMiner has finished initializing the elements, SLDMS starts loading them.
+
+Up to now, when SLDMS failed to load an element, it would stop loading the rest of them. As a result, SLNet would be unaware of the existence of some elements, causing them to not show up in DataMiner client applications without any error whatsoever.
+
+From now on, when SLDMS fails to load an element, it will continue to load the rest of the elements, and generate an error for each element that could not be loaded.
