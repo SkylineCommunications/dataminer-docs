@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.4.6
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Web apps: Improved startup performance because of waffle menu enhancements [ID_39208]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements made to the waffle menu, overall performance has increased when opening a web app.
 
 ### Fixes
 
