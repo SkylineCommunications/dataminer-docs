@@ -138,7 +138,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
 - Migration from a MySQL setup is not yet supported.
-- Migration using a proxy is not yet supported.
+- Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
 
 In addition, the following **other limitations** currently apply:
 
