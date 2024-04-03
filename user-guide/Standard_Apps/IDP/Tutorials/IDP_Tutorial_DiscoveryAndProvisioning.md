@@ -9,6 +9,9 @@ This tutorial will show you how to install IDP and onboard new equipment. By way
 
 Expected duration: 15 minutes.
 
+> [!NOTE]
+> The content and screenshots for this tutorial were created using IDP version 1.5.0.
+
 <!-- TODO: Uncomment and fill in with correct info when Kata is released.
 > [!TIP]
 > See also: [Kata #xx: IDP Introduction](https://community.dataminer.services/courses/kata-xx/)

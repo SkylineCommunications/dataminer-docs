@@ -12,4 +12,4 @@ keywords: idp
 | Name | Description |
 |--|--|
 | [Getting started with IDP and onboarding equipment](xref:IDP_Tutorial_DiscoveryAndProvisioning) | Install IDP and onboard new equipment. |
-| [Getting started with configuration backup](xref:IDP_Tutorial_TakeConfigurationBackup) | Set up IDP to retrieve and store device configurations. |
+| [Getting started with configuration backups](xref:IDP_Tutorial_TakeConfigurationBackup) | Set up IDP to retrieve and store device configurations. |

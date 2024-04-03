@@ -4,6 +4,9 @@ uid: ConfigurationBackupScript
 
 # Implementing the Configuration Backup script
 
+> [!TIP]
+> For a tutorial, refer to [Getting started with configuration backups](xref:IDP_Tutorial_TakeConfigurationBackup).
+
 ## Setting up the DataMiner Configuration Archive
 
 DataMiner IDP can be used to create configuration backups from [elements](xref:About_elements) in the managed inventory. However, before backups can be taken, the DataMiner Configuration Archive needs to be set up. You can do so on the [Admin > Configuration > Network Shares](xref:Configuration#network-shares) page of the IDP app.
@@ -195,7 +198,3 @@ Next, DataMiner IDP will connect to the path and transfer the files to the DataM
 
 > [!NOTE]
 > XML and TXT extensions are visualized by default. You can change this on the [Admin > Configuration > Backup page](xref:Configuration#backup).
-
-## Tutorials
-
-- [Getting started with configuration backup](xref:IDP_Tutorial_TakeConfigurationBackup)
