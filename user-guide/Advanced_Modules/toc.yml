@@ -612,6 +612,8 @@ items:
                     topicUid: GQI_GQIEditableHeader
                   - name: GQIEditableRow
                     topicUid: GQI_GQIEditableRow
+                  - name: GQILogLevel
+                    topicUid: GQI_GQILogLevel
                   - name: GQIPage
                     topicUid: GQI_GQIPage
                   - name: GQIRow
@@ -634,6 +636,8 @@ items:
                     topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
                     topicUid: GQI_IGQIInputArguments
+                  - name: IGQILogger
+                    topicUid: GQI_IGQILogger
                   - name: IGQIOptimizableOperator
                     topicUid: GQI_IGQIOptimizableOperator
                   - name: IGQIOnDestroy

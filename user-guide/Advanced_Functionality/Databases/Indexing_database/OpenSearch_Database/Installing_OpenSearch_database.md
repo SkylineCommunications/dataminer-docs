@@ -57,10 +57,10 @@ These are the main steps of the setup:
   cluster.name: NameOfYourCluster
   #
   # Identify initial cluster manager node:
-    # If you are using OpenSearch 2, use cluster.initial_manager_nodes.
+    # If you are using OpenSearch 2, use cluster.initial_cluster_manager_nodes.
     # If you are using OpenSearch 1, use cluster.initial_master_nodes.
   #
-  cluster.initial_manager_nodes: ["opensearchnode1"] 
+  cluster.initial_cluster_manager_nodes: ["opensearchnode1"] 
   #
   # ------------------------------------ Node ------------------------------------
   #

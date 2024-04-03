@@ -8,34 +8,6 @@ This page contains an overview of the Node Segment parameters available in the I
 
 ## KPIs & KQIs
 
-- **Number CM**: Calculated. The number of cable modems associated with the node segment.
-
-- **Number CM Offline**: Calculated. The number of cable modems associated with the node segment that are reporting a status other than "Operational".
-
-- **Percentage CM Offline**: Calculated. The percentage of cable modems associated with the node segment that are reporting a status other than "Operational".
-
-- **Number CM DOCSIS 1.x**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as a version within the 1.x range. Any version within the 1.x range is included. A regular expression is applied to carry out the aggregation.
-
-- **Number CM DOCSIS 2.0**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as 2.0.
-
-- **Number CM DOCSIS 3.0**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as 3.0.
-
-- **Number CM DOCSIS 3.1**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as 3.1.
-
-- **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
-
-  Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the network.
-
-- **Number CM Ping Unreachable**: Calculated. The number of cable modems associated with the node segment that are not reachable via ping from the hosting DataMiner Agent.
-
-  Calculated based on the number of cable modems associated with the node segment that report an RTT equal to "Timeout" or "Wrong IP Format".
-
-- **Percentage CM Ping Unreachable**: Calculated. The percentage of cable modems associated with the node segment that are not reachable via ping from the hosting DataMiner Agent.
-
-  Calculated based on the number of cable modems associated with the node segment that report an RTT equal to "Timeout" or "Wrong IP Format".
-
-- **Number US QAM Ch.**: Calculated. The number of US (upstream) QAM channels associated with the node segment. This is the same number of channels as associated with the corresponding US port.
-
 - **Number CM US QAM Ch. Rx Power OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Rx Power Status equal to "Out of Spec (OOS)".
 
 - **Percentage CM US QAM Ch. Rx Power OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Rx Power Status equal to "Out of Spec (OOS)".
@@ -51,8 +23,6 @@ This page contains an overview of the Node Segment parameters available in the I
 - **Number CM US QAM Ch. Time Offset OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Time Offset Status equal to "Out of Spec (OOS)".
 
 - **Percentage CM US QAM Ch. Time Offset OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Time Offset Status equal to "Out of Spec (OOS)".
-
-- **Number DS QAM Ch.**: Calculated. The number of DS (downstream) QAM channels associated with the node segment. This is the same number of channels as associated with the corresponding DS port.
 
 - **Number CM DS QAM Ch. Rx Power OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS Rx Power Status equal to "Out of Spec (OOS)".
 
