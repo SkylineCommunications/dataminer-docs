@@ -198,4 +198,4 @@ Next, DataMiner IDP will connect to the path and transfer the files to the DataM
 
 ## Tutorials
 
-* [Getting started with configuration backup](xref:IDP_Tutorial_TakeConfigurationBackup)
+- [Getting started with configuration backup](xref:IDP_Tutorial_TakeConfigurationBackup)
