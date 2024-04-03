@@ -13,7 +13,7 @@ uid: DOM_UserFieldDescriptor
 |--------------------|-----------|-----------------|
 | References a single DataMiner user | string | string |
 
-Defines a DOM field that stores the name of a DataMiner user in the form of a `string`. The 'Name' field of a DataMiner is saved, while the 'Full Name' field is used as the display value in an LCA form. The `GroupNames` property can be used to define which groups the user should be part of. The validity and existence of the user is not checked server-side. However, when displayed in the DOM LCA form, a value will be marked invalid when the user does not exist in the DMS or is not part of the defined groups.
+Defines a DOM field that stores the name of a DataMiner user in the form of a `string`. The 'Name' field of a DataMiner user is saved, while the 'Full Name' field is used as the display value in an LCA form. The `GroupNames` property can be used to define which groups the user should be part of. The validity and existence of the user is not checked server-side. However, when displayed in the DOM LCA form, a value will be marked invalid when the user does not exist in the DMS or is not part of the defined groups.
 
 ## Defining the FieldDescriptor
 
