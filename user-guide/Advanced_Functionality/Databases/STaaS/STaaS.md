@@ -100,22 +100,16 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 
 ## TTL
 
-- Time-To-Live (TTL) values are not yet configurable in STaaS. In the table below, you can find the default TTL values for each datatype. Please note that any data types not present in the table do not have a TTL value.
+- Time-To-Live (TTL) values are not yet configurable in STaaS. In the table below, you can find the default TTL values for each datatype.
 
-| Data Type                         | TTL          |
-|-----------------------------------|:------------:|
-| RTTrend                           | 7 days       |
-| AvgTrendShort                     | 3 months     |
-| AvgTrendMedium                    | 2 years      |
-| AvgTrendLong                      | 10 years     |
-| StateChanges                      | 5 years      |
-| Analytics_ChangePoints            | 1 year       |
-| Analytics_ChangePoints_V2         | 1 year       |
-| Analytics_ChangePointAlarmEntries | 8 days       |
-| Analytics_AlarmFocuses            | 14 days      |
-| Analytics_TrendAlarms             | 14 days      |
-| Analytics_AlarmFocuses            | 2 months     |
-| Analytics_PatternMatchOccurrences | 1 year       |
+| Data Type            | TTL          |
+|----------------------|:------------:|
+| RTTrend              | 7 days       |
+| AvgTrendShort        | 3 months     |
+| AvgTrendMedium       | 2 years      |
+| AvgTrendLong         | 10 years     |
+| StateChanges         | 5 years      |
+| SpectrumTraces       | 1 year       |
 
 ## Limitations
 
