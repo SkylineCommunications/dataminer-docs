@@ -79,7 +79,7 @@ Some examples:
 
 - `frame contains “<Field”`: Display frames that contain the text `<FIeld`.
 
-- `name contains 1.3.6.1.4.1.3930.51.7`: Display SNMP requests about OIDs containing 1.3.6.1.4.1.3930.51.7.
+- `snmp.name contains 1.3.6.1.4.1.3930.51.7`: Display SNMP requests about OIDs containing 1.3.6.1.4.1.3930.51.7.
 
 - `data == 3`: Display SNMP set requests.
 

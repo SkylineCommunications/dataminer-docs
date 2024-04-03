@@ -22,7 +22,13 @@ uid: Cube_Feature_Release_10.4.6
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Alarm Console: Enhanced performance when retrieving the side panel data after selecting an alarm [ID_39284]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+For each alarm tab, you can open a side panel in the Alarm Console showing the real-time value and history of a selected alarm.
+
+Because of a number of enhancements, overall performance has now increased when retrieving this side panel data after selecting an alarm.
 
 ### Fixes
 
