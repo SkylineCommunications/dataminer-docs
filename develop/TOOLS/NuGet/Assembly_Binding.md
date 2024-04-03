@@ -20,4 +20,4 @@ To help with debugging, it can be useful to know more about how assemblies are l
 - [Compilation-time assembly binding](xref:Compilation_Time_Assembly_Binding), and
 - [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
 
-Remember that even though compilation succeeds issues could still occur at runtime.
+Remember that even when compilation succeeds, issues could still occur at runtime.
