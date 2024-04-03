@@ -4,48 +4,63 @@ uid: I-DOCSIS_parameters_us_ofdma_ch
 
 # I-DOCSIS parameters – US OFDMA CH
 
-These parameters are currently still under development.
+These parameters are only available in elements running the CISCO CBR-8 CCAP Platform driver.
 
-<!-- This page contains an overview of the US OFDMA CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the US OFDMA CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
-## KPIs & KQIs
+## OFDMA Channels
 
-- **Ch ID**
+- **Interface Name**: Name of the channel retrieved from the Interface Table using the instance ID.
 
-- **OFDMA Lower Freq.**
+- **Channel ID**: Direct value. ID of the channels within the particular MAC interface. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.23.1.23
 
-- **OFDMA Upper Freq.**
+- **Utilization**: Direct value. Utilization of the OFDMA downstream channel. Polled from the CCAP.
+  - OID: 1.3.6.1.4.1.4491.2.1.28.1.23.1.22
 
-- **OFDMA Subcarrier Spacing**
+- **Rx Power**: Direct value. The power of the expected commanded received signal in the channel. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.23.1.3
 
-- **OFDMA Rx US Power**
+## CM OFDMA Channels
 
-- **OFDMA Tx US Power**
+- **Rx Power**: Direct value. The Rx power in a specified OFDMA channel at the RF input port of the CCAP for a given CM. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.4.1.1
 
-- **OFDMA US Mean Rx MER**
+- **Mean Rx MER**: Direct value. The mean of the dB values of the RxMER measurements of all active subcarriers. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.4.1.2
 
-- **OFDMA Rx US Power Fluctuations**
+- **Standard Deviation Rx MER**: Direct value. The standard deviation of the dB values of the RxMER measurements of all active subcarriers. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.4.1.3
 
-- **OFDMA Corrected Ratio**
+- **Rx MER Threshold**: Direct value. The percentile of all active subcarriers in an OFDMA channel at which the ThresholdRxMerValue occurs. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.4.1.4
 
-- **OFDMA Uncorrectable Ratio**
+- **Rx MER Value**: Direct value. The Rx MER value corresponding to the specified percentile value established by the operator. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.4.1.5
 
-- **OFDMA Channel Width**
+- **Rx MER Highest Frequency**: Direct value. The frequency of the highest-frequency subcarrer having RxMER. Polled from the CCAP.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.4.1.6
 
-- **OFDMA Max Number of Subcarriers**
+- **Subcarrier Zero Frequency**: Direct value. The lower edge frequency of the OFDMA upstream channel. Polled from the Cable Modem.
+    - OID: 1.3.6.1.4.1.4491.2.1.28.1.13.1.2
 
-- **OFDMA Microreflections**
+- **Tx Power**: Direct value. The operational transmit power for the associated OFDMA upstream channel.. Polled from the Cable Modem.
+    - OID: 	1.3.6.1.4.1.4491.2.1.28.1.13.1.10
 
-- **OFDMA US Mean StdDev Rx MER**
+## CM OFDMA IUC
 
-- **OFDMA US T4timeouts**
+- **OFDMA IUC Corrected Post-FEC**: Calculated. The ratio of all corrected packets over all transferred packets for the given OFDMA IUC. Polled from the CCAP.
 
-## System parameters
+  Calculated as follows: Corrected Ratio = (Corrected Difference \* 100) / (Total Codewords Difference).
 
-- **ID**
+  - Corrected Codewords: OID 1.3.6.1.4.1.4491.2.1.28.1.5.1.2
 
-- **Frequency**
+  - Total Codewords: OID 1.3.6.1.4.1.4491.2.1.28.1.5.1.1
 
-- **Width**
+- **OFDMA IUC Uncorrected Post-FEC**: Calculated. The ratio of all uncorrected packets over all transferred packets for the given OFDMA IUC. Polled from the CCAP.
 
-- **Modulation** -->
+  Calculated as follows: Uncorrectable Ratio = (Uncorrected Difference \* 1000,000) / (Total Codewords Difference).
+
+  - Uncorrected Codewords: OID 1.3.6.1.4.1.4491.2.1.28.1.5.1.3
+
+  - Total Codewords: OID 1.3.6.1.4.1.4491.2.1.28.1.5.1.1

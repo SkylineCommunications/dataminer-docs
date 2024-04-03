@@ -47,10 +47,10 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 
 - [US QAM CH](xref:I-DOCSIS_parameters_us_qam_ch)
 
-<!-- - [DS OFDM CH](xref:I-DOCSIS_parameters_ds_ofdm_ch)
+- [DS OFDM CH](xref:I-DOCSIS_parameters_ds_ofdm_ch)
 
 - [US OFDMA CH](xref:I-DOCSIS_parameters_us_ofdma_ch)
- -->
+
 - [Cable Modem](xref:I-DOCSIS_parameters_cable_modem)
 
 - [Thresholds](xref:I-DOCSIS_parameters_thresholds)

@@ -118,10 +118,10 @@ items:
                 topicUid: I-DOCSIS_parameters_cm_us_qam_ch
               - name: US QAM CH
                 topicUid: I-DOCSIS_parameters_us_qam_ch
-              #                - name: DS OFDM CH
-              #                  topicUid: I-DOCSIS_parameters_ds_ofdm_ch
-              #                - name: US OFDMA CH
-              #                  topicUid: I-DOCSIS_parameters_us_ofdma_ch
+              - name: DS OFDM CH
+                topicUid: I-DOCSIS_parameters_ds_ofdm_ch
+              - name: US OFDMA CH
+                topicUid: I-DOCSIS_parameters_us_ofdma_ch
               - name: Cable Modem
                 topicUid: I-DOCSIS_parameters_cable_modem
               - name: Thresholds
