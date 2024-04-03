@@ -16,4 +16,4 @@ Add the following two additional shape data fields to a shape that opens a card 
 | Options          | *NewCardVariable*                                                                                                                                                                                   |
 
 > [!NOTE]
-> - This feature is not operational within Mobile Visual Overviews (such as in the Monitoring app, Dashboards and Low code apps).
+> This feature is not operational within Mobile Visual Overviews (such as in the Monitoring app, Dashboards and Low code apps).
