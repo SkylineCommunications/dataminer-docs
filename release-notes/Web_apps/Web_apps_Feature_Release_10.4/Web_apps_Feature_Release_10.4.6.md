@@ -30,6 +30,14 @@ Because of a number of enhancements made to the waffle menu, overall performance
 
 ### Fixes
 
+#### Dashboards app: 'DATA USED IN DASHBOARD' section would not be hidden when empty [ID_39274]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, when a dashboard did not contain any components that used data, the *DATA* tab would incorrectly still contain a *DATA USED IN DASHBOARD* section.
+
+From now on, when empty, the *DATA USED IN DASHBOARD* section will no longer be displayed.
+
 #### Dashboards app & Low-Code Apps - Template editor: Save button would not become available when you enabled a setting in an override [ID_39290]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
