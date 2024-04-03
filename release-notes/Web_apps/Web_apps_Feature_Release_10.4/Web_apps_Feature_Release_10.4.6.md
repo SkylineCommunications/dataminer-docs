@@ -65,3 +65,9 @@ When a *Time range* component had custom quick pick buttons configured, up to no
 When a *Node edge graph* component contained multiple queries, including one that was linked to a feed, in some rare cases, the data would incorrectly get fetched multiple times.
 
 Also, when a *Node edge graph* component was rendered for the first time, the edge arrows would incorrectly not appear.
+
+#### Dashboards app: Problem with web APIs when adding or removing multiple dashboards simultaneously [ID_39304]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When multiple dashboards were added or removed simultaneously, in some cases, the web APIs could become unresponsive.
