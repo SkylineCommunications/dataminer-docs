@@ -98,6 +98,25 @@ The data is encrypted both at rest and in transit.
 
 If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availability of 99.90%. With [GRS](#data-location-and-redundancy), it has an expected availability of 99.95%. For more information, please contact <sales@skyline.be>.
 
+## TTL
+
+- Time-To-Live (TTL) values are not yet configurable in STaaS. In the table below, you can find the default TTL values for each datatype. Please note that any data types not present in the table do not have a TTL value.
+
+| Data Type                         | TTL          |
+|-----------------------------------|:------------:|
+| RTTrend                           | 7 days       |
+| AvgTrendShort                     | 3 months     |
+| AvgTrendMedium                    | 2 years      |
+| AvgTrendLong                      | 10 years     |
+| StateChanges                      | 5 years      |
+| Analytics_ChangePoints            | 1 year       |
+| Analytics_ChangePoints_V2         | 1 year       |
+| Analytics_ChangePointAlarmEntries | 8 days       |
+| Analytics_AlarmFocuses            | 14 days      |
+| Analytics_TrendAlarms             | 14 days      |
+| Analytics_AlarmFocuses            | 2 months     |
+| Analytics_PatternMatchOccurrences | 1 year       |
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
@@ -108,8 +127,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 In addition, the following **other limitations** currently apply:
 
-- TTL is only supported for trending datatypes. The TTL values are not configurable and changing the values in CUBE will not have any effect.
-  The values are: RTTrending - 7 days, AvgTrendShort - 3 months, AvgTrendMedium - 2 years, and AvgTrendLong - 10 years.
+- Custom configuration of TTL values.
 
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
 
