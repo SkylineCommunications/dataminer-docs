@@ -12,7 +12,7 @@ This solution empowers users to swiftly identify network issues, assess latency 
 
 After the [installation of the DITT Package](xref:Installing_DITT), and with a few [configurations](xref:Working_With_DITT) in any Visio, users can have ping or trace any device derictly from cube.
 
-The DITT also allow users to [open PuTTY](xref:Open_putty_with_DITT), assuming it's installed on their system, with a simple configuration within DITT(xref:Open_putty_with_DITT). This functionality provides users with effortless access to PuTTY from the DITT interface, facilitating SSH connections and remote network device management.
+The DITT also allow users to [open PuTTY](xref:Open_Putty_with_DITT), assuming it's installed on their system, with a simple configuration within DITT. This functionality provides users with effortless access to PuTTY from the DITT interface, facilitating SSH connections and remote network device management.
 
 > [!NOTE]
 > To [configure the DITT PuTTY button](xref:Working_With_DITT), the pre-installation of the package is mandatory.
