@@ -11,7 +11,7 @@ A firewall policy that is too lax may allow adversaries to attack internal servi
 This BPA test verifies that no excessive ports are open in the Windows firewall.
 
 > [!NOTE]
-> This BPA has been replaced by the [Security Advisory BPA](xref:BPA_Security_Advisory), available from 10.4.5 onwards.
+> This BPA test has been replaced by the [Security Advisory](xref:BPA_Security_Advisory) BPA test, available from DataMiner 10.4.5 onwards.
 
 ## Metadata
 
