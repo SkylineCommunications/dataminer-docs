@@ -612,6 +612,8 @@ items:
                     topicUid: GQI_GQIEditableHeader
                   - name: GQIEditableRow
                     topicUid: GQI_GQIEditableRow
+                  - name: GQILogLevel
+                    topicUid: GQI_GQILogLevel
                   - name: GQIPage
                     topicUid: GQI_GQIPage
                   - name: GQIRow
