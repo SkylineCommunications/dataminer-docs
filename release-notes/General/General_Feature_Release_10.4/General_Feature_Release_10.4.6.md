@@ -22,7 +22,13 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
-*No new features have been added yet.*
+#### Storage as a Service: Support for data migration towards a STaaS system using a proxy server [ID_39313]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+As from DataMiner version 10.4.5, Storage as Service (STaaS) supports the use of a proxy server.
+
+From now on, it is also possible to migrate data towards a STaaS system that is using a proxy server.
 
 ## Changes
 
