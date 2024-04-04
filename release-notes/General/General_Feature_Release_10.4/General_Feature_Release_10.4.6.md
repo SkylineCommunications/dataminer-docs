@@ -74,6 +74,14 @@ From now on, it is also possible to migrate data towards a STaaS system that is 
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
+#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
+
+From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
 ### Fixes
 
 *No fixes have been added yet.*
