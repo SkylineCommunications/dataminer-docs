@@ -396,7 +396,9 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 - **Release version**: To be determined.
 
 > [!IMPORTANT]
-> This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
+>
+> - This feature does not support polling of IPv6 addresses. In case IPv6 > addresses are polled on your DMA, do not activate this feature.
+> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET) and [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) calls do not take this soft-launch option into account yet. As a result SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always being executed by WinSNMP.
 
 ### SrmOwnServices
 
