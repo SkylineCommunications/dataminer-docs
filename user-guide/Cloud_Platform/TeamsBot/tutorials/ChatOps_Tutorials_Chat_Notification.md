@@ -63,4 +63,4 @@ Learn more about this package [here](https://github.com/SkylineCommunications/Ch
 
    ![ChatIntegration Examples Teams chat](~/user-guide/images/chatops_notification_03_003.png)
 
-Good job! That went easy, right? Continue with [Adaptive Card notifications with custom buttons](xref:ChatOps_Tutorials_Custom_Buttons) which is a slightly more advanced tutorial following up from here where you will learn on how to enable powerful two-way interactions using buttons with custom commands.
+Good job! That went easy, right? Continue with [Adaptive Card notifications with custom buttons](xref:ChatOps_Tutorials_Custom_Buttons). This is a slightly more advanced tutorial in which you will learn how to enable powerful two-way interactions using buttons with custom commands.
