@@ -4,12 +4,12 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-At present, you can configure actions for two types of events in the DataMiner Low-Code Apps:
+You can configure actions for different types of events in the DataMiner Low-Code Apps. These are the main types:
 
 - *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
 
-For each of these events, you can configure actions as detailed below.
+Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
 
 > [!TIP]
 > Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
@@ -117,7 +117,7 @@ Examples:
 
 - If you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*. Or from DataMiner 10.2.10/10.3.0 onwards, you can select *Fetch the data* for any component that uses query data as input, so that users can manually refresh the displayed data.
 
-- From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35933 -->, if you add a line chart component and a button component, you can configure this action on the button and select the option *Set timespan*, so that users can use the button to set the timespan for the line chart. The action has two arguments, To and From, which can be either set to a static value or linked to a numeric value feed.
+- If you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*<!-- RN 39254 -->, so that users can use the button to set the viewport for the line chart. The action has two arguments, *To* and *From*, which can be either set to a static value or linked to a numeric value feed. Available from DataMiner 10.3.5/10.4.0 onwards. Prior to DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5, this option is named *Set timespan*<!-- RN 35933 -->.
 
 ## Showing a context menu
 
