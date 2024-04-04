@@ -43,7 +43,7 @@ var connection = engine.GetUserConnection();
 var setId = $"ApiTokenSubscription_{Guid.NewGuid()}"
 
 // Create the filter for the ApiToken events, only enabled tokens should match
-var filter = ApiTokenExposers.IsDisabled.Equal(true);
+var filter = ApiTokenExposers.IsDisabled.Equal(false);
 var subscriptionFilter = new SubscriptionFilter<ApiTokenChangedEventMessage, ApiToken>(filter);
 
 // Attach a callback when a new event message arrives
