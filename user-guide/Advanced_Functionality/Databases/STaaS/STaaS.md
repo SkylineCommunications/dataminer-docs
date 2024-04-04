@@ -121,7 +121,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 In addition, the following **other limitations** currently apply:
 
-- Custom configuration of TTL values.
+- Custom configuration of TTL values are not supported yet.
 
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
 
