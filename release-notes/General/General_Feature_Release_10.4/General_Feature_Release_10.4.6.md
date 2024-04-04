@@ -22,6 +22,40 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
+#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, the user-defined API manager will send out an event whenever an `ApiToken` or `ApiDefinition` object is created, update or deleted.
+
+| Event name | Description |
+|---|---|
+| ApiTokenChangedEventMessage      | Generated when an [ApiToken](xref:UD_APIs_Objects_ApiToken) is created, updated, or deleted. |
+| ApiDefinitionChangedEventMessage | Generated when an [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
+
+When subscribing to event messages, you can use the `SubscriptionFilter` to only receive the messages matching a specific filter. See the following example.
+
+```csharp
+// In this example, you will take the Connection object from the script's Engine object
+var connection = engine.GetUserConnection();
+
+// Create a random set ID that identifies our subscription
+var setId = $"ApiTokenSubscription_{Guid.NewGuid()}"
+
+// Create the filter for the ApiToken events, only enabled tokens should match
+var filter = ApiTokenExposers.IsDisabled.Equal(true);
+var subscriptionFilter = new SubscriptionFilter<ApiTokenChangedEventMessage, ApiToken>(filter);
+
+// Attach a callback when a new event message arrives
+connection.OnNewMessage += (sender, args) =>
+{
+    // Handle the events
+}
+
+// Subscribe
+connection.AddSubscription(setId, subscriptionFilter);
+```
+
 #### Storage as a Service: Support for data migration towards a STaaS system using a proxy server [ID_39313]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
