@@ -12,7 +12,7 @@ The User-Defined APIs manager sends out various events when actions are done on 
 | ApiDefinitionChangedEventMessage  | Generated when a [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
 
 > [!NOTE]
-> These event messages are available from DataMiner 10.4.5/10.5.0 onwards.
+> These event messages are available from DataMiner 10.4.6/10.5.0 onwards.
 
 ## Filtering CRUD events
 
