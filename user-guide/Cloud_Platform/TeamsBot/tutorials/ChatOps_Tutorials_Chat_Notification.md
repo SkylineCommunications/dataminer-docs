@@ -19,7 +19,7 @@ Estimated duration: 15 minutes.
 
 ## Overview
 
-- [Step 1: Deploy the ChatIntegration Examples package from the Catalog](#step-1-deploy-the-chatintegration-examples-package-from-the-catalog)
+- [Step 1: Deploy the ChatIntegration Examples package from the Catalog](#step-1-deploy-the-chat-integration-examples-package-from-the-catalog)
 - [Step 2: Fetch the private chat for a user and send a notification](#step-2-fetch-the-private-chat-for-a-user-and-send-a-notification)
 - [Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#step-3-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
 

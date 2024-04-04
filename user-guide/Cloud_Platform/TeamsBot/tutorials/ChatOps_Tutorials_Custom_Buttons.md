@@ -17,7 +17,7 @@ Estimated duration: 15 minutes.
 ## Overview
 
 - [Step 1: Make sure you followed the Chat notifications tutorial](#step-1-follow-the-chat-notifications-tutorial)
-- [Step 2: Deploy the CustomCommand Examples package from the Catalog and configure the scripts](#step-2-deploy-the-customcommand-examples-package-from-the-catalog-and-configure-theiscripts)
+- [Step 2: Deploy the CustomCommand Examples package from the Catalog and configure the scripts](#step-2-deploy-the-customcommand-examples-package-from-the-catalog-and-configure-the-scripts)
 - [Step 3: Fetch the Teams and channels of a Team](#step-3-fetch-the-teams-and-channels-of-a-team)
 - [Step 4: Adjust the existing Correlation rule triggered by a specific alarm to send a channel notification with custom buttons in an Adaptive Card instead](#step-4-adjust-the-existing-correlation-rule-triggered-by-a-specific-alarm-to-send-a-channel-notification-with-custom-buttons-in-an-adaptive-card-instead)
 - [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notification)
