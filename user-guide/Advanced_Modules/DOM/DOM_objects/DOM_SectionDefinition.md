@@ -106,7 +106,7 @@ domInstance.AddOrUpdateListFieldValue(sectionDefinitionId, fieldDescriptorId, mu
 
 ## CustomSectionDefinition properties
 
-In the table below, you can the properties of the `CustomSectionDefinition` object (the base `SectionDefinition` object only exposes its ID). The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
+In the table below, you can find the properties of the `CustomSectionDefinition` object (the base `SectionDefinition` object only exposes its ID). The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
 
 > [!NOTE]
 > From DataMiner 10.3.2/10.4.0 onwards, the `CustomSectionDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
