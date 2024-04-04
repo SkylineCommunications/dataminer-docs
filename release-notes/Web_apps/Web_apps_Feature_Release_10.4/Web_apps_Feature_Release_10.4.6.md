@@ -66,6 +66,14 @@ When a *Node edge graph* component contained multiple queries, including one tha
 
 Also, when a *Node edge graph* component was rendered for the first time, the edge arrows would incorrectly not appear.
 
+#### Dashboards app & Low-Code Apps - Line & area chart component: Problem when displaying trend data of aggregation parameters [ID_39300]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, trend charts would not display trend data of aggregation parameters correctly. The labels would be incorrect and all trend lines would have the same color.
+
+Also, a minor legend issue has now been fixed.
+
 #### Dashboards app: Problem with web APIs when adding or removing multiple dashboards simultaneously [ID_39304]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
