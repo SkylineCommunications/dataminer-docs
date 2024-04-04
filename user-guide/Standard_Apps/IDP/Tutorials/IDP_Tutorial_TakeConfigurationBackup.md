@@ -28,7 +28,7 @@ Expected duration: 20 minutes.
 - A shared folder must be accessible from the system to store the backups.
 
 > [!IMPORTANT]
-> Do not use a DaaS system to follow this tutorial. On DaaS systems, it is not possible to configure a shared folder, or access a shared folder outside the DaaS system.
+> Do not use a DaaS system to follow this tutorial. On DaaS systems, it is not possible to configure a shared folder or access a shared folder outside the DaaS system.
 
 ## Overview
 
@@ -77,9 +77,9 @@ Instead of creating the CI Type from scratch, you will generate it based on an e
 
 ## Step 2: Create an element and manage it
 
-1. Create an element with the deployed connector.
+1. [Create an element](xref:Adding_elements) that uses the connector you deployed in the previous step.
 
-1. Go to *Inventory* > *Unmanaged*.
+1. In the IDP app, go to *Inventory* > *Unmanaged*.
 
 1. Click *Refresh* to refresh the table.
 
