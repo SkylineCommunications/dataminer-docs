@@ -2,30 +2,25 @@
 uid: Installing_DITT
 ---
 
-# Installing DataMiner IT Tools (DITT)
+# Installing DataMiner IT Tools
 
 ## Prerequisites
 
-- DataMiner version 10.3.6 or higher.
+- DataMiner version 10.3.6 or higher
 
-- A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
 ## Deploying DITT
 
 1. Look up the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959) in the DataMiner Catalog.
 
-1. Click the *Deploy* button.
+1. Click *Deploy*.
 
-1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
+1. Select the target DataMiner System, and confirm the deployment. The package will be pushed to the DataMiner System.
 
-   If your DataMiner System does not contain a DITT element yet, a new DITT element is automatically created when the package is installed.
-
-> [!NOTE]
-> To update the Planned Maintenance tool, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created, as one should already exist in your DMS.
-
+   If your DataMiner System does not contain a DITT element yet, a new DITT element will automatically be created when the package is installed.
 
 > [!NOTE]
-> To [configure the DITT in any Visio](xref:Working_With_DITT), the pre-installation of the package is mandatory.
-
-
-
+>
+> - To update the Planned Maintenance tool, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).
+> - Before you can [configure DITT in a visual overview](xref:Working_With_DITT), you first have to [install the DITT package](xref:Installing_DITT).

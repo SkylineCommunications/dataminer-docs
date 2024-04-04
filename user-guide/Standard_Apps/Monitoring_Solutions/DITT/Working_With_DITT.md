@@ -2,52 +2,43 @@
 uid: Working_With_DITT
 ---
 
-# Implementing the DITT in an external Visio
+# Implementing DITT in a visual overview
 
 ## Configuration
 
 > [!NOTE]
-> To configure the DITT in any Visio, the [installation] (xref:Installing_DITT) of the DITT package is mandatory.
+> Before you can configure DITT in a visual overview, you first have to [install the DITT package](xref:Installing_DITT).
 
+1. Download the Visio file of the DITT package, located in `C:\GIT\Visios\Customers\Protocols\Skyline Communications\Skyline\DataMiner IT Tools`.
 
-1. Download the Visio of the DITT package, located in `C:\GIT\Visios\Customers\Protocols\Skyline Communications\Skyline\DataMiner IT Tools`.
+1. Copy and paste the *Ping* and *Tracert* buttons from the *Tools* page of the DITT Visio file to your own Visio file.
 
-1. Copy and paste the Ping and Tracert buttons from the DITT Visio located in *Tools* Page into any Visio diagram (User's Visio).
+   ![Ping and Tracert buttons](~/user-guide/images/DITT_Buttons.png)
 
-![Ping and Tracert Buttons](~/user-guide/images/DITT_Buttons.png)
+1. Copy and paste the *Ping* and *Tracert* pages from the DITT Visio file to your own Visio file.
 
+   ![Ping and Tracert pages](~/user-guide/images/DITT_Pages.png)
 
+1. Copy and paste the *InitVar* value from the *Tools* page to the page on which the buttons will be used.
 
-3. Copy and paste the pages Ping and Tracert from the DITT visio to the User's Visio.
+   ![DITT InitVar](~/user-guide/images/DITT_Init_Vars.png)
 
-![Ping and Tracert Pages](~/user-guide/images/DITT_Pages.png)
+## Configuration of the IP address
 
-4. Finally, copy and paste the Init Var value from the *Tools* page to the page where the buttons will be utilized.
-
-![DITT Init Vars](~/user-guide/images/DITT_Init_Vars.png)
-
-
-## IP Address Configuration
-
-Users need to modify the configuration of the DITT ping and traceroute buttons by adjusting their respective parameters. This modification can be achieved by inserting either a placeholder or a default value inside the _parameter3 Value field in the desired buutton.
-
-## Configuration
+Modify the configuration of the DITT *Ping* and *Tracert* buttons by adjusting their respective parameters. To do so, set the *_parameter3* field of the button in question to either a placeholder or a default value.
 
 > [!NOTE]
-> This example is going to use the 8.8.8.8 Address, instead of the localhost default address.
+> In the following example, IP address 8.8.8.8 is used instead of the default address "localhost".
 
-1. Change the _parameter3 value to a valid IP Addres or a Placeholder.
+1. In the *_parameter3* field, enter either a valid IP address or a placeholder.
 
-![DITT Change IP Address](~/user-guide/images/DITT_IP_Address.png)
+   ![DITT IP address](~/user-guide/images/DITT_IP_Address.png)
 
+1. Check whether, in the *Execute* data field of the button in question, the value following `OperationsArguments=` has changed.
 
-2. Check if the value also changed in the Data shape *Execute* of the desired buutton, after the equals of OperationsArguments.
+   ![DITT check change in IP address](~/user-guide/images/DITT_IP_Address_Check.png)
 
-![DITT Check change in IP Address](~/user-guide/images/DITT_IP_Address_Check.png)
-
-
-3. If both values are equal, the process is finished, if not, perform the neccesary changes.
-
+1. If both values are equal, the process is finished. If not, make the necessary changes.
 
 > [!NOTE]
-> The default IP Address for the DITT ping and traceroute is set to the localhost address.
+> The IP address of the *Ping* and *Tracert* buttons is by default set to "localhost".
