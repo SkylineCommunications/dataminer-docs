@@ -92,30 +92,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      > [!NOTE]
      > If you enable this setting, real-time updates will only be applied for the data sources and operators listed on the [Query updates](xref:Query_updates) page. Prior to DataMiner 10.4.0/10.4.3<!-- RN 37372 -->, data will only be updated every 30 seconds, and this will only be applied for GQI queries using the [Get parameter table by ID](xref:Get_parameter_table_by_ID) data source.
 
-   - *Events*: Available from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->. Allows you to [configure actions](xref:LowCodeApps_event_config) to be performed when certain events occur in the timeline component in the context of a low-code app.
-
-     The following events are supported:
-
-     | Event | Action that triggers the event |
-     |---|---|
-     | Range select | Selecting a section of the timeline using the right mouse button. |
-     | Item resize  | Extending or shrinking an item on the timeline. |
-     | Item move    | Changing the time slot of an item on the timeline. |
-     | Group change | Moving an item on the timeline to another group. |
-
-     ![Events](~/user-guide/images/Events_Setting.png)<br/>*Events setting in DataMiner 10.4.5*
-
-     > [!NOTE]
-     >
-     > - The above-mentioned events can only be triggered when they have actions configured. For example, an item will only be resized when at least one action has been configured for the *Item resize* event.
-     > - While the *Range select* event is timeline-based, other events can have a different configuration for each query on the timeline. For example, if there are multiple queries on the timeline, and you move an item belonging to a certain query, the timeline will look at the configuration of actions for the *On move* event of that specific query to decide what actions to execute.
-
-     > [!TIP]
-     > When interacting with the timeline, you can now use the following keys:
-     >
-     > - *ESCAPE*: When you click this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
-     > - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
-     > - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, then keep this key pressed.
+   - *Events*: See [Configuring events and actions](#configuring-events-and-actions).
 
    - *Highlight range > Use highlighting*: Determines whether a configured time range in the timeline component is highlighted. When this option is enabled, the section of the timeline that falls within the set time range receives a different background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that (partially) occur within this set time range are displayed with normal opacity, while those outside the time range are displayed with lowered opacity. Disabled by default<!--RN 33639-->.
 
@@ -189,23 +166,53 @@ In read mode, you can manipulate the timeline component to navigate through the 
 > - You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
 > - You can move left or right by sliding one finger across the component.
 
-## Actions
+## Configuring events and actions
 
-From DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, the following *Execute component actions* can be configured when the timeline component is used in a low-code app:
+From DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, in the component options for a timeline component in a low-code app, you can configure the following **events** to trigger actions:
 
-| Action | Function |
-|--------|----------|
-| Fetch the data | Fetches the data for the component.<br>This action was already available as from Dataminer 10.2.10/10.3.0 for all components using query data as input. |
-| Highlight time range | Highlights a range on the timeline component.<br>The highlighted section will expose a feed in the form of a *Timespan* object. If multiple sections are highlighted, the feed will contain an array of *Timespan* objects. |
-| Clear highlights | Clears all highlights set by *Highlight time range* actions.<br>Prior to DataMiner 10.4.5, highlights could already be configured using the *Highlight range* setting. This setting is still available and can be used in combination with highlights set by actions. Its behavior remains the same: a highlight set by the *Highlight range* setting will not expose a feed and it will not be cleared by the *Clear highlight* action. |
-| Set viewport | Sets the viewport of the timeline to a certain time range. |
+- *On Range select*: Triggered when a section of the timeline is selected using the right mouse button.
+
+- *On item resize*: Triggered when an item on the timeline is resized.
+
+- *On item move*: Triggered when the time slot of an item on the timeline is changed.
+
+- *On group change*: Triggered when an item on the timeline is moved to another group.
+
+![Events](~/user-guide/images/Events_Setting.png)<br/>*Events setting in DataMiner 10.4.5*
 
 > [!NOTE]
-> Before, it was already possible to [link the value of certain inputs to a feed](xref:LowCodeApps_event_config). From now on, you will be able to link these values to information provided by the event in a similar way. All timeline events expose information relevant to the event in question. The following information is provided for each event:
 >
-> - *Range select*: Provides a *from* and a *to* property, both of type *Timespan*.
-> - *Item resize*: Provides an old and a new *Timespan* pair, indicating the start and the end of the item before and after the resize event. it also provides information about the resized item in the form of a *Query row* object.
-> - *Item move*: Provides the same information as the *Item resize* event.
-> - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
+> - These events can only be triggered when they have actions configured. For example, an item will only be resized when at least one action has been configured for the *Item resize* event.
+> - While the *On range select* event is timeline-based, other events can have a different configuration for each query on the timeline. For example, if there are multiple queries on the timeline, and you move an item belonging to a certain query, the timeline will look at the configuration of actions for the *On move* event of that specific query to decide which actions to execute.
+
+You can configure the following **[component actions](xref:LowCodeApps_event_config#executing-a-component-action)** to be triggered by these events:
+
+- *Fetch the data*: Fetches the data for the component. This action is already available as from DataMiner 10.2.10/10.3.0 for all components using query data as input.
+
+- *Highlight time range*: Highlights a range on the timeline component. The highlighted section will expose a feed in the form of a *Timespan* object. If multiple sections are highlighted, the feed will contain an array of *Timespan* objects.
+
+- *Clear highlights*: Clears all highlights set by *Highlight time range* actions.
+
+- *Set viewport*: Sets the viewport of the timeline to a certain time range.
+
+> [!NOTE]
+> Prior to DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5, highlights can be configured using the *Highlight range* setting. This setting is still available in later DataMiner versions and can be used in combination with highlights set by actions. Its behavior remains the same: a highlight set by the *Highlight range* setting will not expose a feed and it will not be cleared by the *Clear highlight* action.
+
+The value of input for events can be configured to be **linked to feeds**. From DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5, you can also **link the input to information provided by the event** itself. All timeline events expose information relevant to the event in question. The following information is provided for each event:
+
+- *Range select*: Provides a *from* and a *to* property, both of type *Timespan*.
+
+- *Item resize*: Provides an old and a new *Timespan* pair, indicating the start and the end of the item before and after the resize event. It also provides information about the resized item in the form of a *Query row* object.
+
+- *Item move*: Provides the same information as the *Item resize* event.
+
+- *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
 
 ![Event info](~/user-guide/images/Event_Info_Configured.png)<br/>*Event editor in DataMiner 10.4.5*
+
+> [!TIP]
+> When interacting with the timeline, from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, you can use the following keys:
+>
+> - *ESCAPE*: When you press this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
+> - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
+> - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, keep this key pressed.
