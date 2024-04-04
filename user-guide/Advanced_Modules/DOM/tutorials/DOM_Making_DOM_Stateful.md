@@ -49,6 +49,10 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the DOM Editor package to your DMA.
 
+1. Go to <https://catalog.dataminer.services/details/package/5995>.
+
+1. Click the *Deploy* button to deploy the Kata Dom package to your DMA.
+
 1. [Open DataMiner Cube](xref:Using_the_desktop_app), go to *Apps* > *Automation*, and check whether the following scripts have become available:
 
    ![Dom Editor scripts](~/user-guide/images/DOM_Making_DOM_Stateful_domeditorscripts.png)
