@@ -91,7 +91,7 @@ To handle the credentials, follow these steps:
    - **Password**: Enter your personal access token.
 
      > [!NOTE]
-     > Select *remember password* to avoid entering your PAT each time.
+     > Select *remember password* to avoid entering your PAT each time. If the pop-up window keeps getting shown anyway, refer to [Issues with credentials](#issues-with-credentials) for help.
 
 #### Editing credentials
 
