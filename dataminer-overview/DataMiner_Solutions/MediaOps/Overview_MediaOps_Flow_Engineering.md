@@ -7,7 +7,9 @@ uid: Overview_MediaOps_Flow_Engineering
 Unlike the other MediaOps apps, Flow Engineering is not an application intended for end users to interact with. It is the engine running in the background to successfully execute requests to set up flows in the network between a flow sender and a flow receiver. It is responsible for three things:
 
 - **Flow path calculation**: Flow Engineering first calculates the path between the source and the destination of the requested flow. For this, it runs a Dijkstra algorithm on the elements in DataMiner and the physical connectivity defined between them (stored in DataMiner's DCF database)
+
 - **Flow execution**: When the flow path has been calculated, all elements in the path need to be informed of the request to set up the flow. This is done using a standardized message sent to the elements. The connector is then responsible for making sure that the flow is correctly set up on its underlying product.
+
 - **Flow documentation**: The result of the path calculation is also stored, so it can be used for monitoring and other purposes.
 
 ![Flow Engineering UI](~/dataminer-overview/images/flowengineering_screenshot.png)

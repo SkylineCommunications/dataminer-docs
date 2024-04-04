@@ -8,12 +8,6 @@ DataMiner solutions represent **pre-configured implementations that operate on t
 
 Accessible through the [DataMiner Catalog](xref:About_the_Catalog_module), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, Automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
 
-## Updates
-
-Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the DataMiner Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
-
-However, keep in mind that if you modify components of a solution, these will be overwritten when you deploy an update of the solution. Consequently, if you intend to tailor solutions to your unique context, we recommend that you **create customized versions** by copying (or branching) them and then applying necessary adjustments, thereby preserving the original solution for future updates.
-
 ## Solution apps
 
 DataMiner Solutions can include two types of applications: those designed by Skyline to be used "as is" with minimal configuration (DataMiner applications), and sample applications provided for DevOps teams as illustrative examples (sample applications).
@@ -33,6 +27,12 @@ Sample applications are primarily utilized for use cases requiring extensive cus
 The icons of sample applications are not marked with a DataMiner icon.
 
 ![icon of a sample application](~/dataminer-overview/images/FacilityAssetManager.png)
+
+## Available solutions
+
+These are the main solutions that are currently available:
+
+- [dataminer.MediaOps](xref:Overview_dataminer_MediaOps)
 
 ## Common data model
 
@@ -59,3 +59,9 @@ Key features:
 ### High-level overview
 
 ![MediaOps high-level data model](~/dataminer-overview/images/MediaOps_data_model_high_level.png)
+
+## Updates
+
+Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the DataMiner Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
+
+However, keep in mind that if you modify components of a solution, these will be overwritten when you deploy an update of the solution. Consequently, if you intend to tailor solutions to your unique context, we recommend that you **create customized versions** by copying (or branching) them and then applying necessary adjustments, thereby preserving the original solution for future updates.

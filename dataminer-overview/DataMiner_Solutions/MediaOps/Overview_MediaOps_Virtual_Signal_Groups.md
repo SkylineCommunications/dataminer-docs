@@ -7,10 +7,15 @@ uid: Overview_MediaOps_Virtual_Signal_Groups
 The Virtual Signal Groups app is used by media engineers to manage sources and destinations from any device and a variety of transport technologies in large-scale media networks. The app allows users to:
 
 - **Create flow senders and flows receivers**, either by filling in the sender or receiver details manually, or by automatically exporting them through a supported connector.
+
 - **Bundle multiple flow senders** into a source, **or multiple flow receivers** into a destination. These sources and destinations are referred to generally as "Virtual Signal Groups". Creating virtual signal groups ensures that operators can route multiple flows, potentially coming from different devices, in one go.
+
 - **Automatically generate senders, receivers, sources and destinations**, either through a supported connector (e.g. for NMOS compatible devices) or from a CSV file.
+
 - **Define a level structure** to be used when adding flow senders or receivers to a virtual signal group.
+
 - Organize virtual signal groups into **areas and domains**. This allows operators to more easily navigate their control surfaces and find the relevant sources and destinations for their workflows.
+
 - **Configure the desired behavior** of the system **when connecting sources and destinations**. This is done by defining virtual signal group types and specifying a workflow to be executed when connecting a source of a certain type to a destination of a certain type.
 
 ![Virtual Signal Groups app UI](~/dataminer-overview/images/Screenshot_VSG_app.png)<br>
@@ -42,13 +47,17 @@ Once the individual senders and receivers have been described, users can group m
 Virtual signal groups have the following metadata:
 
 - **Administrative state**: Determines whether the source or destination gets displayed on the [control surface](xref:Overview_MediaOps_Control_Surface). This allows you to control when operators should be able to use them for connections.
+
 - **Operational state**: Can be used to indicate to operators whether a source or destination is currently operational.
+
 - **Button label**: Allows you to provide a short-form name for the virtual signal group, to be displayed on a control surface.
 
 Senders, receivers, sources, and destinations can be created manually through forms, or they can be generated automatically in one of the following ways:
 
 - From an **element**: For [supported connectors](xref:Overview_MediaOps_supported_connectors), it is possible to automatically create senders, receivers, and optionally sources and destinations for a specific element with all the necessary information.
+
 - From a **CSV file**: Users can also supply a CSV file with a list of senders and receivers or sources and destinations to automatically create them. By combining this with the export to CSV functionality, this can also be used for bulk editing of existing instances.
+
 - From a DataMiner **Automation script**: Developers can also create senders, receivers, sources, and destinations from code in an Automation script, allowing for automatic creation in many different scenarios and use cases.
 
 ## Levels
