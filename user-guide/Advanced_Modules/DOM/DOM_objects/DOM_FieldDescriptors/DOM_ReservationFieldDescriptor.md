@@ -14,7 +14,7 @@ uid: DOM_ReservationFieldDescriptor
 | References a single SRM booking | Guid | Guid |
 | References one or more SRM bookings | List\<Guid\> | Guid (ListValueWrapper) |
 
-Defines a DOM field that references an SRM booking (`ReservationInstance`) by storing the ID of that booking in the form of a `Guid`. The validity and existence of the booking is not checked server-side. However, when displayed in the DOM LCA form, a value will be marked invalid when the booking does not exist in the DMS.
+Defines a DOM field that references an SRM booking (`ReservationInstance`) by storing the ID of that booking in the form of a `Guid`. The validity and existence of the booking is not checked server-side. However, when displayed in the DOM low-code app form, a value will be marked invalid when the booking does not exist in the DMS.
 
 ## Defining the FieldDescriptor
 

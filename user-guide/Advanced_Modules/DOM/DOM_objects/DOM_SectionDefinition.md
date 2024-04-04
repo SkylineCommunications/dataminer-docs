@@ -4,13 +4,13 @@ uid: DOM_SectionDefinition
 
 # SectionDefinition object
 
-A `SectionDefinition` object uses `FieldDescriptor` objects to define the fields a `DomInstance` should have. The Jobs module also uses this same `SectionDefinition` object.
+A `SectionDefinition` object uses `FieldDescriptor` objects to define the fields a `DomInstance` should have. The *Jobs* module also uses this same `SectionDefinition` object.
 
 The main class is an abstract implementation, as it allows the existence of two types:
 
-- **StaticSectionDefinition**: Currently not used by DOM managers, but used by the Jobs module.
+- **StaticSectionDefinition**: Currently not used by DOM managers, but used by the *Jobs* module.
 
-- **CustomSectionDefinition**: Used with DOM managers. When `SectionDefinitions` are discussed further on this page, it is always this custom type that is meant.
+- **CustomSectionDefinition**: Used with DOM managers. When `SectionDefinitions` are discussed below, it is always this custom type that is meant.
 
 When you work with `SectionDefinitions` in a script, you need to typecast them to the custom type, since you will otherwise not be able to set some properties.
 
@@ -48,7 +48,7 @@ Below is an overview of all other important properties:
 | IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
 | Tooltip | string | Short description of the field that will be available as a tooltip in the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
-| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects). Available from DataMiner 10.3.9/10.4.0 onwards. |
+| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects).<br>Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
@@ -106,7 +106,7 @@ domInstance.AddOrUpdateListFieldValue(sectionDefinitionId, fieldDescriptorId, mu
 
 ## CustomSectionDefinition properties
 
-The table below lists the properties of the `CustomSectionDefinition` object. (The base `SectionDefinition` object only exposes its ID.) The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
+In the table below, you can the properties of the `CustomSectionDefinition` object (the base `SectionDefinition` object only exposes its ID). The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
 
 > [!NOTE]
 > From DataMiner 10.3.2/10.4.0 onwards, the `CustomSectionDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
@@ -148,11 +148,11 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 ## Errors
 
-When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `SectionDefinitionErrors`. Below is a list of all possible `ErrorReasons`. (This list does not contain the errors that are only used by the Jobs module.)
+When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `SectionDefinitionErrors`. Below, you can find a list of all possible `ErrorReasons` (this list does not contain the errors that are only used by the Jobs module).
 
 | Reason | Description |
 |--|--|
-| FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor. Available properties: *NotSupportedType*, *SupportedTypes*. |
-| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
-| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
-| GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`. Available properties: *GenericEnumEntry*, *DomInstanceIds*. |
+| FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor.<br>Available properties: *NotSupportedType*, *SupportedTypes*. |
+| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`.<br>Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
+| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead.<br>Available properties: *SectionDefinition*, *DomDefinitionIds*. |
+| GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`.<br>Available properties: *GenericEnumEntry*, *DomInstanceIds*. |

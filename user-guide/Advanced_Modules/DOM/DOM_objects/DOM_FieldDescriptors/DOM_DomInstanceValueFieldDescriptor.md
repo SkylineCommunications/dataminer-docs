@@ -13,7 +13,7 @@ uid: DOM_DomInstanceValueFieldDescriptor
 |--------------------|-----------|-----------------|
 | References a single `DomInstance` value | Guid | Guid |
 
-Defines a DOM field that references a `DomInstance` by storing the ID of that instance in the form of a `Guid`. Compared to the [`DomInstanceFieldDescriptor`](xref:DOM_DomInstanceFieldDescriptor), this descriptor also references a specific value of that `DomInstance`. The configuration is the same as the [`DomInstanceFieldDescriptor`](xref:DOM_DomInstanceFieldDescriptor), but it adds the `FieldDescriptorId` property that references a specific `FieldValue`. This way, the DOM LCA form will show the specified value of the `DomInstance` alongside the name in the dropdown.
+Defines a DOM field that references a `DomInstance` by storing the ID of that instance in the form of a `Guid`. Compared to the [`DomInstanceFieldDescriptor`](xref:DOM_DomInstanceFieldDescriptor), this descriptor also references a specific value of that `DomInstance`. The configuration is the same as that of the [`DomInstanceFieldDescriptor`](xref:DOM_DomInstanceFieldDescriptor), but it adds the `FieldDescriptorId` property that references a specific `FieldValue`. This way, the DOM low-code app form will show the specified value of the `DomInstance` alongside the name in the dropdown.
 
 ## Defining the FieldDescriptor
 

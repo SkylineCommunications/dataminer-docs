@@ -16,7 +16,7 @@ uid: DOM_GenericEnumFieldDescriptor
 | References a single string enum entry | GenericEnum\<string\> | string |
 | References one or more string enum entries | List<GenericEnum\<string\>> | string (ListValueWrapper) |
 
-Defines a DOM field that stores one or more options from a list of pre-determined discrete values. These possible values are defined by the `GenericEnum` object that is defined on the descriptor. The `GenericEnum` contains `GenericEnumEntry` objects that map a display value to a value, which is either of type int or string.
+Defines a DOM field that stores one or more options from a list of pre-determined discrete values. These possible values are defined by the `GenericEnum` object that is defined on the descriptor. The `GenericEnum` contains `GenericEnumEntry` objects that map a display value to a value, which is either of type `int` or `string`.
 
 It is possible to add additional discrete options after the descriptor was created, but it is not possible to remove or update options that are already in use. If a situation like this would occur, see [Removing an enum entry from a GenericEnumFieldDescriptor](xref:DOM_Remove_Enum_Entry).
 
@@ -24,7 +24,7 @@ It is possible to add additional discrete options after the descriptor was creat
 
 To enable multiple values, set the `FieldType` to `List<GenericEnum<int>>`.
 
-*Int enum:*
+### Int enum
 
 ```csharp
 var genericEnum = new GenericEnum<int>();
@@ -41,7 +41,7 @@ var descriptor = new GenericEnumFieldDescriptor
 };
 ```
 
-*String enum:*
+### String enum
 
 ```csharp
 var genericEnum = new GenericEnum<string>();
@@ -63,7 +63,7 @@ var descriptor = new GenericEnumFieldDescriptor
 
 ## Adding a value for the FieldDescriptor
 
-*Int enum:*
+### Int enum
 
 ```csharp
 var instance = new DomInstance
@@ -81,7 +81,7 @@ var secondEnumValue = 2;
 instance.AddOrUpdateListFieldValue(sectionDefinitionId, fieldDescriptorId, new List<int> { firstEnumValue, secondEnumValue });
 ```
 
-*String enum:*
+### String enum
 
 ```csharp
 var instance = new DomInstance

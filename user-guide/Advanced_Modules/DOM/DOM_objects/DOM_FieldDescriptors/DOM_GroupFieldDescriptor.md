@@ -13,7 +13,7 @@ uid: DOM_GroupFieldDescriptor
 |--------------------|-----------|-----------------|
 | References a single DataMiner group | string | string |
 
-Defines a DOM field that stores the name of a DataMiner user group in the form of a `string`. The validity and existence of the group is not checked server-side. However, when displayed in the DOM LCA form, a value will be marked invalid when the group does not exist in the DMS.
+Defines a DOM field that stores the name of a DataMiner user group in the form of a `string`. The validity and existence of the group is not checked server-side. However, when displayed in the DOM low-code app form, a value will be marked invalid when the group does not exist in the DMS.
 
 ## Defining the FieldDescriptor
 
