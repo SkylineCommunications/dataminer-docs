@@ -133,7 +133,7 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
-- Migrating logger tables is supported from DataMiner 10.3.11 onwards<!-- RN 37283 --> for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards<!-- RN 37408 --> for systems using a Cassandra database per DMA.
+- Migration is supported in 10.4.0 and the latest available 10.4.x feature release.
 
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
