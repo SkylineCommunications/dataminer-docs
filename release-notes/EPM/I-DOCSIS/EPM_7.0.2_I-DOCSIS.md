@@ -16,7 +16,7 @@ A new PTP page has been added to the Harmonic CableOS connector. On this page, t
 
 #### New map dashboards added [ID_39319]
 
-Several new dashboards have been added to the solution, which will show a map of the passive device information associated with the selected entity. These maps can be accessed from the Dashboard module or via a new dashboard link on the Overview page when the selected entity is opened from the Topology app.
+New dashboards titled *03. CPE MAP* have been added to the solution, which will show a map of the passive device information associated with the selected entity. These maps can be accessed from the Dashboard module or via a new dashboard link on the Overview page when the selected entity is opened from the Topology app.
 
 The new maps are available for the following levels:
 
