@@ -2,24 +2,24 @@
 uid: UD_APIs_Events
 ---
 
-# User-Defined APIs Events
+# User-Defined API events
 
-The User-Defined APIs manager sends out various events when actions are done on the `ApiToken` or `ApiDefinition` objects. These can be create, update, or delete (CRUD) events. These types of events contain lists with the created, updated, and deleted objects.
+The User-Defined API manager will send out an event whenever an `ApiToken` or `ApiDefinition` object is created, update or deleted.
 
 | Event name | Description |
-|--|--|
-| ApiTokenChangedEventMessage  | Generated when a [ApiToken](xref:UD_APIs_Objects_ApiToken) is created, updated, or deleted. |
-| ApiDefinitionChangedEventMessage  | Generated when a [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
+|---|---|
+| ApiTokenChangedEventMessage       | Generated when an [ApiToken](xref:UD_APIs_Objects_ApiToken) is created, updated, or deleted. |
+| ApiDefinitionChangedEventMessage  | Generated when an [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
 
 > [!NOTE]
-> These event messages are available from DataMiner 10.4.6/10.5.0 onwards.
+> These event messages are available from DataMiner 10.4.6/10.5.0 onwards.<!-- RN 39117 -->
 
 ## Filtering CRUD events
 
-When subscribing to event messages you can use the `SubscriptionFilter` to only receive the messages matching a filter.
+When subscribing to event messages you can use the `SubscriptionFilter` to only receive the messages matching a specific filter. See the following example.
 
 ```csharp
-// In this example we take the Connection object from the script's Engine object
+// In this example, you will take the Connection object from the script's Engine object
 var connection = engine.GetUserConnection();
 
 // Create a random set ID that identifies our subscription

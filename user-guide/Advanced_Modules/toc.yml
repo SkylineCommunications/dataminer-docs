@@ -1303,6 +1303,8 @@ items:
         topicUid: UD_APIs_Triggering_an_API
       - name: DataMiner UserDefinableApiEndpoint DxM
         topicUid: UD_APIs_UserDefinableApiEndpoint
+      - name: API events
+        topicUid: UD_APIs_Events
       - name: Troubleshooting
         items:
           - name: Troubleshooting User-Defined APIs
@@ -1314,5 +1316,3 @@ items:
             topicUid: UD_APIs_Hello_world_tutorial
           - name: Retrieving elements in alarm
             topicUid: UD_APIs_Elements_in_alarm_tutorial
-      - name: Events
-        topicUid: UD_APIs_Events
