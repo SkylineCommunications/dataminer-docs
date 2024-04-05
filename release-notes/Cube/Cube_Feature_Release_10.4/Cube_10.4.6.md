@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.6
 
 ### Enhancements
 
+#### Visual Overview: Enhanced performance when processing conditions based on view names, service names or element names [ID_39241]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when processing conditions based on view names, service names or element names.
+
 #### Alarm Console: Enhanced performance when retrieving the side panel data after selecting an alarm [ID_39284]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
