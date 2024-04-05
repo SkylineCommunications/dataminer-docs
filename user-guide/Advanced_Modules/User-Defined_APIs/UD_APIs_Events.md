@@ -4,7 +4,7 @@ uid: UD_APIs_Events
 
 # User-Defined API events
 
-The User-Defined API manager will send out an event whenever an `ApiToken` or `ApiDefinition` object is created, update or deleted.
+The User-Defined API manager will send out an event whenever an `ApiToken` or `ApiDefinition` object is created, updated, or deleted.
 
 | Event name | Description |
 |---|---|
@@ -16,16 +16,16 @@ The User-Defined API manager will send out an event whenever an `ApiToken` or `A
 
 ## Filtering CRUD events
 
-When subscribing to event messages you can use the `SubscriptionFilter` to only receive the messages matching a specific filter. See the following example.
+When subscribing to event messages, you can use the `SubscriptionFilter` to only receive the messages matching a specific filter. See the following example.
 
 ```csharp
-// In this example, you will take the Connection object from the script's Engine object
+// In this example, the Connection object is taken from the script's Engine object
 var connection = engine.GetUserConnection();
 
-// Create a random set ID that identifies our subscription
+// Create a random set ID that identifies the subscription
 var setId = $"ApiTokenSubscription_{Guid.NewGuid()}"
 
-// Create the filter for the ApiToken events, only enabled tokens should match
+// Create the filter for the ApiToken events; only enabled tokens should match
 var filter = ApiTokenExposers.IsDisabled.Equal(false);
 var subscriptionFilter = new SubscriptionFilter<ApiTokenChangedEventMessage, ApiToken>(filter);
 
