@@ -74,6 +74,12 @@ From now on, it is also possible to migrate data towards a STaaS system that is 
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
+#### Enhanced performance when processing changes made to service properties [ID_39011]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
+
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->

@@ -173,6 +173,12 @@ From now on, GQI event messages sent by the same GQI session within a time frame
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
+#### Enhanced performance when processing changes made to service properties [ID_39011]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
+
 #### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
