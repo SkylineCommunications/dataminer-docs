@@ -24,3 +24,5 @@ For EPM you will use an attribute epm-selections within the component property t
 # Retrieve Component ID for Web Apps
 ![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/104977c1-1f0a-4887-b88e-8408a0ea4f01)
 ![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/14cb3c3d-9314-4186-acd6-54d7eab037da)
+
+For more detailed information [click here](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Feeds/Specifying_data_input_in_a_dashboard_URL.html).
