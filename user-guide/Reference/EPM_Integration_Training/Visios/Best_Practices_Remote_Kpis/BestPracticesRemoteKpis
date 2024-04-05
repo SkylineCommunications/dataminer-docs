@@ -7,6 +7,13 @@ uid: EpmIntegrationTrainingAggregations
 # Retrieving Data from EPM Element
 If you would like to display data from an EPM Object card onto a Visio, it is best practice to create a cardVar that holds the element information instead of using placeholder [this Element], this will provide a static variable for the Visio and would not have to look up the placeholder everytime.
 
+# Retrieving Data from Remote Element
+In EPM where other data is in other elements and need to be displayed on a Visio, it is recommended to have an DMA ID/Element ID column in the EPM Object table. This will allow for more efficient retrieval of data from the different elements.
+
+Once this is in place you can create a card Variable in the Visio that will store this element information. The card variable will be set using the Execute shape data field, where you will be using the param option to retrieve the value for a specific EPM Object based on the primary key. Since this will be the DMA ID/Element ID, the card variable will now be able to be used as an element object in Visio. 
+Note: Hardcode the name of the frontend for best results
+Here is example of how the syntax would look.
+This will create an empty CardVariable
 
 
 > [!NOTE]
