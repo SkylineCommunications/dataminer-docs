@@ -4,10 +4,12 @@ uid: CreatingApplicationPackages
 
 # Creating application packages
 
-There are currently two ways to create application packages:
+There are multiple ways to create application packages:
 
 - Infrastructure as Code (IaC)
-- Using the application package builder API.
+- Using the application package builder API
+- Using the Packager .NET tool
+- Using the Low-Code-App-Extensions
 
 > [!TIP]
 > [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for Automation scripts solutions.
@@ -161,3 +163,13 @@ namespace Script
 The application package builder API is an API that can be used to creating application packages. The API is available as a NuGet package: [Skyline.DataMiner.Core.AppPackageCreator](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageCreator).
 
 For the API documentation, refer to [Skyline.AppInstaller.AppPackage](xref:Skyline.AppInstaller.AppPackage).
+
+## Packager .NET tool
+
+The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g. an application package from an Automation script solution folder (e.g. as a step in a CI/CD pipeline.) It currently supports creating application packages for Automation script solutions, Visio repositories (both protocol Visio and other) and dashboard repositories.
+(The packager tool also allows creating a protocol package (.dmprotocol) for protocol solutions.)
+
+## Low-Code-App-Extensions
+
+The Low Code App Extensions is an Interactive Automation script that allows, among other things, exporting low code apps (optionally including DOM instances) of a DataMiner system.
+For more information on how to install and use it, refer to [Low Code App Extensions](https://github.com/SkylineCommunications/Low-Code-App-Extensions).
