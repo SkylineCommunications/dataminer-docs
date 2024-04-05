@@ -1309,6 +1309,8 @@ items:
         topicUid: UD_APIs_Triggering_an_API
       - name: DataMiner UserDefinableApiEndpoint DxM
         topicUid: UD_APIs_UserDefinableApiEndpoint
+      - name: API events
+        topicUid: UD_APIs_Events
       - name: Troubleshooting
         items:
           - name: Troubleshooting User-Defined APIs
