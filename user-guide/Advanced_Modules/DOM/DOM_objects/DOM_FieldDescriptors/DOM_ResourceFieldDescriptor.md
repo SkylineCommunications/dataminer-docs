@@ -5,8 +5,8 @@ uid: DOM_ResourceFieldDescriptor
 # ResourceFieldDescriptor
 
 - **FieldValue type**: Guid
-- **FieldValue example**: a0623201-c157-478c-a880-d40422c40f1c (ID of an [SRM resource](xref:The_Resources_module))
-- **Multiple values supported**: :heavy_check_mark: (Since 10.2.3/10.3.0)
+- **FieldValue example**: a0623201-c157-478c-a880-d40422c40f1c (ID of an [SRM resource](xref:Concepts1))
+- **Multiple values supported**: :heavy_check_mark: (since DataMiner 10.2.3/10.3.0)
 - **Available since**: DataMiner 10.1.2/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |
@@ -14,7 +14,7 @@ uid: DOM_ResourceFieldDescriptor
 | References a single SRM resource | Guid | Guid |
 | References one or more SRM resources | List\<Guid\> | Guid (ListValueWrapper) |
 
-Defines a DOM field that references an SRM resource by storing the ID of that resource in the form of a `Guid`. Using the `ResourcePoolIds` property, it is possible to define to which resource pools the resource should belong. If this list is left empty, the dropdown of a DOM low-code app form will display and accept any resource in the DMS. The validity and existence of the resource is not checked server-side. However, when displayed in the DOM low-code app form, a value will be marked invalid when the resource does not exist in the DMS or when it is not part of the defined pools.
+Defines a DOM field that references an SRM resource by storing the ID of that resource in the form of a `Guid`. Using the `ResourcePoolIds` property, it is possible to define to which resource pools the resource should belong. If this list is left empty, the dropdown of a DOM low-code app form will display and accept any resource in the DMS. The validity and existence of the resource is not checked server-side. However, when a value is displayed in the DOM low-code app form, it will be marked invalid when the resource does not exist in the DMS or when it is not part of the defined pools.
 
 ## Defining the FieldDescriptor
 

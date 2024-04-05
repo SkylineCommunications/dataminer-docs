@@ -6,7 +6,7 @@ uid: DOM_GenericEnumFieldDescriptor
 
 - **FieldValue type**: int / string
 - **FieldValue example**: 5 / "very_high"
-- **Multiple values supported**: :heavy_check_mark: (Since 10.4.0/10.4.1)<!-- RN 37482 -->
+- **Multiple values supported**: :heavy_check_mark: (since DataMiner 10.4.0/10.4.1)<!-- RN 37482 -->
 - **Available since**: DataMiner 10.1.2/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |

@@ -4,11 +4,11 @@ uid: DOM_SectionDefinition
 
 # SectionDefinition object
 
-A `SectionDefinition` object uses `FieldDescriptor` objects to define the fields a `DomInstance` should have. The *Jobs* module also uses this same `SectionDefinition` object.
+A `SectionDefinition` object uses `FieldDescriptor` objects to define the fields a `DomInstance` should have. The Jobs module also uses this same `SectionDefinition` object.
 
 The main class is an abstract implementation, as it allows the existence of two types:
 
-- **StaticSectionDefinition**: Currently not used by DOM managers, but used by the *Jobs* module.
+- **StaticSectionDefinition**: Currently not used by DOM managers, but used by the Jobs module.
 
 - **CustomSectionDefinition**: Used with DOM managers. When `SectionDefinitions` are discussed below, it is always this custom type that is meant.
 

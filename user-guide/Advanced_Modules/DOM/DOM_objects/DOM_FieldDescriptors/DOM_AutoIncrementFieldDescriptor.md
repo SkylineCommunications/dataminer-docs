@@ -41,4 +41,4 @@ var descriptor = new AutoIncrementFieldDescriptor()
 
 ## Adding a value for the FieldDescriptor
 
-No value needs to be provided. A value will automatically be added to the each section.
+No value needs to be provided. A value will automatically be added to each section.

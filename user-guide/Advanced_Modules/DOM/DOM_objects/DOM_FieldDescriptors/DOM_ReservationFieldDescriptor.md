@@ -6,7 +6,7 @@ uid: DOM_ReservationFieldDescriptor
 
 - **FieldValue type**: Guid
 - **FieldValue example**: 0d911285-0232-4610-8bd8-ebbebc9cdc29 (ID of an [SRM booking](xref:srm_instantiations#booking))
-- **Multiple values supported**: :heavy_check_mark: (Since 10.2.3/10.3.0)
+- **Multiple values supported**: :heavy_check_mark: (since DataMiner 10.2.3/10.3.0)
 - **Available since**: DataMiner 10.1.2/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |
@@ -14,7 +14,7 @@ uid: DOM_ReservationFieldDescriptor
 | References a single SRM booking | Guid | Guid |
 | References one or more SRM bookings | List\<Guid\> | Guid (ListValueWrapper) |
 
-Defines a DOM field that references an SRM booking (`ReservationInstance`) by storing the ID of that booking in the form of a `Guid`. The validity and existence of the booking is not checked server-side. However, when displayed in the DOM low-code app form, a value will be marked invalid when the booking does not exist in the DMS.
+Defines a DOM field that references an SRM booking (`ReservationInstance`) by storing the ID of that booking in the form of a `Guid`. The validity and existence of the booking is not checked server-side. However, when a value is displayed in the DOM low-code app form, it will be marked invalid when the booking does not exist in the DMS.
 
 ## Defining the FieldDescriptor
 

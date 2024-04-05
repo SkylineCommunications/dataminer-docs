@@ -6,7 +6,7 @@ uid: DOM_DomInstanceValueFieldDescriptor
 
 - **FieldValue type**: Guid
 - **FieldValue example**: 9ba9aa93-8208-4404-9778-6a9343ba8483 (ID of a `DomInstance`)
-- **Multiple values supported**: :heavy_check_mark: (Since 10.2.5/10.3.0 - Server only)<!-- RN 32904 -->
+- **Multiple values supported**: :heavy_check_mark: (since DataMiner 10.2.5/10.3.0 - server only)<!-- RN 32904 -->
 - **Available since**: DataMiner 10.2.3/10.3.0
 
 | Type of Descriptor | FieldType | FieldValue type |

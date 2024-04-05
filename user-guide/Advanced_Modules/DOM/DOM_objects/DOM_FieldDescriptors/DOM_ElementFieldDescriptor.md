@@ -6,7 +6,7 @@ uid: DOM_ElementFieldDescriptor
 
 - **FieldValue type**: string
 - **FieldValue example**: "21569/987" (\<DMA ID\>/\<Element ID\>)
-- **Multiple values supported**: :heavy_check_mark: (Since 10.2.3/10.3.0)
+- **Multiple values supported**: :heavy_check_mark: (since DataMiner 10.2.3/10.3.0)
 - **Available since**: DataMiner 10.1.10/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |
