@@ -25,6 +25,10 @@ The new maps are available for the following levels:
 - Amplifier
 - Tap
 
+#### New Ping and Tracert buttons on CCAP and CM overview pages [ID_39334]
+
+On the overview page for a CCAP or CM, users can now click dedicated *Ping* and *Tracert* buttons to open a window with the outcome of the ping or traceroute operation for the relevant CCAP or CM. This will provide additional insight into the status and connectivity of the system's devices.
+
 ## Changes
 
 ### Enhancements
