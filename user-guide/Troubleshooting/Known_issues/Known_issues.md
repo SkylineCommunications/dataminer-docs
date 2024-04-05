@@ -130,6 +130,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [CoreGateway fails to create MessageBroker session](xref:KI_CoreGateway_fails_to_create_MessageBroker_session) | CoreGateway 2.14.6 | | April 5, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | | February 2, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
