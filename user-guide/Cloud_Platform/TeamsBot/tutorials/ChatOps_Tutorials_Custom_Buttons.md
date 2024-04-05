@@ -42,7 +42,7 @@ In step 5, you will trigger a custom command from this package with a button add
 
    ![Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_003.png)
 
-1. Find your system's IDs in the URL by opening the DMS overview in the [Admin app](https://admin.dataminer.services). Use the top-right organization selector to pick your organization, and the left-side menu to select your DMS.
+1. Find your system's organization ID and DMS ID in the URL by opening the DMS overview in the [Admin app](https://admin.dataminer.services). Use the top-right organization selector to pick your organization, and the left-side menu to select your DMS.
 
    ![How to find IDs in the Admin app](~/user-guide/images/chatops_notification_part_02_02_004.gif)
 
