@@ -11,9 +11,6 @@ items:
   - name: DataMiner modules
     topicUid: Part4AdvancedModules
     href: Advanced_Modules/toc.yml
-#  - name: dataminer.MediaOps
-#    topicUid: MediaOps
-#    href: dataminer_MediaOps/toc.yml
   - name: DataMiner Standard Apps, Frameworks & Solutions
     topicUid: Part5StandardApps
     href: Standard_Apps/toc.yml
