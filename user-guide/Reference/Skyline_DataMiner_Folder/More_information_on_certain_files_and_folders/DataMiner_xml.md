@@ -92,6 +92,17 @@ This tag can have several subtags:
 
 In addition, the tag can have one optional attribute, **publicDNS**. When a DNS name is specified for this attribute, it will be used instead of the DataMiner IP address for links to the DataMiner user interface in notification emails.
 
+### DataMiner.ExternalAuthentication
+
+This tag is used to configure external authentication.
+
+For more information, see:
+
+- [Configuring SAML with Microsoft Entra ID as identity provider](xref:SAML_using_Entra_ID)
+- [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)
+- [Configuring Atlassian Crowd settings](xref:Configuring_Atlassian_Crowd_settings)
+- [Configuring RADIUS settings](xref:Configuring_RADIUS_settings)
+
 ### DataMiner.ID
 
 Information about the ID ranges to be used for e.g. view creation. This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts.
@@ -332,6 +343,9 @@ Example:
   ...
 </DataMiner>
 ```
+
+> [!NOTE]
+> From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the number of distribution traps is limited to 250,000. When the processing queue of distribution traps contains 250,000 traps, new traps will be rejected until the number of traps in the queue has dropped to 100,000. These limits are fixed and cannot be configured.<!--- RN34525 --->
 
 ### DataMiner.Telnet
 

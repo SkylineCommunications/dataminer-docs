@@ -4,54 +4,43 @@ uid: Consuming_NuGet
 
 # Consuming NuGet packages
 
-You can consume [NuGet packages](https://learn.microsoft.com/en-us/nuget/what-is-nuget) in your Visual Studio protocol or Automation script solution by going to the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), searching for existing NuGets and installing them.
+You can consume [NuGet packages](https://learn.microsoft.com/en-us/nuget/what-is-nuget) in your Visual Studio protocol or Automation script solution by going to the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), searching for existing NuGet packages and installing them.
 
-When DIS compiles the Automation script or protocol, it will extract the required DLLs from the NuGet packages and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, those folders with DLLs need to be placed in the *Skyline DataMiner/ProtocolScripts/DllImport* folder.
+When DIS compiles the Automation script or protocol, it will extract the required assemblies from the NuGet packages and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, in recent DataMiner versions, those folders with assemblies need to be placed in the folder `C:\Skyline DataMiner\ProtocolScripts\DllImport`.
 
-> [!NOTE]
-> Support for subfolders in the ProtocolScripts folder is introduced in DataMiner 9.6.12 (RN 23565). However, the DllImport subfolder of the ProtocolScripts folder is  only introduced in DataMiner 10.0.10 (RN 26605).
->
-> This means that prior to DataMiner 10.0.10, only the Files and ProtocolScripts folder are used as hint paths. For example, when you have the QAction@dllImport value `slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`, DataMiner will try to find the assembly in the location `C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`.
-> Starting from DataMiner 10.0.10, the ProtocolScripts\\DllImport folder is added as an additional hint path (which is probed before the Files and ProtocolScripts folders). For the previous example, this means the following path will be tried first:  `C:\Skyline DataMiner\ProtocolScripts\DllImport\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`.
->
-> Also note that only from DataMiner 10.0.10 onwards, subfolder paths for assemblies in a .dmprotocol package will be preserved during installation. This means that prior to DataMiner 10.0.10, you have to put the DLLs in the correct subfolder manually if a subfolder structure should be used.
+Note that support for subfolders in the `ProtocolScripts` folder is introduced in DataMiner 9.6.12 (RN 23565). However, the `DllImport` subfolder of the `ProtocolScripts` folder is only introduced in DataMiner 10.0.10 (RN 26605). This means that prior to DataMiner 10.0.10, only the `Files` and `ProtocolScripts` folder are used as hint paths. For example, when you have the `QAction@dllImport` value `slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`, DataMiner will try to find the assembly in the location `C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`. Starting from DataMiner 10.0.10, the `ProtocolScripts\DllImport` folder is added as an additional hint path (which is probed before the `Files` and `ProtocolScripts` folders). In case of the above-mentioned example, this means that the following path will be tried: `C:\Skyline DataMiner\ProtocolScripts\DllImport\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`. Note also that only from DataMiner 10.0.10 onwards, subfolder paths for assemblies in a .dmprotocol package will be preserved during installation.
 
 > [!NOTE]
-> For DIS and CI/CD, the PackageReference package management format must be used. The packages.config packages management format is not supported.
+> For DIS and CI/CD, the *PackageReference* package management format must be used. The *packages.config* package management format is not supported.
 
 > [!IMPORTANT]
-> DIS currently only processes the *lib* folder of NuGet packages. Other folders such as *ref* or *runtimes* are currently not supported.
+>
+> - **Do not manually put assemblies used by a protocol in the folder** `C:\Skyline DataMiner\ProtocolScripts\DllImport`. Instead, install the protocol via a .dmprotocol or .dmapp package (if you publish from [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio), a package is created in the background, and that package is installed by DIS). When installation happens via a .dmprotocol or .dmapp package, DataMiner will know about these assemblies and make sure these are synchronized.
+> - DIS currently **only processes the *lib* folder** of NuGet packages. Other folders such as *ref* or *runtimes* are currently not supported.
+> - In a protocol or Automation script solution, you **cannot use NuGet packages that generate code** (e.g. the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or Automation script, it only considers the C# code that is included in the XML file of the protocol or Automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or Automation script solution.
+> - When consuming different versions of the same NuGet package, make sure you are aware of the **potential pitfalls** when doing so as explained in [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
 
-Within Skyline, we have an internal NuGet store (<https://devcore3/nuget>) where Skyline employees can produce and consume private libraries. You will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to use it.
-
-## Using the Class Library as a NuGet
-
-The Class Library (Common, Protocol and Automation code) is also available and ready to be used as a NuGet in the internal store.
-
-It is possible to use this instead of DIS Code Generation. This can help solve some of the common issues that occur with DIS Code Generation, such as OS maximum path length problems. It will also allow you to more easily make your own libraries on top of the class library.
-
-> [!NOTE]
-> There is a breaking change for these versions of the Class Library. InterApp Calls are no longer able to use reflection. This makes their use much more stable, but it does mean that you always need to provide a list of known types for every call or serialize/deserialize operation. Upgrading to these versions will likely cause compilation issues that need to be fixed. However, you can now put all your Message classes into a custom solution and re-use that as a NuGet of your own creation.
+At Skyline, an [internal NuGet store](https://devcore3/nuget) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.
 
 ## Licensing
 
-NuGet Libraries from nuget.org are considered third-party libraries, so make sure licensing is OK.
+NuGet libraries from [nuget.org](https://nuget.org) are considered third-party libraries, so make sure licensing is OK.
 
-Consult the Stop/Go/Caution list on the internal Skyline wiki. If your license does not appear on the list, or if the use you intend (i.e. internal vs. distribution) is not listed for that license, the use will be considered a "Stop".
+Consult the Stop/Go/Caution list on [SharePoint](https://skylinebe.sharepoint.com/sites/LegalPortal/SitePages/Stop-Go-Caution-List.aspx). If your license does not appear on the list, or if the use you intend (i.e. internal vs. distribution) is not listed for that license, the use will be considered a "Stop".
 
 If you are unsure as to the identification of the license, please contact the [OSS team](mailto:oss@skyline.be).
 
-## Avoid NuGets with direct external communication
+## Avoid NuGet packages with direct external communication
 
 Try to avoid using NuGet packages that perform direct external communication (unless using them will drastically reduce development time).
 
-A NuGet with direct communication will circumvent the use of DataMiner processes. This will cause the following issues:
+A NuGet package with direct communication will circumvent the use of DataMiner processes. This will cause the following issues:
 
 - It will not be possible to edit some communication settings (e.g. retries, timeouts) via the element settings.
 - Communication will be hidden from the Stream Viewer.
 - Unless this is taken into account during development, there will be no element timeouts when communication is lost.
 
-We try to solve some of these limitations by writing middleware packages that bridge the QAction with the external communication package or technology. For more information, go to [Communication middleware](xref:Nuget_Communication_Middleware).
+We try to solve some of these limitations by writing middleware packages that bridge the QAction with the external communication package or technology. For more information, see [Communication middleware](xref:Nuget_Communication_Middleware).
 
 ## Accessing GitHub NuGet registry in Visual Studio
 
@@ -102,7 +91,7 @@ To handle the credentials, follow these steps:
    - **Password**: Enter your personal access token.
 
      > [!NOTE]
-     > Select *remember password* to avoid entering your PAT each time.
+     > Select *remember password* to avoid entering your PAT each time. If the pop-up window keeps getting shown anyway, refer to [Issues with credentials](#issues-with-credentials) for help.
 
 #### Editing credentials
 

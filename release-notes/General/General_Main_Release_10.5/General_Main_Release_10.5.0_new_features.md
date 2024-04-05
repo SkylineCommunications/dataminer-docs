@@ -31,6 +31,36 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+
+| Type of file to be retrieved | Request | Response |
+|---|---|---|
+| ASCII text files (e.g. log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
+| Binary files (e.g. zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
+
+Both requests have the following arguments:
+
+- The name of the file to be retrieved (with or without extension, with or without full path)
+- The ID of the DataMiner Agent
+
+Restrictions:
+
+- The user must have administrative privileges or must be granted the *SDLogging* permission.
+- The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
+- The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
+- The file name passed in the requests must be the name of an existing file.
+- The file path passed in the requests must be a valid, existing path.
+
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
+
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -111,6 +141,36 @@ New features added to allow this include:
 
   - a new `IGQISortField`
   - a new `IGQISortOperator`
+
+#### Storage as a Service: Proxy support [ID_39221] [ID_39313]
+
+<!-- RN 39221: MR 10.5.0 - FR 10.4.5 -->
+<!-- RN 39313: MR 10.5.0 - FR 10.4.6 -->
+
+Storage as Service (STaaS) now supports the use of a proxy server.
+
+When you configure a proxy server in the *Db.xml* file, all traffic towards STaaS will pass through the proxy instead of going directly to the cloud.
+
+Example of a *Db.xml* file in which a proxy server has been configured:
+
+```xml
+<?xml version="1.0"?>
+<DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+  <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+    <Proxy>
+      <Address></Address>
+      <Port></Port>
+      <UserName></UserName>
+      <Password></Password>
+    </Proxy>
+  </DataBase>
+</DataBases>
+```
+
+> [!NOTE]
+>
+> - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
+> - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
 ### Protocols
 
@@ -351,6 +411,40 @@ The behavior is similar to that of the options in the `ModuleSettingsOverrides` 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
+#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, the user-defined API manager will send out an event whenever an `ApiToken` or `ApiDefinition` object is created, update or deleted.
+
+| Event name | Description |
+|---|---|
+| ApiTokenChangedEventMessage      | Generated when an [ApiToken](xref:UD_APIs_Objects_ApiToken) is created, updated, or deleted. |
+| ApiDefinitionChangedEventMessage | Generated when an [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
+
+When subscribing to event messages, you can use the `SubscriptionFilter` to only receive the messages matching a specific filter. See the following example.
+
+```csharp
+// In this example, you will take the Connection object from the script's Engine object
+var connection = engine.GetUserConnection();
+
+// Create a random set ID that identifies our subscription
+var setId = $"ApiTokenSubscription_{Guid.NewGuid()}"
+
+// Create the filter for the ApiToken events, only enabled tokens should match
+var filter = ApiTokenExposers.IsDisabled.Equal(false);
+var subscriptionFilter = new SubscriptionFilter<ApiTokenChangedEventMessage, ApiToken>(filter);
+
+// Attach a callback when a new event message arrives
+connection.OnNewMessage += (sender, args) =>
+{
+    // Handle the events
+}
+
+// Subscribe
+connection.AddSubscription(setId, subscriptionFilter);
+```
 
 ### Tools
 

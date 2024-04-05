@@ -99,6 +99,18 @@ The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
 
+#### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID_39213]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
+
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The maximum number of concurrent GQI queries has now been increased from 20 to 100.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -107,11 +119,13 @@ On virtual machines, beep commands are bypassed, and on physical machines, this 
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
 
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
-After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
 
 #### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID_38914]
 
@@ -152,3 +166,27 @@ Up to now, an error would occur when a DataMiner module (e.g. Automation, Schedu
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.
+
+#### Problem with SLProtocol when processing a matrix parameter update [ID_39178]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, an error could occur in SLProtocol when processing a matrix parameter update.
+
+#### The 'Communication Info' table would incorrectly not get loaded into the element [ID_39181]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in a connector, you had used the following `<Connections>` syntax, in some cases, the *Communication Info* table would incorrectly not get loaded into the element.
+
+Example of the `<Connections>` syntax that caused the *Communication Info* table to not get loaded into the element:
+
+```xml
+<Connections>
+   <Connection id="0" name="IPDRData">
+      <SmartSerial>
+      ...
+      </SmartSerial>
+   </Connection>
+</Connections>
+```
