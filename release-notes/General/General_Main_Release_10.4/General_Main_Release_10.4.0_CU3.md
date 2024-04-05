@@ -12,7 +12,11 @@ uid: General_Main_Release_10.4.0_CU3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced performance when processing changes made to service properties [ID_39011]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
 
 ### Fixes
 

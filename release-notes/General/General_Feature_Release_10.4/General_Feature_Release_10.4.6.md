@@ -76,9 +76,15 @@ Because of a number of enhancements, overall performance has increased when acti
 
 #### Enhanced performance when processing changes made to service properties [ID_39011]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
+
+#### NATS configuration files will now use plain JSON syntax [ID_39078]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+All NATS configuration files will now use plain JSON syntax.
 
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 
