@@ -71,10 +71,10 @@ The easiest way to get started is by deploying the MediaOps package to a DaaS sy
 
 1. Deploy the MediaOps package from the DataMiner Catalog. Note that this is currently not yet available.<!-- TBD: update when package is available -->
 
-If you want to try out the apps using demo data, you can then run the *Generate Demo Data* script in the Automation module in DataMiner Cube. This script is included in the MediaOps package.
+If you want to try out the apps using demo data, you can then run the *Generate Demo Data* script in the Automation module in DataMiner Cube. This script is included in the MediaOps package. Keep in mind that this script will generate a significant amount of data and will take some time to complete. It will also generate a number of elements in the system. If you no longer want these later, you will need to remove them manually.
 
 > [!NOTE]
-> This script will generate a significant amount of data and will take some time to complete. It will also generate a number of elements in the system. If you no longer want these later, you will need to remove them manually.
+> It is also possible to install MediaOps on a self-hosted DMS, provided DataMiner 10.4.4 or higher is installed and the DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
 > If you have any questions or need assistance to get started with dataminer.mediaOps, contact <support.mediaops@skyline.be>.
