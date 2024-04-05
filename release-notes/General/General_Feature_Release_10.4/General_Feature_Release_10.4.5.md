@@ -403,7 +403,7 @@ In other words, you will no longer have more than 500 suggestion events related 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.6.8
-- DataMiner CoreGateway: version 2.14.5
+- DataMiner CoreGateway: version 2.14.6
 - DataMiner FieldControl: version 2.10.5
 - DataMiner Orchestrator: version 1.5.8
 - DataMiner SupportAssistant: version 1.6.8

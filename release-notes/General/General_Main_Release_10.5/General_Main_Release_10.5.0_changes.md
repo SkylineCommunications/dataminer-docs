@@ -134,7 +134,7 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.6.8
-- DataMiner CoreGateway: version 2.14.5
+- DataMiner CoreGateway: version 2.14.6
 - DataMiner FieldControl: version 2.10.5
 - DataMiner Orchestrator: version 1.5.8
 - DataMiner SupportAssistant: version 1.6.8
@@ -172,12 +172,6 @@ From now on, GQI event messages sent by the same GQI session within a time frame
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
-
-#### NATS configuration files will now use plain JSON syntax [ID_39078]
-
-<!-- MR 10.5.0 - FR 10.4.6 -->
-
-All NATS configuration files will now use plain JSON syntax.
 
 #### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
 

@@ -82,7 +82,7 @@ Because of a number of enhancements, overall performance has increased when proc
 
 #### NATS configuration files will now use plain JSON syntax [ID_39078]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 All NATS configuration files will now use plain JSON syntax.
 
