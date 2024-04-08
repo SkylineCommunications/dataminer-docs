@@ -55,7 +55,17 @@ However, note that these are currently still hidden, because no data is returned
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Verizon ETMS Platform: Activity log adjusted [ID_39342]
+
+The activity log of the Verizon ETMS Platform connector has been updated to reflect new possible entities under a higher entity based on information received from a ticket request.
+
+#### Verizon WM Ticketing adjusted to handle new entities [ID_39343]
+
+The Verizon WM Ticketing connector has been adjusted to handle multiple HETs subscriptions with the same high entity as well as to handle more types of entities and higher entities.
+
+#### Verizon WM Ticketing: Active HETs table adjusted [ID_39345]
+
+The Active HETs table has been adjusted to keep all higher entities with their breach percentage, event count, and state, instead of deleting the row when HETs is no longer active for the entity. It is now also possible to activate trending for these parameters.
 
 ### Fixes
 
