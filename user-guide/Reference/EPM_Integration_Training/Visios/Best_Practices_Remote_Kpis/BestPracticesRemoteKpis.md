@@ -5,19 +5,20 @@ uid: EpmIntegrationTrainingAggregations
 ---
 
 # Retrieving Data from EPM Element
-If you would like to display data from an EPM Object card onto a Visio, it is best practice to create a cardVar that holds the element information instead of using placeholder [this Element], this will provide a static variable for the Visio and would not have to look up the placeholder everytime.
+If you would like to display data from an EPM Object card onto a Visio, it is best practice to create a cardVar that holds the element information instead of using placeholder [this Element]. This will provide a static variable for the Visio, this prevent it from doing a look up on the placeholder everytime.
 
 ![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/1f21e879-03ad-4820-a6aa-b531c8f68089)
 
 # Retrieving Data from Remote Element
-In EPM where other data is in other elements and need to be displayed on a Visio, it is recommended to have an DMA ID/Element ID column in the EPM Object table. This will allow for more efficient retrieval of data from the different elements.
+In EPM environment, there can be data in other elements that a user needs to be displayed on a Visio. In this case, it is recommended to have an DMA ID/Element ID column in the EPM Object table. This will allow for more efficient retrieval of data from the different elements.
 
 Once this is in place you can create a card Variable in the Visio that will store this element information. The card variable will be set using the Execute shape data field, where you will be using the param option to retrieve the value for a specific EPM Object based on the primary key. Since this will be the DMA ID/Element ID, the card variable will now be able to be used as an element object in Visio. 
 Here is example of how the syntax would look.
+
 This will create an empty CardVariable
 
-![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/238cb6a7-c3a7-4830-9ae7-e418913d849b)
-![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/b4843b81-8b0e-4e18-8ecd-6007b8b5252d)
+![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/b1aed891-d64f-45df-a0fe-2502456bf90b)
+![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/025996b5-75c2-4f67-a595-71b50b426976)
 
 > [!NOTE]
 > - From DataMiner 10.0.2 onwards, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console.
