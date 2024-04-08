@@ -119,8 +119,8 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 
 - **Percentage DS Utilization**: Calculated. The average channel utilization of associated downstream channels.
 
-  Individual channel utilization values are retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
+  Individual channel utilization values are retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.
 
 - **Percentage US Utilization**: Calculated. The average channel utilization of associated upstream channels.
 
-  Individual channel utilization values are retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
+  Individual channel utilization values are retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.

@@ -64,4 +64,4 @@ This page contains an overview of the CM DS QAM CH parameters available in the I
 
   - Uncorrected OID: 1.3.6.1.2.1.10.127.1.1.4.1.10
 
-- **DS QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP
+- **DS QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.

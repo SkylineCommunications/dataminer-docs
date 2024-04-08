@@ -109,7 +109,7 @@ These parameters are displayed for the Node Segment and Service Group level in t
   - OID D2.0: 1.3.6.1.2.1.10.127.1.3.3.1.17
 
 - **US QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.
- 
+
 - **Reflected Power Ratio**: Direct value. The average value of the Reflected Power Ratio related to the cable modems served by the given channel.
 
 - **US QAM Ch NMTER**: Calculated. Only available for DOCSIS 3.x. Average value of the US QAM Ch NMTER as it relates to the CMs served by the given channel.

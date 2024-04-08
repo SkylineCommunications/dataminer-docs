@@ -2,11 +2,11 @@
 uid: I-DOCSIS_GQI_Integration
 ---
 
-# I-DOCSIS GQI Integration
+# I-DOCSIS GQI integration
 
-Due the to aggregative nature of EPM, many of the tables in the Frontend element have no data in them. To query the information using GQI, you need query where the data resides. Below is a table showing where all of the data levels information reside.
+Because of the aggregative nature of EPM, many of the tables in the front-end element have no data of their own. To query the information using GQI, you need to query the actual location where the data resides. Below is a table showing where the information of the different data levels resides.
 
-| EPM Level | Frontend (Skyline EPM Platform) | Backend (Skyline EPM Platform DOCSIS) |
+| EPM Level | Front end (Skyline EPM Platform) | Back end (Skyline EPM Platform DOCSIS) |
 | :---: | :---: | :---: |
 | Network | X | - |
 | Market | X | - |
@@ -22,10 +22,11 @@ Due the to aggregative nature of EPM, many of the tables in the Frontend element
 | US Service Group | - | X |
 
 > [!NOTE]  
-> When querying data from the EPM drivers, the tables will show as duplicated. The first entry will be the source table and the second entry is the view table. It is recommended to use the first entry.
+> When you query data from the EPM connectors, the tables will show as duplicated. The first entry will be the source table and the second entry is the view table. The first entry is what you should use for queries.
 
-### Cable Modem KPI's
-The Cable Modem information is seperated between the CCAP Collectors and the Generic DOCSIS CM Collector Elements.
+## Cable modem KPIs
+
+The cable modem information is spread over the CCAP collectors and the Generic DOCSIS CM Collector elements.
 
 | CM KPI | CCAP Collector | Generic DOCSIS CM Collector |
 | :--- | ---: | ---: |
@@ -57,5 +58,3 @@ The Cable Modem information is seperated between the CCAP Collectors and the Gen
 | Reflection Distance | - | X |
 | Group Delay Status | - | X |
 | Reflection Status | - | X |
-
-
