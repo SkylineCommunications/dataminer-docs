@@ -66,7 +66,7 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
       </DataBases>
       ```
 
-   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**), use the following configuration, filling in the required fields, or leaving them blank or removing them if they do not apply:
+   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
 
       ```xml
       <?xml version="1.0"?>
@@ -81,6 +81,9 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
          </DataBase>
       </DataBases>
       ```
+
+      > [!NOTE]
+      > If the proxy does not require authentication, you can leave the *UserName* and *Password* fields blank or remove them.
 
 1. Restart DataMiner to begin using STaaS.
 
