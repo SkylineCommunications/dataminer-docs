@@ -14,6 +14,8 @@ uid: Troubleshooting_procedures
 
 - [Investigating dataminer.services connection issues](xref:Cloud_Connection_Issues)
 
+- [Investigating issues with dataminer.services features](xref:Investigating_Dataminerservices_Feature_Issues)
+
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
 
 - [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
