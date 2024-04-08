@@ -139,3 +139,5 @@ items:
         topicUid: Disabling_bot_locally
       - name: Disconnecting from dataminer.services
         topicUid: Disconnecting_from_dataminer.services
+      - name: Enabling kernel response buffering for DataMiner APIGateway
+        topicUid: Enabling_kernel_response_buffering
