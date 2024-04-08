@@ -77,7 +77,9 @@ Instead of creating the CI Type from scratch, you will generate it based on an e
 
 ## Step 2: Create an element and manage it
 
-1. [Create an element](xref:Adding_elements) that uses the connector you deployed in the previous step. You can enter any IP Address in the *IP address/host* field, for example 127.0.0.1.
+1. [Create an element](xref:Adding_elements) that uses the connector you deployed in the previous step.
+
+   You can enter any IP address in the *IP address/host* field, for example `127.0.0.1`.
 
 1. In the IDP app, go to *Inventory* > *Unmanaged*.
 
@@ -116,7 +118,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
 1. Duplicate the example configuration backup script:
 
-   1. Go to the *Automation* app.
+   1. Go to the Automation module.
 
    1. Expand the folder until you reach *DataMiner Solutions* > *IDP* > *CI Type Management* > *Configuration Management* > *Backup*.
 
@@ -168,7 +170,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
 ## Step 5: Retrieve the device configuration
 
-1. Open *DataMiner IDP* app.
+1. Open the *DataMiner IDP* app.
 
 1. Go to *Admin* > *CI Types* > *Configuration Management*.
 
