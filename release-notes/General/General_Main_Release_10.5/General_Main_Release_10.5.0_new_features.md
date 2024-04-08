@@ -142,9 +142,10 @@ New features added to allow this include:
   - a new `IGQISortField`
   - a new `IGQISortOperator`
 
-#### Storage as a Service: Proxy support [ID_39221]
+#### Storage as a Service: Proxy support [ID_39221] [ID_39313]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- RN 39221: MR 10.5.0 - FR 10.4.5 -->
+<!-- RN 39313: MR 10.5.0 - FR 10.4.6 -->
 
 Storage as Service (STaaS) now supports the use of a proxy server.
 
@@ -167,7 +168,9 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 ```
 
 > [!NOTE]
-> The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
+>
+> - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
+> - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
 ### Protocols
 
@@ -408,6 +411,40 @@ The behavior is similar to that of the options in the `ModuleSettingsOverrides` 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
+#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, the user-defined API manager will send out an event whenever an `ApiToken` or `ApiDefinition` object is created, update or deleted.
+
+| Event name | Description |
+|---|---|
+| ApiTokenChangedEventMessage      | Generated when an [ApiToken](xref:UD_APIs_Objects_ApiToken) is created, updated, or deleted. |
+| ApiDefinitionChangedEventMessage | Generated when an [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
+
+When subscribing to event messages, you can use the `SubscriptionFilter` to only receive the messages matching a specific filter. See the following example.
+
+```csharp
+// In this example, you will take the Connection object from the script's Engine object
+var connection = engine.GetUserConnection();
+
+// Create a random set ID that identifies our subscription
+var setId = $"ApiTokenSubscription_{Guid.NewGuid()}"
+
+// Create the filter for the ApiToken events, only enabled tokens should match
+var filter = ApiTokenExposers.IsDisabled.Equal(false);
+var subscriptionFilter = new SubscriptionFilter<ApiTokenChangedEventMessage, ApiToken>(filter);
+
+// Attach a callback when a new event message arrives
+connection.OnNewMessage += (sender, args) =>
+{
+    // Handle the events
+}
+
+// Subscribe
+connection.AddSubscription(setId, subscriptionFilter);
+```
 
 ### Tools
 

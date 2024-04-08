@@ -12,8 +12,16 @@ uid: General_Main_Release_10.3.0_CU15
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced performance when processing changes made to service properties [ID_39011]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
+
+After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.

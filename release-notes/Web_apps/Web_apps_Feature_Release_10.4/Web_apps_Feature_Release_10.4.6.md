@@ -30,6 +30,14 @@ Because of a number of enhancements made to the waffle menu, overall performance
 
 ### Fixes
 
+#### Dashboards app: 'DATA USED IN DASHBOARD' section would not be hidden when empty [ID_39274]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, when a dashboard did not contain any components that used data, the *DATA* tab would incorrectly still contain a *DATA USED IN DASHBOARD* section.
+
+From now on, when empty, the *DATA USED IN DASHBOARD* section will no longer be displayed.
+
 #### Dashboards app & Low-Code Apps - Template editor: Save button would not become available when you enabled a setting in an override [ID_39290]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -57,3 +65,23 @@ When a *Time range* component had custom quick pick buttons configured, up to no
 When a *Node edge graph* component contained multiple queries, including one that was linked to a feed, in some rare cases, the data would incorrectly get fetched multiple times.
 
 Also, when a *Node edge graph* component was rendered for the first time, the edge arrows would incorrectly not appear.
+
+#### Dashboards app & Low-Code Apps - Line & area chart component: Problem when displaying trend data of aggregation parameters [ID_39300]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, trend charts would not display trend data of aggregation parameters correctly. The labels would be incorrect and all trend lines would have the same color.
+
+Also, a minor legend issue has now been fixed.
+
+#### Dashboards app: Problem with web APIs when adding or removing multiple dashboards simultaneously [ID_39304]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When multiple dashboards were added or removed simultaneously, in some cases, the web APIs could become unresponsive.
+
+#### Dashboards app & Low-Code Apps - Column & bar chart and Pie & donut chart components: Problem when refetching data that was being fetched [ID_39312]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, a `Request was aborted` error could appear when a *Column & bar chart* component or a *Pie & donut chart* component refetched data while that same data was being fetched.

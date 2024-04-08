@@ -14,7 +14,7 @@ If SLLogCollector is not installed on your DataMiner Agent, you can download it 
 
 > [!NOTE]
 >
-> - This tool requires .Net Framework 4.6 or higher.
+> - This tool requires .Net Framework 4.8 or higher.<!-- RN 38966 -->
 > - If our tech support team has requested that you run this tool, they will also provide a link to a secure SharePoint site where you can upload the resulting package.
 
 ## Running the tool
