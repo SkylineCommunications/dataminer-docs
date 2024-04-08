@@ -100,9 +100,9 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 
 ## TTL
 
-- Time-To-Live (TTL) values are not yet configurable in STaaS. In the table below, you can find the default TTL values for each datatype.
+- It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
 
-| Data Type            | TTL          |
+| Data type            | TTL          |
 |----------------------|:------------:|
 | RTTrend              | 7 days       |
 | AvgTrendShort        | 3 months     |
@@ -116,16 +116,18 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 To **migrate existing data** to STaaS, the following limitations apply:
 
 - Migrating logger tables is supported from DataMiner 10.3.11 onwards<!-- RN 37283 --> for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards<!-- RN 37408 --> for systems using a Cassandra database per DMA.
+
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
+
 - Migration from a MySQL setup is not yet supported.
 
 In addition, the following **other limitations** currently apply:
 
-- Custom configuration of TTL values are not supported yet.
-
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
+
+- Custom configuration of TTL values is not yet supported.
 
 - Direct queries from DataMiner Cube to the database are not supported.
 
