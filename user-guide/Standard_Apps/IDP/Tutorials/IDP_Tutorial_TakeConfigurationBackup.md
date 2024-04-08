@@ -98,13 +98,11 @@ Instead of creating the CI Type from scratch, you will generate it based on an e
 
 ## Step 3: Set up the configuration archive
 
-For IDP to store the configurations it needs to access a local folder or a shared folder.
+For IDP to store the configurations, it needs to access a local folder or a shared folder.
 
-1. Open the *DataMiner IDP* app.
+1. In the *DataMiner IDP* app, go to *Admin* > *Configuration*.
 
-1. Go to *Admin* > *Configuration*.
-
-1. Enter the *DataMiner Configuration Archive* settings.
+1. Under *DataMiner Configuration Archive*, specify the settings to access the local or shared folder.
 
    ![Setup configuration archive credentials](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_ConfigurationArchiveSetup.png)
 
