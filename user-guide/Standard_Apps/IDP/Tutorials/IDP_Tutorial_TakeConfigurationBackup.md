@@ -77,7 +77,7 @@ Instead of creating the CI Type from scratch, you will generate it based on an e
 
 ## Step 2: Create an element and manage it
 
-1. [Create an element](xref:Adding_elements) that uses the connector you deployed in the previous step.
+1. [Create an element](xref:Adding_elements) that uses the connector you deployed in the previous step. You can enter any IP Address in the *IP address/host* field, for example 127.0.0.1.
 
 1. In the IDP app, go to *Inventory* > *Unmanaged*.
 
