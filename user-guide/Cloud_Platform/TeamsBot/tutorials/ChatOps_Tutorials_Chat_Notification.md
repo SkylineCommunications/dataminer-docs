@@ -56,13 +56,13 @@ Learn more about this package [here](https://github.com/SkylineCommunications/Ch
 
    ![ChatIntegration Examples ChatsExample Memory file](~/user-guide/images/chatops_notification_02_002.png)
 
-1. Execute the *Send Chat Notification Example* script, select the chat ID, and configure the notification you want to send.
+1. Execute the *Send Chat Notification Example* script. Select the chat ID, enter the notification you want to send, and click *Execute now*.
 
    ![ChatIntegration Examples Send Chat Notification](~/user-guide/images/chatops_notification_02_003.png)
 
 1. Click *Close* to exit the *Send Chat Notification Example* window.
 
-The notification should not appear in the DataMiner chat.
+1. Verify that the notification was received in the DataMiner chat.
 
 ## Step 4: Configure a Correlation rule triggered by a specific alarm to send the chat notification
 
