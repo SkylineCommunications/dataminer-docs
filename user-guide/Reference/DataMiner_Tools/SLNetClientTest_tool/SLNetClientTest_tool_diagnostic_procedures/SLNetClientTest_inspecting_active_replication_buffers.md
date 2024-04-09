@@ -27,7 +27,7 @@ To drop one specific replication buffer:
 1. In the *Type* field at the bottom, select *ReplicationBufferStats*.
 
 > [!NOTE]
-> When a replication buffer saves files to disk, those files are located in C:\\Skyline DataMiner\\ System Cache\\SLNet and are named "ReplicationBuffer_clienthostname_ip_dmaid_eid_objectid.bin".
+> When a replication buffer saves files to disk, those files are located in C:\\Skyline DataMiner\\System Cache\\SLNet and are named "ReplicationBuffer_clienthostname_ip_dmaid_eid_objectid.bin".
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
