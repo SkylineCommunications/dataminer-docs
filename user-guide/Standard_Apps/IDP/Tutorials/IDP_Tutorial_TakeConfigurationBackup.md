@@ -104,6 +104,10 @@ For IDP to store the configurations, it needs to access a local folder or a shar
 
 1. Under *DataMiner Configuration Archive*, specify the settings to access the local or shared folder.
 
+   - Click the triangle button in the top right corner to specify a value for each setting.
+
+   - Specify the credentials for a user account that has access to the specified path.
+
    ![Setup configuration archive credentials](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_ConfigurationArchiveSetup.png)
 
 1. Click *Connect*.
@@ -112,19 +116,19 @@ At this point, you have already generated the CI Type, created an element and ad
 
 ## Step 4: Create the script to retrieve the configuration backup
 
-When IDP is installed it comes with an example script on how to retrieve the configuration and send it to IDP. First, you will duplicate the example script, and then you will change it to retrieve the parameter values from the element created in [Step 2](#step-2-create-an-element-and-manage-it).
+When IDP is installed it comes with an example script on how to retrieve the configuration and send it to IDP. You will now need to duplicate this script and change it to retrieve the parameter values from the element created in [step 2](#step-2-create-an-element-and-manage-it).
 
 1. Duplicate the example configuration backup script:
 
    1. Go to the Automation module.
 
-   1. Expand the folder until you reach *DataMiner Solutions* > *IDP* > *CI Type Management* > *Configuration Management* > *Backup*.
+   1. Expand the folders until you reach *DataMiner Solutions* > *IDP* > *CI Type Management* > *Configuration Management* > *Backup*.
 
-   1. Duplicate the *IDP_Example_Custom_ConfigurationBackup* script, and rename it.
+   1. Within this folder, duplicate the *IDP_Example_Custom_ConfigurationBackup* script, and rename it.
 
       ![Duplicated script](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_DuplicateScript.png)
 
-1. Update the script:
+1. Update the script to retrieve the parameter values from the element you created earlier:
 
    1. Open the script.
 
@@ -162,9 +166,9 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
    1. Click *Save script*.
 
-   1. Before moving on, open the element you have created, and assign values to parameters 502 (*System Contact*) and 504 (*System Location*).
+1. Open the element you created in [step 2](#step-2-create-an-element-and-manage-it), and assign values to parameters 502 (*System Contact*) and 504 (*System Location*).
 
-      ![Set parameter values](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_SetElementValue.png)
+   ![Set parameter values](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_SetElementValue.png)
 
 ## Step 5: Retrieve the device configuration
 
