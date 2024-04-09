@@ -80,6 +80,12 @@ Also, a minor legend issue has now been fixed.
 
 When multiple dashboards were added or removed simultaneously, in some cases, the web APIs could become unresponsive.
 
+#### Dashboards app: Not all data sets would show a counter [ID_39311]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In the *All available data* section of the *Data* tab, not all data sets would show a counter.
+
 #### Dashboards app & Low-Code Apps - Column & bar chart and Pie & donut chart components: Problem when refetching data that was being fetched [ID_39312]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
