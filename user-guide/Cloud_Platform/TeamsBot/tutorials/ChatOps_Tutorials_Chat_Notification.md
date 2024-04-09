@@ -19,11 +19,18 @@ Estimated duration: 15 minutes.
 
 ## Overview
 
-- [Step 1: Deploy the ChatIntegration Examples package from the Catalog](#step-1-deploy-the-chat-integration-examples-package-from-the-catalog)
-- [Step 2: Fetch the private chat for a user and send a notification](#step-2-fetch-the-private-chat-for-a-user-and-send-a-notification)
-- [Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#step-3-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
+- [Step 1: Add the DataMiner app to Microsoft Teams](#step-1-add-the-dataminer-app-to-microsoft-teams)
+- [Step 2: Deploy the ChatIntegration Examples package from the Catalog](#step-2-deploy-the-chat-integration-examples-package-from-the-catalog)
+- [Step 3: Fetch the private chat for a user and send a notification](#step-3-fetch-the-private-chat-for-a-user-and-send-a-notification)
+- [Step 4: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
 
-## Step 1: Deploy the Chat Integration Examples package from the Catalog
+## Step 1: Add the DataMiner app to Microsoft Teams
+
+1. In *Microsoft Teams*, go to *Apps*, and search for "DataMiner".
+
+1. Add the DataMiner app.
+
+## Step 2: Deploy the Chat Integration Examples package from the Catalog
 
 Learn more about this package [here](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md).
 
@@ -37,11 +44,13 @@ Learn more about this package [here](https://github.com/SkylineCommunications/Ch
 
    ![ChatIntegration Examples scripts](~/user-guide/images/chatops_notification_01_002.png)
 
-## Step 2: Fetch the private chat for a user and send a notification
+## Step 3: Fetch the private chat for a user and send a notification
 
 1. Execute the *Fetch Private Chat Example* script with the email address of the user.
 
    ![ChatIntegration Examples Fetch Private Chat](~/user-guide/images/chatops_notification_02_001.png)
+
+1. Click *Close* to exit the *Fetch Private Chat Example* window.
 
 1. Verify that an entry was added in the *ChatsExample* memory file containing the private chat ID.
 
@@ -51,7 +60,11 @@ Learn more about this package [here](https://github.com/SkylineCommunications/Ch
 
    ![ChatIntegration Examples Send Chat Notification](~/user-guide/images/chatops_notification_02_003.png)
 
-## Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification
+1. Click *Close* to exit the *Send Chat Notification Example* window.
+
+The notification should not appear in the DataMiner chat.
+
+## Step 4: Configure a Correlation rule triggered by a specific alarm to send the chat notification
 
 1. Configure a Correlation rule so it will be triggered by a specific alarm and will execute the *Send Chat Notification Example* script.
 
