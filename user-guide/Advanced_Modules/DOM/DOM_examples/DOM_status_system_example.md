@@ -123,7 +123,7 @@ var investigationLink = new DomStatusSectionDefinitionLink(investigationLinkId)
 ```
 
 > [!NOTE]
-> By default, the `Visible` property of the `DomStatusFieldDescriptorLink` is `false`. This means that these fields will not be displayed in a low-code app form. If that would be required, be sure to set that property to `true`.
+> By default, the `Visible` property of the `DomStatusFieldDescriptorLink` is `false`. This means that these fields will not be displayed in a low-code app form. If you do want them to be displayed, be sure to set that property to `true`.
 
 ### Fixing status link
 
