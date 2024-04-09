@@ -24,6 +24,17 @@ Because of a number of enhancements, overall performance has increased when proc
 
 All NATS configuration files will now use plain JSON syntax.
 
+#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
+
+From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
+
+For more information on these interfaces, see:
+
+- [IGQIOnInit interface](xref:GQI_IGQIOnInit)
+- [IGQIOnDestroy interface](xref:GQI_IGQIOnDestroy)
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]

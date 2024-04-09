@@ -61,17 +61,6 @@ Restrictions:
 
 When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
 
-#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
-
-<!-- MR 10.5.0 - FR 10.4.5 -->
-
-From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
-
-For more information on these interfaces, see:
-
-- [IGQIOnInit interface](xref:GQI_IGQIOnInit)
-- [IGQIOnDestroy interface](xref:GQI_IGQIOnDestroy)
-
 #### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

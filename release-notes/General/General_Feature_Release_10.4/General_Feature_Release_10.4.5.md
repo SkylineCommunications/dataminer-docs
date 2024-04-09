@@ -89,7 +89,7 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
 
