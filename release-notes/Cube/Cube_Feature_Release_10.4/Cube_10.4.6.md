@@ -38,4 +38,8 @@ Because of a number of enhancements, overall performance has now increased when 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Visual Overview: Problem with placeholder value update detection [ID_39325]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.

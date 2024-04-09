@@ -91,3 +91,9 @@ In the *All available data* section of the *Data* tab, not all data sets would s
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, a `Request was aborted` error could appear when a *Column & bar chart* component or a *Pie & donut chart* component refetched data while that same data was being fetched.
+
+#### Low-Code Apps: 'View published app' button would no longer be displayed when editing an app that had been published previously [ID_39339]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you were editing an app that had already been published previously, the *View published app* button would incorrectly no longer be displayed.

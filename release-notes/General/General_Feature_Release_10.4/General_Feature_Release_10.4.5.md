@@ -100,7 +100,7 @@ For more information on these interfaces, see:
 
 #### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\Metrics` folder:
 
