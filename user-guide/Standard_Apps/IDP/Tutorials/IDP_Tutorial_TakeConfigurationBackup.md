@@ -179,6 +179,10 @@ When IDP is installed it comes with an example script on how to retrieve the con
 1. Select the backup script.
 
    ![Select the backup script](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_SelectScript.png)
+   > [!NOTE]
+   > If you don't see the script in the dropdown, navigate to *Admin* > *Settings* and click the refresh button.
+   >
+   > ![Refresh backup script folder](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_RefreshScripts.png)
 
 1. Go to *Configuration* > *Summary*.
 
