@@ -122,6 +122,9 @@ var investigationLink = new DomStatusSectionDefinitionLink(investigationLinkId)
 };
 ```
 
+> [!NOTE]
+> By default, the `Visible` property of the `DomStatusFieldDescriptorLink` is `false`. This means that these fields will not be displayed in a low-code app form. If that would be required, be sure to set that property to `true`.
+
 ### Fixing status link
 
 When transitioning to the status *Fixing*, the name of the technician who will fix the issue must be present and valid. However, it can still be changed. The date when the issue was fixed has now also become optional, so it can be filled in before the transition to the *Fixed* status.
