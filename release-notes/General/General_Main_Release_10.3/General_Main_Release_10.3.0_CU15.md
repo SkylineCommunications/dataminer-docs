@@ -20,6 +20,14 @@ Because of a number of enhancements, overall performance has increased when proc
 
 ### Fixes
 
+#### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When string parameters are parsed, both an ASCII version and a Unicode version of the string value should be returned. However, up to now, when a string parameter was a table column parameter, the `Interprete` type of the table would be used. As a result, string values would be processed incorrectly.
+
+From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
+
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
