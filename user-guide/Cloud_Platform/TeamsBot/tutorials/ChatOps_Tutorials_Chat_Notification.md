@@ -4,7 +4,7 @@ uid: ChatOps_Tutorials_Chat_Notification
 
 # Chat notifications
 
-This tutorial shows you how you can use our Chat Integration examples to send notifications from your DataMiner System to Microsoft Teams.
+This tutorial shows you how you can use the Chat Integration examples to send notifications from your DataMiner System to Microsoft Teams.
 
 Estimated duration: 15 minutes.
 
@@ -28,13 +28,13 @@ Estimated duration: 15 minutes.
 
 1. In *Microsoft Teams*, go to *Apps*, and search for "DataMiner".
 
-1. Add the DataMiner app.
+1. Add the *DataMiner* app.
 
 ## Step 2: Deploy the Chat Integration Examples package from the Catalog
 
-Learn more about this package [here](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md).
+To learn more about this package, see its [README file](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md).
 
-1. Browse to <https://catalog.dataminer.services/details/package/5860>.
+1. Go to <https://catalog.dataminer.services/details/package/5860>.
 
    ![ChatIntegration Examples page in Catalog](~/user-guide/images/chatops_notification_01_001.png)
 
