@@ -24,6 +24,9 @@ To create feed references inside textual settings, use the following syntax:
 
 - **Source name**: The name of the low-code app page or panel, e.g. "Page 1".
 
+  > [!NOTE]
+  > When linking a feed to a [Web](xref:DashboardWeb) or [Text](xref:DashboardText) component in a dashboard, the source name should be omitted<!--RN 38993-->.
+
 - **Feed name**: The name of the feed, e.g. "Table 3".
 
 - **Category name**: The part of the feed that will contain the data, e.g. "Selected rows".
