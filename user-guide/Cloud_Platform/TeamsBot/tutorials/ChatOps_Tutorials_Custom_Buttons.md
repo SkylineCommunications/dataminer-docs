@@ -107,9 +107,10 @@ In step 4, you will send a notification in a channel instead of a chat, so you f
 1. The notification received in the channel contains a few buttons. Try them!
 
    - **Take ownership**: Executes the custom *Take Ownership of Alarm* command that you configured in step 2.
+
+     The custom *Take ownership* command enables you to easily interact with the notification. The response of the custom command can again contain an adaptive card with buttons. This enables you to create user flows, while a notification can still be sent in another channel or private chat. This functionality offers a multitude of possibilities.
+
    - Show [element name]: Makes the DataMiner bot show more information about the element in question.
    - Show all alarms on [element name]: Makes the DataMiner bot show all alarms associated with the element in question (if any).
 
    ![Use the custom button of the Adaptive Card and Take Ownership of the alarm as an example](~/user-guide/images/chatops_notification_part_02_05_001.gif)
-
-The custom *Take ownership* command enables you to easily interact with the notification. The response of the custom command can again contain an adaptive card with buttons. This enables you to create user flows, while a notification can still be sent in another channel or private chat. This functionality offers a multitude of possibilities.
