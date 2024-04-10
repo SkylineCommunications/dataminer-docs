@@ -6,21 +6,21 @@ uid: Installing_TAG_App
 
 To install and set up the TAG app:
 
-1. In [DataMiner Catalog](xref:https://catalog.dataminer.services/), download the latest version of the [TAG Platform Package](xref:)
+1. In [DataMiner Catalog](https://catalog.dataminer.services/), download the latest version of the [TAG Platform Package](https://catalog.dataminer.services/details/package/6042)
 
-1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+2. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
-1. In DataMiner Cube, go to *Apps* > *Automation*.
+3. In DataMiner Cube, go to *Apps* > *Automation*.
 
-1. Select the script *TAG_SetupWizard* and click *Execute*.
+4. Select the script *TAG_SetupWizard* and click *Execute*.
 
-1. On the first page, click the button *Execute Now*.
+5. On the first page, click the button *Execute Now*.
 
    The Setup Wizard will execute in the background and apply all changes needed.
 
-1. Close execution window.
+6. Close execution window.
 
-1. Open the Automation app and search for the "Merge LCA themes" script. Within the script, go to Advanced > DLL references and replace **C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll** with **C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll**
+7. Open the Automation app and search for the "Merge LCA themes" script. Within the script, go to Advanced > DLL references and replace **C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll** with **C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll**
 
 ## TAG Elements
 
@@ -40,7 +40,7 @@ To create an element in DataMiner Cube, follow these steps:
 
 1. For the Http Connection:
    * Enter the IP address of the TAG device in the *IP address/host* field.
-   * In the IP port section, input the recommended port for the selected protocol. Refer to the documentation for [TAG MCM](xref:https://catalog.dataminer.services/details/connector/1923) or [TAG MCS](xref:https://catalog.dataminer.services/details/connector/8160) for the recommended port information.
+   * In the IP port section, input the recommended port for the selected protocol. Refer to the documentation for [TAG MCM](https://catalog.dataminer.services/details/connector/1923) or [TAG MCS](https://catalog.dataminer.services/details/connector/8160) for the recommended port information.
 
 1. After filling all required fields, click the Create button to finalize the creation of the element.
 

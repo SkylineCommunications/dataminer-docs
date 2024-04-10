@@ -30,4 +30,4 @@ For more information about how to install the package, see:
 - [Installation](xref:Installing_TAG_App)
   
 > [!TIP]
-> See TAG Solution use case in Dojo: [TAG VS – tech partner integrations [NAB 2024]](xref:https://community.dataminer.services/?post_type=use-case&p=123780).
+> See TAG Solution use case in Dojo: [TAG VS – tech partner integrations [NAB 2024]](https://community.dataminer.services/?post_type=use-case&p=123780).
