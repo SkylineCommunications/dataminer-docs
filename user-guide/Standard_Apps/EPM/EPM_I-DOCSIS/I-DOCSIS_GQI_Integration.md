@@ -24,6 +24,9 @@ Because of the aggregative nature of EPM, many of the tables in the front-end el
 > [!NOTE]  
 > When you query data from the EPM connectors, the tables will show as duplicated. The first entry will be the source table and the second entry is the view table. The first entry is what you should use for queries.
 
+> [!NOTE]  
+> Be careful when performing multiple GQI operations, especially the Join operation, on the Skyline EPM Platform DOCSIS drivers. Due to the large amount of data in EPM, the queries can timeout and take too long to resolve.
+
 ## Cable modem KPIs
 
 The cable modem information is spread over the CCAP collectors and the Generic DOCSIS CM Collector elements.
