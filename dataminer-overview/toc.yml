@@ -94,6 +94,8 @@ items:
                   topicUid: Overview_MediaOps_Cost_and_Billing
                 - name: People and Organizations
                   topicUid: Overview_MediaOps_People_and_Organization
+                - name: Resource Studio
+                  topicUid: Overview_MediaOps_Resource_Studio
             - name: Supported connectors
               topicUid: Overview_MediaOps_supported_connectors
     - name: Agile partnership
