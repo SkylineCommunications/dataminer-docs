@@ -22,7 +22,7 @@ uid: Cube_Feature_Release_10.4.6
 
 ### Enhancements
 
-#### Alarm Console: Enhanced performance when loading a large number of alarms in an active alarms tab [ID_39235]
+#### Alarm Console: Enhanced performance when loading a large number of alarms in an active alarms tab [ID_39235] [ID_39236]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
