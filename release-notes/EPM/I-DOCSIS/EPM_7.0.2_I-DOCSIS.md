@@ -25,6 +25,15 @@ The new maps are available for the following levels:
 - Amplifier
 - Tap
 
+When you open the dashboard, the available layer information is shown for all associated child entities:
+
+- Amplifiers: Icons will show the highest alarm severity affecting the entity.
+- Taps: Icons will show the highest alarm severity affecting the entity.
+- CPE devices:
+  - Group Delay: All CPE devices affected by Group Delay Out of Spec (OOS).
+  - Reflection: All CPE devices affected by Reflection OOS.
+  - Group Delay and Reflection: All CPE devices affected by Group Delay or Reflection OOS.
+
 #### New Ping and Tracert buttons on CCAP and CM overview pages [ID_39334]
 
 On the overview page for a CCAP or CM, users can now click dedicated *Ping* and *Tracert* buttons to open a window with the outcome of the ping or traceroute operation for the relevant CCAP or CM. This will provide additional insight into the status and connectivity of the system's devices.
