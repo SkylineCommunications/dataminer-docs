@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Catalog - Show DMS issues when deploying a catalog item [ID_39374]
+
+Preventing users from deploying a catalog item when a deployment will fail. Showing the different issues with a documentation link for each DataMiner System.
+
 #### 28 March 2024 - Fix - Catalog - Typos in error when no DMS is found [ID_39232]
 
 When no DMS is found for an organization, the displayed error will now no longer contain any typos.
