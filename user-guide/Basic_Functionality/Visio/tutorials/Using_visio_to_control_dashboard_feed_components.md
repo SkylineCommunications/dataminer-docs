@@ -33,18 +33,18 @@ Expected duration: 45 minutes
 1. Once you have created the element, go to the *Table* data page of the element to find the *Numeric Master Table*.
 1. Right-click below the table's column headers to add a new row to the table.  
 
-   ![]((~/user-guide/images/VisioURLFeed_AddRowNumericTable.png)
+   ![](~/user-guide/images/VisioURLFeed_AddRowNumericTable.png)
 
 1. Enter the row's primary key [IDX], enter random numbers into the first three columns, and click *OK*.
 
    > [!IMPORTANT]
    > Do not use any special characters for the primary key as they will interfere with the URL linking performed in step 3.
 
-   ![]((~/user-guide/images/VisioURLFeed_AddRowNumericTableInput.png)
+   ![](~/user-guide/images/VisioURLFeed_AddRowNumericTableInput.png)
 
 1. Add at least one more row to the table.
 
-   ![]((~/user-guide/images/VisioURLFeed_NumericTableRows.png)
+   ![](~/user-guide/images/VisioURLFeed_NumericTableRows.png)
 
 ## Step 2: Create a new dashboard and add a 'Parameter feed' component and a 'State' component to display the numerical data from the Virtual Connector
 
@@ -55,31 +55,31 @@ Expected duration: 45 minutes
 1. From the *Data* pane on the right, drag the *ELEMENTS* header onto the *Parameter feed* component to be used as data.
 1. In the *Data* pane on the right, expand the *PARAMETERS* section, use the filter to find the three numeric table parameters that you entered numbers for, and drag each of them onto the *Parameter feed* component to be used as data.
 
-   ![]((~/user-guide/images/VisioURLFeed_ParameterDataForFeed.png)
+   ![](~/user-guide/images/VisioURLFeed_ParameterDataForFeed.png)
 
 1. In the *Data* pane on the right, expand the *PROTOCOLS* section, search for the *Skyline Generic Virtual Connector*, and drag the protocol onto the *Parameter feed* component to be used as a filter.
 
-   ![]((~/user-guide/images/VisioURLFeed_ProtocolDataForFeed.png)
+   ![](~/user-guide/images/VisioURLFeed_ProtocolDataForFeed.png)
 
 1. Add a [State component](xref:DashboardState).
 1. Click on the *State* component to highlight it.
 1. In the *Layout* pane on the right, select the *LABELS* boxes to display the parameter name, the index and the value.
 
-   ![]((~/user-guide/images/VisioURLFeed_StateLayoutOptions.png)
+   ![](~/user-guide/images/VisioURLFeed_StateLayoutOptions.png)
 
 1. In the *Data* pane on the right, expand the *FEEDS* section to find the items associated with the parameter feed. Expand the *Parameter feed* component, and drag the *Parameters* item onto the *State* component to be used as data.
 
-   ![]((~/user-guide/images/VisioURLFeed_ParameterDataForState.png)
+   ![](~/user-guide/images/VisioURLFeed_ParameterDataForState.png)
 
    At this point, you should be able to make manual parameter feed selections to control which parameter values are shown on the *State* component.
 
-   ![]((~/user-guide/images/VisioURLFeed_DashboardManualResults.png)
+   ![](~/user-guide/images/VisioURLFeed_DashboardManualResults.png)
 
 1. Exit edit mode.
 1. In the top-right corner of the screen, click the ellipsis button, and then click *Share* to open a dialog box.
 1. Enable the *Use uncompressed URL parameters* option, and then click *Copy link*. The URL you copied will be used in step 3 below.
 
-   ![]((~/user-guide/images/VisioURLFeed_URLLink.png)
+   ![](~/user-guide/images/VisioURLFeed_URLLink.png)
 
 ## Step 3: Create a new visual overview for the Generic Virtual Connector element with shapes for each numerical table index linking to the dashboard
 
@@ -87,7 +87,7 @@ Expected duration: 45 minutes
 1. Go to the *VISUAL* page of the element, and right-click anywhere to have the Visio file options displayed.
 1. Hover the mouse pointer over *Set as active "..." element Visio file*, and click *New blank*. This will create a new Visio file associated with the element. It will look like a blank canvas on the VISUAL page of the element.
 
-   ![]((~/user-guide/images/VisioURLFeed_NewBlankVisio.png)
+   ![](~/user-guide/images/VisioURLFeed_NewBlankVisio.png)
 
 1. On the blank *VISUAL* page, right-click anywhere, and select *Edit in Visio*. This will open Microsoft Visio.
 
@@ -101,7 +101,7 @@ Expected duration: 45 minutes
 
    You should see the following under the *Drawing Explorer*:
 
-   ![]((~/user-guide/images/VisioURLFeed_VisioRowGroup.png)
+   ![](~/user-guide/images/VisioURLFeed_VisioRowGroup.png)
 
 1. Add the following shape data to the grouped sheet representing a row.
 
@@ -124,7 +124,7 @@ Expected duration: 45 minutes
 
 1. Using a publicly available web-based encoded JSON URL converter, convert the URL you captured in step 2 to a human-readable format. This will allow users to understand how feed selections are represented in the dashboard's URL.
 
-   ![]((~/user-guide/images/VisioURLFeed_URLConvert.png)
+   ![](~/user-guide/images/VisioURLFeed_URLConvert.png)
 
    With this information, certain sections of the URL can be replaced with placeholders that will allow dynamic entry based on the row index that is fed into it.
 
