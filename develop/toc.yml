@@ -775,6 +775,8 @@ items:
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
+    - name: Obsolete namespaces
+      topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
   - name: Getting started as a System Developer

@@ -89,7 +89,7 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
 
@@ -100,7 +100,7 @@ For more information on these interfaces, see:
 
 #### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\Metrics` folder:
 
@@ -425,12 +425,6 @@ The maximum number of concurrent GQI queries has now been increased from 20 to 1
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
-
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
 #### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
 

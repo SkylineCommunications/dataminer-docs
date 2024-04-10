@@ -167,6 +167,12 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when activating function DVEs.
+
 #### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -211,6 +217,14 @@ As to logging, behavior has changed with respect to exceptions:
 - `GenIfSessionException` will be logged as a warning without stack trace.
 - `GenIfSecurityException` will be logged as a warning without stack trace.
 - Any other error will be logged as error with stack trace.
+
+#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
+
+From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
 
 ### Fixes
 
