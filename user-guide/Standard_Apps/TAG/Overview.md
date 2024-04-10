@@ -18,6 +18,4 @@ Within the TAG package, you will have the following items:
 
 For more information, you can go to the following pages:
 
-- [Installation](xref:EPM_D-DOCSIS)
-
-- [How to use](xref:EPM_GPON)
+- [Installation](xref:Installing_TAG_App)
