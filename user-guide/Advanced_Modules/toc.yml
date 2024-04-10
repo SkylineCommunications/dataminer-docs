@@ -944,7 +944,7 @@ items:
                 topicUid: ConnectorsTopologyRelationsRecursive
             - name: View Tables
               topicUid: EpmIntegrationTrainingViewTables
-            - name: Vissibility Tags and Fields
+            - name: Visibility Tags and Fields
               topicUid: ConnectorsVisChainsFields
           - name: Visual Overview
             topicUid: EpmIntegrationTrainingVisio
@@ -961,6 +961,15 @@ items:
                 topicUid: BestPracticesRemoteKpis
               - name: Perform Pings And Tracert Using DITT
                 topicUid: DITTIntegration
+          - name: Web Apps
+            topicUid: EpmIntegrationTrainingWebApps
+            items:
+              - name: Dashboards in EPM
+                topicUid: EpmIntegrationTrainingDashboards
+              - name: Monitoring App in EPM
+                topicUid: EpmIntegrationTrainingMonitoring
+              - name: Low-Code Apps in EPM
+                topicUid: EpmIntegrationTrainingLowCodeApp
           - name: Other Options
             topicUid: EpmIntegrationTrainingOtherOptions
   - name: Inventory & Asset Management
