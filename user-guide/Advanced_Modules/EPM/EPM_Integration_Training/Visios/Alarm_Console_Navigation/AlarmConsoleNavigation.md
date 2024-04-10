@@ -1,5 +1,5 @@
 ---
-uid: EpmIntegrationTrainingAggregations
+uid: AlarmConsoleNavigation
 ---
 
 # Alarm Console Navigation

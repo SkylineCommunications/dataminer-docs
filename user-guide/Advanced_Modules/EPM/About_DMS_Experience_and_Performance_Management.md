@@ -10,24 +10,26 @@ An EPM element (formerly known as CPE Manager) is created like any other DataMin
 
 Many different EPM protocols exist, and often these are custom-made to match particular situations. EPM elements have a dedicated user interface, which is determined by the element protocol. As such, the user interface can be different for each EPM element.
 
-### Architecture
+## EPM Architecture
 
-A typical architecture for a DMS used for Experience and Performance Management consists of:
+**EPM Manager Driver**: Used for one FE (Frontend) element and multiple BE (Backend) elements.
 
-- A front-end DMA with an EPM element:
+**EPM Collector Driver(s)**: Used to poll all the lowest level information and let FE know of the Topology relationships.
 
-  - Provides the user interface users connect to for Experience and Performance Management.
+### Element Responsibilities
 
-  - Responsible for aggregation of higher level data.
+**Frontend**
+-	In charge of provisioning and assigning unique keys to all topology entities.
+-	Only sets tables with higher level topology entities.
+-	In charge of aggregations at the higher level.
+-	Merges remaining topology information from all BE elements.
+-	Ideally should be on it’s own DMA with little to no other elements.
 
-  - Responsible for provisioning, i.e. provides a reference of all objects and their topology, the link between the objects.
+**Backend**
+-	Contains the rest of the topology information.
+-	In charge of aggregating the remaining levels.
+-	In typical EPM installations, only one BE element is needed per DMA. They are the managers of the entire DMA.
 
-  - Responsible for interaction with other systems.
-
-- Several back-end DMAs:
-
-  - Responsible for aggregation of lower level data.
-
-  - Several collector elements can be created per DMA and per type of individual object.
-
-  - Each collector element polls a group of objects, with a refresh period depending on the number of objects.
+**Collectors**
+-	Poll device KPI information.
+-	As many Collector elements per DMA as needed.

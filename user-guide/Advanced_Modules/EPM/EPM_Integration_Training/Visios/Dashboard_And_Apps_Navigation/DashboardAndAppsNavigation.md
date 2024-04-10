@@ -1,5 +1,5 @@
 ---
-uid: EpmIntegrationTrainingAggregations
+uid: DashboardAndAppsNavigation
 ---
 
 # Dashboards/Apps Navigation

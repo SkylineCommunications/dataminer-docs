@@ -1,8 +1,10 @@
+---
+uid: BestPracticesRemoteKpis
+---
+
 # Best Practies to Retrieve Paramters
 
----
-uid: EpmIntegrationTrainingAggregations
----
+
 
 # Retrieving Data from EPM Element
 If you would like to display data from an EPM Object card onto a Visio, it is best practice to create a cardVar that holds the element information instead of using placeholder [this Element]. This will provide a static variable for the Visio, this prevent it from doing a look up on the placeholder everytime.

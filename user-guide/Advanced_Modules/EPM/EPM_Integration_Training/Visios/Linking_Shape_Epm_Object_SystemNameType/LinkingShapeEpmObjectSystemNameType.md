@@ -1,5 +1,5 @@
 ---
-uid: EpmIntegrationTrainingAggregations
+uid: LinkingShapeEpmObjectSystemNameType
 ---
 
 # Linking A Shape To an EPM Object Using System Name and Type

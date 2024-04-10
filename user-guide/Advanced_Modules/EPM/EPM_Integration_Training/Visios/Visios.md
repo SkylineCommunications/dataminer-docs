@@ -1,5 +1,5 @@
 ---
-uid: EpmIntegrationTrainingConnectors
+uid: EpmIntegrationTrainingVisio
 ---
 
 # Reference

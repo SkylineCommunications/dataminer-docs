@@ -1,5 +1,5 @@
 ---
-uid: EpmIntegrationTrainingAggregations
+uid: FilteringAlarmsUsingSystemNameType
 ---
 
 # Filtering Alarms Using System Name and Type

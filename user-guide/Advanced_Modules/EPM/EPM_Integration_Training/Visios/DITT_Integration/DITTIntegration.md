@@ -1,5 +1,5 @@
 ---
-uid: EpmIntegrationTrainingAggregations
+uid: DITTIntegration
 ---
 
 # DataMiner IT Tools(DITT) Integration
