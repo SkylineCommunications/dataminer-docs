@@ -645,6 +645,8 @@ items:
         items:
           - name: Getting started with basic shapes
             topicUid: Getting_started_with_basic_shapes
+          - name: Using Visio to control dashboard feed components
+            topicUid: Using_visio_to_control_dashboard_feed_components
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:
