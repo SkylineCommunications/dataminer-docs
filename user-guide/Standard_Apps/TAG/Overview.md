@@ -8,6 +8,6 @@ The DataMiner TAG Solution allows for monitoring and control of individual TAG M
 
 For more information, you can go to the following pages:
 
-- [Installtion](xref:EPM_D-DOCSIS)
+- [Installation](xref:EPM_D-DOCSIS)
 
 - [How to use](xref:EPM_GPON)
