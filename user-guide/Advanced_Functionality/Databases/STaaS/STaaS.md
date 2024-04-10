@@ -98,12 +98,27 @@ The data is encrypted both at rest and in transit.
 
 If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availability of 99.90%. With [GRS](#data-location-and-redundancy), it has an expected availability of 99.95%. For more information, please contact <sales@skyline.be>.
 
+## TTL
+
+It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
+
+| Data type                | TTL          |
+|--------------------------|:------------:|
+| Real-time trending       | 7 days       |
+| Average trending (short) | 3 months     |
+| Average trending (medium)| 2 years      |
+| Average trending (long)  | 10 years     |
+| State changes            | 5 years      |
+| Spectrum traces          | 1 year       |
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
 - Migrating logger tables is supported from DataMiner 10.3.11 onwards<!-- RN 37283 --> for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards<!-- RN 37408 --> for systems using a Cassandra database per DMA.
+
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
+
 - Migration from a MySQL setup is not yet supported.
 
 In addition, the following **other limitations** currently apply:
@@ -111,6 +126,8 @@ In addition, the following **other limitations** currently apply:
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
+
+- Custom configuration of TTL values is not yet supported.
 
 - Direct queries from DataMiner Cube to the database are not supported.
 
