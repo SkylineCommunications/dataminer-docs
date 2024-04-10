@@ -100,7 +100,7 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 
 ## TTL
 
-- It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
+It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
 
 | Data type                | TTL          |
 |--------------------------|:------------:|
@@ -108,8 +108,8 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 | Average trending (short) | 3 months     |
 | Average trending (medium)| 2 years      |
 | Average trending (long)  | 10 years     |
-| State Changes            | 5 years      |
-| Spectrum Traces          | 1 year       |
+| State changes            | 5 years      |
+| Spectrum traces          | 1 year       |
 
 ## Limitations
 
