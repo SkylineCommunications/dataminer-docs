@@ -120,6 +120,9 @@ To upgrade from DataMiner 9.6.0 to DataMiner 10.3.0:
 
 When you upload a DataMiner upgrade, several prerequisite checks are automatically executed. These will verify whether all the necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisite checks detect that this is not the case, the upgrade will be canceled.
 
+> [!IMPORTANT]
+> We recommend running the prerequisite checks well in advance of the actual upgrade activity, so that you have time to carry out any actions that are required as reported by the checks.
+
 The following prerequisite checks are currently available:
 
 - [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
