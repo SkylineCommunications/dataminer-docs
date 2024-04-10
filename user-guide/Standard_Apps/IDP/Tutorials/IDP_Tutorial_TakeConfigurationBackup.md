@@ -179,8 +179,9 @@ When IDP is installed it comes with an example script on how to retrieve the con
 1. Select the backup script.
 
    ![Select the backup script](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_SelectScript.png)
+
    > [!NOTE]
-   > If you don't see the script in the dropdown, navigate to *Admin* > *Settings* and click the refresh button.
+   > If you cannot see the script in the dropdown, go to *Admin* > *Settings* and click the refresh button for the *Backup Script Folder* setting.
    >
    > ![Refresh backup script folder](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_RefreshScripts.png)
 
@@ -190,9 +191,14 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
    ![Run the script](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_RunScript.png)
 
-1. Select a *Type* and click *Next*, then click *Finish*.
+   This will open a wizard.
+
+1. Select a type (e.g. *Running*), click *Next*, and then click *Finish*.
 
    ![Confirmation pop-up script](~/user-guide/images/IDP_Tutorial_TakeConfigurationBackup_ConfirmationPopup.png)
+
+   > [!TIP]
+   > See also: [Configuration types](xref:ConfigurationBackupScript#configuration-types-running-startup-golden)
 
 1. Select the element again, and click *Show backups*.
 
