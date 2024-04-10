@@ -20,7 +20,7 @@ To install and set up the TAG app:
 
 1. Close execution window.
 
-1. Search for "Merge LCA themes", open the script. Under Advanced > DLL references replace **C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll** with **C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll **
+1. Search for "Merge LCA themes", open the script. Under Advanced > DLL references replace **C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll** with **C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll**
 
 ## TAG Elements
 
