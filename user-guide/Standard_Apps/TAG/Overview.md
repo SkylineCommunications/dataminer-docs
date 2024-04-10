@@ -4,7 +4,7 @@ uid: Overview_TAG_App
 
 # DataMiner TAG Solution
 
-The DataMiner TAG Solution allows for monitoring and control of individual TAG MCM devices, as well as Media Control Systems (MCS). The TAG Management App will automatically retrieve data from all MCS and MCM elements within the deployed DMS.
+The DataMiner TAG Solution allows for monitoring and control of individual TAG MCM devices, as well as Media Control Systems (MCS). The TAG Management App will automatically retrieve data from all MCS or MCM elements within the deployed DMS.
 
 Within the TAG package, you will have the following items:
 
