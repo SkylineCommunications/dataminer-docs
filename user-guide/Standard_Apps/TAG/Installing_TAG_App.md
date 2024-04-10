@@ -44,7 +44,8 @@ To create an element in DataMiner Cube, follow these steps:
 
 1. After filling all required fields, click the Create button to finalize the creation of the element.
 
-For more information on how to create elements see [Adding elements](xref:Adding_elements).
+> [!TIP]
+> For more information on how to create elements see [Adding elements](xref:Adding_elements).
 
 
    
