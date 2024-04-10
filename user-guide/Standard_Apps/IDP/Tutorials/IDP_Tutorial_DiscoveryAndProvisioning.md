@@ -9,6 +9,9 @@ This tutorial will show you how to install IDP and onboard new equipment. By way
 
 Expected duration: 15 minutes.
 
+> [!NOTE]
+> The content and screenshots for this tutorial were created using IDP version 1.5.0.
+
 > [!TIP]
 > See also: [Kata #25: Getting started with IDP and onboarding new equipment](https://community.dataminer.services/courses/kata-25/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 

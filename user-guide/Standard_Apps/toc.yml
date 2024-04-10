@@ -200,6 +200,8 @@ items:
         items:
           - name: Getting started with IDP and onboarding new equipment
             topicUid: IDP_Tutorial_DiscoveryAndProvisioning
+          - name: Getting started with configuration backups
+            topicUid: IDP_Tutorial_TakeConfigurationBackup
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
