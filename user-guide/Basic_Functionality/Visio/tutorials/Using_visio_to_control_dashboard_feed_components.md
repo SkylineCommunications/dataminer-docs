@@ -6,7 +6,7 @@ uid: Using_visio_to_control_dashboard_feed_components
 
 In this tutorial, you will learn feed data into a dashboard URL in order to automate selections on feed components when the dashboard is opened.The data to be passed into the URL will be defined on an element's visual overview through the clever use of shape data.
 
-Expected duration: 45min
+Expected duration: 45 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created with the DataMiner 10.4.1 web apps.
@@ -28,36 +28,67 @@ Expected duration: 45min
 
 ## Step 1: Create a New Virtual Connector Element and Add Numerical Data to the “Numerical Master Table” on the Element’s “Table” Data Page
 
-1. Create a new element using the Skyline Generic Virtual Connector protocol. The minimum required version 1.0.0.3 can be downloaded, or cloud deployed from here.
+1. Create a new element using the Skyline Generic Virtual Connector protocol. The minimum required version 1.0.0.3 can be downloaded, or cloud deployed from [here](https://catalog.dataminer.services/details/connector/7021).
 1. Once created, navigate to the “Table” data page on the element to find the “Numeric Master Table”.
 1. Right-click below the table’s column headers to add a new row to the table.  
+
+   ![]((~/user-guide/images/VisioURLFeed_AddRowNumericTable.png)
+
 1. Input the row’s Primary Key [IDX] and enter random numbers into the first 3 columns, then click OK. NOTE: Do not use any special characters for the Primary Key as they will interfere with the URL linking in Step #3.
+
+   ![]((~/user-guide/images/VisioURLFeed_AddRowNumericTableInput.png)
+
 1. Add at least one more row to the table before continuing.
+
+   ![]((~/user-guide/images/VisioURLFeed_NumericTableRows.png)
 
 ## Step 2: Create a New Dashboard and Add a “Parameter Feed” Component and a “State” Component to Display the Numeric data from the Virtual Connector
 
-1. Create a new dashboard.
+1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
 1. Enter Edit mode.
-1. Add a Parameter Feed component.
+1. Add a [Parameter Feed component](xref:DashboardParameterFeed).
 1. From the data pane on the right, drag over the “ELEMENTS” field to add it as data into the parameter feed.
 1. From the data pane on the right, expand the “PARAMETERS” section to filter and find the three numeric table parameters that you entered numbers for. Drag them each over to the parameter feed to be used as data.
+
+   ![]((~/user-guide/images/VisioURLFeed_ParameterDataForFeed.png)
+
 1. From the data pane on the right, expand the “PROTOCOLS” field and search for the Skyline Generic Virtual Connector. Drag it over to the parameter feed to be used as a filter.
-1. Add a State component.
+
+   ![]((~/user-guide/images/VisioURLFeed_ProtocolDataForFeed.png)
+
+1. Add a [State component](xref:DashboardState).
 1. Click on the State component to highlight it. Under the “Layout” tab on the right side data pane, check the “LABELS” boxes to show parameter name, index, and value.
+
+   ![]((~/user-guide/images/VisioURLFeed_StateLayoutOptions.png)
+
 1. From the data pane on the right, expand the “FEEDS” section to find the items associated to the parameter feed. Expand the parameter feed and drag the “Parameters” item over to the State component to be used as data.
+
+   ![]((~/user-guide/images/VisioURLFeed_ParameterDataForState.png)
+
 1. At this point, you should be able to make manual Parameter Feed selections to control which parameter values are shown on the State component.
+
+   ![]((~/user-guide/images/VisioURLFeed_DashboardManualResults.png)
+
 1. Exit Edit mode.
 1. On the top right of the dashboard webpage, click the ellipsis to find the “Share” option. Click Share to open a dialog window. Enable the option to “Use uncompressed URL parameters” and then copy the URL link. The URL will used in Step #3 of this tutorial.
+
+   ![]((~/user-guide/images/VisioURLFeed_URLLink.png)
 
 ## Step 3: Create a new Visual Overview for the Generic Virtual Connector Element with shapes for each numeric table index linking to the dashboard
 
 1. Back on Cube, open the Generic Virtual Connector element that was created in step #1.
 1. Open the “VISUAL” page of the element (the visual overview - VISIO) and right click anywhere to display Visio file options. Hover the cursor over “Set as active…element Visio file” and click on “New blank”. This will create a new Visio file associated to the element. It will look like a blank canvas on the Visual Overview for the element.
+
+   ![]((~/user-guide/images/VisioURLFeed_NewBlankVisio.png)
+
 1. On the blank Visual Overview page, right-click anywhere and select “Edit in Visio”. This will open Microsoft Visio. NOTE: Changes that are made to the Visio file and saved can be seen immediately back on cube.
 1. Start by adding a new rectangle that represents a table row.
 1. Add a new textbox with the text: [tableIndex]. Move it on top of the rectangle.
 1. Add a new smaller rectangle that will act as a button to navigate to the dashboard webpage. Double-click the rectangle to give it a useful description. Move it on top of the first rectangle representing a row.
 1. Ctrl-click all 3 components to highlight all 3 at once. Right-click and group them. You should see the following under the “Drawing Explorer”:
+
+   ![]((~/user-guide/images/VisioURLFeed_VisioRowGroup.png)
+
 1. Add the following shape data to the grouped sheet representing a row.
 
    - ChildType: Row
@@ -74,6 +105,9 @@ Expected duration: 45min
      > “this element” is acting as a dynamic placeholder. “1200” is the table PID for the “Numeric Master Table”.
 
 1. Using a publicly available web-based encoded JSON URL converter, the URL that was captured in Step #2 can be transformed into a human readable format. This allows the user to understand how feed selections are represented in the dashboard’s URL.
+
+   ![]((~/user-guide/images/VisioURLFeed_URLConvert.png)
+
 1. With this information, certain sections of the URL can be replaced with placeholders that will allow dynamic entry based on the row index that is fed into it.
 1. Add the following shape data to the button shape. NOTE: the first part of the URL needs to be changed to match the naming structure of your dashboard. The component ID (cid) also needs to be changed to match that of your parameter feed. Note: You can find the ID of each component in the lower right corner of the component while in edit mode.
 
@@ -90,14 +124,14 @@ Expected duration: 45min
 
 This tutorial is part of the following learning path:
 
-- Dashboards tutorials | DataMiner Docs
-- Getting started with basic shapes | DataMiner Docs
-- Visio drawings | DataMiner Docs
-- Specifying data input in a dashboard URL | DataMiner Docs
+- [Dashboards tutorials](xref:Tutorial_Dashboards)
+- [Getting started with basic shapes](xref:Getting_started_with_basic_shapes)
+- [Visio drawings](xref:visio)
+- [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
 
 ## Related documentation
 
-- Feeds
-- Visio drawings | DataMiner Docs
-- Specifying data input in a dashboard URL | DataMiner Docs
-- Generating shapes based on table rows | DataMiner Docs
+- [Feeds](xref:Using_dashboard_feeds)
+- [Visio drawings](xref:visio)
+- [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
+- [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows)
