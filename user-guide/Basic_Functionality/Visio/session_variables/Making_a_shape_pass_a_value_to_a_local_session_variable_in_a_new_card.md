@@ -16,4 +16,6 @@ Add the following two additional shape data fields to a shape that opens a card 
 | Options          | *NewCardVariable*                                                                                                                                                                                   |
 
 > [!NOTE]
-> This feature is not operational in visual overviews that are shown in the DataMiner web apps (e.g. in the Monitoring app, the Dashboards app, and low-code apps).
+>
+> - This feature is not operational in visual overviews that are shown in the DataMiner web apps (e.g. in the Monitoring app, the Dashboards app, and low-code apps).
+> - Passing session variables when navigating to elements using an application protocol (e.g. SRM Booking Manager) is supported from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards.<!-- RN 39167 -->
