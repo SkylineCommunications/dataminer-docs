@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
 
-You are now able to see the DxM status on the nodes overview page.
+On the nodes overview page in the Admin app, you can now see the status of the DxMs.
 
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
