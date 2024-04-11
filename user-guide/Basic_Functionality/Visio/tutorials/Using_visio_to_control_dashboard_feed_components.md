@@ -105,10 +105,10 @@ Expected duration: 45 minutes
    > [!NOTE]
    > When you make changes to the Visio file, they will immediately appear in DataMiner Cube as soon as you save the file.
 
-1. Start by adding a new rectangle that represents a table row.
-1. Add a new textbox with the text *[tableIndex]*, and move it on top of the rectangle.
-1. Add a new smaller rectangle that will act as a button to navigate to the Dashboards app. Double-click the rectangle, give it a useful description, and move it on top of the first rectangle representing a row.
-1. CTRL-click all three components to highlight them all, then right-click, and group them.
+1. Add a large rectangle that represents a table row.
+1. Add a textbox with the text *[tableIndex]*, and move it on top of the rectangle.
+1. Add a small rectangle that will act as a button to navigate to the Dashboards app. Double-click the rectangle, give it a useful description, and move it on top of the first rectangle representing a row.
+1. CTRL-click all three components to select them all, then right-click, and select *Group > Group*.
 
    You should see the following under the *Drawing Explorer*:
 
@@ -121,7 +121,7 @@ Expected duration: 45 minutes
    | ChildType   | Row |
    | ChildMargin | 5   |
 
-1. CTRL-click the grouped sheet representing the row and the existing background sheet that came with the new Visio file to highlight both at once. Then right-click, and group them to create a new group. Add the following shape data to the larger grouped sheet.
+1. CTRL-click the grouped sheet representing the row and the existing background sheet that came with the new Visio file to select both. Then right-click, and select *Group > Group*. Add the following shape data to the larger grouped sheet.
 
    | Shape data field | Value |
    |---|---|
@@ -143,8 +143,8 @@ Expected duration: 45 minutes
 
    > [!NOTE]
    >
-   > - The first part of the URL needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed.
-   > - You can find the ID of each component in the bottom-right corner of the component while in edit mode.
+   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed.
+   > You can find the ID of each component in the bottom-right corner of the component while in edit mode.
 
    | Shape data field | Value |
    |---|---|
@@ -159,7 +159,7 @@ Expected duration: 45 minutes
 
 1. Save the Visio file.
 
-For each table row that was added in step 1, a child shape should be displayed on the visual overview of the *Generic Virtual Connector* element.Each shape will have its own button that, when clicked, will open the dashboard that was created in step 2. Depending on the button that was clicked, the URL will be fed with the appropriate table index information so that the parameter feed on the dashboard automatically selects the index associated with the button's row, and the *State* component will display the corresponding results.
+For each table row that was added in step 1, a child shape should now be displayed on the visual overview of the *Generic Virtual Connector* element. Each shape will have its own button that, when clicked, will open the dashboard that was created in step 2. Depending on the button that was clicked, the URL will be fed with the appropriate table index information so that the parameter feed on the dashboard automatically selects the index associated with the button's row, and the *State* component will display the corresponding results.
 
 ## Learning paths
 
