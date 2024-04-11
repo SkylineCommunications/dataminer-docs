@@ -2,7 +2,7 @@
 uid: Overview_DevOps
 ---
 
-# Devops
+# DevOps
 
 *Empowering every single user to unleash their imagination and use all the functions available.*
 

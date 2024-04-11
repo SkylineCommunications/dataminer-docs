@@ -195,12 +195,12 @@ In Active Directory, do the following:
 - Use universal security groups.
 
   > [!IMPORTANT]
-  > If you do not use universal security groups, DataMiner will only have access to the users that are in the same domain as the DataMiner agent.
+  > If you do not use universal security groups, DataMiner will only have access to the users that are in the same domain as the DataMiner Agent.
 
 - Specify the necessary trusts between the different domains.
 
   > [!IMPORTANT]
-  > If you do not specify trusts between domains, users from one domain will not be able to log in to another domain. 
+  > If you do not specify trusts between domains, users from one domain will not be able to log in to another domain.
 
   > [!NOTE]
   > Parent-child trusts are created automatically.
@@ -223,4 +223,4 @@ In DataMiner, do the following:
   > Directory traversal happens top to bottom. If you do not have access to query against the top level of the forest, any parent or sibling domains of the child domain you are querying against will not be included.
 
 > [!IMPORTANT]
-> When adding existing groups in DataMiner, all domain groups will appear to be in the same domain as the DataMiner agent. However, this is only a visualization issue. Functionality is not affected.
+> When existing groups are added in DataMiner, all domain groups will appear to be in the same domain as the DataMiner Agent. However, this is only a visualization issue. Functionality is not affected.

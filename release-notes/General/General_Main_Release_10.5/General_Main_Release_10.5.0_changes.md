@@ -125,18 +125,19 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900]
+#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
+<!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.6.6
-- DataMiner CoreGateway: version 2.14.4.15849
-- DataMiner FieldControl: version 2.10.3.14011
-- DataMiner Orchestrator: version 1.5.6
-- DataMiner SupportAssistant: version 1.6.6
+- DataMiner ArtifactDeployer: version 1.6.8
+- DataMiner CoreGateway: version 2.14.6
+- DataMiner FieldControl: version 2.10.5
+- DataMiner Orchestrator: version 1.5.8
+- DataMiner SupportAssistant: version 1.6.8
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
@@ -165,6 +166,95 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
+
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when activating function DVEs.
+
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, errors related to real-time GQI data updates will also be logged.
+
+For example:
+
+- When an ad hoc data source is not able to send an update due to API methods being used incorrectly.
+- When a built-in data source is not able to send an update.
+- When the connection used to send the updates to the client gets lost.
+
+Exceptions associated with a custom data source will be logged in the log file of the data source in question.
+
+#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
+
+- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+
+These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
+
+#### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
+
+#### GQI: Enhanced error handling [ID_39226]
+
+<!-- MR 10.5.0 - FR 10.4.5 [CU0] -->
+
+In order to enhance the way in which specific GQI errors are handled, the following new `GenIfException` types have been introduced:
+
+- `GenIfSecurityException` will be thrown when a request cannot be satisfied because the action is not allowed.
+- `GenIfAggregateException` will be thrown when a request caused multiple independent exceptions.
+
+Also, error handling has changed for the following GQI requests:
+
+- `GenIfCloseSessionRequest`
+
+  This request can be used to close multiple sessions at the same time. However, up to now, it would only close sessions until an error occurred, leaving the remaining sessions open. From now on, if an exception occurs for more than one session, a `GenIfAggregateException` will be thrown containing the individual exceptions.
+
+- `GenIfSessionHeartbeatRequest`
+
+  This request can be used to send a heartbeat to multiple sessions at the same time in order to keep them alive.
+
+  Similar to the `GenIfCloseSessionRequest`, up to now, it would only send a heartbeat to the first sessions in the request until an error occurred. In some cases, this could cause sessions to expire unexpectedly.
+
+As to logging, behavior has changed with respect to exceptions:
+
+- `GenIfAggregate` will log each individual exception separately.
+- `GenIfSessionException` will be logged as a warning without stack trace.
+- `GenIfSecurityException` will be logged as a warning without stack trace.
+- Any other error will be logged as error with stack trace.
+
+#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
+
+From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
+#### Enhanced performance when starting up a DataMiner Agent [ID_39331]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
+
+#### Enhanced error message 'Failed to create one or more storages' [ID_39360]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When DataMiner fails to start up due to a problem that occurred while connecting to the database, a `Failed to create one or more storages` message will be thrown.
+
+From now on, this error message will include a reference to the StorageModule log file, in which you can find more information about the problem that occurred:
+
+`More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
 
 ### Fixes
 

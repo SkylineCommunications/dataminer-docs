@@ -60,7 +60,7 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 | 24 months | Start date: 60%<br>Start date + 12 months: 40% |
 | 36 months | Start date: 60%<br>Start date + 12 months: 20%<br>Start date + 24 months: 20% |
 
-At Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
+At the Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
 
 Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use Credit Rate.
 

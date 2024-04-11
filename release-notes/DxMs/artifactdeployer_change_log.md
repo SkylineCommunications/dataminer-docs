@@ -4,6 +4,20 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 29 March 2024 - Enhancement - ArtifactDeployer 1.6.9 - Added the possibility to locally disable artifact deployments through the app settings [ID_39113]
+
+It is now possible to locally disable artifact deployments through the *App settings* file of the ArtifactDeployer DxM. 
+
+To do so, set *DeployArtifactOptions:IsDisabled* to *true* in the app settings. On each server where DataMiner ArtifactDeployer is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner ArtifactDeployer` and either create or modify *appsettings.custom.json* with the following configuration:
+
+```json
+{
+   "DeployArtifactOptions": {
+      "IsDisabled": true
+   }
+}
+```
+
 #### 13 March 2024 - Enhancement - ArtifactDeployer 1.6.8 - Dependencies updated [ID_39046]
 
 Several dependencies have been updated.

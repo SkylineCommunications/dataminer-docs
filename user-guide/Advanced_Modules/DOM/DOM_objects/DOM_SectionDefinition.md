@@ -10,7 +10,7 @@ The main class is an abstract implementation, as it allows the existence of two 
 
 - **StaticSectionDefinition**: Currently not used by DOM managers, but used by the Jobs module.
 
-- **CustomSectionDefinition**: Used with DOM managers. When `SectionDefinitions` are discussed further on this page, it is always this custom type that is meant.
+- **CustomSectionDefinition**: Used with DOM managers. When `SectionDefinitions` are discussed below, it is always this custom type that is meant.
 
 When you work with `SectionDefinitions` in a script, you need to typecast them to the custom type, since you will otherwise not be able to set some properties.
 
@@ -48,43 +48,31 @@ Below is an overview of all other important properties:
 | IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
 | Tooltip | string | Short description of the field that will be available as a tooltip in the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
-| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects). Available from DataMiner 10.3.9/10.4.0 onwards. |
+| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects).<br>Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
+- [**AutoIncrementFieldDescriptor**](xref:DOM_AutoIncrementFieldDescriptor): Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
 
-  - The `IDFormat` property is used to define a string format for the number value. In this string, "{0}" gets replaced by that number value. If the `IDFormat` property is empty, its value will not be formatted.
+- [**GenericEnumFieldDescriptor**](xref:DOM_GenericEnumFieldDescriptor): Defines a field that has a list of possible pre-determined values.
 
-    Some examples, assuming the next value is 10:
+- [**ReservationFieldDescriptor**](xref:DOM_ReservationFieldDescriptor): Defines a field that has the ID of an SRM `(Service)ReservationInstance`.
 
-    | Description | Format | Result |
-    |---|---|---|
-    | Add a prefix and postfix | Pre-{0}-Post | Pre-10-Post |
-    | Prefix with "REF-" and [format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings) the value | REF-{0:000000} | REF-000010 |
-    | When no format is set, the value is stored | | 10 |
+- [**ResourceFieldDescriptor**](xref:DOM_ResourceFieldDescriptor): Defines a field that has the ID of an SRM resource. The descriptor has a *ResourcePoolIds* property that can be used to define from which resource pools the user can select a resource.
 
-  - When the field is marked as soft-deleted, no values will get assigned when a `DomInstance` gets saved.
+- [**ServiceDefinitionFieldDescriptor**](xref:DOM_ServiceDefinitionFieldDescriptor): Defines a field that has the ID of an SRM service definition. It contains a *ServiceDefinitionFilter* property that has a *FilterElement* that can be used to determine which service definitions will be presented to the user.
 
-- **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
+- [**StaticTextFieldDescriptor**](xref:DOM_StaticTextFieldDescriptor): Defines a field that should always have the same static value, defined by the *StaticText* property.
 
-- **ReservationFieldDescriptor**: Defines a field that has the ID of an SRM `(Service)ReservationInstance`.
+- [**DomInstanceFieldDescriptor**](xref:DOM_DomInstanceFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`.
 
-- **ResourceFieldDescriptor**: Defines a field that has the ID of an SRM resource. The descriptor has a *ResourcePoolIds* property that can be used to define from which resource pools the user can select a resource.
+- [**ElementFieldDescriptor**](xref:DOM_ElementFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element.
 
-- **ServiceDefinitionFieldDescriptor**: Defines a field that has the ID of an SRM service definition. It contains a *ServiceDefinitionFilter* property that has a *FilterElement* that can be used to determine which service definitions will be presented to the user.
+- [**DomInstanceValueFieldDescriptor**](xref:DOM_DomInstanceValueFieldDescriptor): Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`.
 
-- **StaticTextFieldDescriptor**: Defines a field that should always have the same static value, defined by the *StaticText* property.
+- [**GroupFieldDescriptor**](xref:DOM_GroupFieldDescriptor): Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 
-- **DomInstanceFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. This `DomInstance` can exist in a different DOM manager. This is why the descriptor has a *ModuleId* property that defines where the instances can be found. There is also a *DomDefinitionIds* list property that can be used to define whether DOM instances should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The `FieldValues` are of type "Guid".
-
-- **ElementFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
-
-- **DomInstanceValueFieldDescriptor**: Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
-
-- **GroupFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
-
-- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+- [**UserFieldDescriptor**](xref:DOM_UserFieldDescriptor): Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
 > [!IMPORTANT]
 > The ID of a `FieldDescriptor` should be unique within a DOM module.
@@ -95,41 +83,20 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 ### Multiple values
 
-Depending on the DataMiner version, the following `FieldDescriptors` can have **multiple values**:
+Some `FieldDescriptors` offer the capability to store multiple values rather than a single one. Refer to the respective descriptor documentation to check if a specific descriptor provides this functionality and from which DataMiner version onwards it is supported.
 
-- DomInstanceFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
-- DomInstanceValueFieldDescriptor (from DataMiner 10.2.5/10.3.0 onwards)<!-- RN 32904 -->
-- ElementFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
-- GenericEnumFieldDescriptor (from DataMiner 10.4.0/10.4.1 onwards)<!-- RN 37482 -->
-- ResourceFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
-- ReservationFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
-- ServiceDefinitionFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
-
-These `FieldDescriptors` therefore also support a list of the type that was already supported before.
-
-Adding multiple values to a `DomInstance` or updating the `DomInstance` with multiple values can be done as follows.
-
-- FieldDescriptor type configuration:
+When configuring a `FieldDescriptor` to accommodate multiple values, adjust the type property to match the list variant of the underlying base type. For instance, change `Guid` to `List<Guid>`. When assigning values to a `DomInstance`, utilize the `AddOrUpdateListFieldValue` extension method to easily add a list of values to the instance.
 
 ```csharp
-// Change the supported type of the fieldDescriptor to list
-fieldDescriptor.FieldType = typeof(List<Guid>);
+var fieldDescriptor = new ResourceFieldDescriptor
+{
+    FieldType = typeof(List<Guid>)
+};
 ```
 
-- Assigning a FieldValue with a list to a DomInstance:
-
 ```csharp
-// Adding a fieldValue to the domInstance
-var fieldValue = new FieldValue()
-{
-    FieldDescriptorID = fieldDescriptor.Id,
-    Value = new ListValueWrapper<Guid>(new List<Guid> { Guid.NewGuid(), Guid.NewGuid() })
-};
-domInstance.Sections.First().AddOrReplaceFieldValue(fieldValue);
- 
-// Update the FielValue of the domInstance
-var values = new List<Guid> { Guid.NewGuid(), Guid.NewGuid() };
-domInstance.AddOrUpdateListFieldValue(sectionDefinition, fieldDescriptor, values);
+var multipleValues = new List<Guid> { Guid.NewGuid(), Guid.NewGuid() };
+domInstance.AddOrUpdateListFieldValue(sectionDefinitionId, fieldDescriptorId, multipleValues);
 ```
 
 > [!NOTE]
@@ -139,7 +106,7 @@ domInstance.AddOrUpdateListFieldValue(sectionDefinition, fieldDescriptor, values
 
 ## CustomSectionDefinition properties
 
-The table below lists the properties of the `CustomSectionDefinition` object. (The base `SectionDefinition` object only exposes its ID.) The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
+In the table below, you can find the properties of the `CustomSectionDefinition` object (the base `SectionDefinition` object only exposes its ID). The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
 
 > [!NOTE]
 > From DataMiner 10.3.2/10.4.0 onwards, the `CustomSectionDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
@@ -181,11 +148,11 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 ## Errors
 
-When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `SectionDefinitionErrors`. Below is a list of all possible `ErrorReasons`. (This list does not contain the errors that are only used by the Jobs module.)
+When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `SectionDefinitionErrors`. Below, you can find a list of all possible `ErrorReasons` (this list does not contain the errors that are only used by the Jobs module).
 
 | Reason | Description |
 |--|--|
-| FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor. Available properties: *NotSupportedType*, *SupportedTypes*. |
-| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
-| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
-| GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`. Available properties: *GenericEnumEntry*, *DomInstanceIds*. |
+| FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor.<br>Available properties: *NotSupportedType*, *SupportedTypes*. |
+| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`.<br>Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
+| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead.<br>Available properties: *SectionDefinition*, *DomDefinitionIds*. |
+| GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`.<br>Available properties: *GenericEnumEntry*, *DomInstanceIds*. |
