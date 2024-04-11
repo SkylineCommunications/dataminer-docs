@@ -11,11 +11,11 @@ Within the TAG package, you will have the following items:
 
 - TAG Management low-code application
 
-- TAG Video Systems MCM-9000 connector
+- TAG Video Systems MCM-9000 connector, version 1.1.6.10
 
-- TAG Video Systems Media Control System (MCS) connector
+- TAG Video Systems Media Control System (MCS) connector, version 1.0.2.1
 
-- Automation scripts used in the application to gather and perform device control operations
+- Automation scripts used in the application to gather data and perform device control operations
 
 The TAG app contains 3 main pages containing information on the TAG devices:
 
