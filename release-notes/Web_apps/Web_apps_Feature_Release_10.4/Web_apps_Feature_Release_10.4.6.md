@@ -112,3 +112,9 @@ In some cases, a `Request was aborted` error could appear when a *Column & bar c
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When you were editing an app that had already been published previously, the *View published app* button would incorrectly no longer be displayed.
+
+#### Dashboards app - Gauge component: Icon would have an incorrect background color [ID_39375]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the dashboard theme would not be applied correctly to the icon inside a *Gauge* component. The icon would have an incorrect background color.
