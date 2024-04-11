@@ -6,7 +6,7 @@ uid: Installing_TAG_App
 
 To install and set up the TAG app:
 
-1. In [DataMiner Catalog](https://catalog.dataminer.services/), download the latest version of the [TAG Platform Package](https://catalog.dataminer.services/details/package/6042)
+1. In [DataMiner Catalog](https://catalog.dataminer.services/), deploy the latest version of the [TAG Management Package](https://catalog.dataminer.services/details/package/6076)
 
 2. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
