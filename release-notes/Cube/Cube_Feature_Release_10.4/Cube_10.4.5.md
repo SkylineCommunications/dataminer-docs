@@ -114,6 +114,12 @@ alarm=48/123/6713
 
 From now on, in Visual Overview, it will also be possible to pass session variables when navigating to an element using an application protocol (e.g. SRM Booking Manager).
 
+#### Visual Overview - SPI logging: Log entries reporting page load timeouts will now show more accurate load times [ID_39222]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When a visual overview page does not load within two minutes, a log entry of type SPI will report a timeout indicating how long it took to load the page in question. From now on, the page load times indicated in SPI log entries will be more accurate, especially in case of large Visio files.
+
 ### Fixes
 
 #### Resources app: Resource would incorrectly be marked as modified when capability values were set to NaN [ID_38699]
@@ -154,8 +160,20 @@ In Visual Overview, in some cases, a null reference exception could be thrown wh
 
 While DataMiner Cube was in alarm storm mode, in some cases, an exception could be thrown.
 
+#### Problem when the statistics of a view were updated while a ticket was updated [ID_39257]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When the statistics of a view were updated while, at the same time, one of the tickets associated with either the view or an element in that view was updated, in some rare cases, an error could occur, causing DataMiner Cube to stop working.
+
 #### Alarm Console - Automatic incident tracking: Problem when double-clicking an alarm group header [ID_39266]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 When, in the Alarm Console, you double-clicked an alarm group header, in some cases, a null reference exception could be thrown.
+
+#### Cube would not be able to connect to a DMA when both had 'Country or region' set to 'Saudi Arabia' [ID_39271]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When both the DataMiner Cube client and the DataMiner Agent had *Country or region* set to "Saudi Arabia" and *Regional format* set to "Arabic (Saudi Arabia)", up to now, DataMiner Cube would not be able to connect to the DataMiner Agent.

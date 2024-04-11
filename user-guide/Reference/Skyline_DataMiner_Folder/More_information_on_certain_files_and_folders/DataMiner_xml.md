@@ -92,6 +92,17 @@ This tag can have several subtags:
 
 In addition, the tag can have one optional attribute, **publicDNS**. When a DNS name is specified for this attribute, it will be used instead of the DataMiner IP address for links to the DataMiner user interface in notification emails.
 
+### DataMiner.ExternalAuthentication
+
+This tag is used to configure external authentication.
+
+For more information, see:
+
+- [Configuring SAML with Microsoft Entra ID as identity provider](xref:SAML_using_Entra_ID)
+- [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)
+- [Configuring Atlassian Crowd settings](xref:Configuring_Atlassian_Crowd_settings)
+- [Configuring RADIUS settings](xref:Configuring_RADIUS_settings)
+
 ### DataMiner.ID
 
 Information about the ID ranges to be used for e.g. view creation. This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts.

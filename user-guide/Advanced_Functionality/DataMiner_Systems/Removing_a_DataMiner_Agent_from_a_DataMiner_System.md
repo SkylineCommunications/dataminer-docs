@@ -4,7 +4,10 @@ uid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
 
 # Removing a DataMiner Agent from a DataMiner System
 
-Depending on whether the DataMiner Agent is part of a Failover pair or not, a different procedure must be used:
+Depending on whether the DataMiner Agent is part of a Failover pair or not, a different procedure must be used.
+
+> [!NOTE]
+> If a [manual configuration was forced for NATS](xref:SLNetClientTest_disabling_automatic_nats_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the removed DMA.
 
 ## Removing a DMA that is not part of a Failover pair
 

@@ -136,6 +136,17 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### Enhanced performance when loading DVEs and virtual functions, changing production protocols and uploading protocols [ID_39034]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased in the following situations:
+
+- When loading stopped and activated parent elements that generate DVEs or virtual functions when a DMA starts up or when a Failover agent goes online.
+- When changing the production protocol or when uploading a protocol being used by existing elements.
+
+Also, when DataMiner Cube is connecting to a DataMiner Agent that is starting up or going online, users will now receive more detailed information on the progress of virtual elements being loaded.
+
 #### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -207,6 +218,12 @@ The number of open suggestion events related to behavioral anomalies will now be
 
 In other words, you will no longer have more than 500 suggestion events related to behavioral anomalies in the suggestion events tab of the Alarm Console.
 
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The maximum number of concurrent GQI queries has now been increased from 20 to 100.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -222,12 +239,6 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
-
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
 #### STaaS: Problem when going into file offload mode [ID_38648]
 

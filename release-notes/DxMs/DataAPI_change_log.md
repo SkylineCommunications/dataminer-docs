@@ -7,6 +7,51 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+#### 1 April 2024 - New feature - DataAPI 1.1.3 - New configuration endpoint for units and decimals [ID_39016]
+
+A new endpoint `<host address>/api/config` has been added, allowing users to configure units and decimals.
+
+Example:
+
+```json
+{
+    "decimals": {
+        "Devices": [
+            {
+                "Connected devices": [
+                    {
+                        "Temperature": 2
+                    }
+                ]
+            }
+        ],
+        "Ping": 2
+    },
+    "units": {
+        "Devices": [
+            {
+                "Connected devices": [
+                    {
+                        "Temperature": "degC"
+                    }
+                ]
+            }
+        ],
+        "Ping": "ms"
+    }
+}
+```
+
+> [!NOTE]
+>
+> - The *config* endpoint can only be used when an auto-generated connector exists, and the parameters specified in the request also exist.
+> - The length of units is restricted to 30 characters to optimize display.
+> - Because of the constraints of double precision in .NET, the number of digits is limited to 15. For example, when there are 5 digits before the decimal point, only 10 useful decimals can be shown.
+
+#### 1 April 2024 - Enhancement - DataAPI 1.1.3 - OpenTelemetry support added [ID_39129]
+
+*DataAPI* now supports OpenTelemetry.
+
 #### 27 March 2024 - Fix - DataAPI 1.1.2 - Foreign key columns removed from trended parameters [ID_39196]
 
 *DataAPI* no longer enables trending for foreign key columns.

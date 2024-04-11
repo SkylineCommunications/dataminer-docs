@@ -183,10 +183,14 @@ items:
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
+      - name: Cassandra does not start up after a server restart
+        topicUid: Cassandra_not_starting_up_after_server_restart
       - name: Collecting DataMiner Cube memory dumps
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
+      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
+        topicUid: Elastic_not_starting_after_upgrade_cleanup
       - name: Investigating dataminer.services issues
         items:
         - name: Investigating dataminer.services connection issues
@@ -201,14 +205,12 @@ items:
         topicUid: Investigating_Web_Issues
       - name: Keeping a DMA from running out of disk space
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
-      - name: Sharing dashboard window does not disappear
-        topicUid: Sharing_dashboard_window_does_not_disappear
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
-      - name: Cassandra does not start up after a server restart
-        topicUid: Cassandra_not_starting_up_after_server_restart
-      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-        topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Re-registering DataMiner services and DLLs
+        topicUid: Re-registering_DataMiner_services_and_DLLs
+      - name: Sharing dashboard window does not disappear
+        topicUid: Sharing_dashboard_window_does_not_disappear
   - name: Known issues
     topicUid: Known_issues
     items:

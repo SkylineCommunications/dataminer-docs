@@ -97,6 +97,8 @@ items:
                 topicUid: I-DOCSIS_maps_deployment_one_backend
               - name: Systems with multiple back-end elements
                 topicUid: I-DOCSIS_maps_deployment_multiple_backends
+          - name: EPM I-DOCSIS GQI integration
+            topicUid: I-DOCSIS_GQI_Integration
           - name: EPM I-DOCSIS passives integration
             topicUid: I-DOCSIS_passives_integration
           - name: EPM I-DOCSIS upgrade
@@ -116,10 +118,10 @@ items:
                 topicUid: I-DOCSIS_parameters_cm_us_qam_ch
               - name: US QAM CH
                 topicUid: I-DOCSIS_parameters_us_qam_ch
-              #                - name: DS OFDM CH
-              #                  topicUid: I-DOCSIS_parameters_ds_ofdm_ch
-              #                - name: US OFDMA CH
-              #                  topicUid: I-DOCSIS_parameters_us_ofdma_ch
+              - name: DS OFDM CH
+                topicUid: I-DOCSIS_parameters_ds_ofdm_ch
+              - name: US OFDMA CH
+                topicUid: I-DOCSIS_parameters_us_ofdma_ch
               - name: Cable Modem
                 topicUid: I-DOCSIS_parameters_cable_modem
               - name: Thresholds
@@ -196,6 +198,12 @@ items:
             topicUid: CI_Types1
           - name: Using your IS-04 registry to provision DataMiner with IDP
             topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+      - name: Tutorials
+        items:
+          - name: Getting started with IDP and onboarding new equipment
+            topicUid: IDP_Tutorial_DiscoveryAndProvisioning
+          - name: Getting started with configuration backups
+            topicUid: IDP_Tutorial_TakeConfigurationBackup
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:

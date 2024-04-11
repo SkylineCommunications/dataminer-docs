@@ -167,6 +167,26 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when activating function DVEs.
+
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, errors related to real-time GQI data updates will also be logged.
+
+For example:
+
+- When an ad hoc data source is not able to send an update due to API methods being used incorrectly.
+- When a built-in data source is not able to send an update.
+- When the connection used to send the updates to the client gets lost.
+
+Exceptions associated with a custom data source will be logged in the log file of the data source in question.
+
 #### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -183,6 +203,93 @@ These files will be recreated with a new identifier when DataMiner or any of its
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
+
+#### GQI: Enhanced error handling [ID_39226]
+
+<!-- MR 10.5.0 - FR 10.4.5 [CU0] -->
+
+In order to enhance the way in which specific GQI errors are handled, the following new `GenIfException` types have been introduced:
+
+- `GenIfSecurityException` will be thrown when a request cannot be satisfied because the action is not allowed.
+- `GenIfAggregateException` will be thrown when a request caused multiple independent exceptions.
+
+Also, error handling has changed for the following GQI requests:
+
+- `GenIfCloseSessionRequest`
+
+  This request can be used to close multiple sessions at the same time. However, up to now, it would only close sessions until an error occurred, leaving the remaining sessions open. From now on, if an exception occurs for more than one session, a `GenIfAggregateException` will be thrown containing the individual exceptions.
+
+- `GenIfSessionHeartbeatRequest`
+
+  This request can be used to send a heartbeat to multiple sessions at the same time in order to keep them alive.
+
+  Similar to the `GenIfCloseSessionRequest`, up to now, it would only send a heartbeat to the first sessions in the request until an error occurred. In some cases, this could cause sessions to expire unexpectedly.
+
+As to logging, behavior has changed with respect to exceptions:
+
+- `GenIfAggregate` will log each individual exception separately.
+- `GenIfSessionException` will be logged as a warning without stack trace.
+- `GenIfSecurityException` will be logged as a warning without stack trace.
+- Any other error will be logged as error with stack trace.
+
+#### SLAnalytics - Behavioral anomaly detection: A decreasing trend slope will now be labeled as a trend change instead of a variance decrease [ID_39249]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
+
+#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
+
+From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
+#### Enhanced performance when starting up a DataMiner Agent [ID_39331]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
+
+#### GQI now also logs requests to SLNet [ID_39355]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, when the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config` is set to "Debug" or lower, GQI will also log information about requests sent to SLNet.
+
+Types of log entries related to SLNet requests:
+
+- `Started SLNet request <RequestID> with <MessageCount> messages`
+
+  This type of entry will be added to the log when GQI starts a request to SLNet, before the messages included in the request are sent.
+
+  - *RequestID*: A unique ID that will allow you to find all log entries associated with one particular SLNet request.
+  - *MessageCount*: The number of SLNet messages included in the request.
+
+- `Sending SLNet message <RequestID>.<Index>: <Description>`
+
+  This type of entry will be added to the log for each individual message in an SLNet request.
+
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
+
+- `Finished SLNet request <RequestID> in <Duration>ms`
+
+  This type of entry will be added to the log when GQI finishes a request to SLNet, regardless of whether the request was successful or not.
+
+  - *RequestID*: The unique ID of request.
+  - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
+
+#### Enhanced error message 'Failed to create one or more storages' [ID_39360]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When DataMiner fails to start up due to a problem that occurred while connecting to the database, a `Failed to create one or more storages` message will be thrown.
+
+From now on, this error message will include a reference to the StorageModule log file, in which you can find more information about the problem that occurred:
+
+`More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
 
 ### Fixes
 

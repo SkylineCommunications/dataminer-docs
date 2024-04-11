@@ -89,7 +89,7 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
 
@@ -100,7 +100,7 @@ For more information on these interfaces, see:
 
 #### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\Metrics` folder:
 
@@ -280,6 +280,17 @@ Because of a number of enhancements, overall performance has increased when fill
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### Enhanced performance when loading DVEs and virtual functions, changing production protocols and uploading protocols [ID_39034]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased in the following situations:
+
+- When loading stopped and activated parent elements that generate DVEs or virtual functions when a DMA starts up or when a Failover agent goes online.
+- When changing the production protocol or when uploading a protocol being used by existing elements.
+
+Also, when DataMiner Cube is connecting to a DataMiner Agent that is starting up or going online, users will now receive more detailed information on the progress of virtual elements being loaded.
+
 #### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -349,6 +360,34 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
 
+#### GQI: Enhanced error handling [ID_39226]
+
+<!-- MR 10.5.0 - FR 10.4.5 [CU0] -->
+
+In order to enhance the way in which specific GQI errors are handled, the following new `GenIfException` types have been introduced:
+
+- `GenIfSecurityException` will be thrown when a request cannot be satisfied because the action is not allowed.
+- `GenIfAggregateException` will be thrown when a request caused multiple independent exceptions.
+
+Also, error handling has changed for the following GQI requests:
+
+- `GenIfCloseSessionRequest`
+
+  This request can be used to close multiple sessions at the same time. However, up to now, it would only close sessions until an error occurred, leaving the remaining sessions open. From now on, if an exception occurs for more than one session, a `GenIfAggregateException` will be thrown containing the individual exceptions.
+
+- `GenIfSessionHeartbeatRequest`
+
+  This request can be used to send a heartbeat to multiple sessions at the same time in order to keep them alive.
+
+  Similar to the `GenIfCloseSessionRequest`, up to now, it would only send a heartbeat to the first sessions in the request until an error occurred. In some cases, this could cause sessions to expire unexpectedly.
+
+As to logging, behavior has changed with respect to exceptions:
+
+- `GenIfAggregate` will log each individual exception separately.
+- `GenIfSessionException` will be logged as a warning without stack trace.
+- `GenIfSecurityException` will be logged as a warning without stack trace.
+- Any other error will be logged as error with stack trace.
+
 #### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID_39256]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
@@ -371,6 +410,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+The maximum number of concurrent GQI queries has now been increased from 20 to 100.
+
 ### Fixes
 
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
@@ -380,12 +425,6 @@ For detailed information about the changes included in those versions, refer to 
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
-
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
 #### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
 
