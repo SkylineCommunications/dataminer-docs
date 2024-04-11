@@ -6,9 +6,11 @@ uid: GQI_Logging
 
 Logging for GQI is available from DataMiner 10.4.0/10.4.4 onwards.<!-- RN 38870 -->
 
-Errors and warnings are logged to log files in the folder *C:\Skyline DataMiner\Logging\GQI*.
+Errors and warnings are logged to log files in the folder `C:\Skyline DataMiner\Logging\GQI`.
 
 If this folder does not exist, it will be created automatically with the first log.
+
+From DataMiner 10.4.0 [CU3]/10.4.5 onwards, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`.
 
 > [!NOTE]
 > The logs are buffered and written asynchronously, so it may take a few seconds for them to appear in the file.
@@ -37,6 +39,8 @@ To change the minimum log level, change the configuration in the *appSettings* s
     ...
 </appSettings>
 ```
+
+For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards, the query name is included in the logging. However, if you set the minimum log level to *Debug*, the full query is logged instead.
 
 > [!NOTE]
 > Any changes to the configuration file are reset after a full DataMiner upgrade or downgrade.
