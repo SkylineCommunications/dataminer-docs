@@ -6,7 +6,7 @@ uid: EpmIntegrationTrainingLowCodeApp
 
 ## Getting Started
 
-For more detailed information about low-code apps [click here](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Low_Code_Apps/Application_framework.html?q=low%20code%20app).
+For more detailed information about the DataMiner Low-Code Apps module, see [DataMiner Low-Code Apps](xref:Application_framework).
 
 ## EPM Integration Training App
 

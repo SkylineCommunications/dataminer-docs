@@ -8,18 +8,24 @@ The EPM Integration Training package provides you with all the necessary compone
 
 ## Installation
 
-The package is available in the catalog and can be deployed into your system if it is cloud-connected, or it can be downloaded and executed on one of the agents in your cluster.
+If your DataMiner System is connected to dataminer.services, you can deploy the package directly from the DataMiner Catalog. Otherwise, you can download it from the Catalog and execute it on one of the DMAs in your cluster.
 
-The package can be installed on a single agent, if more are present then, the package will utilize at most 3 agents to create a Frontend element, two Backend elements, and three Collectors, distributing them across the agents as follows:
+You can install the package on a single DMA. If more DMAs are present in the cluster, the package will utilize at most three DMAs to create a front-end element, two back-end elements, and three collectors, distributing them across the DMAs as follows:
 
-- [Agent 1] - **EPM Availability FE**
+- Agent 1:
 
-- [Agent 2] - **EPM Availability BE 1**
-    - **EPM Availability Collector 1**
-    - **EPM Availability Collector 2**
+  - **EPM Availability Front End**
 
-- [Agent 3] - **EPM Availability BE 2**
-    - **EPM Availability Collector 3**
+- Agent 2:
+
+  - **EPM Availability Back-End 1**
+  - **EPM Availability Collector 1**
+  - **EPM Availability Collector 2**
+
+- Agent 3:
+
+  - **EPM Availability Back-End 2**
+  - **EPM Availability Collector 3**
 
 ## Which components are installed and deployed on my system?
 
@@ -39,7 +45,7 @@ The package can be installed on a single agent, if more are present then, the pa
 
 - Skyline EPM Integration Training.vsdx
 
-### Table Structure
+## Table structure
 
 The front end has minimal information in its local tables. It retrieves all the DMS information via View tables.
 

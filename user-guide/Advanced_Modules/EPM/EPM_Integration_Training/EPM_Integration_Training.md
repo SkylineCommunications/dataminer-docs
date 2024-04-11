@@ -2,7 +2,7 @@
 uid: Epm_Integration_Training
 ---
 
-# Reference
+# EPM integration training
 
 - [Introduction](xref:EpmIntegrationTrainingIntroduction)
 - [Connectors](xref:EpmIntegrationTrainingConnectors)
