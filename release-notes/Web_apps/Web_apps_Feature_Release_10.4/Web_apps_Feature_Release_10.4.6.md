@@ -28,6 +28,21 @@ uid: Web_apps_Feature_Release_10.4.6
 
 Because of a number of enhancements made to the waffle menu, overall performance has increased when opening a web app.
 
+#### Dashboards app & Low-Code Apps - GQI: Requests that contain a query will now include the query name [ID_39324]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+If the following GQI requests contain a query, the Dashboards app and the low-code apps will now include the query name in those requests. This query name will be used in metrics and logging, and can be used to indicate the origin of the query.
+
+- GenIfColumnFetchRequest
+- GenIfDataFetchRequest
+- GenIfOpenSessionRequest
+
+The query name will be constructed as follows:
+
+- `db/<dashboard name>/<queryGUID>`, or
+- `app/<appGUID>/<queryGUID>`
+
 ### Fixes
 
 #### Dashboards app: 'DATA USED IN DASHBOARD' section would not be hidden when empty [ID_39274]
