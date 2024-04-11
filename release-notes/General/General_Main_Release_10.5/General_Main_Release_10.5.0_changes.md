@@ -173,6 +173,20 @@ From now on, GQI event messages sent by the same GQI session within a time frame
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, errors related to real-time GQI data updates will also be logged.
+
+For example:
+
+- When an ad hoc data source is not able to send an update due to API methods being used incorrectly.
+- When a built-in data source is not able to send an update.
+- When the connection used to send the updates to the client gets lost.
+
+Exceptions associated with a custom data source will be logged in the log file of the data source in question.
+
 #### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

@@ -74,6 +74,20 @@ From now on, it is also possible to migrate data towards a STaaS system that is 
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, errors related to real-time GQI data updates will also be logged.
+
+For example:
+
+- When an ad hoc data source is not able to send an update due to API methods being used incorrectly.
+- When a built-in data source is not able to send an update.
+- When the connection used to send the updates to the client gets lost.
+
+Exceptions associated with a custom data source will be logged in the log file of the data source in question.
+
 #### Enhanced performance when processing changes made to service properties [ID_39011]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
