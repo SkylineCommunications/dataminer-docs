@@ -16,7 +16,7 @@ Once the command or SNMP set is executed, the flag needs to be changed again so 
 
 Summary:
 
-- QAction 1: Triggers on write of matrix, process the data to put it into a buffer parameter in a certain format. Set flag to true if it is false. (false indicates a set is being executed).
+- QAction 1: Triggers on write of matrix, process the data to put it into a buffer parameter in a certain format. Set flag to true if it is false (false indicates a set is being executed).
 - QAction 2: Triggers on a flag parameter to take one crosspoint from the buffer, send it to a command and set flag to false.
 - Group is executed with command to perform the setting.
 - Trigger after group to put the flag back to true (back to step 2 until buffer is empty).
