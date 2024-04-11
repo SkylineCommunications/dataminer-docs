@@ -45,4 +45,5 @@ In the previous example the following options were used:
 | `detail`                             | Specify tables that will be displayed in the details pane with a filter on the selection.                                                                                    |
 | `ShowBubbleupAndInstanceAlarmLevel` | Allow two alarm indications on every object: the alarm state of the object and the alarm state of all the objects below.                                                     |
 
-> **_NOTE:_** For more options, refer to the [options attribute](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Chains.Chain.Field-options.html)
+> [!NOTE]
+> For more options, refer to the [options attribute](xref:Protocol.Chains.Chain.Field-options)

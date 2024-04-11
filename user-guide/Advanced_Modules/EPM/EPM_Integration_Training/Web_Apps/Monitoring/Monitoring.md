@@ -8,4 +8,4 @@ The Monitoring app is crucial for EPM systems, especially when accessing large d
 
 ## Getting Started
 
-For more detailed information about Monitoring app [click here](https://docs.dataminer.services/user-guide/Getting_started/The_DataMiner_User_Interface/Monitoring_app/The_Monitoring_app_user_interface.html).
+For more detailed information about Monitoring app [click here](xref:The_Monitoring_app_user_interface).

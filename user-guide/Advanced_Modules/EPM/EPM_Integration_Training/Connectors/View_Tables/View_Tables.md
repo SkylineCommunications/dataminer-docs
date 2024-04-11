@@ -3,7 +3,8 @@ uid: EpmIntegrationTrainingViewTables
 ---
 
 # View Tables
-The Frontend is able to display all of the infromation in the system with View tables. The primary way to do so is through the use of the [directView](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.ArrayOptions-options.html#directview) option since the Frontend and Backend elements use the same driver so the table structures are identical. Below is an example of a directView table:
+
+The Frontend is able to display all of the information in the system with View tables. The primary way to do so is through the use of the [directView](xref:Protocol.Params.Param.ArrayOptions-options#directview) option since the Frontend and Backend elements use the same driver so the table structures are identical. Below is an example of a directView table:
 
 ```xml
 <Param id="8500">
@@ -29,20 +30,22 @@ The Frontend is able to display all of the infromation in the system with View t
 ```
 
 ### Important ArrayOptions options
--	[View=](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.ArrayOptions-options.html#view): the tablePid where the View Table will retrieve all of the information.
--	[directView=]((https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.ArrayOptions-options.html#directview)): columnPid where the unique Backend DMA ID/Element ID’s are listed. 
--	[onlyFilteredDirectview](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.ArrayOptions-options.html#onlyfiltereddirectview:) helps with system load.
+
+- [View=](xref:Protocol.Params.Param.ArrayOptions-options#view): The tablePid where the View Table will retrieve all of the information.
+- [directView=](xref:Protocol.Params.Param.ArrayOptions-options#directview): The columnPid where the unique Backend DMA ID/Element ID’s are listed.
+- [onlyFilteredDirectview](xref:Protocol.Params.Param.ArrayOptions-options#onlyfiltereddirectview) helps with system load.
 
 ### Important ColumnOption options
-- [View=](https://docs.dataminer.services/develop/schemadoc/Protocol/ColumnOptionOptionsOverview.html#view-1): the columnPid where the information exists that will be shown in this column.
+
+- [View=](xref:ColumnOptionOptionsOverview#view-1): The columnPid where the information exists that will be shown in this column.
 
 > [!NOTE]
 >There are options to view information outside of the element using the remoteView syntax `view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx`. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a large amount of entities, more than 20k entities will cause increased load in SLNet. This is because Dataminer handles those subscriptions by requesting all of the collector elements.
 
-
 ### Example
 
 Using the example above, we are mapping the information found in table 8000 to a view table 8500. Below is the table declaration of table 8000:
+
 ```xml
 <Param id="8000">
 <Name>regionOverviewTable</Name>
@@ -67,14 +70,15 @@ Using the example above, we are mapping the information found in table 8000 to a
 </ArrayOptions>
 ```
 
-You can see that all of the columns map to columns in the local table, I.E. view column 8501 maps to local column 8001, view column 8502 maps to local column 8002, etc.
+You can see that all of the columns map to columns in the local table, i.e. view column 8501 maps to local column 8001, view column 8502 maps to local column 8002, etc.
 
-And using the directView option, subscribing and requesting the information to all Backends in columnPid 801 containing the following ID's
+And using the directView option, subscribing and requesting the information to all Backends in columnPid 801 containing the following IDs:
 
-![alt text](image.png)
+![Back-end registration](~/user-guide/images/EPM_Back-end_registration.png)
 
 ### View table Column Parameters
-Since we are essentially just duplicating the information from the local table to a view table, it is not necesarry to recreate all of the parameter declarations from the local table. Because of this the view table parameters are comprised of [duplicateAs](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param-duplicateAs.html) columns to save on having to copy the parameter definition.
+
+Since we are essentially just duplicating the information from the local table to a view table, it is not necessary to recreate all of the parameter declarations from the local table. Because of this the view table parameters are comprised of [duplicateAs](xref:Protocol.Params.Param-duplicateAs) columns to save on having to copy the parameter definition.
 
 ```xml
 <Param id="8001" trending="false" duplicateAs="8501">

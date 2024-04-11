@@ -3,7 +3,9 @@ uid: DashboardAndAppsNavigation
 ---
 
 # Dashboards/Apps Navigation
+
 You can navigate to a dashboard already filtered on the EPM Feed by specifying the data input passed in the URL, this will consist of data option in the URL that will contain a JSON. This is an example of the URL and JSON.
+
   ```xml
       url?data=<URL-encoded JSON object>
 
@@ -15,14 +17,18 @@ You can navigate to a dashboard already filtered on the EPM Feed by specifying t
         "components": <component-data>
       }
   ```
-For EPM you will use an attribute epm-selections within the component property that expects DMA ID/Element ID/Field PID/Primar Key Value. This has to be used within a component object select field, therefore you will need to know the ID of the Dashboard component. An example of the syntax is:
-![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/8ba53c8c-76ab-449e-862c-eaa4681a27d1)
 
->[!NOTE]
->The above shows a dynamic way of retrieving the Primary Key, but it is also possible to hardcode everything, this is not recommended as it will not be ideal in an EPM environment.
+For EPM you will use an attribute epm-selections within the component property that expects DMA ID/Element ID/Field PID/Primary Key Value. This has to be used within a component object select field, therefore you will need to know the ID of the Dashboard component. An example of the syntax is:
 
-# Retrieve Component ID for Web Apps
-![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/104977c1-1f0a-4887-b88e-8408a0ea4f01)
-![image](https://github.com/Daniela-Prada/dataminer-docs/assets/102039927/14cb3c3d-9314-4186-acd6-54d7eab037da)
+![image](~/user-guide/images/EPM_dashboards_navigation.png)
 
-For more detailed information [click here](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Feeds/Specifying_data_input_in_a_dashboard_URL.html).
+> [!NOTE]
+> The above shows a dynamic way of retrieving the Primary Key, but it is also possible to hardcode everything, this is not recommended as it will not be ideal in an EPM environment.
+
+## Retrieving the component ID for the web apps
+
+![image](~/user-guide/images/EPM_Retrieving_component_ID1.png)
+
+![image](~/user-guide/images/EPM_Retrieving_component_ID2.png)
+
+For more detailed information, see [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
