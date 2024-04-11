@@ -133,8 +133,6 @@ If ServiceA has the following two properties:
 
 ### \[Avg:X,Y,Z\]
 
-Available from DataMiner 9.5.8 onwards.
-
 Average of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 ### \[cardvar:VariableName\]
@@ -204,16 +202,12 @@ By default, the regional date/time format will be used. To use a different forma
 
 ### \[DestinationInterfaceElementID\]
 
-Available from DataMiner 9.5.3 onwards.
-
 The DMA ID and element ID of the destination interface of the connection that was clicked.
 
 > [!TIP]
 > See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceElementName\]
-
-Available from DataMiner 9.5.3 onwards.
 
 The element name of the destination interface of the connection that was clicked.
 
@@ -222,8 +216,6 @@ The element name of the destination interface of the connection that was clicked
 
 ### \[DestinationInterfaceIdx\]
 
-Available from DataMiner 9.5.3 onwards.
-
 The interface ID of the destination interface of the connection that was clicked.
 
 > [!TIP]
@@ -231,16 +223,12 @@ The interface ID of the destination interface of the connection that was clicked
 
 ### \[DestinationInterfaceLinkedIdx\]
 
-Available from DataMiner 9.5.3 onwards.
-
 The primary key of the table row to which the destination interface of the connection that was clicked is linked.
 
 > [!TIP]
 > See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceName\]
-
-Available from DataMiner 9.5.3 onwards.
 
 The interface name of the destination interface of the connection that was clicked.
 
@@ -276,17 +264,17 @@ Available from DataMiner 10.1.12/10.2.0 onwards.
 
 This placeholder can be used to refer to the name or the ID of an element.
 
-- *\<input>* should be either an element name or an element ID (in the format DMA ID/element ID).
+- `<input>` should be either an element name or an element ID (in the format DMA ID/element ID).
 
-- *\<output>* can be either *Name* or *ID*.
+- `<output>` can be either *Name* or *ID*.
 
-For example: *\[Element:231/15,Name\]*
+For example: `[Element:231/15,Name]`
 
 ### \[EscapeDataString:x\]
 
 Use this placeholder to insert a URL-encoded string into the value of a shape data field.
 
-If, for example, you enter “\[EscapeDataString:String to be encoded+?\]” in a shape data field, this will be resolved to “String%20to%20be%20encoded%2B%3F%20”.
+If, for example, you enter `[EscapeDataString:String to be encoded+?]` in a shape data field, this will be resolved to `String%20to%20be%20encoded%2B%3F%20`.
 
 Note that the string to be encoded can itself contain dynamic placeholders.
 
