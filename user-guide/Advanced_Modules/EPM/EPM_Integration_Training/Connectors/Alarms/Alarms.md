@@ -1,9 +1,10 @@
 ---
 uid: ConnectorsAlarms
 ---
+
 # Alarms
 
-Within the EPM Manager connector, we have the possiblity to define and customize alarm settings according to our specific requirements.
+Within the EPM Manager connector, we have the possibility to define and customize alarm settings according to our specific requirements.
 
 ## Severity Bubble Up
 
@@ -11,7 +12,7 @@ The Severity Bubble Up option gives the possibility to pass alarm severities to 
 
 To implement this feature, you need to create a `<SeverityBubbleUp>` tag. Within this tag, you must define the `<path>` tag, which specifies the path through which the alarms should bubble up. This path should correspond to a defined chain.
 
-As an example, let's consider the Location topology, which includes various levels connected in a one-to-many manner:
+As an example, consider the Location topology, which includes various levels connected in a one-to-many manner:
 
 - Network (View table 9000)
   - Region (View table 8000)
@@ -19,7 +20,7 @@ As an example, let's consider the Location topology, which includes various leve
       - Hub (View table 6000)
         - Station (View table 5000)
           - Device
-  
+
 To configure the SeverityBubbleUp feature for this topology, use the following setup:
 
 ```xml
@@ -33,7 +34,6 @@ To configure the SeverityBubbleUp feature for this topology, use the following s
 The alarm level link allows aggregating alarms from DataMiner elements or table rows.
 
 In the following example we are aggregating alarms related to the Network topology level.
-
 
 ```xml
 <AlarmLevelLinks>

@@ -5,30 +5,31 @@ uid: ConnectorsRequiredTagsTopology
 # Topology
 
 In the EPM Manager connector, you will find the `<Topologies>` tag, where each distinct topology is defined.
-Inside each `<Topology>` tag, you'll find the `<Cell>` tags, these representing the cells in the EPM topology. Basically, these cells allow you to define the levels visible in a topology and connections between them.
+
+Inside each `<Topology>` tag, you will find the `<Cell>` tags, these representing the cells in the EPM topology. Basically, these cells allow you to define the levels visible in a topology and connections between them.
 
 ## Topology Example
 
 ```xml
 <Topologies>
-	<Topology>
-		<Cell name="Network" table="9500"></Cell>
-		<Cell name="Region" table="8500">
-			<Link source="1" dest="9501"/>
-		</Cell>
-		<Cell name="Sub-Region" table="7500">
-			<Link source="1" dest="8501"/>
-		</Cell>
-		<Cell name="Hub" table="6500">
-			<Link source="1" dest="7501"/>
-		</Cell>
-		<Cell name="Station" table="5500">
-			<Link source="1" dest="6501"/>
-		</Cell>
-		<Cell name="Device" table="2500">
-			<Link source="1" dest="5501"/>
-		</Cell>
-	</Topology>
+   <Topology>
+      <Cell name="Network" table="9500"></Cell>
+      <Cell name="Region" table="8500">
+         <Link source="1" dest="9501"/>
+      </Cell>
+      <Cell name="Sub-Region" table="7500">
+         <Link source="1" dest="8501"/>
+      </Cell>
+      <Cell name="Hub" table="6500">
+         <Link source="1" dest="7501"/>
+      </Cell>
+      <Cell name="Station" table="5500">
+         <Link source="1" dest="6501"/>
+      </Cell>
+      <Cell name="Device" table="2500">
+         <Link source="1" dest="5501"/>
+      </Cell>
+   </Topology>
 </Topologies>
 ```
 
