@@ -513,4 +513,10 @@ items:
         topicUid: SRM_logging
   - name: DataMiner TAG app
     topicUid: SolTAG
-    href: TAG/toc.yml
+    items:
+      - name: Overview
+        topicUid: Overview_TAG_App
+      - name: Installation
+        topicUid: Installing_TAG_App
+      - name: How-to
+        topicUid: How_to_TAG_App
