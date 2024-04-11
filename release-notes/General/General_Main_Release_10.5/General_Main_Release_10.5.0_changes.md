@@ -232,6 +232,12 @@ As to logging, behavior has changed with respect to exceptions:
 - `GenIfSecurityException` will be logged as a warning without stack trace.
 - Any other error will be logged as error with stack trace.
 
+#### SLAnalytics - Behavioral anomaly detection: A decreasing trend slope will now be labeled as a trend change instead of a variance decrease [ID_39249]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
+
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
