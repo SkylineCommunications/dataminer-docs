@@ -126,6 +126,35 @@ From now on, when you change this setting, the change will take effect the momen
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
+#### GQI now also logs requests to SLNet [ID_39355]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, when the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config` is set to "Debug" or lower, GQI will also log information about requests sent to SLNet.
+
+Types of log entries related to SLNet requests:
+
+- `Started SLNet request <RequestID> with <MessageCount> messages`
+
+  This type of entry will be added to the log when GQI starts a request to SLNet, before the messages included in the request are sent.
+
+  - *RequestID*: A unique ID that will allow you to find all log entries associated with one particular SLNet request.
+  - *MessageCount*: The number of SLNet messages included in the request.
+
+- `Sending SLNet message <RequestID>.<Index>: <Description>`
+
+  This type of entry will be added to the log for each individual message in an SLNet request.
+
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
+
+- `Finished SLNet request <RequestID> in <Duration>ms`
+
+  This type of entry will be added to the log when GQI finishes a request to SLNet, regardless of whether the request was successful or not.
+
+  - *RequestID*: The unique ID of request.
+  - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
+
 #### Enhanced error message 'Failed to create one or more storages' [ID_39360]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
