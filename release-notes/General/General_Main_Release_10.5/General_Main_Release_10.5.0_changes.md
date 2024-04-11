@@ -246,6 +246,16 @@ From now on, when you change this setting, the change will take effect the momen
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
+#### STaaS: Enhanced error message 'Failed to create one or more storages' [ID_39360]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When DataMiner fails to start up due to a problem that occurred while connecting to STaaS, a `Failed to create one or more storages` message will be thrown.
+
+From now on, this error message will include a reference to the StorageModule log file, in which you can find more information about the problem that occurred:
+
+`More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
