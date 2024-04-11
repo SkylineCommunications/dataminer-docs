@@ -55,14 +55,35 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
 
-1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it to look like this:
+1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it corresponding to your setup:
 
-   ```xml
-   <?xml version="1.0"?>
-   <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
-      <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
-   </DataBases>
-   ```
+   - For setups **without proxy**, use the following configuration:
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
+      </DataBases>
+      ```
+
+   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+            <Proxy>
+               <Address>[Enter Address Here]</Address>
+               <Port>[Enter Port Here]</Port>
+               <UserName>[Enter UserName Here]</UserName>
+               <Password>[Enter Password Here]</Password>
+            </Proxy>
+         </DataBase>
+      </DataBases>
+      ```
+
+      > [!NOTE]
+      > If the proxy does not require authentication, you can leave the *UserName* and *Password* fields blank or remove them.
 
 1. Restart DataMiner to begin using STaaS.
 
@@ -115,11 +136,13 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
-- Migrating logger tables is supported from DataMiner 10.3.11 onwards<!-- RN 37283 --> for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards<!-- RN 37408 --> for systems using a Cassandra database per DMA.
+- Migration is supported in 10.4.0 and the latest available 10.4.x feature release.
 
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
 - Migration from a MySQL setup is not yet supported.
+
+- Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
 
 In addition, the following **other limitations** currently apply:
 
@@ -135,7 +158,7 @@ In addition, the following **other limitations** currently apply:
 
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
 
-- Proxy and DMZ setups are currently not supported.
+- DMZ setups are currently not supported.
 
 - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag on logger tables is not supported.
 

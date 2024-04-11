@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
+
+On the nodes overview page in the Admin app, you can now see the status of the DxMs.
+
 #### 28 March 2024 - Fix - Catalog - Typos in error when no DMS is found [ID_39232]
 
 When no DMS is found for an organization, the displayed error will now no longer contain any typos.

@@ -74,6 +74,20 @@ From now on, it is also possible to migrate data towards a STaaS system that is 
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, errors related to real-time GQI data updates will also be logged.
+
+For example:
+
+- When an ad hoc data source is not able to send an update due to API methods being used incorrectly.
+- When a built-in data source is not able to send an update.
+- When the connection used to send the updates to the client gets lost.
+
+Exceptions associated with a custom data source will be logged in the log file of the data source in question.
+
 #### Enhanced performance when processing changes made to service properties [ID_39011]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
@@ -86,6 +100,18 @@ Because of a number of enhancements, overall performance has increased when proc
 
 All NATS configuration files will now use plain JSON syntax.
 
+#### Enhanced performance when logging on to a DaaS system with an older version of a DataMiner Cube client [ID_39211]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when logging on to a DaaS system with an older version of a DataMiner Cube client.
+
+#### SLAnalytics - Behavioral anomaly detection: A decreasing trend slope will now be labeled as a trend change instead of a variance decrease [ID_39249]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
+
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -93,6 +119,51 @@ All NATS configuration files will now use plain JSON syntax.
 Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
 
 From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
+#### Enhanced performance when starting up a DataMiner Agent [ID_39331]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
+
+#### GQI now also logs requests to SLNet [ID_39355]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, when the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config` is set to "Debug" or lower, GQI will also log information about requests sent to SLNet.
+
+Types of log entries related to SLNet requests:
+
+- `Started SLNet request <RequestID> with <MessageCount> messages`
+
+  This type of entry will be added to the log when GQI starts a request to SLNet, before the messages included in the request are sent.
+
+  - *RequestID*: A unique ID that will allow you to find all log entries associated with one particular SLNet request.
+  - *MessageCount*: The number of SLNet messages included in the request.
+
+- `Sending SLNet message <RequestID>.<Index>: <Description>`
+
+  This type of entry will be added to the log for each individual message in an SLNet request.
+
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
+
+- `Finished SLNet request <RequestID> in <Duration>ms`
+
+  This type of entry will be added to the log when GQI finishes a request to SLNet, regardless of whether the request was successful or not.
+
+  - *RequestID*: The unique ID of request.
+  - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
+
+#### Enhanced error message 'Failed to create one or more storages' [ID_39360]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When DataMiner fails to start up due to a problem that occurred while connecting to the database, a `Failed to create one or more storages` message will be thrown.
+
+From now on, this error message will include a reference to the StorageModule log file, in which you can find more information about the problem that occurred:
+
+`More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
 
 ### Fixes
 

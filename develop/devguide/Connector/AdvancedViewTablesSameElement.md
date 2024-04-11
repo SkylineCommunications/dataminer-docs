@@ -48,7 +48,7 @@ Below is an example of a base table. Note that as the view table will show data 
   <Name>Services</Name>
   <Description>Services</Description>
   <Type>array</Type>
-  <ArrayOptions index="0" options=";volatile">
+  <ArrayOptions index="0" options="">
      <ColumnOption idx="0" pid="201" type="retrieved" /><!-- ID -->
      <ColumnOption idx="1" pid="202" type="retrieved" /><!-- Name -->
      <ColumnOption idx="2" pid="203" type="retrieved" options=";foreignKey=100" /><!-- Stream ID -->
@@ -62,6 +62,9 @@ Below is an example of a base table. Note that as the view table will show data 
   <Information>
      <Subtext>The list of service.</Subtext>
   </Information>
+  <Display>
+      <RTDisplay>true</RTDisplay>
+  </Display>
   ...
 </Param>
 ```
