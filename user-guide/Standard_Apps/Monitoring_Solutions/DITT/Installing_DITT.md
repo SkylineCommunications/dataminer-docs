@@ -4,13 +4,11 @@ uid: Installing_DITT
 
 # Installing DataMiner IT Tools
 
-## Prerequisites
+1. Make sure the following **prerequisites** are met:
 
-- DataMiner version 10.3.6 or higher
+   - Your DataMiner System uses DataMiner 10.3.6 or higher.
 
-- A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
-
-## Deploying DITT
+   - The DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 1. Look up the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959) in the DataMiner Catalog.
 
