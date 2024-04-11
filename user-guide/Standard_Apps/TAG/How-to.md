@@ -4,7 +4,10 @@ uid: How_to_TAG_App
 
 # How To
 
-The app contains multiple functions that allows interaction with the TAG MCS or TAG MCM elements available in the system.
+The app contains multiple functions that allows interaction with the TAG MCS or TAG MCM elements available in the system. For the app to function fully, the elements must be running at least the following version:
+- TAG Video Systems MCM-9000 connector version 1.1.6.10
+- TAG Video Systems Media Control System (MCS) connector version 1.0.2.1
+
 The most important features are described below:
 
 ## Channel Status
