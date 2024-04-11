@@ -85,6 +85,12 @@ The following requests now have an optional `QueryName` property:
 > - When the GQI log level is set to "Debug", the full query will be logged instead of the query name.
 > - When an exception is thrown during a request, and the GQI log level is set to at least "Error" (which is the case by default), the query (if any) will also be logged alongside the error.
 
+#### Enhanced performance when logging on to a DaaS system with an older version of a DataMiner Cube client [ID_39211]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when logging on to a DaaS system with an older version of a DataMiner Cube client.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]

@@ -86,6 +86,12 @@ Because of a number of enhancements, overall performance has increased when proc
 
 All NATS configuration files will now use plain JSON syntax.
 
+#### Enhanced performance when logging on to a DaaS system with an older version of a DataMiner Cube client [ID_39211]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when logging on to a DaaS system with an older version of a DataMiner Cube client.
+
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->

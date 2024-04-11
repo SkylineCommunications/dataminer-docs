@@ -18,6 +18,12 @@ uid: General_Main_Release_10.3.0_CU15
 
 Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
 
+#### Enhanced performance when logging on to a DaaS system with an older version of a DataMiner Cube client [ID_39211]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when logging on to a DaaS system with an older version of a DataMiner Cube client.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
