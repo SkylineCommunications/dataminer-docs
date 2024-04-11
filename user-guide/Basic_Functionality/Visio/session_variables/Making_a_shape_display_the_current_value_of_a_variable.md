@@ -42,3 +42,8 @@ To add text to a shape, just double-click the shape, and enter the text.
 ## Using the current value of a session variable in an expression
 
 If you want to use the current value of a session variable in an expression (e.g. the value of some shape data field), use a \[var:...\], \[WorkspaceVar:...\], \[cardvar:...\] or \[pagevar:...\] placeholder (depending on the scope). This way you can e.g. link a shape to an element or view using a session variable.
+
+From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option to the \[var:...\], \[cardvar:...\], and \[pagevar:...\] placeholders to prevent the placeholder from being resolved until the variable is set to a value. For example: `[var:testvar,WaitForValue]`.
+
+> [!NOTE]
+> If the variable name contains commas, by default, the text before the first valid option will be considered the name of the variable. For example, in the placeholder `[var:my,var,WaitForValue,NotValidOption]`, "my,var" will be considered the name of the variable. This default behavior can be overruled by using a `[sep]` placeholder. For example, in the placeholder `[cardvar:[sep:,$]test,var$WaitForValue]`, "test,var" will be considered the name of the variable.

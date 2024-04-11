@@ -139,7 +139,10 @@ Average of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 Reference to a session variable (scope: current DataMiner Cube card).
 
-As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholder to refer to a parameter containing an empty string.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option in the placeholder to keep it from being resolved until the variable is set to a value. See [Using the current value of a session variable in an expression](xref:Making_a_shape_display_the_current_value_of_a_variable#using-the-current-value-of-a-session-variable-in-an-expression).
 
 ### [color:severity=...]
 
@@ -376,7 +379,10 @@ Minimum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 Reference to a session variable (scope: current Visio page).
 
-As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholder to refer to a parameter containing an empty string.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option in the placeholder to keep it from being resolved until the variable is set to a value. See [Using the current value of a session variable in an expression](xref:Making_a_shape_display_the_current_value_of_a_variable#using-the-current-value-of-a-session-variable-in-an-expression).
 
 ### \[param:DmaID/ElementID,ParameterID\]
 
@@ -955,7 +961,10 @@ By default, this time will be displayed in the regional date/time format. If you
 
 Reference to a session variable (scope: current DataMiner Cube session).
 
-As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholder to refer to a parameter containing an empty string.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option in the placeholder to keep it from being resolved until the variable is set to a value. See [Using the current value of a session variable in an expression](xref:Making_a_shape_display_the_current_value_of_a_variable#using-the-current-value-of-a-session-variable-in-an-expression).
 
 ### \[xpos\]
 
