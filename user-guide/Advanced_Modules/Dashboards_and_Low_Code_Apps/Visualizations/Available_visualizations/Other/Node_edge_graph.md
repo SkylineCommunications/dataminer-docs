@@ -13,6 +13,8 @@ This component allows you to visualize any type of objects (i.e. “nodes”) an
 
 The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects). Clicking items in the node edge graph also makes these available as a feed for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
 
+When edges are closely grouped together, edge labels may become minimized. If you hover the mouse pointer over the edge, the label becomes visible again. From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, you can press Ctrl+Space to display all labels in the node edge graph.
+
 The component uses dynamic coloring, which can be adjusted according to preference. When you hover the mouse pointer over a node or edge, a tooltip is displayed with detailed info. Click the circle in the top-right corner of the tooltip to switch between different coloring modes for all the nodes or edges of this type:
 
 - *Static*: Edges have no color, nodes have the color from the node settings.
