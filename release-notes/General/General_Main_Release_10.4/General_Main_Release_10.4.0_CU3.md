@@ -12,6 +12,12 @@ uid: General_Main_Release_10.4.0_CU3
 
 ### Enhancements
 
+#### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Simple alarm filters (without operators and/or brackets) can now be translated to Elasticsearch/OpenSearch queries. This will increase overall performance of Elasticsearch/OpenSearch queries containing alarm filters as alarm filtering will now be performed by the database itself. Post-filtering query results will no longer be needed.
+
 #### Enhanced performance when processing changes made to service properties [ID_39011]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
