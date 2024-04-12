@@ -2,59 +2,59 @@
 uid: ConnectorsVisChainsFields
 ---
 
-# Visibility of Chains and Fields
+# Visibility of chains and fields
 
-Within the EPM Manager connector, it is possble to configure the visibility of a Chain or a Field.
+Within the EPM Manager connector, it is possible to configure the visibility of a Chain or a Field.
 To enable this functionality, it is necessary to add a `<display>` tag within the corresponding Chain or Field. Additionally, a Read-Write parameter needs to be created for each Chain or Field. This parameter will allow users to configure visibility of these items according to their requirements.
 
-## Example Parameter
+## Example parameter
 
 ```xml
-	<Param id="301" trending="false" save="true">
-		<Name>chainVisibilityCustomer</Name>
-		<Description>Customer Topology</Description>
-		<Type>read</Type>
-		<Information>...</Information>
-		<Interprete>...</Interprete>
-		<Display>...</Display>
-		<Measurement>
-			<Type>discreet</Type>
-			<Discreets>
-				<Discreet>
-					<Display>Disabled</Display>
-					<Value>1</Value>
-				</Discreet>
-				<Discreet>
-					<Display>Enabled</Display>
-					<Value>2</Value>
-				</Discreet>
-			</Discreets>
-		</Measurement>
-	</Param>
-	<Param id="351" setter="true">
-		<Name>chainVisibilityCustomer</Name>
-		<Description>Customer Topology</Description>
-		<Type>write</Type>
-		<Interprete>...</Interprete>
-		<Display>...</Display>
-		<Measurement>
-			<Type>togglebutton</Type>
-			<Discreets>
-				<Discreet>
-					<Display>Disabled</Display>
-					<Value>1</Value>
-				</Discreet>
-				<Discreet>
-					<Display>Enabled</Display>
-					<Value>2</Value>
-				</Discreet>
-			</Discreets>
-		</Measurement>
-	</Param>
+   <Param id="301" trending="false" save="true">
+      <Name>chainVisibilityCustomer</Name>
+      <Description>Customer Topology</Description>
+      <Type>read</Type>
+      <Information>...</Information>
+      <Interprete>...</Interprete>
+      <Display>...</Display>
+      <Measurement>
+         <Type>discreet</Type>
+         <Discreets>
+            <Discreet>
+               <Display>Disabled</Display>
+               <Value>1</Value>
+            </Discreet>
+            <Discreet>
+               <Display>Enabled</Display>
+               <Value>2</Value>
+            </Discreet>
+         </Discreets>
+      </Measurement>
+   </Param>
+   <Param id="351" setter="true">
+      <Name>chainVisibilityCustomer</Name>
+      <Description>Customer Topology</Description>
+      <Type>write</Type>
+      <Interprete>...</Interprete>
+      <Display>...</Display>
+      <Measurement>
+         <Type>togglebutton</Type>
+         <Discreets>
+            <Discreet>
+               <Display>Disabled</Display>
+               <Value>1</Value>
+            </Discreet>
+            <Discreet>
+               <Display>Enabled</Display>
+               <Value>2</Value>
+            </Discreet>
+         </Discreets>
+      </Measurement>
+   </Param>
 
 ```
 
-## Example Chain
+## Example chain
 
 ```xml
 <Chain name="Customer Topology">

@@ -6,6 +6,6 @@ uid: ConnectorsTopologyRelations
 
 In a topology, it is possible to define three types of relations:
 
-- [One to Many](xref:ConnectorsTopologyRelationsOneMany)
-- [Many to Many](xref:ConnectorsTopologyRelationsManyMany)
+- [One-to-many](xref:ConnectorsTopologyRelationsOneMany)
+- [Many-to-many](xref:ConnectorsTopologyRelationsManyMany)
 - [Recursive](xref:ConnectorsTopologyRelationsRecursive)

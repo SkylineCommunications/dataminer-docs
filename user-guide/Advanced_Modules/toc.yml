@@ -922,9 +922,8 @@ items:
             - name: Aggregation and merge actions
               topicUid: EpmIntegrationTrainingAggregations
             - name: Alarms
-              topicUid: ConnectorsAlarms
+              topicUid: EPM_ConnectorsAlarms
             - name: Required tags
-              topicUid: ConnectorsRequiredTags
               items:
               - name: General configuration
                 topicUid: ConnectorsRequiredTagsGeneralInformation

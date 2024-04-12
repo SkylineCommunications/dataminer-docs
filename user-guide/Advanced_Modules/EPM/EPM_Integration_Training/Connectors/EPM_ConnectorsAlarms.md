@@ -1,18 +1,18 @@
 ---
-uid: ConnectorsAlarms
+uid: EPM_ConnectorsAlarms
 ---
 
 # Alarms
 
-Within the EPM Manager connector, we have the possibility to define and customize alarm settings according to our specific requirements.
+Within the EPM Manager protocol, it is possible to define and customize alarm settings.
 
-## Severity Bubble Up
+## Severity bubble-up
 
-The Severity Bubble Up option gives the possibility to pass alarm severities to linked tables.
+The severity bubble-up feature makes it possible to pass alarm severities to linked tables.
 
-To implement this feature, you need to create a `<SeverityBubbleUp>` tag. Within this tag, you must define the `<path>` tag, which specifies the path through which the alarms should bubble up. This path should correspond to a defined chain.
+To implement this feature, create a `<SeverityBubbleUp>` tag. Within this tag, define the `<path>` tag, which specifies the path through which the alarms should bubble up. This path must correspond to a defined chain.
 
-As an example, consider the Location topology, which includes various levels connected in a one-to-many manner:
+For example, consider the Location topology, which includes various levels connected in a one-to-many manner:
 
 - Network (View table 9000)
   - Region (View table 8000)
@@ -21,7 +21,7 @@ As an example, consider the Location topology, which includes various levels con
         - Station (View table 5000)
           - Device
 
-To configure the SeverityBubbleUp feature for this topology, use the following setup:
+To configure the severity bubble-up feature for this topology, use the following configuration in the EPM Manager protocol:
 
 ```xml
 <SeverityBubbleUp>
