@@ -20,9 +20,9 @@ Aggregation actions are used when aggregating data from within the same element 
 > [!NOTE]
 > For recursive and many to many relations, aggregations may be done by removing the groupBy option, the groupBy option is not necessary  if a valid relation is found but is added to reduce load.
 
-# Merge Actions
+## Merge actions
 
-If KPI data is located outside of the element, i.e. Network KPI’s (located at the FE) aggregated from the Region KPI’s (located at the BE level), then [merge](xref:LogicActionMerge) actions are used.
+If KPI data is located outside of the element, i.e. Network KPIs (located at the FE) aggregated from the Region KPIs (located at the BE level), then [merge](xref:LogicActionMerge) actions are used.
 
 These actions are an extension of aggregation actions. A merge request is sent out to multiple elements, and then the responses are “merged” together to set the table.
 
@@ -75,4 +75,4 @@ The action is like an aggregation action, but instead of being on a column where
    </Action>
    ```
 
-The action is an aggregation action and there is no need to add the return option since we do not want the BE’s to set their tables with this information, we only want the KPI’s to be calculated and then sent to the FE.
+The action is an aggregation action and there is no need to add the return option since we do not want the BEs to set their tables with this information, we only want the KPIs to be calculated and then sent to the FE.

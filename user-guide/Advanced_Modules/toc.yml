@@ -892,7 +892,7 @@ items:
             topicUid: DOM_Remove_Enum_Entry
           - name: Removing a field descriptor from a definition
             topicUid: DOM_Remove_FieldDescriptor_Definition
-  - name: Experience and Performance Management
+  - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
       - name: About DataMiner Experience and Performance Management
