@@ -918,7 +918,6 @@ items:
           - name: Introduction
             topicUid: EpmIntegrationTrainingIntroduction
           - name: Connectors
-            topicUid: EpmIntegrationTrainingConnectors
             items:
             - name: Aggregation and merge actions
               topicUid: EpmIntegrationTrainingAggregations
@@ -947,7 +946,6 @@ items:
             - name: Visibility tags and fields
               topicUid: ConnectorsVisChainsFields
           - name: Visual Overview
-            topicUid: EpmIntegrationTrainingVisio
             items:
               - name: Alarm Console navigation
                 topicUid: AlarmConsoleNavigation
@@ -961,14 +959,13 @@ items:
                 topicUid: BestPracticesRemoteKpis
               - name: Performing ping and tracert operations using DITT
                 topicUid: DITTIntegration
-          - name: Web Apps
-            topicUid: EpmIntegrationTrainingWebApps
+          - name: Web apps
             items:
-              - name: Dashboards in EPM
+              - name: EPM and Dashboards
                 topicUid: EpmIntegrationTrainingDashboards
-              - name: Monitoring App in EPM
+              - name: EPM and the Monitoring app
                 topicUid: EpmIntegrationTrainingMonitoring
-              - name: Low-Code Apps in EPM
+              - name: EPM and Low-Code Apps
                 topicUid: EpmIntegrationTrainingLowCodeApp
           - name: Other Options
             topicUid: EpmIntegrationTrainingOtherOptions

@@ -4,8 +4,4 @@ uid: Epm_Integration_Training
 
 # EPM integration training
 
-- [Introduction](xref:EpmIntegrationTrainingIntroduction)
-- [Connectors](xref:EpmIntegrationTrainingConnectors)
-- [Visual Overview](xref:EpmIntegrationTrainingVisio)
-- [Web Apps](xref:EpmIntegrationTrainingWebApps)
-- [Other Options](xref:EpmIntegrationTrainingOtherOptions)
+To get started with EPM integrations, you can deploy the EPM Integration Training package from the DataMiner Catalog. In addition to this, you can read through the information in this section to better understand and get hands-on with the EPM Solution.

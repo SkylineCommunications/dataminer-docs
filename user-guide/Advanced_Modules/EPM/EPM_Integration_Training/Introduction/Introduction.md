@@ -41,6 +41,10 @@ The EPM Integration Training package installs the following components:
   - Device Overview
   - Device Grid Overview
 
+- Low-code app:
+
+  - EPM Integration Training
+
 - Visio drawings:
 
   - Skyline EPM Integration Training.vsdx
