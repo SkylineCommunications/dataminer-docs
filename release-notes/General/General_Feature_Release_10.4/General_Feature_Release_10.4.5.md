@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.5
 ---
 
-# General Feature Release 10.4.5 – Preview
+# General Feature Release 10.4.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,7 +18,8 @@ uid: General_Feature_Release_10.4.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]](#gqi-implementing-a-custom-sort-order-for-gqi-columns-using-a-custom-operator-id_39136)
+- [Storage as a Service: Proxy support [ID_39221]](#storage-as-a-service-proxy-support-id_39221)
 
 ## Breaking changes
 
