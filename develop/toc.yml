@@ -3478,6 +3478,8 @@ items:
                     topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
                 - name: Specific
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
+              - name: SetAsActive
+                topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
       - name: DeploymentOptions
