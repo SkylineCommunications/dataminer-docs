@@ -14,13 +14,17 @@ Expected duration: 45 minutes
 ## Prerequisites
 
 - DataMiner version 10.2.2 or higher
-- Protocol: Skyline Generic Virtual Connector – 1.0.0.3
+
+- Protocol: [Skyline Generic Virtual Connector](https://catalog.dataminer.services/details/connector/7021) – version 1.0.0.3 or higher
+
 - Microsoft Visio
 
 ## Overview
 
 - [Step 1: Create a new Virtual Connector element and add numerical data to the 'Numerical Master Table' on the element's 'Table' data page](#step-1-create-a-new-virtual-connector-element-and-add-numerical-data-to-the-numerical-master-table-on-the-elements-table-data-page)
+
 - [Step 2: Create a new dashboard and add a 'Parameter feed' component and a 'State' component to display the numerical data from the Virtual Connector](#step-2-create-a-new-dashboard-and-add-a-parameter-feed-component-and-a-state-component-to-display-the-numerical-data-from-the-virtual-connector)
+
 - [Step 3: Create a new visual overview for the Generic Virtual Connector element with shapes for each numerical table index linking to the dashboard](#step-3-create-a-new-visual-overview-for-the-generic-virtual-connector-element-with-shapes-for-each-numerical-table-index-linking-to-the-dashboard)
 
 > [!NOTE]
@@ -29,92 +33,118 @@ Expected duration: 45 minutes
 ## Step 1: Create a new Virtual Connector element and add numerical data to the 'Numerical Master Table' on the element's 'Table' data page
 
 1. Open DataMiner Cube.
-1. Create a new element using the *Skyline Generic Virtual Connector* protocol. The minimum required version (1.0.0.3) can be [deployed from the DataMiner Catalog](https://catalog.dataminer.services/details/connector/7021).
+
+1. Create a new element using the *Skyline Generic Virtual Connector* protocol.
 
    1. Open the Surveyor.
+
    1. Right-click a view (e.g. Root View), and select *New > Element*.
+
    1. Enter an element name, select the DMA, the protocol (i.e. *Skyline Generic Virtual Connector*) and the protocol version (e.g. 1.0.0.3), and click *Create*.
 
 1. Now that you have created the element, go to the *DATA > Table* page of the element, which contains the *Numeric Master Table*.
+
 1. Right-click below the table's column headers, and click *Add...* to add a new row to the table.  
 
-   ![](~/user-guide/images/VisioURLFeed_AddRowNumericTable.png)
+   ![Add Row Numeric Table](~/user-guide/images/VisioURLFeed_AddRowNumericTable.png)
 
 1. Enter the row's primary key [IDX], enter random numbers into the first three columns, and click *OK*.
 
    > [!IMPORTANT]
    > Do not use any special characters for the primary key as they will interfere with the URL linking performed in step 3.
 
-   ![](~/user-guide/images/VisioURLFeed_AddRowNumericTableInput.png)
+   ![Table input](~/user-guide/images/VisioURLFeed_AddRowNumericTableInput.png)
 
 1. Add at least one more row to the table.
 
-   ![](~/user-guide/images/VisioURLFeed_NumericTableRows.png)
+   ![Table rows](~/user-guide/images/VisioURLFeed_NumericTableRows.png)
 
 ## Step 2: Create a new dashboard and add a 'Parameter feed' component and a 'State' component to display the numerical data from the Virtual Connector
 
 1. Open the *Dashboards* app.
+
 1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
+
 1. If you are not yet in edit mode, then click *Start editing*.
+
 1. Add a [Parameter feed component](xref:DashboardParameterFeed).
+
 1. From the *Data* pane on the right, drag the *ELEMENTS* header onto the *Parameter feed* component to be used as data.
+
 1. In the *Data* pane on the right, expand the *PARAMETERS* section, set *From* to "Protocol", set *Protocol* to "Skyline Generic Virtual Connector", use the filter to find the three numeric table parameters that you entered numbers for, and drag each of them onto the *Parameter feed* component to be used as data.
 
-   ![](~/user-guide/images/VisioURLFeed_ParameterDataForFeed.png)
+   ![Parameters](~/user-guide/images/VisioURLFeed_ParameterDataForFeed.png)
 
 1. In the *Data* pane on the right, expand the *PROTOCOLS* section, search for the *Skyline Generic Virtual Connector*, and drag the protocol onto the *Parameter feed* component to be used as a filter.
 
-   ![](~/user-guide/images/VisioURLFeed_ProtocolDataForFeed.png)
+   ![Protocols](~/user-guide/images/VisioURLFeed_ProtocolDataForFeed.png)
 
 1. Add a [State component](xref:DashboardState).
+
 1. Click the *State* component to select it.
+
 1. In the *Data* pane on the right, expand the *FEEDS* section to find the items associated with the parameter feed. Expand the *Parameter feed* component, and drag the *Parameters* item onto the *State* component to be used as data.
 
-   ![](~/user-guide/images/VisioURLFeed_ParameterDataForState.png)
+   ![Feeds](~/user-guide/images/VisioURLFeed_ParameterDataForState.png)
 
-1. In the *Layout* pane on the right, select the *LABELS* boxes to display the parameter name, the index and the value.
+1. In the *Layout* pane on the right, select the *LABELS* boxes to display the parameter name, the index, and the value.
 
-   ![](~/user-guide/images/VisioURLFeed_StateLayoutOptions.png)
+   ![Labels](~/user-guide/images/VisioURLFeed_StateLayoutOptions.png)
 
 1. Click *Stop editing* to exit edit mode.
 
    At this point, you should be able to make manual parameter feed selections to control which parameter values are shown on the *State* component.
 
-   ![](~/user-guide/images/VisioURLFeed_DashboardManualResults.png)
+   ![State component](~/user-guide/images/VisioURLFeed_DashboardManualResults.png)
 
-1. In the top-right corner of the screen, click the ellipsis button, and then click *Share* to open a dialog box.
-1. Enable the *Use uncompressed URL parameters* option, and then click *Copy link*. The URL you copied will be used in step 3 below.
+1. In the top-right corner of the screen, click the ellipsis button, and then click *Share*.
 
-   ![](~/user-guide/images/VisioURLFeed_URLLink.png)
+1. In the pop-up window, enable the *Use uncompressed URL parameters* option, and then click *Copy link*. The URL you copied will be used in step 3 below.
 
-1. Close the dialog box by clicking the "X" in the top-right corner.
+   ![Pop-up window](~/user-guide/images/VisioURLFeed_URLLink.png)
+
+1. Close the pop-up window by clicking the "X" in the top-right corner.
 
 ## Step 3: Create a new visual overview for the Generic Virtual Connector element with shapes for each numerical table index linking to the dashboard
 
 1. In DataMiner Cube, open the *Generic Virtual Connector* element you created in step 1.
+
 1. Go to the *VISUAL* page of the element, and right-click anywhere to have the Visio file options displayed.
+
 1. Hover the mouse pointer over *Set as active "..." element Visio file*, and click *New blank*.
+
+   ![New blank](~/user-guide/images/VisioURLFeed_NewBlankVisio.png)
+
 1. In the confirmation box, click *Yes*.
 
    A new Visio file associated with the element will now be created. It will look like a blank canvas on the VISUAL page of the element.
 
-   ![](~/user-guide/images/VisioURLFeed_NewBlankVisio.png)
-
-1. On the blank *VISUAL* page, right-click anywhere, and select *Edit in Visio*. This will open Microsoft Visio.
+1. If the new Visio file is not opened automatically, on the blank *VISUAL* page, right-click anywhere, and select *Edit in Visio*. This will open Microsoft Visio.
 
    > [!NOTE]
    > When you make changes to the Visio file, they will immediately appear in DataMiner Cube as soon as you save the file.
 
 1. Add a large rectangle that represents a table row.
+
 1. Add a textbox with the text *[tableIndex]*, and move it on top of the rectangle.
+
 1. Add a small rectangle that will act as a button to navigate to the Dashboards app. Double-click the rectangle, give it a useful description, and move it on top of the first rectangle representing a row.
+
 1. CTRL-click all three components to select them all, then right-click, and select *Group > Group*.
 
    You should see the following under the *Drawing Explorer*:
 
-   ![](~/user-guide/images/VisioURLFeed_VisioRowGroup.png)
+   ![Drawing Explorer](~/user-guide/images/VisioURLFeed_VisioRowGroup.png)
 
-1. Add the following shape data to the grouped sheet representing a row.
+   > [!NOTE]
+   > If the Drawing Explorer is not automatically displayed, follow these steps:
+   >
+   > 1. Right-click the ribbon and select *Customize the Ribbon*.
+   > 1. In the *Main Tabs* list on the right, make sure *Developer* is enabled.
+   > 1. Click *OK* in the lower right corner.
+   > 1. Access the *Developer* tab, and select the *Drawing Explorer* check box in the *Show/Hide* group. The Drawing Explorer window appears in the corner of your drawing.
+
+1. Right-click the grouped sheet representing a row, and select *Shape Data*. Add the following shape data:
 
    | Shape data field | Value |
    |---|---|
@@ -135,7 +165,7 @@ Expected duration: 45 minutes
 
 1. Using a publicly available web-based encoded JSON URL converter, convert the URL you captured in step 2 to a human-readable format. This will allow users to understand how feed selections are represented in the dashboard's URL.
 
-   ![](~/user-guide/images/VisioURLFeed_URLConvert.png)
+   ![URL converter](~/user-guide/images/VisioURLFeed_URLConvert.png)
 
    With this information, certain sections of the URL can be replaced with placeholders that will allow dynamic entry based on the row index that is fed into it.
 
