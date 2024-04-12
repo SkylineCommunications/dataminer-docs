@@ -4,52 +4,47 @@ uid: Installing_TAG_App
 
 # Installing the DataMiner TAG app
 
-To install and set up the TAG app:
+To install and set up the TAG app, do the following:
 
-1. In [DataMiner Catalog](https://catalog.dataminer.services/), deploy the latest version of the [TAG Management Package](https://catalog.dataminer.services/details/package/6076)
+1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/), and deploy the latest version of the [TAG Management Package](https://catalog.dataminer.services/details/package/6076).
 
-2. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+1. In DataMiner Cube, go to *Apps > System Center > Agents > Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
-3. In DataMiner Cube, go to *Apps* > *Automation*.
+1. In DataMiner Cube, go to *Apps > Automation*.
 
-4. Select the script *TAG_SetupWizard* and click *Execute*.
+1. Select the *TAG_SetupWizard* script, and click *Execute*.
 
-5. On the first page, click the button *Execute Now*.
+1. On the first page, click *Execute Now*.
 
-   The Setup Wizard will execute in the background and apply all changes needed.
+   The setup wizard will execute in the background and apply all changes needed.
 
-6. Close execution window.
+1. Close the execution window.
 
-7. Open the Automation app and search for the "Merge LCA themes" script. Within the script, go to Advanced > DLL references and replace **C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll** with **C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll**
+1. Open the *Automation* app, and search for the *Merge LCA themes* script. Within the script, go to *Advanced > DLL references*, and replace `C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll` with `C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll`.
 
-## TAG Elements
+## TAG elements
 
-To ensure full functionality of the TAG Management Low-code Application included in your package, creating elements is essential. Without these elements, the application will not operate correctly.
+To ensure full functionality of the *TAG Management* low-code application included in your package, creating elements is essential. Without these elements, the application will not operate correctly.
 
-To create an element in DataMiner Cube, follow these steps:
+To create an element in DataMiner Cube, do the following:
 
-1. In DataMiner Cube, navigate to the Surveyor section and select the View where you wish to add the new element.
+1. In DataMiner Cube, open the *Surveyor*, and select the view in which you want to add the new element.
 
-1. Right-click on the selected view, hover over New, and then choose Element. This action will open a new tab for element configuration.
+1. Right-click the selected view, hover over *New*, and select *Element*. This action will open a window in which you will be able to configure the element.
 
-1. In the Element Configuration tab, locate the Device Details section:
-   * Under Protocol, search for "TAG" and select the appropriate TAG protocol, such as TAG Video Systems MCM-9000 or TAG Video Systems Media Control System.
-   * Choose the latest version from the Version dropdown menu.
+1. In the *Edit* tab, go to the *Device details* section.
 
-1. In the *Version* dropdown select the latest version.
+   1. Open the *Protocol* selection box, search for "TAG", and select the appropriate TAG protocol (e.g. *TAG Video Systems MCM-9000* or *TAG Video Systems Media Control System*).
+   1. Open the *Version* selection box, and select the latest version.
 
-1. For the Http Connection:
-   * Enter the IP address of the TAG device in the *IP address/host* field.
-   * In the IP port section, input the recommended port for the selected protocol. Refer to the documentation for [TAG MCM](https://catalog.dataminer.services/details/connector/1923) or [TAG MCS](https://catalog.dataminer.services/details/connector/8160) for the recommended port information.
+1. Go to the *HTTP connection* section.
 
-1. After filling all required fields, click the Create button to finalize the creation of the element.
+   1. In the *IP address/host* box, enter the IP address of the TAG device.
+   1. In the *IP port* box, enter the recommended port for the selected protocol.
+
+      For information about the recommended port, see the documentation for [TAG MCM](https://catalog.dataminer.services/details/connector/1923) or [TAG MCS](https://catalog.dataminer.services/details/connector/8160).
+
+1. At the bottom of the window, click *Create* button to have the element created.
 
 > [!TIP]
-> For more information on how to create elements see [Adding elements](xref:Adding_elements).
-
-
-   
-
-
-
-   
+> For more information on how to create elements, see [Adding elements](xref:Adding_elements).

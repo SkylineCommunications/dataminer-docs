@@ -1,7 +1,7 @@
-  items:
-    - name: Overview
-      topicUid: Overview_TAG_App
-    - name: Installation
-      topicUid: Installing_TAG_App
-    - name: How-to
-      topicUid: How_to_TAG_App
+items:
+  - name: Overview
+    topicUid: Overview_TAG_App
+  - name: Installation
+    topicUid: Installing_TAG_App
+  - name: How-to
+    topicUid: How_to_TAG_App
