@@ -912,7 +912,7 @@ items:
             topicUid: EPM_alarm_monitoring_and_trending
           - name: Creating a link between DataMiner elements and the EPM element
             topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
-      - name: EPM Integration Training
+      - name: EPM integration training
         topicUid: Epm_Integration_Training
         items:
           - name: Introduction
@@ -920,46 +920,46 @@ items:
           - name: Connectors
             topicUid: EpmIntegrationTrainingConnectors
             items:
-            - name: Aggregations and Merges
+            - name: Aggregation and merge actions
               topicUid: EpmIntegrationTrainingAggregations
             - name: Alarms
               topicUid: ConnectorsAlarms
-            - name: Required Tags
+            - name: Required tags
               topicUid: ConnectorsRequiredTags
               items:
-              - name: General Configuration
+              - name: General configuration
                 topicUid: ConnectorsRequiredTagsGeneralInformation
               - name: Topology
                 topicUid: ConnectorsRequiredTagsTopology
-              - name: Chains and Fields
+              - name: Chains and fields
                 topicUid: ConnectorsRequiredTagsChainsAndFields
-            - name: Topology Relations
+            - name: Topology relations
               topicUid: ConnectorsTopologyRelations
               items:
-              - name: One to Many
+              - name: One-to-many
                 topicUid: ConnectorsTopologyRelationsOneMany
-              - name: Many to Many
+              - name: Many-to-many
                 topicUid: ConnectorsTopologyRelationsManyMany
               - name: Recursive
                 topicUid: ConnectorsTopologyRelationsRecursive
-            - name: View Tables
+            - name: View tables
               topicUid: EpmIntegrationTrainingViewTables
-            - name: Visibility Tags and Fields
+            - name: Visibility tags and fields
               topicUid: ConnectorsVisChainsFields
           - name: Visual Overview
             topicUid: EpmIntegrationTrainingVisio
             items:
-              - name: Alarm Console Navigation
+              - name: Alarm Console navigation
                 topicUid: AlarmConsoleNavigation
-              - name: Filtering Alarms Using System Name And Type Filter
+              - name: Filtering alarms Using System Name And Type filter
                 topicUid: FilteringAlarmsUsingSystemNameType
-              - name: Dashboard and Apps Navigation
+              - name: Dashboard and apps navigation
                 topicUid: DashboardAndAppsNavigation
-              - name: Linking A Shape To EPM Object Using System Name and Type
+              - name: Linking a shape to an EPM object using System Name and Type
                 topicUid: LinkingShapeEpmObjectSystemNameType
-              - name: Best Practices To Retrieve Remote Parameters
+              - name: Best practices to retrieve remote parameters
                 topicUid: BestPracticesRemoteKpis
-              - name: Perform Pings And Tracert Using DITT
+              - name: Performing ping and tracert operations using DITT
                 topicUid: DITTIntegration
           - name: Web Apps
             topicUid: EpmIntegrationTrainingWebApps

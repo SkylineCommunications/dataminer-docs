@@ -2,9 +2,13 @@
 uid: EpmIntegrationTrainingAggregations
 ---
 
-# Aggregate Actions
+# Aggregate and merge actions
 
-Because of the way the EPM architecture is structured it allows us to calculate many aggregated KPIs. These KPIs are calculated by using [aggregation](xref:LogicActionAggregate) actions.
+## Aggregate actions
+
+Because of the way the EPM architecture is structured, it allows the calculation of many aggregated KPIs. This is done using [aggregation](xref:LogicActionAggregate) actions.
+
+For example:
 
 ```xml
 <Action id="8004">
@@ -14,17 +18,18 @@ Because of the way the EPM architecture is structured it allows us to calculate 
 </Action>
 ```
 
-You are able to see what all of the options do in the documentation
-Aggregation actions are used when aggregating data from within the same element i.e. the back ends will aggregate the Region KPIs from the Sub-Region table since all the information is in the element.
+Aggregation actions are used to aggregate data from within the same element. For example, BE elements will aggregate the Region KPIs from the Sub-Region table as all the information is in the element.
 
 > [!NOTE]
-> For recursive and many to many relations, aggregations may be done by removing the groupBy option, the groupBy option is not necessary  if a valid relation is found but is added to reduce load.
+> For recursive and many-to-many relations, aggregation operations can be done by removing the *groupBy* option. The *groupBy* option is not necessary if a valid relation is found, but it is added to reduce the load on the system.
 
 ## Merge actions
 
-If KPI data is located outside of the element, i.e. Network KPIs (located at the FE) aggregated from the Region KPIs (located at the BE level), then [merge](xref:LogicActionMerge) actions are used.
+If KPI data is located outside of the element, e.g. Network KPIs (located at the FE) aggregated from the Region KPIs (located at the BE level), then [merge](xref:LogicActionMerge) actions are used.
 
-These actions are an extension of aggregation actions. A merge request is sent out to multiple elements, and then the responses are “merged” together to set the table.
+These actions are an extension of aggregation actions. A merge request is sent out to multiple elements, and then the responses are "merged" together to set the table.
+
+For example:
 
 ```xml
 <Action id="9003">
@@ -34,7 +39,9 @@ These actions are an extension of aggregation actions. A merge request is sent o
 </Action>
 ```
 
-The action is like an aggregation action, but instead of being on a column where it is retrieving the data, it is on protocol. Other important options are the remoteElement points to a columnPid containing all the BE elements and the trigger option denotes a parameter ID that will be triggered to initiate the merge request. The flow of the receiver of the merge request is as follows:
+This action is like an aggregation action, but instead of being applied to a column that it retrieves data from, it is applied on a protocol. Also important is that *remoteElement* points to a *columnPid* containing all the BE elements, and the *trigger* option denotes a parameter ID that will be triggered to initiate the merge request.
+
+The flow of the receiver of the merge request is as follows:
 
 1. Parameter:
 
@@ -75,4 +82,4 @@ The action is like an aggregation action, but instead of being on a column where
    </Action>
    ```
 
-The action is an aggregation action and there is no need to add the return option since we do not want the BEs to set their tables with this information, we only want the KPIs to be calculated and then sent to the FE.
+The action is an aggregation action and there is no need to add the return option, as the BE elements should not set their tables with this information. All that should happen is that the KPIs are calculated and then sent to the FE.

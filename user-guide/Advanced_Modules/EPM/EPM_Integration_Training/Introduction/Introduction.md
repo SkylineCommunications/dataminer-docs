@@ -27,23 +27,23 @@ You can install the package on a single DMA. If more DMAs are present in the clu
   - **EPM Availability Back-End 2**
   - **EPM Availability Collector 3**
 
-## Which components are installed and deployed on my system?
+## EPM Integration Training package components
 
-### Connectors
+The EPM Integration Training package installs the following components:
 
-- Skyline EPM Integration Training Manager
-- Skyline EPM Integration Training Collector
+- Connectors:
 
-### Web Apps
+  - Skyline EPM Integration Training Manager
+  - Skyline EPM Integration Training Collector
 
- - Dashboards
-    - Device Overview
-    - Device Grid Overview
-- EPM Integration Training
+- Dashboards:
 
-### Visio
+  - Device Overview
+  - Device Grid Overview
 
-- Skyline EPM Integration Training.vsdx
+- Visio drawings:
+
+  - Skyline EPM Integration Training.vsdx
 
 ## Table structure
 
