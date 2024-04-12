@@ -6,21 +6,11 @@ uid: Installing_TAG_App
 
 To install and set up the TAG app, do the following:
 
-1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/), and deploy the latest version of the [TAG Management Package](https://catalog.dataminer.services/details/package/6076).
+- Go to the [DataMiner Catalog](https://catalog.dataminer.services/), and deploy the latest version of the [TAG Management Package](https://catalog.dataminer.services/details/package/6076).
 
-1. In DataMiner Cube, go to *Apps > System Center > Agents > Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
-
-1. In DataMiner Cube, go to *Apps > Automation*.
-
-1. Select the *TAG_SetupWizard* script, and click *Execute*.
-
-1. On the first page, click *Execute Now*.
-
-   The setup wizard will execute in the background and apply all changes needed.
-
-1. Close the execution window.
-
-1. Open the *Automation* app, and search for the *Merge LCA themes* script. Within the script, go to *Advanced > DLL references*, and replace `C:\Skyline DataMiner\ProtocolScripts\WebApiLib.dll` with `C:\Skyline DataMiner\Webpages\API\bin\WebApiLib.dll`.
+If your system is not connected to the DataMiner cloud, then you will have to download the package.
+   
+- In DataMiner Cube, go to *Apps > System Center > Agents > Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
 ## TAG elements
 
