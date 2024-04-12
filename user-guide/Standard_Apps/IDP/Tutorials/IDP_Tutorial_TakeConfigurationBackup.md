@@ -11,6 +11,9 @@ Expected duration: 20 minutes.
 
 > [!NOTE]
 > The content and screenshots for this tutorial were created using DataMiner version 10.4.3 and IDP version 1.5.0.
+>
+> [!TIP]
+> See also: [Kata #26: Set up IDP to back up your device configuration](https://community.dataminer.services/courses/kata-26/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
