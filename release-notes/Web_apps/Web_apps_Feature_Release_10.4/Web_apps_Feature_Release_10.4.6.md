@@ -28,6 +28,21 @@ uid: Web_apps_Feature_Release_10.4.6
 
 Because of a number of enhancements made to the waffle menu, overall performance has increased when opening a web app.
 
+#### Dashboards app & Low-Code Apps - GQI: Requests that contain a query will now include the query name [ID_39324]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+If the following GQI requests contain a query, the Dashboards app and the low-code apps will now include the query name in those requests. This query name will be used in metrics and logging, and can be used to indicate the origin of the query.
+
+- GenIfColumnFetchRequest
+- GenIfDataFetchRequest
+- GenIfOpenSessionRequest
+
+The query name will be constructed as follows:
+
+- `db/<dashboard name>/<queryGUID>`, or
+- `app/<appGUID>/<queryGUID>`
+
 ### Fixes
 
 #### Dashboards app: 'DATA USED IN DASHBOARD' section would not be hidden when empty [ID_39274]
@@ -66,8 +81,40 @@ When a *Node edge graph* component contained multiple queries, including one tha
 
 Also, when a *Node edge graph* component was rendered for the first time, the edge arrows would incorrectly not appear.
 
+#### Dashboards app & Low-Code Apps - Line & area chart component: Problem when displaying trend data of aggregation parameters [ID_39300]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, trend charts would not display trend data of aggregation parameters correctly. The labels would be incorrect and all trend lines would have the same color.
+
+Also, a minor legend issue has now been fixed.
+
 #### Dashboards app: Problem with web APIs when adding or removing multiple dashboards simultaneously [ID_39304]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When multiple dashboards were added or removed simultaneously, in some cases, the web APIs could become unresponsive.
+
+#### Dashboards app: Not all data sets would show a counter [ID_39311]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In the *All available data* section of the *Data* tab, not all data sets would show a counter.
+
+#### Dashboards app & Low-Code Apps - Column & bar chart and Pie & donut chart components: Problem when refetching data that was being fetched [ID_39312]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, a `Request was aborted` error could appear when a *Column & bar chart* component or a *Pie & donut chart* component refetched data while that same data was being fetched.
+
+#### Low-Code Apps: 'View published app' button would no longer be displayed when editing an app that had been published previously [ID_39339]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you were editing an app that had already been published previously, the *View published app* button would incorrectly no longer be displayed.
+
+#### Dashboards app - Gauge component: Icon would have an incorrect background color [ID_39375]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the dashboard theme would not be applied correctly to the icon inside a *Gauge* component. The icon would have an incorrect background color.
