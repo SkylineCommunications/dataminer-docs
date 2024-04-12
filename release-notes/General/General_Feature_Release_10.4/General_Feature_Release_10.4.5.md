@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.4.5
 
 ## Highlights
 
-- [GQI: Metrics for requests, first session pages and all session pages [ID_39098]](#gqi-metrics-for-requests-first-session-pages-and-all-session-pages-id_39098)
+- [GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]](#gqi-implementing-a-custom-sort-order-for-gqi-columns-using-a-custom-operator-id_39136)
 - [Storage as a Service: Proxy support [ID_39221]](#storage-as-a-service-proxy-support-id_39221)
 
 ## Breaking changes

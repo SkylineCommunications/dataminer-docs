@@ -12,8 +12,19 @@ uid: Web_apps_Feature_Release_10.4.5
 
 ## Highlights
 
+- [Dashboards app & Low-Code Apps - Node edge graph component: New features & enhanced performance [ID_38974]](#dashboards-app--low-code-apps---node-edge-graph-component-new-features--enhanced-performance-id_38974)
 - [Dashboards app & Low-Code Apps: Client metric logging [ID_39000]](#dashboards-app--low-code-apps-client-metric-logging-id_39000)
 - [Low-Code Apps - Timeline component: Interactive timeline events and component actions [ID_39254]](#low-code-apps---timeline-component-interactive-timeline-events-and-component-actions-id_39254)
+
+## Breaking changes
+
+#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
+
+From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ## New features
 
@@ -118,16 +129,6 @@ When a Timeline component is used in a low-code app, it is now also possible to 
 > - The existing *Line & area chart* component action *Set timespan* has now been renamed *Set viewport* in order to be consistent with the *Set viewport* action described above.
 
 ## Changes
-
-### Breaking changes
-
-#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
-
-From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ### Enhancements
 
