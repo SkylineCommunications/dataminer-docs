@@ -8,7 +8,7 @@ From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 38710 -->, it is
 
 To do so:
 
-1. On each server where you want to disable these features, go to the folder `C:\Program Files\Skyline Communications\DataMiner APIGateway`.
+1. On each server where you want to enable this feature, go to the folder `C:\Program Files\Skyline Communications\DataMiner APIGateway`.
 
 1. In this folder, create or adjust the override *appsettings.custom.json* with the following contents:
 
