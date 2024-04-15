@@ -351,7 +351,7 @@ On virtual machines, beep commands are bypassed, and on physical machines, this 
 
 #### OpenSearch: Enhanced performance when fetching alarm distribution data during DataMiner startup [ID_39177]
 
-<!-- MR 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, on systems using an OpenSearch database, overall performance has increased when fetching alarm distribution data during DataMiner startup.
 
