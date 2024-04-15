@@ -933,13 +933,6 @@ items:
                 topicUid: ConnectorsRequiredTagsChainsAndFields
             - name: Topology relations
               topicUid: ConnectorsTopologyRelations
-              items:
-              - name: One-to-many
-                topicUid: ConnectorsTopologyRelationsOneMany
-              - name: Many-to-many
-                topicUid: ConnectorsTopologyRelationsManyMany
-              - name: Recursive
-                topicUid: ConnectorsTopologyRelationsRecursive
             - name: View tables
               topicUid: EpmIntegrationTrainingViewTables
             - name: Visibility tags and fields
