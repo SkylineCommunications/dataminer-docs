@@ -19,3 +19,5 @@ To do so:
    }
 }
 ```
+
+1. Restart *DataMiner APIGateway* on each server for the changes to take effect.

@@ -17,3 +17,5 @@ From version 2.13.8 of the [CloudGateway](xref:DataMinerExtensionModules#cloudga
    }
 }
 ```
+
+1. Restart *DataMiner CloudGateway* on each server for the changes to take effect.

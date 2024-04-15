@@ -17,3 +17,5 @@ From version 1.6.9 of the [ArtifactDeployer](xref:DataMinerExtensionModules#arti
    }
 }
 ```
+
+1. Restart *DataMiner ArtifactDeployer* on each server for the changes to take effect.

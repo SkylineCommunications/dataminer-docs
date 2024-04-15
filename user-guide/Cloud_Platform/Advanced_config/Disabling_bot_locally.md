@@ -17,3 +17,5 @@ From version 2.10.6 of the [FieldControl](xref:DataMinerExtensionModules#fieldco
    }
 }
 ```
+
+1. Restart *DataMiner FieldControl* on each server for the changes to take effect.
