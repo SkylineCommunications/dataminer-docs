@@ -15,6 +15,9 @@ keywords: low-code, low code, lowcode
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 
+> [!TIP]
+> See also: [Using Visio to control dashboard feed components](xref:Using_visio_to_control_dashboard_feed_components)
+
 ### Low-Code Apps tutorials
 
 | Name | Description |
