@@ -935,7 +935,7 @@ items:
               topicUid: ConnectorsTopologyRelations
             - name: View tables
               topicUid: EpmIntegrationTrainingViewTables
-            - name: Visibility tags and fields
+            - name: Visibility of chains and fields
               topicUid: ConnectorsVisChainsFields
           - name: Visual Overview
             items:

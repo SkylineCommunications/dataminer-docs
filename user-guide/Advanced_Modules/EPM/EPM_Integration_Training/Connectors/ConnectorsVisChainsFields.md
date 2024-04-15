@@ -4,8 +4,12 @@ uid: ConnectorsVisChainsFields
 
 # Visibility of chains and fields
 
-Within the EPM Manager connector, it is possible to configure the visibility of a Chain or a Field.
-To enable this functionality, it is necessary to add a `<display>` tag within the corresponding Chain or Field. Additionally, a Read-Write parameter needs to be created for each Chain or Field. This parameter will allow users to configure visibility of these items according to their requirements.
+Within the EPM Manager connector, it is possible to configure the visibility of a chain or a field.
+
+To enable this functionality:
+
+- Add a `<display>` tag within the corresponding chain or field.
+- Create a read-write parameter for each chain or field. This parameter will make it possible to configure the visibility of these items when necessary.
 
 ## Example parameter
 
@@ -51,7 +55,6 @@ To enable this functionality, it is necessary to add a `<display>` tag within th
          </Discreets>
       </Measurement>
    </Param>
-
 ```
 
 ## Example chain
@@ -88,13 +91,12 @@ To enable this functionality, it is necessary to add a `<display>` tag within th
         </Display>
     </Field>
 </Chain>
-
 ```
 
 ### Chain configuration
 
-| Tag                | Attribute  | Description                                                                                   |
-|--------------------|------------|-----------------------------------------------------------------------------------------------|
-| `<Visibility>`     | `default`  | Specifies if the Chain or Field should be displayed by default (`true` or `false`).           |
-| `<Standalone>`     | `pid`      | Specifies the ID of the configurable parameter linked to toggle visibility.                  |
-| `<Value>`        |            | Defines one of the possible values the parameter must have to toggle the visibility to the opposite setting in relation to the default attribute.        |
+| Tag            | Attribute | Description                                                                                                                                       |
+|----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<Visibility>` | `default` | Specifies if the chain or field should be displayed by default (`true` or `false`).                                                               |
+| `<Standalone>` | `pid`     | Specifies the ID of the configurable parameter linked to toggle visibility.                                                                       |
+| `<Value>`      |           | Defines one of the possible values the parameter must have to toggle the visibility to the opposite setting in relation to the default attribute. |
