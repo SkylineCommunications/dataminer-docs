@@ -2,33 +2,52 @@
 uid: How_to_TAG_App
 ---
 
-# How to
+# Using the TAG Management app
 
-The app contains multiple functions that allows interaction with the TAG MCS or TAG MCM elements available in the system. To ensure the app works properly, it is necessary to have the following versions set to production at minimum:
+The sidebar on the left of the TAG Management application contains buttons that can be used to access different pages of the app:
 
-- TAG Video Systems MCM-9000 connector version 1.1.6.10
-- TAG Video Systems Media Control System (MCS) connector version 1.0.2.1
+| Button | Page description |
+|:--:|--|
+| ![Overview](~/user-guide/images/TAG_Overview_Icon.png) | Opens the [*Overview* page](#overview-page), which displays an overview of all the TAG devices in your system. |
+| ![Channels](~/user-guide/images/TAG_Channels_Icon.png) | Opens the [*Channel Status* page](#channel-status-page), which displays an overview of all channels configured in the TAG devices. |
+| ![Outputs & Layouts](~/user-guide/images/TAG_Outputs_Layouts_Icon.png) | Opens the [*Outputs* page](#outputs-page), which displays an overview of all available outputs alongside their associated layouts. |
 
-For more information on the most important features, see below.
+## Overview page
 
-## Channel status
+The *Overview* page provides an overview of all your TAG devices, including key metrics such as CPU and memory usage. Additionally, it tracks license usage per instance and presents an overview of channel and output usage.
 
-The *Channel status* page presents a table listing the current channels configured in the TAG devices.
+![Overview page](~/user-guide/images/TAG_Overview_Page.png)
 
-For each channel, you can do the following:
+## Channel Status page
 
-- **Review channel events**: When you click the icon next to the severity value, a new panel will be presented with the current active and inactive events associated with the channel. The events are ordered first by state, then by timestamp. This provides a quick way to review the last alarms reported by TAG.
+The *Channel Status* page provides a table listing the currently configured channels, alongside additional information such as alarm severity, active events, bitrate, memory usage, and more.
+
+For each listed channel, you can do the following:
+
+- **Review channel events**: When you click the ![Review channel](~/user-guide/images/TAG_Review_Channel_Icon.png) icon next to the severity level, a new panel opens with the current active and inactive events associated with the channel. The events are ordered first by state, then by timestamp.
+
+  ![Channel events](~/user-guide/images/TAG_Channel_Review_Panel.png)
+
+  This panel provides a quick way to review the latest alarms reported by TAG.
   
-- **Send a channel to a layout**: When you click the *Send to layout* button, you will be prompted to select the layout where the channel should be set. If the chosen layout does not contain any more available spaces, the prompt will suggest overwriting the first position of the layout.
+- **Send a channel to a layout**: When you click the ![Layout](~/user-guide/images/TAG_Layout_Icon.png) button in the *Send to layout* column, a pop-up window appears that allows you to assign the channel to one of the existing layouts.
 
-## Layouts
+  ![Layout pop-up window](~/user-guide/images/TAG_Layout_Pop-up_Window.png)
 
-The *Outputs & layouts* page presents a list of outputs, with the associated layouts shown for each output.
+  If the chosen layout does not contain any more available spaces, the prompt will suggest overwriting the first position of the layout.
 
-On this page, you can do the following:
+## Outputs page
 
-- Change the layout associated with a selected output by clicking the *Modify Layout* button and selecting a new layout from the available options.
+The *Outputs* page presents a list of available outputs, alongside their associated layout tiles.
 
-- For the selected output and layout, modify the channels assigned to the different positions in the layout tiles table. Also, edit the UMD text for each tile.
+![Outputs page](~/user-guide/images/TAG_Outputs_Page.png)
 
-- Use the *Set audio* button to select the audio stream that should be decoded and output by the selected TAG output.
+- To change the layout associated with a selected output, click the *Modify Layout* button in the top-right corner, and select a new layout from the available options.
+
+- When you have selected an output and a layout, click the downward arrow in the *Title* column and select *Edit position* to modify the channels assigned to the different positions in the layout tiles table.
+
+- To edit the UMD text for a layout tile, select the layout tile and click the ![Edit UMD](~/user-guide/images/TAG_UMD_Edit_Icon.png) button. The UMD Editor will appear.
+
+  ![UMD](~/user-guide/images/TAG_UMD.png)
+
+- To select the audio stream that should be decoded and output by the selected TAG output, click the ![Audio](~/user-guide/images/TAG_Audio_Icon.png) button in the *Set audio* column.

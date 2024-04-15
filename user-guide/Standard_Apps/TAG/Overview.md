@@ -2,26 +2,27 @@
 uid: Overview_TAG_App
 ---
 
-# DataMiner TAG solution
+# The DataMiner TAG Management application
 
-The DataMiner TAG solution allows you to monitor and control individual TAG MCM devices as well as Media Control Systems (MCS).
+The DataMiner TAG Management application allows you to monitor and control individual TAG MCM devices and Media Control Systems (MCS).
 
-The TAG management app seamlessly identifies the device type installed in the system and presents data from either a single MCS or all available MCM elements within the deployed DMS, without the need for any additional user configuration.
+![Tag Management app](~/user-guide/images/Tag_Management_app.png)
 
-Within the TAG package, you can find the following items:
+The TAG Management app seamlessly identifies the device type installed in the system and presents data from either a single MCS or all available MCM elements within the deployed DataMiner System, without the need for any additional user configuration.
 
-- TAG management low-code application
+The *TAG Management* package, available for download from the DataMiner Catalog, contains the following items:
+
+- TAG Management low-code app
+
 - TAG Video Systems MCM-9000 connector version 1.1.6.10
+
 - TAG Video Systems Media Control System (MCS) connector version 1.0.2.1
+
 - Automation scripts used in the application to gather data and perform device control operations
 
-The TAG app contains three main pages containing information on the TAG devices:
+For more information about how to install the package, see [Installing the TAG Management app](xref:Installing_TAG_App).
 
-- *Overview*: Displays general statistics such as the number of channels.
-- *Channels*: Displays the status of each channel, allowing for some configuration and viewing of events.
-- *Outputs*: Displays outputs within the TAG devices and allows for layout configuration.
+The TAG Management app contains three main pages containing information on the TAG devices. For more information about the user interface and the available functionalities, see [Using the Tag Management application](xref:How_to_TAG_App).
 
-For more information about how to install the package, see [Installation](xref:Installing_TAG_App).
-  
 > [!TIP]
-> See the TAG solution use case on Dojo: [TAG VS – Tech Partner Integration [NAB 2024]](https://community.dataminer.services/?post_type=use-case&p=123780).
+> See also: [Use case: TAG VS – Tech Partner Integration](https://community.dataminer.services/use-case/tag-vs-tech-partner-integration/).
