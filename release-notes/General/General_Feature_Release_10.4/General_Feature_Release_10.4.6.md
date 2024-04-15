@@ -22,6 +22,12 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
+#### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Simple alarm filters (without operators and/or brackets) can now be translated to Elasticsearch/OpenSearch queries. This will increase overall performance of Elasticsearch/OpenSearch queries containing alarm filters as alarm filtering will now be performed by the database itself. Post-filtering query results will no longer be needed.
+
 #### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->

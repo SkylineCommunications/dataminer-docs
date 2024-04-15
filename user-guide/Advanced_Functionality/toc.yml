@@ -161,6 +161,8 @@ items:
             topicUid: BPA_Password_Strength
           - name: Report Active RTE
             topicUid: BPA_Report_Active_RTE
+          - name: Security Advisory
+            topicUid: BPA_Security_Advisory
           - name: Service Automatic Properties
             topicUid: BPA_Service_Automatic_Properties
           - name: SRM Framework Configuration

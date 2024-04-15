@@ -15,7 +15,7 @@ The main steps in securing the databases are:
 This BPA test will check that authentication and TLS encryption are enabled on the Cassandra and Elasticsearch databases. It will also verify that the database superuser is not used by DataMiner.
 
 > [!NOTE]
-> This BPA is available from DataMiner version 10.2.12 and 10.3.0 onwards.
+> This BPA test has been replaced by the [Security Advisory](xref:BPA_Security_Advisory) BPA test, available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards.
 
 ## Metadata
 
