@@ -33,7 +33,7 @@ Currently, the following parts of the system are covered:
   - TLS: Verifies if the connection towards the database is using TLS.
 
 > [!NOTE]
-> This BPA test is available from DataMiner 10.4.5 onwards.<!-- RN 38632 -->
+> This BPA test is available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards.<!-- RN 38632 -->
 
 ## Metadata
 
