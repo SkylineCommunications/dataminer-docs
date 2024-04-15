@@ -31,3 +31,37 @@ The GQI will request data.
 #### Returns
 
 A [GQIPage](xref:GQI_GQIPage) with the data.
+
+> [!TIP]
+> In many cases, not all data is immediately necessary for generating a query result. Thus, it's beneficial to partition rows into separate pages. This allows for fetching and processing individual pages as needed, enhancing both speed and memory efficiency. For example:
+
+#### Examples
+
+##### Paged data retrieval
+
+The following example illustrates how the `HasNextPage` boolean can be used to indicate that there are additional pages. If `HasNextPage` is set to `true`, GQI may call `GetNextPage` again when more data is needed.
+
+```csharp
+private int pageCounter = 0;
+private int pageSize = 100;
+
+public GQIPage GetNextPage(GetNextPageInputArgs args)
+{
+    var rows = FetchPagedData(pageCounter);
+    pageCounter++;
+
+    // If a full page is retrieved we assume there is more data
+    var hasNextPage = rows.Length == pageSize;
+    return new GQIPage(rows)
+    {
+        HasNextPage = hasNextPage;
+    };
+}
+
+private GQIRow[] FetchPagedData(int pageNumber){
+    // Fetch page 'pageNumber' containing at most 'pageSize' rows
+}
+```
+
+> [!NOTE]
+> The example is purely to demonstrate how `HasNextPage` could potentially be manipulated. Depending on the data retrieval method, it may be advisable to incorporate additional information into the class.
