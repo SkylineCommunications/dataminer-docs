@@ -226,6 +226,8 @@ items:
         items:
           - name: Installing DataMiner IT Tools
             topicUid: Installing_DITT
+          - name: Basic Information
+            topicUid: Basic_Information
           - name: Open PuTTY using DITT
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview

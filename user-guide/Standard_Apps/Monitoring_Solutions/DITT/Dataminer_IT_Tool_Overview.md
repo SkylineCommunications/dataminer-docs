@@ -12,7 +12,11 @@ You can use this solution to swiftly identify network issues, assess latency and
 
 After [installing the DITT Package](xref:Installing_DITT) and [configuring](xref:Working_With_DITT) a visual overview, you can have DataMiner Cube ping or trace any device.
 
-The DITT solution also allows you to [open PuTTY](xref:Open_Putty_with_DITT), if it is installed on the system. This facilitates SSH connections and remote network device management.
+The DITT solution also allows you to [open PuTTY](xref:Open_Putty_with_DITT), if it is installed on the system where cube is being open (client). This facilitates SSH connections and remote network device management.
 
 > [!NOTE]
-> Before you can [configure the DITT PuTTY button](xref:Working_With_DITT), you first have to [install the DITT package](xref:Installing_DITT).
+> Before you can [configure the DITT PuTTY button](xref:Open_Putty_with_DITT), you first have to [install the DITT package](xref:Installing_DITT).
+
+## Basic Information
+
+For more information about DITT, please refer to [basic Information](xref:Basic_Information)

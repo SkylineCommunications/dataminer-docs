@@ -20,5 +20,5 @@ uid: Installing_DITT
 
 > [!NOTE]
 >
-> - To update the Planned Maintenance tool, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).
+> - To update the DITT, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).
 > - Before you can [configure DITT in a visual overview](xref:Working_With_DITT), you first have to [install the DITT package](xref:Installing_DITT).

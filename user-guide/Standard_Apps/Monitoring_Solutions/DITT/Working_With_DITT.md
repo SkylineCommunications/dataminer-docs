@@ -4,7 +4,9 @@ uid: Working_With_DITT
 
 # Implementing DITT in a visual overview
 
-It is possible to implement DITT in a visual overview of your own:
+Through seamless integration into different visual overviews, the DITT empowers users to efficiently ping any desired network device. Notably, placeholders for IP addresses allow for dynamic adjustments, resulting in tailored pings and tracerts across varying Visio files. This adaptability underscores the DITT's versatility, enabling precise network diagnostics tailored to diverse configurations.
+
+To implement DITT in a visual overview of your own:
 
 1. Make sure the [DITT package](xref:Installing_DITT) is installed.
 
@@ -32,7 +34,7 @@ It is possible to implement DITT in a visual overview of your own:
 
       ![DITT check change in IP address](~/user-guide/images/DITT_IP_Address_Check.png)
 
-      If both values are equal, the configuration is complete. If not, make the necessary changes.
+      If both values are equal, the configuration is complete. If not, the user should manually adjust the value following OperationsArgument.
 
    > [!NOTE]
    > The IP address of the *Ping* and *Tracert* buttons is by default set to "localhost". In the example screenshots above, IP address 8.8.8.8 is used instead of the default address.
