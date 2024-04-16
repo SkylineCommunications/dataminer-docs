@@ -5653,6 +5653,10 @@ items:
             topicUid: EPMManagerTopology
           - name: Chains and fields configuration
             topicUid: EPMManagerChainsAndFields
+          - name: Linking collector data to an EPM object
+            topicUid: EpmIntegrationLinkingCollectorData
+          - name: View impact configuration
+            topicUid: EpmIntegrationViewImpact
           - name: Aggregation and merge actions
             topicUid: EpmIntegrationTrainingAggregations
           - name: Alarm settings

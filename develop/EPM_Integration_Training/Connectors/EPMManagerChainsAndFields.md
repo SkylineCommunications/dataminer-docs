@@ -4,6 +4,8 @@ uid: EPMManagerChainsAndFields
 
 # Chains and fields configuration
 
+## Basic configuration
+
 Within the EPM Manager connector, you will find a `<Chains>` tag that contains a number of `<Chain>` children. Each `<Chain>` represents a topology view visible in DataMiner.
 
 For example:
@@ -144,3 +146,33 @@ To enable this functionality:
 | `<Visibility>` | `default` | Specifies if the chain or field should be displayed by default (`true` or `false`).                                                               |
 | `<Standalone>` | `pid`     | Specifies the ID of the configurable parameter linked to toggle visibility.                                                                       |
 | `<Value>`      |           | Defines one of the possible values the parameter must have to toggle the visibility to the opposite setting in relation to the default attribute. |
+
+## Renaming chains and fields
+
+You can change the names of topology chains and fields without making changes to the connector. This change will also apply to alarms, so any new alarms will be created with the new system types to make sure that alarm linking works.
+
+You can do so by specifying overrides in the *EPMConfig.xml* in the `C:\Skyline DataMiner` root directory. For detailed information, refer to [EPMConfig.xml](xref:EPMConfig_xml)
+
+Example:
+
+```xml
+<Protocol>
+  <Topologies>
+    <Topology>
+      <Cell name="Vendor" override="Manufacturer"/>
+      <Cell name="Station" override="Node"/>
+    </Topology>
+  </Topologies>
+  <Chains>
+    <Chain name="Vendor Topology" override="Manufacturer Topology">
+      <Field name="Vendor" override="Manufacturer"/>
+    </Chain>
+    <Chain name="Location Topology">
+      <Field name="Station" override="Node"/>
+    </Chain>
+  </Chains>
+</Protocol>
+```
+
+> [!NOTE]
+> You can also do this with any collectors using the exposer logic by putting a similar file in the `C:\Skyline DataMiner\Elements\<ElementName>\` directory.
