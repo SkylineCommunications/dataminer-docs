@@ -246,12 +246,6 @@ Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline D
 
 From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
 
-#### Enhanced performance when starting up a DataMiner Agent [ID_39331]
-
-<!-- MR 10.5.0 - FR 10.4.6 -->
-
-Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
-
 #### GQI now also logs requests to SLNet [ID_39355]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->

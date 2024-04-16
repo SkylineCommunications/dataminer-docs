@@ -128,7 +128,7 @@ From now on, when you change this setting, the change will take effect the momen
 
 #### Enhanced performance when starting up a DataMiner Agent [ID_39331]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 

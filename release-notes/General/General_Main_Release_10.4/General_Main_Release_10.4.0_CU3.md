@@ -105,6 +105,12 @@ The following requests now have an optional `QueryName` property:
 
 Performance has increased when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client.
 
+#### Enhanced performance when starting up a DataMiner Agent [ID_39331]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
