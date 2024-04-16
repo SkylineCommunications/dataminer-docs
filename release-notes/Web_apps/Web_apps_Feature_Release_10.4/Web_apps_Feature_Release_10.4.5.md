@@ -339,3 +339,9 @@ Up to now, when you previewed a low-code app, all feeds would incorrectly not be
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
 
 In a *Timeline* component, in some cases, the content of a template could go out of the bounds of the timeline item. From now on, the template content will be cropped so that it stays without the bounds of the timeline item.
+
+#### Problem when trying to log in to a web app [ID_39397]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
+
+When users tried to log in to a web app, in some cases, an `Object reference not set to an instance of an object` error could be thrown.
