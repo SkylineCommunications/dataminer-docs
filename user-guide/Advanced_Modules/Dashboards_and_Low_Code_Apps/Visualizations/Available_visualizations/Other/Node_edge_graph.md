@@ -39,6 +39,12 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
       1. Next to *Node ID column*, select the column from the query that represents the node ID.
 
+      1. When *Node positions* in the *Layout* pane is set to *Linked as data*, two extra options are available:
+
+        - *X*: Select the column from the query that contains the X position.
+
+        - *Y*: Select the column from the query that contains the Y position.
+
       1. Optionally, expand the *Base node* section to configure the node further. The following options are available:
 
          - *Node name*: This name is not displayed in the component itself, and is only intended to clarify the configuration.
@@ -47,11 +53,19 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
          - *Shapes*: Select a different shape in the drop-down box to customize the node shape. By default, no shape is used. You can also select *Custom* in the drop-down box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the drop-down box to select a custom color for the shape.
 
-         - *Icon*: Select a different icon in the drop-down box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color.
+         - *Visual*: Chose if the node should contain either an *image* or an *icon*.
+
+           - *Icon*: In case of an icon as *visual*, select a different icon in the drop-down box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color.
+
+           - *Image*: In case of an image as *visual*, provide the link to the image.
 
          - *Label*: Select the column to use as the label for the node.
 
-         - *Size*: Select whether the node should be small, medium-sized or large.
+         - *Size*: Define how big the node should be.
+
+         - *Enable tooltip*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, no tooltip will appear when hovering over a node.
+
+         - *Show metric*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, the metric that determines the conditional color of the node will not be displayed underneath the node.
 
       1. If you want to visualize some nodes differently for the same query, under *Override nodes*, click *Add override*, specify a filter, and configure the nodes as detailed above.
 
@@ -66,6 +80,10 @@ The component uses dynamic coloring, which can be adjusted according to preferen
       1. Optionally, next to *Style*, select a different style for the connection lines.
 
       1. Optionally, next to *Weight*, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line.
+
+      1. *Enable tooltip*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, no tooltip will appear when hovering over an edge.
+
+      1. *Show metric*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, the metric that determines the conditional color of the edge will not be displayed on the edge.
 
 1. From DataMiner 10.2.4/10.3.0 onwards, optionally, you can make the edges show a direction. To do so, in the *Settings* tab, activate the *Visualize directions* toggle button, and select how the direction should be shown:
 
@@ -125,9 +143,13 @@ You can fine-tune the layout of the component with the following settings in the
 
   - *Highlight/Show entire path*: When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure they are a part of (from root to leaves).
 
-- *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers. Set this to *Custom* if you want to allow users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+- *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers.
+  - Set this to *Custom* if you want to allow users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+  - Set this to *Linked to data* if you want to use location info from your data determine the positions of the nodes. In that case, 2 options will become available in the configuration of each node in the *Settings* pane. It requires the data to have at least two numeric columns that represent the X and Y position of the center of a node.
+  
+- *Viewport*: When *Node positions* is set to *Linked to data*, this determines what the initial viewport of the node-edge should be. By default, it will *auto* determine the viewport to fit all nodes. When set to *custom*, you can specify the *Center*, *Width* and *Height* of the initial viewport.
 
-- Direction: Determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
+- *Direction*: When *Node positions* is set to *Layered*, this determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
 
   - *Backwards*: Nodes are displayed from right to left in order of importance.
 
