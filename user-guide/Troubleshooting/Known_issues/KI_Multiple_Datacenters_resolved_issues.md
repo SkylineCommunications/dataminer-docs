@@ -2,7 +2,7 @@
 uid: KI_Multiple_Datacenters_resolved_issues
 ---
 
-# Various resolved issues with a geo-redundant Cassandra setup with multiple data centers
+# Various issues with a geo-redundant Cassandra setup with multiple data centers
 
 ## Affected versions
 
@@ -19,8 +19,6 @@ Below you can find an overview of issues related to this Cassandra Cluster setup
 
 | Issue | Affected versions | Workaround | Fix |
 |--|--|--|--|
+| DataMiner does not automatically reconnect to a different Cassandra data center when queries fail consistently. | All Cassandra Cluster setups | N/A | Install DataMiner 10.3.0 [CU8]/10.3.11<!--RN 37154--> |
 | DataMiner goes into offload mode after losing only one node. See: [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node)| All Cassandra Cluster setups | N/A | Install DataMiner 10.3.0 [CU7]/10.3.10<!--RN 37117-->. |
 | When the connection with the Cassandra cluster is temporarily lost, data is not offloaded to database offload files and restored to the database afterwards, causing data loss for the duration of the connection issue. See: [Cassandra cluster data not offloaded while database is unavailable](xref:KI_Cassandra_cluster_data_not_offloaded)| All Cassandra Cluster setups | N/A | Install DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9<!--RN 36865-->. |
-
-> [!TIP]
-> See also: [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters)

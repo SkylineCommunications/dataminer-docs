@@ -14,7 +14,7 @@ An issue can occur when MessageBroker uses chunking, which employs the memory al
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.4.0/10.4.1<!--RN 37245-->.
 
 ## Description
 

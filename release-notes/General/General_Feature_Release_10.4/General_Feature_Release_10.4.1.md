@@ -339,6 +339,14 @@ public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterEle
 
 ### Fixes
 
+#### Max Payload exceptions when using MessageBroker with chunking [ID_37245]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When MessageBroker used chunking, the generated chunks would not be trimmed to the correct size before transmission, resulting in *Max Payload* exceptions.
+
+For more detailed information, refer to [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload).
+
 #### Problem when using MessageBroker with chunking [ID_37532]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
