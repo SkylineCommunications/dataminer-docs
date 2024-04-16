@@ -58,7 +58,7 @@ Key features:
 
 ### High-level overview
 
-![MediaOps high-level data model](~/dataminer-overview/images/MediaOps_data_model_high_level.png)
+![MediaOps high-level data model](~/dataminer-overview/images/common_data_model_high_level.png)
 
 ## Updates
 

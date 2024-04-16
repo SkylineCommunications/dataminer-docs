@@ -105,3 +105,11 @@ For more detailed information about this application, see [Cost and Billing appl
 Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier. You can also streamline organization management by overseeing categories, contracts, billing contacts, and company affiliation — all from a single intuitive interface.
 
 For more detailed information about this application, see [People and Organizations application](xref:Overview_MediaOps_People_and_Organization).
+
+## Resource Studio
+
+![Resource Studio app icon](~/dataminer-overview/images/DM_ResourceStudio.png)
+
+The Resource Studio app serves as a comprehensive platform for creating, managing, and optimizing resource utilization. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process. Utilization metrics provided by the app offer valuable insights, enabling users to optimize resource deployment and maximize operational efficiency.
+
+For more detailed information on this application, see [Resource Studio application](xref:Overview_MediaOps_Resource_Studio).

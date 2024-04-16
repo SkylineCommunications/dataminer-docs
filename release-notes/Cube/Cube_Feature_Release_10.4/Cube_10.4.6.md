@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.6
 
 ### Enhancements
 
+#### Alarm Console: Enhanced performance when loading a large number of alarms in an active alarms tab [ID_39235] [ID_39236]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading a large number of alarms into an active alarm tab.
+
 #### Visual Overview: Enhanced performance when processing conditions based on view names, service names or element names [ID_39241]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -38,4 +44,14 @@ Because of a number of enhancements, overall performance has now increased when 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem when opening a card [ID_39251]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you opened a card, in some cases, the data on the card would not get loaded. As a result, the card would remain empty.
+
+#### Visual Overview: Problem with placeholder value update detection [ID_39325]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.
