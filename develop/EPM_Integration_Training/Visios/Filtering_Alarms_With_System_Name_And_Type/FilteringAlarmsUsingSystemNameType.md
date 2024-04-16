@@ -23,4 +23,4 @@ For more detailed information, see [Linking a shape to an alarm filter](xref:Lin
 
 # Visual Example
 
-![image](~/user-guide/images/EPM_filtering_alarms_example.png)
+![image](~/develop/images/EPM_filtering_alarms_example.png)

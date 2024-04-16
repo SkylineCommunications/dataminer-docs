@@ -19,4 +19,4 @@ For more detailed information, see [Linking a shape to an alarm filter](xref:Lin
 
 ## Visual example
 
-![image](~/user-guide/images/EPM_alarm_console_navigation_example.png)
+![image](~/develop/images/EPM_alarm_console_navigation_example.png)

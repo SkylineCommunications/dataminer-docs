@@ -5639,6 +5639,48 @@ items:
       items:
         - name: Bad and best practices
           topicUid: UD_APIs_Bad_and_Best_Practices
+    - name: EPM integration training
+      items:
+        - name: About the EPM Integration Training package
+          topicUid: EpmIntegrationTrainingAbout
+        - name: Connectors configuration
+          items:
+          - name: General configuration EPM Manager connector
+            topicUid: EPMManagerGeneralConfiguration
+          - name: Topology configuration
+            topicUid: EPMManagerTopology
+          - name: Chains and fields configuration
+            topicUid: EPMManagerChainsAndFields
+          - name: Aggregation and merge actions
+            topicUid: EpmIntegrationTrainingAggregations
+          - name: Alarm settings
+            topicUid: EPMManagerAlarms
+          - name: View tables
+            topicUid: EpmIntegrationTrainingViewTables
+        - name: Visual Overview configuration
+          items:
+            - name: Alarm Console navigation
+              topicUid: AlarmConsoleNavigation
+            - name: Filtering alarms Using System Name And Type filter
+              topicUid: FilteringAlarmsUsingSystemNameType
+            - name: Dashboard and apps navigation
+              topicUid: DashboardAndAppsNavigation
+            - name: Linking a shape to an EPM object using System Name and Type
+              topicUid: LinkingShapeEpmObjectSystemNameType
+            - name: Best practices to retrieve remote parameters
+              topicUid: BestPracticesRemoteKpis
+            - name: Performing ping and tracert operations using DITT
+              topicUid: DITTIntegration
+        - name: Web apps configuration
+          items:
+            - name: EPM and Dashboards
+              topicUid: EpmIntegrationTrainingDashboards
+            - name: EPM and the Monitoring app
+              topicUid: EpmIntegrationTrainingMonitoring
+            - name: EPM and Low-Code Apps
+              topicUid: EpmIntegrationTrainingLowCodeApp
+        - name: Other configuration options
+          topicUid: EpmIntegrationTrainingOtherOptions
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

@@ -1,17 +1,61 @@
 ---
-uid: ConnectorsVisChainsFields
+uid: EPMManagerChainsAndFields
 ---
 
-# Visibility of chains and fields
+# Chains and fields configuration
 
-Within the EPM Manager connector, it is possible to configure the visibility of a chain or a field.
+Within the EPM Manager connector, you will find a `<Chains>` tag that contains a number of `<Chain>` children. Each `<Chain>` represents a topology view visible in DataMiner.
+
+For example:
+
+```xml
+<Chains>
+    <Chain name="Customer Topology">
+        <Field name="Customer" options="displayInFilter;showCPEChilds;ignoreEmptyFilterValues;tabs:3500-KPI;details:3500;ShowBubbleupAndInstanceAlarmLevel" pid="3502"/>
+        <Field name="Device" options="displayInFilter;ignoreEmptyFilterValues;tabs:2500-KPI;details:2500;ShowBubbleupAndInstanceAlarmLevel" pid="2501"/>
+    </Chain>
+</Chains>
+```
+
+Within a `<Chain>`, you can define multiple fields. Each field represents a level from the respective topology.
+
+For example:
+
+```xml
+<Field name="Customer" options="displayInFilter;showCPEChilds;ignoreEmptyFilterValues;tabs:3500-KPI;details:3500;ShowBubbleupAndInstanceAlarmLevel" pid="3502"/>
+```
+
+The `<Field>` tag has the following attributes:
+
+| Attribute | Description                                                                                           |
+|-----------|-------------------------------------------------------------------------------------------------------|
+| `name`    | Specifies the name of the field representing the level.                                               |
+| `options` | Used to define the topology options.                                                                  |
+| `pid`     | Specifies the ID of the parameter to which the level is linked. The view table column should be used. |
+
+Several options can be used. These are the options used in the example:
+
+| Option                              | Description                                                                                                              |
+|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| `displayInFilter`                   | Display the field in the filter column on the left side of the EPM UI.                                                   |
+| `ignoreEmptyFilterValues`           | Excludes empty values from the filter drop-down lists of the topology levels.                                            |
+| `tab`                               | Display one or more links in the block and next to the filter corresponding to the field.                                |
+| `detail`                            | Specify tables that will be displayed in the details pane with a filter on the selection.                                |
+| `ShowBubbleupAndInstanceAlarmLevel` | Allow two alarm indications on every object: the alarm state of the object and the alarm state of all the objects below. |
+
+> [!NOTE]
+> For more info about the options, see [options attribute](xref:Protocol.Chains.Chain.Field-options).
+
+## Visibility of chains and fields
+
+Within the EPM Manager protocol, it is possible to configure the visibility of a chain or a field.
 
 To enable this functionality:
 
 - Add a `<display>` tag within the corresponding chain or field.
 - Create a read-write parameter for each chain or field. This parameter will make it possible to configure the visibility of these items when necessary.
 
-## Example parameter
+### Example parameter
 
 ```xml
    <Param id="301" trending="false" save="true">
@@ -57,7 +101,7 @@ To enable this functionality:
    </Param>
 ```
 
-## Example chain
+### Example chain
 
 ```xml
 <Chain name="Customer Topology">
@@ -93,7 +137,7 @@ To enable this functionality:
 </Chain>
 ```
 
-### Chain configuration
+#### Chain configuration
 
 | Tag            | Attribute | Description                                                                                                                                       |
 |----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -8,7 +8,7 @@ From DataMiner 10.1.0/10.0.4 onwards, it is possible to link a shape to an EPM o
 
 To link a shape to an EPM object, add the SystemType and SystemName shape data fields, and specify the system type and system name of the object as their respective values.
 
-![image](~/user-guide/images/EPM_link_shape_to_object.png)
+![image](~/develop/images/EPM_link_shape_to_object.png)
 
 > [!NOTE]
 > `[Field]` in this case is the name of the EPM object. This makes it dynamic within an EPM environment.

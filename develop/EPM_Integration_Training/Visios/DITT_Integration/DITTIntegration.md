@@ -8,7 +8,7 @@ You can use DITT (DataMiner IT Tools) in an EPM environment to ping and trace an
 
 Once the ping and tracert buttons have been created, a shape data field needs to be added to both shapes to connect them with the DITT tool.
 
-![image](~/user-guide/images/EPM_DITT_integration.png)
+![image](~/develop/images/EPM_DITT_integration.png)
 
 - Execute: Here will you define the variables that will be passed to the DITT to perform the desire command.
 - Element: the element where the Visio belongs

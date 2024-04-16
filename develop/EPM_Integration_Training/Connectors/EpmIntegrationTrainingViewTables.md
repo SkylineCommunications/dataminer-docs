@@ -76,7 +76,7 @@ You can see that all of the columns map to columns in the local table, i.e. view
 
 And using the directView option, subscribing and requesting the information to all Backends in columnPid 801 containing the following IDs:
 
-![Back-end registration](~/user-guide/images/EPM_Back-end_registration.png)
+![Back-end registration](~/develop/images/EPM_Back-end_registration.png)
 
 ## View table column parameters
 

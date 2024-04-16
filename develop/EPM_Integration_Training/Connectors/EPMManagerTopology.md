@@ -1,8 +1,55 @@
 ---
-uid: ConnectorsTopologyRelations
+uid: EPMManagerTopology
 ---
 
-# Topology relations
+# Topology configuration
+
+In the EPM Manager connector, the `<Topologies>` tag defines each of the different topologies.
+
+## Cell and Link tags
+
+Within each `<Topology>` tag, you will find `<Cell>` tags. These represent the cells in the EPM topology. They allow you to define the levels visible in a topology and the connections between them.
+
+For example:
+
+```xml
+<Topologies>
+   <Topology>
+      <Cell name="Network" table="9500"></Cell>
+      <Cell name="Region" table="8500">
+         <Link source="1" dest="9501"/>
+      </Cell>
+      <Cell name="Sub-Region" table="7500">
+         <Link source="1" dest="8501"/>
+      </Cell>
+      <Cell name="Hub" table="6500">
+         <Link source="1" dest="7501"/>
+      </Cell>
+      <Cell name="Station" table="5500">
+         <Link source="1" dest="6501"/>
+      </Cell>
+      <Cell name="Device" table="2500">
+         <Link source="1" dest="5501"/>
+      </Cell>
+   </Topology>
+</Topologies>
+```
+
+The `<Cell>` tag is used to define the levels present in the topologies and to associate each level with a specific entity table.
+
+| Attribute | Description                                                                             |
+|-----------|-----------------------------------------------------------------------------------------|
+| `name`    | Defines the name of the level.                                                          |
+| `table`   | Defines the table linked to the level. The tables should be the respective View Tables. |
+
+The `<Link>` tag is used to define the connections of each `<Cell>` (topology level).
+
+| Attribute | Description                                                                      |
+|-----------|----------------------------------------------------------------------------------|
+| `source`  | An ID used to identify the source.                                               |
+| `dest`    | Parameter ID used to define the connection. Must be the index of the View Table. |
+
+## Topology relations
 
 In a topology, it is possible to define three types of relations:
 
@@ -10,7 +57,7 @@ In a topology, it is possible to define three types of relations:
 - [Many-to-many](#many-to-many-relations)
 - [Recursive](#recursive-relations)
 
-## One-to-many relations
+### One-to-many relations
 
 A one-to-many relation indicates that an element from a higher topology level A can be linked with zero or more elements at a lower topology level B. This implies that an element from level B is exclusively associated with one element from level A.
 
@@ -37,7 +84,7 @@ A foreign key relation also has to be defined between customer and device. This 
 </Relations>
 ```
 
-## Many-to-many relations
+### Many-to-many relations
 
 A many-to-many relation suggests that an item from topology level A can be connected to multiple items from another topology level B, and conversely, an item from topology level B can be linked to multiple items from topology level A.
 
@@ -88,7 +135,7 @@ Finally, the foreign key relations must also be defined. In this example, 26000 
 </Relations>
 ```
 
-## Recursive relations
+### Recursive relations
 
 A recursive relationship implies that an item within a topology level A can be linked to another item on the same level A.
 

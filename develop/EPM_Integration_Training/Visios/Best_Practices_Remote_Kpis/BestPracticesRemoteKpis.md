@@ -8,7 +8,7 @@ uid: BestPracticesRemoteKpis
 
 If you want to display data from an EPM Object card onto a Visio, it is best practice to create a cardVar that holds the element information instead of using placeholder [this Element]. This will provide a static variable for the Visio, this prevent it from doing a look up on the placeholder every time.
 
-![image](~/user-guide/images/EPM_cardVar_with_element_info.png)
+![image](~/develop/images/EPM_cardVar_with_element_info.png)
 
 ## Retrieving data from a remote element
 
@@ -20,9 +20,9 @@ Here is example of how the syntax would look.
 
 This will create an empty CardVariable
 
-![image](~/user-guide/images/EPM_syntax_example_partitionElement.png)
+![image](~/develop/images/EPM_syntax_example_partitionElement.png)
 
-![image](~/user-guide/images/EPM_syntax_example_partitionElement2.png)
+![image](~/develop/images/EPM_syntax_example_partitionElement2.png)
 
 > [!NOTE]
 >

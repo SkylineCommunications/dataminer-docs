@@ -1,8 +1,8 @@
 ---
-uid: EPM_ConnectorsAlarms
+uid: EPMManagerAlarms
 ---
 
-# Alarms
+# Alarm settings configuration
 
 Within the EPM Manager protocol, it is possible to define and customize alarm settings.
 

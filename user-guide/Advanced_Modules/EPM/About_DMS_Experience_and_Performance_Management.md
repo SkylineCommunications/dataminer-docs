@@ -14,9 +14,9 @@ Many different EPM protocols exist, and often these are custom-made to match par
 
 EPM uses the following protocols:
 
-**EPM Manager** protocol: Used for one front-end (FE) element and multiple back-end (BE) elements.
+- **EPM Manager** protocol: Used for one front-end (FE) element and multiple back-end (BE) elements.
 
-**EPM Collector** protocol(s): Used to poll all the lowest-level information and inform the FE of the topology relationships.
+- **EPM Collector** protocol(s): Used to poll all the lowest-level information and inform the FE of the topology relationships.
 
 A typical EPM architecture consists of the following elements:
 

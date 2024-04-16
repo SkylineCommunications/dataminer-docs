@@ -8,7 +8,7 @@ EPM provides the ability to link EPM Objects to views using the [viewImpact](xre
 
 This will allow a new alarm icon to appear next to the View in the surveyor. Instead of just the bar that shows the highest alarm severity below that view, a circle appears that shows the alarm severity of the EPM Entity. Below North America, USA, and USA West are EPM Entities linked to a view using this option.
 
-![Alarm icon in the Surveyor](~/user-guide/images/EPM_Surveyor_alarm_icon.png)
+![Alarm icon in the Surveyor](~/develop/images/EPM_Surveyor_alarm_icon.png)
 
 ## Titlebox Data section
 
@@ -18,9 +18,9 @@ To further configure the look of the data section and also add title boxes, you 
 
 On this page, you may add parameters as you would any other page, but you may also add individual column parameters associated with the entity. If using duplicateAs option, both the native and view table column will occupy the same space but will not cause issues in DataMiner.
 
-![EPM Data layout](~/user-guide/images/EPM_Data_Layout.png)
+![EPM Data layout](~/develop/images/EPM_Data_Layout.png)
 
-![EPM Data page](~/user-guide/images/EPM_Data_page.png)
+![EPM Data page](~/develop/images/EPM_Data_page.png)
 
 ## Linking collector data to an EPM object
 
