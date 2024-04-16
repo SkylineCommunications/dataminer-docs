@@ -221,6 +221,17 @@ items:
             topicUid: Installing_Huawei_Manager_Dashboard
           - name: Working with the Huawei Manager dashboard
             topicUid: Working_with_Huawei_Manager_dashboard
+      - name: DataMiner IT Tools (DITT)
+        topicUid: Dataminer_IT_Tool_Overview
+        items:
+          - name: Installing DITT
+            topicUid: Installing_DITT
+          - name: Working with DITT
+            topicUid: Working_with_DITT
+          - name: Opening PuTTY using DITT
+            topicUid: Open_Putty_with_DITT
+          - name: Implementing DITT in a visual overview
+            topicUid: Implementing_DITT_in_Visio
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:
