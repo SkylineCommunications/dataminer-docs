@@ -5661,15 +5661,15 @@ items:
             topicUid: EpmIntegrationTrainingViewTables
         - name: Visual Overview configuration
           items:
-            - name: Alarm Console navigation
-              topicUid: AlarmConsoleNavigation
-            - name: Filtering alarms Using System Name And Type filter
-              topicUid: FilteringAlarmsUsingSystemNameType
-            - name: Dashboard and apps navigation
-              topicUid: DashboardAndAppsNavigation
-            - name: Linking a shape to an EPM object using System Name and Type
+            - name: Linking a shape to an EPM object
               topicUid: LinkingShapeEpmObjectSystemNameType
-            - name: Best practices to retrieve remote parameters
+            - name: Filtering alarms based on system name and type
+              topicUid: FilteringAlarmsUsingSystemNameType
+            - name: Linking a shape to a filtered alarm tab
+              topicUid: AlarmConsoleNavigation
+            - name: Linking a shape to a dashboard or app
+              topicUid: DashboardAndAppsNavigation
+            - name: Best practices for retrieving remote parameters
               topicUid: BestPracticesRemoteKpis
             - name: Performing ping and tracert operations using DITT
               topicUid: DITTIntegration

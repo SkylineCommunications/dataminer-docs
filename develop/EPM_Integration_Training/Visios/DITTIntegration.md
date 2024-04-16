@@ -2,9 +2,9 @@
 uid: DITTIntegration
 ---
 
-# DataMiner IT Tools(DITT) Integration
+# Performing ping and tracert operations using DITT
 
-You can use DITT (DataMiner IT Tools) in an EPM environment to ping and trace any device that has an endpoint. With the use of the DITT, there is no extra code needed. You can add the ping button and trace button to your Visio and which will connect to the DITT and perform the desire operation.
+You can use [DITT (DataMiner IT Tools)](xref:Dataminer_IT_Tool_Overview) in an EPM environment to ping and trace any device that has an endpoint. With the use of the DITT, there is no extra code needed. You can add the ping button and trace button to your Visio and which will connect to the DITT and perform the desire operation.
 
 Once the ping and tracert buttons have been created, a shape data field needs to be added to both shapes to connect them with the DITT tool.
 

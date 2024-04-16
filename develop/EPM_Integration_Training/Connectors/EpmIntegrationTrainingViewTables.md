@@ -2,11 +2,28 @@
 uid: EpmIntegrationTrainingViewTables
 ---
 
-# View Tables
+# View tables
 
-The front-end element can display the information in the system using View tables. This is primarily done through the use of the [directView](xref:Protocol.Params.Param.ArrayOptions-options#directview) option, as the front-end and back-end elements use the same protocol, so the table structures are identical.
+The front-end element can display the information in the system using view tables. In the connector, this is primarily implemented through the use of the [directView](xref:Protocol.Params.Param.ArrayOptions-options#directview) option, as the front-end and back-end elements use the same connector, so the table structures are identical.
 
-Here is an example of a directView table:
+To configure this, the **following options are important**:
+
+- **ArrayOptions** options:
+
+  - [View=](xref:Protocol.Params.Param.ArrayOptions-options#view): The parameter ID of the table where the view table will retrieve information.
+
+  - [directView=](xref:Protocol.Params.Param.ArrayOptions-options#directview): The parameter ID of the column where the unique back-end DMA ID/element IDs are listed.
+
+  - [onlyFilteredDirectview](xref:Protocol.Params.Param.ArrayOptions-options#onlyfiltereddirectview) helps with system load.
+
+- **ColumnOption** options:
+
+  - [View=](xref:ColumnOptionOptionsOverview#view-1): The columnPid where the information exists that will be shown in this column.
+
+    > [!NOTE]
+    > There are options to view information outside of the element using the remoteView syntax `view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx`. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a **large amount of entities**. More than 20k entities will cause increased load in SLNet. This is because DataMiner handles those subscriptions by requesting all of the collector elements.
+
+Here is an **example** of a *directView* table:
 
 ```xml
 <Param id="8500">
@@ -31,22 +48,7 @@ Here is an example of a directView table:
 </ArrayOptions>
 ```
 
-## Important ArrayOptions options
-
-- [View=](xref:Protocol.Params.Param.ArrayOptions-options#view): The tablePid where the View table will retrieve all of the information.
-- [directView=](xref:Protocol.Params.Param.ArrayOptions-options#directview): The columnPid where the unique back-end DMA ID/Element IDs are listed.
-- [onlyFilteredDirectview](xref:Protocol.Params.Param.ArrayOptions-options#onlyfiltereddirectview) helps with system load.
-
-## Important ColumnOption options
-
-- [View=](xref:ColumnOptionOptionsOverview#view-1): The columnPid where the information exists that will be shown in this column.
-
-> [!NOTE]
->There are options to view information outside of the element using the remoteView syntax `view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx`. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a large amount of entities, more than 20k entities will cause increased load in SLNet. This is because Dataminer handles those subscriptions by requesting all of the collector elements.
-
-## Example
-
-Using the example above, we are mapping the information found in table 8000 to a view table 8500. Below is the table declaration of table 8000:
+In the example above, the information found in table 8000 is mapped to a view table 8500. Below is the table declaration of table 8000:
 
 ```xml
 <Param id="8000">
@@ -74,13 +76,11 @@ Using the example above, we are mapping the information found in table 8000 to a
 
 You can see that all of the columns map to columns in the local table, i.e. view column 8501 maps to local column 8001, view column 8502 maps to local column 8002, etc.
 
-And using the directView option, subscribing and requesting the information to all Backends in columnPid 801 containing the following IDs:
+Using the *directView* option, a subscription is made to request all information from the back-end elements in the column with parameter ID 801 containing the following IDs:
 
 ![Back-end registration](~/develop/images/EPM_Back-end_registration.png)
 
-## View table column parameters
-
-Since we are essentially just duplicating the information from the local table to a view table, it is not necessary to recreate all of the parameter declarations from the local table. Because of this the view table parameters are comprised of [duplicateAs](xref:Protocol.Params.Param-duplicateAs) columns to save on having to copy the parameter definition.
+Since you are essentially duplicating the information from the local table to a view table, it is not necessary to recreate all of the parameter declarations from the local table. Because of this, the **view table column parameters** are comprised of **[duplicateAs](xref:Protocol.Params.Param-duplicateAs) columns** to avoid having to copy the parameter definition.
 
 ```xml
 <Param id="8001" trending="false" duplicateAs="8501">
