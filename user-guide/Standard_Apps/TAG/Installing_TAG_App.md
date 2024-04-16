@@ -6,7 +6,7 @@ uid: Installing_TAG_App
 
 ## Prerequisites
 
-- DataMiner version 10.4.2 or higher
+- DataMiner version 10.4.5 or higher
 
 - A connection to a TAG MCS system
 
@@ -35,7 +35,9 @@ If your system is **not connected to the cloud**:
 
 1. Click the *Download* button.
 
-1. In DataMiner Cube, go to *Apps > System Center > Agents > Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+1. Double click the package file and click on the Install button. This step requires [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility) to be installed and connected to the agent that will host the app.
+   
+1. The wizard will show the progress of the installation. If you encounter any issues please contact [techsupport@skyline.be](mailto:techsupport@skyline.be)
 
 ## Creating TAG elements
 
