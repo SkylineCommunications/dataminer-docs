@@ -5,32 +5,32 @@ uid: DIS_2.48
 # DIS 2.48
 
 > [!IMPORTANT]
-> This will be the last version that has support for Visual Studio 2019.
->
-> Visual Studio 2019 went out of support on April 9, 2024: [Support Dates](https://learn.microsoft.com/en-us/lifecycle/products/visual-studio-2019)
+> This will be the last DIS version that supports Visual Studio 2019.
+> Microsoft ended support for Visual Studio 2019 on April 9, 2024. See [Visual Studio 2019 support dates](https://learn.microsoft.com/en-us/lifecycle/products/visual-studio-2019).
 
 ## New features
 
 ### IDE
 
-#### Show message when package is being uploaded [ID_38846]
+#### A message will now be shown when a connector or an Automation script package is being uploaded [ID_38846]
 
-When publishing a connector or automation script an overlay will be shown to indicate that the package is being uploaded.
+When a connector or an Automation script is being published, a message will now be shown to indicate that the package is being uploaded.
 
 ### Validator
 
-DIS is using [Validator version 1.1.3](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.3).
+DIS is currently using [Validator version 1.1.3](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.3).
 
 ## Changes
 
 ### Enhancements
 
-#### Improved Settings > Account tab with clearer statuses [ID_39419]
+#### DIS settings - Account: More detailed status information [ID_39419]
 
-In the *Settings* menu under the *Account* tab, new statuses have been added to give a clearer indication if something goes wrong when signing in in DIS.
+In the *Account* tab of the *DIS settings* window, you can now check the following statuses if something went wrong when you tried to log in to DIS.
 
-- *SkylineAPI status*: Is api.skyline.be reachable?
-- *Account login status*: Can the user authenticate to api.skyline.be?
-- *Account status*: Is the license correct?
+- *Skyline API status*: Can <https://api.skyline.be> be reached?
+- *Account login status*: Can you log in to <https://api.skyline.be>?
+- *Account status*: Do you have a correct DIS license?
 
-In addition all mentions of the DIS license has been renamed to account or authorization as it was often confusing for users to see a failed license check whilst DIS was free and the issue wasn't related to the license.
+> [!NOTE]
+> All occurrences of the word "license" have been replaced by either "account" or "authorization".

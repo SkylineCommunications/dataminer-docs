@@ -244,8 +244,8 @@ If you select this option, whenever you load a MIB file into the *DIS MIB Browse
 In the *Account* tab, you can see
 
 - the name of the user who is currently signed in,
-- the current connection to [SkylineAPI](https://api.skyline.be),
-- the current authentication status to SkylineAPI, and
+- the current [Skyline API](https://api.skyline.be) connection status,
+- the current [Skyline API](https://api.skyline.be) authentication status, and
 - the current account status.
 
 Also, a button allows you to sign out (and sign in again).
