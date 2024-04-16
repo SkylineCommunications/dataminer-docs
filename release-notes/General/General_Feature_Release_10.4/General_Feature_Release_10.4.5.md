@@ -206,6 +206,14 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 
 Performance has increased when properties of elements, services, or views are edited in bulk.
 
+#### 'Database Security' BPA test has been replaced by the 'Security Advisory' BPA test [ID_38632]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
+
+The *Database Security* BPA test has been replaced by the *Security Advisory* BPA test, which will run a collection of checks to see if the system is configured as securely as possible.
+
+For more information on this new BPA test, see [Security Advisory](xref:BPA_Security_Advisory).
+
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->

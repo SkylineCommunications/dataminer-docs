@@ -12,6 +12,14 @@ uid: General_Main_Release_10.3.0_CU15
 
 ### Enhancements
 
+#### 'Database Security' BPA test has been replaced by the 'Security Advisory' BPA test [ID_38632]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
+
+The *Database Security* BPA test has been replaced by the *Security Advisory* BPA test, which will run a collection of checks to see if the system is configured as securely as possible.
+
+For more information on this new BPA test, see [Security Advisory](xref:BPA_Security_Advisory).
+
 #### Enhanced performance when processing changes made to service properties [ID_39011]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
