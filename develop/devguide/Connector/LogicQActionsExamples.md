@@ -354,7 +354,7 @@ public static class QAction
 
 ## Creating an alarm in a QAction
 
-To create an alarm from a QAction, the SLProtocolScripts.dll DLL needs to be imported (Skyline.DataMiner.ProtocolScripts). Alternatively the [Skyline.DataMiner.Utils.Alarms.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Alarms.Protocol) NuGet can be used. It acts as a replacement for the SLProtocolScripts DLL and can be used without the need of having a local DM installed.
+To create an alarm from a QAction, the SLProtocolScripts.dll DLL needs to be imported (Skyline.DataMiner.ProtocolScripts). Alternatively, the [Skyline.DataMiner.Utils.Alarms.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Alarms.Protocol) NuGet can be used. It acts as a replacement for the SLProtocolScripts DLL, and you can use it without having a local DMA installed.
 
 ```csharp
 int elementID = 214;
