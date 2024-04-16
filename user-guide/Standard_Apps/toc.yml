@@ -224,14 +224,14 @@ items:
       - name: DataMiner IT Tools (DITT)
         topicUid: Dataminer_IT_Tool_Overview
         items:
-          - name: Installing DataMiner IT Tools
+          - name: Installing DITT
             topicUid: Installing_DITT
-          - name: Basic Information
-            topicUid: Basic_Information
-          - name: Open PuTTY using DITT
+          - name: Working with DITT
+            topicUid: Working_with_DITT
+          - name: Opening PuTTY using DITT
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview
-            topicUid: Working_With_DITT
+            topicUid: Implementing_DITT_in_Visio
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:

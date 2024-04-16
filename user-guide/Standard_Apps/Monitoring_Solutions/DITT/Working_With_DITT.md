@@ -1,40 +1,30 @@
 ---
-uid: Working_With_DITT
+uid: Working_with_DITT
 ---
 
-# Implementing DITT in a visual overview
+# Working with DataMiner IT Tools
 
-Through seamless integration into different visual overviews, the DITT empowers users to efficiently ping any desired network device. Notably, placeholders for IP addresses allow for dynamic adjustments, resulting in tailored pings and tracerts across varying Visio files. This adaptability underscores the DITT's versatility, enabling precise network diagnostics tailored to diverse configurations.
+When you [install the DITT package](xref:Installing_DITT), a *DITT* element will be added in the *DataMiner IT Tools* view in your DataMiner System.
 
-To implement DITT in a visual overview of your own:
+In DataMiner Cube, you can access this element by navigating to it in the Surveyor, or by opening it under *Apps* > *Applications*.
 
-1. Make sure the [DITT package](xref:Installing_DITT) is installed.
+On the *Tools* page of the element, you can use the *Ping* and *Tracert* buttons to perform a ping or trace operation to the local host. This way you can check the correct functioning of the DITT package. You can also configure the element to show a [PuTTY Button](xref:Open_Putty_with_DITT) as well. However, DITT is mainly intended to be [implemented in other visual overviews](xref:Implementing_DITT_in_Visio).
 
-1. Download the Visio file of the DITT package, located in the folder `C:\GIT\Visios\Customers\Protocols\Skyline Communications\Skyline\DataMiner IT Tools`.
+In the DITT element itself, the following pages are available:
 
-1. Copy and paste the *Ping* and *Tracert* buttons from the *Tools* page of the DITT Visio file to your own Visio file.
+- *Operation Overview*: This page contains a table where you can track each ping or tracert request that was sent using DITT.
 
-   ![Ping and Tracert buttons](~/user-guide/images/DITT_Buttons.png)
+- *Subscriptions*: The table on this page contains the configuration for the *Ping* and *Tracert* buttons.
 
-1. Copy and paste the *Ping* and *Tracert* pages from the DITT Visio file to your own Visio file.
+  > [!CAUTION]
+  > Changing the values in this table could damage the correct functioning of DITT.
 
-   ![Ping and Tracert pages](~/user-guide/images/DITT_Pages.png)
+- *Registrations*: This page is where you can configure the path where the PuTTY executable is stored for each user. See [Opening PuTTY using DITT](xref:Open_Putty_with_DITT).
 
-1. Copy and paste the *InitVar* value from the *Tools* page to the page where the buttons will be used.
+- *Tools*: This page contains the main DITT buttons (*Ping* and *Tracert*). A [PuTTY button](xref:Open_Putty_with_DITT) can also be added.
 
-   ![DITT InitVar](~/user-guide/images/DITT_Init_Vars.png)
+- *Configuration*: Contains the following parameters:
 
-1. Modify the configuration of the DITT *Ping* and *Tracert* buttons by setting the *_parameter3* field of the button to either a placeholder or a default value:
+  - *Request Processing*: Press this button to stop processing ping, tracert, and open PuTTY requests.
 
-   1. In the *_parameter3* field, enter either a valid IP address or a placeholder.
-
-      ![DITT IP address](~/user-guide/images/DITT_IP_Address.png)
-
-   1. Check whether, in the *Execute* data field of the button, the value following `OperationsArguments=` has changed.
-
-      ![DITT check change in IP address](~/user-guide/images/DITT_IP_Address_Check.png)
-
-      If both values are equal, the configuration is complete. If not, the user should manually adjust the value following OperationsArgument.
-
-   > [!NOTE]
-   > The IP address of the *Ping* and *Tracert* buttons is by default set to "localhost". In the example screenshots above, IP address 8.8.8.8 is used instead of the default address.
+  - *Operation*: Shows *Processing* if a current request is being processed, or *Idle* if the system is free to process a request.

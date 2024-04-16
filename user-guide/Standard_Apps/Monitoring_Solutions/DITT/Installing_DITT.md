@@ -4,6 +4,8 @@ uid: Installing_DITT
 
 # Installing DataMiner IT Tools
 
+To be able to implement DITT functionality, such as initiating ping and traceroute commands or opening PuTTY, you first have to install the DITT package:
+
 1. Make sure the following **prerequisites** are met:
 
    - Your DataMiner System uses DataMiner 10.3.6 or higher.
@@ -19,6 +21,4 @@ uid: Installing_DITT
    If your DataMiner System does not contain a DITT element yet, a new DITT element will automatically be created when the package is installed.
 
 > [!NOTE]
->
-> - To update the DITT, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).
-> - Before you can [configure DITT in a visual overview](xref:Working_With_DITT), you first have to [install the DITT package](xref:Installing_DITT).
+> To update DITT, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).
