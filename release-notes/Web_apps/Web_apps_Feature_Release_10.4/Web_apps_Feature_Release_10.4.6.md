@@ -124,3 +124,9 @@ When, in a *Table* component, you applied a filter while the data was still load
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, the dashboard theme would not be applied correctly to the icon inside a *Gauge* component. The icon would have an incorrect background color.
+
+#### Low-Code Apps: Problem when multiple DOM instances had to be passed to a script [ID_39391]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, when you selected multiple DOM instances in a table (while holding the SHIFT button pressed) and then executed a script that used the feeds of those DOM instances as input parameters, only the first DOM instance you selected would be passed to the script. From now on, an array containing all selected DOM instances will be passed to the script.
