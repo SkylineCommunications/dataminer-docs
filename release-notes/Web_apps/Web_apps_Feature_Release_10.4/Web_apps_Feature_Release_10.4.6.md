@@ -113,6 +113,12 @@ In some cases, a `Request was aborted` error could appear when a *Column & bar c
 
 When you were editing an app that had already been published previously, the *View published app* button would incorrectly no longer be displayed.
 
+#### Dashboards app & Low-Code Apps - Table component: A 'No results for applied filter' message would appear when you applied a filter while the data was still loading [ID_39340]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in a *Table* component, you applied a filter while the data was still loading, a `No results for applied filter` message would appear.
+
 #### Dashboards app - Gauge component: Icon would have an incorrect background color [ID_39375]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
