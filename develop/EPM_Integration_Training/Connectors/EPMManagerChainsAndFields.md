@@ -141,11 +141,11 @@ To enable this functionality:
 
 #### Chain configuration
 
-| Tag            | Attribute | Description                                                                                                                                       |
-|----------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| `<Visibility>` | `default` | Specifies if the chain or field should be displayed by default (`true` or `false`).                                                               |
-| `<Standalone>` | `pid`     | Specifies the ID of the configurable parameter linked to toggle visibility.                                                                       |
-| `<Value>`      |           | Defines one of the possible values the parameter must have to toggle the visibility to the opposite setting in relation to the default attribute. |
+| Tag            | Attribute | Description                                                                                                |
+|----------------|-----------|------------------------------------------------------------------------------------------------------------|
+| `<Visibility>` | `default` | Specifies if the chain or field should be displayed by default (`true` or `false`).                        |
+| `<Standalone>` | `pid`     | Specifies the ID of the configurable parameter linked to toggle visibility.                                |
+| `<Value>`      |           | Defines the parameter value that will set the visibility to be the opposite of what is defined by default. |
 
 ## Renaming chains and fields
 
