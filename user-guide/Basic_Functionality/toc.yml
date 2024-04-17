@@ -283,6 +283,8 @@ items:
         items:
           - name: Working with trend predictions
             topicUid: Working_with_trend_predictions
+          - name: Working with trend icons
+            topicUid: Working_with_trend_icons
           - name: Working with behavioral anomaly detection
             topicUid: Working_with_behavioral_anomaly_detection
           - name: Working with pattern matching

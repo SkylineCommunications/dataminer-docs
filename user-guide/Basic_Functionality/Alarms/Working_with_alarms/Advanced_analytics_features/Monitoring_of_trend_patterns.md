@@ -20,11 +20,11 @@ The following limitations apply:
 
     This notice will appear at most every 2 weeks or after a DataMiner restart. In order to reduce memory usage, you can either remove patterns for which monitoring has been activated or restrict the number of parameters for which it has been activated (e.g. by specifying a display key in case of table parameters).
 
-  - As soon as DataMiner uses more than 2 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
+  - As soon as DataMiner uses more than the maximum allowed internal memory for this feature, the following notice will be displayed in the Alarm Console:
 
     *Pattern matching memory critical, patterns with suggestion events enabled may not match properly.*
 
-    This notice will appear at most every 2 weeks or after a DataMiner restart. Also, when you create a pattern in this case, DataMiner will not activate monitoring, even if you selected the option *Generate an alarm when detected*.
+    This notice will appear at most every 2 weeks or after a DataMiner restart. Also, when you create a pattern in this case, DataMiner will not activate monitoring, even if you selected the option *Generate an alarm when detected*. By default, the maximum allowed amount of internal memory is 2GB. From DataMiner 10.3.1/10.4.0 onwards, the setting can be configured via *System Center* > *System settings* > *analytics config.* > *Maximum memory usage*.
 
   - DataMiner checks all changes made to parameters for which patterns are being monitored in real time. If there are more than 6000 parameter changes per second, the following notice will be displayed in the Alarm Console:
 

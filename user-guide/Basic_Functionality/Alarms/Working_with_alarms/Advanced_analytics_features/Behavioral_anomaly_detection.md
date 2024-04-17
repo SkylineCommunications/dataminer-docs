@@ -7,7 +7,7 @@ uid: Behavioral_anomaly_detection
 > [!TIP]
 > This section contains information about behavioral anomaly detection in the Alarm Console. For more information on the functionality of this feature in general, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
-Whenever behavioral anomaly detection finds an anomalous level shift, trend change, or variance change for a parameter, a "suggestion event" is generated in the Alarm Console.
+Whenever behavioral anomaly detection finds an anomalous level shift, trend change, variance change, or flatline for a parameter, a "suggestion event" is generated in the Alarm Console.
 
 These suggestion events can be viewed in a dedicated suggestion events tab, as alarms with severity "Information" and source "Suggestion Engine”. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
 

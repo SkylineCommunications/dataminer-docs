@@ -10,6 +10,8 @@ Most of these features rely on the SLAnalytics process. These require [Storage a
 
 - [Working with trend predictions](xref:Working_with_trend_predictions)
 
+- [Working with Trend Icons](xref:Working_with_trend_icons)
+
 - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
 
 - [Working with pattern matching](xref:Working_with_pattern_matching)
