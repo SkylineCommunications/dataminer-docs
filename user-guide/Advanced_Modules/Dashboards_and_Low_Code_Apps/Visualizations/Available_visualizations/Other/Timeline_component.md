@@ -193,7 +193,7 @@ You can configure the following **[component actions](xref:LowCodeApps_event_con
 
 - *Clear highlights*: Clears all highlights set by *Highlight time range* actions.
 
-- *Set viewport*: Sets the viewport of the timeline to a certain time range.
+- *Set viewport*: Sets the viewport of the timeline to a certain time range<!-- RN 39254 -->.
 
 > [!NOTE]
 > Prior to DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5, highlights can be configured using the *Highlight range* setting. This setting is still available in later DataMiner versions and can be used in combination with highlights set by actions. Its behavior remains the same: a highlight set by the *Highlight range* setting will not expose a feed and it will not be cleared by the *Clear highlight* action.
