@@ -2,7 +2,10 @@
 uid: IDP_1.5.0_CU1
 ---
 
-# IDP 1.5.0 CU1
+# IDP 1.5.0 CU1 (preview)
+
+> [!IMPORTANT]
+> We are still working on this release. Release notes may still be added, modified, or moved to a later release. Check back soon for updates!
 
 ## Enhancements
 
