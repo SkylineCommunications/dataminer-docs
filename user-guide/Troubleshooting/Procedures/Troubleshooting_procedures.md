@@ -30,7 +30,7 @@ uid: Troubleshooting_procedures
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
 
-- [Investigating STaaS issues](xref:Investigating_STaaS_Issues)
+- [Troubleshooting_STaaS_Issues](xref:Troubleshooting_STaaS_Issues)
 
 > [!TIP]
 > See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
