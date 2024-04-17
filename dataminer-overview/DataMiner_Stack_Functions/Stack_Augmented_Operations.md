@@ -141,7 +141,7 @@ Gain valuable insights with ease. Tagged patterns and anomalies provide context 
 > [!TIP]
 > For more information:
 >
-> - User Guide: [Trend icons on data pages](https://docs.dataminer.services/user-guide/Basic_Functionality/Trending/Advanced_analytics_trending/Working_with_behavioral_anomaly_detection.html#trend-icons-on-data-pages)
+> - User Guide: [Trend icons on data pages](https://docs.dataminer.services/user-guide/Basic_Functionality/Trending/Advanced_analytics_trending/Working_with_trend_icons)
 > - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
 > - User Guide: [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 > - User Guide: [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature)
