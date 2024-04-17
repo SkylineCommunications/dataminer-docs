@@ -17,7 +17,7 @@ Because of an internal lock, if the "[next](xref:Protocol.Groups.Group.Content.P
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet<!--RN 39430: TBD-->.
 
 ## Issue description
 
