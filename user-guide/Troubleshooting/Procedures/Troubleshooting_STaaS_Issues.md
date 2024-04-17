@@ -22,7 +22,15 @@ If a system is not registered to use STaaS. DataMiner won't be able to start. Th
 
 To properly register your system, contact your Skyline representative or <staas@dataminer.services>.
 
-## CloudGateway down/Token expiration
+## CloudGateway down/not running
+
+If CloudGateway is down or not running, DataMiner won't be able to startup, and the following error message can be seen in the SLCloudStorage.txt log file:
+
+`CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No subscriber for the subject 'Skyline.Dataminer.Proto.CcaGatewayTypes.GetCcaGatewayConfigRequest' found. Check the process that should handle the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.`
+
+To resolve this issue, go to Task Manager and restart the **DataMiner CloudGateway** service
+
+## Token expiration
 
 Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail.
 
