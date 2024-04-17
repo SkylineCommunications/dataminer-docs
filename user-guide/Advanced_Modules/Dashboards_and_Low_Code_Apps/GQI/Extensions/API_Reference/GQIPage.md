@@ -19,4 +19,4 @@ Represents a single page of rows. Every query result consists of one or more suc
 | HasNextPage | boolean  | No | `true` if there are more pages that GQI can fetch, otherwise 'false' (default). |
 
 > [!TIP]
-> Learn how `HasNextPage` can be used to apply paged data retrieval through following example: [paged data retrieval example](xref:GQI_IGQIDataSource#paged-data-retrieval)
+> When dealing with large amounts of data, it is recommended to spread the data across multiple pages. See [this example](xref:GQI_IGQIDataSource#paged-data-retrieval) on how the `HasNextPage` property can be used to enable paged data retrieval.
