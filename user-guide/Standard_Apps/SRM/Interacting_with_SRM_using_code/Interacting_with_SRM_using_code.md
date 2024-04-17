@@ -10,3 +10,6 @@ Before you interact with SRM using code, you will often need to [find the object
 
 > [!TIP]
 > For more information about the types of scripts that are supported in the SRM framework, see [SRM scripting](xref:srm_scripting).
+
+> [!NOTE]
+> Since SRM Framework 2.0.1 the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available to easily add the required dependencies to develop these scripts. Details on how to install the NuGet on new or existing scripts is available [here](xref:srm_scripting_devpack).

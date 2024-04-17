@@ -30,7 +30,7 @@ The wizard is an interactive Automation script called *SRM_BookResourcesQuickly*
 For example: `{"AssignCapacityType":"Request","BookingManagerElement":"Resource Scheduling","EndDate":"2022-09-07T14:08:28.0052229Z","ResourceIds":"e489a83d-182b-45c7-a981-615c253525b2","StartDate":"2022-09-07T12:38:25.6772229Z"}`
 
 > [!NOTE]
-> For an up-to-date definition of the input argument, import *SLSRMLibrary.dll* and check the class *Skyline.DataMiner.Library.Solutions.SRM.Model.BookResourcesQuickly.InputData*.
+> For an up-to-date definition of the input argument, import *SLSRMLibrary.dll* and check the class *Skyline.DataMiner.Library.Solutions.SRM.Model.BookResourcesQuickly.InputData*. Since SRM Feature Release 2.0.1 check the class *Skyline.DataMiner.Core.SRM.Model.BookResourcesQuickly.InputData*.
 
 ### Running the wizard
 

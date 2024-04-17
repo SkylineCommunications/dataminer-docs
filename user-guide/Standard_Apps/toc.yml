@@ -357,6 +357,9 @@ items:
             topicUid: srm_instantiations
           - name: SRM scripting
             topicUid: srm_scripting
+            items:
+            - name: using the Dev Pack
+              topicUid: srm_scripting_devpack
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:

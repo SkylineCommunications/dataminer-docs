@@ -31,3 +31,6 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 - [Silently creating or editing many bookings using caching](xref:SRM_creating_editing_many_bookings_with_caching)
 
 - [Silently applying a profile to an unmapped resource or resource not part of a booking](xref:SRM_apply_profile_to_unmatched_resource)
+
+> [!NOTE]
+> Since SRM Framework 2.0.1 the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available to easily add the required dependencies to develop these scripts. Details on how to install the NuGet and the updated namespaces is available [here](xref:srm_scripting_devpack).

@@ -6,6 +6,9 @@ uid: srm_scripting
 
 This section explains the main kinds of scripting used in the SRM framework.
 
+> [!NOTE]
+> Since SRM Framework 2.0.1 the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available to easily add the required dependencies to develop these scripts. Details on how to install the NuGet on new or existing scripts is available [here](xref:srm_scripting_devpack).
+
 ## Profile-Load Script (PLS)
 
 A Profile-Load Script (PLS) is an Automation script that is **used to apply profile instances or values onto a virtual function resource**. This script is executed when a booking enters a specific state. For example, at the start time of the booking, a PLS is used to apply a profile instance.

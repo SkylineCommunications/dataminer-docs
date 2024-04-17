@@ -4,6 +4,10 @@ uid: SRM_2.0.1
 
 # SRM 2.0.1
 
+Since this Feature Release of the SRM Framework the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available to easily add the required dependencies to develop [custom SRM Automation scripts](xref:srm_scripting).
+
+Details on how to start implementing or updating the custom Automation scripts is available [here](xref:srm_scripting_devpack). For existing scripts, next to installing the NuGet, the required namespaces [will need to be reviewed](xref:srm_scripting_devpack#how-to-update).
+
 ## Enhancements
 
 #### New ServiceManagement.CreateReservationService method [ID_39096]
