@@ -111,6 +111,12 @@ Performance has increased when logging on to cloud-connected DataMiner Agents or
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
+#### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+From now on, it will no longer be possible to create new elements as long as SLDataMiner has not finished loading all element information. If an attempt is made to create an element while SLDataMiner is still loading element information, an `Agent is starting up` error will now be returned.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
