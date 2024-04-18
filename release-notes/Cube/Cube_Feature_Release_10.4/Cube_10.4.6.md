@@ -83,3 +83,9 @@ When you opened a card, in some cases, the data on the card would not get loaded
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.
+
+#### Alarm Console: No longer possible to filter based on focus after having selected 'Statistical view' or 'Reports view' [ID_39388]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in the *Alarm Console*, you had selected *Statistical view* or *Reports view*, it would incorrectly no longer be possible to filter alarms based on focus.
