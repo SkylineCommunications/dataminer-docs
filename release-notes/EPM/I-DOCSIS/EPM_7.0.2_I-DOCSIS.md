@@ -38,6 +38,9 @@ When you open the dashboard, the available layer information is shown for all as
 
 On the overview page for a CCAP or CM, users can now click dedicated *Ping* and *Tracert* buttons to open a window with the outcome of the ping or traceroute operation for the relevant CCAP or CM. This will provide additional insight into the status and connectivity of the system's devices.
 
+> [!NOTE]
+> To make use of this functionality, [DITT](xref:Dataminer_IT_Tool_Overview) must be deployed in the DataMiner System.
+
 ## Changes
 
 ### Enhancements
