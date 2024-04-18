@@ -10,7 +10,9 @@ You can configure this by adding the **SystemType** and **SystemName** shape dat
 
 For example:
 
-![image](~/develop/images/EPM_link_shape_to_object.png)
+![image](EPM_link_shape_to_object_shape.png)
+
+![image](EPM_link_shape_to_object_field.png)
 
 > [!NOTE]
 > In the example above, `[field]` is the name of the EPM object. This makes it dynamic within an EPM environment.
