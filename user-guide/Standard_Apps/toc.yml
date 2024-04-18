@@ -282,6 +282,13 @@ items:
                 topicUid: Processor_configuration
               - name: Monitoring processed traps
                 topicUid: Monitoring_Processed_Traps
+      - name: DataMiner TAG Management app
+        topicUid: Overview_TAG_App
+        items:
+          - name: Installing the TAG Management app
+            topicUid: Installing_TAG_App
+          - name: Using the TAG Management app
+            topicUid: How_to_TAG_App
   - name: Process Automation framework
     topicUid: PA_index
     items:
