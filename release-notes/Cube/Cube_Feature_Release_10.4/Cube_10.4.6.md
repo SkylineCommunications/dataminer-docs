@@ -58,6 +58,14 @@ Because of a number of enhancements, overall performance has now increased when 
 
 ### Fixes
 
+#### Spectrum monitors: Parameter positions would incorrectly be reused [ID_39225]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, while editing a spectrum monitor, you clicked *Group parameters* to ungroup all parameters, the parameter positions would incorrectly be reused when multiple parameters and multiple measurement points from the same monitor script were being used.
+
+From now on, when you click *Group parameters* to ungroup all parameters, the parameter positions will no longer be reused.
+
 #### Problem when opening a card [ID_39251]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
