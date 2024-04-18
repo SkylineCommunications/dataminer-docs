@@ -43,6 +43,12 @@ The query name will be constructed as follows:
 - `db/<dashboard name>/<queryGUID>`, or
 - `app/<appGUID>/<queryGUID>`
 
+#### Dashboards app & Low-Code Apps - Spectrum analyzer component: Clearer indication that the component is busy loading [ID_39427]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+From now on, a *Spectrum analyzer* component will indicate in a clearer way that it is busy loading.
+
 ### Fixes
 
 #### Dashboards app: 'DATA USED IN DASHBOARD' section would not be hidden when empty [ID_39274]

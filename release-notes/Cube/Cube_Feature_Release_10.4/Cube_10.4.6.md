@@ -89,3 +89,9 @@ In some cases, the algorithm that had to detect placeholder value updates would 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When, in the *Alarm Console*, you had selected *Statistical view* or *Reports view*, it would incorrectly no longer be possible to filter alarms based on focus.
+
+#### Dialog box controls showing underlined text and opening up a dropdown list when clicked would not open their dropdown list when you pressed ALT+DOWN [ID_39423]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+A dialog box control showing underlined text and opening up a dropdown list when clicked (e.g. the severity selector in a *New alarm* action of a correlation rule) would incorrectly not open its dropdown list when you pressed ALT+DOWN.
