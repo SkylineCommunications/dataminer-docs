@@ -48,6 +48,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 Because of a number of enhancements, overall performance has increased when processing conditions based on view names, service names or element names.
 
+#### Enhanced processing of web API exceptions occurring in DataMiner Cube [ID_39270]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the processing of web API exceptions occurring in DataMiner Cube. After a web API exception has been properly processed, a clear log entry will now also be added to the Cube logging.
+
 #### Alarm Console: Enhanced performance when retrieving the side panel data after selecting an alarm [ID_39284]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
