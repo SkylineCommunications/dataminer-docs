@@ -126,6 +126,8 @@ items:
                 topicUid: I-DOCSIS_parameters_cable_modem
               - name: Thresholds
                 topicUid: I-DOCSIS_parameters_thresholds
+              - name: PTP
+                topicUid: I-DOCSIS_parameters_ptp
       - name: DataMiner EPM VSAT
         topicUid: EPM_VSAT
         items:

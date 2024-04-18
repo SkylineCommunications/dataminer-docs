@@ -55,6 +55,8 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 
 - [Thresholds](xref:I-DOCSIS_parameters_thresholds)
 
+- [PTP](xref:I-DOCSIS_parameters_ptp)
+
 ## Aggregated parameter descriptions
 
 - **Number Market**: Calculated. The total number of associated markets.
