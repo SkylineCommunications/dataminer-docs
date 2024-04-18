@@ -24,7 +24,9 @@ When the app is ready, click the ![Publish](~/user-guide/images/AppPublishIcon.p
 > Once an app has been published, it is not possible to revert it to a draft.
 
 > [!NOTE]
-> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission.
+>
+> - To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission.
+> - It is not possible to edit a low-code app on a mobile device.<!-- RN 39036 -->
 
 > [!TIP]
 > See also: [Tutorials - Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App)

@@ -310,7 +310,7 @@ When the local NATS process had been running for a long time, in some cases, the
 
 #### Problem with SLProtocol when it was not able to reach the StorageModule service during startup [ID_38824]
 
-<!-- MR 10.4.0 [CU1] - FR TBD -->
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, during startup, SLProtocol would stop working when it was not able to reach the StorageModule service.
 

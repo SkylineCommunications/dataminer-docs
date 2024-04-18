@@ -125,11 +125,21 @@ items:
             topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
           - name: Chat notifications
             topicUid: ChatOps_Tutorials_Chat_Notification
+          - name: Adaptive Card notifications with custom buttons
+            topicUid: ChatOps_Tutorials_Custom_Buttons
   - name: Advanced configuration
     items:
       - name: Customizing the dataminer.services endpoint configuration
         topicUid: Custom_cloud_endpoint_configuration
+      - name: Disabling artifact deployments locally
+        topicUid: Disabling_artifact_deployments
+      - name: Disabling Remote Access and Live Sharing locally
+        topicUid: Disabling_Remote_Access_and_Live_Sharing
       - name: Disabling reports and notifications offloading
         topicUid: Disable_Offloading_Reports_and_Notifications
+      - name: Disabling the bot feature locally
+        topicUid: Disabling_bot_locally
       - name: Disconnecting from dataminer.services
         topicUid: Disconnecting_from_dataminer.services
+      - name: Enabling kernel response buffering for DataMiner APIGateway
+        topicUid: Enabling_kernel_response_buffering

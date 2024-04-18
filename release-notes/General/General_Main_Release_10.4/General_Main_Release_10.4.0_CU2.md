@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU2
 ---
 
-# General Main Release 10.4.0 CU2 - Preview
+# General Main Release 10.4.0 CU2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -204,6 +204,12 @@ The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
 
+#### OpenSearch: Enhanced performance when fetching alarm distribution data during DataMiner startup [ID_39177]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, on systems using an OpenSearch database, overall performance has increased when fetching alarm distribution data during DataMiner startup.
+
 #### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID_39213]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -239,12 +245,6 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
-
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
 #### STaaS: Problem when going into file offload mode [ID_38648]
 

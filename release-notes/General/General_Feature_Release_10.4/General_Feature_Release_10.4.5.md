@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.5
 ---
 
-# General Feature Release 10.4.5 – Preview
+# General Feature Release 10.4.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,7 +18,8 @@ uid: General_Feature_Release_10.4.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]](#gqi-implementing-a-custom-sort-order-for-gqi-columns-using-a-custom-operator-id_39136)
+- [Storage as a Service: Proxy support [ID_39221]](#storage-as-a-service-proxy-support-id_39221)
 
 ## Breaking changes
 
@@ -89,7 +90,7 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
 
@@ -100,7 +101,7 @@ For more information on these interfaces, see:
 
 #### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
 GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\Metrics` folder:
 
@@ -204,6 +205,14 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Performance has increased when properties of elements, services, or views are edited in bulk.
+
+#### 'Database Security' BPA test has been replaced by the 'Security Advisory' BPA test [ID_38632]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
+
+The *Database Security* BPA test has been replaced by the *Security Advisory* BPA test, which will run a collection of checks to see if the system is configured as securely as possible.
+
+For more information on this new BPA test, see [Security Advisory](xref:BPA_Security_Advisory).
 
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
 
@@ -348,6 +357,12 @@ The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
 
+#### OpenSearch: Enhanced performance when fetching alarm distribution data during DataMiner startup [ID_39177]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, on systems using an OpenSearch database, overall performance has increased when fetching alarm distribution data during DataMiner startup.
+
 #### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -425,12 +440,6 @@ The maximum number of concurrent GQI queries has now been increased from 20 to 1
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
-
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
 #### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
 

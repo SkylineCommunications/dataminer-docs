@@ -393,6 +393,12 @@ When the local NATS process had been running for a long time, in some cases, the
 
 `Failed to execute NATS server test, the local NATS server might be offline.`
 
+#### Problem with SLProtocol when it was not able to reach the StorageModule service during startup [ID_38824]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, during startup, SLProtocol would stop working when it was not able to reach the StorageModule service.
+
 #### Automation: Problem when sending an email to a user or group [ID_38844]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->

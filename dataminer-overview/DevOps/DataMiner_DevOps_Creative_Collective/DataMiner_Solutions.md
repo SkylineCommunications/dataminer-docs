@@ -9,3 +9,6 @@ DataMiner is one of the most powerful enabling platforms to drive digital transf
 A DataMiner Solution, in general, can refer to any type of setup or configuration of a DataMiner platform, leveraging one or more of its enabling functions (e.g Visual Overview graphics, Automation scripts, connectors, ChatOps extensions, no-code Apps, user-definable APIs, ad hoc data sources, and much more). These solutions are stored in the DataMiner Catalog and can be loaded on any DataMiner System that meets the minimum requirements.
 
 Every DataMiner Solution essentially revolves around converting data and controls into value towards specific goals and objectives, easily and efficiently. A DataMiner Solution is always built and designed with that specific mindset. It can address a very broad range of goals and be considered from many different types of perspectives, **resulting in [unlimited opportunity](xref:Unlimited_Opportunity) for DevOps professionals**.
+
+> [!TIP]
+> For more detailed information on the available DataMiner Solutions, refer to the [main DataMiner Solutions page](xref:Overview_DataMiner_Solutions).

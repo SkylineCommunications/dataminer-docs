@@ -2,21 +2,28 @@
 uid: Cube_Feature_Release_10.4.5
 ---
 
-# DataMiner Cube Feature Release 10.4.5 – Preview
+# DataMiner Cube Feature Release 10.4.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.5](xref:General_Feature_Release_10.4.5).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
-*No features have been added yet.*
+#### Visual Overview: New option to prevent placeholders from being resolved until a variable is set to a value [ID_38910]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+In Visual Overview, a variable placeholder will resolve to an empty value when the variable in question is not initialized.
+
+From now on, you can add the "WaitForValue" option to a `[var]`, `[cardvar]`, or `[pagevar]` placeholder to prevent the placeholder (and the shape data field in which it is used) from being resolved until the variable is set to a value.
+
+Example: `[var:testvar,WaitForValue]`
+
+> [!NOTE]
+> If the variable name contains commas, by default, the text before the first valid option will be considered the name of the variable. For example, in the placeholder `[var:my,var,WaitForValue,NotValidOption]`, "my,var" will be considered the name of the variable. This default behavior can be overruled by using a `[sep]` placeholder. For example, in the placeholder `[cardvar:[sep:,$]test,var$WaitForValue]`, "test,var" will be considered the name of the variable.
 
 ## Changes
 
@@ -58,20 +65,6 @@ When, in the *Upgrade* window, you hover over the *Upload only* button, the foll
 
 The same message will also be shown on the confirmation box that will appear after you click the *Upload only* button.
 
-#### Visual Overview: Preventing placeholders from being resolved until the variable is set to a value [ID_38910]
-
-<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
-
-In Visual Overview, a variable placeholder will resolve to an empty value when the variable in question is not initialized.
-
-From now on, you can add the "WaitForValue" option to a `[var]`, `[cardvar]` or `[pagevar]` placeholder. This will prevent the placeholder (and the shape data field in which it is used) from being resolved until the variable is set to a value.
-
-Example: `[var:testvar,WaitForValue]`
-
-> [!NOTE]
-> If the variable name contains commas, by default, the text before the first valid option will be considered the name of the variable. For example, in the placeholder `[var:my,var,WaitForValue,NotValidOption]`, "my,var" will be considered the name of the variable.
-> This default behavior can be overruled by using a `[sep]` placeholder. For example, in the placeholder `[cardvar:[sep:,$]test,var$WaitForValue]`, "test,var" will be considered the name of the variable.
-
 #### Enhanced performance when loading properties in a view card [ID_38942]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
@@ -84,11 +77,11 @@ Because of a number of enhancements, overall performance has increased when load
 
 Up to now, when you opened a web application by clicking an icon in the *Apps* pane of Cube's sidebar, you had to log in to that app when you had not yet logged in to another app that was open in the browser. From now on, you will be logged in automatically.
 
-#### System Center - Agents: Warning when adding or removing agents on systems that have the NATSForceManualConfig option enabled [ID_39070]
+#### System Center - Agents: Warning when adding or removing Agents on systems that have the NATSForceManualConfig option enabled [ID_39070]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
-When you add or remove an agent on a DataMiner System that has the *NATSForceManualConfig* option enabled, a warning message will now appear, saying that the NATS configuration will have to be updated.
+When you add or remove an Agent on a DataMiner System that has the *NATSForceManualConfig* option enabled, a warning message will now appear, saying that the NATS configuration will have to be updated.
 
 #### Log entries added to SLClient.txt will now include the ConnectionID dimension [ID_39118]
 

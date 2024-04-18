@@ -775,6 +775,8 @@ items:
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
+    - name: Obsolete namespaces
+      topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
   - name: Getting started as a System Developer
@@ -3476,6 +3478,8 @@ items:
                     topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
                 - name: Specific
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
+              - name: SetAsActive
+                topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
       - name: DeploymentOptions

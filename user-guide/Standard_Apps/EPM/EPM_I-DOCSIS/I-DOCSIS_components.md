@@ -40,39 +40,56 @@ The I-DOCSIS EPM Solution uses the following Automation scripts:
 - **EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA**: Used to retrieve all CM-related data in Dashboards using GQI.
 - **EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA**: Used to retrieve all DS QAM Channel-related data in Dashboards using GQI.
 - **EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA**: Used to retrieve all US QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_OFDM_DATA**: Used to retrieve all OFDM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_OFDMA_DATA**: Used to retrieve all OFDMA Channel-related data in Dashboards using GQI.
 - **EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA**: Used to retrieve all CM DS QAM Channel-related data in Dashboards using GQI.
 - **EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA**: Used to retrieve all CM US QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_PASSIVE_DATA**: Used to retrieve all Passive relation-related data in Dashboards using GQI.
 
 ## Dashboards
 
 The I-DOCSIS EPM Solution includes the following dashboards:
 
-- I-DOCSIS CCAP
-- I-DOCSIS Channel Utilization
-- I-DOCSIS Network
-- I-DOCSIS Service Group [Fiber Node]
-- I-DOCSIS Service Group [Fiber Node] - CM DS SNR OOS
-- I-DOCSIS Customer Diagnosis tool - CM Info
-- I-DOCSIS Customer Diagnosis Tool - Network Performance
-- I-DOCSIS Global System Counts
-- AMPLIFIER/01. CM Overview
-- AMPLIFIER/02. Offline CM Overview
-- CM/01. CM Overview
-- CM/02. CM DS QAM Channels
-- CM/03. CM US QAM Channels
-- NODE/01. CM Overview
-- NODE/02. Offline CM Overview
-- NODE SEGMENT/01. DS QAM Channels
-- NODE SEGMENT/02. US QAM Channels
-- TAP/01. CM Overview
-- TAP/02. Offline CM Overview
-- SERVICE GROUP/01. DS QAM Channels
-- SERVICE GROUP/02. US QAM Channels
+- AMPLIFIER/01. CM OVERVIEW
+- AMPLIFIER/02. OFFLINE CM OVERVIEW
+- AMPLIFIER/03. CPE MAP
+- CM/01. CM OVERVIEW
+- CM/02. CM DS QAM CHANNELS
+- CM/03. CM US QAM CHANNELS
+- CM/04. CM OFDM CHANNELS
+- CM/05. CM OFDMA CHANNELS
+- INOC/CMs NOT AVAILABLE
+- NODE/01. CM OVERVIEW
+- NODE/02. OFFLINE CM OVERVIEW
+- NODE/03. CPE MAP
+- NODE SEGMENT/01. CM OVERVIEW
+- NODE SEGMENT/02. OFFLINE CM OVERVIEW
+- NODE SEGMENT/03. DS QAM CHANNELS
+- NODE SEGMENT/04. US QAM CHANNELS
+- NODE SEGMENT/05. OFDM CHANNELS
+- NODE SEGMENT/06. OFDMA CHANNELS
+- NODE SEGMENT/07. CPE MAP
+- TAP/01. CM OVERVIEW
+- TAP/02. OFFLINE CM OVERVIEW
+- TAP/03. CPE MAP
+- SERVICE GROUP/01. CM OVERVIEW
+- SERVICE GROUP/02. OFFLINE CM OVERVIEW
+- SERVICE GROUP/03. DS QAM CHANNELS
+- SERVICE GROUP/04. US QAM CHANNELS
+- SERVICE GROUP/05. OFDM CHANNELS
+- SERVICE GROUP/06. OFDMA CHANNELS
 
 ## Visuals
 
 The I-DOCSIS EPM Solution includes the following visual overviews:
 
 - Network
+- Market
+- Hub
 - CCAP Core
 - Service Group [Fiber Node]
+- Node Segment
+- Node
+- Amplifier
+- Tap
+- Cable Modem

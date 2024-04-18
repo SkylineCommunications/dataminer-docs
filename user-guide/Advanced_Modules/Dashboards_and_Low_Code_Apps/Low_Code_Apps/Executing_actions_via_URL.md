@@ -27,6 +27,9 @@ As soon as the actions have been executed, the action configuration will be remo
 >   - *Execute component action: delete current instance/save current changes*
 >   - *Navigate to a URL*
 
+> [!IMPORTANT]
+> To guarantee support across all browsers and prevent possible issues, the URL value should be encoded. If, for example, the JSON structure contains any ampersands ("&"), this will not work unencoded.
+
 ## Example
 
 In this example, an *Open a panel* action is added to an app URL:
@@ -34,3 +37,6 @@ In this example, an *Open a panel* action is added to an app URL:
 ```txt
 https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner.Web.Common.v1.DMAApplicationPagePanelAction","Panel":"4507edc7-fcee-47bd-985c-f40d844e72cb","Position":"Center","Width":30,"AsOverlay":true}]}
 ```
+
+> [!NOTE]
+> For the example above, this is the encoded equivalent: `https://myDMA/APP_ID/PAGE_NAME#%7B%22actions%22%3A%5B%7B%22Type%22%3A6%2C%22__type%22%3A%22Skyline.DataMiner.Web.Common.v1.DMAApplicationPagePanelAction%22%2C%22Panel%22%3A%224507edc7-fcee-47bd-985c-f40d844e72cb%22%2C%22Position%22%3A%22Center%22%2C%22Width%22%3A30%2C%22AsOverlay%22%3Atrue%7D%5D%7D`
