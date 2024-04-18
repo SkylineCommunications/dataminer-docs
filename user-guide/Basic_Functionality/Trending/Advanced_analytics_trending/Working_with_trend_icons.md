@@ -13,11 +13,11 @@ The DataMiner Analytics software analyzes the behavior of numeric parameters in 
 
 Please note the following regarding these icons:
 
-- Behavior is calculated for single-value parameters and table parameters. For [partial tables](xref:Table_parameters#partial-tables), behavior is only calculated for the rows of the first page.
+- Behavior is calculated for single-value parameters and table parameters. For [partial tables](xref:Table_parameters#partial-tables), behavior is only calculated for the rows of the first page at first. Behavior for the rows of any other page is calculated only when the page is opened.
 
 - The selection of a particular icon is based on the trend data behavior within a configurable time interval. By default, this time interval is set to 3600 seconds. Prior to DataMiner 10.0.9/10.1.0, this is specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. From DataMiner 10.0.9/10.1.0 onwards, the time interval can be configured via *System Center* > *System settings* > *analytics config* > *Minimum window duration*.
 
-- During the initial time interval following the start of the SLAnalytics process, DataMiner has insufficient data to determine parameter behavior. Only the standard trend icon will be displayed in this period of time.
+- During the initial time interval following the start of the SLAnalytics process, DataMiner may have insufficient data to determine the behavior of some parameters. In that case, only the default trend icon will be displayed for those parameters in this period of time.
 
 - When an element card stays open, the icon will be updated at regular intervals. By default, icons are updated every 300 seconds. Prior to DataMiner 10.0.9/10.1.0, this is specified in the *updateArrowTime* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. From DataMiner 10.0.9/10.1.0 onwards, the length of the update interval can be configured in *System Center* > *System settings* > *analytics config* > *Arrow update interval*.
 
