@@ -357,9 +357,6 @@ items:
             topicUid: srm_instantiations
           - name: SRM scripting
             topicUid: srm_scripting
-            items:
-            - name: using the Dev Pack
-              topicUid: srm_scripting_devpack
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:
@@ -471,6 +468,8 @@ items:
       - name: Interacting with SRM using code
         topicUid: Interacting_with_SRM_using_code
         items:
+          - name: Using the SRM Dev Pack
+            topicUid: srm_scripting_devpack
           - name: Finding the reference of an object
             topicUid: SRM_find_reference_of_object
           - name: Silent actions

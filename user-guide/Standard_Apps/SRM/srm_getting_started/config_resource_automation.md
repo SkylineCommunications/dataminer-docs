@@ -22,7 +22,7 @@ For example: `{"ResourceId":" 25405e6e-3f96-4801-bc76-2dc1dae18358"}`
 
 > [!NOTE]
 >
-> - For an up-to-date definition of the input argument, import *SLSRMLibrary.dll* and check the class *Skyline.DataMiner.Library.Solutions.SRM.Model.ApplyProfileToResource.InputData*. Since SRM Feature Release 2.0.1 check the class *Skyline.DataMiner.Core.SRM.Model.ApplyProfileToResource.InputData*.
+> - For an up-to-date definition of the input argument, import *SLSRMLibrary.dll* and check the class *Skyline.DataMiner.Library.Solutions.SRM.Model.ApplyProfileToResource.InputData*, or *Skyline.DataMiner.Core.SRM.Model.ApplyProfileToResource.InputData* from feature release 2.0.1 of the SRM framework onwards.
 > - In case both the *ReservationId* and the *BookingManagerName* input parameter are specified, the booking action log will be extended with records related to the execution of the Profile-Load Script. If only the *BookingManagerName* input parameter is specified, a separate action log file will be generated (`Resource_<Resource_Guid>_<Date Time>.html`).<!-- RN 32100 -->
 
 ### Running the wizard

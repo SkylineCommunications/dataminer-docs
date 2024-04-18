@@ -33,4 +33,4 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 - [Silently applying a profile to an unmapped resource or resource not part of a booking](xref:SRM_apply_profile_to_unmatched_resource)
 
 > [!NOTE]
-> Since SRM Framework 2.0.1 the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available to easily add the required dependencies to develop these scripts. Details on how to install the NuGet and the updated namespaces is available [here](xref:srm_scripting_devpack).
+> Since [Feature release 2.0.1](xref:SRM_2.0.1) of the SRM framework, the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available, which allows you to easily add the required dependencies to develop these scripts. For details on how to install the NuGet on new or existing scripts, see [Updating the SRM namespaces](xref:srm_scripting_devpack).

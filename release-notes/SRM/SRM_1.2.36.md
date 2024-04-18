@@ -15,7 +15,7 @@ A new method, *ServiceManagement.CreateReservationService*, is now available, wh
 
 #### Support added for updated service creation behavior [ID_39162]
 
-In DataMiner [10.4.5](xref:General_Feature_Release_10.4.5#not-possible-to-delete-a-service-created-via-an-srm-booking-when-it-had-been-assigned-a-name-that-was-already-being-used-id_38914) (as well as 10.3.0 [CU14] and 10.4.0 [CU2]), to prevent an issue when a service was created via an SRM booking and it had an error because the name was already in use by another object, new behavior was introduced when an SRM service is create with a name that already exists. Previously, when an existing name was passed with a different ID, the existing service name was returned, while now an error is thrown. The SRM Solution has now been adapted to support this new behavior, while also remaining compatible with the previous behavior.
+In DataMiner [10.4.5](xref:General_Feature_Release_10.4.5#not-possible-to-delete-a-service-created-via-an-srm-booking-when-it-had-been-assigned-a-name-that-was-already-being-used-id_38914) (as well as 10.3.0 [CU14] and 10.4.0 [CU2]), to prevent an issue when a service was created via an SRM booking and it had an error because the name was already in use by another object, new behavior was introduced when an SRM service is created with a name that already exists. Previously, when an existing name was passed with a different ID, the existing service name was returned, while now an error is thrown. The SRM framework has now been adapted to support this new behavior, while also remaining compatible with the previous behavior.
 
 #### Support for regular resources linked to elements in SRM_DiscoverResources script [ID_39187]
 
@@ -23,7 +23,7 @@ The *SRM_DiscoverResources* script now supports regular resources linked to elem
 
 #### Ability added to disable Booking Friendly Reference [ID_39199]
 
-On the Configuration page of the Booking Manager, you can now deactivate the Booking Friendly Reference feature. Deactivating this feature will improve performance when new bookings are created, as this feature requires that a profile instance is read and updated for each booking that is created.
+On the *Configuration* page of the Booking Manager, you can now deactivate the Booking Friendly Reference feature. Deactivating this feature will improve performance when new bookings are created, as this feature requires several additional operations.
 
 ## Fixes
 

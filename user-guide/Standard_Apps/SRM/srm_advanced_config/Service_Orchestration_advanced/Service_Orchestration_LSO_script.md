@@ -11,8 +11,6 @@ LSO scripts are responsible for orchestrating the configuration of resources, i.
 
 When an event needs to be triggered (e.g. end of pre-roll) for a specific booking, the SRM framework will look up the [target service state](xref:Service_Orchestration_service_states) defined in the Booking Manager app (e.g. START). Based on this, it will then identify the LSO script to run by looking at the list of [actions defined in the service definition](xref:Service_Orchestration_service_states#configuring-the-action-linked-to-each-service-state).
 
-
-
 ## Main classes
 
 LSO scripts can make use of the following classes to interact with bookings and their included resources:
