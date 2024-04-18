@@ -53,6 +53,14 @@ Up to now, when a dashboard did not contain any components that used data, the *
 
 From now on, when empty, the *DATA USED IN DASHBOARD* section will no longer be displayed.
 
+#### Web app - Interactive Automation scripts: Options of a UI control would incorrectly overlap other dialog box items [ID_39289]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in a dialog box of an interactive Automation script, a UI control had a large number of options, in some cases, those options would overlap other items on the dialog box.
+
+From now on, UI controls options will be listed in a scrollable region. As a result, they will no longer overlap other dialog box items.
+
 #### Dashboards app & Low-Code Apps - Template editor: Save button would not become available when you enabled a setting in an override [ID_39290]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
