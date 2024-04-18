@@ -20,7 +20,7 @@ On this page, you may add parameters as you would any other page, but you may al
 
 There are a couple of options that are required for the EPM protocol to have so the DMS knows which element is the front end of the system. First is a parameter named “Elementmanagertype” and the other is having the Protocol.Display@type attribute set to "element manager". More information can be found here: [EPM Integration in Cube](xref:AdvancedEpm)
 
-On startup, the DMS will crawl through the system to find which element has these conditions met to establish it as the front end. To avoid having to do this crawl, you can set this property using an Automation script. The [EpmConfig](https://catalog.dataminer.services/details/automation-script/3713) script will do so after inputting the DataMiner and Element ID of the front end.
+On startup, the DMS will crawl through the system to find which element has these conditions met to establish it as the front end. When the DMS finds the element, it will register it's DMA and Elmenet ID in the DMS cache. This cache is wiped when the DMS is shut down or restarted. To avoid having to do this crawl, you can register the element using an Automation script. The [EpmConfig](https://catalog.dataminer.services/details/automation-script/3713) script will do so after inputting the DataMiner and Element ID of the front end.
 
 ### Topology soft launch
 
