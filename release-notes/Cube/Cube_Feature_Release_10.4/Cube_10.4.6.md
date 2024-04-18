@@ -22,6 +22,20 @@ uid: Cube_Feature_Release_10.4.6
 
 ### Enhancements
 
+#### System Center: Certain sections will no longer be visible when connected to a DaaS system [ID_39173]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When DataMiner Cube is connected to a DaaS system, in *System Center*, the following sections will no longer be visible:
+
+- *Database > General*
+- *Backup*
+- *Search & Indexing > Indexing engine*
+- *System settings > Time to live*
+- *Tools > Query executer*
+
+Also, when DataMiner Cube is connected to a DaaS system, the *Indexing* app will no longer be visible, even when the *Indexing* soft-launch option is enabled.
+
 #### Alarm Console: Enhanced performance when loading a large number of alarms in an active alarms tab [ID_39235] [ID_39236]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
