@@ -132,3 +132,11 @@ After a DataMiner startup, in some cases, certain alarm groups would either be i
 When string parameters are parsed, both an ASCII version and a Unicode version of the string value should be returned. However, up to now, when a string parameter was a table column parameter, the `Interprete` type of the table would be used. As a result, string values would be processed incorrectly.
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
+
+#### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID_39398]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, SLProtocol would add the following line in the log file of an element when it encountered the [parameter type "matrix"](xref:UIComponentsTableMatrix).
+
+`CParameter::ReadSettings|CRU|-1|!! Unknown <Type> MATRIX for parameter`
