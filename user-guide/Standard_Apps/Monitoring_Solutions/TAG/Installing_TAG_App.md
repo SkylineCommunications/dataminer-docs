@@ -31,10 +31,6 @@ uid: Installing_TAG_App
 
 ## Accessing the TAG Management app
 
-To ensure full functionality of the *TAG Management* low-code app included in your package, TAG elements need to be included on your DMA. Without these elements, the application will not operate correctly.
-
-If necessary, [add new elements](xref:Adding_elements) using the appropriate [TAG Video Systems protocol](xref:Connector_help_TAG_Video_Systems_MBC-7000), e.g. *TAG Video Systems MCM-9000* or *TAG Video Systems Media Control System*.
-
 To access the TAG Management application:
 
 1. Go to `http(s)://[DMA name]/root`.
@@ -42,6 +38,9 @@ To access the TAG Management application:
 1. Select *TAG Management* to start using the application.
 
    ![TAG Management](~/user-guide/images/TAG_application.png)
+
+> [!NOTE]
+> This application enhances the functionality of existing TAG MCM and MCS elements on your DMA. If these elements have not been configured yet, [add the necessary elements](xref:Adding_elements) using the [appropriate protocols](https://docs.dataminer.services/connector/doc/TAG_Video_Systems_MBC-7000.html).
 
 > [!TIP]
 > See also: [Use case: TAG VS – Tech Partner Integration](https://community.dataminer.services/use-case/tag-vs-tech-partner-integration/).
