@@ -75,7 +75,7 @@ helper.LogSuccess("Configuration was successful");
 
 helper.Log("Report a warning", LogEntryType.Warning);
    // generate a log record with a custom severity
-   // Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed,or Skyline.DataMiner.Core.SRM.Logging.Orchestration from version 2.0.1 of the SRM feature release onwards.
+   // Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed, or Skyline.DataMiner.Core.SRM.Logging.Orchestration from version 2.0.1 of the SRM feature release onwards.
 ```
 
 ### Adding custom log records from an LSO script
