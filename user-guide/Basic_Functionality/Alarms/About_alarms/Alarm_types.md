@@ -45,6 +45,8 @@ Several special alarm types exist in DataMiner:
 
 - [Correlated alarms](#correlated-alarms) group other alarms based on a Correlation rule.
 
+- [Incidents](xref:Automatic_incident_tracking) group other alarms based on AI.
+
 ### Information events
 
 An information event is a message distributed throughout the DataMiner System to draw attention to something. In the Alarm Console, these messages are shown in the default tab *Information events*.
@@ -97,10 +99,18 @@ You can expand a correlated alarm in order to see the base alarms that triggered
 
 The severity of a correlated alarm depends on the Correlation rule configuration. It can be the highest severity of its base alarms or a custom severity.
 
-Correlated alarms are represented in the Alarm Console with a special icon. This is also the icon used for [alarm groups](xref:Automatic_incident_tracking).
+Correlated alarms are represented in the Alarm Console with a special icon.
 
 ![Correlated alarm](~/user-guide/images/correlated_alarm.png)<br>
 *Correlated alarm in the Alarm Console in DataMiner 10.3.6*
+
+### Incidents
+
+[Alarm groups](xref:Automatic_incident_tracking), also known as incidents, are alarms triggered by the SLAnalytics process. They automatically group alarms related to the same incident based on advanced analytics.
+
+They use the same icon as correlated alarms, they can be expanded in the same way and their severity is always the highest severity of their base alarms.
+
+You can also manually create your own alarm group (see [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group).)
 
 ## Alarm type priority
 
