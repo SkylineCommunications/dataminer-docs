@@ -14,6 +14,8 @@ A new PTP page has been added to the Harmonic CableOS connector. On this page, t
 - RPD Port PTP Status Table
 - RPD PTP Clock Status Table
 
+While these parameters are currently not shown on the topology chains, you can retrieve this information with a dashboard or low-code app, or in a visual overview.
+
 #### New map dashboards added [ID_39319]
 
 New dashboards titled *03. CPE MAP* have been added to the solution, which will show a map of the passive device information associated with the selected entity. These maps can be accessed from the Dashboard module or via a new dashboard link on the Overview page when the selected entity is opened from the Topology app.
