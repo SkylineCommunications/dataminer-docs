@@ -22,6 +22,23 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
+#### MessageBroker: New NatsSession class properties 'UpdateOnReconnect' and 'DisconnectedHandler' [ID_38809]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The `NatsSession` class has the following new properties:
+
+- *UpdateOnReconnect*: Forces NATS to re-read its configuration when reconnecting.
+
+  The NATS configuration file can be modified during runtime. When NATS reconnects and *UpdateOnReconnect* is true, NATS will re-read its configuration, causing the NATS session to be updated accordingly.
+
+- *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
+
+  By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
+
+  > [!NOTE]
+  > When *DisconnectedHandler* is set to true, NATS will not update its configuration when reconnecting, not even when *UpdateOnReconnect* is set to true.
+
 #### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
@@ -91,6 +108,12 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 
 A number of security enhancements have been made.
 
+#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
+
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -154,6 +177,16 @@ From now on, when you change this setting, the change will take effect the momen
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
+
+#### SLDataGateway: Enhanced logging [ID_39341]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of the SLDataGateway process.
+
+The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cleaner entries, and entries of type "Error" will also be added to the *SLError.txt* file.
+
+Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
 
 #### GQI now also logs requests to SLNet [ID_39355]
 

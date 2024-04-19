@@ -179,6 +179,12 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
+
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -263,6 +269,16 @@ A proactive detecting suggestion event indicating a forecasted crossing of a cri
 Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
 
 From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
+#### SLDataGateway: Enhanced logging [ID_39341]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of the SLDataGateway process.
+
+The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cleaner entries, and entries of type "Error" will also be added to the *SLError.txt* file.
+
+Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
 
 #### GQI now also logs requests to SLNet [ID_39355]
 
