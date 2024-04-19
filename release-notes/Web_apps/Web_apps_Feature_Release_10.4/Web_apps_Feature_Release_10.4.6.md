@@ -159,3 +159,9 @@ In some cases, the dashboard theme would not be applied correctly to the icon in
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 Up to now, when you selected multiple DOM instances in a table (while holding the SHIFT button pressed) and then executed a script that used the feeds of those DOM instances as input parameters, only the first DOM instance you selected would be passed to the script. From now on, an array containing all selected DOM instances will be passed to the script.
+
+#### Dashboards app & Low-Code Apps: Errors mentioning caching problems could occur when you created a dashboard or a low-code app [ID_39437]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, a large number of errors mentioning caching problems could occur when you created a dashboard or a low-code app.
