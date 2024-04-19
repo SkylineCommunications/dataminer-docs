@@ -130,6 +130,12 @@ In the *All available data* section of the *Data* tab, not all data sets would s
 
 In some cases, a `Request was aborted` error could appear when a *Column & bar chart* component or a *Pie & donut chart* component refetched data while that same data was being fetched.
 
+#### Dashboards app & Low-Code Apps - Time picker: 'Now' button would round off time values incorrectly [ID_39323]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in the time picker, you clicked the *Now* button, in some cases, the time value would be rounded off incorrectly. When the current time was e.g. 10:58, the time would be rounded off to 10:00 instead of 11:00.
+
 #### Low-Code Apps: 'View published app' button would no longer be displayed when editing an app that had been published previously [ID_39339]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
