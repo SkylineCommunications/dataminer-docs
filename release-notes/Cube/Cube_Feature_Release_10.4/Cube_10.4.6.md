@@ -78,6 +78,12 @@ From now on, when you click *Group parameters* to ungroup all parameters, the pa
 
 When you opened a card, in some cases, the data on the card would not get loaded. As a result, the card would remain empty.
 
+#### Trend graph would show "no data" due to primary key being replaced by the display key in the trend data request [ID_39258]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some rare cases, a trend graph for a particular parameter would show "no data". This was due to the primary key being replaced by the display key in the message that requested the trend data to be displayed.
+
 #### Visual Overview: Problem with placeholder value update detection [ID_39325]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
