@@ -166,7 +166,7 @@ In addition, the following **other limitations** currently apply:
 
 ## Troubleshooting
 
-For troubleshooting issues with STaaS, please refer to this [page](xref:Troubleshooting_STaaS_Issues).
+For troubleshooting information related to STaaS, see [Troubleshooting STaaS issues](xref:Troubleshooting_STaaS_Issues).
 
 > [!NOTE]
-> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these with the procedures in the page referenced above, contact <staas@dataminer.services>.
+> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the available troubleshooting information, contact <staas@dataminer.services>.

@@ -2,82 +2,104 @@
 uid: Troubleshooting_STaaS_Issues
 ---
 
-# Troubleshooting STaaS Issues
-This page provides solutions to common issues that you may encounter while using STaaS. It covers problems related to cloud connectivity, registration, token expiration, and service reachability. 
-Each section provides a detailed explanation of the issue, the error messages you might see, and the steps to resolve it.
+# Troubleshooting STaaS issues
 
-## Not Cloud Connected
+This page provides solutions to common issues that you may encounter while using STaaS. It covers problems related to dataminer.services connectivity, registration, token expiration, and service reachability.
 
-If a system is not cloud connected and is trying to use STaaS, DataMiner won't be able to start. The following error message will be present in the SLCloudStorage.txt log file:
+## The DMS is not connected to dataminer.services
 
-`CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "This DMS is not Cloud Registered." }`
+If a system is trying to use STaaS but is not connected to dataminer.services, DataMiner will not be able to start up.
 
-To get your system Cloud Connected, please refer to this [page](xref:Connecting_your_DataMiner_System_to_the_cloud).
+The following error message will be present in the *SLCloudStorage.txt* log file:
 
-### Not registered to use STaaS
+```txt
+CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "This DMS is not Cloud Registered." }
+```
 
-If a system is not registered to use STaaS. DataMiner won't be able to start. The following error message will be present in the SLCloudStorage.txt log file:
+To connect your system to dataminer.services, refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-`CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a EndpointInfoAsync. (Failed to EndpointInfoAsync. (404)) `
+### The DMS is not registered to use STaaS
 
-To properly register your system, contact your Skyline representative or <staas@dataminer.services>.
+If a system is trying to use STaaS while it is not registered to use STaaS, DataMiner will not be able to start up.
 
-## CloudGateway down/not running
+The following error message will be present in the *SLCloudStorage.txt* log file:
 
-If CloudGateway is down or not running, DataMiner won't be able to startup, and the following error message can be seen in the SLCloudStorage.txt log file:
+```txt
+CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a EndpointInfoAsync. (Failed to EndpointInfoAsync. (404))
+```
 
-`CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No subscriber for the subject 'Skyline.Dataminer.Proto.CcaGatewayTypes.GetCcaGatewayConfigRequest' found. Check the process that should handle the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.`
+To register your system, contact your Skyline representative or <staas@dataminer.services>.
 
-To resolve this issue, go to Task Manager and restart the **DataMiner CloudGateway** service
+## CloudGateway is not running correctly
 
-## Token expiration
+If a system is trying to use STaaS but the CloudGateway DxM is not running or not running correctly, DataMiner will not be able to start up.
 
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail.
+The following error message will be present in the *SLCloudStorage.txt* log file:
 
-When you encounter this issue, you will find entries similar to the examples below in the SLCloudStorage.txt log file:
+```txt
+CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No subscriber for the subject 'Skyline.Dataminer.Proto.CcaGatewayTypes.GetCcaGatewayConfigRequest' found. Check the process that should handle the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.
+```
 
-`CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "The Service Principal of this DMS is expired (3/14/2023 8:09:51 AM +00:00) but should soon be refreshed automatically." }`
+To resolve this issue, go to Task Manager and restart the *DataMiner CloudGateway* service.
 
-`CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No responders are available for the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.`
+## The session token has expired
 
-To resolve this issue, use the following workaround:
+Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
+
+When you encounter this issue, you will find entries similar to the examples below in the *SLCloudStorage.txt* log file:
+
+```txt
+CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "The Service Principal of this DMS is expired (3/14/2023 8:09:51 AM +00:00) but should soon be refreshed automatically." }
+```
+
+```txt
+CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No responders are available for the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.
+```
+
+To resolve this issue:
 
 1. [Open SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool) on the DMA.
+
+   > [!WARNING]
+   > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 1. Select *Offline Tools* > *CcaGateway (offline)* > *Renew cloud session* and complete the renew process.
 
    > [!NOTE]
    > As the renewal of the Service Principal (SP) token is managed by a cloud service, it can take a few minutes before the renewal is fully synced.
 
-1. Wait a few minutes and then restart the DMA. The issue should be resolved now.
+1. Wait a few minutes and then restart the DMA.
+
+   The issue should now be resolved.
 
 > [!NOTE]
-> If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
+> If the DataMiner System consists of multiple DMAs, it is sufficient to do this on one of the DMAs.
 
-## STaaS is unreachable 
+## STaaS is unreachable
 
-If STaaS becomes unreachable for any reason, the following error message will appear in your alarm console:
+If STaaS is unreachable for some reason, the following error message will be shown in the Alarm Console:
 
-![image](https://github.com/SkylineCommunications/dataminer-docs/assets/120723729/40acf88a-0d26-445b-b3cf-bc8c77102f34)
+![Error in Alarm Console](~/user-guide/images/STaaS_troubleshooting_Alarm_Console.png)
 
-DataMiner will automatically initiate offload mode, ensuring that no data loss occurs. While this error is displayed in your alarm console, it is important **not** to restart the system or any elements. 
-Typically, this issue resolves itself. If it persists, users are advised to contact support.
+DataMiner will automatically initiate offload mode, ensuring that no data loss occurs. While this error is displayed in the Alarm Console, **do not restart** the system or any of its elements.
 
-## API Deployment Manager failed to initialize
+This issue will typically resolves itself. If it persists, contact support.
 
-When the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is still enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in Cube:
+## The API Deployment Manager failed to initialize
+
+If the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in DataMiner Cube:
 
 ```txt
 APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
 ```
 
-In the SLDBConnection.txt log file, the error will look like this:
+In the *SLDBConnection.txt* log file, you will find this error:
 
 ```txt
 2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
 ```
 
-To resolve this issue, remove the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option from *SoftLaunchOptions.xml*.
+The [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is **not supported** on systems using STaaS. To resolve this issue, remove the option from *SoftLaunchOptions.xml*.
 
 ## Connector-specific issues
 
