@@ -178,6 +178,16 @@ From now on, when you change this setting, the change will take effect the momen
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
+#### SLDataGateway: Enhanced logging [ID_39341]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of the SLDataGateway process.
+
+The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cleaner entries, and entries of type "Error" will also be added to the *SLError.txt* file.
+
+Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
+
 #### GQI now also logs requests to SLNet [ID_39355]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
