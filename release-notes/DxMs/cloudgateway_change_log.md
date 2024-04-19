@@ -4,6 +4,12 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ server
+
+Extended the CloudGateway with the capability to offload data when installed on a DMZ server.
+
+Several dependencies have been updated.
+
 #### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID_39113]
 
 It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM. 
