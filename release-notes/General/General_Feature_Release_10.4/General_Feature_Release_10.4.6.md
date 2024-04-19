@@ -74,6 +74,12 @@ From now on, it is also possible to migrate data towards a STaaS system that is 
 
 ### Enhancements
 
+#### Security enhancements [ID_38869]
+
+<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
+
+A number of security enhancements have been made.
+
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
