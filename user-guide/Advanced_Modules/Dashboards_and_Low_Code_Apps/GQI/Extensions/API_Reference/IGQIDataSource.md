@@ -33,7 +33,7 @@ The GQI will request data.
 A [GQIPage](xref:GQI_GQIPage) with the data.
 
 > [!TIP]
-> In many cases, not all data is immediately required to generate a query result. Thus, it's beneficial to partition rows into separate pages, so individual pages can be requested and processed as needed, enhancing both speed and memory efficiency.
+> In numerous scenarios, not all data is required immediately to generate a query result. Therefore, partitioning rows into separate pages proves beneficial, allowing individual pages to be requested and processed as needed. This approach enhances both speed and memory efficiency.
 
 #### Examples
 
@@ -50,7 +50,7 @@ public GQIPage GetNextPage(GetNextPageInputArgs args)
     var rows = FetchPagedData(pageCounter);
     pageCounter++;
 
-    // If a full page is retrieved we assume there is more data
+    // If a full page is retrieved, we assume there is more data
     var hasNextPage = rows.Length == pageSize;
     return new GQIPage(rows)
     {
