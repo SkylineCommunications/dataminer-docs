@@ -141,6 +141,12 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 `CParameter::ReadSettings|CRU|-1|!! Unknown <Type> MATRIX for parameter`
 
+#### Redundancy group and derived element no longer visible in UI after deleting a protocol used by elements in that redundancy group [ID_39411]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+
 #### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
