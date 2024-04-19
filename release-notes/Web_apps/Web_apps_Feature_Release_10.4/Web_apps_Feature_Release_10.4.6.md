@@ -16,7 +16,16 @@ uid: Web_apps_Feature_Release_10.4.6
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: Parameter table filter feeds are now also supported [ID_39335]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Low-code apps now also support parameter table filter feeds if the URL option `showAdvancedSettings=true` is used.
+
+This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+
+> [!NOTE]
+> You can use feeds found either on the same page or on another page.
 
 ## Changes
 
@@ -121,6 +130,12 @@ In the *All available data* section of the *Data* tab, not all data sets would s
 
 In some cases, a `Request was aborted` error could appear when a *Column & bar chart* component or a *Pie & donut chart* component refetched data while that same data was being fetched.
 
+#### Dashboards app & Low-Code Apps - Time picker: 'Now' button would round off time values incorrectly [ID_39323]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in the time picker, you clicked the *Now* button, in some cases, the time value would be rounded off incorrectly. When the current time was e.g. 10:58, the time would be rounded off to 10:00 instead of 11:00.
+
 #### Low-Code Apps: 'View published app' button would no longer be displayed when editing an app that had been published previously [ID_39339]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -144,3 +159,9 @@ In some cases, the dashboard theme would not be applied correctly to the icon in
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 Up to now, when you selected multiple DOM instances in a table (while holding the SHIFT button pressed) and then executed a script that used the feeds of those DOM instances as input parameters, only the first DOM instance you selected would be passed to the script. From now on, an array containing all selected DOM instances will be passed to the script.
+
+#### Dashboards app & Low-Code Apps: Errors mentioning caching problems could occur when you created a dashboard or a low-code app [ID_39437]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, a large number of errors mentioning caching problems could occur when you created a dashboard or a low-code app.

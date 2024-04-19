@@ -11,11 +11,12 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38263] [ID_38951]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38263] [ID_38869] [ID_38951]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
 
 A number of security enhancements have been made.
@@ -140,6 +141,17 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner SupportAssistant: version 1.6.8
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
+
+The dynamic timeout will be calculated as the time it would take to send the chunk at a speed of 1 Mbps, rounded up to the nearest second.
+
+> [!NOTE]
+> The minimum timeout will always be 5 seconds.
 
 #### GQI: Ad hoc data source now supports real-time updates [ID_38643]
 

@@ -111,6 +111,12 @@ Performance has increased when logging on to cloud-connected DataMiner Agents or
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
+#### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+From now on, it will no longer be possible to create new elements as long as SLDataMiner has not finished loading all element information. If an attempt is made to create an element while SLDataMiner is still loading element information, an `Agent is starting up` error will now be returned.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
@@ -126,3 +132,23 @@ After a DataMiner startup, in some cases, certain alarm groups would either be i
 When string parameters are parsed, both an ASCII version and a Unicode version of the string value should be returned. However, up to now, when a string parameter was a table column parameter, the `Interprete` type of the table would be used. As a result, string values would be processed incorrectly.
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
+
+#### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID_39398]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, SLProtocol would add the following line in the log file of an element when it encountered the [parameter type "matrix"](xref:UIComponentsTableMatrix).
+
+`CParameter::ReadSettings|CRU|-1|!! Unknown <Type> MATRIX for parameter`
+
+#### Redundancy group and derived element no longer visible in UI after deleting a protocol used by elements in that redundancy group [ID_39411]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+
+#### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.

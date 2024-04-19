@@ -47,3 +47,9 @@ After a DataMiner startup, in some cases, certain alarm groups would either be i
 When string parameters are parsed, both an ASCII version and a Unicode version of the string value should be returned. However, up to now, when a string parameter was a table column parameter, the `Interprete` type of the table would be used. As a result, string values would be processed incorrectly.
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
+
+#### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.

@@ -74,6 +74,23 @@ From now on, it is also possible to migrate data towards a STaaS system that is 
 
 ### Enhancements
 
+#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
+
+The dynamic timeout will be calculated as the time it would take to send the chunk at a speed of 1 Mbps, rounded up to the nearest second.
+
+> [!NOTE]
+> The minimum timeout will always be 5 seconds.
+
+#### Security enhancements [ID_38869]
+
+<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
+
+A number of security enhancements have been made.
+
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -177,6 +194,12 @@ From now on, this error message will include a reference to the StorageModule lo
 
 `More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
 
+#### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+From now on, it will no longer be possible to create new elements as long as SLDataMiner has not finished loading all element information. If an attempt is made to create an element while SLDataMiner is still loading element information, an `Agent is starting up` error will now be returned.
+
 ### Fixes
 
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
@@ -192,3 +215,23 @@ After a DataMiner startup, in some cases, certain alarm groups would either be i
 When string parameters are parsed, both an ASCII version and a Unicode version of the string value should be returned. However, up to now, when a string parameter was a table column parameter, the `Interprete` type of the table would be used. As a result, string values would be processed incorrectly.
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
+
+#### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID_39398]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, SLProtocol would add the following line in the log file of an element when it encountered the [parameter type "matrix"](xref:UIComponentsTableMatrix).
+
+`CParameter::ReadSettings|CRU|-1|!! Unknown <Type> MATRIX for parameter`
+
+#### Redundancy group and derived element no longer visible in UI after deleting a protocol used by elements in that redundancy group [ID_39411]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+
+#### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
