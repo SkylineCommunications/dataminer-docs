@@ -22,6 +22,23 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
+#### MessageBroker: New NatsSession class properties 'UpdateOnReconnect' and 'DisconnectedHandler' [ID_38809]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The `NatsSession` class has the following new properties:
+
+- *UpdateOnReconnect*: Forces NATS to re-read its configuration when reconnecting.
+
+  The NATS configuration file can be modified during runtime. When NATS reconnects and *UpdateOnReconnect* is true, NATS will re-read its configuration, causing the NATS session to be updated accordingly.
+
+- *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
+
+  By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
+
+  > [!NOTE]
+  > When *DisconnectedHandler* is set to true, NATS will not update its configuration when reconnecting, not even when *UpdateOnReconnect* is set to true.
+
 #### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
