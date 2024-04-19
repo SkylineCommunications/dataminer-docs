@@ -96,7 +96,7 @@ To set up external authentication, you first need to create an enterprise applic
 
 1. Still on the *Single sign-on* page, look for the *SAML Certificates* section and copy the *App Federation Metadata Url*.
 
-   You will need this later, for the **ipMetadata**, when [configuring DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
+   You will need this later, for the *ipMetadata* [configuration in DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
 
 ### Creating a DataMiner metadata file
 
