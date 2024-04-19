@@ -212,3 +212,9 @@ From now on, when a table cell is saved, the `Interprete` type of the column wil
 Up to now, SLProtocol would add the following line in the log file of an element when it encountered the [parameter type "matrix"](xref:UIComponentsTableMatrix).
 
 `CParameter::ReadSettings|CRU|-1|!! Unknown <Type> MATRIX for parameter`
+
+#### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
