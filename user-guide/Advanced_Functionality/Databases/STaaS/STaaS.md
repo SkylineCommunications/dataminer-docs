@@ -166,53 +166,7 @@ In addition, the following **other limitations** currently apply:
 
 ## Troubleshooting
 
-> [!NOTE]
-> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these with the procedures below, contact <staas@dataminer.services>.
-
-### Cloud connection lost
-
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail.
-
-When you encounter this issue, you will find entries similar to the examples below in the SLDBConnection.txt log file:
-
-`2023/10/02 14:04:23.458|SLDBConnection|SLCloudStorage|INF|0|6|2023-10-02T14:04:23.442|FATAL|DataGateway.CloudStorage.CloudStorage|CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "The Service Principal of this DMS is expired (3/14/2023 8:09:51 AM +00:00) but should soon be refreshed automatically." }`
-
-`2023/10/02 14:05:33.981|SLDBConnection|SLCloudStorage|INF|0|6|2023-10-02T14:05:33.980|FATAL|DataGateway.CloudStorage.CloudStorage|CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No responders are available for the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.`
-
-To resolve this issue, use the following workaround:
-
-1. [Open SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool) on the DMA.
-
-1. Select *Offline Tools* > *CcaGateway (offline)* > *Renew cloud session* and complete the renew process.
-
-   > [!NOTE]
-   > As the renewal of the Service Principal (SP) token is managed by a cloud service, it can take a few minutes before the renewal is fully synced.
-
-1. Wait a few minutes and then restart the DMA. The issue should be resolved now.
+For troubleshooting information related to STaaS, see [Troubleshooting STaaS issues](xref:Troubleshooting_STaaS_Issues).
 
 > [!NOTE]
-> If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
-
-### API Deployment Manager failed to initialize
-
-When the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is still enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in Cube:
-
-```txt
-APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
-```
-
-In the SLDBConnection.txt log file, the error will look like this:
-
-```txt
-2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
-```
-
-To resolve this issue, remove the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option from *SoftLaunchOptions.xml*.
-
-### Connector-specific issues
-
-Some connector versions may contain a bug that causes a lot of parameter sets to be saved to the database. In the interest of saving cost and reducing load, we therefore **recommend using the latest version** available for most connectors.
-
-This issue is known to occur with the following connector versions:
-
-- [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
+> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the available troubleshooting information, contact <staas@dataminer.services>.
