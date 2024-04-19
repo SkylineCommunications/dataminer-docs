@@ -108,6 +108,12 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 
 A number of security enhancements have been made.
 
+#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
+
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
