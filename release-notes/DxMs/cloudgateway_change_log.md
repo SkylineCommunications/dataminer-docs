@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ server
 
-Extended the CloudGateway with the capability to offload data when installed on a DMZ server.
+The CloudGateway DxM has been extended with the capability to offload data when installed on a DMZ server.
 
 Several dependencies have been updated.
 
