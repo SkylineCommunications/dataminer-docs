@@ -145,7 +145,7 @@ To set up external authentication, you first need to create an enterprise applic
        </md:SPSSODescriptor>
      ```
 
-1. Replace [ENTITYID] with the IP address or the DNS name of your DataMiner System, for example ``https://dataminer.example.com/``. This must be the same as the *Entity ID* you specified while setting up the Microsoft Entra ID Enterprise application.
+1. Replace [ENTITYID] with the IP address or the DNS name of your DataMiner System. This URL must be the same as the *Entity ID* you specified while setting up the Microsoft Entra ID Enterprise application.
 
 1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. The specified URL(s) must match the *Reply URL* you specified while setting up the Microsoft Entra ID Enterprise application.
 
