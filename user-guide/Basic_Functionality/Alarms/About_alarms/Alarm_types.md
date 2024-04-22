@@ -45,7 +45,7 @@ Several special alarm types exist in DataMiner:
 
 - [Correlated alarms](#correlated-alarms) group other alarms based on a Correlation rule.
 
-- [Incidents](xref:Automatic_incident_tracking) group other alarms based on AI.
+- [Incidents](#incidents) group other alarms based on AI.
 
 ### Information events
 
@@ -108,7 +108,7 @@ Correlated alarms are represented in the Alarm Console with a special icon.
 
 [Alarm groups](xref:Automatic_incident_tracking), also known as incidents, are alarms triggered by the SLAnalytics process. They automatically group alarms related to the same incident based on advanced analytics.
 
-They use the same icon as correlated alarms, they can be expanded in the same way and their severity is always the highest severity of their base alarms.
+They use the same icon as correlated alarms, and they can be expanded in the same way as correlated alarms. Their severity is always the highest severity of their base alarms.
 
 You can also manually create your own alarm group (see [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group).)
 
