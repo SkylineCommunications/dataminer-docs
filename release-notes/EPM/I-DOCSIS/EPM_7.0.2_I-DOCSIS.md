@@ -43,6 +43,13 @@ On the overview page for a CCAP or CM, users can now click dedicated *Ping* and 
 > [!NOTE]
 > To make use of this functionality, [DITT](xref:Dataminer_IT_Tool_Overview) must be deployed in the DataMiner System.
 
+#### CISCO CBR-8 CCAP Platform: New Service Group Naming Convention parameter to determine fiber node description [ID_39448]
+
+On the *Debug* page of the CISCO CBR-8 CCAP Platform element, it is now possible to define which descriptor is used for the fiber node, using the new parameter *Service Group Naming Convention*. This parameter can have the following values:
+
+- *Interface Alias*: The alias of the cable interface associated with the fiber node will be used. This is the previous default behavior.
+- *Node MIB*: The *ccwbFiberNodeDescription* MIB table will be used to retrieve the description.
+
 ## Changes
 
 ### Enhancements
