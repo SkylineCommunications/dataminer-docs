@@ -23,13 +23,13 @@ The log file name is formatted as *Script_Library_Type.txt*.
 
 ## The log format
 
-The log format is:
+Logged messages are formatted als follows:
 
 ```log
 [Timestamp Level] [Session] [Node] Message
 ```
 
-A concrete example could be:
+A concrete example:
 
 ```log
 [1993-02-21 12:34:56.789 WRN] [c6a3d4bf] [71ba5588] This is an important warning!
@@ -44,7 +44,7 @@ It consists of these distinct parts:
 - **Message**: any message that GQI or the extension wants to log.
 
 > [!NOTE]
-> Whenever an extension instance accesses the logger property, the current GQI user will be logged immediately to give additional context that is otherwise not available for individual log messages. You can see this in the logs of the [example](#example).
+> Whenever an extension instance accesses the logger property, the current GQI user will be logged immediately as a separate log message to give additional context that is otherwise not available for individual log messages. You can see this in the logs of the [example](#example).
 
 ## Example
 
