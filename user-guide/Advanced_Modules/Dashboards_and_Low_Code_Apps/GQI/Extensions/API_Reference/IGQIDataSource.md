@@ -54,7 +54,7 @@ public GQIPage GetNextPage(GetNextPageInputArgs args)
     var hasNextPage = rows.Length == pageSize;
     return new GQIPage(rows)
     {
-        HasNextPage = hasNextPage;
+        HasNextPage = hasNextPage,
     };
 }
 
