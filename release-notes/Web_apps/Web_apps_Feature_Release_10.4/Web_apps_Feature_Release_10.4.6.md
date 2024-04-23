@@ -27,6 +27,29 @@ This type of filter supports both VALUE and FULLFILTER syntax. For more informat
 > [!NOTE]
 > You can use feeds found either on the same page or on another page.
 
+#### Dashboards app & Low-Code Apps - Node edge graph component: New configuration options [ID_39417]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When configuring the nodes and edges of a *Node edge graph* component, you now have a number of additional options.
+
+##### Nodes
+
+When configuring the nodes of a *Node edge graph* component, you can now configure the X and Y positions of those nodes. When, in the *Layout* tab, *Node positions* is set to "Linked as data", you can now set the following additional options:
+
+- *X*: The query column containing the X positions of the nodes.
+- *Y*: The query column containing the Y positions of the nodes.
+
+Also, apart from an icon, you can now make node shapes show a particular custom image.
+
+##### Nodes and/or edges
+
+When configuring the nodes and/or the edges of a *Node edge graph* component, you can now enable or disable the following options:
+
+- *Enable tooltip*: When the URL option *showAdvancedSettings=true* is used, you can use this option to specify whether or not a tooltip should appear when you hover over a node/edge.
+
+- *Show metric*: When the URL option *showAdvancedSettings=true* is used, you can use this option to specify whether the nodes/edges should be highlighted with their conditional color.
+
 ## Changes
 
 ### Enhancements
