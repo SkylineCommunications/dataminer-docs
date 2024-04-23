@@ -18,7 +18,7 @@ This section consists of the following topics:
 
 - [Adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules)
 
-- [Lengthy Correlation Rules](xref:Lengthy_Correlation_Rules)
+- [Best practices when creating Correlation rules](xref:Best_Practices_When_Creating_Correlation_Rules)
 
 - [Correlation rule syntax](xref:Correlation_rule_syntax)
 

@@ -1,22 +1,24 @@
 ---
-uid: Lengthy_Correlation_Rules
+uid: Best_Practices_When_Creating_Correlation_Rules
 ---
 
-# Lengthy Correlation Rules
+# Best practices when creating Correlation rules
 
-## What are lengthy Correlation rules
+## Avoid Lengthy Correlation Rules
+
+### What are lengthy Correlation rules
 
 Lengthy Correlation rules are rules whose actions take a long time to complete.
 While those actions are executing, Correlation cannot perform other tasks. This has a negative impact on the system.
 
-## Implications of lengthy Correlation rules
+### Implications of lengthy Correlation rules
 
 - Other Correlation rules may encounter delays in accessing data that interests them due to the prolonged execution of lengthy rules. Consequently, these rules may execute their actions later than anticipated.
 
 - When lengthy Correlation Rules are running, it can lead to the occurrence of Runtime Errors (RTEs).
 
 
-## Proposed improvements
+### Proposed improvements
 
 - When a Correlation rule executes an automation script that contains sleeps, check if it is possible to reduce or even remove these. Whether this is possible depends entirely on the context and the purpose of those sleeps.
 
