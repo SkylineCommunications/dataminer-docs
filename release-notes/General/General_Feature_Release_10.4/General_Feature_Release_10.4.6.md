@@ -159,6 +159,12 @@ Performance has increased when logging on to cloud-connected DataMiner Agents or
 
 Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
 
+#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
