@@ -12,11 +12,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 #### 25 April 2024 - Enhancement - Settings overhaul [ID_39277]
 
 The dataminer.services settings, configurable from the Admin app, have been enhanced with the following improvements:
-- In addition to one global Remote Access setting, there are now sub/child settings that apply to remote accessing Cube, the User-Definable APIs and the web apps.
-- A new setting has been added for Live Sharing (dashboard sharing).
 - From now on settings have a hierarchical structure where disabled parent settings overwrite their sub/child settings. 
-- Settings are now also configureable on the organization where disabled organization settings overwrite the same setting on all its DataMiner Systems, this also applies for all its sub/child settings.
-- Settings are shown/managed from a seperate page for the organization and for each DMS.
+- Settings are now also configureable on the organization where disabled organization settings overwrite the same setting on all its DataMiner Systems. This also applies for all its sub/child settings.
+- Settings are displayed and managed from a seperate page for the organization and for each DMS.
+- A new setting has been added for Live Sharing (dashboard sharing).
+- In addition to one global Remote Access setting, there are now sub/child settings that apply to remote accessing Cube, the User-Definable APIs and the web apps.
 
 #### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
 
