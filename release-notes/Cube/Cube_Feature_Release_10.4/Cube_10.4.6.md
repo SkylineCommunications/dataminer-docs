@@ -64,6 +64,12 @@ Because of a number of enhancements, overall performance has now increased when 
 
 ### Fixes
 
+#### Memory leak in Alarm Console [ID_38819]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the Alarm Console could leak memory.
+
 #### Spectrum monitors: Parameter positions would incorrectly be reused [ID_39225]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
