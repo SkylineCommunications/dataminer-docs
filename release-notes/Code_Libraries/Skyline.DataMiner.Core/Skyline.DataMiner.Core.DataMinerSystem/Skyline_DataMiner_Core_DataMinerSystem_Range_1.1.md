@@ -9,13 +9,13 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.1.9
 
-#### New feature - Monitors added to subscribe on view alarm level and view state
+#### New feature - Monitors added to subscribe to view alarm level and view state
 
 Monitors have been added to subscribe to view alarm level and view state.
 
-#### Fix - Support scripted connector types
+#### Enhancement - Support added for scripted connector types
 
-With the introduction of DataAPI and scripted connectors, the *ConnectionType* enum has been extended with the new types.
+With the introduction of the Data API module and scripted connectors, the *ConnectionType* enum has been extended with the new types.
 
 ### 1.1.1.8
 
