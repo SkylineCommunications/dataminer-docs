@@ -188,3 +188,19 @@ Up to now, when you selected multiple DOM instances in a table (while holding th
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, a large number of errors mentioning caching problems could occur when you created a dashboard or a low-code app.
+
+#### Dashboards app & Low-Code Apps - Time range component: Minor issues [ID_39458]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+The following minor issues regarding the *Time range* component have been fixed:
+
+- The option *Layout > Advanced> Layout & Alignment > Align current time position* would no longer be visible.
+
+  From now on, the option *Layout > Advanced> Layout & Alignment > Align current time position* will be visible when the option *Layout > Advanced > Show current range* is enabled.
+
+- The option *Layout > Advanced > Layout & Alignment > Show refresh timer* would always be visible, but would have no effect when the option *Settings > General > Allow refresh* was disabled.
+
+  From now on, the option *Layout > Advanced > Layout & Alignment > Show refresh timer* wil only be visible when *Settings > General > Allow refresh* is enabled.
+
+- When, in the *Layout > Advanced* section, you had only selected quick picks from the *Starting from now*, **Near future* and *Distant future* categories, the *Time range* component would incorrectly show `No quick picks have been selected`.
