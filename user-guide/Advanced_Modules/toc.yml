@@ -178,6 +178,8 @@ items:
             topicUid: Testing_a_Correlation_rule
       - name: General configuration of Correlation rules
         topicUid: General_configuration_of_Correlation_rules
+      - name: Lengthy Correlation rules
+        topicUid: Lengthy_Correlation_Rules
       - name: Filtering and grouping base alarms for Correlation rules
         topicUid: Filtering_and_grouping_base_alarms_for_Correlation_rules
         items:
