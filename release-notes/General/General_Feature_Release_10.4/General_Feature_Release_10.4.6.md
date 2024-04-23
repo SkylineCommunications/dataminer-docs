@@ -161,7 +161,7 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 
 #### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
 
-<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+<!-- MR 10.5.0 - FR 10.4.6 -->
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
@@ -239,6 +239,39 @@ When DataMiner fails to start up due to a problem that occurred while connecting
 From now on, this error message will include a reference to the StorageModule log file, in which you can find more information about the problem that occurred:
 
 `More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
+
+#### MySql.Data.dll file is now deprecated [ID_39370]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, should from now on be considered deprecated.
+
+This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
+
+To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
+
+1. Open DataMiner Cube.
+1. Open *System Center*.
+1. Go to *Agents > BPA*.
+1. Run the *Check Deprecated MySql DLL* test (if it has not been run yet).
+1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and Automation scripts that are still using this DLL file.
+
+   This overview is displayed as a string in JSON format. It will contain the following information:
+
+   - The names and versions of the protocols that are still using this file, including the IDs of the QActions in which this file is referenced.
+   - The names of the Automation scripts that are still using this file.
+
+1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and Automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
+
+When you have replaced all references to the *MySql.Data.dll* file, do the following:
+
+1. Stop the DataMiner Agent.
+1. Remove the *MySql.Data.dll* file from the `C:\Skyline DataMiner\ProtocolScripts\` folder.
+1. Start the DataMiner Agent.
+
+> [!IMPORTANT]
+> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
+> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the error log for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
 
 #### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
 

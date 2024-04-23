@@ -256,6 +256,12 @@ As to logging, behavior has changed with respect to exceptions:
 
 Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
 
+#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -327,7 +333,7 @@ The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, s
 
 This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
 
-To remove all references to the MySql.Data.dll file in your protocols and Automation scripts, do the following:
+To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
 
 1. Open DataMiner Cube.
 1. Open *System Center*.
@@ -349,7 +355,7 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 1. Start the DataMiner Agent.
 
 > [!IMPORTANT]
-> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the MySql.Data.dll file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the MySql.Data.dll file, the BPA will not be able to detect this.
+> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
 > When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the error log for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
 
 ### Fixes

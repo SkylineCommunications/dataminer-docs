@@ -105,12 +105,6 @@ The following requests now have an optional `QueryName` property:
 
 Performance has increased when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client.
 
-#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
-
-<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
-
-From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
-
 #### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID_39308]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
