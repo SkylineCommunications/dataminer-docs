@@ -70,12 +70,13 @@ Note that DIS will always include the latest version of the `SLAppPackageInstall
 ```
 
 > [!NOTE]
-> While for regular Automation scripts you need to provide a full path to any referenced assemblies this is not the case for references in an install script. This is because when installing the package, the referenced assemblies will be available in the `C:\Skyline DataMiner\AppPackages\Installed\<PackageName>.<PackageVersion>\Scripts\InstallDependencies` directory and DataMiner will automatically update the references to point to the corresponding assemblies in this directory.
+> While for regular Automation scripts you need to provide a full path to any referenced assemblies, this is not the case for references in an install script. This is because when the package is installed, the referenced assemblies will be available in the `C:\Skyline DataMiner\AppPackages\Installed\<PackageName>.<PackageVersion>\Scripts\InstallDependencies` directory, and DataMiner will automatically update the references to point to the corresponding assemblies in this directory.
 
 #### SetupContent
 
-In case you require specific files that you only need during the installation of the package you can do this by putting these files in the `SetupContent` directory of the solution.
-These files will only be available during the installation. To obtain the path to this directory from the install script, you can use the `installer.GetSetupContentDirectory()`. If the package contains a `SetupContent` directory, this method will return the full path to this directory so you can use the files in this folder to perform some custom operations during installation of the package. If the folder does not exist, this method will return `null`.
+In case you require specific files that you only need during the installation of the package, you can configure this by putting these files in the `SetupContent` directory of the solution. These files will only be available during the installation.
+
+To obtain the path to this directory from the install script, you can use `installer.GetSetupContentDirectory()`. If the package contains a `SetupContent` directory, this method will return the full path to this directory, so you can use the files in this folder to perform custom operations during installation of the package. If the folder does not exist, this method will return `null`.
 
 ## Uninstall.xml
 
