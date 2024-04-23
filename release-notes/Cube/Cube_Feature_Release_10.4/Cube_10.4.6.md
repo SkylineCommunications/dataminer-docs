@@ -102,6 +102,12 @@ In some cases, the algorithm that had to detect placeholder value updates would 
 
 When, in the *Alarm Console*, you had selected *Statistical view* or *Reports view*, it would incorrectly no longer be possible to filter alarms based on focus.
 
+#### Visual Overview: Problem when a session variable in a URL of an embedded web browser was updated [ID_39403]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in Visual Overview, a session variable in a URL of an embedded web browser was updated, in some cases, an exception could be thrown.
+
 #### Dialog box controls showing underlined text and opening up a dropdown list when clicked would not open their dropdown list when you pressed ALT+DOWN [ID_39423]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
