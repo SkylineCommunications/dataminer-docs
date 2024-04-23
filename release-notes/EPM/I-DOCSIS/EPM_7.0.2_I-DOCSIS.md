@@ -50,6 +50,9 @@ On the *Debug* page of the CISCO CBR-8 CCAP Platform element, it is now possible
 - *Interface Alias*: The alias of the cable interface associated with the fiber node will be used. This is the previous default behavior.
 - *Node MIB*: The *ccwbFiberNodeDescription* MIB table will be used to retrieve the description.
 
+> [!NOTE]
+> Only the administrator user can access this parameter directly. Other users can change its value using the multiple set feature.
+
 ## Changes
 
 ### Enhancements
