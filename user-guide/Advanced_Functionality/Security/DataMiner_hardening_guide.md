@@ -21,13 +21,11 @@ A good start for hardening your DataMiner is to make use of the available BPA te
 
 For information on how to run these tests, refer to [Running BPA tests](xref:Running_BPA_tests).
 
-There are many BPA tests available, but these are the most important ones in relation to this guide:
+There are many BPA tests available, but from DataMiner 10.4.5/10.4.0 [CU3], all security checks are available in a single BPA: the (Security Advisory BPA)[xref:BPA_Security_Advisory]. For systems running DataMiner versions 10.2.12/1.3.0 until 10.4.5/10.4.0 [CU3], some security checks are available in their dedicated BPAs:
 
 - [Database Security](xref:BPA_Database_Security)
 - [Firewall Configuration](xref:BPA_Firewall_Configuration)
 - [HTTPS Configuration](xref:BPA_Https_Configuration)
-
-All three of these are available by default from DataMiner 10.2.12/10.3.0 onwards.
 
 After you have run these BPA tests, they will provide an overview of the detected issues and point you to the right documentation to resolve them.
 
