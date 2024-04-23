@@ -37,17 +37,17 @@ Also, a number of client messages have been adapted to support passing this new 
 
 From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
 
-1. Re-read the NATS configuration file.
+1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-Also, the `NatsSession` class has the following new property:
+Also, the `NatsSessionOptions` class has the following new property:
 
 - *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
 
   By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
 
   > [!IMPORTANT]
-  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read its configuration.
+  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
 
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
 

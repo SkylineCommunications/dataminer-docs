@@ -28,17 +28,17 @@ uid: General_Feature_Release_10.4.6
 
 From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
 
-1. Re-read the NATS configuration file.
+1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-Also, the `NatsSession` class has the following new property:
+Also, the `NatsSessionOptions` class has the following new property:
 
 - *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
 
   By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
 
   > [!IMPORTANT]
-  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read its configuration.
+  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
 
 #### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
 
@@ -164,6 +164,12 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 A proactive detecting suggestion event indicating a forecasted crossing of a critical alarm threshold will now be cleared sooner. As soon as the system detects that the predicted trend has dropped below the threshold in question will the suggestion event be cleared.
+
+#### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID_39308]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, Cube clients connected to a DataMiner Agent via a gRPC connection will now be able to better detect when they have been disconnected.
 
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 

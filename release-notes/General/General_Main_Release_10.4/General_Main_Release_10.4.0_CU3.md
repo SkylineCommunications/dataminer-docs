@@ -105,6 +105,12 @@ The following requests now have an optional `QueryName` property:
 
 Performance has increased when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client.
 
+#### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID_39308]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, Cube clients connected to a DataMiner Agent via a gRPC connection will now be able to better detect when they have been disconnected.
+
 #### Enhanced performance when starting up a DataMiner Agent [ID_39331]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
