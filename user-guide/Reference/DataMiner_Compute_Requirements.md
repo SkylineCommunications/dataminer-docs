@@ -103,11 +103,11 @@ DataMiner requires a server with a name that is **no longer than 15 characters**
 
 ## Standalone Cloud Gateway server requirements
 
-If you want to connect your system to the dataminer.services platform, but would prefer to use a separate server for this, the server will need to meet the following requirements:
+If you want to [connect your system to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) but would prefer to use a dedicated Cloud Gateway server for this, the server will need to meet the following requirements:
 
 ### Operating System
 
-See "Operating system" under "DataMiner Requirements".
+See "Operating system" under [DataMiner requirements](#dataminer-requirements).
 
 ### RAM
 
