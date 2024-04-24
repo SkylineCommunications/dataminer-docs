@@ -212,3 +212,9 @@ The following minor issues regarding the *Time range* component have been fixed:
   From now on, the option *Layout > Advanced > Layout & Alignment > Show refresh timer* wil only be visible when *Settings > General > Allow refresh* is enabled.
 
 - When, in the *Layout > Advanced* section, you had only selected quick picks from the *Starting from now*, **Near future* and *Distant future* categories, the *Time range* component would incorrectly show `No quick picks have been selected`.
+
+#### Dashboards app & Low-Code Apps: Page would incorrectly scroll when you clicked a Grid, Service definition or Node edge graph components [ID_39463]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you clicked a *Grid*, a *Service definition* or a *Node edge graph* component, in some cases, the page would incorrectly scroll until the component was at the top of the window.
