@@ -301,6 +301,12 @@ When string parameters are parsed, both an ASCII version and a Unicode version o
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
 
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+
 #### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID_39398]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
