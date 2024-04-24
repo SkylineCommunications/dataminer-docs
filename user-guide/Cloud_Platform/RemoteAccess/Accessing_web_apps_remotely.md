@@ -4,7 +4,7 @@ uid: Accessing_web_apps_remotely
 
 # Accessing DataMiner web apps remotely
 
-If [remote accessing the web apps is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access each of the DataMiner web apps via the [remote access URL](xref:Cloud_Remote_Access_URL):
+If [remote access to the web apps is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access each of the DataMiner web apps via the [remote access URL](xref:Cloud_Remote_Access_URL):
 
 - [Accessing the Monitoring app via dataminer.services](xref:Accessing_the_Monitoring_app#accessing-the-monitoring-app-via-dataminerservices)
 - [Accessing the Dashboards app via dataminer.services](xref:Accessing_the_Dashboards_app#accessing-the-dashboards-app-via-dataminerservices)

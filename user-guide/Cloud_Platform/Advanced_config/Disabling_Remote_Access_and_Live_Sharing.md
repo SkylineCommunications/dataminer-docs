@@ -2,6 +2,10 @@
 uid: Disabling_Remote_Access_and_Live_Sharing
 ---
 
+> [!NOTE]
+>
+> - The Remote Access features or Live Sharing can also be disabled easily on dataminer.services. See [Controlling remote access](xref:Controlling_remote_access).
+
 # Disabling Remote Access and Live Sharing locally
 
 From version 2.13.8 of the [CloudGateway](xref:DataMinerExtensionModules#cloudgateway) DxM onwards<!-- RN 39113 -->, it is possible to disable the Remote Access and Live Sharing features for a particular server through the app settings of the DxM:
