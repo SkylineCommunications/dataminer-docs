@@ -115,11 +115,11 @@ A minimum of 4 GB will be required to smoothly run the necessary services on the
 
 ### CPU
 
-The processes are not CPU heavy and do not require a lot of parallel computing. That is why we recommend at least 4 cores.
+The processes are not CPU-heavy and do not require a lot of parallel computing. That is why we recommend at least 4 cores.
 
 ### Network
 
-See "Network" under "DataMiner Requirements".
+See "Network" under [DataMiner requirements](#dataminer-requirements).
 
 ## Cassandra requirements
 
