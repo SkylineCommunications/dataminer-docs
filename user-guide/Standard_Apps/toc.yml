@@ -289,8 +289,6 @@ items:
             topicUid: Installing_TAG_App
           - name: Using the TAG Management app
             topicUid: How_to_TAG_App
-          - name: TAG MCM Monitoring Considerations
-            topicUid: TAG_MCM_Monitoring_Considerations
   - name: Process Automation framework
     topicUid: PA_index
     items:
