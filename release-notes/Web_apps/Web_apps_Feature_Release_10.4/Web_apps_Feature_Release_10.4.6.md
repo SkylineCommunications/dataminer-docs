@@ -153,6 +153,14 @@ In the *All available data* section of the *Data* tab, not all data sets would s
 
 In some cases, a `Request was aborted` error could appear when a *Column & bar chart* component or a *Pie & donut chart* component refetched data while that same data was being fetched.
 
+#### Dashboards app & Low-Code Apps: Component settings would not be updated correctly [ID_39322]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you were editing a component, in some cases, the *Layout* and *Settings* panes would not get updated correctly when, for example, you removed data.
+
+From now on, both panels will be updated correctly, and will only show settings that are available.
+
 #### Dashboards app & Low-Code Apps - Time picker: 'Now' button would round off time values incorrectly [ID_39323]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
