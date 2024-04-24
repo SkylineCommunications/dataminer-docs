@@ -281,7 +281,7 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 > The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
 > When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
 
-#### GQI - Get parameters for element: Enhanced performance [ID_39376]
+#### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -292,6 +292,12 @@ Because of a number of enhancements, overall performance of GQI queries using a 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 From now on, it will no longer be possible to create new elements as long as SLDataMiner has not finished loading all element information. If an attempt is made to create an element while SLDataMiner is still loading element information, an `Agent is starting up` error will now be returned.
+
+#### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying single-value parameters.
 
 ### Fixes
 
