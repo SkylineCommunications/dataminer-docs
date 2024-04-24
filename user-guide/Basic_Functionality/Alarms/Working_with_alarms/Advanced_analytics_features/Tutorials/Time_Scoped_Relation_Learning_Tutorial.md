@@ -2,17 +2,16 @@
 uid: Time_Scoped_Relation_Learning_Tutorial
 ---
 
-# Gain insights using Time-Scoped Relation Learning
+# Gaining insights using time-scoped relation learning
+
+This tutorial showcases DataMiner's [time-scoped relation learning](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) features. You will learn how to select a time range where a parameter seems to be misbehaving and how DataMiner automatically guides you to identify the root cause of the problem.
+
+This tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to establish the parameters' normal behavior, enabling DataMiner to detect unexpected behavior. Trending is enabled on all parameters used in this tutorial.
 
 Estimated duration: 20 minutes.
 
-This tutorial walks you through the use of DataMiner's [Time-Scoped Relation Learning](xref:Working_with_behavioral_anomaly_detection). You will select a time range where a certain parameter seems to be misbehaving and DataMiner will automatically lead you to the root cause of the problem.
-
-To detect unexpected behavior, DataMiner first needs to learn the normal behavior of a parameter, so we will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to push in historical trend data. We have enabled trending on the parameters used in this tutorial.
-
 > [!TIP]
->
-> - See also: [Kata #28: "Automated Relation Learning for Seamless Root Cause Analysis"](https://community.dataminer.services/courses/kata-28/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #28: Automated Relation Learning for Seamless Root Cause Analysis](https://community.dataminer.services/courses/kata-28/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -27,30 +26,34 @@ To detect unexpected behavior, DataMiner first needs to learn the normal behavio
 The tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
+
 - [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
-- [Step 3: Discover the proactive cap detection functionality](#step-3-discover-the-proactive-cap-detection-functionality)
-- [Step 4: Find the root cause manually: an easy use case](#step-4-discover-the-root-cause-manually-for-an-easy-use-case)
-- [Step 5: Use time-scoped Relation Learning to deal with more complicated use cases](#step-5-use-time-scoped-relation-learning-to-deal-with-more-complicated-use-cases)
+
+- [Step 3: Discover proactive cap detection](#step-3-discover-proactive-cap-detection)
+
+- [Step 4: Find the root cause](#step-4-find-the-root-cause)
+
+- [Step 5: Use time-scoped relation learning](#step-5-use-time-scoped-relation-learning)
+
 - [Step 6: Final exercise](#step-6-final-exercise)
 
 ## Step 1: Install the example package from the catalog
 
 1. Go to <https://catalog.dataminer.services/details/package/6057>.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button. (Alternatively, download the item and install it manually.)
+1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create an element named *Relation Learning Tutorial - Kata Relation Learning* in your system that will be used throughout the rest of the tutorial. The element will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Relation Learning Tutorial*.
-   
+   This will create a DataMiner element named "Relation Learning Tutorial - Kata Relation Learning" in your system that will be used throughout the rest of the tutorial. The element will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Relation Learning Tutorial*.
+
 ## Step 2: Discover anomaly detection in trend graphs
 
 1. In DataMiner Cube, select the element *Relation Learning Tutorial - Kata Relation Learning* in the Surveyor.
 
-   This element shows the available physical memory on a fictitious server and its task manager table, showing the memory usage of various processes running on that server.
+   This element gives insights into the available physical memory of a fictional server and displays a *Task manager* table, showing the memory usage of various processes running on the server.
 
-1. Click the *Generate Data* button to push in historical trend data.
-    
-   > [!NOTE]
-   > When pressing the run button, you should see something happening within 10 seconds. A lot of historical trend data will now be pushed through DataMiner and analyzed in real-time.
+1. Click the *Generate Data* button to initiate the influx of historical trend data.
+
+   Within approximately 10 seconds, you will observe substantial historical trend data being pushed through DataMiner, undergoing real-time analysis.
 
    > [!NOTE]
    > The protocols used in this tutorial can only load data for a parameter once. If you have made a mistake or want to retry an exercise, you can rerun the simulation by [duplicating](xref:Duplicating_elements) the element and generating the data again on the duplicated element.
@@ -59,105 +62,136 @@ The tutorial consists of the following steps:
 
 1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *Available Physical Memory* parameter.
 
-1. Click *Month to date* at the top right to see the trend data for the past month.
+1. Select *Month to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past month.
 
-   The available physical memory seemed quite stable at first but during the last 10 days you can see three anomalous events:
-   a temporary decrease of the memory, a permanent decrease and finally a decreasing trend in the memory.
+   Initially, the available physical memory appears relatively stable. However, over the last 10 days, three anomalous events become apparent: a temporary decrease in memory (1), followed by a permanent decrease (2), and ultimately, a decreasing trend in the memory (3).
 
-   Under each of the behavioral changes, a grey block is displayed. These blocks indicate a detected change in behavior, or **change point**.
+   ![Anomalous events](~/user-guide/images/Anomalous_Events.png)
 
- 1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end value of the change.
+   Under each of the behavioral changes, a gray block is displayed. These blocks indicate a detected change in behavior, or **change point**.
 
-   ![Available physical memory: investigate behavioral changes (as in DataMiner Version 10.4.0)](~/user-guide/images/ExploreChangePoints.gif)
+1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end values of the change.
 
    > [!TIP]
    > For more information on the possible types of change points, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
 
+![Available physical memory: investigate behavioral changes (as in DataMiner Version 10.4.0)](~/user-guide/images/ExploreChangePoints.gif)
 
-## Step 3: Discover the proactive cap detection functionality
+## Step 3: Discover proactive cap detection
 
-The main topic for this tutorial is Relation Learning, but this use case also offers an ideal opportunity to say a few words about the proactive cap detection functionality. As you can see, the available physical memory parameter is getting dangerously close to 0MB. DataMiner knows however that a free memory parameter is not allowed to go below zero, so without doing any configuration work, DataMiner can warn you about this behavior ahead of time.
+Although the main focus of this tutorial is relation learning, it is important to note the proactive cap detection functionality at play. As you can see in the trend data, the available physical memory parameter approaches a critical level of 0MB. However, DataMiner knows that a free memory parameter is not allowed to dip below zero and proactively alerts you to this behavior without requiring any configuration.
   
 1. Click the light bulb icon in the top-right corner of the Alarm Console.
 
    This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
-1. A menu opens: select the entry referring to alarms being predicted in the near future.
 
-    A new tab opens in the alarm template, displaying a list of predicted issues.
-1. In the list, look for the event related to the Available Physical Memory of our Relation Learning Tutorial element.
+1. Click the menu item *1 alarm is predicted in the near future* (this can be a higher number if your system has detected anomalies on other elements).
 
-    The event shows an estimate of when the system will run out of memory.
-1. Double click the event to automatically open the trend graph of the parameter in question.
+   ![Alarms predicted](~/user-guide/images/Alarms_Near_Future.png)
 
-   ![Available physical memory: investigate the proactive alarm (as in DataMiner Version 10.4.0)](~/user-guide/images/ProactiveAlarm.gif)
+    A new *Predicted alarms* tab will now be shown in the Alarm Console, listing the predicted issues.
 
-## Step 4: Discover the root cause manually for an easy use case
+1. Find the predicted alarm for the element *Relation Learning Tutorial - Kata Relation Learning*.
 
-It is now time to investigate the memory leak problem, causing our system to run out of memory. To do so, we do not need any
-fancy techniques:
+   In the *Value* column, you can find an estimate of when the system will reach the predicted minimum value of 0MB and is expected to run out of memory.
 
- 1. From the trend graph of the *Available Physical Memory* parameter, hit the *Up to Data Display* button in the top left.
- 1. Browse through the list of processes to find the one using the most memory: the *MyStockController* process seems to be our culprit.
- 1. Open the trend graph of the memory usage of this process.
- 1. Hit *Week to date* to see that this process started leaking memory about three days ago.
- 1. Compare this trend graph with the trend graph of the *Available Physical Memory*.
- 
-    You will see that the *Available Physical Memory* started dropping just when the *MyStockController* memory started to leak. Culprit found!
-   
-   ![Manual root cause analysis for a memory leak (as in DataMiner Version 10.4.0)](~/user-guide/images/MemoryLeakManualResolution.gif)
+1. Double-click the predicted alarm to open the trend graph of that parameter.
 
-## Step 5: Use time-scoped Relation Learning to deal with more complicated use cases
+![Available physical memory: investigate the proactive alarm (as in DataMiner Version 10.4.0)](~/user-guide/images/ProactiveAlarm.gif)
 
-It was easy to solve the previous use case manually as it was quite extreme and still ongoing (ie we could check the current values
-to easily find the culprit). This method would not work when we would be investigating issues that occurred for example
-one week ago or when the issue was more subtle. 
+## Step 4: Find the root cause
 
-To tackle a more difficult problem, let us focus on the permanent drop in *Available Physical Memory* that happened about a week ago.
+Now that you have identified the memory leak problem, it is time to address it.
 
-1. Open the trend graph of the *Available Physical Memory* parameter.
-1. Click *Month to date* to see data for the past month.
-1. Look for the region where the *Available Physical Memory* parameter shows a permanent drop (about a week ago)
-1. Either press control and select the area of the trend graph containing the drop or click the grey box under the drop
-(the one that represents the change point related to this drop as explained in [Step 2](#step-2-discover-anomaly-detection-in-trend-graphs))
+1. Click *Up to Data Display* in the top-left corner of the *Available Physical Memory* trending page.
 
-    This creates an overlay showing 3 buttons.
+1. To find the process consuming the most memory, double-click *Memory Usage* in the *Task manager* table.
 
-1. Click the lightbulb
+   The downward-facing arrow next to *Memory Usage* indicates that the column is sorted from highest to lowest. *MyStockController* emerges as the process using the most memory and appears to be the culprit.
 
-    DataMiner is proposing to add the memory usage of the Java Runtime to the trend graph.
-1. Click *Add 'Task manager: Memory Usage Java runtime' of 'Relation Learning Tutorial - Kata Relation Learning' to trend graph.*
-1. Notice that we have found our culprit: the Java Runtime started taking more memory just when the *Available Physical Memory* went down.
+1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to *MyStockController*.
 
-   ![Use Time-scoped relation learning to find the root cause of a permanent memory drop (as in DataMiner Version 10.4.0)](~/user-guide/images/MemoryIssueSolveUsingTSR.gif)
+1. Select *Week to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past week.
+
+   The *MyStockController* process started leaking memory approximately three days ago.
+
+1. Compare this trend graph to the *Available Physical Memory* trend graph:
+
+   1. Click the upward arrow in the lower right corner of the trending page to open the parameter pane.
+
+   1. Select *Add parameter* in the lower left corner of the parameter pane.
+
+   1. Change the parameter to *Available Physical Memory* and click *Show trend* in the lower right corner of the parameter pane.
+
+   > [!TIP]
+   > See also: [Working with the parameter pane](xref:Working_with_the_parameter_pane)
+
+   The decreasing trend observed in the *Available Physical Memory* trend graph started simultaneously with the onset of memory leakage in the *MyStockController* process. The root cause has been successfully identified.
+
+![Manual root cause analysis for a memory leak (as in DataMiner Version 10.4.0)](~/user-guide/images/MemoryLeakManualResolution.gif)
+
+## Step 5: Use time-scoped relation learning
+
+Given the significant and ongoing nature of the memory leakage, identifying its root cause was fairly straightforward. If the issue was no longer ongoing, the culpable process may no longer have revealed itself as the primary memory consumer or, if the problem had been more subtle, pinpointing its root cause would have been considerably more challenging.
+
+Finding the cause of the permanent decrease in available physical memory that occurred approximately a week ago could therefore prove more difficult.
+
+1. Select *Up to Data Display* in the top-left corner of the trending page.
+
+1. Click the trend icon next to *Available Physical Memory* to access the *Available Physical Memory* trending page.
+
+1. Select *Month to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past month.
+
+1. Within the trend graph, select the section of the graph where the parameter exhibits a permanent drop by pressing Ctrl and dragging with the left mouse button at the same time.
+
+   > [!NOTE]
+   > If you are unable to select a section of the graph, click the user icon in the Cube header, navigate to *Settings > Trending > Graph actions*, and verify the hotkey configured for alternate mouse button actions on a trend graph. See [Trending settings](xref:User_settings#trending-settings).
+
+   Alternatively, you can select the gray block displayed under the behavioral change.
+
+1. Click the light bulb icon.
+
+   DataMiner suggests adding the memory usage of the Java runtime to the trend graph.
+
+1. Select *Add 'Task manager: Memory Usage Java runtime' of 'Relation Learning Tutorial - Kata Relation Learning' to trend graph*.
+
+   Thanks to DataMiner's assistance, you have again identified the culprit: the Java Runtime began consuming more memory simultaneously with the *Available Physical Memory* decrease.
+
+![Use Time-scoped relation learning to find the root cause of a permanent memory drop (as in DataMiner Version 10.4.0)](~/user-guide/images/MemoryIssueSolveUsingTSR.gif)
 
 ## Step 6: Final exercise
 
-Time to show what you learned! The *Available Physical Memory* parameter has another strange behavior: a temporary drop in memory about 10 days ago.
-Which process was responsible for this? Can you crack the case, earning you at least 75 juicy devops points?
+In this final step, you will apply everything you have learned earlier in a practical exercise:
 
-> If you are a member of the DevOps Program and you have completed the exercise above, send us an email to get DevOps Points.
+The *Available Physical Memory* parameter exhibits a temporary drop in memory (1).
+
+![Anomalous events](~/user-guide/images/Anomalous_Events.png)
+
+Which process was responsible for this? Find the culprit and earn at least 75 DevOps Points.
+
+> If you are a member of the DevOps Professional Program and you have completed the exercise above, send us the name of the process to get DevOps Points.
 >
 > Use the following email format:
 >
-> - Subject: Tutorial - Relation Learning Tutorial - *** (but replace *** with the process that caused the temporary memory drop
-> - To: [ai@skyline.be](mailto:ai@skyline.be)
-> - Body:
->   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email
->   - If possible, add a screen shot containing the trend graph of both the *Available Physical Memory* and the memory usage of the process causing the issue.
->   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
-> 
-> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
-
-> [!IMPORTANT]
-> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps points by sending us examples where Relation Learning helped you solve a problem or examples where Relation Learning didn't perform as well as you had hoped.
->
-> Use the following email format to send us your examples:
->
-> - Subject: Tutorial - Relation Learning Feedback
+> - Subject: Tutorial - Relation Learning Tutorial - xxx (Replace "xxx" with the name of the process that caused the temporary memory drop)
 > - To: [ai@skyline.be](mailto:ai@skyline.be)
 > - Body:
 >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
->   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why Relation Learning was useful or not.
->   - A screen shot referring to this use case
+>   - If possible, add a screenshot showing both the *Available Physical Memory* trend graph as well as the memory usage of the process that caused the issue.
+>   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
 >
-> Skyline will review your submission. Upon successful validation, you will be awarded the DevOps Points.
+> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
+
+> [!IMPORTANT]
+> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g. the feature did not perform as well as you had hoped).
+>
+> Use the following email format to send us your examples:
+>
+> - Subject: Tutorial - Relation learning feedback
+> - To: [ai@skyline.be](mailto:ai@skyline.be)
+> - Body:
+>   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
+>   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why relation learning was useful or not.
+> - Attachment: a screenshot relevant to your use case
+>
+> Skyline will review your submission. Upon successful validation, you will be awarded DevOps Points.
