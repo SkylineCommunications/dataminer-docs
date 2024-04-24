@@ -218,3 +218,9 @@ The following minor issues regarding the *Time range* component have been fixed:
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When you clicked a *Grid*, a *Service definition* or a *Node edge graph* component, in some cases, the page would incorrectly scroll until the component was at the top of the window.
+
+#### Dashboards app: Problem when sharing a dashboard in which certain query nodes had been linked to feeds [ID_39465]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, an error could occur when you shared a dashboard in which e.g. a *Get Parameters for element where* query node had been linked to a feed.
