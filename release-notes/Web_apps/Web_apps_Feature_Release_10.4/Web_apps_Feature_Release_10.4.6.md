@@ -224,3 +224,9 @@ When you clicked a *Grid*, a *Service definition* or a *Node edge graph* compone
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, an error could occur when you shared a dashboard in which e.g. a *Get Parameters for element where* query node had been linked to a feed.
+
+#### Dashboards app & Low-Code Apps: GUIDs would incorrectly be visible in the query builder [ID_39467]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, GUIDs would incorrectly be visible in the query builder, even when properly resolved.
