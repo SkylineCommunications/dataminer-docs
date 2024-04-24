@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 25 April 2024 - Enhancement - Settings overhaul [ID_39277]
+#### 25 April 2024 - Enhancement - Settings overhaul [ID_39471]
 
 The dataminer.services settings, configurable from the Admin app, have been enhanced with the following improvements:
 - From now on settings have a hierarchical structure where disabled parent settings overwrite their sub/child settings. 
