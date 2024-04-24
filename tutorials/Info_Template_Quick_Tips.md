@@ -4,9 +4,9 @@ uid: Info_Template_Quick_Tips
 
 # Information template quick tips
 
-Learn about DataMiner Information Templates and how to use them to enhance data presentation.
+Learn about DataMiner Information Templates and how to use them to enhance your data presentation.
 
-1. Deploy tutorial package [Info Template Quick Tips](https://catalog.dataminer.services/details/package/tbd)
+1. Deploy tutorial package [Info Template Quick Tips](https://catalog.dataminer.services/details/32274506-07a4-4ecb-98d3-bea773c3903e)
 
 1. [Creating an info template](xref:Creating_an_information_template)
 1. [Activating an info template](xref:Activating_an_information_template)
