@@ -29,7 +29,7 @@ You can validate this as follows:
    This way, you avoid dealing with issues that have already been fixed.
 
 > [!NOTE]
-> You can always install the [latest Cloud Pack](https://aka.dataminer.services/cloud-pack-download) manually to upgrade or install the core DxMs required for upgrades via the Admin app should there be DxMs that are missing for the remote upgrades to work.
+> If any of the DxMs are missing that are required for the upgrade from the Admin app to work, download and install the [latest Cloud Pack](https://aka.dataminer.services/cloud-pack-download) to install these manually.
 
 ## Make sure the requirements to access the DMS remotely are met
 
