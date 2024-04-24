@@ -230,3 +230,9 @@ In some cases, an error could occur when you shared a dashboard in which e.g. a 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, GUIDs would incorrectly be visible in the query builder, even when properly resolved.
+
+#### Dashboards app & Low-Code Apps - Table component: Random cell values would incorrectly be displayed when data was being loaded [ID_39476]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When data was being loading into a *Table* component, in some cases, random cell values would incorrectly be displayed inside the table. From now on, a *Table* component will only show data when it has finished loading all data.
