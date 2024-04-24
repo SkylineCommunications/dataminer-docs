@@ -301,6 +301,12 @@ From now on, it will no longer be possible to create new elements as long as SLD
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
+
 #### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
@@ -340,3 +346,10 @@ If the midnight synchronization of the Resource Manager fails, it is retried up 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
+
+#### SLDataMiner would not properly clean up in-memory element information [ID_39443]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- Not added to MR 10.5.0: Issue introduced by RN 38988 -->
+
+When an element was stopped or deleted, in some rare cases, SLDataMiner would not properly remove all information about that element from its memory.
