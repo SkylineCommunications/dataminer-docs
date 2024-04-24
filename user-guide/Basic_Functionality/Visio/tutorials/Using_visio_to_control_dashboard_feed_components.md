@@ -121,6 +121,8 @@ Expected duration: 45 minutes
 
 1. In the top-right corner of the screen, click the ellipsis button, and then click *Share*.
 
+   ![Share button](~/user-guide/images/VisioURLFeed_ShareButton.png)
+
 1. In the pop-up window, enable the *Use uncompressed URL parameters* option, and then click *Copy link*.
 
    ![Pop-up window](~/user-guide/images/VisioURLFeed_URLLink.png)
