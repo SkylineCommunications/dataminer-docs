@@ -1,8 +1,8 @@
 ---
-uid: DMI_UserDefinableAPIs
+uid: DMI_User-DefinedAPIs
 ---
 
-# User-definable APIs
+# User-Defined APIs
 
 In this section:
 

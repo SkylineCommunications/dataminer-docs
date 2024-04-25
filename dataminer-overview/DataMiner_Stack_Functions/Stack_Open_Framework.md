@@ -8,7 +8,7 @@ uid: Stack_Open_Framework
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_open_framework.png)
 
-## User-definable APIs
+## User-Defined APIs
 
 Create RESTful APIs on the fly, tailored to your use case.
 
@@ -17,7 +17,7 @@ Select or create an Automation script, and with only a few clicks, you can publi
 > [!TIP]
 > For more information:
 >
-> - [DataMiner User-Definable APIs - Solution Use Case](https://community.dataminer.services/use-case/dataminer-user-definable-apis-webhooks/)
+> - [DataMiner User-Defined APIs - Solution Use Case](https://community.dataminer.services/use-case/dataminer-user-definable-apis-webhooks/)
 > - User Guide: [User-Defined APIs](xref:UD_APIs).
 
 ## Northbound APIs
