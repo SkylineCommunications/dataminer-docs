@@ -305,6 +305,10 @@ items:
                 topicUid: Adding_related_parameters_to_a_trend_graph
               - name: Adding time-scoped related parameters to a trend graph
                 topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+          - name: Tutorials
+            items:
+              - name: Gaining insights using time-scoped relation learning
+                topicUid: Time_Scoped_Relation_Learning_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:
