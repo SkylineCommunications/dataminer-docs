@@ -17,6 +17,16 @@ This building block adds the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-onini
 
 Throughout its lifespan, the extension uses the [IGQILogger](xref:GQI_IGQILogger) object to log messages and exceptions.
 
+## Logging messages
+
+To log messages from within an ad hoc data source or custom operator:
+
+1.
+
+1.
+
+1.
+
 ## Log files
 
 Log files are created for both types of extensions, each within their respective subfolders:
