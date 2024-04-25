@@ -12,7 +12,7 @@ To enable logging, the GQI extension (either an ad hoc data source or a custom o
 
 This building block adds the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) lifecycle method, granting access to the [IGQILogger](xref:GQI_IGQILogger) object through the [Logger property](xref:GQI_OnInitInputArgs#properties) of the [OnInitInputArgs](xref:GQI_OnInitInputArgs) class.
 
-Throughout its lifespan, the extension uses the [IGQILogger](xref:GQI_IGQILogger) object to log messages and exceptions.
+Throughout its lifespan, the extension can use the [IGQILogger](xref:GQI_IGQILogger) methods to log messages and exceptions.
 
 ## Logging messages
 
