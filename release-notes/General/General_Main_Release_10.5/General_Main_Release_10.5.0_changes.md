@@ -370,6 +370,12 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
 
+#### SLNet: Enhancements that optimize the way in which the Jobs and Ticketing web apps retrieve data from the database [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* web apps has increased, especially when retrieving data from the database.
+
 #### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
