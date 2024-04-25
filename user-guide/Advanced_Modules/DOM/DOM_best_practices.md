@@ -159,6 +159,10 @@ In a `DomBehaviorDefinition`, you have very fine control over what fields should
 
 To reduce the size of the `DomBehaviorDefinition`, you should limit the number of fields used in a status system. It could be beneficial to split off data not tied to a specific state into a separate `DomDefinition`.
 
+### Avoid using the AutoIncrementFieldDescriptor when high create performance is required
+
+The [`AutoIncrementFieldDescriptor`](xref:DOM_AutoIncrementFieldDescriptor) requires the generation of a unique number during every create operation across the DMS, which can introduce additional delays and hinder create performance. Hence, it is advisable to avoid using this `FieldDescriptor` type when aiming for high create performance.
+
 ## DOM CRUD and scripting
 
 ### Try to limit the number of CRUD calls
@@ -218,6 +222,10 @@ Note that this recommendation is only important when the DOM data could contain 
 ### Limit the use of field descriptors with external references that will be shown in a DOM form
 
 There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `ReservationFieldDescriptor` that refer to existing DataMiner objects. When a field like this is shown in a form in a low-code app, a list of possible values will be retrieved to populate a dropdown. When there are many of these types of fields, many calls are executed, impacting the user experience for the low-code app. If these fields are hidden in a form (e.g. because they are only used by scripts), there should be no overhead.
+
+### Avoid using GQI aggregations besides counts on ID
+
+While GQI offers versatile aggregation capabilities for DOM data, it is crucial to consider their impact on performance. These operations execute in memory and demand all data from the DOM manager as per configured filters. When dealing with extensive source data, specialized aggregation queries may be very slow, burdening the DMA. To ensure efficiency, we advise restricting the use of aggregation operators solely with count operations on the ID field of DOM data. This specific call is optimized for database execution, delivering exceptional performance. For datasets containing fewer than 500 records, more intricate aggregations like grouping may be feasible.
 
 ## General
 
