@@ -173,6 +173,12 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
+#### Enhanced SLDBConnection logging [ID_39267]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -283,9 +289,15 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 #### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
+
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
 
 #### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
 
@@ -295,7 +307,7 @@ From now on, it will no longer be possible to create new elements as long as SLD
 
 #### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying single-value parameters.
 
@@ -341,6 +353,16 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
 
+#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When, on a STaaS system, an attempt was made to delete data from the database using a delete statement with a filter, in some cases, the data would not be deleted and the following error would be logged in the *CloudStorage.txt* log file:
+
+`Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
+
+This issue has now been fixed.
+
 #### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID_39420]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
@@ -359,3 +381,9 @@ In some cases, an error could occur in SLAutomation when its internal parameter 
 <!-- Not added to MR 10.5.0: Issue introduced by RN 38988 -->
 
 When an element was stopped or deleted, in some rare cases, SLDataMiner would not properly remove all information about that element from its memory.
+
+#### Security: Problem when granting a user group access to multiple elements in the same view [ID_39449]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When you tried to grant a user group access to multiple elements in the same view, only the first of the elements you selected would be added.
