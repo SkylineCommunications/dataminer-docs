@@ -8,10 +8,9 @@ This tutorial showcases DataMiner's [time-scoped relation learning](xref:Adding_
 
 This tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to establish the parameters' normal behavior, enabling DataMiner to detect unexpected behavior. Trending is enabled on all parameters used in this tutorial.
 
-Estimated duration: 20 minutes.
+The content and screenshots for this tutorial have been created in DataMiner 10.4.0.
 
-> [!TIP]
-> See also: [Kata #28: Automated Relation Learning for Seamless Root Cause Analysis](https://community.dataminer.services/courses/kata-28/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+Estimated duration: 20 minutes.
 
 ## Prerequisites
 
@@ -25,7 +24,7 @@ Estimated duration: 20 minutes.
 
 The tutorial consists of the following steps:
 
-- [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
+- [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 
 - [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
 
@@ -37,13 +36,13 @@ The tutorial consists of the following steps:
 
 - [Step 6: Final exercise](#step-6-final-exercise)
 
-## Step 1: Install the example package from the catalog
+## Step 1: Install the example package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/package/6057>.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create a DataMiner element named "Relation Learning Tutorial - Kata Relation Learning" in your system that will be used throughout the rest of the tutorial. The element will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Relation Learning Tutorial*.
+   This will create a DataMiner element named "Relation Learning Tutorial - Kata Relation Learning" in your system, which will be used throughout the rest of the tutorial. The element will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Relation Learning Tutorial*.
 
 ## Step 2: Discover anomaly detection in trend graphs
 
@@ -132,9 +131,9 @@ Now that you have identified the memory leak problem, it is time to address it.
 
 ## Step 5: Use time-scoped relation learning
 
-Given the significant and ongoing nature of the memory leakage, identifying its root cause was fairly straightforward. If the issue was no longer ongoing, the culpable process may no longer have revealed itself as the primary memory consumer or, if the problem had been more subtle, pinpointing its root cause would have been considerably more challenging.
+Given the significant and ongoing nature of the memory leakage, identifying its root cause was fairly straightforward. Had the issue no longer been ongoing, the culpable process may not have revealed itself as the process currently consuming the most memory or, if the problem had been more subtle, pinpointing its root cause would have been considerably more challenging.
 
-Finding the cause of the permanent decrease in available physical memory that occurred approximately a week ago could therefore prove more difficult.
+Finding the cause of the permanent decrease in available physical memory, which occurred approximately a week ago, could therefore prove more difficult.
 
 1. Select *Up to Data Display* in the top-left corner of the trending page.
 
@@ -155,7 +154,7 @@ Finding the cause of the permanent decrease in available physical memory that oc
 
 1. Select *Add 'Task manager: Memory Usage Java runtime' of 'Relation Learning Tutorial - Kata Relation Learning' to trend graph*.
 
-   Thanks to DataMiner's assistance, you have again identified the culprit: the Java Runtime began consuming more memory simultaneously with the *Available Physical Memory* decrease.
+   Thanks to DataMiner's assistance, you have again identified the culprit: the Java runtime began consuming more memory simultaneously with the *Available Physical Memory* decrease.
 
 ![Use Time-scoped relation learning to find the root cause of a permanent memory drop (as in DataMiner Version 10.4.0)](~/user-guide/images/MemoryIssueSolveUsingTSR.gif)
 
@@ -178,7 +177,7 @@ Which process was responsible for this? Find the culprit and earn at least 75 De
 > - Body:
 >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
 >   - If possible, add a screenshot showing both the *Available Physical Memory* trend graph as well as the memory usage of the process that caused the issue.
->   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
+>   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the relation learning feature.
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
