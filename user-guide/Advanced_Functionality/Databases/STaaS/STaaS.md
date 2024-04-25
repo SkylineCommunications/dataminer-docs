@@ -144,6 +144,8 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 - Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
 
+- If an element with a logger table is stopped when starting the migration the data of that element will not be migrated.
+
 In addition, the following **other limitations** currently apply:
 
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
