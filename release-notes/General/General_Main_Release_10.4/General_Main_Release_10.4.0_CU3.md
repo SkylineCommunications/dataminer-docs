@@ -117,6 +117,12 @@ Because of a number of enhancements, Cube clients connected to a DataMiner Agent
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
+#### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
+
 #### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->

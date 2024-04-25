@@ -289,7 +289,7 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 #### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
 
@@ -352,6 +352,16 @@ Up to now, SLProtocol would add the following line in the log file of an element
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+
+#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When, on a STaaS system, an attempt was made to delete data from the database using a delete statement with a filter, in some cases, the data would not be deleted and the following error would be logged in the *CloudStorage.txt* log file:
+
+`Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
+
+This issue has now been fixed.
 
 #### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID_39420]
 
