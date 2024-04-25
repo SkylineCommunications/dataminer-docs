@@ -14,5 +14,5 @@ uid: EPM_7.0.3_I-DOCSIS
 Several improvements have been implemented in the EPM_I_DOCSIS_AddNewCcapCmPair script, which is used to create a new CCAP.
 
 - Every page now includes a *Cancel* button, which you can use the terminate the script.
-- Validation on fields now prevents the user from proceeding if fields still need to be filled in.
+- If fields that must be filled in are still empty, the field validation will now prevent the user from proceeding.
 - When the script has been fully executed, a final page is now displayed with important information regarding the element creation process. If a message labeled as "[ERROR]" is shown in this window, this means that the creation of a specific element could not be completed. If a message labeled as "[INFO]" is shown, this message contains important information regarding the creation of elements.
