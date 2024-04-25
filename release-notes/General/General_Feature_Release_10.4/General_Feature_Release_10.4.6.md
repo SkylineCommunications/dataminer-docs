@@ -307,7 +307,7 @@ From now on, it will no longer be possible to create new elements as long as SLD
 
 #### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying single-value parameters.
 
