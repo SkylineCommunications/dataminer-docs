@@ -96,6 +96,12 @@ In some rare cases, a trend graph for a particular parameter would show "no data
 
 In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.
 
+#### Memory leak in Alarm Console [ID_39366]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the Alarm Console could leak memory.
+
 #### Alarm Console: No longer possible to filter based on focus after having selected 'Statistical view' or 'Reports view' [ID_39388]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
