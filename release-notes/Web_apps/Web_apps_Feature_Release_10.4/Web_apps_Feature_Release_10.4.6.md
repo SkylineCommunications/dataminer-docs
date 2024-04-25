@@ -16,7 +16,7 @@ uid: Web_apps_Feature_Release_10.4.6
 
 ## Breaking changes
 
-#### Low-Code Apps: Problem when multiple DOM instances had to be passed to a script [ID_39391]
+#### Low-Code Apps: Selection of DOM instances will now be passed to a script as an array [ID_39391]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
