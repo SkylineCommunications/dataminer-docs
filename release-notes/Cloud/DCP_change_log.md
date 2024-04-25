@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 25 April 2024 - Enhancement - Enabled more web app folders to be accessed via Remote Access [ID_39486]
+#### 25 April 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39486]
 
-From now on Remote Access to the web apps allows access to the `/Webpages/SRM/` and `/Webpages/assets/` folders which will be needed for future web app enhancements and features.
+From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Webpages/SRM/` and `/Webpages/assets/` folders, which will be needed for future web app enhancements and features.
 
 #### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
 
