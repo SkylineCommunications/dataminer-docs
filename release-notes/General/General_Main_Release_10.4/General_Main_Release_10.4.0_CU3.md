@@ -187,4 +187,4 @@ In some cases, an error could occur in SLAutomation when its internal parameter 
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
-When you tried to grant a user group access to multiple elements in the same view, only one of the elements you selected would incorrectly be added.
+When you tried to grant a user group access to multiple elements in the same view, only the first of the elements you selected would be added.
