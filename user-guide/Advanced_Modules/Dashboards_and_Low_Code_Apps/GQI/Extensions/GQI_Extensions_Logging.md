@@ -14,16 +14,6 @@ This building block adds the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-onini
 
 Throughout its lifespan, the extension can use the [IGQILogger](xref:GQI_IGQILogger) methods to log messages and exceptions.
 
-## Logging messages
-
-To log messages from within an ad hoc data source or custom operator:
-
-1.
-
-1.
-
-1.
-
 > [!TIP]
 > For a practical example, refer to [Example](#example) below.
 
