@@ -293,11 +293,11 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
 
-#### SLNet: Enhancements that optimize the way in which the Jobs and Ticketing web apps retrieve data from the database [ID_39385]
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* web apps has increased, especially when retrieving data from the database.
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
 
 #### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
 
