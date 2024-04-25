@@ -83,6 +83,14 @@ The query name will be constructed as follows:
 - `db/<dashboard name>/<queryGUID>`, or
 - `app/<appGUID>/<queryGUID>`
 
+#### Low-Code Apps - DOM: Booking field enhancements [ID_39333]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Up to now, booking fields that do not support multiple values would only display the first 100 values, without any indication that not all values were shown. Similarly, booking fields that support multiple values would only display the first 500 values without any indication that not all values were shown.
+
+From now on, when there are more than 100 values, a booking field will display the first 100 and will always indicate that not all values are shown, regardless of whether this field allows multiple values or not.
+
 #### Dashboards app & Low-Code Apps - Spectrum analyzer component: Clearer indication that the component is busy loading [ID_39427]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
