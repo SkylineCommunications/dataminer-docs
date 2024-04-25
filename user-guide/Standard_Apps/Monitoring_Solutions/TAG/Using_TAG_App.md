@@ -65,7 +65,7 @@ The *Outputs* page presents a list of available outputs, alongside their associa
 
 ## Limitation: missing information
 
-To optimize application performance, we highly recommend using TAG's Media Control System (MCS) together with TAG MCM. While TAG MCM alone can sustain functionality, certain information and KPIs may be missing from the app.
+To optimize application performance, we highly recommend using TAG's Media Control System (MCS). While TAG MCM alone can sustain functionality, certain information and KPIs may be missing from the app.
 
 Potential causes of discrepancies:
 
