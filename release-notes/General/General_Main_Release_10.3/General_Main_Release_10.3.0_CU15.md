@@ -46,6 +46,12 @@ Because of a number of enhancements, Cube clients connected to a DataMiner Agent
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
+
 #### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
@@ -65,3 +71,9 @@ If the midnight synchronization of the Resource Manager fails, it is retried up 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
+
+#### Security: Problem when granting a user group access to multiple elements in the same view [ID_39449]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When you tried to grant a user group access to multiple elements in the same view, only the first of the elements you selected would be added.

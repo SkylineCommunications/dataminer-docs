@@ -403,6 +403,14 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, it was only possible to retrieve a single function definition by ID using the *GetFunctionDefinition* method.
+
+From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
+
 ### Tools
 
 #### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]

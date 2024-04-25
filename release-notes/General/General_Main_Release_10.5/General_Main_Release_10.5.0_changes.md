@@ -262,6 +262,12 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
+#### Enhanced SLDBConnection logging [ID_39267]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -358,6 +364,12 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 > The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
 > When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
 
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -396,3 +408,19 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
+
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+
+#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When, on a STaaS system, an attempt was made to delete data from the database using a delete statement with a filter, in some cases, the data would not be deleted and the following error would be logged in the *CloudStorage.txt* log file:
+
+`Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
+
+This issue has now been fixed.
