@@ -26,7 +26,6 @@ items:
           - name: EPM release notes
             href: EPM/toc.yml
           - name: IDP release notes
-            topicUid: IDP_1.5.0
             href: IDP/toc.yml
           - name: MbgNMS release notes
             topicUid: MbgNMS_1.2.3

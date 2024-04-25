@@ -31,22 +31,23 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
-#### MessageBroker: New NatsSession class properties 'UpdateOnReconnect' and 'DisconnectedHandler' [ID_38809]
+#### MessageBroker: New NATS reconnection algorithm [ID_38809]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-The `NatsSession` class has the following new properties:
+From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
 
-- *UpdateOnReconnect*: Forces NATS to re-read its configuration when reconnecting.
+1. Re-read the MessageBroker configuration file.
+1. Update the endpoints to which MessageBroker will connect.
 
-  The NATS configuration file can be modified during runtime. When NATS reconnects and *UpdateOnReconnect* is true, NATS will re-read its configuration, causing the NATS session to be updated accordingly.
+Also, the `NatsSessionOptions` class has the following new property:
 
 - *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
 
   By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
 
-  > [!NOTE]
-  > When *DisconnectedHandler* is set to true, NATS will not update its configuration when reconnecting, not even when *UpdateOnReconnect* is set to true.
+  > [!IMPORTANT]
+  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
 
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
 
@@ -401,6 +402,14 @@ connection.OnNewMessage += (sender, args) =>
 // Subscribe
 connection.AddSubscription(setId, subscriptionFilter);
 ```
+
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, it was only possible to retrieve a single function definition by ID using the *GetFunctionDefinition* method.
+
+From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
 ### Tools
 

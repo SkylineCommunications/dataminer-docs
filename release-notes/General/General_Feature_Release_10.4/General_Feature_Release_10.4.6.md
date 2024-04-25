@@ -22,22 +22,23 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
-#### MessageBroker: New NatsSession class properties 'UpdateOnReconnect' and 'DisconnectedHandler' [ID_38809]
+#### MessageBroker: New NATS reconnection algorithm [ID_38809]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-The `NatsSession` class has the following new properties:
+From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
 
-- *UpdateOnReconnect*: Forces NATS to re-read its configuration when reconnecting.
+1. Re-read the MessageBroker configuration file.
+1. Update the endpoints to which MessageBroker will connect.
 
-  The NATS configuration file can be modified during runtime. When NATS reconnects and *UpdateOnReconnect* is true, NATS will re-read its configuration, causing the NATS session to be updated accordingly.
+Also, the `NatsSessionOptions` class has the following new property:
 
 - *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
 
   By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
 
-  > [!NOTE]
-  > When *DisconnectedHandler* is set to true, NATS will not update its configuration when reconnecting, not even when *UpdateOnReconnect* is set to true.
+  > [!IMPORTANT]
+  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
 
 #### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
 
@@ -86,6 +87,14 @@ connection.AddSubscription(setId, subscriptionFilter);
 As from DataMiner version 10.4.5, Storage as Service (STaaS) supports the use of a proxy server.
 
 From now on, it is also possible to migrate data towards a STaaS system that is using a proxy server.
+
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, it was only possible to retrieve a single function definition by ID using the *GetFunctionDefinition* method.
+
+From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
 ## Changes
 
@@ -158,11 +167,29 @@ Performance has increased when logging on to cloud-connected DataMiner Agents or
 
 Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
 
+#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
+
+#### Enhanced SLDBConnection logging [ID_39267]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 A proactive detecting suggestion event indicating a forecasted crossing of a critical alarm threshold will now be cleared sooner. As soon as the system detects that the predicted trend has dropped below the threshold in question will the suggestion event be cleared.
+
+#### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID_39308]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, Cube clients connected to a DataMiner Agent via a gRPC connection will now be able to better detect when they have been disconnected.
 
 #### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
 
@@ -227,11 +254,62 @@ From now on, this error message will include a reference to the StorageModule lo
 
 `More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
 
+#### MySql.Data.dll file is now deprecated [ID_39370]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, should from now on be considered deprecated.
+
+This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
+
+To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
+
+1. Open DataMiner Cube.
+1. Open *System Center*.
+1. Go to *Agents > BPA*.
+1. Run the *Check Deprecated MySql DLL* test (if it has not been run yet).
+1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and Automation scripts that are still using this DLL file.
+
+   This overview is displayed as a string in JSON format. It will contain the following information:
+
+   - The names and versions of the protocols that are still using this file, including the IDs of the QActions in which this file is referenced.
+   - The names of the Automation scripts that are still using this file.
+
+1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and Automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
+
+When you have replaced all references to the *MySql.Data.dll* file, do the following:
+
+1. Stop the DataMiner Agent.
+1. Remove the *MySql.Data.dll* file from the `C:\Skyline DataMiner\ProtocolScripts\` folder.
+1. Start the DataMiner Agent.
+
+> [!IMPORTANT]
+> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
+> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
+
+#### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
+
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
+
 #### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 From now on, it will no longer be possible to create new elements as long as SLDataMiner has not finished loading all element information. If an attempt is made to create an element while SLDataMiner is still loading element information, an `Agent is starting up` error will now be returned.
+
+#### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
+
+<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying single-value parameters.
 
 ### Fixes
 
@@ -241,6 +319,12 @@ From now on, it will no longer be possible to create new elements as long as SLD
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
+
 #### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
@@ -248,6 +332,12 @@ After a DataMiner startup, in some cases, certain alarm groups would either be i
 When string parameters are parsed, both an ASCII version and a Unicode version of the string value should be returned. However, up to now, when a string parameter was a table column parameter, the `Interprete` type of the table would be used. As a result, string values would be processed incorrectly.
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
+
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
 
 #### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID_39398]
 
@@ -263,8 +353,37 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
 
+#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When, on a STaaS system, an attempt was made to delete data from the database using a delete statement with a filter, in some cases, the data would not be deleted and the following error would be logged in the *CloudStorage.txt* log file:
+
+`Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
+
+This issue has now been fixed.
+
+#### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID_39420]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g. bookings not being starting.
+
 #### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
+
+#### SLDataMiner would not properly clean up in-memory element information [ID_39443]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- Not added to MR 10.5.0: Issue introduced by RN 38988 -->
+
+When an element was stopped or deleted, in some rare cases, SLDataMiner would not properly remove all information about that element from its memory.
+
+#### Security: Problem when granting a user group access to multiple elements in the same view [ID_39449]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When you tried to grant a user group access to multiple elements in the same view, only one of the elements you selected would incorrectly be added.
