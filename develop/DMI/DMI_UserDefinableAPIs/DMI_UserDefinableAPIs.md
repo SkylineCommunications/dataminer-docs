@@ -1,5 +1,6 @@
 ---
 uid: DMI_User-DefinedAPIs
+keywords: user-definable API
 ---
 
 # User-Defined APIs
