@@ -370,6 +370,18 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
 
+#### SLLogCollector: Enhancements to make sure the JAVA_HOME variable is set [ID_39409]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made to prevent SLLogCollector from experiencing problems when the JAVA_HOME variable is not set:
+
+- SLLogCollector is now able to pass environment variables to helper executables. This will allow temporarily setting an environment variable to make sure a particular tool can be run correctly.
+
+- In SLLogCollector, the timeout for helper executables has been reduced from 5 minutes to 1 minute.
+
+- An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
