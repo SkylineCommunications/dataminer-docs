@@ -12,6 +12,9 @@ uid: Installing_TAG_App
 
 - A connection to a TAG MCS system
 
+  > [!IMPORTANT]
+  > We highly recommend using TAG's Media Control System (MCS) for optimal performance. While TAG MCM is supported, certain information and KPIs may be missing.  See [Limitation: missing information](xref:How_to_TAG_App#limitation-missing-information).
+
 - The DataMiner TAG Management app contains multiple functions that allow interaction with the TAG MCS or TAG MCM elements available in the system. To ensure the app works properly, it is necessary to have the following versions set to production at minimum:
 
   - TAG Video Systems MCM-9000 connector version 1.1.6.10
