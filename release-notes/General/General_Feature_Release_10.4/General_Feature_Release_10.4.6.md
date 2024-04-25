@@ -381,3 +381,9 @@ In some cases, an error could occur in SLAutomation when its internal parameter 
 <!-- Not added to MR 10.5.0: Issue introduced by RN 38988 -->
 
 When an element was stopped or deleted, in some rare cases, SLDataMiner would not properly remove all information about that element from its memory.
+
+#### Security: Problem when granting a user group access to multiple elements in the same view [ID_39449]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When you tried to grant a user group access to multiple elements in the same view, only one of the elements you selected would incorrectly be added.
