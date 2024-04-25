@@ -256,6 +256,18 @@ As to logging, behavior has changed with respect to exceptions:
 
 Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
 
+#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
+
+#### Enhanced SLDBConnection logging [ID_39267]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -327,7 +339,7 @@ The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, s
 
 This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
 
-To remove all references to the MySql.Data.dll file in your protocols and Automation scripts, do the following:
+To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
 
 1. Open DataMiner Cube.
 1. Open *System Center*.
@@ -349,8 +361,26 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 1. Start the DataMiner Agent.
 
 > [!IMPORTANT]
-> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the MySql.Data.dll file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the MySql.Data.dll file, the BPA will not be able to detect this.
-> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the error log for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
+> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
+> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
+
+#### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
+
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
+
+#### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying single-value parameters.
 
 ### Fixes
 
@@ -390,3 +420,9 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
+
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).

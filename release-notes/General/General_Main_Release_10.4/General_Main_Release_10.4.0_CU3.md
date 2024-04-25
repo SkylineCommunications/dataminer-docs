@@ -105,12 +105,6 @@ The following requests now have an optional `QueryName` property:
 
 Performance has increased when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client.
 
-#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
-
-<!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
-
-From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
-
 #### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID_39308]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -137,6 +131,12 @@ From now on, it will no longer be possible to create new elements as long as SLD
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
+
 #### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
@@ -158,6 +158,12 @@ Up to now, SLProtocol would add the following line in the log file of an element
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+
+#### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID_39420]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g. bookings not being starting.
 
 #### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
 

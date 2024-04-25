@@ -96,6 +96,12 @@ In some rare cases, a trend graph for a particular parameter would show "no data
 
 In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.
 
+#### Memory leak in Alarm Console [ID_39366]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the Alarm Console could leak memory.
+
 #### Alarm Console: No longer possible to filter based on focus after having selected 'Statistical view' or 'Reports view' [ID_39388]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -107,6 +113,14 @@ When, in the *Alarm Console*, you had selected *Statistical view* or *Reports vi
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When, in Visual Overview, a session variable in a URL of an embedded web browser was updated, in some cases, an exception could be thrown.
+
+#### Alarm Console: Not possible to open new suggestion event tabs when 'Behavioral Anomaly Detection' was disabled in System Center [ID_39415]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When *Behavioral Anomaly Detection* was disabled in *System Center > System settings > Analytics Config*, up to now, it would incorrectly not be possible to open new suggestion event tabs in the Alarm Console, even though suggestion events are also created by *Pattern Matching* and *Proactive Cap Detection*.
+
+From now on, it will be possible to open new suggestion event tabs in the Alarm Console when at least one of the following Analytics features is enabled: *Proactive Cap Detection*, *Behavioral Anomaly Detection* or *Pattern Matching*.
 
 #### Dialog box controls showing underlined text and opening up a dropdown list when clicked would not open their dropdown list when you pressed ALT+DOWN [ID_39423]
 
