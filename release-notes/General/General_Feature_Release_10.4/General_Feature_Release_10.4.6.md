@@ -399,3 +399,14 @@ When an element was stopped or deleted, in some rare cases, SLDataMiner would no
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 When you tried to grant a user group access to multiple elements in the same view, only the first of the elements you selected would be added.
+
+#### 'Security Advisory' BPA test: Issues fixed [ID_39503]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+<!-- Only added to FR 10.4.6 -->
+
+A number of issues have been fixed in the [Security Advisory](xref:BPA_Security_Advisory) BPA test:
+
+- The NATS test would always report a severity rating, even if all was fine.
+- A `NullReference` exception could be thrown when no HTTPS binding existed in IIS.
+- When determining whether gRPC was being used, an error could occur when parsing the *MaintenanceSettings.xml* file.
