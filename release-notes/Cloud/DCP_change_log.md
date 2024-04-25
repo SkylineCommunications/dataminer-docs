@@ -9,6 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 25 April 2024 - Enhancement - Settings overhaul [ID_39471]
+
+The dataminer.services settings, configurable from the Admin app, have been enhanced with the following improvements:
+
+- Settings now have a hierarchical structure. Disabled parent settings override their child settings.
+- Settings can now also be configured on organization level. If a setting is disabled on organization level, this overrides this same setting for all the DataMiner Systems of this organization, as well as its child settings.
+- Settings are now displayed and managed from a separate page for the organization and for each DMS.
+- A new setting has been added for Live Sharing (i.e. dashboard sharing).
+- In addition to one global Remote Access setting, there are now separate child settings for remote access to Cube, the User-Defined APIs, and the web apps.
+
 #### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
 
 On the nodes overview page in the Admin app, you can now see the status of the DxMs.
@@ -135,7 +145,7 @@ To add a command to your DMS, create an Automation script in the folder "bot" in
 
 For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
-#### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
+#### 23 January 2024 - Fix - Unknown error when accessing the web apps remotely [ID_38549]
 
 While remote access was used to go to the web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
