@@ -16,7 +16,7 @@ To use this feature, your system needs to meet the following requirements:
 
 - Your system must be connected to dataminer.services. For information on how to connect, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- Port **5100** is by default open for traffic on the **internal network** for the remote log collection to work. If this setting was customized, make sure that the port is still enabled. For more information on this endpoint, see [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration) 
+- Port **5100** is by default open for traffic on the **internal network** for the remote log collection to work. If this setting was customized, make sure that the port is still enabled. For more information on this endpoint, see [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 
 - The correct versions of specific DxMs must be running on the DataMiner Agents:
 
