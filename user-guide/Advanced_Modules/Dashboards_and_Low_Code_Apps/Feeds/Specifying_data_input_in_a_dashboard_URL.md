@@ -16,7 +16,7 @@ If a dashboard has been configured with one or more feed components, it is possi
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
 > [!IMPORTANT]
-> To guarantee support across all browsers and prevent possible issues, the URL value should be encoded. If, for example, the JSON structure contains any ampersands ("&"), this will not work unencoded.
+> To guarantee support across all browsers and prevent possible issues, the URL value should be encoded. If, for example, the JSON structure contains any ampersands ("&"), this will not work unencoded. See [URL-encoded equivalents](#url-encoded-equivalents).
 
 ## JSON syntax
 
@@ -72,6 +72,22 @@ This JSON object has to have the following structure:
   > [!NOTE]
   > You can find the ID of each component in the lower right corner of the component while in edit mode.
 
+### URL-encoded equivalents
+
+To guarantee support across all browsers and prevent possible issues, the URL value should be encoded.
+
+| character | URL-encoded equivalent |
+|--|--|
+| " | %22 |
+| : | %3A |
+| , | %2C |
+| [ | %5B |
+| ] | %5D |
+| / | %2F |
+| { | %7B |
+| } | %7D |
+| Space | %20 |
+
 ### Examples: passing the data using a JSON object in the URL
 
 #### Example 1: dashboard
@@ -106,15 +122,6 @@ To pass this JSON object as part of a URL, it needs to be URL-encoded.
 
 `https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?data=%7B%22version%22%3A1%2C%22components%22%3A%5B%7B%22cid%22%3A123%2C%22select%22%3A%7B%22elements%22%3A%5B%221%2F2%22%2C%221%2F8%22%2C%22212%2F123%22%5D%2C%22parameters%22%3A%5B%221%2F2%2F3%22%2C%221%2F4%2F6%22%5D%7D%7D%5D%7D`
 
-> [!NOTE]
->
-> - " is encoded as %22.
-> - : is encoded as %3A.
-> - , is encoded as %2C.
-> - [ is encoded as %5B.
-> - ] is encoded as %5D.
-> - / is encoded as %2F.
-
 #### Example 2: low-code app
 
 The following example URL selects one default element on the initial page. The component ID is "1", and the element ID is "1/6"
@@ -124,15 +131,6 @@ https://<dma>/<app-id>?data={"version":1,"components":[{"cid":1,"select":{"eleme
 ```
 
 This is the encoded equivalent: `https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D`
-
-> [!NOTE]
->
-> - { is encoded as %7B
-> - " is encoded as %22.
-> - [ is encoded as %5B.
-> - ] is encoded as %5D.
-> - / is encoded as %2F.
-> - } is encoded as %7D
 
 ## Legacy syntax
 
