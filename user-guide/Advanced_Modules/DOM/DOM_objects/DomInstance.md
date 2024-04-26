@@ -20,7 +20,7 @@ The table below lists the properties of the `DomInstance` object. It also indica
 | ID | DomInstanceId | Yes | The ID of the `DomInstance`. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the `DomDefinition` that this instance is linked to. |
 | Sections | List\<Section> | Yes | The `Sections` that contain the actual values for the `FieldDescriptors` wrapped in `FieldValues` |
-| Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) in the `ModuleSettings`. |
+| Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) in the `ModuleSettings` or `DomDefinition`. |
 | StatusId | string | Yes | The ID of the current status of this `DomInstance` (if statuses are used). |
 
 ## Requirements
