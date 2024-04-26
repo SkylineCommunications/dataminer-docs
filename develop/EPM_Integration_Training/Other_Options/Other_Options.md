@@ -14,7 +14,7 @@ On this page, you may add parameters as you would any other page, but you may al
 
 ![EPM Data layout](~/develop/images/EPM_Data_Layout.png)
 
-![EPM Data page](~/develop/images/EPM_Data_page.png)
+![EPM Data page](~/develop/images/EPM_Topology_Data_page.png)
 
 ## EPM configuration
 
