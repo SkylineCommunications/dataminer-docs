@@ -223,9 +223,9 @@ Note that this recommendation is only important when the DOM data could contain 
 
 There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `ReservationFieldDescriptor` that refer to existing DataMiner objects. When a field like this is shown in a form in a low-code app, a list of possible values will be retrieved to populate a dropdown. When there are many of these types of fields, many calls are executed, impacting the user experience for the low-code app. If these fields are hidden in a form (e.g. because they are only used by scripts), there should be no overhead.
 
-### Avoid using GQI aggregations besides counts on ID
+### Limit the use of GQI aggregation operations
 
-While GQI offers versatile aggregation capabilities for DOM data, it is crucial to consider their impact on performance. These operations execute in memory and demand all data from the DOM manager as per configured filters. When dealing with extensive source data, specialized aggregation queries may be very slow, burdening the DMA. To ensure efficiency, we advise restricting the use of aggregation operators solely with count operations on the ID field of DOM data. This specific call is optimized for database execution, delivering exceptional performance. For datasets containing fewer than 500 records, more intricate aggregations like grouping may be feasible.
+While GQI offers versatile [aggregation capabilities](xref:GQI_Aggregate) for DOM data, it is crucial to consider their impact on performance. These operations execute in memory and involve fetching all data from the DOM manager based on configured filters. When you are working with a large data source, certain aggregation operations could significantly slow down, putting strain on the DMA. To ensure efficiency, we recommend only using the *Aggregate* query operators together with the *Count* method, when the ID field of DOM data is selected as the aggregation column. This approach is optimized for database execution, ensuring exceptional performance. For smaller datasets with fewer than 500 records, more intricate aggregations like grouping may be feasible.
 
 ## General
 
