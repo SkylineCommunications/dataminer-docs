@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 26 April 2024 - Fix - ArtifactDeployer 1.6.10 - Inconsistent cloud endpoint detection failures [ID_39513]
+
+An issue has been resolved that could make features like DxM and Catalog deployments inconsistently fail.
+
 #### 29 March 2024 - Enhancement - ArtifactDeployer 1.6.9 - Added the possibility to locally disable artifact deployments through the app settings [ID_39113]
 
 It is now possible to locally disable artifact deployments through the *App settings* file of the ArtifactDeployer DxM. 

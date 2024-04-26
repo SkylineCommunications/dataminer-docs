@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 26 April 2024 - Fix - SupportAssistant 1.6.9 - Inconsistent cloud endpoint detection failures [ID_39514]
+
+An issue has been resolved that could make features like Remote Log Collections and data offloads for proactive support inconsistently fail.
+
 #### 13 March 2024 - Enhancement - SupportAssistant 1.6.8 - Dependencies updated [ID_39050]
 
 Several dependencies have been updated.
