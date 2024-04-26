@@ -57,7 +57,7 @@ To ensure that both primary and backup dmas can communicate, assert that both ag
 
 ## Preparing the database
 
-Each [supported system data storage architecture](xref:Supported_System_Data_Storage_Architectures) has a different way of handling the setup of a failover system. Therefore it is important to based on the chosen architecture take the measures described below:
+Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a failover system. Therefore it is important to based on the chosen architecture take the measures described below:
 
 ### Legacy setup with MySQL or MSSQL database
 
