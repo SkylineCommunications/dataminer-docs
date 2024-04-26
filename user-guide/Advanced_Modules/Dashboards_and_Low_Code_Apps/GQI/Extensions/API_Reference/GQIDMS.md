@@ -25,7 +25,7 @@ The `GQIDMS` class contains the methods listed below. These can be used to reque
 
 ### IConnection GetConnection()
 
-Available from DataMiner 10.4.7/10.5.0 onwards.<!-- RN39489 -->
+Available from DataMiner 10.4.6/10.5.0 onwards.<!-- RN39489 -->
 
 Provides a connection interface from GQI to SLNet. This connection can be used to request data from the DMS or to subscribe on events.
 
