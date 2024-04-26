@@ -18,10 +18,10 @@ items:
         topicUid: DIS_Tutorials
       - name: DataMiner Object Manager (DOM) tutorials
         topicUid: DOM_tutorials
+      - name: Protocols & Templates tutorials
+        topicUid: Protocols_Templates_tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
         topicUid: Visio_Tutorials
-      - name: Information template tutorials
-        topicUid: Information_template_tutorials
 
