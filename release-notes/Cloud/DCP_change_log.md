@@ -23,6 +23,10 @@ The dataminer.services settings, configurable from the Admin app, have been enha
 - A new setting has been added for Live Sharing (i.e. dashboard sharing).
 - In addition to one global Remote Access setting, there are now separate child settings for remote access to Cube, the User-Defined APIs, and the web apps.
 
+#### 9 April 2024 - Enhancement - Improvements for DxM deployments from the Admin app [ID_39268]
+
+When a user attempts to upgrade or install a DxM, a check is now performed to verify if all the system requirements are met. If missing requirements are detected, the action is disabled, and a warning is shown. Clicking the warning will show more information on how to resolve the issue.
+
 #### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
 
 On the nodes overview page in the Admin app, you can now see the status of the DxMs.
