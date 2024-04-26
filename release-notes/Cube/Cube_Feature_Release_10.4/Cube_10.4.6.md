@@ -23,6 +23,7 @@ uid: Cube_Feature_Release_10.4.6
 When you create a new alarm tab, an SPI log entry will be generated containing the following information:
 
 - the time it took for the alarm tab to load,
+- the time it took to retrieve, process, group and sort the alarms,
 - the filter that was applied,
 - the time range that was set (in case of a history tab), and
 - the number of alarms that were loaded.
