@@ -282,6 +282,17 @@ Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline D
 
 From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
 
+#### ProtocolCache.txt replaced by ProtocolCacheV2.txt [ID_39316]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *ProtocolCache.txt* file, located in the `C:\Skyline DataMiner\System Cache\` folder, has now been replaced by the *ProtocolCacheV2.txt* file.
+
+While the *ProtocolCache.txt* file only contained information about the protocols that were not fully compatible with Cassandra, the *ProtocolCacheV2.txt* file will also contain information like minimum required DataMiner version.
+
+> [!IMPORTANT]
+> up to now, when no compliance information was specified in a protocol, all QActions would be checked for queries incompatible with Cassandra. From now on, it will be assumed that a protocol version is compatible with Cassandra unless Cassandra compliance is explicitly set to false in the `<Compliancies>` element of the protocol.
+
 #### SLDataGateway: Enhanced logging [ID_39341]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
