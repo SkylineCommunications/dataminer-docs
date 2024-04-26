@@ -97,6 +97,20 @@ From now on, when there are more than 100 values, a booking field will display t
 
 From now on, a *Spectrum analyzer* component will indicate in a clearer way that it is busy loading.
 
+#### Dashboards app & Low-Code Apps - Alarm table component: Sliding window limits [ID_39484]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When an *Alarm table* component is configured to show alarms in a sliding window, from now on, you will be able to specify the following limits:
+
+- Initial number of alarms (default: 10,000)
+- Maximum number of alarms (from 1 to 100,000)
+- Size of sliding window (from 1 minute to 1 day)
+- Refresh rate of sliding window (from 1 minute to 1 day)
+
+> [!NOTE]
+> When setting the size or the refresh rate of the sliding window, it will no longer be possible to specify a value in seconds or milliseconds.
+
 ### Fixes
 
 #### Dashboards app: 'DATA USED IN DASHBOARD' section would not be hidden when empty [ID_39274]
