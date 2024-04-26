@@ -41,9 +41,6 @@ This JSON object has to have the following structure:
 
 - The version number is currently always 1.
 
-  > [!IMPORTANT]
-  > In a low-code app URL, use "v" instead of "version" to specify the version number.
-
 - ``<data>`` is a JSON object with a number of property keys (corresponding with the [objects listed below](#supported-objects)) and property values (as an array of strings). For example:
 
   ```json
@@ -133,7 +130,7 @@ The following example URL selects one default element on the initial page. The c
 https://<dma>/<app-id>?data={"version":1,"components":[{"cid":1,"select":{"elements":["1/6"]}]}}
 ```
 
-This is the encoded equivalent: `https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D`
+This is the encoded equivalent: `https://<dma>/<app-id>?data=%7B%22version%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D`
 
 ## Legacy syntax
 
