@@ -260,3 +260,9 @@ In some cases, GUIDs would incorrectly be visible in the query builder, even whe
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When data was being loading into a *Table* component, in some cases, random cell values would incorrectly be displayed inside the table. From now on, a *Table* component will only show data when it has finished loading all data.
+
+#### Low-Code Apps: Deleting a context menu action would incorrectly not be saved [ID_39488]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you opened the edit mode, deleted a context menu action, and immediately exited the edit mode, up to now, this deletion would incorrectly not be saved.
