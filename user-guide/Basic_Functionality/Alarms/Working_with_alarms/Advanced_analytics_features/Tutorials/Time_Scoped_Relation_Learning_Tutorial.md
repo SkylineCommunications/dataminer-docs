@@ -12,6 +12,9 @@ The content and screenshots for this tutorial have been created in DataMiner 10.
 
 Estimated duration: 20 minutes.
 
+>[!TIP]
+>See also: [Kata #28: Utilize automated relationship learning for seamless root cause analysis](https://community.dataminer.services/courses/kata-28/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - DataMiner 10.3.8 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
@@ -180,17 +183,3 @@ Which process was responsible for this? Find the culprit and earn at least 75 De
 >   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the relation learning feature.
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
-
-> [!IMPORTANT]
-> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g. the feature did not perform as well as you had hoped).
->
-> Use the following email format to send us your examples:
->
-> - Subject: Tutorial - Relation learning feedback
-> - To: [ai@skyline.be](mailto:ai@skyline.be)
-> - Body:
->   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
->   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why relation learning was useful or not.
-> - Attachment: a screenshot relevant to your use case
->
-> Skyline will review your submission. Upon successful validation, you will be awarded DevOps Points.
