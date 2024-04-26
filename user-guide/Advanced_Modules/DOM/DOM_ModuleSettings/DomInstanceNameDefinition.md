@@ -33,7 +33,8 @@ These are the available types:
   | List\<T> | "SomeValue;SomeValue" (Values separated with semicolons ";") |
 
   > [!NOTE]
-  > Prior to DataMiner 10.4.0 [CU1]/10.4.4, the raw value of a GenericEnumEntry is used instead of the display value.<!-- RN 38586 -->
+  > - Prior to DataMiner 10.4.0 [CU1]/10.4.4, the raw value of a GenericEnumEntry is used instead of the display value.<!-- RN 38586 -->
+  > - From DataMiner 10.4.7/10.5.0 onwards, GenericEnum fields that allow multiple values are supported in the DomInstance name.<!-- RN 39510 -->
 
 ## Example
 
