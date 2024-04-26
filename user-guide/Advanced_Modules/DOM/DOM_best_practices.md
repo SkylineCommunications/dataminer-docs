@@ -159,9 +159,9 @@ In a `DomBehaviorDefinition`, you have very fine control over what fields should
 
 To reduce the size of the `DomBehaviorDefinition`, you should limit the number of fields used in a status system. It could be beneficial to split off data not tied to a specific state into a separate `DomDefinition`.
 
-### Avoid using the AutoIncrementFieldDescriptor when high create performance is required
+### Avoid using the AutoIncrementFieldDescriptor when high-performance create actions are required
 
-The [`AutoIncrementFieldDescriptor`](xref:DOM_AutoIncrementFieldDescriptor) requires the generation of a unique number during every create operation across the DMS, which can introduce additional delays and hinder create performance. Hence, it is advisable to avoid using this `FieldDescriptor` type when aiming for high create performance.
+The [`AutoIncrementFieldDescriptor`](xref:DOM_AutoIncrementFieldDescriptor) generates a unique number for each create operation across the DMS. This may cause additional delays and hinder performance when creating `DomInstances`. It is advisable to avoid using this `FieldDescriptor` type when aiming for high-performance create actions.
 
 ## DOM CRUD and scripting
 
