@@ -16,7 +16,16 @@ uid: Cube_Feature_Release_10.4.6
 
 ## New features
 
-*No features have been added yet.*
+#### SPI logging: An SPI log entry will now be generated when you create a new alarm tab [ID_39382]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you create a new alarm tab, an SPI log entry will be generated containing the following information:
+
+- the time it took for the alarm tab to load,
+- the filter that was applied,
+- the time range that was set (in case of a history tab), and
+- the number of alarms that were loaded.
 
 ## Changes
 
@@ -61,6 +70,12 @@ A number of enhancements have been made with regard to the processing of web API
 For each alarm tab, you can open a side panel in the Alarm Console showing the real-time value and history of a selected alarm.
 
 Because of a number of enhancements, overall performance has now increased when retrieving this side panel data after selecting an alarm.
+
+#### SPI logging: Loading time of a visual overview will now include the loading times of all embedded visual overviews [ID_39351]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In SPI log entries indicating how long it took to load a visual overview, from now on, the total loading time of a visual overview will include the loading times of all visual overviews embedded in that visual overview.
 
 ### Fixes
 
