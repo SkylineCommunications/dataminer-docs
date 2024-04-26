@@ -6,4 +6,4 @@ uid: DataMinerModuleIntegrations
 
 In this section:
 
-- [User-definable APIs](xref:DMI_UserDefinableAPIs)
+- [User-Defined APIs](xref:DMI_User-DefinedAPIs)

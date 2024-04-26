@@ -10,7 +10,7 @@ You will need to make sure a Profile-Load Script is available for each virtual f
 
 ## Creating a Profile-Load Script
 
-Below you can fin the basic steps to create a Profile-Load Scripts. For more detailed information on [script input arguments](#input-arguments-of-a-profile-load-script) and [content](#content-of-a-profile-load-script), as well as on [how to test a PLS](#testing-profile-load-scripts), refer to the sections below this.
+Below you can find the basic steps to create a Profile-Load Scripts. For more detailed information on [script input arguments](#input-arguments-of-a-profile-load-script) and [content](#content-of-a-profile-load-script), as well as on [how to test a PLS](#testing-profile-load-scripts), refer to the sections below this.
 
 1. Start from the example script *SRM_ProfileLoadScriptTemplate*, which is included in the SRM framework.
 

@@ -3478,6 +3478,8 @@ items:
                     topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
                 - name: Specific
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
+              - name: SetAsActive
+                topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
       - name: DeploymentOptions
@@ -5634,8 +5636,8 @@ items:
 - name: DataMiner module integrations
   topicUid: DataMinerModuleIntegrations
   items:
-    - name: User-definable APIs
-      topicUid: DMI_UserDefinableAPIs
+    - name: User-Defined APIs
+      topicUid: DMI_User-DefinedAPIs
       items:
         - name: Bad and best practices
           topicUid: UD_APIs_Bad_and_Best_Practices

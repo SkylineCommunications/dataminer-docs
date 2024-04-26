@@ -26,7 +26,7 @@ Default tooltip: *Link to 'http://URL'*
 > - Both HTTP and HTTPS are supported.
 > - If you put a "#" sign in front of the URL, the webpage will be displayed inside the shape.
 > - Links starting with "mailto:" are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
-> - It is also possible to link to a DataMiner dashboard this way.
+> - It is also possible to link to a dashboard or low-code app this way. See [Linking to a dashboard or low-code app](#linking-to-a-dashboard-or-low-code-app)
 
 ## Options for shapes linked to a webpage
 
@@ -163,6 +163,18 @@ To do so, use the following configuration in the webpage:
   ```xml
   <a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
   ```
+
+## Linking to a dashboard or low-code app
+
+You can link to a dashboard or low-code app in the same way as you would link to another webpage.
+
+In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify a feed for the dashboard or low-code app.
+
+> [!TIP]
+> For more information about the URL syntax, refer to [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL) or [Specifying data input in an app URL](xref:Specifying_data_input_in_URL)
+
+> [!NOTE]
+> It is also possible to [link a shape to a component of a dashboard](xref:Linking_a_shape_to_a_dashboard_component) instead of the entire dashboard.
 
 ## Examples
 

@@ -13,6 +13,9 @@ If a dashboard has been configured with one or more feed components, it is possi
 > - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
+> [!IMPORTANT]
+> To guarantee support across all browsers and prevent possible issues, the URL value should be encoded. If, for example, the JSON structure contains any ampersands ("&"), this will not work unencoded.
+
 ## JSON syntax
 
 From DataMiner 10.2.0/10.2.2 onwards, you can pass the data using a JSON object in the URL:

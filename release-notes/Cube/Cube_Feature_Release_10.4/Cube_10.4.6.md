@@ -22,6 +22,20 @@ uid: Cube_Feature_Release_10.4.6
 
 ### Enhancements
 
+#### System Center: Certain sections will no longer be visible when connected to a DaaS system [ID_39173]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When DataMiner Cube is connected to a DaaS system, in *System Center*, the following sections will no longer be visible:
+
+- *Database > General*
+- *Backup*
+- *Search & Indexing > Indexing engine*
+- *System settings > Time to live*
+- *Tools > Query executer*
+
+Also, when DataMiner Cube is connected to a DaaS system, the *Indexing* app will no longer be visible, even when the *Indexing* soft-launch option is enabled.
+
 #### Alarm Console: Enhanced performance when loading a large number of alarms in an active alarms tab [ID_39235] [ID_39236]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -34,6 +48,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 Because of a number of enhancements, overall performance has increased when processing conditions based on view names, service names or element names.
 
+#### Enhanced processing of web API exceptions occurring in DataMiner Cube [ID_39270]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the processing of web API exceptions occurring in DataMiner Cube. After a web API exception has been properly processed, a clear log entry will now also be added to the Cube logging.
+
 #### Alarm Console: Enhanced performance when retrieving the side panel data after selecting an alarm [ID_39284]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -44,14 +64,66 @@ Because of a number of enhancements, overall performance has now increased when 
 
 ### Fixes
 
+#### Memory leak in Alarm Console [ID_38819]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the Alarm Console could leak memory.
+
+#### Spectrum monitors: Parameter positions would incorrectly be reused [ID_39225]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, while editing a spectrum monitor, you clicked *Group parameters* to ungroup all parameters, the parameter positions would incorrectly be reused when multiple parameters and multiple measurement points from the same monitor script were being used.
+
+From now on, when you click *Group parameters* to ungroup all parameters, the parameter positions will no longer be reused.
+
 #### Problem when opening a card [ID_39251]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When you opened a card, in some cases, the data on the card would not get loaded. As a result, the card would remain empty.
 
+#### Trend graph would show "no data" due to primary key being replaced by the display key in the trend data request [ID_39258]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In some rare cases, a trend graph for a particular parameter would show "no data". This was due to the primary key being replaced by the display key in the message that requested the trend data to be displayed.
+
 #### Visual Overview: Problem with placeholder value update detection [ID_39325]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.
+
+#### Memory leak in Alarm Console [ID_39366]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the Alarm Console could leak memory.
+
+#### Alarm Console: No longer possible to filter based on focus after having selected 'Statistical view' or 'Reports view' [ID_39388]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in the *Alarm Console*, you had selected *Statistical view* or *Reports view*, it would incorrectly no longer be possible to filter alarms based on focus.
+
+#### Visual Overview: Problem when a session variable in a URL of an embedded web browser was updated [ID_39403]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When, in Visual Overview, a session variable in a URL of an embedded web browser was updated, in some cases, an exception could be thrown.
+
+#### Alarm Console: Not possible to open new suggestion event tabs when 'Behavioral Anomaly Detection' was disabled in System Center [ID_39415]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When *Behavioral Anomaly Detection* was disabled in *System Center > System settings > Analytics Config*, up to now, it would incorrectly not be possible to open new suggestion event tabs in the Alarm Console, even though suggestion events are also created by *Pattern Matching* and *Proactive Cap Detection*.
+
+From now on, it will be possible to open new suggestion event tabs in the Alarm Console when at least one of the following Analytics features is enabled: *Proactive Cap Detection*, *Behavioral Anomaly Detection* or *Pattern Matching*.
+
+#### Dialog box controls showing underlined text and opening up a dropdown list when clicked would not open their dropdown list when you pressed ALT+DOWN [ID_39423]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+A dialog box control showing underlined text and opening up a dropdown list when clicked (e.g. the severity selector in a *New alarm* action of a correlation rule) would incorrectly not open its dropdown list when you pressed ALT+DOWN.

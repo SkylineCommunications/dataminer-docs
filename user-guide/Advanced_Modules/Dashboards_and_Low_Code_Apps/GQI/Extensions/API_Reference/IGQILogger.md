@@ -9,7 +9,7 @@ uid: GQI_IGQILogger
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-Contains functionality to log messages and exceptions. The log files will be placed in the folder `C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources` or `C:\Skyline DataMiner\Logging\GQI\Custom operators`.
+Contains functionality to log messages and exceptions. See [Logging](xref:GQI_Extensions_Logging) for more detailed information and a practical example of how the `IGQILogger` interface can be used.
 
 Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39043 -->
 

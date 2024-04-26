@@ -119,6 +119,8 @@ Examples:
 
 - If you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*<!-- RN 39254 -->, so that users can use the button to set the viewport for the line chart. The action has two arguments, *To* and *From*, which can be either set to a static value or linked to a numeric value feed. Available from DataMiner 10.3.5/10.4.0 onwards. Prior to DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5, this option is named *Set timespan*<!-- RN 35933 -->.
 
+- From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, if you configure this action for a [Node edge graph](xref:DashboardNodeEdgeGraph) component, you can select the option *Clear selection*.
+
 ## Showing a context menu
 
 From DataMiner 10.4.1/10.5.0 onwards<!--RN 37209-->, this option is only available during the configuration of actions in the [Template Editor](xref:Template_Editor) for *Icon*, *Rectangle*, and *Ellipse* layers.
