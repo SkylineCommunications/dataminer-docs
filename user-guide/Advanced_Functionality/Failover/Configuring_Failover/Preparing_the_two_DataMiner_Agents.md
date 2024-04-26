@@ -99,7 +99,7 @@ Now restart the backup dma.
 
 - When using TLS, assert that the required certificates are imported and configurations done on the backup dma as well.
 For Cassandra see [Encryption in Cassandra](xref:Security_Cassandra_TLS).
-For the indexing databases see the following. For Opensearch see [Securing the Opensearch database](xref:Security_Opensearch), for Elasticsearch (deprecated) see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
+For the indexing databases see the following. For Opensearch see [Securing the Opensearch database](xref:Security_OpenSearch), for Elasticsearch (deprecated) see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
 
 > [!IMPORTANT]
 >
