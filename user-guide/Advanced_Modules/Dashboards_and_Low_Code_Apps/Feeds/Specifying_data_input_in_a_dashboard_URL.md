@@ -56,7 +56,10 @@ This JSON object has to have the following structure:
 
 - When you provide data in the (optional) *feedAndSelect* item, that data will be interpreted as if it was passed using the [legacy syntax](#legacy-syntax) described below.
 
-- When you provide data in the (optional) *feed* item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard or app page.
+- When you provide data in the (optional) *feed* item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard.
+
+  > [!NOTE]
+  > The (optional) *feed* item is currently only available for passing data input in a dashboard URL.
 
 - When you provide data in the (optional) *select* item, that data will only be used to select items in selection boxes on the dashboard or app page. It will not be used in the URL feed.
 
