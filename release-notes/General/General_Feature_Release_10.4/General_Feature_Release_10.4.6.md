@@ -328,6 +328,12 @@ A number of enhancements have been made to prevent SLLogCollector from experienc
 
 - An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
 
+### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
+
 #### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
