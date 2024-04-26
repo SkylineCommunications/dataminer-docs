@@ -491,7 +491,7 @@ items:
             topicUid: Configuring_feed_components
           - name: Dynamically referencing feed values in text
             topicUid: Feed_Link
-          - name: Specifying data input in a dashboard URL
+          - name: Specifying data input in a dashboard or app URL
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
