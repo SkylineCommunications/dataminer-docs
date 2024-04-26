@@ -78,6 +78,16 @@ Because of a number of enhancements, overall performance has now increased when 
 
 In SPI log entries indicating how long it took to load a visual overview, from now on, the total loading time of a visual overview will include the loading times of all visual overviews embedded in that visual overview.
 
+#### SPI logging: No SPI log entry will be generated when the DMA to which you are connecting is starting, restarting or upgrading [ID_39502]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you have connected to a DataMiner Agent, an SPI log entry is generated, indicating how long the connection process took.
+
+Up to now, when the DataMiner Agent was starting, restarting or upgrading while you were connecting to it, the startup time of the DataMiner Agent would be included in the connection duration indicated in the above-mentioned SPI log entry.
+
+From now on, when the DataMiner Agent to which you are connecting is starting, restarting or upgrading, no SPI log entry will be generated.
+
 ### Fixes
 
 #### Memory leak in Alarm Console [ID_38819]
