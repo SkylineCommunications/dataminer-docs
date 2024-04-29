@@ -609,11 +609,6 @@ items:
           topicUid: AdvancedDataMinerMediationLayerLinkingTableParameters
         - name: Data pages
           topicUid: AdvancedDataMinerMediationLayerDataPages
-      - name: EPM integration in Cube
-        topicUid: AdvancedEpm
-        items:
-        - name: Launching EPM objects by clicking buttons in Data Display table cells
-          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
@@ -5641,9 +5636,9 @@ items:
       items:
         - name: Bad and best practices
           topicUid: UD_APIs_Bad_and_Best_Practices
-    - name: EPM integration training
+    - name: EPM integration
       items:
-        - name: About the EPM Integration Training package
+        - name: EPM Integration Training
           topicUid: EpmIntegrationTrainingAbout
         - name: Connectors configuration
           items:
@@ -5657,6 +5652,8 @@ items:
             topicUid: EpmIntegrationLinkingCollectorData
           - name: View impact configuration
             topicUid: EpmIntegrationViewImpact
+          - name: Configuring buttons in table cells to open EPM objects
+            topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
           - name: Aggregation and merge actions
             topicUid: EpmIntegrationTrainingAggregations
           - name: Alarm settings
@@ -5685,8 +5682,10 @@ items:
               topicUid: EpmIntegrationTrainingMonitoring
             - name: EPM and Low-Code Apps
               topicUid: EpmIntegrationTrainingLowCodeApp
-        - name: Other configuration options
-          topicUid: EpmIntegrationTrainingOtherOptions
+        - name: Topology app configuration
+          topicUid: Topology_app_configuration
+        - name: DataMiner processes configuration
+          topicUid: EPM_DataMiner_processes_config
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

@@ -2,13 +2,13 @@
 uid: EpmIntegrationTrainingAbout
 ---
 
-# About the EPM Integration Training package
+# EPM Integration Training
+
+To get started with EPM integration, you can install the EPM Integration Training package. This package contains all the necessary components to understand, navigate, and get hands-on with an EPM solution.
 
 ## Installation
 
-The EPM Integration Training package provides you with all the necessary components to understand, navigate, and get hands-on with an EPM solution.
-
-If your DataMiner System is connected to dataminer.services, you can deploy the package directly from the [DataMiner Catalog](https://catalog.dataminer.services/details/b661f936-d6e7-447c-baee-f0a5503e75b4). Otherwise, you can download it from the Catalog and execute it on one of the DMAs in your cluster. 
+If your DataMiner System is connected to dataminer.services, you can deploy the package directly from the [DataMiner Catalog](https://catalog.dataminer.services/details/b661f936-d6e7-447c-baee-f0a5503e75b4). Otherwise, you can download it from the Catalog and execute it on one of the DMAs in your cluster.
 
 You can install the package on a single DMA. If more DMAs are present in the cluster, the package will utilize at most three DMAs to create a front-end element, two back-end elements, and three collectors, distributing them across the DMAs as follows:
 
@@ -51,7 +51,7 @@ The EPM Integration Training package installs the following components:
 
 ## Table structure
 
-The front-end element has minimal information in its local tables. It retrieves all the DMS information via View tables.
+The front-end element has minimal information in its local tables. It retrieves all the DMS information via view tables.
 
 |            | Frontend Local Table | Frontend View Table | Backend Local Table |
 |------------|----------------------|---------------------|---------------------|

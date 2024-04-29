@@ -2,11 +2,9 @@
 uid: AdvancedEPMLaunchEPMObjectsTableCellButtons
 ---
 
-# Launching EPM objects by clicking buttons in Data Display table cells
+# Configuring buttons in Data Display table cells to open EPM objects
 
-Starting from DataMiner 10.2.3 (RN 32368), a different way of adding links to EPM objects in a Data Display table is supported.
-
-When you configure a cell button in a protocol as shown below, the table cell will display the SystemType and SystemName defined in the EPM object. Clicking the link will open a new card for that object.
+Starting from DataMiner 10.2.3<!-- RN 32368 -->, when you configure a cell button in a protocol as shown below, the table cell will display the SystemType and SystemName defined in the EPM object. Clicking the link will open a new card for that object.
 
 Example:
 
@@ -22,7 +20,7 @@ Example:
 </Measurement>
 ```
 
-The discreet value can contain the SystemType and SystemName of the object, or a reference like “{pid:530}”. In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
+The discreet value can contain the SystemType and SystemName of the object, or a reference like `{pid:530}`. In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
 
 If you know the type of the EPM object, you can add a type prefix ("epm" or "view"), followed by an equal sign and (a reference to) the identifier.
 
@@ -40,16 +38,13 @@ In each of the examples above, the card will be opened on a particular page:
 - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
 - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 
-> [!NOTE]
-> From DataMiner 10.2.3 onwards, EPM cards can be saved in workspaces; however, this is only supported when the card layout is set to “Tab layout”.
-
-Starting from DataMiner 10.2.6 (RN 33295), if the SystemName contains colons (e.g. a MAC address), you can replace the default separator (i.e. a colon) by another one (e.g. a pipe character) by placing a `[sep:XY]` prefix in front of the SystemName. See the following example:
+Starting from DataMiner 10.2.6<!-- RN 33295 -->, if the SystemName contains colons (e.g. a MAC address), you can replace the default separator (i.e. a colon) by another one (e.g. a pipe character) by placing a `[sep:XY]` prefix in front of the SystemName. See the following example:
 
 ```xml
 <Value type="open">{EPM=[sep::|]CPE/'00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
 ```
 
-From DataMiner 10.2.9 onwards (RN 33857), you can specify a second custom separator to also replace the existing separator inside the SystemType and/or SystemName. Since the default separator between the SystemType and the SystemName is "/", this would mean that neither the systemType nor the SystemName would be allowed to contain that character ("/").
+From DataMiner 10.2.9 onwards<!-- RN 33857 -->, you can specify a second custom separator to also replace the existing separator inside the SystemType and/or SystemName. Since the default separator between the SystemType and the SystemName is "/", this would mean that neither the systemType nor the SystemName would be allowed to contain that character ("/").
 
 In the following example, a second [sep:XY] is used to replace the "/" inside the SystemType ("CPE/CPE") with another character ("$").
 

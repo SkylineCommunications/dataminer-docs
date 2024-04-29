@@ -84,6 +84,9 @@ A foreign key relation also has to be defined between customer and device. This 
 </Relations>
 ```
 
+> [!TIP]
+> See also: [Relations](xref:UIComponentsTableRelations)
+
 ### Many-to-many relations
 
 A many-to-many relation suggests that an item from topology level A can be connected to multiple items from another topology level B, and conversely, an item from topology level B can be linked to multiple items from topology level A.
@@ -135,6 +138,9 @@ Finally, the foreign key relations must also be defined. In this example, 26000 
 </Relations>
 ```
 
+> [!TIP]
+> See also: [Relations](xref:UIComponentsTableRelations)
+
 ### Recursive relations
 
 A recursive relationship implies that an item within a topology level A can be linked to another item on the same level A.
@@ -185,3 +191,6 @@ Finally, the foreign key relations must also be defined. In this example, 23000 
     <Relation path="21000;23000;21000" />
 </Relations>
 ```
+
+> [!TIP]
+> See also: [Relations](xref:UIComponentsTableRelations)

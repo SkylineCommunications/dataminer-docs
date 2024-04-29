@@ -17,7 +17,9 @@ The [Protocol.Type](#type-configuration) and [Protocol.Display](#display-configu
 
 For example:
 
-`<Type relativeTimers="true" options="disableViewRefresh" databaseOptions="partitionedTrending">virtual</Type>`
+```xml
+<Type relativeTimers="true" options="disableViewRefresh" databaseOptions="partitionedTrending">virtual</Type>
+```
 
 > [!NOTE]
 > The connector is defined as virtual, as it does not require any communication settings.
@@ -34,7 +36,9 @@ For example:
 
 For example:
 
-`<Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General" wideColumnPages="">`
+```xml
+<Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General" wideColumnPages="">
+```
 
 > [!TIP]
 > See also: [Protocol.Display](xref:Protocol.Display)

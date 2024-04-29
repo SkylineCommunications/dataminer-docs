@@ -6,7 +6,7 @@ uid: EPMManagerChainsAndFields
 
 ## Basic configuration
 
-Within the EPM Manager connector, you will find a `<Chains>` tag that contains a number of `<Chain>` children. Each `<Chain>` represents a topology view visible in DataMiner.
+Within the EPM Manager connector, you will find a [Chains](xref:Protocol.Chains) tag that contains a number of [Chain](xref:Protocol.Chains.Chain) children, which each represent a topology view visible in DataMiner.
 
 For example:
 
@@ -27,7 +27,7 @@ For example:
 <Field name="Customer" options="displayInFilter;showCPEChilds;ignoreEmptyFilterValues;tabs:3500-KPI;details:3500;ShowBubbleupAndInstanceAlarmLevel" pid="3502"/>
 ```
 
-The `<Field>` tag has the following attributes:
+The [Field](xref:Protocol.Chains.Chain.Field) tag has the following attributes:
 
 | Attribute | Description                                                                                           |
 |-----------|-------------------------------------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Within the EPM Manager protocol, it is possible to configure the visibility of a
 
 To enable this functionality:
 
-- Add a `<display>` tag within the corresponding chain or field.
+- Add a `<Display>` tag within the corresponding chain or field.
 - Create a read-write parameter for each chain or field. This parameter will make it possible to configure the visibility of these items when necessary.
 
 ### Example parameter
