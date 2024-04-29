@@ -24,5 +24,4 @@ To link to EPM objects in this JSON syntax, you will need to use the **epm-selec
 > See also:
 >
 > - [Linking a shape to a dashboard component](xref:Linking_a_shape_to_a_dashboard_component)
-> - [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
-> - [Specifying data input in an app URL](xref:Specifying_data_input_in_URL)
+> - [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL)
