@@ -225,7 +225,7 @@ There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `Reservati
 
 ### Limit the use of GQI aggregation operations
 
-While GQI offers versatile [aggregation capabilities](xref:GQI_Aggregate) for DOM data, it is crucial to consider their impact on performance. These operations execute in memory and involve fetching all data from the DOM manager based on configured filters. When you are working with a large data source, certain aggregation operations could significantly slow down, putting strain on the DMA. To ensure efficiency, we recommend only using the *Aggregate* query operators together with the *Count* method, when the ID field of DOM data is selected as the aggregation column. This approach is optimized for database execution, ensuring exceptional performance. For smaller datasets with fewer than 500 records, more intricate aggregations like grouping may be feasible.
+While GQI offers versatile [aggregation capabilities](xref:GQI_Aggregate) for DOM data, it is crucial to consider their impact on performance. These operations execute in memory and involve fetching all data from the DOM manager based on configured filters. When you are working with a large data source, certain aggregation operations could significantly slow down, putting strain on the DMA. To ensure efficiency, we recommend only using the *Aggregate* query operator together with the *Count* method, when the ID field of DOM data is selected as the aggregation column. This approach is optimized for database execution, ensuring exceptional performance. For smaller datasets with fewer than 500 records, more intricate aggregations like grouping may be feasible.
 
 ## General
 
