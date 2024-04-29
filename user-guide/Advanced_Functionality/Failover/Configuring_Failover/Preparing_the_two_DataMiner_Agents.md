@@ -6,18 +6,20 @@ uid: Preparing_the_two_DataMiner_Agents
 
 Before you start the actual configuration, make sure you have the following:
 
-- A primary DMA
+- A [primary DMA](#primary-dataminer-agent)
 
-- A backup DMA (newly installed)
+- A [backup DMA](#backup-dataminer-agent) (newly installed)
 
-- A pair of additional IP addresses or a hostname
+- A [pair of additional IP addresses or a hostname](#additional-ip-addresses-or-hostname)
 
   > [!NOTE]
   > To avoid possible conflicts, make sure these IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
+In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
+
 ## Primary DataMiner Agent
 
-The primary DMA is a normal DataMiner Agent. In most cases, this will be an existing DMA that is a member of a DMS Cluster. It does not require any additional configuration.
+The primary DMA is a normal DataMiner Agent. In most cases, this will be an existing DMA that is a member of a DMS cluster. It does not require any additional configuration.
 
 ## Backup DataMiner Agent
 
@@ -53,59 +55,75 @@ Addresses: 10.11.5.52
 
 ## Opening the required ports
 
-To ensure that both primary and backup dmas can communicate, assert that both agents have the required ports open as seen in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports). Assert that packets coming from the "Virtual IP address" or the "shared hostname" to and from these ports are not dropped by the network.
+To ensure that the primary and backup DMA can communicate, make sure that both DMAs have the required ports mentioned under [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+
+Make sure that packets to and from these ports coming from the virtual IP address or the shared hostname are not dropped by the network.
 
 ## Preparing the database
 
-Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a failover system. Therefore it is important to based on the chosen architecture take the measures described below:
-
-### Legacy setup with MySQL or MSSQL database
-
-DataMiner will automatically synchronize the configuration and subsequently its data.
-To check the data synchronization state after the failover setup, you can check [Synchronizing the DMA databases](xref:Synchronizing_the_DMA_databases)
-Note that MySQL is considered legacy as mentioned in [Legacy setup with MySQL or MSSQL database](xref:Legacy_setup_with_MySQL_or_MSSQL_database)
-
-### Separate Cassandra setup without indexing
-
-DataMiner will automatically attempt to add Cassandra to a cluster of 2 Cassandra nodes, one for the primary dma and one for the backup dma.
-Before attempting to set up a failover agent, assert that Cassandra is installed and running on both DataMiner agents, by opening *Windows Services* and checking whether the *cassandra* service exists and is running.
-If this is the case, open an *elevated command window* and navigate to *C:\Program Files\Cassandra\bin*.
-There, execute the command *nodetool version*. Assert that the output of this command is the same before continuing.
-e.g. if the command returns **"ReleaseVersion: 3.7"** you may only continue to configure the failover if the other node also returns **"ReleaseVersion: 3.7"**. If one of the DMAs has a release version of **3.7**, but for the other agent the release version is **3.11** or higher, please follow the procedure to update the Cassandra node with version **3.7** on the page [Updating Cassandra](xref:Cassandra_updating) in the tab *On Windows*.
-Finally, ensure that between the primary and backup DMA, port 7000 and port 9042 is open to allow the databases to communicate as mentioned in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
-
-### Separate Cassandra setup with indexing
-
-We recommend against this setup for failover. With this setup it is possible that if one node goes down, all data in the indexing database is unavailable.
-
-If you do go ahead with this, please keep the following into account:
-The indexing database will automatically create a cluster of 2 nodes, one for the primary dma and one for the backup dma.
-To ensure this can happen, assert that ports 9200 and 9300 are open between primary and backup dma to allow the databases to communicate as mentioned in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
-
-For the steps taken for Cassandra: see paragraph [Separate Cassandra setup without indexing](xref:Preparing_the_two_DataMiner_Agents#separate-cassandra-setup-without-indexing).
+Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a Failover system. Below you can find the measures that need to be taken for each of the supported architectures.
 
 ### Dedicated clustered storage
 
-- Assert that the agents to be added can reach the Cassandra Cluster through ports 9042 or 9142 when using TLS.
+1. Make sure that the Agents to be added can reach the Cassandra cluster through ports 9042 or 9142 when using TLS.
 
-- Assert that the agents to be added can reach the Elastic or OpenSearch cluster through port 9200.
+1. Make sure that the Agents to be added can reach the OpenSearch or Elasticsearch cluster through port 9200.
 
-- Assert that no elements/ alarms or other DataMiner functionalities are used on the backup dma to ensure that no conflicts happen when joining the dmas.
+1. Double-check that there are no elements or alarms on the backup DMA to ensure that no conflicts happen when joining the DMAs. The backup DMA must be a newly installed, blank Agent.
 
-- Stop the backup dma, then copy the database configuration from the primary dma to the backup dma.
-The database configuration can be found on the primary (existing) dma in *C:\Skyline DataMiner\db.xml*.
-Copy the contents of the "DataBases" tag to the file *C:\Skyline DataMiner\db.xml* on the backup dma.
-Now restart the backup dma.
+1. Stop the backup DMA, and then copy the database configuration from the primary DMA to the backup DMA:
 
-- When using TLS, assert that the required certificates are imported and configurations done on the backup dma as well.
-For Cassandra see [Encryption in Cassandra](xref:Security_Cassandra_TLS).
-For the indexing databases see the following. For Opensearch see [Securing the Opensearch database](xref:Security_OpenSearch), for Elasticsearch (deprecated) see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
+   1. On the primary DMA, open `C:\Skyline DataMiner\DB.xml`.
 
-> [!IMPORTANT]
->
-> When using multiple [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) or [Opensearch clusters](xref:Configuring_multiple_OpenSearch_clusters) prior to DataMiner 10.4.0 and 10.4.2, there is an additional file that needs to be copied from the primary to the backup dma. This file is found in *C:\Skyline DataMiner\Databases\DBConfiguration.xml*. This also needs to be done while the backup agent is stopped.
+   1. Copy the contents of the `DataBases` tag.
+
+   1. Paste this content in the file `C:\Skyline DataMiner\db.xml` on the backup DMA.
+
+      > [!IMPORTANT]
+      > If multiple [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) are used prior to DataMiner 10.4.0/10.4.2, there is an additional file that needs to be copied from the primary to the backup DMA. You can find this *DBConfiguration.xml* file in the folder `C:\Skyline DataMiner\Databases\`. Make sure you also do this while the backup Agent is stopped.
+
+      > [!NOTE]
+      > If multiple [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) are used, you may wish to configure the *priorityOrder* attribute differently on the main or backup DMA. You can do this if you want to change which indexing cluster is read from when there is a Failover switch. For more info on the *priorityOrder* attribute, see [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+
+   1. Restart the backup DMA.
+
+1. If TLS is used, make sure that the required certificates are imported, and this is correctly configured on the backup DMA as well.
+
+   - For Cassandra see [Encryption in Cassandra](xref:Security_Cassandra_TLS).
+
+   - For OpenSearch, see [Securing the OpenSearch database](xref:Security_OpenSearch).
+
+   - For Elasticsearch (deprecated) see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
+
+### Separate Cassandra setup with indexing
+
+We **recommend against this setup** for Failover. With this setup, it is possible that if one node goes down, all data in the indexing database is unavailable.
+
+If you do go ahead with this, take into account that the the indexing database will automatically create a cluster of two nodes: one for the primary DMA and one for the backup DMA. To ensure this can happen, make sure that **ports 9200 and 9300** are open between primary and backup DMA so the databases can communicate. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+
+For Cassandra, you will need to take the same steps as detailed below for a [separate Cassandra setup without indexing](xref:Preparing_the_two_DataMiner_Agents#separate-cassandra-setup-without-indexing).
+
+### Separate Cassandra setup without indexing
+
+When you set up Failover, DataMiner will automatically attempt to add Cassandra to a cluster of two Cassandra nodes, one for the primary DMA and one for the backup DMA. To make sure this can happen correctly, follow the steps below before you attempt to set up Failover:
+
+1. Make sure that Cassandra is installed and running on both DataMiner Agents, by opening *Windows Services* and checking whether the *cassandra* service exists and is running.
+
+1. If Cassandra is running, open an *elevated command window* and navigate to `C:\Program Files\Cassandra\bin`.
+
+1. In this folder, execute the command *nodetool version*.
+
+1. Make sure the output of this command is the same for both DMAs.
+
+   For example, if the command returns "**ReleaseVersion: 3.7**", the other node must also return "**ReleaseVersion: 3.7**". If one of the DMAs has a lower release version, update the Cassandra node so it uses the same version (see *On Windows* under [Updating Cassandra](xref:Cassandra_updating)).
+
+1. Make sure that between the primary and backup DMA, **port 7000 and port 9042** are open to allow the databases to communicate as mentioned under [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+
+### Legacy setup with MySQL or MSSQL database
+
+DataMiner will automatically synchronize the configuration and subsequently its data. No steps are necessary to prepare for this.
+
+To check the data synchronization state after you have set up Failover, see [Synchronizing the DMA databases](xref:Synchronizing_the_DMA_databases).
 
 > [!NOTE]
-> When using multiple [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) or [Opensearch clusters](xref:Configuring_multiple_OpenSearch_clusters) you may wish to choose the *priorityOrder* attribute differently on the main or backup DMA.
-> This can be done if you wish to swap which indexing cluster will be read from when the dma switches.
-> For more info on the *priorityOrder* attribute, see [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) or [Opensearch clusters](xref:Configuring_multiple_OpenSearch_clusters).
+> From DataMiner 10.3 onwards, this setup is no longer supported. See [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
