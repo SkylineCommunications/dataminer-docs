@@ -12,7 +12,7 @@ items:
         href: Web_apps/toc.yml
       - name: dataminer.services release notes
         items:
-          - name: dataminer.services release notes
+          - name: dataminer.services change log
             topicUid: DCP_change_log
           - name: Cloud Pack release notes
             topicUid: Cloud_Pack_change_log
