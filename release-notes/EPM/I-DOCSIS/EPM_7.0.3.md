@@ -25,9 +25,9 @@ Several improvements have been implemented in the EPM_I_DOCSIS_AddNewCcapCmPair 
 
 For the following parameters in the upstream and downstream threshold tables, the threshold boundaries were updated:
 
-- For the upstream QAM channel for the collector, the Minimum Tx Power Level is now 25.0 dBmV.
+- For the upstream QAM channel for the CM collector, the Minimum Tx Power Level is now 25.0 dBmV.
 - For the upstream QAM channel for the CCAP, the Maximum Timing Offset Level is now 10000 µs.
-- For the downstream QAM channel for the collector, the Maximum Rx Power Level is now 20 dBmV.
+- For the downstream QAM channel for the CM collector, the Maximum Rx Power Level is now 20 dBmV.
 
 #### Skyline EPM Platform information template adjusted to remove table name [ID_39508]
 
