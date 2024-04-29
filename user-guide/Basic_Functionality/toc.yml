@@ -360,8 +360,8 @@ items:
             topicUid: Editing_the_information_template_for_one_parameter
           - name: Tutorials
             items:
-              - name: Info template quick tips
-                topicUid: Info_template_quick_tips
+              - name: Using information templates for enhanced parameter presentation and monitoring
+                topicUid: Information_Templates_Tutorial
       - name: Alarm templates
         items:
           - name: About alarm templates
