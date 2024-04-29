@@ -262,6 +262,12 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
+#### Enhanced SLDBConnection logging [ID_39267]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
+
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -275,6 +281,17 @@ A proactive detecting suggestion event indicating a forecasted crossing of a cri
 Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
 
 From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
+#### ProtocolCache.txt replaced by ProtocolCacheV2.txt [ID_39316]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *ProtocolCache.txt* file, located in the `C:\Skyline DataMiner\System Cache\` folder, has now been replaced by the *ProtocolCacheV2.txt* file.
+
+While the *ProtocolCache.txt* file only contained information about the protocols that were not fully compatible with Cassandra, the *ProtocolCacheV2.txt* file will also contain information like minimum required DataMiner version.
+
+> [!IMPORTANT]
+> up to now, when no compliance information was specified in a protocol, all QActions would be checked for queries incompatible with Cassandra. From now on, it will be assumed that a protocol version is compatible with Cassandra unless Cassandra compliance is explicitly set to false in the `<Compliancies>` element of the protocol.
 
 #### SLDataGateway: Enhanced logging [ID_39341]
 
@@ -358,6 +375,30 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 > The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
 > When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
 
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
+
+#### SLLogCollector: Enhancements to make sure the JAVA_HOME variable is set [ID_39409]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made to prevent SLLogCollector from experiencing problems when the JAVA_HOME variable is not set:
+
+- SLLogCollector is now able to pass environment variables to helper executables. This will allow temporarily setting an environment variable to make sure a particular tool can be run correctly.
+
+- In SLLogCollector, the timeout for helper executables has been reduced from 5 minutes to 1 minute.
+
+- An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
+
+### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -396,3 +437,19 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
+
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+
+#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When, on a STaaS system, an attempt was made to delete data from the database using a delete statement with a filter, in some cases, the data would not be deleted and the following error would be logged in the *CloudStorage.txt* log file:
+
+`Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
+
+This issue has now been fixed.

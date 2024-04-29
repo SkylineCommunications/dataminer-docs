@@ -305,6 +305,10 @@ items:
                 topicUid: Adding_related_parameters_to_a_trend_graph
               - name: Adding time-scoped related parameters to a trend graph
                 topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+          - name: Tutorials
+            items:
+              - name: Gaining insights using time-scoped relation learning
+                topicUid: Time_Scoped_Relation_Learning_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:
@@ -651,6 +655,8 @@ items:
         items:
           - name: Getting started with basic shapes
             topicUid: Getting_started_with_basic_shapes
+          - name: Using Visio to control dashboard feed components
+            topicUid: Using_visio_to_control_dashboard_feed_components
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:

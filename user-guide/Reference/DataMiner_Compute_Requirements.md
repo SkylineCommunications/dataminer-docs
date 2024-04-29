@@ -101,6 +101,26 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 DataMiner requires a server with a name that is **no longer than 15 characters**. Make sure the name does not contain any characters that are disallowed in NetBIOS computer names or DNS host names. For more information, refer to [learn.microsoft.com](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#netbios-computer-names).
 
+## Standalone Cloud Gateway server requirements
+
+If you want to [connect your system to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) but would prefer to use a dedicated Cloud Gateway server for this, the server will need to meet the following requirements:
+
+### Operating System
+
+See "Operating system" under [DataMiner requirements](#dataminer-requirements).
+
+### RAM
+
+A minimum of 4 GB will be required to smoothly run the necessary services on the server.
+
+### CPU
+
+The processes are not CPU-heavy and do not require a lot of parallel computing. That is why we recommend at least 4 cores.
+
+### Network
+
+See "Network" under [DataMiner requirements](#dataminer-requirements).
+
 ## Cassandra requirements
 
 For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:Databases_about), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.

@@ -171,7 +171,7 @@ You can link to a dashboard or low-code app in the same way as you would link to
 In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify a feed for the dashboard or low-code app.
 
 > [!TIP]
-> For more information about the URL syntax, refer to [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL) or [Specifying data input in an app URL](xref:Specifying_data_input_in_URL)
+> For more information about the URL syntax, refer to [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
 
 > [!NOTE]
 > It is also possible to [link a shape to a component of a dashboard](xref:Linking_a_shape_to_a_dashboard_component) instead of the entire dashboard.
