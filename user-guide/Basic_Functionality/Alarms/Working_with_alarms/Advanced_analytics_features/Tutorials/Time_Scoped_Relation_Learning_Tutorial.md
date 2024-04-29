@@ -163,7 +163,7 @@ Finding the cause of the permanent decrease in available physical memory, which 
 
 ## Step 6: Final exercise
 
-In this final step, you will apply everything you have learned earlier in a practical exercise:
+In this final step, you will apply everything you have learned earlier in a [practical exercise](https://community.dataminer.services/courses/kata-28/lessons/kata-28-upload-assignment/):
 
 The *Available Physical Memory* parameter exhibits a temporary drop in memory (1).
 
@@ -171,15 +171,16 @@ The *Available Physical Memory* parameter exhibits a temporary drop in memory (1
 
 Which process was responsible for this? Find the culprit and earn at least 75 DevOps Points.
 
-> If you are a member of the DevOps Professional Program and you have completed the exercise above, send us the name of the process to get DevOps Points.
+> [!IMPORTANT]
+> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g. the feature did not perform as well as you had hoped).
 >
-> Use the following email format:
+> Use the following email format to send us your examples:
 >
-> - Subject: Tutorial - Relation Learning Tutorial - xxx (Replace "xxx" with the name of the process that caused the temporary memory drop)
+> - Subject: Tutorial - Relation learning feedback
 > - To: [ai@skyline.be](mailto:ai@skyline.be)
 > - Body:
 >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
->   - If possible, add a screenshot showing both the *Available Physical Memory* trend graph as well as the memory usage of the process that caused the issue.
->   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the relation learning feature.
+>   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why relation learning was useful or not.
+> - Attachment: a screenshot relevant to your use case
 >
-> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
+> Skyline will review your submission. Upon successful validation, you will be awarded DevOps Points.
