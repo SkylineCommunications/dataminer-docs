@@ -14,18 +14,18 @@ You can install the package on a single DMA. If more DMAs are present in the clu
 
 - Agent 1:
 
-  - **EPM Availability Front End**
+  - **EPM Training Front End**
 
 - Agent 2:
 
-  - **EPM Availability Back-End 1**
-  - **EPM Availability Collector 1**
-  - **EPM Availability Collector 2**
+  - **EPM Training Back-End 1**
+  - **EPM Training Collector 1**
+  - **EPM Training Collector 2**
 
 - Agent 3:
 
-  - **EPM Availability Back-End 2**
-  - **EPM Availability Collector 3**
+  - **EPM Training Back-End 2**
+  - **EPM Training Collector 3**
 
 ## Components
 

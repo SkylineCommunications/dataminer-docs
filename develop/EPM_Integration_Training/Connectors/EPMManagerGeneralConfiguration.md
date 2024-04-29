@@ -32,7 +32,7 @@ For example:
 | Tag         | Attribute     | Value             | Description                                        |
 |-------------|---------------|-------------------|----------------------------------------------------|
 | `<Display>` | `type`        | `element manager` | Enables the EPM interface.                         |
-| `<Display>` | `pageOptions` | `*;CPEOnly`       | Data pages are no longer displayed in the element. |
+| `<Display>` | `pageOptions` | `*;CPEOnly`       | Data pages are hidden for all users except the Administrator user. It is not recommended to log on as the Administrator in a Production environment. |
 
 For example:
 

@@ -151,7 +151,7 @@ To enable this functionality:
 
 You can change the names of topology chains and fields without making changes to the connector. This change will also apply to alarms, so any new alarms will be created with the new system types to make sure that alarm linking works.
 
-You can do so by specifying overrides in the *EPMConfig.xml* in the `C:\Skyline DataMiner` root directory. For detailed information, refer to [EPMConfig.xml](xref:EPMConfig_xml)
+You can do so by specifying overrides in the *EPMConfig.xml* in the `C:\Skyline DataMiner` root directory. A DMA restart is required for changes to go into effect. For detailed information, refer to [EPMConfig.xml](xref:EPMConfig_xml)
 
 Example:
 
