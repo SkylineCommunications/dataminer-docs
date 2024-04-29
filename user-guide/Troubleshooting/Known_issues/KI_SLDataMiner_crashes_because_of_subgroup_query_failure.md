@@ -20,7 +20,7 @@ When SLDataMiner attempts to fetch users of a group, either by adding the group 
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU13], 10.4.0 [CU1], or 10.4.4<!--RN 39058-->.
 
 ## Description
 

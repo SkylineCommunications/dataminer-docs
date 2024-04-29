@@ -32,4 +32,7 @@ uid: Monitoring_Solutions
   <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/user-guide/images/Smart_Trap_Processor.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/user-guide/images/Tag_Management.svg" style="width:100%"></a>
+  </div>  
 </div>

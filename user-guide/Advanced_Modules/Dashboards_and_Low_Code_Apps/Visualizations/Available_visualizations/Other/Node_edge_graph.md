@@ -91,6 +91,12 @@ To configure actions:
 
 1. In the *Action* box, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
+You can configure the following [**component actions**](xref:LowCodeApps_event_config#executing-a-component-action):
+
+- *Fetch the data*: Fetches the data for the component. Available from DataMiner 10.2.10/10.3.0 onwards.
+
+- *Clear selection*: Clear the feed status of the component. Available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->.
+
 > [!NOTE]
 > You can also override the default action for a node or edge using the *Add override* option.
 
