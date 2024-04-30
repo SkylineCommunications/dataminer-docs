@@ -109,6 +109,9 @@ When you set up Failover, DataMiner will automatically attempt to add Cassandra 
 
 1. Make sure that Cassandra is installed and running on both DataMiner Agents, by opening *Windows Services* and checking whether the *cassandra* service exists and is running.
 
+   > [!NOTE]
+   > If Cassandra is not installed yet, for instance because you used an older DataMiner installer that still installs MySQL, you will first need to [migrate the database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
+
 1. If Cassandra is running, open an *elevated command window* and navigate to `C:\Program Files\Cassandra\bin`.
 
 1. In this folder, execute the command *nodetool version*.
