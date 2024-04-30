@@ -26,4 +26,8 @@ uid: Cube_Feature_Release_10.4.7
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm Console: Undocked alarm card would not indicate which view was selected [ID_39494]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When you undocked an alarm tab or you opened the *Alarms* tab of a card, it would not be possible to see whether the list view, the statistical view or the reports view was selected. From now on, the selected view will be indicated clearly.
