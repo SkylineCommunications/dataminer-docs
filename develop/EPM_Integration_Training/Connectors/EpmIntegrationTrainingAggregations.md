@@ -39,7 +39,7 @@ For example:
 </Action>
 ```
 
-This action is like an aggregation action, but instead of being applied to a column that it retrieves data from, it is applied on a protocol. Also important is that *remoteElement* points to a *columnPid* containing all the BE elements, and the *trigger* option denotes a parameter ID that will be triggered to initiate the merge request.
+This action is like an aggregation action, but instead of being applied to a column that it retrieves data from, it is applied to a protocol. Also important is that *remoteElement* points to a *columnPid* containing all the BE elements, and the *trigger* option denotes a parameter ID that will be triggered to initiate the merge request.
 
 The flow of the receiver of the merge request is as follows:
 
@@ -82,4 +82,4 @@ The flow of the receiver of the merge request is as follows:
    </Action>
    ```
 
-The action is an aggregation action and there is no need to add the return option, as the BE elements should not set their tables with this information. All that should happen is that the KPIs are calculated and then sent to the FE.
+The action is an aggregation action, and there is no need to add the return option, as the BE elements should not set their tables with this information. All that should happen is that the KPIs are calculated and then sent to the FE.

@@ -21,7 +21,7 @@ To configure this, the **following options are important**:
   - [View=](xref:ColumnOptionOptionsOverview#view-1): The columnPid where the information exists that will be shown in this column.
 
     > [!NOTE]
-    > There are options to view information outside of the element using the remoteView syntax `view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx`. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a **large amount of entities**. More than 20k entities will cause increased load in SLNet. This is because DataMiner handles those subscriptions by requesting all of the collector elements.
+    > There are options to view information outside of the element using the remoteView syntax `view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx`. This is **NOT RECOMMENDED** if you are expecting to retrieve remote data from a **large amount of entities**. If there are more than 20K entities, this will cause an increased load in SLNet. This is because DataMiner handles those subscriptions by requesting all of the collector elements.
 
 Here is an **example** of a *directView* table:
 

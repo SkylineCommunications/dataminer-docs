@@ -39,11 +39,11 @@ Several options can be used. These are the options used in the example:
 
 | Option                              | Description                                                                                                              |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `displayInFilter`                   | Display the field in the filter column on the left side of the EPM UI.                                                   |
+| `displayInFilter`                   | Displays the field in the filter column on the left side of the EPM UI.                                                   |
 | `ignoreEmptyFilterValues`           | Excludes empty values from the filter drop-down lists of the topology levels.                                            |
-| `tab`                               | Display one or more links in the block and next to the filter corresponding to the field.                                |
+| `tab`                               | Displays one or more links in the block and next to the filter corresponding to the field.                                |
 | `detail`                            | Specify tables that will be displayed in the details pane with a filter on the selection.                                |
-| `ShowBubbleupAndInstanceAlarmLevel` | Allow two alarm indications on every object: the alarm state of the object and the alarm state of all the objects below. |
+| `ShowBubbleupAndInstanceAlarmLevel` | Allows two alarm indications on every object: the alarm state of the object and the alarm state of all the objects below. |
 
 > [!NOTE]
 > For more info about the options, see [options attribute](xref:Protocol.Chains.Chain.Field-options).
@@ -151,7 +151,7 @@ To enable this functionality:
 
 You can change the names of topology chains and fields without making changes to the connector. This change will also apply to alarms, so any new alarms will be created with the new system types to make sure that alarm linking works.
 
-You can do so by specifying overrides in the *EPMConfig.xml* in the `C:\Skyline DataMiner` root directory. A DMA restart is required for changes to go into effect. For detailed information, refer to [EPMConfig.xml](xref:EPMConfig_xml)
+You can do so by specifying overrides in the *EPMConfig.xml* in the `C:\Skyline DataMiner` root directory, and then restarting DataMiner so that the changes take effect. For detailed information, refer to [EPMConfig.xml](xref:EPMConfig_xml).
 
 Example:
 

@@ -40,14 +40,14 @@ The `<Cell>` tag is used to define the levels present in the topologies and to a
 | Attribute | Description                                                                             |
 |-----------|-----------------------------------------------------------------------------------------|
 | `name`    | Defines the name of the level.                                                          |
-| `table`   | Defines the table linked to the level. The tables should be the respective View Tables. |
+| `table`   | Defines the table linked to the level. The tables should be the respective view tables. |
 
 The `<Link>` tag is used to define the connections of each `<Cell>` (topology level).
 
 | Attribute | Description                                                                      |
 |-----------|----------------------------------------------------------------------------------|
 | `source`  | An ID used to identify the source.                                               |
-| `dest`    | Parameter ID used to define the connection. Must be the index of the View Table. |
+| `dest`    | Parameter ID used to define the connection. Must be the index of the view table. |
 
 ## Topology relations
 
