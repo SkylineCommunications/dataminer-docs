@@ -96,6 +96,21 @@ Up to now, it was only possible to retrieve a single function definition by ID u
 
 From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
+#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The `GetConnection()` method, which implements the `IConnection` interface, can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators. The method is compatible with existing Nuget packages for Automation scripts.
+
+```csharp
+IConnection GetConnection()
+```
+
+This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the connection between GQI and SLNet.
+
+> [!NOTE]
+> The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+
 ## Changes
 
 ### Enhancements
