@@ -14,14 +14,6 @@ uid: Web_apps_Feature_Release_10.4.6
 
 *No highlights have been selected yet.*
 
-## Breaking changes
-
-#### Low-Code Apps: Selection of DOM instances will now be passed to a script as an array [ID_39391]
-
-<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
-
-Up to now, when you selected multiple DOM instances in a table (while holding the SHIFT button pressed) and then executed a script that used the feeds of those DOM instances as input parameters, only the first DOM instance you selected would be passed to the script. From now on, an array containing all selected DOM instances will be passed to the script.
-
 ## New features
 
 #### Low-Code Apps: Parameter table filter feeds are now also supported [ID_39335]
@@ -95,7 +87,7 @@ In the *Layout* tab, you can find the following settings to configure this:
   Tooltip settings:
 
   - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
-  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the Y-axis names).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the names of the column containing the Y values).
   - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:
