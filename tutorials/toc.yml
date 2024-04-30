@@ -8,6 +8,8 @@ items:
         topicUid: ChatOps_Tutorials
       - name: CI/CD Tutorials
         topicUid: CICD_Tutorials
+      - name: Correlation Tutorials
+        topicUid: Correlation_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials

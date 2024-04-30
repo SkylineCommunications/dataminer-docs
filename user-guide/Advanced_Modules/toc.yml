@@ -159,6 +159,8 @@ items:
     items:
       - name: About DataMiner Correlation
         topicUid: About_DMS_Correlation
+      - name: DataMiner Correlation Tutorials
+        topicUid: Correlation_Tutorials
       - name: Managing Correlation rules
         topicUid: Managing_Correlation_rules
         items:

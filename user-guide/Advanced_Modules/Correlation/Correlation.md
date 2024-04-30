@@ -8,6 +8,8 @@ This section consists of the following topics:
 
 - [About DataMiner Correlation](xref:About_DMS_Correlation)
 
+- [DataMiner Correlation Tutorials](xref:Correlation_Tutorials)
+
 - [Managing Correlation rules](xref:Managing_Correlation_rules)
 
 - [General configuration of Correlation rules](xref:General_configuration_of_Correlation_rules)
