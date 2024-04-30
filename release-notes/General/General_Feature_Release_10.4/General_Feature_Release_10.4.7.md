@@ -28,7 +28,11 @@ uid: General_Feature_Release_10.4.7
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Service & Resource Management: Enhanced performance when creating multiple bookings simultaneously [ID_39390]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
 ### Fixes
 
