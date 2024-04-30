@@ -173,6 +173,14 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
+#### Service & Resource Management: Queue will now be skipped when processing SetSrmJsonSerializableProperties requests [ID_39264]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When the *ResourceManagerHelper* methods *UpdateReservationInstanceProperties* or *SafelyUpdateReservationInstanceProperties* were used to update properties of a booking, up to now, their action was queued on the master DMA to be handled sequentially for all bookings.
+
+From now on, the *SetSrmJsonSerializableProperties* requests sent by the above-mentioned methods will skip said queue.
+
 #### Enhanced SLDBConnection logging [ID_39267]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -328,7 +336,7 @@ A number of enhancements have been made to prevent SLLogCollector from experienc
 
 - An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
 
-### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
