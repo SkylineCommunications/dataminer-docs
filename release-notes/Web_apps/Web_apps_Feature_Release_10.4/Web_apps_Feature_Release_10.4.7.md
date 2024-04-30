@@ -36,4 +36,8 @@ Both the *Grid* and the *Timeline* component no longer have a "New" label.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app & Low-Code Apps - Maps component: 'Map type not supported' error would not be displayed [ID_39506]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When you tried to use a *Maps* component with an unsupported provider, in some cases, the `Map type not supported` error would incorrectly not be displayed. Instead, the component would stay empty.
