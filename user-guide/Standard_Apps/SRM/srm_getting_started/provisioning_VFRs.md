@@ -4,7 +4,7 @@ uid: provisioning_VFRs
 
 # Provisioning virtual function resources
 
-Once the necessary virtual functions are in place, you can provision the system with virtual function resources. Virtual function resources are typically added in resource pools. You can **add resource manually** (see [Configuring pools of resources](xref:Configuring_pools_of_resources)) **or using the script *SRM_DiscoverResources*** (see [Migrating resources](xref:SRM_migrating_resources))(included in the SRM framework).
+Once the necessary virtual functions are in place, you can provision the system with virtual function resources. Virtual function resources are typically added in resource pools. You can **add resources manually** (see [Configuring pools of resources](xref:Configuring_pools_of_resources)) **or using the script *SRM_DiscoverResources*** (see [Migrating resources](xref:SRM_migrating_resources)).
 
 While a virtual function definition could include multiple possible types of interfaces, a specific virtual function resource may not have all of these. When you have created the resource pools and added the virtual function resources, it is therefore important that you also **indicate which interfaces a virtual function resource can have**.
 
