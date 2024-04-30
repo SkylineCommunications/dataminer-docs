@@ -100,7 +100,7 @@ From now on, you can retrieve multiple function definitions in one go using the 
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-The `GetConnection()` method, which implements the `IConnection` interface, can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators. The method is compatible with existing Nuget packages for Automation scripts.
+The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for Automation scripts.
 
 ```csharp
 IConnection GetConnection()
