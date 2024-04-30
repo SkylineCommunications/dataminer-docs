@@ -58,6 +58,51 @@ When configuring the nodes and/or the edges of a *Node edge graph* component, yo
 
 - *Show metric*: When the URL option *showAdvancedSettings=true* is used, you can use this option to specify whether the nodes/edges should be highlighted with their conditional color.
 
+#### Dashboards app & Low-Code Apps - Line & area chart component: Showing multiple lines on multiple Y axes [ID_39509]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a *Line & area chart* component visualizes GQI data, it is now able to show multiple lines on multiple Y axes.
+
+In the *Layout* tab, you can find the following settings to configure this:
+
+- *X axis*: Allows you to rename the default X axis.
+
+  This name will be used as the X label in the tooltips.
+
+- *Y axis*: Allows you to add and rename Y axes.
+
+  - You can add up to 10 Y axes to a single chart.
+  - The axis names will only be used to allow you to choose the correct axis.
+  - By reordering the axes, you can determine the order in which they are added to the chart.
+
+- *Lines*: Allows you to add lines that will be displayed on the chart.
+
+  - You can add up to 20 lines to a single chart.
+  - By reordering the lines, you can determine the order in which they are displayed on the chart and in the tooltip.
+  - The lines inherit the colors specified in the color palette of the component or theme. When all colors are used, the first ones will be assigned again.
+
+  For each line, the following settings can be configured:
+
+  - *X axis column*: The numeric column that contains the X values of the line. The column can be taken from any query specified in the component.
+  - *Y axis column*: the numeric column that contains the Y values of the line. The column can be taken from any query specified in the component.
+  - *Y axis*: The Y axis that is used to plot the line.
+
+- *Tooltips*: Allows you to enable/disable the tooltip and to configure what it will display.
+
+  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value at the same pixel, both will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
+
+  Tooltip settings:
+
+  - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the Y-axis names).
+  - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
+
+It is now also possible to pan and zoom inside a *Line & area chart* component:
+
+- To zoom, scroll while keep the CTRL key pressed (maximum 10,000 times).
+- To pan, drag while keeping the right mouse button pressed (Only works when zoomed in since the default viewport shows all the data).
+
 ## Changes
 
 ### Enhancements
