@@ -28,6 +28,12 @@ uid: Web_apps_Feature_Release_10.4.7
 
 Because of a number of enhancements, overall performance has increased when updating a visual overview in a web app.
 
+#### Dashboards app & Low-Code Apps: 'New' label removed from Grid and Timeline components [ID_39490]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Both the *Grid* and the *Timeline* component no longer have a "New" label.
+
 ### Fixes
 
 *No fixes have been added yet.*
