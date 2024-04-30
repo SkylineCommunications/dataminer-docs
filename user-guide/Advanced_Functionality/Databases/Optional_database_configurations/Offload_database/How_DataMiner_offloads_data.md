@@ -27,6 +27,9 @@ If the offload database cannot be reached for some time while it is activated, t
 
    ![Offload database of type MySQL](~/user-guide/images/db_offload_mysql.jpg)
 
+> [!IMPORTANT]
+> From DataMiner 10.4.6/10.5.0 onwards<!--RN 39370-->, the *Mysql.data.dll* file is deprecated. Use the [*Check Deprecated MySql DLL* BPA test](xref:BPA_Check_Deprecated_MySql_DLL) to scan your DataMiner Agent for any protocols and Automation scripts still using this deprecated DLL file.
+
 ## Offload database of type MSSQL
 
 1. *SLDatabase.dll* orders *system.data.dll* to load a CSV file into a particular database table by sending it the query to be executed.
