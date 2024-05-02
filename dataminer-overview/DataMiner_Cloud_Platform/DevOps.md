@@ -75,7 +75,7 @@ Key benefits of DataMiner Integration Studio (DIS):
 - Empowers users to create high-value plug-in components for the DataMiner platform.
 - Enables seamless extension and customization of the DataMiner platform to meet specific needs.
 - Supports connectors for data ingestion into the DataMiner platform, as well as unified control.
-- Simplifies the creation and deployment of user-definable APIs, ChatOps extensions, and much more.
+- Simplifies the creation and deployment of User-Defined APIs, ChatOps extensions, and much more.
 - Streamlines automation, orchestration, and process automation activities.
 - Drives data-driven decision-making and operational optimization.
 - Fosters innovation in product and service offerings.

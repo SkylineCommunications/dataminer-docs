@@ -129,6 +129,21 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
+#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for Automation scripts.
+
+```csharp
+IConnection GetConnection()
+```
+
+This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the connection between GQI and SLNet.
+
+> [!NOTE]
+> The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
@@ -402,6 +417,14 @@ connection.OnNewMessage += (sender, args) =>
 // Subscribe
 connection.AddSubscription(setId, subscriptionFilter);
 ```
+
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, it was only possible to retrieve a single function definition by ID using the *GetFunctionDefinition* method.
+
+From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
 ### Tools
 

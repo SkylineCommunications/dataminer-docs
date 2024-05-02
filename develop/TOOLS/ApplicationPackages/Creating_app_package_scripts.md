@@ -43,7 +43,7 @@ public void Install(Engine engine, AppInstallContext context)
 
 The created method should contain all actions that need to be performed in order to have a successful installation.
 
-The [Skyline.AppInstaller](xref:Skyline.AppInstaller) namespace contains various classes related to installing a DMAPP and can be used to define the installation.
+The [Skyline.AppInstaller](xref:Skyline.AppInstaller) namespace contains various classes related to installing an application package and can be used to define the installation.
 
 The example below will install all (by default supported) content of the package using the [InstallDefaultContent](xref:Skyline.AppInstaller.AppInstaller.InstallDefaultContent) method.
 
@@ -70,7 +70,13 @@ Note that DIS will always include the latest version of the `SLAppPackageInstall
 ```
 
 > [!NOTE]
-> An example is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> While for regular Automation scripts you need to provide a full path to any referenced assemblies, this is not the case for references in an install script. This is because when the package is installed, the referenced assemblies will be available in the `C:\Skyline DataMiner\AppPackages\Installed\<PackageName>.<PackageVersion>\Scripts\InstallDependencies` directory, and DataMiner will automatically update the references to point to the corresponding assemblies in this directory.
+
+#### SetupContent
+
+In case you require specific files that you only need during the installation of the package, you can configure this by putting these files in the `SetupContent` directory of the solution. These files will only be available during the installation.
+
+To obtain the path to this directory from the install script, you can use `installer.GetSetupContentDirectory()`. If the package contains a `SetupContent` directory, this method will return the full path to this directory, so you can use the files in this folder to perform custom operations during installation of the package. If the folder does not exist, this method will return `null`.
 
 ## Uninstall.xml
 

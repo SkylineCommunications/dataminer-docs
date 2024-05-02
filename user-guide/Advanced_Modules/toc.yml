@@ -210,6 +210,8 @@ items:
             topicUid: Sending_a_text_message
           - name: Triggering a parameter set
             topicUid: Triggering_a_parameter_set
+      - name: Best practices when creating Correlation rules
+        topicUid: Best_Practices_When_Creating_Correlation_Rules
       - name: Correlation rule syntax
         topicUid: Correlation_rule_syntax
         items:
@@ -334,8 +336,6 @@ items:
                 topicUid: LowCodeApps_organizing_landing_page
           - name: Deleting a low-code application
             topicUid: Deleting_custom_apps
-          - name: Specifying data input in an app URL
-            topicUid: Specifying_data_input_in_URL
           - name: Executing actions via the app URL
             topicUid: Executing_actions_via_URL
           - name: Tutorials
@@ -495,7 +495,7 @@ items:
             topicUid: Configuring_feed_components
           - name: Dynamically referencing feed values in text
             topicUid: Feed_Link
-          - name: Specifying data input in a dashboard URL
+          - name: Specifying data input in a dashboard or app URL
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
@@ -676,6 +676,8 @@ items:
                     topicUid: GQI_TimeRangeMetadata
               - name: Best practices
                 topicUid: GQI_Extensions_Best_Practices
+              - name: Logging
+                topicUid: GQI_Extensions_Logging
           - name: Logging
             topicUid: GQI_Logging
           - name: Query updates

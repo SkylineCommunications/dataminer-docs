@@ -16,7 +16,17 @@ uid: Cube_Feature_Release_10.4.6
 
 ## New features
 
-*No features have been added yet.*
+#### SPI logging: An SPI log entry will now be generated when you create a new alarm tab [ID_39382]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you create a new alarm tab, an SPI log entry will be generated containing the following information:
+
+- the time it took for the alarm tab to load,
+- the time it took to retrieve, process, group and sort the alarms,
+- the filter that was applied,
+- the time range that was set (in case of a history tab), and
+- the number of alarms that were loaded.
 
 ## Changes
 
@@ -62,6 +72,22 @@ For each alarm tab, you can open a side panel in the Alarm Console showing the r
 
 Because of a number of enhancements, overall performance has now increased when retrieving this side panel data after selecting an alarm.
 
+#### SPI logging: Loading time of a visual overview will now include the loading times of all embedded visual overviews [ID_39351]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+In SPI log entries indicating how long it took to load a visual overview, from now on, the total loading time of a visual overview will include the loading times of all visual overviews embedded in that visual overview.
+
+#### SPI logging: No SPI log entry will be generated when the DMA to which you are connecting is starting, restarting or upgrading [ID_39502]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When you have connected to a DataMiner Agent, an SPI log entry is generated, indicating how long the connection process took.
+
+Up to now, when the DataMiner Agent was starting, restarting or upgrading while you were connecting to it, the startup time of the DataMiner Agent would be included in the connection duration indicated in the above-mentioned SPI log entry.
+
+From now on, when the DataMiner Agent to which you are connecting is starting, restarting or upgrading, no SPI log entry will be generated.
+
 ### Fixes
 
 #### Memory leak in Alarm Console [ID_38819]
@@ -96,6 +122,12 @@ In some rare cases, a trend graph for a particular parameter would show "no data
 
 In some cases, the algorithm that had to detect placeholder value updates would work incorrectly. When a placeholder value had been changed, it would incorrectly not report a value change, and when a placeholder value had not been changed, it would incorrectly report a value change.
 
+#### Memory leak in Alarm Console [ID_39366]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
+
+In some cases, the Alarm Console could leak memory.
+
 #### Alarm Console: No longer possible to filter based on focus after having selected 'Statistical view' or 'Reports view' [ID_39388]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
@@ -108,8 +140,22 @@ When, in the *Alarm Console*, you had selected *Statistical view* or *Reports vi
 
 When, in Visual Overview, a session variable in a URL of an embedded web browser was updated, in some cases, an exception could be thrown.
 
+#### Alarm Console: Not possible to open new suggestion event tabs when 'Behavioral Anomaly Detection' was disabled in System Center [ID_39415]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When *Behavioral Anomaly Detection* was disabled in *System Center > System settings > Analytics Config*, up to now, it would incorrectly not be possible to open new suggestion event tabs in the Alarm Console, even though suggestion events are also created by *Pattern Matching* and *Proactive Cap Detection*.
+
+From now on, it will be possible to open new suggestion event tabs in the Alarm Console when at least one of the following Analytics features is enabled: *Proactive Cap Detection*, *Behavioral Anomaly Detection* or *Pattern Matching*.
+
 #### Dialog box controls showing underlined text and opening up a dropdown list when clicked would not open their dropdown list when you pressed ALT+DOWN [ID_39423]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 A dialog box control showing underlined text and opening up a dropdown list when clicked (e.g. the severity selector in a *New alarm* action of a correlation rule) would incorrectly not open its dropdown list when you pressed ALT+DOWN.
+
+#### Visual Overview: Problem when combining static and variable values when dynamically positioning shapes [ID_39459]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a shape contained *XPos* and *YPos* data fields to allow it to be positioned dynamically, those fields would be resolved incorrectly when one contained a static value while the other contained a [param:] placeholder that retrieved a value from a table.

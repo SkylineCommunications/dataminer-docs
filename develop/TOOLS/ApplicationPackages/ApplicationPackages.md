@@ -1,5 +1,6 @@
 ---
 uid: ApplicationPackages
+keywords: dmapp, application package, install package, package
 ---
 
 # Application packages
