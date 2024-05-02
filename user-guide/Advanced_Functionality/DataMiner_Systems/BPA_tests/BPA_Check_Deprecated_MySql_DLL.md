@@ -8,6 +8,10 @@ From DataMiner 10.4.6/10.5.0 onwards<!--RN 39370-->, the *MySql.Data.dll* file, 
 
 From DataMiner 10.4.6/10.5.0 onwards<!--RN 39370-->, you can run this BPA test to scan the DataMiner Agent for protocols and Automation scripts that still use this deprecated DLL file. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab).
 
+If an [outdated *MySql.Data.dll* file is detected](#error) on your DMA, this indicates the use of an old file version, which may pose a potential security risk. In this event, always remove the DLL file.
+
+If a [deprecated *MySql.Data.dll* file is detected](#warning) on your DMA, the file version is still up to date. However, we recommend removing the DLL file to avoid potential future problems.
+
 ## Metadata
 
 - Name: Check Deprecated MySql DLL
@@ -115,7 +119,9 @@ One or multiple protocols and/or Automation scripts still use the deprecated DLL
 
 ### Not Executed
 
-to be added
+`Could not execute test due to {ExceptionMessage}`
+
+Click the ellipsis ("...") next to the result message to access more information about the exception.
 
 ## Limitations
 
