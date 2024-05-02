@@ -71,7 +71,7 @@ To configure this setup:
             -->
             <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
         </DataBase>
-        <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+        <DataBase active="true" search="true" ID="1" priorityOrder="1" type="ElasticSearch">
             <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
             <UID />
             <PWD>root</PWD>

@@ -165,9 +165,6 @@ apiRules:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DMSMessage$
     type: Type
 - exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DynamicTableIndicesResponse$
-    type: Type
-- exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ElementInfoEventMessage$
     type: Type
 - exclude:

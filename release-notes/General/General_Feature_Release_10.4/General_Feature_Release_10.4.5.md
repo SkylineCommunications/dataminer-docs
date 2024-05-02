@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.5
 ---
 
-# General Feature Release 10.4.5 – Preview
+# General Feature Release 10.4.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,7 +18,8 @@ uid: General_Feature_Release_10.4.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]](#gqi-implementing-a-custom-sort-order-for-gqi-columns-using-a-custom-operator-id_39136)
+- [Storage as a Service: Proxy support [ID_39221]](#storage-as-a-service-proxy-support-id_39221)
 
 ## Breaking changes
 
@@ -205,6 +206,14 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 
 Performance has increased when properties of elements, services, or views are edited in bulk.
 
+#### 'Database Security' BPA test has been replaced by the 'Security Advisory' BPA test [ID_38632]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
+
+The *Database Security* BPA test has been replaced by the *Security Advisory* BPA test, which will run a collection of checks to see if the system is configured as securely as possible.
+
+For more information on this new BPA test, see [Security Advisory](xref:BPA_Security_Advisory).
+
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
@@ -347,6 +356,12 @@ Because of a number of enhancements, the accuracy of the flatline detection algo
 The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
+
+#### OpenSearch: Enhanced performance when fetching alarm distribution data during DataMiner startup [ID_39177]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, on systems using an OpenSearch database, overall performance has increased when fetching alarm distribution data during DataMiner startup.
 
 #### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
 

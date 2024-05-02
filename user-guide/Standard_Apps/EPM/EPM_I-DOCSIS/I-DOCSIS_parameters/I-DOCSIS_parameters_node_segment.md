@@ -76,10 +76,6 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Average Packet Loss Rate**: The average packet loss rate for all CMs associated with the given level.
 
-- **US Utilization**: The percentage US utilization of the channels associated with the port.
-
-- **DS Utilization**: The percentage DS utilization of the channels associated with the port.
-
 ## System parameters
 
 - **Name \[IDX]**: Direct value. The display name of the node segment.

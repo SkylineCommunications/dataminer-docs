@@ -2,17 +2,29 @@
 uid: Web_apps_Feature_Release_10.4.5
 ---
 
-# DataMiner web apps Feature Release 10.4.5 – Preview
+# DataMiner web apps Feature Release 10.4.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.5](xref:General_Feature_Release_10.4.5).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards app & Low-Code Apps - Node edge graph component: New features & enhanced performance [ID_38974]](#dashboards-app--low-code-apps---node-edge-graph-component-new-features--enhanced-performance-id_38974)
+- [Dashboards app & Low-Code Apps: Client metric logging [ID_39000]](#dashboards-app--low-code-apps-client-metric-logging-id_39000)
+- [Low-Code Apps - Timeline component: Interactive timeline events and component actions [ID_39254]](#low-code-apps---timeline-component-interactive-timeline-events-and-component-actions-id_39254)
+
+## Breaking changes
+
+#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
+
+From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ## New features
 
@@ -117,16 +129,6 @@ When a Timeline component is used in a low-code app, it is now also possible to 
 > - The existing *Line & area chart* component action *Set timespan* has now been renamed *Set viewport* in order to be consistent with the *Set viewport* action described above.
 
 ## Changes
-
-### Breaking changes
-
-#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
-
-<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
-
-Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
-
-From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ### Enhancements
 
@@ -331,3 +333,15 @@ From now on, for example, it will be possible to navigate to `https://{MYDMA}/ap
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Up to now, when you previewed a low-code app, all feeds would incorrectly not be reset. From now on, all feeds will be properly reset when you preview a low-code app.
+
+#### Dashboards app - Timeline component: The content of a template could go out of the bounds of the timeline item [ID_39389]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
+
+In a *Timeline* component, in some cases, the content of a template could go out of the bounds of the timeline item. From now on, the template content will be cropped so that it stays without the bounds of the timeline item.
+
+#### Problem when trying to log in to a web app [ID_39397]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
+
+When users tried to log in to a web app, in some cases, an `Object reference not set to an instance of an object` error could be thrown.
