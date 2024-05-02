@@ -18,23 +18,33 @@ Expected duration: 20 minutes
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- Deploy the *Info Template Quick Tips* package from the [Catalog](https://catalog.dataminer.services/details/32274506-07a4-4ecb-98d3-bea773c3903e).
-
-  Once you have deployed the package, a view and element named "Info template quick tips" will be added to your DataMiner Agent, and the Master Table on the *Data > Table* page of this element will contain pre-provisioned data.
-
-  ![Info template quick tips tutorial image 0](~/user-guide/images/Info_Template_Quick_Tips_img00.png)
-
 ## Overview
 
 This tutorial consists of the following steps:
 
-- [Step 1: Create and configure a new information template](#step-1-create-and-configure-a-new-information-template)
+- [Step 1: Deploy the Info Template Quick Tips package from the Catalog](#step-1-deploy-the-info-template-quick-tips-package-from-the-catalog)
+- [Step 2: Create and configure a new information template](#step-2-create-and-configure-a-new-information-template)
+- [Step 3: Enhance the table's data presentation](#step-3-enhance-the-tables-data-presentation)
+- [Step 4: Override the 'Location' parameter description](#step-4-override-the-location-parameter-description)
 
-- [Step 2: Enhance the table's data presentation](#step-2-enhance-the-tables-data-presentation)
+## Step 1: Deploy the Info Template Quick Tips package from the Catalog
 
-- [Step 3: Override the 'Location' parameter description](#step-3-override-the-location-parameter-description)
+1. Go to <https://catalog.dataminer.services/details/32274506-07a4-4ecb-98d3-bea773c3903e>.
 
-## Step 1: Create and configure a new information template
+1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+
+   > [!TIP]
+   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
+
+1. Open DataMiner Cube and check whether a view and element named "Info template quick tips" have been added to your DataMiner Agent.
+
+   If this is the case, the package has been successfully deployed.
+
+   On the *Data* > *Table* page of the element, you will see that the Master Table of the element contains pre-provisioned data:
+
+   ![Master Table](~/user-guide/images/Info_Template_Quick_Tips_img00.png)
+
+## Step 2: Create and configure a new information template
 
 1. In Cube, select *Apps* in the sidebar and open the *Protocols & Templates* module.
 
@@ -42,15 +52,15 @@ This tutorial consists of the following steps:
 
 1. Under *Information Templates*, right-click the default information template and select *New*.
 
-   ![Info template quick tips tutorial image 1](~/user-guide/images/Info_Template_Quick_Tips_img01.png)
+   ![New information template creation](~/user-guide/images/Info_Template_Quick_Tips_img01.png)
 
 1. Choose a name for the template and select *OK*.
 
-1. Change the display name of the following parameters: *Master Table*, *Column 1*, *Column 2*, *Column 3*, and *Column 4*.
+1. Change the display name of the parameters *Master Table*, *Column 1*, *Column 2*, *Column 3*, and *Column 4*:
 
-   1. Select the parameter in the parameter list to the left.
+   1. Select the parameter in the parameter list on the left.
 
-   1. On the *details of parameter* page, navigate to *Description* and select the *Override* check box.
+   1. In the *details of parameter* section, under *Description*, select the *Override* checkbox.
 
    1. Enter a new display name for the parameter.
 
@@ -62,17 +72,21 @@ This tutorial consists of the following steps:
       | Column 3 | Weather Conditions |
       | Column 4 | Hide Me |
 
-   ![display name](~/user-guide/images/InfoTemplates.gif)
+   ![Configuration display name](~/user-guide/images/InfoTemplates.gif)
 
-1. Click *Only protocol parameters* in the top-left corner, and select *Only edited parameters* from the dropdown list.
+1. Click *Only protocol parameters* in the top-left corner, and select *Only edited parameters*.
 
-   The list of parameters will now be limited to the ones you just edited.
+   The list of parameters will now be limited to the ones you have just edited.
 
-1. Select the *Hide Me* parameter, navigate to *Parameter access > Hide parameter* on the *details of parameter* page, and select the *Override* check box.
+1. Select the *Hide Me* parameter, and under *Parameter access* > *Hide parameter* on the right, select the *Override* checkbox.
 
-1. Hover your mouse pointer over the *Weather Conditions* parameter and click the "+" button to duplicate the parameter.
+1. Hover the mouse pointer over the *Weather Conditions* parameter and click the "+" button to duplicate the parameter entry.
 
-1. Specify a filter for the following parameters:
+   ![Duplicating a parameter](~/user-guide/images/InfoTemplateDuplicateParameter.png)
+
+   This way, there will be two entries for this same parameter, which can each be configured with their own filter.
+
+1. In the filter boxes next to the parameter names, specify the following filters:
 
    | Parameter | Filter |
    |--|--|
@@ -82,19 +96,24 @@ This tutorial consists of the following steps:
    | Weather Conditions | \*East Coast* |
    | Weather Conditions | \*West Coast* |
 
-   The information template configuration is now only applied on a filtered selection of available rows of the dynamic table.
+   The information template configuration will now only be applied to a filtered selection of available rows of the dynamic table.
 
-   ![filter](~/user-guide/images/Info_Template_Quick_Tips_img04.png)
+   ![Filter configuration](~/user-guide/images/Info_Template_Quick_Tips_img04.png)
 
-1. To save all changes, select *Apply* in the lower right corner.
+1. In the lower right corner, select *Apply* to save your changes.
 
 1. Click *OK* to close the information template.
 
-## Step 2: Enhance the table's data presentation
-
 1. Under *Information Templates*, right-click your new template and select *Set as active Information template*.
 
+1. In the dialog, click *Yes* to confirm that the information template should be set.
+
+## Step 3: Enhance the table's data presentation
+
 1. In the Surveyor, select the *Info template quick tips* element, and navigate to *Data > Table*.
+
+   > [!NOTE]
+   > If the element card was still open from earlier, you may need to close and reopen it to see the changes from the information template.
 
 1. Optionally, right-click the top row of the table, hover your mouse pointer over *Columns* and make sure only the following columns remain selected: *Name*, *Location*, and *Weather Conditions*. Select *Save layout*.
 
@@ -124,7 +143,7 @@ This tutorial consists of the following steps:
 
    ![alarm severity](~/user-guide/images/Info_Template_Quick_Tips_img08.png)
 
-## Step 3: Override the 'Location' parameter description
+## Step 4: Override the 'Location' parameter description
 
 1. Select the hamburger button in the top-left corner of the *Info template quick tips* element card and select *Parameter names*.
 
