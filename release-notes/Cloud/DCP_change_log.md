@@ -23,6 +23,10 @@ The dataminer.services settings, configurable from the Admin app, have been enha
 - A new setting has been added for Live Sharing (i.e. dashboard sharing).
 - In addition to one global Remote Access setting, there are now separate child settings for remote access to Cube, the User-Defined APIs, and the web apps.
 
+#### 25 April 2024 - Enhancement - Catalog - Show DMS issues when deploying a catalog item [ID_39374]
+
+In case deploying a catalog item to a DataMiner System will fail, it will now no longer be possible for users to try to deploy the item to that system, and a documentation link will be shown so the users can resolve the issue.
+
 #### 9 April 2024 - Enhancement - Improvements for DxM deployments from the Admin app [ID_39268]
 
 When a user attempts to upgrade or install a DxM, a check is now performed to verify if all the system requirements are met. If missing requirements are detected, the action is disabled, and a warning is shown. Clicking the warning will show more information on how to resolve the issue.
