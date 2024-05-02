@@ -36,6 +36,14 @@ Because of a number of enhancements, overall performance has increased when crea
 
 ### Fixes
 
+#### Issues with user accounts [ID_39234]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some cases, user accounts could become corrupted and group memberships could get lost.
+
+Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
+
 #### SLSNMPAgent would incorrectly interpret variable trap bindings of type 'IpAddress' as bindings of type 'OctetString' [ID_39425]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->

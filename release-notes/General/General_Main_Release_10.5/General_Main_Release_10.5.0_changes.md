@@ -446,6 +446,14 @@ This type of exceptions will be now be properly caught and logged as warnings so
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
 
+#### Issues with user accounts [ID_39234]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some cases, user accounts could become corrupted and group memberships could get lost.
+
+Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
+
 #### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
