@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 25 April 2024 - Enhancement - Catalog - Show DMS issues when deploying a catalog item [ID_39374]
 
-Preventing users from deploying a catalog item when a deployment will fail. Showing the different issues with a documentation link for each DataMiner System.
+In case deploying a catalog item to a DataMiner System will fail, it will now no longer be possible for users to try to deploy the item to that system, and a documentation link will be shown so the users can resolve the issue.```
 
 #### 28 March 2024 - Fix - Catalog - Typos in error when no DMS is found [ID_39232]
 
