@@ -25,6 +25,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. Go to *Apps* > *System Center* > *Database*.
 
+   > [!NOTE]
+   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Database > General* page is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as database configuration is included as part of DaaS.
+
 1. Choose **Type**: *Database per cluster*.
 
 1. Specify the following database settings for the Cassandra nodes:
