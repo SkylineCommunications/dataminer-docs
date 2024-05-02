@@ -173,9 +173,9 @@ This step will show how you can make a quick edit to the information template fo
 
 1. Select the hamburger button in the top-left corner of the *Info template quick tips* element card and select *Parameter names*.
 
-1. In the *Element parameter names* window, look up the "Location" parameter name in the *Information template name* column
+1. In the *Element parameter names* window, look up the "Location" parameter name in the *Information template name* column.
 
-   To quickly find this parameter, you can use the filter box in the top right corner.
+   To quickly find this parameter, you can use the filter box in the top-right corner.
 
 1. In the *Custom name* column for this parameter, enter the custom parameter name `Region`.
 
