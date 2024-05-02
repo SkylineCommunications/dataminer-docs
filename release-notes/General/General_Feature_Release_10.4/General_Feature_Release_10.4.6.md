@@ -194,7 +194,7 @@ From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. 
 
 When the *ResourceManagerHelper* methods *UpdateReservationInstanceProperties* or *SafelyUpdateReservationInstanceProperties* were used to update properties of a booking, up to now, their action was queued on the master DMA to be handled sequentially for all bookings.
 
-From now on, the *SetSrmJsonSerializableProperties* requests sent by the above-mentioned methods will skip said queue.
+From now on, the *SetSrmJsonSerializableProperties* requests will skip said queue.
 
 #### Enhanced SLDBConnection logging [ID_39267]
 
