@@ -55,3 +55,9 @@ In some rare cases, an exception could be thrown when MessageBroker tried to rea
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Up to now, SLSNMPAgent would incorrectly interpret variable trap bindings of type 'IpAddress' as bindings of type 'OctetString'.
+
+#### Problem when disposing an ISession with multiple subscriptions [ID_39483]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
