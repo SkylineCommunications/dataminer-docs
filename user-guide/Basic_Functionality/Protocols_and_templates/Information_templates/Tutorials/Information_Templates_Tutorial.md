@@ -24,10 +24,11 @@ This tutorial consists of the following steps:
 
 - [Step 1: Deploy the Info Template Quick Tips package from the Catalog](#step-1-deploy-the-info-template-quick-tips-package-from-the-catalog)
 - [Step 2: Create and configure a new information template](#step-2-create-and-configure-a-new-information-template)
-- [Step 3: Enhance the table's data presentation](#step-3-enhance-the-tables-data-presentation)
-- [Step 4: Override the 'Location' parameter description](#step-4-override-the-location-parameter-description)
+- [Step 3: Hide the unnecessary table columns](#step-3-hide-the-unnecessary-table-columns-optional)
+- [Step 4: Assign a customized alarm template](#step-4-assign-a-customized-alarm-template)
+- [Step 5: Override the 'Location' parameter description](#step-5-override-the-location-parameter-description)
 
-## Step 1: Deploy the Info Template Quick Tips package from the Catalog
+## Step 1: Deploy the 'Info Template Quick Tips' package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/32274506-07a4-4ecb-98d3-bea773c3903e>.
 
@@ -46,15 +47,17 @@ This tutorial consists of the following steps:
 
 ## Step 2: Create and configure a new information template
 
+In this step, you will configure an information template to change the way the parameters from the example element are displayed.
+
 1. In Cube, select *Apps* in the sidebar and open the *Protocols & Templates* module.
 
-1. Select *Skyline Generic Virtual Connector* from the list of protocols.
+1. Select *Skyline Generic Virtual Connector* in the list of protocols.
 
 1. Under *Information Templates*, right-click the default information template and select *New*.
 
    ![New information template creation](~/user-guide/images/Info_Template_Quick_Tips_img01.png)
 
-1. Choose a name for the template and select *OK*.
+1. Specify a name for the template and select *OK*.
 
 1. Change the display name of the parameters *Master Table*, *Column 1*, *Column 2*, *Column 3*, and *Column 4*:
 
@@ -62,7 +65,7 @@ This tutorial consists of the following steps:
 
    1. In the *details of parameter* section, under *Description*, select the *Override* checkbox.
 
-   1. Enter a new display name for the parameter.
+   1. Enter the new display name for the parameter.
 
       | Parameter name | Display name |
       |--|--|
@@ -108,51 +111,81 @@ This tutorial consists of the following steps:
 
 1. In the dialog, click *Yes* to confirm that the information template should be set.
 
-## Step 3: Enhance the table's data presentation
+## Step 3: Hide the unnecessary table columns (optional)
+
+By default, the table shows a lot of columns that are not useful for this tutorial. In this step, you will hide these to get a cleaner view on the data.
 
 1. In the Surveyor, select the *Info template quick tips* element, and navigate to *Data > Table*.
 
    > [!NOTE]
    > If the element card was still open from earlier, you may need to close and reopen it to see the changes from the information template.
 
-1. Optionally, right-click the top row of the table, hover your mouse pointer over *Columns* and make sure only the following columns remain selected: *Name*, *Location*, and *Weather Conditions*. Select *Save layout*.
+1. Right-click the top row of the table and hover the mouse pointer over the *Columns* option until it expands to show all columns in the table.
 
-   Only the *Name*, *Location*, and *Weather Conditions* columns are displayed now.
+1. Clear the selection from all columns except *Name*, *Location*, and *Weather Conditions*.
 
-   ![intuitive table](~/user-guide/images/Info_Template_Quick_Tips_img06.png)
+1. At the bottom of the menu, select *Save layout*.
 
-1. Navigate to *Apps > Protocols & Templates*, and select *Skyline Generic Virtual Connector* from the list of protocols.
+   Only the *Name*, *Location*, and *Weather Conditions* columns will be displayed now.
+
+   ![Table with only the necessary columns shown](~/user-guide/images/Info_Template_Quick_Tips_img06.png)
+
+## Step 4: Assign a customized alarm template
+
+To enhance the way the table data are shown, in this step, you will assign an alarm template to the element.
+
+1. Navigate to *Apps > Protocols & Templates*.
+
+1. Select *Skyline Generic Virtual Connector* in the list of protocols, and make sure the production version is selected under *Versions*.
 
 1. Under *Alarm*, right-click *Info template quick tips* and select *Open*.
 
-1. Include the *Earth Stations: Weather Conditions* parameter in the alarm template.
+1. Next to the *Earth Stations: Weather Conditions* parameter, click *Excluded* to include the parameter in the alarm template.
 
-1. Enter "Sunny" in the *Normal* column, "Rain" in the *Minor High* column, and "Snow" in the *Critical High* column.
+1. Configure the alarm thresholds:
+
+   - In the *Normal* column, enter `Sunny`.
+
+   - In the *MIN HI* column, enter `Rain`.
+
+   - In the *CRIT HI* column, enter `Snow`.
 
    ![alarm template](~/user-guide/images/Info_Template_Quick_Tips_img07.png)
 
-1. To apply all changes, select *Apply* in the lower right corner.
+   > [!TIP]
+   > See also: [Configuring normal alarm thresholds](xref:Configuring_normal_alarm_thresholds)
+
+1. In the lower right corner, select *Apply* to apply your changes.
 
 1. Click *OK* to close the alarm template.
 
 1. Make sure the *Info template quick tips* alarm template is selected under *Alarms*, and select *Assign elements* at the top of the *Elements* section.
 
-1. In the *Assign Template* window, use the *Add >>* button to apply the alarm template to the *Info template quick tips* element, and select *Close*.
+1. In the *Assign Template* window, use the *Add >>* button to apply the alarm template to the *Info template quick tips* element, and then select *Close*.
 
-   Now that you have applied the alarm template, you can find earth stations with weather conditions "Rain" and "Snow" in the Alarm Console, flagged as minor and critical alarms respectively. Additionally, on the *Data > Table* page of the *Info template quick tips* element, the alarm severity is visually represented with appropriate colors.
+   Now that you have applied the alarm template, you will find minor and critical alarms in the Alarm Console for the earth stations with weather conditions "Rain" and "Snow", respectively. Additionally, on the *Data > Table* page of the *Info template quick tips* element, the alarm severity will be shown with appropriate colors.
 
-   ![alarm severity](~/user-guide/images/Info_Template_Quick_Tips_img08.png)
+   ![Alarm severity shown on the element card and in the Alarm Console](~/user-guide/images/Info_Template_Quick_Tips_img08.png)
 
-## Step 4: Override the 'Location' parameter description
+## Step 5: Override the 'Location' parameter description
+
+This step will show how you can make a quick edit to the information template for one specific element only.
 
 1. Select the hamburger button in the top-left corner of the *Info template quick tips* element card and select *Parameter names*.
 
-1. In the *Element parameter names* window, scroll down until you find "Location" in the *Information template name* column, and enter the custom parameter name "Region" in the *Custom name* column.
+1. In the *Element parameter names* window, look up the "Location" parameter name in the *Information template name* column
 
-   ![custom name](~/user-guide/images/Info_Template_Quick_Tips_img10.png)
+   To quickly find this parameter, you can use the filter box in the top right corner.
+
+1. In the *Custom name* column for this parameter, enter the custom parameter name `Region`.
+
+   ![Custom name configuration](~/user-guide/images/Info_Template_Quick_Tips_img10.png)
 
 1. Click *Apply* to apply your changes and *OK* to close the *Parameter names* window.
 
-   On the *Data > Table* page, the column previously called "Location" is now called "Region".
+   On the *Data > Table* page, the column previously called "Location" will now be called "Region".
 
-   ![region](~/user-guide/images/Info_Template_Quick_Tips_img11.png)
+   ![Customized parameter name](~/user-guide/images/Info_Template_Quick_Tips_img11.png)
+
+> [!TIP]
+> See also: [Changing parameter names for a particular element](xref:Changing_parameter_names_for_a_particular_element)
