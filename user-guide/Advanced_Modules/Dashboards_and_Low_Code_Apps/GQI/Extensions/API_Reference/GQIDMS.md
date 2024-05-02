@@ -34,7 +34,7 @@ Provides a connection interface from GQI to SLNet. This connection can be used t
 An [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the connection between GQI and SLNet.
 
 > [!TIP]
-> Interacting with the IConnection API directly is complex, but it is compatible to use effortlessly with other DataMiner libraries.
+> Because of its complexity, instead of interacting directly with the IConnection interface, the best way you can use it is by integrating with existing DataMiner libraries.
 
 > [!NOTE]
 > The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
