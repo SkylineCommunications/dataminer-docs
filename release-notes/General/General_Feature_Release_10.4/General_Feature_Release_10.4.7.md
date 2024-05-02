@@ -22,7 +22,14 @@ uid: General_Feature_Release_10.4.7
 
 ## New features
 
-*No new features have been added yet.*
+#### Factory reset tool: Additional actions [ID_39524] [ID_39530]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+The factory reset tool `SLReset.exe` will now perform the following additional actions:
+
+- If the DataMiner Agent is connected to *dataminer.services*, disconnect the DataMiner Agent from *dataminer.services*.
+- Clear all custom appsettings of the DataMiner extension modules (DxMs).
 
 ## Changes
 
