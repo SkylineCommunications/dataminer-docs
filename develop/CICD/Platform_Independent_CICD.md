@@ -43,10 +43,7 @@ The following tools are the most useful:
 
 - [Skyline.DataMiner.CICD.Tools.DataMinerDeploy](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.DataMinerDeploy#readme-body-tab)
 
-  This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner Agent using the artifact ID returned when performing a catalog upload.
-
-  > [!NOTE]
-  > This currently only supports deployment from dataminer.services to DMAs connected to dataminer.services.
+  This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner This can be done either by using the artifact ID returned when performing a catalog upload or with a .dmapp directly to an agent you have direct access with.
 
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 
