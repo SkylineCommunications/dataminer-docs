@@ -42,3 +42,6 @@ namespace Script
     }
 }
 ```
+
+> [!NOTE]
+> From DataMiner 10.4.6/10.5.0 onwards<!--RN 39362-->, the `GetFunctionDefinitions` method is available for the ProtocolFunctionHelper, which allows you to retrieve multiple function definitions in one go. Prior to DataMiner 10.4.6/10.5.0, you can use the `GetFunctionDefinition` method to retrieve a single function definition by ID.
