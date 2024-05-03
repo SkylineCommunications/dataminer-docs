@@ -14,8 +14,8 @@ The following steps can be taken to configure the backups for a DMA:
 
 1. In System Center, select the *Backup* tab.
 
-   > [!IMPORTANT]
-   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab is no longer available when using a [DataMiner as a Service (DaaS) system](xref:Creating_a_DMS_in_the_cloud), as automatic backups are included as part of DaaS.
+   > [!NOTE]
+   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as automatic backups are included as part of DaaS.
 
 1. In the *General* tab, under *Location*, optionally configure local or network path(s) where the backups should also be stored.
 
@@ -77,8 +77,8 @@ To take an immediate backup of a DMA:
 
 1. In System Center, select the *Backup* tab.
 
-   > [!IMPORTANT]
-   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab is no longer available when you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as automatic backups are included as part of DaaS.
+   > [!NOTE]
+   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as automatic backups are included as part of DaaS.
 
 1. Check whether the backup configuration is correct, and adjust it if necessary. (See above.)
 
