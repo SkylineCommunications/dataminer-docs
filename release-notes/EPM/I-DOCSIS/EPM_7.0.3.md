@@ -32,3 +32,13 @@ For the following parameters in the upstream and downstream threshold tables, th
 #### Skyline EPM Platform information template adjusted to remove table name [ID_39508]
 
 ​The information template for the Skyline EPM Platform connector has been updated to remove the table name for the Percentage of US/DS Utilization parameters. Previously, in the topology, this was shown as "Percentage DS Utilization (DOCSIS DS Service Group: Percentage DS Utilization)", while now it is shown as "Percentage DS Utilization".
+
+#### CCAP alarms now linked to EPM to allow navigation to EPM card from Alarm Console [ID_39539]
+
+All alarms originating from the CCAP Core Overview table in any of the CCAP collectors are now linked to the EPM object, so that users can now navigate to the EPM object from the Alarm Console by right-clicking an alarm and selecting to open the EPM card.
+
+### Fixes
+
+#### Empty fiber nodes in dashboard because of separator issue in CSV files [ID_39552]
+
+Because the CCAP Collector and CM Collector used both a comma and semicolon in files, and fiber node names could contain commas, this could cause incorrect parsing of subsequent columns, which could among others cause empty fiber nodes to be shown in the *Top 50 FN OFDMA Utilization* dashboard. To prevent this, a new method has been added to identify the separator in the CSV file to ensure correct data processing even when fiber node names contain special characters such as commas.
