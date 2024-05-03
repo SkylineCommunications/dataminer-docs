@@ -8,86 +8,85 @@ In this tutorial, you will learn how to use Correlation to take action when an e
 
 Expected duration: 15 minutes
 
-The tutorial consists of the following steps:
+## Prerequisites
 
-- [Responding to element timeouts using Correlation](#responding-to-element-timeouts-using-correlation)
-    - [Step 1: Create the setup needed for this tutorial](#step-1-create-the-setup-needed-for-this-tutorial)
-      - [Step 1.1: Lookup the "Correlation KATA Switch Timeout" item from the DataMiner Catalog](#step-11-lookup-the-correlation-kata-switch-timeout-item-from-the-dataminer-catalog)
-      - [Step 1.2: Deploy the item](#step-12-deploy-the-item)
-    - [Step 2: Create the Correlation rule](#step-2-create-the-correlation-rule)
-      - [Step 2.1: Add an alarm filter that filters on alarms from the element "Network Switch"](#step-21-add-an-alarm-filter-that-filters-on-alarms-from-the-element-network-switch)
-      - [Step 2.2: Add a Rule Condition that triggers when the Severity is equal to Timeout](#step-22-add-a-rule-condition-that-triggers-when-the-severity-is-equal-to-timeout)
-      - [Step 2.3: Select the "Persistent event" trigger mechanism and fill in 5 minutes](#step-23-select-the-persistent-event-trigger-mechanism-and-fill-in-5-minutes)
-      - [Step 2.4: Add the RunScript action and select the "Generate Information Event (network switch timed out)" script](#step-24-add-the-runscript-action-and-select-the-generate-information-event-network-switch-timed-out-script)
-      - [Step 2.5: Add the Send email action (optional)](#step-25-add-the-send-email-action-optional)
-      - [Step 2.6: Add other rule actions (optional)](#step-26-add-other-rule-actions-optional)
-    - [Step 3: Go to the element "Network Switch" and generate a timeout](#step-3-go-to-the-element-network-switch-and-generate-a-timeout)
-    - [Step 4: Five minutes after the element went into timeout, verify whether the rule actions were executed](#step-4-five-minutes-after-the-element-went-into-timeout-verify-whether-the-rule-actions-were-executed)
-  - [Getting those sweet DevOps points](#getting-those-sweet-devops-points)
-  - [Summary](#summary)
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-### Step 1: Create the setup needed for this tutorial
+## Overview
 
-#### Step 1.1: Lookup the "Correlation KATA Switch Timeout" item from the DataMiner Catalog
+This tutorial consists of the following steps:
 
-See [looking up an item in the catalog](xref:Looking_up_an_item_in_the_catalog).
+- [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the DataMiner Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-dataminer-catalog)
+- [Step 2: Create the Correlation rule](#step-2-create-the-correlation-rule)
+- [Step 3: Generate a timeout alarm](#step-3-generate-a-timeout-alarm)
+- [Step 4: Verify whether the rule actions have been executed](#step-4-verify-whether-the-rule-actions-have-been-executed)
 
-#### Step 1.2: Deploy the item
+## Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the DataMiner Catalog
 
-See [deploying a catalog item](xref:Deploying_a_catalog_item).
+1. Look up the 'Correlation KATA Switch Timeout' item in the DataMiner Catalog.
 
-### Step 2: Create the Correlation rule
+1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-Correlation can be found in DataMiner Cube under Apps > Modules > Correlation.
+   > [!TIP]
+   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-#### Step 2.1: Add an alarm filter that filters on alarms from the element "Network Switch"
+## Step 2: Create the Correlation rule
 
-See [filtering and grouping base alarms for Correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules) for more information.
+In this step, you will create a Correlation Rule that will trigger based on alarms from the *Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an Automation script will generate an information event.
 
-#### Step 2.2: Add a Rule Condition that triggers when the Severity is equal to Timeout
+1. In DataMiner Cube, go to *Apps* > *Modules* > *Correlation* to open the Correlation module.
 
-See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
+1. Add an alarm filter that filters on alarms from the element "Network Switch".
 
-#### Step 2.3: Select the "Persistent event" trigger mechanism and fill in 5 minutes
+   See [filtering and grouping base alarms for Correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules) for more information.
 
-The Correlation Rule will wait until the rule conditions are met for 5 minutes before acting and executing its actions.
-See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
+1. Add a rule condition that triggers when the severity is equal to "Timeout".
 
-#### Step 2.4: Add the RunScript action and select the "Generate Information Event (network switch timed out)" script
+   See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
 
-This automation script will generate an information event when executed. Note that these scripts also can do other things.
-See [adding a RunScript action](xref:Running_an_Automation_script_from_a_Correlation_rule) for more information.
+1. Select the "Persistent event" trigger mechanism and fill in 5 minutes.
 
-#### Step 2.5: Add the Send email action (optional)
+   The Correlation Rule will wait until the rule conditions are met for 5 minutes before acting and executing its actions.
 
-See [sending an email](xref:Sending_an_email) for more information on how to do this.
-Note that this is optional for completing the tutorial.
+   See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
 
-#### Step 2.6: Add other rule actions (optional)
+1. Add the RunScript action and select the "Generate Information Event (network switch timed out)" script.
 
-For more information on how to add rule actions, go to [adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
-Note that this is optional for completing the tutorial.
+   This Automation script will generate an information event when executed. Note that these scripts also can do other things.
 
-[!NOTE]
-Make sure to have a look at some [best practices when making Correlation Rules](xref:Best_Practices_When_Creating_Correlation_Rules).
-Correlation is a powerful tool but can impact your system if setup in the wrong way.
+   See [adding a RunScript action](xref:Running_an_Automation_script_from_a_Correlation_rule) for more information.
 
-### Step 3: Go to the element "Network Switch" and generate a timeout
+1. Optionally, add the Send email action.
 
-Note that the element will not get the Timeout alarm for 30s after clicking the button "Generate Timeout" because if an element does not respond, DataMiner 
-by default waits 30s before generating a Timeout alarm for the element.
+   See [sending an email](xref:Sending_an_email) for more information on how to do this.
 
-### Step 4: Five minutes after the element went into timeout, verify whether the rule actions were executed
+   > [!NOTE]
+   > This action will only work if a mail server has been configured. See [Configuring outgoing email](xref:Configuring_outgoing_email)
 
-If configured correctly, you should see an information event in the Alarm Console generated by the automation script the Correlation rule triggers.
-If you added the Send email action to the Correlation rule and you have a mail server configured, you should have received a mail.
+1. Optionally, add other rule actions according to your preference.
 
-## Getting those sweet DevOps points 
+   For more information on how to add rule actions, go to [adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 
-Take a screenshot of your Correlation Rule and Alarm Console displaying the generated information event. Submit it on Dojo and receive 75 DevOps Points. 
-An extra 75 DevOps Points are awarded if you manage to complete the challenge within the week after the tutorial released (10 May 2024).
+> [!NOTE]
+> Make sure to have a look at some [best practices when making Correlation Rules](xref:Best_Practices_When_Creating_Correlation_Rules). Correlation is a powerful tool, but can have a negative impact on your system if set up the wrong way.
 
-## Summary
+## Step 3: Generate a timeout alarm
 
-This Correlation Rule will take alarms from the element "Network Switch". 
-If the element is in timeout for longer than 5 minutes, the Rule will take action. An automation script will generate an information event and DataMiner will send an email.
+1. In the Surveyor, select the *Network Switch* element.
+
+1. Click the *Generate Timeout* button and wait 30 seconds (i.e. the default duration DataMiner waits when an element does not respond before generating a timeout alarm).
+
+   A timeout alarm will then be generated.
+
+## Step 4: Verify whether the rule actions have been executed
+
+1. Wait for five minutes after the alarm has gone into timeout.
+
+1. Check whether an information event has been generated in the Alarm Console.
+
+   This information event should have been created by the Automation script triggered by the Correlation rule, if you configured everything correctly.
+
+1. If you added the Send email action to the Correlation rule, check whether you have received an email.
+
+> [!NOTE]
+> To be granted DevOps points for taking this tutorial, take a screenshot of your Correlation rule and of the Alarm Console displaying the generated information event. Submit it on Dojo and receive 75 DevOps Points. An extra 75 DevOps Points are awarded if you manage to complete the challenge within a week after the Kata is released.
