@@ -28,7 +28,7 @@ Up to now, SLSNMPAgent would incorrectly interpret variable trap bindings of typ
 
 #### Protocols: 'next' attribute would no longer work for SNMP parameters [ID_39430]
 
-<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 The `next` attribute of a parameter inside a parameter group determines the number of milliseconds DataMiner has to wait before reading the next parameter. This functionality no longer worked for SNMP parameters.
 
