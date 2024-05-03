@@ -40,35 +40,48 @@ In this step, you will create a Correlation Rule that will trigger based on alar
 
    See [filtering and grouping base alarms for Correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules) for more information.
 
-1. Add a rule condition that triggers when the severity is equal to "Timeout".
+   ![Adding an alarmfilter](~/user-guide/images/Correlation_Adding_Alarmfilters.png)
+
+2. Add a rule condition that triggers when the severity is equal to "Timeout".
 
    See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
 
-1. Select the "Persistent event" trigger mechanism and fill in 5 minutes.
+   ![Adding a rule condition](~/user-guide/images/Correlation_Adding_RuleConditions.png)
+
+3. Select the "Persistent event" trigger mechanism and fill in 5 minutes.
 
    The Correlation Rule will wait until the rule conditions are met for 5 minutes before acting and executing its actions.
 
    See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
 
-1. Add the RunScript action and select the "Generate Information Event (network switch timed out)" script.
+   ![Configuring *persistent event time*](~/user-guide/images/Correlation_PersistentEvent.png)
+
+4. Add the RunScript action and select the "Generate Information Event (network switch timed out)" script.
 
    This Automation script will generate an information event when executed. Note that these scripts also can do other things.
 
    See [adding a RunScript action](xref:Running_an_Automation_script_from_a_Correlation_rule) for more information.
 
-1. Optionally, add the Send email action.
+   ![Adding the *run script* action](~/user-guide/images/Correlation_Add_Run_Script_Action.png)
+
+5. Optionally, add the Send email action.
 
    See [sending an email](xref:Sending_an_email) for more information on how to do this.
+
+   ![Adding the *send mail* action](~/user-guide/images/Correlation_Add_Send_Mail_Action.png)
 
    > [!NOTE]
    > This action will only work if a mail server has been configured. See [Configuring outgoing email](xref:Configuring_outgoing_email)
 
-1. Optionally, add other rule actions according to your preference.
+6. Optionally, add other rule actions according to your preference.
 
    For more information on how to add rule actions, go to [adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 
 > [!NOTE]
 > Make sure to have a look at some [best practices when making Correlation Rules](xref:Best_Practices_When_Creating_Correlation_Rules). Correlation is a powerful tool, but can have a negative impact on your system if set up the wrong way.
+
+> [!NOTE]
+> Pictures used for this tutorial are from DataMiner 10.4.6 Feature Release.
 
 ## Step 3: Generate a timeout alarm
 
@@ -87,6 +100,3 @@ In this step, you will create a Correlation Rule that will trigger based on alar
    This information event should have been created by the Automation script triggered by the Correlation rule, if you configured everything correctly.
 
 1. If you added the Send email action to the Correlation rule, check whether you have received an email.
-
-> [!NOTE]
-> To be granted DevOps points for taking this tutorial, take a screenshot of your Correlation rule and of the Alarm Console displaying the generated information event. Submit it on Dojo and receive 75 DevOps Points. An extra 75 DevOps Points are awarded if you manage to complete the challenge within a week after the Kata is released.
