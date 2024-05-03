@@ -13,26 +13,34 @@ A DataMiner Object Model is a generic data storage system that makes it possible
 > - DOM data can be displayed in dashboards and applications from DataMiner 10.1.7 onwards. In versions prior to DataMiner 10.3.6/10.4.0, this feature is in soft launch, so you will need to activate the *DOMManager* [soft-launch option](xref:SoftLaunchOptions) to use it.  
 > - The DataMiner Jobs module functions in a similar way as a DOM manager. The main difference is in the naming of the objects used. In addition, multiple DOM manager instances can run at the same time, while there can only be one Jobs module.
 
-## Getting Started
+## Getting started with DOM
 
-DataMiner Object Models (DOM) provide a powerful way to manage and manipulate data within your applications. Follow these steps to get started with DOM:
+If you are just getting started with the DataMiner Object Models (DOM), this is what we recommend:
 
-### 1. Watch the introduction video
+1. **Watch the introduction video**
 
-   Begin by watching the introduction video titled "Kata #15: Getting started with DataMiner Object Models" available [here](https://community.dataminer.services/video/kata-15-getting-started-with-dataminer-object-models/). Additionally, you can access a written tutorial for further details [here](xref:DOM_Getting_Started_With_DOM).
+   Begin by watching the introduction video [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/video/kata-15-getting-started-with-dataminer-object-models/). 
 
-### 2. Watch the follow-up video
+   You can also find further details related to this in the tutorial [Getting started with DOM](xref:DOM_Getting_Started_With_DOM).
 
-   After understanding the basics, watch the follow-up video titled "Kata #24: Make a DOM module state-aware" [here](https://community.dataminer.services/video/kata-24-make-a-dom-module-state-aware/). This video builds upon the introductory concepts. Access the corresponding written tutorial [here](xref:DOM_Making_DOM_Stateful).
+1. **Watch the follow-up video**
 
-### 3. Explore basic tutorial via code
+   Once you understand the basics, watch the follow-up video [Kata #24: Make a DOM module state-aware](https://community.dataminer.services/video/kata-24-make-a-dom-module-state-aware/).
 
-   For hands-on experience, check out the basic tutorial to create a DOM setup via code [here](xref:DOM_Create_Basic_Setup). This will help you understand the required steps to create a DOM setup via code, including a low-code app.
+   For further details related to this, check the tutorial [Making DOM objects state-aware](xref:DOM_Making_DOM_Stateful).
 
-### 4. Review examples
+1. **Explore basic tutorial via code**
 
-   Explore practical examples to grasp the application of DOM. Check out the "Invoice app example" [here](xref:DOM_Invoice_app_example) and the "Status system example" [here](xref:DOM_status_system_example). These examples showcase real-world scenarios where DOM can be beneficial.
+   For hands-on experience, follow the [basic tutorial to create a DOM setup via code](xref:DOM_Create_Basic_Setup).
 
-### 5. Dive into detailed documentation
+   This will help you understand the required steps to create a DOM setup, including a low-code app.
 
-   For a comprehensive understanding and to discover advanced capabilities, explore all the remaining technical documentation available. This will provide you with in-depth knowledge and insights into leveraging DOM effectively within your applications.
+1. **Review examples**
+
+   Explore practical examples to gain insight in how DOM is applied. Specifically, you can check the [Invoice app example](xref:DOM_Invoice_app_example) and the [Status system example](xref:DOM_status_system_example).
+
+   These showcase real-world scenarios where DOM can be beneficial.
+
+1. **Dive into the detailed documentation**
+
+   To gain a comprehensive understanding and discover advanced capabilities, explore all the remaining technical documentation available in this DataMiner Object Models (DOM) section. This will provide you with in-depth knowledge and insights into leveraging DOM effectively within your applications.
