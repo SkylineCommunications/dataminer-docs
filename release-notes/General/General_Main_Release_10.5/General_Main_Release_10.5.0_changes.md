@@ -476,6 +476,17 @@ When, on a STaaS system, an attempt was made to delete data from the database us
 
 This issue has now been fixed.
 
+#### Protocols: 'next' attribute would no longer work for SNMP parameters [ID_39430]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+The `next` attribute of a parameter inside a parameter group determines the number of milliseconds DataMiner has to wait before reading the next parameter. This functionality no longer worked for SNMP parameters.
+
+Also, when a group contained single parameters in combination with a partial table, the single parameters would incorrectly also be requested each time the next batch of rows were requested from the partial table. From now on, the single parameters will only be requested once.
+
+> [!NOTE]
+> When a `next` attribute is defined on a partial SNMP table parameter inside a parameter group, then the delay will also be applied between the batches of rows that are requested.
+
 #### Problem when disposing an ISession with multiple subscriptions [ID_39483]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
