@@ -486,6 +486,8 @@ items:
                 topicUid: DashboardNumericInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
+              - name: Search input
+                topicUid: DashboardSearchInputFeed
       - name: Feeds
         topicUid: Using_dashboard_feeds
         items:
