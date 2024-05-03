@@ -6,6 +6,9 @@ uid: Backing_up_a_DataMiner_Agent_in_DataMiner_Cube
 
 In the *System Center* module, you can configure automatic backups that will run at regular intervals, and execute an immediate backup when necessary.
 
+> [!IMPORTANT]
+> Backups are automatically configured as part of [DaaS](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab in System Center is therefore no longer available when you are using a DaaS system.
+
 ## Configuring the DataMiner backups
 
 The following steps can be taken to configure the backups for a DMA:
@@ -13,9 +16,6 @@ The following steps can be taken to configure the backups for a DMA:
 1. Go to *Apps* > *System Center*.
 
 1. In System Center, select the *Backup* tab.
-
-   > [!NOTE]
-   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as automatic backups are included as part of DaaS.
 
 1. In the *General* tab, under *Location*, optionally configure local or network path(s) where the backups should also be stored.
 
@@ -76,9 +76,6 @@ To take an immediate backup of a DMA:
 1. Go to *Apps* > *System Center*.
 
 1. In System Center, select the *Backup* tab.
-
-   > [!NOTE]
-   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as automatic backups are included as part of DaaS.
 
 1. Check whether the backup configuration is correct, and adjust it if necessary. (See above.)
 

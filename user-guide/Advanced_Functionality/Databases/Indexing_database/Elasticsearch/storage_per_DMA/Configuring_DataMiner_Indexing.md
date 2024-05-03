@@ -18,7 +18,7 @@ The following settings are available:
 - *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the indexing database. Only displayed in case booking data have not been migrated yet.
 
   > [!NOTE]
-  > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the Indexing Engine settings are no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud).
+  > If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), Indexing Engine settings cannot be customized. As such, from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the Indexing Engine settings are no longer available for DaaS.
 
   Please note the following regarding the migration of booking data:
 
