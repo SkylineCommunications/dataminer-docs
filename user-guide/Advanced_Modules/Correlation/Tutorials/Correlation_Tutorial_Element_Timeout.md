@@ -8,6 +8,9 @@ In this tutorial, you will learn how to use Correlation to take action when an e
 
 Expected duration: 15 minutes
 
+> [!NOTE]
+> The content and screenshots for this tutorial were created in DataMiner 10.4.6.
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
@@ -40,15 +43,15 @@ In this step, you will create a Correlation Rule that will trigger based on alar
 
    See [filtering and grouping base alarms for Correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules) for more information.
 
-   ![Adding an alarmfilter](~/user-guide/images/Correlation_Adding_Alarmfilters.png)
+   ![Adding an alarm filter](~/user-guide/images/Correlation_Adding_Alarmfilters.png)
 
-2. Add a rule condition that triggers when the severity is equal to "Timeout".
+1. Add a rule condition that triggers when the severity is equal to "Timeout".
 
    See [adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules) for more information.
 
    ![Adding a rule condition](~/user-guide/images/Correlation_Adding_RuleConditions.png)
 
-3. Select the "Persistent event" trigger mechanism and fill in 5 minutes.
+1. Select the "Persistent event" trigger mechanism and fill in 5 minutes.
 
    The Correlation Rule will wait until the rule conditions are met for 5 minutes before acting and executing its actions.
 
@@ -56,7 +59,7 @@ In this step, you will create a Correlation Rule that will trigger based on alar
 
    ![Configuring *persistent event time*](~/user-guide/images/Correlation_PersistentEvent.png)
 
-4. Add the RunScript action and select the "Generate Information Event (network switch timed out)" script.
+1. Add the RunScript action and select the "Generate Information Event (network switch timed out)" script.
 
    This Automation script will generate an information event when executed. Note that these scripts also can do other things.
 
@@ -64,7 +67,7 @@ In this step, you will create a Correlation Rule that will trigger based on alar
 
    ![Adding the *run script* action](~/user-guide/images/Correlation_Add_Run_Script_Action.png)
 
-5. Optionally, add the Send email action.
+1. Optionally, add the Send email action.
 
    See [sending an email](xref:Sending_an_email) for more information on how to do this.
 
@@ -73,15 +76,12 @@ In this step, you will create a Correlation Rule that will trigger based on alar
    > [!NOTE]
    > This action will only work if a mail server has been configured. See [Configuring outgoing email](xref:Configuring_outgoing_email)
 
-6. Optionally, add other rule actions according to your preference.
+1. Optionally, add other rule actions according to your preference.
 
    For more information on how to add rule actions, go to [adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 
 > [!NOTE]
 > Make sure to have a look at some [best practices when making Correlation Rules](xref:Best_Practices_When_Creating_Correlation_Rules). Correlation is a powerful tool, but can have a negative impact on your system if set up the wrong way.
-
-> [!NOTE]
-> Pictures used for this tutorial are from DataMiner 10.4.6 Feature Release.
 
 ## Step 3: Generate a timeout alarm
 
