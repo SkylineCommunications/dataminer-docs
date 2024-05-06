@@ -725,7 +725,7 @@ namespace SRM.SRM_ProfileInstance_CRUD
 
 #### Managing virtual function definitions
 
-A ProtocolFunctionHelper class has been added to facilitate the creation of Automation scripts dealing with virtual function definitions.
+A ProtocolFunctionHelper class is available that facilitates the creation of Automation scripts dealing with virtual function definitions.
 
 The example below illustrates the use of the various methods in this class.
 
@@ -855,7 +855,7 @@ namespace SRM.SRM_FunctionDefinitions
 }
 ```
 
-##### [Prior to DataMiner 10.4.6/10.5.0 onwards](#tab/tabid-2)
+##### [Prior to DataMiner 10.4.6/10.5.0](#tab/tabid-2)
 
 ```cs
 using System;
