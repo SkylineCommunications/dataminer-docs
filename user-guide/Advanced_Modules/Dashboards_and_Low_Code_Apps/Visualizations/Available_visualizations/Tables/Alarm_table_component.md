@@ -31,7 +31,7 @@ To configure the component:
      > [!NOTE]
      >
      > - If an initial number of alarms to load is specified, no grouping is applied.
-     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39484-->, in case you select alarms in a sliding window, the initial number of alarms to load is limited to a minimum of 1 alarm and a maximum of 100,000 alarms. By default, this is set to 10,000.
+     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39484-->, the initial number of alarms to load is limited to a minimum of 1 alarm and a maximum of 100,000 alarms.
 
    - Below *Columns*, you can select one or more columns in order to have only those columns displayed in the alarm list. For each column, arrow buttons will be displayed that allow you to customize the column order.
 
