@@ -22,7 +22,7 @@ The card variable should be set using the *Execute* shape data field. In the val
 
 For example, this will create an empty card variable named "_partitionElement":
 
-![image](~/develop/images/EPM_syntax_example_partitionElement.png)
+![image](EPM_full_syntax_example_partitionElement.png)
 
 ![image](~/develop/images/EPM_syntax_example_partitionElement2.png)
 
