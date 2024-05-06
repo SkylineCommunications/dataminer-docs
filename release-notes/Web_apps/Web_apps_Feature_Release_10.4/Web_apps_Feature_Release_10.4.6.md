@@ -138,10 +138,7 @@ From now on, a *Spectrum analyzer* component will indicate in a clearer way that
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When an *Alarm table* component is configured to show alarms in a sliding window, from now on, you will be able to specify the following limits:
-
-- Size of sliding window (from 1 minute to 1 day)
-- Refresh rate of sliding window (from 1 minute to 1 day)
+When an *Alarm table* component is configured to show alarms in a sliding window, from now on, the sliding window size and refresh time are limited to a minimum of 1 minute and a maximum of 1 day.
 
 > [!NOTE]
 > When setting the size or the refresh rate of the sliding window, it will no longer be possible to specify a value in seconds or milliseconds.
