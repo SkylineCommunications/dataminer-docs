@@ -9,8 +9,8 @@ In today’s digital landscape, properly securing your data and systems is of th
 
 This guide will give you a comprehensive overview to help you make the necessary changes to secure your DataMiner System as much as possible.
 
->[!TIP]
->See also: [Kata #29: DataMiner Hardening](https://community.dataminer.services/courses/kata-29/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> [!TIP]
+> See also: [Kata #29: DataMiner Hardening](https://community.dataminer.services/courses/kata-29/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Keep your system up to date
 
