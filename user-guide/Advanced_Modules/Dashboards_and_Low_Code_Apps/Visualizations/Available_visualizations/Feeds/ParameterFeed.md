@@ -22,7 +22,7 @@ This feed component allows the user to select multiple parameters from a predefi
    - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard or app URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
 
      > [!NOTE]
-     > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use filter feeds found either on a dashboard, the same low-code app page/panel, or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, these filter feeds can only be found on a dashboard or the same low-code app page/panel.
+     > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use filter feeds found either on a dashboard, on the same low-code app page/panel, or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, these filter feeds can only be found on a dashboard or the same low-code app page/panel.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
