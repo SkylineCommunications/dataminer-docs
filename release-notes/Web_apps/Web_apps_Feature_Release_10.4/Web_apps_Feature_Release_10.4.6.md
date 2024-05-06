@@ -16,16 +16,14 @@ uid: Web_apps_Feature_Release_10.4.6
 
 ## New features
 
-#### Low-Code Apps: Parameter table filter feeds are now also supported [ID_39335]
+#### Low-Code Apps: Expanded support for parameter table filter feeds [ID_39335]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-Low-code apps now also support parameter table filter feeds if the URL option `showAdvancedSettings=true` is used.
-
-This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+Previously, parameter table filter feeds were exclusively supported for dashboards and individual low-code app pages/panels. From now on, you can use feeds found either on the same low-code app page/panel or on another page/panel.
 
 > [!NOTE]
-> You can use feeds found either on the same page or on another page.
+> To use parameter table filters, first add the `showAdvancedSettings=true` option to the app URL.
 
 #### Dashboards app & Low-Code Apps - Node edge graph component: New configuration options [ID_39417]
 
