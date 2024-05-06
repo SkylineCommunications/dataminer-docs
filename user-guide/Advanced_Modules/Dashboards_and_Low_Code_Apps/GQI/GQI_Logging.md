@@ -32,7 +32,7 @@ The [minimum log level](https://github.com/serilog/serilog/wiki/Configuration-Ba
 
 You can change the minimum log level to include less or more information in the log file. For example, to investigate potential issues, it can be useful to lower the minimum log level to *Debug*.
 
-From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum log level to *Debug* or lower, information about requests sent to SLNet are also logged. See [Log entries related to SLNet requests](#log-entries-related-to-slnet-requests).
+From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum log level to *Debug* or lower, information about requests sent to SLNet is also logged. See [Log entries related to SLNet requests](#log-entries-related-to-slnet-requests).
 
 To change the minimum log level, change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
 
@@ -51,7 +51,7 @@ For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards, the query name is
 
 ## Log entries related to SLNet requests
 
-From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you set the [minimum log level](#minimum-log-level) to *Debug* or lower, information about requests sent to SLNet are also logged.
+From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you set the [minimum log level](#minimum-log-level) to *Debug* or lower, information about requests sent to SLNet is also logged.
 
 The types of log entries related to SLNet requests include:
 
