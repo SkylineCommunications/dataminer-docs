@@ -140,13 +140,13 @@ From now on, a *Spectrum analyzer* component will indicate in a clearer way that
 
 When an *Alarm table* component is configured to show alarms in a sliding window, from now on, you will be able to specify the following limits:
 
-- Initial number of alarms (default: 10,000)
-- Maximum number of alarms (from 1 to 100,000)
 - Size of sliding window (from 1 minute to 1 day)
 - Refresh rate of sliding window (from 1 minute to 1 day)
 
 > [!NOTE]
 > When setting the size or the refresh rate of the sliding window, it will no longer be possible to specify a value in seconds or milliseconds.
+
+The *Initial number of alarms* setting is now also limited to a minimum of 1 alarm and a maximum of 100,000 alarms.
 
 ### Fixes
 
