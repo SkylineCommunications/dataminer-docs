@@ -894,7 +894,7 @@ items:
             topicUid: DOM_Remove_Enum_Entry
           - name: Removing a field descriptor from a definition
             topicUid: DOM_Remove_FieldDescriptor_Definition
-  - name: Experience and Performance Management
+  - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
       - name: About DataMiner Experience and Performance Management
@@ -914,8 +914,8 @@ items:
             topicUid: EPM_alarm_monitoring_and_trending
           - name: Creating a link between DataMiner elements and the EPM element
             topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
-      - name: Linking an EPM interface to a view
-        topicUid: Linking_an_EPM_interface_to_a_view
+      - name: EPM integration training
+        topicUid: EPM_Integration_Training
   - name: Inventory & Asset Management
     topicUid: AssetManagement
     items:
