@@ -413,6 +413,17 @@ Because of a number of enhancements, overall performance has increased when upda
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
+#### SLLogCollector packages now include GQI and Web API logging [ID_39557]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the contents of the following folders:
+
+- *C:\\Skyline DataMiner\\Logging\\GQI*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
+- *C:\\Skyline DataMiner\\Logging\\Web*
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
