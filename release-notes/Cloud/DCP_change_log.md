@@ -9,25 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 7 May 2024 - Fix - Admin - Saving settings should now only be available to users with write access [ID_39589]
+#### 7 May 2024 - Fix - Admin - Save button for settings available to users without write access [ID_39589]
 
-The save functionality on the Organization and DataMiner System setting in the Admin application should no longer be available to user that do not have write access.
+In the Admin app, users who do not have write access will now no longer have access to the save functionality on the Organization and DataMiner System Settings pages.
 
-#### 7 May 2024 - Fix - Catalog - Catalog item deployment [ID_39575]
+#### 7 May 2024 - Fix - Catalog - Catalog item deployment window stayed open [ID_39575]
 
-After a catalog item is deployed the deploy popup will now correctly close automatically.
+After a Catalog item is deployed, the deploy pop-up window will now correctly close automatically.
 
-#### 7 May 2024 - Enhancement - Catalog - Registration of a catalog item [ID_39574]
+#### 7 May 2024 - Enhancement - Catalog - Improved Catalog item registration message [ID_39574]
 
-When a new catalog item is registered, the success popup containing the id of the catalog item will now have a small description on how you can use this id.
+When a new Catalog item is registered, the success pop-up message containing the ID of the item will now also briefly describe how you can use this ID.
 
-#### 7 May 2024 - Enhancement - Catalog - Private items without versions [ID_39521]
+#### 7 May 2024 - Enhancement - Catalog - Message added for private items without versions [ID_39521]
 
-Private catalog items that do not have any versions will now show an informative message.
+Private Catalog items that do not have any versions will now show an informative message.
 
-#### 7 May 2024 - Fix - Catalog - Legacy routes should now correctly resolve [ID_39377]
+#### 7 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39377]
 
-When a user would navigate to a legacy url of the Catalog application, it should now redirect to the correct page.
+When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
 
 #### 25 April 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39486]
 
