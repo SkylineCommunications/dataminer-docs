@@ -51,6 +51,12 @@ In some cases, user accounts could become corrupted and group memberships could 
 
 Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
 
+#### Problem with SLNet when information on hanging calls was being retrieved [ID_39373]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+In some rare cases, an error could occur in SLNet when information on hanging calls was being retrieved.
+
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
