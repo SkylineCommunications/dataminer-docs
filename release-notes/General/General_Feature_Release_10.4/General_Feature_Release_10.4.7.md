@@ -41,6 +41,12 @@ The factory reset tool `SLReset.exe` will now perform the following additional a
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
+#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
+
 ### Fixes
 
 #### Issues with user accounts [ID_39234]

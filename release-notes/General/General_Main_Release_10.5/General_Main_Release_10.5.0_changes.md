@@ -407,6 +407,12 @@ A number of enhancements have been made to prevent SLLogCollector from experienc
 
 Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
 
+#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
