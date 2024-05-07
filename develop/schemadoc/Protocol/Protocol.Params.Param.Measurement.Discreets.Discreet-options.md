@@ -22,7 +22,7 @@ The following options are available:
 
 Used with ContextMenu: Displays an OK/Cancel confirmation box showing the message "abc" (case insensitive) before triggering a ContextMenu item.
 
-Use this option to prevent accidental deletion of selected rows.
+Use this option to prevent accidental impacting actions such as, for example, deletion of selected rows.
 
 *Feature introduced in DataMiner 8.5.0 (RN 7360).*
 
