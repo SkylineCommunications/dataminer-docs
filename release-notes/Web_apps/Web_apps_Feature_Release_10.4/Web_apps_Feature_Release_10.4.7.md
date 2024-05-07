@@ -16,7 +16,13 @@ uid: Web_apps_Feature_Release_10.4.7
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards app & Low-Code Apps: New 'Search input' component [ID_39555]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+A new *Search input* component is now available.
+
+It is identical to the *Text input* component, but allows users to clear its contents by clicking the *X*.
 
 ## Changes
 
