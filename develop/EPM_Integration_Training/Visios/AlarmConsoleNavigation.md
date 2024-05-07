@@ -14,7 +14,7 @@ When a shape is used to [filter alarms based on System Name and/or type](xref:Fi
 
 Example:
 
-![image](~/develop/images/EPM_alarm_console_navigation_example.png)
+![AlarmTab configuration example](~/develop/images/EPM_alarm_console_navigation_example.png)
 
 > [!TIP]
 > For more detailed information, see [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter).

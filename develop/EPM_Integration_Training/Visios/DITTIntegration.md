@@ -4,13 +4,13 @@ uid: DITTIntegration
 
 # Performing ping and tracert operations using DITT
 
-You can use [DITT (DataMiner IT Tools)](xref:Dataminer_IT_Tool_Overview) in an EPM environment to ping and trace any device that has an endpoint With the use of the DITT, no extra code is needed. You can add the ping button and trace button to your visual overview and use them to connect to DITT and perform the desired operation.
+You can use [DITT (DataMiner IT Tools)](xref:Dataminer_IT_Tool_Overview) in an EPM environment to ping and trace any device that has an endpoint. With DITT, you can do this without any need for extra code. You can add the ping button and trace button to your visual overview and use them to connect to DITT and perform the desired operation.
 
 For detailed info, see [Implementing DITT in a visual overview](xref:Implementing_DITT_in_Visio).
 
 Example:
 
-![image](~/develop/images/EPM_DITT_integration.png)
+![DITT integration example](~/develop/images/EPM_DITT_integration.png)
 
 The following shape data fields are used in this example:
 

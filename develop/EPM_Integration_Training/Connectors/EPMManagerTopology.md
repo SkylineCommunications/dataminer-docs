@@ -4,11 +4,11 @@ uid: EPMManagerTopology
 
 # Topology configuration
 
-In the EPM Manager connector, the `<Topologies>` tag defines each of the different topologies.
+In the EPM Manager connector, the [Topologies](xref:Protocol.Topologies) tag defines each of the different topologies.
 
 ## Cell and Link tags
 
-Within each `<Topology>` tag, you will find `<Cell>` tags. These represent the cells in the EPM topology. They allow you to define the levels visible in a topology and the connections between them.
+Within each [Topology](xref:Protocol.Topologies.Topology) tag, you will find [Cell](xref:Protocol.Topologies.Topology.Cell) tags. These represent the cells in the EPM topology. They allow you to define the levels visible in a topology and the connections between them.
 
 For example:
 
@@ -35,14 +35,14 @@ For example:
 </Topologies>
 ```
 
-The `<Cell>` tag is used to define the levels present in the topologies and to associate each level with a specific entity table.
+The [Cell](xref:Protocol.Topologies.Topology.Cell) tag is used to define the levels present in the topologies and to associate each level with a specific entity table.
 
 | Attribute | Description                                                                             |
 |-----------|-----------------------------------------------------------------------------------------|
 | `name`    | Defines the name of the level.                                                          |
 | `table`   | Defines the table linked to the level. The tables should be the respective view tables. |
 
-The `<Link>` tag is used to define the connections of each `<Cell>` (topology level).
+The [Link](xref:Protocol.Topologies.Topology.Cell.Link) tag is used to define the connections of each cell (i.e. topology level).
 
 | Attribute | Description                                                                      |
 |-----------|----------------------------------------------------------------------------------|

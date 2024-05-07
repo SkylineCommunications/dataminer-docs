@@ -20,7 +20,7 @@ The *FilterContext* option will allow you to link the shape to an EPM object by 
 
 Example:
 
-![image](~/develop/images/EPM_filtering_alarms_example.png)
+![AlarmSummary shape data configuration example](~/develop/images/EPM_filtering_alarms_example.png)
 
 > [!TIP]
 > For more detailed information, see [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter).

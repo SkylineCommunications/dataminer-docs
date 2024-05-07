@@ -10,10 +10,10 @@ The [Protocol.Type](#type-configuration) and [Protocol.Display](#display-configu
 
 ## Type configuration
 
-| Tag      | Attribute         | Value                 | Description                                                |
-|----------|-------------------|-----------------------|------------------------------------------------------------|
-| `<Type>` | `options`         | `disableViewRefresh`  | Disables updates of view tables and partial subscriptions. |
-| `<Type>` | `databaseOptions` | `partitionedTrending` | Activates partitioning on trend tables.                    |
+| Tag | Attribute | Value | Description |
+|--|--|--|--|
+| [Type](xref:Protocol.Type) | [options](xref:Protocol.Type-options) | `disableViewRefresh` | Disables updates of view tables and partial subscriptions. |
+| [Type](xref:Protocol.Type) | [databaseOptions](xref:Protocol.Type-databaseOptions) | `partitionedTrending` | Activates partitioning on trend tables. |
 
 For example:
 
@@ -24,21 +24,15 @@ For example:
 > [!NOTE]
 > The connector is defined as virtual, as it does not require any communication settings.
 
-> [!TIP]
-> See also: [Protocol.Type](xref:Protocol.Type)
-
 ## Display configuration
 
 | Tag         | Attribute     | Value             | Description                                        |
 |-------------|---------------|-------------------|----------------------------------------------------|
-| `<Display>` | `type`        | `element manager` | Enables the EPM interface.                         |
-| `<Display>` | `pageOptions` | `*;CPEOnly`       | Data pages are hidden for all users except the Administrator user. We do not recommended logging on as the Administrator in a Production environment. |
+| [Display](xref:Protocol.Display) | [type](xref:Protocol.Display-type)        | `element manager` | Enables the EPM interface.                         |
+| [Display](xref:Protocol.Display) | [pageOptions](xref:Protocol.Display-pageOptions) | `*;CPEOnly`       | Data pages are hidden for all users except the Administrator user. We do not recommended logging on as the Administrator in a Production environment. |
 
 For example:
 
 ```xml
 <Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General" wideColumnPages="">
 ```
-
-> [!TIP]
-> See also: [Protocol.Display](xref:Protocol.Display)

@@ -37,12 +37,12 @@ The [Field](xref:Protocol.Chains.Chain.Field) tag has the following attributes:
 
 Several options can be used. These are the options used in the example:
 
-| Option                              | Description                                                                                                              |
-|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `displayInFilter`                   | Displays the field in the filter column on the left side of the EPM UI.                                                   |
-| `ignoreEmptyFilterValues`           | Excludes empty values from the filter drop-down lists of the topology levels.                                            |
-| `tab`                               | Displays one or more links in the block and next to the filter corresponding to the field.                                |
-| `detail`                            | Specify tables that will be displayed in the details pane with a filter on the selection.                                |
+| Option | Description |
+|--|--|
+| `displayInFilter` | Displays the field in the filter column on the left side of the EPM UI. |
+| `ignoreEmptyFilterValues` | Excludes empty values from the filter drop-down lists of the topology levels. |
+| `tab` | Displays one or more links in the block and next to the filter corresponding to the field. |
+| `details` | Allows you to specify the tables that will be displayed in the details pane with a filter on the selection. |
 | `ShowBubbleupAndInstanceAlarmLevel` | Allows two alarm indications on every object: the alarm state of the object and the alarm state of all the objects below. |
 
 > [!NOTE]
