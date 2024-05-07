@@ -9,6 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 7 May 2024 - Fix - Admin - Saving settings should now only be available to users with write access [ID_39589]
+
+The save functionality on the Organization and DataMiner System setting in the Admin application should no longer be available to user that do not have write access.
+
+#### 7 May 2024 - Fix - Catalog - Catalog item deployment [ID_39575]
+
+After a catalog item is deployed the deploy popup will now correctly close automatically.
+
+#### 7 May 2024 - Enhancement - Catalog - Registration of a catalog item [ID_39574]
+
+When a new catalog item is registered, the success popup containing the id of the catalog item will now have a small description on how you can use this id.
+
+#### 7 May 2024 - Enhancement - Catalog - Private items without versions [ID_39521]
+
+Private catalog items that do not have any versions will now show an informative message.
+
+#### 7 May 2024 - Fix - Catalog - Legacy routes should now correctly resolve [ID_39377]
+
+When a user would navigate to a legacy url of the Catalog application, it should now redirect to the correct page.
+
 #### 25 April 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39486]
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Webpages/SRM/` and `/Webpages/assets/` folders, which will be needed for future web app enhancements and features.
