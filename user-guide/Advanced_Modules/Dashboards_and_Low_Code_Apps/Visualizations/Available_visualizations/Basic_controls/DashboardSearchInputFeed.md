@@ -4,7 +4,7 @@ uid: DashboardSearchInputFeed
 
 # Search input
 
-Available from DataMiner 10.4.7 onwards<!--  RN 39555 -->. This basic control allows the user to enter text, which will then be available as a string feed in the dashboard or low-code app. The string feed can be used by queries and by script parameters in low-code app actions. This string feed can also be cleared with an 'x' button available in the input.
+Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--  RN 39555 -->. This basic control allows users to enter text that will then be available as a string feed in the dashboard or low-code app. The string feed can be used by queries and by script parameters in low-code app actions. This string feed can also be cleared with an "x" button available in the input.
 
 You can drag a data feed to the component to link it to that feed, or [specify a feed in the URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the feed, but users will still be able to modify the value.
 
