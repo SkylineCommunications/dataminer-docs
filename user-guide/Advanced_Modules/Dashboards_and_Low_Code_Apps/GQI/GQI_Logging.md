@@ -44,6 +44,9 @@ To change the minimum log level, change the configuration in the *appSettings* s
 </appSettings>
 ```
 
+> [!IMPORTANT]
+> Prior to DataMiner 10.4.6/10.5.0, a change to the minimum log level requires an SLHelper restart. From DataMiner 10.4.6/10.5.0 onwards<!--RN 39309-->, it is no longer necessary to restart SLHelper. The change takes effect immediately upon saving the *SLHelper.exe.config* file.
+
 For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards, the query name is included in the logging. However, if you set the minimum log level to *Debug*, the full query is logged instead.
 
 > [!NOTE]
