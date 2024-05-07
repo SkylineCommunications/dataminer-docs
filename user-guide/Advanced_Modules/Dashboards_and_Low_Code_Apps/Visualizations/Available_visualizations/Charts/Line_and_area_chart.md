@@ -132,6 +132,55 @@ To configure the component:
 
 Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
 
+### [From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards](#tab/tabid-1)
+
+<!--RN 39509-->
+
+1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+
+1. In the *Component* > *Layout* tab, configure the following fields in the *Lines* section:
+
+   - *X-axis column*: The numeric column that should be used for the X-axis data.
+
+   - *Y-axis column*: The numeric column that should be used for the Y-axis data.
+
+   - *Y-axis*: The Y-axis that is used to plot the line.
+
+   > [!NOTE]
+   > Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
+
+1. Optionally, in the *Lines* section, select *+ Add line* to add additional lines to the chart. A maximum of 20 lines can be added to a chart.
+
+   > [!NOTE]
+   >
+   > - To change the order in which the lines are displayed on the chart and in the tooltip, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the entry up or down in the *Lines* section.
+   > - The lines inherit the colors specified in the color palette of the component or theme. When all colors are used, the first ones will be assigned again.
+
+1. Optionally, configure the following layout settings:
+
+   - *X-axis*: Allows you to rename the default X-axis. This name will be used as the X-label in the tooltips.
+
+   - *Y-axis*: Allows you to add and rename Y-axes, with a limit of 10 Y-axes per line & area chart component. This name will be used as the Y-label in the tooltips.
+
+     > [!NOTE]
+     > To change the order in which the Y-axes are added to the chart, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the entry up or down in the *Y-axis* section.
+
+   - *Tooltip*: Enables a tooltip that is displayed when you hover the mouse pointer over the chart. The tooltip shows the Y-value(s) for the closest X-value of any line on the chart. If multiple lines share an X-value at the same pixel, both will be shown. The values shown in the tooltip are indicated on the chart with colored dots.
+
+     If the *Tooltip* setting is enabled, you can configure what the tooltip will display:
+
+     - *Tooltip* > *Include x labels* (1): Allows you to include or exclude the X-axis labels (i.e. the X-axis names).
+
+     - *Tooltip* > *Include y labels* (2): Allows you to include or exclude the Y-axis labels (i.e. the names of the column containing the Y-values).
+
+     - *Tooltip* > *Include colors* (3): Allows you to include or exclude a small indicator in front of the tooltip that indicates the color of the line.
+
+     ![Tooltip line & area chart](~/user-guide/images/Tooltip_LineAreaChart.png)<br>*Line & area chart component in DataMiner 10.4.6*
+
+1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuring-the-component).
+
+### [Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6](#tab/tabid-2)
+
 1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
@@ -145,6 +194,8 @@ Query results are supported as a data feed for this component from DataMiner 10.
 
 1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuring-the-component).
 
+***
+
 ## Export to CSV
 
 It is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
@@ -153,6 +204,19 @@ It is possible to export the trend data to CSV. To do so, click the ... icon in 
 >
 > - The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
 > - From DataMiner 10.3.3/10.4.0 onwards, the *Show average*, *Show minimum*, and *Show maximum* settings are also taken into account when you export a chart to CSV. In addition, if the *Show min/max shading* option is enabled, minimum and maximum values will always be taken into account in the export. <!-- RN 35311 -->
+
+## Zooming and panning
+
+From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zooming and panning functionalities are available for the line & area chart component.
+
+- To zoom in, press CTRL while scrolling up (up to 10,000 times).
+
+- To zoom out, press CTRL while scrolling down (up to 10,000 times).
+
+- To move left or right across the component, right-click the chart and drag your mouse.
+
+  > [!NOTE]
+  > Panning is only possible when the chart is zoomed in, as the default viewport shows all available data.
 
 ## Examples
 
