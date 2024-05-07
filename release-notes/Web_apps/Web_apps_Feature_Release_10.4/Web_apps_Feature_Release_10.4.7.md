@@ -16,6 +16,22 @@ uid: Web_apps_Feature_Release_10.4.7
 
 ## New features
 
+#### Interactive Automation scripts: UIBlockDefinition has new DebugTag property [ID_39365]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+The `UIBlockDefinition` class has a new `DebugTag` property, which allows you to assign an identifier to a UI element. That identifier can then be used in automated tests to explicitly refer to the UI element in question.
+
+Example of a [Cypress](https://www.cypress.io/) test that gets the UI element of which the `DebugTag` property was set to "TextComponent1":
+
+```javascript
+cy.get(`[data-cy="TextComponent"]`)
+    .should('have.text', 'Some text');
+```
+
+> [!NOTE]
+> The `DebugTag` can only be used in interactive Automation scripts launched from web apps, not in interactive Automation scripts launched from DataMiner Cube.
+
 #### Dashboards app & Low-Code Apps: New 'Search input' component [ID_39555]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
