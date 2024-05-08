@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [DVE export rules not working correctly](xref:KI_DVE_Export_Rules) | From DataMiner 10.4.0/10.4.1 onwards | | May 10, 2024 |
 | [Param next attribute not working correctly](xref:KI_Param_next_not_working) | From DataMiner 10.4.1 onwards | | March 20, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |

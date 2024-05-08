@@ -218,6 +218,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: DVE export rules not working correctly
+            topicUid: KI_DVE_Export_Rules
           - name: Param next attribute not working correctly
             topicUid: KI_Param_next_not_working
           - name: Timetrace data is no longer written during Cassandra Cluster migration
