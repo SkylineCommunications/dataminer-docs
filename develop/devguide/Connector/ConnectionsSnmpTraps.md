@@ -39,7 +39,7 @@ The OID of the traps that should be captured is specified in the TrapOID tag. Th
 By default, only traps received from the polling IP address of the main connection of an element will be captured. Using the ipid attribute, you can refer to a parameter containing the IP addresses from which traps should be captured.
 
 > [!IMPORTANT]
-> If a hostname instead of an IP is used in the polling IP address of an element's main connection, the traps received from the hostname will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
+> If a hostname instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the hostname will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
 
 The checkBindings attribute allows you to prevent traps from being processed further unless the specified binding checks succeed. The following example specifies that binding 2 of the trap must contain *display* and binding 3 must match the value of parameter 102 (which can also contain wildcards). Only if both conditions are met, DataMiner will process the trap.
 
