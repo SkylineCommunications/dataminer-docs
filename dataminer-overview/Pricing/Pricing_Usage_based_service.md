@@ -60,7 +60,7 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 | 24 months | Start date: 60%<br>Start date + 12 months: 40% |
 | 36 months | Start date: 60%<br>Start date + 12 months: 20%<br>Start date + 24 months: 20% |
 
-At Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
+At the Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
 
 Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use Credit Rate.
 
@@ -75,7 +75,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud).  No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at additional charge.| Sum of ingress units. | 0.9 per 100K alarm updates <br> 0.3 per 100K information events <br> 0.3 per 10M data points stored <br> 0.3 per 10M element data updates |
 
 > [!TIP]
-> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 90,000 element data updates per Managed Object on average per month.
+> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.
 
 > [!IMPORTANT]
 > The calculation of Service Usage may result in fractional amounts. However, for billing purposes, the total is rounded up to the nearest whole number of credits.

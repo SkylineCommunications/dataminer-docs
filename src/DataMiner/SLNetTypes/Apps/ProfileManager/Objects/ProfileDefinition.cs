@@ -16,56 +16,46 @@ namespace Skyline.DataMiner.Net.Profiles
 	/// <example>
 	/// <para>Creating, retrieving, updating and deleting a profile definition.</para>
 	/// <code>
-	/// using Skyline.DataMiner.Automation;
-	/// using Skyline.DataMiner.Net.IManager.Helper;
-	/// using Skyline.DataMiner.Net.Profiles;
 	/// using System;
 	/// using System.Linq;
+	/// using Skyline.DataMiner.Automation;
+	/// using Skyline.DataMiner.Net.Messages.SLDataGateway;
+	/// using Skyline.DataMiner.Net.Profiles;
 	/// 
 	/// public class Script
 	/// {
-	///		//We will be using the ProfileManagerHelper object to communicate with the ProfileManager Module. This is our API.
-	///		ProfileManagerHelper Helper;
-	///		
-	///		public Script()
-	///		{
-	///			//Initialize the ProfileManagerHelper
-	///			Helper = new ProfileManagerHelper();
-	///			
-	///			//Handling the RequestResponseEvent gives the ProfileManagerHelper connection with SLNet.
-	///			Helper.RequestResponseEvent += Helper_RequestResponseEvent;
-	///		}
-	///		
-	///		// Handles the RequestResponseEvent. Any server call the Helper makes behind the scenes calls this method.
-	///		private void Helper_RequestResponseEvent(object sender, IManagerRequestResponseEventArgs e)
-	///		{
-	///			e.responseMessage = Engine.SLNet.SendSingleResponseMessage(e.requestMessage);
-	///		}
+	///		ProfileHelper helper;
 	///		
 	///		public void Run(Engine engine)
 	///		{
-	///			var profiledefinition = CreateProfileDefinition();
-	///			profiledefinition = RetrieveProfileDefinition(profiledefinition.ID);
-	///			profiledefinition = UpdateProfileDefinition(profiledefinition);
-	///			profiledefinition = DeleteProfileDefinition(profiledefinition.ID);
+	///			helper = new ProfileHelper(engine.SendSLNetMessages);
+	///			var profileDefinition = CreateprofileDefinition();
+	///			profileDefinition = RetrieveProfileDefinition(profileDefinition.ID);
+	///			profileDefinition = UpdateProfileDefinition(profileDefinition);
+	///			profileDefinition = DeleteProfileDefinition(profileDefinition.ID);
 	///		}
 	///		
 	///		private ProfileDefinition DeleteProfileDefinition(Guid iD)
 	///		{
-	///			return Helper.RemoveProfileDefinitions(new ProfileDefinition(iD)).FirstOrDefault();
+	///			var profileDefinition = RetrieveProfileDefinition(iD);
+	///			helper.ProfileDefinitions.Delete(profileDefinition);
+	///			
+	/// 		return profileDefinition;
 	///		}
 	///		
-	///		private ProfileDefinition UpdateProfileDefinition(ProfileDefinition profiledefinition)
+	///		private ProfileDefinition UpdateProfileDefinition(ProfileDefinition profileDefinition)
 	///		{
-	///			profiledefinition.Description = "Another Description";
-	///			profiledefinition.Parameters.Add(CreateParameter()); // Created a new parameter linked to the ProfileDefinition (same method as in Profile Parameter code sample)
+	///			profileDefinition.Description = "Another Description";
+	///			profileDefinition.Parameters.Add(CreateParameter()); // Created a new parameter linked to the ProfileDefinition (same method as in Profile Parameter code sample)
 	///			
-	///			return Helper.AddOrUpdateProfileDefinition(profiledefinition);
+	///			return helper.ProfileDefinitions.Update(profileDefinition);
 	///		}
 	///		
 	///		private ProfileDefinition RetrieveProfileDefinition(Guid iD)
 	///		{
-	///			return Helper.GetProfileDefinitions(new ProfileDefinition(iD)).FirstOrDefault();
+	///			var filter = ProfileDefinitionExposers.ID.Equal(iD);
+	///			var profileDefinition = helper.ProfileDefinitions.Read(filter).FirstOrDefault();
+	///			return profileDefinition;
 	///		}
 	///		
 	///		private ProfileDefinition CreateProfileDefinition()
@@ -86,7 +76,7 @@ namespace Skyline.DataMiner.Net.Profiles
 	///				}
 	///			};
 	///
-	///			return Helper.AddOrUpdateProfileDefinition(def);
+	///			return helper.ProfileDefinitions.Create(def);
 	///		}
 	///	}
 	/// </code>

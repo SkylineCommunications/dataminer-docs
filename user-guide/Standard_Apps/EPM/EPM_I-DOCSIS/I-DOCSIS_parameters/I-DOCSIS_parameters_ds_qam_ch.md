@@ -72,13 +72,7 @@ These parameters are displayed for the Node Segment and Service Group levels in 
 
   - Uncorrected: OID 1.3.6.1.2.1.10.127.1.1.4.1.11
 
-- **DS QAM Ch Utilization**: Calculated. The average value of the DS QAM Ch Utilization related to the cable modems served by the given channel.
-
-  Calculated as follows: DS QAM Ch Utilization = (Current Nº octets transmitted - Nº octets transmitted previously) \* 8 \* 100 / (Delta \* Interface's current bandwidth).
-
-  - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.16
-
-  - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
+- **DS QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.
 
 - **DS QAM Ch Output Bitrate**: Calculated. The average value of the DS QAM Ch Output Bitrate related to the cable modems served by the given channel.
 

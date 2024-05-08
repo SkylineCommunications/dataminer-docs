@@ -73,3 +73,6 @@ Main Site|2
 ```
 
 If you set the value above, clicking the shape will open the Visio drawing linked to the view named "Main Site", on its second tab page.
+
+> [!TIP]
+> To navigate to a page of the current Visio drawing, use [NavigatePage](xref:Creating_a_button_to_navigate_to_a_page_of_the_current_Visio_drawing).

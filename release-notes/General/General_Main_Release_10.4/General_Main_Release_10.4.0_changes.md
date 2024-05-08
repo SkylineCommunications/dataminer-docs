@@ -1111,6 +1111,14 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
+#### Max Payload exceptions when using MessageBroker with chunking [ID_37245]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When MessageBroker used chunking, the generated chunks would not be trimmed to the correct size before transmission, resulting in *Max Payload* exceptions.
+
+For more detailed information, refer to [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload).
+
 #### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -1248,14 +1256,6 @@ When, while automatic incident tracking was running, you manually created an inc
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
-
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
-
-<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
-
-Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
-
-From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
 #### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
 

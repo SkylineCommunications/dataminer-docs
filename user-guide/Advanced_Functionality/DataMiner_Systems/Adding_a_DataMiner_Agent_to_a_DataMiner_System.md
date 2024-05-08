@@ -13,7 +13,9 @@ More information on adding DataMiner Agents is included in the following section
 - [Adding a DataMiner Probe](xref:Adding_a_DataMiner_Probe)
 
 > [!NOTE]
-> In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System will connect to it using its primary IP address. However, in case e.g. NAT (Network Address Translation) is being used, you have to configure the connection strings by hand. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+>
+> - In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System will connect to it using its primary IP address. However, in case e.g. NAT (Network Address Translation) is being used, you have to configure the connection strings by hand. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+> - If a [manual configuration was forced for NATS](xref:SLNetClientTest_disabling_automatic_nats_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the added DMA.
 
 > [!WARNING]
 > If you add a DataMiner Agent to a DataMiner System, please make sure that it is a new DataMiner Agent that has not yet been put into use and that uses the same software version as the other Agents in the system.

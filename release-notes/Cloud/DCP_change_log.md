@@ -9,6 +9,82 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 7 May 2024 - Fix - Admin - Save button for settings available to users without write access [ID_39589]
+
+In the Admin app, users who do not have write access will now no longer have access to the save functionality on the Organization and DataMiner System Settings pages.
+
+#### 7 May 2024 - Fix - Catalog - Catalog item deployment window stayed open [ID_39575]
+
+After a Catalog item is deployed, the deploy pop-up window will now correctly close automatically.
+
+#### 7 May 2024 - Enhancement - Catalog - Improved Catalog item registration message [ID_39574]
+
+When a new Catalog item is registered, the success pop-up message containing the ID of the item will now also briefly describe how you can use this ID.
+
+#### 7 May 2024 - Enhancement - Catalog - Message added for private items without versions [ID_39521]
+
+Private Catalog items that do not have any versions will now show an informative message.
+
+#### 7 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39377]
+
+When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
+
+#### 25 April 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39486]
+
+From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Webpages/SRM/` and `/Webpages/assets/` folders, which will be needed for future web app enhancements and features.
+
+#### 25 April 2024 - Enhancement - Settings overhaul [ID_39471]
+
+The dataminer.services settings, configurable from the Admin app, have been enhanced with the following improvements:
+
+- Settings now have a hierarchical structure. Disabled parent settings override their child settings.
+- Settings can now also be configured on organization level. If a setting is disabled on organization level, this overrides this same setting for all the DataMiner Systems of this organization, as well as its child settings.
+- Settings are now displayed and managed from a separate page for the organization and for each DMS.
+- A new setting has been added for Live Sharing (i.e. dashboard sharing).
+- In addition to one global Remote Access setting, there are now separate child settings for remote access to Cube, the User-Defined APIs, and the web apps.
+
+#### 25 April 2024 - Enhancement - Catalog - Show DMS issues when deploying a catalog item [ID_39374]
+
+In case deploying a catalog item to a DataMiner System will fail, it will now no longer be possible for users to try to deploy the item to that system, and a documentation link will be shown so the users can resolve the issue.
+
+#### 9 April 2024 - Enhancement - Improvements for DxM deployments from the Admin app [ID_39268]
+
+When a user attempts to upgrade or install a DxM, a check is now performed to verify if all the system requirements are met. If missing requirements are detected, the action is disabled, and a warning is shown. Clicking the warning will show more information on how to resolve the issue.
+
+#### 29 March 2024 - Enhancement - Admin DxM status [ID_39277]
+
+On the nodes overview page in the Admin app, you can now see the status of the DxMs.
+
+#### 28 March 2024 - Fix - Catalog - Typos in error when no DMS is found [ID_39232]
+
+When no DMS is found for an organization, the displayed error will now no longer contain any typos.
+
+#### 28 March 2024 - Enhancement - Admin - Adjusted visibility credits section organization overview [ID_39214]
+
+Regular members of an organization will now no longer be able to see the credits section of the organization overview.
+
+#### 28 March 2024 - New feature - Catalog - Trial deployments [ID_39205]
+
+It is now possible for users without a license for a connector to deploy a trial version. These trial versions should not be used in production environments, as stated in the terms and agreements.
+
+#### 28 March 2024 - Fix - Catalog - Links in organization overview not working correctly [ID_39204]
+
+Links in the DataMiner Systems table of the organization overview will now correctly navigate to the right location.
+
+#### 28 March 2024 - Enhancement - Catalog - Filter on public and/or private items [ID_39026]
+
+On the *Browse* page of the Catalog, you can now filter catalog items so you see only public items, only private items, or both public and private items.
+
+#### 28 March 2024 - Enhancement - Admin - Audit Organization Keys [ID_39023]
+
+It is now possible for admin users to see the permissions of organization keys on the audit detail page.
+
+#### 14 March - Admin - Organization overview overhaul [ID_38960]
+
+The user interface of the Organization overview page has been adjusted to be more in line with upcoming design changes.
+
+It will now include an overview of all DataMiner Systems in a table, which will include the name, URL, and status of each DataMiner System.
+
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
 You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
@@ -101,7 +177,7 @@ To add a command to your DMS, create an Automation script in the folder "bot" in
 
 For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
-#### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
+#### 23 January 2024 - Fix - Unknown error when accessing the web apps remotely [ID_38549]
 
 While remote access was used to go to the web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 

@@ -4,7 +4,7 @@ uid: CodingGuidelines
 
 # DataMiner Protocol Development Guidelines
 
-The guidelines specified in this section are designed to uphold the level of quality of DMS protocols by improving readability, maintainability, performance.
+The guidelines specified in this section are designed to uphold the level of quality of DMS protocols by improving readability, maintainability, and performance.
 
 By adhering to these guidelines, we can ensure that protocols have a consistent look, and thereby increase maintainability and readability. The guidelines also increase reusability, stability and performance.
 

@@ -116,7 +116,7 @@ uid: NTNotifyTypesOverview
 |100|NT_GET_SUBJECT_AND_COMMENT||
 |101|NT_SET_SUBJECT_AND_COMMENT||
 |102|NT_REMOVE_FILE||
-|103|NT_REMOVE_DOCUMENT|See NT_REMOVE_DOCUMENT (103).|
+|103|<xref:NT_REMOVE_DOCUMENT>|Removes the specified document from the Documents folder.|
 |104|NT_SET_SECURITY_INFO||
 |105|NT_THREAD_CHECK||
 |106|<xref:NT_MAKE_ALARM>|Creates an alarm.|

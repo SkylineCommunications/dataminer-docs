@@ -14,8 +14,11 @@ DataMiner 10.4.0/10.4.3 introduced the *DataMinerSolutions.dll* file [(RN 38530)
 
 ## Fix
 
-No fix is available yet.
+Deploy and install IDP 1.5.0 (or higher) from the [Catalog](https://catalog.dataminer.services/details/package/3163).
+
+> [!TIP]
+> For more information on how to proceed with the installation/upgrade procedure, refer to [Installing DataMiner IDP](xref:Installing_DataMiner_IDP).
 
 ## Description
 
-After upgrading your DataMiner System to DataMiner 10.4.0/10.4.3 or higher, IDP Discovery is no longer working.
+After the DataMiner System is upgraded to DataMiner 10.4.0/10.4.3 or higher, IDP Discovery is no longer working.

@@ -2,17 +2,29 @@
 uid: Web_apps_Feature_Release_10.4.5
 ---
 
-# DataMiner web apps Feature Release 10.4.5 – Preview
+# DataMiner web apps Feature Release 10.4.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.5](xref:General_Feature_Release_10.4.5).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards app & Low-Code Apps - Node edge graph component: New features & enhanced performance [ID_38974]](#dashboards-app--low-code-apps---node-edge-graph-component-new-features--enhanced-performance-id_38974)
+- [Dashboards app & Low-Code Apps: Client metric logging [ID_39000]](#dashboards-app--low-code-apps-client-metric-logging-id_39000)
+- [Low-Code Apps - Timeline component: Interactive timeline events and component actions [ID_39254]](#low-code-apps---timeline-component-interactive-timeline-events-and-component-actions-id_39254)
+
+## Breaking changes
+
+#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
+
+From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ## New features
 
@@ -65,17 +77,58 @@ Client metric logging is employed to record different performance and issue indi
 > [!TIP]
 > For more information, see [Dashboards and Low-Code Apps logging](xref:Dashboards_and_Low_Code_Apps_Logging).
 
-## Changes
-
-### Breaking changes
-
-#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
+#### Low-Code Apps - Timeline component: Interactive timeline events and component actions [ID_39254]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
+When setting up a Timeline component, you can now configure actions to be performed when certain events occur in the component.
 
-From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
+##### Events
+
+The following events are supported:
+
+| Event | Action that triggers the event |
+|---|---|
+| Range select | Selecting a section of the timeline using the right mouse button. |
+| Item resize  | Extending or shrinking an item on the timeline. |
+| Item move    | Changing the time slot of an item on the timeline. |
+| Group change | Moving an item on the timeline to another group. |
+
+> [!NOTE]
+>
+> - The above-mentioned events can only be triggered when they have actions configured. For example, an item will only be resized when at least one action has been configured for the *Item resize* event.
+> - While the *Range select* event is timeline-based, other events can have a different configuration for each query on the timeline. For example, if there are multiple queries on the timeline, and you move an item belonging to a certain query, the timeline will look at the configuration of actions for the *On move* event of that specific query to decide what actions to execute.
+
+> [!TIP]
+> When interacting with the timeline, you can now use the following keys:
+>
+> - *ESCAPE*: When you click this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
+> - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
+> - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, then keep this key pressed.
+
+##### Actions
+
+When a Timeline component is used in a low-code app, it is now also possible to configure the following component actions:
+
+| Action | Function |
+|--------|----------|
+| Fetch the data | Fetches the data for the component.<br>This action was already available as from Dataminer 10.2.10/10.3.0 for all components using query data as input. |
+| Highlight time range | Highlights a range on the timeline component.<br>The highlighted section will expose a feed in the form of a *Timespan* object. If multiple sections are highlighted, the feed will contain an array of *Timespan* objects. |
+| Clear highlights | Clears all highlights set by *Highlight time range* actions.<br>Prior to DataMiner 10.4.5, highlights could already be configured using the *Highlight range* setting. This setting is still available and can be used in combination with highlights set by actions. Its behavior remains the same: a highlight set by the *Highlight range* setting will not expose a feed and it will not be cleared by the *Clear highlight* action. |
+| Set viewport | Sets the viewport of the timeline to a certain time range. |
+
+> [!NOTE]
+>
+> - Before, it was already possible to [link the value of certain inputs to a feed](xref:LowCodeApps_event_config). From now on, you will be able to link these values to information provided by the event in a similar way. All timeline events expose information relevant to the event in question. The following information is provided for each event:
+>
+>   - *Range select*: Provides a *from* and a *to* property, both of type *Timespan*.
+>   - *Item resize*: Provides an old and a new *Timespan* pair, indicating the start and the end of the item before and after the resize event. it also provides information about the resized item in the form of a *Query row* object.
+>   - *Item move*: Provides the same information as the *Item resize* event.
+>   - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
+>
+> - The existing *Line & area chart* component action *Set timespan* has now been renamed *Set viewport* in order to be consistent with the *Set viewport* action described above.
+
+## Changes
 
 ### Enhancements
 
@@ -153,6 +206,12 @@ Up to now, when two states were able to transition to each other, an infinite lo
 
 When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
 
+#### Dashboards app & Low-Code Apps - Interactive Automation scripts: Values would not get updated when the focus changed [ID_38838]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in an interactive Automation script run from a dashboard or a low-code app, you had changed a value, that value would incorrectly not get updated when the focus changed.
+
 #### Dashboards app: Problem with Dropdown components on shared dashboards [ID_38953]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -212,3 +271,77 @@ When, in the *DATA* pane, you opened the *PARAMETERS* section, set the *From* bo
 When a web app loses its WebSocket connection, a `Connection has been interrupted` message is displayed in the app's subheader. In some cases, that message would incorrectly not disappear once the WebSocket connection was restored.
 
 From now on, a message will also be displayed in the app's subheader when not all messages received when the app was disconnected could be recovered. That same message will ask the user to refresh the app.
+
+#### Dashboards app & Low-Code Apps - Time range component: Custom time zone would not be used when selecting 'Now' in the time picker [ID_39171]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you had set a custom time zone for web apps, that time zone would incorrectly not be used when you selected *Now* in the time picker of a *Time range* component.
+
+> [!TIP]
+> See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
+
+#### Dashboards app & Low-Code Apps - Table, Grid, Timeline & Maps components: Template previews would not show the background color of the component [ID_39183]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In the *Template Editor*, up to now, template previews would not show the background color of the component. As this could lead to confusion when previewing templates without background shapes, all previews will now have the same background color as the component in which they will be used.
+
+> [!NOTE]
+> At present, the *Maps* component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+#### Dashboards app: Not possible to duplicate a dashboard with the same name to another folder [ID_39190]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, you were not allowed to duplicate a dashboard with the same name to a different folder. From now on, you will be allowed to do so.
+
+#### Dashboards app & Low-Code Apps: 'Select a visualization' button would not be displayed [ID_39194]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in edit mode, you clicked a component or hovered the mouse pointer over it, the *Select a visualization* button would incorrectly not be displayed when you dragged query row data from the feed section onto the dashboard or the low-code panel you were editing.
+
+#### Dashboards app: Popup window would not open immediately when you selected 'Create dashboard', 'Duplicate dashboard' or 'Settings' [ID_39223]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you right-clicked a dashboard in the left pane, and selected *Create dashboard*, *Duplicate dashboard* or *Settings*, the corresponding popup window would not open immediately. From now on, it will open straight away.
+
+#### Web apps - Color picker: Moving the color slider would not be possible when the color was set to RGB 0/0/0 [ID_39227]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you opened the color picker and the color was set to a grey color (i.e. RGB 0/0/0), it would not be possible to select another color by moving the color slider.
+
+#### Low-Code Apps: Refreshing an app would cause it to redirect the user to the root page instead of the authentication page [ID_39231]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you refreshed a low-code app while the connection was lost, the app would incorrectly redirect you to the root page (e.g. `https://myDma/root/`) instead of the app's authentication page.
+
+#### Low-Code Apps: Draft version of an app could incorrectly be opened via the URL of the published version [ID_39242]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, it would incorrectly be possible to open a draft version of a low-code app via the URL of the published version, even when that draft version had not yet been published.
+
+From now on, for example, it will be possible to navigate to `https://{MYDMA}/app/draft/{APPID}/Page?v=4`, but no longer to `https://{MYDMA}/app/{APPID}/Page?v=4`.
+
+#### Low-Code Apps: Feeds would incorrectly not be reset when you previewed a low-code app [ID_39276]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you previewed a low-code app, all feeds would incorrectly not be reset. From now on, all feeds will be properly reset when you preview a low-code app.
+
+#### Dashboards app - Timeline component: The content of a template could go out of the bounds of the timeline item [ID_39389]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
+
+In a *Timeline* component, in some cases, the content of a template could go out of the bounds of the timeline item. From now on, the template content will be cropped so that it stays without the bounds of the timeline item.
+
+#### Problem when trying to log in to a web app [ID_39397]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
+
+When users tried to log in to a web app, in some cases, an `Object reference not set to an instance of an object` error could be thrown.

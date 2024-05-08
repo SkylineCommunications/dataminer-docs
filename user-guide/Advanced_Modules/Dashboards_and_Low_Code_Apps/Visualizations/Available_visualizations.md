@@ -288,4 +288,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardTextInputFeed.html" title="Text Input" target="_self"><img src="~/user-guide/images/Text_Input.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardSearchInputFeed.html" title="DropDown" target="_self"><img src="~/user-guide/images/Search_Input.svg" style="width:100%"></a>
+  </div>
 </div>

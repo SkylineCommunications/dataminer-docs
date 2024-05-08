@@ -29,3 +29,13 @@ Checks if this block is a filter operator and provides an [IGQIFilterOperator](x
 #### Returns
 
 `true` if this query block is a filter operator, otherwise `false`.
+
+### bool IsSortOperator(out IGQISortOperator sortOperator)
+
+Checks if this block is a sort operator and provides an [IGQISortOperator](xref:GQI_IGQISortOperator) reference for it.
+
+Available from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37806 -->
+
+#### Parameters
+
+- **out** [IGQISortOperator](xref:GQI_IGQISortOperator) `sortOperator`: A reference to this block if it represents a sort operation; otherwise null.

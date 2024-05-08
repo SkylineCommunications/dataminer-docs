@@ -12,9 +12,9 @@ To access the PLM low-code app:
 
 1. Sign in using your DataMiner credentials.
 
-1. Select the *EPM PLM* app.
+1. Select the *DataMiner Planned Maintenance Tool* app.
 
-   ![EPM PLM app](~/user-guide/images/EPM_PLM_app.png)
+   ![PLM app](~/user-guide/images/EPM_PLM_app.png)
 
 ## The PLM tool sidebar
 
