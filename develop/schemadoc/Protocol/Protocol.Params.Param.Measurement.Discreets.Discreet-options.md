@@ -74,7 +74,7 @@ Note that this always has to be the first option in the list:
 
 Use this option to link a particular color to a value of a discreet parameter. If that parameter is associated with a table column that controls the row color, selecting a discreet value will mean selecting the color linked to that value.
 
-See also: rowTextColoring
+See also: [rowTextColoring](xref:ColumnOptionOptionsOverview#rowtextcoloring)
 
 ### script:...
 
