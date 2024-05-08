@@ -165,19 +165,15 @@ Query results are supported as a data feed for this component from DataMiner 10.
      > [!NOTE]
      > To change the order in which the Y-axes are added to the chart, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the entry up or down in the *Y-axis* section.
 
-   - *Tooltip*: Enables a tooltip that is displayed when you hover the mouse pointer over the chart. The tooltip shows the Y-value(s) for the closest X-value of any line on the chart. If multiple lines share an X-value at the same pixel, both will be shown. The values shown in the tooltip are indicated on the chart with colored dots.
+   - *Tooltip*: Enables a tooltip that is displayed when you hover the mouse pointer over the chart. The tooltip shows the Y-value(s) for the closest X-value of any line on the chart. If multiple lines share an X-value, both will be shown. The values shown in the tooltip are indicated on the chart with colored dots.
 
      If the *Tooltip* setting is enabled, you can configure what the tooltip will display:
 
-     - *Tooltip* > *Include x labels* (1): Allows you to include or exclude the X-axis labels (i.e. the X-axis names).
+     - *Tooltip* > *Include x labels*: Allows you to include the X-axis labels (i.e. the X-axis names).
 
-     - *Tooltip* > *Include y labels* (2): Allows you to include or exclude the Y-axis labels (i.e. the names of the column containing the Y-values).
+     - *Tooltip* > *Include y labels*: Allows you to include the Y-axis labels (i.e. the name of the column containing the Y-values).
 
-     - *Tooltip* > *Include colors* (3): Allows you to include or exclude a small indicator in front of the tooltip that indicates the color of the line.
-
-     ![Tooltip line & area chart](~/user-guide/images/Tooltip_LineAreaChart.png)<br>*Line & area chart component in DataMiner 10.4.6*
-
-1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuring-the-component).
+     - *Tooltip* > *Include colors*: Allows you to include a small indicator in front of the tooltip that indicates the color of the line.
 
 ### [Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6](#tab/tabid-2)
 
@@ -186,7 +182,9 @@ Query results are supported as a data feed for this component from DataMiner 10.
 1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
 
    - *Query*: The query data feed you want to use.
+
    - *X axis*: The column that should be used for the X-axis data.
+
    - *Y axis*: The column that should be used for the Y-axis data.
 
    > [!NOTE]
