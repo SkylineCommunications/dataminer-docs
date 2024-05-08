@@ -14,26 +14,16 @@ uid: Web_apps_Feature_Release_10.4.6
 
 *No highlights have been selected yet.*
 
-## Breaking changes
-
-#### Low-Code Apps: Selection of DOM instances will now be passed to a script as an array [ID_39391]
-
-<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
-
-Up to now, when you selected multiple DOM instances in a table (while holding the SHIFT button pressed) and then executed a script that used the feeds of those DOM instances as input parameters, only the first DOM instance you selected would be passed to the script. From now on, an array containing all selected DOM instances will be passed to the script.
-
 ## New features
 
-#### Low-Code Apps: Parameter table filter feeds are now also supported [ID_39335]
+#### Low-Code Apps: Expanded support for parameter table filter feeds [ID_39335]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-Low-code apps now also support parameter table filter feeds if the URL option `showAdvancedSettings=true` is used.
-
-This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+Previously, parameter table filter feeds were exclusively supported for dashboards and individual low-code app pages/panels. From now on, you can use feeds found either on the same low-code app page/panel or on another page/panel.
 
 > [!NOTE]
-> You can use feeds found either on the same page or on another page.
+> To use parameter table filters, first add the `showAdvancedSettings=true` option to the app URL.
 
 #### Dashboards app & Low-Code Apps - Node edge graph component: New configuration options [ID_39417]
 
@@ -57,6 +47,51 @@ When configuring the nodes and/or the edges of a *Node edge graph* component, yo
 - *Enable tooltip*: When the URL option *showAdvancedSettings=true* is used, you can use this option to specify whether or not a tooltip should appear when you hover over a node/edge.
 
 - *Show metric*: When the URL option *showAdvancedSettings=true* is used, you can use this option to specify whether the nodes/edges should be highlighted with their conditional color.
+
+#### Dashboards app & Low-Code Apps - Line & area chart component: Showing multiple lines on multiple Y axes [ID_39509]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
+
+When a *Line & area chart* component visualizes GQI data, it is now able to show multiple lines on multiple Y axes.
+
+In the *Layout* tab, you can find the following settings to configure this:
+
+- *X axis*: Allows you to rename the default X axis.
+
+  This name will be used as the X label in the tooltips.
+
+- *Y axis*: Allows you to add and rename Y axes.
+
+  - You can add up to 10 Y axes to a single chart.
+  - The axis names will only be used to allow you to choose the correct axis.
+  - By reordering the axes, you can determine the order in which they are added to the chart.
+
+- *Lines*: Allows you to add lines that will be displayed on the chart.
+
+  - You can add up to 20 lines to a single chart.
+  - By reordering the lines, you can determine the order in which they are displayed on the chart and in the tooltip.
+  - The lines inherit the colors specified in the color palette of the component or theme. When all colors are used, the first ones will be assigned again.
+
+  For each line, the following settings can be configured:
+
+  - *X axis column*: The numeric column that contains the X values of the line. The column can be taken from any query specified in the component.
+  - *Y axis column*: the numeric column that contains the Y values of the line. The column can be taken from any query specified in the component.
+  - *Y axis*: The Y axis that is used to plot the line.
+
+- *Tooltips*: Allows you to enable/disable the tooltip and to configure what it will display.
+
+  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value at the same pixel, both will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
+
+  Tooltip settings:
+
+  - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the names of the column containing the Y values).
+  - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
+
+It is now also possible to pan and zoom inside a *Line & area chart* component:
+
+- To zoom, scroll while keep the CTRL key pressed (maximum 10,000 times).
+- To pan, drag while keeping the right mouse button pressed (Only works when zoomed in since the default viewport shows all the data).
 
 ## Changes
 
@@ -101,15 +136,12 @@ From now on, a *Spectrum analyzer* component will indicate in a clearer way that
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When an *Alarm table* component is configured to show alarms in a sliding window, from now on, you will be able to specify the following limits:
-
-- Initial number of alarms (default: 10,000)
-- Maximum number of alarms (from 1 to 100,000)
-- Size of sliding window (from 1 minute to 1 day)
-- Refresh rate of sliding window (from 1 minute to 1 day)
+When an *Alarm table* component is configured to show alarms in a sliding window, from now on, the sliding window size and refresh time are limited to a minimum of 1 minute and a maximum of 1 day.
 
 > [!NOTE]
 > When setting the size or the refresh rate of the sliding window, it will no longer be possible to specify a value in seconds or milliseconds.
+
+The *Initial number of alarms* setting is now also limited to a minimum of 1 alarm and a maximum of 100,000 alarms.
 
 ### Fixes
 

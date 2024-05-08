@@ -40,15 +40,6 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-Also, the `NatsSessionOptions` class has the following new property:
-
-- *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
-
-  By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
-
-  > [!IMPORTANT]
-  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
-
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -128,6 +119,21 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 >
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
+
+#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for Automation scripts.
+
+```csharp
+IConnection GetConnection()
+```
+
+This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the connection between GQI and SLNet.
+
+> [!NOTE]
+> The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
 
 ### Protocols
 
@@ -423,3 +429,12 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 |---------|----------|
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
 | Health Stats (SLProtocol) > Details... | Show all details of a specific element. |
+
+#### Factory reset tool: Additional actions [ID_39524] [ID_39530]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+The factory reset tool `SLReset.exe` will now perform the following additional actions:
+
+- If the DataMiner Agent is connected to *dataminer.services*, disconnect the DataMiner Agent from *dataminer.services*.
+- Clear all custom appsettings of the DataMiner extension modules (DxMs).

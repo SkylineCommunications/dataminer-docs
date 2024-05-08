@@ -22,7 +22,7 @@ The following options are available:
 
 Used with ContextMenu: Displays an OK/Cancel confirmation box showing the message "abc" (case insensitive) before triggering a ContextMenu item.
 
-Use this option to prevent accidental deletion of selected rows.
+Use this option to prevent accidental impacting actions such as, for example, deletion of selected rows.
 
 *Feature introduced in DataMiner 8.5.0 (RN 7360).*
 
@@ -74,7 +74,7 @@ Note that this always has to be the first option in the list:
 
 Use this option to link a particular color to a value of a discreet parameter. If that parameter is associated with a table column that controls the row color, selecting a discreet value will mean selecting the color linked to that value.
 
-See also: rowTextColoring
+See also: [rowTextColoring](xref:ColumnOptionOptionsOverview#rowtextcoloring)
 
 ### script:...
 

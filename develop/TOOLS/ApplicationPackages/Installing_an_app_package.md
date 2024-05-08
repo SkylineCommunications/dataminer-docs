@@ -11,6 +11,11 @@ Application packages can be uploaded, viewed, installed, and configured using th
 
 From DataMiner 10.1.0 [CU19]/10.2.0 [CU7]/10.2.10 onwards (RN 33969), you can double-click the application package to start the installation procedure.
 
+Alternatively, you can also use our dotnet tooling:
+
+- You can [deploy an application package](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.DataMinerDeploy) directly to a (non-DaaS) server.
+- You can [upload an application package](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab) to a DataMiner Agent connected to dataminer.services, and then use the returned identifier to [deploy the package](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.DataMinerDeploy) to that Agent.
+
 > [!IMPORTANT]
 > We currently do not support installing an application package via the System Center in DataMiner.
 

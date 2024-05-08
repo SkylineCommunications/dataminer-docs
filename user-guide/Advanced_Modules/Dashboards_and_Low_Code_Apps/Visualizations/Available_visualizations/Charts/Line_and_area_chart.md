@@ -33,7 +33,9 @@ To configure the component:
    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
      > [!NOTE]
-     > When you update a filter that is already used in the component, re-add the filter in order to update it in the component.
+     >
+     > - When you update a filter that is already used in the component, re-add the filter in order to update it in the component.
+     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use feeds found either on the same low-code app page/panel or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, you can only use feeds found on the same low-code app page/panel.
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 

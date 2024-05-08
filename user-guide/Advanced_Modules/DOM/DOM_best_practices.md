@@ -213,7 +213,7 @@ You can also keep your CRUD scripts fast by using the ['FullCrudMeta' variant](x
 
 ### Avoid using DOM data on the right side of a join in GQI
 
-With the current behavior of joining data using a [GQI query](xref:Generic_Query_Interface), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, this will lead to performance and scaling issues.
+With the current behavior of joining data using a [GQI query](xref:About_GQI), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, this will lead to performance and scaling issues.
 
 We recommend implementing an [ad hoc data source](xref:Configuring_an_ad_hoc_data_source_in_a_query) instead. This allows you to more efficiently retrieve the DOM data by only retrieving the `DomInstances` that are needed. Within this ad-hoc data source, a potential caching layer can also be implemented.
 

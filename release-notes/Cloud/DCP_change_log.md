@@ -9,6 +9,30 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 8 May 2024 - Fix - Catalog - Maximum number of results too low when searching from home page [ID_39612]
+
+When you executed a search on the home page, the results were incorrectly limited to 5 items only. Now when you click *View all results*, this will take you to the browse page where you will see a maximum of 50 results.
+
+#### 7 May 2024 - Fix - Admin - Save button for settings available to users without write access [ID_39589]
+
+In the Admin app, users who do not have write access will now no longer have access to the save functionality on the Organization and DataMiner System Settings pages.
+
+#### 7 May 2024 - Fix - Catalog - Catalog item deployment window stayed open [ID_39575]
+
+After a Catalog item is deployed, the deploy pop-up window will now correctly close automatically.
+
+#### 7 May 2024 - Enhancement - Catalog - Improved Catalog item registration message [ID_39574]
+
+When a new Catalog item is registered, the success pop-up message containing the ID of the item will now also briefly describe how you can use this ID.
+
+#### 7 May 2024 - Enhancement - Catalog - Message added for private items without versions [ID_39521]
+
+Private Catalog items that do not have any versions will now show an informative message.
+
+#### 7 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39377]
+
+When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
+
 #### 25 April 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39486]
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Webpages/SRM/` and `/Webpages/assets/` folders, which will be needed for future web app enhancements and features.
@@ -22,6 +46,10 @@ The dataminer.services settings, configurable from the Admin app, have been enha
 - Settings are now displayed and managed from a separate page for the organization and for each DMS.
 - A new setting has been added for Live Sharing (i.e. dashboard sharing).
 - In addition to one global Remote Access setting, there are now separate child settings for remote access to Cube, the User-Defined APIs, and the web apps.
+
+#### 25 April 2024 - Enhancement - Catalog - Show DMS issues when deploying a catalog item [ID_39374]
+
+In case deploying a catalog item to a DataMiner System will fail, it will now no longer be possible for users to try to deploy the item to that system, and a documentation link will be shown so the users can resolve the issue.
 
 #### 9 April 2024 - Enhancement - Improvements for DxM deployments from the Admin app [ID_39268]
 

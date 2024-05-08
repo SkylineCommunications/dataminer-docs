@@ -149,6 +149,8 @@ items:
             topicUid: BPA_Check_Antivirus_DLLs
           - name: Check Cluster SLNet Connections
             topicUid: BPA_Check_Cluster_SLNet_Connections
+          - name: Check Deprecated MySql DLL
+            topicUid: BPA_Check_Deprecated_MySql_DLL
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: Firewall Configuration

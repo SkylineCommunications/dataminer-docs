@@ -262,6 +262,14 @@ Up to now, in some cases, a decreasing trend slope would be labeled as a varianc
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
+#### Service & Resource Management: Queue will now be skipped when processing SetSrmJsonSerializableProperties requests [ID_39264]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When the *ResourceManagerHelper* methods *UpdateReservationInstanceProperties* or *SafelyUpdateReservationInstanceProperties* were used to update properties of a booking, up to now, their action was queued on the master DMA to be handled sequentially for all bookings.
+
+From now on, the *SetSrmJsonSerializableProperties* requests will skip said queue.
+
 #### Enhanced SLDBConnection logging [ID_39267]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -393,11 +401,36 @@ A number of enhancements have been made to prevent SLLogCollector from experienc
 
 - An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
 
-### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
+
+#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced rounding of anomaly threshold values & optimized linking of severities to anomaly thresholds [ID_39492]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In alarm templates, the rounding of anomaly threshold values has been enhanced. For example, 3.09999999999999 will now be displayed as 3.1.
+
+Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
+
+#### SLLogCollector packages now include GQI and Web API logging [ID_39557]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the contents of the following folders:
+
+- *C:\\Skyline DataMiner\\Logging\\GQI*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
+- *C:\\Skyline DataMiner\\Logging\\Web*
 
 ### Fixes
 
@@ -444,6 +477,12 @@ A *ModelHostException* could be thrown while checking whether the DataMiner Syst
 
 In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
 
+#### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
+
 #### STaaS: Problem when using a delete statement with a filter [ID_39416]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -453,3 +492,9 @@ When, on a STaaS system, an attempt was made to delete data from the database us
 `Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
 
 This issue has now been fixed.
+
+#### Problem when disposing an ISession with multiple subscriptions [ID_39483]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.

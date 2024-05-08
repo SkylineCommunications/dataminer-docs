@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 30 April 2024 - Enhancement - Orchestrator 1.6.0 - Retries after failed DxM installation [ID_39519]
+
+The Orchestrator will now retry the installation of a DxM when the installation was interrupted.  
+
 #### 26 April 2024 - Fix - Orchestrator 1.5.9 - Inconsistent cloud endpoint detection failures [ID_39512]
 
 An issue has been resolved that could make features like DxM and Catalog deployments, Remote Log Collection, and data offloads for proactive support inconsistently fail.

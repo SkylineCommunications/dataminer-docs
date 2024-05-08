@@ -222,7 +222,7 @@ uid: glossary_a_to_l
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
-| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:Generic_Query_Interface). |
+| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:About_GQI). |
 | Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 
 ## H

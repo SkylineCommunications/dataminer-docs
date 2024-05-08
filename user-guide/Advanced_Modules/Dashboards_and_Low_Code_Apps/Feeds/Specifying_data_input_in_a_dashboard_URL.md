@@ -86,6 +86,7 @@ To guarantee support across all browsers and prevent possible issues, the URL va
 | / | %2F |
 | { | %7B |
 | } | %7D |
+| & | %26 |
 | Space | %20 |
 
 ### Examples: passing the data using a JSON object in the URL
