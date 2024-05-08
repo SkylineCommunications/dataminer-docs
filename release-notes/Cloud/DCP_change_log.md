@@ -9,10 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 8 May 2024 - Fix - Catalog - Remove page limit from search query [ID_39612]
+#### 8 May 2024 - Fix - Catalog - Maximum number of results too low when searching from home page [ID_39612]
 
-Executing a search on the home page no longer limits its results to 5 items.
-Now when clicking "view all results", the user will be navigated to the browse page and see a maximum of 50 results again
+When you executed a search on the home page, the results were incorrectly limited to 5 items only. Now when you click *View all results*, this will take you to the browse page where you will see a maximum of 50 results.
 
 #### 7 May 2024 - Fix - Admin - Save button for settings available to users without write access [ID_39589]
 
