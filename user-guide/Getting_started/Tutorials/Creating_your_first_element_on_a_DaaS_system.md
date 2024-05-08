@@ -17,7 +17,7 @@ The tutorial consists of the following steps:
 - [Step 1: Create a staging DataMiner System in the cloud](#step-1-create-a-staging-dataminer-system-in-the-cloud)
 - [Step 2: Deploy the 'Microsoft Platform' connector from the Catalog](#step-2-deploy-the-microsoft-platform-connector-from-the-catalog)
 - [Step 3: Access your newly created DaaS system for the first time](#step-3-access-your-newly-created-daas-system-for-the-first-time)
-- [Step 4: Create an element to monitor the CPU usage of your PC](#step-4-create-an-element-to-monitor-the-cpu-usage-of-your-pc)
+- [Step 4: Create an element to monitor your PC](#step-4-create-an-element-to-monitor-your-pc)
 
 ## Step 1: Create a staging DataMiner System in the cloud
 
@@ -41,8 +41,12 @@ Access your newly created DaaS system for the first time. Follow the instruction
 
 - [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS)
 
-## Step 4: Create an element to monitor the CPU usage of your PC
+## Step 4: Create an element to monitor your PC
 
 Create an element named *My Windows server* that will use the *Microsoft Platform* connector you deployed in step 2. Follow the instructions below:
 
 - [Adding elements](xref:Adding_elements)
+
+> [!NOTE]
+> Once you have created the element, opening the element card will allow you to view the current value of a multitude of parameters (e.g. total processor load, available physical memory, running processes and services, disk information, and much more).
+> If you want to monitor some of those parameters in real time, you can assign an alarm template to the element, and configure alarm thresholds per parameter. For more information, see [About alarm templates](xref:About_alarm_templates).
