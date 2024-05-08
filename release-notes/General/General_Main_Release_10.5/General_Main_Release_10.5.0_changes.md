@@ -413,6 +413,14 @@ Because of a number of enhancements, overall performance has increased when upda
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced rounding of anomaly threshold values & optimized linking of severities to anomaly thresholds [ID_39492]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In alarm templates, the rounding of anomaly threshold values has been enhanced. For example, 3.09999999999999 will now be displayed as 3.1.
+
+Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
+
 #### SLLogCollector packages now include GQI and Web API logging [ID_39557]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
