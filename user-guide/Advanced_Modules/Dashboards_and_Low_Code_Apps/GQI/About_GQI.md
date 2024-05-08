@@ -2,17 +2,18 @@
 uid: About_GQI
 ---
 
-# About Generic Query Interface
+# About the Generic Query Interface
 
-The Generic Query Interface offers a versatile query language designed to retrieve and manipulate data from both within and beyond your DataMiner system. Its output is presented in a tabular format and is independent of the underlying data structure, effectively functioning as a flexible abstraction layer.
+The Generic Query Interface (available from DataMiner 10.0.13 onwards) is designed to retrieve and manipulate data from both inside and outside a DataMiner System. Its output is presented in a tabular format and is independent of the underlying data structure, effectively functioning as a flexible abstraction layer.
 
-This abstraction layer fulfills several key functions:
+With operators, the retrieved data can be transformed, so that you can shape the output according to specific requirements. To display the retrieved data, you can use visualizations in dashboards and low-code apps, making it easy for users to access and understand the information.
 
-- Operators enable the transformation of the retrieved data, providing flexibility in shaping the output according to specific requirements.
-- Visualizations can be effortlessly generated to represent the retrieved data, facilitating a clearer understanding of the information at hand.
-- Various analytical tools are available for in-depth examination and scrutiny of the retrieved data set, empowering users to extract valuable insights and make informed decisions.
+Various analytical tools are also available for in-depth examination of the retrieved data set, empowering users to extract valuable insights and make informed decisions.
 
 ![GQI concept](~/user-guide/images/gqi_concept.png)
+
+> [!TIP]
+> You can also schedule GQI queries to run periodically at fixed times, dates, or intervals using the [Data Aggregator module](xref:Data_Aggregator_DxM).
 
 ## What are queries?
 
@@ -20,16 +21,21 @@ A query defines the data to be accessed and the transformations to be applied.
 
 It comprises:
 
-- A single data source, specifying the data to retrieve. This can originate from within your DataMiner system, such as parameters, DOM instances, bookings, or alarms, or from external sources like API endpoints, databases, or local file storage formats such as CSV, JSON, or XML.
-- Any number of operators, linked together to create intricate transformations. These operators can be sequenced to perform tasks like filtering datasets followed by computing average values grouped by specific criteria.
+- A single **data source**, specifying the data to retrieve.
 
-Queries can be constructed using a conversational API accessible within Dashboards or Low-Code Apps. This interface facilitates a dialogue between the user and GQI, where users dictate the data selection or operators, and GQI responds with available options. For instance, filtering numeric columns might offer choices like 'Greater than' or 'Lower than', while text column filtering might include options such as 'Contains' or 'Matches regex'.
+  This can be a source from **inside** your DataMiner System, such as parameters, DOM instances, bookings, or alarms, or from **outside** the system, such as API endpoints, databases, or local files in formats such as CSV, JSON, or XML.
+
+- Any number of **operators**, linked together to create transformations.
+
+  These operators can be sequenced to perform tasks like filtering data sets followed by computing average values grouped by specific criteria.
+
+To construct queries, you can use the Dashboards or Low-Code Apps modules, where you can assemble the queries with a user-friendly UI. When you select a data source or operator in the UI, the options that are available next are automatically adjusted based on your selection. For example, if you filter numeric columns, you may get choices like "Greater than" or "Lower than", while text column filtering might include options such as "Contains" or "Matches regex".
 
 > [!TIP]
 > See also: [Creating a GQI query](xref:Creating_GQI_query)
 
 ## Architecture
 
-GQI operates as a server-side process housed within the SLHelper process. This process is activated only upon usage. Once activated, it remains operational for a duration of 30 minutes before automatically shutting down, thereby releasing any utilized resources.
+GQI operates as a server-side process within the SLHelper process. It is only activated when it is used. Once the process has been activated, it remains operational for a duration of 30 minutes before automatically shutting down and releasing any utilized resources.
 
-Queries are executed within the security context of the DataMiner user, ensuring that DataMiner's security measures are enforced during data retrieval. Consequently, the results obtained may vary significantly for users belonging to different security groups.
+When queries are executed, the rights and permissions of the current DataMiner user are taken into account. This way, DataMiner's security measures are enforced during data retrieval. This means that the obtained results may vary significantly for users belonging to different security groups.

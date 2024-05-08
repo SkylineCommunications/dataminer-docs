@@ -500,9 +500,8 @@ items:
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
       - name: Generic Query Interface (GQI)
-        topicUid: Generic_Query_Interface
         items:
-          - name: About Generic Query Interface
+          - name: About the Generic Query Interface
             topicUid: About_GQI
           - name: Creating a GQI query
             topicUid: Creating_GQI_query
