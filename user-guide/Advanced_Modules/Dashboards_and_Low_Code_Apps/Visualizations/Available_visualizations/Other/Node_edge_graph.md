@@ -39,11 +39,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
       1. Next to *Node ID column*, select the column from the query that represents the node ID.
 
-      1. When *Node positions* in the *Layout* pane is set to *Linked as data*, two extra options are available:
-
-        - *X*: Select the column from the query that contains the X position.
-
-        - *Y*: Select the column from the query that contains the Y position.
+      1. Next to *X* and *Y*, select the column from the query that contains the X and Y positions respectively. Only available when the *Node positions* setting in the [*Layout* pane](#layout-configuration) is set to *Linked as data* (available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->).
 
       1. Optionally, expand the *Base node* section to configure the node further. The following options are available:
 
@@ -51,21 +47,21 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
          - *Weight*: A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings).
 
-         - *Shapes*: Select a different shape in the drop-down box to customize the node shape. By default, no shape is used. You can also select *Custom* in the drop-down box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the drop-down box to select a custom color for the shape.
+         - *Shape*: Select a different shape in the drop-down box to customize the node shape. By default, no shape is used. You can also select *Custom* in the drop-down box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the drop-down box to select a custom color for the shape.
 
-         - *Visual*: Chose if the node should contain either an *image* or an *icon*.
+         - *Visual*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon or custom image within the node shape.
 
-           - *Icon*: In case of an icon as *visual*, select a different icon in the drop-down box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color.
+         - *Icon*: Select a different icon from the dropdown box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color. From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, this setting is only available if the *Visual* setting is set to *Icon*.
 
-           - *Image*: In case of an image as *visual*, provide the link to the image.
+         - *Image*: Only available if the *Visual* setting is set to *Image*. Enter a custom image link.
 
          - *Label*: Select the column to use as the label for the node.
 
-         - *Size*: Define how big the node should be.
+         - *Size*: From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (Default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large.
 
-         - *Enable tooltip*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, no tooltip will appear when hovering over a node.
+         - *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip appears when hovering the mouse pointer over a node. This setting is enabled by default.
 
-         - *Show metric*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, the metric that determines the conditional color of the node will not be displayed underneath the node.
+         - *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node.
 
       1. If you want to visualize some nodes differently for the same query, under *Override nodes*, click *Add override*, specify a filter, and configure the nodes as detailed above.
 
@@ -81,9 +77,9 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
       1. Optionally, next to *Weight*, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line.
 
-      1. *Enable tooltip*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, no tooltip will appear when hovering over an edge.
+      1. *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip appears when hovering the mouse pointer over an edge. This setting is enabled by default.
 
-      1. *Show metric*: Can be toggled on or off when the URL option *showAdvancedSettings=true* is used. When toggled off, the metric that determines the conditional color of the edge will not be displayed on the edge.
+      1. *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge.
 
 1. From DataMiner 10.2.4/10.3.0 onwards, optionally, you can make the edges show a direction. To do so, in the *Settings* tab, activate the *Visualize directions* toggle button, and select how the direction should be shown:
 
@@ -149,13 +145,27 @@ You can fine-tune the layout of the component with the following settings in the
 
   - *Highlight/Show entire path*: When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure they are a part of (from root to leaves).
 
-- *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers.
-  - Set this to *Custom* if you want to allow users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
-  - Set this to *Linked to data* if you want to use location info from your data determine the positions of the nodes. In that case, 2 options will become available in the configuration of each node in the *Settings* pane. It requires the data to have at least two numeric columns that represent the X and Y position of the center of a node.
-  
-- *Viewport*: When *Node positions* is set to *Linked to data*, this determines what the initial viewport of the node-edge should be. By default, it will *auto* determine the viewport to fit all nodes. When set to *custom*, you can specify the *Center*, *Width* and *Height* of the initial viewport.
+- *Node positions*: Allows you to change how the nodes are positioned within the component.
 
-- *Direction*: When *Node positions* is set to *Layered*, this determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
+  The following options are available:
+
+  - *Layered*: Nodes are displayed in different layers. This is the default option.
+
+  - *Custom*: Allows users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+
+  - *Linked to data*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Location information from your data is used to determine the node positions. To use this feature, your data must include at least two numeric columns representing the X and Y positions of each node's center. You can configure these columns in the *Identifiers* > *Nodes* section of the [*Settings* pane](#basic-component-configuration).
+
+    > [!NOTE]
+    > If certain nodes are missing their location info, the *Settings* pane header will apear in orange font.
+    > ![Location info missing](~/user-guide/images/Location_Info_Missing.png)
+
+    Configure the initial viewport:
+
+    - *Auto*: Automatically determine the viewport to fit all nodes. This is the default option.
+
+    - *Custom*: Specify the *Center X*, *Center Y*, *Width*, and *Height* of your custom viewport.
+
+- *Direction*: When the *Node positions* setting is set to *Layered*, this option determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
 
   - *Backwards*: Nodes are displayed from right to left in order of importance.
 
