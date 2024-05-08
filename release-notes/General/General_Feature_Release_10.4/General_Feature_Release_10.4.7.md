@@ -110,3 +110,14 @@ Also, when a group contained single parameters in combination with a partial tab
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+
+#### Service & Resource Management: Deleted reservation instances could get cached again when running end actions [ID_39541]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39264 -->
+
+Since DataMiner version 10.4.6, reservation instance actions triggered when changing the hosting cache are scheduled to run asynchronously.
+
+In some cases, this change would cause an ongoing booking that was being deleted to get cached again when it ran its end actions.
+
+From now on, the latest version of a deleted reservation instance will no longer be retrieved again. This will avoid the instance to get cached again.
