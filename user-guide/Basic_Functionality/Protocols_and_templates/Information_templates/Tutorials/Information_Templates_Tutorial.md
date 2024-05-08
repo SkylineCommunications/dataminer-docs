@@ -4,12 +4,19 @@ uid: Information_Templates_Tutorial
 
 # Using information templates for enhanced parameter presentation and monitoring
 
-This tutorial will show you how to configure and use an information template to enhance the presentation and monitoring of parameters associated with satellite earth stations.
+This tutorial will show you how to configure and use an information template to enhance the presentation and monitoring of satellite earth station parameters. You will learn to customize a table for quick data comprehension by adjusting the display name of columns, hiding unnecessary columns, and applying filters.
+
+Because it is common to reuse information templates, you will also learn how to make a quick edit to it for one specific element only.
+
+Although the primary focus of this tutorial lies on information templates, you will also learn to use an alarm template to visualize both minor and critical alarms for earth stations affected by potentially challenging weather conditions.
 
 Expected duration: 20 minutes
 
 > [!TIP]
-> See also: [Information templates](xref:Information_templates)
+> See also:
+>
+> - [Information templates](xref:Information_templates)
+> - [Alarm templates](xref:About_alarm_templates)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.5.
