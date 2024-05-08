@@ -169,11 +169,13 @@ Query results are supported as a data feed for this component from DataMiner 10.
 
      If the *Tooltip* setting is enabled, you can configure what the tooltip will display:
 
-     - *Tooltip* > *Include x labels*: Allows you to include the X-axis labels (i.e. the X-axis names).
+     - *Tooltip* > *Include x labels* (1): Allows you to include the X-axis labels (i.e. the X-axis names).
 
-     - *Tooltip* > *Include y labels*: Allows you to include the Y-axis labels (i.e. the name of the column containing the Y-values).
+     - *Tooltip* > *Include y labels* (2): Allows you to include the Y-axis labels (i.e. the name of the column containing the Y-values).
 
-     - *Tooltip* > *Include colors*: Allows you to include a small indicator in front of the tooltip that indicates the color of the line.
+     - *Tooltip* > *Include colors* (3): Allows you to include a small indicator in front of the tooltip that indicates the color of the line.
+
+       ![Tooltip line & area chart](~/user-guide/images/Tooltip_LineAreaChart.png)<br>*Line & area chart component in DataMiner 10.4.6*
 
 ### [Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6](#tab/tabid-2)
 
