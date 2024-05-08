@@ -31,7 +31,7 @@ This tutorial consists of the following steps:
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-After deploying, an automation script will be provided and an element named "Correlation KATA Switch Timeout - Network Switch" will be created. This element can be found in the Surveyor at *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
+When the package has been deployed, the Automation script "Correlation KATA Switch timeout Script" and the element "Correlation KATA Switch Timeout - Network Switch" will become available in the DataMiner System. You can find the element in the Surveyor under *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
