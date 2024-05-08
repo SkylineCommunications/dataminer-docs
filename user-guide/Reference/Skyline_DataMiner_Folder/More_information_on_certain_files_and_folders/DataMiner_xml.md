@@ -332,10 +332,9 @@ See:
 
 ### DataMiner.SnmpTrapDistribution
 
-Available from DataMiner 9.6.5 onwards. 
+SNMP trap distribution is a process where SNMP traps or inform messages are shared across DataMiner Agents in the cluster. When a trap arrives at one Agent, it is processed there first. If other Agents in the cluster have elements that listen for traps, the trap will be distributed to those Agents. However, Agents without interested elements will not receive it.
 
-SNMP trap distribution is a process where SNMP traps or informs are shared across DataMiner agents in the cluster. When a trap arrives at one agent, it's processed there first. If other agents in the cluster have elements that listen for trap, the trap will be distributed to those agents. However, agents without interested elements won't receive it. 
-If set to false, SNMP trap distribution will be disabled within the DMS.
+If this is set to false, SNMP trap distribution will be disabled within the DMS.
 
 Example:
 
