@@ -21,8 +21,9 @@ This tutorial consists of the following steps:
 
 - [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the DataMiner Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-dataminer-catalog)
 - [Step 2: Create the Correlation rule](#step-2-create-the-correlation-rule)
-- [Step 3: Generate a timeout alarm](#step-3-generate-a-timeout-alarm)
-- [Step 4: Verify whether the rule actions have been executed](#step-4-verify-whether-the-rule-actions-have-been-executed)
+- [Step 3: Enable the Correlation Rule](#step-3-enable-the-correlation-rule)
+- [Step 4: Generate a timeout alarm](#step-4-generate-a-timeout-alarm)
+- [Step 5: Verify whether the rule actions have been executed](#step-5-verify-whether-the-rule-actions-have-been-executed)
 
 ## Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the DataMiner Catalog
 
@@ -30,14 +31,20 @@ This tutorial consists of the following steps:
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
+After deploying, an automation script will be provided and an element named "Correlation KATA Switch Timeout - Network Switch" will be created. This element can be found in the Surveyor at *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
+
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
 ## Step 2: Create the Correlation rule
 
-In this step, you will create a Correlation Rule that will trigger based on alarms from the *Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an Automation script will generate an information event.
+In this step, you will create a Correlation Rule that will trigger based on alarms from the *Correlation KATA Switch Timeout - Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an Automation script will generate an information event.
 
 1. In DataMiner Cube, go to *Apps* > *Modules* > *Correlation* to open the Correlation module.
+
+1. Create a new Correlation Rule.
+   
+   See [adding a new Correlation Rule](xref:Adding_a_new_Correlation_rule) for more information.
 
 1. Add an alarm filter that filters on alarms from the element "Network Switch".
 
@@ -59,7 +66,7 @@ In this step, you will create a Correlation Rule that will trigger based on alar
 
    ![Configuring *persistent event time*](~/user-guide/images/Correlation_PersistentEvent.png)
 
-1. Add the RunScript action and select the "Generate Information Event (network switch timed out)" script.
+1. Add the RunScript action and select the "Correlation KATA switch timeout Script" script.
 
    This Automation script will generate an information event when executed. Note that these scripts also can do other things.
 
@@ -81,9 +88,14 @@ In this step, you will create a Correlation Rule that will trigger based on alar
    For more information on how to add rule actions, go to [adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 
 > [!NOTE]
-> Make sure to have a look at some [best practices when making Correlation Rules](xref:Best_Practices_When_Creating_Correlation_Rules). Correlation is a powerful tool, but can have a negative impact on your system if set up the wrong way.
+> Make sure to have a look at some [best practices when making Correlation rules](xref:Best_Practices_When_Creating_Correlation_Rules). Correlation is a powerful tool, but can have a negative impact on your system if set up the wrong way.
 
-## Step 3: Generate a timeout alarm
+## Step 3: Enable the Correlation Rule
+
+Do this by checking *Enable this rule*. See [general configuration of Correlation rules](xref:General_configuration_of_Correlation_rules) for more information.
+When a Correlation Rule is disabled, it will not be active and won't take action where needed.
+
+## Step 4: Generate a timeout alarm
 
 1. In the Surveyor, select the *Network Switch* element.
 
@@ -91,7 +103,7 @@ In this step, you will create a Correlation Rule that will trigger based on alar
 
    A timeout alarm will then be generated.
 
-## Step 4: Verify whether the rule actions have been executed
+## Step 5: Verify whether the rule actions have been executed
 
 1. Wait for five minutes after the alarm has gone into timeout.
 
