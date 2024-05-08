@@ -40,10 +40,10 @@ When both the original and the destination server run the exact same version of 
 
 1. Make sure that both the original and the destination server run the exact same version of MySQL.
 
-2. Make sure that the MySQL service is stopped.
+1. Make sure that the MySQL service is stopped.
 
-3. Copy all files from the *SLDMADB* directory of the original server to that same directory of the destination server.
+1. Copy all files from the *SLDMADB* directory of the original server to that same directory of the destination server.
 
-    Depending on the MySQL version, this directory will be located in *C:\\MySQL\\Data\\* or in *C:\\Program Files\\MySQL\\MySQL Server X.X\\data*.
+   Depending on the MySQL version, this directory will be located in *C:\\MySQL\\Data\\* or in *C:\\Program Files\\MySQL\\MySQL Server X.X\\data*.
 
-4. Start the MySQL service.
+1. Start the MySQL service.
