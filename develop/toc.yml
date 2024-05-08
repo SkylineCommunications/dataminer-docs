@@ -236,6 +236,8 @@ items:
         items:
         - name: Reserved parameter IDs
           topicUid: ReservedIDsParameters
+        - name: Other reserved IDs
+          topicUid: ReservedIDsOther
         - name: DataMiner element control protocol
           topicUid: ReservedIDsElementControlProtocol
         - name: Aggregator
@@ -609,11 +611,6 @@ items:
           topicUid: AdvancedDataMinerMediationLayerLinkingTableParameters
         - name: Data pages
           topicUid: AdvancedDataMinerMediationLayerDataPages
-      - name: EPM integration in Cube
-        topicUid: AdvancedEpm
-        items:
-        - name: Launching EPM objects by clicking buttons in Data Display table cells
-          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
@@ -5636,11 +5633,61 @@ items:
 - name: DataMiner module integrations
   topicUid: DataMinerModuleIntegrations
   items:
-    - name: User-definable APIs
-      topicUid: DMI_UserDefinableAPIs
+    - name: User-Defined APIs
+      topicUid: DMI_User-DefinedAPIs
       items:
         - name: Bad and best practices
           topicUid: UD_APIs_Bad_and_Best_Practices
+    - name: EPM integration
+      items:
+        - name: EPM Integration Training
+          topicUid: EpmIntegrationTrainingAbout
+        - name: Connectors configuration
+          items:
+          - name: General configuration EPM Manager connector
+            topicUid: EPMManagerGeneralConfiguration
+          - name: Topology configuration
+            topicUid: EPMManagerTopology
+          - name: Chains and fields configuration
+            topicUid: EPMManagerChainsAndFields
+          - name: Linking collector data to an EPM object
+            topicUid: EpmIntegrationLinkingCollectorData
+          - name: View impact configuration
+            topicUid: EpmIntegrationViewImpact
+          - name: Configuring buttons in table cells to open EPM objects
+            topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+          - name: Aggregation and merge actions
+            topicUid: EpmIntegrationTrainingAggregations
+          - name: Alarm settings
+            topicUid: EPMManagerAlarms
+          - name: View tables
+            topicUid: EpmIntegrationTrainingViewTables
+        - name: Visual Overview configuration
+          items:
+            - name: Linking a shape to an EPM object
+              topicUid: LinkingShapeEpmObjectSystemNameType
+            - name: Filtering alarms based on system name and type
+              topicUid: FilteringAlarmsUsingSystemNameType
+            - name: Linking a shape to a filtered alarm tab
+              topicUid: AlarmConsoleNavigation
+            - name: Linking a shape to a dashboard or app
+              topicUid: DashboardAndAppsNavigation
+            - name: Best practices for retrieving remote parameters
+              topicUid: BestPracticesRemoteKpis
+            - name: Performing ping and tracert operations using DITT
+              topicUid: DITTIntegration
+        - name: Web apps configuration
+          items:
+            - name: EPM and Dashboards
+              topicUid: EpmIntegrationTrainingDashboards
+            - name: EPM and the Monitoring app
+              topicUid: EpmIntegrationTrainingMonitoring
+            - name: EPM and Low-Code Apps
+              topicUid: EpmIntegrationTrainingLowCodeApp
+        - name: Topology app configuration
+          topicUid: Topology_app_configuration
+        - name: DataMiner processes configuration
+          topicUid: EPM_DataMiner_processes_config
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

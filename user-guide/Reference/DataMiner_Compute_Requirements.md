@@ -73,10 +73,10 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 and higher<!--RN 37969--> | Microsoft .NET Framework 4.8 and .NET 8.0 |
-| DataMiner 10.3.9/10.4.0 and higher | Microsoft .NET Framework 4.8 and .NET 6.0 |
-| DataMiner 10.3.3 to 10.3.8<br>DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
-| DataMiner 10.1.12 to 10.3.2/10.3.0 [CU2] | Microsoft .NET Framework 4.8 and .NET 5.0 |
+| DataMiner Feature Release 10.4.3 and higher<!--RN 37969--><br>DataMiner Main Release 10.3.0 [CU12] and higher<br>DataMiner Main Release 10.4.0 and higher | Microsoft .NET Framework 4.8, .NET 6.0 and .NET 8.0 |
+| DataMiner Feature Release 10.3.9 to 10.4.2 | Microsoft .NET Framework 4.8 and .NET 6.0 |
+| DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 CU3 to 10.3.0 CU11 | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
+| DataMiner Feature Release 10.1.12 to 10.3.2<br>DataMiner Main Release 10.3.0 CU2 | Microsoft .NET Framework 4.8 and .NET 5.0 |
 | DataMiner 10.1.11 | Microsoft .NET Framework 4.8 |
 | DataMiner versions prior to 10.1.11 | Microsoft .NET Framework 4.6.2 |
 
@@ -100,6 +100,26 @@ In the table below, you can find which .NET (Framework) versions are required fo
 ### Computer name
 
 DataMiner requires a server with a name that is **no longer than 15 characters**. Make sure the name does not contain any characters that are disallowed in NetBIOS computer names or DNS host names. For more information, refer to [learn.microsoft.com](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#netbios-computer-names).
+
+## Standalone Cloud Gateway server requirements
+
+If you want to [connect your system to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) but would prefer to use a dedicated Cloud Gateway server for this, the server will need to meet the following requirements:
+
+### Operating System
+
+See "Operating system" under [DataMiner requirements](#dataminer-requirements).
+
+### RAM
+
+A minimum of 4 GB will be required to smoothly run the necessary services on the server.
+
+### CPU
+
+The processes are not CPU-heavy and do not require a lot of parallel computing. That is why we recommend at least 4 cores.
+
+### Network
+
+See "Network" under [DataMiner requirements](#dataminer-requirements).
 
 ## Cassandra requirements
 

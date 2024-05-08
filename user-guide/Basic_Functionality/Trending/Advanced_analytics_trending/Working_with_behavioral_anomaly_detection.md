@@ -36,41 +36,18 @@ From DataMiner 10.3.8/10.4.0 onwards<!-- RN 36664 -->, a change can also be cons
 Please note the following information regarding this feature:
 
 - Whenever an anomalous change point is detected, a **suggestion event** is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
+
 - You can configure alarm templates to have **alarms** generated instead of suggestion events, depending on the parameter and the type of anomaly. See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+
 - If a very high number of behavioral change points are detected in a short period, detection of behavioral anomalies is temporarily disabled to avoid unreliable results. This is indicated in the SLAnalytics logging. Prior to DataMiner 10.2.3/10.3.0, a notification is also displayed in the Alarm Console, which disappears again 2 hours after the change point flood has been resolved.
+
 - From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37571-->, a change in trend must maintain its altered state for at least an hour before it is labeled as a trend change.
+
 - Anomaly detection is only available for numeric parameters. Level shift, outlier, trend change, variance change, and unlabeled change detection is only available for parameters that are not part of [partial tables](xref:Table_parameters#partial-tables) and is also limited to at most 100,000 parameters per DMA. Flatline detection is available for all numeric parameters.
+
 - Anomaly detection is not available for discrete parameters. <!-- RN 35465 -->
 
-## Trend icons on data pages
-
-Based on the behavioral anomaly detection, the following icons can be displayed next to a trended parameter on a data page:
-
-| Icon   | Description     |
-|--------|-----------------|
-| ![Trend graph icon](~/user-guide/images/StandardTrendGraphIcon.png) | Standard trend graph icon |
-| ![Upward arrow icon](~/user-guide/images/ArrowRight60.png) | Upward arrow  |
-| ![Downward arrow icon](~/user-guide/images/ArrowRight120.png)  | Downward arrow  |
-| ![Flat arrow icon](~/user-guide/images/ArrowRight.png)  | Flat arrow  |
-| ![Upward level shift icon](~/user-guide/images/LevelShiftIncrease.png) ![Red upward level shift icon](~/user-guide/images/LevelShiftIncreaseRed.png) | Upward level shift |
-| ![Downward level shift icon](~/user-guide/images/LevelShiftDecrease.png) ![Red downward level shift icon](~/user-guide/images/LevelShiftDecreaseRed.png) | Downward level shift |
-| ![Upward trend change icon](~/user-guide/images/ArrowTrendChangeUp.png) ![Red upward trend change](~/user-guide/images/ArrowTrendChangeUpRed.png) | Upward trend change |
-| ![Downward trend change icon](~/user-guide/images/ArrowTrendChangeDown.png) ![Red downward trend change](~/user-guide/images/ArrowTrendChangeDownRed.png) | Downward trend change |
-| ![Variance increase icon](~/user-guide/images/ArrowVarianceChangeUp.png) ![Red variance increase icon](~/user-guide/images/ArrowVarianceChangeUpRed.png) | Variance increase |
-| ![Variance decrease icon](~/user-guide/images/ArrowVarianceChangeDown.png) ![Red variance decrease icon](~/user-guide/images/ArrowVarianceChangeDownRed.png) | Variance decrease |
-| ![Upward outlier icon](~/user-guide/images/ArrowOutlierUp.png) ![Red upward outlier icon](~/user-guide/images/ArrowOutlierUpRed.png) | Upward outlier |
-| ![Downward outlier icon](~/user-guide/images/ArrowOutlierDown.png) ![Red downward outlier icon](~/user-guide/images/ArrowOutlierDownRed.png) | Downward outlier |
-| ![Flatline icon](~/user-guide/images/ArrowFlatline.png) ![Red flatline icon](~/user-guide/images/ArrowFlatlineRed.png) | Flatline |
-
-Please note the following regarding these icons:
-
-- If you hover the mouse pointer over these icons, a tooltip will display additional information.
-
-- If a change point is considered anomalous, the icon is displayed in red.
-
-- The selection of a particular icon is based on the trend data behavior and the change points that have occurred within a configurable time interval. By default, this time interval is set to 3600 seconds. Prior to DataMiner 10.0.9/10.1.0, this is specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. From DataMiner 10.0.9/10.1.0 onwards, the time interval can be configured via *System Center* > *System settings* > *analytics config*.
-
-- The calculation of state icons requires the storage of average trend data. To limit memory usage, from DataMiner 10.4.2/10.5.0 onwards<!--RN 38041-->, the number of trended parameters for which state icons are calculated is limited to at most 250,000 trended parameters per DMA.
+- Recent change points will be reflected in a parameter's trend icon. For a list of all available trend icons, see [Working with trend icons](xref:Working_with_trend_icons).
 
 ## Change points in trend graphs
 

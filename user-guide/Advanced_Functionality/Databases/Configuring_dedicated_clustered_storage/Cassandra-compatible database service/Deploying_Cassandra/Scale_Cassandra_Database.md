@@ -18,6 +18,6 @@ When a node is added, other nodes will push some of the data to the new node, as
 
 To remove a node, first **check the status** of the node you want to remove using the *nodetool status* command.
 
-- If the node is **up**, run the *nodetool decomission* command on the node you want to remove. You can use the *nodetool netstats* command to monitor the progress.
+- If the node is **up**, run the *nodetool decommission* command on the node you want to remove. You can use the *nodetool netstats* command to monitor the progress.
 
 - If the node is **down**, removing it may lead to data loss if you have keyspaces with RF1. In case your cluster does not use vnodes (which are used by default), you need to adjust the tokens to evenly distribute the data across the remaining nodes. Run the nodetool command *removenode command* for the *Host ID* of the node on one of the nodes that is still up. Then initiate a repair on all data to ensure that all nodes have the correct data.
