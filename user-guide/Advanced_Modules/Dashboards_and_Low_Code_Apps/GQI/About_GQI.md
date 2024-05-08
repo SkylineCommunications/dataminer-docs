@@ -4,7 +4,7 @@ uid: About_GQI
 
 # About the Generic Query Interface
 
-The Generic Query Interface (available from DataMiner 10.0.13 onwards) is designed to retrieve and manipulate data from both inside and outside a DataMiner System. Its output is presented in a tabular format and is independent of the underlying data structure, effectively functioning as a flexible abstraction layer.
+The Generic Query Interface is designed to retrieve and manipulate data from both inside and outside a DataMiner System. Its output is presented in a tabular format and is independent of the underlying data structure, effectively functioning as a flexible abstraction layer.
 
 With operators, the retrieved data can be transformed, so that you can shape the output according to specific requirements. To display the retrieved data, you can use visualizations in dashboards and low-code apps, making it easy for users to access and understand the information.
 
