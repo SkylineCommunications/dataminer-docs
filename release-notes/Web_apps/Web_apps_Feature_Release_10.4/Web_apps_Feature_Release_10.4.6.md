@@ -80,7 +80,7 @@ In the *Layout* tab, you can find the following settings to configure this:
 
 - *Tooltips*: Allows you to enable/disable the tooltip and to configure what it will display.
 
-  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value, both will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
+  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value, all relevant Y values will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
 
   Tooltip settings:
 
