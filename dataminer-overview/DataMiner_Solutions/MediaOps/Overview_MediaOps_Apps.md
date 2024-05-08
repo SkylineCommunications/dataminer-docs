@@ -4,7 +4,7 @@ uid: Overview_MediaOps_Apps
 
 # MediaOps apps
 
-dataMiner.MediaOps will soon be available in the DataMiner Catalog<!-- TBD: update when available --> as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+dataminer.MediaOps will soon be available in the DataMiner Catalog<!-- TBD: update when available --> as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
 
 Below is an overview of the out-of-the-box DataMiner applications included in the dataminer.MediaOps installation package.
 
