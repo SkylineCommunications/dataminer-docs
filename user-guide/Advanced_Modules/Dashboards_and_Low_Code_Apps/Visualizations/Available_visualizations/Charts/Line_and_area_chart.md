@@ -158,20 +158,20 @@ Query results are supported as a data feed for this component from DataMiner 10.
 
 1. Optionally, configure the following layout settings:
 
-   - *X-axis*: Allows you to rename the default X-axis. This name will be used as the X-label in the tooltips.
+   - *X-axis*: Allows you to rename the default X-axis. This name will be used as the X label in the tooltips.
 
-   - *Y-axis*: Allows you to add and rename Y-axes, with a limit of 10 Y-axes per line & area chart component. This name will be used as the Y-label in the tooltips.
+   - *Y-axis*: Allows you to add and rename Y-axes, with a limit of 10 Y-axes per line & area chart component. This name will be used as the Y label in the tooltips.
 
      > [!NOTE]
      > To change the order in which the Y-axes are added to the chart, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the entry up or down in the *Y-axis* section.
 
-   - *Tooltip*: Enables a tooltip that is displayed when you hover the mouse pointer over the chart. The tooltip shows the Y-value(s) for the closest X-value of any line on the chart. If multiple lines share an X-value, both will be shown. The values shown in the tooltip are indicated on the chart with colored dots.
+   - *Tooltip*: Enables a tooltip that is displayed when you hover the mouse pointer over the chart. The tooltip shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value, both will be shown. The values shown in the tooltip are indicated on the chart with colored dots.
 
      If the *Tooltip* setting is enabled, you can configure what the tooltip will display:
 
      - *Tooltip* > *Include x labels* (1): Allows you to include the X-axis labels (i.e. the X-axis names).
 
-     - *Tooltip* > *Include y labels* (2): Allows you to include the Y-axis labels (i.e. the name of the column containing the Y-values).
+     - *Tooltip* > *Include y labels* (2): Allows you to include the Y-axis labels (i.e. the name of the column containing the Y values).
 
      - *Tooltip* > *Include colors* (3): Allows you to include a small indicator in front of the tooltip that indicates the color of the line.
 
