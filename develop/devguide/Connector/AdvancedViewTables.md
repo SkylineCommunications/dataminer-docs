@@ -10,6 +10,10 @@ In this section:
 - <xref:AdvancedViewTablesOtherElement>
 - <xref:AdvancedViewTablesForcingARefresh>
 
+> [!NOTE]
+>
+> - View tables must not be monitored, trended, or alarmed.
+
 ## See also
 
 DataMiner Protocol Markup Language:
