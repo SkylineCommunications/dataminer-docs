@@ -17,6 +17,7 @@ Expected duration: 20 minutes
 >
 > - [Information templates](xref:Information_templates)
 > - [Alarm templates](xref:About_alarm_templates)
+> - [Kata #30: Create your own information template](https://community.dataminer.services/courses/kata-30/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.5.
