@@ -27,7 +27,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="row">The row data.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
-		///		<list type = "bullet" >
+		///		<list type="bullet">
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
@@ -39,20 +39,20 @@ namespace Skyline.DataMiner.Scripting
 		///			        <para>To add a row with a specific timestamp:</para>
 		///			        <para>row (object[]):</para>
 		///			        <list type="bullet">
-		///			        <item><description>row[0] (object[]): the row data</description></item>
-		///			        <item><description>row[1] (DateTime): the timestamp</description></item>
+		///				        <item><description>row[0] (object[]): the row data</description></item>
+		///				        <item><description>row[1] (DateTime): the timestamp</description></item>
+		///			        </list>
 		///			    </description>
 		///			</item>
 		///		</list>
-		///		<code language = "csharp">
-		///			int tableID = 1000;
-		///			object rowData = new object[] { "Key 200", "S", "20.20" };
-		///			DateTime timeStamp = DateTime.Now - TimeSpan.FromDays(2);
-		///			
-		///			protocol.AddRow(tableId, new object[] { rowData, timeStamp});
+		///		<code language="csharp">
+		///		int tableID = 1000;
+		///		object rowData = new object[] { "Key 200", "S", "20.20" };
+		///		DateTime timeStamp = DateTime.Now - TimeSpan.FromDays(2);
+		///
+		///		protocol.AddRow(tableId, new object[] { rowData, timeStamp});
 		///		</code>
 		/// </remarks>
-		/// 
 		int AddRow(int tableId, object[] row);
 
 		/// <summary>
