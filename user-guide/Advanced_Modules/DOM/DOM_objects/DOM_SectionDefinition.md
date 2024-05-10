@@ -37,6 +37,9 @@ A `FieldDescriptor` object defines what a field of a `DomInstance` should look l
 - TimeSpan
 - bool
 
+> [!IMPORTANT]
+> When storing `DateTime` values, it is possible to save them in either the local or UTC timezone. However, it is strongly recommended to always use UTC. When displaying a `DateTime` `FieldValue` in a low-code app form, the values will be converted to the timezone set by the browser. When updated via the form, the value will be converted and saved in UTC disregarding whether the value was orignally stored in local time or not.
+
 Below is an overview of all other important properties:
 
 | Property | Type | Description |
