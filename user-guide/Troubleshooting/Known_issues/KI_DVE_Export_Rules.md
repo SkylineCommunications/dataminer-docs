@@ -20,4 +20,4 @@ No fix is available yet.
 
 Upon transitioning to a new version of a DVE protocol, the functionality of DVE export rules may become erratic. The severity of the problem can vary based on the nature of the export rules implemented.
 
-For example, an export rule designed to designate the default page of all DVE protocols as "Task Manager" will revert back to its previous default page before the rule was configured.
+For example, an export rule designed to designate the default page of all DVE protocols as "Task Manager" may reset, causing the default page to revert to the standard default page prior to the rule being configured.
