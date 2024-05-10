@@ -43,4 +43,4 @@ For SNMPv3 connections, you can specify the following connection settings while 
 > We recommend that you use SHA-512 and AES-256, since this is the most secure combination. As such, this is the combination that is selected by default.
 
 > [!NOTE]
-> If a URL instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the URL will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
+> If a hostname instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the hostname will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
