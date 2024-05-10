@@ -220,3 +220,13 @@ Within the dashboard or app URL, the following data objects can be specified:
   - To treat the values of column *23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number* of query *3af9e5a7-91fc-4333-94c0-e39a59f0d900* as a range from 5 to 10, with 5 included but 10 not included:
 
     `?query columns=3af9e5a7-91fc-4333-94c0-e39a59f0d900%1e23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number%1erange%1e5%1f10%1ffalse%1ftrue`
+
+- *query rows*: Supported from DataMiner 10.3.0[CU12]/10.4.3 onwards. An array of query rows, each row must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
+  - VERSION: a parameter with the data version, currently always `v:1`.
+  - COLUMNS: a list of the column Id, Name & ClientType (*string*, *number*, *guid*, *boolean* or *date*) of the columns in order separated with `\u000E`. Each column is separated with `\u001F`.
+  - CELLS: a list of rows, each row consists of cells. A cell is represented with the `VALUE\u000EDISPLAYVALUE` . The cells in a row are separated with `\u000E`. Each row is separated with `\u001F`.
+  - KEYS: a list of the keys of the rows, separated with `\u001`. This key is unique for the row.
+
+  For example, a query row with 2 columns: The first column contains string values and is named *ID*, the second columns contains numbers and is named *Value*.
+
+    `v:1\u001FIDColumn\u000EID\u000Estring\u001FValueColumn\u000EValue\u000Enumber\u001Evalue1\u000EValue 1\u001F5\u000EFive\u001ERowKey`
