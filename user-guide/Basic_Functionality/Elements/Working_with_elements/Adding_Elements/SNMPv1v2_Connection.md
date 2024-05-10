@@ -21,4 +21,4 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 - **Set community string**: The community string used when setting values on the device. The default value, unless overridden in the protocol, is *private*.
 
 > [!NOTE]
-> If a URL instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the URL will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
+> If a hostname instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the hostname will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
