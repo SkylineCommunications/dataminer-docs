@@ -38,9 +38,6 @@ The OID of the traps that should be captured is specified in the TrapOID tag. Th
 
 By default, only traps received from the polling IP address of the main connection of an element will be captured. Using the ipid attribute, you can refer to a parameter containing the IP addresses from which traps should be captured.
 
-> [!IMPORTANT]
-> If a hostname instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the hostname will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
-
 The checkBindings attribute allows you to prevent traps from being processed further unless the specified binding checks succeed. The following example specifies that binding 2 of the trap must contain *display* and binding 3 must match the value of parameter 102 (which can also contain wildcards). Only if both conditions are met, DataMiner will process the trap.
 
 ```xml
@@ -60,10 +57,11 @@ setBindings="1,250"
 > - An example protocol "SLC SDF SNMP - Traps" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 > [!IMPORTANT]
-> A Trigger 'on change' on a trap receiver parameter will never trigger. Because of the way the trap data is received, stored and forwarded, the actual value of the trap receiver parameter will not change. In case you want to trigger an operation upon receiving a trap (e.g. poll a table), you need to either:
 >
-> - map one of the bindings to a parameter and then trigger on a change of that parameter, or
-> - trigger a QAction using 'allbindinginfo' and trigger the operation (e.g. poll a table) from that QAction (e.g. using CheckTrigger or SetParameter).
+> - A Trigger 'on change' on a trap receiver parameter will never trigger. Because of the way the trap data is received, stored and forwarded, the actual value of the trap receiver parameter will not change. In case you want to trigger an operation upon receiving a trap (e.g. poll a table), you need to either:
+>   - map one of the bindings to a parameter and then trigger on a change of that parameter, or
+>   - trigger a QAction using 'allbindinginfo' and trigger the operation (e.g. poll a table) from that QAction (e.g. using CheckTrigger or SetParameter).
+> - For a protocol to be able to capture traps, it is important that the SNMP connection that is set up during element creation is configured with the **polling IP address instead of a hostname**. Using a hostname is not supported for SNMP trap reception.
 
 ### See also
 
