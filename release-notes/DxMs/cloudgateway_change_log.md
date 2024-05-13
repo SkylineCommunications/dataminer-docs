@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 13 May 2024 - Fix - CloudGateway 2.13.10 - Reducing Logs dataminer.services Endpoints Connection Tester
+#### 13 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging
 
-The CloudGateway will stop spamming the logs every minute when a dataminer.services endpoint is unreachable.
+The CloudGateway DxM will now no longer add logging every minute when a dataminer.services endpoint is unreachable.
 
 #### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server
 
