@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 10 May 2024 - Enhancement - Admin - More information included in DMS overview [ID_39563]
+
+The DMS overview now shows more information about the system, including DxM and connectivity information.
+
 #### 8 May 2024 - Fix - Catalog - Maximum number of results too low when searching from home page [ID_39612]
 
 When you executed a search on the home page, the results were incorrectly limited to 5 items only. Now when you click *View all results*, this will take you to the browse page where you will see a maximum of 50 results.
