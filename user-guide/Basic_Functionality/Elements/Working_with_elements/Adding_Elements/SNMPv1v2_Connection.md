@@ -10,6 +10,9 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 
 - **IP address/host**: The polling IP or URL of the destination.
 
+  > [!IMPORTANT]
+  > Do not fill in a hostname instead of an IP address if this connection will be used to receive SNMP traps. Using a hostname is not supported for SNMP trap reception.
+
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
 - **Port number**: By default 161.
@@ -19,6 +22,3 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 - **Get community string**: The community string used when reading values from the device. The default value, unless overridden in the protocol, is *public*.
 
 - **Set community string**: The community string used when setting values on the device. The default value, unless overridden in the protocol, is *private*.
-
-> [!NOTE]
-> If a hostname instead of an IP is used in the polling IP address of an element's SNMP connection(s), the traps received from the hostname will not be captured. This is because DNS resolution does not occur when traps are received, causing the element's trap receivers to not know which IP to listen to.
