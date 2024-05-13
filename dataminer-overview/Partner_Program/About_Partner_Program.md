@@ -6,7 +6,7 @@ uid: About_Partner_Program
 
 At Skyline we value the collaboration with our partners and your commitment and contributions to create value for end customers. Our Partner Program is designed to recognize and reward you for the value your technical and business skills add to the market.
 
-The moment you become our partner you start receiving benefits.  
+The moment you become our partner, you start receiving benefits.  
 
 - Buy DataMiner Licenses, Usage-based Services, and Support Services at reduced rates
 
