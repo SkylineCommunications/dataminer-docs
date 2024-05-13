@@ -6,6 +6,9 @@ uid: Protocol.Topologies
 
 Contains several Topology tags, each representing the connections in a diagram displayed in an EPM (formerly known as CPE) element.
 
+> [!TIP]
+> See also: [EPM topology configuration](xref:EPMManagerTopology)
+
 ## Parent
 
 [Protocol](xref:Protocol)

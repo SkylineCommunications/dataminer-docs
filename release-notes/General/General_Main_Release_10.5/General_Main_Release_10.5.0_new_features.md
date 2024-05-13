@@ -40,15 +40,6 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-Also, the `NatsSessionOptions` class has the following new property:
-
-- *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
-
-  By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
-
-  > [!IMPORTANT]
-  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
-
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
@@ -438,3 +429,12 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 |---------|----------|
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
 | Health Stats (SLProtocol) > Details... | Show all details of a specific element. |
+
+#### Factory reset tool: Additional actions [ID_39524] [ID_39530]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+The factory reset tool `SLReset.exe` will now perform the following additional actions:
+
+- If the DataMiner Agent is connected to *dataminer.services*, disconnect the DataMiner Agent from *dataminer.services*.
+- Clear all custom appsettings of the DataMiner extension modules (DxMs).

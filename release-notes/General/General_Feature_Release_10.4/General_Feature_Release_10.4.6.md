@@ -31,15 +31,6 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-Also, the `NatsSessionOptions` class has the following new property:
-
-- *DisconnectedHandler*: Forces NATS to override the handler when disconnecting.
-
-  By setting *DisconnectedHandler* to true, you can force NATS to invoke a custom handler when it disconnects.
-
-  > [!IMPORTANT]
-  > When *DisconnectedHandler* is set to true, NATS will not perform the new reconnection algorithm described above. However, it will re-read the MessageBroker configuration file.
-
 #### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
@@ -439,6 +430,12 @@ When an element was stopped or deleted, in some rare cases, SLDataMiner would no
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 When you tried to grant a user group access to multiple elements in the same view, only the first of the elements you selected would be added.
+
+#### Caches would not get disposed correctly when the Resource Manager was reinitialized [ID_39493]
+
+<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 [CU0] -->
+
+When the Resource Manager was reinitialized, the caches would not be disposed correctly, causing SLNet to leak memory.
 
 #### 'Security Advisory' BPA test: Issues fixed [ID_39503]
 

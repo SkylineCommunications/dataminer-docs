@@ -23,7 +23,7 @@ There are several ways to recover from this issue:
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.4.6/10.5.0<!--RN 38809-->.
 
 ## Description
 

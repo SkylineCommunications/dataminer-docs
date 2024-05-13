@@ -16,16 +16,14 @@ uid: Web_apps_Feature_Release_10.4.6
 
 ## New features
 
-#### Low-Code Apps: Parameter table filter feeds are now also supported [ID_39335]
+#### Low-Code Apps: Expanded support for parameter table filter feeds [ID_39335]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-Low-code apps now also support parameter table filter feeds if the URL option `showAdvancedSettings=true` is used.
-
-This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+Previously, parameter table filter feeds were exclusively supported for dashboards and individual low-code app pages/panels. From now on, you can use feeds found either on the same low-code app page/panel or on another page/panel.
 
 > [!NOTE]
-> You can use feeds found either on the same page or on another page.
+> To use parameter table filters, first add the `showAdvancedSettings=true` option to the app URL.
 
 #### Dashboards app & Low-Code Apps - Node edge graph component: New configuration options [ID_39417]
 
@@ -82,12 +80,12 @@ In the *Layout* tab, you can find the following settings to configure this:
 
 - *Tooltips*: Allows you to enable/disable the tooltip and to configure what it will display.
 
-  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value at the same pixel, both will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
+  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value, all relevant Y values will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
 
   Tooltip settings:
 
   - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
-  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the names of the column containing the Y values).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the name of the column containing the Y values).
   - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:
@@ -138,15 +136,12 @@ From now on, a *Spectrum analyzer* component will indicate in a clearer way that
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When an *Alarm table* component is configured to show alarms in a sliding window, from now on, you will be able to specify the following limits:
-
-- Initial number of alarms (default: 10,000)
-- Maximum number of alarms (from 1 to 100,000)
-- Size of sliding window (from 1 minute to 1 day)
-- Refresh rate of sliding window (from 1 minute to 1 day)
+When an *Alarm table* component is configured to show alarms in a sliding window, from now on, the sliding window size and refresh time are limited to a minimum of 1 minute and a maximum of 1 day.
 
 > [!NOTE]
 > When setting the size or the refresh rate of the sliding window, it will no longer be possible to specify a value in seconds or milliseconds.
+
+The *Initial number of alarms* setting is now also limited to a minimum of 1 alarm and a maximum of 100,000 alarms.
 
 ### Fixes
 

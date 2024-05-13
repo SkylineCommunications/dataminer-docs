@@ -159,3 +159,9 @@ A dialog box control showing underlined text and opening up a dropdown list when
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 When a shape contained *XPos* and *YPos* data fields to allow it to be positioned dynamically, those fields would be resolved incorrectly when one contained a static value while the other contained a [param:] placeholder that retrieved a value from a table.
+
+#### Visual Overview: Conditional shape manipulation actions 'Show' and 'Hide' would not always get performed correctly [ID_39525]
+
+<!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 [CU0] -->
+
+In some cases, the conditional shape manipulation actions *Show* and *Hide* would not get performed correctly.

@@ -10,7 +10,7 @@ These are parameters that will not be available in an alarm template, but that c
 
 - **Serial number**: The serial number reported by the vendor. This value will be the index for this ONT element through all GPON EPM queries and aggregations.
 
-- **Manufacturer**: The creator of the ONT. This field can be used in user-defined dashboards with [GQI](xref:Generic_Query_Interface) to get insights in performance and recalls.
+- **Manufacturer**: The creator of the ONT. This field can be used in user-defined dashboards with [GQI](xref:About_GQI) to get insights in performance and recalls.
 
 - **Hardware version**: The model or revision for the electronics of the ONT. This cannot be included in an alarm or trend template.
 

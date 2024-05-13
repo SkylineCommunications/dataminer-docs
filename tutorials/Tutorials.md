@@ -12,14 +12,14 @@ uid: Tutorials
     <a href="/tutorials/ChatOps_Tutorials/ChatOps_Tutorials.html" title="ChatOps tutorials" target="_self"><img src="~/tutorials/images/Tutorials_ChatOps.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/tutorials/Correlation_Tutorials.html" title="Correlation tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Correlation.svg" style="width:100%"></a>
-  </div>  
+    <a href="/tutorials/CICD_Tutorials.html" title="CI/CD tutorials" target="_self"><img src="~/tutorials/images/Tutorials_CICD.svg" style="width:100%"></a>
+  </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/tutorials/CICD_Tutorials.html" title="CI/CD tutorials" target="_self"><img src="~/tutorials/images/Tutorials_CICD.svg" style="width:100%"></a>
-  </div>
+    <a href="/tutorials/Correlation_Tutorials.html" title="Correlation tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Correlation.svg" style="width:100%"></a>
+  </div>  
   <div class="column">
     <a href="/tutorials/Dashboards_Low_Code_Apps.html" title="Dashboards and Low-Code Apps tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Dashboards_Low_Code_Apps.svg" style="width:100%"></a>
   </div>
@@ -41,6 +41,9 @@ uid: Tutorials
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/tutorials/Protocols_Templates_Tutorials.html" title="Protocols & Templates tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Protocols_Templates.svg" style="width:100%"></a>
+  </div>  
   <div class="column">
     <a href="/tutorials/User-defined_APIs_Tutorials.html" title="User-defined APIs tutorials" target="_self"><img src="~/tutorials/images/Tutorials_User-Defined_APIs.svg" style="width:100%"></a>
   </div>  
