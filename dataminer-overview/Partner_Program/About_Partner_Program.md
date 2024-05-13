@@ -32,7 +32,7 @@ A partner can obtain these levels based on business skills, technical skills, or
 
 Your skill level allows you to buy DataMiner Licenses, DataMiner Credits, and Support Services at discounted rates. The discount rates vary with your skill Level.
 
-*For example: As a partner, you achieved the Technical Creator level, while also having the Business Collaborator level. To determine your Base Discount, we look to the highest level, which in this example is the Technical Creator level.*
+*For example: As a partner, you achieved the Technical Creator level, while also having the Business Collaborator level. To determine your Base Discount, we look at the highest level, which in this example is the Technical Creator level.*
 
 The credits you accumulate serve a dual purpose. Not only do they allow you to achieve higher skill levels, you can also translate them to commercial value:
 
