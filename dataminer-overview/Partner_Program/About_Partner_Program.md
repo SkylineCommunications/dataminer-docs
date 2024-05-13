@@ -45,7 +45,7 @@ The credits you accumulate serve a dual purpose. Not only do they allow you to a
 
 ## Earning Credits  
 
-We recognize our partners have different professional profiles and backgrounds. Whether you are a technical expert, designing and integrating DataMiner solutions, a staff augmentation partner, or a reseller, every effort counts.
+We recognize that our partners have different professional profiles and backgrounds. Whether you are a technical expert, designing and integrating DataMiner solutions, a staff augmentation partner, or a reseller, every effort counts.
 
 Technical skills:
 
