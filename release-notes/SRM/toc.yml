@@ -28,7 +28,11 @@ items:
       - name: SRM 1.2.32
         topicUid: SRM_1.2.32
       - name: SRM 1.2.31
-        topicUid: SRM_1.2.31
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.31
+          - name: Addendum CU1
+            topicUid: SRM_1.2.31_CU1
       - name: SRM 1.2.30
         items:
           - name: New features and changes
