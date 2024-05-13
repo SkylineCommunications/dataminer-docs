@@ -41,6 +41,31 @@ The factory reset tool `SLReset.exe` will now perform the following additional a
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
+#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced rounding of anomaly threshold values & optimized linking of severities to anomaly thresholds [ID_39492]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In alarm templates, the rounding of anomaly threshold values has been enhanced. For example, 3.09999999999999 will now be displayed as 3.1.
+
+Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
+
+#### SLLogCollector packages now include GQI and Web API logging [ID_39557]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the contents of the following folders:
+
+- *C:\\Skyline DataMiner\\Logging\\GQI*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
+- *C:\\Skyline DataMiner\\Logging\\Web*
+
 ### Fixes
 
 #### Issues with user accounts [ID_39234]
@@ -50,6 +75,12 @@ Because of a number of enhancements, overall performance has increased when crea
 In some cases, user accounts could become corrupted and group memberships could get lost.
 
 Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
+
+#### Problem with SLNet when information on hanging calls was being retrieved [ID_39373]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+In some rare cases, an error could occur in SLNet when information on hanging calls was being retrieved.
 
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
 

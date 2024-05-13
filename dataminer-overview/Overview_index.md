@@ -64,6 +64,12 @@ We are working on adding more information to this section soon, so check back fo
     <a href="/dataminer-overview/Professional_Services/Professional_Services.html" title="DataMiner Professional Services" target="_self"><img src="~/dataminer-overview/images/DataMiner_Professional_Services.svg" style="width:100%"></a>
   </div>
   <div class="column">
+    <a href="/dataminer-overview/Legal/Commercial_Terms.html" title="Legal" target="_self"><img src="~/dataminer-overview/images/Legal.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column">
     <a href="/dataminer-overview/FAQ/FAQs.html" title="FAQ" target="_self"><img src="~/dataminer-overview/images/Frequently_Asked_Questions.svg" style="width:100%"></a>
   </div>
 </div>

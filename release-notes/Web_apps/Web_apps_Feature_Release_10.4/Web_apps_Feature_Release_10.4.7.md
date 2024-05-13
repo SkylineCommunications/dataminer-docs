@@ -16,7 +16,29 @@ uid: Web_apps_Feature_Release_10.4.7
 
 ## New features
 
-*No new features have been added yet.*
+#### Interactive Automation scripts: UIBlockDefinition has new DebugTag property [ID_39365]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+The `UIBlockDefinition` class has a new `DebugTag` property, which allows you to assign an identifier to a UI element. That identifier can then be used in automated tests to explicitly refer to the UI element in question.
+
+Example of a [Cypress](https://www.cypress.io/) test that gets the UI element of which the `DebugTag` property was set to "TextComponent":
+
+```javascript
+cy.get(`[data-cy="TextComponent"]`)
+    .should('have.text', 'Some text');
+```
+
+> [!NOTE]
+> The `DebugTag` can only be used in interactive Automation scripts launched from web apps, not in interactive Automation scripts launched from DataMiner Cube.
+
+#### Dashboards app & Low-Code Apps: New 'Search input' component [ID_39555]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+A new *Search input* component is now available.
+
+It is identical to the *Text input* component, but allows users to clear its contents by clicking the *X*.
 
 ## Changes
 
@@ -42,6 +64,26 @@ Up to now, the duplicate page name check would be case sensitive. From now on, i
 
 Also, a case-insensitive duplicate panel name check has now been added, and leading and trailing whitespace characters in page or panel names will now be trimmed.
 
+#### Dashboards app & Low-Code Apps - Line & area chart component: Enhancements [ID_39586]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+A number of enhancements have been made to the *Line & area chart* component:
+
+- Axis labels showing time data are now fully aligned with the *Timeline* component. The first label will now always include the day, the month and the year.
+
+- The Y axis now has a dynamic range. Its minimum and maximum values will change according to the visible data.
+
+- The component now has touchscreen support for panning and zooming:
+
+  - To pan, drag left or right.
+  - To zoom, pinch the chart.
+
+- The chart dimensions will now be automatically adapted.
+
+  - When a line chart has data, but does not have lines configured, the component will add one line on the default X and Y axes.
+  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value. 
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Maps component: 'Map type not supported' error would not be displayed [ID_39506]
@@ -49,3 +91,9 @@ Also, a case-insensitive duplicate panel name check has now been added, and lead
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 When you tried to use a *Maps* component with an unsupported provider, in some cases, the `Map type not supported` error would incorrectly not be displayed. Instead, the component would stay empty.
+
+#### Data Aggregator DxM would incorrectly not be able to run a GQI query that used Regexmatch column manipulation methods [ID_39540]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not be able to run a GQI query that used *Regexmatch* column manipulation methods.

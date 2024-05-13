@@ -269,6 +269,10 @@ items:
               topicUid: Agile_Time_Materials_Methodology
             - name: Some Use Cases & Practical Examples
               topicUid: Some_Use_Cases_Practical_Examples
+    - name: Legal
+      items:
+        - name: Commercial terms
+          topicUid: Commercial_Terms
     - name: Frequently asked questions
       topicUid: FAQs
       items:

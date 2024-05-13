@@ -7,3 +7,4 @@ uid: DataMinerModuleIntegrations
 In this section:
 
 - [User-Defined APIs](xref:DMI_User-DefinedAPIs)
+- [EPM integration](xref:EpmIntegrationTrainingAbout)

@@ -80,12 +80,12 @@ In the *Layout* tab, you can find the following settings to configure this:
 
 - *Tooltips*: Allows you to enable/disable the tooltip and to configure what it will display.
 
-  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value at the same pixel, both will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
+  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value, all relevant Y values will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
 
   Tooltip settings:
 
   - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
-  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the names of the column containing the Y values).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the name of the column containing the Y values).
   - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:
