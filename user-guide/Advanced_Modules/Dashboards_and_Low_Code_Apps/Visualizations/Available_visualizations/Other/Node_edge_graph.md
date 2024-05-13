@@ -39,7 +39,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
       1. Next to *Node ID column*, select the column from the query that represents the node ID.
 
-      1. Next to *X* and *Y*, select the column from the query that contains the X and Y positions respectively. Only available when the *Node positions* setting in the [*Layout* pane](#layout-configuration) is set to *Linked as data* (available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->).
+      1. Next to *X* and *Y*, select the column from the query that contains the X and Y positions respectively. This setting is only available when the *Node positions* setting in the [*Layout* pane](#layout-configuration) is set to *Linked as data* (available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->).
 
       1. Optionally, expand the *Base node* section to configure the node further. The following options are available:
 
@@ -47,7 +47,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
          - *Weight*: A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings).
 
-         - *Shape*: Select a different shape in the drop-down box to customize the node shape. By default, no shape is used. You can also select *Custom* in the drop-down box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the drop-down box to select a custom color for the shape.
+         - *Shape*: Select a different shape in the dropdown box to customize the node shape. By default, no shape is used. You can also select *Custom* in the dropdown box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the dropdown box to select a custom color for the shape.
 
          - *Visual*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon or custom image within the node shape.
 
@@ -57,9 +57,9 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
          - *Label*: Select the column to use as the label for the node.
 
-         - *Size*: From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (Default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large.
+         - *Size*: From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large.
 
-         - *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip appears when hovering the mouse pointer over a node. This setting is enabled by default.
+         - *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default.
 
          - *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node.
 
@@ -77,7 +77,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
       1. Optionally, next to *Weight*, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line.
 
-      1. *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip appears when hovering the mouse pointer over an edge. This setting is enabled by default.
+      1. *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over an edge. This setting is enabled by default.
 
       1. *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge.
 
