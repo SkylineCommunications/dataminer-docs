@@ -156,7 +156,8 @@ You can fine-tune the layout of the component with the following settings in the
   - *Linked to data*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Location information from your data is used to determine the node positions. To use this feature, your data must include at least two numeric columns representing the X and Y positions of each node's center. You can configure these columns in the *Identifiers* > *Nodes* section of the [*Settings* pane](#basic-component-configuration).
 
     > [!NOTE]
-    > If certain nodes are missing their location info, the *Settings* pane header will apear in orange font.
+    > If the location info is missing for certain nodes, the *Settings* pane header will have an orange font.
+    >
     > ![Location info missing](~/user-guide/images/Location_Info_Missing.png)
 
     Configure the initial viewport:
