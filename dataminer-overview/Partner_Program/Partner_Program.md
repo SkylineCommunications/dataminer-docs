@@ -82,4 +82,4 @@ Today, the **quality, features, and characteristics of an operational platform a
   You can go to market either with a solution offering or a professional services offering.
 
 > [!NOTE]
-> [Apply online](xref:Becoming_a_DataMiner_Partner#application-procedure) to become a DataMiner Partner now!
+> [Apply online](xref:Getting_Started_with_the_Partner_Program#application-procedure) to become a DataMiner Partner now!

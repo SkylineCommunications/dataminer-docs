@@ -211,8 +211,8 @@ items:
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
-        - name: Becoming a DataMiner Partner
-          topicUid: Becoming_a_DataMiner_Partner
+        - name: About the Partner Program
+          topicUid: About_Partner_Program
         - name: Getting started with the Partner Program
           topicUid: Getting_Started_with_the_Partner_Program
           items:
