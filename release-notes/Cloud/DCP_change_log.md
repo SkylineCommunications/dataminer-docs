@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 10 May 2024 - Enhancement - Admin - DMS overview [ID_39563]
+#### 10 May 2024 - Enhancement - Admin - More information included in DMS overview [ID_39563]
 
-The DMS overview now shows more information about the system, including DxM and connecticity information.
+The DMS overview now shows more information about the system, including DxM and connectivity information.
 
 #### 25 April 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39486]
 
