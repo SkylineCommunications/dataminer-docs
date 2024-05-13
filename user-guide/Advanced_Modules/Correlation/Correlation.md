@@ -20,6 +20,8 @@ This section consists of the following topics:
 
 - [Best practices when creating Correlation rules](xref:Best_Practices_When_Creating_Correlation_Rules)
 
+- [DataMiner Correlation tutorials](xref:Correlation_Tutorial_Element_Timeout)
+
 - [Correlation rule syntax](xref:Correlation_rule_syntax)
 
 - [Using Correlation analyzers](xref:Using_Correlation_analyzers)
