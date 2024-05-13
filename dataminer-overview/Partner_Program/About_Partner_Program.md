@@ -41,7 +41,7 @@ The credits you accumulate serve a dual purpose. Not only do they allow you to a
 - Self-use: reduce your subscriptions costs, training, and certifications.
 
 > [!NOTE]
-> The total number of credits utilized in any given order shall not exceed 5% of the DataMiner Licenses or Usage-based Services ordered for an end customer, 25% of DataMiner Credits when ordering for self-use (e.g. setting a lab or a demo system), or up to 50%, for your training and certifications.
+> The total number of credits utilized in any given order cannot exceed 5% of the DataMiner Licenses or Usage-based Services ordered for an end customer, 25% of DataMiner Credits when ordering for self-use (e.g. setting up a lab or a demo system), or 50% for your training and certifications.
 
 ## Earning Credits  
 
