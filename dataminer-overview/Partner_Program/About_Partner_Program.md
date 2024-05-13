@@ -4,7 +4,7 @@ uid: About_Partner_Program
 
 # About the Partner Program
 
-At Skyline we value the collaboration with our partners and your commitment and contributions to create value to end customers. Our Partner Program is designed to recognize and reward you for the value your technical and business skills add to the market.
+At Skyline we value the collaboration with our partners and your commitment and contributions to create value for end customers. Our Partner Program is designed to recognize and reward you for the value your technical and business skills add to the market.
 
 The moment you become our partner you start receiving benefits.  
 
