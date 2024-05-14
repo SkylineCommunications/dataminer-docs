@@ -22,7 +22,7 @@ To use this feature, your system needs to meet the following requirements:
 
   - **All DataMiner Agents** in the system need both **Orchestrator 1.5.4** or higher and **SupportAssistant 1.6.5** or higher.
 
-  - At least one DataMiner Agent with **internet access** (or proxy or DMZ server) in the cluster must have a **CloudGateway 2.12.3** or higher.
+  - At least one DataMiner Agent with **internet access** (or proxy or DMZ server) in the cluster must have **CloudGateway 2.12.3** or higher.
 
   The easiest way to install these DxMs is to upgrade all DataMiner Agents to **DataMiner 10.3.12/10.4.0** or higher and install the **Cloud Pack 3.1.5** or higher on the DataMiner Agents with internet access.
 
