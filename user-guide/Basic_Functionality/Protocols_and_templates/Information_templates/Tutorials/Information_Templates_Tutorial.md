@@ -111,6 +111,41 @@ In this step, you will configure an information template to change the way the p
 
    ![Filter configuration](~/user-guide/images/Info_Template_Quick_Tips_img04.png)
 
+1. Select the *Weather Conditions* parameter with the *West Coast* filter, and make changes to the following parameter data:
+
+   - *Parameters > Detailed description*: `The weather at the location of the site`
+
+   - *Parameters > Custom name*: `Weather Conditions`
+
+   - *Parameters > Category*: `Signal fault`
+
+   - *Parameters > Key point*: `Reception`
+
+   - *Parameters > Component info*: `Entire service`
+
+   - *Alarm > Alarm description*: `Weather impact`
+
+   - *Alarm > Corrective actions*: `Rain, mask for 1 hour | Snow, mask for 2 hours`
+
+   > [!TIP]
+   > For more information about the different parameter data, see [Creating an information template](xref:Creating_an_information_template).
+
+1. Select the *Weather Conditions* parameter with the *East Coast* filter, and make changes to the following parameter data:
+
+   - *Parameters > Detailed description*: `The weather at the location of the site`
+
+   - *Parameters > Custom name*: `Weather Conditions`
+
+   - *Parameters > Category*: `Signal fault`
+
+   - *Parameters > Key point*: `Reception`
+
+   - *Parameters > Component info*: `Entire service`
+
+   - *Alarm > Alarm description*: `Weather impact`
+
+   - *Alarm > Corrective actions*: `Rain, mask for 2 hours | Snow, mask for 3 hours`
+
 1. In the lower right corner, select *Apply* to save your changes.
 
 1. Click *OK* to close the information template.
@@ -172,6 +207,23 @@ To enhance the way the table data are shown, in this step, you will assign an al
 1. In the *Assign Template* window, use the *Add >>* button to apply the alarm template to the *Info template quick tips* element, and then select *Close*.
 
    Now that you have applied the alarm template, you will find minor and critical alarms in the Alarm Console for the earth stations with weather conditions "Rain" and "Snow", respectively. Additionally, on the *Data > Table* page of the *Info template quick tips* element, the alarm severity will be shown with appropriate colors.
+
+1. In the Alarm Console, add the following columns:
+
+   - Category
+
+   - Alarm description
+
+   - Corrective action
+
+   - Component info
+
+   - Key point
+
+   > [!TIP]
+   > See also: [Adding or removing columns](xref:ChangingTheAlarmConsoleLayout#adding-or-removing-columns)
+
+   Depending on whether an alarm is detected for an earth station on the East or West Coast, you will find the appropriate corrective action in the Alarm Console.
 
    ![Alarm severity shown on the element card and in the Alarm Console](~/user-guide/images/Info_Template_Quick_Tips_img08.png)
 
