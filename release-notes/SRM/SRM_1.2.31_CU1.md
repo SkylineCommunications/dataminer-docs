@@ -15,4 +15,4 @@ In DataMiner [10.4.5](xref:General_Feature_Release_10.4.5#not-possible-to-delete
 
 #### Timeout during booking creation now uses Retry Timeout setting [ID_39481]
 
-When a contributing booking is created using the SRM framework API, the service creation timeout is now no longer fixed to a value of 30 seconds, but instead the *Retry Timeout* setting from the Booking Manager is applied.
+When a booking is created using the SRM framework API, the service creation timeout is now no longer fixed to a value of 30 seconds, but instead the *Retry Timeout* setting from the Booking Manager is applied. A service gets created during booking creation when services are persistent or for a contributing booking.
