@@ -18,6 +18,12 @@ uid: General_Main_Release_10.3.0_CU16
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
+#### Security enhancements [ID_39611]
+
+<!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem with SLNet when information on hanging calls was being retrieved [ID_39373]
