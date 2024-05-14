@@ -18,8 +18,9 @@ uid: General_Main_Release_10.4.0_CU4
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
-#### Security enhancements [ID_39611]
+#### Security enhancements [ID_38263] [ID_39611]
 
+<!-- 38263: MR 10.4.0 [CU4] - FR 10.4.3 -->
 <!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 A number of security enhancements have been made.
