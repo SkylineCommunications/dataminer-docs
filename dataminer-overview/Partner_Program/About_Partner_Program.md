@@ -89,4 +89,4 @@ Business skills:
 
 The engagement level will be measured using the previous 2 years, only to set the partner level. Credits will not be given for any activity prior to May 1st, 2024.
 
-Existing contracts will be respected till the end duration.
+Existing contracts will be respected until their end duration.
