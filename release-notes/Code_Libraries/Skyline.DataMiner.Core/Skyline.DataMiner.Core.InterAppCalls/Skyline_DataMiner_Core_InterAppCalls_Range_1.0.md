@@ -18,6 +18,10 @@ This change allows our library to dynamically select a more efficient underlying
 >[!NOTE]
 > The DIS Validator should help report possible invalid code when updating to the new InterApp branch.
 
+#### Breaking change - isLegacyDestination removed
+
+The *Send* method has removed the *isLegacyDestination* argument. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* namespaces to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
+
 #### New feature - Enhanced efficiency on InterApp reply calls
 
 The scalability and performance of InterApp calls have been drastically improved through the use of high-speed and modern message broker technology in the background.
