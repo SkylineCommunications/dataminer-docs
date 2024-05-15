@@ -34,6 +34,9 @@ The latest benchmark tests, at the time of release, demonstrate that the roundtr
 >[!NOTE]
 > It is possible to forcibly disable the use of the new broker technology by either adding *LegacyInterAppSubscriptions* to the *C:\Skyline DataMiner\SoftLaunchOptions.xml* file or by adjusting your source code to send a call with *allowBroker* set to *false*.
 
+>[!NOTE]
+> As of the latest DataMiner version (10.4.6), the default maximum message size with the new message broker is configured to 30 MB.
+
 #### New feature - Enhanced security: Remote code execution exploit prevention
 
 Several classes are now checked and blocked from getting deserialized when using InterApp calls. This is to avoid bad actors abusing these calls and their ability to maliciously run software as part of JSON deserialization, something called remote code execution exploits.
