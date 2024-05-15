@@ -29,4 +29,4 @@ When you upgrade to this IDP version, the existing custom Visio files will stay 
 
 #### Rack Layout Visual Overview not updated correctly when navigating to different racks [ID_39347]
 
-When you navigated from one rack view to another, it could occur that the selection from the first rack view was still applied for the second one, so that Visual Overview did not display the right data.
+When you navigated from one rack view to another, the details of a device selected in the previous rack could still be displayed. Consequently, it could occur that details were shown of a device that was not present in the currently opened rack.
