@@ -20,7 +20,7 @@ This change allows our library to dynamically select a more efficient underlying
 
 #### Breaking change - isLegacyDestination removed
 
-The *Send* method has removed the *isLegacyDestination* argument. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* namespaces to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
+The *Send* method has removed the *isLegacyDestination* argument. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* nuget to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
 
 #### New feature - Enhanced efficiency on InterApp reply calls
 
@@ -39,6 +39,22 @@ The latest benchmark tests, at the time of release, demonstrate that the roundtr
 Several classes are now checked and blocked from getting deserialized when using InterApp calls. This is to avoid bad actors abusing these calls and their ability to maliciously run software as part of JSON deserialization, something called remote code execution exploits.
 
 If such a potentially risky class is detected, you will receive a *SecurityException* indicating a potential RCE exploitation was found.
+
+### 1.0.0.3
+
+#### Refactor - DataMinerSystem library upgraded
+
+The DataMinerSystem dependency was upgraded to the latest version.
+
+#### Fix - Reply message
+
+The reply method had a bug that would send the incorrect message back. This has been fixed.
+
+### 1.0.0.2
+
+#### New feature - Support for Legacy namespaces
+
+When sending a message you can set isLegacyDestination to true when destination uses legacy class library (SLC.Lib.*) with namespace Skyline.DataMiner.Library.Common.
 
 ### 1.0.0.1
 
