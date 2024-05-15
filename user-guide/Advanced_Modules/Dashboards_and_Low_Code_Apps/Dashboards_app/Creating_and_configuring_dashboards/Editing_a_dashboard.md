@@ -20,7 +20,7 @@ To edit an existing dashboard:
 
    - To move a component, drag and drop it to a different position on the dashboard.
 
-     In case the component contains interactive areas, you can first hover the mouse over the component and then use the ![Drag-and-drop icon](~/user-guide/images/NewRD_dragdrop.png) icon below it to drag and drop the component without clicking it directly.
+     In case the component contains interactive areas, you can first hover the mouse pointer over the component and then use the ![Drag-and-drop icon](~/user-guide/images/NewRD_dragdrop.png) icon below it to drag and drop the component without clicking it directly.
 
    - To resize a component, move the mouse pointer to the edge of the component and drag it until the component has the desired size.
 
@@ -35,4 +35,4 @@ To edit an existing dashboard:
 > [!NOTE]
 >
 > - Prior to DataMiner 10.3.5/10.4.0<!--  RN 35940 -->, it is not possible to edit a dashboard that is being shared. To edit such a dashboard in those DataMiner versions, you will need to temporarily stop sharing it and then share it again once you are done editing.
-> - To rename a dashboard, right-click the dashboard in the sidebar on the left and select *Rename*. This is not possible for a dashboard that is being shared.
+> - To rename a dashboard, right-click the dashboard in the sidebar on the left and select *Settings* or *Rename*, depending on your DataMiner version<!--RN 38278-->. This is not possible for a dashboard that is being shared.

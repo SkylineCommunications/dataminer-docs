@@ -7,13 +7,18 @@ uid: Configuring_DataMiner_Indexing
 The indexing settings in System Center determine which information is stored in the indexing database. To configure these settings, go to *System Center* > *Search & Indexing*.
 
 > [!TIP]
-> In the *DB.xml* file, you can specify the configuration data for several databases as well. See [indexing database settings](xref:DB_xml#indexing-database-settings).
+>
+> - From DataMiner 10.3.0/10.3.3 onwards, for systems with a **dedicated clustered storage** setup, essential indexing database settings that are required to set up the database are available in System Center along with the general database settings. See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube).
+> - For earlier DataMiner versions or for setups with storage per DMA, the indexing setup is configured in *DB.xml*. See [indexing database settings](xref:DB_xml#indexing-database-settings).
 
 The following settings are available:
 
 - *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available.
 
 - *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the indexing database. Only displayed in case booking data have not been migrated yet.
+
+  > [!NOTE]
+  > If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), Indexing Engine settings cannot be customized. As such, from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the Indexing Engine settings are no longer available for DaaS.
 
   Please note the following regarding the migration of booking data:
 

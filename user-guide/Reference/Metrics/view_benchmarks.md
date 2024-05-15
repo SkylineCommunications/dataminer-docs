@@ -8,7 +8,7 @@ uid: view_benchmarks
 
 - Intel Core i5-6500 CPU @ 3.20GHz
 - 4 cores
-- 16GB RAM
+- 16 GB RAM
 - HDD
 - Cassandra
 - Windows 10 Enterprise

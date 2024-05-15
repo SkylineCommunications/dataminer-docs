@@ -116,9 +116,9 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
    > [!NOTE]
    >
    > - To duplicate a component theme, click the ![Duplicate](~/user-guide/images/Duplicate_Theme.png) button next to it.
-   > - To delete a component theme, click the ![Delete](~/user-guide/images/Delete_Theme.png) button next to it.
+   > - To delete a component theme, click the ![Delete](~/user-guide/images/Delete_Theme.png) button next to it. This is not possible for the default theme.
 
-1. Click *Save* in the lower right corner to save all changes.
+1. Click *Create* or *Save* (depending on your DataMiner version<!--RN 38278-->) in the lower right corner to save all changes.
 
    > [!NOTE]
    >

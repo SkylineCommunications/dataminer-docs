@@ -10,12 +10,12 @@ To implement a logger table, perform the following steps:
 
     ```xml
     <Param id="5200" trending="false">
-       <Name>Traps Logger Table</Name>
+       <Name>TrapsLogger</Name>
        <Description>Traps Logger</Description>
        <Type>array</Type>
        <ArrayOptions index="0" options="database">
-          <ColumnOption idx="0" pid="5201" type="retrieved" options="" />
-          <ColumnOption idx="1" pid="5202" type="retrieved" options="" />
+          <ColumnOption idx="0" pid="5201" type="retrieved" />
+          <ColumnOption idx="1" pid="5202" type="retrieved" />
          ...
        </ArrayOptions>
       ...
@@ -26,12 +26,12 @@ To implement a logger table, perform the following steps:
 
     ```xml
     <Param id="5200" trending="false">
-       <Name>Traps Logger Table</Name>
+       <Name>TrapsLogger</Name>
        <Description>Traps Logger</Description>
        <Type>array</Type>
        <ArrayOptions index="0" options="database">
-          <ColumnOption idx="0" pid="5201" type="retrieved" options="" />
-          <ColumnOption idx="1" pid="5202" type="retrieved" options="" />
+          <ColumnOption idx="0" pid="5201" type="retrieved" />
+          <ColumnOption idx="1" pid="5202" type="retrieved" />
          ...
        </ArrayOptions>
        <Database>
@@ -54,9 +54,9 @@ To implement a logger table, perform the following steps:
     ```xml
     <Param id="5204" trending="false">
        <Name>sip</Name>
-       <Description>Source IP (Trap Log)</Description>
+       <Description>Source IP (Traps Logger)</Description>
        <Information>
-          <Subtext>Trap Log Source IP</Subtext>
+          <Subtext>The Source IP of the trap.</Subtext>
        </Information>
        <Type>read</Type>
        <Interprete>
@@ -125,7 +125,7 @@ To implement a logger table, perform the following steps:
     ```xml
     <Param id="5202" trending="false">
        <Name>ts</Name>
-       <Description>Database Timestamp (Trap Log)</Description>
+       <Description>Database Timestamp (Traps Logger)</Description>
        <Information>
           <Subtext>This is the principal timestamp used in the database.</Subtext>
        </Information>
@@ -166,7 +166,7 @@ To implement a logger table, perform the following steps:
       From DataMiner version 9.5.7 (RN 16738) onwards, you can specify the TTL of a logger table column via the Partition tag on any column. This is also supported for the indexing database.
 
       ```xml
-      <Param id="1003" trending="false">
+      <Param id="1003">
         ...
          <Database>
             <ColumnDefinition>VARCHAR(200)</ColumnDefinition>

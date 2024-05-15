@@ -4,14 +4,14 @@ uid: DashboardParameterFeed
 
 # Parameter feed
 
-This dashboard feed allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
+This feed component allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
 
 > [!NOTE]
 >
 > - From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.
 > - From DataMiner 10.3.4/10.4.0 onwards, when an EPM feed is used to feed EPM identifiers to a parameter feed, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM feed (indicated as *EPM identifiers* in the data pane). <!-- RN 35562 -->
 
-To configure this component:
+## Configuring the component
 
 1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
@@ -19,7 +19,10 @@ To configure this component:
 
    - From DataMiner 10.0.0/10.0.2 onwards, multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
-   - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
+   - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard or app URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
+
+     > [!NOTE]
+     > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use filter feeds found either on a dashboard, on the same low-code app page/panel, or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, these filter feeds can only be found on a dashboard or the same low-code app page/panel.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 

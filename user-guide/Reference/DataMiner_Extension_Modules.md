@@ -6,7 +6,7 @@ uid: DataMinerExtensionModules
 
 A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated.
 
-Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
+Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades and are part of the DataMiner installer starting from DataMiner 10.3.7. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
 
 DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
@@ -20,9 +20,15 @@ For ease of installation, DxMs may be packaged together in a pack, such as the [
 
 The APIGateway module is the endpoint for the gRPC communication with a DataMiner Agent.
 
+From DataMiner 10.4.0/10.4.2 onwards<!--RN 37734 + 36575-->, DataMiner modules can register with APIGateway. All modules registered with APIGateway are displayed under `https://[Your DMA]/APIGateway/api/version`, showing the following properties:
+
+- Name
+- Version
+- Endpoint on which they can be accessed via APIGateway (proxy modules only)
+
 ### ArtifactDeployer
 
-The ArtifactDeployer module is responsible for allowing users to deploy different DataMiner artifacts towards their system. An example of a feature that uses this module is the [deployment of connectors from within the Catalog](xref:Deploying_A_DataMiner_Connector_to_your_system).
+The ArtifactDeployer module is responsible for allowing users to deploy different DataMiner artifacts towards their system. An example of a feature that uses this module is the [deployment of connectors from within the Catalog](xref:Deploying_a_catalog_item).
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 

@@ -15,7 +15,7 @@ To configure the component:
 
    From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. to do so, hover the mouse over the component, click the filter icon, and then add a filter feed from the *parameters* section of the data pane.
+1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. to do so, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *parameters* section of the data pane.
 
 1. Optionally, customize the following component options in the *Settings* tab:
 

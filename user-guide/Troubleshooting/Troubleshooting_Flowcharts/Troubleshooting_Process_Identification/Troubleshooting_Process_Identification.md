@@ -48,8 +48,9 @@ uid: Troubleshooting_Process_Identification
 | **Process** | **Function**|
 |--|--|
 | [SLXML.exe](xref:Troubleshooting_SLXML_exe) | Writes XML to files. |
-| [SLASPConnection.exe](xref:Troubleshooting_SLASPConnection_exe) | Generates legacy reports. |
+| [SLASPConnection.exe](xref:Troubleshooting_SLASPConnection_exe) | Generates legacy reports and sends reports/notifications via email. |
 | [SLAnalytics.exe](xref:Troubleshooting_SLAnalytics_exe) | AI-driven prediction and other DataMiner Analytics features. |
 | [SLHelper.exe](xref:Troubleshooting_SLHelper_exe) | Performs various small tasks. |
-| SLBrain.exe | Backwards compatibility DataMiner 8.0 Correlation. <br> Deprecated. |
+| SLBrain.exe | Backwards compatibility DataMiner 8.0 Correlation.<br>Deprecated. |
 | [SLScheduler.exe](xref:Troubleshooting_SLScheduler_exe) | Schedules DataMiner tasks. |
+| [w3wp.exe](xref:Investigating_Web_Issues) | Windows worker process of the IIS Web Server. |

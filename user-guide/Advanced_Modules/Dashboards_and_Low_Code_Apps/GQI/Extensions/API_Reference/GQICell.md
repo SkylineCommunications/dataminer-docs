@@ -1,10 +1,17 @@
 ---
-uid: GQICell
+uid: GQI_GQICell
 ---
 
-# GQICell
+# GQICell class
 
-The *GQICell* object has the following properties:
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
+
+## Definition
+
+Represents a single cell in a [GQIRow](xref:GQI_GQIRow).
+
+## Properties
 
 | Property | Type | Required | Description |
 |--|--|--|--|
@@ -12,4 +19,7 @@ The *GQICell* object has the following properties:
 | DisplayValue | String | No | The display value of the cell. |
 
 > [!NOTE]
-> The type of value of a cell must match the type of the corresponding column.
+> Empty cells, i.e. cells without value, are allowed.
+
+> [!IMPORTANT]
+> The type of the value of a cell should match the type of the corresponding column.

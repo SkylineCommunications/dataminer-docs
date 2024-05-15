@@ -48,4 +48,4 @@ Before you can run the DataMiner Cube browser application in Microsoft Edge, a n
 > - It is possible that your Edge policies are in fact managed by your company. In that case, you may not be able to configure this yourself, and you will need to contact your IT administrator for this. You can verify if this is the case by browsing to <edge://policy/> in Microsoft Edge. If this page contains an item "InternetExplorerIntegrationSiteList", IE compatibility is configured at company level.
 
 > [!TIP]
-> See also: [Internet Explorer Support](https://community.dataminer.services/documentation/internet-explorer-support/)
+> See also: [Can I still use the DataMiner Cube browser app in Internet Explorer?](xref:DataMiner_client_applications#can-i-still-use-the-dataminer-cube-browser-app-in-internet-explorer)

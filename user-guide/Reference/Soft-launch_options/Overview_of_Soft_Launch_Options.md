@@ -43,11 +43,18 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 - **Minimum version**: 9.5.12
 - **Release version**: 10.0.0/10.0.2 ([RN 24095](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-behavioral-anomaly-detection-and-suggestion-events-id_15723id_15914id_15916id_15951id_15952id_15976id_16001id_16050id_16163id_17279id_17462id_19224id_24095id_24126id_24147))
 
+### AnomalyFeedback
+
+Allows you to provide positive or negative feedback on anomaly suggestion events and alarms. This feedback is stored in the *ai_anomalyfeedback* table in the indexing database and is used to enhance anomaly event generation.
+
+- **Minimum version**: 10.4.4<!--RN 38980-->
+- **Release version**: To be determined
+
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards.
-> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite).
+> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37765 -->
+> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed).
 
 > [!CAUTION]
 > APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
@@ -74,6 +81,12 @@ Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-s
 
 - **Minimum version**: 10.2.7
 - **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id_33215-id_36489))
+
+### BrokerGateway
+
+Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.
+
+- **Minimum version**: 10.4.1<!-- RN 37649 -->
 
 ### CassandraCluster
 
@@ -109,6 +122,16 @@ This is a Cube-only feature that can only be activated with the argument `ENABLE
 
 - **Minimum version**: 9.6.7
 - **Estimated Release version**: To be determined
+
+### DataAPI
+
+Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+
+- **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
+- **Estimated Release version**: To be determined
+
+> [!NOTE]
+> The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
 
 ### Diagnostics
 
@@ -172,9 +195,11 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
+> - The profile instances data source (available from DataMiner 10.3.0 CU11/10.4.2 onwards).<!-- RN 38138 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.4.1
+- **Minimum version for the custom operator**: 10.2.7
+- **Release version for the custom operator**: 10.3.0 [CU10]/10.4.1 ([RN 37840](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-configuring-custom-operators-id_37840))
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -186,10 +211,13 @@ Enables the ownership framework.
 
 ### Indexing
 
-Enables the use of Elasticsearch for alarm indexing and other applications. To preview the indexing configuration in DataMiner Cube, use the argument `ENABLEFEATURE=Indexing`.
+Enables the use of Elasticsearch for alarm indexing and other applications.
 
 - **Minimum version**: 9.5.0
-- **Release version**: 10.0.0/1.0.0.2 ([RN 24054](xref:General_Feature_Release_10.0.2_new_features#dataminer-indexing-id_13370id_13406id_13504id_13571id_13623-id_13622id_13629id_13695id_13769id_13912id_14001id_14038-id_16287id_16896id_16915id_16935id_16959id_17081id_17166-id_17328id_17851id_18562id_18714id_19337id_19437id_19443-id_19691id_20373id_20845id_20998id_21205id_21257id_21634-id_22378id_22927id_23049id_23998id_24054id_24158))
+- **Release version**: 10.0.0/10.0.2 ([RN 24054](xref:General_Feature_Release_10.0.2_new_features#dataminer-indexing-id_13370id_13406id_13504id_13571id_13623-id_13622id_13629id_13695id_13769id_13912id_14001id_14038-id_16287id_16896id_16915id_16935id_16959id_17081id_17166-id_17328id_17851id_18562id_18714id_19337id_19437id_19443-id_19691id_20373id_20845id_20998id_21205id_21257id_21634-id_22378id_22927id_23049id_23998id_24054id_24158))
+
+> [!NOTE]
+> It is also possible to use the argument `ENABLEFEATURE=Indexing` in DataMiner Cube to view the *Indexing* app. However, this soft-launch feature has been abandoned and is no longer available in some setups.
 
 ### JobManager
 
@@ -200,15 +228,21 @@ Enables the [Jobs app](xref:jobs).
 
 ### LegacyAnnotations
 
-Shows the legacy Annotations module in Cube.
+Enables or disables the legacy Annotations module.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
+
+> [!NOTE]
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using this legacy module, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### LegacyReportsAndDashboards
 
-Shows the legacy Reports & Dashboards module in Cube.
+Enables or disables the legacy Reports and Dashboards modules.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
+
+> [!NOTE]
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### MonitoringAndControl
 
@@ -287,7 +321,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.4.1
+- **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812))
 
 ### ReportsAndDashboardsExport
 
@@ -301,7 +335,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.2
+- **Estimated release version**: 10.4.7
 
 ### ReportsAndDashboardsGuides
 
@@ -327,7 +361,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.4.1
+- **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812))
 
 ### ResourceList
 
@@ -357,6 +391,18 @@ Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLa
 - **Minimum version**: 10.3.9
 - **Release version**: N/A
 
+### SnmpPollingSnmpPlusPlusOnly
+
+Configures the DataMiner System to use SNMP++ for the polling of all three SNMP versions, instead of only for SNMPv3.<!-- RN 37778 -->
+
+- **Minimum version**: 10.4.2
+- **Release version**: To be determined.
+
+> [!IMPORTANT]
+>
+> - This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
+> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET) and [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) calls do not take this soft-launch option into account yet. As a result, SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always executed by WinSNMP.
+
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
@@ -377,13 +423,6 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 
 - **Minimum version**: 10.3.11
 
-### VisualDataManager
-
-Enables the new VisualDataHelper.
-
-- **Minimum version**: 9.6.1
-- **Release version**: 9.6.4
-
 ### UseWebIAS
 
 Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
@@ -396,3 +435,10 @@ Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
 - **Release version**: 10.3.6/10.4.0 ([RN 36273](xref:General_Feature_Release_10.3.6#user-defined-apis-id_34910-id_35134-id_35169-id_35417-id_35743-id_35810-id_35880-id_35885-id_36118-id_36250-id_36273-id_36366))
+
+### VisualDataManager
+
+Enables the new VisualDataHelper.
+
+- **Minimum version**: 9.6.1
+- **Release version**: 9.6.4

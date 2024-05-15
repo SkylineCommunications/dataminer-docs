@@ -8,7 +8,7 @@ uid: dynamic_virtual_element_benchmarks
 
 - Intel Xeon E5-2620 v17
 - 2 sockets
-- 32GB RAM
+- 32 GB RAM
 - Windows Server 2012 R2
 
 ## Benchmarks

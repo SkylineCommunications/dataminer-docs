@@ -222,7 +222,7 @@ uid: glossary_a_to_l
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
-| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:Generic_Query_Interface). |
+| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:About_GQI). |
 | Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 
 ## H
@@ -291,7 +291,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | LAN | Local Area Network. Network connecting devices within a limited area. |
-| Latch level | The previous highest alarm severity level of a DataMiner object.<br>See [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings). |
+| Latch level | The previous highest alarm severity level of a DataMiner object.<br>See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings). |
 | LDAP | Lightweight Directory Access Protocol. Cross-platform protocol used for directory services authentication. |
 | Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
 | LINQ | Language Integrated Query.<br>See [Language Integrated Query](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |

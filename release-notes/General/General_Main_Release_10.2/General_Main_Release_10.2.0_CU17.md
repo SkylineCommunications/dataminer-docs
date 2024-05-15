@@ -180,3 +180,9 @@ Up to now, when a numeric input component had a non-zero minimum value set, the 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you opened an alarm tab of type "sliding window", the history alarms matching the sliding window would be retrieved from the server but DataMiner Cube would incorrectly not show them.
+
+#### SLAnalytics would shut down immediately when it failed to get information from SLNet at start-up [ID_36692]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When starting up, SLAnalytics requests information from SLNet. Up to now, when it failed to get that information, it would immediately shut down. From now on, when the first request fails, it will try again once before shutting down.

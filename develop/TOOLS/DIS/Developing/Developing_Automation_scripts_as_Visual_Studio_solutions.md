@@ -48,7 +48,7 @@ In Visual Studio 2019, perform the following steps:
    > [!NOTE]
    > The default protocol solution folder and the default Automation script folder can both be specified in *DIS Settings \> Solutions*.
 
-1. Select *Create initial Automation script* if you want to solution to contain a basic script with one Exe block.
+1. Select *Create initial Automation script* if you want the solution to contain a basic script with one Exe block.
 1. Click *OK*.
 
 > [!NOTE]
@@ -143,9 +143,7 @@ An Automaton script Visual Studio solution is organized into various folders, ea
 
 - **Scripts**: This folder contains subfolders, with each subfolder representing an individual Automation script. The name of each subfolder corresponds with the name of the Automation script. Inside each subfolder, you will find the XML file for the Automation script and a subfolder named "Actions". The *Actions* folder contains the C# projects for each C# Exe block present in the Automation script.
 
-- **QActions**: This folder contains a C# Class Library project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
-
 - **Tests**: This folder is intended for test projects.
 
   > [!NOTE]
-  > Test projects should only be integrated into protocol solutions for the purpose of testing protocol functionality. They should not be used for system tests that include certain Automation scripts, among other things.
+  > Test projects should only be integrated into Automation script solutions for the purpose of testing Automation script functionality. They should not be used for system tests that include e.g. other Automation scripts, among other things.

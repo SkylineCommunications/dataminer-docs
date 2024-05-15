@@ -1,11 +1,33 @@
 ---
-uid: Troubleshooting
+uid: DIS_Troubleshooting
 ---
 
-# Troubleshooting
+# Problem in DIS?
 
-This section consists of the following topics:
+DIS is a complex program that can do a lot of things. It can happens that something breaks or was not taken in account.
 
-- [Repairing an incorrectly installed DIS package on Visual Studio 2010](xref:Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010)
-- [Could not find SLScripting process, is DataMiner running?](xref:Could_not_find_SLScripting_process_is_DataMiner_running)
-- [Clicking the Publish button causes an error](xref:Clicking_the_Publish_button_causes_an_error)
+## Preliminary checks
+
+Before you report the issue or spend time trying to debug, please check the following items:
+
+- Are you using the latest version of Visual Studio?
+
+- Are you using the latest version of DIS?
+
+  > [!NOTE]
+  > DIS also has an [insider version](https://community.dataminer.services/dataminer-integration-studio-other-downloads/). This could already contain a fix for your issue. Do note that this version could receive more hotfix changes as this is primarily used by Skyline employees to filter out any issues before it becomes the main release.
+
+- Are all [prerequisites](xref:Prerequisites) met?
+
+When you have checked all this, and the issue persists, your next step is to [gather and check the necessary information](xref:DIS_Troubleshooting_RetrieveInformation).
+
+## Feeling adventurous?
+
+A big portion of our code has been extracted and put into [NuGet packages](xref:Platform_independent_CICD#nuget-libraries). Based on the stacktrace of the exception or the topic, you could have a look at the NuGet libraries to see if you can spot the problem. You can then create an issue or pull request on GitHub to help out with the code.
+
+## Common problems
+
+- [Licensing problem](xref:DIS_Troubleshooting_LicenseIssue)
+- [DIS Inject problems](xref:DIS_Troubleshooting_DisInject)
+- [Package creation problems](xref:DIS_Troubleshooting_CompilationFailure)
+- [Publishing problems](xref:DIS_Troubleshooting_UploadFailure)

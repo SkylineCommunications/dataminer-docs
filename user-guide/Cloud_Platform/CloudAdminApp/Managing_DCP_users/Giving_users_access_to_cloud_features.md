@@ -35,7 +35,7 @@ If users have a dataminer.services account (i.e. they are registered on <https:/
 1. Specify the email address that is used for the user on dataminer.services, and click *Add*.
 
 > [!NOTE]
-> If users need to have remote access to the DataMiner System via web apps, make sure remote access is enabled. See [Controlling remote access with the Admin app](xref:Controlling_remote_access).
+> If users need to have remote access to the DataMiner System via web apps, make sure remote access to the web apps is enabled. See [Controlling remote access with the Admin app](xref:Controlling_remote_access).
 
 ## Revoking access to dataminer.services features
 

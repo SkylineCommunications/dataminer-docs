@@ -61,6 +61,16 @@ namespace Skyline.DataMiner.Net.Profiles
 		/// Initializes a new instance of the <see cref="ProfileHelper"/> class.
 		/// </summary>
 		/// <param name="messageHandler">The message handler.</param>
+		/// <example>
+		/// <para>Automation script object instantiation.</para>
+		/// <code>
+		/// public void Run(Engine engine) 
+		/// {
+		/// 	var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
+		/// 	// do CRUD operations on profile definitions, profile instances, etc.
+		/// }
+		/// </code>
+		/// </example>
 		public ProfileHelper(Func<DMSMessage[], DMSMessage[]> messageHandler) : base(messageHandler)
 		{
 		}

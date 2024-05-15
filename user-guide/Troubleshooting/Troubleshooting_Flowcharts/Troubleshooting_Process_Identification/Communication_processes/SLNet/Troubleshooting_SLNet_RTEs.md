@@ -7,7 +7,7 @@ uid: Troubleshooting_SLNet_RTEs
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - SLNetCom notification issues
@@ -66,4 +66,4 @@ class test1 classSolution
 class MODULES,IssueFound,IsStackIssue classDecision;
 class START,END,TECHSUPPORT classTerminal;
 class HOME,BACK classExternalRef;
-</div>
+```

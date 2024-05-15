@@ -153,6 +153,8 @@ If you use **GitHub**, it is currently not possible to publish scripts directly 
    1. Go to the *Actions* tab for your repository to check if the workflow for the release was successful.
 
       The workflow for the release should be green. If it is not, you may need to click it and select *Re-run all jobs* in the top-right corner.
+      
+      If the workflow of the release remains red, and you notice error logging mentioning *Missing argument "api-key"*, add the DATAMINER_DEPLOY_KEY to your repository secrets before re-running the jobs.
 
 1. To make sure the deployed GitHub Automation script is shown in the catalog, use the following workaround:
 
@@ -185,7 +187,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
 1. Make sure the following prerequisites are available:
 
-   - [DataMiner](xref:Deploying_a_DataMiner_System)
+   - [DataMiner](xref:Creating_a_DataMiner_System)
 
    - [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 

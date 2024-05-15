@@ -13,6 +13,9 @@ The following QActions implement some functionality that is often required when 
 - [Processing gzip-compressed data](#processing-gzip-compressed-data)
 - [Creating an alarm in a QAction](#creating-an-alarm-in-a-qaction)
 
+> [!TIP]
+> See also: [Use case: Internal flow – QActions](xref:LogicUseCase3)
+
 ## Reading from files
 
 Reading data from files can be done using an instance of the *StreamReader* class (System.IO). Always specify the default encoding (System.Text) so content with special characters will be interpreted correctly. By also using a *FileStream* instance (System.IO), it is possible to read files that are already in use.
@@ -351,7 +354,7 @@ public static class QAction
 
 ## Creating an alarm in a QAction
 
-To create an alarm from a QAction, the SLProtocolScripts.dll DLL needs to be imported (Skyline.DataMiner.ProtocolScripts).
+To create an alarm from a QAction, the SLProtocolScripts.dll DLL needs to be imported (Skyline.DataMiner.ProtocolScripts). Alternatively, the [Skyline.DataMiner.Utils.Alarms.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Alarms.Protocol) NuGet can be used. It acts as a replacement for the SLProtocolScripts DLL, and you can use it without having a local DMA installed.
 
 ```csharp
 int elementID = 214;

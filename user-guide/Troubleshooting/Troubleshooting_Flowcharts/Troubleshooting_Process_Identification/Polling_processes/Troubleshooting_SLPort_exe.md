@@ -12,7 +12,7 @@ SLPort controls all communication from and to devices connected to either a seri
 
 ## SLPort troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 %%{init: { 'theme': 'base', 'themeVariables': { 'edgeLabelBackground':'#fff', 'fontFamily' : 'Segoe UI'}}}%%
 flowchart TD
 A[SLPort]:::Start
@@ -42,7 +42,7 @@ classDef Start fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef Solution fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef InfoAccClick fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef InfoAccNoClick fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
-</div>
+```
 
 > [!NOTE]
 >

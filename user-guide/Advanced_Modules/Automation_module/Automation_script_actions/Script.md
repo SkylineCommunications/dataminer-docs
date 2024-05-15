@@ -17,4 +17,4 @@ Use this action to run another Automation script from within the current script.
 1. Specify further options for the way the subscript will be run. For more information on these options, see [Script execution options](xref:Script_execution_options).
 
 > [!NOTE]
-> It is also possible to add this action within a C# block in a script. For more information, see [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine#Skyline_DataMiner_Automation_Engine_PrepareSubScript_System_String_).
+> It is also possible to add this action within a C# block in a script. For more information, see [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.PrepareSubScript(System.String)).

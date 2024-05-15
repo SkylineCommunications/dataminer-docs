@@ -4,10 +4,6 @@ uid: Community
 
 # DataMiner Community
 
-In this section:
+The [Dojo DataMiner Community platform](https://community.dataminer.services/) allows you to actively participate in the world-wide DataMiner community.
 
-- [About the Community module](xref:About_the_Community_module)
-
-- [Accessing the Community module](xref:Accessing_the_Community_module)
-
-- [Overview of the DataMiner Dojo website](xref:Overview_of_the_DataMiner_Dojo_website)
+For more information, go to [Getting started with the Dojo DataMiner Community platform](xref:Getting_started_community).

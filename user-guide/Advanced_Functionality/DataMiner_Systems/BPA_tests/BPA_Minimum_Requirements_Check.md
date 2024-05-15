@@ -17,7 +17,7 @@ This BPA test checks if the following minimum hardware requirements are met or e
 
 This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.7, 10.1.0 CU4, 10.0.0 CU15 and 9.6.0 CU24 onwards, this BPA test is available by default.
 
-For more information on system requirements, see [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/).
+For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 ## Metadata
 

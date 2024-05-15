@@ -22,7 +22,7 @@ Typically, you will only need to install the meta-package. However, in some case
 
 ## Requirements
 
-The [DataMiner Integration Studio](xref:DIS) Visual Studio extension is required for development of connectors and Automation scripts using DataMiner Development Packages.
+The [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) Visual Studio extension is required for development of connectors and Automation scripts using DataMiner Development Packages.
 
 See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_the_software)
 

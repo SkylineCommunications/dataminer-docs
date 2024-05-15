@@ -4,9 +4,7 @@ uid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
 
 # Changing the default browser engine used in DataMiner Cube
 
-From DataMiner 9.6.3 onwards, you can change the default browser engine used in DataMiner Cube.
-
-To do so:
+To change the default browser engine used in DataMiner Cube:
 
 1. In the *System Center* module, go to *System settings* > *plugins*.
 

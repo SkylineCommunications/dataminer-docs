@@ -8,7 +8,7 @@ This section contains information on useful tools for system developers.
 
 It also contains information on DataMiner [Application packages](xref:ApplicationPackages).
 
-The most important of the tools for developers is **[DataMiner Integration Studio (DIS)](xref:DIS)**.
+The most important of the tools for developers is **[DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio)**.
 
 > [!TIP]
 > See also: [Memory dump collection tools](xref:Collecting_DataMiner_Cube_memory_dumps#tools)

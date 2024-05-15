@@ -54,9 +54,9 @@ Example:
     <Type options="connection=0">header</Type>
     <Interprete>
         <RawType>other</RawType>
+        <Type>string</Type>
         <LengthType>fixed</LengthType>
         <Length>3</Length>
-        <Type>string</Type>
         <Value>0x000x000x00</Value>
     </Interprete>
 </Param>
@@ -80,13 +80,13 @@ In the example below, the IP address/port combination specified in parameter 400
 
 ```xml
 <Param id="400" trending="false" save="true">
-    <Name>Dynamic polling IP</Name>
+    <Name>DynamicPollingIP</Name>
     ...
     <Type options="dynamic ip 1">read</Type>
     <Interprete>
         <RawType>other</RawType>
-        <LengthType>next param</LengthType>
         <Type>string</Type>
+        <LengthType>next param</LengthType>
     </Interprete>
     ...
 </Param>

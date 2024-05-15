@@ -4,15 +4,17 @@ uid: DataMiner_Cube_header_bar
 
 # DataMiner Cube header bar
 
-From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the header bar of DataMiner Cube:
+In the header bar of DataMiner Cube, you can find the following items:
 
-- **Cube side indicators**: Four blue squares, each representing one of the four Cube sides. The largest square marks the Cube side that is currently displayed. These indicators may be hidden, depending on the user settings. (See “Quick menu icon” below.)
+![Header bar Cube](~/user-guide/images/Header_Bar.png)<br/>*Cube header bar in DataMiner 10.4.1*
 
-- **Cube search box**: See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
+- **Cube side indicators** (1): Four blue squares, each representing one of the four Cube sides. The largest square marks the Cube side that is currently displayed. These indicators may be hidden, depending on the user settings. (See “Quick menu icon” below.)
 
-- **DMS time**: Indicates the server time of the DMS, which may be useful in case the server is not in the same time zone as the client. This time indicator may be hidden, depending on the user settings. (See “Quick menu icon” below.)
+- **Cube search box** (2): See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
-- **![Quick menu button](~/user-guide/images/CubeXquickmenu.png) Quick menu icon**: This icon opens a quick menu where you can toggle the following options related to the header:
+- **DMS time** (3): Indicates the server time of the DMS, which may be useful in case the server is not in the same time zone as the client. This time indicator may be hidden, depending on the user settings. (See “Quick menu icon” below.)
+
+- **![Quick menu button](~/user-guide/images/CubeXquickmenu.png) Quick menu icon** (4): This icon opens a quick menu where you can toggle the following options related to the header:
 
   - *Show Cube sides*: Determines whether the 4 squares indicating the Cube sides are displayed.
 
@@ -22,7 +24,7 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
   - *Show search box*: Determines whether the search box is displayed. (Available from DataMiner 10.3.5/10.4.0 onwards).
 
-- **User icon**: Click this icon to open a menu containing information on the user and the DMA, as well as the following options:
+- **User icon** (5): Click this icon to open a menu containing information on the user and the DMA, as well as the following options:
 
   - *Account details*: Opens your user card.
 

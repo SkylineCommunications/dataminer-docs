@@ -30,7 +30,7 @@ The wizard is an interactive Automation script called *SRM_ResourceManagement*. 
 For example: `{"BookingManagerElement":"Resource Orchestration","ReservationId":"00000000-0000-0000-0000-000000000000","ResourceIds":"e489a83d-182b-45c7-a981-615c253525b2","Timing":{"EffectiveStart":"2022-09-07T16:18:24.1242596+02:00","PreRoll":"00:00:00","StartDate":"2022-09-07T16:18:24.1242596+02:00","EffectiveEnd":"2022-09-07T17:25:27.9282596+02:00","EndDate":"2022-09-07T17:25:27.9282596+02:00","PostRoll":"00:00:00","IsSilent":false}}`
 
 > [!NOTE]
-> For an up-to-date definition of the input argument, import *SLSRMLibrary.dll* and check the class *Skyline.DataMiner.Library.Solutions.SRM.Model.ResourceManagement.InputData*.
+> For an up-to-date definition of the input argument, import *SLSRMLibrary.dll* and check the class *Skyline.DataMiner.Library.Solutions.SRM.Model.ResourceManagement.InputData*, or *Skyline.DataMiner.Core.SRM.Model.ResourceManagement.InputData* from feature release 2.0.1 of the SRM framework onwards.
 
 ### Running the wizard
 

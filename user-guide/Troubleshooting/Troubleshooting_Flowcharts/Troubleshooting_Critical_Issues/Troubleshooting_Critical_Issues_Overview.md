@@ -4,7 +4,7 @@ uid: Troubleshooting_Critical_Issues_Overview
 
 # Critical issues: overview
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -41,4 +41,4 @@ class Start DarkBlue;
 class CheckWatchdog classDecision;
 class Automaticrestart,MachineoutofResources,DataNotUpdated,ErrorAlarmConsole, LightBlue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```

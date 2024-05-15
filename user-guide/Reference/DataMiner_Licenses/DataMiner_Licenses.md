@@ -4,15 +4,11 @@ uid: DataminerLicenses
 
 # Obtaining a DataMiner license
 
-There are four procedures to obtain a DataMiner license:
+There are two different types of DataMiner license, which are obtained in different ways:
 
-- [License for DMA to be installed by Skyline](xref:License_for_DMA_to_be_installed_by_Skyline)
+- [Permanent license](xref:Permanent_license)
 
-- [Full license for DMA to be installed by user](xref:Full_license_for_DMA_to_be_installed_by_user)
-
-- [Online demo license for DMA to be installed by user](xref:Online_demo_license_for_DMA_to_be_installed_by_user)
-
-- [Offline demo license for DMA to be installed by user](xref:Offline_demo_license_for_DMA_to_be_installed_by_user)
+- [Time-based license](xref:Time-based_license)
 
 > [!NOTE]
 >

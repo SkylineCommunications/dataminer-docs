@@ -8,7 +8,7 @@ uid: profile_manager_benchmarks
 
 - Intel Xeon Silver 4210
 - 8 cores (16TH) VM
-- 32GB RAM
+- 32 GB RAM
 - SSD (NVMe)
 - Windows Server 2019 Standard
 

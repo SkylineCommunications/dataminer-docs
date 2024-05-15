@@ -49,7 +49,13 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 
    - **Show current** > **Information events**: Displays the *Information events* tab.
 
-   - **Show current** > **Suggestion events**: Displays the *Suggestion events* tab. Only available in DataMiner Systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures). Suggestion events are AI-generated notifications. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
+   - **Show current** > **Suggestion events**: Displays the *Suggestion events* tab. Suggestion events are AI-generated notifications. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
+
+     > [!NOTE]
+     > This tab is only available in DataMiner Systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures). In addition, the necessary analytics features need to be enabled via *System Center* > *System settings* > *Analytics Config*:
+     >
+     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39415-->, *Behavioral Anomaly Detection*, *Pattern Matching*, or *Proactive Cap Detection* need to be enabled.
+     > - Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, *Behavioral Anomaly Detection* must be enabled.
 
    - **Show current** > **Masked alarms**: Displays the *Masked alarms* tab.
 

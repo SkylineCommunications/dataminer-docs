@@ -6,7 +6,7 @@ uid: Delete_Component
 
 You can delete a component as follows:
 
-- Click on the component or hover the mouse over the component and click the red recycle bin icon.
+- Click on the component or hover the mouse pointer over the component and click the red recycle bin icon.
 
 - Select the component and click *Delete component* in the header bar of the app (only in the Dashboards app).
 

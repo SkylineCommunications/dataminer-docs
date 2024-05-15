@@ -6,7 +6,7 @@ uid: Troubleshooting_Critical_Issues_Data_Not_Updated
 
 ## Data not updated troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -53,7 +53,7 @@ class Start DarkBlue;
 class Automaticrestart,DataNotUpdated,ErrorAlarmConsole,Automaticrestart,MachineoutofResources, LightBlue;
 class Home,SLLogCollector,Investigation LightBlue;
 class Surveyor,AlarmConsole,Element Gray;
-</div>
+```
 
 ## Surveyor
 

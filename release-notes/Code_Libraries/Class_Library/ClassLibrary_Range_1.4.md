@@ -4,7 +4,7 @@ uid: ClassLibrary_Range_1.4
 
 # Class Library Range 1.4
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > DEPRECATED: This library is no longer maintained. The code has been moved to separate public NuGets. See [Skyline.DataMiner.Core.DataMinerSystem](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.0).
 
 > [!NOTE]

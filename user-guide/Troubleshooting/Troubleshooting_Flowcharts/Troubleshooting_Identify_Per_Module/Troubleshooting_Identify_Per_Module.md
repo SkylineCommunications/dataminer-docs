@@ -9,7 +9,7 @@ uid: Troubleshooting_Identify_per_Module
 
 Each module below conforms to one of the main parts of the DataMiner Cube UI. Click the module you are having trouble with in order to continue.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -39,7 +39,7 @@ class START classTerminal;
 class AlarmConsole,Surveyor,Apps classExternalRef;
 %%class classActionClickable;
 class ModuleDefinition classDecision;
-</div>
+```
 
 ### Examples
 

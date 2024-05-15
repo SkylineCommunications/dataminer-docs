@@ -67,7 +67,7 @@ Your app is currently in the "Draft" stage, but you can now take it live by publ
 
 Now that you have successfully created and published your app, you can start adding some content to it.
 
-- [Edit an existing app](xref:Tutorial_Apps_Edit_Existing_App)
+- [Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App)
 
 ## Learning paths
 

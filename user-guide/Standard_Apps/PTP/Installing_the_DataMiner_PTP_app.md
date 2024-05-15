@@ -6,18 +6,10 @@ uid: Installing_the_DataMiner_PTP_app
 
 To install and set up the DataMiner PTP app:
 
-1. Double-click the *DataMiner PTP* package.
-
-1. In the upgrade window, click the *Upgrade* button. The installation will begin, and the installation progress will be displayed.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!NOTE]
    > DataMiner PTP should be installed on all DataMiner Agents in the DataMiner System.
-
-1. When the installation process has finished, the *Upgrade Summary* window will display information on any issues that have occurred. Click *Close* to go back to the main upgrade window.
-
-1. Click the *Finished* button to close the upgrade window.
-
-1. Open DataMiner Cube. See [Opening DataMiner Cube](xref:Opening_the_desktop_app).
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 

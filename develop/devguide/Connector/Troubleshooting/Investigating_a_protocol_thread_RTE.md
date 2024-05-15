@@ -61,4 +61,4 @@ While investigating the issue should only take about 15 minutes, the time to res
 
 - For more information about protocol threads and SLProtocol processes, see [SLProtocol](xref:InnerWorkingsSLProtocol).
 - For more information on how to request the pending calls via the SLNetClientTest tool, see [How to retrieve protocol pending calls](xref:How_to_retrieve_protocol_pending_calls).
-- For more information about DataMiner Integration Studio, see [DataMiner Integration Studio](xref:DIS).
+- For more information about DataMiner Integration Studio, see [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio).

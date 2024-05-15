@@ -4,11 +4,15 @@ uid: Protocol.Params.Param.Display.Units
 
 # Units element
 
-Specifies a unit for a parameter value displayed on the user interface.
+Specifies a unit for a parameter value displayed in the user interface (e.g. in a report, in the Alarm Console, etc.).
 
 ## Type
 
-Contains one of the following values:
+Contains a unit of measurement.
+
+In the table below, you can find a list of the suggested units to use. These are the units of measurement recognized by the validator in DIS. However, you can also use units that are not mentioned in this list if necessary. For example, a string like "Batteries" can be used to show the number of batteries attached to a backup power supply.
+
+In case you have a suggestion for a unit to be added to the list below, send an email to <DIS@skyline.be>.
 
 |Value|Description|
 |--- |--- |
@@ -942,12 +946,6 @@ Contains one of the following values:
 ## Parent
 
 [Display](xref:Protocol.Params.Param.Display)
-
-## Remarks
-
-This can be a unit like “Vac”, “dBm”, etc., but it can also be a string like “Batteries” (for example for a parameter showing the number of batteries attached to a backup power supply).
-
-The specified unit will be used each time the value of the parameter is displayed: in a report, on the alarm display, etc.
 
 ## Examples
 

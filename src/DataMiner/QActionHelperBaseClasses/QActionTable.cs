@@ -107,9 +107,39 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Adds a row to the table.
 		/// </summary>
+		/// <param name="row">The primary key of the row.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns>The 1-based internal position of the row in the table.</returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public int AddRow(string row, DateTime? timeInfo) { return 0; }
+
+		/// <summary>
+		/// Adds a row to the table.
+		/// </summary>
 		/// <param name="row">The row data.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		public int AddRow(QActionTableRow row) { return 0; }
+
+		/// <summary>
+		/// Adds a row to the table.
+		/// </summary>
+		/// <param name="row">The row data.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns>The 1-based internal position of the row in the table.</returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public int AddRow(QActionTableRow row, DateTime? timeInfo) { return 0; }
 
 		/// <summary>
 		/// Adds a row to the table.
@@ -119,10 +149,39 @@ namespace Skyline.DataMiner.Scripting
 		public int AddRow(object[] row) { return 0; }
 
 		/// <summary>
+		/// Adds a row to the table.
+		/// </summary>
+		/// <param name="row">The row data.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns>The 1-based internal position of the row in the table.</returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public int AddRow(object[] row, DateTime? timeInfo) { return 0; }
+
+		/// <summary>
 		/// Adds a row to the table and returns the primary key of the new row.
 		/// </summary>
 		/// <returns>The primary key of the added row.</returns>
 		public string AddRowReturnKey() { return ""; }
+
+		/// <summary>
+		/// Adds a row to the table and returns the primary key of the new row.
+		/// </summary>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns>The primary key of the added row.</returns>
+		/// <remarks>
+		///	    <list type="bullet">
+		///	        <item>
+		///	            <description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///	        </item>
+		///	    </list>
+		/// </remarks>
+		public string AddRowReturnKey(DateTime? timeInfo) { return ""; }
 
 		/// <summary>
 		/// Adds a row to the table and returns the primary key of the new row.
@@ -135,8 +194,38 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds a row to the table and returns the primary key of the new row.
 		/// </summary>
 		/// <param name="row">The row data.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns>The primary key of the added row.</returns>
+		/// <remarks>
+		///	    <list type="bullet">
+		///	        <item>
+		///	            <description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///	        </item>
+		///	    </list>
+		/// </remarks>
+		public string AddRowReturnKey(QActionTableRow row, DateTime? timeInfo) { return ""; }
+
+		/// <summary>
+		/// Adds a row to the table and returns the primary key of the new row.
+		/// </summary>
+		/// <param name="row">The row data.</param>
 		/// <returns>The primary key of the added row.</returns>
 		public string AddRowReturnKey(object[] row) { return ""; }
+
+		/// <summary>
+		/// Adds a row to the table and returns the primary key of the new row.
+		/// </summary>
+		/// <param name="row">The row data.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns>The primary key of the added row.</returns>
+		/// <remarks>
+		///	    <list type="bullet">
+		///	        <item>
+		///	            <description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///	        </item>
+		///	    </list>
+		/// </remarks>
+		public string AddRowReturnKey(object[] row, DateTime? timeInfo) { return ""; }
 
 		/// <summary>
 		/// Removes the specified rows from the specified table.
@@ -177,12 +266,12 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>	
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -194,8 +283,51 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>	
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(List<QActionTableRow> rows, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>	
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(List<QActionTableRow> rows, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -203,7 +335,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -216,12 +348,55 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(List<object[]> columns, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -233,13 +408,56 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(object[] columns, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(object[] columns, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -249,10 +467,53 @@ namespace Skyline.DataMiner.Scripting
 		public object FillArray(QActionTableRow[] rows, DateTime? timeInfo = null) { return null; }
 
 		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(QActionTableRow[] rows, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArray(QActionTableRow[] rows, bool useClearAndLeave) { return null; }
+
+		/// <summary>
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -267,7 +528,44 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(object[] columns, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(object[] columns, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -284,8 +582,45 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Adds the provided content to the table.
 		/// </summary>
-		/// <param name="rows">The rows of the table.</param>3
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="columns">The <b>columns</b> of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(List<object[]> columns, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -300,7 +635,44 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(QActionTableRow[] rows, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(QActionTableRow[] rows, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -310,6 +682,43 @@ namespace Skyline.DataMiner.Scripting
 		///		</list>
 		/// </remarks>
 		public object FillArrayNoDelete(List<QActionTableRow> rows, DateTime? timeInfo = null) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(List<QActionTableRow> rows, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Adds the provided content to the table.
+		/// </summary>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object FillArrayNoDelete(List<QActionTableRow> rows, bool useClearAndLeave) { return null; }
 
 		/// <summary>
 		/// Gets the primary keys of all rows that have the specified value for the specified column.
@@ -371,10 +780,47 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="Keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="Values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp.</param>
-		/// <exception cref="ArgumentException">The length of 'Keys' is not equal to the length of 'Values'.</exception>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <exception cref="ArgumentException">The length of "Keys" is not equal to the length of "Values".</exception>
 		/// <returns></returns>
 		public object SetColumn(int columnPid, string[] Keys, object[] Values, DateTime? timeInfo = null) { return null; }
+
+		/// <summary>
+		/// Sets the specified cells of a column with the provided values.
+		/// </summary>
+		/// <param name="columnPid">The ID of the column parameter.</param>
+		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
+		/// <param name="values">The values to set.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">The length of "keys" is not equal to the length of "values".</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object SetColumn(int columnPid, string[] keys, object[] values, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the specified cells of a column with the provided values.
+		/// </summary>
+		/// <param name="columnPid">The ID of the column parameter.</param>
+		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
+		/// <param name="values">The values to set.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">The length of "keys" is not equal to the length of "values".</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object SetColumn(int columnPid, string[] keys, object[] values, bool useClearAndLeave) { return null; }
 
 		/// <summary>
 		/// Sets the content of the specified row to the provided content.
@@ -388,11 +834,115 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Sets the content of the specified row to the provided content.
 		/// </summary>
+		/// <param name="row">The 0-based index of the row.</param>
+		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentOutOfRangeException">The index is smaller than 0 or larger than the number of rows in the table.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(int row, object[] data, DateTime? timeInfo) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">The 0-based index of the row.</param>
+		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentOutOfRangeException">The index is smaller than 0 or larger than the number of rows in the table.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(int row, object[] data, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">The 0-based index of the row.</param>
+		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentOutOfRangeException">The index is smaller than 0 or larger than the number of rows in the table.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(int row, object[] data, DateTime? timeInfo, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
 		/// <param name="row">The row to set. A null reference as cell value will preserve the value of the cell.</param>
 		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
 		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
 		/// <returns></returns>
 		public object[] SetRow(QActionTableRow row, bool createRow = false) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">The row to set. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(QActionTableRow row, bool createRow, DateTime? timeInfo) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">The row to set. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(QActionTableRow row, bool createRow, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">The row to set. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(QActionTableRow row, bool createRow, DateTime? timeInfo, bool useClearAndLeave) { return null; }
 
 		/// <summary>
 		/// Sets the content of the specified row to the provided content.
@@ -403,5 +953,60 @@ namespace Skyline.DataMiner.Scripting
 		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
 		/// <returns></returns>
 		public object[] SetRow(string row, object[] data, bool createRow = false) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">Primary key of the row.</param>
+		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(string row, object[] data, bool createRow, DateTime? timeInfo) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">Primary key of the row.</param>
+		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(string row, object[] data, bool createRow, bool useClearAndLeave) { return null; }
+
+		/// <summary>
+		/// Sets the content of the specified row to the provided content.
+		/// </summary>
+		/// <param name="row">Primary key of the row.</param>
+		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
+		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
+		/// <remarks>
+		///		<list type="bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		public object[] SetRow(string row, object[] data, bool createRow, DateTime? timeInfo, bool useClearAndLeave) { return null; }
 	}
 }

@@ -22,8 +22,12 @@ In a low-code app, this component will also make a number of [component actions]
 - *Set form to edit mode*
 - *Set form to read mode*
 
-> [!NOTE]
->
-> - Saving an empty field value for a DOM instance is only supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36276 -->. Prior to this, you can only empty a DOM field value using an Automation script. See [Altering values of a DomInstance - examples](xref:DOM_Altering_values_of_a_DomInstance).
-> - The `GroupFieldDescriptor` and `UserFieldDescriptor` [field descriptors](xref:DOM_SectionDefinition#fielddescriptor) are supported as a dropdown list in the form component from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36556 -->. Fields defined as `GroupFieldDescriptor` will display the group name and use that same group name as value. Fields defined as `UserFieldDescriptor` will display the full name of the user, but will store the user name as value. When the field descriptor defines any group names, the dropdown list will only include the users belonging to those groups.
-> - From DataMiner 10.3.10/10.4.0 onwards<!-- RN 37007 -->, the GenericEnumFieldDescriptors options are listed in the same order as they are created, for optimal customizability of the form. In earlier DataMiner versions, they are ordered alphabetically.
+Please note the following:
+
+- Saving an empty field value for a DOM instance is only supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36276 -->. Prior to this, you can only empty a DOM field value using an Automation script. See [Altering values of a DomInstance - examples](xref:DOM_Altering_values_of_a_DomInstance).
+
+- The `GroupFieldDescriptor` and `UserFieldDescriptor` [field descriptors](xref:DOM_SectionDefinition#fielddescriptor) are supported as a dropdown list in the form component from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36556 -->. Fields defined as `GroupFieldDescriptor` will display the group name and use that same group name as value. Fields defined as `UserFieldDescriptor` will display the full name of the user, but will store the user name as value. When the field descriptor defines any group names, the dropdown list will only include the users belonging to those groups.
+
+- From DataMiner 10.3.10/10.4.0 onwards<!-- RN 37007 -->, the GenericEnumFieldDescriptors options are listed in the same order as they are created, for optimal customizability of the form. In earlier DataMiner versions, they are ordered alphabetically.
+
+- From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 37546 -->, only the first 100 instances are initially loaded in a form. To find other instances, you can search for them. However, note that for `DomInstanceValue` fields, you can only search on the DOM instance name. Also, if a `DomInstanceValueFieldDescriptor` is used that refers to a field descriptor in a section definition that allows multiple values, only the first value that is found will be shown. If a DOM instance does not contain a value for such a field descriptor, only the DOM instance name will be shown.

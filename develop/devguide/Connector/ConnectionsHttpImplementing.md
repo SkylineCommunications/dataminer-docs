@@ -11,7 +11,7 @@ Periodically requesting information from a device via HTTP can be done as follow
 The approach is very similar to serial communication: with HTTP, the content of the group will be a session, whereas with serial communication a pair is used.
 
 > [!NOTE]
-> An example protocol "SLC SDF HTTP" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> An example protocol "Skyline Example HTTP" is available in the [SkylineCommunications/SLC-C-Example_HTTP](https://github.com/SkylineCommunications/SLC-C-Example_HTTP) GitHub repository.
 
 ## Session
 
@@ -43,11 +43,13 @@ The url attribute defines the path, optionally including a query string and/or f
 > [!NOTE]
 >
 > - Instead of using the url attribute, you can specify the ID of a parameter that holds the request path. This is done using the pid attribute:
+>
 >    ```xml
 >    <Request verb="GET" url="/barco-webservice/rest/NetworkWall/alarm">
 >    <Request verb="GET" pid="5045"> <!-- content parameter 5045: "barco-webservice/rest/NetworkWall/alarm" -->
 >    ```
->    - In case the pid attribute is used, parameter 5045 does not need a leading slash (“/”).
+>
+>    - In case the pid attribute is used, parameter 5045 does not need a leading slash ("/").
 >    - In case both the url and pid attributes are specified, the pid attribute will be ignored. Typically, only one of these attributes is specified.
 > - It is also possible to specify an absolute URL (e.g. "http://google.com"), which possibly specifies another host (or IP address/port) than the one specified in the corresponding element connection.
 However, this should be used only when there is no other option, because when the specified host becomes unavailable, the element will go into timeout, giving the impression that the host specified in the element wizard is no longer available.
@@ -55,6 +57,9 @@ However, this should be used only when there is no other option, because when th
 Including a request header (e.g. "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See Protocol.HTTP.Session.Connection.Request.Headers.Header.
 
 By using either Data or Parameters, you can send data along with the HTTP request. See Protocol.HTTP.Session.Connection.Request.Data and Protocol.HTTP.Session.Connection.Request.Parameters.
+
+> [!IMPORTANT]
+> DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded", you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g. '&amp;').
 
 > [!NOTE]
 > Either Parameters or Data should be used, not both. If both are used together, only the content of Parameters will be included in the request.

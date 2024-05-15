@@ -474,7 +474,7 @@ namespace Skyline.DataMiner.Automation
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
 		/// <item><description>If the user clicks Ignore, the message box will be closed.</description></item>
 		/// </list>
-		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see Find interactive client.</note>
+		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see <see href="xref:AutomationActionFindInteractiveClient">Find interactive client</see>.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>

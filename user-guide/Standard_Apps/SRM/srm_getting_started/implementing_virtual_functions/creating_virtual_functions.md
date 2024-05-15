@@ -8,7 +8,7 @@ As any device or platform in the solution must be considered from a function per
 
 You can **create virtual functions using DataMiner Integration Studio** (version 2.37 or above):
 
-1. Open Visual Studio (with [DataMiner Integration Studio](xref:DIS) installed).
+1. Open Visual Studio (with [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) installed).
 
 1. In the header menu, select *File* > *New File*.
 

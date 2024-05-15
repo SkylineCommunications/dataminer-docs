@@ -18,7 +18,7 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 
    - Make sure bidirectional communication between the DMZ and the DMS is possible through NATS on port 4222.
 
-   - Make sure bidirectional communication between the [DxMs](xref:DataMinerExtensionModules) on all servers and the DMZ is possible through NATS on port 5100.
+   - Make sure bidirectional communication between the [DxMs](xref:DataMinerExtensionModules) on all servers and the DMZ is possible over TCP on port 5100.
 
      > [!NOTE]
      > If communication through port 5100 is not possible, it is possible to configure a different port. See [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
@@ -31,7 +31,7 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
    > From DataMiner 10.3.7/10.4.0 onwards<!-- RN 36085 -->, a Cloud Pack containing these DxMs (but not DataMiner CloudGateway) is automatically installed when you upgrade or install DataMiner.
 
    > [!NOTE]
-   > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
+   > For all DxMs (except the Cloud Gateway), it is advised to have an instance running on every node. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
 
 1. On the DMZ server, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create an override *appsettings.custom.json* with the following contents:
 

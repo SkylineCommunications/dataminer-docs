@@ -6,8 +6,7 @@ uid: KI_Smart-serial_communication_no_longer_working
 
 ## Affected versions
 
-- DataMiner 10.1.0 and older
-- DataMiner 10.0.13 and older
+DataMiner versions prior to 10.0.13/10.1.0.
 
 ## Cause
 
@@ -15,7 +14,7 @@ Windows 2019 upgrade/installation
 
 ## Fix
 
-SLPort automatically resizes the socket buffer before receiving data from a socket [[ID_27891](xref:General_Main_Release_10.1.0_enhancements#slport-now-automatically-resizes-the-socket-buffer-before-receiving-data-from-a-socket-id_27891)]
+Install DataMiner 10.1.0/10.0.13 ([ID_27891](xref:General_Main_Release_10.1.0_enhancements#slport-now-automatically-resizes-the-socket-buffer-before-receiving-data-from-a-socket-id_27891)).
 
 ## Issue description
 

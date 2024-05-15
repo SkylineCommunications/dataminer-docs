@@ -4,7 +4,7 @@ uid: DataMiner_Cube_tips_tricks
 
 # DataMiner Cube tips & tricks
 
-This section lists tips and tricks on how to use DataMiner Cube, including the tips displayed on the DataMiner Pulse homepage.
+This section lists tips and tricks on how to use DataMiner Cube.
 
 ## About alarms
 
@@ -41,8 +41,6 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Want to open an item in a new card without using a context menu? Hold the Ctrl key while you click or double-click to open the item. See [Opening cards](xref:Working_with_cards_in_DataMiner_Cube#opening-cards).
 
-- Need help? Press F1. See [Using keyboard navigation](xref:Using_keyboard_navigation).
-
 ## About workspaces
 
 - Want to quickly open a new element in an existing card? Drag the element from the Surveyor onto the card header. See [Dragging cards](xref:Working_with_cards_in_DataMiner_Cube#dragging-cards).
@@ -57,13 +55,13 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ## About the Surveyor
 
-- Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor).
+- Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](xref:DataMiner_Cube_sidebar#surveyor-pane).
 
-- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings).
+- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings).
 
 - The Surveyor can be enriched with statistics, such as the number of alarms in a view. See [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor).
 
-- Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](xref:Main_Cube_UI_components_prior_to_DataMiner_10#recent-items).
+- Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). See [Activity pane](xref:DataMiner_Cube_sidebar#activity-pane).
 
 - Do you want to copy several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
 
@@ -77,7 +75,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ## Miscellaneous
 
-- With the advanced options to open a DMS from the Cube start window, you can customize which view or app is initially shown – and you can do even much more than that! See [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
+- With the advanced options to open a DMS from the Cube start window, you can customize which view or app is initially shown, and you can do even much more than that! See [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
 - Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor).
 

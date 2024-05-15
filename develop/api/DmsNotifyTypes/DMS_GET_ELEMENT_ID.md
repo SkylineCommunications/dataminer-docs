@@ -4,6 +4,9 @@ uid: DMS_GET_ELEMENT_ID
 
 # DMS_GET_ELEMENT_ID (72)
 
+> [!WARNING]
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+
 Gets the ID of the element given the element name.
 
 ```csharp

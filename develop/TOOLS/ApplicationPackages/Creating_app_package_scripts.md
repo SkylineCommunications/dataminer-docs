@@ -7,7 +7,6 @@ uid: Creating_app_package_scripts
 Application packages can contain different scripts, each used for a different purpose:
 
 - A script to install an application version without having to restart a DMA. This script, *Install.xml*, must always be included in an application package.
-- A script to configure the application, e.g. to configure parameter values. This script, *Config.xml*, is optional.
 - A script to uninstall an application version. This script, *Uninstall.xml*, is optional.
 
 ## Install.xml
@@ -44,7 +43,7 @@ public void Install(Engine engine, AppInstallContext context)
 
 The created method should contain all actions that need to be performed in order to have a successful installation.
 
-The [Skyline.AppInstaller](xref:Skyline.AppInstaller) namespace contains various classes related to installing a DMAPP and can be used to define the installation.
+The [Skyline.AppInstaller](xref:Skyline.AppInstaller) namespace contains various classes related to installing an application package and can be used to define the installation.
 
 The example below will install all (by default supported) content of the package using the [InstallDefaultContent](xref:Skyline.AppInstaller.AppInstaller.InstallDefaultContent) method.
 
@@ -71,64 +70,13 @@ Note that DIS will always include the latest version of the `SLAppPackageInstall
 ```
 
 > [!NOTE]
-> An example is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> While for regular Automation scripts you need to provide a full path to any referenced assemblies, this is not the case for references in an install script. This is because when the package is installed, the referenced assemblies will be available in the `C:\Skyline DataMiner\AppPackages\Installed\<PackageName>.<PackageVersion>\Scripts\InstallDependencies` directory, and DataMiner will automatically update the references to point to the corresponding assemblies in this directory.
 
-## Config.xml
+#### SetupContent
 
-This (optional) script is used to perform configuration steps requiring user interaction once the installation is complete.
+In case you require specific files that you only need during the installation of the package, you can configure this by putting these files in the `SetupContent` directory of the solution. These files will only be available during the installation.
 
-A configuration script always expects a set of input parameters defining the user input; it cannot be executed without them.
-
-### AutomationEntryPoint ConfigureApp
-
-As a first step, a method indicated as ConfigureApp Automation entry point needs to be created. The default Run method can never be executed during the installation of an app package.
-
-You can define an Automation entry point using the `AutomationEntryPoint` attribute by defining it as `AutomationEntryPointType.Types.ConfigureApp`.
-
-The method needs to have 2 arguments.
-
-- The `Engine` object.
-- The `AppConfigurationContext` object.
-
-Both arguments will obtain their value automatically during runtime and therefore do not need to be defined in the script. The content of the method should consist of all the actions needed to install the application, e.g. to create elements.
-
-Example:
-
-```csharp
-[AutomationEntryPoint(AutomationEntryPointType.Types.ConfigureApp)]
-public void Configure(Engine engine, AppConfigurationContext context)
-{
-   ...
-}
-```
-
-> [!NOTE]
-> - The namespace `Skyline.DataMiner.Net.AppPackages` needs to be included to provide access to `AppConfigurationContext`.
-> - At present, a configuration can only be executed using the SLNETCLientTest tool.
-
-### Input parameters
-
-Input parameters can be used during configuration. A pop-up message will ask the user to fill in the necessary parameters from the script.
-
-The parameter values can be accessed through the `AppConfigurationContext`, as a dictionary where the keys are the input parameter keys and the values are the values provided by the user.
-
-Example:
-
-```csharp
-[AutomationEntryPoint(AutomationEntryPointType.Types.ConfigureApp)]
-public void Configure(Engine engine, AppConfigurationContext context)
-{
-   var entriesToDictionary = context.Values.ToDictionary(entry => entry.ID, entry => entry.Value);
-   var username = entriesToDictionary["username"];
-   var password = entriesToDictionary["password"];
-   
-   engine.Log("username:" + username);
-   engine.Log("password:" + password);
-}
-```
-
-> [!NOTE]
-> An example is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+To obtain the path to this directory from the install script, you can use `installer.GetSetupContentDirectory()`. If the package contains a `SetupContent` directory, this method will return the full path to this directory, so you can use the files in this folder to perform custom operations during installation of the package. If the folder does not exist, this method will return `null`.
 
 ## Uninstall.xml
 

@@ -11,7 +11,7 @@ uid: Troubleshooting_Surveyor
 
 ### Overview
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -51,7 +51,7 @@ click Export "#exportimport"
 class START classTerminal;
 class Additional,Surveyor classDecision;
 class etc,Views,RedundancyGroups,Export,Sla,Elements,Services, classExternalRef;
-</div>
+```
 
 ### Views
 

@@ -14,7 +14,7 @@ From DataMiner 10.1.0/10.1.1 onwards
 
 ## Fix
 
-Manually configure a custom port for NATS. See [Investigating NATS issues](xref:Investigating_NATS_Issues#manually-configuring-a-custom-port-for-nats).
+Manually configure a custom port for NATS. See [Investigating NATS issues](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use).
 
 ## Issue description
 

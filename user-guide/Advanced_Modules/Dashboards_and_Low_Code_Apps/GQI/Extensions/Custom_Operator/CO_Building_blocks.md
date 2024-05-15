@@ -2,65 +2,26 @@
 uid: CO_Building_blocks
 ---
 
-# Building blocks
+# Building blocks of a custom operator
 
 A custom operator implements predefined interfaces that can be considered building blocks as they add the desired functionality to the operator.
 
-At least **one of the following interfaces is required** for the class to be detected by GQI as a custom operator:
+The [*IGQIRowOperator*](xref:GQI_IGQIDataSource) and [*IGQIColumnOperator*](xref:GQI_IGQIDataSource) interfaces are used to identify the class as a custom operator. At least one of them should be implemented for the class to be detected by GQI as a custom operator.
 
-- **IGQIColumnOperator**
+All other interfaces add additional functionality.
 
-  The *IGQIColumnOperator* interface is used to create, rename, and add columns. This interface has one method:
+## Interfaces in a custom operator
 
-  | **Method** | **Parameters** | **Returns** | **Description** |
-  |--|--|--|--|
-  | HandleColumns | GQIEditableHeader | - | The GQI will request the implementation to handle the columns. |
+The available interfaces are:
 
-- **IGQIRowOperator**
+- [IGQIColumnOperator](xref:GQI_IGQIColumnOperator): Makes it possible to manipulate the columns.
 
-  The *IGQIRowOperator* interface is used to read and update cells within each row. This interface has one method:
+- [IGQIRowOperator](xref:GQI_IGQIRowOperator): Makes it possible to manipulate the rows.
 
-  | **Method** | **Parameters** | **Returns** | **Description** |
-  |--|--|--|--|
-  | HandleRow | GQIEditableRow | - | The GQI will request the implementation to handle the row. |
+- [IGQIInputArguments](xref:GQI_IGQIInputArguments): Retrieves input from the user through input arguments.
 
-The following **optional interfaces** can be implemented to add additional functionality:
+- [IGQIOnDestroy](xref:GQI_IGQIOnDestroy): Can be implemented to clean up resources after it has been used (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->).
 
-- **IGQIInputArguments**
+- [IGQIOnInit](xref:GQI_IGQIOnInit): Provides a way to initialize the custom operator with access to dependencies like the DMS (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->).
 
-  The *IGQIInputArguments* interface is used to request additional information from the user while configuring the data source. This interface has the following methods:
-
-  | **Method** | **Parameters** | **Returns** | **Description** |
-  |--|--|--|--|
-  | GetInputArguments | - | GQIArgument[] | Asks the user for additional information during data source configuration. |
-  | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Indicates that the arguments have been processed. The processed arguments can be found in the *OnArgumentsProcessedInputArgs*. |
-
-  > [!IMPORTANT]
-  > GQI does not validate the input arguments. For example, a user can input an SQL query as a text input argument, and GQI will forward it to the custom data source implementation without validation.
-
-- **IGQIOptimizableOperator**
-
-  The *IGQIOptimizableOperator* interface is used to optimize your custom operator based on other operators in a query.
-
-  Some common use cases include:
-
-  - Combining multiple operators into a single, more efficient operation.
-
-  - Forwarding certain operators to improve performance.
-
-  This interface has one method:
-
-  | **Method** | **Parameters** | **Returns** | **Description** |
-  |--|--|--|--|
-  | Optimize | IGQIOperatorNode<br>IGQICoreOperator | IGQIQueryNode | Intercepts how subsequent operators should be handled. Given the current query node and the next operator, it should return the resulting query node. |
-
-  > [!TIP]
-  > We recommend forwarding operators whenever possible as this enables the core framework to perform significant optimizations.
-
-  > [!IMPORTANT]
-  >
-  > - The `Optimize` method may not be called if there are no supported subsequent operators.
-  > - The `Optimize` method will be called each time there is a new next operator.
-
-  > [!NOTE]
-  > Currently, the `Optimize` method only triggers for filter operators (typed `IGQIFilterOperator`).
+- [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator): Used in order to optimize the custom operator based on other operators in a query.

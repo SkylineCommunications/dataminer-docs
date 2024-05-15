@@ -9,7 +9,7 @@ uid: nats_benchmarks
 ### Client
 
 - Intel Core i7-8700 CPU @ 3.20GHz
-- 32GB RAM
+- 32 GB RAM
 - Hosting all clients
 
 ### Servers

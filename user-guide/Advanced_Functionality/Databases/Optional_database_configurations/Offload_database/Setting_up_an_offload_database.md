@@ -166,6 +166,12 @@ The final step is the configuration of the DMS.
 
    1. In the panel on the right, right-click *TCP/IP* and select *Enable*.
 
+   1. Double-click *TCP/IP* to open its properties, and select *IP Addresses* at the top.
+
+   1. Scroll down, remove the value for *TCP Dynamic Ports*, and fill in *1433* for *TCP Port*.
+
+   1. Click *OK* to save and close the properties.
+
    1. In the panel on the left, go to the SQL Server Services, right-click SQL Server (MSSQLSERVER) and select *Restart*.
 
    1. Close the SQL Server Configuration Manager.

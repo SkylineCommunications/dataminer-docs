@@ -6,7 +6,7 @@ uid: KI_elements_not_loading_in_DMS_with_multiple_ES
 
 ## Affected versions
 
-Feature release versions from DataMiner 10.3.10 onwards.
+Feature release versions from DataMiner 10.3.10 to 10.4.1.
 
 ## Cause
 
@@ -35,7 +35,7 @@ Execute the following procedure for each DataMiner Agent in your DMS:
 
 ## Fix
 
-No fix is available yet.<!-- RN 37446 -->
+Install DataMiner 10.4.2.<!-- RN 37446 -->
 
 ## Description
 

@@ -10,13 +10,27 @@ uid: Troubleshooting_procedures
 
 - [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
 
+- [Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup](xref:Elastic_not_starting_after_upgrade_cleanup)
+
+- [Investigating dataminer.services connection issues](xref:Cloud_Connection_Issues)
+
+- [Investigating issues with dataminer.services features](xref:Investigating_Dataminerservices_Feature_Issues)
+
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
+
+- [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+
+- [Investigating web issues](xref:Investigating_Web_Issues)
 
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
+- [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
+
+- [Re-registering DataMiner services and DLLs](xref:Re-registering_DataMiner_services_and_DLLs)
+
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
 
-- [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
+- [Troubleshooting STaaS issues](xref:Troubleshooting_STaaS_Issues)
 
 > [!TIP]
 > See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)

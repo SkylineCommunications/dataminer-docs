@@ -11,14 +11,14 @@ Spectrum measurement points are often configured to set one or more parameters b
 
 1. On a spectrum analyzer card, go to the *Measurement points* menu and select *Edit measurement point*.
 
-2. In the left pane of the *Edit measurement point* window, select the measurement point.
+1. In the left pane of the *Edit measurement point* window, select the measurement point.
 
-3. In the *Setup* section, select *Set up your measurement point via an Automation script*.
+1. In the *Setup* section, select *Set up your measurement point via an Automation script*.
 
-4. Click *\<empty>*, and select an Automation script in the drop-down list.
+1. Click *\<empty>*, and select an Automation script in the drop-down list.
 
-5. In the boxes below the script name, fill in the necessary dummies and parameters for the script.
+1. In the boxes below the script name, fill in the necessary dummies and parameters for the script.
 
-6. If necessary, select additional options for the way the Automation script is run. For more information on these options, see [Script execution options](xref:Script_execution_options).
+1. If necessary, select additional options for the way the Automation script is run. For more information on these options, see [Script execution options](xref:Script_execution_options).
 
-7. Click *Apply* to apply your changes.
+1. Click *Apply* to apply your changes.

@@ -47,6 +47,9 @@ When you compare two protocols, DIS will also automatically validate both these 
 
 - *Validator* - The differences between the two protocol validations.
 
+> [!NOTE]
+> As comparing between two solutions is not possible, the C# checks will not throw any errors because not all the required information is present.
+
 When you right-click an error in the list, a shortcut menu offers you the following options:
 
 | Command | Function |
@@ -54,7 +57,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Navigate | Go to the line in the protocol that triggered the error. |
 | Copy | Copy the error to the Windows Clipboard. |
 | Show Details... | Show all details of the error in a separate window. |
-| Suppress... | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
+| Suppress... | Suppress the error.<br>Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
 
 > [!NOTE]
 >

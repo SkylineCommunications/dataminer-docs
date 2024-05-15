@@ -18,15 +18,7 @@ Under the *VISUAL* node, one or more pages are displayed that contain a graphic 
 
 ### DATA
 
-Up to DataMiner 9.0.0, The *DATA* node contains subnodes indicating the status of service children. Expand one of these subnodes to view all service children with this particular status. Each service child node can in turn be expanded to display its data pages.
-
-From DataMiner 9.0.5 onwards, service children are displayed in a different way depending on their status:
-
-- Devices that are both included and in use are displayed at the top of the list, respectively followed by devices that are not in use and by excluded devices.
-
-- Devices that are not in use are grayed out.
-
-- For devices that are not in use or excluded, the status of the device is added in parentheses to the device name.
+The data pages of a service represent the different service children, i.e. the elements or partial elements included in the service.
 
 A service child can have one of the following statuses:
 
@@ -36,11 +28,19 @@ A service child can have one of the following statuses:
 
 - **Excluded**: The device is excluded based on a condition.
 
+Service children are displayed in a different way depending on their status:
+
+- At the top of the list, service children are displayed that are both included and in use. Below them, you will find the service children that are not in use, and below those the service children that are excluded.
+
+- Service children that are not in use are grayed out.
+
+- For service children that are not in use or excluded, the status is added in parentheses to the name of the element within the service.
+
 > [!TIP]
-> See also:
-> [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service)
+> See also: [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service)
 
 > [!NOTE]
+>
 > - For services that were created with a service protocol, additional *Summary* pages are available, such as the *General parameters* page, which is similar to the General parameters page of an element.
 > - In the Cube user settings, you can select to show or hide excluded devices and/or the General parameters page. See [Card settings](xref:User_settings#card-settings).
 
@@ -49,8 +49,7 @@ A service child can have one of the following statuses:
 This page displays all alarms related to the service, in the default Alarm Console layout.
 
 > [!TIP]
-> See also:
-> [Working with the Alarm Console](xref:Working_with_the_Alarm_Console)
+> See also: [Working with the Alarm Console](xref:Working_with_the_Alarm_Console)
 
 ### SLA
 
@@ -61,15 +60,14 @@ This page is only available for services that are monitored by an SLA element. I
 A graphic representation of the alarm distribution, alarm events, alarm states, and a timeline. You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
 
 > [!TIP]
-> See also:
-> [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)
+> See also: [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)
 
 ### DASHBOARDS
 
-This page links to the DMS Dashboards app.
+This page links to the DMS Dashboards module.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
 
 ### DOCUMENTS
 
@@ -84,4 +82,4 @@ On this page, you can add short notes to the service. For more information, see 
 On this page, you can add, view and edit extensive annotations to the service. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.

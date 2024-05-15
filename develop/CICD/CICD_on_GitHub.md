@@ -19,6 +19,6 @@ For more information, refer to:
 
 - [CI/CD starter workflows](xref:github_starter_workflows)
 - [CI/CD reusable workflows](xref:github_reusable_workflows)
-- [Deploy action](xref:Deploying_Automation_scripts_from_a_GitHub_repository)
+- [CI/CD GitHub Examples](xref:CICD_GitHub_Examples)
 - [Skyline-specific: migration efforts](xref:migration_from_gerrit_to_github)
 - [Skyline-specific: Guidelines for using GitHub](xref:Using_GitHub_for_CICD)

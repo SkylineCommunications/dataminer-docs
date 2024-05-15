@@ -29,7 +29,7 @@ By default, this attribute is omitted. As a consequence, the groups will be exec
 
 ## Examples
 
-In the following example, the will be started within 300 seconds (depending on the random number) every 60000 milliseconds:
+In the following example, the timer will be started within 300 seconds (depending on the random number) every 60000 milliseconds:
 
 ```xml
 <Time initial="random=0:300">60000</Time>

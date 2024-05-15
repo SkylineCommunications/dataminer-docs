@@ -6,7 +6,7 @@ keywords: allocation awareness, elasticsearch
 # Configuring a multiple data center Elasticsearch cluster
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
 
 When the nodes in the Elasticsearch cluster are hosted in different data centers, racks, or zones, you should use **allocation awareness**. This will ensure that the data is correctly spread between the different locations and that you will still have all your data in case the connection to a location is lost.
 

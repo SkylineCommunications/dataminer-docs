@@ -6,10 +6,10 @@ uid: Uninstalling_a_DataMiner_Agent
 
 There are two possibilities to uninstall a DataMiner Agent:
 
-- [Using the DataMiner Installer](#uninstalling-a-dma-using-the-dataminer-installer)
+- [Using the DataMiner Installer](#uninstalling-a-dma-using-the-installer)
 - [Using a manual procedure](#uninstalling-a-dma-using-a-manual-procedure)
 
-## Uninstalling a DMA using the DataMiner Installer
+## Uninstalling a DMA using the Installer
 
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
@@ -34,6 +34,10 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.
+
+1. In case other systems have [DxMs](xref:DataMinerExtensionModules) that request data from the Agent you are uninstalling (such as [Data Aggregator](xref:Data_Aggregator_DxM)), make sure to disable these requests.
+
+   This will ensure that those DxMs do not keep trying to send requests to the uninstalled Agent.
 
 ## Uninstalling a DMA using a manual procedure
 
@@ -119,3 +123,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.
+
+1. In case other systems have [DxMs](xref:DataMinerExtensionModules) that request data from the Agent you are uninstalling (such as [Data Aggregator](xref:Data_Aggregator_DxM)), make sure to disable these requests.
+
+   This will ensure that those DxMs do not keep trying to send requests to the uninstalled Agent.
