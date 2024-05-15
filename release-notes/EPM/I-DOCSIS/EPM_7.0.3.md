@@ -17,6 +17,14 @@ Several improvements have been implemented in the EPM_I_DOCSIS_AddNewCcapCmPair 
 - If fields that must be filled in are still empty, the field validation will now prevent the user from proceeding.
 - When the script has been fully executed, a final page is now displayed with important information regarding the element creation process. If a message labeled as "[ERROR]" is shown in this window, this means that the creation of a specific element could not be completed. If a message labeled as "[INFO]" is shown, this message contains important information regarding the creation of elements.
 
+#### PNM threshold parameters now configurable for CM collectors via front end [ID_39603]
+
+Up to now, to update the PNM threshold settings for all collectors, the Multiple Set feature had to be used. Now you can instead configure these via the front end, on the *Configuration* > *Thresholds Settings* > *PNM* page.
+
+The following PNM parameters are available: Velocity Factor (VF) for Coax Cable, Non-Main-Tap Energy Ratio (NMTER) Threshold, Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold, and Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold.
+
+To complete setting a parameter, click the *Apply* button. This will execute an Automation script that will set the values to all CM collectors.
+
 ## Changes
 
 ### Enhancements
@@ -36,6 +44,10 @@ For the following parameters in the upstream and downstream threshold tables, th
 #### CCAP alarms now linked to EPM to allow navigation to EPM card from Alarm Console [ID_39539]
 
 All alarms originating from the CCAP Core Overview table in any of the CCAP collectors are now linked to the EPM object, so that users can now navigate to the EPM object from the Alarm Console by right-clicking an alarm and selecting to open the EPM card.
+
+#### Generic DOCSIS CM Collector: Improved performance [ID_39658]
+
+The Generic DOCSIS CM Collector has been updated to improve performance. This enhancement should specifically reduce the load on the CPU.
 
 ### Fixes
 
