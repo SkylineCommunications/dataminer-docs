@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 15 May 2024 - Enhancement - Admin - Organization and DMS Settings Audits [ID_39669]
+
+From now on changing settings on the organization or DMS will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
+
 #### 10 May 2024 - Enhancement - Admin - More information included in DMS overview [ID_39563]
 
 The DMS overview now shows more information about the system, including DxM and connectivity information.
