@@ -133,20 +133,30 @@ To check the data synchronization state after you have set up Failover, see [Syn
 
 ## Preparing authentication and user provisioning
 
-DataMiner supports SAML using different *Identity Providers*, such as [Okta](xref:SAML_using_Okta), [Microsoft Entra ID](xref:SAML_using_Entra_ID) and [Azure B2C](xref:SAML_using_Azure_B2C).
-When using this SAML authentication on the primary DMA, manual steps need to be taken to ensure that the configuration also exists on the backup DMA.  
-To do that, the configuration of the backup agent must be made to mirror the configuration on the primary DMA.
+DataMiner supports SAML using different identity providers, such as [Okta](xref:SAML_using_Okta), [Microsoft Entra ID](xref:SAML_using_Entra_ID), and [Azure B2C](xref:SAML_using_Azure_B2C).
 
-This can be done when the backup DataMiner agent is stopped.  
-Adapting DataMiner.xml on the backup DMA and copying the relevant tags such as the *\<ExternalAuth\>* tag and *\<AzureAD\>* tags (the latter only when using AzureAD) from the primary agent's DataMiner.xml.
-This includes a reference to the place where the Identity Provider's *ipMetaData.xml* file is stored. This file is usually stored on the *identity provider* and is filled in as an *url* in DataMiner.xml.
-Furthermore, the *C:\Skyline DataMiner\spMetaData* file should be copied from the primary to the backup DMA. For references to the configuration of the *spMetaData* file, see the pages for [Microsoft Entra ID or Azure B2C](xref:SAML_using_Entra_ID#creating-a-dataminer-metadata-file) or [Okta](xref:SAML_using_Okta).
-As mentioned, we support different *identity providers*.
-To identify which tags need to be mirrored for each *identity provider*, follow the guides at [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
-Make sure that both *authentication* and *user provisioning* are taken into consideration.
+If SAML authentication is used on the primary DMA, you will need to ensure that the configuration also exists on the backup DMA. For this, the configuration of the backup Agent must be made to mirror the configuration on the primary DMA:
+
+1. Make sure the backup DMA is stopped.
+
+1. On the primary DMA, open `C:\Skyline DataMiner\DataMiner.xml`.
+
+1. Copy the relevant tags such as the *\<ExternalAuth\>* and *\<AzureAD\>* tags, depending on the identity provider used, from the primary DMA's *DataMiner.xml*.
+
+   This includes a reference to the place where the identity provider's *ipMetaData.xml* file is stored. This file is usually stored on the identity provider and is filled in as a URL in DataMiner.xml.
+
+   > [!NOTE]
+   > To identify which tags are required for your specific setup, refer to [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML). Make sure that both authentication and user provisioning are taken into consideration.
+
+1. On the backup DMA, open `C:\Skyline DataMiner\DataMiner.xml` and paste the copied tags where appropriate.
+
+1. In case the *ipMetaData.xml* file is located on the primary DMA instead of referenced by URL in *DataMiner.xml*, copy this file to the same location on the backup DMA as is referenced in *DataMiner.xml*.
+
+1. On the primary DMA, locate the file `C:\Skyline DataMiner\spMetaData` and copy it to the same location on the backup DMA.
+
+   For information on the *spMetaData* file, refer to [Microsoft Entra ID or Azure B2C](xref:SAML_using_Entra_ID#creating-a-dataminer-metadata-file) or [Okta](xref:SAML_using_Okta), depending on your setup.
+
+1. Start the backup DMA.
 
 > [!IMPORTANT]
-> During this, make sure that that the *Identity Provider* has a reference to the address representing the online DMA. When referring to the DMS via a IP address, ensure that the *Identity Provider* refers to the *Virtual IP address* (the IP address that represents the online DMA) instead of the DMA's *private IP*.
-
-> [!NOTE]
-> When the *ipMetaData* file is located on the primary DMA instead of being referenced by URL in DataMiner.xml, this file also needs to be copied to the backup DMA on the same location as referenced in DataMiner.xml.
+> While you do this, also make sure that that the identity provider has a reference to the address representing the online DMA. If it refers to the DMS via an IP address, make sure that the identity provider refers to the **virtual IP address** (i.e. the IP address that represents the online DMA) instead of a DMA's private IP address.
