@@ -51,6 +51,12 @@ In low-code apps, you can now configure actions for a new *On close* event, whic
 > - Navigating to the next page will be blocked until all configured actions are executed. Therefore, it is good practice to only configure actions that do not take too long.
 > - The existing *On page load* event has now been renamed to *On open*.
 
+#### Low-Code Apps: New 'Close all panels' action [ID_39625]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In low-code apps, you can now configure a *Close all panels* action. As its name suggests, this action will close all panels when executed.
+
 ## Changes
 
 ### Enhancements
@@ -115,8 +121,8 @@ Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not
 
 Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not be able to run a GQI query that used the 'Get object manager instances' data source.
 
-#### Dashboards app: Access permissions for a private dashboard would be granted to an incorrect user [ID_39610]
+#### Dashboards app: Access permissions for a private dashboard would be linked to an incorrect user name [ID_39610]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be granted to the domain controller user instead of your DataMiner user.
+When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be linked to the domain controller user name instead of your DataMiner user name.
