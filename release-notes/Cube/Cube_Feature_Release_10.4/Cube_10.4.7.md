@@ -28,6 +28,12 @@ uid: Cube_Feature_Release_10.4.7
 
 When, in the *Update Center* window, you clicked *Check for updates*, up to now, Cube would use DCP user authentication to authenticate you. From now on, Cube will use Azure B2C authentication instead.
 
+#### Visual Overview: Enhanced performance when loading shapes containing ParametersSummary data fields [ID_39477]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading shapes containing *ParametersSummary* data fields.
+
 ### Fixes
 
 #### Alarm Console: Undocked alarm card would not indicate which view was selected [ID_39494]
