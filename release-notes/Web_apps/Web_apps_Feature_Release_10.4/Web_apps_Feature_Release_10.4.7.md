@@ -114,3 +114,9 @@ Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not be able to run a GQI query that used the 'Get object manager instances' data source.
+
+#### Dashboards app: Access permissions for a private dashboard would be granted to an incorrect user [ID_39610]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be granted to the domain controller user instead of your DataMiner user.
