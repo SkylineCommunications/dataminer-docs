@@ -9,6 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
+
+When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
+
+#### 16 May 2024 - Enhancement - Catalog - Show apps menu [ID_39621]
+
+From now now, clicking the logo of the Catalog app will open the apps menu.
+This apps menu provides quick links to our other cloud apps.
+
 #### 16 May 2024 - Enhancement - Admin - DMS overview [ID_39677] [ID_39678]
 
 A agent will now show a message that both failover agents need to have the latest CoreGateway DxM version installed in order to get more information about failover.
