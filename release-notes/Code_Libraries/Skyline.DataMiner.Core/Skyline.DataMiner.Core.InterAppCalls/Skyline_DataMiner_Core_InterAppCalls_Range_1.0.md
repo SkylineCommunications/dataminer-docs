@@ -18,7 +18,7 @@ Previously, it was possible to reply to an InterApp call in several ways that in
 
 #### Breaking change - isLegacyDestination removed
 
-The *isLegacyDestination* argument is now no longer available for the *Send* method. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* NuGet to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
+The *isLegacyDestination* argument is now no longer available for the *Send* method. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* NuGet to the current library. This change occurred several years ago, and as such, this argument has been dropped to improve library code maintainability.
 
 #### New feature - Enhanced efficiency on InterApp reply calls
 
@@ -26,7 +26,7 @@ The scalability and performance of InterApp calls have been drastically improved
 
 The latest benchmark tests, at the time of release, demonstrate that the roundtrip time of an InterApp call with a response is over 100 times faster (600 ms to 6 ms), and the load on the SLNet process has been significantly reduced.
 
->[!NOTE]
+> [!NOTE]
 >
 > - For this improvement to be active, DataMiner version 10.3.12 or higher must be installed. Lower DataMiner versions will dynamically fall back to using SLNet subscriptions.
 > - It is possible to forcibly disable the use of the new broker technology by either adding *LegacyInterAppSubscriptions* to the *C:\Skyline DataMiner\SoftLaunchOptions.xml* file or adjusting the source code to send a call with *allowBroker* set to *false*.
