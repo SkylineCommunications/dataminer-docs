@@ -172,6 +172,12 @@ Because of a number of enhancements, overall memory usage has been reduced, espe
 
 SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
 
+#### GQI: Enhanced sorting of indexed logger tables [ID_38857]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+A number of enhancements have been made with regard to the sorting of indexed logger tables.
+
 #### Grouping of GQI event messages [ID_38913]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

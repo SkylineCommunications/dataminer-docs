@@ -35,6 +35,12 @@ The factory reset tool `SLReset.exe` will now perform the following additional a
 
 ### Enhancements
 
+#### GQI: Enhanced sorting of indexed logger tables [ID_38857]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+A number of enhancements have been made with regard to the sorting of indexed logger tables.
+
 #### Cassandra & Cassandra cluster: Enhanced performance when querying the maskstate table [ID_39192]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
