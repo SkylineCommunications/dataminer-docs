@@ -78,9 +78,10 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
-#### Security enhancements [ID_39611]
+#### Security enhancements [ID_39611] [ID_39387]
 
 <!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+<!-- 39387: MR 10.5.0 - FR 10.4.7 -->
 
 A number of security enhancements have been made.
 
