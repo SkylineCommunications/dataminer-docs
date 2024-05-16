@@ -23,7 +23,7 @@ uid: Adding_a_regular_DataMiner_Agent
 
 1. In the *Manage* tab, below the list of DMAs in the cluster, click *Add*.
 
-1. Enter the IP address or the hostname of the DMA you want to add and click *Add*.
+1. Enter the IP address of the DMA you want to add and click *Add*.
 
    > [!NOTE]
    > To avoid a mix of different environments, enter the IP address instead of the hostname if the DataMiner System already contains a Failover pair configured with virtual IP addresses. From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards, adding a hostname in such a case will be impossible.<!--RN 37075-->
