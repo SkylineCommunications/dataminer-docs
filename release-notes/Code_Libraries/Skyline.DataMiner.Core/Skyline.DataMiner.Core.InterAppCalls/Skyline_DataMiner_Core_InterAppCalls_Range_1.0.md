@@ -11,56 +11,51 @@ uid: Skyline_DataMiner_Core_InterAppCalls_Range_1.0
 
 #### Breaking change - Replying to an InterApp message
 
-Where before you were allowed to reply to an InterApp call in several ways that involved setting parameter 9000001 (or a similar PID) in some way, this has now changed to only allow a *.Reply* call on the incoming message.
+Previously, it was possible to reply to an InterApp call in several ways that involved setting parameter 9000001 (or a similar PID) in some way. Now only a *.Reply* call on the incoming message is allowed. This change allows the library to dynamically select a more efficient underlying communication protocol if a high enough DataMiner version is used or to continue using SLNet subscriptions as a fallback.
 
-This change allows our library to dynamically select a more efficient underlying communication protocol if you have a high enough DataMiner version, or to continue using SLNet Subscriptions as a fallback.
-
->[!NOTE]
-> The DIS Validator should help report possible invalid code when updating to the new InterApp branch.
+> [!NOTE]
+> The DIS Validator should help report possible invalid code when you update to the new InterApp branch.
 
 #### Breaking change - isLegacyDestination removed
 
-The *Send* method has removed the *isLegacyDestination* argument. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* nuget to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
+The *Send* method has removed the *isLegacyDestination* argument. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* NuGet to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
 
 #### New feature - Enhanced efficiency on InterApp reply calls
 
 The scalability and performance of InterApp calls have been drastically improved through the use of high-speed and modern message broker technology in the background.
 
-The latest benchmark tests, at the time of release, demonstrate that the roundtrip time of an InterApp call with a response is over 100 times faster (600ms to 6ms) and significantly reduces the utilization of the SLNet process.
+The latest benchmark tests, at the time of release, demonstrate that the roundtrip time of an InterApp call with a response is over 100 times faster (600 ms to 6 ms), and the load on the SLNet process has been significantly reduced.
 
 >[!NOTE]
-> For this improvement to be active, you require DataMiner version 10.3.12 or higher. Lower DataMiner versions will dynamically fall back to using SLNet Subscriptions.
-
->[!NOTE]
-> It is possible to forcibly disable the use of the new broker technology by either adding *LegacyInterAppSubscriptions* to the *C:\Skyline DataMiner\SoftLaunchOptions.xml* file or by adjusting your source code to send a call with *allowBroker* set to *false*.
-
->[!NOTE]
-> As of the latest DataMiner version (10.4.6), the default maximum message size with the new message broker is configured to 30 MB.
+>
+> - For this improvement to be active, DataMiner version 10.3.12 or higher must be installed. Lower DataMiner versions will dynamically fall back to using SLNet subscriptions.
+> - It is possible to forcibly disable the use of the new broker technology by either adding *LegacyInterAppSubscriptions* to the *C:\Skyline DataMiner\SoftLaunchOptions.xml* file or adjusting the source code to send a call with *allowBroker* set to *false*.
+> - As of DataMiner 10.4.6, the default maximum message size with the new message broker is set to 30 MB.
 
 #### New feature - Enhanced security: Remote code execution exploit prevention
 
-Several classes are now checked and blocked from getting deserialized when using InterApp calls. This is to avoid bad actors abusing these calls and their ability to maliciously run software as part of JSON deserialization, something called remote code execution exploits.
+Several classes are now checked and blocked from getting deserialized when InterApp calls are used. This will prevent bad actors from abusing these calls and remove their ability to maliciously run software as part of JSON deserialization (i.e. remote code execution exploits).
 
-If such a potentially risky class is detected, you will receive a *SecurityException* indicating a potential RCE exploitation was found.
+If such a potentially risky class is detected, a *SecurityException* will indicate that a potential RCE exploitation was found.
 
 ### 1.0.0.3
 
 #### Refactor - DataMinerSystem library upgraded
 
-The DataMinerSystem dependency was upgraded to the latest version.
+The DataMinerSystem dependency has been upgraded to the latest version.
 
 #### Fix - Reply message
 
-The reply method had a bug that would send the incorrect message back. This has been fixed.
+It could occur that the reply method sent an incorrect message back. This has been fixed.
 
 ### 1.0.0.2
 
 #### New feature - Support for Legacy namespaces
 
-When sending a message you can set isLegacyDestination to true when destination uses legacy class library (SLC.Lib.*) with namespace Skyline.DataMiner.Library.Common.
+When sending a message, you can now set *isLegacyDestination* to true when the destination uses the legacy class library (SLC.Lib.\*) with namespace *Skyline.DataMiner.Library.Common*.
 
 ### 1.0.0.1
 
 #### New feature - Migration from Class Library
 
-InterApp classes and functionality have been extracted into a publicly available NuGet library. This was extracted from Class Library range 1.2.0.x.
+InterApp classes and functionality have been extracted into a publicly available NuGet library. This has been extracted from Class Library range 1.2.0.x.
