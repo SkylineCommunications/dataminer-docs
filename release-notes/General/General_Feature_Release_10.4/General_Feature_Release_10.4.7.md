@@ -122,3 +122,11 @@ Also, when a group contained single parameters in combination with a partial tab
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+
+#### Interactive Automation script was not able to continue once a lost connection was re-established [ID_39487]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
+
+From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
