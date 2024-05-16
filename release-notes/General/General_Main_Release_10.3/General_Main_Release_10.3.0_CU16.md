@@ -12,6 +12,13 @@ uid: General_Main_Release_10.3.0_CU16
 
 ### Enhancements
 
+#### Security enhancements [ID_38263] [ID_39611]
+
+<!-- 38263: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.3 -->
+<!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+A number of security enhancements have been made.
+
 #### Cassandra & Cassandra cluster: Enhanced performance when querying the maskstate table [ID_39192]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
@@ -23,13 +30,6 @@ Because of a number of enhancements, on systems using a Cassandra and Cassandra 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
-
-#### Security enhancements [ID_38263] [ID_39611]
-
-<!-- 38263: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.3 -->
-<!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
-
-A number of security enhancements have been made.
 
 ### Fixes
 
