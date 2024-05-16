@@ -5,7 +5,7 @@ uid: Skyline_DataMiner_Core_InterAppCalls_Range_1.0
 # Skyline DataMiner Core InterAppCalls Range 1.0
 
 > [!NOTE]
-> Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is a continuation and split from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
+> Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is based on the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
 
 ### 1.0.1.1
 
@@ -18,7 +18,7 @@ Previously, it was possible to reply to an InterApp call in several ways that in
 
 #### Breaking change - isLegacyDestination removed
 
-The *Send* method has removed the *isLegacyDestination* argument. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* NuGet to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
+The *isLegacyDestination* argument is now no longer available for the *Send* method. This argument was intended to briefly assist in the move from the obsolete *SLC.Lib.* NuGet to the current library. This change occurred several years ago, and as such, this argument was dropped to improve library code maintainability.
 
 #### New feature - Enhanced efficiency on InterApp reply calls
 
