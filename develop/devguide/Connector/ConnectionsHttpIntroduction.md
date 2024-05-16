@@ -10,7 +10,9 @@ Many devices support HTTP communication (e.g. returning XML data as a response t
 
 DataMiner supports HTTP communication, allowing protocols to define one or more connections of type "http". DataMiner runs a process called "SLPort" which takes care of all communication from and to devices connected to either a serial port or an IP port.
 
-When multiple elements are polling the same URL, they all create their own connection. Also, when an element has two HTTP interfaces that point to the same URL, this results in two connections. A connection to the data source is created before each "Session" and closed again after the last request within that "Session".
+When multiple elements are polling the same URL, they all create their own connection. Also, when an element has two HTTP interfaces that point to the same URL, this results in two connections.
+
+A connection to the data source is created before each "Session" and closed again after the last request within that "Session".
 
 > [!NOTE]
 > For more information about HTTP, refer to:
