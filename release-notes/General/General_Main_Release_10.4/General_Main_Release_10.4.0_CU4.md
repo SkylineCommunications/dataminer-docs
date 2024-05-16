@@ -41,6 +41,12 @@ In some cases, user accounts could become corrupted and group memberships could 
 
 Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
 
+#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
+
 #### Problem with SLNet when information on hanging calls was being retrieved [ID_39373]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->

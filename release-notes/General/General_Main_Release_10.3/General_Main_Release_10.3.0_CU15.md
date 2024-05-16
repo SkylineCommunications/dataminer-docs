@@ -46,12 +46,6 @@ Because of a number of enhancements, Cube clients connected to a DataMiner Agent
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
-#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
-
-<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
-
-When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
-
 #### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
