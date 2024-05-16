@@ -9,7 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 15 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
+#### 16 May 2024 - Enhancement - Admin - DMS overview [ID_39677] [ID_39678]
+
+A agent will now show a message that both failover agents need to have the latest CoreGateway DxM version installed in order to get more information about failover.
+
+#### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
 
 From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
 
