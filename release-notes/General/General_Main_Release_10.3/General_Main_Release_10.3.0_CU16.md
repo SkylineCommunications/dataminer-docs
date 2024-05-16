@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU16
 
 ### Enhancements
 
+#### Cassandra & Cassandra cluster: Enhanced performance when querying the maskstate table [ID_39192]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, on systems using a Cassandra and Cassandra cluster database, overall performance has increased when querying the maskstate database table. As a result, elements will start up quicker depending on the number of masked objects in the database.
+
 #### Service & Resource Management: Enhanced performance when creating multiple bookings simultaneously [ID_39390]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
