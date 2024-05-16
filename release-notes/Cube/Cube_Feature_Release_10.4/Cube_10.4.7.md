@@ -22,7 +22,11 @@ uid: Cube_Feature_Release_10.4.7
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Update Center: DCP user authentication replaced by Azure B2C authentication [ID_39466]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When, in the *Update Center* window, you clicked *Check for updates*, up to now, Cube would use DCP user authentication to authenticate you. From now on, Cube will use Azure B2C authentication instead.
 
 ### Fixes
 
