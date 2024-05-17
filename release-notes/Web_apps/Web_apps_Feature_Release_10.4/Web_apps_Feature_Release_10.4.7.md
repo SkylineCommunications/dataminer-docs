@@ -63,6 +63,15 @@ In low-code apps, you can now configure a *Close all panels* action. As its name
 
 In low-code apps, you can now configure actions for a new *On open* panel event, which will be triggered each time a panel is opened.
 
+#### Low-Code Apps: New 'On close' panel event [ID_39668]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In low-code apps, you can now configure actions for a new *On close* panel event, which will be triggered when a panel is closed, either by you clicking an overlay or when a *Close panel* or *Close all panels* action is executed.
+
+> [!NOTE]
+> The panel will only be closed when all configured actions have been executed. Therefore, it is good practice to only configure actions that do not take too long.
+
 ## Changes
 
 ### Enhancements
