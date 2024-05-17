@@ -155,3 +155,11 @@ In some cases, an `InvalidOperationException` could be thrown when a .NET Framew
 When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+
+#### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
+
+From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
