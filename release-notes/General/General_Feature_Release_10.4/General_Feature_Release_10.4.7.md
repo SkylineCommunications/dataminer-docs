@@ -78,6 +78,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### SLAnalytics: Enhanced alarm template monitoring [ID_39561]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When an alarm template contained multiple lines for the same parameter, each with a different filter, up to now, SLAnalytics would only take into account the lines that were being monitored. From now on, as soon as one line related to a specific parameter is being monitored, SLAnalytics will take into account all lines related to that parameter.
+
 #### Security enhancements [ID_39611] [ID_39387]
 
 <!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
