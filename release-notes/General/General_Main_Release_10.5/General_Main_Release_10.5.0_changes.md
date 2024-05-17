@@ -395,6 +395,12 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
 
+#### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
+
 #### SLLogCollector: Enhancements to make sure the JAVA_HOME variable is set [ID_39409]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
