@@ -178,7 +178,7 @@ items:
     - name: Pricing
       topicUid: Pricing
       items:
-      - name: Commercial models summary
+      - name: Commercial and deploy models summary
         topicUid: Pricing_Commercial_Models
       - name: Usage-based services
         topicUid: Pricing_Usage_based_service

@@ -26,7 +26,7 @@ This plan is primarily intended for DataMiner platform users who have free or pa
 
 The *Continuity* plan provides unlimited remote technical support during business hours, software updates and upgrades for the core software and connectors, proactive support services, and guaranteed response and corrective action times.
 
-This is the standard support plan for users with perpetual-use licenses and subscriptions starting from a minimum [Monthly Utilization Allowance](xref:Pricing_Commercial_Models#subscription-plan-vs-pay-per-use-plan).
+This is the standard support plan for users with perpetual-use licenses and subscriptions starting from a minimum [Monthly Utilization Allowance](xref:Pricing_Commercial_Models).
 
 ### Evolve
 
