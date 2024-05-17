@@ -155,7 +155,7 @@ The elements will be created with the following specifications:
    > [!NOTE]
    >
    > - The CSV file must be present on the server running the DMA.
-   > - The CSV file has to have the following structure: ElementName, Ccap_DMA, Collector_DMA, Protocol, IpAddress, GetCommunityString, SetCommunityString,GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
+   > - The CSV file has to have the following structure: ElementName*, Ccap_DMA*, Collector_DMA*, Protocol*, IpAddress*, GetCommunityString, SetCommunityString,GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
 
 1. Click *Create Bulk*.
 
@@ -168,6 +168,8 @@ Here is an example of the CSV file with the mandatory headers and the content of
 | filename1 | EPM-DMA03 | EPM-DMA03 | CISCO CBR-8 CCAP Platform | 10.11.12.11 | getPublic | setprivate | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US1 | 123 |
 | filename2 | EPM-DMA04 | EPM-DMA04 | CISCO CBR-8 CCAP Platform | 10.11.12.12 | getprivate | setPublic | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US2 | 123 |
 
+Each time the script is executed, it will attempt to create five (5) elements. If there are fewer than five elements left to create, it will create as many as possible without any issues. After creating the first set of elements, the user can execute the script again, without modifying the CSV file, and it will attempt to create the next set of five elements.
+
 > [!NOTE]
 >
 > - For the **Protocol** column, only the following values are currently accepted:
@@ -177,3 +179,8 @@ Here is an example of the CSV file with the mandatory headers and the content of
 >   - CISCO CBR-8 CCAP Platform
 >   - Huawei 5688-5800 CCAP Platform
 > - Click the *Cancel* button in any window to close the Automation script at any time.
+
+
+## Closing window after Script execution
+
+After the script is executed, whether for bulk creation or single creation, a window will appear displaying important information about the execution. It is crucial to read this window carefully. If any line begins with [ERROR], it means that the creation of that particular element failed and was aborted. Lines beginning with [INFO] will provide details about any issues encountered after the creation of the elements or confirm the successful completion of processes.
