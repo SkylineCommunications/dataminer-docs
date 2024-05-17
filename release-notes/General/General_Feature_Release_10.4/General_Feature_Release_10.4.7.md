@@ -53,6 +53,12 @@ Because of a number of enhancements, on systems using a Cassandra and Cassandra 
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
+#### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
+
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -77,6 +83,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
+
+#### SLAnalytics: Enhanced alarm template monitoring [ID_39561]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When an alarm template contained multiple lines for the same parameter, each with a different filter, up to now, SLAnalytics would only take into account the lines that were being monitored. From now on, as soon as one line related to a specific parameter is being monitored, SLAnalytics will take into account all lines related to that parameter.
 
 #### Security enhancements [ID_39611] [ID_39387]
 
@@ -143,3 +155,11 @@ In some cases, an `InvalidOperationException` could be thrown when a .NET Framew
 When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+
+#### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
+
+From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.

@@ -504,3 +504,11 @@ This issue has now been fixed.
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+
+#### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
+
+From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
