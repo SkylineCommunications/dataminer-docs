@@ -11,6 +11,9 @@ Expected duration: 15 minutes
 > [!NOTE]
 > The content and screenshots for this tutorial were created in DataMiner 10.4.6.
 
+> [!TIP]
+>See also: [Kata #31: Master correlation rules](https://community.dataminer.services/courses/kata-31/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
