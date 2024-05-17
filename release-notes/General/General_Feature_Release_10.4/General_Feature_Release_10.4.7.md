@@ -55,7 +55,7 @@ Because of a number of enhancements, overall performance has increased when crea
 
 #### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
 
