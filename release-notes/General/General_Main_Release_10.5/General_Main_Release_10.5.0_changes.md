@@ -427,6 +427,15 @@ In alarm templates, the rounding of anomaly threshold values has been enhanced. 
 
 Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
 
+#### SLLogCollector packages will now include nslookup output for hostnames [ID_39526]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
+
+- *MaintenanceSettings.xml* (HTTPS) and/or
+- *DMS.xml* (Failover).
+
 #### SLLogCollector packages now include GQI and Web API logging [ID_39557]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
