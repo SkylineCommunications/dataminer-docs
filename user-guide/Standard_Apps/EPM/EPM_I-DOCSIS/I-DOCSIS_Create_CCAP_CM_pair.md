@@ -6,6 +6,9 @@ uid: I-DOCSIS_Create_CCAP_CM_pair
 
 To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create elements in bulk from a CSV file.
 
+ > [!NOTE]
+ > The creation of HarmonicOS pairs using the script is not fully supported yet. While the elements will be created, some additional configurations will be missing.
+
 ## Creating a single CCAP/CM pair
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
