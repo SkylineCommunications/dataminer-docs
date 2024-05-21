@@ -282,12 +282,6 @@ From now on, the *SetSrmJsonSerializableProperties* requests will skip said queu
 
 A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
 
-#### Enhanced performance when loading services during a DataMiner startup [ID_39286]
-
-<!-- MR 10.5.0 - FR 10.4.7 -->
-
-Because of a number of enhancements, overall performance has increased when loading services during a DataMiner startup.
-
 #### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
