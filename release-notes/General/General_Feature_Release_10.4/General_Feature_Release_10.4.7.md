@@ -22,6 +22,16 @@ uid: General_Feature_Release_10.4.7
 
 ## New features
 
+#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+DomInstance names now support GenericEnum fields that allow multiple values. In other words, `list GenericEnumFieldDescriptor` will now be supported as a `FieldValueConcatenationItem` for a DomInstance name.
+
+When you add a GenericEnumFieldDescriptor that supports multiple values to a DomDefinition NameDefinition, it will add the display names of the enum values separated by a semicolon (';').
+
+Also, from now on, it will no longer be possible to create multiple enum values with the same values using the SLNetTypes method `AddEntry(GenericEnumEntry<T> entry)`. When you try to do so, an `InvalidOperationException` will now be thrown.
+
 #### Factory reset tool: Additional actions [ID_39524] [ID_39530]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
