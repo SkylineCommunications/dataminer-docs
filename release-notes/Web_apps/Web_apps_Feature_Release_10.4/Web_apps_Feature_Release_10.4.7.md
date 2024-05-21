@@ -147,3 +147,9 @@ Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be linked to the domain controller user name instead of your DataMiner user name.
+
+#### Dashboards app & Low-Code Apps: Line & area chart component would show null values [ID_39689]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In some cases, a *Line and area chart* component would incorrectly show null values. From now on, these values will no longer be displayed.
