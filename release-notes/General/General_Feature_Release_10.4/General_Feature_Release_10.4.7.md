@@ -57,6 +57,12 @@ A number of enhancements have been made with regard to the sorting of indexed lo
 
 Because of a number of enhancements, on systems using a Cassandra and Cassandra cluster database, overall performance has increased when querying the maskstate database table. As a result, elements will start up quicker depending on the number of masked objects in the database.
 
+#### Enhanced performance when loading services during a DataMiner startup [ID_39286]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading services during a DataMiner startup.
+
 #### SLDataMiner: Enhanced log entry indicating progress of multi-threaded operations that take longer that 30 seconds to complete [ID_39367]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
