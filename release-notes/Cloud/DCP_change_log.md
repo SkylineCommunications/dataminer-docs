@@ -13,14 +13,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
 
-#### 16 May 2024 - Enhancement - Catalog - Show apps menu [ID_39621]
+#### 16 May 2024 - New feature - Catalog - New apps menu [ID_39621]
 
-From now now, clicking the logo of the Catalog app will open the apps menu.
-This apps menu provides quick links to our other cloud apps.
+Clicking the logo in the top-left corner of the Catalog app will now open a new apps menu, which will allow users to easily navigate to the other dataminer.services apps.
 
-#### 16 May 2024 - Enhancement - Admin - DMS overview [ID_39677] [ID_39678]
+#### 16 May 2024 - Enhancement - Admin - Message in DMS overview when latest CoreGateway version is not installed for Failover Agent [ID_39677] [ID_39678]
 
-A agent will now show a message that both failover agents need to have the latest CoreGateway DxM version installed in order to get more information about failover.
+In the DMS overview in the Admin app, when applicable, a message will now be shown to notify the Admin user that both Agents in a Failover pair need to have the latest CoreGateway DxM version installed so that more information about Failover can be retrieved.
 
 #### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
 
