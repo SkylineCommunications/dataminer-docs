@@ -107,7 +107,7 @@ Example:
 
 > [!NOTE]
 >
-> - The *config* endpoint can only be used when an auto-generated connector exists and which is identified by the mandatory **type** HTTP header field.
+> - The *config* endpoint can only be used when an auto-generated connector exists that is identified by the mandatory **type** HTTP header field.
 > - The parameters specified in the request must also exist.
 > - The length of units is restricted to 30 characters to optimize display.
 > - Because of the constraints of double precision in .NET, the number of digits is limited to 15. For example, when there are 5 digits before the decimal point, only 10 useful decimals can be shown.
