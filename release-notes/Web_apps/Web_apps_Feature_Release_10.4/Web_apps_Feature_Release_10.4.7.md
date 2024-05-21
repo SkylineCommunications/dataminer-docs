@@ -148,6 +148,12 @@ Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not
 
 When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be linked to the domain controller user name instead of your DataMiner user name.
 
+#### Dashboards app & Low-Code Apps - Template editor: Problem when configuring a conditional case using a numeric column with discrete values as a filter [ID_39656]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When, in the template editor, you configured a conditional case using a numeric column with discrete values as a filter, the condition would not get applied when a discrete value was selected.
+
 #### Dashboards app & Low-Code Apps: Line & area chart component would show null values [ID_39689]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
