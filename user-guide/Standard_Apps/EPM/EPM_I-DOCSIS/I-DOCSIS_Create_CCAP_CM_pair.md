@@ -4,18 +4,18 @@ uid: I-DOCSIS_Create_CCAP_CM_pair
 
 # Creating a new CCAP/CM pair
 
-To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create elements in bulk from a CSV file.
+To create a CCAP/CM pair, you can either create a single CCAP/CM pair, or create elements in bulk from a CSV file.
 
- > [!NOTE]
- > The creation of HarmonicOS pairs using the script is not fully supported yet. While the elements will be created, some additional configurations will be missing.
+> [!NOTE]
+> The creation of HarmonicOS pairs using the script is not fully supported yet. While the elements will be created, some additional configuration will be missing.
 
 ## Creating a single CCAP/CM pair
 
-1. In DataMiner Cube, go to *Apps* > *Automation*.
+1. In DataMiner Cube, go to *Apps > Automation*.
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
-1. In the lower right corner, click *Execute*.
+1. In the bottom-right corner, click *Execute*.
 
    This will open a pop-up window.
 
@@ -47,13 +47,9 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
       At present, the following protocols are supported:
 
       - CISCO CMTS CCAP Platform
-
       - Arris E6000 CCAP Platform
-
       - Casa Systems CCAP Platform
-
       - CISCO CBR-8 CCAP Platform
-
       - Huawei 5688-5800 CCAP Platform
 
    1. Select the desired **protocol version**. We recommend the production version.
@@ -114,9 +110,9 @@ The elements will be created with the following specifications:
 
   - **Element name**: The defined element name combined with the suffix "_COLLECTOR".
 
-  - **Protocol** The [Generic DOCSIS CM Collector](https://catalog.dataminer.services/details/connector/4207) protocol.
+  - **Protocol**: The [Generic DOCSIS CM Collector](https://catalog.dataminer.services/details/connector/4207) protocol.
 
-  - **Protocol version**:The production version.
+  - **Protocol version**: The production version.
 
   - **IP address**: 127.0.0.1.
 
@@ -143,11 +139,11 @@ The elements will be created with the following specifications:
 
 <!-- RN 37262 -->
 
-1. In DataMiner Cube, go to apps > Automation.
+1. In DataMiner Cube, go to *Apps > Automation*.
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
-1. In the lower right corner, click *Execute*.
+1. In the bottom-right corner, click *Execute*.
 
    This will open a pop-up window.
 
@@ -158,16 +154,16 @@ The elements will be created with the following specifications:
    > [!NOTE]
    >
    > - The CSV file must be present on the server running the DMA.
-   > - The CSV file has to have the following structure: ElementName*, Ccap_DMA*, Collector_DMA*, Protocol*, IpAddress*, GetCommunityString, SetCommunityString,GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
+   > - The CSV file has to have the following structure: ElementName*, Ccap_DMA*, Collector_DMA*, Protocol*, IpAddress*, GetCommunityString, SetCommunityString, GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
 
 1. Click *Create Bulk*.
 
 The elements will be created with the specifications in the CSV file of each row.
 
-Here is an example of the CSV file with the mandatory headers and the content of each row.
+Here is an example of a CSV file with the mandatory headers and the content of each row.
 
 | ElementName | Ccap_DMA | Collector_DMA | Protocol | IpAddress | GetCommunityString | SetCommunityString | GetCommunityStringColl | SetCommunityStringColl | Network | Market | Hub | SystemUser | SystemPass |
-|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | filename1 | EPM-DMA03 | EPM-DMA03 | CISCO CBR-8 CCAP Platform | 10.11.12.11 | getPublic | setprivate | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US1 | 123 |
 | filename2 | EPM-DMA04 | EPM-DMA04 | CISCO CBR-8 CCAP Platform | 10.11.12.12 | getprivate | setPublic | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US2 | 123 |
 
@@ -176,14 +172,19 @@ Each time the script is executed, it will attempt to create five (5) elements. I
 > [!NOTE]
 >
 > - For the **Protocol** column, only the following values are currently accepted:
+>
 >   - CISCO CMTS CCAP Platform
 >   - Arris E6000 CCAP Platform
 >   - Casa Systems CCAP Platform
 >   - CISCO CBR-8 CCAP Platform
 >   - Huawei 5688-5800 CCAP Platform
+>
 > - Click the *Cancel* button in any window to close the Automation script at any time.
 
+## Closing window after script execution
 
-## Closing window after Script execution
+After the script is executed, whether for bulk creation or single creation, a window will appear displaying important information about the execution.It is crucial to read this window carefully.
 
-After the script is executed, whether for bulk creation or single creation, a window will appear displaying important information about the execution. It is crucial to read this window carefully. If any line begins with [ERROR], it means that the creation of that particular element failed and was aborted. Lines beginning with [INFO] will provide details about any issues encountered after the creation of the elements or confirm the successful completion of processes.
+If any line begins with [ERROR], it means that the creation of that particular element failed and was aborted.
+
+Lines beginning with [INFO] will provide details about any issues encountered after the creation of the elements or confirm the successful completion of processes.
