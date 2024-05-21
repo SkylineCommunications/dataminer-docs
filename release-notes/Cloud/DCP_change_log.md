@@ -229,7 +229,7 @@ Users will now only be able to access a user-defined API using the remote access
 
 It is now possible to create a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system on dataminer.services for staging systems.
 
-Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for this: When you deploy such a DaaS system, 3 DataMiner credits will be deducted from your organization every week. In case your organization runs out of DataMiner credits, the DaaS system will be deleted. By default, every organization is provided with 3 DataMiner credits, so you can try out a DaaS system for one week free of charge.
+Our [Pay-per-Use](xref:Pricing_Commercial_Models) model is used for this: When you deploy such a DaaS system, 3 DataMiner credits will be deducted from your organization every week. In case your organization runs out of DataMiner credits, the DaaS system will be deleted. By default, every organization is provided with 3 DataMiner credits, so you can try out a DaaS system for one week free of charge.
 
 > [!TIP]
 > See also:
