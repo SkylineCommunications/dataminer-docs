@@ -30,7 +30,7 @@ To register a new Catalog item, do the following:
 
 1. Go to the [Catalog](https://catalog.dataminer.services).
 
-1. Next to the organization selector, click *Register Catalog*. This will open a pop-up window with a number of fields.
+1. Open the user menu by clicking the user icon on the top right. Here you will find the "Register item" button.
 
 1. Indicate for which organization you want to register the Catalog item. This can be done by using the selection box that will automatically be populated with all the organizations on the dataminer.services platform you have access to.
 
