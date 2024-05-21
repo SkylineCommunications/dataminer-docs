@@ -53,7 +53,7 @@ Because of a number of enhancements, overall performance has increased when exec
 
 #### SLAnalytics: Enhanced alarm template monitoring [ID_39561]
 
-<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 When an alarm template contained multiple lines for the same parameter, each with a different filter, up to now, SLAnalytics would only take into account the lines that were being monitored. From now on, as soon as one line related to a specific parameter is being monitored, SLAnalytics will take into account all lines related to that parameter.
 
