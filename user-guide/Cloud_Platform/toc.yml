@@ -62,6 +62,8 @@ items:
         topicUid: About_the_Catalog_module
       - name: Looking up an item in the Catalog
         topicUid: Looking_up_an_item_in_the_catalog
+      - name: Registering an item to the Catalog
+        topicUid: Register_Catalog_Item
       - name: Deploying a Catalog item
         topicUid: Deploying_a_catalog_item
   - name: DataMiner Sharing
