@@ -36,13 +36,13 @@ Registering a new catalog item can be done by executing the following steps.
 
 1. Finally, you will need to provide a name for the item. This will be the name that will be used to display the item in the catalog and needs to be human readable. Make sure you pick a name that makes sense for your item.
 
-Once all of this information has been filled in you will be able to click on the "Register" button. This will fulfill the registration process for the catalog item and return the unique identifier for that catalog item. This identifier allows you to register versions for the catalog item with the [API](xref:Register_catalog_item#register_new_versions_using_the_catalog_api).
+Once all of this information has been filled in you will be able to click on the "Register" button. This will fulfill the registration process for the catalog item and return the unique identifier for that catalog item. This identifier allows you to register versions for the catalog item with the [API](xref:Register_Catalog_Item#register-using-the-catalog-api).
 
 ### Register using the Catalog API
 
 #### Authentication
 
-Authentication for this call is done with [organization keys](xref:Managing_DCP_keys#organization_keys). This key needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+Authentication for this call is done with [organization keys](xref:Managing_DCP_keys#organization-keys). This key needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
 #### API call signature
 
