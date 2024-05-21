@@ -25,6 +25,14 @@ A number of security enhancements have been made.
 
 Because of a number of enhancements, on systems using a Cassandra and Cassandra cluster database, overall performance has increased when querying the maskstate database table. As a result, elements will start up quicker depending on the number of masked objects in the database.
 
+#### SLDataMiner: Enhanced log entry indicating progress of multi-threaded operations that take longer that 30 seconds to complete [ID_39367]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When a multi-threaded operation takes longer that 30 seconds to complete, an entry is added to the *SLDataMiner.txt* log file to indicate that the operation in question is still in progress. This log entry has now been enhanced. It will now show the progress in more detail.
+
+`Waiting for completion of %s : %lli/%lli completed`
+
 #### Service & Resource Management: Enhanced performance when creating multiple bookings simultaneously [ID_39390]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
