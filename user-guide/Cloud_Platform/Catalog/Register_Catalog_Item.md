@@ -48,7 +48,7 @@ Authentication for this call is done with [organization keys](xref:Managing_DCP_
 
 The call to register a catalog item can be found at the following URL: <https://api.dataminer.serivces/api/key-catalog/v1-0/catalog/register>. To call the API you will need to use the **POST** HTTP method.
 
-The call accepts a binary file as input. This file should be a zip file containing a ["manifest.yml"](xref:#manifest_file) and the item you want to upload.
+The call accepts a binary file as input. This file should be a zip file containing a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) and the item you want to upload.
 
 #### Manifest file
 
