@@ -103,3 +103,15 @@ Also, when a group contained single parameters in combination with a partial tab
 When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+
+#### 'Security Advisory' BPA test: Issues fixed [ID_39606] [ID_39716]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+The following issues have been fixed in the [Security Advisory](xref:BPA_Security_Advisory) BPA test:
+
+- When the BPA was run on a cloud-connected DataMiner System with more than one agent, the logic that determines whether port 5100 should be opened in the firewall would always fail. When the port was open, the BPA advised to close it, and when the port was closed, the BPA advised to open it.
+
+- When the BPA was run on a DMA using HTTPS, it would throw an exception when IIS had an HTTPS binding without a certificate configured.
+
+  In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.

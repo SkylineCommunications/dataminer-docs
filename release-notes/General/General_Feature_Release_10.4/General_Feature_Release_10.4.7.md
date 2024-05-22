@@ -196,3 +196,15 @@ From now on, when a client application loses connection while an interactive Aut
 When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
 
 From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
+
+#### 'Security Advisory' BPA test: Issues fixed [ID_39606] [ID_39716]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+The following issues have been fixed in the [Security Advisory](xref:BPA_Security_Advisory) BPA test:
+
+- When the BPA was run on a cloud-connected DataMiner System with more than one agent, the logic that determines whether port 5100 should be opened in the firewall would always fail. When the port was open, the BPA advised to close it, and when the port was closed, the BPA advised to open it.
+
+- When the BPA was run on a DMA using HTTPS, it would throw an exception when IIS had an HTTPS binding without a certificate configured.
+
+  In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
