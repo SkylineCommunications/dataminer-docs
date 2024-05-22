@@ -2,17 +2,15 @@
 uid: Advanced_SRM_settings
 ---
 
-# Advanced SRM settings
+# Function resources
 
-From DataMiner 9.5.7 onwards, advanced SRM settings can be configured in the file *Config.xml*, in the folder *C:\\Skyline DataMiner\\ProtocolFunctionManager*. This file contains the following tags:
+From DataMiner 9.5.7 onwards, some advanced settings related to function DVEs linked with a function resource, can be configured in the file *Config.xml*, in the folder *C:\\Skyline DataMiner\\ProtocolFunctionManager*. This file contains the following tags:
 
 | Tag | Description |
 |--|--|
-| ActiveFunctionResourcesThreshold | Used to configure the number of virtual function resources that can be active at the same time before a disabling of virtual function resources is triggered. Set this to an integer representing the maximum number of active virtual function resources. By default: 100. |
-| FunctionHysteresis | Can be used to keep virtual function resources from being disabled if they will be used again soon. Set this to the number of seconds in the future that the system has to check whether a virtual function resource is in use, in order to determine whether it should be disabled. By default, up to DataMiner 9.5.12, this is set to *PT0S*, which means no hysteresis is applied. From DataMiner 9.5.13 onwards, the default value is 10 minutes. |
-
-> [!NOTE]
-> From DataMiner 9.5.8 onwards, the hysteresis functionality is expanded to also include the preloading of virtual function resources. This means that if, for example, function hysteresis is set to 10 minutes, any disabled virtual function resources that are required for a booking instance will be enabled 10 minutes before the start of the booking instance.
+| ActiveFunctionResourcesThreshold | Used to configure the number of function DVEs that can be active at the same time. Their deactivation is scheduled after a booking has finished. They only get deactivated if the threshold is reached. The default threshold is 100. <br/> The threshold will not act as a limit, since it is not considered during the activation of function DVEs. |
+| FunctionHysteresis | This hysteresis is considered when the deactivation of function DVEs gets triggered (see 'ActiveFunctionResourcesThreshold'), to keep them from being disabled if they will be used again soon. This time span will be added to the start time of bookings and used to check whether a function resource is in use, in order to determine whether it should be disabled. <br/> From DataMiner 9.5.8 onwards it is also considered to activate a function DVE before the booking it is assigned to, is started. For example, if the function hysteresis is set to 10 minutes, any deactivated (disabled) function DVE that is required for a booking will be activated (enabled) 10 minutes before the start of the booking instance. <br/> By default, up to DataMiner 9.5.12, this is set to *PT0S*, which means no hysteresis is applied. From DataMiner 9.5.13 onwards, the default value is 10 minutes.  |
+| FunctionActivationTimeout | When a booking is scheduled to start immediately its assigned function DVEs will get activated, since the start will fail if one of those DVEs is not active. From DataMiner 10.4.7 onwards, this setting is available to define the timeout after which a booking will fail to start. The default value is 1 minute, which was the fixed value previously. |
 
 For example:
 
@@ -20,6 +18,7 @@ For example:
 <ProtocolFunctionManagerConfigInfo>
   <ActiveFunctionResourcesThreshold>100</ActiveFunctionResourcesThreshold>
   <FunctionHysteresis>PT0S</FunctionHysteresis>
+  <FunctionActivationTimeout>PT1M</FunctionActivationTimeout>
 </ProtocolFunctionManagerConfigInfo>
 ```
 
@@ -36,7 +35,10 @@ namespace Script
         {
             var protocolFunctionHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
             var currentConfig = protocolFunctionHelper.GetProtocolFunctionConfig();
-            currentConfig.ActiveFunctionResourcesThreshold = 123; // Change to desired value
+            // Change to the desired values
+            currentConfig.ActiveFunctionResourcesThreshold = 123;
+            currentConfig.FunctionHysteresis = TimeSpan.Zero;
+            currentConfig.FunctionActivationTimeout = TimeSpan.FromMinutes(2);
             protocolFunctionHelper.SetProtocolFunctionConfig(currentConfig);
         }
     }
