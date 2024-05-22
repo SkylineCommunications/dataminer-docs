@@ -1287,6 +1287,10 @@ items:
             topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
           - name: Creating a simulated spectrum element
             topicUid: Creating_a_simulated_spectrum_element
+      - name: Tutorials
+        items:
+            - name: Monitor a spectrum signal by comparing it with thresholds
+              topicUid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
   - name: Ticketing
     topicUid: ticketing
     items:
