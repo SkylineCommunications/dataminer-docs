@@ -91,7 +91,7 @@ On the *Browse* page of the Catalog, you can now filter catalog items so you see
 
 It is now possible for admin users to see the permissions of organization keys on the audit detail page.
 
-#### 14 March - Admin - Organization overview overhaul [ID_38960]
+#### 14 March 2024 - Admin - Organization overview overhaul [ID_38960]
 
 The user interface of the Organization overview page has been adjusted to be more in line with upcoming design changes.
 
