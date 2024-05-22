@@ -12,7 +12,7 @@ When you open up the Catalog module, a search box is displayed.
 
 1. As soon as you notice the name of the item you are looking for, click it, and continue to the next step.
 
-   If you cannot find the item you are looking for, you can choose to get a list of all the search results by clicking the . This will open the browse page. On the left side of this page, you have filters that allow you to narrow down your search.
+   If you cannot find the item you are looking for in the list, you can choose to get a list of all the search results by clicking the "View all results" button at the bottom of the list. This will open the browse page. On the left side of this page, you have filters that allow you to narrow down your search.
 
    If you only want to see the items that have been registered by your organization, you can use the *All/Public/Private* filter.
 
