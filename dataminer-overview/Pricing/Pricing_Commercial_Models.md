@@ -26,7 +26,7 @@ Perpetual-Use Licenses are a one-off expenditure.
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner Credits**. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
+DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
 
 By default, it works on a Pay-per-Use model, where the number of credits consumed matches the actual utilization measured or recorded in any given month.
 

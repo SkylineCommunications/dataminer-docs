@@ -26,7 +26,7 @@ This includes:
 
 ## Subscriptions
 
-By default, DataMiner Credits are deducted monthly based on the metered usage (pay-per-use), allowing for variable usage patterns. However, you have the option to reserve a fixed number of units per month per service (available for most services). This approach provides a more predictable budget, suitable for steady, predictable usage. In exchange for committing to this usage level (Monthly Utilization Allowances (MUA)), you can enjoy savings of up to 60%, depending on the quantities subscribed.
+By default, DataMiner credits are deducted monthly based on the metered usage (pay-per-use), allowing for variable usage patterns. However, you have the option to reserve a fixed number of units per month per service (available for most services). This approach provides a more predictable budget, suitable for steady, predictable usage. In exchange for committing to this usage level (Monthly Utilization Allowances (MUA)), you can enjoy savings of up to 60%, depending on the quantities subscribed.
 
 |   | Subscription | Pay-per-Use |
 |---|:---:|:---:|
