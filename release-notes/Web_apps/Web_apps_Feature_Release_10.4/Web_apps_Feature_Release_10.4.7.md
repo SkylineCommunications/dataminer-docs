@@ -40,7 +40,7 @@ A new *Search input* component is now available.
 
 It is identical to the *Text input* component, but allows users to clear its contents by clicking the *X*.
 
-#### Low-Code Apps: New 'On close' page event [ID_39604]
+#### Low-Code Apps: New 'On close' page event [ID_39604] [ID_39682]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -49,6 +49,7 @@ In low-code apps, you can now configure actions for a new *On close* page event,
 > [!NOTE]
 >
 > - Navigating to the next page will be blocked until all configured actions are executed. Therefore, it is good practice to only configure actions that do not take too long.
+> - Actions linked to the *On close* page event will not be executed when you close the app.
 > - The existing *On page load* event has now been renamed to *On open*.
 
 #### Low-Code Apps: New 'Close all panels' action [ID_39625]
