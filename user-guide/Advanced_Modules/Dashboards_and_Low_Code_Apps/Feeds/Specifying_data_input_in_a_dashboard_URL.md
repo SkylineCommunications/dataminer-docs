@@ -220,3 +220,17 @@ Within the dashboard or app URL, the following data objects can be specified:
   - To treat the values of column *23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number* of query *3af9e5a7-91fc-4333-94c0-e39a59f0d900* as a range from 5 to 10, with 5 included but 10 not included:
 
     `?query columns=3af9e5a7-91fc-4333-94c0-e39a59f0d900%1e23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number%1erange%1e5%1f10%1ffalse%1ftrue`
+
+- *query rows*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->. An array of query rows. Each row must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
+
+  - *VERSION*: A parameter with the data version, currently always `v:1`.
+
+  - *COLUMNS*: A list of the column ID, name, and client type (*string*, *number*, *guid*, *boolean* or *date*) of each column. As the separator between the items for each column, use `\u000E`. As the separator between the columns, use `\u001F`.
+
+  - *CELLS*: A list of rows, each consisting of cells represented in the format `VALUE\u000EDISPLAYVALUE`. As the separator between the cells, use `\u000E`. As the separator between the rows, use `\u001F`.
+
+  - *KEYS*: A list of the keys of the rows, separated by `\u001`. This key is unique for the row.
+
+  For example, to add a query row with two columns to the URL, of which the first column, *ID*, contains string values, and the second column, *Value*, contains numbers:
+
+  `v:1\u001FIDColumn\u000EID\u000Estring\u001FValueColumn\u000EValue\u000Enumber\u001Evalue1\u000EValue 1\u001F5\u000EFive\u001ERowKey`

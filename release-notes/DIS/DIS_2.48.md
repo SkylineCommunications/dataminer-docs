@@ -18,7 +18,7 @@ When a connector or an Automation script is being published, a message will now 
 
 ### Validator
 
-DIS is currently using [Validator version 1.1.3](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.3).
+DIS is currently using [Validator version 1.1.4](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.4).
 
 ## Changes
 

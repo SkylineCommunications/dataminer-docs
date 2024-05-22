@@ -178,7 +178,7 @@ items:
     - name: Pricing
       topicUid: Pricing
       items:
-      - name: Commercial models summary
+      - name: Commercial and deploy models summary
         topicUid: Pricing_Commercial_Models
       - name: Usage-based services
         topicUid: Pricing_Usage_based_service
@@ -211,8 +211,8 @@ items:
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
-        - name: Becoming a DataMiner Partner
-          topicUid: Becoming_a_DataMiner_Partner
+        - name: About the Partner Program
+          topicUid: About_Partner_Program
         - name: Getting started with the Partner Program
           topicUid: Getting_Started_with_the_Partner_Program
           items:
@@ -269,6 +269,10 @@ items:
               topicUid: Agile_Time_Materials_Methodology
             - name: Some Use Cases & Practical Examples
               topicUid: Some_Use_Cases_Practical_Examples
+    - name: Legal
+      items:
+        - name: Commercial terms
+          topicUid: Commercial_Terms
     - name: Frequently asked questions
       topicUid: FAQs
       items:

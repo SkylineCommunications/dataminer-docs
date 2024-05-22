@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU3
 ---
 
-# General Main Release 10.4.0 CU3 - Preview
+# General Main Release 10.4.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -142,12 +142,6 @@ Because of a number of enhancements, overall performance of GQI queries using a 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
-
-#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
-
-<!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
-
-When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
 
 #### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
 

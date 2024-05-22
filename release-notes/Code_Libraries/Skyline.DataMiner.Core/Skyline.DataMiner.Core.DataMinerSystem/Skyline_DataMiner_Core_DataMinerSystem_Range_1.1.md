@@ -7,6 +7,36 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.10
+
+#### New feature - Monitors Start and Stop methods overload with subscribe timeout
+
+The Start and Stop extension methods now have additional overloads that take an additional subscribeTimeout (TimeSpan) argument, which allows you to set a timeout for the SLNet subscriptions when starting or stopping a subscription.
+
+```csharp
+try
+{
+    element.StartAlarmLevelMonitor( 
+    protocol,
+    (change) =>
+    {
+        var dms = change.Dms;
+        var myElement = dms.GetElement(new DmsElementId(change.MonitorSource));
+        var detectedElementAlarmParam = myElement.GetStandaloneParameter<string>(303);
+        detectedElementAlarmParam.SetValue(change.Alarm.ToString());
+    }, TimeSpan.FromSeconds(30));
+}
+catch(InvalidOperationException e)
+{
+    // SLNet subscribe timeout occurred.
+}
+```
+
+The overloads that do not have the subscribeTimeout argument will use a default timeout of 10 minutes (which can result in an RTE). If you want to avoid an RTE, use the overload with the additional subscribeTimeout argument and provide a value that is small enough to avoid the RTE.
+
+> [!NOTE]
+> In the background, multiple SLNet subscriptions can be created when a single Start or Stop method is called. You should therefore make sure the timeout value is kept small enough to avoid an RTE.
+
 ### 1.1.1.9
 
 #### New feature - Monitors added to subscribe to view alarm level and view state

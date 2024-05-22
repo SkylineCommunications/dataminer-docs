@@ -2,7 +2,7 @@
 uid: Web_apps_Main_Release_10.3.0_CU15
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU15 - Preview
+# DataMiner web apps Main Release 10.3.0 CU15
 
 This Main Release of the DataMiner web applications contains all new features, enhancements and fixes that were added to [DataMiner web apps Feature Release 10.4.6](xref:Web_apps_Feature_Release_10.4.6).
 

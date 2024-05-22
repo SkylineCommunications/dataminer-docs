@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 15 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
+
+From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
+
+#### 10 May 2024 - Enhancement - Admin - More information included in DMS overview [ID_39563]
+
+The DMS overview now shows more information about the system, including DxM and connectivity information.
+
+#### 8 May 2024 - Fix - Catalog - Maximum number of results too low when searching from home page [ID_39612]
+
+When you executed a search on the home page, the results were incorrectly limited to 5 items only. Now when you click *View all results*, this will take you to the browse page where you will see a maximum of 50 results.
+
 #### 7 May 2024 - Fix - Admin - Save button for settings available to users without write access [ID_39589]
 
 In the Admin app, users who do not have write access will now no longer have access to the save functionality on the Organization and DataMiner System Settings pages.
@@ -217,7 +229,7 @@ Users will now only be able to access a user-defined API using the remote access
 
 It is now possible to create a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system on dataminer.services for staging systems.
 
-Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for this: When you deploy such a DaaS system, 3 DataMiner credits will be deducted from your organization every week. In case your organization runs out of DataMiner credits, the DaaS system will be deleted. By default, every organization is provided with 3 DataMiner credits, so you can try out a DaaS system for one week free of charge.
+Our [Pay-per-Use](xref:Pricing_Commercial_Models) model is used for this: When you deploy such a DaaS system, 3 DataMiner credits will be deducted from your organization every week. In case your organization runs out of DataMiner credits, the DaaS system will be deleted. By default, every organization is provided with 3 DataMiner credits, so you can try out a DaaS system for one week free of charge.
 
 > [!TIP]
 > See also:

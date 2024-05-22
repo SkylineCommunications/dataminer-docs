@@ -8,28 +8,28 @@ If you want to move the MySQL data directory to another location, you cannot jus
 
 1. Stop DataMiner.
 
-2. In MySQL Administrator, do the following:
+1. In MySQL Administrator, do the following:
 
-    1. Go to *Service Control* and stop the MySQL service.
+   1. Go to *Service Control* and stop the MySQL service.
 
-    2. Go to *Startup Variables* and write down the contents of both the *Base directory* and *Data directory* boxes.
+   1. Go to *Startup Variables* and write down the contents of both the *Base directory* and *Data directory* boxes.
 
-3. If the data has to be moved to a folder that does not exist yet, then create that folder.
+1. If the data has to be moved to a folder that does not exist yet, then create that folder.
 
-4. Copy all data in the current data directory to the folder that will become the new data directory.
+1. Copy all data in the current data directory to the folder that will become the new data directory.
 
-5. In my.ini, located in the base directory, change the datadir parameter. If your current data directory is *C:\\MySQLData*, look for the following line:
+1. In my.ini, located in the base directory, change the datadir parameter. If your current data directory is *C:\\MySQLData*, look for the following line:
 
-    ```txt
-    datadir="C:\MySQLData\
-    ```
+   ```txt
+   datadir="C:\MySQLData\
+   ```
 
-6. In MySQL Administrator, do the following:
+1. In MySQL Administrator, do the following:
 
-    1. Go to *Startup Variables* and enter the new data directory in the *Data directory* box.
+   1. Go to *Startup Variables* and enter the new data directory in the *Data directory* box.
 
-    2. Go to *Service Control* and start the MySQL service.
+   1. Go to *Service Control* and start the MySQL service.
 
-7. Start DataMiner.
+1. Start DataMiner.
 
-8. Check all trend data to make sure the move was successful.
+1. Check all trend data to make sure the move was successful.

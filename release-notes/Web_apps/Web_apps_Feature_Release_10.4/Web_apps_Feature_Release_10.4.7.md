@@ -40,6 +40,39 @@ A new *Search input* component is now available.
 
 It is identical to the *Text input* component, but allows users to clear its contents by clicking the *X*.
 
+#### Low-Code Apps: New 'On close' page event [ID_39604] [ID_39682]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In low-code apps, you can now configure actions for a new *On close* page event, which will be triggered right before a page is closed, either manually (by navigating using the sidebar) or via an action.
+
+> [!NOTE]
+>
+> - Navigating to the next page will be blocked until all configured actions are executed. Therefore, it is good practice to only configure actions that do not take too long.
+> - Actions linked to the *On close* page event will not be executed when you close the app.
+> - The existing *On page load* event has now been renamed to *On open*.
+
+#### Low-Code Apps: New 'Close all panels' action [ID_39625]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In low-code apps, you can now configure a *Close all panels* action. As its name suggests, this action will close all panels when executed.
+
+#### Low-Code Apps: New 'On open' panel event [ID_39636]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In low-code apps, you can now configure actions for a new *On open* panel event, which will be triggered each time a panel is opened.
+
+#### Low-Code Apps: New 'On close' panel event [ID_39668]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In low-code apps, you can now configure actions for a new *On close* panel event, which will be triggered when a panel is closed, either by you clicking an overlay or when a *Close panel* or *Close all panels* action is executed.
+
+> [!NOTE]
+> The panel will only be closed when all configured actions have been executed. Therefore, it is good practice to only configure actions that do not take too long.
+
 ## Changes
 
 ### Enhancements
@@ -97,3 +130,33 @@ When you tried to use a *Maps* component with an unsupported provider, in some c
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not be able to run a GQI query that used *Regexmatch* column manipulation methods.
+
+#### Dashboards app - Web component: 'auth' argument would incorrectly be added to the URL specified in a Web component [ID_39587]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In some cases, an *auth* argument would incorrectly be added to the URL specified in a Web component. This would cause the Web component to not being able to resolve the URL.
+
+#### Data Aggregator DxM would incorrectly not be able to run a GQI query that used the 'Get object manager instances' data source [ID_39596]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not be able to run a GQI query that used the 'Get object manager instances' data source.
+
+#### Dashboards app: Access permissions for a private dashboard would be linked to an incorrect user name [ID_39610]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be linked to the domain controller user name instead of your DataMiner user name.
+
+#### Dashboards app & Low-Code Apps - Template editor: Problem when configuring a conditional case using a numeric column with discrete values as a filter [ID_39656]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When, in the template editor, you configured a conditional case using a numeric column with discrete values as a filter, the condition would not get applied when a discrete value was selected.
+
+#### Dashboards app & Low-Code Apps: Line & area chart component would show null values [ID_39689]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In some cases, a *Line and area chart* component would incorrectly show null values. From now on, these values will no longer be displayed.

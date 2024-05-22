@@ -2,17 +2,13 @@
 uid: Web_apps_Feature_Release_10.4.6
 ---
 
-# DataMiner web apps Feature Release 10.4.6 – Preview
+# DataMiner web apps Feature Release 10.4.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.6](xref:General_Feature_Release_10.4.6).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -80,12 +76,12 @@ In the *Layout* tab, you can find the following settings to configure this:
 
 - *Tooltips*: Allows you to enable/disable the tooltip and to configure what it will display.
 
-  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value at the same pixel, both will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
+  The tooltip is displayed when you hover over the chart. It shows the Y value(s) for the closest X value of any line on the chart. If multiple lines share an X value, all relevant Y values will be shown. The values shown in the tooltip will also be indicated on the chart with colored dots.
 
   Tooltip settings:
 
   - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
-  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the names of the column containing the Y values).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the name of the column containing the Y values).
   - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:

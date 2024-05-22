@@ -11,13 +11,13 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38263] [ID_38869] [ID_38951]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38869] [ID_38951] [ID_39387]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
-<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
 <!-- 38869: MR 10.5.0 - FR 10.4.6 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
+<!-- 39387: MR 10.5.0 - FR 10.4.7 -->
 
 A number of security enhancements have been made.
 
@@ -172,6 +172,12 @@ Because of a number of enhancements, overall memory usage has been reduced, espe
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
+
+#### GQI: Enhanced sorting of indexed logger tables [ID_38857]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+A number of enhancements have been made with regard to the sorting of indexed logger tables.
 
 #### Grouping of GQI event messages [ID_38913]
 
@@ -421,6 +427,15 @@ In alarm templates, the rounding of anomaly threshold values has been enhanced. 
 
 Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
 
+#### SLLogCollector packages will now include nslookup output for hostnames [ID_39526]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
+
+- *MaintenanceSettings.xml* (HTTPS) and/or
+- *DMS.xml* (Failover).
+
 #### SLLogCollector packages now include GQI and Web API logging [ID_39557]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -498,3 +513,11 @@ This issue has now been fixed.
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+
+#### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
+
+From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
