@@ -43,6 +43,21 @@ Expected duration: 20 minutes.
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
+## Overview
+
+This tutorial consists of the following steps:
+
+  - [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
+  - [Step 2: Initialize use case](#step-2-initialize-use-case)
+  - [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
+  - [Step 4: Add a spectrum script](#step-4-add-a-spectrum-script)
+  - [Step 5: Add a first spectrum monitor to detect the Rain Fade](#step-5-add-a-first-spectrum-monitor-to-detect-the-rain-fade)
+  - [Step 6: Test the Rain Fade effect](#step-6-test-the-rain-fade-effect)
+  - [Step 7: Add a second threshold (to detect the sudden shift in frequency)](#step-7-add-a-second-threshold-to-detect-the-sudden-shift-in-frequency)
+  - [Step 8: Edit the spectrum script](#step-8-edit-the-spectrum-script)
+  - [Step 9: Add a second spectrum monitor to detect the shifted carrier](#step-9-add-a-second-spectrum-monitor-to-detect-the-shifted-carrier)
+  - [Step 10: Test the Shifted Frequency effect](#step-10-test-the-shifted-frequency-effect)
+
 ## Step 1: Deploy the 'Spectrum Simulation' package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/01ea2334-0cbb-4dfe-ae6b-07a7ed425df4>.
