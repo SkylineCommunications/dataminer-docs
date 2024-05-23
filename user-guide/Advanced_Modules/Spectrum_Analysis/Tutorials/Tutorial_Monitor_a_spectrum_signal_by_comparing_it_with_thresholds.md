@@ -2,45 +2,54 @@
 uid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
 ---
 
-# Your title
+# Monitor a spectrum signal by comparing it with thresholds
 
-<!-- Add a short introduction here, mentioning any necessary context information and explaining in broad terms what the purpose of the tutorial is. -->
+For many international football games, a good live stream across the globe is of utmost importance to let all football fans watch the game live. Satellite communication plays a crucial role in this. A good example of this use case, could be the Champions League Final in London of the 1st of June, 2024, broadcasted from the legendary Wembley stadium in London. In this simulated use case, the satellite dish on the top of the Skyline HQ receives the signal, behaving like a TV broadcaster to spread it through the Belgian house chambers. In this tutorial, we are going to learn how to monitor the signal and generate alarms when the signal is for example altered by rain fade or a sudden frequency change.
 
-In this tutorial, you will learn how to: <!-- Only add the bulleted list below if it actually makes sense to divide the tutorial into several bullet points; otherwise try to just summarize it in one sentence.  -->
+In this tutorial, you will learn how to:
 
-- <!-- First learned item -->
-- <!-- Second learned item -->
-- <!-- etc. -->
+- Deploy an application package from the DataMiner Catalog
+- Open the Spectrum Analyzer component
+- Add and manage a preset
+- Alter the settings to get the trace window applicable for your use case
+- Add and edit thresholds
+- Add and edit spectrum analyzer scripts
+- Add and edit spectrum analyzer monitors
 
-Expected duration: <!-- Add the expected duration of the tutorial here; if it doesn't make sense to add an expected duration, remove this instead -->
+Expected duration: 20 minutes.
 
 > [!TIP]
 > See also:
->
-> - <!-- Add any relevant links to sections of the documentation with more information. You can also add links elsewhere in your text, wherever this can be useful to avoid adding duplicate information. -->
+> -[Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> -[Skyline Spectrum Simulation protocol](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner 10.x.x.<!--  Fill in the correct version. This way, if the tutorial is no longer up to date with the latest version of DataMiner, users will know why their system might show something different. -->
+> The content and screenshots for this tutorial have been created in DataMiner 10.4.5
 
 ## Prerequisites
 
-<!-- Add a bulleted list including any required software and licenses. Make sure to include the minimum DataMiner version. -->
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- 
-- 
-- 
+## Overview
 
-## Title of the first main step
+This tutorial consists of the following steps:
 
-1. First step
+## Step 1: Deploy the 'Spectrum Simulation' package from the Catalog
 
-1. Second step
+1. Go to <https://catalog.dataminer.services/details/32274506-07a4-4ecb-98d3-bea773c3903e>.
 
-   Result of a step, e.g. "This will open a wizard."<!--  Make sure to use the correct indentation. If you don't use enough spaces, you'll interrupt the list and it will start numbering from 1 again. -->
+1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-1. ...
+   > [!TIP]
+   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-<!-- For information on how to add tables, code blocks, and so on, refer to <https://docs.dataminer.services/CONTRIBUTING.html#markdown-syntax>. -->
+1. Open DataMiner Cube and check whether a view and element named "Info template quick tips" have been added to your DataMiner Agent.
+
+   If this is the case, the package has been successfully deployed.
+
+   On the *Data* > *Table* page of the element, you will see that the Master Table of the element contains pre-provisioned data:
+
+   ![Master Table](~/user-guide/images/Info_Template_Quick_Tips_img00.png)
 
 ## Title of the next main step
 
