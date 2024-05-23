@@ -32,6 +32,45 @@ cy.get(`[data-cy="TextComponent"]`)
 > [!NOTE]
 > The `DebugTag` can only be used in interactive Automation scripts launched from web apps, not in interactive Automation scripts launched from DataMiner Cube.
 
+#### Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID_39451] [ID_39638]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
+
+To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class. Contrary to the `ShowUI()` method, the `HideUI()` method does not require a response and will not return any result.
+
+Example:
+
+```csharp
+using System;
+using Skyline.DataMiner.Automation;
+
+public class Script
+{
+    public void Run(Engine engine)
+    {
+        // Build and display a form
+        var formUi = BuildFormUi();
+        var results = engine.ShowUI(formUi);
+
+        // Process UI results
+
+        // Hide the UI before starting a lengthy operation
+        engine.HideUI();
+
+        // Build and display issue information
+        var issueUi = BuildIssueUi();
+        var issueResults = engine.ShowUI(issueUi);
+    }
+}
+```
+
+> [!NOTE]
+>
+> - Although the use of `HideUI()` requires the Automation script to be interactive, a script will not be recognized as interactive if the method is included in the script. It needs to be used in combination with `ShowUI()` or `FindInteractiveClient()`.
+> - Although it is possible to request hiding the UI prior to showing it, it is recommended to not show any UI and only hide the UI after it was shown.
+
 #### Dashboards app & Low-Code Apps: New 'Search input' component [ID_39555]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
