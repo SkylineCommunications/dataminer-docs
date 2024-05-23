@@ -22,7 +22,9 @@ Expected duration: 20 minutes.
   - [Prerequisites](#prerequisites)
   - [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
   - [Step 2: Initialize use case](#step-2-initialize-use-case)
-  - [Next steps](#next-steps)
+  - [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
+  - [Step 4: Add a first spectrum script](#step-4-add-a-first-spectrum-script)
+  - [Step 4: Add a first spectrum script](#step-4-add-a-first-spectrum-script-1)
 
 > [!TIP]
 > See also:
@@ -42,8 +44,8 @@ Expected duration: 20 minutes.
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   > [!TIP]
-   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
+    > [!TIP]
+    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
 1. Open DataMiner Cube and check whether a view "Spectrum Simulation (SPCTRM)" and element named "SPCTRM Spectrum Simulation" have been added to your DataMiner Agent.
 
@@ -67,7 +69,9 @@ Expected duration: 20 minutes.
 
    ![Initialize Signal](~/user-guide/images/Tutorial_Spectrum_Champions_League_img01.png)
 
-1. Go to Cube and open the element card "SPCTRM Spectrum Simulation"
+1. Go to Cube and open the element card "SPCTRM Spectrum Simulation", and add a preset called e.g. "myPreset". It is important to check the checkbox "Share preset with other users".
+
+    ![Add preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img03.png)
 
 > [!TIP]
 > See also:
@@ -77,8 +81,31 @@ Expected duration: 20 minutes.
 
     ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img02.png)
 
-<!-- Add as many subtitles as needed to describe the main steps. -->
+> [!NOTE]
+> Upon editing settings of the preset in the next steps, it is a good practice to reopen the element card at a regular base. This is to let the UI know of the latest changes.
 
-## Next steps
+## Step 3: Add a first threshold (to detect the rain fade)
+
+1. Make sure your preset is loaded. Add a threshold that is just a bit below (in terms of amplitude) the main signal (which has a center frequency of 11 750 MHz). This will be threshold 1 that will be used to detect the rain fade.
+
+    ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img04.png)
+
+1. Save the preset and reload the element card.
+
+    ![Save spectrum preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img05.png)
+
+> [!TIP]
+> See also:
+> -[Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds)
+
+## Step 4: Add a first spectrum script
+
+1. Create a script (e.g. called "myScript") that is calculating a boolean value "rainFadeDetected", making use of the many spectrum script possibilities.
+
+    ![Creating the first script](~/user-guide/images/Tutorial_Spectrum_Champions_League_img06.png)
+
+1. Save the preset and reload the element card.
+
+## Step 4: Add a first spectrum script
 
 <!-- Optionally add this title, with a link to a tutorial that logically follows this one. If there is no such tutorial, leave this out. -->
