@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
+
+DMS overview will now show the a agent of failover pair as offlin when the other agent is online.
+
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
 When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
