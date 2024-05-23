@@ -18,10 +18,16 @@ In this tutorial, you will learn how to:
 
 Expected duration: 20 minutes.
 
+- [Monitor a spectrum signal by comparing it with thresholds](#monitor-a-spectrum-signal-by-comparing-it-with-thresholds)
+  - [Prerequisites](#prerequisites)
+  - [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
+  - [Step 2: Initialize use case](#step-2-initialize-use-case)
+  - [Next steps](#next-steps)
+
 > [!TIP]
 > See also:
-> -[Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-> -[Skyline Spectrum Simulation protocol](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
+> -[Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/) on DataMiner Dojo
+> -[Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created in DataMiner 10.4.5
@@ -30,34 +36,46 @@ Expected duration: 20 minutes.
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-## Overview
-
-This tutorial consists of the following steps:
-
 ## Step 1: Deploy the 'Spectrum Simulation' package from the Catalog
 
-1. Go to <https://catalog.dataminer.services/details/32274506-07a4-4ecb-98d3-bea773c3903e>.
+1. Go to <https://catalog.dataminer.services/details/01ea2334-0cbb-4dfe-ae6b-07a7ed425df4>.
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-1. Open DataMiner Cube and check whether a view and element named "Info template quick tips" have been added to your DataMiner Agent.
+1. Open DataMiner Cube and check whether a view "Spectrum Simulation (SPCTRM)" and element named "SPCTRM Spectrum Simulation" have been added to your DataMiner Agent.
 
    If this is the case, the package has been successfully deployed.
 
-   On the *Data* > *Table* page of the element, you will see that the Master Table of the element contains pre-provisioned data:
+   ![Spectrum Simulation element](~/user-guide/images/Tutorial_Spectrum_Champions_League_img00.png)
 
-   ![Master Table](~/user-guide/images/Info_Template_Quick_Tips_img00.png)
+1. Open the Automation module of your Cube and check if the Automation script "SPCTRM_AS_SkylineSpectrumSimulation" has been added.
 
-## Title of the next main step
+1. Check the home of dataminer.services whether the Low Code App "Skyline Spectrum Simulation" has been added.
 
-1. First step
+> [!TIP]
+> See also:
+> -[Accessing a custom low code app on your system](xref:Accessing_custom_apps)
 
-1. Second step
+## Step 2: Initialize use case
 
-1. ...
+1. Open the Low Code App "Skyline Spectrum Simulation"
+
+1. Click on the button "Initialize Signal"
+
+   ![Initialize Signal](~/user-guide/images/Tutorial_Spectrum_Champions_League_img01.png)
+
+1. Go to Cube and open the element card "SPCTRM Spectrum Simulation"
+
+> [!TIP]
+> See also:
+> -[Using spectrum analysis presets](xref:Using_Spectrum_Analysis_presets)
+
+1. Set the center frequency to 11 750 MHz, the frequency span to 400 MHz and the sweep time to 100 ms. The carrier of the main live feed and SNG feed will appear in the spectrum trace.
+
+    ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img02.png)
 
 <!-- Add as many subtitles as needed to describe the main steps. -->
 
