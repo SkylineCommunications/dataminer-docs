@@ -66,6 +66,8 @@ Now that you have set up your staging DataMiner System, add the *Microsoft Platf
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
+   ![Deploy Microsoft Platform connector](~/user-guide/images/Microsoft_Platform_Connector.png)
+
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
 
