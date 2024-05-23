@@ -2,15 +2,14 @@
 uid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
 ---
 
-# Monitor a spectrum signal by comparing it with thresholds
+# Monitoring a spectrum signal by comparing it with thresholds
 
-For many international football games, a good live stream across the globe is of utmost importance to let all football fans watch the game live. Satellite communication plays a crucial role in this. A good example of this use case, could be the Champions League Final in London of the 1st of June, 2024, broadcasted from the legendary Wembley stadium in London. In this simulated use case, the satellite dish on the top of the Skyline HQ receives the signal, behaving like a TV broadcaster to spread it through the Belgian house chambers. In this tutorial, we are going to learn how to monitor the signal and generate alarms when the signal is for example altered by rain fade or a sudden frequency change.
+For many international football games, a good live stream across the globe is of the utmost importance to make sure all football fans can watch the game live. Satellite communication plays a crucial role in this. A good example of this use case could be the Champions League Final of June 1st, 2024, broadcast from the legendary Wembley stadium in London. In this simulated use case, the satellite dish at the Skyline HQ receives the signal, behaving like a TV broadcaster to spread it to the Belgian living rooms. In this tutorial, you will learn how to monitor the signal and generate alarms when the signal is for example altered by rain fade or a sudden frequency change.
 
-In this tutorial, you will learn how to:
+You will learn how to:
 
 - Deploy an application package from the DataMiner Catalog
-- Open the Spectrum Analyzer component
-- Add and manage a preset
+- Add and manage a spectrum preset
 - Alter the settings to get the trace window applicable for your use case
 - Add and edit thresholds
 - Add and edit spectrum analyzer scripts
@@ -18,26 +17,17 @@ In this tutorial, you will learn how to:
 
 Expected duration: 20 minutes.
 
-- [Monitor a spectrum signal by comparing it with thresholds](#monitor-a-spectrum-signal-by-comparing-it-with-thresholds)
-  - [Prerequisites](#prerequisites)
-  - [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
-  - [Step 2: Initialize use case](#step-2-initialize-use-case)
-  - [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
-  - [Step 4: Add a spectrum script](#step-4-add-a-spectrum-script)
-  - [Step 5: Add a first spectrum monitor to detect the Rain Fade](#step-5-add-a-first-spectrum-monitor-to-detect-the-rain-fade)
-  - [Step 6: Test the Rain Fade effect](#step-6-test-the-rain-fade-effect)
-  - [Step 7: Add a second threshold (to detect the sudden shift in frequency)](#step-7-add-a-second-threshold-to-detect-the-sudden-shift-in-frequency)
-  - [Step 8: Edit the spectrum script](#step-8-edit-the-spectrum-script)
-  - [Step 9: Add a second spectrum monitor to detect the shifted carrier](#step-9-add-a-second-spectrum-monitor-to-detect-the-shifted-carrier)
-  - [Step 10: Test the Shifted Frequency effect](#step-10-test-the-shifted-frequency-effect)
+> [!TIP]
+> See also: [Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
 
+<!-- Replace the tip above with this one when the kata is released:
 > [!TIP]
 > See also:
 > -[Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/) on DataMiner Dojo
-> -[Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
+> -[Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7) -->
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner 10.4.5
+> The content and screenshots for this tutorial have been created in DataMiner 10.4.5.
 
 ## Prerequisites
 
@@ -47,16 +37,16 @@ Expected duration: 20 minutes.
 
 This tutorial consists of the following steps:
 
-  - [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
-  - [Step 2: Initialize use case](#step-2-initialize-use-case)
-  - [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
-  - [Step 4: Add a spectrum script](#step-4-add-a-spectrum-script)
-  - [Step 5: Add a first spectrum monitor to detect the Rain Fade](#step-5-add-a-first-spectrum-monitor-to-detect-the-rain-fade)
-  - [Step 6: Test the Rain Fade effect](#step-6-test-the-rain-fade-effect)
-  - [Step 7: Add a second threshold (to detect the sudden shift in frequency)](#step-7-add-a-second-threshold-to-detect-the-sudden-shift-in-frequency)
-  - [Step 8: Edit the spectrum script](#step-8-edit-the-spectrum-script)
-  - [Step 9: Add a second spectrum monitor to detect the shifted carrier](#step-9-add-a-second-spectrum-monitor-to-detect-the-shifted-carrier)
-  - [Step 10: Test the Shifted Frequency effect](#step-10-test-the-shifted-frequency-effect)
+- [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
+- [Step 2: Initialize the use case](#step-2-initialize-the-use-case)
+- [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
+- [Step 4: Add a spectrum script](#step-4-add-a-spectrum-script)
+- [Step 5: Add a first spectrum monitor to detect the rain fade](#step-5-add-a-first-spectrum-monitor-to-detect-the-rain-fade)
+- [Step 6: Test the rain fade effect](#step-6-test-the-rain-fade-effect)
+- [Step 7: Add a second threshold to detect a sudden shift in frequency](#step-7-add-a-second-threshold-to-detect-a-sudden-shift-in-frequency)
+- [Step 8: Edit the spectrum script](#step-8-edit-the-spectrum-script)
+- [Step 9: Add a second spectrum monitor to detect the shifted carrier](#step-9-add-a-second-spectrum-monitor-to-detect-the-shifted-carrier)
+- [Step 10: Test the shifted frequency effect](#step-10-test-the-shifted-frequency-effect)
 
 ## Step 1: Deploy the 'Spectrum Simulation' package from the Catalog
 
@@ -64,73 +54,103 @@ This tutorial consists of the following steps:
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-    > [!TIP]
-    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
+   > [!TIP]
+   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-1. Open DataMiner Cube and check whether a view "Spectrum Simulation (SPCTRM)" and element named "SPCTRM Spectrum Simulation" have been added to your DataMiner Agent.
+1. Check whether the package has been successfully deployed:
 
-   If this is the case, the package has been successfully deployed.
+   - Open DataMiner Cube and check whether a view "Spectrum Simulation (SPCTRM)" and element named "SPCTRM Spectrum Simulation" have been added to your DataMiner Agent.
 
-   ![Spectrum Simulation element](~/user-guide/images/Tutorial_Spectrum_Champions_League_img00.png)
+     ![Spectrum Simulation element](~/user-guide/images/Tutorial_Spectrum_Champions_League_img00.png)
 
-1. Open the Automation module of your Cube and check if the Automation script "SPCTRM_AS_SkylineSpectrumSimulation" has been added.
+   - Open the Automation module in DataMiner Cube and check if the Automation script *SPCTRM_AS_SkylineSpectrumSimulation* has been added.
 
-1. Check the home of dataminer.services whether the Low Code App "Skyline Spectrum Simulation" has been added.
+   - On the homepage of your DataMiner System, check whether the low-code app "Skyline Spectrum Simulation" has been added.
 
-> [!TIP]
-> See also:
-> -[Accessing a custom low code app on your system](xref:Accessing_custom_apps)
+     > [!TIP]
+     > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)
 
-## Step 2: Initialize use case
+## Step 2: Initialize the use case
 
-1. Open the Low Code App "Skyline Spectrum Simulation"
+1. Open the low-code app "Skyline Spectrum Simulation".
 
-1. Click on the button "Initialize Signal"
+1. At the bottom of the window, click the button *Initialize Signal*.
 
    ![Initialize Signal](~/user-guide/images/Tutorial_Spectrum_Champions_League_img01.png)
 
-1. Go to Cube and open the element card "SPCTRM Spectrum Simulation", and add a preset called e.g. "myPreset". It is important to check the checkbox "Share preset with other users".
+1. Add a preset to the spectrum simulation element:
 
-    ![Add preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img03.png)
+   1. Open DataMiner Cube.
 
-> [!TIP]
-> See also:
-> -[Using spectrum analysis presets](xref:Using_Spectrum_Analysis_presets)
+   1. In the Surveyor, select the element *SPCTRM Spectrum Simulation*.
 
-1. Set the center frequency to 11 750 MHz, the frequency span to 400 MHz and the sweep time to 100 ms. The carrier of the main live feed and SNG feed will appear in the spectrum trace.
+   1. On the *Spectrum Analyzer* data page, select the *Presets* tab in the pane on the right, and click the *Manage* button at the bottom of the pane.
 
-    ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img02.png)
+   1. Click *New* and specify the necessary data:
+
+      - Add a name, e.g. "myPreset".
+
+      - Optionally, add a description.
+
+      - Select the checkbox *Share preset with other users*.
+
+      ![Add preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img03.png)
+
+      > [!TIP]
+      > See also: [Using spectrum analysis presets](xref:Using_Spectrum_Analysis_presets)
+
+   1. Click *OK*.
+
+1. Select the *Manual* tab in the pane on the right, and configure the following settings:
+
+   - *Frequency span*: 400 MHz
+   - *Center frequency*: 11 750 MHz
+   - *Sweeptime*: 100 ms
+
+   The carrier of the main live feed and SNG feed will appear in the spectrum trace.
+
+   ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img02.png)
 
 > [!NOTE]
-> Upon editing settings of the preset in the next steps, it is a good practice to reopen the element card at a regular base. This is to let the UI know of the latest changes.
+> When you edit settings of the preset later, you should regularly close and reopen th element card. This will ensure that the UI is updated with the latest changes.
 
-## Step 3: Add a first threshold (to detect the rain fade)
+## Step 3: Add a first threshold to detect the rain fade
 
-1. Make sure your preset is loaded. Add a threshold that is just a bit below (in terms of amplitude) the main signal (which has a center frequency of 11 750 MHz). This will be threshold 1 that will be used to detect the rain fade.
+1. Make sure your preset is loaded:
 
-    ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img04.png)
+   1. In the Presets pane, select *Show shared presets*.
+
+   1. Select your preset, and click the *Load* button.
+
+1. Add a threshold to detect the rain fade:
+
+   1. In the ribbon at the top of the card, select *thresholds* and click *Threshold edit mode*.
+
+   1. In the details pane to the right of the spectrum display, click *Add threshold*.
+
+   1. Select the new threshold entry in the pane, and draw the threshold on the spectrum real-time display so that it is slightly below the main signal (which has a center frequency of 11 750 MHz) in terms of amplitude.
+
+   ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img04.png)
 
 1. Save the preset and reload the element card.
 
-    ![Save spectrum preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img05.png)
+   ![Save spectrum preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img05.png)
 
 > [!TIP]
-> See also:
-> -[Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds)
+> See also: [Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds)
 
 ## Step 4: Add a spectrum script
 
 1. Create a script (e.g. called "myScript") that is calculating a boolean value "rainFadeDetected", making use of the many spectrum script possibilities.
 
-    ![Creating the first script](~/user-guide/images/Tutorial_Spectrum_Champions_League_img06.png)
+   ![Creating the first script](~/user-guide/images/Tutorial_Spectrum_Champions_League_img06.png)
 
 1. Save the preset and reload the element card.
 
 > [!TIP]
-> See also:
-> -[Working with spectrum scripts](xref:Working_with_spectrum_scripts)
+> See also: [Working with spectrum scripts](xref:Working_with_spectrum_scripts)
 
-## Step 5: Add a first spectrum monitor to detect the Rain Fade
+## Step 5: Add a first spectrum monitor to detect the rain fade
 
 1. Add a Rain Fade Monitor that is using the rainFadeDetected param, monitor it and generate a Major alarm when this boolean is evaluated to true.
 
@@ -141,10 +161,9 @@ This tutorial consists of the following steps:
     ![Set the monitor interval to 5 seconds](~/user-guide/images/Tutorial_Spectrum_Champions_League_img08.png)
 
 > [!TIP]
-> See also:
-> -[Working with spectrum monitors](xref:Working_with_spectrum_monitors)
+> See also: [Working with spectrum monitors](xref:Working_with_spectrum_monitors)
 
-## Step 6: Test the Rain Fade effect
+## Step 6: Test the rain fade effect
 
 1. Open the Spectrum Simulation app and click on the button 'Let it rain'.
 
@@ -156,7 +175,7 @@ This tutorial consists of the following steps:
 
 1. Save the preset and reload the element card.
 
-## Step 7: Add a second threshold (to detect the sudden shift in frequency)
+## Step 7: Add a second threshold to detect a sudden shift in frequency
 
 1. Make sure your preset is loaded. Add a second threshold that is just a bit above your SNG Feed signal (that has a small amplitude) and that is also covering until the right end of the current trace window.
 
@@ -167,10 +186,10 @@ This tutorial consists of the following steps:
 ## Step 8: Edit the spectrum script
 
 1. The script needs to be elaborated, as we want to use this new threshold 2 to detect if the SNG Feed carrier shifted to the right. Note that, as described in the [spectrum scripts page](xref:Working_with_spectrum_scripts) there are multiple ways to calculate booleans. In this tutorial, it was chosen to build further upon what we already used before, and use the 'trace above maximum threshold'-option.
-   
+
     ![Shifted Carrier Detected boolean](~/user-guide/images/Tutorial_Spectrum_Champions_League_img12.png)
 
-1. Apply the script, save the preset and reload the element card. 
+1. Apply the script, save the preset and reload the element card.
 
 ## Step 9: Add a second spectrum monitor to detect the shifted carrier
 
@@ -178,7 +197,7 @@ This tutorial consists of the following steps:
 
     ![Shifted Carrier Spectrum Monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img13.png)
 
-## Step 10: Test the Shifted Frequency effect
+## Step 10: Test the shifted frequency effect
 
 1. Open the Spectrum Simulation app and click on the button 'Frequency Shift of SNG Feed (+150 MHz)'.
 
@@ -187,5 +206,3 @@ This tutorial consists of the following steps:
 1. If everything has been configured correctly, a critical alarm should be generated because the SNG Feed carrier has shifted 150 MHz and as it is above the threshold now detected by the second spectrum monitor you added.
 
     ![Shifted Carrier detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img15.png)
-
-

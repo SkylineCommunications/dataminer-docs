@@ -1289,7 +1289,7 @@ items:
             topicUid: Creating_a_simulated_spectrum_element
       - name: Tutorials
         items:
-            - name: Monitor a spectrum signal by comparing it with thresholds
+            - name: Monitoring a spectrum signal by comparing it with thresholds
               topicUid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
   - name: Ticketing
     topicUid: ticketing
