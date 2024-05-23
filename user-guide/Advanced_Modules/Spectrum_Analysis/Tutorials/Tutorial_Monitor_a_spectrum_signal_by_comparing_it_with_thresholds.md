@@ -23,10 +23,13 @@ Expected duration: 20 minutes.
   - [Step 1: Deploy the 'Spectrum Simulation' package from the Catalog](#step-1-deploy-the-spectrum-simulation-package-from-the-catalog)
   - [Step 2: Initialize use case](#step-2-initialize-use-case)
   - [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
-  - [Step 4: Add a first spectrum script](#step-4-add-a-first-spectrum-script)
-  - [Step 5: Add a monitor to detect the Rain Fade](#step-5-add-a-monitor-to-detect-the-rain-fade)
+  - [Step 4: Add a spectrum script](#step-4-add-a-spectrum-script)
+  - [Step 5: Add a first spectrum monitor to detect the Rain Fade](#step-5-add-a-first-spectrum-monitor-to-detect-the-rain-fade)
   - [Step 6: Test the Rain Fade effect](#step-6-test-the-rain-fade-effect)
   - [Step 7: Add a second threshold (to detect the sudden shift in frequency)](#step-7-add-a-second-threshold-to-detect-the-sudden-shift-in-frequency)
+  - [Step 8: Edit the spectrum script](#step-8-edit-the-spectrum-script)
+  - [Step 9: Add a second spectrum monitor to detect the shifted carrier](#step-9-add-a-second-spectrum-monitor-to-detect-the-shifted-carrier)
+  - [Step 10: Test the Shifted Frequency effect](#step-10-test-the-shifted-frequency-effect)
 
 > [!TIP]
 > See also:
@@ -100,7 +103,7 @@ Expected duration: 20 minutes.
 > See also:
 > -[Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds)
 
-## Step 4: Add a first spectrum script
+## Step 4: Add a spectrum script
 
 1. Create a script (e.g. called "myScript") that is calculating a boolean value "rainFadeDetected", making use of the many spectrum script possibilities.
 
@@ -112,7 +115,7 @@ Expected duration: 20 minutes.
 > See also:
 > -[Working with spectrum scripts](xref:Working_with_spectrum_scripts)
 
-## Step 5: Add a monitor to detect the Rain Fade
+## Step 5: Add a first spectrum monitor to detect the Rain Fade
 
 1. Add a Rain Fade Monitor that is using the rainFadeDetected param, monitor it and generate a Major alarm when this boolean is evaluated to true.
 
@@ -136,6 +139,38 @@ Expected duration: 20 minutes.
 
     ![Rain alarm detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img10.png)
 
+1. Save the preset and reload the element card.
+
 ## Step 7: Add a second threshold (to detect the sudden shift in frequency)
 
-<!-- Optionally add this title, with a link to a tutorial that logically follows this one. If there is no such tutorial, leave this out. -->
+1. Make sure your preset is loaded. Add a second threshold that is just a bit above your SNG Feed signal (that has a small amplitude) and that is also covering until the right end of the current trace window.
+
+    ![Second threshold](~/user-guide/images/Tutorial_Spectrum_Champions_League_img11.png)
+
+1. Save the preset and reload the element card.
+
+## Step 8: Edit the spectrum script
+
+1. The script needs to be elaborated, as we want to use this new threshold 2 to detect if the SNG Feed carrier shifted to the right. Note that, as described in the [spectrum scripts page](xref:Working_with_spectrum_scripts) there are multiple ways to calculate booleans. In this tutorial, it was chosen to build further upon what we already used before, and use the 'trace above maximum threshold'-option.
+   
+    ![Shifted Carrier Detected boolean](~/user-guide/images/Tutorial_Spectrum_Champions_League_img12.png)
+
+1. Apply the script, save the preset and reload the element card. 
+
+## Step 9: Add a second spectrum monitor to detect the shifted carrier
+
+1. Similar to step 5, you need to add a second separate monitor that can shift the Detected Carrier. This time, we choose to generate a critical alarm.
+
+    ![Shifted Carrier Spectrum Monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img13.png)
+
+## Step 10: Test the Shifted Frequency effect
+
+1. Open the Spectrum Simulation app and click on the button 'Frequency Shift of SNG Feed (+150 MHz)'.
+
+    ![Frequency Shift of SNG Feed](~/user-guide/images/Tutorial_Spectrum_Champions_League_img14.png)
+
+1. If everything has been configured correctly, a critical alarm should be generated because the SNG Feed carrier has shifted 150 MHz and as it is above the threshold now detected by the second spectrum monitor you added.
+
+    ![Shifted Carrier detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img15.png)
+
+
