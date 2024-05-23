@@ -163,7 +163,16 @@ A number of enhancements have been made to the *Line & area chart* component:
 - The chart dimensions will now be automatically adapted.
 
   - When a line chart has data, but does not have lines configured, the component will add one line on the default X and Y axes.
-  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value. 
+  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
+
+#### Low-Code Apps: All open panels will now stay open when you switch from one page to another [ID_39632]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, all open panels would by default be closed when you switched from one page to another. From now on, all open panels will by default stay open when you switch from one page to another.
+
+> [!NOTE]
+> When you migrate to this DataMiner version, in all your existing low-code apps, a *Close all panels* action will be added to the *On close* event of each page.
 
 #### Web API: Enhanced performance [ID_39684]
 
