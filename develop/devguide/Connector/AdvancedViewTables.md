@@ -4,7 +4,7 @@ uid: AdvancedViewTables
 
 # View tables
 
-View tables are used to aggregate data from different other tables in one single table. These can be tables [from the same element](xref:AdvancedViewTablesSameElement) or [from other elements](xref:AdvancedViewTablesOtherElement).
+View tables are used to display data from different other tables in a single table. These can be tables [from the same element](xref:AdvancedViewTablesSameElement) or [from other elements](xref:AdvancedViewTablesOtherElement).
 
 > [!NOTE]
 > Alarm monitoring and trending must not be enabled for view tables. If alarm monitoring or trending are needed, you should configure this on the base tables instead of the view table.
