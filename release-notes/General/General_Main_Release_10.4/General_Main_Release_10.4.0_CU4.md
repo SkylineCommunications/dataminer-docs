@@ -49,7 +49,7 @@ Because of a number of enhancements, overall performance has increased when crea
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
-Because of a number of enhancements, it will now take considerably less time for a Failover agent to go online.
+Because of a number of enhancements, it will now take less time for a Failover agent to go online, especially when a large number of clients are trying to connect to it.
 
 #### SLAnalytics: Enhanced alarm template monitoring [ID_39561]
 
