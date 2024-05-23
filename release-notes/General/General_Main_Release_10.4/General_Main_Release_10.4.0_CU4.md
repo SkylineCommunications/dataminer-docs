@@ -51,6 +51,12 @@ Because of a number of enhancements, overall performance has increased when crea
 
 Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
 
+#### Failover: Enhanced agent performance when going online [ID_39435]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, it will now take considerably less time for a Failover agent to go online.
+
 #### SLAnalytics: Enhanced alarm template monitoring [ID_39561]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
