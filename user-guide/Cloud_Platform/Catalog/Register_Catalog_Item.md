@@ -6,9 +6,9 @@ uid: Register_Catalog_Item
 
 ## What is a Catalog item?
 
-The content available in the Catalog module has always been provided by Skyline Communications. We have been using this module initially to share our connectors with all of our users. In a later stage, we have been adding app packages, Automation scripts and visual overviews. All of these items are called "Catalog items".
+The content available in the Catalog module has always been provided by Skyline Communications. We have been using this module initially to share our connectors with all of our users. In a later stage, we have been adding [Application packages](xref:ApplicationPackages), Automation scripts and visual overviews. All of these items are called "Catalog items".
 
-As more and more users create their own customized solutions on top of the DataMiner software, we want to allow them to register their solutions to the Catalog as well. This will enable our users to easily manage the solutions and packages they have created, distribute them among the different teams within their organization and even share them with other organizations.
+As more and more users create their own customized solutions on top of the DataMiner software, we want to allow them to register their solutions to the Catalog as well. This will enable our users to easily manage the solutions and packages they have created and distribute them among the different teams within their organization. In the future, users will also be able to share their packages with different organizations or make them available on the catalog for everyone to use.
 
 ## Private Catalog items
 
@@ -18,13 +18,22 @@ Private Catalog items are items that are only available to one or more organizat
 
 ## Versioning of Catalog items
 
-Catalog items can hold multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is promoted for Catalog item versions. Users can assign extra labels to versions if they want to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can hold multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced for Catalog item versions. Users can assign extra labels to versions if they want to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+
+## Supported Catalog item types
+
+At the moment we support the following types:
+
+1. Automation Script
+1. Application Package
+1. Connector
+1. Visio
 
 ## How to register a private Catalog item
 
 ### Register using the Catalog UI
 
-If you use the UI, you can only register a Catalog item. There is no UI yet to register a new version. This can only be done by using the API.
+If you use the UI, you can only register a Catalog item. There is no UI yet to register a new version. This can only be done by using the [API](xref:Register_Catalog_Item#register-using-the-catalog-api).
 
 To register a new Catalog item, do the following:
 
@@ -34,7 +43,7 @@ To register a new Catalog item, do the following:
 
 1. Indicate for which organization you want to register the Catalog item. This can be done by using the selection box that will automatically be populated with all the organizations on the dataminer.services platform you have access to.
 
-1. Select the type of the Catalog item. The type will define how the Catalog item will be shown to the users. We also allow filtering on type so users can quickly find what they are looking for when browsing the Catalog module.
+1. Select the type of the Catalog item. This can be one of the supported [catalog item types](xref:Register_Catalog_Item#supported_catalog_item_types). The type will define how the Catalog item will be shown to the users. We also allow filtering on type so users can quickly find what they are looking for when browsing the Catalog module.
 
 1. Enter the name of the item. This will be the name that will be used to display the item in the Catalog. It needs to be human readable. Make sure you pick a name that makes sense.
 
