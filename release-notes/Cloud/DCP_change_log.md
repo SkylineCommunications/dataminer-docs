@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### TBD - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
 
-DMS overview will now show the a agent of failover pair as offlin when the other agent is online.
+The DMS overview page will now correctly show the failover pair agent as offline when this is the case.
 
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
