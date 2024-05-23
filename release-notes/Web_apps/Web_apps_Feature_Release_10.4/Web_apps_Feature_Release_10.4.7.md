@@ -64,6 +64,15 @@ In low-code apps, you can now configure a *Close all panels* action. As its name
 
 In low-code apps, you can now configure actions for a new *On open* panel event, which will be triggered each time a panel is opened.
 
+#### Low-Code Apps: Option to allow users to drag a panel to another location [ID_39649]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When you configure a panel, it is now possible to allow users to drag it to another location.
+
+> [!NOTE]
+> Even if you indicated that a panel can be dragged to another location, it will only be possible to do so when that panel is opened as a pop-up window.
+
 #### Low-Code Apps: New 'On close' panel event [ID_39668]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
