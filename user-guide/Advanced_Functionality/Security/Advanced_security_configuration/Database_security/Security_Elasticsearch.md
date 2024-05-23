@@ -156,8 +156,8 @@ To configure TLS encryption for inter-node communication:
 
 By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster.
 
-> [!Note]
-> In order for the Authentication to work TLS must be configured (see above steps on how to configure).
+> [!NOTE]
+> For the authentication to work, TLS must be configured first, as detailed above.
 
 To enable authentication in Elasticsearch 6.8.X:
 
