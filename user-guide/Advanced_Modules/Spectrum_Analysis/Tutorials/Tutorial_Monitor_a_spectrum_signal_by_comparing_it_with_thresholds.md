@@ -24,7 +24,9 @@ Expected duration: 20 minutes.
   - [Step 2: Initialize use case](#step-2-initialize-use-case)
   - [Step 3: Add a first threshold (to detect the rain fade)](#step-3-add-a-first-threshold-to-detect-the-rain-fade)
   - [Step 4: Add a first spectrum script](#step-4-add-a-first-spectrum-script)
-  - [Step 4: Add a first spectrum script](#step-4-add-a-first-spectrum-script-1)
+  - [Step 5: Add a monitor to detect the Rain Fade](#step-5-add-a-monitor-to-detect-the-rain-fade)
+  - [Step 6: Test the Rain Fade effect](#step-6-test-the-rain-fade-effect)
+  - [Step 7: Add a second threshold (to detect the sudden shift in frequency)](#step-7-add-a-second-threshold-to-detect-the-sudden-shift-in-frequency)
 
 > [!TIP]
 > See also:
@@ -106,6 +108,34 @@ Expected duration: 20 minutes.
 
 1. Save the preset and reload the element card.
 
-## Step 4: Add a first spectrum script
+> [!TIP]
+> See also:
+> -[Working with spectrum scripts](xref:Working_with_spectrum_scripts)
+
+## Step 5: Add a monitor to detect the Rain Fade
+
+1. Add a Rain Fade Monitor that is using the rainFadeDetected param, monitor it and generate a Major alarm when this boolean is evaluated to true.
+
+    ![Creating the first monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img07.png)
+
+1. It is recommended for the tutorial to also edit the details of the rainFadeMonitor and change the Interval to 5 seconds (default value is 5 minutes). This will make sure that the monitor is triggered every 5 seconds, causing a quick reaction when the Rain Fade kicks in.
+
+    ![Set the monitor interval to 5 seconds](~/user-guide/images/Tutorial_Spectrum_Champions_League_img08.png)
+
+> [!TIP]
+> See also:
+> -[Working with spectrum monitors](xref:Working_with_spectrum_monitors)
+
+## Step 6: Test the Rain Fade effect
+
+1. Open the Spectrum Simulation app and click on the button 'Let it rain'.
+
+    ![Let it rain](~/user-guide/images/Tutorial_Spectrum_Champions_League_img09.png)
+
+1. If everything has been configured correctly, a major alarm should be generated because the main carrier is now below your threshold because the rain fade caused a sudden drop in amplitude.
+
+    ![Rain alarm detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img10.png)
+
+## Step 7: Add a second threshold (to detect the sudden shift in frequency)
 
 <!-- Optionally add this title, with a link to a tutorial that logically follows this one. If there is no such tutorial, leave this out. -->
