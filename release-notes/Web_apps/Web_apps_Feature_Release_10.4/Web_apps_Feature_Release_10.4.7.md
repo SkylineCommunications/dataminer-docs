@@ -175,3 +175,11 @@ When, in the template editor, you configured a conditional case using a numeric 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 In some cases, a *Line and area chart* component would incorrectly show null values. From now on, these values will no longer be displayed.
+
+#### Dashboards app & Low-Code Apps - Stepper component: Problem when a DOM instance in the initial state did not have any history [ID_39704]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, when a DOM instance was in the initial state, did not have any history, and had a definition that contained a loop from "initial" back to "initial", the *Stepper* component would show an incorrect state.
+
+From now on, the *Stepper* component will no longer try and guess the history of a DOM instance in the initial state when no history is available.
