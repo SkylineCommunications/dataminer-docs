@@ -6,7 +6,7 @@ uid: artifactdeployer_change_log
 
 #### 23 May 2024 - Enhancement - ArtifactDeployer 1.7.0 - Deployment event improvements [ID_39717]
 
-Improved on how Catalog and DxM deployment events are forwarded to dataminer.services. This should reduce the amount of deployments shown on dataminer.services as failures while they actually did succeed. 
+An improvement has been implemented to the way Catalog and DxM deployment events are forwarded to dataminer.services. This will reduce the number of deployments that are incorrectly shown as failures on dataminer.services even though they actually succeeded.
 
 #### 26 April 2024 - Fix - ArtifactDeployer 1.6.10 - Inconsistent cloud endpoint detection failures [ID_39513]
 
@@ -14,7 +14,7 @@ An issue has been resolved that could make features like DxM and Catalog deploym
 
 #### 29 March 2024 - Enhancement - ArtifactDeployer 1.6.9 - Added the possibility to locally disable artifact deployments through the app settings [ID_39113]
 
-It is now possible to locally disable artifact deployments through the *App settings* file of the ArtifactDeployer DxM. 
+It is now possible to locally disable artifact deployments through the *App settings* file of the ArtifactDeployer DxM.
 
 To do so, set *DeployArtifactOptions:IsDisabled* to *true* in the app settings. On each server where DataMiner ArtifactDeployer is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner ArtifactDeployer` and either create or modify *appsettings.custom.json* with the following configuration:
 
