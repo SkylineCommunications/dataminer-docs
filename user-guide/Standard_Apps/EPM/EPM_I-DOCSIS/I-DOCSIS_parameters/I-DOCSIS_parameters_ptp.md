@@ -27,3 +27,6 @@ Currently, these parameters are not shown on the topology chains available in I-
   - **Clock State**: Direct value. This attribute represents the current state of the clock for the instance.
 
     OID: 1.3.6.1.4.1.4491.2.1.32.1.1.2.1.1
+
+> [!NOTE]
+> These KPIs are aimed at a distributed architecture (D-DOCSIS). Currently, the KPIs are being added to the connector, as this connector will also be used in the D-DOCSIS solution.
