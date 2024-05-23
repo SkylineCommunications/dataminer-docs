@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 16 May 2024 - Enhancement - ChatOps - Possibility to skip the confirmation when running custom commands [ID_39736]
+#### 23 May 2024 - Enhancement - ChatOps - Possibility to skip the confirmation when running custom commands [ID_39736]
 
 From now on, it is possible to skip the confirmation message when running a custom command with the DataMiner Teams bot.
 
