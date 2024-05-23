@@ -20,6 +20,9 @@ Private Catalog items are items that are only available to one or more organizat
 
 Catalog items can hold multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced for Catalog item versions. Users can assign extra labels to versions if they want to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
+> [!WARNING]
+> If the item is of type Connector, you will need to adhere to the [existing connector versioning](xref:ProtocolVersionSemantics).
+
 ## Supported Catalog item types
 
 At the moment we support the following types:
