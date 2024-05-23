@@ -23,6 +23,15 @@ The visual overviews used by the PTP application will now be delivered as protoc
 
 When you upgrade to this PTP version, the existing custom Visio file will stay in the system, but PTP will now use the protocol default Visio files instead. If the custom Visio file has any custom changes, you can go back to using it by [making it the active Visio file](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files). If you no longer need the custom Visio file, you can [delete it](xref:Managing_Visio_files_linked_to_protocols#removing-a-microsoft-visio-file-assigned-to-a-protocol).
 
+#### Standard PTP mediation connector updated to version 1.0.0.22 [ID_39728]
+
+The version of the mediation connector *Standard DataMiner PTP Device* included in the PTP package has been incremented from 1.0.0.20 to 1.0.0.22.
+
+For detailed information about the changes in this version, refer to the [change log for this connector in the DataMiner Catalog](https://catalog.dataminer.services/details/59d8a85e-5ee6-4203-a7c4-2b06ad665d96).
+
+> [!NOTE]
+> New versions of the mediation connector can be deployed independently of the PTP app.
+
 ### Fixes
 
 #### SLProtocol RTEs triggered by initialization DMS Monitors on systems with high SLNet load [ID_39726]
