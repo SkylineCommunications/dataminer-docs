@@ -65,6 +65,10 @@ The call accepts a binary file as input. This file should be a zip file containi
 
 This file will contain all necessary information to register a Catalog item or version. This manifest file should be a valid yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
 
+> [!WARNING]
+> If the *id* field is not filled in, a new Catalog item registration will be created.
+> If you want to register a new version for an existing Catalog item, make sure to fill in the ID of that item.
+
 ```yml
 # [Required]
 # Possible values: 
@@ -142,7 +146,3 @@ tags:
   - 'Information Platform'
   - 'Azure'
 ```
-
-> [!WARNING]
-> If the *id* field is not filled in, a new Catalog item registration will be created.
-> If you want to register a new version for an existing Catalog item, make sure to fill in the ID of that item.
