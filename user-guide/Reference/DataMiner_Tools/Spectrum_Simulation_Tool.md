@@ -4,7 +4,7 @@ uid: Spectrum_Simulation_protocol
 
 # Spectrum simulation protocol
 
-To test DataMiner Spectrum Analysis, a spectrum simulation protocol is available. You can for example use it to verify the “set parameter” commands that SLSpectrum sends to the protocol, or to get a trace on the screen and test the various features of the spectrum user interface and spectrum monitoring without a real device.
+To test DataMiner Spectrum Analysis, a spectrum simulation protocol is available. You can for example use it to verify the "set parameter" commands that SLSpectrum sends to the protocol, or to get a trace on the screen and test the various features of the spectrum user interface and spectrum monitoring without a real device. You can even simulate various carriers and amplitudes that closely resemble real-life use cases.
 
 To use this protocol:
 
@@ -16,4 +16,4 @@ To use this protocol:
 1. Create an element that uses this protocol.
 
 > [!NOTE]
-> For detailed information about this protocol, see [Skyline Spectrum Simulator](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html).
+> For detailed information about this protocol, see [Skyline Spectrum Simulation](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html).
