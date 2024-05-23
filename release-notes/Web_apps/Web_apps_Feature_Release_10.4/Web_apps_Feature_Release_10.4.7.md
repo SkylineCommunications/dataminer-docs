@@ -117,6 +117,12 @@ A number of enhancements have been made to the *Line & area chart* component:
   - When a line chart has data, but does not have lines configured, the component will add one line on the default X and Y axes.
   - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value. 
 
+#### Web API: Enhanced performance [ID_39684]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements with regard to subscription reuse and WebSocket communication, overall performance of the web API has increased.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Maps component: 'Map type not supported' error would not be displayed [ID_39506]
