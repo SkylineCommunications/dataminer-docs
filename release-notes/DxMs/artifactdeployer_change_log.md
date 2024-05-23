@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 23 May 2024 - Enhancement - ArtifactDeployer 1.7.0 - Deployment event improvements [ID_39717]
+
+Improved on how Catalog and DxM deployment events are forwarded to dataminer.services. This should reduce the amount of deployments shown on dataminer.services as failures while they actually did succeed. 
+
 #### 26 April 2024 - Fix - ArtifactDeployer 1.6.10 - Inconsistent cloud endpoint detection failures [ID_39513]
 
 An issue has been resolved that could make features like DxM and Catalog deployments inconsistently fail.
