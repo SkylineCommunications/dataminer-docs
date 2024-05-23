@@ -9,6 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 16 May 2024 - Enhancement - ChatOps - Skip the confirmation when running custom commands [ID_39736]
+
+From now on it's possible to skip the confirmation message when running a custom command with the DataMiner Teams bot. 
+You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command, for example `run toggle switch --sc` with 'toggle switch' the name of the custom command automation script.
+
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) was also released that allows to skip the confirmation on custom buttons in adaptive cards.
+
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
 When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
