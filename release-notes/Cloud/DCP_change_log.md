@@ -99,7 +99,7 @@ It will now include an overview of all DataMiner Systems in a table, which will 
 
 #### 14 March 2024 - Enhancement - Admin - Buttons overhaul [ID_39008]
 
-The buttons of the Admin app have been adjusted to be more in line with our upcoming new design.
+The buttons of the Admin app have been adjusted to be more in line with upcoming design changes.
 
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
