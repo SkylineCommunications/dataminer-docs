@@ -18,13 +18,10 @@ You will learn how to:
 Expected duration: 20 minutes.
 
 > [!TIP]
-> See also: [Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
-
-<!-- Replace the tip above with this one when the kata is released:
-> [!TIP]
 > See also:
-> -[Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/) on DataMiner Dojo
-> -[Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7) -->
+>
+> - [Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/) on DataMiner Dojo
+> - [Skyline Spectrum Simulation connector](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created in DataMiner 10.4.5.
