@@ -148,6 +148,12 @@ When a client application lost connection while an interactive Automation script
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
 
+#### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID_39598]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+On Failover systems, the Service Manager would incorrectly initialize twice.
+
 #### 'Security Advisory' BPA test: Issues fixed [ID_39606] [ID_39716]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->

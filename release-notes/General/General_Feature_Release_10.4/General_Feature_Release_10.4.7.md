@@ -241,6 +241,12 @@ When an imported element was deleted and then imported again, up to now, SLAnaly
 
 From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
 
+#### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID_39598]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+On Failover systems, the Service Manager would incorrectly initialize twice.
+
 #### 'Security Advisory' BPA test: Issues fixed [ID_39606] [ID_39716]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
