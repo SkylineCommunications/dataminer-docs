@@ -112,7 +112,7 @@ This tutorial consists of the following steps:
    ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img02.png)
 
 > [!NOTE]
-> When you edit settings of the preset later, you should regularly close and reopen th element card. This will ensure that the UI is updated with the latest changes.
+> When you edit settings of the preset later, you should regularly close and reopen the element card. This will ensure that the UI is updated with the latest changes.
 
 ## Step 3: Add a first threshold to detect the rain fade
 
