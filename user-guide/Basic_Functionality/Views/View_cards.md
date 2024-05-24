@@ -29,7 +29,7 @@ The navigation pane on the left side of a view card contains a tree view with th
 
 - [VISUAL](#visual)
 
-- [BELOW THIS VIEW / DATA](#below-this-view--data)
+- [BELOW THIS VIEW / DATA](#below-this-view)
 
 - [ALARMS](#alarms)
 
