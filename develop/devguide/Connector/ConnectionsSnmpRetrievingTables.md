@@ -62,13 +62,6 @@ Protocol implementation:
   > Note, however, that once you include a column, all preceding columns must be included as well.
   > Note also that all columns will still be retrieved from the agent, even though these are not visualized. This is a consequence of the way tables are structured in SNMP and the GetNext operation.
 
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete">1.3.6.1.2.1.2.2</OID>
-  </SNMP>
-  ```
-
 Capture observation:
 
 - The initial request is an SNMP get next request with the OID of ifEntry (1.3.6.1.2.1.2.2.1). This returns the content of 1.3.6.1.2.1.2.2.1.1 (first row, first column).
@@ -97,14 +90,19 @@ Protocol implementation:
 
   Define an SNMP tag on the column parameters, specifying the OID.
 
-  > [!NOTE]
-  > Not all columns defined in the MIB table need to be defined in the protocol.
-With this approach, you can specify the columns that are of interest, so that only these columns will be retrieved.
+  ```xml
+  <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+      <Type>octetstring</Type>
+    </SNMP>
+  ```
 
-> [!NOTE]
->
-> - By default, 50 cells are retrieved in one request. In order to change this, use the "bulk" option.
-> - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device.
+  > [!NOTE]
+  >
+  > - Not all columns defined in the MIB table need to be defined in the protocol. With this approach, you can specify the columns that are of interest, so that only these columns will be retrieved.
+  > - By default, 50 cells are retrieved in one request. In order to change this, use the "bulk" option.
+  > - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device.
 From the GetNext responses, the values will be placed in the first column of the protocol table. The OID defined on the first column parameter will be ignored.
 This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table.
 
