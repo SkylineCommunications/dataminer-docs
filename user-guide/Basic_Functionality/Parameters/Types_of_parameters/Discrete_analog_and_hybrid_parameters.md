@@ -8,7 +8,7 @@ uid: Discrete_analog_and_hybrid_parameters
 
 These parameters can have one of a limited set of predefined values. These can for instance be different strings.
 
-![Discrete parameter](~/user-guide/images/Discrete_Parameter_Text_Box_Control.png)<br>*Discrete parameter in DataMiner 10.4.5*
+![Discrete parameter](~/user-guide/images/Discrete_Parameter_Text_Box.png)<br>*Discrete parameter in DataMiner 10.4.5*
 
 For more information on how to update discrete parameters, see [Updating discrete parameters](xref:Updating_discrete_parameters).
 

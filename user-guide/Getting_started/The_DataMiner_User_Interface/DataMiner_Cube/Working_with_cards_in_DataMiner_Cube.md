@@ -61,6 +61,8 @@ The pane consists of a tree view with several fixed nodes:
 
 - **VISUAL**: Contains all available Visual Overview pages.
 
+  ![Visual page](~/user-guide/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.4.5*
+
   > [!NOTE]
   >
   > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
