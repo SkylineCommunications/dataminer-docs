@@ -101,6 +101,22 @@ Because of a number of enhancements, it will now take less time for a Failover a
 
 When an alarm template contained multiple lines for the same parameter, each with a different filter, up to now, SLAnalytics would only take into account the lines that were being monitored. From now on, as soon as one line related to a specific parameter is being monitored, SLAnalytics will take into account all lines related to that parameter.
 
+#### SNMP++: Trap processing enhancements [ID_39629]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, when SNMP++ was used for trap reception, a single thread would be responsible for reading the raw data from the UDP socket and forwarding it to SLSNMPManager.
+
+From now on, one thread will read the raw data from the UDP buffer and add it to a queue. Another thread will then take the data from that queue, parse it into an appropriate SNMP object, and forward it to SLSNMPManager.
+
+> [!NOTE]
+>
+> - If traps would get lost, the UDP buffer can be increased by changing the *DefaultReceiveWindow* and *DefaultSendWindow* REG_DWORD values under the Windows Registry key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AFD\Parameters` (default value: 65536 bytes) and rebooting the server. Note that increasing these values will only have an effect when dealing with a small burst of traps. If traps are constantly entering at a higher rate than SLSNMPManager can process, it means that the DataMiner Agent is not able to catch up.
+> - The throughput at which traps can be processed depends on various factors: the CPU benchmark and CPU usage, the log level of the SLSNMPManager logging, if traps need to be forwarded within the DMS, how long the QAction runs that processes the trap, and when an element is able to process a trap.
+
+> [!CAUTION]
+> Please take extreme care when modifying the Windows registry. We strongly advise you to back up the registry before you modify it.
+
 ### Fixes
 
 #### Issues with user accounts [ID_39234]
