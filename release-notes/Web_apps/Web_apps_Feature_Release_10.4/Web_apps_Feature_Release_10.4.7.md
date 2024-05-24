@@ -236,4 +236,7 @@ From now on, the *Stepper* component will no longer try and guess the history of
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-After a dashboard or a low-code app had been migrated from DataMiner version 10.3.8 to DataMiner version 10.3.9 or later, all references to query columns specified in table templates would no longer work.
+After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later, all references to query columns specified in table templates would no longer work.
+
+> [!NOTE]
+> This problem did not occur after a web-only upgrade.
