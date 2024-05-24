@@ -7,6 +7,10 @@ uid: Security_Cassandra_TLS
 > [!TIP]
 > If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
+> [!NOTE]
+> We strongly advise to use certificates based on hostname and not IP. These hostnames should then be used in the configuration of db.xml that you can find in Connecting with DataMiner below. This recommendation is for self signed  certificates and purchased certifcates.
+> In case you would want to use the IP in the certificate and db.xml, you have to make sure that you can resolve the IP to a hostname on the network, or that the SAN is correctly set in the certificate.
+
 ## Client-Server Encryption
 
 By default, Cassandra communicates with clients over an insecure channel, which means attackers can set up Man-In-The-Middle (MITM) attacks to steal data or credentials that are sent over the wire. To mitigate this, encryption should be enabled. Cassandra provides this option through its **client_encryption_options**.
@@ -77,8 +81,12 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
 1. Now that you have certificates for every node, digitally sign them with the private key of the root CA certificate. To do so, first create a certificate signing request (CSR).
 
    ```txt
-   keytool -certreq -keystore <NODE IP>.jks -alias <NODE IP> -file <NODE IP>.csr -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -ext SAN=DNS:<NODE NAME>,IP:<NODE IP>
+   keytool -certreq -keystore <HOSTNAME>.jks -alias <HOSTNAME> -file <HOSTNAME>.csr -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -ext SAN=DNS:<NODE NAME>,IP:<NODE IP>
    ```
+   
+> [!NOTE]
+> It's advised to use hostname instead of the IP. If you choose the IP over the hostname, you have to make sure the IP can be resolved, or the SAN has the correct hostname.
+
 
 1. Digitally sign the node certificates with the root certificate authority.
 
