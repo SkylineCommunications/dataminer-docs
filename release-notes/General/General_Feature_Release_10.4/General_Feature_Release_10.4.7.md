@@ -249,6 +249,12 @@ When a client application lost connection while an interactive Automation script
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
 
+#### API Gateway: Problem when processing a large number of parallel calls [ID_39550]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When API Gateway had to process a large number of parallel calls, up to now, this could lead to a threading problem, causing clients to time out and get disconnected.
+
 #### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
