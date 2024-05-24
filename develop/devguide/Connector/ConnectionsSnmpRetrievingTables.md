@@ -102,9 +102,7 @@ Protocol implementation:
   >
   > - Not all columns defined in the MIB table need to be defined in the protocol. With this approach, you can specify the columns that are of interest, so that only these columns will be retrieved.
   > - By default, 50 cells are retrieved in one request. In order to change this, use the "bulk" option.
-  > - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device.
-From the GetNext responses, the values will be placed in the first column of the protocol table. The OID defined on the first column parameter will be ignored.
-This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table.
+  > - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device. From the GetNext responses, the values will be placed in the first column of the protocol table. The OID defined on the first column parameter will be ignored. This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table.
 
 Capture observation:
 
