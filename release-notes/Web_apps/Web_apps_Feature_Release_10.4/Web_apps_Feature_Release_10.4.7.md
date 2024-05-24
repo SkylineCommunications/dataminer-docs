@@ -231,3 +231,9 @@ In some cases, a *Line and area chart* component would incorrectly show null val
 Up to now, when a DOM instance was in the initial state, did not have any history, and had a definition that contained a loop from "initial" back to "initial", the *Stepper* component would show an incorrect state.
 
 From now on, the *Stepper* component will no longer try and guess the history of a DOM instance in the initial state when no history is available.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem with references to query columns specified in table templates after migrating a dashboard or app [ID_39730]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+After a dashboard or a low-code app had been migrated from DataMiner version 10.3.8 to DataMiner version 10.3.9 or later, all references to query columns specified in table templates would no longer work.
