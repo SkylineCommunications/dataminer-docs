@@ -31,6 +31,50 @@ Because of a number of enhancements, on systems using a Cassandra and Cassandra 
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
+#### Replication buffering enhancements [ID_39428]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+A number of enhancements have been made with regard to the replication buffering functionality:
+
+- In some cases, the replication buffering limits would not be taken into account, causing the buffer to keep on growing.
+
+- When DataMiner restarted with an active ReplicationBuffer storage file, at the end of its startup routine, it would incorrectly not flush the contents of the file once the replication connection was re-established.
+
+- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. Also, there will only be one ReplicationBuffer file per replicated element.
+
+##### Manually removing old ReplicationBuffer files
+
+On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contain a large number of old ReplicationBuffer files. These files will not be removed automatically. If you want to remove them manually, you have two options:
+
+1. If you no longer need the data stored in those files, you can delete all files with a name matching the following format:
+
+   `ReplicationBuffer_[AgentNameReplicatedElement]_[AgentIpReplicatedElement]_[AgentDmaIdReplicatedElement]_[ElementIdReplicatedElement]_[SomeHashOfTheStorage]`
+
+   Example: *ReplicationBuffer_slc-h32-g06_10.11.6.32_223_4_6992437*
+
+1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e. in order to fill some gaps in their trend data), you can try to do the following:
+
+   1. Connect to the DMA using the SLNetClientTest tool.
+   1. Go to the *Build Message* tab of the main window.
+   1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+   1. In the *ExtraInfo* field, specify "flush:[fileNamePattern]". For examples of file name patterns, see below.
+   1. In the *Type* field at the bottom, select "ReplicationBufferStats".
+
+   Examples of flush commands:
+
+   | Enter... | to try to flush... |
+   |----------|--------------------|
+   | flush:* | all ReplicationBuffer files. |
+   | flush:agentName* | all ReplicationBuffer files for DataMiner Agent *agentName* |
+   | flush:agentName_10.11.6.32_223_4 | all ReplicationBuffer files for the replicated element 223/4 on DataMiner Agent agentName |
+
+> [!IMPORTANT]
+> DataMiner will only succeed in flushing a ReplicationBuffer if the replication connection for the replicated element in question is active. If not, it will fail to do so, and will leave the file untouched.
+
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### Failover: Enhanced agent performance when going online [ID_39435]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
