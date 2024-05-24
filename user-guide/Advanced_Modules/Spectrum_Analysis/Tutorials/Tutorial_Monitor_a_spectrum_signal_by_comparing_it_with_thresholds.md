@@ -88,7 +88,7 @@ This tutorial consists of the following steps:
 
    1. Click *New* and specify the necessary data:
 
-      - Add a name, e.g. "myPreset".
+      - Add a name, e.g. `myPreset`.
 
       - Optionally, add a description.
 
@@ -96,10 +96,10 @@ This tutorial consists of the following steps:
 
       ![Add preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img03.png)
 
-      > [!TIP]
-      > See also: [Using spectrum analysis presets](xref:Using_Spectrum_Analysis_presets)
-
    1. Click *OK*.
+
+   > [!TIP]
+   > See also: [Using spectrum analysis presets](xref:Using_Spectrum_Analysis_presets)
 
 1. Select the *Manual* tab in the pane on the right, and configure the following settings:
 
@@ -118,7 +118,7 @@ This tutorial consists of the following steps:
 
 1. Make sure your preset is loaded:
 
-   1. In the Presets pane, select *Show shared presets*.
+   1. In the *Presets* pane, select *Show shared presets*.
 
    1. Select your preset, and click the *Load* button.
 
@@ -128,81 +128,144 @@ This tutorial consists of the following steps:
 
    1. In the details pane to the right of the spectrum display, click *Add threshold*.
 
-   1. Select the new threshold entry in the pane, and draw the threshold on the spectrum real-time display so that it is slightly below the main signal (which has a center frequency of 11 750 MHz) in terms of amplitude.
+   1. Draw the threshold on the spectrum real-time display so that it is slightly below the main signal (which has a center frequency of 11 750 MHz) in terms of amplitude.
 
-   ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img04.png)
+      ![Spectrum Trace](~/user-guide/images/Tutorial_Spectrum_Champions_League_img04.png)
 
-1. Save the preset and reload the element card.
+1. Save the preset:
 
-   ![Save spectrum preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img05.png)
+   1. At the bottom of the *Presets* pane, select the preset you made earlier in the dropdown list.
+
+      ![Save spectrum preset](~/user-guide/images/Tutorial_Spectrum_Champions_League_img05.png)
+
+   1. Click *Save*.
+
+   1. In the dialog box, click *Yes*.
+
+1. Close and reopen the element card.
 
 > [!TIP]
 > See also: [Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds)
 
 ## Step 4: Add a spectrum script
 
-1. Create a script (e.g. called "myScript") that is calculating a boolean value "rainFadeDetected", making use of the many spectrum script possibilities.
+1. Create a script that calculates a boolean value "rainFadeDetected":
 
-   ![Creating the first script](~/user-guide/images/Tutorial_Spectrum_Champions_League_img06.png)
+   1. In the ribbon at the top of the card, select *monitors* and click *New script*.
 
-1. Save the preset and reload the element card.
+   1. Specify a name for the script, e.g. `myScript`.
+
+   1. Configure the script contents as illustrated below:
+
+      ![Creating the first script](~/user-guide/images/Tutorial_Spectrum_Champions_League_img06.png)
+
+   1. Click *Apply* to save the script, and close the script window.
+
+1. Save the preset and reload the element card, like in the previous step.
 
 > [!TIP]
 > See also: [Working with spectrum scripts](xref:Working_with_spectrum_scripts)
 
 ## Step 5: Add a first spectrum monitor to detect the rain fade
 
-1. Add a Rain Fade Monitor that is using the rainFadeDetected param, monitor it and generate a Major alarm when this boolean is evaluated to true.
+In this step, you will add a rain fade monitor that generates a major alarm when the "rainFadeDetected" boolean is evaluated as true.
 
-    ![Creating the first monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img07.png)
+1. In the ribbon at the top of the card, select *monitors* and click *New monitor*.
 
-1. It is recommended for the tutorial to also edit the details of the rainFadeMonitor and change the Interval to 5 seconds (default value is 5 minutes). This will make sure that the monitor is triggered every 5 seconds, causing a quick reaction when the Rain Fade kicks in.
+1. If this is the first monitor that gets added to the system, in the new monitor window, click *Add monitor*.
 
-    ![Set the monitor interval to 5 seconds](~/user-guide/images/Tutorial_Spectrum_Champions_League_img08.png)
+1. Specify a name for the monitor, e.g. `rainFadeMonitor`.
+
+1. Expand *Show details*, and set *Interval* to 5 seconds (instead of the default value of 5 minutes).
+
+   ![Set the monitor interval to 5 seconds](~/user-guide/images/Tutorial_Spectrum_Champions_League_img08.png)
+
+   This will make sure that the monitor is triggered every 5 seconds, causing a quick reaction when the rain fade kicks in.
+
+1. Make sure your script (e.g. "myScript") is selected in the *script* dropdown box.
+
+1. Under *Monitoring and trending*, click *Add* and select *Script variable rainFadeDetected* to add this as a parameter.
+
+1. Configure the parameter as illustrated below:
+
+   ![Creating the first monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img07.png)
+
+1. Click *Apply* to save the monitor, and close the monitor window.
 
 > [!TIP]
 > See also: [Working with spectrum monitors](xref:Working_with_spectrum_monitors)
 
 ## Step 6: Test the rain fade effect
 
-1. Open the Spectrum Simulation app and click on the button 'Let it rain'.
+1. Open the Spectrum Simulation low-code app and click the button *Let it rain*.
 
-    ![Let it rain](~/user-guide/images/Tutorial_Spectrum_Champions_League_img09.png)
+   ![Let it rain](~/user-guide/images/Tutorial_Spectrum_Champions_League_img09.png)
 
-1. If everything has been configured correctly, a major alarm should be generated because the main carrier is now below your threshold because the rain fade caused a sudden drop in amplitude.
+   This will make the main carrier go below the configure threshold, simulating the rain fade causing a sudden drop in amplitude.
 
-    ![Rain alarm detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img10.png)
+1. Check in the Alarm Console in Cube if a major alarm is generated.
 
-1. Save the preset and reload the element card.
+   ![Rain alarm detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img10.png)
+
+   > [!NOTE]
+   > As you configured the monitor to execute the script with an interval of 5 seconds, it can take up to 5 seconds before the alarm is generated after the start of the rain fade. By default, this interval is even set to 5 minutes.
+
+1. In the Spectrum Simulation low-code app, click the button *Let the sun shine*.
+
+   This will cause the alarm to go away again.
 
 ## Step 7: Add a second threshold to detect a sudden shift in frequency
 
-1. Make sure your preset is loaded. Add a second threshold that is just a bit above your SNG Feed signal (that has a small amplitude) and that is also covering until the right end of the current trace window.
+1. Go back to the spectrum analyzer page in Cube and make sure your preset is loaded.
 
-    ![Second threshold](~/user-guide/images/Tutorial_Spectrum_Champions_League_img11.png)
+1. Add a second threshold that is just a bit above your SNG Feed signal (with a small amplitude) and that goes all the way to the right of the current trace window:
+
+   ![Second threshold](~/user-guide/images/Tutorial_Spectrum_Champions_League_img11.png)
 
 1. Save the preset and reload the element card.
 
 ## Step 8: Edit the spectrum script
 
-1. The script needs to be elaborated, as we want to use this new threshold 2 to detect if the SNG Feed carrier shifted to the right. Note that, as described in the [spectrum scripts page](xref:Working_with_spectrum_scripts) there are multiple ways to calculate booleans. In this tutorial, it was chosen to build further upon what we already used before, and use the 'trace above maximum threshold'-option.
+In this step, you will further elaborate the script you created earlier, so that the new threshold 2 is used to detect if the SNG feed carrier has shifted to the right. While there are [multiple ways to calculate booleans in spectrum scripts](xref:Spectrum_Analyzer_script_actions), in this tutorial, you will build on what you used earlier and therefore use the *Trace above maximum threshold* option.
 
-    ![Shifted Carrier Detected boolean](~/user-guide/images/Tutorial_Spectrum_Champions_League_img12.png)
+1. In the ribbon at the top of the card, select *monitors* and click *Edit scripts*.
 
-1. Apply the script, save the preset and reload the element card.
+1. Select the script you created earlier and add the script content indicated below:
+
+   ![Shifted Carrier Detected boolean](~/user-guide/images/Tutorial_Spectrum_Champions_League_img12.png)
+
+1. Click *Apply* to save the script, and close the script window.
+
+1. Save the preset and reload the element card.
 
 ## Step 9: Add a second spectrum monitor to detect the shifted carrier
 
-1. Similar to step 5, you need to add a second separate monitor that can shift the Detected Carrier. This time, we choose to generate a critical alarm.
+In this step, you will add a second, separate monitor that will generate a critical alarm when a shifted carrier is detected.
 
-    ![Shifted Carrier Spectrum Monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img13.png)
+1. In the ribbon at the top of the card, select *monitors* and click *New monitor*.
+
+1. Specify a name for the monitor, e.g. `shiftedCarrierMonitor`.
+
+1. Expand *Show details*, and set *Interval* to 5 seconds.
+
+1. Make sure your script (e.g. "myScript") is selected in the *script* dropdown box.
+
+1. Under *Monitoring and trending*, click *Add* and select *Script variable shiftedCarrierDetected* to add this as a parameter.
+
+1. Configure the parameter as illustrated below:
+
+   ![Shifted carrier spectrum monitor](~/user-guide/images/Tutorial_Spectrum_Champions_League_img13.png)
+
+1. Click *Apply* to save the monitor, and close the monitor window.
 
 ## Step 10: Test the shifted frequency effect
 
-1. Open the Spectrum Simulation app and click on the button 'Frequency Shift of SNG Feed (+150 MHz)'.
+1. Open the Spectrum Simulation low-code app and click the button *Frequency Shift of SNG Feed (+150 MHz)*.
 
-    ![Frequency Shift of SNG Feed](~/user-guide/images/Tutorial_Spectrum_Champions_League_img14.png)
+   ![Frequency Shift of SNG Feed](~/user-guide/images/Tutorial_Spectrum_Champions_League_img14.png)
 
-1. If everything has been configured correctly, a critical alarm should be generated because the SNG Feed carrier has shifted 150 MHz and as it is above the threshold now detected by the second spectrum monitor you added.
+   This will shift the SNG feed carrier by 150 MHz, which will bring it above the threshold monitored in the second spectrum monitor you added.
+
+1. Check in the Alarm Console in Cube if a critical alarm is generated.
 
     ![Shifted Carrier detected](~/user-guide/images/Tutorial_Spectrum_Champions_League_img15.png)
