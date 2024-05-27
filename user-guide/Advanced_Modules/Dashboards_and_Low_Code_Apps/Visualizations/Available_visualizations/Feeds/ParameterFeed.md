@@ -6,6 +6,8 @@ uid: DashboardParameterFeed
 
 This feed component allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
 
+![Parameter feed](~/user-guide/images/Parameter_Feed.png)<br>*Parameter feed component in DataMiner 10.4.5*
+
 > [!NOTE]
 >
 > - From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.

@@ -6,6 +6,8 @@ uid: LineAndAreaChart
 
 This component can be used to display a trend graph.
 
+![Line & area chart](~/user-guide/images/Line_Area_Chart.png)<br>*Line & area chart component in DataMiner 10.4.5*
+
 > [!NOTE]
 >
 > - From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.

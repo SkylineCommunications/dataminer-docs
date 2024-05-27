@@ -143,6 +143,8 @@ To add or remove columns:
 
 - Right-click in the table header, choose *Add/Remove column*, and select the columns you want to add or remove.
 
+  ![Alarm column](~/user-guide/images/Add_Alarm_Column.png)<br>*Adding or removing alarm columns in DataMiner 10.4.5*
+
 > [!NOTE]
 > It is possible to add action buttons in the Alarm Console with this functionality, by selecting the required actions under *Add/Remove column \> Actions*.
 
@@ -211,6 +213,8 @@ To do so:
 
 To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![Statistical view button](~/user-guide/images/Statistical_View_button.png)
 
+![Statistical view](~/user-guide/images/Statistical_View.png)<br>*Statistical view in DataMiner 10.4.5*
+
 To return to the regular list view again, click the list view button: ![List view button](~/user-guide/images/List_View_button.png)
 
 The statistical view has three tab pages, each offering a different drill-down approach:
@@ -235,6 +239,8 @@ To view severity timelines per element or per parameter:
 1. Click the reports view button in the alarm bar: ![Reports view button](~/user-guide/images/Reports_view_button.png)
 
 1. Depending on whether you wish to see these so-called “heat maps” for elements or for parameters, either stay in the *elements* tab, or go to the *parameters* tab.
+
+   ![Reports view](~/user-guide/images/Reports_View.png)<br>*Reports view in DataMiner 10.4.5*
 
    The tabs respectively list all elements and all parameters in the DMS for which an alarm has occurred, and for each item in the list, a timeline is displayed that shows the evolution of the alarm severity over time.
 

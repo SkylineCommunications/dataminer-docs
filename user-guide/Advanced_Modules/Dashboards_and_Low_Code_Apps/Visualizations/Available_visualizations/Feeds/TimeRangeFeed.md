@@ -6,6 +6,8 @@ uid: DashboardTimeRangeFeed
 
 This feed component allows the user to specify a time range.
 
+![Time range feed](~/user-guide/images/Time_Range.png)<br>*Time range feed component in DataMiner 10.4.5*
+
 To configure the component:
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:

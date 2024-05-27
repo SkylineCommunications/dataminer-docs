@@ -4,7 +4,11 @@ uid: ColumnAndBarChart
 
 # Column & Bar chart
 
-This chart can be used to display the elements or services in a view that caused the most or the least alarms in a selected time range and were in an alarm state for the longest or the shortest period of time. From DataMiner 10.0.13 onwards, it can also be used to represent any data based on a data query in the form of a bar chart. In that case the bars can represent any number of variables for any set of categories.
+This chart can be used to display the elements or services in a view that caused the most or the least alarms in a selected time range and were in an alarm state for the longest or the shortest period of time.
+
+![Bar chart](~/user-guide/images/Bar_Chart.png)<br>*Bar chart component in DataMiner 10.4.5*
+
+From DataMiner 10.0.13 onwards, it can also be used to represent any data based on a data query in the form of a bar chart. In that case the bars can represent any number of variables for any set of categories.
 
 > [!NOTE]
 > Negative values are only supported in bar chart components from DataMiner 10.1.0/10.1.3 onwards.
