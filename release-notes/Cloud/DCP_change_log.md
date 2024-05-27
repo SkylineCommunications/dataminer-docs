@@ -9,6 +9,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 27 May 2024 - Enhancement - Catalog - Updated deploy popup with new style [RN_39663]
+
+Refactored catalog deploy to use new popup component.  
+This also introduces the name of the artefact into the deploy popup.  
+(Some styling changes also happened)
+
+#### 27 May 2024 - Fix - All cloud apps - Disable caching of index.html [ID_39725]
+
+​Users will now always have the latest index page since the caching has been turned off.  
+This results in guaranteeing that the app always has the latest code since everything resolves to the index page.
+
+#### 27 May 2024 - Enhancement - Admin - Audit filter [ID_39737]
+
+The audit filter "Subject Type" will now correctly show options.
+
 #### 15 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
 
 From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
