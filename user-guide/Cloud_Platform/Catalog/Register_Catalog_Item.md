@@ -34,7 +34,7 @@ At present, the following types of Catalog items are supported:
 
 ### Using the Catalog UI
 
-If you use the UI, you can only register a Catalog item. There is no UI yet to register a new version. This can only be done by using the [API](xref:Register_Catalog_Item#register-using-the-catalog-api).
+If you use the UI, you can only register a Catalog item. There is no UI yet to register a new version. This can only be done by using the [API](#using-the-catalog-api).
 
 To register a new Catalog item, do the following:
 
@@ -50,7 +50,7 @@ To register a new Catalog item, do the following:
 
 1. Enter the name of the item. This will be the name that will be used to display the item in the Catalog. It needs to be human readable. Make sure you pick a name that makes sense.
 
-1. Once all information has been filled in, click *Register*. This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the catalog item using the [API](xref:Register_Catalog_Item#register-using-the-catalog-api).
+1. Once all information has been filled in, click *Register*. This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the catalog item using the [API](#using-the-catalog-api).
 
 ### Using the Catalog API
 
