@@ -6,7 +6,7 @@ uid: Register_Catalog_Item
 
 ## What is a Catalog item?
 
-A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner system. For example a catalog item could be a single connector or it could be an Application Package containing multiple dashboards, automation scripts and connectors.
+A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner system. For example an item could be a single connector or it could be an Application Package containing multiple dashboards, automation scripts and connectors.
 
 You can find the different types of Catalog items we support [here](xref:Register_Catalog_Item#supported-catalog-item-types).
 
