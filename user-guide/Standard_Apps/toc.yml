@@ -237,10 +237,12 @@ items:
         items:
           - name: Installing the Ping Monitoring tool
             topicUid: Installing_Ping_Monitoring
-          - name: Working with the Ping Monitoring tool
-            topicUid: Working_with_Ping_Monitoring
-          - name: Support management of groups and destinations
-            topicUid: Crud_actions
+          - name: Accessing the Ping Monitoring tool
+            topicUid: Accessing_Ping_Monitoring
+          - name: Ping Monitoring UI overview
+            topicUid: Ping_Monitoring_UI
+          - name: Managing groups and destinations
+            topicUid: Ping_Monitoring_managing_groups_destinations
       - name: DataMiner Planned Maintenance (PLM) tool
         topicUid: DataMiner_PLM_Tool_Overview
         items:

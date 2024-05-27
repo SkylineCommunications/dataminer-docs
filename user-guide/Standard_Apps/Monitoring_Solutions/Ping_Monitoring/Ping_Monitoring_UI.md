@@ -1,24 +1,8 @@
 ---
-uid: Working_with_Ping_Monitoring
+uid: Ping_Monitoring_UI
 ---
 
-# Working with the Ping Monitoring tool
-
-> [!TIP]
-> See also:
->
-> - [Ping Monitoring - DataMiner Use Case Demo](https://www.youtube.com/watch?v=LpYbxc0jIro) for a visual guide ![Video](~/user-guide/images/video_Duo.png)
-> - [Ping Monitoring use case](https://community.dataminer.services/use-case/ping-monitoring/) for several use cases and application highlights
-
-## The Ping Monitoring tool user interface
-
-To access the Ping Monitoring tool:
-
-1. Go to `http(s)://[DMA name]/root`.
-
-1. Select *PING Monitor* to start using the application.
-
-   ![PING Monitor](~/user-guide/images/Ping_Monitor.png)
+# Ping Monitoring UI overview
 
 The Ping Monitoring tool UI consists of the following main components:
 
@@ -30,7 +14,7 @@ The Ping Monitoring tool UI consists of the following main components:
 
 ![Ping Monitoring UI](~/user-guide/images/PingMonitoring_UI.png)
 
-### The Ping Monitoring header bar
+## The Ping Monitoring header bar
 
 You can find the following functionalities in the header bar of the application:
 
@@ -38,7 +22,7 @@ You can find the following functionalities in the header bar of the application:
 
 - **Alarm History**: Available only on the [*Alarms* page](#the-alarms-page). Allows you to access all alarms that occurred in the last 15 minutes, hour, 3 hours, or 24 hours.
 
-### The Ping Monitoring sidebar
+## The Ping Monitoring sidebar
 
 The sidebar on the left of the Ping Monitoring tool contains buttons that can be used to access different pages:
 
@@ -50,9 +34,9 @@ The sidebar on the left of the Ping Monitoring tool contains buttons that can be
 
 - ![Alarms](~/user-guide/images/Alarms_PM.png) : Clicking the *Alarms* button displays an overview of all active alarms in the groups. See [The *Alarms* page](#the-alarms-page).
 
-### The Ping Monitoring overview pane
+## The Ping Monitoring overview pane
 
-#### The 'Destinations' page
+### The 'Destinations' page
 
 The *Destinations* page offers an overview of all internet destinations in your DataMiner System receiving ping commands on a predefined, customized basis.
 
@@ -72,7 +56,9 @@ The following information is available for each destination:
 
 Clicking the ![additional information](~/user-guide/images/additional_information.png) button displays additional information about the destination, including host information, results, settings, and more.
 
-#### The 'Grid View' page
+With the buttons at the top of the page, you can [create, edit, and delete destinations](xref:Ping_Monitoring_managing_groups_destinations#managing-destinations).
+
+### The 'Grid View' page
 
 The *Grid View* page offers a compact grid overview of all destinations, ideal for managing a large number of destinations. The color of each grid tile indicates the associated destination's [alarm severity level](xref:Alarm_types#alarm-severity-levels).
 
@@ -80,7 +66,7 @@ The *Grid View* page offers a compact grid overview of all destinations, ideal f
 
 Click any tile in the grid to display additional information about the destination, including host information, results, settings, and more.
 
-#### The 'Groups' page
+### The 'Groups' page
 
 The *Groups* page offers an overview of all active groups, with each group corresponding to a Generic Ping element in your DataMiner System.
 
@@ -100,11 +86,13 @@ Selecting a group in the overview will display all destinations configured withi
 
 Clicking the *Slowest Destinations in Group* button will display any outliers in the groups, i.e. destinations that take a longer time than average to receive and respond to a ping command.
 
-#### The 'Alarms' page
+With the buttons at the top of the page, you can [create, edit, and delete groups](xref:Ping_Monitoring_managing_groups_destinations#managing-groups).
+
+### The 'Alarms' page
 
 The *Alarms* page offers an overview of all active alarms in the groups. A filter pane on the left allows you to filter by group.
 
-#### The filter pane
+### The filter pane
 
 On the *Destinations* and *Grid View* pages, a filter pane on the left enables you to narrow down destinations based on their properties.
 
