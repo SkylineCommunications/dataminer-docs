@@ -14,7 +14,7 @@ You can find the different types of Catalog items we support [here](xref:Registe
 
 Public Catalog items are items that are available for anyone within the community to use.
 
-Private Catalog items are items that are only available to one or more organizations. This gives users the possibility to develop app packages, Automation scripts or any type of Catalog item and redeploy them within their organization on various systems.
+Private Catalog items are items that are only available within your own organization. This gives users the possibility to develop app packages, Automation scripts or any type of Catalog item and redeploy them within their organization on various systems.
 
 ## Versioning of Catalog items
 
