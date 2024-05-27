@@ -14,7 +14,7 @@ In specific circumstances, a new feature introduced in DataMiner 10.4.6 ([ID 392
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet.<!-- RN 39755 -->
 
 ## Description
 
