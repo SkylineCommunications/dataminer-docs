@@ -4,37 +4,35 @@ uid: Register_Catalog_Item
 
 # Registering a Catalog item
 
-## What is a Catalog item?
+## About Catalog items
 
-A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner system. For example an item could be a single connector or it could be an Application Package containing multiple dashboards, automation scripts and connectors.
+A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. [Different types of Catalog items](#supported-catalog-item-types) are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, Automation scripts, and connectors.
 
-You can find the different types of Catalog items we support [here](xref:Register_Catalog_Item#supported-catalog-item-types).
-
-## Public and private Catalog items
+### Public and private Catalog items
 
 Public Catalog items are items that are available for anyone within the community to use.
 
 Private Catalog items are items that are only available within your own organization. This gives users the possibility to develop app packages, Automation scripts or any type of Catalog item and redeploy them within their organization on various systems.
 
-## Versioning of Catalog items
+### Versioning of Catalog items
 
-Catalog items can hold multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced. Users can assign extra labels to versions if they want to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced. Users can assign extra labels to versions if they want to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
-> [!WARNING]
+> [!IMPORTANT]
 > If the item is of type Connector, you will need to adhere to the [existing connector versioning](xref:ProtocolVersionSemantics).
 
-## Supported Catalog item types
+### Supported Catalog item types
 
-At the moment we support the following types:
+At present, the following types of Catalog items are supported:
 
-1. Automation Script
-1. Application Package
-1. Connector
-1. Visio
+- Automation Script
+- Application Package
+- Connector
+- Visio
 
-## How to register a private Catalog item
+## Registering a private Catalog item
 
-### Register using the Catalog UI
+### Using the Catalog UI
 
 If you use the UI, you can only register a Catalog item. There is no UI yet to register a new version. This can only be done by using the [API](xref:Register_Catalog_Item#register-using-the-catalog-api).
 
@@ -42,7 +40,9 @@ To register a new Catalog item, do the following:
 
 1. Go to the [Catalog](https://catalog.dataminer.services).
 
-1. Open the user menu by clicking the user icon on the top right. Here you will find the "Register item" button.
+1. Open the user menu by clicking the user icon in the top-right corner.
+
+   Here you will find the *Register item* button.
 
 1. Indicate for which organization you want to register the Catalog item. This can be done by using the selection box that will automatically be populated with all the organizations on the dataminer.services platform you have access to.
 
@@ -52,7 +52,7 @@ To register a new Catalog item, do the following:
 
 1. Once all information has been filled in, click *Register*. This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the catalog item using the [API](xref:Register_Catalog_Item#register-using-the-catalog-api).
 
-### Register using the Catalog API
+### Using the Catalog API
 
 #### Authentication
 
@@ -68,9 +68,8 @@ The call accepts a binary file as input. This file should be a zip file containi
 
 This file will contain all necessary information to register a Catalog item or version. This manifest file should be a valid yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
 
-> [!WARNING]
-> If the *id* field is not filled in, a new Catalog item registration will be created.
-> If you want to register a new version for an existing Catalog item, make sure to fill in the ID of that item.
+> [!IMPORTANT]
+> If the *id* field is not filled in, a new Catalog item registration will be created. If you want to register a new version for an existing Catalog item, make sure to fill in the ID of that item.
 
 ```yml
 # [Required]
