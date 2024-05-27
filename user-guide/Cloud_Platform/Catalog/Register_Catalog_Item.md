@@ -6,15 +6,15 @@ uid: Register_Catalog_Item
 
 ## What is a Catalog item?
 
-The content available in the Catalog module has always been provided by Skyline Communications. We have been using this module initially to share our connectors with all of our users. In a later stage, we have been adding [Application packages](xref:ApplicationPackages), Automation scripts and visual overviews. All of these items are called "Catalog items".
+A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner system. For example a catalog item could be a single connector or it could be an Application Package containing multiple dashboards, automation scripts and connectors.
 
-As more and more users create their own customized solutions on top of the DataMiner software, we want to allow them to register their solutions to the Catalog as well. This will enable our users to easily manage the solutions and packages they have created and distribute them among the different teams within their organization. In the future, users will also be able to share their packages with different organizations or make them available on the catalog for everyone to use.
+You can find the different types of Catalog items we support [here](xref:Register_Catalog_Item#supported-catalog-item-types).
 
-## Private Catalog items
+## Public and private Catalog items
 
-All of the items that have been provided by Skyline Communications are considered to be public items. They are available for all our users. Note that for some of these items (e.g. Connectors) users might need to buy a license to be able to use them on their system.
+Public Catalog items are items that are available for anyone within the community to use.
 
-Private Catalog items are items that are only available to one or more organizations. This gives users the possibility to develop app packages, Automation scripts or any type of Catalog item and redeploy them within their organization on various systems or share them with other organizations.
+Private Catalog items are items that are only available to one or more organizations. This gives users the possibility to develop app packages, Automation scripts or any type of Catalog item and redeploy them within their organization on various systems.
 
 ## Versioning of Catalog items
 
