@@ -52,9 +52,6 @@ class DataPresent classDecision;
 >
 > - your investigation may be complete.
 > - you may need to check the log information in *SLErrors.txt*, *SLWatchDog2.txt*, *SLDBConnection.txt*, or the element logging.
->
-> The usual need to investigate an alarm creation issue is a LogCollector package with memory dumps of SLProtocol, SLElement and SLDataMiner.
-> For retrieval issues, usually SLDataGateway and SLNet.
 
 ### Retrieval Issue
 
@@ -93,6 +90,9 @@ class FollowCTT,ClientSide,ServerSide,AlarmTTL classAction;
 class RetrievalIssueChecks classDecision;
 class NotFixed classSolution;
 ```
+
+> [!NOTE]
+> To investigate an alarm retrieval issue, usually a LogCollector package is needed with memory dumps of SLDataGateway and SLNet.
 
 ### Creation Issue
 
@@ -135,3 +135,6 @@ class AlarmTemplate classAction;
 class DataPresent,CanSimulate,VerifyConfiguration classDecision;
 class ExtraInfoNotFixed,NotFixedCOPS classSolution;
 ```
+
+> [!NOTE]
+> To investigate an alarm creation issue, usually a LogCollector package is needed with memory dumps of SLProtocol, SLElement, and SLDataMiner.
