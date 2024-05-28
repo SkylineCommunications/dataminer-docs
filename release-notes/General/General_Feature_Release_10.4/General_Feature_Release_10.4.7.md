@@ -287,11 +287,11 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 
   In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
 
-#### MessageBroker: Problem when receiving a Subscribe call while switching from 'Connected' to 'Reconnecting' [ID_39633]
+#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
-When MessageBroker received a Subscribe call while its connection status was switching from "Connected" to "Reconnecting", in some cases, the subscription could fail.
+When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
 #### Problem when setting up SLNet connections to the IPv6 loopback address [ID_39667]
 
