@@ -24,7 +24,7 @@ To register a new Catalog item:
 
 1. Select the type of the Catalog item.
 
-   This can be one of the supported [Catalog item types](xref:About_the_Catalog_module#supported-catalog-item-types). The type will define how the Catalog item will be shown to the users. Users can also filter on type to quickly find what they are looking for when browsing the Catalog.
+   The selected [Catalog item type](xref:About_the_Catalog_module#supported-catalog-item-types) defines how the Catalog item will be shown to the users. Users can also filter on type to quickly find what they are looking for when browsing the Catalog.
 
 1. Enter the name of the item.
 
