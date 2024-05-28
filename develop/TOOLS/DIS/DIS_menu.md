@@ -113,10 +113,6 @@ If you want to convert the standalone protocol XML file you opened in the XML ed
 
 See [Protocol \> Generate Class Library code](#protocol--generate-class-library-code).
 
-## Check for updates...
-
-If you click *Check for updates…*, the *DIS Update* dialog box will appear. This dialog box will indicate whether or not a new DIS version is available.
-
 ## Help
 
 If you click *Help*, the DataMiner Integration Studio user guide will open in a browser window.

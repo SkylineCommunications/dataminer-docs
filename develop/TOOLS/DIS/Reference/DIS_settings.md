@@ -250,17 +250,6 @@ In the *Account* tab, you can see
 
 Also, a button allows you to sign out (and sign in again).
 
-## Updates
-
-In the *Updates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for updates.
-
-- If you select the *Check for plug-in updates* option, DataMiner Integration Studio will check once every hour whether a more recent version of the *DataMinerIntegrationStudio.vsix* extension file is available. If so, an update banner will appear at the top of the editor window.
-
-- If you select the *Get insider builds* option, DataMiner Integration Studio will not only check for main builds (i.e. the official release versions), but also for insider builds (i.e. pre-release versions for testing purposes).
-
-    > [!NOTE]
-    > It is advised to always install official release versions.
-
 ## Templates
 
 In the *Templates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for template updates when Visual Studio starts and install these when updates are available.
