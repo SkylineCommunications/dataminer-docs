@@ -32,4 +32,8 @@ uid: General_Feature_Release_10.4.8
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLLogCollector: 'Access is denied' errors [ID_39364]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLLogCollector would not have the required permissions to access process objects or execute certain WMI queries. As a result, `Access is denied` errors would be added to the *SLLogCollector.txt* log file.
