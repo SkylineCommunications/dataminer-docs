@@ -22,6 +22,12 @@ uid: General_Feature_Release_10.4.7
 
 ## New features
 
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+
 #### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
