@@ -204,6 +204,67 @@ items:
             topicUid: IDP_Tutorial_DiscoveryAndProvisioning
           - name: Getting started with configuration backups
             topicUid: IDP_Tutorial_TakeConfigurationBackup
+  - name: MediaOps
+    topicUid: MediaOpsGeneral
+    items:
+      - name: Supported Connectors
+        topicUid: mediaops_connectors
+      - name: Apps
+        items: 
+        - name: Virtual Signal Groups
+          topicUid: virtual_signal_groups_app
+        - name: Control Surface
+          topicUid: control_surface_app
+        - name: Flow Engineering
+          topicUid: flow_engineering_app
+        - name: Flow Monitoring
+          topicUid: flow_monitoring_app
+        - name: Scheduling
+          topicUid: scheduling_app
+          items:
+            - name: Job Timeline view
+              topicUid: scheduling_job_timeline
+            - name: Resource Timeline view
+              topicUid: scheduling_resource_timeline
+            - name: Job Search
+              topicUid: scheduling_job_search
+            - name: Operations Management
+              topicUid: scheduling_ops_management
+            - name: App Config
+              topicUid: scheduling_app_config
+            - name: DOM Details
+              topicUid: scheduling_dom
+            - name: Lifecycle
+              topicUid: scheduling_job_lifecycle
+        - name: Workflow Designer
+          topicUid: workflow_designer_app
+          items:
+            - name: Workflow Execution
+              topicUid: workflows
+        - name: Cost and Billing
+          topicUid: cost_billing_overview
+          items:
+            - name: Contracts
+              topicUid: cost_billing_contracts
+            - name: Ratecards
+              topicUid: cost_billing_ratecards
+            - name: Currencies
+              topicUid: cost_billing_currencies
+            - name: Billing Calculation
+              topicUid: cost_billing_billing_calculation
+            - name: Cost Calculation
+              topicUid: cost_billing_cost_calculation
+        - name: People and Organizations
+          topicUid: people_organizations_overview
+          items:
+            - name: People
+              topicUid: people_organizations_people
+            - name: Teams
+              topicUid: people_organizations_teams
+            - name: Organizations
+              topicUid: people_organizations_organizations
+        - name: Resource Studio
+          topicUid: resource_studio_app
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
