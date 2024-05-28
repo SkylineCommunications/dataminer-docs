@@ -21,3 +21,9 @@ uid: General_Main_Release_10.3.0_CU17
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLLogCollector would not have the required permissions to access process objects or execute certain WMI queries. As a result, `Access is denied` errors would be added to the *SLLogCollector.txt* log file.
+
+#### Problem with SLASPConnection when an email message could not be delivered [ID_39759]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, a fatal error could occur in SLASPConnection when an email message could not be delivered.
