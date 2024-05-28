@@ -20,7 +20,7 @@ To register a new Catalog item, do the following:
 
 1. Indicate for which organization you want to register the Catalog item. This can be done by using the selection box that will automatically be populated with all the organizations on the dataminer.services platform you have access to.
 
-1. Select the type of the Catalog item. This can be one of the supported [catalog item types](xref:Register_Catalog_Item#supported-catalog-item-types). The type will define how the Catalog item will be shown to the users. We also allow filtering on type so users can quickly find what they are looking for when browsing the Catalog module.
+1. Select the type of the Catalog item. This can be one of the supported [catalog item types](xref:About_the_Catalog_module#supported-catalog-item-types). The type will define how the Catalog item will be shown to the users. We also allow filtering on type so users can quickly find what they are looking for when browsing the Catalog module.
 
 1. Enter the name of the item. This will be the name that will be used to display the item in the Catalog. It needs to be human readable. Make sure you pick a name that makes sense.
 
