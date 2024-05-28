@@ -180,6 +180,21 @@ Up to now, all open panels would by default be closed when you switched from one
 
 Because of a number of enhancements with regard to subscription reuse and WebSocket communication, overall performance of the web API has increased.
 
+#### Dashboards app & Low-Code Apps: More consistent use of colors in graphs [ID_39739]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+The way in which colors are assigned to graphs has been enhanced. Across all components, charts displaying the same data will now use the same colors. This will greatly improve visual coherence and data interpretation.
+
+Instead of each component independently taking the next color from its color palette, components will now check if another component has already requested a color for the same data. If so, the same color will be applied.
+
+Data is considered identical if the display label used in the chart legend is identical. For example, if multiple charts display data labeled "SLNet:0", they will all use the same color for this label.
+
+Note that, by default, colors will not be consistent across different sessions. Refreshing the application may result in different colors being used for the same data. If you want to maintain consistent colors across multiple sessions, you can now define conditional colors in a component theme's color palette by binding colors to specific regular expressions that match the display labels of the data.
+
+> [!NOTE]
+> If you want to revert to the former color assignment behavior where a single color is used across all graphs, include only one color in the component theme's color palette.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Maps component: 'Map type not supported' error would not be displayed [ID_39506]
