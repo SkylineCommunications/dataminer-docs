@@ -4,7 +4,7 @@ uid: Creating_your_first_element_on_a_DaaS_system
 
 # Creating your first element on a DaaS system
 
-This tutorial guides you through setting up a free DataMiner Community Edition system as a service and create your first Microsoft Platform element. With this element, you will be able to monitor your own PC.
+This tutorial guides you through setting up a free DataMiner Community Edition system as a service and creating your first Microsoft Platform element. With this element, you will be able to monitor your own PC.
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.6.
 

@@ -14,7 +14,7 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
-      - name: Getting started with DataMiner tutorials
+      - name: Getting started tutorials
         topicUid: Getting_Started_Tutorials
       - name: DataMiner IDP tutorials
         topicUid: IDP_Tutorials

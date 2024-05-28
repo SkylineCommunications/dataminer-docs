@@ -2,7 +2,7 @@
 uid: Getting_Started_Tutorials
 ---
 
-# Getting started with DataMiner tutorials
+# Getting started tutorials
 
 | Name | Description |
 |--|--|
