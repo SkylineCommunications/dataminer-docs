@@ -6,6 +6,8 @@ uid: visio
 
 The Visual Overview functionality in DataMiner uses Microsoft Visio drawings, enriched with DataMiner functionality using special shape data fields, to provide highly customized graphical user interfaces.
 
+![Visio](~/user-guide/images/Visio_Drawings.png)<br>*Visual Overview in DataMiner 10.4.5*
+
 At Skyline, we do our utmost to keep the DataMiner software in pace with Microsoft Visio as to features. If you notice that one of your Visio drawings is not rendered as it should be in Visual Overview, you can send us a copy of that file for diagnosis. If the problem can be tracked down to an unsupported Visio feature, we will ensure that the feature is supported as soon as possible.
 
 > [!NOTE]

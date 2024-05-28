@@ -16,6 +16,8 @@ Use this action to send a notification via email.
 
 1. To include a report or dashboard in the email, select *Include report or dashboard*, select an existing report template or dashboard, and add any required elements, parameters, etc.
 
+![Email](~/user-guide/images/Automation_Email.png)<br>*Automation module in DataMiner 10.4.5*
+
    > [!NOTE]
    >
    > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.

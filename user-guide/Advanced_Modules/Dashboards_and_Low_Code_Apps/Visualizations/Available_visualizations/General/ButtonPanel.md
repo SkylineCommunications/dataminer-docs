@@ -7,7 +7,11 @@ uid: DashboardButtonPanel
 > [!NOTE]
 > Prior to DataMiner 10.3.9/10.4.0, this feature is available in preview, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-This component is available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36775 -->. It displays a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed. The following types of buttons can be configured:
+This component is available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36775 -->. It displays a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed.
+
+![Button panel](~/user-guide/images/Button_Panel.png)<br>*Button panel component in DataMiner 10.3.9*
+
+The following types of buttons can be configured:
 
 - Simple buttons used only to set parameters.
 

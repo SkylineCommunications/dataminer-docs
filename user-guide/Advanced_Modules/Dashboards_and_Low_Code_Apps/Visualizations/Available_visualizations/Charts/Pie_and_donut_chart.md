@@ -6,6 +6,8 @@ uid: PieAndDonutChart
 
 This component displays the results of queries in a chart shaped like a pie or donut. It is available from DataMiner 10.0.13 onwards.
 
+![Donut chart](~/user-guide/images/Donut_Chart.png)<br>*Donut chart in DataMiner 10.4.5*
+
 To configure the component:
 
 1. Apply a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).

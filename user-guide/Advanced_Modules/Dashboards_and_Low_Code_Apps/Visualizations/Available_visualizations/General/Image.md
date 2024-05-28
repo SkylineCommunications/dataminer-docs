@@ -6,6 +6,8 @@ uid: DashboardImage
 
 This component displays an uploaded image.
 
+![Image](~/user-guide/images/Image.png)<br>*Image component in DataMiner 10.4.6*
+
 To configure this component:
 
 - In the *Component* > *Settings* tab, select the image you want to display in the *Image* drop-down list.

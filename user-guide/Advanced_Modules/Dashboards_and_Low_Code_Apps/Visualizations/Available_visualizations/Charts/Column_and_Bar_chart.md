@@ -54,6 +54,8 @@ To configure the component:
 
    - *Chart* > *Stack bars*: Determines whether the bars for one particular element or service are stacked in the chart.
 
+     ![Stack bars](~/user-guide/images/Stack_Bars.png)<br>*Stacked bar chart in DataMiner 10.4.5*
+
    - *Chart* > *Legend*: Determines whether a legend can be displayed. If this option is selected, an arrow icon is displayed in the top right corner of the chart. Clicking this icon will display the legend.
 
    - *Table* > *Show*: Determines whether a table with detailed information is displayed below the chart.

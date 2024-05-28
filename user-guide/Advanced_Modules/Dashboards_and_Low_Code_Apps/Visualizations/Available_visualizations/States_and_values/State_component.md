@@ -6,6 +6,8 @@ uid: DashboardState
 
 This component displays the state, name and, if applicable, the value of a DataMiner object. This can be an element, a view, a parameter, etc.
 
+![State](~/user-guide/images/State.png)<br>*State component in DataMiner 10.4.6*
+
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as a feed for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
 

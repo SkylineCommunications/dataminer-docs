@@ -6,6 +6,8 @@ uid: DashboardGauge
 
 This component displays a numeric parameter value as a gauge.
 
+![Gauge](~/user-guide/images/Gauge.png)<br>*Gauge component in DataMiner 10.4.5*
+
 To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).

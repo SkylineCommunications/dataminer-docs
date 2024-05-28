@@ -101,7 +101,7 @@ DataMiner also includes root cause analysis (RCA) based on connectivity informat
 > [!TIP]
 > For more information:
 >
-> - [DataMiner Correlation](xref:correlation)
+> - [DataMiner Correlation](xref:About_DMS_Correlation)
 > - [DMS Correlation training video](https://community.dataminer.services/courses/dataminer-advanced/lessons/dms-correlation-2/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Fault management
