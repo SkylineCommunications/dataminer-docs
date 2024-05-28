@@ -181,3 +181,9 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 - When the BPA was run on a DMA using HTTPS, it would throw an exception when IIS had an HTTPS binding without a certificate configured.
 
   In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
+
+#### Problem when setting up SLNet connections to the IPv6 loopback address [ID_39667]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When an SLNet connection was made to the IPv6 loopback address using the FQDN (e.g. when replicating elements on the same DataMiner Agent), the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to one of the IP addresses the FQDN pointed to.
