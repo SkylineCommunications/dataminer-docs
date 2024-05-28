@@ -408,6 +408,10 @@ items:
             topicUid: Alarm_template_groups
           - name: Exporting alarm template parameter data
             topicUid: Exporting_alarm_template_parameter_data
+          - name: Tutorials
+            items:
+            - name: Getting started with alarm templates
+              topicUid: Getting_started_with_alarm_templates
       - name: Trend templates
         items:
           - name: About trend templates
