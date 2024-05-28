@@ -30,7 +30,6 @@ The following sections provide more information on the DIS menu:
 - [Tool Windows \> DIS Validator](xref:DisValidatorToolWindow)
 - [Tool Windows \> DIS Comparer](xref:DisComparerToolWindow)
 - [Settings](xref:DIS_settings)
-- [Check for updates...](#check-for-updates)
 - [Help](#help)
 
 ## DMA
