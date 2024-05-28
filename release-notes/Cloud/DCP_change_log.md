@@ -9,7 +9,39 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 15 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
+#### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
+
+When an item is deployed from the Catalog, a new pop-up component will now be shown. The pop-up component has a new style and includes the name of the artefact.
+
+#### 27 May 2024 - Fix - All dataminer.services apps - Caching of index.html disabled [ID_39725]
+
+Caching for the index page has been disabled for all dataminer.services apps, so that users will now always get the latest index page. As a result of this, the apps will be guaranteed to always have the latest code, since everything in the apps resolves to the index page.
+
+#### 27 May 2024 - Enhancement - Admin - Audit filter [ID_39737]
+
+The audit filter "Subject Type" will now correctly show options.
+
+#### 23 May 2024 - Enhancement - ChatOps - Possibility to skip the confirmation when running custom commands [ID_39736]
+
+From now on, it is possible to skip the confirmation message when running a custom command with the DataMiner Teams bot.
+
+You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.
+
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in adaptive cards.
+
+#### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
+
+When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.
+
+#### 16 May 2024 - New feature - Catalog - New apps menu [ID_39621]
+
+Clicking the logo in the top-left corner of the Catalog app will now open a new apps menu, which will allow users to easily navigate to the other dataminer.services apps.
+
+#### 16 May 2024 - Enhancement - Admin - Message in DMS overview when latest CoreGateway version is not installed for Failover Agent [ID_39677] [ID_39678]
+
+In the DMS overview in the Admin app, when applicable, a message will now be shown to notify the Admin user that both Agents in a Failover pair need to have the latest CoreGateway DxM version installed so that more information about Failover can be retrieved.
+
+#### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID_39669]
 
 From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
 
@@ -91,11 +123,15 @@ On the *Browse* page of the Catalog, you can now filter catalog items so you see
 
 It is now possible for admin users to see the permissions of organization keys on the audit detail page.
 
-#### 14 March - Admin - Organization overview overhaul [ID_38960]
+#### 14 March 2024 - Admin - Organization overview overhaul [ID_38960]
 
 The user interface of the Organization overview page has been adjusted to be more in line with upcoming design changes.
 
 It will now include an overview of all DataMiner Systems in a table, which will include the name, URL, and status of each DataMiner System.
+
+#### 14 March 2024 - Enhancement - Admin - Buttons overhaul [ID_39008]
+
+The buttons of the Admin app have been adjusted to be more in line with upcoming design changes.
 
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 

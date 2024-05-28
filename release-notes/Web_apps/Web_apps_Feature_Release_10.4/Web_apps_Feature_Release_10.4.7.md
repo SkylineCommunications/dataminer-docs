@@ -32,6 +32,45 @@ cy.get(`[data-cy="TextComponent"]`)
 > [!NOTE]
 > The `DebugTag` can only be used in interactive Automation scripts launched from web apps, not in interactive Automation scripts launched from DataMiner Cube.
 
+#### Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID_39451] [ID_39638]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
+
+To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class. Contrary to the `ShowUI()` method, the `HideUI()` method does not require a response and will not return any result.
+
+Example:
+
+```csharp
+using System;
+using Skyline.DataMiner.Automation;
+
+public class Script
+{
+    public void Run(Engine engine)
+    {
+        // Build and display a form
+        var formUi = BuildFormUi();
+        var results = engine.ShowUI(formUi);
+
+        // Process UI results
+
+        // Hide the UI before starting a lengthy operation
+        engine.HideUI();
+
+        // Build and display issue information
+        var issueUi = BuildIssueUi();
+        var issueResults = engine.ShowUI(issueUi);
+    }
+}
+```
+
+> [!NOTE]
+>
+> - Although the use of `HideUI()` requires the Automation script to be interactive, a script will not be recognized as interactive if the method is included in the script. It needs to be used in combination with `ShowUI()` or `FindInteractiveClient()`.
+> - Although it is possible to request hiding the UI prior to showing it, it is recommended to not show any UI and only hide the UI after it was shown.
+
 #### Dashboards app & Low-Code Apps: New 'Search input' component [ID_39555]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
@@ -40,7 +79,7 @@ A new *Search input* component is now available.
 
 It is identical to the *Text input* component, but allows users to clear its contents by clicking the *X*.
 
-#### Low-Code Apps: New 'On close' page event [ID_39604]
+#### Low-Code Apps: New 'On close' page event [ID_39604] [ID_39682]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -49,6 +88,7 @@ In low-code apps, you can now configure actions for a new *On close* page event,
 > [!NOTE]
 >
 > - Navigating to the next page will be blocked until all configured actions are executed. Therefore, it is good practice to only configure actions that do not take too long.
+> - Actions linked to the *On close* page event will not be executed when you close the app.
 > - The existing *On page load* event has now been renamed to *On open*.
 
 #### Low-Code Apps: New 'Close all panels' action [ID_39625]
@@ -62,6 +102,15 @@ In low-code apps, you can now configure a *Close all panels* action. As its name
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 In low-code apps, you can now configure actions for a new *On open* panel event, which will be triggered each time a panel is opened.
+
+#### Low-Code Apps: Option to allow users to drag a panel to another location [ID_39649]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When you configure a panel, it is now possible to allow users to drag it to another location.
+
+> [!NOTE]
+> Even if you indicated that a panel can be dragged to another location, it will only be possible to do so when that panel is opened as a pop-up window.
 
 #### Low-Code Apps: New 'On close' panel event [ID_39668]
 
@@ -114,7 +163,22 @@ A number of enhancements have been made to the *Line & area chart* component:
 - The chart dimensions will now be automatically adapted.
 
   - When a line chart has data, but does not have lines configured, the component will add one line on the default X and Y axes.
-  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value. 
+  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
+
+#### Low-Code Apps: All open panels will now stay open when you switch from one page to another [ID_39632]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, all open panels would by default be closed when you switched from one page to another. From now on, all open panels will by default stay open when you switch from one page to another.
+
+> [!NOTE]
+> When you migrate to this DataMiner version, in all your existing low-code apps, a *Close all panels* action will be added to the *On close* event of each page.
+
+#### Web API: Enhanced performance [ID_39684]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements with regard to subscription reuse and WebSocket communication, overall performance of the web API has increased.
 
 ### Fixes
 
@@ -147,3 +211,32 @@ Up to now, due to a parsing issue, the Data Aggregator DxM would incorrectly not
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 When you created a private dashboard, in some cases, the user permissions necessary to access that dashboard would incorrectly be linked to the domain controller user name instead of your DataMiner user name.
+
+#### Dashboards app & Low-Code Apps - Template editor: Problem when configuring a conditional case using a numeric column with discrete values as a filter [ID_39656]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When, in the template editor, you configured a conditional case using a numeric column with discrete values as a filter, the condition would not get applied when a discrete value was selected.
+
+#### Dashboards app & Low-Code Apps: Line & area chart component would show null values [ID_39689]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In some cases, a *Line and area chart* component would incorrectly show null values. From now on, these values will no longer be displayed.
+
+#### Dashboards app & Low-Code Apps - Stepper component: Problem when a DOM instance in the initial state did not have any history [ID_39704]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, when a DOM instance was in the initial state, did not have any history, and had a definition that contained a loop from "initial" back to "initial", the *Stepper* component would show an incorrect state.
+
+From now on, the *Stepper* component will no longer try and guess the history of a DOM instance in the initial state when no history is available.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem with references to query columns specified in table templates after migrating a dashboard or app [ID_39730]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later, all references to query columns specified in table templates would no longer work.
+
+> [!NOTE]
+> This problem did not occur after a web-only upgrade.
