@@ -6,19 +6,7 @@ uid: Learning_Resources
 
 Participants in the DevOps Enablement Program will have access to coaching and focus sessions led by subject-matter experts. The training's core content is available online and on-demand, ensuring maximum flexibility and allowing trainees to learn at their own pace and in their own time.
 
-Here are various learning materials available for incorporation into the candidate's personalized learning path, as decided together with the Facilitator:
-
-| Training modules | Courses |
-|--|--|
-| [DataMiner Foundational](https://community.dataminer.services/learning/courses/dataminer-foundational/) | [DataMiner Fundamentals](https://community.dataminer.services/courses/dataminer-operator/) <br>[DataMiner Configurator](https://community.dataminer.services/courses/dataminer-administrator/) <br>[DataMiner Sys Admin](https://community.dataminer.services/courses/dataminer-advanced/) |
-| [Data Acquisition & Control Plane](https://community.dataminer.services/learning/courses/data-acquisition-control-plane/) | [DataMiner Connector Integration: HTTP Basics](https://community.dataminer.services/courses/dataminer-connector-integration-http-basics/)<br>[DataMiner Integration Studio](https://community.dataminer.services/courses/dataminer-integration-studio/)<br>[Unit Testing](https://community.dataminer.services/courses/data-ingest-control-plane-development-unit-testing/)<br> [DataMiner Connector Integration: SNMP Basics](https://community.dataminer.services/courses/dataminer-connector-integration-snmp-basics/) |
-| [Orchestration & Automation](https://community.dataminer.services/learning/courses/orchestration-automation/) | [DataMiner Automation](https://community.dataminer.services/courses/dataminer-automation/)<br>[Service & Resource Management](https://community.dataminer.services/courses/srm/)<br>[Service & Resource Manager: implementing a function](https://community.dataminer.services/courses/service-resource-manager-implementing-a-function/) |
-| [Cloud Services](https://community.dataminer.services/learning/courses/cloud-services/) | [DataMiner Cloud Platform](https://community.dataminer.services/courses/dataminer-cloud-platform/) |
-| [Apps & Solutions](https://community.dataminer.services/learning/courses/apps-solutions/) | COMING SOON |
-| [Visualization](https://community.dataminer.services/learning/courses/visualization/) | [Visual Overview](https://community.dataminer.services/courses/visio/)<br>[DataMiner Dashboards](https://community.dataminer.services/courses/dashboard/) |
-| [Sales & Business Insights](https://community.dataminer.services/dataminer-sales-business-insights/) | [Corporate Business Value Proposition](https://community.dataminer.services/courses/corporate-business-value-proposition/) |
-| [DataMiner Tutorials - Bringing the Thunder](https://community.dataminer.services/learning-courses-tutorials/) | A series of weekly online learning sessions |
-| [Other](https://community.dataminer.services/learning/courses/other/) | [Secure Coding](https://community.dataminer.services/courses/secure-coding-learning-path/)<br>[Ranorex](https://community.dataminer.services/courses/ranorex/) |
+On [DataMiner Dojo](https://community.dataminer.services/learning/courses/), you can access various learning materials available for incorporation into the candidate's personalized learning path, as decided together with the Facilitator.
 
 > [!TIP]
 > Related training material:
