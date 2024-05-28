@@ -19,7 +19,7 @@ Expected duration: 15 minutes.
 
 - [Step 1: Create the ad hoc data source](#step-1-create-the-ad-hoc-data-source)
 - [Step 2: Fetch the client connections from the DMS](#step-2-fetch-the-client-connections-from-the-dms)
-- [Step 3: Parse the responses into a GQIPage](#step-3-parse-the-responses-into-a-gqipage)
+- [Step 3: Transform DMS responses into a GQIPage](#step-3-transform-dms-responses-into-a-gqipage)
 
 ## Step 1: Create the ad hoc data source
 
