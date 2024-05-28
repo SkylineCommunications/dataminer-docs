@@ -65,7 +65,7 @@ See [Allowing dynamic shape behavior](xref:Turning_a_shape_into_a_parameter_cont
 
 ## AllowEmptyDynamicValues
 
-Shape-level option.
+Page- and shape-level option.
 
 Can be used as an option on any shape to show it even when some dynamic values have not yet resolved.
 

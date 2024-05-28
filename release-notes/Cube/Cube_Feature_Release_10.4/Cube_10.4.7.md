@@ -42,6 +42,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 When you undocked an alarm tab or you opened the *Alarms* tab of a card, it would not be possible to see whether the list view, the statistical view or the reports view was selected. From now on, the selected view will be indicated clearly.
 
+#### Visual Overview: Load time metric could be incorrect when a visual overview page was opened while Cube was still loading [ID_39588]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+When Cube was still loading when a visual overview page was opened, in some cases, the visual overview load time metric would be incorrect. From now on, when Cube is still loading when a visual overview page is opened, the load time metric will be disregarded.
+
 #### Login screen would remain stuck at 'Logging on...' when remote access to DataMiner Cube was disabled in admin.dataminer.services [ID_39590]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->

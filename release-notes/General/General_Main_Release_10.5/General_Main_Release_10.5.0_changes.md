@@ -514,6 +514,12 @@ This issue has now been fixed.
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
+#### API Gateway: Problem when processing a large number of parallel calls [ID_39550]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When API Gateway had to process a large number of parallel calls, up to now, this could lead to a threading problem, causing clients to time out and get disconnected.
+
 #### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
