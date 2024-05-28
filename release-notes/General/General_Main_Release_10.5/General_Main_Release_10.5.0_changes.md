@@ -527,3 +527,9 @@ When API Gateway had to process a large number of parallel calls, up to now, thi
 When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
 
 From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
+
+#### MessageBroker: Problem when receiving a Subscribe call while switching from 'Connected' to 'Reconnecting' [ID_39633]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When MessageBroker received a Subscribe call while its connection status was switching from "Connected" to "Reconnecting", in some cases, the subscription could fail.
