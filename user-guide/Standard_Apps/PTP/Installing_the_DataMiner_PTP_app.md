@@ -2,7 +2,7 @@
 uid: Installing_the_DataMiner_PTP_app
 ---
 
-do# Installing the DataMiner PTP app
+# Installing the DataMiner PTP app
 
 ## Deploying the package
 
