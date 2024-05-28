@@ -4,33 +4,7 @@ uid: Register_Catalog_Item
 
 # Registering a Catalog item
 
-## About Catalog items
-
-A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. [Different types of Catalog items](#supported-catalog-item-types) are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, Automation scripts, and connectors.
-
-### Public and private Catalog items
-
-Public Catalog items are items that are available for anyone within the community to use.
-
-Private Catalog items are items that are only available within your own organization. This gives users the possibility to develop app packages, Automation scripts or any type of Catalog item and redeploy them within their organization on various systems.
-
-### Versioning of Catalog items
-
-Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced. Users can assign extra labels to versions if they want to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
-
-> [!IMPORTANT]
-> If the item is of type Connector, you will need to adhere to the [existing connector versioning](xref:ProtocolVersionSemantics).
-
-### Supported Catalog item types
-
-At present, the following types of Catalog items are supported:
-
-- Automation Script
-- Application Package
-- Connector
-- Visio
-
-## Registering a private Catalog item
+## How to register a private Catalog item
 
 ### Using the Catalog UI
 
@@ -40,9 +14,9 @@ To register a new Catalog item, do the following:
 
 1. Go to the [Catalog](https://catalog.dataminer.services).
 
-1. Open the user menu by clicking the user icon in the top-right corner.
+1. Open the user menu by clicking the user icon on the top right. 
 
-   Here you will find the *Register item* button.
+1. Click the "Register item" button.
 
 1. Indicate for which organization you want to register the Catalog item. This can be done by using the selection box that will automatically be populated with all the organizations on the dataminer.services platform you have access to.
 
@@ -98,7 +72,8 @@ id: '<fill in guid here or leave empty>'
 title: 'add-new-switch'
 
 # [Required] 
-# The version in format X.X.X
+# The version in format X.X.X (see https://semver.org/)
+# Items of type "Connector" should use the X.X.X.X format
 # Once a version has been published it can no longer be changed.
 # The version should be incremented to do any changes.
 # If you want to create a package that is not final, you can provide a label at the end: X.X.X-label

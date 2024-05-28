@@ -2,7 +2,7 @@
 uid: Managing_DCP_keys
 ---
 
-# dataminer.services keys
+# Managing dataminer.services keys
 
 ## System keys
 
