@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
+
+When an item is deployed from the Catalog, a new pop-up component will now be shown. The pop-up component has a new style and includes the name of the artefact.
+
+#### 27 May 2024 - Fix - All dataminer.services apps - Caching of index.html disabled [ID_39725]
+
+Caching for the index page has been disabled for all dataminer.services apps, so that users will now always get the latest index page. As a result of this, the apps will be guaranteed to always have the latest code, since everything in the apps resolves to the index page.
+
+#### 27 May 2024 - Enhancement - Admin - Audit filter [ID_39737]
+
+The audit filter "Subject Type" will now correctly show options.
+
 #### 23 May 2024 - Enhancement - ChatOps - Possibility to skip the confirmation when running custom commands [ID_39736]
 
 From now on, it is possible to skip the confirmation message when running a custom command with the DataMiner Teams bot.
