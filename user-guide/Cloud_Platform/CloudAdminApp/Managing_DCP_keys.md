@@ -20,7 +20,7 @@ To view your system keys:
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System, and select the *Keys* page. Here you will be able to manage your system keys.
 
    > [!NOTE]
-   > To be able to see the keys page on a system, you need to be at least an Admin on that system.
+   > To be able to see the keys page for a system, you need to be at least an Admin for that system.
 
 ## Organization keys
 
@@ -38,9 +38,9 @@ To view your organization keys:
 1. In the pane on the left, under *Organization*, select the *Keys* page. Here you will be able to manage your organization keys.
 
    > [!NOTE]
-   > To be able to see the keys page on an organization; you need to be at least an Admin on that organization.
+   > To be able to see the keys page for an organization, you need to be at least an Admin for that organization.
 
-## How to manage your keys
+## Managing your keys
 
 Each set of keys consists of a (user-defined) label, a primary key, and a secondary key. The following options are available to manage these keys:
 
