@@ -255,3 +255,9 @@ After a dashboard or a low-code app had been migrated from DataMiner server vers
 
 > [!NOTE]
 > This problem did not occur after a web-only upgrade.
+
+#### Web API: No longer possible to configure ticketing domains [ID_39771]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+Due to an issue in the Web API, it was no longer possible to configure ticketing domains.
