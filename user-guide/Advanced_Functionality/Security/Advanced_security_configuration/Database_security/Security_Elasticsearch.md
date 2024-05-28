@@ -7,67 +7,6 @@ uid: Security_Elasticsearch
 > [!TIP]
 > If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
-## Authentication
-
-By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster.
-
-To enable authentication in Elasticsearch 6.8.X:
-
-1. Stop your DataMiner Agent.
-
-1. Stop the *elasticsearch-service-x64* service.
-
-1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
-
-   `xpack.security.enabled: true`
-
-   `discovery.type: single-node`
-
-   > [!NOTE]
-   > For a multi-node cluster, "discovery.type" is not required.
-
-1. Start the *elasticsearch-service-x64* service.
-
-1. Execute the **elasticsearch-setup-passwords.bat** script (as superuser) with the *interactive* argument.
-
-   - On a **Windows** server, this is located in `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
-
-   - On a **Linux** server, this is located in `/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive`
-
-1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
-
-1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in *C:\Skyline DataMiner\db.xml*.
-
-   ```xml
-   <DataBase active="true" search="true" type="Elasticsearch">
-      <DBServer>[ELASTIC URL]</DBServer>
-      <UID>[YOUR ELASTIC USER]</UID>
-      <PWD>[YOUR STRONG PASSWORD]</PWD>
-   </DataBase>
-   ```
-
-1. Start your DataMiner Agent.
-
-> [!NOTE]
-> To keep using Kibana, also set the credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in *C:\Program Files\Elasticsearch\Kibana\config*).
-
-## Updating passwords
-
-The *elasticsearch-setup-passwords.bat* script can only *create* the passwords. 
-
-To **update** an existing password:
-
-1. Send the following request to your Elasticsearch database, where **&lt;USERNAME&gt;** is the name of the user you want to update:
-
-   ```
-   POST /_security/user/<USERNAME>/_password
-   {
-      "password" : "new-strong-password"
-   }
-   ```
-
-1. Update the password in the *DB.xml* file on every DataMiner Agent and restart the DataMiner System.
-
 ## Client-server TLS encryption
 
 By default all client-server communication with Elasticsearch is unencrypted.
@@ -212,6 +151,71 @@ To configure TLS encryption for inter-node communication:
 
 > [!NOTE]
 > DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
+
+## Authentication
+
+By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster.
+
+> [!NOTE]
+> For the authentication to work, TLS must be configured first, as detailed above.
+
+To enable authentication in Elasticsearch 6.8.X:
+
+1. Stop your DataMiner Agent.
+
+1. Stop the *elasticsearch-service-x64* service.
+
+1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
+
+   `xpack.security.enabled: true`
+
+   `discovery.type: single-node`
+
+   > [!NOTE]
+   > For a multi-node cluster, "discovery.type" is not required.
+
+1. Start the *elasticsearch-service-x64* service.
+
+1. Execute the **elasticsearch-setup-passwords.bat** script (as superuser) with the *interactive* argument.
+
+   - On a **Windows** server, this is located in `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
+
+   - On a **Linux** server, this is located in `/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive`
+
+1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
+
+1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in *C:\Skyline DataMiner\db.xml*.
+
+   ```xml
+   <DataBase active="true" search="true" type="Elasticsearch">
+      <DBServer>[ELASTIC URL]</DBServer>
+      <UID>[YOUR ELASTIC USER]</UID>
+      <PWD>[YOUR STRONG PASSWORD]</PWD>
+   </DataBase>
+   ```
+
+1. Start your DataMiner Agent.
+
+> [!NOTE]
+> To keep using Kibana, also set the credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in *C:\Program Files\Elasticsearch\Kibana\config*).
+
+## Updating passwords
+
+The *elasticsearch-setup-passwords.bat* script can only *create* the passwords. 
+
+To **update** an existing password:
+
+1. Send the following request to your Elasticsearch database, where **&lt;USERNAME&gt;** is the name of the user you want to update:
+
+   ```
+   POST /_security/user/<USERNAME>/_password
+   {
+      "password" : "new-strong-password"
+   }
+   ```
+
+1. Update the password in the *DB.xml* file on every DataMiner Agent and restart the DataMiner System.
+
 
 ## Updating Elasticsearch
 
