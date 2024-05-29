@@ -93,9 +93,6 @@ When *Simulation Mode* is set to *Spikes*, alarms will exist for short periods o
 
 1. Click *OK* to save your changes.
 
-> [!NOTE]
-> Be mindful of the polling interval of the parameters when defining hysteresis. If your parameter is only updated every 5 seconds, you need to configure at least 10 seconds (two updates) for the hysteresis to make a difference.
-
 ## Step 4: Configure alarm monitoring using rate thresholds
 
 If a parameter is a counter that continuously increases (e.g. received packets on a network interface), it is not possible to define regular alarm thresholds. For such a parameter, you can use rate thresholds instead.
