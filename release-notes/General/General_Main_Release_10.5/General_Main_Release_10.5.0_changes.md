@@ -447,12 +447,6 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
-
-<!-- MR 10.5.0 - FR 10.4.8 -->
-
-A number of enhancements have been made to the process that determines whether a flatline change point is considered to be anomalous or not.
-
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]

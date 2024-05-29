@@ -12,7 +12,11 @@ uid: General_Main_Release_10.4.0_CU5
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made to the process that determines whether a flatline change point is considered to be anomalous or not.
 
 ### Fixes
 
