@@ -11,11 +11,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 29 May 2024 - Enhancement - Popup buttons [ID_39010]
 
-The buttons appearance in popups have been updated.
+Buttons in the popups have been updated to the new style.
 
 #### 29 May 2024 - Fix - Admin - email validation [ID_39791]
 
-The email validation has been corrected.
+The email validation has been updated to support all domain extensions.
 
 #### 29 May 2024 - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
 
