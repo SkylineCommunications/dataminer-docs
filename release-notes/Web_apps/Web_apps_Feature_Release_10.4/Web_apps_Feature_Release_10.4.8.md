@@ -22,7 +22,13 @@ uid: Web_apps_Feature_Release_10.4.8
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app: Enhanced input validation when updating theme colors [ID_39749]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made with regard to the validation of theme color updates.
+
+When you specify invalid colors or invalid regex patterns, you will not be able to click *Save* until all invalid values have been corrected.
 
 ### Fixes
 
