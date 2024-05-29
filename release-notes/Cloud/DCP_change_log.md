@@ -9,7 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### TBD - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
+#### 29 May 2024 - Enhancement - Popup buttons [ID_39010]
+
+The buttons appearance in popups have been updated.
+
+#### 29 May 2024 - Fix - Admin - email validation [ID_39791]
+
+The email validation has been corrected.
+
+#### 29 May 2024 - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
 
 The DMS overview page will now correctly show the failover pair agent as offline when this is the case.
 
