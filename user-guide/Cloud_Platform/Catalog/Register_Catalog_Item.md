@@ -60,7 +60,7 @@ This file will contain all necessary information to register a Catalog item or v
 #   - package: If the catalog item is a Solution Package that can be deployed on a DataMiner System.
 #   - connector: If the catalog item is a Protocol that can be deployed on a DataMiner System.
 #   - visio: If the catalog item is a Visio that can be deployed on a DataMiner System.
-type: 'AutomationScript'
+type: 'automationscript'
 
 # [Required] 
 # The id of the catalog item.
