@@ -539,3 +539,9 @@ From now on, when an imported element is deleted and then imported again, SLAnal
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
+
+#### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
