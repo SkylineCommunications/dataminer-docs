@@ -8,140 +8,213 @@ This tutorial explains how to get started with alarm templates.
 
 Expected duration: 15 minutes
 
+> [!NOTE]
+> The content and images for this tutorial have been created using DataMiner version 10.4.6.
+<!-- 
 > [!TIP]
-> See also: [Kata #34: Master alarm templates](https://community.dataminer.services/courses/kata-34/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #34: Master alarm templates](https://community.dataminer.services/courses/kata-34/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
 
 ## Prerequisites
 
 A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
-> A [new DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a cloud connection out of the box, so it automatically meets this requirement.
+> A [new DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box, so it automatically meets this requirement.
 
 ## Overview
 
 - [Step 1: Deploy the simulation element](#step-1-deploy-the-simulation-element)
-- [Step 2: Alarm on a parameter using normal thresholds](#step-2-alarm-on-a-parameter-using-normal-thresholds)
-- [Step 3: Define hysteresis](#step-3-define-hysteresis)
-- [Step 4: Alarm on a parameter using rate thresholds](#step-4-alarm-on-a-parameter-using-rate-thresholds)
-- [Step 5: Alarm on a parameter using relative thresholds](#step-5-alarm-on-a-parameter-using-relative-thresholds)
-- [Step 6: Alarm on a parameter using absolute thresholds](#step-6-alarm-on-a-parameter-using-absolute-thresholds)
-- [Step 7: Define a condition to disable alarming](#step-7-define-a-condition-to-disable-alarming)
+- [Step 2: Configure alarm monitoring using normal thresholds](#step-2-configure-alarm-monitoring-using-normal-thresholds)
+- [Step 3: Configure hysteresis](#step-3-configure-hysteresis)
+- [Step 4: Configure alarm monitoring using rate thresholds](#step-4-configure-alarm-monitoring-using-rate-thresholds)
+- [Step 5: Configure alarm monitoring using relative thresholds](#step-5-configure-alarm-monitoring-using-relative-thresholds)
+- [Step 6: Configure alarm monitoring using absolute thresholds](#step-6-configure-alarm-monitoring-using-absolute-thresholds)
+- [Step 7: Define a condition to disable alarm monitoring](#step-7-define-a-condition-to-disable-alarm-monitoring)
 
 ## Step 1: Deploy the simulation element
 
-1. For this tutorial we created a simulation protocol that allows us to simulates some practical use cases. Use the Catalog to deploy the [Generic Data Simulator](https://catalog.dataminer.services/details/4f30b72c-b395-49d6-986b-e540b58754e6).
+For this tutorial, a simulation protocol is available that allows you to simulate some practical use cases. In this first step, you will deploy this protocol and then create an element using the protocol.
+
+1. Look up the [Generic Data Simulator](https://catalog.dataminer.services/details/4f30b72c-b395-49d6-986b-e540b58754e6) in the Catalog.
+
+1. Deploy the protocol to your DataMiner Agent by clicking the *Deploy* button.
 
    > [!TIP]
-   > If you are new to deploying items from the catalog, refer to [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
+   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-1. Open DataMiner Cube and verify that the protocol is available under *Protocols & Templates*.
+1. In DataMiner Cube, go to *Apps* > *Protocols & Templates* and verify whether the protocol is available.
 
-1. To avoid having to create an alarm template for every new version of the connector we will create our alarm template on a production version. This way alarm templates remain even after setting a new version as production. Configure the deployed version as production so it is available when creating the element.
+1. In the *Versions* column, right-click the deployed version of the protocol and select *Set as production*.
 
-1. Create a new element in your DMS that uses the production version of the Generic Data Simulator.
+   Creating the alarm template for the production version will have the advantage that there will be no need to create a new alarm template for every new version of the protocol. Even when a new version is set as production, the same alarm template will continue to apply.
 
-## Step 2: Alarm on a parameter using normal thresholds
+1. Make sure the *Production* version is selected, right-click the *Elements* column on the right, and select *New element*.
 
-1. Right-click the newly created element and select *Protocols & Templates > Assign alarm template > \<New alarm template\>* to create a new alarm template. In this tutorial we are naming our alarm template *Default*.
+1. Create a new element with a name of your choice.
 
-1. Check the *CPU* parameter and apply the click *OK*.
+   The production version of the *Generic Data Simulator* protocol should automatically be selected in the element editor.
 
-In the element, you should now see that the *CPU* parameter under the *General* page is alarmed. You can play around with the *Simulation Mode* to simulate alarms.
+   > [!TIP]
+   > See also: [Adding elements](xref:Adding_elements)
+
+## Step 2: Configure alarm monitoring using normal thresholds
+
+1. Look up the newly created element in the Cube Surveyor.
+
+1. Right-click the element and select *Protocols & Templates* > *Assign alarm template* > *\<New alarm template\>*.
+
+1. In the dialog, keep the *Alarm template* option selected, specify the name *Default*, and click *OK*.
+
+1. Select the *CPU* parameter, and click *OK* at the bottom of the window.
+
+   In the element, you should now see the alarm severity color displayed next to the *CPU* parameter on the *General* page.
+
+1. Set *Simulation Mode* to a different value and check what happens.
+
+   The different modes simulate situations that can trigger alarms, so the alarm severity color next to *CPU* will change accordingly, and an alarm may be generated in the Alarm Console.
 
 ![Create an alarm template](~/user-guide/images/KataAlarmTemplatesNewAlarmTemplate.gif)
 
-## Step 3: Define hysteresis
+## Step 3: Configure hysteresis
 
-When using the *Spikes* mode, you will see that alarms can exist for short periods of time which might make it difficult for operators to notice the alarm or it might not be relevant as operators might only be interested if the threshold is being violated for longer periods of time. For this we can play with hysteresis to make the alarm console more digestible for operators.
+When *Simulation Mode* is set to *Spikes*, alarms will exist for short periods of time, which might make it difficult for operators to notice the alarms. The alarms might also not be relevant, as it could be that operators are only interested if the threshold is violated for longer periods of time. To deal with this, you can configure the hysteresis feature in the alarm template.
 
-1. Right-click the element and select *Protocols & Templates > View alarm template 'Default'* to open the alarm template.
+1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
-1. Configure in the *HYST ON* column for the *CPU* parameter *10s* to avoid that alarms are being generated when the CPU is only high for a brief moment (*Spikes* mode).
+   This will open the alarm template again.
 
-1. Configure in the *HYST OFF* column for the *CPU* parameter *20s* to ensure operators have more time to notice the alarms. When changing from *High Load* to *Low Load* you will notice that the alarm is present for *20s* longer after the value drops below the alarm threshold.
+1. In the *HYST ON* column for the *CPU* parameter, specify *10*.
 
-> [!TIP]
-> Be mindful of the polling interval of the parameters when defining hysteresis. If your parameter is only being updated every *5s*, you need to configure at least *10s* (two updates) for the hysteresis to make a difference.
+   An alarm will now only be generated if the CPU value remains high for 10 seconds.
 
-## Step 4: Alarm on a parameter using rate thresholds
+1. In the *HYST OFF* column for the *CPU* parameter, specify *20*.
 
-When you have counter that continuously go (e.g. received packets on a network interface) it is not possible to define thresholds. For these type of parameters we have the *Rate* option.
+   The alarm will now remain present for 20 seconds longer after the CPU value drops below the alarm threshold, ensuring that operators have more time to notice it.
 
-1. Right-click the element and select *Protocols & Templates > View alarm template 'Default'* to open the alarm template.
+1. Click *OK* to save your changes.
 
-1. Select *Only protocol parameters* at the right top.
+> [!NOTE]
+> Be mindful of the polling interval of the parameters when defining hysteresis. If your parameter is only updated every 5 seconds, you need to configure at least 10 seconds (two updates) for the hysteresis to make a difference.
 
-1. Check the *Counter Parameter*.
+## Step 4: Configure alarm monitoring using rate thresholds
 
-1. Select *Rate* as Type and define *3* under *CRIT HI*.
+If a parameter is a counter that continuously increases (e.g. received packets on a network interface), it is not possible to define regular alarm thresholds. For such a parameter, you can use rate thresholds instead.
 
-1. Click *OK* to save the changes.
+1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
-In the element, you should now see that the *Counter Parameter* under the *General* page is alarmed. When selecting *High Load* the parameter will increment with five on every update and therefor be in alarm. When going back to *Low Load* the alarm will be cleared again as the parameter will increment with one.
+1. At the top of the template, click *Only monitored parameters* and select *Only protocol parameters* instead.
 
-## Step 5: Alarm on a parameter using relative thresholds
+   All the parameters included in the protocol will now be displayed.
 
-With relative alarming it is possible to define a baseline to which the value can deviate percentage wise. This can very helpful especially in tables where every row can have a different baseline value.
+1. Select the *Counter Parameter*.
 
-1. Right-click the element and select *Protocols & Templates > View alarm template 'Default'* to open the alarm template.
+1. In the *Type* box, select *Rate*.
 
-1. Select *Only protocol parameters* at the right top.
+1. In the *CRIT HI* column, specify *3*.
 
-1. Check the *Bitrate* parameter.
+   With this configuration, when the current value of the parameter will increase by 3 or more compared to the previously measured value, a critical alarm will be triggered.
 
-1. Select *Relative* as Type and define *20%* under *CRIT LO* and *CRIT HI*.
+1. Click *OK* to save your changes.
 
-1. Click on *[Baseline]* under *Normal* and configure the baseline value that is to be considered normal.
+   *Counter Parameter* will now also be monitored.
 
-1. Click *OK* to save the changes.
+1. Set *Simulation Mode* to *High Load*.
 
-In the element, the *Bitrate* column in the *Interfaces* page/table is now alarmed. The *Bitrate Baseline* column together with the *Bitrate Variance* columns can be used to simulate alarms. Keep in mind that changing the *Bitrate Baseline* value will only change the behavior of the simulation, this will not change the baseline value of the alarm template.
+   The parameter value will now increase by 5 on every update, so a critical alarm will be triggered.
 
-> [!TIP]
-> There is an option to automatically update the baseline values used for alarming based on the history. For this trending has to be enabled for at least the number of days configured in the alarm template.
+1. Set *Simulation Mode* back to *Low Load*.
+
+   The alarm will be cleared again, as the parameter value will now increase by 1 on every update.
+
+## Step 5: Configure alarm monitoring using relative thresholds
+
+With relative alarm thresholds, you can define a baseline from which the value can deviate percentage-wise. This can especially be useful for tables where every row can have a different baseline value.
+
+1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
+
+1. At the top of the template, click *Only monitored parameters* and select *Only protocol parameters* instead.
+
+1. Select the *Interfaces: Bitrate* parameter.
+
+1. In the *Type* box, select *Relative*.
+
+1. In the *CRIT LO* and *CRIT HI* column, specify *20*.
+
+   With this configuration, if the parameter decreases or increases by 20% compared to the baseline value, an alarm will be triggered.
+
+1. In the *NORMAL* column, click *[Baseline]*.
+
+1. Right-click each cell in the *Current value* column, and select *Use current value as baseline value*.
+
+   The value that are currently in the table will now be considered the normal values to compare against.
+
+   > [!NOTE]
+   > With the *Automatically update the baselines* option at the bottom, the baseline values can be updated automatically based on the parameter history. However, you can only use this option if trending has been enabled on the parameter for at least the number of days mentioned in the *Trend window* box.
+
+1. Click *Close* and then *OK* to save the changes.
+
+1. Go to the *Interfaces* data page of the simulation element.
+
+   You will see that the *Bitrate* column of the *Interfaces* table is colored according to the current alarm severity.
+
+1. Change the values in the *Bitrate Baseline* and *Bitrate Variance* columns to simulate alarms.
+
+   Keep in mind that changing the *Bitrate Baseline* value will only change the behavior of the simulation. This will not change the baseline value of the alarm template.
 
 ![Configure relative alarming](~/user-guide/images/KataAlarmTemplatesRelativeAlarming.gif)
 
-## Step 6: Alarm on a parameter using absolute thresholds
+## Step 6: Configure alarm monitoring using absolute thresholds
 
-In some cases it is easier to define in absolute numbers how much a value can deviate from the baseline (e.g. when the baseline is close to zero).
+In some cases, it can be easier to define in absolute numbers how much a value can deviate from the baseline (e.g. when the baseline is close to zero).
 
-1. Right-click the element and select *Protocols & Templates > View alarm template 'Default'* to open the alarm template.
+1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
-1. Duplicate the row for the *Bitrate* parameter.
+1. Hover the mouse pointer over the *Interfaces:Bitrate* parameter, and click the + icon to duplicate the parameter.
 
-1. Configure the first rule of the two to filter on *Ethernet1/1*.
+1. In the filter box of the first instance of the duplicated parameter, specify the filter rule *Ethernet1/1*.
 
    > [!IMPORTANT]
-   > Ensure that the most strict rule is always on top as the first rule that matches the filter will be used and no other rules will be checked below it.
+   > When you duplicate parameters in an alarm template and apply different monitoring based on filters, make sure that the most strict rule is always at the top, because the first rule for which a match is found will be used, and the rules below it will no longer be checked.
 
-1. Select *absolute* as Type and define *0.5* under *CRIT LO* and *CRIT HI*.
+1. In the *Type* box, select *Absolute*.
 
-1. Click on *[Baseline]* under *Normal* and configure the baseline value for *Ethernet1/1* as *0*.
+1. In the *CRIT LO* and *CRIT HI* column, specify *0.5*.
 
-1. Click *OK* to save the changes.
+1. In the *NORMAL* column of the row with the Ethernet1/1 filter, click *[Baseline]*.
 
-1. Change the simulated bitrate for *Ethernet1/1* to fluctuate around *0*, by setting the *Bitrate Baseline* to *0* in the *Interfaces* table under the *Interfaces* page of the element.
+1. In the *Baseline value* column for *Ethernet1/1*, set the value to *0*.
+
+1. Click *Close* and then *OK* to save the changes.
+
+1. In the *Interfaces* table of the simulation element, set the *Bitrate Baseline* value for *Ethernet1/1* to *0*, to simulate a bitrate fluctuating around 0.
 
 ![Configure relative alarming](~/user-guide/images/KataAlarmTemplatesAbsoluteAlarming.gif)
 
-## Step 7: Define a condition to disable alarming
+## Step 7: Define a condition to disable alarm monitoring
 
-By defining alarm conditions it is possible to dynamically enable/disable alarming based on other values.
+By defining alarm conditions, you can dynamically enable and disable alarm monitoring based on other values.
 
-1. Right-click the element and select *Protocols & Templates > View alarm template 'Default'* to open the alarm template.
+1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
-1. Select *\<New\>* under the *CONDITION* column for the bitrate parameter.
+1. In the *CONDITION* column for the first *Bitrate* parameter instance, select *\<New\>*.
 
-1. Configure the condition as in below screenshot.
+1. Configure the condition as illustrated below, and click *OK*:
 
    ![Alarm hysteresis](~/user-guide/images/KataAlarmTemplatesCondition.png)
 
-1. Apply the condition on both *Bitrate* alarm rules.
+1. Select the same condition for the other *Bitrate* parameter instance.
 
-1. Click *OK* to save the changes.
+1. Click *OK* to save your changes.
 
-1. Change the *Admin State* for some interfaces to validate that the conditional alarming works properly.
+1. In the *Interfaces* table of the simulation element, switch the *Admin State* for some interfaces to *Down*.
+
+   The alarm severity color should no longer be displayed for those interfaces.
 
 ![Configure relative alarming](~/user-guide/images/KataAlarmTemplatesConditonalAlarming.gif)
+
+## Related documentation
+
+- [Configuring normal alarm thresholds](xref:Configuring_normal_alarm_thresholds)
+- [Configuring hysteresis in an alarm template](xref:Configuring_alarm_hysteresis)
+- [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds)
+- [Using conditions in an alarm template](xref:Using_conditions_in_an_alarm_template)
