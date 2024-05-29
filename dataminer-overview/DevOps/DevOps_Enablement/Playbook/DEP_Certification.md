@@ -10,11 +10,15 @@ The [Certification process](https://community.dataminer.services/learning/certif
 
 Currently available certifications include
 
-- [DataMiner Operator](https://community.dataminer.services/learning/certification/dataminer-operator/)
+- [DataMiner Fundamentals](https://community.dataminer.services/learning/certification/dataminer-operator/)
 
-- [DataMiner Administrator](https://community.dataminer.services/learning/certification/dataminer-administrator/)
+- [DataMiner Configurator](https://community.dataminer.services/learning/certification/dataminer-administrator/)
 
-- [Automation expert](https://community.dataminer.services/learning/certification/automation/)
+- [Automation](https://community.dataminer.services/learning/certification/automation/)
+
+- [Scripts & Connectors Developer: HTTP Basics](https://community.dataminer.services/learning/certification/scripts-connectors-developer-http-basics/)
+
+- [Scripts & Connectors Developer: SNMP Basics](https://community.dataminer.services/learning/certification/scripts-connectors-developer-snmp-basics/)
 
 - [Visual Overview - Level 1](https://community.dataminer.services/learning/certification/visual-overview-level-1/)
 

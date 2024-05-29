@@ -25,6 +25,7 @@ This component displays a webpage or a block of static HTML. It can also be used
 
      > [!NOTE]
      > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38993-->, you can link this component to a feed by [dynamically referencing feed values](xref:Feed_Link) in the HTML code. However, note that the HTML code is limited to 100,000 characters and HTML highlighting is disabled from 15,000 characters onwards.
+     > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38993-->, if the component is configured as a webpage, you can use the `<DMAIP>` placeholder to insert the current hostname and port in the URL.
 
 In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Customize_Component_Layout).
 

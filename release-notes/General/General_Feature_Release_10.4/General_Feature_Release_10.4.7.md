@@ -22,6 +22,12 @@ uid: General_Feature_Release_10.4.7
 
 ## New features
 
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+
 #### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -77,6 +83,50 @@ When a multi-threaded operation takes longer that 30 seconds to complete, an ent
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
+#### Replication buffering enhancements [ID_39428]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+A number of enhancements have been made with regard to the replication buffering functionality:
+
+- In some cases, the replication buffering limits would not be taken into account, causing the buffer to keep on growing.
+
+- When DataMiner restarted with an active ReplicationBuffer storage file, at the end of its startup routine, it would incorrectly not flush the contents of the file once the replication connection was re-established.
+
+- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. Also, there will only be one ReplicationBuffer file per replicated element.
+
+##### Manually removing old ReplicationBuffer files
+
+On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contain a large number of old ReplicationBuffer files. These files will not be removed automatically. If you want to remove them manually, you have two options:
+
+1. If you no longer need the data stored in those files, you can delete all files with a name matching the following format:
+
+   `ReplicationBuffer_[AgentNameReplicatedElement]_[AgentIpReplicatedElement]_[AgentDmaIdReplicatedElement]_[ElementIdReplicatedElement]_[SomeHashOfTheStorage]`
+
+   Example: *ReplicationBuffer_slc-h32-g06_10.11.6.32_223_4_6992437*
+
+1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e. in order to fill some gaps in their trend data), you can try to do the following:
+
+   1. Connect to the DMA using the SLNetClientTest tool.
+   1. Go to the *Build Message* tab of the main window.
+   1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+   1. In the *ExtraInfo* field, specify "flush:[fileNamePattern]". For examples of file name patterns, see below.
+   1. In the *Type* field at the bottom, select "ReplicationBufferStats".
+
+   Examples of flush commands:
+
+   | Enter... | to try to flush... |
+   |----------|--------------------|
+   | flush:* | all ReplicationBuffer files. |
+   | flush:agentName* | all ReplicationBuffer files for DataMiner Agent *agentName* |
+   | flush:agentName_10.11.6.32_223_4 | all ReplicationBuffer files for the replicated element 223/4 on DataMiner Agent agentName |
+
+> [!IMPORTANT]
+> DataMiner will only succeed in flushing a ReplicationBuffer if the replication connection for the replicated element in question is active. If not, it will fail to do so, and will leave the file untouched.
+
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### Failover: Enhanced agent performance when going online [ID_39435]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
@@ -129,6 +179,60 @@ When an alarm template contained multiple lines for the same parameter, each wit
 <!-- 39387: MR 10.5.0 - FR 10.4.7 -->
 
 A number of security enhancements have been made.
+
+#### SNMP++: Trap processing enhancements [ID_39629]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, when SNMP++ was used for trap reception, a single thread would be responsible for reading the raw data from the UDP socket and forwarding it to SLSNMPManager.
+
+From now on, one thread will read the raw data from the UDP buffer and add it to a queue. Another thread will then take the data from that queue, parse it into an appropriate SNMP object, and forward it to SLSNMPManager.
+
+> [!NOTE]
+>
+> - If traps would get lost, the UDP buffer can be increased by changing the *DefaultReceiveWindow* and *DefaultSendWindow* REG_DWORD values under the Windows Registry key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AFD\Parameters` (default value: 65536 bytes) and rebooting the server. Note that increasing these values will only have an effect when dealing with a small burst of traps. If traps are constantly entering at a higher rate than SLSNMPManager can process, it means that the DataMiner Agent is not able to catch up.
+> - The throughput at which traps can be processed depends on various factors: the CPU benchmark and CPU usage, the log level of the SLSNMPManager logging, if traps need to be forwarded within the DMS, how long the QAction runs that processes the trap, and when an element is able to process a trap.
+
+> [!CAUTION]
+> Please take extreme care when modifying the Windows registry. We strongly advise you to back up the registry before you modify it.
+
+#### Service & Resource Management: DVE activation enhancements [ID_39672]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Advanced_SRM_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
+
+When you create a booking that needs to start immediately, SLNet will enable the DVEs and wait for up to 1 minute until they are active before trying to start the booking. If the DVEs take more than 1 minute to activate, the booking will fail to start since the DVEs need to be activated before the booking can be started.
+
+##### DVE activation delay is now configurable
+
+From now on, the one-minute DVE activation delay is configurable by running a script similar to the one below. Changing this delay does not need DataMiner to be restarted.
+
+```csharp
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Messages;
+namespace Script
+{
+    public class Script
+    {
+        public void Run(Engine engine)
+        {
+            var protocolFunctionHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
+            var currentConfig = protocolFunctionHelper.GetProtocolFunctionConfig();
+            currentConfig.ActiveFunctionResourcesThreshold = 123;
+            currentConfig.FunctionActivationTimeout = TimeSpan.FromMinutes(10);
+            protocolFunctionHelper.SetProtocolFunctionConfig(currentConfig);
+        }
+    }
+}
+```
+
+> [!NOTE]
+> If the activation fails after half the timeout, a retry will be made. In case of the one-minute default, a retry will be made after 30 seconds. If the timeout is increased to 10 minutes, the retry will be made after 5 minutes.
+
+##### Waiting for DVE activation confirmation will now be processed asynchronously
+
+Waiting for DVEs to get activated will now be processed asynchronously. This will avoid that function DVEs that take longer to get activated obfuscate the ones that get activated faster.
 
 ### Fixes
 
@@ -189,6 +293,12 @@ When a client application lost connection while an interactive Automation script
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
 
+#### API Gateway: Problem when processing a large number of parallel calls [ID_39550]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When API Gateway had to process a large number of parallel calls, up to now, this could lead to a threading problem, causing clients to time out and get disconnected.
+
 #### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -196,6 +306,12 @@ From now on, when a client application loses connection while an interactive Aut
 When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
 
 From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
+
+#### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID_39598]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
+
+On Failover systems, the Service Manager would incorrectly initialize twice.
 
 #### 'Security Advisory' BPA test: Issues fixed [ID_39606] [ID_39716]
 
@@ -208,3 +324,15 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 - When the BPA was run on a DMA using HTTPS, it would throw an exception when IIS had an HTTPS binding without a certificate configured.
 
   In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
+
+#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
+
+#### Problem when setting up SLNet connections to the IPv6 loopback address [ID_39667]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When an SLNet connection was made to the IPv6 loopback address using the FQDN (e.g. when replicating elements on the same DataMiner Agent), the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to one of the IP addresses the FQDN pointed to.

@@ -21,6 +21,26 @@ The email validation has been updated to support all domain extensions.
 
 The DMS overview page will now correctly show the failover pair agent as offline when this is the case.
 
+#### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
+
+When an item is deployed from the Catalog, a new pop-up component will now be shown. The pop-up component has a new style and includes the name of the artefact.
+
+#### 27 May 2024 - Fix - All dataminer.services apps - Caching of index.html disabled [ID_39725]
+
+Caching for the index page has been disabled for all dataminer.services apps, so that users will now always get the latest index page. As a result of this, the apps will be guaranteed to always have the latest code, since everything in the apps resolves to the index page.
+
+#### 27 May 2024 - Enhancement - Admin - Audit filter [ID_39737]
+
+The audit filter "Subject Type" will now correctly show options.
+
+#### 23 May 2024 - Enhancement - ChatOps - Possibility to skip the confirmation when running custom commands [ID_39736]
+
+From now on, it is possible to skip the confirmation message when running a custom command with the DataMiner Teams bot.
+
+You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.
+
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in adaptive cards.
+
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
 When a user navigates to a legacy URL of the Catalog application, it will now redirect to the correct page.

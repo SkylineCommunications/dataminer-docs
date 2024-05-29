@@ -32,6 +32,45 @@ cy.get(`[data-cy="TextComponent"]`)
 > [!NOTE]
 > The `DebugTag` can only be used in interactive Automation scripts launched from web apps, not in interactive Automation scripts launched from DataMiner Cube.
 
+#### Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID_39451] [ID_39638]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
+
+To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class. Contrary to the `ShowUI()` method, the `HideUI()` method does not require a response and will not return any result.
+
+Example:
+
+```csharp
+using System;
+using Skyline.DataMiner.Automation;
+
+public class Script
+{
+    public void Run(Engine engine)
+    {
+        // Build and display a form
+        var formUi = BuildFormUi();
+        var results = engine.ShowUI(formUi);
+
+        // Process UI results
+
+        // Hide the UI before starting a lengthy operation
+        engine.HideUI();
+
+        // Build and display issue information
+        var issueUi = BuildIssueUi();
+        var issueResults = engine.ShowUI(issueUi);
+    }
+}
+```
+
+> [!NOTE]
+>
+> - Although the use of `HideUI()` requires the Automation script to be interactive, a script will not be recognized as interactive if the method is included in the script. It needs to be used in combination with `ShowUI()` or `FindInteractiveClient()`.
+> - Although it is possible to request hiding the UI prior to showing it, it is recommended to not show any UI and only hide the UI after it was shown.
+
 #### Dashboards app & Low-Code Apps: New 'Search input' component [ID_39555]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
@@ -124,13 +163,37 @@ A number of enhancements have been made to the *Line & area chart* component:
 - The chart dimensions will now be automatically adapted.
 
   - When a line chart has data, but does not have lines configured, the component will add one line on the default X and Y axes.
-  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value. 
+  - The columns will be chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
+
+#### Low-Code Apps: All open panels will now stay open when you switch from one page to another [ID_39632]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+Up to now, all open panels would by default be closed when you switched from one page to another. From now on, all open panels will by default stay open when you switch from one page to another.
+
+> [!NOTE]
+> When you migrate to this DataMiner version, in all your existing low-code apps, a *Close all panels* action will be added to the *On close* event of each page.
 
 #### Web API: Enhanced performance [ID_39684]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements with regard to subscription reuse and WebSocket communication, overall performance of the web API has increased.
+
+#### Dashboards app & Low-Code Apps: More consistent use of colors in graphs [ID_39739]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+The way in which colors are assigned to graphs has been enhanced. Across all components, charts displaying the same data will now use the same colors. This will greatly improve visual coherence and data interpretation.
+
+Instead of each component independently taking the next color from its color palette, components will now check if another component has already requested a color for the same data. If so, the same color will be applied.
+
+Data is considered identical if the display label used in the chart legend is identical. For example, if multiple charts display data labeled "SLNet:0", they will all use the same color for this label.
+
+Note that, by default, colors will not be consistent across different sessions. Refreshing the application may result in different colors being used for the same data. If you want to maintain consistent colors across multiple sessions, you can now define conditional colors in a component theme's color palette by binding colors to specific regular expressions that match the display labels of the data.
+
+> [!NOTE]
+> If you want to revert to the former color assignment behavior where a single color is used across all graphs, include only one color in the component theme's color palette.
 
 ### Fixes
 
@@ -183,3 +246,18 @@ In some cases, a *Line and area chart* component would incorrectly show null val
 Up to now, when a DOM instance was in the initial state, did not have any history, and had a definition that contained a loop from "initial" back to "initial", the *Stepper* component would show an incorrect state.
 
 From now on, the *Stepper* component will no longer try and guess the history of a DOM instance in the initial state when no history is available.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem with references to query columns specified in table templates after migrating a dashboard or app [ID_39730]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later, all references to query columns specified in table templates would no longer work.
+
+> [!NOTE]
+> This problem did not occur after a web-only upgrade.
+
+#### Web API: No longer possible to configure ticketing domains [ID_39771]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+Due to an issue in the Web API, it was no longer possible to configure ticketing domains.
