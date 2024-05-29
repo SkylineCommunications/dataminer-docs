@@ -16,7 +16,11 @@ uid: Cube_Feature_Release_10.4.8
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Cube will now reflect all changes to user-defined APIs in real time [ID_39238]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+DataMiner Cube now subscribes to the *ApiTokenChangedEventMessage* and the *ApiDefinitionChangedEventMessage*, which were introduced in DataMiner version 10.5.0/10.4.6. As a result, the *User-Defined APIs* section of *System Center* and the *Automation* module will now reflect all changes to user-defined APIs in real time.
 
 ## Changes
 
