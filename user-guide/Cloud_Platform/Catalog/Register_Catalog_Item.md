@@ -4,43 +4,51 @@ uid: Register_Catalog_Item
 
 # Registering a Catalog item
 
-## How to register a private Catalog item
+Below you can find detailed information on how you can register a private Catalog item, either [using the Catalog UI](#using-the-catalog-ui), or [using the Catalog API](#using-the-catalog-api).
 
-### Using the Catalog UI
+## Using the Catalog UI
 
-If you use the UI, you can only register a Catalog item. There is no UI yet to register a new version. This can only be done by using the [API](#using-the-catalog-api).
+If you use the UI, you can only register a new Catalog item, but not a new version. To register a new version for an existing item, [use the API](#using-the-catalog-api).
 
-To register a new Catalog item, do the following:
+To register a new Catalog item:
 
 1. Go to the [Catalog](https://catalog.dataminer.services).
 
-1. Open the user menu by clicking the user icon on the top right. 
+1. Open the user menu by clicking the user icon in the top-right corner.
 
-1. Click the "Register item" button.
+1. Click the *Register item* button.
 
-1. Indicate for which organization you want to register the Catalog item. This can be done by using the selection box that will automatically be populated with all the organizations on the dataminer.services platform you have access to.
+1. Select the organization for which you want to register the Catalog item.
 
-1. Select the type of the Catalog item. This can be one of the supported [catalog item types](xref:About_the_Catalog_module#supported-catalog-item-types). The type will define how the Catalog item will be shown to the users. We also allow filtering on type so users can quickly find what they are looking for when browsing the Catalog module.
+   The selection box is automatically populated with all the organizations you have access to on the dataminer.services platform.
 
-1. Enter the name of the item. This will be the name that will be used to display the item in the Catalog. It needs to be human readable. Make sure you pick a name that makes sense.
+1. Select the type of the Catalog item.
 
    The selected [Catalog item type](xref:About_the_Catalog_module#supported-catalog-item-types) defines how the Catalog item will be shown to the users. Users can also filter on type to quickly find what they are looking for when browsing the Catalog.
 
-### Using the Catalog API
+1. Enter the name of the item.
 
-#### Authentication
+   This name will be used to display the item in the Catalog. Make sure you pick a human-readable name that makes sense.
+
+1. Once all information has been filled in, click *Register*.
+
+   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item using the [API](#using-the-catalog-api).
+
+## Using the Catalog API
+
+### Authentication
 
 The API call is authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
-#### API call signature
+### API call signature
 
 The call to register a Catalog item can be found at the following URL: <https://api.dataminer.serivces/api/key-catalog/v1-0/catalog/register>. To call the API you will need to use the **POST** HTTP method.
 
 The call accepts a binary file as input. This file should be a zip file containing a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) and the item you want to upload.
 
-#### Manifest file
+### Manifest file
 
-This file will contain all necessary information to register a Catalog item or version. This manifest file should be a valid yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
+This file will contain all necessary information to register a Catalog item or version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
 
 > [!IMPORTANT]
 > If the *id* field is not filled in, a new Catalog item registration will be created. If you want to register a new version for an existing Catalog item, make sure to fill in the ID of that item.
