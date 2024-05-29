@@ -24,7 +24,7 @@ To register a new Catalog item, do the following:
 
 1. Enter the name of the item. This will be the name that will be used to display the item in the Catalog. It needs to be human readable. Make sure you pick a name that makes sense.
 
-1. Once all information has been filled in, click *Register*. This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the catalog item using the [API](#using-the-catalog-api).
+   The selected [Catalog item type](xref:About_the_Catalog_module#supported-catalog-item-types) defines how the Catalog item will be shown to the users. Users can also filter on type to quickly find what they are looking for when browsing the Catalog.
 
 ### Using the Catalog API
 

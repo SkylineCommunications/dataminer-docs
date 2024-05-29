@@ -24,7 +24,7 @@ To view your system keys:
 
 ## Organization keys
 
-Organization keys can be used to create new systems within the dataminer.services platform (more information will be added soon) or to [register new Catalog items](xref:Register_Catalog_Item).
+Organization keys are among others used to [register new Catalog items](xref:Register_Catalog_Item).
 
 To view your organization keys:
 
