@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.4.8
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app & Low-Code Apps: Feed links would be broken after a migration [ID_39744]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+After a dashboard or a low-code app had been migrated to a newer version, in some cases, feed links defined in that dashboard or low-code app would be broken.
