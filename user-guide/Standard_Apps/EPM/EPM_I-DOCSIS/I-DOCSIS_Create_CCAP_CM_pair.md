@@ -4,10 +4,10 @@ uid: I-DOCSIS_Create_CCAP_CM_pair
 
 # Creating a new CCAP/CM pair
 
-To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create elements in bulk from a CSV file.
+To create CCAP/CM pairs, you can either create a single CCAP/CM pair at a time, or create elements in bulk from a CSV file.
 
- > [!NOTE]
- > The creation of HarmonicOS pairs using the script is not fully supported yet. While the elements will be created, some additional configurations will be missing.
+> [!NOTE]
+> The creation of HarmonicOS pairs is not fully supported yet. While the elements will be created, some additional configuration will be missing.
 
 ## Creating a single CCAP/CM pair
 
@@ -26,7 +26,7 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
    1. Define the **element name** (mandatory field).
 
       > [!NOTE]
-      > The name of the collector element will consist of the defined element name with the suffix "_COLLECTOR".
+      > The name of the collector element will consist of the defined element name with the suffix `_COLLECTOR`.
 
       > [!IMPORTANT]
       > Make sure the element name does not contain any [forbidden characters](xref:Forbidden_characters).
@@ -47,13 +47,9 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
       At present, the following protocols are supported:
 
       - CISCO CMTS CCAP Platform
-
       - Arris E6000 CCAP Platform
-
       - Casa Systems CCAP Platform
-
       - CISCO CBR-8 CCAP Platform
-
       - Huawei 5688-5800 CCAP Platform
 
    1. Select the desired **protocol version**. We recommend the production version.
@@ -85,55 +81,32 @@ The elements will be created with the following specifications:
 - **CCAP:**
 
   - **Element name**: The defined element name.
-
   - **Protocol**: The selected protocol.
-
   - **Protocol version**: The selected version.
-
   - **IP address**: The defined IP address.
-
   - **Alarm template**: The default alarm template.
-
   - **Trend template**: The default trend template.
-
   - **Get community string CCAP**: The defined get community string for the CCAP.
-
   - **Set community string CCAP**: The defined set community string for the CCAP.
-
   - **Entity export directory**: The same directory as is set in the back end of the host.
-
   - **Entity import directory**: The same directory as is set in the back end of the host.
-
   - **Entity import directory type**: Remote.
-
   - **System username**: The username to access the shared folder.
-
   - **System password**: The password to access the shared folder.
 
 - **Collector:**
 
   - **Element name**: The defined element name combined with the suffix "_COLLECTOR".
-
-  - **Protocol** The [Generic DOCSIS CM Collector](https://catalog.dataminer.services/details/connector/4207) protocol.
-
-  - **Protocol version**:The production version.
-
+  - **Protocol**: The [Generic DOCSIS CM Collector](https://catalog.dataminer.services/details/connector/4207) protocol.
+  - **Protocol version**: The production version.
   - **IP address**: 127.0.0.1.
-
   - **Alarm template**: public.
-
   - **Trend template**: private.
-
   - **Get community string Collector**: The defined get community string for the collector.
-
   - **Set community string Collector**: The defined set community string for the collector.
-
   - **Entity import directory**: The same directory as is set in the back end of the host.
-
   - **Entity import directory type**: Remote.
-
   - **System username**: The username to access the shared folder.
-
   - **System password**: The password to access the shared folder.
 
 > [!NOTE]
@@ -143,7 +116,7 @@ The elements will be created with the following specifications:
 
 <!-- RN 37262 -->
 
-1. In DataMiner Cube, go to apps > Automation.
+1. In DataMiner Cube, go to *Apps* > *Automation*.
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
@@ -155,35 +128,35 @@ The elements will be created with the following specifications:
 
 1. Below the **Create Bulk** script text, enter the path of the CSV file.
 
+   Here is an example of a CSV file with the mandatory headers and the content of each row:
+
+   | ElementName | Ccap_DMA | Collector_DMA | Protocol | IpAddress | GetCommunityString | SetCommunityString | GetCommunityStringColl | SetCommunityStringColl | Network | Market | Hub | SystemUser | SystemPass |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | filename1 | EPM-DMA03 | EPM-DMA03 | CISCO CBR-8 CCAP Platform | 10.11.12.11 | getPublic | setprivate | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US1 | 123 |
+   | filename2 | EPM-DMA04 | EPM-DMA04 | CISCO CBR-8 CCAP Platform | 10.11.12.12 | getprivate | setPublic | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US2 | 123 |
+
    > [!NOTE]
    >
    > - The CSV file must be present on the server running the DMA.
-   > - The CSV file has to have the following structure: ElementName*, Ccap_DMA*, Collector_DMA*, Protocol*, IpAddress*, GetCommunityString, SetCommunityString,GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
+   > - The CSV file has to have the following structure: ElementName*, Ccap_DMA*, Collector_DMA*, Protocol*, IpAddress*, GetCommunityString, SetCommunityString, GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
+   > - For the **Protocol** column, only the following values are currently accepted:
+   >   - CISCO CMTS CCAP Platform
+   >   - Arris E6000 CCAP Platform
+   >   - Casa Systems CCAP Platform
+   >   - CISCO CBR-8 CCAP Platform
+   >   - Huawei 5688-5800 CCAP Platform
 
 1. Click *Create Bulk*.
 
-The elements will be created with the specifications in the CSV file of each row.
+   The elements will be created with the specifications in the CSV file of each row.
 
-Here is an example of the CSV file with the mandatory headers and the content of each row.
+   > [!NOTE]
+   >
+   > - Each time the script is executed, it will attempt to create five elements. If there are fewer than five elements left to create, it will create as many as possible without any issues. After the first set of elements has been created, you can execute the script again without modifying the CSV file, and it will attempt to create the next set of five elements.
+   > - Click the *Cancel* button in any window to close the Automation script at any time.
 
-| ElementName | Ccap_DMA | Collector_DMA | Protocol | IpAddress | GetCommunityString | SetCommunityString | GetCommunityStringColl | SetCommunityStringColl | Network | Market | Hub | SystemUser | SystemPass |
-|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
-| filename1 | EPM-DMA03 | EPM-DMA03 | CISCO CBR-8 CCAP Platform | 10.11.12.11 | getPublic | setprivate | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US1 | 123 |
-| filename2 | EPM-DMA04 | EPM-DMA04 | CISCO CBR-8 CCAP Platform | 10.11.12.12 | getprivate | setPublic | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US2 | 123 |
+1. When the script has been executed, carefully read the window with information about the execution.
 
-Each time the script is executed, it will attempt to create five (5) elements. If there are fewer than five elements left to create, it will create as many as possible without any issues. After creating the first set of elements, the user can execute the script again, without modifying the CSV file, and it will attempt to create the next set of five elements.
+   - If any line begins with [ERROR], this means that the creation of that particular element failed.
 
-> [!NOTE]
->
-> - For the **Protocol** column, only the following values are currently accepted:
->   - CISCO CMTS CCAP Platform
->   - Arris E6000 CCAP Platform
->   - Casa Systems CCAP Platform
->   - CISCO CBR-8 CCAP Platform
->   - Huawei 5688-5800 CCAP Platform
-> - Click the *Cancel* button in any window to close the Automation script at any time.
-
-
-## Closing window after Script execution
-
-After the script is executed, whether for bulk creation or single creation, a window will appear displaying important information about the execution. It is crucial to read this window carefully. If any line begins with [ERROR], it means that the creation of that particular element failed and was aborted. Lines beginning with [INFO] will provide details about any issues encountered after the creation of the elements or confirm the successful completion of processes.
+   - Lines beginning with [INFO] provide information about any issues encountered after the creation of the elements or confirm the successful completion of processes.

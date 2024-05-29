@@ -2,38 +2,50 @@
 uid: I-DOCSIS_Delete_CCAP_CM_pair
 ---
 
-# Deleting a CCAP/CM Pair Manually
+# Deleting a CCAP/CM pair manually
 
-To delete a CCAP/CM pair manually, follow these steps:
+To delete a CCAP/CM pair manually:
 
-1. In the Surveyor inside Cube, locate the CCAP element to be removed.
+1. In the Cube Surveyor, locate the CCAP element to be removed.
 
-1. Right-click the element and select *Edit*.
+1. Right-click the element, and select *Edit*.
 
-1. Note the ID of the element (in green) and the DMA name (in yellow).
+1. Note down the ID of the element (indicated in green below) and the DMA name (indicated in yellow below).
 
-![Element Properties](~/user-guide/images/Delete_propertiesOfElement.png)
+   ![Element editor](~/user-guide/images/Delete_propertiesOfElement.png)
 
-4. In the Surveyor, click *EPM BE*.
+1. In the Surveyor, select the *EPM BE* view.
 
-![Find BE View](~/user-guide/images/Delete_BEFind.png)
+   ![EPM BE view](~/user-guide/images/Delete_BEFind.png)
 
-5. Look for the elements table on the card side panel,  click it and  in the table search for the DMA name (in yellow) noted in the previous step.
+1. On the view card, navigate to *Below this view* > *Elements*.
 
-![Find BE element host](~/user-guide/images/Delete_SearchHost.png)
+1. Use the filter box above the elements table to search for the DMA name you noted down earlier (indicated in yellow below).
 
-6. Right-click the first row and select *Open in New Card*.
+   ![Find BE element host](~/user-guide/images/Delete_SearchHost.png)
 
-7. In the newly opened element, click the *CCAP Collectors* tab, find the element ID (in green) noted earlier in the table, and click delete.
+1. Right-click the first row, and select *Open in new card*.
 
-![Delete BE Registration](~/user-guide/images/Delete_BEDeleteRegistration.png)
+1. On the newly opened element card, click the *CCAP Collectors* tab.
 
-8. Go to the *EPM FE* element, click the *Configuration* tab, then the *CCAP Collectors* tab, find the element ID (in green) noted earlier in the table, and click delete.
+1. In the table, look up the element ID you noted down earlier (indicated in green below), and click *Delete*.
 
-![Delete FE Registration](~/user-guide/images/Delete_FEDeleteRegistration.png)
+   ![Delete BE registration](~/user-guide/images/Delete_BEDeleteRegistration.png)
 
-9. Return to the Surveyor inside Cube, locate the element to be removed, right-click it again, and select delete, it is the same element from step 1.
+1. In the Surveyor, select the *EPM FE* element
 
-10. Locate the associated Collector element, which has the same name as the CCAP but with the _COLLECTOR suffix, should be right below the deleted element. If it is not under the element, search for it manually.
+1. On the element card, go to *Configuration* > *CCAP Collectors*.
 
-11. Right-click the Collector element and select *Delete*.
+1. In the table, look up the element ID you noted down earlier (indicated in green below), and click *Delete*.
+
+   ![Delete FE registration](~/user-guide/images/Delete_FEDeleteRegistration.png)
+
+1. In the Surveyor, right-click the element you want to remove, and select *Delete*.
+
+   This should be the same element as in step 1.
+
+1. Locate the associated collector element.
+
+   This element has the same name as the CCAP element, but with the `_COLLECTOR` suffix. It should be right below the deleted element. If it is not there, search for it manually.
+
+1. Right-click the collector element, and select *Delete*.
