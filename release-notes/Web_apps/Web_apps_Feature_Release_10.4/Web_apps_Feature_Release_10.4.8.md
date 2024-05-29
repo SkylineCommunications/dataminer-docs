@@ -26,8 +26,8 @@ uid: Web_apps_Feature_Release_10.4.8
 
 ### Fixes
 
-#### Dashboards app & Low-Code Apps: Feed links would be broken after a migration [ID_39744]
+#### Dashboards app & Low-Code Apps: Problems with feed links after migrating a dashboard or app [ID_39744]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-After a dashboard or a low-code app had been migrated to a newer version, in some cases, feed links defined in that dashboard or low-code app would be broken.
+After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later,feed links defined in the *Web* component, the *Text* component or the *Navigate to a URL* action would no longer work.
