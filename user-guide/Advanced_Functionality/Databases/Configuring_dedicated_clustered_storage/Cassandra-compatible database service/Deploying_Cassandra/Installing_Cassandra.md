@@ -16,7 +16,8 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
    - For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
 
    > [!IMPORTANT]
-   > Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
+   > Make sure that the time of all servers in the cluster is in sync. Even a slight time difference between servers may result in Cassandra nodes failing to join the cluster.
+   > We recommend that you configure an NTP server to maintain time synchronization between the nodes.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
 
