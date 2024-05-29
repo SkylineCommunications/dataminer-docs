@@ -2,10 +2,7 @@
 uid: PTP_1.1.4
 ---
 
-# PTP 1.1.4 (preview)
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be added, modified, or moved to a later release. Check back soon for updates!
+# PTP 1.1.4
 
 ## New features
 
@@ -31,6 +28,10 @@ For detailed information about the changes in this version, refer to the [change
 
 > [!NOTE]
 > New versions of the mediation connector can be deployed independently of the PTP app.
+
+#### Minimum DataMiner version increased to 10.0.10 [ID_39784]
+
+The PTP app now requires at least DataMiner version 10.0.10.0-9414.
 
 ### Fixes
 
