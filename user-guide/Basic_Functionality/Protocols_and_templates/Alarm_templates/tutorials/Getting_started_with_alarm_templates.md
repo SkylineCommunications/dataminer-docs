@@ -12,7 +12,7 @@ Expected duration: 15 minutes
 > The content and images for this tutorial have been created using DataMiner version 10.4.6.
 <!-- 
 > [!TIP]
-> See also: [Kata #34: Master alarm templates](https://community.dataminer.services/courses/kata-34/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
+> See also: [Kata #33: Master alarm templates](https://community.dataminer.services/courses/kata-33/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
 
 ## Prerequisites
 
