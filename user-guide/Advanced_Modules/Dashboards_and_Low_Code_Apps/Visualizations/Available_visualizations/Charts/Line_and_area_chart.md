@@ -10,7 +10,7 @@ This component can be used to display a trend graph.
 
 > [!NOTE]
 >
-> - From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
+> - If this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 
 ## Configuring the component
@@ -30,7 +30,7 @@ To configure the component:
 
    - For a table parameter, an *indices* filter feed is supported.
 
-   - From DataMiner 10.0.2 onwards, in a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - In a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
 
    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
@@ -47,7 +47,7 @@ To configure the component:
 
    - *Trend span*: Allows you to customize the time span for which trending is displayed. You can either select a predefined time span or select *Custom* and specify a start and end time.
 
-   - *Value range* > *Fixed minimum*/*Fixed Maximum*: Available from DataMiner 10.0.13 onwards. These settings allow you to configure a minimum and/or maximum range for the chart, so that no values outside this range are displayed. The configured range will apply to all lines in the chart, regardless of any particular axis or displayed parameter. By default, no limits are applied.
+   - *Value range* > *Fixed minimum*/*Fixed Maximum*: These settings allow you to configure a minimum and/or maximum range for the chart, so that no values outside this range are displayed. The configured range will apply to all lines in the chart, regardless of any particular axis or displayed parameter. By default, no limits are applied.
 
    - *Minimum visible gap size*: Allows you to specify the minimum duration a gap must have before it is displayed in the graph. By default, this is set to 0.
 
@@ -57,11 +57,11 @@ To configure the component:
 
    - *Show real-time trend data*: If real-time trending is available, this box allows you to set the chart to display real-time trending instead of average trending.
 
-   - *Show average*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled.
+   - *Show average*: Available if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled.
 
-   - *Show minimum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the minimum trend data. By default, this is disabled.
+   - *Show minimum*: Available if *Show real-time trend data*/Stack trend lines is not selected. Displays the minimum trend data. By default, this is disabled.
 
-   - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled.
+   - *Show maximum*: Available if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled.
 
    - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. The default setting (from DataMiner 10.3.2/10.4.0 onwards<!-- RN 35160 -->) is *All together*.
 
@@ -84,9 +84,9 @@ To configure the component:
 
      - *Chart limit*: Determines how many parameters can at most be displayed in one chart. By default, this is set to 16 parameters.
 
-     - *Chart limit behavior*: Available from DataMiner 10.0.13 onwards. Determines what happens when the number of parameters in the chart exceeds the defined chart limit:
+     - *Chart limit behavior*: Determines what happens when the number of parameters in the chart exceeds the defined chart limit:
 
-       - *Disable parameters in legend*: The excess parameters are disabled in the chart but remain available in the chart legend, so that they can be enabled again manually. This option is selected by default, and is also the default behavior prior to DataMiner 10.0.13.
+       - *Disable parameters in legend*: The excess parameters are disabled in the chart but remain available in the chart legend, so that they can be enabled again manually. This option is selected by default.
 
        - *Create additional charts*: Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit.
 
@@ -103,7 +103,7 @@ To configure the component:
 
    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon next to the graph.
 
-   - *Styling and Information* > *Hide non-trended parameters*: Available from DataMiner 10.0.9 onwards. Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. By default, it is not selected in the most recent DataMiner versions, but it is selected by default prior to DataMiner 10.3.9/10.4.0<!-- RN 36869 -->. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
+   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. By default, it is not selected in the most recent DataMiner versions, but it is selected by default prior to DataMiner 10.3.9/10.4.0<!-- RN 36869 -->. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
 
      > [!NOTE]
      > Prior to DataMiner 10.3.9/10.4.0, when a line chart component used element table column parameters as data and indices as filter, it would cross-match indices across the unique elements associated with the table column parameters. This behavior is prevented by disabling the *Hide non-trended parameters* option, enhancing the performance of these visualizations.

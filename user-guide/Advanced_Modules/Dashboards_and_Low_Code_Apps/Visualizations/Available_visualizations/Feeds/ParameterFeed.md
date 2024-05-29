@@ -19,7 +19,7 @@ This feed component allows the user to select multiple parameters from a predefi
 
    - The component supports element and parameter data feeds. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, a protocol or view feed can be used as an additional filter.
 
-   - From DataMiner 10.0.0/10.0.2 onwards, multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
+   - Multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
    - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard or app URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
 
@@ -41,20 +41,20 @@ This feed component allows the user to select multiple parameters from a predefi
 
    - *Auto-select all indices*: Available up to DataMiner 10.0.12. Select this option to automatically include all indices when at least one element and one parameter have been selected in the component.
 
-   - *Auto-select all*: Available from DataMiner 10.0.13 onwards. Replaced the previous auto-select options. When this option is selected, all items will be selected according to the “Select all behavior” settings below.
+   - *Auto-select all*: Replaced the previous auto-select options. When this option is selected, all items will be selected according to the “Select all behavior” settings below.
 
      > [!NOTE]
      > From DataMiner 10.2.11/10.3.0 onwards, this option is not available if the component uses EPM identifiers as its data source.
 
-   - *Select all behavior* > *Select all items*: Available from 10.0.13 onwards. If this option is selected, "Select all" will select all items. For a [partial table](xref:Table_parameters#partial-tables), only the items from the first page will be selected.
+   - *Select all behavior* > *Select all items*: If this option is selected, "Select all" will select all items. For a [partial table](xref:Table_parameters#partial-tables), only the items from the first page will be selected.
 
-   - *Select all behavior* > *Select specific number of items*: Available from 10.0.13 onwards. If you select this option, a box is displayed below it. In this box, you should specify how many items “Select all” should select. For a [partial table](xref:Table_parameters#partial-tables), these items will be selected across different pages.
+   - *Select all behavior* > *Select specific number of items*: If you select this option, a box is displayed below it. In this box, you should specify how many items “Select all” should select. For a [partial table](xref:Table_parameters#partial-tables), these items will be selected across different pages.
 
    - *Auto-expand parameters*: Select this option to expand all tables and groups in the component by default.
 
    - *Default grouping*: See [Customizing the default grouping](#customizing-the-default-grouping).
 
-   - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box (available from DataMiner 10.0.9 onwards). For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to “Y”, the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
+   - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box. For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to “Y”, the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
 
    - To group parameters in the selector, under *Parameter groups*, click *Add parameter group*. Then specify a group name and select the parameters that should be in the group. Repeat this for every parameter group you want to configure.
 

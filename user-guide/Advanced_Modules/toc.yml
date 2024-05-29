@@ -442,8 +442,6 @@ items:
                 topicUid: LineAndAreaChart
               - name: Pie & donut chart
                 topicUid: PieAndDonutChart
-              - name: Bar chart (horizontal)
-                topicUid: BarChartHorizontal
           - name: Other
             items:
               - name: Grid

@@ -9,7 +9,7 @@ uid: DashboardButtonPanel
 
 This component is available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36775 -->. It displays a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed.
 
-![Button panel](~/user-guide/images/Button_Panel.png)<br>*Button panel component in DataMiner 10.3.9*
+![Button panel](~/user-guide/images/ButtonPanel.gif)<br>*Button panel component in DataMiner 10.3.9*
 
 The following types of buttons can be configured:
 

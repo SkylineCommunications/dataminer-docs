@@ -40,7 +40,7 @@ To configure the component:
      - *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
 
      > [!NOTE]
-     > Prior to DataMiner 10.0.10, the component does not support feeds with multiple elements, services, views or redundancy groups. From that DataMiner version onwards, these are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
+     > Feeds with multiple elements, services, views, or redundancy groups are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
 
    - In the *Style* section, the following options are available:
 

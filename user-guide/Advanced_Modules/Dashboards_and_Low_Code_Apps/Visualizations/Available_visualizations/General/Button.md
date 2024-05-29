@@ -7,7 +7,7 @@ uid: DashboardButton
 > [!IMPORTANT]
 > In the Dashboards app, this feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions). However, it is fully available in the [DataMiner Low-Code Apps](xref:Application_framework).
 
-In the Dashboards app, this component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Low-Code Apps, it is available by default.
+In the Dashboards app, this component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Low-Code Apps, it is available by default.
 
 ![Button](~/user-guide/images/Button.png)<br>*Button component in DataMiner 10.4.6*
 

@@ -6,6 +6,8 @@ uid: DashboardWeb
 
 This component displays a webpage or a block of static HTML. It can also be used to display a [video thumbnail](#configuring-a-video-thumbnail).
 
+![Web](~/user-guide/images/Web_Component.png)<br>*Web component in DataMiner 10.4.5*
+
 ## Configuring the component
 
 - To configure the component as a webpage:
