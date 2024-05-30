@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 29 May 2024 - Enhancement - Popup buttons [ID_39010]
+#### 29 May 2024 - Enhancement - New style for buttons in pop-up windows [ID_39010]
 
-Buttons in the popups have been updated to the new style.
+Buttons in pop-up windows have been updated to the new style.
 
 #### 29 May 2024 - Fix - Admin - email validation [ID_39791]
 
