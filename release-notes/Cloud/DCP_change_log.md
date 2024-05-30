@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
+
+From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Documents/DMA_COMMON_DOCUMENTS/`, which will make accessing files easier.
+
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
 When an item is deployed from the Catalog, a new pop-up component will now be shown. The pop-up component has a new style and includes the name of the artefact.
