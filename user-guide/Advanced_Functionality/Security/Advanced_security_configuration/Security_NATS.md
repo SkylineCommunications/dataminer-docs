@@ -8,18 +8,22 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 
 ## Enabling NATS inter-node TLS communication
 
+To enable NATS inter-node TLS communication, first [request or generate the TLS certificates](#request-or-generate-the-tls-certificates-pem-format), and then [configure the TLS certificates](#configure-the-tls-certificates).
+
 > [!NOTE]
 > This applies solely to instances involving a DMS cluster or external DxMs. If you have a single-Agent setup, all communication is confined to the local host, as there is only one NATS node.
 
-### Request or generate TLS certificates (PEM format)
+### Request or generate the TLS certificates (PEM format)
 
-   To generate self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and for Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+To generate self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and for Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
-### Configure TLS certificates
+### Configure the TLS certificates
 
 A **NATS node** is always configured on the system where the DataMiner software is hosted. Follow the steps below for **each of the NATS nodes** in the cluster to enable inter-node TLS encryption:
 
-1. Ensure the **NATSForceManualConfig** option is enabled. This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file. Refer to [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config) for detailed instructions.
+1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)).
+
+   This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file.
 
 1. Update the **nats-server.config** file to incorporate the TLS section within the cluster segment.
 
@@ -68,33 +72,41 @@ A **NATS node** is always configured on the system where the DataMiner software 
 
 ## Enabling DataMiner-to-NATS node TLS communication
 
+To enable DataMiner-to-NATS node TLS communication, first [install the TLS certificate](#install-the-tls-certificate), and then [configure the TLS certificate](#configure-the-tls-certificate).
+
 > [!IMPORTANT]
 > TLS encryption for communication between software and NATS nodes is available starting from DataMiner 10.4.3 [CU0]/10.5.0<!-- RN 38302 --> with support for CA-signed certificates (Certificate Authority-Signed Certificates). While support for self-signed certificates will be introduced later, keep in mind that for now only CA-signed certificates are supported and attempting to use self-signed certificates will result in DataMiner startup failures.
 
-### Install TLS certificate
+### Install the TLS certificate
 
-Before configuring the **DataMiner-NATS TLS encryption**, the certificate needs to be installed in the Windows Trusted Root Certification Authorities Certificate Store. This process **require administrator privileges**. Follow these steps:
+Before configuring the **DataMiner-NATS TLS encryption**, you need to install the certificate in the Windows Trusted Root Certification Authorities Certificate Store. This process **require administrator privileges**.
 
-   1. Double-click the certificate file.
+Follow these steps to install the certificate:
 
-      This will open the *Certificate* dialog.
+1. Double-click the certificate file.
 
-   1. Click *Install Certificate*.
+   This will open the *Certificate* dialog.
 
-   1. Select to store the certificate on the "Local Machine"
+1. Click *Install Certificate*.
 
-      > [!NOTE]
-      > This requires administrative privileges.
+1. Select to store the certificate on the "Local Machine"
 
-   1. Select *Place all certificates in the following store*.
+   > [!NOTE]
+   > This requires administrative privileges.
 
-   1. Click *Browse* and select *Trusted Root Certification Authorities*.
+1. Select *Place all certificates in the following store*.
 
-### Configure TLS certificate
+1. Click *Browse* and select *Trusted Root Certification Authorities*.
 
-Since a **NATS node** is always configured on the system where the DataMiner software is hosted, each node must configure its own DataMiner-to-NATS TLS encryption. Follow these steps to complete the configuration:
+### Configure the TLS certificate
 
-1. Ensure the **NATSForceManualConfig** option is enabled. This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file. Refer to [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config) for detailed instructions.
+Since a **NATS node** is always configured on the system where the DataMiner software is hosted, each node must configure its own DataMiner-to-NATS TLS encryption.
+
+Follow these steps to complete the configuration:
+
+1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)).
+
+   This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file.
 
 1. Update the **nats-server.config** file to incorporate the TLS section.
 
