@@ -9,7 +9,11 @@ uid: EPM_7.0.4_I-DOCSIS
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Trend component added to OFDM(A) dashboards [ID_39800]
+
+The OFDM(A) dashboards in the node segment folder and service group folder now include a detailed trend graph of the channel utilization of the selected channel in the OFDM(A) table. By default, the first row is selected.
+
+A time picker has also been added at the top of the dashboards so that users can customize the time range of the displayed trend data. This will provide better insight into channel usage patterns and will help users identify anomalies.
 
 ## Changes
 
