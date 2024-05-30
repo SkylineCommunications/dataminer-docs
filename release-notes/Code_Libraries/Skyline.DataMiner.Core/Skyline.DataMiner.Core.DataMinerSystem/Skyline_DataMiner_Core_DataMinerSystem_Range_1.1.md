@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.11
+
+#### New feature - Retrieve alarm level for a view
+
+*IDmsView* has a new method *GetAlarmLevel()*, which will retrieve the alarm level of a view.
+
 ### 1.1.1.10
 
 #### New feature - Monitors Start and Stop methods overload with subscribe timeout
