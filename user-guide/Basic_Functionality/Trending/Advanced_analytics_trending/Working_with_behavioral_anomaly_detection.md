@@ -15,7 +15,11 @@ uid: Working_with_behavioral_anomaly_detection
 > - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 > - [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
-From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the changes in the behavior of a trend, also known as "change points". The following kinds of change points can be detected:
+From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the changes in the behavior of a trend, also known as "change points".
+
+![Anomaly detection](~/user-guide/images/Anomaly_Detection.png)<br>*Trending: Anomaly detection in DataMiner 10.4.5*
+
+The following kinds of change points can be detected:
 
 - **Flatline**: A fluctuating value suddenly remains constant. This type of change point can be detected from DataMiner 10.2.5/10.3.0 onwards.
 

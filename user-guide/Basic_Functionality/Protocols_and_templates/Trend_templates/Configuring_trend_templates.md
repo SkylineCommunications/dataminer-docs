@@ -44,6 +44,8 @@ To configure a trend template:
 
      - Use the up and down buttons to change the order of the filters. This may be important as trending is applied top to bottom.
 
+       ![Changing filter order](~/user-guide/images/Change_Order_Filters.png)<br>*Trend template in DataMiner 10.4.5*
+
        > [!NOTE]
        >
        > - For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.

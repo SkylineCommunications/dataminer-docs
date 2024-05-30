@@ -4,7 +4,11 @@ uid: Table_parameters
 
 # Table parameters
 
-Different types of table parameters exist in DataMiner Cube, detailed in the sections below. Regardless of the type of table parameter, the following applies:
+Different types of table parameters exist in DataMiner Cube, detailed in the sections below.
+
+![Table parameter](~/user-guide/images/Table_Parameter.png)<br>*Table parameter in DataMiner 10.4.5*
+
+Regardless of the type of table parameter, the following applies:
 
 - In most tables, the leftmost column will show a **key icon** in the header. This indicates that this column contains the display key for each row, a unique identifier for the row. The display key is the human-readable counterpart of the row’s primary key.
 

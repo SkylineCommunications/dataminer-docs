@@ -4,7 +4,9 @@ uid: DashboardTable
 
 # Table
 
-This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Creating a GQI query](xref:Creating_GQI_query). Available from DataMiner 10.0.13 onwards.
+This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Creating a GQI query](xref:Creating_GQI_query).
+
+![Table component](~/user-guide/images/Table_Component.png)<br>*Table component in DataMiner 10.4.1*
 
 It displays the different possible data sources of queries as follows:
 

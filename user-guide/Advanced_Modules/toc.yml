@@ -155,7 +155,6 @@ items:
       - name: SLA reporting
         topicUid: SLA_reporting
   - name: Correlation
-    topicUid: correlation
     items:
       - name: About DataMiner Correlation
         topicUid: About_DMS_Correlation
@@ -443,8 +442,6 @@ items:
                 topicUid: LineAndAreaChart
               - name: Pie & donut chart
                 topicUid: PieAndDonutChart
-              - name: Bar chart (horizontal)
-                topicUid: BarChartHorizontal
           - name: Other
             items:
               - name: Grid

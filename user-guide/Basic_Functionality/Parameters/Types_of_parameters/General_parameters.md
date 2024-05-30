@@ -6,6 +6,8 @@ uid: General_parameters
 
 For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in Cube. This page contains parameters that apply to the DataMiner element itself, rather than the device the element represents. Depending on the type of element, some general parameters may or may not be available. An overview of these parameters can be found below.
 
+![General parameters](~/user-guide/images/General_Parameters.png)<br>*General parameters page in DataMiner 10.4.5*
+
 > [!NOTE]
 > Replicated elements only replicate the [Lock status], [Lock owner] and [Timer base] general parameters.
 

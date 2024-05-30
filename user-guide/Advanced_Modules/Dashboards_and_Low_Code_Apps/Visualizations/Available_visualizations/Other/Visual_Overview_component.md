@@ -6,6 +6,8 @@ uid: DashboardVisualOverview
 
 This component displays a Visio file linked to an element.
 
+![Visual overview](~/user-guide/images/Visual_Overview.png)<br>*Visual overview component on DataMiner 10.4.3*
+
 To configure this component:
 
 1. In the *Data* tab, select the element for which the visual overview should be displayed and drag it to the component.
@@ -23,4 +25,4 @@ To configure this component:
 > [!NOTE]
 >
 > - Spectrum components are currently not yet supported in visual overviews within dashboards or low-code apps.
-> - Quick filters are supported for table parameters in visual overview components from DataMiner 10.0.12 onwards. See [Using quick filters](xref:Using_quick_filters).
+> - Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).

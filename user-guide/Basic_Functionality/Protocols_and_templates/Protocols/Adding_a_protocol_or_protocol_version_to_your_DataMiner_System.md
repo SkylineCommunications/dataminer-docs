@@ -56,19 +56,11 @@ To do so:
 
 1. In DataMiner Cube, go to the Update Center in one of the following ways:
 
-   - From DataMiner 10.0.0/10.0.2 onwards:
+   - In the Cube header bar, click the user icon on the right and select *Check for updates*.
 
-     - In the Cube header bar, click the user icon on the right and select *Check for updates*.
+   - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
 
-     - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
-
-   - Using a version prior to DataMiner 10.0.0/10.0.2:
-
-     - On the right-hand side of the DataMiner Cube header bar, click the “Updates are available” icon.
-
-     - On the right-hand side of the DataMiner Cube header bar, click the Help icon and select *Check for updates* from the menu.
-
-     - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
+     ![Updating protocols](~/user-guide/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.4.5*
 
 1. Click the *Check for updates* button.
 

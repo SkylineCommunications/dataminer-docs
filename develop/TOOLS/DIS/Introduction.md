@@ -6,6 +6,8 @@ uid: Overall_concept_of_the_DataMiner_Integration_Studio
 
 DataMiner Integration Studio (DIS) is a free [Visual Studio IDE extension](https://visualstudio.microsoft.com/vs/features/extend/). It facilitates navigating, editing, developing, troubleshooting, testing and deploying DataMiner connectors and Automation scripts.
 
+![DIS](~/user-guide/images/DIS.png)
+
 ## Features
 
 After installation of the DataMiner Integration Studio extension, Microsoft Visual Studio turns into a full-blown DataMiner IDE with the following editors:
