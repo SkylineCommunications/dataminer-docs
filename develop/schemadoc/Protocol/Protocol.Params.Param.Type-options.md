@@ -101,7 +101,9 @@ If you do not specify a port, then the last port set will be used. If no port ha
 Only applicable for parameters of type read.
 
 > [!NOTE]
-> For smart-serial connections, [dynamic polling](xref:ConnectionsSmartSerialDynamicPolling) is supported from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->.
+>
+> - For smart-serial connections, [dynamic polling](xref:ConnectionsSmartSerialDynamicPolling) is supported from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->.
+> - For HTTP connections, to poll an HTTPS server on a different port than 443, the "https://" prefix needs to be specified before the IP address as parameter value. The prefix that was configured during element creation will not be taken into account.
 
 ### dynamic snmp get
 
