@@ -74,7 +74,7 @@ items:
         items:
           - name: Read parameters versus write parameters
             topicUid: Read_parameters_versus_write_parameters
-          - name: Discrete, analog and hybrid parameters
+          - name: Discrete, analog, and hybrid parameters
             topicUid: Discrete_analog_and_hybrid_parameters
           - name: Monitored parameters versus non-monitored parameters
             topicUid: Monitored_parameters_versus_non-monitored_parameters

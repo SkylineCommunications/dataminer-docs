@@ -8,7 +8,7 @@ uid: Monitored_parameters_versus_non-monitored_parameters
 
 Parameters for which alarm thresholds have been defined and alarm monitoring has been enabled. For this type of parameter, alarms can be generated.
 
-![Monitored parameters](~/user-guide/images/Non-monitored_Parameters.png)<br>*Monitored Total Processor Load parameter in DataMiner 10.4.6*
+![Monitored parameters](~/user-guide/images/Monitored_Parameters.png)<br>*Monitored Total Processor Load parameter in DataMiner 10.4.6*
 
 ### Non-monitored parameters
 

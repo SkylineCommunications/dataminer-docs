@@ -497,7 +497,7 @@ For the fourth column, *Fulfillment*, follow these steps to incorporate conditio
 
      Click *Apply* to save these changes.
 
-- When the value in the *Fulfillment* column is set to *Fulfilled*, the background color should be red.
+- When the value in the *Fulfillment* column is set to *Unfulfilled*, the background color should be red.
 
   1. Click *Add case* to add another conditional case.
 
