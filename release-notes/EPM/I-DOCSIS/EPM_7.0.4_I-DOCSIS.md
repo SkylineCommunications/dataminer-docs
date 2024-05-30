@@ -27,6 +27,10 @@ In the CISCO CBR-8 CCAP Platform connector, the efficiency and accuracy of the b
 
 For DOCSIS 2.0 and lower, the mapping of CMs to service groups has been updated so the correct service groups and ports used by the CMs will be found. This will prevent CMs with missing information and will ensure that the aggregation operations match across all levels.
 
+#### Unnecessary hyphens removed from PNM parameter names [ID_39799]
+
+On the visual overview pages related to PNM, unnecessary hyphens have been removed from the parameter names where appropriate. For example, the parameter *Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold* has been renamed to *Pre-Main Tap to Total Energy Ratio (PreMTTER) Threshold*. The same change has also been implemented for the *Non-Main-Tap Energy Ratio (NMTER) Threshold* and *Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold* parameters. This change has been implemented in the visual overview of the front end and that of the collectors.
+
 ### Fixes
 
 #### Overlapping GUI elements on PNM thresholds configuration page [ID_39723]
