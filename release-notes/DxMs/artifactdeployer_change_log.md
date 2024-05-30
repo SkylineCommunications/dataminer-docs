@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 30 May 2024 - Fix - ArtifactDeployer 1.7.1 - Missing Azore.Core.dll after upgrading to ArtifactDeployer 1.7.0 [ID_39783]
+
+An issue has been resolved where a required `Azore.Core.dll` went missing after an upgrade to ArtifactDeployer 1.7.0. This was not an issue when the ArtifactDeployer 1.7.0 was a clean installation.
+
 #### 23 May 2024 - Enhancement - ArtifactDeployer 1.7.0 - Deployment event improvements [ID_39717]
 
 An improvement has been implemented to the way Catalog and DxM deployment events are forwarded to dataminer.services. This will reduce the number of deployments that are incorrectly shown as failures on dataminer.services even though they actually succeeded.
