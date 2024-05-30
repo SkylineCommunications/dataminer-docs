@@ -8,9 +8,9 @@ uid: Security_Cassandra_TLS
 > If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
 > [!NOTE]
-> We strongly advise to use certificates based on hostname and not IP. These hostnames should then be used in the configuration of db.xml that you can find in Connecting with DataMiner below. This recommendation is for self signed  certificates and purchased certifcates.
-> In case you would want to use the IP in the certificate and db.xml, you have to make sure that you can resolve the IP to a hostname. This has to be done by a DNS or using the hosts file on the DataMiner server.
-
+> We strongly advise using certificates based on hostname and not on IP. These hostnames should then be used in the configuration of DB.xml detailed under [Connecting with DataMiner](#connecting-with-dataminer). This recommendation applies both for self-signed  certificates and purchased certificates.
+>
+> In case you want to use the IP in the certificate and DB.xml, you have to make sure that you can resolve the IP to a hostname. This has to be done by a DNS or using the hosts file on the DataMiner server.
 
 ## Client-Server Encryption
 
@@ -84,10 +84,9 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    ```txt
    keytool -certreq -keystore <HOSTNAME>.jks -alias <HOSTNAME> -file <HOSTNAME>.csr -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -ext SAN=DNS:<NODE NAME>,IP:<NODE IP>
    ```
-   
-> [!NOTE]
-> It's advised to use hostname instead of the IP. If you choose the IP over the hostname, you have to make sure the IP can be resolved. This either by using a DNS in the network or the hosts file on the DataMiner Server.
 
+   > [!NOTE]
+   > We recommend using the hostname instead of the IP. If you do use the IP, make sure it can be resolved, either by using a DNS in the network or the hosts file on the DataMiner Server.
 
 1. Digitally sign the node certificates with the root certificate authority.
 
