@@ -9,9 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### TBD - Enhancement - Home - DaaS error messages [ID_39810]
+#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID_39810]
 
 Error messages when creating a DaaS are now more specific.
+
+#### 30 May 2024 - Fix - Catalog - Details page not loading [ID_39772]
+
+The catalog details page will now load correctly when you directly access this page, even if you're not associated with any organization.
 
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
