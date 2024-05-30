@@ -120,6 +120,12 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+
 #### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->

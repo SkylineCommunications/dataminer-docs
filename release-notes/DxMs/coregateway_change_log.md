@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 30 May 2024 - Fix - CoreGateway 2.14.7 - Missing System.Net.Http.dll after upgrading to CoreGateway 2.14.0 – 2.14.6 [ID_39777]
+
+An issue has been resolved where a required `System.Net.Http.dll` went missing after upgrading to a CoreGateway version from range 2.13.0 – 2.14.6. This did not happen with a clean installation of CoreGateway 2.14.0 – 2.14.6.
+
 #### 13 March 2024 - Fix - CoreGateway 2.14.6 - Issues with dataminer.services features when DMA alias contained spaces [ID_39107]
 
 Since CoreGateway 2.13.0 (and CloudGateway 2.11.0), dataminer.services features like Remote Access and Catalog deployments did not work correctly if the [DMA alias defined in DataMiner.xml](xref:Changing_the_name_of_a_DMA#configuring-an-alias-in-dataminerxml) contained one or more spaces. This issue has been resolved.

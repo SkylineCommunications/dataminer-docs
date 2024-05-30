@@ -38,7 +38,7 @@ cy.get(`[data-cy="TextComponent"]`)
 
 In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
 
-To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class. Contrary to the `ShowUI()` method, the `HideUI()` method does not require a response and will not return any result.
+To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class.
 
 Example:
 
@@ -255,3 +255,9 @@ After a dashboard or a low-code app had been migrated from DataMiner server vers
 
 > [!NOTE]
 > This problem did not occur after a web-only upgrade.
+
+#### Web API: No longer possible to configure ticketing domains [ID_39771]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+Due to an issue in the Web API, it was no longer possible to configure ticketing domains.

@@ -56,6 +56,9 @@ In systems using [Storage as a Service](xref:STaaS) or a [self-hosted setup with
 > For more information:
 >
 > - [Trending](xref:trending) in the DataMiner User Guide.
+> - [Navigating trending graphs](https://www.youtube.com/watch?v=hvWkbjUr82I&ab_channel=DataMinerbySkylineCommunications)
+> - [Trend predictions](https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/)
+> - [Trend groups](https://community.dataminer.services/video/ruis-rapid-recap-trend-groups/)
 
 ## Visual Overview
 

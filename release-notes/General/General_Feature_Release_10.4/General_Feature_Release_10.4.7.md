@@ -22,6 +22,12 @@ uid: General_Feature_Release_10.4.7
 
 ## New features
 
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+
 #### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -190,6 +196,44 @@ From now on, one thread will read the raw data from the UDP buffer and add it to
 > [!CAUTION]
 > Please take extreme care when modifying the Windows registry. We strongly advise you to back up the registry before you modify it.
 
+#### Service & Resource Management: DVE activation enhancements [ID_39672]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Advanced_SRM_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
+
+When you create a booking that needs to start immediately, SLNet will enable the DVEs and wait for up to 1 minute until they are active before trying to start the booking. If the DVEs take more than 1 minute to activate, the booking will fail to start since the DVEs need to be activated before the booking can be started.
+
+##### DVE activation delay is now configurable
+
+From now on, the one-minute DVE activation delay is configurable by running a script similar to the one below. Changing this delay does not need DataMiner to be restarted.
+
+```csharp
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Messages;
+namespace Script
+{
+    public class Script
+    {
+        public void Run(Engine engine)
+        {
+            var protocolFunctionHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
+            var currentConfig = protocolFunctionHelper.GetProtocolFunctionConfig();
+            currentConfig.ActiveFunctionResourcesThreshold = 123;
+            currentConfig.FunctionActivationTimeout = TimeSpan.FromMinutes(10);
+            protocolFunctionHelper.SetProtocolFunctionConfig(currentConfig);
+        }
+    }
+}
+```
+
+> [!NOTE]
+> If the activation fails after half the timeout, a retry will be made. In case of the one-minute default, a retry will be made after 30 seconds. If the timeout is increased to 10 minutes, the retry will be made after 5 minutes.
+
+##### Waiting for DVE activation confirmation will now be processed asynchronously
+
+Waiting for DVEs to get activated will now be processed asynchronously. This will avoid that bookings with function DVEs that take longer to get activated will prevent other bookings with function DVEs that get activated faster from starting.
+
 ### Fixes
 
 #### Issues with user accounts [ID_39234]
@@ -280,6 +324,12 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 - When the BPA was run on a DMA using HTTPS, it would throw an exception when IIS had an HTTPS binding without a certificate configured.
 
   In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
+
+#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
 #### Problem when setting up SLNet connections to the IPv6 loopback address [ID_39667]
 
