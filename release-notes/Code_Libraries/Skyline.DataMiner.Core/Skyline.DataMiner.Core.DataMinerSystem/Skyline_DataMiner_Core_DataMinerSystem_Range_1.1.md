@@ -11,7 +11,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### New feature - Retrieve alarm level for a view
 
-*IDmsView* has a new method *GetAlarmLevel()* that will retrieve the alarm level of the view.
+*IDmsView* has a new method *GetAlarmLevel()*, which will retrieve the alarm level of a view.
 
 ### 1.1.1.10
 
