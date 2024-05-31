@@ -21,6 +21,18 @@ The error messages that are displayed in case something goes wrong during the cr
 
 When a user that was not associated with any organization directly accessed a details page in the Catalog, it could occur that this page did not load correctly.
 
+#### 29 May 2024 - Fix - Admin - Email validation did not support domain extensions of more than 3 characters [ID_39791]
+
+When adding a user to an organization or DMS in the Admin app, it was only possible to enter an email address with a domain extension of maximum 3 characters. This has now been updated so that all domain extensions are supported.
+
+#### 29 May 2024 - Enhancement - Admin - DMS overview Failover pair offline status [ID_39694]
+
+The DMS overview page will now correctly show a Failover Agent as offline when appropriate.
+
+#### 29 May 2024 - Enhancement - New style for buttons in pop-up windows [ID_39010]
+
+Buttons in pop-up windows have been updated to the new style.
+
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
 When an item is deployed from the Catalog, a new pop-up component will now be shown. The pop-up component has a new style and includes the name of the artefact.
