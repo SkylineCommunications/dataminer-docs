@@ -540,3 +540,11 @@ When MessageBroker received a Subscribe call while it was reconnecting, in some 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
 In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
+
+#### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+After a quarantine had been forced during a booking update, in some cases, the SRM framework would stop responding.
+
+See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)

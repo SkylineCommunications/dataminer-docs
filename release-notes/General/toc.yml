@@ -48,7 +48,11 @@ items:
           - name: General Feature Release 10.4.5
             topicUid: General_Feature_Release_10.4.5
           - name: General Feature Release 10.4.6
-            topicUid: General_Feature_Release_10.4.6
+            items:
+              - name: New features and changes
+                topicUid: General_Feature_Release_10.4.6
+              - name: General Feature Release 10.4.6 CU1
+                topicUid: General_Feature_Release_10.4.6_CU1
           - name: General Feature Release 10.4.7 - Preview
             topicUid: General_Feature_Release_10.4.7
           - name: General Feature Release 10.4.8 - Preview
