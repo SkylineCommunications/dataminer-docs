@@ -131,7 +131,8 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
 <!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
-<!-- RN 39802/39803: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
