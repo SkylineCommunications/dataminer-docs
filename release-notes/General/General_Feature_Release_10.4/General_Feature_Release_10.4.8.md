@@ -56,6 +56,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### 'Security Advisory' BPA test: Enhanced testing of HTTP and HTTPS connections [ID_39813]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made to the [Security Advisory](xref:BPA_Security_Advisory) BPA test with regard to the testing of HTTP and HTTPS connections.
+
 ### Fixes
 
 #### SLLogCollector: 'Access is denied' errors [ID_39364]
