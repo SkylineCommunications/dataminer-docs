@@ -17,9 +17,9 @@ Buttons in pop-up windows have been updated to the new style.
 
 When adding a user to a organization or DMS, it was only possible to enter a email address with a domain extensions of maximum 3 characters. This has been updated now to support all domain extensions.
 
-#### 29 May 2024 - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
+#### 29 May 2024 - Enhancement - Admin - DMS overview Failover pair offline status [ID_39694]
 
-The DMS overview page will now correctly show the failover pair agent as offline when this is the case.
+The DMS overview page will now correctly show a Failover Agent as offline when appropriate.
 
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
