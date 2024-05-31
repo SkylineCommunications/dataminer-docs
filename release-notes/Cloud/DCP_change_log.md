@@ -13,6 +13,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Documents/DMA_COMMON_DOCUMENTS/`, which will make accessing files easier.
 
+#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID_39810]
+
+The error messages that are displayed in case something goes wrong during the creation of a DaaS instance have been improved. Instead of a generic error, more specific information is now displayed.
+
+#### 30 May 2024 - Fix - Catalog - Details page not loading [ID_39772]
+
+When a user that was not associated with any organization directly accessed a details page in the Catalog, it could occur that this page did not load correctly.
+
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
 When an item is deployed from the Catalog, a new pop-up component will now be shown. The pop-up component has a new style and includes the name of the artefact.
