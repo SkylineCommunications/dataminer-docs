@@ -6,6 +6,9 @@ uid: Security_NATS
 
 By default, NATS does **not** employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we **strongly recommend enabling TLS encryption** for enhanced security within your NATS cluster.
 
+> [!CAUTION]
+> Enabling TLS encryption for NATS inter-node or DataMiner-to-NATS node communication requires the NATSForceManualConfig option. This option must be enabled to prevent DataMiner from overwriting your custom NATS configuration that includes encryption. Without this setting, any manual configurations for TLS encryption may be lost, leaving your communications unprotected. Ensure the **NATSForceManualConfig** option is enabled to maintain the integrity and security of your encrypted communications. See [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config).
+
 ## Enabling NATS inter-node TLS communication
 
 To enable NATS inter-node TLS communication, first [request or generate the TLS certificates](#request-or-generate-the-tls-certificates-pem-format), and then [configure the TLS certificates](#configure-the-tls-certificates).
@@ -72,31 +75,8 @@ A **NATS node** is always configured on the system where the DataMiner software 
 
 ## Enabling DataMiner-to-NATS node TLS communication
 
-To enable DataMiner-to-NATS node TLS communication, first [install the TLS certificate](#install-the-tls-certificate), and then [configure the TLS certificate](#configure-the-tls-certificate).
-
 > [!IMPORTANT]
 > TLS encryption for communication between software and NATS nodes is available starting from DataMiner 10.4.3 [CU0]/10.5.0<!-- RN 38302 --> with support for CA-signed certificates (Certificate Authority-Signed Certificates). While support for self-signed certificates will be introduced later, keep in mind that for now only CA-signed certificates are supported and attempting to use self-signed certificates will result in DataMiner startup failures.
-
-### Install the TLS certificate
-
-Before configuring the **DataMiner-NATS TLS encryption**, you need to install the certificate in the Windows Trusted Root Certification Authorities Certificate Store. This process **require administrator privileges**.
-
-Follow these steps to install the certificate:
-
-1. Double-click the certificate file.
-
-   This will open the *Certificate* dialog.
-
-1. Click *Install Certificate*.
-
-1. Select to store the certificate on the "Local Machine"
-
-   > [!NOTE]
-   > This requires administrative privileges.
-
-1. Select *Place all certificates in the following store*.
-
-1. Click *Browse* and select *Trusted Root Certification Authorities*.
 
 ### Configure the TLS certificate
 
