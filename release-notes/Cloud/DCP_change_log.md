@@ -9,17 +9,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 29 May 2024 - Enhancement - New style for buttons in pop-up windows [ID_39010]
+#### 29 May 2024 - Fix - Admin - Email validation did not support domain extensions of more than 3 characters [ID_39791]
 
-Buttons in pop-up windows have been updated to the new style.
-
-#### 29 May 2024 - Fix - Admin - email validation [ID_39791]
-
-When adding a user to a organization or DMS, it was only possible to enter a email address with a domain extensions of maximum 3 characters. This has been updated now to support all domain extensions.
+When adding a user to an organization or DMS in the Admin app, it was only possible to enter an email address with a domain extension of maximum 3 characters. This has now been updated so that all domain extensions are supported.
 
 #### 29 May 2024 - Enhancement - Admin - DMS overview Failover pair offline status [ID_39694]
 
 The DMS overview page will now correctly show a Failover Agent as offline when appropriate.
+
+#### 29 May 2024 - Enhancement - New style for buttons in pop-up windows [ID_39010]
+
+Buttons in pop-up windows have been updated to the new style.
 
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
