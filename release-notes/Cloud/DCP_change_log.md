@@ -11,11 +11,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 30 May 2024 - Enhancement - Home - DaaS error messages [ID_39810]
 
-Error messages when creating a DaaS are now more specific.
+The error messages that are displayed in case something goes wrong during the creation of a DaaS instance have been improved. Instead of a generic error, more specific information is now displayed.
 
 #### 30 May 2024 - Fix - Catalog - Details page not loading [ID_39772]
 
-The catalog details page will now load correctly when you directly access this page, even if you're not associated with any organization.
+When a user that was not associated with any organization directly accessed a details page in the Catalog, it could occur that this page did not load correctly.
 
 #### 27 May 2024 - Enhancement - Catalog - Updated deploy pop-up message with new style [ID_39663]
 
