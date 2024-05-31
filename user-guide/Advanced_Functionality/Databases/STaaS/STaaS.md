@@ -162,9 +162,12 @@ In addition, the following **other limitations** currently apply:
 
 - DMZ setups are currently not supported.
 
-- Logger Tables:
+- Regarding logger tables:
+
   - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag is not supported.
+
   - [Indexed logger tables](xref:AdvancedLoggerTablesImplementation#indexed-logger-tables) can be created and read from the database, but advanced search queries with GQI are not supported.
+
   - [DirectConnection logger tables](xref:AdvancedLoggerTablesDefiningDirectConnectionTable) are not supported.
 
 ## Troubleshooting
