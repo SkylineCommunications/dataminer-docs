@@ -1,0 +1,26 @@
+---
+uid: DIS_3.0
+---
+
+# DIS 3.0
+
+## Changes
+
+### Enhancements
+
+#### Support for Visual Studio 2019 has been dropped [ID_39719]
+
+Support for Microsoft Visual Studio 2019 has been dropped. The last DIS version supporting Visual Studio 2019 is DIS v2.48.
+
+#### DIS is now available on Visual Studio Marketplace [ID_39747]
+
+DIS is now available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
+
+> [!NOTE]
+> As Visual Studio contains functionality to automatically notify and/or update extensions, the *Updates* tab has been removed from the *DIS Settings* window.
+
+### Fixes
+
+#### Visual Studio would incorrectly throw warnings when DIS created a QAction_Helper project [ID_39643]
+
+When DIS generated a `QAction_Helper` project (e.g. while converting a *protocol.xml* file to a protocol solution), Visual Studio would incorrectly throw a large number of warnings.

@@ -11,6 +11,8 @@ Available from DataMiner 10.3.9/10.4.0 onwards. Prior to this, the component is 
 
 This feed component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query result.
 
+![Query filter](~/user-guide/images/Query_Filter.png)<br>*Query filter feed component in DataMiner 10.4.5*
+
 ## Configuring the component
 
 1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).

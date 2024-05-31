@@ -6,6 +6,8 @@ uid: DashboardListFeed
 
 This feed component allows the user to select one or more items in a list. The selectable items can be based on any data feed.
 
+![List feed](~/user-guide/images/List_Feed.gif)<br>*List feed component in DataMiner 10.4.6*
+
 To configure the component:
 
 1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).

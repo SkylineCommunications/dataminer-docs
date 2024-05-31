@@ -11,6 +11,8 @@ Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is 
 
 The component displays a list of alarms or information events, which can be filtered in multiple ways.
 
+![Alarm table](~/user-guide/images/Alarm_Table.png)<br>*Alarm table component in DataMiner 10.4.6*
+
 To configure the component:
 
 1. In the *Settings* tab, configure which type of alarms should be displayed and how:

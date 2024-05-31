@@ -38,7 +38,7 @@ cy.get(`[data-cy="TextComponent"]`)
 
 In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
 
-To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class. Contrary to the `ShowUI()` method, the `HideUI()` method does not require a response and will not return any result.
+To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class.
 
 Example:
 

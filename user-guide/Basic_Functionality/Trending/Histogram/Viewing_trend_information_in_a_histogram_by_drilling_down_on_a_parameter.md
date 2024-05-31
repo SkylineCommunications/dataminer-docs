@@ -16,6 +16,8 @@ uid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
 
     - Next to *Minimum value* and *Maximum value*, specify a different range for the histogram.
 
+   ![Histogram Advanced](~/user-guide/images/Histogram_Advanced.png)<br>*Histogram in DataMiner 10.4.5*
+
     > [!NOTE]
     > From DataMiner 9.5.2/DataMiner 9.0.0 CU15 onwards, an additional option *Automatic intervals* is available. When this option is selected, DataMiner automatically determines the intervals. Specifying a custom interval width and minimum and maximum value is only possible when this option is not selected.
 

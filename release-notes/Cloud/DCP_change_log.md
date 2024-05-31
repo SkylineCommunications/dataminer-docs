@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
+
+From now on, if Remote Access to the web apps is enabled, this also allows access to the folder `/Documents/DMA_COMMON_DOCUMENTS/`, so that it is possible to access the documents available in Cube.
+
+#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID_39810]
+
+The error messages that are displayed in case something goes wrong during the creation of a DaaS instance have been improved. Instead of a generic error, more specific information is now displayed.
+
+#### 30 May 2024 - Fix - Catalog - Details page not loading [ID_39772]
+
+When a user that was not associated with any organization directly accessed a details page in the Catalog, it could occur that this page did not load correctly.
+
 #### 29 May 2024 - Fix - Admin - Email validation did not support domain extensions of more than 3 characters [ID_39791]
 
 When adding a user to an organization or DMS in the Admin app, it was only possible to enter an email address with a domain extension of maximum 3 characters. This has now been updated so that all domain extensions are supported.

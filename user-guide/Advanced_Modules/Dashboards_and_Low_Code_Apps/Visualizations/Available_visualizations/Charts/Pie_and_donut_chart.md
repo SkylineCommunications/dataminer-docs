@@ -4,7 +4,9 @@ uid: PieAndDonutChart
 
 # Pie & donut chart
 
-This component displays the results of queries in a chart shaped like a pie or donut. It is available from DataMiner 10.0.13 onwards.
+This component displays the results of queries in a chart shaped like a pie or donut.
+
+![Donut chart](~/user-guide/images/Donut_Chart.png)<br>*Donut chart in DataMiner 10.4.5*
 
 To configure the component:
 
@@ -23,19 +25,19 @@ To configure the component:
 
    - *Chart shape*: Can be set to *Pie* or *Donut*.
 
-   - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. Determines whether the legend is displayed.
+   - *Legend \> Show Legend*: Determines whether the legend is displayed.
 
-   - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. If the legend is set to be displayed, this option determines whether it is displayed on the left, on the right, at the top or at the bottom of the visualization.
+   - *Legend \> Show Legend*: If the legend is set to be displayed, this option determines whether it is displayed on the left, on the right, at the top or at the bottom of the visualization.
 
-   - *Tooltips* > *Show Tooltips*: Available from DataMiner 10.0.13 onwards. Determines whether tooltips are displayed.
+   - *Tooltips* > *Show Tooltips*: Determines whether tooltips are displayed.
 
-   - *Tooltips* > *Include label*: Available from DataMiner 10.0.13 onwards. Determines whether the label is included in tooltips.
+   - *Tooltips* > *Include label*: Determines whether the label is included in tooltips.
 
-   - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
+   - *Tooltips* > *Include dimension*: Determines whether the dimensions are indicated in tooltips.
 
-   - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
+   - *Tooltips* > *Include value*: Determines whether values are indicated in tooltips.
 
-   - *Tooltips* > *Include percentages*: Available from DataMiner 10.0.13 onwards. Determines whether percentages are indicated in tooltips.
+   - *Tooltips* > *Include percentages*: Determines whether percentages are indicated in tooltips.
 
    - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 

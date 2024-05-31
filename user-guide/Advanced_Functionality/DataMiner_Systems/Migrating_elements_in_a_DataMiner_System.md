@@ -12,11 +12,15 @@ To do so:
 
 1. Go to the *Status* tab.
 
+   ![Status tab](~/user-guide/images/Status_Tab.png)<br>*System Center > Agents > Status in DataMiner 10.4.5*
+
    In the *Status* tab, you can see an overview of the DMAs in the DMS, with the number of elements per DMA and several other parameters such as the processor load and the free disk space of each DMA.
 
 1. In the lower right corner of the *Status* tab, click the *Migrate* button.
 
    This will open the *Element migration* window, which lists the available elements in a table on the left and the possible destination DMAs on the right.
+
+   ![Element migration](~/user-guide/images/Element_Migration.png)<br>*Element migration window in DataMiner 10.4.5*
 
    > [!NOTE]
    >

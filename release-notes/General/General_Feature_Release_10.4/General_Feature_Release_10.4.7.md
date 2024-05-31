@@ -232,7 +232,7 @@ namespace Script
 
 ##### Waiting for DVE activation confirmation will now be processed asynchronously
 
-Waiting for DVEs to get activated will now be processed asynchronously. This will avoid that function DVEs that take longer to get activated obfuscate the ones that get activated faster.
+Waiting for DVEs to get activated will now be processed asynchronously. This will avoid that bookings with function DVEs that take longer to get activated will prevent other bookings with function DVEs that get activated faster from starting.
 
 ### Fixes
 

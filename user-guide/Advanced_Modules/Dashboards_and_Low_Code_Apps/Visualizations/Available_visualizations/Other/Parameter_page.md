@@ -6,11 +6,11 @@ uid: DashboardParameterPage
 
 This component displays a particular data page of an element.
 
+![Parameter page](~/user-guide/images/Parameter_Page.png)<br>*Parameter page component in DataMiner 10.4.5*
+
 To configure the component:
 
-1. Prior to DataMiner 10.0.9: Add an element data feed.
-
-   From DataMiner 10.0.9 onwards: Add an element data feed or a data page feed (recommended). For a data page feed, filter the *Parameters* item in the data pane either by element or by protocol.
+1. Add an element data feed or a data page feed (recommended). For a data page feed, filter the *Parameters* item in the data pane either by element or by protocol.
 
 1. If you used an element data feed: Click the filter button in the quick menu below the component and add a data page filter feed from the *Parameters* category.
 
