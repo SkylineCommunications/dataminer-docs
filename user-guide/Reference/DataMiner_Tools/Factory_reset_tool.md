@@ -66,11 +66,11 @@ It will always perform the following actions, regardless of whether the DMA is r
 
 - DeleteAllDxmCustomAppSettings
 
-  Available from DataMiner 10.4.7/10.5.0 onwards<!--RN 39530-->. This action removes the *appsettings.custom.json* file, which contains custom DxM settings that are preserved during upgrades. As a result, all custom DxM settings will be reset.
+  Available from DataMiner 10.4.7/10.5.0 onwards<!--RN 39530-->. This action removes the *appsettings.custom.json* file, which contains custom DxM settings that are preserved during a DxM upgrade. As a result, all custom DxM settings will be reset.
 
 - ResetCloudConnection
 
-  Available from DataMiner 10.4.7/10.5.0 onwards<!--RN 39524-->. This action deletes the CloudGateway data folder that contains the identity and authentication tokens for connecting to dataminer.services. Running this action disconnects the DataMiner Agent from dataminer.services, allowing new users to set up a fresh cloud connection.
+  Available from DataMiner 10.4.7/10.5.0 onwards<!--RN 39524-->. This action deletes the CloudGateway data folder that contains the identity and authentication tokens for connecting to dataminer.services. Running this action disconnects the DataMiner Agent from dataminer.services, allowing you to set up a fresh cloud connection.
 
 ## SLDataGateway.Tools.Database.exe
 
