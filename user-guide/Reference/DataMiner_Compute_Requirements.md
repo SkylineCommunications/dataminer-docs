@@ -115,7 +115,7 @@ A minimum of 4 GB will be required to smoothly run the necessary services on the
 
 ### CPU
 
-The processes are not CPU-heavy and do not require a lot of parallel computing, this means that 4 cores should be enough.
+The processes are not CPU-heavy and do not require a lot of parallel computing. This means that 4 cores should be enough.
 
 ### Network
 
