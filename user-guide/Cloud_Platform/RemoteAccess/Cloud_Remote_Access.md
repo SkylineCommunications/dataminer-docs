@@ -14,9 +14,9 @@ With this feature, users can:
 
 - [Call a user-defined API](xref:UD_APIs_Triggering_an_API#url) through dataminer.services.
 
-- Access files or webpages on the DMA that have been made available for remote access.<!-- RN 38426 -->
+- Access files on the DMA that have been made available for remote access.<!-- RN 38426 -->
 
-  The files or webpages that are available for public access are located in the following folders on the DMA:
+  The files that are available for public access are located in the following folders on the DMA:
 
   - `C:\Skyline DataMiner\Webpages\public\`
 
