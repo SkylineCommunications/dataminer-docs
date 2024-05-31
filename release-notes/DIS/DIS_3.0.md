@@ -24,3 +24,7 @@ DIS is now available on [Visual Studio Marketplace](https://marketplace.visualst
 #### Visual Studio would incorrectly throw warnings when DIS created a QAction_Helper project [ID_39643]
 
 When DIS generated a `QAction_Helper` project (e.g. while converting a *protocol.xml* file to a protocol solution), Visual Studio would incorrectly throw a large number of warnings.
+
+#### Incorrect TargetFramework banner will only show when applicable [ID_39818]
+
+When working on a connector solution which has a `Compliancies/MinimumRequiredVersion` tag with a DataMiner version below 10.2.0, the banner will not be shown anymore. Starting from DataMiner 10.2, .NET Framework 4.8 has become the standard.
