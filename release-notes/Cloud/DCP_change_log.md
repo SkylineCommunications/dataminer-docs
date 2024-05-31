@@ -15,7 +15,7 @@ Buttons in pop-up windows have been updated to the new style.
 
 #### 29 May 2024 - Fix - Admin - email validation [ID_39791]
 
-The email validation has been updated to support all domain extensions.
+When adding a user to a organization or DMS, it was only possible to enter a email address with a domain extensions of maximum 3 characters. This has been updated now to support all domain extensions.
 
 #### 29 May 2024 - Enhancement - Admin - DMS overview failover pair offline status [ID_39694]
 
