@@ -45,3 +45,9 @@ In some cases, SLLogCollector would not have the required permissions to access 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, a fatal error could occur in SLASPConnection when an email message could not be delivered.
+
+#### GQI: 'Get trend data patterns' data source would incorrectly return the pattern ID instead of the linked pattern ID [ID_39811]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.7 [CU0] -->
+
+The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.

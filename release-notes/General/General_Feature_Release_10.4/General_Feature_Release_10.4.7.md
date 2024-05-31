@@ -336,3 +336,9 @@ When MessageBroker received a Subscribe call while it was reconnecting, in some 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
 When an SLNet connection was made to the IPv6 loopback address using the FQDN (e.g. when replicating elements on the same DataMiner Agent), the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to one of the IP addresses the FQDN pointed to.
+
+#### GQI: 'Get trend data patterns' data source would incorrectly return the pattern ID instead of the linked pattern ID [ID_39811]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.7 [CU0] -->
+
+The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.
