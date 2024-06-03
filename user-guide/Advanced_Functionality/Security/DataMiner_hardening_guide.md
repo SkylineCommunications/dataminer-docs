@@ -60,31 +60,38 @@ By default, NATS does not employ TLS encryption, leaving communication susceptib
 
 ### Disable legacy components
 
-DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component, the legacy *Reports and Dashboards* component and the v0 api.
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component, the legacy *Reports and Dashboards* component, and the v0 api.
 
-#### Reports and Dashboards and Annotations
+#### Annotations and legacy Reports and Dashboards
 
-The *Annotations* and *Reports and Dashboards* component can be disabled by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
+To disable both the *Annotations* component and the legacy *Reports and Dashboards* component:
 
-```xml
-<SLNet>
-   <LegacyAnnotations>false</LegacyAnnotations>
-   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
-</SLNet>
-```
+1. Add the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
 
-To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
+   ```xml
+   <SLNet>
+      <LegacyAnnotations>false</LegacyAnnotations>
+      <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
+   </SLNet>
+   ```
+
+1. To make the changes take effect, run the *ConfigureIIS.bat* script, located in the `C:\Skyline DataMiner\Tools` folder, as Administrator.
 
 > [!NOTE]
 > The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 #### v0 API
 
-The v0 API can be disabled by adding the `<add key="enableLegacyV0Interface" value="false"/>` tag under `<appSettings>` in `C:\Skyline DataMiner\Webpages\API\Web.config` and restarting IIS.
+To disable the v0 API:
+
+1. Open the file `C:\Skyline DataMiner\Webpages\API\Web.config`.
+
+1. Add the tag `<add key="enableLegacyV0Interface" value="false"/>` tag under `<appSettings>`, and save the file.
+
+1. Restart IIS.
 
 > [!NOTE]
-> The v0 API is disabled by default as from DataMiner versions 10.2.0/10.1.6.
-> It is not possible to enable the v0 API when your DMS is connected to dataminer.services.
+> The v0 API is disabled by default as from DataMiner versions 10.2.0/10.1.6. It is not possible to enable the v0 API when your DMS is connected to dataminer.services.
 
 ## DataMiner Webpages hardening
 
