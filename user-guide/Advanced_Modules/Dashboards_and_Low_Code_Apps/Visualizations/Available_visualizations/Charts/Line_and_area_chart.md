@@ -156,7 +156,7 @@ Query results are supported as a data feed for this component from DataMiner 10.
    > [!NOTE]
    >
    > - To change the order in which the lines are displayed on the chart and in the tooltip, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the entry up or down in the *Lines* section.
-   > - The lines inherit the colors specified in the color palette of the component or theme. When all colors are used, the first ones will be assigned again.
+   > - The lines inherit the colors specified in the data colors or, in versions prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->, the color palette of the component or theme. When all colors are used, the first ones will be assigned again. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, lines displaying the same data as other components will inherit the same data color by default, instead of using the next color in the theme's data colors.
 
 1. Optionally, configure the following layout settings:
 

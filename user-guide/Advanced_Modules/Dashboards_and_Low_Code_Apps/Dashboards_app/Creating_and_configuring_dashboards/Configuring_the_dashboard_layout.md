@@ -56,7 +56,15 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
      - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
 
-     - In the *Colors* section, you can set the default background color and font color for the components. Under *Color palette*, you can configure additional columns, e.g. for the lines in a line chart component.
+     - In the *Colors* section, you can set the default background color and font color for the components. Under *Data colors* or *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can configure additional colors, e.g. for the lines in a line chart component.
+
+       From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, components displaying the same data use the same data color by default. Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, each component independently takes the next color from the theme's assigned color palette.
+
+       > [!NOTE]
+       >
+       > - To determine if data is considered identical, compare the display labels. If multiple components display the same labeled data, they will all use the same color for this label.
+       > - Data may vary across different sessions. Refreshing the dashboard may result in different colors being used for the same data. To ensure consistent colors across multiple sessions, you can define conditional colors in a [component theme's color palette](xref:Customize_Component_Layout) by binding colors to specific regular expressions that match the display labels of the data.
+       > - If you want a single color to be used across all components, include only one color in the component theme's data colors/color palette.
 
      - In the *Spacing* section (formerly called the *Containers* section), you can configure the margins, i.e. the amount of space (in pixels) around the components, as well as the padding, i.e. the amount of space (in pixels) that should be left free within the components.
 
