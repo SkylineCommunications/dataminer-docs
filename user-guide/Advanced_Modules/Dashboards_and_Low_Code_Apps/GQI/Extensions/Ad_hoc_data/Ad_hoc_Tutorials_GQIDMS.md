@@ -96,7 +96,10 @@ To retrieve the current client connections, the data source will have to communi
 
 ## Step 3: Transform DMS responses into a GQIPage
 
-Parse the responses into a [GQIPage](xref:GQI_GQIPage).
+Transform the responses into a [GQIPage](xref:GQI_GQIPage). Each `LoginInfoResponseMessage` represents an active client connection and will be converted into a row.
+
+> [!NOTE]
+> Ensure `DateTime` values are in UTC. Although the `ConnectTime` value is in UTC, it is not explicitly marked as such. Therefore, it will be specified in the example.
 
 ```csharp
     public GQIPage GetNextPage(GetNextPageInputArgs args)
