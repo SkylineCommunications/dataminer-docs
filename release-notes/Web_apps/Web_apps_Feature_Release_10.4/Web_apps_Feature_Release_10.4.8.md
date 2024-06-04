@@ -43,3 +43,11 @@ When an interactive Automation script was launched from a node edge graph or a c
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later,feed links defined in the *Web* component, the *Text* component or the *Navigate to a URL* action would no longer work.
+
+#### Low-Code Apps: Problem when executing an 'Opening an app' action in which no app had been specified [ID_39785]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a low-code app executed an *Opening an app* action in which no app had been specified, an error would occur.
+
+From now on, when an incorrectly configured action is detected, it will no longer be executed. Instead, an error message will appear.
