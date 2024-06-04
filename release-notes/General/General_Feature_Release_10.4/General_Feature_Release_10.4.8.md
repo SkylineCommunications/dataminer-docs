@@ -98,3 +98,9 @@ In some cases, SLNet would execute booking events in incorrect order.
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, a fatal error could occur in SLASPConnection when an email message could not be delivered.
+
+#### Problem with SLProtocol when invalid optional parameters were defined on a response [ID_39830]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.

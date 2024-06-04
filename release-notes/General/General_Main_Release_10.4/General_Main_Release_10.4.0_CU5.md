@@ -69,3 +69,9 @@ In some cases, a fatal error could occur in SLASPConnection when an email messag
 <!-- MR 10.4.0 [CU5] - FR 10.4.7 [CU0] -->
 
 The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.
+
+#### Problem with SLProtocol when invalid optional parameters were defined on a response [ID_39830]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
