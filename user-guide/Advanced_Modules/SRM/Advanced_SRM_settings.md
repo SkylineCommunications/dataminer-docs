@@ -20,7 +20,7 @@ This file contains the following tags:
 
 - **FunctionActivationTimeout**: When a booking is scheduled to start immediately, its assigned function DVEs will get activated, because the booking will fail to start if one of those DVEs is not active. From DataMiner 10.4.0 [CU4]/10.4.7 onwards, this setting is available to define the timeout after which a booking will fail to start. The default value is 1 minute. Prior to DataMiner 10.4.0 [CU4]/10.4.7, this default value is always used.<!-- RN 39672 -->
 
-- **SkipDcfLinks**: When a booking starts, DCF connections are created between the function DVEs of the assigned resources. They get deleted again when the booking finishes. From DataMiner 10.4.8 onwards, this setting is available to disable this start and end action. The default value is false.<!-- RN 39446 -->
+- **SkipDcfLinks**: When a booking starts, DCF connections are created between the function DVEs of the assigned resources. They get deleted again when the booking finishes. From DataMiner 10.4.8/10.5.0 onwards, this setting is available to disable this start and end action. The default value is false.<!-- RN 39446 -->
 
 For example:
 
