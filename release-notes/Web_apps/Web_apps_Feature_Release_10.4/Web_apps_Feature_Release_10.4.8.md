@@ -51,3 +51,9 @@ After a dashboard or a low-code app had been migrated from DataMiner server vers
 When a low-code app executed an *Opening an app* action in which no app had been specified, an error would occur.
 
 From now on, when an incorrectly configured action is detected, it will no longer be executed. Instead, an error message will appear.
+
+#### Dashboards app & Low-Code Apps: Problem when a Form component had to show the same data to multiple users [ID_39801]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a *Form* component on a dashboard or in a low-code app had to show the same data to multiple users, in some rare cases, an error could occur in the web APIs, causing the component to not show any data at all.
