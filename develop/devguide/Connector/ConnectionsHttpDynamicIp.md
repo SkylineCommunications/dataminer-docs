@@ -26,10 +26,9 @@ In the example above, advanced port 1 is overruled by the value specified in thi
 
 The content of this parameter is: "IP:PORT".
 
-For example, if you specify "10.12.0.63:4000", then all communication will be done on IP 10.12.0.63 port 4000. If you do not specify a port, the port configured in the element wizard will be used.
+For example, if you specify "10.12.0.63:4000", then all communication will be done on IP 10.12.0.63 port 4000. If you do not specify a port, the port configured in the element editor will be used.
 
 > [!NOTE]
-> To dynamically poll using https protocol, the IP should be prefixed with "https://", e.g. specifying "https://10.12.0.63" will poll using https while "10.12.0.63" will poll using http. This is regardless of the IP and the port configured in the element wizard.  
-
-> [!NOTE]
-> “bypassProxy” will be taken from the connection settings from the element wizard.
+>
+> - To dynamically poll using the HTTPS protocol, make sure the IP is prefixed with "https://". For example, specifying `https://10.12.0.63` will poll using HTTPS, while `10.12.0.63` will poll using HTTP. This happens regardless of the IP and the port configured in the element editor.
+> - "bypassProxy" will be taken from the connection settings from the element wizard.
