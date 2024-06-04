@@ -39,3 +39,9 @@ For detailed information about the changes included in those versions, refer to 
 After a quarantine had been forced during a booking update, in some cases, the SRM framework would stop responding.
 
 See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
+
+#### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+In some cases, SLProtocol would stop working after it had tried to read beyond the size of a table.
