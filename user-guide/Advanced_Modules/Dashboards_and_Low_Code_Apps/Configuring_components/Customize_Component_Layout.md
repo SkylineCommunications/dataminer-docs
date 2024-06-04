@@ -36,7 +36,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        1. Select *Add conditional color*.
 
-       1. Enter the text to match the display label. Partial matches are allowed. For example, entering `Tot` will match data labeled `Total`.
+       1. Enter a regular expression to match the display label. For example, entering `Tot` will match data labeled `Total`, while entering `^Tot$` will only match data labeled `Tot`.
 
        1. Choose a custom color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
