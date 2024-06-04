@@ -84,7 +84,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 > We recommend always upgrading to the latest .NET Framework version.
 
 > [!IMPORTANT]
-> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) first.
+> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.6-windows-hosting-bundle-installer) first.
 
 ### Microsoft Visual C++
 
