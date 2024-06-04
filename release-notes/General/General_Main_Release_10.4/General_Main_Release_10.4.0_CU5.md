@@ -40,6 +40,12 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 In some cases, SLLogCollector would not have the required permissions to access process objects or execute certain WMI queries. As a result, `Access is denied` errors would be added to the *SLLogCollector.txt* log file.
 
+#### Problem during Profile Manager initialization [ID_39565]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, an exception could be thrown while the Profile Manager was being initialized.
+
 #### Table row discrepancy between SLElement and SLProtocol [ID_39645]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
