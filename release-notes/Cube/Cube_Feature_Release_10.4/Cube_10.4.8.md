@@ -30,4 +30,8 @@ DataMiner Cube now subscribes to the *ApiTokenChangedEventMessage* and the *ApiD
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm Console: Problem when sorting alarms by the PollingIP column [ID_39804]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When, in the Alarm Console, you tried to sort alarms by the *PollingIP* column, Cube could throw an exception or even stop working when that column contained IP addresses starting with "http://" or "https://".
