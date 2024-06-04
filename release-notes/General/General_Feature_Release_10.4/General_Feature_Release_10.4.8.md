@@ -87,6 +87,12 @@ Due to a locking issue, in some cases, SLProtocol and SLElement could end up wit
 
 In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
 
+#### Service & Resource Management: Booking events would be executed in incorrect order [ID_39748]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLNet would execute booking events in incorrect order.
+
 #### Problem with SLASPConnection when an email message could not be delivered [ID_39759]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
