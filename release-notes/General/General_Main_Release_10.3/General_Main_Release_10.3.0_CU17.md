@@ -26,6 +26,12 @@ As NATS does not need TLS enabled on single DataMiner Agents, from now on, the [
 
 A number of enhancements have been made to the [Security Advisory](xref:BPA_Security_Advisory) BPA test with regard to the testing of HTTP and HTTPS connections.
 
+#### 'Security Advisory' BPA test will now take into account that the SNMP agent port can be a custom port [ID_39852]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
+
 ### Fixes
 
 #### SLLogCollector: 'Access is denied' errors [ID_39364]
