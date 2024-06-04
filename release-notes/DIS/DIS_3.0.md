@@ -4,6 +4,12 @@ uid: DIS_3.0
 
 # DIS 3.0
 
+## New features
+
+### Validator
+
+DIS now uses [Validator version 1.1.5](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.5).
+
 ## Changes
 
 ### Enhancements
