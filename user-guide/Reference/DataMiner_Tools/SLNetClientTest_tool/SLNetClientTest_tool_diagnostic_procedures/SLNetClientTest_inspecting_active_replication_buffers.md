@@ -26,8 +26,38 @@ To drop one specific replication buffer:
 
 1. In the *Type* field at the bottom, select *ReplicationBufferStats*.
 
-> [!NOTE]
-> When a replication buffer saves files to disk, those files are located in C:\\Skyline DataMiner\\System Cache\\SLNet and are named "ReplicationBuffer_clienthostname_ip_dmaid_eid_objectid.bin".
-
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+## Deleting and flushing replication buffer files
+
+When a replication buffer saves files to disk, those files are located in `C:\Skyline DataMiner\System Cache\SLNet` and are named "ReplicationBuffer_clienthostname_ip_dmaid_eid_objectid.bin".
+
+Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, ReplicationBuffer files include a unique hash in their filenames. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39428-->, these files do not include a unique hash in their filenames, and there is only one file per replicated element. Old ReplicatonBuffer files will remain in the SLNet folder, but the new changes prevent further growth.
+
+- If this data is no longer needed, delete the files manually.
+
+- To keep the data, you can flush it to the Agent using the SLNetClientTest tool.
+
+  1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+  1. Go to the *Build Message* tab of the main window.
+
+  1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+
+  1. In the *ExtraInfo* field, specify "flush:\[fileNamePattern]".
+
+     Examples:
+
+     | Command | Action |
+     |--|--|
+     | `flush:*` | flushes all files |
+     | `flush:slc-h32-g06` | flushes all files for Agent slc-h32-g06 |
+     | `flush:slc-h32-g06_10.11.6.32_223_4` | flushes files for a specific element on the Agent |
+
+  1. In the *Type* field at the bottom, select *ReplicationBufferStats*.
+
+  > [!IMPORTANT]
+  >
+  > - DataMiner can only flush the ReplicationBuffer if the replication connection for that specific subscription is active. If not, the flush will fail and the file will remain.
+  > - Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
