@@ -26,7 +26,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        You can also further customize your title with *Bold*, *Italics*, and *Underline*.
 
-     - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format or by using the color picker box on the right.
+     - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
        Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g. for the lines in a line chart.
 
@@ -71,7 +71,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        - *Thickness*: The thickness (in pixels) of the border that should be displayed around the components.
 
-       - *Color*: Specify a custom border color, either by specifying the color in RGB format or by using the color picker box on the right.
+       - *Color*: Specify a custom border color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
      - In the *Shadow* section, select the size of the shadow displayed behind the components.
 

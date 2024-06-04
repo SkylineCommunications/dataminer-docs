@@ -36,9 +36,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 1. Configure the theme:
 
-   - Set a background color in RGB format.
-
-   - Add and configure the other colors of the theme (in RGB format).
+   - Set a background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
    - Configure the component layout:
 
