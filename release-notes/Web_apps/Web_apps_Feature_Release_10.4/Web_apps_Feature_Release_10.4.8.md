@@ -63,3 +63,9 @@ When a *Form* component on a dashboard or in a low-code app had to show the same
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, a *Form* component would not be able to create instances when the behavior definition contained fields with default values that were not linked to the initial state.
+
+#### Dashboards app - Column & bar chart component: Chart and legend would show different colors after removing a bar [ID_39847]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When, in edit mode, you removed a bar from a *Colum & bar chart* component, in some cases, the chart and the legend would show different colors.
