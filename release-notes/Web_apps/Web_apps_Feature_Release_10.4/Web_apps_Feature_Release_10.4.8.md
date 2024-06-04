@@ -57,3 +57,9 @@ From now on, when an incorrectly configured action is detected, it will no longe
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When a *Form* component on a dashboard or in a low-code app had to show the same data to multiple users, in some rare cases, an error could occur in the web APIs, causing the component to not show any data at all.
+
+#### Low-Code Apps: Form component not able to create instances [ID_39808]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, a *Form* component would not be able to create instances when the behavior definition contained fields with default values that were not linked to the initial state.
