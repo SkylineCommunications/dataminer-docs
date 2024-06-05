@@ -1,8 +1,8 @@
 ---
-uid: Advanced_SRM_settings
+uid: Function_resource_settings
 ---
 
-# Function resources
+# Function resource settings
 
 Some advanced settings related to function DVEs linked with a function resource can be configured in the file *Config.xml*, in the folder *C:\\Skyline DataMiner\\ProtocolFunctionManager*.
 
