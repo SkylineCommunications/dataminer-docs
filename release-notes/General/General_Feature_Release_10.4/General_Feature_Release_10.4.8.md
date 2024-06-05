@@ -22,7 +22,38 @@ uid: General_Feature_Release_10.4.8
 
 ## New features
 
-*No new features have been added yet.*
+#### Correlation log file will now include correlation rule statistics [ID_39301]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+For every correlation rule, a number of statistics will now be stored in the *SLCorrelation.txt* log file on a daily basis.
+
+Example of a log entry containing correlation rule statistics:
+
+```txt
+2024/05/28 00:00:00.011|SLNet.exe|Log|INF|0|32|CorrelationRuleActionStatistics => [Rule => My_Correlation_Rule; NumberOfTimesExecuted => 6; TotalExecutionDuration => 00:31:41.5222024; MinimumExecutionDuration => 00:01:40.0854200; MaximumExecutionDuration => 00:10:00.4677544; FirstExecutionDuration => 00:10:00.4677544; LastExecutionDuration => 00:05:00.0185738; FirstExecutionTime => 05/27/2024 20:15:03; LastExecutionTime => 05/27/2024 20:48:02;]
+```
+
+#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID_39446]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a booking starts, DCF connections are created between the function DVEs of the assigned resources. They get deleted again when the booking finishes. From now on, the `SkipDcfLinks` setting can be used to disable this start and end action.
+
+Default value: false.
+
+Example of a function manager *config.xml* file containing this new setting:
+
+```xml
+<ProtocolFunctionManagerConfigInfo>
+  <ActiveFunctionResourcesThreshold>100</ActiveFunctionResourcesThreshold>
+  <FunctionHysteresis>PT1H</FunctionHysteresis>
+  <FunctionActivationTimeout>PT1M</FunctionActivationTimeout>
+  <SkipDcfLinks>true</SkipDcfLinks>
+</ProtocolFunctionManagerConfigInfo>
+```
+
+For more information, see [Function resource settings](xref:Function_resource_settings)
 
 ## Changes
 
