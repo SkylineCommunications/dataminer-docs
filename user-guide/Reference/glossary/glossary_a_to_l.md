@@ -210,7 +210,7 @@ uid: glossary_a_to_l
 | FTP | File Transfer Protocol. Standard network protocol used for the transfer of files between a client and a server. |
 | FTTx | Fiber To The x. Broadband network architecture where optical fiber is used up to a certain point in the network. For example, FTTdp (Fiber To The Distribution Point) uses fiber up to a junction box close to the customer's premises, whereas FTTH (Fiber To The Home) uses fiber all the way up to the customer's premises. |
 | Function DVE | Alternative name for “virtual function”.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Function hysteresis | Functionality of DataMiner SRM that keeps virtual function resources from being disabled if they will be used again soon.<br>See [Advanced SRM settings](xref:Advanced_SRM_settings). |
+| Function hysteresis | Functionality of DataMiner SRM that keeps virtual function resources from being disabled if they will be used again soon.<br>See [Advanced SRM settings](xref:Function_resource_settings). |
 | Function XML | XML file containing a virtual function definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 
 ## G
