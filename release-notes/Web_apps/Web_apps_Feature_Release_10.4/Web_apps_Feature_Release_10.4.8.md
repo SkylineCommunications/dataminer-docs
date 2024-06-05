@@ -22,6 +22,12 @@ uid: Web_apps_Feature_Release_10.4.8
 
 ### Enhancements
 
+#### Dashboards app & Low-Code Apps: Enhancements related to the configuration of conditional graph colors [ID_39746]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made with regard to the configuration of conditional graph colors.
+
 #### Dashboards app: Enhanced input validation when updating theme colors [ID_39749]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
