@@ -6,7 +6,23 @@ uid: LowCodeApps_event_config
 
 You can configure actions for different types of events in the DataMiner Low-Code Apps. These are the main types:
 
-- *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
+- *On open*: This event takes place when a page or panel is opened. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
+
+  > [!NOTE]
+  > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
+
+- *On close*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682 + 39668-->. This event takes place when a page or panel is closed.
+
+  - A page can be closed either by manually navigating away using the sidebar or via an action.
+
+  - A panel can be closed either by clicking an overlay or when a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is executed.
+
+  > [!NOTE]
+  >
+  > - Navigating to the next page is blocked until all configured actions are executed.
+  > - A panel will close only after all configured actions are executed.
+  > - Actions linked to an *On close* page or panel event will not be executed when you close the app.
+
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
 
 Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
@@ -74,6 +90,14 @@ To configure an event to close a panel of the app:
 1. Select *Close a panel* and select the panel.
 
 1. In the *Where* box, select where the panel that should be closed is located: in a pop-up window, on the left, or on the right. This is necessary in case the same panel is opened multiple times in different places.
+
+## Closing all panels of the app
+
+Available from DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-->.
+
+To configure an event to close all panels of the app:
+
+- Select *Close all panels*.
 
 ## Opening an app
 
