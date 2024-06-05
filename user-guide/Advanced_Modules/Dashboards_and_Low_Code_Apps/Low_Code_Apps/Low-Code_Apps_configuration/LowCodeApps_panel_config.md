@@ -26,6 +26,23 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 To allow users to open a panel, you will need to configure an event with the action [Open a panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app).
 
+From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39649-->, a panel will remain open when you navigate to a different page using the sidebar.
+
+> [!NOTE]
+> If a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is configured for an *On open* or *On close* page event, the panel will still close.
+
+## Closing a panel
+
+There are several ways to close a panel:
+
+- Configure a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action (available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-->).
+
+  ![Close all panels](~/user-guide/images/CloseAllPanels.gif)<br>*Low-Code Apps module in DataMiner 10.4.7*
+
+- If the panel is opened as an overlay (i.e. the background is slightly blurred), click outside the panel to close it.
+
+- Navigate to a different page using the sidebar (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39649-->).
+
 ## Deleting a panel
 
 From DataMiner 10.3.6/10.4.0 onwards, to delete a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Delete*.<!-- RN 36097 --> Prior to DataMiner 10.3.6/10.4.0, to delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon.

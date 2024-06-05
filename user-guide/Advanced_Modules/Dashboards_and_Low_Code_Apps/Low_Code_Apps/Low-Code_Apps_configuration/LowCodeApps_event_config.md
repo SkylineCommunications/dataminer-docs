@@ -63,9 +63,16 @@ To configure an event to open a panel of the app:
 
 1. In the *Width* box, specify the width of the panel (in %) compared to the rest of the app.
 
-1. If the panel should be opened as an overlay, toggle the *As overlay* button.
+1. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39649-->, the following modes are available for panels:
 
-   If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside it.
+   - *Basic*: The panel opens on top of the page.
+
+   - *As overlay*: If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside it. This is the default setting.
+
+   - *Draggable*: This option is only available if you have selected *in a popup* in the *Where* box. When the mode is set to *Draggable*, you can move the panel by left-clicking and dragging the header of the panel to its destination.
+
+   > [!NOTE]
+   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, to set the panel to open as an overlay, toggle the *As overlay* button.
 
 ## Closing a panel of the app
 
