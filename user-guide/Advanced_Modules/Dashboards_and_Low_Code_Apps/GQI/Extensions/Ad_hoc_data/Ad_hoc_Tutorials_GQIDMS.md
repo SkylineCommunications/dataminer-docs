@@ -9,7 +9,7 @@ In this tutorial, you will learn how you can create a GQI data source that retri
 Expected duration: 15 minutes.
 
 > [!NOTE]
-> This tutorial uses DataMiner version 10.3.4/10.4.0 onwards.
+> This tutorial uses DataMiner version 10.3.4.
 
 ## Prerequisites
 
@@ -25,12 +25,16 @@ Expected duration: 15 minutes.
 
 1. Create a new class that implements the [IGQIDatasource](xref:GQI_IGQIDataSource) interface.
 
-    > [!NOTE]
-    > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.3.4*.
+   > [!NOTE]
+   > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.3.4*.
 
-1. Implement the `GetColumns` method to define the columns of the data source. Our data source will include two columns: a *Client* column of  type `String` and a *Connection Time* column of type `DateTime`.
+1. Implement the `GetColumns` method to define the columns of the data source.
 
-1. Implement the `GetNextPage` method to provide the actual data. For now, leave it empty since we still need to retrieve the data from the DMS.
+   The data source will include two columns: a *Client* column of type `String` and a *Connection Time* column of type `DateTime`.
+
+1. Implement the `GetNextPage` method to provide the actual data.
+
+   For now, leave it empty, as you still need to retrieve the data from the DMS.
 
 ```csharp
 [GQIMetaData(Name = "Client connections")]
@@ -62,34 +66,36 @@ To retrieve the current client connections, the data source will have to communi
 
 1. Add the [IGQIOnInit](xref:GQI_IGQIOnInit) interface to the class.
 
-1. Implement the `OnInit` method, which receives [OnInitInputArgs](xref:GQI_OnInitInputArgs) as parameters. 
+1. Implement the `OnInit` method, which receives [OnInitInputArgs](xref:GQI_OnInitInputArgs) as parameters.
 
 1. Store the DMS property from the arguments in the class for later use.
 
-    ```csharp
-    [GQIMetaData(Name = "Client connections")]
-    public class ClientConnections : IGQIDataSource
-    {
-        private GQIDMS _dms;
+   ```csharp
+   [GQIMetaData(Name = "Client connections")]
+   public class ClientConnections : IGQIDataSource
+   {
+       private GQIDMS _dms;
 
-        public OnInitOutputArgs OnInit(OnInitInputArgs args)
-        {
-            _dms = args.DMS;
-            return default;
-        }
-    }
-    ```
+       public OnInitOutputArgs OnInit(OnInitInputArgs args)
+       {
+           _dms = args.DMS;
+           return default;
+       }
+   }
+   ```
 
-1. Use the `GQIDMS` object to send messages to the DMS. Retrieve the client connections by sending a `GetInfoMessage`. The response will be a collection of `LoginInfoResponseMessage` objects.
+1. Use the `GQIDMS` object to send messages to the DMS.
 
-    ```csharp
-        public GQIPage GetNextPage(GetNextPageInputArgs args)
-        {
-            var request = new GetInfoMessage(InfoType.ClientList);
-            var responses = _dms.SendMessages(request).OfType<LoginInfoResponseMessage>();
-            return default;
-        }
-    ```
+   Retrieve the client connections by sending a `GetInfoMessage`. The response will be a collection of `LoginInfoResponseMessage` objects.
+
+   ```csharp
+       public GQIPage GetNextPage(GetNextPageInputArgs args)
+       {
+           var request = new GetInfoMessage(InfoType.ClientList);
+           var responses = _dms.SendMessages(request).OfType<LoginInfoResponseMessage>();
+           return default;
+       }
+   ```
 
 > [!IMPORTANT]
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
@@ -97,9 +103,6 @@ To retrieve the current client connections, the data source will have to communi
 ## Step 3: Transform DMS responses into a GQIPage
 
 Transform the responses into a [GQIPage](xref:GQI_GQIPage). Each `LoginInfoResponseMessage` represents an active client connection and will be converted into a row.
-
-> [!NOTE]
-> Ensure `DateTime` values are in UTC. Although the `ConnectTime` value is in UTC, it is not explicitly marked as such. Therefore, it will be specified in the example.
 
 ```csharp
     public GQIPage GetNextPage(GetNextPageInputArgs args)
@@ -127,3 +130,6 @@ Transform the responses into a [GQIPage](xref:GQI_GQIPage). Each `LoginInfoRespo
         return new GQIPage(rows.ToArray());
     }
 ```
+
+> [!NOTE]
+> Ensure `DateTime` values are in UTC. Although the `ConnectTime` value is in UTC, it is not explicitly marked as such. Therefore, this is specified in the example.
