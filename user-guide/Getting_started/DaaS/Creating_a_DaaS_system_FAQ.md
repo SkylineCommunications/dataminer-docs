@@ -90,3 +90,9 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
 See also: [User management](xref:User_management).
+
+## Are there specific limitations that apply for DaaS?
+
+As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
+
+In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).
