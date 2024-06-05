@@ -33,7 +33,7 @@ To drop one specific replication buffer:
 
 When a replication buffer saves files to disk, those files are located in `C:\Skyline DataMiner\System Cache\SLNet` and are named "ReplicationBuffer_clienthostname_ip_dmaid_eid_objectid.bin".
 
-Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, ReplicationBuffer files include a unique hash in their filenames. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39428-->, these files do not include a unique hash in their filenames, and there is only one file per replicated element. Old ReplicatonBuffer files will remain in the SLNet folder, but the new changes prevent further growth.
+Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, ReplicationBuffer files include a unique hash in their filenames. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39428-->, these files do not include a unique hash in their filenames. As a result there is only one file per replicated element. Old ReplicatonBuffer files will remain in the SLNet folder, but the new changes prevent further growth.
 
 - If this data is no longer needed, delete the files manually.
 
