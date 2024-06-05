@@ -26,7 +26,7 @@ uid: General_Feature_Release_10.4.8
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
-For every correlation rule, a number of statistics will now be stored in the *SLCorrelation.txt* log file on a daily basis.
+For every correlation rule that is executed, a number of statistics will now be stored in the *SLCorrelation.txt* log file on a daily basis.
 
 Example of a log entry containing correlation rule statistics:
 
