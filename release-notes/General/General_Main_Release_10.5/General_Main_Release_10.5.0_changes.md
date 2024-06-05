@@ -562,10 +562,13 @@ See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadl
 
 In some cases, SLProtocol would stop working after it had tried to read beyond the size of a table.
 
-#### GQI: Problem when performing a join operation with data sources that retrieved data from the same table [ID_39844]
+#### GQI: Problem when performing a join operation [ID_39844]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
-When a join operation was performed with two data sources that both retrieved data from the same table (e.g. *Get trend data patterns* and *Get trend data pattern events*), in some cases, the GQI query would fail and return the following error:
+When a join operation was performed with two of the following data sources, in some cases, the GQI query would fail and return a `Cannot add custom table to the registry as the registry is already built.` error.
 
-`Cannot add custom table to the registry as the registry is already built.`
+- *Get alarms*
+- *Get behavioral change events*
+- *Get trend data pattern events*
+- *Get trend data patterns*
