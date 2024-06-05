@@ -95,4 +95,4 @@ See also: [User management](xref:User_management).
 
 As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
 
-In addition, the [DataMiner Web Services (v1)](xref:Using_the_Web_Services_v1) are not supported with DaaS.
+In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).
