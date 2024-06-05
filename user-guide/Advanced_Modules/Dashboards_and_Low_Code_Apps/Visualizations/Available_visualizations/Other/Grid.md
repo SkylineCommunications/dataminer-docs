@@ -11,6 +11,8 @@ Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->. Prior to this, th
 
 This component allows you to visualize data as a grid.
 
+![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.4.1*
+
 ## Configuring the component
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed). The grid component should always be configured with *Queries* data input.

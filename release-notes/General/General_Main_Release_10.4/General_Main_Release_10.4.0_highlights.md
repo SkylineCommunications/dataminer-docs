@@ -111,7 +111,7 @@ If you trigger an API via the SLNetClientTest tool, this will bypass the endpoin
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37250] [ID_37334] [37434]
+#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37334] [37434]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 

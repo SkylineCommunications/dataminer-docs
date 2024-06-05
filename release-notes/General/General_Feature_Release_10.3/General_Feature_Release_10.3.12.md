@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.3.12
 
 ## New features
 
-#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37250] [ID_37334] [37434]
+#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37334] [37434]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 

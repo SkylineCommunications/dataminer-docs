@@ -107,6 +107,13 @@ items:
           topicUid: Overview_Agile_Partnership_principles
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
+        - name: Compliance statements
+          topicUid: Overview_Compliance_Statements_intro
+          items:
+            - name: Requirements vs. goals and objectives
+              topicUid: Overview_Compliance_Statements_RvsG_O
+            - name: Tender compliancy (licenses / engineering days)
+              topicUid: Overview_Compliance_Statements_Tender_Compliancy
     - name: DevOps
       topicUid: Overview_DevOps_index
       items:
@@ -178,7 +185,7 @@ items:
     - name: Pricing
       topicUid: Pricing
       items:
-      - name: Commercial models summary
+      - name: Commercial and deploy models summary
         topicUid: Pricing_Commercial_Models
       - name: Usage-based services
         topicUid: Pricing_Usage_based_service
@@ -201,13 +208,6 @@ items:
           topicUid: Partner_support_lines
         - name: User Operations Support application
           topicUid: User_operations_support
-    - name: Compliance statements
-      topicUid: Overview_Compliance_Statements_intro
-      items:
-        - name: Requirements vs. goals and objectives
-          topicUid: Overview_Compliance_Statements_RvsG_O
-        - name: Tender compliancy (licenses / engineering days)
-          topicUid: Overview_Compliance_Statements_Tender_Compliancy
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:

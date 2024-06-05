@@ -8,6 +8,8 @@ uid: Read_parameters_versus_write_parameters
 
 Read parameters display a read-only value that has been retrieved from a device.
 
+![Read parameters](~/user-guide/images/Read_Parameters.png)<br>*Read parameter in DataMiner 10.4.5*
+
 The way this value is displayed depends on whether it is a discrete or an analog value.
 
 - Discrete values can only be displayed as text.
@@ -25,6 +27,8 @@ The way this value is displayed depends on whether it is a discrete or an analog
 ### Write parameters
 
 The value of write parameters can be updated by a user and sent back to the device.
+
+![Write parameters](~/user-guide/images/Write_Parameter.png)<br>*Read and associated write parameter in DataMiner 10.4.5*
 
 The way the DataMiner user interfaces allow users to change those values depends on the type of parameter.
 

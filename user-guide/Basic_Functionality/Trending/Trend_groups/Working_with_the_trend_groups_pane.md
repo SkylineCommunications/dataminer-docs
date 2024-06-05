@@ -8,7 +8,7 @@ In the trend group pane on the left-hand side, you can add or delete trend group
 
 ## Adding a trend group
 
-To add a trend group
+To add a trend group:
 
 1. Click the *Add group button*.
 
@@ -25,6 +25,8 @@ To add a trend group
 1. Optionally, add a short description in the *Description* field.
 
     This description will be shown under the name of the group in the trend group pane.
+
+![Adding a trend group](~/user-guide/images/Add_Trend_Group.png)<br>*Saving a trend group in DataMiner 10.4.5*
 
 > [!NOTE]
 > Alternatively, you can also add parameters in the parameter pane and click the *Save as* button to save these as a trend group.

@@ -73,6 +73,7 @@ If you are not upgrading to the DataMiner version that immediately follows your 
 >
 > - There is one exception to this rule: if you are upgrading from a version prior to DataMiner 10.1.x to 10.2.x or higher, **skip DataMiner 10.1** and proceed directly to the subsequent major version instead (i.e. DataMiner 10.2).
 > - If you are upgrading from DataMiner 9.6.0/9.6.x or a DataMiner 10.0.0 main release version prior to DataMiner 10.0.0 [CU19], upgrade to [DataMiner 10.0.0 [CU19]](https://community.dataminer.services/download/dataminer-main-release-10-0-0-0-11025-cu19/) as the next major version.
+> - If you are on the Feature Release track and want to switch to a DataMiner version on the Main Release track, skip the main release version that matches your current feature release version. For example, if you have DataMiner 10.2.12 installed, you can upgrade directly to DataMiner 10.3.0, or you can upgrade from DataMiner 10.2.12 to any 10.3.x version and then to 10.4.0. See [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
 
 > [!TIP]
 > See [Example upgrade path](#example-upgrade-path).

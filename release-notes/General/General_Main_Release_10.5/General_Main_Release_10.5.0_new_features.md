@@ -120,6 +120,24 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
+#### Correlation log file will now include correlation rule statistics [ID_39301]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+For every correlation rule that is executed, a number of statistics will now be stored in the *SLCorrelation.txt* log file on a daily basis.
+
+Example of a log entry containing correlation rule statistics:
+
+```txt
+2024/05/28 00:00:00.011|SLNet.exe|Log|INF|0|32|CorrelationRuleActionStatistics => [Rule => My_Correlation_Rule; NumberOfTimesExecuted => 6; TotalExecutionDuration => 00:31:41.5222024; MinimumExecutionDuration => 00:01:40.0854200; MaximumExecutionDuration => 00:10:00.4677544; FirstExecutionDuration => 00:10:00.4677544; LastExecutionDuration => 00:05:00.0185738; FirstExecutionTime => 05/27/2024 20:15:03; LastExecutionTime => 05/27/2024 20:48:02;]
+```
+
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+
 #### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -416,6 +434,37 @@ connection.AddSubscription(setId, subscriptionFilter);
 Up to now, it was only possible to retrieve a single function definition by ID using the *GetFunctionDefinition* method.
 
 From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
+
+#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID_39446]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a booking starts, DCF connections are created between the function DVEs of the assigned resources. They get deleted again when the booking finishes. From now on, the `SkipDcfLinks` setting can be used to disable this start and end action.
+
+Default value: false.
+
+Example of a function manager *config.xml* file containing this new setting:
+
+```xml
+<ProtocolFunctionManagerConfigInfo>
+  <ActiveFunctionResourcesThreshold>100</ActiveFunctionResourcesThreshold>
+  <FunctionHysteresis>PT1H</FunctionHysteresis>
+  <FunctionActivationTimeout>PT1M</FunctionActivationTimeout>
+  <SkipDcfLinks>true</SkipDcfLinks>
+</ProtocolFunctionManagerConfigInfo>
+```
+
+For more information, see [Function resource settings](xref:Function_resource_settings)
+
+#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+DomInstance names now support GenericEnum fields that allow multiple values. In other words, `list GenericEnumFieldDescriptor` will now be supported as a `FieldValueConcatenationItem` for a DomInstance name.
+
+When you add a GenericEnumFieldDescriptor that supports multiple values to a DomDefinition NameDefinition, it will add the display names of the enum values separated by a semicolon (';').
+
+Also, from now on, it will no longer be possible to create multiple enum values with the same values using the SLNetTypes method `AddEntry(GenericEnumEntry<T> entry)`. When you try to do so, an `InvalidOperationException` will now be thrown.
 
 ### Tools
 

@@ -11,6 +11,8 @@ Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37812-->. Prior to this, th
 
 This component allows you to visualize and manage bookings, events, and other time-bound data (e.g. appointments and project timelines).
 
+![Timeline](~/user-guide/images/Timeline.png)<br>*Timeline component in DataMiner 10.4.5*
+
 ## Configuring the component
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed). The timeline component should always be configured with *Queries* data input.

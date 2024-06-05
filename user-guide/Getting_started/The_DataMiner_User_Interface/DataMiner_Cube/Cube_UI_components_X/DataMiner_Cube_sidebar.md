@@ -24,6 +24,8 @@ From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sid
 
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
 
+![Unpin a button](~/user-guide/images/Unpin_Button.png)<br>*DataMiner Cube sidebar in DataMiner 10.4.5*
+
 > [!NOTE]
 >
 > - At most 4 items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
@@ -155,6 +157,8 @@ The following actions are possible with this list:
 - Click an item in the list to open it in a card. If you wish to open the item in a new card, use the middle mouse button.
 
 - Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
+
+  ![Pin an item](~/user-guide/images/Pin_Item.png)<br>*Activity pane in DataMiner 10.4.5*
 
 > [!NOTE]
 >
