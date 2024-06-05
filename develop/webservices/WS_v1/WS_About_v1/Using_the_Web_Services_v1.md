@@ -9,6 +9,9 @@ The v1 methods can be used in SOAP, JSON, or URL-encoded requests.
 > [!WARNING]
 > We strongly recommend that you use HTTPS when accessing the Web Service APIs over public Internet. If you do not do so, all information – including logon credentials – will be sent over the Internet as plain, unencrypted text.
 
+> [!NOTE]
+> At present, the Web Services (v1) are not supported for [DaaS](xref:Creating_a_DMS_in_the_cloud) systems.
+
 ## Authentication
 
 Most methods require a connection string, which is a token identifier received upon authentication. To authenticate, either use the [ConnectApp](xref:ConnectApp) method, or, if two-step authentication is required, use [ConnectAppAndInfo](xref:ConnectAppAndInfo) and [ConnectAppAndInfoStep2](xref:ConnectAppAndInfoStep2).
