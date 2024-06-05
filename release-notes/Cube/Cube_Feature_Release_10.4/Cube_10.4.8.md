@@ -46,12 +46,16 @@ To configure for which parameters those features are enabled, do the following:
 
    **Behavioral anomaly detection**
 
+   | Enabled | Run on trended parameters by default | Result |
+   |---|---|---|
    | False | -     | Behavioral anomaly detection is disabled. |
    | True  | True  | Behavioral anomaly detection is enabled by default for trended numeric parameters that are not part of partial tables.<br>In the trend template, this setting can be overridden for specific parameters. See below. |
    | True  | False | Behavioral anomaly detection is disabled system-wide, except for trended parameters of which the *Anomalies* setting has explicitly been enabled in the trend template. |
 
    **Proactive cap detection**
 
+   | Enabled | Run on trended parameters by default | Result |
+   |---|---|---|
    | False | -     | Proactive cap detection is disabled. |
    | True  | True  | Proactive cap detection is enabled by default for trended numeric parameters that are not part of partial tables and have explicitly specified value bounds.<br>In the trend template, this setting can be overridden for specific parameters. See below. |
    | True  | False | Proactive cap detection is disabled system-wide, except for trended parameters of which the *Proactive alarms* setting has explicitly been enabled in the trend template. |

@@ -58,6 +58,12 @@ In some cases, an exception could be thrown while the Profile Manager was being 
 
 Due to a locking issue, in some cases, SLProtocol and SLElement could end up with different sets of table rows stored in memory.
 
+#### Services and DCF interfaces would indicate an incorrect severity when a table had multiple columns that were being monitored [ID_39650]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When a table was fully included in a service or when a table exposed a DCF interface and had multiple columns that were being monitored, up to now, the severity that would bubble up to the service or interface level would incorrectly be the severity of the value that was last modified instead of the highest severity found in the table.
+
 #### Service & Resource Management: Booking events would be executed in incorrect order [ID_39748]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
