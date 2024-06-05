@@ -121,7 +121,7 @@ From now on, one thread will read the raw data from the UDP buffer and add it to
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Advanced_SRM_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
+When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Function_resource_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
 
 When you create a booking that needs to start immediately, SLNet will enable the DVEs and wait for up to 1 minute until they are active before trying to start the booking. If the DVEs take more than 1 minute to activate, the booking will fail to start since the DVEs need to be activated before the booking can be started.
 

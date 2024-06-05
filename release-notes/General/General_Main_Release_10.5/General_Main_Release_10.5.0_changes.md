@@ -449,6 +449,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -555,3 +561,14 @@ See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadl
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
 
 In some cases, SLProtocol would stop working after it had tried to read beyond the size of a table.
+
+#### GQI: Problem when performing a join operation [ID_39844]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a join operation was performed with two of the following data sources, in some cases, the GQI query would fail and return a `Cannot add custom table to the registry as the registry is already built.` error.
+
+- *Get alarms*
+- *Get behavioral change events*
+- *Get trend data pattern events*
+- *Get trend data patterns*

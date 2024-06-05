@@ -579,6 +579,8 @@ items:
                         topicUid: Ad_hoc_Tutorials
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
+                      - name: Building a GQI data source that retrieves data from a DMS
+                        topicUid: Ad_hoc_Tutorials_GQIDMS
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
@@ -1223,7 +1225,9 @@ items:
       - name: SRM code snippets
         topicUid: SRM_code_snippets
       - name: Advanced SRM settings
-        topicUid: Advanced_SRM_settings
+        items:
+          - name: Function resource settings
+            topicUid: Function_resource_settings
       - name: SRM reporting
         topicUid: SRM_reporting
         items:

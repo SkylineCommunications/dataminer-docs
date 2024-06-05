@@ -16,7 +16,7 @@ The moment you become our partner, you start receiving benefits.
 
 ## Partner skill levels
 
-Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a Fiscal Year determines your skill level, which remains valid from the moment you earn it until the end of the following year.
+Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a calendar year determines your skill level, which remains valid from the moment you earn it until the end of the following year.
 
 There are 3 types of skill level depending on your engagement:
 
@@ -58,7 +58,7 @@ Technical skills:
 | Metric | Measure | # Credits earned |
 |--|--|--|
 | Formal knowledge | Number of certifications obtained per month | 10 |
-| Community engagement | DevOps Points added per month | 5 per 500 DevOps Points |
+| Community engagement | DevOps Points added per month | 5 per 500 DevOps Points per month |
 | Community engagement | # of downloads per month<br>Automation scripts<br>Applications<br>Connectors<br>Dashboards<br>Visio | 10 per 5 downloads |
 | Supporting infrastructure | Existing Demo System Lab* | 10 per CY |
 
@@ -80,7 +80,7 @@ Business skills:
 | Digital presence | Dojo profile | 10 |
 | Digital presence | # blog posts and PRs | 10 |
 | Sales | Achieving the yearly sales target | 50 |
-| Sales | Per deal registered with Partner Management* |  50 |
+| Sales | Per new deal registered with Partner Management* |  50 |
 | Sales | Per new customer added | 100 |
 
 *\* Only attributed if the opportunity results in a successful business transaction for Skyline, regardless of if the deal was closed by the partner.*

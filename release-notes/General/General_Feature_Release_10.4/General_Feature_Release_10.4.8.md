@@ -22,7 +22,38 @@ uid: General_Feature_Release_10.4.8
 
 ## New features
 
-*No new features have been added yet.*
+#### Correlation log file will now include correlation rule statistics [ID_39301]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+For every correlation rule that is executed, a number of statistics will now be stored in the *SLCorrelation.txt* log file on a daily basis.
+
+Example of a log entry containing correlation rule statistics:
+
+```txt
+2024/05/28 00:00:00.011|SLNet.exe|Log|INF|0|32|CorrelationRuleActionStatistics => [Rule => My_Correlation_Rule; NumberOfTimesExecuted => 6; TotalExecutionDuration => 00:31:41.5222024; MinimumExecutionDuration => 00:01:40.0854200; MaximumExecutionDuration => 00:10:00.4677544; FirstExecutionDuration => 00:10:00.4677544; LastExecutionDuration => 00:05:00.0185738; FirstExecutionTime => 05/27/2024 20:15:03; LastExecutionTime => 05/27/2024 20:48:02;]
+```
+
+#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID_39446]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a booking starts, DCF connections are created between the function DVEs of the assigned resources. They get deleted again when the booking finishes. From now on, the `SkipDcfLinks` setting can be used to disable this start and end action.
+
+Default value: false.
+
+Example of a function manager *config.xml* file containing this new setting:
+
+```xml
+<ProtocolFunctionManagerConfigInfo>
+  <ActiveFunctionResourcesThreshold>100</ActiveFunctionResourcesThreshold>
+  <FunctionHysteresis>PT1H</FunctionHysteresis>
+  <FunctionActivationTimeout>PT1M</FunctionActivationTimeout>
+  <SkipDcfLinks>true</SkipDcfLinks>
+</ProtocolFunctionManagerConfigInfo>
+```
+
+For more information, see [Function resource settings](xref:Function_resource_settings)
 
 ## Changes
 
@@ -54,6 +85,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner SupportAssistant: version 1.6.9
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
 #### 'Security Advisory' BPA test: Enhanced testing of HTTP and HTTPS connections [ID_39813]
 
@@ -87,6 +124,12 @@ In some cases, an exception could be thrown while the Profile Manager was being 
 
 Due to a locking issue, in some cases, SLProtocol and SLElement could end up with different sets of table rows stored in memory.
 
+#### Services and DCF interfaces would indicate an incorrect severity when a table had multiple columns that were being monitored [ID_39650]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When a table was fully included in a service or when a table exposed a DCF interface and had multiple columns that were being monitored, up to now, the severity that would bubble up to the service or interface level would incorrectly be the severity of the value that was last modified instead of the highest severity found in the table.
+
 #### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -110,3 +153,14 @@ In some cases, a fatal error could occur in SLASPConnection when an email messag
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
+
+#### GQI: Problem when performing a join operation [ID_39844]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a join operation was performed with two of the following data sources, in some cases, the GQI query would fail and return a `Cannot add custom table to the registry as the registry is already built.` error.
+
+- *Get alarms*
+- *Get behavioral change events*
+- *Get trend data pattern events*
+- *Get trend data patterns*
