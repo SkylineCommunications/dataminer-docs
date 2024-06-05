@@ -86,6 +86,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
+
 #### 'Security Advisory' BPA test: Enhanced testing of HTTP and HTTPS connections [ID_39813]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
