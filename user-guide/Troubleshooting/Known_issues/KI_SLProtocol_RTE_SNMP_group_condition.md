@@ -6,11 +6,15 @@ uid: KI_SLProtocol_RTE_SNMP_group_condition
 
 ## Affected versions
 
-This issue has been found in DataMiner 10.3.0 CU13 and 10.4.6. Investigation is still going on to verify if other DataMiner versions are affected.
+From DataMiner 10.4.4/10.4.0 [CU1]/10.3.0 [CU13] onwards.
 
 ## Cause
 
-If a protocol contains an SNMP group with a condition, and such a group is executed for the first time with the condition being false and then a next time with the condition being true, this can trigger an SLProtocol run-time error depending on how quickly the device respond.
+If a protocol contains an SNMP group with a condition, and such a group is first executed with the condition being false and then with the condition being true, this can trigger an SLProtocol run-time error depending on how quickly the device responds.
+
+## Workaround
+
+In the affected protocol.xml, execute a group of type "poll trigger" instead of the group with the condition, and configure it so that its trigger will contain the condition, and if the condition is met, it will call an action of type "execute next" to execute the original poll group. Make sure the condition is removed from the original group.
 
 ## Fix
 
@@ -18,3 +22,4 @@ No fix is available yet.
 
 ## Issue description
 
+In the Alarm Console, a DataMiner run-time error is displayed with description "Thread problem in SLProtocol.exe", mentioning a protocol that contains an SNMP group with a condition.
