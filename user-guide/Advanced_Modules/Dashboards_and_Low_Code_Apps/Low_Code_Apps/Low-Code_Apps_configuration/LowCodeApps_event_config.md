@@ -106,6 +106,9 @@ To configure an event to close all panels of the app:
 
 - Select *Close all panels*.
 
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7, navigating to a different low-code app page would close any open panels. From DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards, panels remain open when navigating to a different page. To ensure older apps function correctly after upgrading to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 or higher, an *On close* page event with a *Close all panels* action is automatically configured for each page of apps created before the upgrade<!--RN 39632-->. New apps created after the upgrade will not have these events configured.
+
 ## Opening an app
 
 To configure an event to open another low-code app that has been published in your DMS:
