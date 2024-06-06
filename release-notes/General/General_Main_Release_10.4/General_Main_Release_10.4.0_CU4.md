@@ -55,7 +55,7 @@ A number of enhancements have been made with regard to the replication buffering
 
 - When DataMiner restarted with an active ReplicationBuffer storage file, at the end of its startup routine, it would incorrectly not flush the contents of the file once the replication connection was re-established.
 
-- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. Also, there will only be one ReplicationBuffer file per replicated element.
+- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. As a result, there will only be one ReplicationBuffer file per replicated element.
 
 ##### Manually removing old ReplicationBuffer files
 
