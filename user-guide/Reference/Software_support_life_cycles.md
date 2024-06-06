@@ -17,7 +17,7 @@ uid: Software_support_life_cycles
 | 10.0.0  | 17 Dec 2021           | 24 Feb 2023     | 23 Feb 2024           | 23 Feb 2024        |
 | 9.6.0   | -                     | 25 Feb 2022     | 24 Feb 2023           | 24 Feb 2023        |
 
-For the Main Release track, different support levels are maintained for the different versions:
+Legend:
 
 - **Regular updates**: Monthly cumulative updates containing fixes and security updates.
 - **Supported**: Security updates and critical bug fixes only (as required).
@@ -34,11 +34,16 @@ For the Main Release track, different support levels are maintained for the diff
 
 ### Feature Release track
 
-| Version | Supported until |
-|---------|-----------------|
-| 10.4.x  | 15 Nov 2024     |
+| Version | Regular upgrades until | Supported until | Limited support until | Not supported from |
+|---------|------------------------|-----------------|-----------------------|--------------------|
+| 10.4.x  | 15 Nov 2024            | 15 Nov 2024     | 25 Feb 2028           | 25 Feb 2028        |
 
-For the Feature Release track, monthly upgrades are released with all the latest new features, fixes, and security updates. Only the latest Feature Release version is supported.
+Legend:
+
+- **Regular upgrades**: Monthly upgrades are released with all the latest new features, fixes, and security updates.
+- **Supported**: Only the **latest Feature Release version** is supported. There are no more cumulative updates for a Feature Release version once the next Feature Release version has become available.
+- **Limited support**: Online technical help without software updates for fixes, security updates, or features.
+- **Not supported**: No more support is available.
 
 > [!NOTE]
 > If you are following the Feature Release track, you always need to upgrade to the latest version to get the latest security updates. If you do not want to upgrade to a new Feature Release version but do want to get the latest security updates, you will need to switch to the Main Release track instead.
