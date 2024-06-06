@@ -93,7 +93,7 @@ A number of enhancements have been made with regard to the replication buffering
 
 - When DataMiner restarted with an active ReplicationBuffer storage file, at the end of its startup routine, it would incorrectly not flush the contents of the file once the replication connection was re-established.
 
-- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. Also, there will only be one ReplicationBuffer file per replicated element.
+- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. As a result, there will only be one ReplicationBuffer file per replicated element.
 
 ##### Manually removing old ReplicationBuffer files
 
@@ -331,11 +331,13 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
-#### Problem when setting up SLNet connections to the IPv6 loopback address [ID_39667]
+#### Problem when setting up SLNet connections to the IPv6 loopback address or an FQDN pointing to a loopback address [ID_39667]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When an SLNet connection was made to the IPv6 loopback address using the FQDN (e.g. when replicating elements on the same DataMiner Agent), the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to one of the IP addresses the FQDN pointed to.
+When an SLNet connection was made to the IPv6 loopback address, the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to the primary IPv6 address.
+
+Also, when an SLNet connection was made to a FQDN which points to a loopback address, the system would incorrectly use a TCP connection to the primary IPv4 address.
 
 #### GQI: 'Get trend data patterns' data source would incorrectly return the pattern ID instead of the linked pattern ID [ID_39811]
 

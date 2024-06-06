@@ -20,8 +20,6 @@ uid: Part7Reference
 
 - [Software support life cycles](xref:Software_support_life_cycles)
 
-- [Support services terms](xref:Support_services_terms)
-
 - [Soft-launch options](xref:SoftLaunchOptions)
 
 - [DataMiner Extension Modules](xref:DataMinerExtensionModules)
