@@ -20,7 +20,7 @@ To configure a page:
 
 1. Click the pencil icon to configure the components on the page. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
 
-1. If one or more actions should be triggered when the page is loaded or closed, in the page configuration pane, open the *Events* section and click the *Configure actions* button next to *On open* (or *On page load*) or *On close* (available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682-->). Then configure the action(s) that should be triggered. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. If one or more actions should be triggered when the page is loaded or closed, in the page configuration pane, open the *Events* section and click the *Configure actions* button next to [*On open* (or *On page load*) or *On close*](xref:LowCodeApps_event_config). Then configure the action(s) that should be triggered.
 
 1. If you want to hide the page from the sidebar:
 
