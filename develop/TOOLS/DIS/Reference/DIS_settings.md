@@ -95,37 +95,6 @@ In the *Solutions* tab, you can specify the following default solution folders:
 - Default protocol solutions folder
 - Default Automation script solutions folder
 
-## Class Library
-
-> [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
-
-In the *Class Library* tab, you can select a base package (shipped with DIS) and specify the location of one or more custom/community packages, which will typically contain code written specifically for a particular vendor or project and maintained by a dedicated team of developers.
-
-Apart from a number of C# files, class library packages include a manifest.xml file that contains the name and the version of the package as well as any dependencies to other packages. When a Class Library QAction 63000 or a Class Library EXE block is generated, all information about the packages that were used to build the class library packages used by that QAction or EXE block will be added to it. This will allow DIS to check the included packages each time it generates the QAction or EXE block, alert the user whenever it notices package inconsistencies (different base package, updated community packages, etc.), and offer the user the opportunity to either allow or block the QAction or EXE block update.
-
-DIS will automatically reload the class library packages when packages have been modified on disk or when any settings in this *Class Library* tab have been changed.
-
-For more information on Class Library packages, see [Class Library packages](xref:Class_Library_packages)
-
-### Enable Class Library feature
-
-> [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
-
-Clear the *Enable Class Library feature* option if you want to disable the Class Library feature.
-
-### Automatically generate Class Library code
-
-> [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
-
-If you select the *Automatically generate Class Library code* option, DIS will automatically regenerate the Class Library QAction 63000 and the Class Library EXE blocks whenever references to class library items have been added, changed or removed.
-
-If you want to force an ad hoc regeneration of the Code Library QAction 63000 and the Code Library EXE blocks, you can click the *Protocol \> Generate Class Library Code* command in the DIS menu.
-
-See also: [Protocol \> Generate Class Library code](xref:DIS_menu#protocol--generate-class-library-code)
-
 ## Interface
 
 In the *Interface* tab, you can change a number of settings pertaining to mouse behavior, highlighting and the file tab search box.
@@ -252,6 +221,9 @@ Also, a button allows you to sign out (and sign in again).
 
 ## Updates
 
+> [!IMPORTANT]
+> This feature has been removed from DIS v3.0 onwards as DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
+
 In the *Updates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for updates.
 
 - If you select the *Check for plug-in updates* option, DataMiner Integration Studio will check once every hour whether a more recent version of the *DataMinerIntegrationStudio.vsix* extension file is available. If so, an update banner will appear at the top of the editor window.
@@ -268,9 +240,6 @@ In the *Templates* tab, you can indicate whether you want DataMiner Integration 
 In the *Templates Nuget package ID* text box, you can specify the ID of the NuGet package you want to use in Visual Studio. This NuGet package contains the solution and project templates you can use to create new solutions and projects.
 
 The update button allows you to manually trigger an update.
-
-> [!NOTE]
-> This tab is only available in Visual Studio 2022.
 
 ## Other
 

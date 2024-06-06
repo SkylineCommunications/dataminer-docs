@@ -112,6 +112,9 @@ When you publish a protocol or an Automation script, DIS will create either a *.
 
 ### Update
 
+> [!IMPORTANT]
+> This feature has been removed from DIS v3.0 onwards as DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
+
 If DataMiner Integration Studio is set to check for updates, an *Update* button will appear if a newer version of the *DataMinerIntegrationStudio.vsix* file is available.
 
 If you click the *Update* button, the *Update* dialog box will ask whether you want to update DataMiner Integration Studio. To update, click *Update now*.
