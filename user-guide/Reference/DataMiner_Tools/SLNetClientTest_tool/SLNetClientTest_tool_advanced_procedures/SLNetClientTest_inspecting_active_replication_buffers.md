@@ -4,7 +4,7 @@ uid: SLNetClientTest_inspecting_active_replication_buffers
 
 # Inspecting the active replication buffers
 
-To solve issues with replication buffering, it is possible to [inspect the active replication buffers](#inspecting-the-active-replication-buffers) with the SLNetClientTest tool, and also to [drop a specific buffer](#dropping-a-replication-buffer).
+To solve issues with replication buffering, it is possible to [inspect the active replication buffers](#inspecting-the-active-replication-buffers) with the SLNetClientTest tool, and also to [drop a specific buffer](#dropping-a-replication-buffer). After an upgrade to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, it may also be necessary to [flush the replication buffer](#managing-replication-buffer-files) to the DMA.
 
 ## Viewing all active replication buffers
 
@@ -71,5 +71,5 @@ When a replication buffer saves files to disk, those files are located in `C:\Sk
 
     > [!IMPORTANT]
     >
-    > - DataMiner can only flush the ReplicationBuffer if the replication connection for that specific subscription is active. If not, the flush will fail and the file will remain.
+    > - DataMiner can only flush the replication buffer if the replication connection for that specific subscription is active. If not, the flush will fail and the file will remain.
     > - Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
