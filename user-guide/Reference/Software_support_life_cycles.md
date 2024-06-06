@@ -6,47 +6,27 @@ uid: Software_support_life_cycles
 
 ## DataMiner support life cycle policy
 
-### Main Release track
+If you are following the **Feature Release** track, you always need to **upgrade to the latest version** to get the latest security updates. If you do not want to upgrade to a new Feature Release version but do want to get the latest security updates, you will need to switch to the Main Release track instead.
 
-| Version | Regular updates until | Supported until | Limited support until | Not supported from |
-|---------|-----------------------|-----------------|-----------------------|--------------------|
-| 10.4.0  | 21 Nov 2025           | 26 Feb 2027     | 25 Feb 2028           | 25 Feb 2028        |
-| 10.3.0  | 15 Nov 2024           | 27 Feb 2026     | 26 Feb 2027           | 26 Feb 2027        |
-| 10.2.0  | 24 Nov 2023           | 28 Feb 2025     | 27 Feb 2026           | 27 Feb 2026        |
-| 10.1.0  | 18 Nov 2022           | 23 Feb 2024     | 28 Feb 2025           | 28 Feb 2025        |
-| 10.0.0  | 17 Dec 2021           | 24 Feb 2023     | 23 Feb 2024           | 23 Feb 2024        |
-| 9.6.0   | -                     | 25 Feb 2022     | 24 Feb 2023           | 24 Feb 2023        |
+For the **Main Release** track, the following support is available:
+
+| Version | Regular updates until | Supported until     | *Limited support until* |
+|---------|-----------------------|---------------------|-------------------------|
+| 10.4.0  | 21 Nov 2025           | **26 Feb 2027**     | *25 Feb 2028*           |
+| 10.3.0  | 15 Nov 2024           | **27 Feb 2026**     | *26 Feb 2027*           |
+| 10.2.0  | 24 Nov 2023           | **28 Feb 2025**     | *27 Feb 2026*           |
+| 10.1.0  | 18 Nov 2022           | **23 Feb 2024**     | *28 Feb 2025*           |
+
+Older versions are no longer supported.
 
 Legend:
 
 - **Regular updates**: Monthly cumulative updates containing fixes and security updates.
 - **Supported**: Security updates and critical bug fixes only (as required).
 - **Limited support**: Online technical help without software updates for fixes, security updates, or features.
-- **Not supported**: No more support is available.
 
 > [!NOTE]
->
-> - For security updates with third-party dependencies that are only compatible with a later version of DataMiner, it will be necessary to upgrade to this later version.
-> - For the oldest supported version (currently 10.2.0), security updates will be published only when and as necessary. There will be no regular updates.
-
-> [!TIP]
-> See also [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
-
-### Feature Release track
-
-| Version | Regular upgrades until | Supported until | Limited support until | Not supported from |
-|---------|------------------------|-----------------|-----------------------|--------------------|
-| 10.4.x  | 15 Nov 2024            | 15 Nov 2024     | 25 Feb 2028           | 25 Feb 2028        |
-
-Legend:
-
-- **Regular upgrades**: Monthly upgrades are released with all the latest new features, fixes, and security updates.
-- **Supported**: Only the **latest Feature Release version** is supported. There are no more cumulative updates for a Feature Release version once the next Feature Release version has become available.
-- **Limited support**: Online technical help without software updates for fixes, security updates, or features.
-- **Not supported**: No more support is available.
-
-> [!NOTE]
-> If you are following the Feature Release track, you always need to upgrade to the latest version to get the latest security updates. If you do not want to upgrade to a new Feature Release version but do want to get the latest security updates, you will need to switch to the Main Release track instead.
+> For security updates with third-party dependencies that are only compatible with a later version of DataMiner, it will be necessary to upgrade to this later version.
 
 > [!TIP]
 > See also [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
