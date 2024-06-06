@@ -118,11 +118,11 @@ In some cases, SLLogCollector would not have the required permissions to access 
 
 In some cases, an exception could be thrown while the Profile Manager was being initialized.
 
-#### Service & Resource Management: SLNet handle leak when messages that had already been sent to the master agent were sent again [ID_39622]
+#### Service & Resource Management: SLNet handle leak when messages were sent directly to the master agent [ID_39622]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
-When SRM messages that had already been sent to the master agent were sent again, SLNet could experience a handle leak.
+When SRM messages were sent directly to the master agent, SLNet could experience a handle leak.
 
 #### Table row discrepancy between SLElement and SLProtocol [ID_39645]
 
