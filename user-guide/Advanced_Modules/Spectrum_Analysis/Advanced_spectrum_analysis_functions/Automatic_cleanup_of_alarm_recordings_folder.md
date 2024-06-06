@@ -14,7 +14,7 @@ When the folder *C:\\Skyline DataMiner\\Spectrum Alarm Recordings\\* is full, Da
 
 Each time a new alarm recording has been stored in the above-mentioned folder, DataMiner will check the total size of all files in the folder. If that total size exceeds the configured maximum size, DataMiner will execute the following steps until the total size of all files in the folder is less than the configured maximum size.
 
-1. Remove all alarm recordings for alarms that have an ID that is less than the smallest alarm ID in the database.
+1. Prior to DataMiner version 10.4.8, remove all alarm recordings for alarms that have an ID that is less than the smallest alarm ID in the database.
 
 1. Remove all alarm recordings for alarms of severity “Warning”, unless they are less than 2 weeks old.
 
