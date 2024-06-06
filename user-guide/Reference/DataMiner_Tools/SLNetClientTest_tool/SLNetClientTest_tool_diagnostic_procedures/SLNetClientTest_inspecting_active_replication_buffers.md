@@ -4,7 +4,9 @@ uid: SLNetClientTest_inspecting_active_replication_buffers
 
 # Inspecting the active replication buffers
 
-To solve issues with replication buffering, it is possible to inspect the active replication buffers with the SLNetClientTest tool, and also to drop a specific buffer.
+To solve issues with replication buffering, it is possible to [inspect the active replication buffers](#inspecting-the-active-replication-buffers) with the SLNetClientTest tool, and also to [drop a specific buffer](#dropping-a-replication-buffer).
+
+## Viewing all active replication buffers
 
 To view a list of all active replication buffers:
 
@@ -13,6 +15,8 @@ To view a list of all active replication buffers:
 1. In the *Diagnostics* menu, select *Caches & Subscriptions* > *ReplicationBufferStats*.
 
    In the *Properties* tab of the main window, a new message will appear that lists the number of active buffers. For detailed information, double-click the message, or select the message and check the *Text* pane on the right.
+
+## Dropping a replication buffer
 
 To drop one specific replication buffer:
 
