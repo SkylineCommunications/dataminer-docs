@@ -155,7 +155,6 @@ items:
       - name: SLA reporting
         topicUid: SLA_reporting
   - name: Correlation
-    topicUid: correlation
     items:
       - name: About DataMiner Correlation
         topicUid: About_DMS_Correlation
@@ -443,8 +442,6 @@ items:
                 topicUid: LineAndAreaChart
               - name: Pie & donut chart
                 topicUid: PieAndDonutChart
-              - name: Bar chart (horizontal)
-                topicUid: BarChartHorizontal
           - name: Other
             items:
               - name: Grid
@@ -582,6 +579,8 @@ items:
                         topicUid: Ad_hoc_Tutorials
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
+                      - name: Building a GQI data source that retrieves data from a DMS
+                        topicUid: Ad_hoc_Tutorials_GQIDMS
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
@@ -1226,7 +1225,9 @@ items:
       - name: SRM code snippets
         topicUid: SRM_code_snippets
       - name: Advanced SRM settings
-        topicUid: Advanced_SRM_settings
+        items:
+          - name: Function resource settings
+            topicUid: Function_resource_settings
       - name: SRM reporting
         topicUid: SRM_reporting
         items:
@@ -1287,6 +1288,10 @@ items:
             topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
           - name: Creating a simulated spectrum element
             topicUid: Creating_a_simulated_spectrum_element
+      - name: Tutorials
+        items:
+            - name: Monitoring a spectrum signal by comparing it with thresholds
+              topicUid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
   - name: Ticketing
     topicUid: ticketing
     items:

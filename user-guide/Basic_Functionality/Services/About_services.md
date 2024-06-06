@@ -10,7 +10,7 @@ DataMiner [services](#services) allow you to view your system from a service per
 
 In DataMiner, you can build a service layer on top of your devices. That way, operators can be offered a “service-centric” view of the network infrastructure.
 
-![](~/user-guide/images/services_concept.jpg)
+![](~/user-guide/images/services_concept.png)
 
 Services are displayed with the following icon in DataMiner:
 

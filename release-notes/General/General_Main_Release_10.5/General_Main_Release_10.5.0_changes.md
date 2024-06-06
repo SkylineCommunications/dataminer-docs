@@ -126,19 +126,21 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278]
+#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278] [ID_39802] [ID_39803]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
 <!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
+<!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.6.8
-- DataMiner CoreGateway: version 2.14.6
-- DataMiner FieldControl: version 2.10.5
-- DataMiner Orchestrator: version 1.5.8
-- DataMiner SupportAssistant: version 1.6.8
+- DataMiner ArtifactDeployer: version 1.7.1
+- DataMiner CoreGateway: version 2.14.7
+- DataMiner FieldControl: version 2.10.6
+- DataMiner Orchestrator: version 1.6.0
+- DataMiner SupportAssistant: version 1.6.9
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
@@ -447,6 +449,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -514,6 +522,12 @@ This issue has now been fixed.
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
+#### API Gateway: Problem when processing a large number of parallel calls [ID_39550]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When API Gateway had to process a large number of parallel calls, up to now, this could lead to a threading problem, causing clients to time out and get disconnected.
+
 #### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -521,3 +535,40 @@ In some cases, an `InvalidOperationException` could be thrown when a .NET Framew
 When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
 
 From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
+
+#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
+
+#### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
+
+#### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+After a quarantine had been forced during a booking update, in some cases, the SRM framework would stop responding.
+
+See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
+
+#### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+In some cases, SLProtocol would stop working after it had tried to read beyond the size of a table.
+
+#### GQI: Problem when performing a join operation [ID_39844]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a join operation was performed with two of the following data sources, in some cases, the GQI query would fail and return a `Cannot add custom table to the registry as the registry is already built.` error.
+
+- *Get alarms*
+- *Get behavioral change events*
+- *Get trend data pattern events*
+- *Get trend data patterns*

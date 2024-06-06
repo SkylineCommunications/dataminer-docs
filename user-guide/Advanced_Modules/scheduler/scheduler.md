@@ -6,6 +6,8 @@ uid: scheduler
 
 DataMiner Scheduler allows you to manage a list of scheduled tasks that are to be executed by DataMiner.
 
+![Scheduler](~/user-guide/images/Scheduler.png)<br>*DataMiner Scheduler in DataMiner 10.4.5*
+
 Find out more in the following topics:
 
 - [About the Scheduler module](xref:About_the_Scheduler_module)
