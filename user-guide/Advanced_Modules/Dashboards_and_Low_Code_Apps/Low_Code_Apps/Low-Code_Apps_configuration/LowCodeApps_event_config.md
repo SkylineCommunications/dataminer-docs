@@ -4,7 +4,7 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-You can configure actions for different types of events in the DataMiner Low-Code Apps. These are the main types:
+You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
 - *On open*: This event takes place when a page or panel is opened and all components are done loading. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
 
