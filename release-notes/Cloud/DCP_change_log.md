@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### TBD - Enhancement -  Rename 'Nodes' page to 'DxMs' in Admin app  [ID_39874]
+#### TBD - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
 
-What was previously called the 'Nodes' page has been renamed to the 'DxMs' page to be more in line with the actual functionality of the page in the Admin app.
+In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
 
 #### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
 
