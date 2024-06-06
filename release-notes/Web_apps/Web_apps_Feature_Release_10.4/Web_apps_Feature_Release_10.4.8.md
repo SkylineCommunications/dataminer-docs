@@ -70,6 +70,12 @@ When a *Form* component on a dashboard or in a low-code app had to show the same
 
 In some cases, a *Form* component would not be able to create instances when the behavior definition contained fields with default values that were not linked to the initial state.
 
+#### Dashboards app & Low-Code Apps: Problems when configuring a Node edge graph component [ID_39821]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, a run-time error could occur when configuring a *Node edge graph* component.
+
 #### Dashboards app - Column & bar chart component: Chart and legend would show different colors after removing a bar [ID_39847]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
