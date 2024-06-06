@@ -40,6 +40,12 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 In some cases, SLLogCollector would not have the required permissions to access process objects or execute certain WMI queries. As a result, `Access is denied` errors would be added to the *SLLogCollector.txt* log file.
 
+#### Service & Resource Management: SLNet handle leak when messages that had already been sent to the master agent were sent again [ID_39622]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When SRM messages that had already been sent to the master agent were sent again, SLNet could experience a handle leak.
+
 #### Table row discrepancy between SLElement and SLProtocol [ID_39645]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
