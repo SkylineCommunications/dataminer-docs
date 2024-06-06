@@ -9,6 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 30 May 2024 - Enhancement - Home - Create DaaS password confirmation [ID_39865]
+
+When deploying a DaaS. You will now be asked to confirm your password.
+
+#### 30 May 2024 - Fix - 	Admin - Opening in desktop app [ID_39838]
+
+The button 'Open in desktop app' has been fixed to open Cube from the DMS overview page.
+
+#### 30 May 2024 - Fix - Admin - Zero credits not showing [ID_39866]
+
+On the Admin organization overview page. You will now be able to see how many credits you have. Even when you have none.
+
+#### 30 May 2024 - Fix - Catalog - Version - SVN link & disable button [ID_39816]
+
+The SVN link has been changed to use the version nummber. The deploy button will be disabled when this occurs.
+
 #### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the folder `/Documents/DMA_COMMON_DOCUMENTS/`, so that it is possible to access the documents available in Cube.
