@@ -85,7 +85,7 @@ To configure an event to open a panel of the app:
 
    - *As overlay*: If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside it. This is the default setting.
 
-   - *Draggable*: This option is only available if you have selected *in a popup* in the *Where* box. When the mode is set to *Draggable*, you can move the panel by left-clicking and dragging the header of the panel to its destination.
+   - *Draggable*: This option is only available when *Where* is set to *in a popup*. When the panel is draggable, you can move the panel by left-clicking and dragging the header of the panel to its destination.
 
    > [!NOTE]
    > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, to set the panel to open as an overlay, toggle the *As overlay* button.
