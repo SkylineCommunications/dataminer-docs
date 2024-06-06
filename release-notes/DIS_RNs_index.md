@@ -7,5 +7,4 @@ uid: DIS_RNs_index
 These release notes contain all new features, enhancements, and fixes for DataMiner Integration Studio.
 
 > [!NOTE]
->
-> - It is advised to always install official release versions.
+> It is advised to always install official release versions.

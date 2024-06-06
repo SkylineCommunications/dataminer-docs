@@ -88,14 +88,14 @@ If no matching page can be found, you will be directed to a page explaining [how
 
 C# helper classes are automatically added or updated each time you switch from an XML editor tab to a C# editor tab (or vice versa). If, however, you want to force an ad hoc update of all C# helper classes, you can select *Protocol \> Generate QAction Helper Code*.
 
-## Protocol \> Convert to Solution...
+## Protocol \> Convert to Solution
 
 If you want to convert the standalone protocol XML file you opened in the XML editor to a protocol solution, select *Protocol \> Convert to Solution...*
 
-## Check for updates...
+## Check for updates
 
 > [!IMPORTANT]
-> This feature has been removed from DIS v3.0 onwards as DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
+> This feature has been removed from DIS v3.0 onwards. DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
 
 If you click *Check for updates…*, the *DIS Update* dialog box will appear. This dialog box will indicate whether or not a new DIS version is available.
 

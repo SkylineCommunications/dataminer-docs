@@ -31,9 +31,9 @@ https://*.skyline.be/*
 > Make sure your version of Visual Studio is up to date. If you have an outdated version, the installer may detect missing prerequisites and therefore prevent you from installing the extension.
 
 > [!IMPORTANT]
-> DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise.
-> Visual Studio Code and Visual Studio for Mac are not supported.
-> DIS currently does not work with ARM64.
+>
+> - DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise. Visual Studio Code and Visual Studio for Mac are not supported.
+> - DIS currently does not work with ARM64.
 
 ### Required user permissions
 

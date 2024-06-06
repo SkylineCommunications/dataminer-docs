@@ -10,9 +10,9 @@ If you open a protocol XML file or an Automation script XML file in Microsoft Vi
 
 > [!NOTE]
 >
-> - To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.
-> - To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
-> - To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
+> - To create a new protocol XML file, go to *File > New > File > General > DataMiner*, select *DataMiner Protocol Template*, and click *Open*.
+> - To create a new Automation script XML file, select *File > New > File > General > DataMiner*, select *DataMiner Automation Script Template*, and click *Open*.
+> - To create a new function XML file, select *File > New > File > General > DataMiner*, select *DataMiner Function Template*, click *Open*, specify the function file version, select the associated protocol XML file, and click *OK*.
 
 ## File tab header
 
@@ -113,7 +113,7 @@ When you publish a protocol or an Automation script, DIS will create either a *.
 ### Update
 
 > [!IMPORTANT]
-> This feature has been removed from DIS v3.0 onwards as DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
+> This feature has been removed from DIS v3.0 onwards. DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
 
 If DataMiner Integration Studio is set to check for updates, an *Update* button will appear if a newer version of the *DataMinerIntegrationStudio.vsix* file is available.
 

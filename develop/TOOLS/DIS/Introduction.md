@@ -22,11 +22,11 @@ Navigate through complex scripts and connectors effortlessly. Our intuitive tool
 
 ### Effortless editing
 
-Say goodbye to manual coding and embrace a more intuitive approach. DataMiner Integration Studio offers custom-designed UIs, that allows you to **switch between raw code and graphical views**. Benefit from code completion and generation shortcuts, and leverage code snippets for increased productivity and consistency.
+Say goodbye to manual coding and embrace a more intuitive approach. DataMiner Integration Studio offers custom-designed UIs that allow you to **switch between raw code and graphical views**. Benefit from code completion and generation shortcuts, and leverage code snippets for increased productivity and consistency.
 
 ### Seamless import methods
 
-Simplify integration with easy import of definition files such as SNMP, XML, JSON, and WSDL. Automatically **generate code based on the imported information**, saving time and effort. The hierarchical structure allows for easy selection of metrics and data elements to include in your connector or script.
+Simplify integration by importing definition files in SNMP, XML, JSON, and WSDL format. Automatically **generate code based on the imported information**, saving time and effort. The hierarchical structure allows for easy selection of metrics and data elements to include in your connector or script.
 
 ### Real-time debugging
 
@@ -38,17 +38,17 @@ Deliver high-quality, dependable connectors with our built-in QA Validator. With
 
 ## Getting started with DIS
 
-Discover the power of DataMiner Integration Studio. Install and configure the extension, delve into driver development concepts, and enroll in our comprehensive course to maximize your DataMiner System’s potential.
+Discover the power of DataMiner Integration Studio. Install and configure the extension, delve into connector development concepts, and enroll in our comprehensive course to maximize your DataMiner System's potential.
 
-- [Installing and configuring DataMiner Integration Stduio](xref:Installing_and_configuring_the_software)
-- [Driver development - Concepts](https://community.dataminer.services/courses/dataminer-connector-integration-http-basics/)
+- [Installing and configuring DataMiner Integration Studio](xref:Installing_and_configuring_the_software)
+- [Connector development - Concepts](https://community.dataminer.services/courses/dataminer-connector-integration-http-basics/)
 - [DataMiner Integration Studio course](https://community.dataminer.services/courses/dataminer-integration-studio/)
 
 ## Questions
 
-Still have some unanswered questions? Explore our extensive Q&A section, brimming with insightful answers contributed by our vibrant community. In the overview below you can find questions related to:
+Do you still have some unanswered questions? Explore our extensive Q&A section, brimming with insightful answers contributed by our vibrant community. In the overview below, you can find questions related to:
 
 - [DataMiner Integration Studio](https://community.dataminer.services/questions/?qtag%5B%5D=883&order_by=newest)
-- [DataMiner drivers](https://community.dataminer.services/questions/?qtag%5B%5D=794&qtag%5B%5D=152&qtag%5B%5D=812&qtag%5B%5D=601&qtag%5B%5D=638&qtag%5B%5D=640&order_by=newest&qtag%5B%5D=126)
+- [DataMiner connectors](https://community.dataminer.services/questions/?qtag%5B%5D=794&qtag%5B%5D=152&qtag%5B%5D=812&qtag%5B%5D=601&qtag%5B%5D=638&qtag%5B%5D=640&order_by=newest&qtag%5B%5D=126)
 - [Automation scripts](https://community.dataminer.services/questions/?qtag%5B%5D=804&qtag%5B%5D=576&order_by=newest)
 - [SRM functions](https://community.dataminer.services/questions/?qtag%5B%5D=302&order_by=newest&qtag%5B%5D=146)
