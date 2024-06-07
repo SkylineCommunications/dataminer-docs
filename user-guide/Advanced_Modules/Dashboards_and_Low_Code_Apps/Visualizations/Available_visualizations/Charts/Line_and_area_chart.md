@@ -228,6 +228,9 @@ When visualized on a mobile device<!--RN 39586-->:
 
 - You can move left or right by sliding one finger across the component.
 
+> [!NOTE]
+> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using a query data feed](#configuration-with-query-data-feed), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
+
 ## Examples
 
 ### Trend graph showing DMA KPIs
