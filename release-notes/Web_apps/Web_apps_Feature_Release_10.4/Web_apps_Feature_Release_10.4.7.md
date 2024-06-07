@@ -2,17 +2,17 @@
 uid: Web_apps_Feature_Release_10.4.7
 ---
 
-# DataMiner web apps Feature Release 10.4.7 – Preview
+# DataMiner web apps Feature Release 10.4.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.7](xref:General_Feature_Release_10.4.7).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID_39451] [ID_39638]](#low-code-apps---interactive-automation-scripts-ui-can-now-be-hidden-id_39451-id_39638)
 
 ## New features
 
