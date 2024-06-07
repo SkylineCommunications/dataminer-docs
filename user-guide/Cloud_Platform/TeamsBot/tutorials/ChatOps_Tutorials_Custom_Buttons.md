@@ -35,7 +35,7 @@ Later in this tutorial, you will trigger a custom command from the *Custom Comma
 
 > [!NOTE]
 > To learn more about this package, refer to its [README file](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples/README.md).
-
+   
 1. Go to <https://catalog.dataminer.services/details/package/5863>.
 
    ![Custom Command Examples page in Catalog](~/user-guide/images/chatops_notification_part_02_02_001.png)
@@ -53,6 +53,8 @@ Later in this tutorial, you will trigger a custom command from the *Custom Comma
 ## Step 3: Fetch the teams and the channels of a team
 
 To be able to send a notification in a channel later in this tutorial, you will first need to fetch the teams and the channels of a team, or create new ones if you do not have any yet.
+
+1. In DataMiner Cube, open the Automation module.
 
 1. Fetch or create the teams:
 
