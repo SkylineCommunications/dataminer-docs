@@ -50,33 +50,6 @@ Later in this tutorial, you will trigger a custom command from the *Custom Comma
 
    ![Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_003.png)
 
-1. Go to the [Admin app](https://admin.dataminer.services) to copy the URL for your DMS:
-
-   1. Make sure the correct organization is selected in the top-right corner.
-
-      If you need to change the selected organization, click the displayed organization name and select the correct organization in the menu.
-
-   1. In the pane on the left, select your DMS, and select *Overview*.
-
-   1. Copy the URL in the address bar of the browser.
-
-      This URL contains your system's organization ID and DMS ID.
-
-   ![How to find IDs in the Admin app](~/user-guide/images/chatops_notification_part_02_02_004.gif)
-
-1. In DataMiner Cube, open the Automation module.
-
-1. Select the *Take Ownership of Alarm* script.
-
-1. Select the *Send Channel Notification Asking To Take Ownership of an Alarm* script.
-
-1. Like for the previous script, locate the lines illustrated below, enter the organization ID and the DMS ID, and save the script:
-
-   ```csharp
-   var organizationId = Guid.Parse("");
-   var dmsId = Guid.Parse("");
-   ```
-
 ## Step 3: Fetch the teams and the channels of a team
 
 To be able to send a notification in a channel later in this tutorial, you will first need to fetch the teams and the channels of a team, or create new ones if you do not have any yet.
