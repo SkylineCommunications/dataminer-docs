@@ -166,6 +166,14 @@ In some cases, SLNet would execute booking events in incorrect order.
 
 In some cases, a fatal error could occur in SLASPConnection when an email message could not be delivered.
 
+#### SLAnalytics - Alarm template monitoring: Problem when processing template removals [ID_39819]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When all elements were removed from an alarm template, SLAnalytics would correctly remove the template from its cache. However, when that entire alarm template was removed later on, SLAnalytics would incorrectly add an incorrect version of that template to its cache.
+
+Also, when a user created a template and then removed it without assigning elements to it, SLAnalytics would add it to its cache, but would never remove it from its cache.
+
 #### Problem with SLProtocol when invalid optional parameters were defined on a response [ID_39830]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->

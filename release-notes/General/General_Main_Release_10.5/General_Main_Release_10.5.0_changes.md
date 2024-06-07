@@ -556,6 +556,14 @@ After a quarantine had been forced during a booking update, in some cases, the S
 
 See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
 
+#### SLAnalytics - Alarm template monitoring: Problem when processing template removals [ID_39819]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When all elements were removed from an alarm template, SLAnalytics would correctly remove the template from its cache. However, when that entire alarm template was removed later on, SLAnalytics would incorrectly add an incorrect version of that template to its cache.
+
+Also, when a user created a template and then removed it without assigning elements to it, SLAnalytics would add it to its cache, but would never remove it from its cache.
+
 #### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
