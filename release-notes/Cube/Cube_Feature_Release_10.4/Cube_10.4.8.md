@@ -75,11 +75,11 @@ To configure for which parameters those features are enabled, do the following:
 
 ### Fixes
 
-#### Cube logging: Incorrect `CubeHost: Unable to load assembly` errors [ID_39767]
+#### Incorrect `CubeHost: Unable to load assembly` errors in Cube log files on client computers [ID_39767]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-Up to now, incorrect `CubeHost: Unable to load assembly` errors mentioning the following DLL files would be added to the Cube logging:
+On client computers, up to now, incorrect `CubeHost: Unable to load assembly` errors mentioning the following DLL files would be added to the log files in the `%LocalAppData%/Skyline/DataMiner/DataMinerCube/Logs` folder:
 
 - Google.Protobuf
 - System.Buffers
