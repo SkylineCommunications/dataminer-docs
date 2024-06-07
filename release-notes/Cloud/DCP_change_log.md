@@ -11,11 +11,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
-A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
 
-These IDs, that would have to be hardcoded before, can be used for the buttons added in adaptive cards.
+These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
 
-You can fetch them by using the following example:
+You can fetch them using the following example:
+
 ````cs
 var chatIntegrationHelper = new ChatIntegrationHelperBuilder().Build();
 try
