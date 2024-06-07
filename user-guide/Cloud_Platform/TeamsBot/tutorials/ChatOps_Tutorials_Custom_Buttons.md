@@ -68,17 +68,6 @@ Later in this tutorial, you will trigger a custom command from the *Custom Comma
 
 1. Select the *Take Ownership of Alarm* script.
 
-1. Locate the lines illustrated below, enter the organization ID and the DMS ID, and save the script:
-
-   ```csharp
-   var organizationId = Guid.Parse("");
-   var dmsId = Guid.Parse("");
-   ```
-
-   ![How to fill in the IDs in the Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_005.gif)
-
-   ![Take Ownership of Alarm CustomCommand Example script with IDs filled in](~/user-guide/images/chatops_notification_part_02_02_006.png)
-
 1. Select the *Send Channel Notification Asking To Take Ownership of an Alarm* script.
 
 1. Like for the previous script, locate the lines illustrated below, enter the organization ID and the DMS ID, and save the script:
