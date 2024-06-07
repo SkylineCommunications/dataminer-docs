@@ -4,7 +4,7 @@ uid: Creating_your_first_element_on_a_DaaS_system
 
 # Creating your first element on a DaaS system
 
-This tutorial guides you through setting up a free DataMiner Community Edition system as a service and creating your first Microsoft Platform element. With this element, you will be able to monitor your own PC.
+This tutorial guides you through setting up a free DataMiner Community Edition system as a service and creating your first Skyline Universal Weather element. With this element, you will be able to monitor the weather conditions at a location of your choice.
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.6.
 
@@ -19,10 +19,10 @@ Estimated duration: 15 minutes
 The tutorial consists of the following steps:
 
 - [Step 1: Create a staging DataMiner System in the cloud](#step-1-create-a-staging-dataminer-system-in-the-cloud)
-- [Step 2: Deploy the 'Microsoft Platform' protocol from the Catalog](#step-2-deploy-the-microsoft-platform-protocol-from-the-catalog)
+- [Step 2: Deploy the 'Skyline Universal Weather' protocol from the Catalog](#step-2-deploy-the-skyline-universal-weather-protocol-from-the-catalog)
 - [Step 3: Install the DataMiner Cube desktop application](#step-3-install-the-dataminer-cube-desktop-application)
 - [Step 4: Access your newly created DaaS system for the first time](#step-4-access-your-newly-created-daas-system-for-the-first-time)d
-- [Step 5: Create an element to monitor your PC](#step-5-create-an-element-to-monitor-your-pc)
+- [Step 5: Create an element to monitor weather conditions](#step-5-create-an-element-to-monitor-weather-conditions)
 
 ## Step 1: Create a staging DataMiner System in the cloud
 
@@ -58,15 +58,17 @@ Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commerci
 > [!TIP]
 > See also: [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services)
 
-## Step 2: Deploy the 'Microsoft Platform' protocol from the Catalog
+## Step 2: Deploy the 'Skyline Universal Weather' protocol from the Catalog
 
-Now that you have set up your staging DataMiner System, add the *Microsoft Platform* protocol (also known as connector), through which your Microsoft Platform element will communicate with your DMA.
+Now that you have set up your staging DataMiner System, add the *Skyline Universal Weather* protocol (also known as connector), through which your element will communicate with your DMA.
 
-1. Look up the [*Microsoft Platform* connector](https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f) in the DataMiner Catalog.
+1. Look up the [*Skyline Universal Weather* connector](https://catalog.dataminer.services/details/6664b1b8-6975-4990-bb97-6df0b0239e2e) in the DataMiner Catalog.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Go to the *Versions* tab.
 
-   ![Deploy Microsoft Platform connector](~/user-guide/images/Microsoft_Platform_Connector.png)
+1. Click the sideward arrow next to *1.0.4.6* and select *Deploy*.
+
+   ![Deploy Skyline Universal Weather connector](~/user-guide/images/Skyline_Universal_Weather_Connector.png)
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
@@ -107,36 +109,28 @@ Now that you have installed DataMiner Cube, you can use it to access your new Da
 > [!TIP]
 > See also: [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS)
 
-## Step 5: Create an element to monitor your PC
+## Step 5: Create an element to monitor weather conditions
 
-Finally, you will create an element that allows you to monitor your own PC. This element will use the *Microsoft Platform* protocol you deployed earlier.
+Finally, you will create an element that allows you to monitor weather conditions. This element will use the *Skyline Universal Weather* protocol you deployed earlier.
 
 1. In the Cube sidebar, go to *Apps* > *Protocols & Templates*.
 
-1. Under *Protocols*, select the *Microsoft Platform* protocol.
+1. Under *Protocols*, select the *Skyline Universal Weather* protocol.
 
 1. Right-click in the *Elements* column, and select *New element*.
-
-   ![Add Microsoft Platform element](~/user-guide/images/Microsoft_Platform_Element.png)
 
    A card will open.
 
 1. Specify the following information:
 
-   - *General* > *Name*: `My Windows server`
+   - *General* > *Name*: `Weather conditions`
 
-   - *General* > *Description*: `Element to monitor my PC`
+   - *General* > *Description*: `Element to monitor weather conditions`
 
-   - *SNMP connection* > *IP address/host*: `127.0.0.1`
-
-   - *Serialconnection* > *IP address/host*: `127.0.0.1`
+   - *HTTP connection* > *IP address/host*: `xxx`
 
 1. Click *Create* to add the element.
 
-You have now created an element that allows you to monitor your PC.
+You have now created an element that allows you to monitor the weather conditions of a location of your choice.
 
-Opening the element card will allow you to view the current value of a multitude of parameters (e.g. total processor load, available physical memory, running processes and services, disk information, and much more).
-
-![Monitor PC](~/user-guide/images/Monitor_PC.png)
-
-If you want to monitor some of those parameters in real time, you can assign an alarm template to the element, and configure alarm thresholds per parameter. For more information, see [About alarm templates](xref:About_alarm_templates).
+Opening the element card will allow you to ...
