@@ -81,3 +81,9 @@ In some cases, a run-time error could occur when configuring a *Node edge graph*
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When, in edit mode, you removed a bar from a *Colum & bar chart* component, in some cases, the chart and the legend would show different colors.
+
+#### Dashboards app: Problem when updating the name of a dashboard folder while a dashboard was open [ID_39873]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you updated the name of a dashboard folder while a dashboard was open, in some cases, a `Dashboard has not been found` error would be thrown.
