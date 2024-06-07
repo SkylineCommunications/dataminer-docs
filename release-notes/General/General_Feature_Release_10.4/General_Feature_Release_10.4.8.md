@@ -124,6 +124,12 @@ In some cases, an exception could be thrown while the Profile Manager was being 
 
 When SRM messages were sent directly to the master agent, SLNet could experience a handle leak.
 
+#### Problem when restarting a DMA either manually or automatically [ID_39642]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a DataMiner Agent was restarted either manually or automatically, in some rare cases, it would not restart properly.
+
 #### Table row discrepancy between SLElement and SLProtocol [ID_39645]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->

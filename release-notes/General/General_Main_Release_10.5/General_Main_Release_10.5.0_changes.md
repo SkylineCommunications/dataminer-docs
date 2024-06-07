@@ -542,6 +542,12 @@ From now on, when an imported element is deleted and then imported again, SLAnal
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
+#### Problem when restarting a DMA either manually or automatically [ID_39642]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a DataMiner Agent was restarted either manually or automatically, in some rare cases, it would not restart properly.
+
 #### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
