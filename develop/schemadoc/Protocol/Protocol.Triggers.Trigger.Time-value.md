@@ -30,4 +30,4 @@ string
 
 ## Remarks
 
-Above example with the combination of timeout with the value attribute is broken since RN8550, DataMiner version 8.5.2.6. At this moment, the trigger on timeout will always go off when the polling of a parameter results in a timeout, regardless of what is configured in the value attribute.
+The combination of a timeout with the value attribute shown in the example above no longer works since DataMiner 8.5.2.6 (RN 8550). At present, the trigger on timeout will always go off when the polling of a parameter results in a timeout, regardless of what is configured in the value attribute.
