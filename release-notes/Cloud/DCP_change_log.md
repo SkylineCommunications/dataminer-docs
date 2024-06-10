@@ -37,9 +37,9 @@ The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications
 
 On the Admin organization overview page. You will now be able to see how many credits you have. Even when you have none.
 
-#### 30 May 2024 - Enhancement - Home - Create DaaS password confirmation [ID_39865]
+#### 30 May 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
 
-When deploying a DaaS. You will now be asked to confirm your password.
+When deploying a DaaS system, you will now be asked to confirm your password.
 
 #### 30 May 2024 - Fix - Admin - Opening in desktop app [ID_39838]
 
