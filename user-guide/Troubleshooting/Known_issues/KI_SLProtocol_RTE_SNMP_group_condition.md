@@ -18,7 +18,7 @@ In the affected protocol.xml, execute a group of type "poll trigger" instead of 
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet.<!-- RN 39885 -->
 
 ## Issue description
 
