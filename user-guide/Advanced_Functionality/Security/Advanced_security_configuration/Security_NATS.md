@@ -7,7 +7,7 @@ uid: Security_NATS
 By default, NATS does **not** employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we **strongly recommend enabling TLS encryption** for enhanced security within your NATS cluster.
 
 > [!CAUTION]
-> Enabling TLS encryption for NATS inter-node or DataMiner-to-NATS node communication requires the NATSForceManualConfig option. This option must be enabled to prevent DataMiner from overwriting your custom NATS configuration that includes encryption. Without this setting, any manual configurations for TLS encryption may be lost, leaving your communications unprotected. Ensure the **NATSForceManualConfig** option is enabled to maintain the integrity and security of your encrypted communications. See [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config).
+> To enable TLS encryption for NATS inter-node or DataMiner-to-NATS node communication, you will need to disable automatic NATS configuration as described below. Otherwise, DataMiner could overwrite your custom NATS configuration, leaving your communication unprotected. However, this means you will become responsible for maintaining the configuration of the [*SLCloud.xml*](xref:SLCloud_xml), [*nas.config*](xref:Investigating_NATS_Issues#nasconfig), and [*nats-server.config*](xref:Investigating_NATS_Issues#nats-serverconfig) files, as well as ensuring the synchronization of the credentials in the system.
 
 ## Enabling NATS inter-node TLS communication
 
@@ -77,8 +77,6 @@ A **NATS node** is always configured on the system where the DataMiner software 
 
 > [!IMPORTANT]
 > TLS encryption for communication between software and NATS nodes is available starting from DataMiner 10.4.3 [CU0]/10.5.0<!-- RN 38302 --> with support for CA-signed certificates (Certificate Authority-Signed Certificates). While support for self-signed certificates will be introduced later, keep in mind that for now only CA-signed certificates are supported and attempting to use self-signed certificates will result in DataMiner startup failures.
-
-### Configure the TLS certificate
 
 Since a **NATS node** is always configured on the system where the DataMiner software is hosted, each node must configure its own DataMiner-to-NATS TLS encryption.
 
