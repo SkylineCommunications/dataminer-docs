@@ -20,7 +20,7 @@ Estimated duration: 15 minutes.
 ## Overview
 
 - [Step 1: Follow the chat notifications tutorial](#step-1-follow-the-chat-notifications-tutorial)
-- [Step 2: Deploy the Custom Command Examples package from the Catalog and configure the scripts](#step-2-deploy-the-custom-command-examples-package-from-the-catalog-and-configure-the-scripts)
+- [Step 2: Deploy the Custom Command Examples package from the Catalog](#step-2-deploy-the-custom-command-examples-package-from-the-catalog)
 - [Step 3: Fetch the teams and the channels of a team](#step-3-fetch-the-teams-and-the-channels-of-a-team)
 - [Step 4: Adjust the chat notification Correlation rule to send a notification with custom buttons](#step-4-adjust-the-chat-notification-correlation-rule-to-send-a-notification-with-custom-buttons)
 - [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notification)
@@ -29,13 +29,13 @@ Estimated duration: 15 minutes.
 
 If you have not yet done so, go to [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification) and follow the tutorial. Otherwise, you can skip this step.
 
-## Step 2: Deploy the Custom Command Examples package from the Catalog and configure the scripts
+## Step 2: Deploy the Custom Command Examples package from the Catalog
 
 Later in this tutorial, you will trigger a custom command from the *Custom Command Examples* package with a button added to an Adaptive Card notification. To make this possible, this package first needs to be deployed.
 
 > [!NOTE]
 > To learn more about this package, refer to its [README file](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples/README.md).
-   
+
 1. Go to <https://catalog.dataminer.services/details/package/5863>.
 
    ![Custom Command Examples page in Catalog](~/user-guide/images/chatops_notification_part_02_02_001.png)
@@ -142,7 +142,7 @@ In this step, you will adjust the Correlation rule from the [Chat notifications]
 
 The notification in the channel contains a few buttons. Give them a try:
 
-- **Take ownership**: Executes the custom *Take Ownership of Alarm* command that you configured in [step 2](#step-2-deploy-the-custom-command-examples-package-from-the-catalog-and-configure-the-scripts).
+- **Take ownership**: Executes the custom *Take Ownership of Alarm* command from the Custom Command Examples package.
 
   With such commands, you can easily interact with the notification. The response of the custom command can again contain an adaptive card with buttons. This enables you to create user flows, while a notification can still be sent in another channel or private chat. This functionality offers a multitude of possibilities.
 
