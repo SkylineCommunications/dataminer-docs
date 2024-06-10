@@ -28,24 +28,26 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 To allow users to open a panel, you will need to configure an event with the action [Open a panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app).
 
-From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39632-->, a panel will remain open when you navigate to a different page using the sidebar.
+From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39632-->, an opened panel will by default remain open when you navigate to a different page using the sidebar. However, if a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is configured for an *On open* or *On close* page event, the panel will close.
 
 > [!NOTE]
->
-> - If a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is configured for an *On open* or *On close* page event, the panel will still close.
-> - To ensure older apps function correctly after upgrading to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 or higher, an *On close* page event with a [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is automatically configured for each page of apps created before the upgrade<!--RN 39632-->. As a result, panels will close when navigating away using the sidebar. New apps created after the upgrade will not have these events configured.
+> To ensure older apps function correctly after upgrading to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 or higher, an *On close* page event with a [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is automatically configured for each page of apps created before the upgrade<!--RN 39632-->. As a result, these older apps will continue to show the same behavior as before the upgrade: panels will close when you navigate to another page in the sidebar. New pages and new apps added after the upgrade will not have these events configured.
 
 ## Closing a panel
 
-There are several ways to close a panel:
+Users can close a panel in different ways:
 
-- Configure a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action (available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-->).
+- If the panel is opened as an overlay (i.e. the background is slightly blurred), clicking outside the panel will close it.
 
-  ![Close all panels](~/user-guide/images/CloseAllPanels.gif)<br>*Low-Code Apps module in DataMiner 10.4.7*
+- Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39632-->), a panel is closed when you navigate to a different page using the sidebar.
 
-- If the panel is opened as an overlay (i.e. the background is slightly blurred), click outside the panel to close it.
+- By means of an event that triggers one of the following actions:
 
-- Navigate to a different page using the sidebar (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39632-->).
+  - A [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) action.
+
+  - A [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action (available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-->).
+
+    ![Close all panels](~/user-guide/images/CloseAllPanels.gif)<br>*Low-Code Apps module in DataMiner 10.4.7*
 
 ## Deleting a panel
 
