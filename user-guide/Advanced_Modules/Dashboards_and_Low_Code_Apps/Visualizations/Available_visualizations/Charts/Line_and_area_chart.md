@@ -151,7 +151,7 @@ Query results are supported as a data feed for this component from DataMiner 10.
    > [!NOTE]
    >
    > - Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
-   > - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when a chart has data, but does not have lines configured, the component will add one line on the default X-axis and Y-axis. The columns are chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
+   > - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when a chart has data but does not have lines configured, the component will add one line on the default X-axis and Y-axis. The columns are chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
 
 1. Optionally, in the *Lines* section, select *+ Add line* to add additional lines to the chart. A maximum of 20 lines can be added to a chart.
 
