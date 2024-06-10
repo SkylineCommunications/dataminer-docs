@@ -9,17 +9,41 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 30 May 2024 - Enhancement - Home - Create DaaS password confirmation [ID_39865]
+#### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
-When deploying a DaaS. You will now be asked to confirm your password.
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
 
-#### 30 May 2024 - Fix - 	Admin - Opening in desktop app [ID_39838]
+These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
 
-The button 'Open in desktop app' has been fixed to open Cube from the DMS overview page.
+You can fetch them using the following example:
+
+````cs
+var chatIntegrationHelper = new ChatIntegrationHelperBuilder().Build();
+try
+{
+  var dmsIdentity = chatIntegrationHelper.GetDataMinerServicesDmsIdentity();
+  var organizationId = dmsIdentity.OrganizationId;
+  var dmsId = dmsIdentity.DmsId;
+}
+finally
+{
+  chatIntegrationHelper?.Dispose();
+}
+````
+
+The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions) have been updated accordingly.
 
 #### 30 May 2024 - Fix - Admin - Zero credits not showing [ID_39866]
 
 On the Admin organization overview page. You will now be able to see how many credits you have. Even when you have none.
+
+#### 30 May 2024 - Enhancement - Home - Create DaaS password confirmation [ID_39865]
+
+When deploying a DaaS. You will now be asked to confirm your password.
+
+#### 30 May 2024 - Fix - Admin - Opening in desktop app [ID_39838]
+
+The button 'Open in desktop app' has been fixed to open Cube from the DMS overview page.
 
 #### 30 May 2024 - Fix - Catalog - Version - SVN link & disable button [ID_39816]
 

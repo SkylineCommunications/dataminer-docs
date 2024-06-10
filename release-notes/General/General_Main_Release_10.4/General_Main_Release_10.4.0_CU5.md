@@ -52,6 +52,18 @@ In some cases, SLLogCollector would not have the required permissions to access 
 
 In some cases, an exception could be thrown while the Profile Manager was being initialized.
 
+#### Service & Resource Management: SLNet handle leak when messages were sent directly to the master agent [ID_39622]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When SRM messages were sent directly to the master agent, SLNet could experience a handle leak.
+
+#### Problem when restarting a DMA either manually or automatically [ID_39642]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When a DataMiner Agent was restarted either manually or automatically, in some rare cases, it would not restart properly.
+
 #### Table row discrepancy between SLElement and SLProtocol [ID_39645]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
@@ -63,6 +75,12 @@ Due to a locking issue, in some cases, SLProtocol and SLElement could end up wit
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When a table was fully included in a service or when a table exposed a DCF interface and had multiple columns that were being monitored, up to now, the severity that would bubble up to the service or interface level would incorrectly be the severity of the value that was last modified instead of the highest severity found in the table.
+
+#### SLNet would not process errors correctly when using FileInfoHelper [ID_39676]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When SLNet was using FileInfoHelper, in some cases, it would not process errors correctly.
 
 #### Service & Resource Management: Booking events would be executed in incorrect order [ID_39748]
 
