@@ -27,6 +27,6 @@ To do so:
 5. Restart the DataMiner software.
 
 > [!NOTE]
+>
 > - If you disable the SNMP agent function of all elements on a DataMiner Agent, third-party applications that poll DataMiner over SNMP will no longer receive responses from DataMiner, not even from elements of which the SNMP agent option is enabled on their virtual IP address.
 > - This feature is no longer available from DataMiner 9.5.14 onwards.
->

@@ -71,16 +71,25 @@ uid: Feature_overview
 | [Automatic backup of all dashboards and low-code apps during DMA upgrade or Web upgrade](xref:Upgrading_Downgrading_Webapps#automatic-backup) | 10.3.11/10.3.0 [CU8] |   |   |   |
 | [DataMiner web upgrades](xref:Upgrading_Downgrading_Webapps) | 10.3.0/10.3.3 |   |   |   |
 | Message throttling | 10.2.0/10.1.2 |   |   |   |
+| Template editor | 10.2.12 | ReportsAndDashboardsDynamicVisuals<br>ReportsAndDashboardsScheduler |   |   |
+| Template editor | 10.4.1/10.5.0 |   |   |   |
 
 ## Miscellaneous
 
 |Feature | Minimum DataMiner version | Soft-launch option | License | Database |
 |---|---|---|---|---|
+
+| Automatically generating service RCA chains based on connectivity for elements in a service | 9.5.2 |   |   |   |
+| Automatically generating service RCA chains based on connectivity for service templates | 9.5.3 |   |   |   |
+| BPA tests | 9.6.0 [CU23]/10.0.0 [CU11]/10.2.0 |   |   |   |
 | Configuring a cluster transition state timeout<br>MaintenanceSettings.xml (ClusterTransitionStateTimeout) | 10.0.3 |   |   |   |
 | Data Aggregator DxM | 10.2.12 |   |   |   |
 | DataMiner Object Models (DOM) | 10.1.2/10.2.0 |   |   |   |
+| DataMiner Probes | 8.5.4 |   |   |   |
 | Displaying DOM data in dashboards and low-code apps | 10.1.7 | DOMManager (prior to 10.3.6/10.4.0) |   |   |
 | DMS callback in ad hoc data sources |   |   |   |   |
-| gRPC connections between DMAs | 10.3.2/10.3.0 |   |   |   |
+| Failover using a shared hostname instead of virtual IP addresses | 10.2.0/10.1.8 |   |   |   |
+| gRPC connections between DMAs and between DMAs and client applications | 10.3.2/10.3.0 |   |   |   |
 | NATS | 10.1.0/10.1.1 |   |   |   |
+| NATS using TLS | 10.4.3 |   |   |   |
 | Real-time updates in ad hoc data sources | 10.4.4/10.5.0 |   |   |   |

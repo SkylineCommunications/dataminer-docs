@@ -28,4 +28,3 @@ To enable this functionality:
 
 > [!NOTE]
 > If a DMA was installed prior to DataMiner 9.6.11 and is upgraded to DataMiner 9.6.11 or higher, this functionality will remain enabled.
->

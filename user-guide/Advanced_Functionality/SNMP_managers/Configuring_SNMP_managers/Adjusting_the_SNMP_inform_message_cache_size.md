@@ -27,7 +27,7 @@ In the *DataMiner.xml* file, you can customize how many inform messages are stor
 5. Restart the DataMiner software.
 
 > [!NOTE]
+>
 > - If you set *informCacheSize* to 0, the cache will be disabled.
 > - Only inform messages are stored in this cache, not traps.
 > - When an inform message is discarded, this is logged in *SLSNMPManager.txt* on information level 3.
->

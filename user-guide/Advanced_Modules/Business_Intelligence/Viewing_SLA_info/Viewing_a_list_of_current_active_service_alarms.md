@@ -7,6 +7,7 @@ uid: Viewing_a_list_of_current_active_service_alarms
 To view a list of the alarms that are currently affecting the SLA, go to the *Active Service Alarms* page of the SLA element.
 
 > [!NOTE]
+>
 > - If you are using a version of the *Skyline SLA Definition Basic* protocol prior to 2.0.0.15, this page is named the *Affecting Alarms* page instead. The naming of the column headers is also different, mentioning “Affecting Alarm” instead of “Current Active Service Alarm”.
 > - For performance reasons, it is possible to keep active alarms from being displayed on this page. To do so, set *Active Alarms* to *Hide* on the *Advanced Configuration* page of the SLA. Note that you need at least security level 3 to change this setting.
 > - With recent versions of the *Skyline SLA Definition Basic* protocol, it is possible to hide outages that occur in the offline window and/or alarms that have no impact on the SLA because of violation filters. See [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA) and [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter).
