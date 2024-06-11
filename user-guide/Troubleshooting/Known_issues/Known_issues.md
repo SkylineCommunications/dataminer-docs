@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Deadlock in service loading during DataMiner startup](xref:KI_deadlock_service_loading) | From DataMiner 10.3.0 [CU10]/10.4.1 onwards | | June 11, 2024 |
 | [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition) |From DataMiner 10.4.4/10.4.0 [CU1]/10.3.0 [CU13] onwards | | June 6, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
