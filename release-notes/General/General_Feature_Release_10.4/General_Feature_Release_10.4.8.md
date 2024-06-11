@@ -158,7 +158,7 @@ When a table was fully included in a service or when a table exposed a DCF inter
 
 #### Problem with SLProtocol while processing a FillArray request [ID_39657]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLProtocol could stop working while processing a FillArray request.
 

@@ -78,6 +78,12 @@ Due to a locking issue, in some cases, SLProtocol and SLElement could end up wit
 
 When a table was fully included in a service or when a table exposed a DCF interface and had multiple columns that were being monitored, up to now, the severity that would bubble up to the service or interface level would incorrectly be the severity of the value that was last modified instead of the highest severity found in the table.
 
+#### Problem with SLProtocol while processing a FillArray request [ID_39657]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLProtocol could stop working while processing a FillArray request.
+
 #### SLNet would not process errors correctly when using FileInfoHelper [ID_39676]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
