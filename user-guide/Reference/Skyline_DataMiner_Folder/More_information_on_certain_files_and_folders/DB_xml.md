@@ -80,7 +80,7 @@ In the example below, two tables will be kept from being checked:
 > [!NOTE]
 > Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace “xxx” by the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
 >
-> However, note that this causes that that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
+> However, note that this causes that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
 
 ### Configuring how long parameter data are kept in the database for DMS Reporter
 
