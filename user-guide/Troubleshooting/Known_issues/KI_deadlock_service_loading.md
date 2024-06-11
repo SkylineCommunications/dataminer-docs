@@ -20,7 +20,7 @@ Restart the DataMiner Agent.
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.4.8/10.5.0.<!-- RN 39896 -->
 
 ## Description
 
