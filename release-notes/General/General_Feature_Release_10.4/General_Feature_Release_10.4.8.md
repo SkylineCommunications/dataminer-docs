@@ -106,6 +106,14 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 ### Fixes
 
+#### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When, on an offline Failover agent, SLNet failed to parse the *DMS.xml* file, up to now, the Failover setup would be ended.
+
+From now on, when SLNet fails to parse the *DMS.xml* file on an offline Failover agent, it will use the last-known Failover configuration it has stored in memory.
+
 #### SLLogCollector: 'Access is denied' errors [ID_39364]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
