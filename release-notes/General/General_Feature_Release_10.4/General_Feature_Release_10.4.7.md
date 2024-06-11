@@ -340,3 +340,9 @@ Also, when an SLNet connection was made to a FQDN which points to a loopback add
 <!-- MR 10.4.0 [CU5] - FR 10.4.7 [CU0] -->
 
 The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR TBD - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
