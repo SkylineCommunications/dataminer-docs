@@ -2,7 +2,7 @@
 uid: Restoring_the_database_only
 ---
 
-# Restoring the database only
+# Restoring the database only (legacy)
 
 If you do not use the Taskbar Utility to restore a DMA, there are two ways you can restore a legacy MySQL database:
 
