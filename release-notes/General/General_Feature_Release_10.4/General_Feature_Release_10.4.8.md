@@ -210,3 +210,9 @@ When a join operation was performed with two of the following data sources, in s
 - *Get behavioral change events*
 - *Get trend data pattern events*
 - *Get trend data patterns*
+
+#### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
