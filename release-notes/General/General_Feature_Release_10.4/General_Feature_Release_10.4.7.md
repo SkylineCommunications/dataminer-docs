@@ -343,6 +343,6 @@ The *Get trend data patterns* data source would incorrectly return the pattern I
 
 #### SLElement would leak memory while NATS was down [ID_39889]
 
-<!-- MR TBD - FR 10.4.7 [CU0] -->
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.

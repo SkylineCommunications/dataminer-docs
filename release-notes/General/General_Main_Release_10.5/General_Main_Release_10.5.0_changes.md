@@ -580,3 +580,9 @@ When a join operation was performed with two of the following data sources, in s
 - *Get behavioral change events*
 - *Get trend data pattern events*
 - *Get trend data patterns*
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
