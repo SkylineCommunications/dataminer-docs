@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 10 June 2024 - Fix - ToC checkbox - Fixed an issue with the ToC URL
+#### 10 June 2024 - Fix - ToC checkbox - Fixed an issue with the ToC URL [ID_39895]
 
 The link of our ToC was updated to the correct link.
 
