@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 10 June 2024 - Fix - ToC checkbox - Fixed an issue with the ToC URL [ID_39895]
 
-The link of our ToC was updated to the correct link.
+The link to the terms and conditions, displayed among others when a DaaS system was registered and an Agent was connected to dataminer.services, did not work correctly. This has now been resolved.
 
 #### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
