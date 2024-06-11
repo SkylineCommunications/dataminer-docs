@@ -16,7 +16,7 @@ Some DxMs are not included in the DataMiner Cloud Pack and must be deployed sepa
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *Nodes* page.
+1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *DxMs* page.
 
    This page lists the different nodes in the DMS, with all possible DxMs that can be deployed on each node.
 
@@ -30,7 +30,7 @@ To upgrade the DxMs used by the nodes in a DataMiner System connected to datamin
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *Nodes* page.
+1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *DxMs* page.
 
 1. To upgrade all DxMs installed on a node to the latest version, click *Install latest available versions*.
 
@@ -52,7 +52,7 @@ When a node in a DataMiner System is no longer used, you can remove it from data
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *Nodes* page.
+1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *DxMs* page.
 
 1. Click the garbage can icon next to the obsolete node.
 
