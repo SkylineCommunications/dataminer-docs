@@ -11,7 +11,7 @@ uid: KI_deadlock_service_loading
 
 ## Cause
 
-When services with duplicate IDs or services marked as deleted are loaded in, a deadlock can occur during startup of the SLDataMiner process.
+When services with duplicate IDs are loaded in, a deadlock can occur during startup of the SLDataMiner process.
 
 ## Workaround
 
