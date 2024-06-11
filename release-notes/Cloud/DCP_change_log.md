@@ -13,6 +13,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 From now on, if Remote Access to the web apps is enabled, this allows access to the entire folder `/Documents/`, so that it is possible to access the documents available in Cube. Previously, only the `/Documents/DMA_COMMON_DOCUMENTS/` folder was accessible.
 
+#### 10 June 2024 - Fix - Link to terms and conditions not working [ID_39895]
+
+The link to the terms and conditions, displayed among others when a DaaS system was registered and an Agent was connected to dataminer.services, did not work correctly. This has now been resolved.
+
 #### 10 June 2024 - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
 
 In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
