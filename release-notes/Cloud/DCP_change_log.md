@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39881]
+
+From now on, if Remote Access to the web apps is enabled, this allows access to the entire folder `/Documents/`, so that it is possible to access the documents available in Cube. Previously, only the `/Documents/DMA_COMMON_DOCUMENTS/` folder was accessible.
+
 #### 10 June 2024 - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
 
 In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
