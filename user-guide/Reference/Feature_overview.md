@@ -6,15 +6,15 @@ uid: Feature_overview
 
 ## Analytics
 
-|Feature | Minimum DataMiner version | Soft-launch option | License | Database |
-|---|---|---|---|---|
-| Alarm focus | 10.0.0/10.0.2 |   |   |   |
-| Automatic incident tracking | 10.1.0/10.0.11 |   |   |   |
-| Behavioral anomaly detection | 10.0.0/10.0.2 |   |   |   |
-| Pattern matching | 10.1.0/10.0.13 |   |   |   |
-| Proactive cap detection | 10.1.0/10.0.11 |   |   |   |
-| Trend icons |   |   |   |   |
-| Trend predictions |   |   |   |   |
+|Feature | Minimum DataMiner version | Soft-launch option | Note |
+|---|---|---|---|
+| Alarm focus | 10.0.0/10.0.2 |   |   |
+| Automatic incident tracking | 10.1.0/10.0.11 |   |   |
+| Behavioral anomaly detection | 10.0.0/10.0.2 |   |   |
+| Pattern matching | 10.1.0/10.0.13 |   |   |
+| Proactive cap detection | 10.1.0/10.0.11 |   |   |
+| Trend icons |   |   |   |
+| Trend predictions |   |   |   |
 
 ## Connectors
 
