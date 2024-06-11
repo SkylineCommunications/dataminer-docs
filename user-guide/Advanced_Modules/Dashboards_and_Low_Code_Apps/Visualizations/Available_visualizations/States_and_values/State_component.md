@@ -15,12 +15,12 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
-
    - Column parameter feeds are supported.
 
      > [!NOTE]
      > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+
+   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
    - This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
