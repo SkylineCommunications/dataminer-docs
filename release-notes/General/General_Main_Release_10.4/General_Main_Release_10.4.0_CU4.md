@@ -227,3 +227,9 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 When an SLNet connection was made to the IPv6 loopback address, the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to the primary IPv6 address.
 
 Also, when an SLNet connection was made to a FQDN which points to a loopback address, the system would incorrectly use a TCP connection to the primary IPv4 address.
+
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+In some cases, a deadlock would occur during startup of the SLDataMiner process when services with duplicate IDs were loaded in.

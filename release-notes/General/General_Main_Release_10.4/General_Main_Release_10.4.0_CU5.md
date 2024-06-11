@@ -125,3 +125,9 @@ The *Get trend data patterns* data source would incorrectly return the pattern I
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
+
+#### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.

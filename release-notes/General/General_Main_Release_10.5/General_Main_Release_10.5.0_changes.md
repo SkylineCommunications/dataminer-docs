@@ -581,20 +581,8 @@ When a join operation was performed with two of the following data sources, in s
 - *Get trend data pattern events*
 - *Get trend data patterns*
 
-#### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
-
-<!-- MR 10.5.0 - FR 10.4.8 -->
-
-In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
-
 #### SLElement would leak memory while NATS was down [ID_39889]
 
 <!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
-
-#### Problem during SLDataMiner startup when loading in services with duplicate IDs or services marked as deleted [ID_39896]
-
-<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
-
-When services with duplicate IDs or services marked as deleted were loaded in, in some cases, a deadlock would occur during startup of the SLDataMiner process.

@@ -213,6 +213,6 @@ When a join operation was performed with two of the following data sources, in s
 
 #### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.

@@ -159,3 +159,9 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 - When the BPA was run on a DMA using HTTPS, it would throw an exception when IIS had an HTTPS binding without a certificate configured.
 
   In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
+
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+In some cases, a deadlock would occur during startup of the SLDataMiner process when services with duplicate IDs were loaded in.

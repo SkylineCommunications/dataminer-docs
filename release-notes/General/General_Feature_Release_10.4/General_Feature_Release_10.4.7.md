@@ -347,8 +347,8 @@ The *Get trend data patterns* data source would incorrectly return the pattern I
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
 
-#### Problem during SLDataMiner startup when loading in services with duplicate IDs or services marked as deleted [ID_39896]
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
 
-<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
 
-When services with duplicate IDs or services marked as deleted were loaded in, in some cases, a deadlock would occur during startup of the SLDataMiner process.
+In some cases, a deadlock would occur during startup of the SLDataMiner process when services with duplicate IDs were loaded in.
