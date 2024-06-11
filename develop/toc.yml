@@ -5324,6 +5324,8 @@ items:
       items:
         - name: Introduction
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
+        - name: Features
+          topicUid: DataMiner_Integration_Studio_Features
         - name: Installation and configuration
           topicUid: Installing_and_configuring_the_software
           items:

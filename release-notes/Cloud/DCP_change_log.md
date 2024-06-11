@@ -9,9 +9,33 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### TBD - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
+#### 10 June 2024 - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
 
 In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
+
+#### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
+
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
+
+These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
+
+You can fetch them using the following example:
+
+````cs
+var chatIntegrationHelper = new ChatIntegrationHelperBuilder().Build();
+try
+{
+  var dmsIdentity = chatIntegrationHelper.GetDataMinerServicesDmsIdentity();
+  var organizationId = dmsIdentity.OrganizationId;
+  var dmsId = dmsIdentity.DmsId;
+}
+finally
+{
+  chatIntegrationHelper?.Dispose();
+}
+````
+
+The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions) have been updated accordingly.
 
 #### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
 

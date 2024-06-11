@@ -12,7 +12,7 @@ uid: Cube_Feature_Release_10.4.8
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Enabling or disabling SLAnalytics features either system-wide or for specific parameters [ID_39692]](#enabling-or-disabling-slanalytics-features-either-system-wide-or-for-specific-parameters-id_39692)
 
 ## New features
 
@@ -74,6 +74,19 @@ To configure for which parameters those features are enabled, do the following:
 *No enhancements have been added yet.*
 
 ### Fixes
+
+#### Incorrect `CubeHost: Unable to load assembly` errors in Cube log files on client computers [ID_39767]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+On client computers, up to now, incorrect `CubeHost: Unable to load assembly` errors mentioning the following DLL files would be added to the log files in the `%LocalAppData%/Skyline/DataMiner/DataMinerCube/Logs` folder:
+
+- Google.Protobuf
+- System.Buffers
+- System.Diagnostics.DiagnosticSource
+- System.Memory
+- System.Numerics.Vectors
+- System.Runtime.CompilerServices.Unsafe
 
 #### Alarm Console: Problem when sorting alarms by the PollingIP column [ID_39804]
 

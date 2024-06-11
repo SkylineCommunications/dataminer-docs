@@ -149,7 +149,9 @@ Query results are supported as a data feed for this component from DataMiner 10.
    - *Y-axis*: The Y-axis that is used to plot the line.
 
    > [!NOTE]
-   > Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
+   >
+   > - Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
+   > - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when a chart has data but does not have lines configured, the component will add one line on the default X-axis and Y-axis. The columns are chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
 
 1. Optionally, in the *Lines* section, select *+ Add line* to add additional lines to the chart. A maximum of 20 lines can be added to a chart.
 
@@ -219,6 +221,15 @@ From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zoomin
 
   > [!NOTE]
   > Panning is only possible when the chart is zoomed in, as the default viewport shows all available data.
+
+When visualized on a mobile device<!--RN 39586-->:
+
+- You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+
+- You can move left or right by sliding one finger across the component.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using a query data feed](#configuration-with-query-data-feed), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
 
 ## Examples
 

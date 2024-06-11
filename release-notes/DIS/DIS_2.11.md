@@ -15,14 +15,14 @@ In both the XML editor and the C# editor, you can now use the new right-click me
 This option allows you to select a particular piece of text and have it copied a number of times. Moreover, by inserting variables and formulas in the text to be copied, you can have parts of the text change automatically from copy to copy.
 
 1. Select the text that has to be repeated, right-click, and select *Repeat Selected Text...*
-2. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
-3. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
+1. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
+1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
     - Place your cursor where you want the variable of formula to be inserted, and click *Insert placeholder*.
     - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value “x” delimited by “$” characters. You could change it to e.g. “$x+5$”.
 
-4. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
-5. Click *OK* to have the text in the *Preview* box pasted in the editor.
+1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
+1. Click *OK* to have the text in the *Preview* box pasted in the editor.
 
 ##### Using '$' characters inside a formula
 
