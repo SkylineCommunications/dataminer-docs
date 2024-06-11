@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 10 June 2024 - Fix - ToC checkbox - Fixed an issue with the ToC URL [ID_39895]
+#### 10 June 2024 - Fix - Link to terms and conditions not working [ID_39895]
 
 The link to the terms and conditions, displayed among others when a DaaS system was registered and an Agent was connected to dataminer.services, did not work correctly. This has now been resolved.
 
