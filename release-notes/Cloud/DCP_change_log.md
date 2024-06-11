@@ -37,7 +37,7 @@ finally
 
 The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions) have been updated accordingly.
 
-#### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812] [ID_39881]
+#### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812] [ID_39881]
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the folder `/Documents/`, so that it is possible to access the documents available in Cube.
 
