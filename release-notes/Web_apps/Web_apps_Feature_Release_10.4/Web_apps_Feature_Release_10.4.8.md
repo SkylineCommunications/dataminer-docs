@@ -87,3 +87,17 @@ When, in edit mode, you removed a bar from a *Colum & bar chart* component, in s
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you updated the name of a dashboard folder while a dashboard was open, in some cases, a `Dashboard has not been found` error would be thrown.
+
+#### Dashboards app: Components showing the result of a query filtered by feeds would not get updated when the feed values changed [ID_39877]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In a dashboard, in some cases, components showing the result of a query filtered by feeds would not get updated when the feed values changed.
+
+Also, in some cases, a query could keep on updating when it was linked to a time range feed that exposed a sliding window (e.g. "last 5 minutes").
+
+#### Dashboards app & Low-Code Apps - Pie & donut chart component: Pie chart would not re-appear after an error message had disappeared [ID_39879]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a pie chart disappeared to allow an error message to get displayed, in some cases, it would incorrectly not re-appear after the error message had disappeared.
