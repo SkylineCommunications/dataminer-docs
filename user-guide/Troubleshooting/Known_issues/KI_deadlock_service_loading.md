@@ -8,7 +8,6 @@ uid: KI_deadlock_service_loading
 
 - Main release versions from 10.3.0 [CU10] onwards.
 - Feature release versions from 10.4.1 onwards.
-- Occurs more frequently starting from DataMiner 10.4.0 [CU4]/10.4.7.
 
 ## Cause
 
@@ -20,7 +19,7 @@ Restart the DataMiner Agent.
 
 ## Fix
 
-Install DataMiner 10.4.8/10.5.0.<!-- RN 39896 -->
+Install DataMiner 10.3.0 [CU16], 10.4.0 [CU4], or 10.4.7 [CU0].<!-- RN 39896 -->
 
 ## Description
 
