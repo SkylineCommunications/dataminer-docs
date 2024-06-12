@@ -8,9 +8,9 @@ The DataMiner software is available in two commercial models: [**Perpetual-Use L
 
 | Deploy models | DataMiner nodes | Storage nodes | Commercial models available |
 |--|--|--|--|
-| Private | Private/public cloud or on-premises | Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
+| Self-Managed | Private/public cloud or on-premises | Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
 | Hybrid  | Private/public cloud or on-premises | Storage as a Service (STaaS) | Perpetual-Use Licenses<br>Usage-based services |
-| Hosted  | DataMiner as a Service (DaaS) |  STaaS (default with DaaS) | Usage-based services |
+| Managed Service  | DataMiner as a Service (DaaS) |  STaaS (default with DaaS) | Usage-based services |
 
 ## Perpetual-Use Licenses
 
@@ -34,11 +34,11 @@ In addition, you also have the option to subscribe to certain services, by reser
 
 ### DataMiner Community Edition
 
-The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on private infrastructure or as a service.
+The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on Self-Managed infrastructure or as a service.
 
 This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer. When ready to scale up, you can move to the standard usage-based services by purchasing credits.
 
-- **Private instance**: Community Edition systems deployed on your own infrastructure (on-premises or in a private/public cloud) are free, but must be renewed every 12 months.
+- **Self-Managed**: Community Edition systems deployed on your own infrastructure (on-premises or in a private/public cloud) are free, but must be renewed every 12 months.
 
 - **DataMiner as a Service**: Community Edition systems [deployed as a service](xref:Creating_a_DMS_in_the_cloud) are free for the first 7 days, with a subscription after that.
 
