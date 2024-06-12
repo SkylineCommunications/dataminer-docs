@@ -185,7 +185,7 @@ In some cases, SLLogCollector can seem to get stuck when collecting files. This 
 
 **Symptoms**: In the *Details* window of the Windows Task Manager, there is a *cmd.exe* entry with the following string in the *Command line* column: `C:\WINDOWS\system32\cmd.exe /c ""C:\Program Files\Cassandra\bin\nodetool.bat" status"`
 
-**Workaround**: Either define *JAVA_HOME* in the environment variables of the PC, or replace `if NOT DEFINED JAVA_HOME goto err` with `if NOT DEFINED JAVA_HOME set JAVA_HOME=C:\Program Files\Cassandra\Java` in *nodetool.bat*.
+**Workaround**: Either define *JAVA_HOME* in the environment variables of the PC, or replace `if NOT DEFINED JAVA_HOME goto :err` with `if NOT DEFINED JAVA_HOME set JAVA_HOME=C:\Program Files\Cassandra\Java` in *nodetool.bat*.
 
 **Solution**: Install DataMiner 10.3.0 [CU15], 10.4.0 [CU3], 10.4.6, or higher.<!-- RN 39409 -->
 
@@ -201,12 +201,19 @@ In some cases, SLLogCollector can seem to get stuck when collecting files. This 
 
 ### HTTP request timeouts
 
-**Issue**: In case of a large database cluster (usually Elasticsearch), SLLogCollector takes a long time to cycle through every combination of IP/Request/Endpoint. Each of these can take up to 5 minutes.
+**Issue**: In case of a large database cluster (usually OpenSearch or Elasticsearch), SLLogCollector takes a long time to cycle through every combination of IP/Request/Endpoint. Each of these can take up to 5 minutes.
 
 **Symptoms**: After you have waited 5 minutes, the SLLogCollector logging shows warnings containing URLs.
 
-**Workaround**: Temporarily set the problematic database cluster to active="false" in DB.xml, without restarting the DMA.
-Alternatively, you can also remove the corresponding httpCollector from `C:\skyline dataminer\tools\SLLogCollector\LogConfigs\default.xml`.
+**Workaround**: Remove the corresponding HTTP collector from the SLLogCollector default config:
+
+1. Open the file `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs\default.xml` in a code editor (e.g. Notepad++).
+
+1. Search for the `<Http name="ElasticApi">` tag.
+
+1. Remove the content starting from that tag up to and including the closing `<\Http>` tag.
+
+1. Save the file and restart SLLogCollector.
 
 <!-- **Solution**: TBD - task 241544 -->
 
@@ -216,8 +223,12 @@ If SLLogCollector seems stuck, but none of the issues mentioned above apply for 
 
 1. Open a command prompt as administrator.
 
-1. Enter the following command to navigate to the procdump folder: `cd C:\skyline dataminer\tools\procdump`.
+1. Enter the following command to navigate to the Procdump folder: `cd C:\Skyline DataMiner\Tools\Procdump`.
 
 1. Enter the following command to create a dump file: `procdump -ma <PID of SL_LogCollector>`.
 
-1. Send us the resulting file.
+   In the command above, replace `<PID of SL_LogCollector>` with the PID indicated in the *PID* column for *SL_LogCollector* in the *Details* tab of the Windows Task Manager.
+
+   The resulting file will be placed in the folder `C:\Skyline DataMiner\Tools\Procdump\`.
+
+1. Send the resulting .dmp file to <techsupport@skyline.be>.
