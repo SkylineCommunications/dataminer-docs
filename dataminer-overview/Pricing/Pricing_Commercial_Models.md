@@ -84,4 +84,4 @@ Usage-based services are charged based on the actual monthly usage of services, 
 > DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as a usage-based service.
 
 > [!IMPORTANT]
-> The system must be connected to dataminer.services in order to enable metering for systems that are privately hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
+> The system must be connected to dataminer.services in order to enable metering for systems that are Self-Managed by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
