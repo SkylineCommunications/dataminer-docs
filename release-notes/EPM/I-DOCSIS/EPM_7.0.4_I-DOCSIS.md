@@ -31,6 +31,10 @@ For DOCSIS 2.0 and lower, the mapping of CMs to service groups has been updated 
 
 On the visual overview pages related to PNM, unnecessary hyphens have been removed from the parameter names where appropriate. For example, the parameter *Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold* has been renamed to *Pre-Main Tap to Total Energy Ratio (PreMTTER) Threshold*. The same change has also been implemented for the *Non-Main-Tap Energy Ratio (NMTER) Threshold* and *Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold* parameters. This change has been implemented in the visual overview of the front end and that of the collectors.
 
+#### QAM Channel and OFDM Channel dashboards now use trend component [ID_39909]
+
+The QAM Channel and OFDM Channel dashboards now use a trend component instead of a GQI graph, so that the graph displayed in the dashboards is more similar to a Cube trend graph.
+
 ### Fixes
 
 #### Overlapping GUI elements on PNM thresholds configuration page [ID_39723]
