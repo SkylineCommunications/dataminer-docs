@@ -169,3 +169,15 @@ To resolve this, you may need to increase the start timeout for systemd (see [sy
    ```bash
    sudo systemctl status opensearch
    ```
+
+## Error when executing securitadmin.sh
+
+- ERR: An unexpected SSLHandshakeException occured: Received fatal alert: certificate_unknown
+
+   This is quite general error OpenSearch is showing. Best is to go and check the OpenSearch logs (see at the top of this page) to see if you can find a root cause.
+
+   If you used your own certificates, you have to make sure that your admin certificate is signed by the same rootCA as your node certificates. You can validate this with following command:
+
+   ```bash
+   openssl verify -verbose -CAfile [Path To Your RootCA] [Path To Your Admin Certificate]
+   ```
