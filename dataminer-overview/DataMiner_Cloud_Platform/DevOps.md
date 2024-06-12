@@ -42,7 +42,9 @@ Project Collaboration is always available to assist with time and budget trackin
 > - [Prioritizing and risk management with Project Collaboration](https://community.dataminer.services/prioritizing-and-risk-management-with-project-collaboration)
 > - [Project Collaboration User Guide](xref:Collaboration)
 
-## CI/CD
+## GitOps
+
+GitOps is an operational framework based on DevOps practices, like **Continuous Integration/Continuous Delivery (CI/CD) pipeline** and version control, which automates infrastructure and manages software deployment.
 
 The **Continuous Integration/Continuous Deployment (CI/CD) pipeline** is there to automate the process of building and testing code, with a focus on utilizing tools such as DIS, GitHub, GitLab, Jenkins Pipeline, and others.
 
