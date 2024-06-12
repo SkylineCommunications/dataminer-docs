@@ -174,3 +174,50 @@ Collectors of type "Exe" can be used to run an executable file and store the out
 | Exe.Commands |  | Yes | The element containing all commands to be run. |
 | Exe.Commands.Command |  | Yes | The command to be run. |
 | Exe.Commands.Command@fileName | String | No | The name of the file in which the result has to be saved. Default: `<executable> <command>.txt` |
+
+## Troubleshooting
+
+In some cases, SLLogCollector can seem to get stuck when collecting files. This usually has one of the root causes detailed below.
+
+### Nodetool missing JAVA_HOME
+
+**Issue**: When nodetool cannot resolve a *JAVA_HOME* variable (either in the session or system-wide), it goes into an error mode without exiting, which can block SLLogCollector.
+
+**Symptoms**: In the *Details* window of the Windows Task Manager, there is a *cmd.exe* entry with the following string in the *Command line* column: `C:\WINDOWS\system32\cmd.exe /c ""C:\Program Files\Cassandra\bin\nodetool.bat" status"`
+
+**Workaround**: Either define *JAVA_HOME* in the environment variables of the PC, or replace `if NOT DEFINED JAVA_HOME goto err` with `if NOT DEFINED JAVA_HOME set JAVA_HOME=C:\Program Files\Cassandra\Java` in *nodetool.bat*.
+
+**Solution**: Install DataMiner 10.3.0 [CU15], 10.4.0 [CU3], 10.4.6, or higher.<!-- RN 39409 -->
+
+### Large number of files
+
+**Issue**: When certain folders, e.g. the SRM debug location or the Logging\FormatterExceptions folder, contain a large number of files, it can take a long time before SLLogCollector has managed to copy these over.
+
+**Symptoms**: One core of the CPU shows high usage. Under `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Temp_<guid>`, Files are slowly being added to the `\Logs\Skyline DataMiner\Logging\FormatterExceptions` or `\Logs\Skyline DataMiner\SRM...` folder.
+
+**Workaround**: Manually clean up folders that contain an excessive number of files.
+
+<!-- **Solution**: TBD - RN 39894 -->
+
+### HTTP request timeouts
+
+**Issue**: In case of a large database cluster (usually Elasticsearch), SLLogCollector takes a long time to cycle through every combination of IP/Request/Endpoint. Each of these can take up to 5 minutes.
+
+**Symptoms**: After you have waited 5 minutes, the SLLogCollector logging shows warnings containing URLs.
+
+**Workaround**: Temporarily set the problematic database cluster to active="false" in DB.xml, without restarting the DMA.
+Alternatively, you can also remove the corresponding httpCollector from `C:\skyline dataminer\tools\SLLogCollector\LogConfigs\default.xml`.
+
+<!-- **Solution**: TBD - task 241544 -->
+
+### Other issues
+
+If SLLogCollector seems stuck, but none of the issues mentioned above apply for your situation, follow the steps below to gather information so we can investigate the issue:
+
+1. Open a command prompt as administrator.
+
+1. Enter the following command to navigate to the procdump folder: `cd C:\skyline dataminer\tools\procdump`.
+
+1. Enter the following command to create a dump file: `procdump -ma <PID of SL_LogCollector>`.
+
+1. Send us the resulting file.
