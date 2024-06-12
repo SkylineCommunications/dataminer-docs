@@ -77,4 +77,4 @@ The Communication Gateway module now supports Arista CloudVision and Mellanox Te
 
 A new Communication Gateway module is now available as a DxM (DataMiner Extension Module). This module makes it possible for connectors or scripts running in the DataMiner environment to communicate with devices that require a gRPC connection.
 
-To install this DxM, follow the [installation procedure for DxMs that are not included in the DataMiner Cloud Pack](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
+To install this DxM, follow the [installation procedure for DxMs that are not included in the DataMiner Cloud Pack](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).

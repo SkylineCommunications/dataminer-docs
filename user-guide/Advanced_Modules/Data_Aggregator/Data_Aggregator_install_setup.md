@@ -25,7 +25,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
+1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *DxMs* page.
 
 1. Next to *DataMiner DataAggregator*, select to install this DxM.
 
