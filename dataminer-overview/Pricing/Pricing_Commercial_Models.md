@@ -34,7 +34,7 @@ In addition, you also have the option to subscribe to certain services, by reser
 
 ### DataMiner Community Edition
 
-The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on Self-managed infrastructure or as a service.
+The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on self-managed infrastructure or as a service.
 
 This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer. When ready to scale up, you can move to the standard usage-based services by purchasing credits.
 
