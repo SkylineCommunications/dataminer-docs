@@ -7,7 +7,7 @@ uid: I-DOCSIS_Create_CCAP_CM_pair
 To create CCAP/CM pairs, you can either create a single CCAP/CM pair at a time, or create elements in bulk from a CSV file.
 
 > [!NOTE]
-> The creation of HarmonicOS pairs is not fully supported yet. While the elements will be created, some additional configuration will be missing.
+> The creation of CCAP pairs using the connector Harmonic CableOS is currently not supported.
 
 ## Creating a single CCAP/CM pair
 
@@ -146,9 +146,14 @@ The elements will be created with the following specifications:
    >   - CISCO CBR-8 CCAP Platform
    >   - Huawei 5688-5800 CCAP Platform
 
+   > [!NOTE]
+   > CSV files only support commas (,) as separators and must include the headers previously described.
+   
+   
 1. Click *Create Bulk*.
 
    The elements will be created with the specifications in the CSV file of each row.
+   The script will provision devices in bulk, processing five elements at a time.
 
    > [!NOTE]
    >
