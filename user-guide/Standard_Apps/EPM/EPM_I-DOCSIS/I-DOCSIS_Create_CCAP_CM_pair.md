@@ -147,13 +147,11 @@ The elements will be created with the following specifications:
    >   - Huawei 5688-5800 CCAP Platform
 
    > [!NOTE]
-   > CSV files only support commas (,) as separators and must include the headers previously described.
-   
-   
+   > CSV files only support commas (,) as separators and must include the headers mentioned above.
+
 1. Click *Create Bulk*.
 
-   The elements will be created with the specifications in the CSV file of each row.
-   The script will provision devices in bulk, processing five elements at a time.
+   The elements will be created with the specifications in the CSV file of each row. The script will provision devices in bulk, processing five elements at a time.
 
    > [!NOTE]
    >
