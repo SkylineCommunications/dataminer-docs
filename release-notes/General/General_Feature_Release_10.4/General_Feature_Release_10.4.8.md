@@ -186,6 +186,14 @@ When a DOM state filter was applied in a DOM instance count query, an `InvalidOp
 
 In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
 
+#### Service & Resource Management: Error occurring when the Service Manager fails to delete a service was incorrectly logged as 'information' instead of 'error' [ID_39738]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, the error thrown when the Service Manager fails to delete a service was incorrectly logged as "information" instead of "error". From now on, this error will be logged as error with log level 0.
+
+Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
+
 #### Service & Resource Management: Booking events would be executed in incorrect order [ID_39748]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->

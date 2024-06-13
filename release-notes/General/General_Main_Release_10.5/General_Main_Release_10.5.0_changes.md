@@ -548,6 +548,14 @@ When MessageBroker received a Subscribe call while it was reconnecting, in some 
 
 In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
 
+#### Service & Resource Management: Error occurring when the Service Manager fails to delete a service was incorrectly logged as 'information' instead of 'error' [ID_39738]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, the error thrown when the Service Manager fails to delete a service was incorrectly logged as "information" instead of "error". From now on, this error will be logged as error with log level 0.
+
+Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
+
 #### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
