@@ -31,22 +31,22 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 
 The I-DOCSIS EPM Solution uses the following Automation scripts:
 
-- **EpmConfig**: Sets the Frontend configuration on the DMS to improve topology app performence.
+- **EpmConfig**: Sets the front-end configuration in the DMS to improve topology app performance.
 - **EPM_I_DOCSIS_EpmFeToEpmBe**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
 - **EPM_I_DOCSIS_EpmBeToCcapPair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
 - **EPM_I_DOCSIS_AddNewCcapCmPair**: Allows the user to create a CCAP/CM pair from the EPM UI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA**: Used to retrieve all CM-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA**: Used to retrieve all DS QAM Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA**: Used to retrieve all US QAM Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_OFDM_DATA**: Used to retrieve all OFDM Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_OFDMA_DATA**: Used to retrieve all OFDMA Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA**: Used to retrieve all CM DS QAM Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA**: Used to retrieve all CM US QAM Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_PASSIVE_DATA**: Used to retrieve all Passive relation-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_OFDM_DATA**: Used to retrieve all OFDM Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_OFDMA_DATA**: Used to retrieve all OFDMA Channel-related data in Dashboards using GQI.
-- **EPM_I_DOCSIS_GQI_GET_ALL_UNREACHABLE_CM**: Used to retrieve all CM's unreachable via ping but reported as operational by the CMTS.
-- **EPM_I_DOCSIS_SetThresholdsTableToCollectors**: Used to update all collectors of any Channel threshold changes made on the Frontend.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA**: Used to retrieve all CM-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA**: Used to retrieve all DS QAM Channel-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA**: Used to retrieve all US QAM Channel-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_OFDM_DATA**: Used to retrieve all OFDM Channel-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_OFDMA_DATA**: Used to retrieve all OFDMA Channel-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA**: Used to retrieve all CM DS QAM Channel-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA**: Used to retrieve all CM US QAM Channel-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_PASSIVE_DATA**: Used to retrieve all Passive relation-related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_OFDM_DATA**: Used to retrieve all OFDM Channel–related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_OFDMA_DATA**: Used to retrieve all OFDMA Channel–related data in dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_UNREACHABLE_CM**: Used to retrieve all CMs unreachable via ping but reported as operational by the CMTS.
+- **EPM_I_DOCSIS_SetThresholdsTableToCollectors**: Used to update all collectors of any channel threshold changes made on the front end.
 
 ## Dashboards
 
