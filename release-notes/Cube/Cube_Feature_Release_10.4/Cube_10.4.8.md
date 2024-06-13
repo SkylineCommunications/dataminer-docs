@@ -94,6 +94,12 @@ On client computers, up to now, incorrect `CubeHost: Unable to load assembly` er
 
 When, in the Alarm Console, you tried to sort alarms by the *PollingIP* column, Cube could throw an exception or even stop working when that column contained IP addresses starting with "http://" or "https://".
 
+#### Visual Overview: Show/hide condition would not be evaluated correctly when the Show data field contained a placeholder that included a DataMinerTime placeholder [ID_39833]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a shape was configured to be shown or hidden depending on the value of a placeholder that included a [DataMinerTime] placeholder, in some cases, the show/hide condition would not be evaluated correctly.
+
 #### URLs pointing to the DataMiner Agent to which Cube was connected via gRPC would contain an incorrect hostname [ID_39851]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
