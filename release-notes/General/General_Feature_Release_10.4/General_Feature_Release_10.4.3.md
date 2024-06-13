@@ -161,7 +161,7 @@ From now on, for every batch of DomInstances that are processed in bulk, the his
 
 #### Security enhancements [ID_38263] [ID_38386] [ID_38514]
 
-<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+<!-- 38263: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.3 -->
 <!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
 <!-- 38514: MR 10.4.0 - FR 10.4.3 -->
 

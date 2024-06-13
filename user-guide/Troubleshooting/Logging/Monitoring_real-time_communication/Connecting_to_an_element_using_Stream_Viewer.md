@@ -19,6 +19,8 @@ The Stream Viewer window consists of two panes:
 
 - On the right, the communication stream is displayed for the selected item in the tree view.
 
+![Stream Viewer](~/user-guide/images/StreamViewer.png)<br>*Stream Viewer in DataMiner 10.4.5*
+
 At the bottom of the Stream Viewer window, there are five buttons:
 
 | Button    | Functionality                                                                           |

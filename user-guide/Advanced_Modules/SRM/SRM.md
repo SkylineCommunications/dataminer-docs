@@ -24,7 +24,7 @@ The following topics provide more information on this module:
 
 - [SRM code snippets](xref:SRM_code_snippets)
 
-- [Advanced SRM settings](xref:Advanced_SRM_settings)
+- [Advanced SRM settings](xref:Function_resource_settings)
 
 - [SRM reporting](xref:SRM_reporting)
 

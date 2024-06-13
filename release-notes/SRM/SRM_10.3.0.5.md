@@ -5,7 +5,7 @@ uid: SRM_10.3.0.5
 # SRM 10.3.0.5
 
 > [!NOTE]
-> This version requires that **DataMiner 10.3.0 [CU0] or higher** is installed. It is not compatible with the DataMiner Feature Release track.
+> This version requires that **DataMiner 10.3.0 [CU0] or higher** is installed. The DataMiner Feature Release track is not supported.
 
 ## Enhancements
 

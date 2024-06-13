@@ -14,4 +14,7 @@ Ping Monitoring automates the process of verifying whether an internet destinati
 You can customize the monitoring frequency to meet your specific requirements, ranging from intervals of a few seconds to several minutes. Each monitored destination is expected to provide a response to every packet sent. In the event of no reply within a predefined period, the tool identifies a network issue and can trigger alarms and notifications.
 
 > [!TIP]
-> See also: [Ping Monitoring](https://community.dataminer.services/use-case/ping-monitoring/) on DataMiner Dojo
+> See also:
+>
+> - [Ping Monitoring use case](https://community.dataminer.services/use-case/ping-monitoring/) for several use cases and application highlights
+> - [Ping Monitoring - DataMiner Use Case Demo](https://www.youtube.com/watch?v=LpYbxc0jIro) for a visual guide ![Video](~/user-guide/images/video_Duo.png)

@@ -5,7 +5,7 @@ uid: SRM_1.2.21
 # SRM 1.2.21
 
 > [!NOTE]
-> This version requires that **DataMiner 10.1.10-10897 or higher** is installed. It is not compatible with the DataMiner Main Release track.
+> This version requires that **DataMiner 10.1.10-10897 or higher** is installed. The DataMiner Main Release track is not supported.
 
 ## New features
 

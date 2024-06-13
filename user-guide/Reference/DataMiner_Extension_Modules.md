@@ -6,7 +6,7 @@ uid: DataMinerExtensionModules
 
 A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated.
 
-Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
+Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades and are part of the DataMiner installer starting from DataMiner 10.3.7. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
 
 DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
@@ -84,7 +84,7 @@ See [Data Aggregator](xref:Data_Aggregator_DxM).
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
-The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 ### CommunicationGateway
 

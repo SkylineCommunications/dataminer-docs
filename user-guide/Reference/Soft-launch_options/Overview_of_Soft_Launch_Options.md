@@ -211,10 +211,13 @@ Enables the ownership framework.
 
 ### Indexing
 
-Enables the use of Elasticsearch for alarm indexing and other applications. To preview the indexing configuration in DataMiner Cube, use the argument `ENABLEFEATURE=Indexing`.
+Enables the use of Elasticsearch for alarm indexing and other applications.
 
 - **Minimum version**: 9.5.0
-- **Release version**: 10.0.0/1.0.0.2 ([RN 24054](xref:General_Feature_Release_10.0.2_new_features#dataminer-indexing-id_13370id_13406id_13504id_13571id_13623-id_13622id_13629id_13695id_13769id_13912id_14001id_14038-id_16287id_16896id_16915id_16935id_16959id_17081id_17166-id_17328id_17851id_18562id_18714id_19337id_19437id_19443-id_19691id_20373id_20845id_20998id_21205id_21257id_21634-id_22378id_22927id_23049id_23998id_24054id_24158))
+- **Release version**: 10.0.0/10.0.2 ([RN 24054](xref:General_Feature_Release_10.0.2_new_features#dataminer-indexing-id_13370id_13406id_13504id_13571id_13623-id_13622id_13629id_13695id_13769id_13912id_14001id_14038-id_16287id_16896id_16915id_16935id_16959id_17081id_17166-id_17328id_17851id_18562id_18714id_19337id_19437id_19443-id_19691id_20373id_20845id_20998id_21205id_21257id_21634-id_22378id_22927id_23049id_23998id_24054id_24158))
+
+> [!NOTE]
+> It is also possible to use the argument `ENABLEFEATURE=Indexing` in DataMiner Cube to view the *Indexing* app. However, this soft-launch feature has been abandoned and is no longer available in some setups.
 
 ### JobManager
 
@@ -332,7 +335,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.7
+- **Estimated release version**: 10.4.10
 
 ### ReportsAndDashboardsGuides
 

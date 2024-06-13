@@ -91,6 +91,9 @@ class RetrievalIssueChecks classDecision;
 class NotFixed classSolution;
 ```
 
+> [!NOTE]
+> To investigate an alarm retrieval issue, usually a LogCollector package is needed with memory dumps of SLDataGateway and SLNet.
+
 ### Creation Issue
 
 ```mermaid
@@ -132,3 +135,6 @@ class AlarmTemplate classAction;
 class DataPresent,CanSimulate,VerifyConfiguration classDecision;
 class ExtraInfoNotFixed,NotFixedCOPS classSolution;
 ```
+
+> [!NOTE]
+> To investigate an alarm creation issue, usually a LogCollector package is needed with memory dumps of SLProtocol, SLElement, and SLDataMiner.

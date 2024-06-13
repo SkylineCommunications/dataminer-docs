@@ -84,7 +84,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 > We recommend always upgrading to the latest .NET Framework version.
 
 > [!IMPORTANT]
-> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) first.
+> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.6-windows-hosting-bundle-installer) first.
 
 ### Microsoft Visual C++
 
@@ -100,6 +100,26 @@ In the table below, you can find which .NET (Framework) versions are required fo
 ### Computer name
 
 DataMiner requires a server with a name that is **no longer than 15 characters**. Make sure the name does not contain any characters that are disallowed in NetBIOS computer names or DNS host names. For more information, refer to [learn.microsoft.com](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#netbios-computer-names).
+
+## Standalone Cloud Gateway server requirements
+
+If you want to [connect your system to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) but would prefer to use a dedicated Cloud Gateway server for this, the server will need to meet the following requirements:
+
+### Operating System
+
+See "Operating system" under [DataMiner requirements](#dataminer-requirements).
+
+### RAM
+
+A minimum of 4 GB will be required to smoothly run the necessary services on the server.
+
+### CPU
+
+The processes are not CPU-heavy and do not require a lot of parallel computing. This means that 4 cores should be enough.
+
+### Network
+
+See "Network" under [DataMiner requirements](#dataminer-requirements).
 
 ## Cassandra requirements
 

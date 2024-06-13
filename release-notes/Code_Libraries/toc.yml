@@ -5,6 +5,8 @@ items:
       topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
     - name: Skyline.DataMiner.Core.DataMinerSystem Range 1.0
       topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
+    - name: Skyline.DataMiner.Core.InterAppCalls Range 1.0
+      topicUid: Skyline_DataMiner_Core_InterAppCalls_Range_1.0
   - name: Skyline.DataMiner.DataSources.OpenConfig
     items:
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 4.x

@@ -6,6 +6,9 @@ uid: Protocol.Topologies.Topology
 
 Defines a topology.
 
+> [!TIP]
+> See also: [EPM topology configuration](xref:EPMManagerTopology)
+
 ## Parent
 
 [Topologies](xref:Protocol.Topologies)

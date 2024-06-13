@@ -30,8 +30,8 @@ All specifications are provided based on the assumption that DMAs are running on
 | 7 | Number of SLAs | DMS | 10,000 ||
 | 8 | Number of concurrent active alarms | DMS<br>DataMiner Cube | 10,000 | DataMiner Cube will enter protection mode when the number of alarms increases above this limit. In protection mode, the system will remain fully functional. However, not all active alarms will be pushed to the client.<br>Note: This setting is configurable. 10,000 is the recommended default value. |
 | 9 | Number of concurrent active alarms | DMA | 25,000 ||
-| 10 | Number of SNMP traps per second received on a DMA continuously | DMA | 400 ||
-| 11 | Number of SNMP traps per second received on a DMA in burst mode | DMA | 1,000 ||
+| 10 | Number of SNMP traps per second received on a DMA continuously | DMA | 400 | Logging levels of SNMP Managers set to No logging (0). <br> DefaultReceiveWindow set to at least 65536 in the Windows registry. <br> Total bytes of received traps within a time window of 5ms do not exceed the UDP buffer size. <br> In this case, the QActions that process the trap content are not introducing a significant delay, nor are the elements busy executing other logic that might prevent or delay the traps from being processed. |
+| 11 | Number of SNMP traps per second received on a DMA in burst mode | DMA | 1,000 | Logging levels of SNMP Managers set to No logging (0). <br> DefaultReceiveWindow set to at least 65536 in the Windows registry. <br> Total bytes of received traps within a time window of 5ms do not exceed the UDP buffer size. <br> In this case, the QActions that process the trap content are not introducing a significant delay, nor are the elements busy executing other logic that might prevent or delay the traps from being processed. |
 | 12 | Number of DVEs | DMA | 2,000 - 10,000 | Depending on the type of device. |
 | 13 | Number of EPM (formerly CPE) devices | DMA | 100,000 | Based on a 15-minute update cycle. |
 | 14 | Number of views | DMS | 8,000 ||

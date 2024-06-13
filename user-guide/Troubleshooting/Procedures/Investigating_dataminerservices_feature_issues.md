@@ -28,6 +28,9 @@ You can validate this as follows:
 
    This way, you avoid dealing with issues that have already been fixed.
 
+> [!NOTE]
+> If any of the DxMs are missing that are required for the upgrade from the Admin app to work, download and install the [latest Cloud Pack](https://aka.dataminer.services/cloud-pack-download) to install these manually.
+
 ## Make sure the requirements to access the DMS remotely are met
 
 If your connection to dataminer.services is valid, but you are still unable to access your DMS remotely with DataMiner Cube, check whether all requirements are met, as detailed under [Accessing your DMS remotely with DataMiner Cube](xref:Accessing_DMS_remotely_with_Cube).

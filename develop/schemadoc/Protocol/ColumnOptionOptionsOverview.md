@@ -348,7 +348,7 @@ If you use this option, the value of this column will be used as a link to an el
 
 If you specify this option, you indicate that the value in this column will control the row color.
 
-See also the rowTextColor option of the Discreet tag: `rowTextColor=#RRGGBB`.
+See also the [rowTextColor](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#rowtextcolorrrggbb) option of the Discreet tag: `rowTextColor=#RRGGBB`.
 
 ## save
 
