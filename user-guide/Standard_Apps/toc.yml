@@ -105,6 +105,8 @@ items:
             topicUid: I-DOCSIS_upgrade
           - name: Creating a new CCAP/CM pair
             topicUid: I-DOCSIS_Create_CCAP_CM_pair
+          - name: Deleting a CCAP/CM pair
+            topicUid: I-DOCSIS_Delete_CCAP_CM_pair
           - name: Available parameters in I-DOCSIS
             topicUid: I-DOCSIS_parameters
             items:
