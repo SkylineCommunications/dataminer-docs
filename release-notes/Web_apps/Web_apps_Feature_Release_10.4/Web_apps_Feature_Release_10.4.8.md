@@ -101,3 +101,11 @@ Also, in some cases, a query could keep on updating when it was linked to a time
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When a pie chart disappeared to allow an error message to get displayed, in some cases, it would incorrectly not re-appear after the error message had disappeared.
+
+#### Web API would incorrectly retrieve the time zone from the user-specific ClientSettings.json file [ID_39897]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\<username>\\* folder.
+
+From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
