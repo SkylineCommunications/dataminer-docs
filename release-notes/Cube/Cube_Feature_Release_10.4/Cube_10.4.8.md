@@ -26,7 +26,7 @@ DataMiner Cube now subscribes to the *ApiTokenChangedEventMessage* and the *ApiD
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-The following SLAnalytics features can now be enabled either system-wide or for specific parameters.
+The following SLAnalytics features can now be enabled either for system-wide or for specific parameters.
 
 - Trend icons
 - Behavioral anomaly detection
@@ -66,6 +66,35 @@ To configure for which parameters those features are enabled, do the following:
 
    > [!NOTE]
    > In the trend template editor, the *Trend icons*, *Anomalies* and/or *Proactive alarms* settings are only displayed when you click the cogwheel button and select the *Allow Augmented Operations configuration* option.
+
+#### Visual Overview: New RegexMatch placeholder [ID_39763]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Next to the [RegexReplace:x,y,z] placeholder, you can now use the [RegexMatch:x,y,options] placeholder.
+
+This new placeholder, which basically takes a regular expression and an input, will return the parts of the input that match the regular expression.
+
+For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e. "ac".
+
+When multiple matches are found within the input, by default, all matches will be concatenated and returned as one single string, without any separators.
+
+- If you want the matches to be separated, you can specify a separator.
+
+  For example, `[RegexMatch: [a-z], aBc, separator=%]` will return "a%c".
+
+- If you do not want all matches to be concatenated, you can use the "index=" option to indicate the specific match you want to have returned.
+
+  For example, `[RegexMatch: [a-z], aBc, index=0]` will return "a".
+
+If the regular expression or the input includes the default separator (","), you can use the [sep:] placeholder to replace it by another one.
+
+For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the default separator has been replaced by "%".
+
+> [!NOTE]
+>
+> - If the regular expression or the input are empty, the placeholder will return an empty string.
+> - The ']' character cannot be used as a separator.
 
 ## Changes
 
