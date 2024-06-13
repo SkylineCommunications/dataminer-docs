@@ -10,7 +10,7 @@ The DataMiner software is available in two commercial models: [**Perpetual-Use L
 |--|--|--|--|
 | Self-managed | Private/public cloud or on-premises | Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
 | Hybrid | Private/public cloud or on-premises | Storage as a Service (STaaS) | Perpetual-Use Licenses<br>Usage-based services |
-| Managed service | DataMiner as a Service (DaaS) |  STaaS (default with DaaS) | Usage-based services |
+| Managed service | DataMiner as a Service (DaaS) |  STaaS | Usage-based services |
 
 ## Perpetual-Use Licenses
 
