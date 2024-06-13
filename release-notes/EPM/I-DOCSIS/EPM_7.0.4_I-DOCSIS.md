@@ -35,8 +35,24 @@ On the visual overview pages related to PNM, unnecessary hyphens have been remov
 
 The QAM Channel and OFDM Channel dashboards now use a trend component instead of a GQI graph, so that the graph displayed in the dashboards is more similar to a Cube trend graph.
 
+#### Harmonic CableOS: Improved interfaces information retrieval [ID_39921]
+
+An improvement has been implemented to the way data is retrieved in the interface tables for the Harmonic CableOS connector, resulting in more reliable and consistent bitrate calculations. The utilization percentages calculations and error rates calculations have also been updated.
+
+#### Automation scripts placed in dedicated folder during deployment [ID_39922]
+
+When the EPM package is deployed, all its Automation scripts are now placed in an I-DOCSIS folder instead of at the root level of the Automation module.
+
 ### Fixes
 
 #### Overlapping GUI elements on PNM thresholds configuration page [ID_39723]
 
 Previously, on the *Configuration* > *Thresholds Settings* > *PNM* page of the EPM visual overview, GUI elements could overlap when a threshold was modified. The spacing on this page has been adjusted to prevent this issue.
+
+#### EPM dashboards with GQI queries not working correctly with recent DataMiner versions [ID_39766]
+
+When EPM dashboards using GQI queries were used in recent DataMiner versions, it could occur that the queries did not work correctly. The dashboards have now been updated to prevent this.
+
+#### Generic DOCSIS CM Collector: RTE caused by SLProtocolExt call [ID_39923]
+
+Because of the use of the *SLProtocolExt* interface to retrieve keys from the CM QAM DS Channel table, long wait times could be encountered in the Generic DOCSIS CM Collector connector, which could cause a run-time error in DataMiner. The connector has now been enhanced to prevent this.
