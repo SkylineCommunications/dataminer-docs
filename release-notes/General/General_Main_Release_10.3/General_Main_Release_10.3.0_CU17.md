@@ -42,6 +42,12 @@ When, on an offline Failover agent, SLNet failed to parse the *DMS.xml* file, up
 
 From now on, when SLNet fails to parse the *DMS.xml* file on an offline Failover agent, it will use the last-known Failover configuration it has stored in memory.
 
+#### Problem with SLLog while iterating over the log file buffers [ID_39321]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+SLLog has a thread that iterates over the different log file buffers and that copies a number of lines from the buffers to the log files. Due to a problem in this iteration mechanism, in some cases, SLLog would leak memory or even stop working.
+
 #### SLLogCollector: 'Access is denied' errors [ID_39364]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
