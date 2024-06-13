@@ -102,6 +102,12 @@ Also, in some cases, a query could keep on updating when it was linked to a time
 
 When a pie chart disappeared to allow an error message to get displayed, in some cases, it would incorrectly not re-appear after the error message had disappeared.
 
+#### Dashboards app & Low-Code Apps - Service definition component: Names of the resources would no longer be displayed [ID_39888]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Due to a problem with the web API, the *Service definition* component would no longer display the names of the resources.
+
 #### Web API would incorrectly retrieve the time zone from the user-specific ClientSettings.json file [ID_39897]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
