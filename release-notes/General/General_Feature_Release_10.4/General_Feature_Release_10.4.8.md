@@ -168,6 +168,12 @@ In some cases, SLProtocol could stop working while processing a FillArray reques
 
 When SLNet was using FileInfoHelper, in some cases, it would not process errors correctly.
 
+#### DataMiner Object Models: Problem when applying a DOM state filter in a DOM instance count query [ID_39712]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a DOM state filter was applied in a DOM instance count query, an `InvalidOperationException: Sequence contains more than one matching element` error could be thrown when multiple DOM behavior definitions shared the same DOM state name.
+
 #### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
