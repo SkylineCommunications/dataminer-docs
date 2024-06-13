@@ -52,7 +52,7 @@ From now on, when SLNet fails to parse the *DMS.xml* file on an offline Failover
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
-SLLog has a thread that iterates over the different log file buffers and that copies a number of lines from the buffers to the log files. Due to a problem in this iteration mechanism, in some cases, SLLog would leak memory or even stop working.
+SLLog has a thread that iterates over the different log file buffers and that copies a number of lines from the buffers to the log files. Due to a problem in this iteration mechanism, in some cases, SLLog could start to leak memory.
 
 #### SLLogCollector: 'Access is denied' errors [ID_39364]
 
