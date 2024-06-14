@@ -4,7 +4,7 @@ uid: Creating_your_first_element_on_a_DaaS_system
 
 # Creating your first element on a DaaS system
 
-This tutorial guides you through setting up a free DataMiner Community Edition system as a service and creating your first Skyline Generic Ping element. With this element, you will be able to monitor a website of your choice.
+This tutorial guides you through setting up a free DataMiner Community Edition system as a service and creating your first Skyline Generic HTTP Query element. With this element, you will be able to monitor a website of your choice.
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.6.
 
@@ -20,7 +20,7 @@ The tutorial consists of the following steps:
 
 - [Step 1: Create a staging DataMiner System in the cloud](#step-1-create-a-staging-dataminer-system-in-the-cloud)
 - [Step 2: Install the DataMiner Cube desktop application](#step-2-install-the-dataminer-cube-desktop-application)
-- [Step 3: Deploy the 'Generic Ping' protocol from the Catalog](#step-3-deploy-the-generic-ping-protocol-from-the-catalog)
+- [Step 3: Deploy the 'Generic HTTP Query' protocol from the Catalog](#step-3-deploy-the-generic-http-query-protocol-from-the-catalog)
 - [Step 4: Access your newly created DaaS system for the first time](#step-4-access-your-newly-created-daas-system-for-the-first-time)
 - [Step 5: Create an element to monitor a website of your choice](#step-5-create-an-element-to-monitor-a-website-of-your-choice)
 - [Step 6: Create an alarm template for your element](#step-6-create-an-alarm-template-for-your-element)
@@ -80,17 +80,17 @@ To access and interact with your new DataMiner System, install DataMiner Cube, t
 
 1. Click *Install*.
 
-## Step 3: Deploy the 'Generic Ping' protocol from the Catalog
+## Step 3: Deploy the 'Generic HTTP Query' protocol from the Catalog
 
-Now that you have set up your staging DataMiner System, add the *Generic Ping* protocol (also known as connector), through which your element will communicate with your DMA.
+Now that you have set up your staging DataMiner System, add the *Generic HTTP Query* protocol (also known as connector), through which your element will communicate with your DMA.
 
-1. Look up the [*Generic Ping* connector](https://catalog.dataminer.services/details/253977dd-efa6-4095-b22e-de9adb9cc23d) in the DataMiner Catalog.
+1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the DataMiner Catalog.
 
-1. Go to the *Versions* tab.
+1. Click the *Deploy* button.
 
-1. Click the sideward arrow next to *3.1.2.14* and select *Deploy*.
+1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
 
-   ![Deploy Generic Ping connector](~/user-guide/images/Generic_Ping_Connector.png)
+   ![Deploy Generic HTTP Query connector](~/user-guide/images/Generic_HTTP_Query_Connector.png)
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
@@ -114,11 +114,11 @@ Now that you have installed DataMiner Cube, you can use it to access your new Da
 
 ## Step 5: Create an element to monitor a website of your choice
 
-Next, you will create an element that allows you to monitor a website of your choice. This element will use the *Generic Ping* protocol you deployed earlier, which can be used to regularly send ping commands to the website to ensure it is accessible and functional.
+Next, you will create an element that allows you to monitor a website of your choice, such as your corporate website. This element will use the *Generic HTTP Query* protocol you deployed earlier, which can be used to regularly send HTTP/HTTPS requests to assess the website's availability and functional status, including monitoring its response time. If the website goes down, this element will alert you of this.
 
 1. In the Cube sidebar, go to *Apps* > *Protocols & Templates*.
 
-1. Under *Protocols*, select the *Generic Ping* protocol.
+1. Under *Protocols*, select the *Generic HTTP Query* protocol.
 
 1. Right-click in the *Elements* column, and select *New element*.
 
@@ -126,36 +126,41 @@ Next, you will create an element that allows you to monitor a website of your ch
 
 1. Specify the following information:
 
-   - *General* > *Name*: `Ping element`
+   - *General* > *Name*: Choose a name for your element, e.g. `My corporate website`.
 
-   - *General* > *Description*: `Element to monitor a website's availability`
+   - *General* > *Description*: Choose a description for your element, e.g. `Element to monitor a website's responsiveness`.
 
 1. Click *Create* to add the element.
 
-1. Go to *DATA* > *Ping* > *Add New Ping With Options* to add a new item.
+1. On the *DATA* > *General* page, right-click the *HTTP Queries* table and select *Add GET*.
+
+   ![Add GET](~/user-guide/images/Add_GET.png)
 
 1. Specify the following information:
 
-   - **New: Destination Address**: Enter the hostname of your chosen website, e.g. `www.skyline.be`.
+   - **URl (HTTP Queries)**: Enter the hostname of your chosen website. Follow this format: `http(s)://[address]`, e.g. `https://www.skyline.be`.
 
-   - **New: Description**: Enter a short description, e.g. `Skyline`.
+   - **Interval (HTTP Queries)**: 10 s.
 
-   - **New: Admin Status**: Set to `Enabled`.
+     The HTTP query will be executed every 10 seconds.
 
-   > [!NOTE]
-   > A parameter is only saved once you click the green checkmark and confirm your choice.
+   - **Timeout (HTTP Queries)**: 900 s.
+
+     The system will wait 900 seconds for a response from the remote server after an HTTP query is sent. If the server does not respond within this time frame, the query is considered failed.
+
+   - **Name (HTTP Queries)**: Enter a name for your entry, e.g. `Skyline`.
 
 1. Select *Add Ping* in the lower right corner and confirm you wish to execute the *Add Ping* command.
 
-A new entry has now been added to the Ping Table on the *DATA* > *Ping* page.
+A new entry has now been added to the *HTTP Queries* table on the *DATA* > *General* page.
 
-![Ping page](~/user-guide/images/Ping_Page.png)
+![*HTTP Queries* table](~/user-guide/images/HTTP_Queries_Table.png)
 
-You have now created an element that allows you to monitor the ping status of a website. By default, a ping command is sent out every 5 seconds.
+You have now created an element that allows you to monitor the status of a website. By default, a HTTP/HTTPS request is sent out every 10 seconds.
 
 ## Step 6: Create an alarm template for your element
 
-The average ping result is 5 ms. If this result consistently increases, the *Avg time* column will eventually show an average exceeding 5 ms. In this final step, you will create an alarm template to trigger an alarm when this happens.
+To monitor your entry effectively, you will track both the status code and response time. A `200 OK` status in the *Status Code* column confirms a successful request. Aim to maintain a response time below 100 ms. In this final step, you will create an alarm template to trigger an alarm when these conditions are not met.
 
 1. Look up your newly created element in the Cube Surveyor.
 
@@ -163,19 +168,19 @@ The average ping result is 5 ms. If this result consistently increases, the *Avg
 
 1. In the *new alarm template* pop-up window, choose a name for your template and click *OK*.
 
-1. Under *Ping*, select the *Ping Table: Avg Time* parameter and configure the alarm thresholds:
+1. Under *General*, select the *HTTP Queries: Response Time* parameter and configure the alarm thresholds:
 
-   - In the *Normal* column, enter 5.
+   - In the *MIN HI* column, enter 60.
 
-   - In the *WARN HI* column, enter 10.
+   - In the *MAJ HI* column, enter 80.
 
-   - In the *MIN HI* column, enter 15.
+   - In the *CRIT HI* column, enter 100.
 
-   - In the *MAJ HI* column, enter 20.
+1. Under *General*, select the *HTTP Queries: Status Code* parameter and configure the alarm threshold:
 
-   - In the *CRIT HI* column, enter 30.
+   - In the *Normal* column, enter `200 OK`.
 
-   ![Avg Time](~/user-guide/images/Ping_Table_Avg_Time.png)
+   ![Alarm template HTTP Queries](~/user-guide/images/Alarm_Template_HTTP_Queries.png)
 
    > [!TIP]
    > See also:
@@ -185,7 +190,7 @@ The average ping result is 5 ms. If this result consistently increases, the *Avg
 
 1. Select *OK* in the lower right corner.
 
-   On the *DATA* > *Ping* page of your element, the alarm severity will now be shown with appropriate colors for the *Avg Time* column.
+   On the *DATA* > *General* page of your element, the alarm severity will now be shown with appropriate colors for the *Avg Time* column.
 
 ![Alarm template](~/user-guide/images/Ping_Alarm_Template.png)
 
