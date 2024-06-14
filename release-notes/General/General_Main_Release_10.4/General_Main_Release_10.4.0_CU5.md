@@ -14,7 +14,7 @@ uid: General_Main_Release_10.4.0_CU5
 
 #### ReIndexElasticSearchIndexes tool: Enhancements [ID_39614]
 
-<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 A number of enhancements have been made to the *ReIndexElasticSearchIndexes* tool, which must be used when [migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch).
 
