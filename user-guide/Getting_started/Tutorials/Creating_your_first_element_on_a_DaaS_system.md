@@ -201,4 +201,3 @@ To monitor your entry effectively, you will track both the status code and respo
 > 1. Clear the selection from all columns except *Description*, *Interval*, *Timeout Time*, *Ping Status*, *Last Ping Time*, *Ping Result*, *Avg Time*, *Min Time*, *Max Time*, and *Avg Success [%]*.
 > 1. At the bottom of the menu, select *Save layout*.
 >
->    ![Columns removed](~/user-guide/images/Columns_Removed.png)
