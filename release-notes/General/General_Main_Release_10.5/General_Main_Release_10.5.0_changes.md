@@ -455,6 +455,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
