@@ -4,10 +4,11 @@ uid: Removing_a_DaaS_system
 
 # Removing a DaaS system
 
-> [!WARNING]
-> When you remove a DaaS system, this is **irreversible**, and **all data of the system will be lost**.
 
-1. On the dataminer.services page, click the ellipsis ( "...") button in the top-right corner of the box representing the system and select *Delete DMS*.
+> [!WARNING]
+> When you remove a DaaS system, the system will be decomissioned. The DataMiner System can still be recovered upon request by contacting [daas@dataminer.services](mailto:daas@dataminer.services), however the cloud identity and shares will be lost and it will receive a new cloud identity within your organization upon recovery.
+
+1. In order to remove a DaaS system, you must have the necessary permissions for this system on dataminer.services in your organization. On the dataminer.services page, click the ellipsis ("...") button in the top-right corner of the box representing the system and select *Delete DMS*. 
 
 1. Fill in the name of the system to confirm that this is the system you want to remove.
 
