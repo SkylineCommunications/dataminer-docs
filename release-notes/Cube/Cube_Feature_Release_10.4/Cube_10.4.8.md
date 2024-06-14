@@ -26,7 +26,7 @@ DataMiner Cube now subscribes to the *ApiTokenChangedEventMessage* and the *ApiD
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-The following SLAnalytics features can now be enabled either for system-wide or for specific parameters.
+The following SLAnalytics features can now be enabled either system-wide or for specific parameters.
 
 - Trend icons
 - Behavioral anomaly detection
