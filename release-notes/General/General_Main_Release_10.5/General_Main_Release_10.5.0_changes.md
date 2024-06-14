@@ -461,6 +461,12 @@ The trend change detection accuracy has been improved, especially after a restar
 
 From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
 
+#### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID_39910]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]

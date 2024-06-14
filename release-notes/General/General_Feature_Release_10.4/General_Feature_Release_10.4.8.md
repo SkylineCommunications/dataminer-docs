@@ -130,6 +130,12 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
 
+#### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID_39910]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
 ### Fixes
 
 #### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
