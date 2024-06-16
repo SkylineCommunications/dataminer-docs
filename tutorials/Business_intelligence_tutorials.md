@@ -1,5 +1,5 @@
 ---
-uid: Business_intelligence_tutorial
+uid: Business_intelligence_tutorials
 ---
 
 # Business intelligence tutorials
@@ -8,4 +8,4 @@ uid: Business_intelligence_tutorial
 
 | Name | Description |
 |--|--|
-| [Using DataMiner business intelligence to manage and monitor your SLAs](xref:SLA_tutorial) | Configure and use a a power monitoring SLA. |
+| [Using DataMiner business intelligence to manage and monitor your SLAs](xref:SLA_tutorial) | Configure and use a power monitoring SLA. |
