@@ -7,9 +7,7 @@ uid: Protocol.Params.Param-saveInterval
 Specifies that only one save operation must be executed per interval.
 
 > [!CAUTION]
-> This feature is undergoing improvements.
-> The specified interval is not yet functional, and save operations currently execute only when the element is restarted.
-> Use with consideration.
+> Be careful with the use of this feature, as it is still undergoing improvements. The specified interval is not yet functional, and save operations are currently only executed when the element is restarted.
 
 ## Content Type
 
