@@ -190,11 +190,11 @@ In this final step, you will create an alarm template to monitor the *Status Cod
 
    - In the *NORMAL* column, enter `2*`.
 
-   - In the *WARN HI* column, enter `3*;1*`.
+   - In the *WARN HI* column, enter `1*;3*`.
 
    - In the *CRIT HI* column, enter `4*;5*`.
 
-   With this configuration, if the HTTP response status code in the *Status Code* column starts with a 3 or 1, a *Warning high* alarm will be triggered. If a status code starts with a 4 or 5, a *Critical high* alarm will be triggered.
+   With this configuration, if the HTTP response status code in the *Status Code* column starts with a 1 or 3, a *Warning high* alarm will be triggered. If a status code starts with a 4 or 5, a *Critical high* alarm will be triggered.
 
    ![Alarm template HTTP Queries](~/user-guide/images/Alarm_Template_HTTP_Queries.png)
 
@@ -203,6 +203,8 @@ In this final step, you will create an alarm template to monitor the *Status Cod
    On the *DATA* > *General* page of your element, the alarm severity will now be shown with appropriate colors for the *Status Code* column.
 
    ![Alarm template](~/user-guide/images/Ping_Alarm_Template.png)
+
+You are now monitoring the *Status Code* parameter. If a warning or alarm is triggered for your chosen website, it indicates an issue that should be investigated.
 
 > [!TIP]
 > See also:
@@ -216,10 +218,10 @@ By default, the *HTTP Queries* table shows a lot of columns that are not useful 
 
 1. Right-click the top row of the table and hover the mouse pointer over the *Columns* option until it expands to show all columns in the table.
 
-1. Clear the selection from all columns except *Name*, *Interval*, *Status Code*, *Avg Response Time*, *Response Time*, and *Execute*.
+1. Clear the selection from all columns except *Name*, *Interval*, *Status Code*, *Avg Response Time*, *Execute*, and *Response Time*.
 
 1. At the bottom of the menu, select *Save layout*.
 
-   Only the *Name*, *Interval*, *Status Code*, *Avg Response Time*, *Response Time*, and *Execute* columns will be displayed now.
+   Only the *Name*, *Interval*, *Status Code*, *Avg Response Time*, *Execute*, and *Response Time* columns will be displayed now.
 
    ![Unnecessary columns](~/user-guide/images/Unnecessary_columns.png)
