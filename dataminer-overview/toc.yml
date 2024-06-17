@@ -99,7 +99,7 @@ items:
             - name: Supported connectors
               topicUid: Overview_MediaOps_supported_connectors
         - name: DOM Viewer
-          topicUid: domviewer
+          topicUid: domviewer_about
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
