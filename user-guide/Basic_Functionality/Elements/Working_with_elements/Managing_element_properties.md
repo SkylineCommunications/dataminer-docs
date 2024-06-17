@@ -55,7 +55,7 @@ To add a custom property to a DataMiner item, which can be an element, but also 
 
    - **Format (regular expression)**: If you want to restrict the allowed values by means of a regular expression, select this checkbox and enter a regular expression in the text box.
 
-   - **Possible values**: If you want to specify a list of allowed values, select this checkbox and add all allowed values to the list.
+   - **Possible values**: If you want to specify a list of allowed values, select this checkbox and add all allowed values to the list. Optionally add a metric value to determine the order of the items in the dropdown list. The lowest number will be displayed on top.
 
 1. In the *Edit* dialog box, click *OK*.
 1. In the *Properties* dialog box, click *OK*.
