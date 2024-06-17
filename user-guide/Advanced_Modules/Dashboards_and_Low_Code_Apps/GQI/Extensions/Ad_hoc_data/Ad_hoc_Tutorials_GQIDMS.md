@@ -136,3 +136,10 @@ Transform the responses into a [GQIPage](xref:GQI_GQIPage). Each `LoginInfoRespo
 
 > [!NOTE]
 > Ensure `DateTime` values are in UTC. Although the `ConnectTime` value is in UTC, it is not explicitly marked as such. Therefore, this is specified in the example.
+
+> [!NOTE]
+> Don't forget to compile script as [library](xref:Compiling_a_CSharp_code_block_as_a_library) by including following in the Script.Exe tag.
+> ```xml
+>    <Param type="preCompile">true</Param>
+>    <Param type="libraryName">Kata Clients Connections</Param>
+> ```
