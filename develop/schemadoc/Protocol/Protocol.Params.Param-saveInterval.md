@@ -6,6 +6,10 @@ uid: Protocol.Params.Param-saveInterval
 
 Specifies that only one save operation must be executed per interval.
 
+> [!CAUTION]
+> This feature currently does not work as intended and should not be used.
+> The specified interval is ignored, and save operations are only executed when the element is restarted.
+
 ## Content Type
 
 duration
