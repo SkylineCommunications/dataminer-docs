@@ -7,10 +7,7 @@ uid: Removing_a_DaaS_system
 > [!WARNING]
 > When you remove a DaaS system, the system will be decommissioned. Within 7 days after you remove the system, you can still recover it by contacting [daas@dataminer.services](mailto:daas@dataminer.services). However, the cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
-1. Make sure you are logged in to dataminer.services with an account that has the necessary permissions on dataminer.services:
-
-   - On organization level, you need the **Admin or Owner** role.
-   - On system level, you need the **Owner** role.
+1. Make sure you are logged in to dataminer.services with an account that has either the **Admin or Owner** role on organization level, or the **Owner** role on system level.
 
 1. On the dataminer.services page, click the ellipsis ("...") button in the top-right corner of the box representing the system and select *Delete DMS*.
 
