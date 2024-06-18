@@ -115,3 +115,9 @@ Due to a problem with the web API, the *Service definition* component would no l
 Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\<username>\\* folder.
 
 From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
+
+#### Low-Code Apps: The app would incorrectly open in edit mode when you clicked 'Preview draft' [ID_39935]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When clicked *Preview draft* immediately after refreshing the browser window, in some rare cases, the draft version of the app would not be shown. Instead, the app would incorrectly open in edit mode.
