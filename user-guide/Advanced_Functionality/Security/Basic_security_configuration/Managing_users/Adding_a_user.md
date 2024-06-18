@@ -4,7 +4,7 @@ uid: Adding_a_user
 
 # Adding a user
 
-There are two ways to add a new user to a DataMiner System, depending on whether it is a local user or a domain user.
+There are two ways to add a new user to a DataMiner System, depending on whether it is a [local user](xref:Types_of_users#local-users) or a [domain user](xref:Types_of_users#manually-added-domain-users).
 
 ## Adding a local user
 
@@ -52,4 +52,4 @@ There are two ways to add a new user to a DataMiner System, depending on whether
    The new users will be added to the list of *Domain* users.
 
 > [!NOTE]
-> Some properties of domain users (e.g. name, password) cannot be changed in DataMiner. To indicate that domain users are read-only, these users are marked by a gray user icon in the user list.
+> Domain users can also be added automatically, in case they get added to a domain group that has been added to the DMS. See [Adding a user group](xref:Adding_a_user_group).

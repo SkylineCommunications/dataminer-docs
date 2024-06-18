@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39881]
+
+From now on, if Remote Access to the web apps is enabled, this allows access to the entire folder `/Documents/`, so that it is possible to access the documents available in Cube. Previously, only the `/Documents/DMA_COMMON_DOCUMENTS/` folder was accessible.
+
+#### 10 June 2024 - Fix - Link to terms and conditions not working [ID_39895]
+
+The link to the terms and conditions, displayed among others when a DaaS system was registered and an Agent was connected to dataminer.services, did not work correctly. This has now been resolved.
+
+#### 10 June 2024 - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
+
+In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
+
 #### 10 June 2024 - Fix - Admin - Zero credits not showing [ID_39866]
 
 On the Admin organization overview page, it was not possible to see how many credits were left in case you had zero credits. Now the number of available credits will always be displayed, even if this is zero.

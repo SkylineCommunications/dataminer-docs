@@ -176,6 +176,32 @@ When an alarm template contained multiple lines for the same parameter, each wit
 
 A number of security enhancements have been made.
 
+#### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
+
+#### ReIndexElasticSearchIndexes tool: Enhancements [ID_39614]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+A number of enhancements have been made to the *ReIndexElasticSearchIndexes* tool, which must be used when [migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch).
+
+- Up to now, when iterating over all indexes, the process would stop when it reached an index that could not be re-indexed. From now on, all indexes will always be processed, and a list of failed indexes will be written to disk.
+
+- Up to now, logging would only be available during program execution. No logging would be written to file. From now on, a log file will be kept, allowing investigation of any failures that occurred during a re-indexing process.
+
+- Up to now, when a re-indexing process failed, a generic error would be visible in the logging. From now on, the underlying failures detailing the root cause will also be logged.
+
+- Up to now, when a re-indexing process failed, the temporary index that was created would not be deleted. From now on, an attempt will be made to properly delete it.
+
+- Up to now, when the aliases were checked, a correction would be attempted before continuing. However, when a correction was necessary, the process would not continue. From now on, a retry will be made after a correction attempt.
+
+- A command-line option has been added to allow you to retry the failed indexes (which will now be stored in the failed indexes list on disk). This can prove useful if, after investigation, the cause of the failure to re-index has been resolved.
+
+  `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`
+
 #### SNMP++: Trap processing enhancements [ID_39629]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
@@ -340,3 +366,15 @@ Also, when an SLNet connection was made to a FQDN which points to a loopback add
 <!-- MR 10.4.0 [CU5] - FR 10.4.7 [CU0] -->
 
 The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
+
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+In some cases, a deadlock would occur during startup of the SLDataMiner process when services with duplicate IDs were loaded in.

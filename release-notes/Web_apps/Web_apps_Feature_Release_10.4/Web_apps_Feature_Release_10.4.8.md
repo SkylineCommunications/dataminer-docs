@@ -87,3 +87,37 @@ When, in edit mode, you removed a bar from a *Colum & bar chart* component, in s
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you updated the name of a dashboard folder while a dashboard was open, in some cases, a `Dashboard has not been found` error would be thrown.
+
+#### Dashboards app: Components showing the result of a query filtered by feeds would not get updated when the feed values changed [ID_39877]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In a dashboard, in some cases, components showing the result of a query filtered by feeds would not get updated when the feed values changed.
+
+Also, in some cases, a query could keep on updating when it was linked to a time range feed that exposed a sliding window (e.g. "last 5 minutes").
+
+#### Dashboards app & Low-Code Apps - Pie & donut chart component: Pie chart would not re-appear after an error message had disappeared [ID_39879]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a pie chart disappeared to allow an error message to get displayed, in some cases, it would incorrectly not re-appear after the error message had disappeared.
+
+#### Dashboards app & Low-Code Apps - Service definition component: Names of the resources would no longer be displayed [ID_39888]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Due to a problem with the web API, the *Service definition* component would no longer display the names of the resources.
+
+#### Web API would incorrectly retrieve the time zone from the user-specific ClientSettings.json file [ID_39897]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\<username>\\* folder.
+
+From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
+
+#### Low-Code Apps: The app would incorrectly open in edit mode when you clicked 'Preview draft' [ID_39935]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When clicked *Preview draft* immediately after refreshing the browser window, in some rare cases, the draft version of the app would not be shown. Instead, the app would incorrectly open in edit mode.

@@ -34,6 +34,20 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 ### Fixes
 
+#### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When, on an offline Failover agent, SLNet failed to parse the *DMS.xml* file, up to now, the Failover setup would be ended.
+
+From now on, when SLNet fails to parse the *DMS.xml* file on an offline Failover agent, it will use the last-known Failover configuration it has stored in memory.
+
+#### Problem with SLLog while iterating over the log file buffers [ID_39321]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+SLLog has a thread that iterates over the different log file buffers and that copies a number of lines from the buffers to the log files. Due to a problem in this iteration mechanism, in some cases, SLLog could start to leak memory.
+
 #### SLLogCollector: 'Access is denied' errors [ID_39364]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
@@ -52,6 +66,12 @@ When SRM messages were sent directly to the master agent, SLNet could experience
 
 When a DataMiner Agent was restarted either manually or automatically, in some rare cases, it would not restart properly.
 
+#### SLAutomation would leak a small amount of memory each time an Automation script was run [ID_39644]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLAutomation would leak a small amount of memory each time an Automation script was run.
+
 #### Table row discrepancy between SLElement and SLProtocol [ID_39645]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
@@ -63,6 +83,12 @@ Due to a locking issue, in some cases, SLProtocol and SLElement could end up wit
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When a table was fully included in a service or when a table exposed a DCF interface and had multiple columns that were being monitored, up to now, the severity that would bubble up to the service or interface level would incorrectly be the severity of the value that was last modified instead of the highest severity found in the table.
+
+#### Problem with SLProtocol while processing a FillArray request [ID_39657]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLProtocol could stop working while processing a FillArray request.
 
 #### SLNet would not process errors correctly when using FileInfoHelper [ID_39676]
 
@@ -87,3 +113,9 @@ In some cases, a fatal error could occur in SLASPConnection when an email messag
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
+
+#### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.

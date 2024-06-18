@@ -455,6 +455,18 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+
+#### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID_39910]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -548,6 +560,14 @@ When MessageBroker received a Subscribe call while it was reconnecting, in some 
 
 In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
 
+#### Service & Resource Management: Error occurring when the Service Manager fails to delete a service was incorrectly logged as 'information' instead of 'error' [ID_39738]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, the error thrown when the Service Manager fails to delete a service was incorrectly logged as "information" instead of "error". From now on, this error will be logged as error with log level 0.
+
+Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
+
 #### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
@@ -580,3 +600,9 @@ When a join operation was performed with two of the following data sources, in s
 - *Get behavioral change events*
 - *Get trend data pattern events*
 - *Get trend data patterns*
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.

@@ -38,6 +38,8 @@ items:
               topicUid: ChangeMinimumRequiredDMAVersion
             - name: Change protocol name
               topicUid: ChangeProtocolName
+            - name: Change InterApp range
+              topicUid: ChangeInterAppRange
           - name: Parameter changes
             topicUid: ChangeParameterDescription
             items:
