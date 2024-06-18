@@ -12,7 +12,7 @@ You can also dive deeper by opening definition tables, where you can see a list 
 
 For a broad overview, the DOM Viewer’s powerful table functionality lists all field descriptors across all definitions in every module, complete with extensive filtering options. The same robust features apply to all DOM instances, providing you with a holistic view of your entire DataMiner System.
 
-[Deploy](https://catalog.dataminer.services/details/08aa327a-eb86-4b6a-9fcc-c3f109a26f8a) the DOM Viewer today to transform your data management experience and unlock the full potential of your DataMiner System.
+[Deploy the DOM Viewer](https://catalog.dataminer.services/details/08aa327a-eb86-4b6a-9fcc-c3f109a26f8a) to your DataMiner System today to transform your data management experience and unlock the full potential of your DataMiner System.
 
 > [!TIP]
 > See [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
