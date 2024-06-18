@@ -1,13 +1,13 @@
 ---
 uid: SLA_tutorial
 ---
-# Using DataMiner business intelligence to manage and monitor your SLAs
+# Using an SLA to monitor a power service
 
-This tutorial will show you how to configure and use a Service Level Agreement (SLA) to monitor a power service. You will learn to customize SLA parameters to track service metrics towards high availability compliance.
+In this tutorial, you will learn how to configure and use a Service Level Agreement (SLA) to monitor a power service. You will learn to customize SLA parameters to track service metrics towards high availability compliance.
 
 Because services are at the heart of SLAs, you will also learn how to use an existing service as the starting point for SLA management.
 
-You will also see how to configure and alarm template to monitor and visualize alarms for city streets affected by power service degradation.
+Additionally, you will learn how to configure an alarm template to monitor and visualize alarms for city streets affected by power service degradation.
 
 Expected duration: 20 minutes
 
@@ -15,13 +15,12 @@ Expected duration: 20 minutes
 > See also:
 >
 > - [Business intelligence](xref:sla)
-> - [Skyline SLA Definition Basic connector help](https://docs.dataminer.services/connector/doc/Skyline_SLA_Definition_Basic.html)
+> - [Connector documentation: Skyline SLA Definition Basic](https://docs.dataminer.services/connector/doc/Skyline_SLA_Definition_Basic.html)
 > - [Services](xref:About_services)
 > - [Alarm templates](xref:About_alarm_templates)
-> - [Kata #TBD: Learn how to configure and manage your own SLAs](https://community.dataminer.services/courses/kata-TBD/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created using [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) version 10.4.7.0-14409.
+> The content and screenshots for this tutorial have been created using DataMiner version 10.4.7.
 
 ## Prerequisites
 
@@ -31,128 +30,188 @@ Expected duration: 20 minutes
 
 This tutorial consists of the following steps:
 
-- [Step 1: Deploy the DataMiner SLA tutorial package from the Catalog and explore its content](#step-1-deploy-the-dataminer-sla-tutorial-package-from-the-catalog-and-explore-its-content)
-- [Step 2: Create and configure a new SLA](#step-2-create-and-configure-a-new-sla)
-- [Step 3: Assign a customized alarm template](#step-3-assign-a-customized-alarm-template)
-- [Step 4: View and analyze SLA metrics](#step-4-view-and-analyze-sla-metrics)
+- [Step 1: Deploy the DataMiner SLA tutorial package from the Catalog](#step-1-deploy-the-dataminer-sla-tutorial-package-from-the-catalog)
+- [Step 2: Create a new SLA](#step-2-create-a-new-sla)
+- [Step 3: Configure your new SLA](#step-3-configure-your-new-sla)
+- [Step 4: Assign and modify an alarm template](#step-4-assign-and-modify-an-alarm-template)
+- [Step 5: Analyze the SLA metrics](#step-5-analyze-the-sla-metrics)
 
-## Step 1: Deploy the *DataMiner SLA tutorial* package from the Catalog and explore its content
+## Step 1: Deploy the *DataMiner SLA tutorial* package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/ac72d9e5-4c12-4408-a591-2fc2316abebf>.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-1. Open DataMiner Cube and check that the following items are created in your DataMiner agent:
-    1. View: *DataMiner SLA tutorial*
-    1. Element: *Power Monitoring - Miami*
-    1. Service: *Power Service - South Beach*
+1. Open DataMiner Cube and check whether the following items have been added to your DataMiner Agent:
 
-   If that is the case, the package has been successfully deployed.
+   - A view named "DataMiner SLA tutorial" (1)
+
+   - An element named "Power Monitoring - Miami" (2)
+
+   - A service named "Power Service - South Beach" (3)
+
+   ![DataMiner SLA tutorial](~/user-guide/images/DataMiner_SLA_Tutorial.png)
+
+   If this is the case, the package has been successfully deployed.
 
    On the *Data* > *Table* page of the element, you will see that the *Street Overview* and *Power Parameters* tables contain pre-provisioned data:
 
    ![Street Overview and Power Parameters tables](~/user-guide/images/SLA_tutorial_img00.png)
 
-    On the *Data* > *Table* page of the service, you will see that some of the power parameters have been included:
+    On the *Data* > *Power Monitoring - Miami* > *Table* page of the service, you will see that the *Power Parameters* table already contains two entries.
 
     ![Service power parameters](~/user-guide/images/SLA_tutorial_img01.png)
 
-## Step 2: Create and configure a new SLA
+## Step 2: Create a new SLA
 
-1. Create "Power SLA - South Beach" element
+Now that you have installed the *DataMiner SLA tutorial* package, you will create a new Service Level Agreement (SLA).
 
-    Right click on the *DataMiner SLA tutorial* view > *New* > *SLA*:
+1. In the Surveyor, right-click the *DataMiner SLA tutorial* view and select *New* > *SLA*.
 
-    ![Create SLA](~/user-guide/images/SLA_tutorial_img02.png)
+   ![Create SLA](~/user-guide/images/SLA_tutorial_img02.png)
 
-    On the *New SLA* screen configure the following fields:
-    - Name: *Power SLA - South Beach*
-    - Service: *Power Service - South Beach*
-    - Protocol: *Skyline SLA Definition Basic*
-    - Version: *Production*
+   A card will open.
 
-    Click Create.
+1. Specify the following information:
 
-    ![New SLA screen](~/user-guide/images/SLA_tutorial_img03.png)
+   - *Name*: `Power SLA - South Beach`
 
-1. Configure SLA element parameters
+   - *Service*: `Power Service - South Beach`
 
-    On the *SLA Configuration* page configure the following parameters:
-    - Window settings
-        - Type: *Fixed window*
-        - Time: *1*
-        - Unit: *Minutes*
-    - Alarm settings
-        - Violation level: *Warning*
-        - Delay time: *Not used*
-        - Minimum outage threshold: *Full outage*
-    - Extra settings
-        - Admin state: *Tracking*
-        - Base timestamp: *2001/01/01 00:00:00*
-        - Time to keep outages: *1 Month*
-        - SLA validity start time: *Since creation*
-        - SLA validity end time: *Forever*
+   - *Protocol*: `Skyline SLA Definition Basic`
 
-    ![SLA configuration](~/user-guide/images/SLA_tutorial_img04.png)
+   - *Version*: Production
 
-    On the *Compliance configuration* page configure the following parameters:
-    - Total violation
-        - Maximum total violations type: *Absolute*
-        - Maximum total violations value: *20*
-        - Maximum total violations unit: *Seconds*
-    - Single violation
-        - Maximum single violation type: *Absolute*
-        - Maximum single violation value: *5*
-        - Maximum single violation unit: *Seconds*
-    - Violation count
-        - Total violations before breached: *0*
+1. Click *Create* to add the SLA.
 
-    ![Compliance configuration](~/user-guide/images/SLA_tutorial_img05.png)
+   ![New SLA screen](~/user-guide/images/SLA_tutorial_img03.png)
 
-    On the *Advanced configuration* page configure the following parameters:
-    - Active Alarms: *Show*
-    - Outages: *Enabled*
+## Step 3: Configure your new SLA
 
-    ![Advanced configuration](~/user-guide/images/SLA_tutorial_img06.png)
+In this step, you will configure different data pages of your newly created SLA.
 
-## Step 3: Assign a customized alarm template
+1. On the *Data* > *SLA Configuration* page of your SLA, configure the following parameters:
 
-1. Configure and assign the *DataMiner SLA tutorial* alarm template
+   - *Window settings* > *Type*: Fixed window
 
-    On *Apps* > *Protocols & Templates* > *Skyline Generic Virtual Connector*, open the *DataMiner SLA tutorial* alarm template and configure it as it follows:
+   - *Window settings* > *Time*: 1
 
-    ![Open DataMiner SLA tutorial alarm template](~/user-guide/images/SLA_tutorial_img07.png)
+   - *Window settings* > *Unit*: Minutes
 
-    ![Configure DataMiner SLA tutorial alarm template](~/user-guide/images/SLA_tutorial_img08.png)
+   - *Alarm settings* > *Violation Level*: Warning
 
-    Click Apply and then OK.
+   - *Alarm settings* > *Delay Time*: Not used
 
-    Right click on the *Power Monitoring - Miami* element > *Protocols & Templates* > *Assign alarm template* and select the DataMiner SLA tutorial template.
+   - *Alarm settings* > *Minimum outage threshold*: Full outage
 
-    ![Assign DataMiner SLA tutorial alarm template](~/user-guide/images/SLA_tutorial_img09.png)
+   - *Extra settings* > *Admin State*: Tracking
 
-1. Generate an alarm
+   - *Extra settings* > *Base Timestamp*: 2001/01/01 00:00:00
 
-    On the *Power Monitoring - Miami* element > *Power Parameters* table, right click on *Ocean Drive* > *Edit item..* and set the Voltage to 115.
+   - *Extra settings* > *Time To Keep Outages*: 1 Month
 
-    ![Generate a Voltage alarm](~/user-guide/images/SLA_tutorial_img10.png)
+   - *Extra settings* > *SLA Validity Start Time*: Since creation
 
-    Click OK.
+   - *Extra settings* > *SLA Validity End Time*: Forever
 
-    See how a new Voltage alarm has been generated and how it impacts the *Power Service - South Beach* service.
+   > [!TIP]
+   > To save all changes simultaneously, click *Save all* in the lower right corner.
+
+   ![SLA configuration](~/user-guide/images/SLA_tutorial_img04.png)
+
+1. On the *Data* > *Compliance Configuration* page of your SLA, configure the following parameters:
+
+   - *Total violation* > *Maximum Total Violations Type*: Absolute
+
+   - *Total violation* > *Maximum Total Violations Value*: 20
+
+   - *Total violation* > *Maximum Total Violations Unit*: Seconds
+
+   - *Violation count* > *Total Violations Before Breach*: 0
+
+   - *Single violation* > *Maximum Single Violation Type*: Absolute
+
+   - *Single violation* > *Maximum Single Violation Value*: 5
+
+   - *Single violation* > *Maximum Single Violation Unit*: Seconds
+
+   > [!TIP]
+   > To save all changes simultaneously, click *Save all* in the lower right corner.
+
+   ![Compliance configuration](~/user-guide/images/SLA_tutorial_img05.png)
+
+1. On the *Data* > *Advanced Configuration* page, configure the following parameters:
+
+   - *Active Alarms*: Show
+
+   - *Outages*: Enabled
+
+   ![Advanced configuration](~/user-guide/images/SLA_tutorial_img06.png)
+
+## Step 4: Assign and modify an alarm template
+
+In the next step, you will assign an alarm template to the *Power Monitoring - Miami* element. This alarm template came included in the package you installed in a previous step. However, you will need to modify it.
+
+1. In the Cube sidebar, go to *Apps* > *Protocols & Templates*.
+
+1. Under *Protocols*, select *Skyline Generic Virtual Connector*.
+
+1. Under *Alarm*, right-click *DataMiner SLA tutorial* and select *Open*.
+
+   ![Open DataMiner SLA tutorial alarm template](~/user-guide/images/SLA_tutorial_img07.png)
+
+1. Configure the alarm template:
+
+   1. Under *Table*, set the *Power Parameters: Voltage (V)* parameter to *Included*.
+
+   1. Configure the following alarm thresholds:
+
+      - In the *WARN LO* column, enter `115`.
+
+      - In the *NORMAL* column, enter `120`.
+
+      ![Configure DataMiner SLA tutorial alarm template](~/user-guide/images/SLA_tutorial_img08.png)
+
+   1. Click *Apply* and then *OK*.
+
+1. In the Surveyor, right-click the *Power Monitoring - Miami* element and select *Protocols & Templates* > *Assign alarm template* > *DataMiner SLA tutorial*.
+
+1. Confirm that you want to apply this alarm template.
+
+1. Generate an alarm to verify whether the alarm template was correctly configured.
+
+   1. In the Surveyor, select the *Power Monitoring - Miami* element.
+
+   1. Go to the *DATA* > *Table* page, right-click the *Ocean Drive* entry in the *Power Parameters* table, and select *Edit item*.
+
+   1. Lower the Voltage to 115.
+
+      ![Generate a Voltage alarm](~/user-guide/images/SLA_tutorial_img10.png)
+
+   1. Click *OK*.
+
+   The *Power Parameters* table on the *DATA* > *TABLE* page of your element will now show an alarm in the *Voltage* column of the *Ocean Drive* entry.
 
    ![Voltage alarm](~/user-guide/images/SLA_tutorial_img10.1.png)
 
-## Step 4: View and analyze SLA metrics
+   In the Alarm Console, you will see an alarm of severity *Warning Low* for the *Power Monitoring - Miami* element.
 
-1. View general SLA metrics
+   ![Alarm Console](~/user-guide/images/SLA_tutorial_Alarm_Console.png)
 
-    On the *Power SLA - South Beach* element > "Main View" page, see how the SLA has been breached due to the Voltage alarm.
+## Step 5: Analyze the SLA metrics
 
-    ![General SLA metrics](~/user-guide/images/SLA_tutorial_img11.png)
+In this final step, you will learn to interpret the different SLA metrics.
+
+1. Go to the *DATA* > *Main View* page of the *Power SLA - South Beach* SLA.
+
+1. Under *Compliance Info*, verify whether *Compliance* is set to *Compliant* or *Breached*.
+
+   Because of the Voltage alarm you simulated, it should show *Breached*.
+
+   ![General SLA metrics](~/user-guide/images/SLA_tutorial_img11.png)
 
 1. Restore service compliance and inspect SLA outages and history
 

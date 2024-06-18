@@ -2,10 +2,10 @@
 uid: Business_intelligence_tutorials
 ---
 
-# Business intelligence tutorials
+# Business Intelligence tutorials
 
-## Service level agreement (SLA) tutorials
+## Service Level Agreement (SLA) tutorials
 
 | Name | Description |
 |--|--|
-| [Using DataMiner business intelligence to manage and monitor your SLAs](xref:SLA_tutorial) | Configure and use a power monitoring SLA. |
+| [Managing and monitoring your SLAs](xref:SLA_tutorial) | Configure and use an SLA to monitor a power service. |
