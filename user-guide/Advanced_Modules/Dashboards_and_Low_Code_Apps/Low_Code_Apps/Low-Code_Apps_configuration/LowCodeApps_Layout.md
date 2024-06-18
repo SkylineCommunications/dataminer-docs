@@ -84,7 +84,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
          >
          > - To determine if data is considered identical, compare the display labels. If multiple components display the same labeled data, they will all use the same color for this label.
          > - Data colors may vary across different sessions. Refreshing the low-code app may result in different colors being used for the same data. To ensure consistent colors across multiple sessions, you can define conditional colors in the *Component Styles* section of a low-code app page theme or in a [component theme's color palette](xref:Customize_Component_Layout) by binding colors to specific regular expressions that match the display labels of the data.
-         > - If a low-code app created prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 relies on the color order assigned in the theme's color palette, you will need to manually bind these colors to the data using conditional coloring.
+         > - If a low-code app created prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 relies on the color order assigned in the theme's color palette, you will need to manually bind these colors to the data using conditional coloring to achieve the same result.
          > - If you want a single color to be used across all components, include only one color in the component theme's data colors/color palette.
 
        - *Conditional colors*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->. If a display label of the data matches the specified text, that data will inherit the conditional color. These conditional colors override the normal data colors.

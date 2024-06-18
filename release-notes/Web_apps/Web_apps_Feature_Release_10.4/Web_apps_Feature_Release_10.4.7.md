@@ -30,7 +30,7 @@ Note that, by default, colors will not be consistent across different sessions. 
 
 > [!NOTE]
 >
-> - If a low-code app created prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 relies on the color order assigned in the theme's color palette, you will need to manually bind these colors to the data using conditional coloring.
+> - If a low-code app created prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 relies on the color order assigned in the theme's color palette, you will need to manually bind these colors to the data using conditional coloring to achieve the same result.
 > - If you want to revert to the former color assignment behavior where a single color is used across all graphs, include only one color in the component theme's color palette.
 
 ## New features
