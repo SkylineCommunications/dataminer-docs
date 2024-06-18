@@ -100,7 +100,11 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Cube logging: Entries regarding known UI issues now include a link to a page where you can find more information [ID_39768]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In the Cube logging, entries regarding known UI issues will now include a link to a page on <https://docs.dataminer.services/> where you can find more information about the issue in question.
 
 ### Fixes
 
