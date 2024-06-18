@@ -121,3 +121,9 @@ From now on, the current time zone will be retrieved from the *ClientSettings.js
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When clicked *Preview draft* immediately after refreshing the browser window, in some rare cases, the draft version of the app would not be shown. Instead, the app would incorrectly open in edit mode.
+
+#### Web API: Problem during the initialization of the dashboard cache would cause 'Dashboard was not found' errors to be displayed when opening low-code apps [ID_39946]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you deleted a low-code app while the dashboard cache was still being initialized, in some cases, an exception could be thrown, and when, later on, you tried to open an app, a `Dashboard was not found` error would be displayed.
