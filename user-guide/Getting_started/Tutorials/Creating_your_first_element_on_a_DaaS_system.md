@@ -117,11 +117,9 @@ Now that you have installed DataMiner Cube, you can use it to access your new Da
 
 Next, you will create an element that allows you to monitor a website of your choice, such as your corporate website. This element will use the *Generic HTTP Query* protocol you deployed earlier, which can be used to regularly send HTTP/HTTPS requests. This helps assess the website's availability.
 
-1. In the Cube sidebar, go to *Apps* > *Protocols & Templates*.
+1. In the Cube sidebar, right-click in the Surveyor and select *New > Element*.
 
-1. Under *Protocols*, select the *Generic HTTP Query* protocol.
-
-1. Right-click in the *Elements* column, and select *New element*.
+   ![Add element](~/user-guide/images/Add_Element.png)
 
    A card will open.
 
@@ -131,7 +129,12 @@ Next, you will create an element that allows you to monitor a website of your ch
 
    - *General* > *Description*: Enter a description for your element, e.g. `Element to monitor a website's responsiveness`.
 
+   - *Device details* > *Protocol*: `Generic HTTP Query`.
+
 1. Click *Create* to add the element.
+
+   > [!TIP]
+   > See also: [Adding elements](xref:Adding_elements)
 
 1. On the *DATA* > *General* page, right-click the *HTTP Queries* table and select *Add GET*.
 
