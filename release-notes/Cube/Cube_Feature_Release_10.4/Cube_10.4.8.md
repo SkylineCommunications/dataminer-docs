@@ -121,6 +121,12 @@ On client computers, up to now, incorrect `CubeHost: Unable to load assembly` er
 - System.Numerics.Vectors
 - System.Runtime.CompilerServices.Unsafe
 
+#### Visual Overview: Opening a visual overview containing an image could cause Cube to become unresponsive [ID_39770]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you opened a visual overview that containing an image, in some cases, DataMiner Cube could become unresponsive.
+
 #### Alarm Console: Problem when sorting alarms by the PollingIP column [ID_39804]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
