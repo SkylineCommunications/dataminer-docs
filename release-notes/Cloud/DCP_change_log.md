@@ -33,21 +33,17 @@ finally
 
 The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions) have been updated accordingly.
 
-#### 30 May 2024 - Fix - Admin - Zero credits not showing [ID_39866]
+#### 10 June 2024 - Fix - Admin - Zero credits not showing [ID_39866]
 
-On the Admin organization overview page. You will now be able to see how many credits you have. Even when you have none.
+You were not able to see how many credits you had left on the Admin organization overview page when you had zero credits. You are now be able to see how many credits you have. Even when you have none.
 
-#### 30 May 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
+#### 10 June 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
 
-When deploying a DaaS system, you will now be asked to confirm your password.
+When you want to deploy a DaaS system, you will now be asked to confirm your password before being able to deploy a system.
 
-#### 30 May 2024 - Fix - Admin - Opening in desktop app [ID_39838]
+#### 10 June 2024 - Fix - Admin - Opening in desktop app [ID_39838]
 
-The button 'Open in desktop app' has been fixed to open Cube from the DMS overview page.
-
-#### 30 May 2024 - Fix - Catalog - Version - SVN link & disable button [ID_39816]
-
-The SVN link has been changed to use the version nummber. The deploy button will be disabled when this occurs.
+You were not able to open Cube when clicking the 'Open in desktop app' button on the overview page of a DMS. This has been fixed to open Cube correctly.
 
 #### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
 
