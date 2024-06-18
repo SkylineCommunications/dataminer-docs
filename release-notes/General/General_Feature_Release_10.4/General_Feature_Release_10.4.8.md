@@ -59,6 +59,12 @@ For more information, see [Function resource settings](xref:Function_resource_se
 
 ### Enhancements
 
+#### SLElement: Enhanced performance when processing service impact updates [ID_39003]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->

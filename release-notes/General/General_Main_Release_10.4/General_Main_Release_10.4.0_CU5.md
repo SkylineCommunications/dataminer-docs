@@ -12,6 +12,12 @@ uid: General_Main_Release_10.4.0_CU5
 
 ### Enhancements
 
+#### SLElement: Enhanced performance when processing service impact updates [ID_39003]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
