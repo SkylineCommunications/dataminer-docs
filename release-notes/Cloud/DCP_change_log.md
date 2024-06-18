@@ -21,6 +21,18 @@ The link to the terms and conditions, displayed among others when a DaaS system 
 
 In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
 
+#### 10 June 2024 - Fix - Admin - Zero credits not showing [ID_39866]
+
+On the Admin organization overview page, it was not possible to see how many credits were left in case you had zero credits. Now the number of available credits will always be displayed, even if this is zero.
+
+#### 10 June 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
+
+When you deploy a DaaS system, you will now be asked to confirm your password before can deploy the system.
+
+#### 10 June 2024 - Fix - Admin - Opening in desktop app not working [ID_39838]
+
+On the overview page of a DMS in the Admin app, the *Open in desktop app* button did not work correctly. Now Cube will correctly be opened when this button is clicked.
+
 #### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
 A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
