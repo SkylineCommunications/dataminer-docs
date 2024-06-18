@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 10 June 2024 - Fix - Admin - Zero credits not showing [ID_39866]
+
+On the Admin organization overview page, it was not possible to see how many credits were left in case you had zero credits. Now the number of available credits will always be displayed, even if this is zero.
+
+#### 10 June 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
+
+When you deploy a DaaS system, you will now be asked to confirm your password before can deploy the system.
+
+#### 10 June 2024 - Fix - Admin - Opening in desktop app not working [ID_39838]
+
+On the overview page of a DMS in the Admin app, the *Open in desktop app* button did not work correctly. Now Cube will correctly be opened when this button is clicked.
+
 #### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
 A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
@@ -32,18 +44,6 @@ finally
 ````
 
 The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions) have been updated accordingly.
-
-#### 10 June 2024 - Fix - Admin - Zero credits not showing [ID_39866]
-
-You were not able to see how many credits you had left on the Admin organization overview page when you had zero credits. You are now be able to see how many credits you have. Even when you have none.
-
-#### 10 June 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
-
-When you want to deploy a DaaS system, you will now be asked to confirm your password before being able to deploy a system.
-
-#### 10 June 2024 - Fix - Admin - Opening in desktop app [ID_39838]
-
-You were not able to open Cube when clicking the 'Open in desktop app' button on the overview page of a DMS. This has been fixed to open Cube correctly.
 
 #### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
 
