@@ -30,7 +30,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g. for the lines in a line chart.
 
-       From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, under *Colors* > *Data colors*, you can specify conditional colors. If a display label of the data matches the specified text, that data will inherit the conditional color.
+       From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, under *Colors* > *Data colors*, you can specify conditional colors. If a display label of the data matches the specified text, that data will inherit the conditional color. These conditional colors override the normal data colors.
 
        To add a conditional color:
 
