@@ -449,6 +449,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->

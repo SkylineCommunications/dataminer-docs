@@ -71,6 +71,12 @@ Because of a number of enhancements, overall performance of SLElement has increa
 
 A number of enhancements have been made to the process that determines whether a flatline change point is considered to be anomalous or not.
 
+#### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
+
 #### 'Security Advisory' BPA test will no longer report an issue when NATS does not have TLS enabled on a single DMA [ID_39792]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
