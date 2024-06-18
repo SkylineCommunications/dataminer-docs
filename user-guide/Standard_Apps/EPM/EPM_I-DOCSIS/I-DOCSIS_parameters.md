@@ -18,11 +18,11 @@ This section lists the aggregated parameters for each topology level in the I-DO
 | Number CM|X|X|X|X|X|X|X|X|X|X|X|X|
 | Number CM Offline|X|X|X|X|X|X|X|X|X|X|X|X|
 | Percentage CM Offline|X|X|X|X|X|X|X|X|X|X|X|X|
-| Number CM DOCSIS 2.0|X|X|X|X|X|X|X|X|X|X|X|X|
-| Number CM DOCSIS 3.0|X|X|X|X|X|X|X|X|X|X|X|X|
-| Number CM DOCSIS 3.1|X|X|X|X|X|X|X|X|X|X|X|X|
-| Number CM DOCSIS 1.x|X|X|X|X|X|X|X|X|X|X|X|X|
-| Number CM DOCSIS Other|X|X|X|X|X|X|X|X|X|X|X|X|
+| Number DOCSIS 2.0|X|X|X|X|X|X|X|X|X|X|X|X|
+| Number DOCSIS 3.0|X|X|X|X|X|X|X|X|X|X|X|X|
+| Number DOCSIS 3.1|X|X|X|X|X|X|X|X|X|X|X|X|
+| Number DOCSIS 1.x|X|X|X|X|X|X|X|X|X|X|X|X|
+| Number DOCSIS Unknown|X|X|X|X|X|X|X|X|X|X|X|X|
 | Number CM Ping Unreachable|X|X|X|X|X|X|X|X|X|X|X|X|
 | Percentage CM Ping Unreachable|X|X|X|X|X|X|X|X|X|X|X|X|
 | Average Latency|X|X|X|X|X|X|X|X|X|X|X|X|
@@ -81,23 +81,23 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 
   Calculated based on the CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (8 Operational = Online, any other value = Offline).
 
-- **Number CM DOCSIS 2.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 2.0 range.
+- **Number DOCSIS 2.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 2.0 range.
 
   Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
-- **Number CM DOCSIS 3.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.0 range.
+- **Number DOCSIS 3.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.0 range.
 
   Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
-- **Number CM DOCSIS 3.1**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.1 range.
+- **Number DOCSIS 3.1**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.1 range.
 
   Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
-- **Number CM DOCSIS 1.x**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 1.x range.
+- **Number DOCSIS 1.x**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 1.x range.
 
   Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
-- **Number CM DOCSIS Other**: Calculated. The total number of associated cable modems that are unable to report their DOCSIS version or for which the DOCSIS version is outside of the known range.
+- **Number DOCSIS Unknown**: Calculated. The total number of associated cable modems that are unable to report their DOCSIS version or for which the DOCSIS version is outside of the known range.
 
   Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
