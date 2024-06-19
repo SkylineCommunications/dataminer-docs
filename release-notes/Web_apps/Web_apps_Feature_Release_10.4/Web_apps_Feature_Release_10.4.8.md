@@ -36,6 +36,12 @@ A number of enhancements have been made with regard to the validation of theme c
 
 When you specify invalid colors or invalid regex patterns, you will not be able to click *Save* until all invalid values have been corrected.
 
+#### Low-Code Apps: Default table cell hyperlink will no longer contain the URL of the DMA [ID_39963]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Up to now, a table cell hyperlink would by default be the URL of the DataMiner Agent, followed by `{cellValue}`. From now on, a table cell hyperlink will by default be `{cellValue}`, without the URL of the DataMiner Agent.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Interactive Automation scripts launched from a node edge graph or a context menu action would not inherit the theme of the dashboard or low-code app [ID_39664]
