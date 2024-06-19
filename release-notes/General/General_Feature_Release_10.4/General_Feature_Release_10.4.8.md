@@ -116,6 +116,14 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
 
+#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+
+`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+
 #### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->

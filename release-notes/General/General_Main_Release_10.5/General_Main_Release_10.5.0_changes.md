@@ -461,6 +461,14 @@ From now on, when a QAction throws an unhandled exception, an attempt will be ma
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+
+`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+
 #### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
