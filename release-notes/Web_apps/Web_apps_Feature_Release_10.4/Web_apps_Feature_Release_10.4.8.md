@@ -82,6 +82,12 @@ In some cases, a run-time error could occur when configuring a *Node edge graph*
 
 When, in edit mode, you removed a bar from a *Colum & bar chart* component, in some cases, the chart and the legend would show different colors.
 
+#### Dashboards app & Low-Code Apps - Maps component: Problem when changing a layer setting [ID_39855]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you changed a value in the layer settings of a *Maps* component, all settings would be reloaded and the text box containing the value you changed would go out of bounds.
+
 #### Dashboards app: Problem when updating the name of a dashboard folder while a dashboard was open [ID_39873]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
