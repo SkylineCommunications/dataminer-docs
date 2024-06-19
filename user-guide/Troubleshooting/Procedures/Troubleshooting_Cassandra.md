@@ -6,70 +6,76 @@ uid: Troubleshooting_Cassandra
 
 ## Context
 
-DataMiner uses Cassandra in various ways. Each way (=storage) has its specific behavior and place within DataMiner.
+DataMiner uses Cassandra in various ways. Each way has its specific behavior and place within a DataMiner System.
 
-For Cassandra we have two types of storages, i.e. there are two distinct types of Cassandra database in use:
+We have two types of Cassandra storage, i.e. two distinct types of Cassandra databases:
 
-- Dedicated clustered storage, hereafter called Cassandra Cluster
-- Storage per DMA (with or without indexing), hereafter called Cassandra Single
+- Dedicated clustered storage: *Cassandra Cluster*
+- Storage per DMA (with or without indexing): *Cassandra Single*
 
-For more information about the storage options see [About databases](xref:Databases_about).
+For more information on available storage options, see [About databases](xref:Databases_about).
 
-First and foremost, it is imperative to determine whether the setup is using Cassandra Cluster or Cassandra Single. There are some key differences between the two when investigating.
+First and foremost, it is imperative to determine whether the setup is using *Cassandra Cluster* or *Cassandra Single*. When investigating issues, you should keep in mind that there are some key differences between the two.
 
-To do this, in DataMiner Cube, navigate to system center > Database > Type. If the type is database per cluster, we note down that we have a Cassandra Cluster or a dedicated clustered storage. If the type is Cassandra, the system has a Cassandra Single or a Storage Per DMA.
+In DataMiner Cube, go to *System Center > Database > Type*:
+
+- If the type is *database per cluster*, a *Cassandra Cluster* or a *dedicated clustered storage* is being used.
+- If the type is *Cassandra*, a *Cassandra Single* or a *Storage Per DMA* is being used.
 
 ## Architecture
 
-In case of a failover system a healthy Cassandra single system has two clustered nodes with replication factor "2" and replication strategy "simple strategy".
+In case of a Failover system, a healthy *Cassandra Single* system has two clustered nodes with replication factor "2" and replication strategy "simple strategy".
 
-In case there are no failover agents, each agent matches one single Cassandra node that is not clustered together with the other Cassandra nodes linked to DataMiner.
+If there are no failover agents, each agent is a single Cassandra node that is not clustered with the other Cassandra nodes linked to DataMiner.
 
-When using a Cassandra Cluster, the number of nodes depends on the configuration.
+When using a *Cassandra Cluster*, the number of nodes depends on the configuration.
 
-## Issue symptoms
+## Symptoms of issues
 
-- DataMiner fails to start up – errors found in  SLDBConnection log
-- Elements fail to start and are in “error” status
-- In alarm console
+- DataMiner fails to start up. Errors can be found in the SLDBConnection.txt log file.
 
-  - Error alarm with value - General database failure, failed to initialize…
-  - Error alarm mentioning DataMiner goes into “offload mode”
+- Elements fail to start and are in status "Error".
+
+- In the Alarm Console, the following alarms appear:
+
+  - Error alarm with value "General database failure, failed to initialize..."
+  - Error alarm mentioning "DataMiner goes into offload mode"
 
     > [!NOTE]
-    > This may also be caused by different databases such as Elasticsearch having problems
+    > This error may also be caused by other databases (e.g. Elasticsearch).
 
-- The SLDataGateway process’ memory is leaking
+- The SLDataGateway process is leaking memory.
 
 ## Prerequisites and required tools
 
-- Microsoft Platform elements
+- *Microsoft Platform* elements
 
-  - Trending must be enabled
-  - To detect memory leaks
+  - Trending must be enabled.
+  - Can be used to detect memory leaks.
 
 - DevCenter
 
-  - Allows you to test-query the database
-  - Can be found on C:\Program Files\Cassandra\DevCenter\Run DevCenter for Cassandra Single or can be downloaded from the Apache or DataStax websites
+  - Allows you to manually query the database.
+  - Can be found in *C:\\Program Files\\Cassandra\\DevCenter\\Run DevCenter* (*Cassandra Single*) or can be downloaded from the Apache or DataStax websites.
 
-- Notepad ++ (optional)
+- Notepad++ (optional)
 
-  - Helps format and read the Cassandra.yaml and debug.log and system.log file
+  - Helps format and read the *Cassandra.yaml*, *debug.log*, and *system.log* files.
 
 ## Investigation
 
 ### Data collection during occurrence
 
-- LogCollector Package including SLDataGateway memory dump.
+- LogCollector package, including SLDataGateway memory dump
+
 - Cassandra Single:
 
-  - Logging (debug.log and system.log) of the affected database is included in the package.
+  - Logging (*debug.log* and *system.log*) of the affected database is included in the LogCollector package.
 
 - Cassandra Cluster:
 
-  - Manually collect debug.log and system.log from the database machine.
-  - Verify if the time of the issue is present in the log file.
+  - Manually collect *debug.log* and *system.log* from the machine hosting the database.
+  - Check if the time at which the issue occurred can be found in the log files.
 
 ### Basic debugging
 
