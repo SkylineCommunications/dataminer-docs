@@ -32,7 +32,7 @@ When using a *Cassandra Cluster*, the number of nodes depends on the configurati
 
 ## Symptoms of issues
 
-- DataMiner fails to start up. Errors can be found in the SLDBConnection.txt log file.
+- DataMiner fails to start up. Errors can be found in the *SLDBConnection.txt* log file.
 
 - Elements fail to start and are in status "Error".
 
@@ -79,33 +79,31 @@ When using a *Cassandra Cluster*, the number of nodes depends on the configurati
 
 ### Basic debugging
 
-- Check SLCassandraHealth.txt in C:\Skyline DataMiner\Logging
+1. Check *SLCassandraHealth.txt* in *C:\\Skyline DataMiner\\Logging*
 
-  - Green -> All is well
-  - Red -> The database is down and needs to be looked at
+   - Green: All is well.
+   - Red: The database is down and needs to be looked at.
 
-- Check the SLDBConnection.txt log in C:\Skyline DataMiner\Logging.
+1. Check *SLDBConnection.txt* log in *C:\\Skyline DataMiner\\Logging*.
 
-  - Check for the line “failed to fetch max alarm ID”
+   Look for a line saying `Failed to fetch max alarm ID`.
 
-- Verify all nodes are running fine via the status in Node tool.
+1. Verify whether all nodes are running fine by checking their status in *nodetool*.
 
-  - UN or up/normal, means the Node is running fine.
-  - DN, means the node is Down. In some cases, this can mean data loss is occurring.
+   - UN (or up/normal): The node is running fine.
+   - DN: The node is down. In some cases, this can mean data is being lost.
 
-- Investigate the log files of Cassandra. The most important log files are debug.log and system.log. (For other logs, see [Cassandra Logs](https://cassandra.apache.org/doc/latest/cassandra/troubleshooting/reading_logs.html))
+1. Check the Cassandra log files. The most important log files are *debug.log* and *system.log*. For an overview of all log files, see [Cassandra Logs](https://cassandra.apache.org/doc/latest/cassandra/troubleshooting/reading_logs.html).
 
-  In Cassandra Cluster, on a Linux node, these files can be mostly be found on /var/log/cassandra. On Cassandra Single, these can be found on C:\Program Files\Cassandra\logs.
+   On a *Cassandra Cluster*, on a Linux node, these files can mostly be found in */var/log/cassandra*. On a *Cassandra Single*, these can be found in *C:\Program Files\Cassandra\logs*.
 
-  - Search for tombstone or timeout in the debug.log and system.log.
+   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing.
 
-    This is mostly relevant in case you find elements unable to start or find element data missing.
+   Tombstones are created upon adding/updating/deleting a null value toward the database. They correspond with a "delete" in Cassandra and drastically decrease read performance. They also take up space.
 
-    - Tombstones are created upon an update/delete/write of a null value toward the database. They correspond with a “delete” in Cassandra and drastically decrease read-performance, as well as take up space.
+   Cassandra has a process called "compaction", which, among other things, removes these tombstones. If, for any reason, the amount of tombstones becomes too large, reads may eventually time out or fail altogether (see *tombstone_failure_threshold* in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)).
 
-      To deal with them, Cassandra has a process called “compaction” which, among other things, removes these tombstones. If for any reason the amount of tombstones becomes too large, reads may eventually time out or fail altogether (for failure see “tombstone_failure_threshold in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)).
-
-    - If it is determined that there is a tombstone problem or a timeout, the query that causes this is logged. This  should be noted down.
+   If it has been determined that there is a tombstone problem or a timeout, the query that causes this will be logged. Make a note of this.
 
 ## Common configuration mistakes
 
