@@ -32,5 +32,7 @@ uid: Troubleshooting_procedures
 
 - [Troubleshooting STaaS issues](xref:Troubleshooting_STaaS_Issues)
 
+- [Troubleshooting - Cassandra](xref:Troubleshooting_Cassandra)
+
 > [!TIP]
 > See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)

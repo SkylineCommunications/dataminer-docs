@@ -213,6 +213,8 @@ items:
         topicUid: Sharing_dashboard_window_does_not_disappear
       - name: Troubleshooting STaaS issues
         topicUid: Troubleshooting_STaaS_Issues
+      - name: Troubleshooting - Cassandra
+        topicUid: Troubleshooting_Cassandra
   - name: Known issues
     topicUid: Known_issues
     items:
