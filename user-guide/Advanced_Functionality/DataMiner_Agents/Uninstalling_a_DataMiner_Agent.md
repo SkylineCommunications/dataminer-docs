@@ -89,12 +89,22 @@ There are two possibilities to uninstall a DataMiner Agent:
       sc delete cassandra
       ```
 
-   1. Delete the folder C:\\Program Files\\Cassandra.
+   1. Delete the folder C:\\Program Files\\Cassandra. Alternatively, use the same command prompt and enter the following command:
 
-   1. Delete the folder C:\\ProgramData\\Cassandra.
+      ```txt
+      rmdir "C:\Program Files\Cassandra" /s
+      ```
+
+   1. Delete the folder C:\\ProgramData\\Cassandra. 
 
       > [!NOTE]
       > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
+      
+      Alternatively, use the same command prompt and enter the following command:
+
+      ```txt
+      rmdir "C:\ProgramData\Cassandra" /s
+      ``` 
 
    1. Run *regedit* as Administrator and delete the registry key “cassandra” in *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0*.
 
