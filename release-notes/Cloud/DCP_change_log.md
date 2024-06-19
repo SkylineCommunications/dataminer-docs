@@ -9,23 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 19 June 2024 - Fix - Catalog - Email of user shown in user-menu [ID_39960]
+#### 19 June 2024 - Fix - Catalog - Email of user shown in user menu [ID_39960]
 
-A bug was fixed that prevented the user's email from showing up in the user-menu of Catalog.
+A bug was fixed that prevented the user's email from showing up in the user menu of the Catalog.
 
 #### 19 June 2024 - Fix - Catalog - Cookies correctly remember the selected organization and is shared across the cloud apps [ID_39913]
 
-There was an issue in the catalog app where the cookies for selected organization were not used correctly.
-Now catalog app will correctly save its selected organization and also select a specific organization if one was saved in cookies (this works with all cloud apps across the dataminer.services namespace)
+There was an issue in the Catalog app where the cookies for selected organization were not used correctly.
+Now the Catalog app will correctly save its selected organization and also select a specific organization if one was saved in cookies (this works with all cloud apps across the dataminer.services namespace)
 
 #### 19 June 2024 - Enhancement - Catalog - Register catalog item moved to user-menu [ID_39906]
 
-The button to open the form in order to register a catalog item can now be found in the user-menu. Before this was a button in the header itself.  
-_Note: In order to see the option a user should be part of at least 1 organization._
+The button to open the form in order to register a catalog item has been moved from the header to the user menu.
 
-#### 19 June 2024 - Enhancement - Catalog - Documentation link has been added after registering a catalog item [ID_39904]
+> [!NOTE]
+> To be able to see the button, you need to be a member of at least one organization.
 
-​After registering an item users will now have a link to the documentation guiding them to the next step: uploading a version.
+#### 19 June 2024 - Enhancement - Catalog - Documentation link shown after Catalog item is registered [ID_39904]
+
+​After registering an item, users will now get a link to the documentation guiding them to the next step, i.e. uploading a version.
 
 #### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39881]
 
