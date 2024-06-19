@@ -107,14 +107,14 @@ When using a *Cassandra Cluster*, the number of nodes depends on the configurati
 
 ## Common configuration mistakes
 
-- Not matching the system requirements. These can be found on [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
+- The machines hosting the databases do not meet the system requirements. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
-  - Cassandra typically needs at least 32 Gbs of RAM on a Production setup. On a staging setup, you may be able to get away with 16 Gb of RAM.
+  - Cassandra typically needs at least 32Gb of RAM on a Production setup. On a staging setup, you may be able to get away with 16Gb of RAM.
   - Cassandra disks may not be on a NAS or similar technology. Attaching the storage to the network is forbidden.
-  - Cassandra needs low latency and high bandwidth to work
-  - The Cassandra servers need to have the exact same time. Time differences between servers in the Cassandra cluster may lead to reads/writes not being executed. NTP may be used to sync the times.
+  - Cassandra needs low latency and high bandwidth to work.
+  - The Cassandra servers all need to have the exact same time. Time differences between servers in a Cassandra Cluster may lead to reads/writes not being executed. NTP may be used to synchronize the time settings.
 
-- Failing to customize the system to use the available resources
+- The system has not been customized to use the available resources.
 
   - Forgetting to set heap size of Cassandra
   
