@@ -121,3 +121,9 @@ When clicked *Preview draft* immediately after refreshing the browser window, in
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you deleted a low-code app while the dashboard cache was still being initialized, in some cases, an exception could be thrown, and when, later on, you tried to open an app, a `Dashboard was not found` error would be displayed.
+
+#### Low-Code Apps - Timeline component: Timeline items would no longer be visible when you zoomed out on them [ID_39962]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you kept on zooming out on a timeline item, at some point, that item would no longer be visible.
