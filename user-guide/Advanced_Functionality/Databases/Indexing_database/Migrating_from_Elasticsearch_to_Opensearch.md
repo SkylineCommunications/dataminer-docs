@@ -26,6 +26,9 @@ To use this tool, follow the instructions below:
 > [!CAUTION]
 > To prevent data loss, all Agents of the DMS must be stopped during this procedure. They must not be started up again until the migration is completed.
 
+> [!NOTE]
+> As of DataMiner 10.3.0 [CU16], 10.4.0 [CU4], and 10.4.7 [CU0], an improved version of the tool is available, which among others features better logging, as well as the possibility to retry failed indexes (once the cause of the failure has been resolved) using the following command-line option: `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`.<!-- RN 39614 -->
+
 > [!TIP]
 > See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
 
