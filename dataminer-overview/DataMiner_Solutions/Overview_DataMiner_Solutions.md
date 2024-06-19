@@ -66,4 +66,3 @@ Key features:
 Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the DataMiner Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
 
 However, keep in mind that if you modify components of a solution, these will be overwritten when you deploy an update of the solution. Consequently, if you intend to tailor solutions to your unique context, we recommend that you **create customized versions** by copying (or branching) them and then applying necessary adjustments, thereby preserving the original solution for future updates.
-
