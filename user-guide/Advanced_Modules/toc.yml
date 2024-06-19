@@ -156,7 +156,7 @@ items:
         topicUid: SLA_reporting
       - name: Tutorials
         items:
-          - name: Using DataMiner business intelligence to manage and monitor your SLAs
+          - name: Using an SLA to monitor a power service
             topicUid: SLA_tutorial
   - name: Correlation
     items:

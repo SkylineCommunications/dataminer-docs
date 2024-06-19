@@ -8,4 +8,4 @@ uid: Business_intelligence_tutorials
 
 | Name | Description |
 |--|--|
-| [Managing and monitoring your SLAs](xref:SLA_tutorial) | Configure and use an SLA to monitor a power service. |
+| [Using an SLA to monitor a power service](xref:SLA_tutorial) | Learn how to create an SLA that allows you to monitor a power service. |

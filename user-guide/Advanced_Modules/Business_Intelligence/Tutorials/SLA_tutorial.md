@@ -1,11 +1,10 @@
 ---
 uid: SLA_tutorial
 ---
+
 # Using an SLA to monitor a power service
 
-In this tutorial, you will learn how to configure and use a Service Level Agreement (SLA) to monitor a power service. You will learn to customize SLA parameters to track service metrics towards high availability compliance.
-
-Because services are at the heart of SLAs, you will also learn how to use an existing service as the starting point for SLA management.
+In this tutorial, you will learn how to configure and use a Service Level Agreement (SLA) to monitor a power service. The steps include creating an SLA using an existing service as a starting point and customizing SLA parameters to track service metrics for high availability compliance.
 
 Additionally, you will learn how to configure an alarm template to monitor and visualize alarms for city streets affected by power service degradation.
 
@@ -85,71 +84,107 @@ Now that you have installed the *DataMiner SLA tutorial* package, you will creat
 
    - *Version*: Production
 
-1. Click *Create* to add the SLA.
-
    ![New SLA screen](~/user-guide/images/SLA_tutorial_img03.png)
+
+1. Click *Create* to add the SLA.
 
 ## Step 3: Configure your new SLA
 
 In this step, you will configure different data pages of your newly created SLA.
 
-1. On the *Data* > *SLA Configuration* page of your SLA, configure the following parameters:
+1. Navigate to the *Data* > *SLA Configuration* page of your SLA.
 
-   - *Window settings* > *Type*: Fixed window
+1. Configure the following parameters:
 
-   - *Window settings* > *Time*: 1
+   - **Window settings**
 
-   - *Window settings* > *Unit*: Minutes
+     - *Type*: Fixed window
 
-   - *Alarm settings* > *Violation Level*: Warning
+     - *Time*: 1
 
-   - *Alarm settings* > *Delay Time*: Not used
+     - *Unit*: Minutes
 
-   - *Alarm settings* > *Minimum outage threshold*: Full outage
+   - **Alarm settings**
 
-   - *Extra settings* > *Admin State*: Tracking
+     - *Violation Level*: Warning
 
-   - *Extra settings* > *Base Timestamp*: 2001/01/01 00:00:00
+     - *Delay Time*: Not used
 
-   - *Extra settings* > *Time To Keep Outages*: 1 Month
+     - *Minimum outage threshold*: Full outage
 
-   - *Extra settings* > *SLA Validity Start Time*: Since creation
+   - **Extra settings**
 
-   - *Extra settings* > *SLA Validity End Time*: Forever
+     - *Admin State*: Tracking
+
+     - *Base Timestamp*: 2001/01/01 00:00:00
+
+     - *Time To Keep Outages*: 1 Month
+
+     - *SLA Validity Start Time*: Since creation
+
+     - *SLA Validity End Time*: Forever
 
    > [!TIP]
    > To save all changes simultaneously, click *Save all* in the lower right corner.
 
    ![SLA configuration](~/user-guide/images/SLA_tutorial_img04.png)
 
-1. On the *Data* > *Compliance Configuration* page of your SLA, configure the following parameters:
+1. Navigate to the *Data* > *Compliance Configuration* page of your SLA.
 
-   - *Total violation* > *Maximum Total Violations Type*: Absolute
+1. Configure the following parameters:
 
-   - *Total violation* > *Maximum Total Violations Value*: 20
+   - **Total violation**
 
-   - *Total violation* > *Maximum Total Violations Unit*: Seconds
+     - *Maximum Total Violations Type*: Absolute
 
-   - *Violation count* > *Total Violations Before Breach*: 0
+     - *Maximum Total Violations Value*: 20
 
-   - *Single violation* > *Maximum Single Violation Type*: Absolute
+     - *Maximum Total Violations Unit*: Seconds
 
-   - *Single violation* > *Maximum Single Violation Value*: 5
+   - **Violation count**
 
-   - *Single violation* > *Maximum Single Violation Unit*: Seconds
+     - *Total Violations Before Breach*: 0
+
+   - **Single violation**
+
+     - *Maximum Single Violation Type*: Absolute
+
+     - *Maximum Single Violation Value*: 5
+
+     - *Maximum Single Violation Unit*: Seconds
 
    > [!TIP]
    > To save all changes simultaneously, click *Save all* in the lower right corner.
 
    ![Compliance configuration](~/user-guide/images/SLA_tutorial_img05.png)
 
-1. On the *Data* > *Advanced Configuration* page, configure the following parameters:
+1. Navigate to the *Data* > *Advanced Configuration* page.
+
+1. Configure the following parameters:
 
    - *Active Alarms*: Show
 
    - *Outages*: Enabled
 
    ![Advanced configuration](~/user-guide/images/SLA_tutorial_img06.png)
+
+   > [!IMPORTANT]
+   > If you do not see the options to change these parameters, you may not have the sufficient parameter access level. In this case, increase your access level:
+   >
+   > 1. Click the user icon in the top-right corner of the Cube header bar.
+   > 1. Select *System Center* and navigate to *Users/Groups*.
+   > 1. Go to the *Groups* tab and select the group in question.
+   > 1. Enter "1" in the *Group level* field on the *Details* tab.
+   > 1. Click *Apply* in the lower right corner of the tab.
+   >
+   > See also: [Configuring a user group](xref:Configuring_a_user_group)
+   >
+   > If you do not want to change the access level for the entire group, change your own override level:
+   >
+   > 1. Navigate to *Users/Groups* > *Users* in System Center.
+   > 1. Select the account you used to log in to the DMS.
+   > 1. Enter "1" in the *Override level* field on the *Details* tab.
+   > 1. Click *Apply* in the lower right corner of the tab.
 
 ## Step 4: Assign and modify an alarm template
 
@@ -193,38 +228,43 @@ In the next step, you will assign an alarm template to the *Power Monitoring - M
 
    1. Click *OK*.
 
-   The *Power Parameters* table on the *DATA* > *TABLE* page of your element will now show an alarm in the *Voltage* column of the *Ocean Drive* entry.
+   The *Power Parameters* table on the *DATA* > *TABLE* page of your element will now show an alarm in the *Voltage* column of the *Ocean Drive* entry. In the Alarm Console, you will see an alarm of severity *Warning Low* for the *Power Monitoring - Miami* element.
 
    ![Voltage alarm](~/user-guide/images/SLA_tutorial_img10.1.png)
 
-   In the Alarm Console, you will see an alarm of severity *Warning Low* for the *Power Monitoring - Miami* element.
-
-   ![Alarm Console](~/user-guide/images/SLA_tutorial_Alarm_Console.png)
-
 ## Step 5: Analyze the SLA metrics
 
-In this final step, you will learn to interpret the different SLA metrics.
+In this final step, you will learn how to interpret different SLA metrics.
 
-1. Go to the *DATA* > *Main View* page of the *Power SLA - South Beach* SLA.
+1. Go to the *DATA* > *Main View* page of the *Power SLA - South Beach* SLA element.
 
-1. Under *Compliance Info*, verify whether *Compliance* is set to *Compliant* or *Breached*.
-
-   Because of the Voltage alarm you simulated, it should show *Breached*.
+   Under *Compliance Info*, you will see that *Compliance* is now set to *Breached* due to the simulated Voltage alarm.
 
    ![General SLA metrics](~/user-guide/images/SLA_tutorial_img11.png)
 
-1. Restore service compliance and inspect SLA outages and history
+1. Restore service compliance:
 
-    On the *Power Monitoring - Miami* element > *Power Parameters* table, right click on *Ocean Drive* > *Edit item..* and set the Voltage to 120, which will clear the Voltage alarm.
+   1. Go to the *DATA* > *Table* page of the *Power Monitoring - Miami* element.
 
-    On the *Power SLA - South Beach* element > "Main View" page, see how the SLA is restored to a compliance state.
+   1. Right-click the *Ocean Drive* entry in the *Power Parameters* table, and select *Edit item*.
 
-    Review SLA *Outage List* and *History Statistics*, which show SLA compliance metrics over time.
+   1. Set the Voltage to 120.
 
-    ![SLA outage list](~/user-guide/images/SLA_tutorial_img12.png)
+   1. Click *OK*.
 
-    ![SLA history statistics](~/user-guide/images/SLA_tutorial_img13.png)
+      The Voltage alarm has now been cleared.
+
+1. Return to the *DATA* > *Main View* page of the *Power SLA - South Beach* SLA element.
+
+   Under *Compliance Info*, the *Compliance* status will now be set to *Compliant*.
+
+1. Go to the *DATA* > *Outage List* page of the SLA.
+
+   On this page, you will find a history of SLA compliance metrics.
+
+   ![SLA outage list](~/user-guide/images/SLA_tutorial_img12.png)
+
+   ![SLA history statistics](~/user-guide/images/SLA_tutorial_img13.png)
 
 > [!TIP]
-> Try browsing through the rest of the *Power SLA - South Beach* element and get familiar with available options such as, *Offline window* and *Violation settings*.
-> Refer to the provided resources for details on these and other features.
+> Explore the other pages of the *Power SLA - South Beach* SLA element such as the *Offline window* and *Violation Configuration* pages.
