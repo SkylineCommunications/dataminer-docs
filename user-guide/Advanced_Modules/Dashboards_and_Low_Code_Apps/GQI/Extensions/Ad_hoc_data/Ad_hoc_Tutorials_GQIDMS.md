@@ -142,9 +142,13 @@ Transform the responses into a [GQIPage](xref:GQI_GQIPage). Each `LoginInfoRespo
 
 In order for GQI to work, the script must be configured to compile as a library.
 
-To do so, add the following to the *Script.Exe* tag in the script XML:
+To do so:
 
-```xml
-   <Param type="preCompile">true</Param>
-   <Param type="libraryName">Kata Clients Connections</Param>
-```
+- If you use DIS, add the following to the *Script.Exe* tag in the script XML:
+
+  ```xml
+     <Param type="preCompile">true</Param>
+     <Param type="libraryName">Kata Clients Connections</Param>
+  ```
+
+- If you do not use DIS, in the Automation module in Cube, select the *Compile as library* option. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library)
