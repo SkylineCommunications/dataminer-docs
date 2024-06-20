@@ -15,6 +15,9 @@ To configure a user group:
 1. To change the group’s security level, enter a new level in the *Group level* field on the *Details* tab.
 
    Access levels range from 1 (highest level) to 100 (lowest level). This level affects access to specific parameters on element cards (defined with a *level* attribute in the protocol), as well as access to specific pages or shapes in Visual Overview (see [Making a shape or page visible only for a particular access level](xref:Making_a_shape_or_page_visible_only_for_a_particular_access_level)).
+   
+   > [!NOTE]
+   > It is possible that after changing the access level, this change will not take effect until you have closed DataMiner Cube and opened it again.
 
 1. To change what users are a member of the group, go to the *Users* tab and move users to and from the *Available users* and *Included users* columns using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
