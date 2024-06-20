@@ -487,6 +487,14 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
 
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process, located in the *C:\\Skyline DataMiner\\Files\\x64\\* folder.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
