@@ -1,5 +1,6 @@
 ---
 uid: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
+keywords: clearing the Cube cache, Cube cache clear
 ---
 
 # Cleaning up the DataMiner Cube desktop app cache

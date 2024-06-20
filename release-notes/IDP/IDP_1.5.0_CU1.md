@@ -24,3 +24,9 @@ The visual overviews used by the IDP protocols will now be delivered as protocol
 - Generic Rack Layout Manager
 
 When you upgrade to this IDP version, the existing custom Visio files will stay in the system, but IDP will now use the protocol default Visio files instead. If the custom Visio files have any custom changes, you can go back to using them by [making them the active Visio file](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files). If you no longer need the custom Visio files, you can [delete them](xref:Managing_Visio_files_linked_to_protocols#removing-a-microsoft-visio-file-assigned-to-a-protocol).
+
+## Fixes
+
+#### Rack Layout Visual Overview not updated correctly when navigating to different racks [ID_39347]
+
+When you navigated from one rack view to another, the details of a device selected in the previous rack could still be displayed. Consequently, it could occur that details were shown of a device that was not present in the currently opened rack.

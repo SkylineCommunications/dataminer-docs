@@ -49,7 +49,7 @@ There are many different types of cards, such as:
 
 - Spectrum analyzer cards
 
-Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [Experience and Performance Management](xref:EPM)).
+Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or [EPM Manager](xref:EPM) cards.
 
 ## Card navigation pane
 

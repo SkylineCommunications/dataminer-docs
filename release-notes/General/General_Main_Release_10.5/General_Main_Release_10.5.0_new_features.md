@@ -120,6 +120,12 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+
 #### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -416,6 +422,16 @@ connection.AddSubscription(setId, subscriptionFilter);
 Up to now, it was only possible to retrieve a single function definition by ID using the *GetFunctionDefinition* method.
 
 From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
+
+#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+DomInstance names now support GenericEnum fields that allow multiple values. In other words, `list GenericEnumFieldDescriptor` will now be supported as a `FieldValueConcatenationItem` for a DomInstance name.
+
+When you add a GenericEnumFieldDescriptor that supports multiple values to a DomDefinition NameDefinition, it will add the display names of the enum values separated by a semicolon (';').
+
+Also, from now on, it will no longer be possible to create multiple enum values with the same values using the SLNetTypes method `AddEntry(GenericEnumEntry<T> entry)`. When you try to do so, an `InvalidOperationException` will now be thrown.
 
 ### Tools
 
