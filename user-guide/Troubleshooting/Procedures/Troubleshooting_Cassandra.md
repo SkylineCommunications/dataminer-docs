@@ -33,7 +33,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
 - *Cassandra Cluster*: The number of nodes depends on the configuration.
 
-## Symptoms of issues
+## Issue symptoms
 
 - DataMiner fails to start up. Errors can be found in the *SLDBConnection.txt* log file.
 
