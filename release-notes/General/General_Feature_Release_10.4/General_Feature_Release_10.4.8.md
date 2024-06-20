@@ -146,7 +146,7 @@ On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flag
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
-*SLASPConnection.exe* is now a 64-bit process, located in the *C:\\Skyline DataMiner\\Files\\x64\\* folder.
+*SLASPConnection.exe* is now a 64-bit process.
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
