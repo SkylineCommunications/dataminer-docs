@@ -2,25 +2,26 @@
 uid: Troubleshooting_Cassandra
 ---
 
-# Troubleshooting - Cassandra
+# Troubleshooting – Cassandra
 
 ## Context
 
 DataMiner uses Cassandra in various ways. Each way has its specific behavior and place within a DataMiner System.
 
-We have two types of Cassandra storage, i.e. two distinct types of Cassandra databases:
+Two types of Cassandra storage are used, i.e. two distinct types of Cassandra databases:
 
-- Dedicated clustered storage: *Cassandra Cluster*
-- Storage per DMA (with or without indexing): *Cassandra Single*
+- Dedicated clustered storage:, called *Cassandra Cluster* below.
+- Storage per DMA (with or without indexing), called *Cassandra Single* below.
 
-For more information on available storage options, see [About databases](xref:Databases_about).
+> [!TIP]
+> For more information on available storage options, see [About databases](xref:Databases_about).
 
-First and foremost, it is imperative to determine whether the setup is using *Cassandra Cluster* or *Cassandra Single*. When investigating issues, you should keep in mind that there are some key differences between the two.
+When you start troubleshooting, you first need to determine whether the setup uses *Cassandra Cluster* or *Cassandra Single*. There are some key differences between the two that are important for your investigation.
 
-In DataMiner Cube, go to *System Center > Database > Type*:
+To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
-- If the type is *database per cluster*, a *Cassandra Cluster* or a *dedicated clustered storage* is being used.
-- If the type is *Cassandra*, a *Cassandra Single* or a *Storage Per DMA* is being used.
+- If the type is *database per cluster*, *Cassandra Cluster* (i.e. *dedicated clustered storage*) is used.
+- If the type is *Cassandra*, *Cassandra Single* (i.e. *Storage Per DMA*) is used.
 
 ## Architecture
 
