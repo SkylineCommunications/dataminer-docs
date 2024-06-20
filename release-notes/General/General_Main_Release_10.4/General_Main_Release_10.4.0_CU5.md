@@ -157,3 +157,9 @@ See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtoco
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
+
+#### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+When initializing a data migration to a Cassandra cluster, in some cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw a KeyNotFoundException, causing the initialization to fail.
