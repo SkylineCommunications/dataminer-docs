@@ -176,6 +176,7 @@ In this step, you will configure different data pages of your newly created SLA.
    > 1. Go to the *Groups* tab and select the group in question.
    > 1. Enter "1" in the *Group level* field on the *Details* tab.
    > 1. Click *Apply* in the lower right corner of the tab.
+   > 1. Close Cube and restart it.
    >
    > See also: [Configuring a user group](xref:Configuring_a_user_group)
    >
@@ -185,6 +186,7 @@ In this step, you will configure different data pages of your newly created SLA.
    > 1. Select the account you used to log in to the DMS.
    > 1. Enter "1" in the *Override level* field on the *Details* tab.
    > 1. Click *Apply* in the lower right corner of the tab.
+   > 1. Close Cube and restart it.
 
 ## Step 4: Assign and modify an alarm template
 
@@ -228,7 +230,7 @@ In the next step, you will assign an alarm template to the *Power Monitoring - M
 
    1. Click *OK*.
 
-   The *Power Parameters* table on the *DATA* > *TABLE* page of your element will now show an alarm in the *Voltage* column of the *Ocean Drive* entry. In the Alarm Console, you will see an alarm of severity *Warning Low* for the *Power Monitoring - Miami* element.
+   The *Power Parameters* table on the *DATA* > *Table* page of your element will now show an alarm in the *Voltage* column of the *Ocean Drive* entry. In the Alarm Console, you will see an alarm of severity *Warning Low* for the *Power Monitoring - Miami* element.
 
    ![Voltage alarm](~/user-guide/images/SLA_tutorial_img10.1.png)
 
@@ -241,6 +243,9 @@ In this final step, you will learn how to interpret different SLA metrics.
    Under *Compliance Info*, you will see that *Compliance* is now set to *Breached* due to the simulated Voltage alarm.
 
    ![General SLA metrics](~/user-guide/images/SLA_tutorial_img11.png)
+
+   > [!NOTE]
+   > It may take a few seconds before the compliance status changes from *Compliant* to *Breached*.
 
 1. Restore service compliance:
 
@@ -258,6 +263,9 @@ In this final step, you will learn how to interpret different SLA metrics.
 
    Under *Compliance Info*, the *Compliance* status will now be set to *Compliant*.
 
+   > [!NOTE]
+   > It may take a few seconds before the compliance status changes from *Breached* to *Compliant*.
+
 1. Go to the *DATA* > *Outage List* page of the SLA.
 
    On this page, you will find a history of SLA compliance metrics.
@@ -267,4 +275,4 @@ In this final step, you will learn how to interpret different SLA metrics.
    ![SLA history statistics](~/user-guide/images/SLA_tutorial_img13.png)
 
 > [!TIP]
-> Explore the other pages of the *Power SLA - South Beach* SLA element such as the *Offline window* and *Violation Configuration* pages.
+> Optionally, explore the other pages of the *Power SLA - South Beach* SLA element such as the *Offline window* and *Violation Configuration* pages.
