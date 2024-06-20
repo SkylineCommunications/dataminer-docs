@@ -4,9 +4,9 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
-#### 20 June 2024 - Fix - CoreGateway 2.14.8 - Resolved an issue that could occur when the DMA was switching between online and offline [ID_39928]
+#### 20 June 2024 - Fix - CoreGateway 2.14.8 - Problem when DMA switched between online and offline [ID_39928]
 
-An issue has been resolved where the CoreGateway would keep handling request when the local DMA went offline or would not handle requests when the local DMA went online due to a race condition. 
+Because of a race condition, it could occur that CoreGateway kept handling requests when the local DMA went offline or would not handle requests when the local DMA went online. This issue has been resolved.
 
 #### 30 May 2024 - Fix - CoreGateway 2.14.7 - Missing System.Net.Http.dll after upgrading to CoreGateway 2.14.0 – 2.14.6 [ID_39777]
 
