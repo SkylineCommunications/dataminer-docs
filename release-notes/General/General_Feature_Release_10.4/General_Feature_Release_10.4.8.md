@@ -65,6 +65,12 @@ For more information, see [Function resource settings](xref:Function_resource_se
 
 Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
 
+#### Elasticsearch/OpenSearch: Result set of queries retrieving DOM instances can now be limited [ID_39686]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, it is possible to limit the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database. This will enhance overall performance of this type of queries.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->

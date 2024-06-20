@@ -449,6 +449,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### Elasticsearch/OpenSearch: Result set of queries retrieving DOM instances can now be limited [ID_39686]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, it is possible to limit the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database. This will enhance overall performance of this type of queries.
+
 #### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
