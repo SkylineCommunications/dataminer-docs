@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 19 June 2024 - Fix - Remote access & live sharing stability improvement [ID_39983]
+#### 19 June 2024 - Fix - Remote access & live sharing reconnecting improvement [ID_39983]
 
 From now on, when using remote access or live sharing, if the connected DMA that is used to serve the web API requests suddenly goes offline, for example when switching in a failover setup, the connection will switch correctly to another online DMA in the DMS. Before it would keep trying to connect to the initial DMA that went offline, leading to remote access or live sharing not working unless the browser cookies were cleared.
 This will also resolve the automatic login issues caused by this.
