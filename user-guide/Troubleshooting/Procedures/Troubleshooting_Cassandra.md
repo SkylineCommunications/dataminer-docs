@@ -109,44 +109,43 @@ When using a *Cassandra Cluster*, the number of nodes depends on the configurati
 
 - The machines hosting the databases do not meet the system requirements. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
-  - Cassandra typically needs at least 32Gb of RAM on a Production setup. On a staging setup, you may be able to get away with 16Gb of RAM.
+  - Cassandra typically needs at least 32Gb of RAM on a production setup. On a staging setup, you may be able to get away with 16Gb of RAM.
   - Cassandra disks may not be on a NAS or similar technology. Attaching the storage to the network is forbidden.
   - Cassandra needs low latency and high bandwidth to work.
   - The Cassandra servers all need to have the exact same time. Time differences between servers in a Cassandra Cluster may lead to reads/writes not being executed. NTP may be used to synchronize the time settings.
 
 - The system has not been customized to use the available resources.
 
-  - Forgetting to set heap size of Cassandra
+  - The heap size has not been set.
   
-    - The rule of thumb is to use half the available RAM as the heap size
+    - The rule of thumb is to use half the available RAM as heap size.
 
-      - If your Cassandra node has 32 Gb of RAM, the usual setup with DataMiner sees the heap size set to 16 Gb.
-      - If your Cassandra node has 16 Gb of RAM, the usual setup with DataMiner sees the heap size set to 8 Gb
+      - If your Cassandra node has 32 Gb of RAM, the usual setup with DataMiner has a heap size of 16 Gb.
+      - If your Cassandra node has 16 Gb of RAM, the usual setup with DataMiner has a heap size of 8 Gb.
 
     - There are different procedures for Windows and Linux:
 
-      - For Windows: follow point 2 of paragraph [After the migration](xref:Migrating_the_general_database_to_Cassandra#after-the-migration).
-      - For Linux, change the parameters XmX and Xms in jvm.options. See [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster#setting-the-heap-space).
+      - For Windows, see step 2 of [After the migration](xref:Migrating_the_general_database_to_Cassandra#after-the-migration).
+      - For Linux, change the XmX and Xms parameters in *jvm.options*. See *Setting the heap space* in [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster#setting-the-heap-space).
 
-    - If you do not set it up, Cassandra will automatically set the heap space to ¼ of RAM and cap to 8 GB
+    - If you do not set the heat size, Cassandra will automatically set it to a quarter of the available RAM (capped to 8 Gb).
   
-  - Not setting the maximum possible tombstone_failure_threshold
+  - The maximum possible *tombstone_failure_threshold* has not been set.
   
-    - On Windows: 100 000
-    - On Linux: 2 000 000
-    - See point 6 in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
+    - On Windows: 100000
+    - On Linux: 2000000
 
-- Changing the TTL of trend data too often in Cassandra Cluster
+    See step 6 in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
 
-  - The TTL of trend data resides in DataMiner Cube > System Center > System settings > time to live > Trending
-  - We recommend against changing this on a production cluster using Cassandra Cluster
-  - A decrease in TTL
+- The trend data TTL is being changed too often in Cassandra Cluster.
 
-    - Data will be kept until the previous “larger” TTL has expired.
-    - Manual actions will need to be executed, e.g. enabling the option unsafe_aggressive_sstable_expiration for Cassandra (see [Time Window CompactionStrategy](https://cassandra.apache.org/doc/stable/cassandra/operating/compaction/twcs.html)) or manually removing the already expired sstables on disk will be required.
+  - To set the trend data TLL, open DataMiner Cube, and go to *System Center > System settings > time to live > Trending*.
+  - We recommend against changing this setting on a production cluster using *Cassandra Cluster*.
+  - When you decrease the TTL:
 
-      To be documented: Request help with this from Skyline for the time being
+    - Data will be kept until the previous, higher TTL has expired.
+    - Manual actions will need to be executed. For example, enabling the *unsafe_aggressive_sstable_expiration* option for Cassandra (see [Time Window CompactionStrategy](https://cassandra.apache.org/doc/stable/cassandra/operating/compaction/twcs.html)) or manually removing the already expired sstables on disk.
 
-  - An increase in TTL
+      **To be documented: Request help with this from Skyline for the time being.**
 
-    - Old data will expire with the smaller TTL still as only newer data will be written with the higher TTL
+  - When you increase the TTL, note that old data will still expire with the old, smaller TTL as only new data will be written with the higher TTL.
