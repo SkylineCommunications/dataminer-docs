@@ -9,6 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 19 June 2024 - Fix - Remote access & live sharing stability improvement [ID_39983]
+
+From now on, when using remote access or live sharing, if the connected DMA that is used to serve the web API requests suddenly goes offline, for example when switching in a failover setup, the connection will switch correctly to another online DMA in the DMS. Before it would keep trying to connect to the initial DMA that went offline, leading to remote access or live sharing not working unless the browser cookies were cleared.
+This will also resolve the automatic login issues caused by this.
+
+#### 19 June 2024 - Fix - Remote access automatic login improvement [ID_39982]
+
+An issue has been resolved where a blue error page would be shown displaying there was an unexpected error, which would occur if the automatic login with a user's linked DataMiner account failed. Now the login page will be shown where users can still manually log in as a fallback.
+
 #### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39881]
 
 From now on, if Remote Access to the web apps is enabled, this allows access to the entire folder `/Documents/`, so that it is possible to access the documents available in Cube. Previously, only the `/Documents/DMA_COMMON_DOCUMENTS/` folder was accessible.
