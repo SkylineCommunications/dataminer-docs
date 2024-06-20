@@ -10,7 +10,7 @@ On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you hav
 > After installing the IO Libraries or after changing the IO configuration, restart the DMA software.
 
 > [!NOTE]
-> Both the Keysight Agilent IO Libraries and the NATS module within DataMiner use IP port 9090. This can result in NATS issues and prevent DataMiner from starting. To fix this, see [Investigating NATS issues](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
+> Both the Keysight Agilent IO Libraries and the NATS module within DataMiner use IP port 9090. This can result in NATS issues and prevent DataMiner from starting. To fix this, see [Troubleshooting – NATS](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
 
 ## Installing the IO Libraries
 
