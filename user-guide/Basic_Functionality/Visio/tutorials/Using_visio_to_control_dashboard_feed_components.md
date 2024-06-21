@@ -203,21 +203,27 @@ Expected duration: 45 minutes
 
 1. Using a publicly available web-based encoded JSON URL converter, convert the URL you copied earlier to a human-readable format.
 
-   This will allow users to understand how feed selections are represented in the dashboard's URL.
+   This will make it easier to understand how feed selections are represented in the dashboard's URL.
 
    ![URL converter](~/user-guide/images/VisioURLFeed_URLConvert.png)
 
-   With this information, certain sections of the URL can be replaced with placeholders that will allow dynamic entry based on the row index that is fed into it.
+1. Replace sections of the URL with placeholders to allow dynamic entry based on the row index that is fed into it:
+
+   ```txt
+   http://<DMAIP>/dashboard/#/db/zStaging/Visio%20URL%20Feed.dmadb?data={"version":1,"feed":null,"components":[{"cid":2,"select":{"parameters":["[cardVar:_elementId]/1202/[tableIndex]","[cardVar:_elementId]/1203/[tableIndex]","[cardVar:_elementId]/1204/[tableIndex]"],"elements":["[cardVar:_elementId]"],"indices":["[tableIndex]/[displaytableIndex]"]}}],"feedAndSelect":{}}
+   ```
+
+   > [!NOTE]
+   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the lower right corner of the component while in edit mode.
+
+1. Again use a web-based encoded JSON URL converter, this time to convert the URL back to encoded JSON.
 
 1. Add the following shape data to the button shape.
 
-   > [!NOTE]
-   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the bottom-right corner of the component while in edit mode.
-
    | Shape data field | Value |
    |---|---|
-   | Enabled | true |
-   | Link    | `http://<DMAIP>/dashboard/#/db/zStaging/Visio%20URL%20Feed.dmadb?data={"version":1,"feed":null,"components":[{"cid":2,"select":{"parameters":["[cardVar:_elementId]/1202/[tableIndex]","[cardVar:_elementId]/1203/[tableIndex]","[cardVar:_elementId]/1204/[tableIndex]"],"elements":["[cardVar:_elementId]"],"indices":["[tableIndex]/[displaytableIndex]"]}}],"feedAndSelect":{}}` |
+   | Enabled | *true* |
+   | Link    | The URL with encoded JSON |
 
 1. Make sure nothing is selected in the Visio drawing, and add the following shape data to *ThePage*:
 
