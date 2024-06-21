@@ -464,6 +464,8 @@ items:
                 topicUid: DashboardTimeline
               - name: Trend statistics
                 topicUid: DashboardTrendStatistics
+              - name: Interactive automation script
+                topicUid: InteractiveAutomationScript
           - name: Feeds
             topicUid: Feeds
             items:
