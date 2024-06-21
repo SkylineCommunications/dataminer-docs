@@ -106,6 +106,14 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 
 In the Cube logging, entries regarding known UI issues will now include a link to a page on <https://docs.dataminer.services/> where you can find more information about the issue in question.
 
+#### Surveyor: Root view will always be expanded when no expanded views can be found in the user settings of the user [ID_39848]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a user expands a view in the Surveyor, this is saved in the user settings of that user. That way, when a user logs in to DataMiner Cube, all views that were expanded the last time the user logged out will automatically be expanded again.
+
+From now on, the root view will always be expanded when no expanded views can be found in the user settings of the user.
+
 ### Fixes
 
 #### Incorrect `CubeHost: Unable to load assembly` errors in Cube log files on client computers [ID_39767]
