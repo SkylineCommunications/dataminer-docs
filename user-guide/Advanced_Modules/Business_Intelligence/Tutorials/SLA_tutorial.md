@@ -17,6 +17,7 @@ Expected duration: 20 minutes
 > - [Connector documentation: Skyline SLA Definition Basic](https://docs.dataminer.services/connector/doc/Skyline_SLA_Definition_Basic.html)
 > - [Services](xref:About_services)
 > - [Alarm templates](xref:About_alarm_templates)
+> - [Kata #36: Manage and monitor your Service Level Agreements](https://community.dataminer.services/courses/kata-36/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.7.
