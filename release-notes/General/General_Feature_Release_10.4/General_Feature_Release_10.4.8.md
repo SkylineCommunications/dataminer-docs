@@ -93,7 +93,8 @@ As NATS does not need TLS enabled on single DataMiner Agents, from now on, the [
 
 #### DxMs upgraded [ID_39802] [ID_39991]
 
-<!-- RN 39802/39991: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 

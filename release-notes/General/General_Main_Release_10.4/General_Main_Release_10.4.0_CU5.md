@@ -44,6 +44,16 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
 
+#### DxMs upgraded [ID_39991]
+
+<!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CoreGateway: version 2.14.8
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
