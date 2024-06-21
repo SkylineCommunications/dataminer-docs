@@ -13,6 +13,9 @@ A DataMiner Object Model is a generic data storage system that makes it possible
 > - DOM data can be displayed in dashboards and applications from DataMiner 10.1.7 onwards. In versions prior to DataMiner 10.3.6/10.4.0, this feature is in soft launch, so you will need to activate the *DOMManager* [soft-launch option](xref:SoftLaunchOptions) to use it.  
 > - The DataMiner Jobs module functions in a similar way as a DOM manager. The main difference is in the naming of the objects used. In addition, multiple DOM manager instances can run at the same time, while there can only be one Jobs module.
 
+> [!TIP]
+> To visualize and control your DataMiner Object Model (DOM) definitions and instances, the [DOM Viewer](xref:domviewer_about) application can come in very handy.
+
 ## Getting started with DOM
 
 If you are just getting started with the DataMiner Object Models (DOM), this is what we recommend:

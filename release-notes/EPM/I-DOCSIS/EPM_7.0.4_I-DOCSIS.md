@@ -2,10 +2,7 @@
 uid: EPM_7.0.4_I-DOCSIS
 ---
 
-# EPM 7.0.4 I-DOCSIS (preview)
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be added, modified, or moved to a later release. Check back soon for updates!
+# EPM 7.0.4 I-DOCSIS
 
 ## New features
 
@@ -43,6 +40,16 @@ An improvement has been implemented to the way data is retrieved in the interfac
 
 When the EPM package is deployed, all its Automation scripts are now placed in an I-DOCSIS folder instead of at the root level of the Automation module.
 
+#### Skyline EPM Platform and Skyline EPM Platform DOCSIS information templates updated [ID_39933]
+
+In the Skyline EPM Platform information template, several parameters on the service group level have been renamed to match with the other levels:
+
+- *Number CM DOCSIS 2.0* has been renamed to *Number DOCSIS 2.0*.
+- *Number CM DOCSIS 3.0* has been renamed to *Number DOCSIS 3.0*.
+- *Number CM DOCSIS 3.1* has been renamed to *Number DOCSIS 3.1*.
+
+In addition, a new information template has been added for the Skyline EPM Platform DOCSIS connector in order to match the naming convention used in the Skyline EPM Platform connector.
+
 ### Fixes
 
 #### Overlapping GUI elements on PNM thresholds configuration page [ID_39723]
@@ -56,3 +63,7 @@ When EPM dashboards using GQI queries were used in recent DataMiner versions, it
 #### Generic DOCSIS CM Collector: RTE caused by SLProtocolExt call [ID_39923]
 
 Because of the use of the *SLProtocolExt* interface to retrieve keys from the CM QAM DS Channel table, long wait times could be encountered in the Generic DOCSIS CM Collector connector, which could cause a run-time error in DataMiner. The connector has now been enhanced to prevent this.
+
+#### Card structure different when opened from the Alarm Console or from the topology [ID_39934]
+
+Previously, when an EPM alarm was opened from the Alarm Console, the displayed parameters were not organized in the same way as when the same card was opened from the topology. This has been adjusted, and parameters have been grouped into boxes, so that the page structure will now be the same regardless of where it is opened from.

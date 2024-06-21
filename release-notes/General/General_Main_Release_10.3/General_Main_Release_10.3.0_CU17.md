@@ -114,6 +114,14 @@ In some cases, a fatal error could occur in SLASPConnection when an email messag
 
 When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
 
+#### Protocols: SNMP groups with a condition could get stuck [ID_39885]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+If a protocol contained an SNMP group with a condition, and that group was first executed with the condition being false and then with the condition being true, the group could get stuck depending on how quickly the device responded.
+
+See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition)
+
 #### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->

@@ -59,11 +59,29 @@ For more information, see [Function resource settings](xref:Function_resource_se
 
 ### Enhancements
 
+#### SLElement: Enhanced performance when processing service impact updates [ID_39003]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
+
+#### Elasticsearch/OpenSearch: Limit set on queries retrieving DOM instances will now be applied to the result set [ID_39686]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
 
 A number of enhancements have been made to the process that determines whether a flatline change point is considered to be anomalous or not.
+
+#### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
 
 #### 'Security Advisory' BPA test will no longer report an issue when NATS does not have TLS enabled on a single DMA [ID_39792]
 
@@ -73,13 +91,15 @@ When the [Security Advisory](xref:BPA_Security_Advisory) BPA test was run on a s
 
 As NATS does not need TLS enabled on single DataMiner Agents, from now on, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will only report an issue regarding NATS TLS when, on a single DataMiner Agent, firewall ports 4222 and 6222 are open.
 
-#### DxMs upgraded [ID_39802]
+#### DxMs upgraded [ID_39802] [ID_39991]
 
 <!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.7.1
+- DataMiner CoreGateway: version 2.14.8
 - DataMiner FieldControl: version 2.10.6
 - DataMiner Orchestrator: version 1.6.0
 - DataMiner SupportAssistant: version 1.6.9
@@ -104,6 +124,14 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
 
+#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+
+`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+
 #### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -115,6 +143,14 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
 ### Fixes
 
@@ -243,8 +279,22 @@ When a join operation was performed with two of the following data sources, in s
 - *Get trend data pattern events*
 - *Get trend data patterns*
 
+#### Protocols: SNMP groups with a condition could get stuck [ID_39885]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+If a protocol contained an SNMP group with a condition, and that group was first executed with the condition being false and then with the condition being true, the group could get stuck depending on how quickly the device responded.
+
+See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition)
+
 #### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
+
+#### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+When initializing a data migration to a Cassandra cluster, in some cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw a KeyNotFoundException, causing the initialization to fail.

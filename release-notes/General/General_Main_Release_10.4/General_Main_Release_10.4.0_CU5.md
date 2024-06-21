@@ -12,6 +12,12 @@ uid: General_Main_Release_10.4.0_CU5
 
 ### Enhancements
 
+#### SLElement: Enhanced performance when processing service impact updates [ID_39003]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
@@ -37,6 +43,16 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
+
+#### DxMs upgraded [ID_39991]
+
+<!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CoreGateway: version 2.14.8
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
 ### Fixes
 
@@ -138,8 +154,22 @@ The *Get trend data patterns* data source would incorrectly return the pattern I
 
 When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
 
+#### Protocols: SNMP groups with a condition could get stuck [ID_39885]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+If a protocol contained an SNMP group with a condition, and that group was first executed with the condition being false and then with the condition being true, the group could get stuck depending on how quickly the device responded.
+
+See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition)
+
 #### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
+
+#### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+When initializing a data migration to a Cassandra cluster, in some cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw a KeyNotFoundException, causing the initialization to fail.

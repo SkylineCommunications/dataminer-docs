@@ -106,6 +106,25 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 
 In the Cube logging, entries regarding known UI issues will now include a link to a page on <https://docs.dataminer.services/> where you can find more information about the issue in question.
 
+#### Surveyor: Root view will always be expanded when no expanded views can be found in the user settings of the user [ID_39848]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a user expands a view in the Surveyor, this is saved in the user settings of that user. That way, when a user logs in to DataMiner Cube, all views that were expanded the last time the user logged out will automatically be expanded again.
+
+From now on, the root view will always be expanded when no expanded views can be found in the user settings of the user.
+
+#### Some user permissions will no longer be available when Cube is connected to a DaaS system [ID_39870]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When Cube is connected to a DaaS system, the following user permissions will no longer be available:
+
+- *Modules > System Configuration > Backup*
+- *Modules > System Configuration > Database > Configure local/general DB*
+- *Modules > System Configuration > Indexing engine*
+- *Modules > System Configuration > Tools > Allow access to query executor*
+
 ### Fixes
 
 #### Incorrect `CubeHost: Unable to load assembly` errors in Cube log files on client computers [ID_39767]
@@ -121,6 +140,12 @@ On client computers, up to now, incorrect `CubeHost: Unable to load assembly` er
 - System.Numerics.Vectors
 - System.Runtime.CompilerServices.Unsafe
 
+#### Visual Overview: Opening a visual overview containing an image could cause Cube to become unresponsive [ID_39770]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you opened a visual overview that containing an image, in some cases, DataMiner Cube could become unresponsive.
+
 #### Alarm Console: Problem when sorting alarms by the PollingIP column [ID_39804]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
@@ -132,6 +157,17 @@ When, in the Alarm Console, you tried to sort alarms by the *PollingIP* column, 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When a shape was configured to be shown or hidden depending on the value of a placeholder that included a [DataMinerTime] placeholder, in some cases, the show/hide condition would not be evaluated correctly.
+
+#### Problem when clicking a 'DataMiner web apps' link when using a STaaS or DaaS system [ID_39840]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In DataMiner Cube, there are two places where you can find a link to your DMA's root page (e.g. <https://myDMA/root/>):
+
+- the *DataMiner web apps* link on the Cube home page, and
+- the *Open DataMiner web apps* link on the user menu.
+
+Up to now, when you clicked one of those links when using a STaaS or DaaS system, an ERR_NAME_NOT_RESOLVED error would be returned.
 
 #### URLs pointing to the DataMiner Agent to which Cube was connected via gRPC would contain an incorrect hostname [ID_39851]
 
