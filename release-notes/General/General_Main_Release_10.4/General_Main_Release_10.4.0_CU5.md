@@ -56,6 +56,16 @@ For detailed information about the changes included in those versions, refer to 
 
 ### Fixes
 
+#### Documents: Issues fixed [ID_39076]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+With regard to document management, the following issues have been fixed:
+
+- In some cases, element documents hosted on a Failover system could incorrectly get deleted when a Failover switch occurred.
+- When you renamed an element, in some cases, its documents would incorrectly no longer be linked to it.
+- When you renamed a document folder with subfolders containing files, in some cases, that folder would not be synchronized correctly among the agent in the cluster.
+
 #### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->

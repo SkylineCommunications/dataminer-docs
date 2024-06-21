@@ -96,6 +96,13 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 > - If the regular expression or the input are empty, the placeholder will return an empty string.
 > - The ']' character cannot be used as a separator.
 
+#### Element cards: Documents page now supports subfolders [ID_39876]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- See also 'Fixes' -->
+
+On element/service level, it is now possible to use subfolders on the *Documents* page.
+
 ## Changes
 
 ### Enhancements
@@ -174,3 +181,14 @@ Up to now, when you clicked one of those links when using a STaaS or DaaS system
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When Cube was connected to a DataMiner Agent via a gRPC connection, in some cases, the URLs of e.g. log files would contain an incorrect hostname, making it impossible to retrieve those files from the DataMiner Agent.
+
+#### Documents: Issues fixed [ID_39876]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- See also 'New features' -->
+
+With regard to document management, the following issues have been fixed:
+
+- When you uploaded element documents that were larger than 64 kB, in some cases, they would get corrupted.
+- It would not be possible to downloading element documents while being connected to the hosting agent.
+- In the *Documents* app, in some cases, you would incorrectly be able to see documents of elements to which you did not have access.
