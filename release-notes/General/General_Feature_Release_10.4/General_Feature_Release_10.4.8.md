@@ -91,13 +91,14 @@ When the [Security Advisory](xref:BPA_Security_Advisory) BPA test was run on a s
 
 As NATS does not need TLS enabled on single DataMiner Agents, from now on, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will only report an issue regarding NATS TLS when, on a single DataMiner Agent, firewall ports 4222 and 6222 are open.
 
-#### DxMs upgraded [ID_39802]
+#### DxMs upgraded [ID_39802] [ID_39991]
 
-<!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39802/39991: MR 10.5.0 - FR 10.4.8 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.7.1
+- DataMiner CoreGateway: version 2.14.8
 - DataMiner FieldControl: version 2.10.6
 - DataMiner Orchestrator: version 1.6.0
 - DataMiner SupportAssistant: version 1.6.9
