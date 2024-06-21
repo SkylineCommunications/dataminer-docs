@@ -139,6 +139,17 @@ When, in the Alarm Console, you tried to sort alarms by the *PollingIP* column, 
 
 When a shape was configured to be shown or hidden depending on the value of a placeholder that included a [DataMinerTime] placeholder, in some cases, the show/hide condition would not be evaluated correctly.
 
+#### Problem when clicking a 'DataMiner web apps' link when using a STaaS or DaaS system [ID_39840]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In DataMiner Cube, there are two places where you can find a link to your DMA's root page (e.g. <https://myDMA/root/>):
+
+- the *DataMiner web apps* link on the Cube home page, and
+- the *Open DataMiner web apps* link on the user menu.
+
+Up to now, when you clicked one of those links when using a STaaS or DaaS system, an ERR_NAME_NOT_RESOLVED error would be returned.
+
 #### URLs pointing to the DataMiner Agent to which Cube was connected via gRPC would contain an incorrect hostname [ID_39851]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
