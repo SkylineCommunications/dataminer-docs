@@ -152,6 +152,12 @@ On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flag
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
+#### DataMiner backup: 'RemoteServices' folder by default added to backup packages that contain services [ID_39993]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+
 ### Fixes
 
 #### Documents: Issues fixed [ID_39076]
