@@ -218,8 +218,6 @@ items:
     items:
       - name: Current issues
         items:
-          - name: SLProtocol RTE caused by SNMP group with condition
-            topicUid: KI_SLProtocol_RTE_SNMP_group_condition
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: NATS services missing after reboot
@@ -250,6 +248,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: SLProtocol RTE caused by SNMP group with condition
+            topicUid: KI_SLProtocol_RTE_SNMP_group_condition
           - name: Deadlock in service loading during startup
             topicUid: KI_deadlock_service_loading
           - name: Deadlock when forcing quarantine during booking update
