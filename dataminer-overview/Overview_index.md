@@ -49,7 +49,7 @@ We are working on adding more information to this section soon, so check back fo
     <a href="/dataminer-overview/Pricing/Pricing.html" title="Pricing" target="_self"><img src="~/dataminer-overview/images/Pricing.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer-overview/Support%20Services/Overview_Support_DMS_M_and_S.html" title="DataMiner Support Services" target="_self"><img src="~/dataminer-overview/images/Support_Services.svg" style="width:100%"></a>
+    <a href="/dataminer-overview/Support_Services/Overview_Support_DMS_M_and_S.html" title="DataMiner Support Services" target="_self"><img src="~/dataminer-overview/images/Support_Services.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer-overview/Partner_Program/Partner_Program.html" title="DataMiner Partner Program" target="_self"><img src="~/dataminer-overview/images/DataMiner_Partner_Program.svg" style="width:100%"></a>
