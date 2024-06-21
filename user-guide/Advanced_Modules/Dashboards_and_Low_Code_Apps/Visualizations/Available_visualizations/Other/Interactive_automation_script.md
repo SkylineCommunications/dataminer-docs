@@ -5,6 +5,8 @@ uid: InteractiveAutomationScript
 # Interactive automation script
 
 Available from DataMiner 10.4.9 onwards.
+> [!NOTE]
+> This component is only available in Low Code Apps.
 
 This component allows you to visualize any interactive automation script within a component. Allowing you to implement these scripts within pages and panels of any Low Code App.
 
