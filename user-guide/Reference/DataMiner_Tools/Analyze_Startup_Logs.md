@@ -4,6 +4,8 @@ uid: Analyze_Startup_Logs
 
 # Analyze startup logs
 
+<!-- RN 25630 -->
+
 In case a DMA fails to start up for some reason, you can use this tool to analyze the log files and get information on what could be the cause of the problem.
 
 > You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/analyze-startup-logs/).
