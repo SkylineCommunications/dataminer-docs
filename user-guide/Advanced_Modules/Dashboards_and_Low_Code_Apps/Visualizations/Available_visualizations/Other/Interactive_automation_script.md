@@ -2,16 +2,14 @@
 uid: InteractiveAutomationScript
 ---
 
-# Interactive automation script
+# Interactive Automation script
 
-Available from DataMiner 10.4.9 onwards.
+Available from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards.<!-- RN 39969 -->
+
+This component allows you to visualize any interactive Automation script within pages or panels of an low-code app.
+
 > [!NOTE]
-> This component is only available in Low Code Apps.
-
-This component allows you to visualize any interactive automation script within a component. Allowing you to implement these scripts within pages and panels of any Low Code App.
-
-> [!IMPORTANT]
-> Only interactive scripts work in this component.
+> This component is only available in the Low-Code Apps module. It only works with interactive scripts.
 
 ## Executing a script
 
