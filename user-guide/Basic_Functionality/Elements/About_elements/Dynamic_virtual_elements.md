@@ -54,6 +54,10 @@ However, it is possible to assign a separate trend template or alarm template to
 > [!NOTE]
 > From DataMiner 9.5.6 onwards, limited editing possibilities are available for DVE child elements, allowing you to modify the description of the element, the alarm and trend template, the parent view(s) and the properties, and allowing you to set the DVE child element to *Hidden*.
 
+> [!NOTE]
+> By default, DVE child elements follow the alarm template of the parent DVE, if that is available.
+When an alarm template other than the parent DVE's alarm template is assigned to a DVE child element, the two templates will be applied in a hierarchical fashion, with the specific DVE child's template coming first, and the parent DVE's template next. When the parent DVE does not have any assigned alarm template, the DVE child's template behaves like a standard alarm template.
+
 ## Enabling or disabling the creation of DVE child elements
 
 By default, when a parent element is created, creation of child elements is enabled. However, it is possible to disable or enable the creation of child elements.
