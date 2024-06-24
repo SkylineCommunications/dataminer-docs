@@ -204,8 +204,6 @@ items:
           topicUid: Overview_Out_Of_Business_Hours_Support
         - name: Proactive Support
           topicUid: Proactive_Support
-        - name: Support services terms
-          topicUid: Support_services_terms
         - name: Partner support lines
           topicUid: Partner_support_lines
         - name: User Operations Support application

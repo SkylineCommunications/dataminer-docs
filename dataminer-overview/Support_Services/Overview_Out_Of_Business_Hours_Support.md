@@ -11,7 +11,7 @@ Last-minute and planned work may require interventions outside of business hours
 **Planned Interventions** refers to planned work, reserved 10 days ahead of the intervention.
 
 > [!NOTE]
-> Out-of-business-hours support is available for level 1 priority issues and planned intervention work. For more information, see [Support services terms](xref:Support_services_terms).
+> Out-of-business-hours support is available for level 1 priority issues and planned intervention work. For more information, see [Support services terms](xref:Support_Terms_On_Premises).
 
 ## Out-of-business-hours subscription (OBH subscription)
 
