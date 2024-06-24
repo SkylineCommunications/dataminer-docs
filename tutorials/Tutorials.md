@@ -9,7 +9,7 @@ uid: Tutorials
     <a href="/tutorials/Analytics_Tutorials.html" title="Analytics tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Analytics.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/tutorials/Business_Intelligence_tutorials.html" title="Business Intelligence tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Business_Intelligence.svg" style="width:100%"></a>
+    <a href="/tutorials/Business_intelligence_tutorials.html" title="Business Intelligence tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Business_Intelligence.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/tutorials/ChatOps_Tutorials/ChatOps_Tutorials.html" title="ChatOps tutorials" target="_self"><img src="~/tutorials/images/Tutorials_ChatOps.svg" style="width:100%"></a>
