@@ -204,6 +204,11 @@ items:
             topicUid: IDP_Tutorial_DiscoveryAndProvisioning
           - name: Getting started with configuration backups
             topicUid: IDP_Tutorial_TakeConfigurationBackup
+  - name: dataminer.MediaOps
+    topicUid: MediaOps
+    items:
+      - name: People & Organizations
+        topicUid: People_Organizations
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
