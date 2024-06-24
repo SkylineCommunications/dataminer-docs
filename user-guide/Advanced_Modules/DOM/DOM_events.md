@@ -45,7 +45,7 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
-You can additionally build a `FilterElement` and add it to the list of subscription filters. This allows you to only receive updates for `DomInstances` that meet very specific conditions. (e.g. only receive updates for `DomInstances` linked to a specific `DomDefinition`) Do note that you will currently receive events of type `DomCrudEvent<T>` instead of the actual specific event type when using this additional filtering.
+In addition, you can also build a `FilterElement` and add it to the list of subscription filters. This allows you to only receive updates for `DomInstances` that meet very specific conditions (e.g. only receive updates for `DomInstances` linked to a specific `DomDefinition`). Do note that you will currently receive events of type `DomCrudEvent<T>` instead of the actual specific event type when using this additional filtering.
 
 ```csharp
 using System;
