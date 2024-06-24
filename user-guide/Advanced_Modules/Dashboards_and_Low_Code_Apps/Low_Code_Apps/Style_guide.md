@@ -13,24 +13,28 @@ These best pratices should allow you to create intuitive, visually appealing app
 ## Colours / Themes
 
 - when starting to work on a app it essential to start from a good **theme**. :If you like the look and feel of certain app duplicate that one and start tuning it for your own app, more information on how customize a theme see [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
-- when defining a background color for pages and panels (as part of the theme), never use full white or full black. Some good defaults below:
-  | Light background | Dark background|
+- when defining a background color for pages and panels (as part of the theme), never use full white (#FFFFFF) or full black (#000000). Some good defaults below:
+
+  |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
   |#F2F2F2           |#1E232F         |
-- make sure your theme has a component style with a transparent background. Use this component style for titles, logos, buttons.
+
+- make sure your theme has a component style with a transparent background. Use this component style for titles, images, buttons.
   TODO: show image
-- also make a component style with a background color which differs from the page/panel background. Some good defaults below:
-  | Light background | Dark background|
+- also make a component style with a background color which differs from the page/panel background, this way they can easily be distinguish from the background. This can be used for query filters, tables, timelines, ... (anything but titles, images, buttons). Choose a slightly lighter color then the page/panel background, some good defaults below:
+  
+  |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
   |#FDFDFD           |#282F3E         |
+
 - Make sure when picking colors, that there is enough contrast on text and icons in comparison with the background. This will greatly improve readability for the end user.
 
-  | Good | Bad |
+  |👍 Good |👎 Bad |
   |------|-----|
   |![Good Contrast](~/user-guide/images/LCA_Style_Guide_Contrast_Good.png)|![Bad Contrast](~/user-guide/images/LCA_Style_Guide_Contrast_Bad.png)|
 
  
-- Limit the number of colors that you use in an app. 
+- Limit the number of colors that you use in an app, don't make it too colorfull nor too monotone. 
 
 
 ## Navigation
@@ -71,7 +75,7 @@ Buttons can trigger different actions on page or panel. Some attention points wh
 - Use short labels
 - Make sure buttons have a transparent background
 
-| Good | Bad |
+| 👍 Good | 👎 Bad |
 |------|-----|
 |![Good Button](~/user-guide/images/LCA_Style_Guide_Button_Good.png)|![Bad Button](~/user-guide/images/LCA_Style_Guide_Button_Bad.png)|
 
@@ -79,13 +83,24 @@ Buttons can trigger different actions on page or panel. Some attention points wh
 
 ## Forms
 
-
+- Forms can best be shown in a popup or side panel. If you choose one over the other, make it consistent across the apps you build.
+- Use the "As overlay" option when opening the popup/panel, this way the focus is on the popup/panel and not on the background
+- Add any form actions, like **save** and **delete** as buttons on top of the form. 
+- Always enable the **Fit to view** setting on a Form in a panel, this will make sure you form scales with the available screen size of the user. 
+- If the Dom instance shown in the form has states, always show a stepper component on top showing the current state of the instance.
+- If you make the popup/panel max 35% of the width the labels of the form will be shown above the inputs, which might be easier to read.
 
 ## Tables
 
-Tables should only contain the most relevant data 
+- Tables should only contain the most relevant data, try to limit the number of columns.
+- Don't show guids in a table column, even if this data is part of your GQI query, it should be hidden in the table by using a filter on the columns that are shown.
+- Use the table templates on each column 
+  - to add icons to each columns (where relevant)
+  - to increase the row height. The default row height is a bit small, increase to about 46px for good readability. 
 
-Don't show guids in a table column, even if this data is part of your GQI query, it should be hidden in the table by using a filter on the columns that are shown.
+See example of a good visualization of a table below:
+
+
 
 ## Panels
 
@@ -96,7 +111,7 @@ For example : a DOM Form, additional details/metadata which were not shown on th
 
 Make sure components on a page/panel are aligned verticall:y and horizontally
 
-| Good | Bad |
+| 👍 Good | 👎 Bad |
 |------|-----|
 |![Good Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Good.png)|![Bad Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Bad.png)|
 
@@ -105,4 +120,17 @@ Make sure components on a page/panel are aligned verticall:y and horizontally
 ## 
 
 > [!TIP]
-> When using HTML inside a grid or table template make sure you have an outer element with an empty title attribute, otherwise the HTML will show up on hover:
+> When using HTML inside a grid or table template make sure you have an outer **element** with an empty title attribute, otherwise the HTML will show up on hover:
+
+[comment]: # TODO: insert html snipper to show example
+
+## LCA inspiration
+
+The following apps can give some inspiration on how to build enjoyable low-code app experiences:
+
+- [People & Organizations](https://ziine.skyline.be/app/06951cc4-5695-4f6c-a49b-55582d72f611/People%20Overview)
+- [Media Asset Management Orchestration](https://ziine.skyline.be/app/6b56efeb-abad-4298-bf59-8f5ba6bf3750/Overview)
+- [Techex Tx Core](https://ziine.skyline.be/app/299c8d59-bb34-4d58-b994-d56bf022fb95/Infrastructure)
+- [Penalty Box](https://ziine.skyline.be/app/5b6adee8-ed7c-44ce-aabb-aba0de4b5ee6/Severity)
+
+
