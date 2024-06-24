@@ -30,7 +30,7 @@ Recommended DataMiner client configuration:
 
 ### Microsoft .NET Framework
 
-Microsoft .NET Framework 4.6.2
+Microsoft .NET Framework 4.7.2
 
 > [!IMPORTANT]
 > We recommend always upgrading to the latest .NET Framework version.
