@@ -6,30 +6,43 @@ uid: InteractiveAutomationScript
 
 Available from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards.<!-- RN 39969 -->
 
-This component allows you to visualize any interactive Automation script within pages or panels of an low-code app.
+This component allows you to visualize any interactive Automation script (IAS) within pages or panels of a low-code app.
 
 > [!NOTE]
-> This component is only available in the Low-Code Apps module. It only works with interactive scripts.
+>
+> - This component is only available in the Low-Code Apps module.
+> - Scripts will time out after they have run for 15 minutes. This means that after a script has been shown in the component for 15 minutes, an error will be shown.
 
-## Executing a script
+## Configuring the component
 
-1. To show a script on view of the component, you can use the *Component* > *Settings* > *General* > *Script*.
+1. In the *Component* > *Settings* tab, select the script that should be shown in the component in the *Script* box.
 
-1. You can also use component actions to Start/Abort scripts. The start will start a new script in the component, while the abort action will stop the script currently running inside of the component.
+   > [!NOTE]
+   > Make sure to select an interactive script, because only interactive Automation scripts will work with this component.
 
-    > [!NOTE]
-    > When starting a new script while another is running, the component will wait for the current script to finish before launching the new one. Aborting will finish the one currently shown.
+1. If necessary, configure the parameters and/or dummies for the script.
 
-Scripts will timeout after 15 minutes of them running. This means that after 15 minutes of a script being shown in the component an error will appear.
+   > [!NOTE]
+   > If any required parameters or dummies are not configured, either here in the settings or through a [component action](#component-actions), the component will remain blank.
 
-This component will not prompt for any missing parameters or dummies. This means that these should be filled in trough the config of either the actions or the script setting. When there are missing parameters or dummies the component will remain blank.
+1. Optionally, in the *Events* section of the *Component* > *Settings* tab, configure what should happen when the script is finished.
 
-## Action on script finish
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-1. You can configure actions to happen when a script finishes using the *Component* > *Settings* > *Events* > *On finish* setting. This does not trigger when you abort the script using the previously mentioned action.
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-## Layout Settings
+   - *Show title*: Setting this to *Show* will show the script title as the title of the component, overriding any title that may be configured via the *General* > *Title* setting.
 
-1. You can make the component display the title of the script via *Component* > *Layout* > *Advanced* > *Show Title*. This will however override the title you can set on any component using the *Component* > *Layout* > *General* > *Title* setting.
+   > [!NOTE]
+   > The dimensions configured in the script are ignored when this component is used. Instead, the script will fill the entire component.
 
-The script dimensions are ignored when using this component. This means your script will fill in the entire component.
+## Component actions
+
+When you have added an IAS component to a low-code app, you can configure the following [component actions](xref:LowCodeApps_event_config#executing-a-component-action) in your low-code app to interact with the component:
+
+- *Start*: Starts a new script in the component.
+
+- *Abort*: Stops the script that is currently running within the component. If any action is configured to be executed when the script is finished, this will not be triggered if the *Abort* action is used.
+
+> [!NOTE]
+> When a new script is started while another is running, the component will wait for the current script to finish before launching the new one. The abort action will finish the script that is currently shown.
