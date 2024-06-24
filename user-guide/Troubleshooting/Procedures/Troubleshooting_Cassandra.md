@@ -4,8 +4,6 @@ uid: Troubleshooting_Cassandra
 
 # Troubleshooting – Cassandra
 
-## Context
-
 DataMiner uses Cassandra in various ways. Each way has its specific behavior and place within a DataMiner System.
 
 Two types of Cassandra storage are used, i.e. two distinct types of Cassandra databases:
@@ -15,6 +13,8 @@ Two types of Cassandra storage are used, i.e. two distinct types of Cassandra da
 
 > [!TIP]
 > For more information on available storage options, see [About databases](xref:Databases_about).
+
+## Determining the type of setup
 
 When you start troubleshooting, you first need to determine whether the setup uses *Cassandra Cluster* or *Cassandra Single*. There are some key differences between the two that are important for your investigation.
 
@@ -45,13 +45,13 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
   - Error alarm mentioning "DataMiner goes into offload mode"
 
     > [!NOTE]
-    > This error may also be caused by other databases (e.g. Elasticsearch).
+    > This error may also be caused by other databases, such as OpenSearch or Elasticsearch (note that the latter is no longer recommended).
 
 - The SLDataGateway process is leaking memory.
 
-## Prerequisites and required tools
+## Prerequisites and required tools for troubleshooting
 
-- *Microsoft Platform* elements
+- A *Microsoft Platform* element for each DMA server
 
   - Trending must be enabled.
   - Can be used to detect memory leaks.
