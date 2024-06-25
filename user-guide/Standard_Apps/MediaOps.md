@@ -4,10 +4,9 @@ uid: MediaOps
 
 # dataminer.MediaOps
 
-## MediaOps applications
+> [!NOTE]
+> We are working on adding more information to this section soon, so check back for updates frequently.
 
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Standard_Apps/MediaOps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/user-guide/images/People_Organizations.svg" style="width:100%"></a>
-  </div>
-</div>
+dataminer.MediaOps will soon be available in the DataMiner Catalog as a package containing multiple low-code apps designed to simplify customization within media operations.
+
+All functions of the MediaOps solution are built on the Common Data Model (CDM), which will also be included in the package.

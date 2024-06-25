@@ -207,8 +207,13 @@ items:
   - name: dataminer.MediaOps
     topicUid: MediaOps
     items:
-      - name: People & Organizations
-        topicUid: People_Organizations
+      - name: Installing dataminer.MediaOps
+        topicUid: Installing_MediaOps
+      - name: MediaOps applications
+        topicUid: MediaOps_apps
+        items:
+          - name: People & Organizations
+            topicUid: People_Organizations
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
