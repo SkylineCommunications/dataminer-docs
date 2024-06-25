@@ -9,14 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 19 June 2024 - Fix - Catalog - Email of user shown in user menu [ID_39960]
+#### 19 June 2024 - Fix - Catalog - Email of user not shown in user menu [ID_39960]
 
 A bug was fixed that prevented the user's email from showing up in the user menu of the Catalog.
 
-#### 19 June 2024 - Fix - Catalog - Cookies correctly remember the selected organization and is shared across the cloud apps [ID_39913]
+#### 19 June 2024 - Fix - Catalog - Selected organization is not remembered cross cloud apps or after reloading the catalog app [ID_39913]
 
-There was an issue in the Catalog app where the cookies for selected organization were not used correctly.
-Now the Catalog app will correctly save its selected organization and also select a specific organization if one was saved in cookies (this works with all cloud apps across the dataminer.services namespace)
+When using the catalog app and selecting an organization, reloading the app would "forget" the previous selected organization and always select the first one.
+Coming over from another cloud app (e.g. Admin), a different organization would be selected (in most cases the first one alphabetically).
+The organization is now correctly saved and shared arross apps or across app reloads.
 
 #### 19 June 2024 - Enhancement - Catalog - Register catalog item moved to user-menu [ID_39906]
 
