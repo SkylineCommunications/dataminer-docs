@@ -147,3 +147,9 @@ From now on, this component will correctly use the time zone specified in the ab
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you kept on zooming out on a timeline item, at some point, that item would no longer be visible.
+
+#### Dashboards app & Low-Code Apps - Query filters: Problem with highlight filtering on an enum value linked to a DOM object [ID_39971]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Highlight filtering on an enum value linked to a DOM object would no longer work.

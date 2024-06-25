@@ -487,6 +487,16 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
 
+#### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the *VerifyNoLegacyReportsDashboards* prerequisite verifies that no legacy reports and legacy dashboards still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
+
+Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or higher. From now on, this will no longer be the case.
+
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
+
 #### SLASPConnection is now a 64-bit process [ID_39978]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
