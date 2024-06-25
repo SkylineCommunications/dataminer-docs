@@ -83,7 +83,7 @@ To access and interact with your new DataMiner System, install DataMiner Cube, t
 
 ## Step 3: Deploy the 'Generic HTTP Query' protocol from the Catalog
 
-Now that you have set up your staging DataMiner System, add the *Generic HTTP Query* protocol (also known as connector), through which your element will communicate with your DMA.
+Now that you have set up your staging DataMiner System and installed DataMiner Cube, add the *Generic HTTP Query* protocol (also known as connector), through which your element will communicate with your DMA.
 
 1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the DataMiner Catalog.
 
@@ -98,7 +98,7 @@ Now that you have set up your staging DataMiner System, add the *Generic HTTP Qu
 
 ## Step 4: Access your newly created DaaS system for the first time
 
-Now that you have installed DataMiner Cube, you can use it to access your new DaaS system.
+Access your new DaaS system.
 
 1. Go to [dataminer.services](https://dataminer.services).
 
@@ -164,7 +164,7 @@ You have now created an element to monitor the status of a website. By default, 
 
 ## Step 6: Create an alarm template for your element
 
-To monitor your entry effectively, you will focus on the HTTP response status code in the *Status Code* column. These codes are grouped into five categories based on their first digit, each representing a different class of response:
+To monitor the website's availability effectively, you will focus on the HTTP response status code in the *Status Code* column. These codes are grouped into five categories based on their first digit, each representing a different class of response:
 
 | Category | Type of response | Example |
 |--|--|--|
