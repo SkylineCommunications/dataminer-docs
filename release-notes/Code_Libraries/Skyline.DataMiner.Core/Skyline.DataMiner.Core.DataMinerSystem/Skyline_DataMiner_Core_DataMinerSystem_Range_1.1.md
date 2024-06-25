@@ -11,7 +11,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### Fix - Breaking change reverted for InterAppCalls
 
-When using the Skyline.DataMiner.Core.InterAppCalls.Common NuGet package and versions 1.1.1.10/1.1.1.11 of the DataMinerSystem package will cause run-time errors. This breaking change has been reverted.
+When the Skyline.DataMiner.Core.InterAppCalls.Common NuGet package was used, versions 1.1.1.10/1.1.1.11 of the DataMinerSystem package could cause run-time errors. This breaking change has been reverted.
 
 ### 1.1.1.11
 
