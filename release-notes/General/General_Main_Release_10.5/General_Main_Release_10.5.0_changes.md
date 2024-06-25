@@ -479,6 +479,12 @@ From now on, when a QAction throws an unhandled exception, an attempt will be ma
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### Native processes will now close the MessageBroker connection immediately when stopping [ID_39863]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, when a native process (e.g. SLDataMiner) was stopping, in some rare cases, it would wait for 30 seconds before it closed the MessageBroker connection. From now on, it will close the MessageBroker connection immediately.
+
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
