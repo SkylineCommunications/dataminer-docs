@@ -24,13 +24,15 @@ The SLSNMPManager process communicates with devices acting as SNMP agents.
 
 - It sets parameter values on devices by sending SNMP Set messages.
 
-- It uses SNMP++ to receive notifications from devices.
+- By default, it uses SNMP++ to receive notifications from devices.
+
+- There's an separate SLSNMPManager process for each SNMP version (SNMPv1, SNMPv2 and SNMPv3).
 
 The UDP ports to be used are set as follows:
 
 - The port on which the device will listen for Get and Set messages (i.e. the “polling port”) has to be specified during the creation of the element associated with that device. Default: 161
 
-- By default, only the SNMPv3 process will receive notifications, on port 162. It will then forward them to the SNMPv1 and SNMPv2 processes when necessary:
+- By default, only the SLSNMPManager process for SNMPv3 will receive notifications, on port 162. It will then forward them to the SNMPv1 and SNMPv2 processes when necessary:
 
   - The SNMPv1 process will receive all notifications (SNMPv1, SNMPv2 and SNMPv3).
 
