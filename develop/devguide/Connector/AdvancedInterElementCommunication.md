@@ -10,6 +10,7 @@ When implementing a protocol, it is often necessary to obtain information from a
 - <xref:AdvancedInterElementCommunicationDataDistribution>
 - <xref:AdvancedInterElementCommunicationParameterReplication>
 - <xref:AdvancedInterElementCommunicationClassLibrary>
+- <xref:InterAppCalls_Introduction>
 
 ## See also
 
