@@ -1346,6 +1346,9 @@ Permission to upgrade DMAs (.dmupgrade, .zip) and to restore backups (.dmbackup)
 
 ### Modules \> System configuration \> Backup
 
+> [!NOTE]
+> These user permissions are not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, they are no longer displayed in such a system.<!-- RN 39870 -->
+
 #### Modules \> System configuration \> Backup \> UI available
 
 Permission to access the Backup page in System Center.
@@ -1406,11 +1409,17 @@ Permission to access the Database page in System Center.
 
 Permission to change the settings of the general database. Prior to DataMiner 10.1.0/10.1.2, this is called the local database.
 
+> [!NOTE]
+> This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->
+
 #### Modules \> System configuration \> Database \> Configure central/offload DB
 
 Permission to change the settings of the offload database. Prior to DataMiner 10.1.0/10.1.1, this is called the central database.
 
 ### Modules \> System configuration \> Indexing engine
+
+> [!NOTE]
+> These user permissions are not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, they are no longer displayed in such a system.<!-- RN 39870 -->
 
 #### Modules \> System configuration \> Indexing engine \> Configure
 
@@ -1599,6 +1608,9 @@ Permission to see and control the background tasks of all users.
 #### Modules \> System configuration \> Tools \> Allow access to query executor
 
 Permission to execute SQL queries against the general or offload database.
+
+> [!NOTE]
+> This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->
 
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> UI Available
 
