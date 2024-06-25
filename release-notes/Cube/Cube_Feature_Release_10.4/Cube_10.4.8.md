@@ -121,11 +121,11 @@ When a user expands a view in the Surveyor, this is saved in the user settings o
 
 From now on, the root view will always be expanded when no expanded views can be found in the user settings of the user.
 
-#### Some user permissions will no longer be available when Cube is connected to a DaaS system [ID_39870]
+#### Some user permissions will no longer be visible when Cube is connected to a DaaS system [ID_39870]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When Cube is connected to a DaaS system, the following user permissions will no longer be available:
+When Cube is connected to a DaaS system, the following user permissions will no longer be visible:
 
 - *Modules > System Configuration > Backup*
 - *Modules > System Configuration > Database > Configure local/general DB*

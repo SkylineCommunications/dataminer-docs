@@ -309,6 +309,14 @@ See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtoco
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
 
+#### Problem while setting up serial connections when starting an element [ID_39943]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When an element was started, up to now, its serial connections were set up too early, which would cause issues when credentials were required. From now on, serial connections will be set up after the parameters have been loaded, especially SSH connections that require credentials stored in parameters.
+
+Also, an SSH connect request that receives a bad credentials response will no longer try to connect indefinitely. Instead, after the initial fail, it will only try as often as the configured retry attempts.
+
 #### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
