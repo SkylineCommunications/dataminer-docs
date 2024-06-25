@@ -36,7 +36,7 @@ These are the available types:
   >
   > - Prior to DataMiner 10.4.0 [CU1]/10.4.4, the raw value of a GenericEnumEntry is used instead of the display value.<!-- RN 38586 -->
   > - From DataMiner 10.4.7/10.5.0 onwards, GenericEnum fields that allow multiple values are supported in the DomInstance name.<!-- RN 39510 -->
-  > - When using a `DomInstanceFieldDescriptor`, the name of the referenced `DomInstance` will not be resolved and only the Guid value stored on that `DomInstance` will be included in the concatenation.
+  > - When a `DomInstanceFieldDescriptor` is used, the name of the referenced `DomInstance` will not be resolved, and only the GUID value stored on that `DomInstance` will be included in the concatenation.
 
 ## Example
 
