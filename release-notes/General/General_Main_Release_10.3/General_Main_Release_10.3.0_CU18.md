@@ -12,7 +12,13 @@ uid: General_Main_Release_10.3.0_CU18
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
+
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+
+`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
 ### Fixes
 
