@@ -300,7 +300,7 @@ The default password of the *admin* user should be changed and all the users exc
    OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -cacert < GeneratedRootCA.pem > -cert < GeneratedAdminCert.pem > -key < GeneratedAdminKey.pem > 
    ```
 
-   If the private key has a password you can specify this with the -keypass option in the request above.
+   If the private key has a password, you can specify this with the -keypass option in the request above.
 
    > [!IMPORTANT]
    > The command above only needs to be executed on one of the nodes.
