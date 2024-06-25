@@ -16,7 +16,23 @@ uid: Web_apps_Feature_Release_10.4.9
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: New 'Interactive Automation script' component [ID_39969]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In low-code apps, you can now use *Interactive Automation script* components.
+
+An *Interactive Automation script* component allows you to launch a preset interactive Automation script (ad hoc, on view, or after an event has occurred) and to display its UI. It also allows you to select a script and launch it, or to abort the script that is being run.
+
+When you launch a new script while another is being run, the new script will start once the other script has finished.
+
+In the settings of the component, you can also opt to have the component either show or hide the name of the script.
+
+> [!NOTE]
+>
+> - The component cannot be used to launch Automation scripts that are not interactive.
+> - The component will not ask for any missing parameters or dummies. It expects them to be filled in either in its settings or via feeds. When input is missing, the script will not be launched and the component will be blank.
+> - By default, scripts will time out after 15 minutes. If a script times out, an error will be displayed in the component.
 
 ## Changes
 
