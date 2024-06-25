@@ -53,3 +53,9 @@ When, on a mobile device, you entered your credentials on the authentication pag
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When, in the *Parameters* data set, you filtered by protocol, the parameters list would incorrectly not include any parameters of type "Button".
+
+#### Dashboards app & Low-Code Apps - Timeline component: Regional settings would not be taken into account [ID_39987]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the *C:\\Skyline DataMiner\\users\\ClientSettings.json* file.
