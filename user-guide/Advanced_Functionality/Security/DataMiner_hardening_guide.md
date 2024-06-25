@@ -9,6 +9,9 @@ In today’s digital landscape, properly securing your data and systems is of th
 
 This guide will give you a comprehensive overview to help you make the necessary changes to secure your DataMiner System as much as possible.
 
+> [!TIP]
+> See also: [Kata #29: DataMiner Hardening](https://community.dataminer.services/courses/kata-29/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Keep your system up to date
 
 Your first step should be to make sure your system is always up to date. This includes the operating system and all installed software. This way, you have access to the latest security fixes and features.
@@ -17,19 +20,17 @@ To obtain the most recent version of DataMiner and related software, go to the [
 
 ## Use BPA tests
 
-A good start for hardening your DataMiner is to make use of the available BPA tests. These scan your DataMiner System for all sorts of issues and will help you resolve any detected issues.
+A good start for hardening your DataMiner System is to make use of the available BPA tests. These scan your DataMiner System for all sorts of issues and will help you resolve any detected issues.
 
 For information on how to run these tests, refer to [Running BPA tests](xref:Running_BPA_tests).
 
-There are many BPA tests available, but these are the most important ones in relation to this guide:
+From DataMiner 10.4.5/10.4.0 [CU3] onwards, you can run the [Security Advisory BPA test](xref:BPA_Security_Advisory) to run all security-related checks at the same time. In earlier DataMiner versions (starting from DataMiner 10.2.12/10.3.0), the security checks are available in the following dedicated BPA tests:
 
 - [Database Security](xref:BPA_Database_Security)
 - [Firewall Configuration](xref:BPA_Firewall_Configuration)
 - [HTTPS Configuration](xref:BPA_Https_Configuration)
 
-All three of these are available by default from DataMiner 10.2.12/10.3.0 onwards.
-
-After you have run these BPA tests, they will provide an overview of the detected issues and point you to the right documentation to resolve them.
+After you have run a BPA test, it will provide an overview of the detected issues and point you to the right documentation to resolve them.
 
 ## DataMiner Agent hardening
 
@@ -57,6 +58,41 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
+### Disable legacy components
+
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component, the legacy *Reports and Dashboards* component, and the v0 api.
+
+#### Annotations and legacy Reports and Dashboards
+
+To disable both the *Annotations* component and the legacy *Reports and Dashboards* component:
+
+1. Add the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
+
+   ```xml
+   <SLNet>
+      <LegacyAnnotations>false</LegacyAnnotations>
+      <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
+   </SLNet>
+   ```
+
+1. To make the changes take effect, run the *ConfigureIIS.bat* script, located in the `C:\Skyline DataMiner\Tools` folder, as Administrator.
+
+> [!NOTE]
+> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+
+#### v0 API
+
+To disable the v0 API:
+
+1. Open the file `C:\Skyline DataMiner\Webpages\API\Web.config`.
+
+1. Add the tag `<add key="enableLegacyV0Interface" value="false"/>` tag under `<appSettings>`, and save the file.
+
+1. Restart IIS.
+
+> [!NOTE]
+> The v0 API is disabled by default as from DataMiner versions 10.2.0/10.1.6. It is not possible to enable the v0 API when your DMS is connected to dataminer.services.
+
 ## DataMiner Webpages hardening
 
 ### HTTPS
@@ -80,22 +116,6 @@ There are some other HTTP headers that can improve security. However, their valu
 - [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
 
 - [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
-
-### Disable legacy components
-
-DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
-
-```xml
-<SLNet>
-   <LegacyAnnotations>false</LegacyAnnotations>
-   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
-</SLNet>
-```
-
-To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
-
-> [!NOTE]
-> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 ## Operating system hardening
 

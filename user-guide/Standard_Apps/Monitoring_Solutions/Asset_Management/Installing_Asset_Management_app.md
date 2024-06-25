@@ -106,7 +106,7 @@ To make sure the application looks as it was intended, modify the theme before y
 
    - *Color > Font color*: rgb(21,21,21)
 
-   - *Color > Color palette*:
+   - *Color > Data colors* or *Color > Color palette* (depending on your DataMiner version):
 
      - *Color 1*: rgb(244,190,73)
 

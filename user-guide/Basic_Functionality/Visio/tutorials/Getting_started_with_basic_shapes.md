@@ -131,7 +131,7 @@ In DataMiner Cube, you should see two colored shapes, one of which displays the 
 
 1. Save your Visio file.
 
-In DataMiner Cube, only your ellipse will now be colored with the alarm state of the element, and only that shape will be clickable. The *pretty hover* option will ensure that the highlighted area of the ellipse moves with he ellipse, not its outer rectangle.
+In DataMiner Cube, only your ellipse will now be colored with the alarm state of the element, and only that shape will be clickable. The *pretty hover* option will ensure that the highlighted area of the ellipse moves with the ellipse, not its outer rectangle.
 
 ![End result](~/user-guide/images/Endresult.webp)
 

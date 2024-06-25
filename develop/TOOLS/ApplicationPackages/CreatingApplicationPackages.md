@@ -4,10 +4,12 @@ uid: CreatingApplicationPackages
 
 # Creating application packages
 
-There are currently two ways to create application packages:
+There are multiple ways to create application packages:
 
 - Infrastructure as Code (IaC)
-- Using the application package builder API.
+- Using the application package builder API
+- Using the Packager .NET tool
+- Using the Low-Code-App-Extensions
 
 > [!TIP]
 > [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for Automation scripts solutions.
@@ -42,70 +44,70 @@ The following example defines an application package that consists of an Automat
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/packageManifest">
-	<Name>Incident Manager</Name>
-	<Version>1.0.2-CU0</Version>
-	<Content>
-		<AutomationScripts>
-			<AutomationScript>
-				<RepoPath>Automation\Generic\Sample apps\Incident Manager</RepoPath>
-				<Version>
-					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
-					</Selection>
-				</Version>
-			</AutomationScript>
-		</AutomationScripts>
-		<CompanionFiles>
-			<CompanionFile>
-				<RepoPath>CompanionFiles\Generic\Sample apps\Incident Manager</RepoPath>
-				<Version>
-					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
-					</Selection>
-				</Version>
-			</CompanionFile>
-		</CompanionFiles>
-	</Content>
-	<VersionHistory>
-		<Branches>
-			<Branch id="1">
-				<MajorVersions>
-					<MajorVersion id="0">
-						<MinorVersions>
-							<MinorVersion id="1">
-								<CUVersions>
-									<CU id="0">
-										<Changes>
-											<NewFeature>Initial Version</NewFeature>
-										</Changes>
-										<Date>2023-04-14</Date>
-										<Provider>
-											<Company>Skyline Communications</Company>
-											<Author>JVW</Author>
-										</Provider>
-									</CU>
-								</CUVersions>
-							</MinorVersion>
-							<MinorVersion id="2">
-								<CUVersions>
-									<CU id="0">
-										<Changes>
-											<NewFeature>Add Incidents API</NewFeature>
-										</Changes>
-										<Date>2023-06-09</Date>
-										<Provider>
-											<Company>Skyline Communications</Company>
-											<Author>AVV</Author>
-										</Provider>
-									</CU>
-								</CUVersions>
-							</MinorVersion>
-						</MinorVersions>
-					</MajorVersion>
-				</MajorVersions>
-			</Branch>
-		</Branches>
-	</VersionHistory>
+   <Name>Incident Manager</Name>
+   <Version>1.0.2-CU0</Version>
+   <Content>
+      <AutomationScripts>
+         <AutomationScript>
+            <RepoPath>Automation\Generic\Sample apps\Incident Manager</RepoPath>
+            <Version>
+               <Selection>
+                  <Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+               </Selection>
+            </Version>
+         </AutomationScript>
+      </AutomationScripts>
+      <CompanionFiles>
+         <CompanionFile>
+            <RepoPath>CompanionFiles\Generic\Sample apps\Incident Manager</RepoPath>
+            <Version>
+               <Selection>
+                  <Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+               </Selection>
+            </Version>
+         </CompanionFile>
+      </CompanionFiles>
+   </Content>
+   <VersionHistory>
+      <Branches>
+         <Branch id="1">
+            <MajorVersions>
+               <MajorVersion id="0">
+                  <MinorVersions>
+                     <MinorVersion id="1">
+                        <CUVersions>
+                           <CU id="0">
+                              <Changes>
+                                 <NewFeature>Initial Version</NewFeature>
+                              </Changes>
+                              <Date>2023-04-14</Date>
+                              <Provider>
+                                 <Company>Skyline Communications</Company>
+                                 <Author>JVW</Author>
+                              </Provider>
+                           </CU>
+                        </CUVersions>
+                     </MinorVersion>
+                     <MinorVersion id="2">
+                        <CUVersions>
+                           <CU id="0">
+                              <Changes>
+                                 <NewFeature>Add Incidents API</NewFeature>
+                              </Changes>
+                              <Date>2023-06-09</Date>
+                              <Provider>
+                                 <Company>Skyline Communications</Company>
+                                 <Author>AVV</Author>
+                              </Provider>
+                           </CU>
+                        </CUVersions>
+                     </MinorVersion>
+                  </MinorVersions>
+               </MajorVersion>
+            </MajorVersions>
+         </Branch>
+      </Branches>
+   </VersionHistory>
 </Manifest>
 ```
 
@@ -116,43 +118,43 @@ The installation script is an Automation script with an [AutomationEntryPoint ty
 ```csharp
 namespace Script
 {
-	using System;
+   using System;
 
-	using Skyline.AppInstaller;
-	using Skyline.DataMiner.Automation;
-	using Skyline.DataMiner.Net.AppPackages;
+   using Skyline.AppInstaller;
+   using Skyline.DataMiner.Automation;
+   using Skyline.DataMiner.Net.AppPackages;
 
-	/// <summary>
-	///     DataMiner Script Class.
-	/// </summary>
-	internal class Script
-	{
-		/// <summary>
-		///     The script entry point.
-		/// </summary>
-		/// <param name="engine">Provides access to the Automation engine.</param>
-		/// <param name="context">Provides access to the installation context.</param>
-		[AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
-		public void Install(Engine engine, AppInstallContext context)
-		{
-			try
-			{
-				engine.Timeout = new TimeSpan(0, 10, 0);
-				engine.GenerateInformation("Starting installation");
-				var installer = new AppInstaller(Engine.SLNetRaw, context);
-				installer.InstallDefaultContent();
+   /// <summary>
+   ///     DataMiner Script Class.
+   /// </summary>
+   internal class Script
+   {
+      /// <summary>
+      ///     The script entry point.
+      /// </summary>
+      /// <param name="engine">Provides access to the Automation engine.</param>
+      /// <param name="context">Provides access to the installation context.</param>
+      [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
+      public void Install(Engine engine, AppInstallContext context)
+      {
+         try
+         {
+            engine.Timeout = new TimeSpan(0, 10, 0);
+            engine.GenerateInformation("Starting installation");
+            var installer = new AppInstaller(Engine.SLNetRaw, context);
+            installer.InstallDefaultContent();
 
-				// Custom installation logic can be added here for each individual install package.
-				var subScript = engine.PrepareSubScript("Incidents_Dependencies_Import");
-				subScript.Synchronous = true;
-				subScript.StartScript();
-			}
-			catch (Exception e)
-			{
-				engine.ExitFail("Exception encountered during installation: " + e);
-			}
-		}
-	}
+            // Custom installation logic can be added here for each individual install package.
+            var subScript = engine.PrepareSubScript("Incidents_Dependencies_Import");
+            subScript.Synchronous = true;
+            subScript.StartScript();
+         }
+         catch (Exception e)
+         {
+            engine.ExitFail("Exception encountered during installation: " + e);
+         }
+      }
+   }
 }
 ```
 
@@ -161,3 +163,15 @@ namespace Script
 The application package builder API is an API that can be used to creating application packages. The API is available as a NuGet package: [Skyline.DataMiner.Core.AppPackageCreator](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageCreator).
 
 For the API documentation, refer to [Skyline.AppInstaller.AppPackage](xref:Skyline.AppInstaller.AppPackage).
+
+## Packager .NET tool
+
+The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g. an application package from an Automation script solution folder (e.g. as a step in a CI/CD pipeline.) It currently supports creating application packages for Automation script solutions, Visio repositories (both protocol Visio files and other) and dashboard repositories.
+
+The packager tool also allows the creation of a protocol package (.dmprotocol) for protocol solutions.
+
+## Low-Code-App-Extensions
+
+The *Low Code App Extensions* script is an Interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
+
+For more information on how to install and use this script, refer to [Low Code App Extensions](https://github.com/SkylineCommunications/Low-Code-App-Extensions).

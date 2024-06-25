@@ -16,13 +16,13 @@ To use this feature, your system needs to meet the following requirements:
 
 - Your system must be connected to dataminer.services. For information on how to connect, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- Port **5100** must be open for traffic on the **internal network** for the remote log collection to work. For more information on this endpoint, see [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+- Port **5100** must be open for traffic on the **internal network** for the remote log collection to work. If a custom port is configured for the dataminer.services endpoint, this must be open as well. For more information on this endpoint, see [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 
 - The correct versions of specific DxMs must be running on the DataMiner Agents:
 
-  - **All DataMiner Agents** in the system need both **Orchestrator 1.4.0** or higher and **SupportAssistant 1.5.3** or higher.
+  - **All DataMiner Agents** in the system need both **Orchestrator 1.5.4** or higher and **SupportAssistant 1.6.5** or higher.
 
-  - DataMiner Agents with **internet access** (or proxy or DMZ server) also need to use **CloudGateway 2.12.3** or higher.
+  - At least one DataMiner Agent with **internet access** (or proxy or DMZ server) in the cluster must have **CloudGateway 2.12.3** or higher.
 
   The easiest way to install these DxMs is to upgrade all DataMiner Agents to **DataMiner 10.3.12/10.4.0** or higher and install the **Cloud Pack 3.1.5** or higher on the DataMiner Agents with internet access.
 

@@ -6,6 +6,9 @@ uid: Protocol.Chains.Chain
 
 Each Protocol.Chains.Chain child represents a different topology view of an EPM (formerly known as CPE) or Service Overview Manager element.
 
+> [!TIP]
+> See also: [EPM chains and fields configuration](xref:EPMManagerChainsAndFields)
+
 ## Parent
 
 [Chains](xref:Protocol.Chains)

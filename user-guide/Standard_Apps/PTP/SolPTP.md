@@ -9,7 +9,7 @@ The DataMiner PTP app allows you to monitor a PTP stack in real time. It provide
 PTP (Precision Time Protocol) is the de facto protocol used by broadcasters, media network operators and service providers to synchronize device clocks in complex media networks to achieve accurately synchronized video, audio and meta-data streams.
 
 > [!NOTE]
-> The DataMiner PTP app requires DataMiner version 10.0.3 or above.
+> The DataMiner PTP app requires DataMiner version 10.0.10 or above.<!-- RN 39784 -->
 
 This section contains the following information on the DataMiner PTP app:
 

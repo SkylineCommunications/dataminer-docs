@@ -9,10 +9,27 @@ uid: DMS_SNMP_NOTIFICATION
 
 Sends an SNMP trap or inform message.
 
+```csharp
+DMS dms = new DMS();
+
+int type = (int)NotificationType.DMS_SNMP_NOTIFICATION;
+int messageType = 22;
+
+int elementID = protocol.ElementID;
+string destination = "127.0.0.1";
+object returnValue;
+
+object[] generalInfo = new object[] { elementID, -1, destination, "", "" };
+object[] bindings = new object[] { new object[]{"1.3.6.1.4.1.2509.5.5.1.5.1", "value", "OctetString"}};
+
+dms.Notify(type, messageType, generalInfo, bindings, out returnValue);
+
+protocol.Log("QA" + protocol.QActionID + "|Return value: " + returnValue, LogType.Error, LogLevel.NoLogging);
+```
+
 ## Parameters
 
 - type (int): Specifies the notify type. To perform a DMS_SNMP_NOTIFICATION call, set this to 73.
-- subType (int): Specifies the sub type. Not applicable for DMS_SNMP_NOTIFICATION calls. Set this to 0.
 - messageType (int): Defines the type of message that will be sent:
 
   - 21 = SNMPv1 Trap

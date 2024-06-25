@@ -4,9 +4,6 @@ uid: EPM_7.0.1_I-DOCSIS
 
 # EPM 7.0.1 I-DOCSIS
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
-
 ## New features
 
 #### Channel Utilization added for US/DS Service Group [ID_38849]

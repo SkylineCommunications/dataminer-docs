@@ -10,7 +10,7 @@ Follow these steps below to connect a DMA to an existing DMS running STaaS:
 
 1. Disconnect the DMA you are adding from dataminer.services.
 
-   To make sure the DMA is disconnected, follow the procedure on [Permanently disconnecting from dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/AboutCloudPlatform/Disconnecting_from_dataminer.services.html#permanently-disconnecting-from-dataminerservices).
+   To make sure the DMA is disconnected, follow the procedure on [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices).
 
    > [!IMPORTANT]
    > Only disconnect the DMA you are adding, NOT the cluster you are adding it to.
@@ -32,7 +32,7 @@ Follow these steps below to connect a DMA to an existing DMS running STaaS:
 
    1. Restart the DMA.
 
-1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/Adding_a_DMA/Adding_a_regular_DataMiner_Agent.html).
+1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
 
 1. Once the DMA has successfully joined the cluster, enable STaaS in *DB.xml*:
 

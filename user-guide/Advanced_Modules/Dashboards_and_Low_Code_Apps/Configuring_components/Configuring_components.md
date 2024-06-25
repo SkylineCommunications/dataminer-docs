@@ -10,9 +10,13 @@ In the edit mode, visualizations are available via the panel on the left, and da
 
 There are several ways to add a component:
 
-- **Drag a visualization** from the pane on the left onto an empty section of the dashboard or low-code app page. A data feed will then need to be applied to the component.
+- **Drag a visualization** from the pane on the left onto an empty section of the dashboard or low-code app page (1). A data feed will then need to be applied to the component (2).
 
-- **Drag a data feed** from the *Data* pane on the right onto an empty section of the dashboard or low-code app page. A visualization will then still need to be applied to the component.
+  ![Add a component](~/user-guide/images/Add_Component_Visualization.png)<br>*Dashboards app in DataMiner 10.4.5*
+
+- **Drag a data feed** from the *Data* pane on the right onto an empty section of the dashboard or low-code app page (1). A visualization will then still need to be applied to the component (2).
+
+  ![Add a component](~/user-guide/images/Add_Component_Data_Feed.png)<br>*Dashboards app in DataMiner 10.4.5*
 
 The following actions are then possible to configure the component:
 

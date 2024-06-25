@@ -965,6 +965,30 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public IConnection GetUserConnection() { return null; }
 
+		/// <summary>
+		/// Hides a custom-made dialog box of an interactive Automation script.
+		/// </summary>
+		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
+		/// <exception cref="DataMinerException">Hide UI failed.</exception>
+		/// <para>Feature introduced in DataMiner 10.4.7 (RN 39451/RN 39638).</para>
+		/// <para>This feature is only available for interactive Automation scripts executed in a web environment.</para>
+		/// <example>
+		/// <code>
+		/// // Build and display a form
+		/// var formUi = BuildFormUi();
+		/// var results = engine.ShowUI(formUi);
+		/// 
+		/// // Process UI results
+		/// 
+		/// // Hide the UI before starting a lengthy operation
+		/// engine.HideUI();
+		/// 
+		/// // Build and display issue information
+		/// var issueUi = BuildIssueUi();
+		/// var issueResults = engine.ShowUI(issueUi);
+		/// </code>
+		/// </example>
+		public void HideUI() { }
 
 		/// <summary>
 		/// Resets the timeout timer, extending the time the Automation script is allowed to execute.

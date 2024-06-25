@@ -55,14 +55,35 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
 
-1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it to look like this:
+1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it corresponding to your setup:
 
-   ```xml
-   <?xml version="1.0"?>
-   <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
-      <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
-   </DataBases>
-   ```
+   - For setups **without proxy**, use the following configuration:
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
+      </DataBases>
+      ```
+
+   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+            <Proxy>
+               <Address>[Enter Address Here]</Address>
+               <Port>[Enter Port Here]</Port>
+               <UserName>[Enter UserName Here]</UserName>
+               <Password>[Enter Password Here]</Password>
+            </Proxy>
+         </DataBase>
+      </DataBases>
+      ```
+
+      > [!NOTE]
+      > If the proxy does not require authentication, you can leave the *UserName* and *Password* fields blank or remove them.
 
 1. Restart DataMiner to begin using STaaS.
 
@@ -98,13 +119,32 @@ The data is encrypted both at rest and in transit.
 
 If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availability of 99.90%. With [GRS](#data-location-and-redundancy), it has an expected availability of 99.95%. For more information, please contact <sales@skyline.be>.
 
+## TTL
+
+It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
+
+| Data type                | TTL          |
+|--------------------------|:------------:|
+| Real-time trending       | 7 days       |
+| Average trending (short) | 3 months     |
+| Average trending (medium)| 2 years      |
+| Average trending (long)  | 10 years     |
+| State changes            | 5 years      |
+| Spectrum traces          | 1 year       |
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
-- Migrating logger tables is supported from DataMiner 10.3.11 onwards<!-- RN 37283 --> for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards<!-- RN 37408 --> for systems using a Cassandra database per DMA.
+- Migration is supported in 10.4.0 and the latest available 10.4.x feature release.
+
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
+
 - Migration from a MySQL setup is not yet supported.
+
+- Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
+
+- If you start the migration while an element with a logger table is stopped, the data of that element will not be migrated.
 
 In addition, the following **other limitations** currently apply:
 
@@ -112,69 +152,27 @@ In addition, the following **other limitations** currently apply:
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
 
+- Custom configuration of TTL values is not yet supported.
+
 - Direct queries from DataMiner Cube to the database are not supported.
 
 - The [SLReset tool](xref:Factory_reset_tool) is not supported.
 
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
 
-- Proxy and DMZ setups are currently not supported.
+- DMZ setups are currently not supported.
 
-- The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag on logger tables is not supported.
+- Regarding logger tables:
 
-- DOM queries can be slower depending on the number of DOM records and the complexity of the query. This limitation will be removed in the near future.
+  - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag is not supported.
+
+  - [Indexed logger tables](xref:AdvancedLoggerTablesImplementation#indexed-logger-tables) can be created and read from the database, but advanced search queries with GQI are not supported.
+
+  - [DirectConnection logger tables](xref:AdvancedLoggerTablesDefiningDirectConnectionTable) are not supported.
 
 ## Troubleshooting
 
-> [!NOTE]
-> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these with the procedures below, contact <staas@dataminer.services>.
-
-### Cloud connection lost
-
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail.
-
-When you encounter this issue, you will find entries similar to the examples below in the SLDBConnection.txt log file:
-
-`2023/10/02 14:04:23.458|SLDBConnection|SLCloudStorage|INF|0|6|2023-10-02T14:04:23.442|FATAL|DataGateway.CloudStorage.CloudStorage|CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "The Service Principal of this DMS is expired (3/14/2023 8:09:51 AM +00:00) but should soon be refreshed automatically." }`
-
-`2023/10/02 14:05:33.981|SLDBConnection|SLCloudStorage|INF|0|6|2023-10-02T14:05:33.980|FATAL|DataGateway.CloudStorage.CloudStorage|CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No responders are available for the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.`
-
-To resolve this issue, use the following workaround:
-
-1. [Open SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
-
-1. [Connect to the DMA with SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool)
-
-1. Select *Offline Tools* > *CcaGateway (offline)* > *Renew cloud session* and complete the renew process.
-
-   > [!NOTE]
-   > As the renewal of the Service Principal (SP) token is managed by a cloud service, it can take a few minutes before the renewal is fully synced.
-
-1. Wait a few minutes and then restart the DMA.The issue should be resolved now.
+For troubleshooting information related to STaaS, see [Troubleshooting – STaaS](xref:Troubleshooting_STaaS_Issues).
 
 > [!NOTE]
-> If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
-
-### API Deployment Manager failed to initialize
-
-When the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is still enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in Cube:
-
-```txt
-APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
-```
-
-In the SLDBConnection.txt log file, the error will look like this:
-
-```txt
-2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
-```
-
-To resolve this issue, remove the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option from *SoftLaunchOptions.xml*.
-
-### Connector-specific issues
-
-Some connector versions may contain a bug that causes a lot of parameter sets to be saved to the database. In the interest of saving cost and reducing load, we therefore **recommend using the latest version** available for most connectors.
-
-This issue is known to occur with the following connector versions:
-
-- [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
+> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the available troubleshooting information, contact <staas@dataminer.services>.

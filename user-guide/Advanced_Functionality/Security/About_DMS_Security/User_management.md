@@ -8,7 +8,7 @@ uid: User_management
 
 DataMiner supports the following types of directories for user management:
 
-- [Active Directory](xref:Adding_a_user#to-add-an-existing-domain-user) (default)
+- [Active Directory](xref:Adding_a_user#adding-an-existing-domain-user) (default)
 - [Azure Active Directory](xref:Setting_up_Azure_Active_Directory_Domain_Services)
 - [Atlassian Crowd](xref:Configuring_Atlassian_Crowd_settings)
 - [LDAP-compatible directories](xref:Configuring_LDAP_settings) (e.g. OpenLDAP)

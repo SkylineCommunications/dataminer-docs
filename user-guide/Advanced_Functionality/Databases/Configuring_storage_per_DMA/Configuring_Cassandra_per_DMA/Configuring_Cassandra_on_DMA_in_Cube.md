@@ -23,7 +23,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
    - **Name**: The name of the database.
 
-   - **DB Server**: The name or IP address of the server that hosts the database. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
+   - **DB Server**: The name or IP address of the server that hosts the database. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g. `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 

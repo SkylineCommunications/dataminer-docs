@@ -4,7 +4,7 @@ uid: DataMinerErrorCodes
 
 # DataMiner error codes
 
-Values are 32 bit values structured as follows:
+Values are 32-bit values structured as follows:
 
 ![alt text](../images/errorCodeStructure.svg "DataMiner error code structure")
 

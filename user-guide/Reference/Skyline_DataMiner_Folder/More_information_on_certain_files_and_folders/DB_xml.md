@@ -38,7 +38,7 @@ The following configuration is possible for the general database:
 
 - [Keeping a database table from being checked during an upgrade](#keeping-a-database-table-from-being-checked-during-an-upgrade)
 
-- [Configuring how long parameter data are kept in the database for DMS Reporter](#configuring-how-long-parameter-data-are-kept-in-the-database-for-dms-reporter)
+- [Configuring how long parameter data are kept in the database for DMS Reporter](#configuring-how-long-parameter-data-are-kept-in-the-database-for-dms-reporter-legacy)
 
 - [Keeping a separate log for slow database queries](#keeping-a-separate-log-for-slow-database-queries)
 
@@ -80,15 +80,15 @@ In the example below, two tables will be kept from being checked:
 > [!NOTE]
 > Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace “xxx” by the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
 >
-> However, note that this causes that that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
+> However, note that this causes that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
 
-### Configuring how long parameter data are kept in the database for DMS Reporter
+### Configuring how long parameter data are kept in the database for DMS Reporter (legacy)
 
 In order to make sure that parameter data is not removed from the database too early, two additional attributes are available in the *Maintenance* tag:
 
-- **initialLoadDays**: The number of days that parameter data will be kept in the rep_pd_info database table on first request. Default: 62.
+- **initialLoadDays**: The number of days that parameter data will be kept in the *rep_pd_info* database table on first request. Default: 62.
 
-- **paramMaxUnusedDays** The maximum number of days between each request for the parameter data to be kept in the rep_pd_info database.
+- **paramMaxUnusedDays** The maximum number of days between each request for the parameter data to be kept in the *rep_pd_info* database.
 
 This configuration can for instance be of use to ensure that a report with data for the past month will contain all parameter information for the entire month, as otherwise data might already have been removed during database maintenance.
 
@@ -98,7 +98,7 @@ Example:
 <Maintenance monthsToKeep="12" initialLoadDays="30" paramMaxUnusedDays="15"> </Maintenance>
 ```
 
-In the example above, the parameter data will be kept in the rep_pd_info table for 30 days. If the parameter data is not requested for 15 consecutive days, all data older than 30 days will be removed.
+In the example above, the parameter data will be kept in the *rep_pd_info* table for 30 days. If the parameter data is not requested for 15 consecutive days, all data older than 30 days will be removed.
 
 ### Keeping a separate log for slow database queries
 
@@ -120,7 +120,7 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 ### Configuring how alarm history slider data are kept in a Cassandra database
 
-In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize history alarm information in the DataMiner Cube history slider.
+In a Cassandra general database, the timetrace table among others contains "snapshots", which are used to visualize history alarm information in the DataMiner Cube history slider.
 
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
@@ -134,7 +134,7 @@ In a Cassandra general database, the timetrace table among others contains “sn
 In order to optimize the writing speed to a Cassandra database, an option can be specified that will skip the writing of the commit log.
 
 > [!CAUTION]
-> This option should only be used if performance of disk writes is an issue. It should never be used when two disks are in use or in a Failover setup. In general, we advise not to use this option. We are not responsible for any data loss caused if you do.
+> This option should only be used if performance of disk writes is an issue. It should never be used when two disks are in use or in a Failover setup. In general, we advise you not to use this option. We are not responsible for any data loss caused if you do.
 
 To add this option, In *DB.xml*, add a *\<SkipCommitLog>* tag to the currently active Cassandra database. For example:
 
@@ -254,7 +254,7 @@ To configure this size limit:
 
 ## Offload database settings
 
-The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
+The configuration data for the offload or "central" database has to be specified in a *\<Database>* tag of which the *local* attribute is set to "false".
 
 > [!NOTE]
 > The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.

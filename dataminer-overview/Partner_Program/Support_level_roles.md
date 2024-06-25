@@ -20,7 +20,7 @@ When **providing DataMiner Support Services as a partner**, the responsibilities
 
 Second Line Support consists of **specialized, fully trained DataMiner experts**. Their responsibilities include:
 
-- Dealing with more advanced user inquiries and system architecture questions, including basic analysis of underlying TCP/IP infrastructure issues (e.g firewall configuration) and OS-related configuration issues (e.g. domain integration).
+- Dealing with more advanced user inquiries and system architecture questions, including basic analysis of underlying TCP/IP infrastructure issues (e.g. firewall configuration) and OS-related configuration issues (e.g. domain integration).
 
 - Identifying whether reported issues are likely related to system deficiencies, bugs, and/or conflicts with third-party software components.
 

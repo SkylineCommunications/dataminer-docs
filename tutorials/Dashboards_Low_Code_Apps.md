@@ -15,6 +15,9 @@ keywords: low-code, low code, lowcode
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 
+> [!TIP]
+> See also: [Using Visio to control dashboard feed components](xref:Using_visio_to_control_dashboard_feed_components)
+
 ### Low-Code Apps tutorials
 
 | Name | Description |
@@ -43,3 +46,4 @@ keywords: low-code, low code, lowcode
 | [Forwarding dummy data to the GQI](xref:Ad_hoc_Tutorials) | Go through an example script that forwards dummy data to the GQI. |
 | [Building a GQI data source that fetches satellites](xref:Ad_hoc_Tutorials_Satellites) | Go through an example script that forwards satellites data to the GQI. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
+| [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_GQIDMS) | Create an ad hoc data source to retrieve data from your DMS. |

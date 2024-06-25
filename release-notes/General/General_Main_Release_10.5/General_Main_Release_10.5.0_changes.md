@@ -11,12 +11,13 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38263] [ID_38951]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38869] [ID_38951] [ID_39387]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
-<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
+<!-- 39387: MR 10.5.0 - FR 10.4.7 -->
 
 A number of security enhancements have been made.
 
@@ -125,26 +126,42 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900]
+#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278] [ID_39802] [ID_39803]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
+<!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
+<!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.6.6
-- DataMiner CoreGateway: version 2.14.4.15849
-- DataMiner FieldControl: version 2.10.3.14011
-- DataMiner Orchestrator: version 1.5.6
-- DataMiner SupportAssistant: version 1.6.6
+- DataMiner ArtifactDeployer: version 1.7.1
+- DataMiner CoreGateway: version 2.14.7
+- DataMiner FieldControl: version 2.10.6
+- DataMiner Orchestrator: version 1.6.0
+- DataMiner SupportAssistant: version 1.6.9
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
+
+The dynamic timeout will be calculated as the time it would take to send the chunk at a speed of 1 Mbps, rounded up to the nearest second.
+
+> [!NOTE]
+> The minimum timeout will always be 5 seconds.
 
 #### GQI: Ad hoc data source now supports real-time updates [ID_38643]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 The ad hoc data source now supports real-time updates.
+
+For this purpose, the [IGQIUpdateable](xref:GQI_IGQIUpdateable) interface must be implemented in the data source.
 
 #### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
 
@@ -158,11 +175,335 @@ Because of a number of enhancements, overall memory usage has been reduced, espe
 
 SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
 
+#### GQI: Enhanced sorting of indexed logger tables [ID_38857]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+A number of enhancements have been made with regard to the sorting of indexed logger tables.
+
 #### Grouping of GQI event messages [ID_38913]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
+
+#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
+
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when activating function DVEs.
+
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, errors related to real-time GQI data updates will also be logged.
+
+For example:
+
+- When an ad hoc data source is not able to send an update due to API methods being used incorrectly.
+- When a built-in data source is not able to send an update.
+- When the connection used to send the updates to the client gets lost.
+
+Exceptions associated with a custom data source will be logged in the log file of the data source in question.
+
+#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
+
+- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+
+These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
+
+#### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
+
+#### GQI: Enhanced error handling [ID_39226]
+
+<!-- MR 10.5.0 - FR 10.4.5 [CU0] -->
+
+In order to enhance the way in which specific GQI errors are handled, the following new `GenIfException` types have been introduced:
+
+- `GenIfSecurityException` will be thrown when a request cannot be satisfied because the action is not allowed.
+- `GenIfAggregateException` will be thrown when a request caused multiple independent exceptions.
+
+Also, error handling has changed for the following GQI requests:
+
+- `GenIfCloseSessionRequest`
+
+  This request can be used to close multiple sessions at the same time. However, up to now, it would only close sessions until an error occurred, leaving the remaining sessions open. From now on, if an exception occurs for more than one session, a `GenIfAggregateException` will be thrown containing the individual exceptions.
+
+- `GenIfSessionHeartbeatRequest`
+
+  This request can be used to send a heartbeat to multiple sessions at the same time in order to keep them alive.
+
+  Similar to the `GenIfCloseSessionRequest`, up to now, it would only send a heartbeat to the first sessions in the request until an error occurred. In some cases, this could cause sessions to expire unexpectedly.
+
+As to logging, behavior has changed with respect to exceptions:
+
+- `GenIfAggregate` will log each individual exception separately.
+- `GenIfSessionException` will be logged as a warning without stack trace.
+- `GenIfSecurityException` will be logged as a warning without stack trace.
+- Any other error will be logged as error with stack trace.
+
+#### SLAnalytics - Behavioral anomaly detection: A decreasing trend slope will now be labeled as a trend change instead of a variance decrease [ID_39249]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
+
+#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
+
+#### Service & Resource Management: Queue will now be skipped when processing SetSrmJsonSerializableProperties requests [ID_39264]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When the *ResourceManagerHelper* methods *UpdateReservationInstanceProperties* or *SafelyUpdateReservationInstanceProperties* were used to update properties of a booking, up to now, their action was queued on the master DMA to be handled sequentially for all bookings.
+
+From now on, the *SetSrmJsonSerializableProperties* requests will skip said queue.
+
+#### Enhanced SLDBConnection logging [ID_39267]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
+
+#### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A proactive detecting suggestion event indicating a forecasted crossing of a critical alarm threshold will now be cleared sooner. As soon as the system detects that the predicted trend has dropped below the threshold in question will the suggestion event be cleared.
+
+#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config`, the change would only take effect after an SLHelper restart.
+
+From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
+
+#### ProtocolCache.txt replaced by ProtocolCacheV2.txt [ID_39316]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *ProtocolCache.txt* file, located in the `C:\Skyline DataMiner\System Cache\` folder, has now been replaced by the *ProtocolCacheV2.txt* file.
+
+While the *ProtocolCache.txt* file only contained information about the protocols that were not fully compatible with Cassandra, the *ProtocolCacheV2.txt* file will also contain information like minimum required DataMiner version.
+
+> [!IMPORTANT]
+> up to now, when no compliance information was specified in a protocol, all QActions would be checked for queries incompatible with Cassandra. From now on, it will be assumed that a protocol version is compatible with Cassandra unless Cassandra compliance is explicitly set to false in the `<Compliancies>` element of the protocol.
+
+#### SLDataGateway: Enhanced logging [ID_39341]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made with regard to the logging of the SLDataGateway process.
+
+The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cleaner entries, and entries of type "Error" will also be added to the *SLError.txt* file.
+
+Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
+
+#### GQI now also logs requests to SLNet [ID_39355]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+From now on, when the *serilog:minimum-level* setting in `C:\Skyline DataMiner\Files\SLHelper.exe.config` is set to "Debug" or lower, GQI will also log information about requests sent to SLNet.
+
+Types of log entries related to SLNet requests:
+
+- `Started SLNet request <RequestID> with <MessageCount> messages`
+
+  This type of entry will be added to the log when GQI starts a request to SLNet, before the messages included in the request are sent.
+
+  - *RequestID*: A unique ID that will allow you to find all log entries associated with one particular SLNet request.
+  - *MessageCount*: The number of SLNet messages included in the request.
+
+- `Sending SLNet message <RequestID>.<Index>: <Description>`
+
+  This type of entry will be added to the log for each individual message in an SLNet request.
+
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
+
+- `Finished SLNet request <RequestID> in <Duration>ms`
+
+  This type of entry will be added to the log when GQI finishes a request to SLNet, regardless of whether the request was successful or not.
+
+  - *RequestID*: The unique ID of request.
+  - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
+
+#### Enhanced error message 'Failed to create one or more storages' [ID_39360]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When DataMiner fails to start up due to a problem that occurred while connecting to the database, a `Failed to create one or more storages` message will be thrown.
+
+From now on, this error message will include a reference to the StorageModule log file, in which you can find more information about the problem that occurred:
+
+`More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
+
+#### MySql.Data.dll file is now deprecated [ID_39370]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, should from now on be considered deprecated.
+
+This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
+
+To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
+
+1. Open DataMiner Cube.
+1. Open *System Center*.
+1. Go to *Agents > BPA*.
+1. Run the *Check Deprecated MySql DLL* test (if it has not been run yet).
+1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and Automation scripts that are still using this DLL file.
+
+   This overview is displayed as a string in JSON format. It will contain the following information:
+
+   - The names and versions of the protocols that are still using this file, including the IDs of the QActions in which this file is referenced.
+   - The names of the Automation scripts that are still using this file.
+
+1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and Automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
+
+When you have replaced all references to the *MySql.Data.dll* file, do the following:
+
+1. Stop the DataMiner Agent.
+1. Remove the *MySql.Data.dll* file from the `C:\Skyline DataMiner\ProtocolScripts\` folder.
+1. Start the DataMiner Agent.
+
+> [!IMPORTANT]
+> The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
+> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
+
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
+
+#### SLLogCollector: Enhancements to make sure the JAVA_HOME variable is set [ID_39409]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+A number of enhancements have been made to prevent SLLogCollector from experiencing problems when the JAVA_HOME variable is not set:
+
+- SLLogCollector is now able to pass environment variables to helper executables. This will allow temporarily setting an environment variable to make sure a particular tool can be run correctly.
+
+- In SLLogCollector, the timeout for helper executables has been reduced from 5 minutes to 1 minute.
+
+- An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
+
+#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced rounding of anomaly threshold values & optimized linking of severities to anomaly thresholds [ID_39492]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In alarm templates, the rounding of anomaly threshold values has been enhanced. For example, 3.09999999999999 will now be displayed as 3.1.
+
+Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
+
+#### SLLogCollector packages will now include nslookup output for hostnames [ID_39526]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
+
+- *MaintenanceSettings.xml* (HTTPS) and/or
+- *DMS.xml* (Failover).
+
+#### SLLogCollector packages now include GQI and Web API logging [ID_39557]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the contents of the following folders:
+
+- *C:\\Skyline DataMiner\\Logging\\GQI*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
+- *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
+- *C:\\Skyline DataMiner\\Logging\\Web*
+
+#### Elasticsearch/OpenSearch: Limit set on queries retrieving DOM instances will now be applied to the result set [ID_39686]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
+
+#### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
+
+#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+
+`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+
+#### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+
+#### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID_39910]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
+#### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the *VerifyNoLegacyReportsDashboards* prerequisite verifies that no legacy reports and legacy dashboards still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
+
+Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or higher. From now on, this will no longer be the case.
+
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
+
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
 ### Fixes
 
@@ -202,3 +543,104 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
+
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+
+#### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
+
+#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+
+<!-- MR 10.5.0 - FR 10.4.6 -->
+
+When, on a STaaS system, an attempt was made to delete data from the database using a delete statement with a filter, in some cases, the data would not be deleted and the following error would be logged in the *CloudStorage.txt* log file:
+
+`Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
+
+This issue has now been fixed.
+
+#### Problem when disposing an ISession with multiple subscriptions [ID_39483]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+
+#### API Gateway: Problem when processing a large number of parallel calls [ID_39550]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When API Gateway had to process a large number of parallel calls, up to now, this could lead to a threading problem, causing clients to time out and get disconnected.
+
+#### SLAnalytics: Elements imported after being deleted earlier would incorrectly be considered deleted [ID_39566]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
+
+From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
+
+#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
+
+<!-- MR 10.5.0 - FR 10.4.7 -->
+
+When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
+
+#### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
+
+#### Service & Resource Management: Error occurring when the Service Manager fails to delete a service was incorrectly logged as 'information' instead of 'error' [ID_39738]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, the error thrown when the Service Manager fails to delete a service was incorrectly logged as "information" instead of "error". From now on, this error will be logged as error with log level 0.
+
+Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
+
+#### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+After a quarantine had been forced during a booking update, in some cases, the SRM framework would stop responding.
+
+See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
+
+#### SLAnalytics - Alarm template monitoring: Problem when processing template removals [ID_39819]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When all elements were removed from an alarm template, SLAnalytics would correctly remove the template from its cache. However, when that entire alarm template was removed later on, SLAnalytics would incorrectly add an incorrect version of that template to its cache.
+
+Also, when a user created a template and then removed it without assigning elements to it, SLAnalytics would add it to its cache, but would never remove it from its cache.
+
+#### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+In some cases, SLProtocol would stop working after it had tried to read beyond the size of a table.
+
+#### GQI: Problem when performing a join operation [ID_39844]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a join operation was performed with two of the following data sources, in some cases, the GQI query would fail and return a `Cannot add custom table to the registry as the registry is already built.` error.
+
+- *Get alarms*
+- *Get behavioral change events*
+- *Get trend data pattern events*
+- *Get trend data patterns*
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.

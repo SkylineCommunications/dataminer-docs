@@ -62,13 +62,6 @@ Protocol implementation:
   > Note, however, that once you include a column, all preceding columns must be included as well.
   > Note also that all columns will still be retrieved from the agent, even though these are not visualized. This is a consequence of the way tables are structured in SNMP and the GetNext operation.
 
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete">1.3.6.1.2.1.2.2</OID>
-  </SNMP>
-  ```
-
 Capture observation:
 
 - The initial request is an SNMP get next request with the OID of ifEntry (1.3.6.1.2.1.2.2.1). This returns the content of 1.3.6.1.2.1.2.2.1.1 (first row, first column).
@@ -97,16 +90,19 @@ Protocol implementation:
 
   Define an SNMP tag on the column parameters, specifying the OID.
 
-  > [!NOTE]
-  > Not all columns defined in the MIB table need to be defined in the protocol.
-With this approach, you can specify the columns that are of interest, so that only these columns will be retrieved.
+  ```xml
+  <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+      <Type>octetstring</Type>
+    </SNMP>
+  ```
 
-> [!NOTE]
->
-> - By default, 50 cells are retrieved in one request. In order to change this, use the "bulk" option.
-> - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device.
-From the GetNext responses, the values will be placed in the first column of the protocol table. The OID defined on the first column parameter will be ignored.
-This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table.
+  > [!NOTE]
+  >
+  > - Not all columns defined in the MIB table need to be defined in the protocol. With this approach, you can specify the columns that are of interest, so that only these columns will be retrieved.
+  > - By default, 50 cells are retrieved in one request. In order to change this, use the "bulk" option.
+  > - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device. From the GetNext responses, the values will be placed in the first column of the protocol table. The OID defined on the first column parameter will be ignored. This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table.
 
 Capture observation:
 
@@ -250,22 +246,16 @@ In the example below, table 1100 will retrieve a filtered set of rows for the co
 
 ```xml
 <Param id="1100" trending="false">
-  <Name>PortListTable</Name>
-  <Description>Port List</Description>
-  <Information>
-     <Text>Port List</Text>
-     <Subtext>This shows Information about the Ports on this Device.</Subtext>
-  </Information>
+  <Name>Ports</Name>
+  <Description>Ports</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-     <ColumnOption idx="0" pid="1101" type="snmp" options=""/>
-     <ColumnOption idx="1" pid="1102" type="snmp" options=""/>
+     <ColumnOption idx="0" pid="1101" type="snmp" />
+     <ColumnOption idx="1" pid="1102" type="snmp" />
   </ArrayOptions>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-   </Interprete>
+  <Information>
+     <Subtext>This shows Information about the Ports on this Device.</Subtext>
+  </Information>
    <SNMP>
       <Enabled>true</Enabled>
      <OID type="complete" options="instance"></OID>
@@ -275,34 +265,27 @@ In the example below, table 1100 will retrieve a filtered set of rows for the co
   <Name>Port Index</Name>
   <Description>Port Index</Description>
   <Type>read</Type>
-   <Interprete>
+  <Interprete>
       <RawType>other</RawType>
-      <LengthType>next param</LengthType>
       <Type>string</Type>
-   </Interprete>
+      <LengthType>next param</LengthType>
+  </Interprete>
 </Param>
 <Param id="1102" trending="false">
   <Name>Port Type</Name>
   <Description>Port Type</Description>
   <Type>read</Type>
+  <Information>
+     <Subtext>The type of the port.</Subtext>
+  </Information>
   <SNMP>
      <Enabled>true</Enabled>
      <OID type="complete" id="1">1.2.3.4.*</OID>
   </SNMP>
-  <Information>
-     <Text>Port Type</Text>
-     <Subtext>Port Type</Subtext>
-     <Includes>
-        <Include>range</Include>
-        <Include>units</Include>
-        <Include>steps</Include>
-        <Include>time</Include>
-     </Includes>
-  </Information>
   <Interprete>
      <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
      <Type>double</Type>
+     <LengthType>next param</LengthType>
   </Interprete>
 ...
 </Param>

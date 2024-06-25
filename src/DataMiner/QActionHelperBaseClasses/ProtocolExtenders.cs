@@ -23,6 +23,9 @@
 		///			<item>
 		///				<description>This method is an extension method. The use of this extension method is preferred over the use of the Log method defined in the ISLProtocol interface as the parameters of type LogType and LogLevel increase readability.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.3.1 onwards (RN 34801), the message is limited to 5120 characters. When a larger message is provided, it will be truncated to this limit.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		public static void Log(this SLProtocol protocol, string message, LogType logType = LogType.Allways, LogLevel logLevel = LogLevel.DevelopmentLogging)

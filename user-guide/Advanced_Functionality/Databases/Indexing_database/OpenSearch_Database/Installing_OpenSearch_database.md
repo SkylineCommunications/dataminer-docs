@@ -29,7 +29,7 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 > It is also possible to [set up OpenSearch Dashboards](#setting-up-opensearch-dashboards), which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
 
 > [!TIP]
-> For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+> For troubleshooting information, see [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
 
 ### Example configuration
 
@@ -57,10 +57,10 @@ These are the main steps of the setup:
   cluster.name: NameOfYourCluster
   #
   # Identify initial cluster manager node:
-    # If you are using OpenSearch 2, use cluster.initial_manager_nodes.
+    # If you are using OpenSearch 2, use cluster.initial_cluster_manager_nodes.
     # If you are using OpenSearch 1, use cluster.initial_master_nodes.
   #
-  cluster.initial_manager_nodes: ["opensearchnode1"] 
+  cluster.initial_cluster_manager_nodes: ["opensearchnode1"] 
   #
   # ------------------------------------ Node ------------------------------------
   #
@@ -101,7 +101,6 @@ These are the main steps of the setup:
   
   discovery.type: zen
   
-  node.max_local_storage_nodes: 3
   indices.query.bool.max_clause_count: 2147483647
 
   ```

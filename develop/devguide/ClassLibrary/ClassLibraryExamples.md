@@ -133,12 +133,10 @@ IDmsElement element = dms.GetElement(new DmsElementId(346, 529981));
 
 element.Name = "Renamed Element";
 
-IWritableProperty myProperty = element.Properties["CustomProperty"] as IWritableProperty;
-
-
-if (myProperty != null)
+if (element.Properties["CustomProperty"].IsWritable)
 {
-   myProperty.Value = "A";
+    IWritableProperty myProperty = element.Properties["CustomProperty"].AsWritable();
+    myProperty.Value = "A";
 }
 else
 {

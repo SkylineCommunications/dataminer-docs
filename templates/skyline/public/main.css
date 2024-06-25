@@ -137,7 +137,7 @@ h6,
 
 h1 {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 42px;
 }
 
 h2 {
@@ -176,6 +176,10 @@ h6 {
 
 .table {
  font-size: 14px;
+}
+
+.table-responsive {
+  margin-bottom: 10px;
 }
 
 article h1, article h2, article h3, article h4 {
