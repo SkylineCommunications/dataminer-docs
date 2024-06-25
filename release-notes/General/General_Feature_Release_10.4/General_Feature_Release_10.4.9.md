@@ -32,4 +32,8 @@ uid: General_Feature_Release_10.4.9
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+At startup, in some cases, the CloudEndpointManager in SLNet could throw an exception when the NATS and NAS services were not installed.
