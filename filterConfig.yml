@@ -186,9 +186,6 @@ apiRules:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProfileManagerParameterMessage$
     type: Type
 - exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProtocolInfoResponseMessage$
-    type: Type
-- exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.IProfileManagerRequestMessage$
     type: Type
 - exclude:
