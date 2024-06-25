@@ -450,6 +450,8 @@ items:
             items:
               - name: Grid
                 topicUid: DashboardGrid
+              - name: Interactive Automation script
+                topicUid: InteractiveAutomationScript
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
               - name: Parameter page
