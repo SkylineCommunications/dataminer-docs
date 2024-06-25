@@ -16,7 +16,7 @@ In order to use the OpenConfig middleware, you will need to have the following s
 - The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) is installed on at least one of the DataMiner Agents in the cluster.
 
 > [!NOTE]
-> You can install the CommunicationGateway DxM with the Admin app. See [Deploying a DxM on a node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node). The DxM will be installed as a Windows service and will start automatically after installation.
+> You can install the CommunicationGateway DxM with the Admin app. See [Deploying a DxM on a node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). The DxM will be installed as a Windows service and will start automatically after installation.
 
 ## Usage
 

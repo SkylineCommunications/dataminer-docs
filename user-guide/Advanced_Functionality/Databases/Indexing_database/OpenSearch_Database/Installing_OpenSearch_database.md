@@ -29,7 +29,7 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 > It is also possible to [set up OpenSearch Dashboards](#setting-up-opensearch-dashboards), which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
 
 > [!TIP]
-> For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+> For troubleshooting information, see [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
 
 ### Example configuration
 

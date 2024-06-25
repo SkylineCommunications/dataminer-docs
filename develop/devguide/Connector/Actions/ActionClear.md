@@ -31,9 +31,9 @@ By default, if a response enters more than once with the same data, the accompan
 > A clear response should always happen after the response is fully handled. For example, Trigger After Response or Trigger After Group. This is because the flow for incoming data in SLProtocol is as follows:
 >
 > 1. Data is received from SLPort in SLProtocol
-> 2. Data is checked against PreviousData; if it matches it will stop here.
-> 3. Data is matched to parameters and all QActions and triggers for those parameters will run.
-> 4. PreviousData is filled in with Data.
+> 1. Data is checked against PreviousData; if it matches it will stop here.
+> 1. Data is matched to parameters and all QActions and triggers for those parameters will run.
+> 1. PreviousData is filled in with Data.
 > A clear response that happens during a QAction or trigger during step 3 will have no effect, as PreviousData is written in step 4.
 
 ### Attributes

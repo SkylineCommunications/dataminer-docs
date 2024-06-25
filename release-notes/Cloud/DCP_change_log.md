@@ -9,6 +9,62 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID_39983]
+
+Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g. when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
+
+#### 19 June 2024 - Fix - Remote access automatic login showed error page when failing [ID_39982]
+
+When the automatic login with a user's linked DataMiner account failed, up to now a blue error page was shown displaying that there was an unexpected error. Now, the login page will be shown instead, where users can manually log in as a fallback.
+
+#### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39881]
+
+From now on, if Remote Access to the web apps is enabled, this allows access to the entire folder `/Documents/`, so that it is possible to access the documents available in Cube. Previously, only the `/Documents/DMA_COMMON_DOCUMENTS/` folder was accessible.
+
+#### 10 June 2024 - Fix - Link to terms and conditions not working [ID_39895]
+
+The link to the terms and conditions, displayed among others when a DaaS system was registered and an Agent was connected to dataminer.services, did not work correctly. This has now been resolved.
+
+#### 10 June 2024 - Enhancement - Admin - 'Nodes' page renamed to 'DxMs' [ID_39874]
+
+In the Admin app, the *Nodes* page has been renamed to *DxMs* to be more in line with the actual functionality of the page.
+
+#### 10 June 2024 - Fix - Admin - Zero credits not showing [ID_39866]
+
+On the Admin organization overview page, it was not possible to see how many credits were left in case you had zero credits. Now the number of available credits will always be displayed, even if this is zero.
+
+#### 10 June 2024 - Enhancement - Home - Password confirmation when deploying DaaS [ID_39865]
+
+When you deploy a DaaS system, you will now be asked to confirm your password before can deploy the system.
+
+#### 10 June 2024 - Fix - Admin - Opening in desktop app not working [ID_39838]
+
+On the overview page of a DMS in the Admin app, the *Open in desktop app* button did not work correctly. Now Cube will correctly be opened when this button is clicked.
+
+#### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
+
+A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
+
+These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
+
+You can fetch them using the following example:
+
+````cs
+var chatIntegrationHelper = new ChatIntegrationHelperBuilder().Build();
+try
+{
+  var dmsIdentity = chatIntegrationHelper.GetDataMinerServicesDmsIdentity();
+  var organizationId = dmsIdentity.OrganizationId;
+  var dmsId = dmsIdentity.DmsId;
+}
+finally
+{
+  chatIntegrationHelper?.Dispose();
+}
+````
+
+The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions) have been updated accordingly.
+
 #### 30 May 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39812]
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the folder `/Documents/DMA_COMMON_DOCUMENTS/`, so that it is possible to access the documents available in Cube.

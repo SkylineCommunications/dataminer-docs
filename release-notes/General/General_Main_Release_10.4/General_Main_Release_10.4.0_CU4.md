@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU4
 ---
 
-# General Main Release 10.4.0 CU4 - Preview
+# General Main Release 10.4.0 CU4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -44,6 +44,12 @@ When a multi-threaded operation takes longer that 30 seconds to complete, an ent
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
+
+#### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
 
 #### Replication buffering enhancements [ID_39428]
 
@@ -100,6 +106,26 @@ Because of a number of enhancements, it will now take less time for a Failover a
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 When an alarm template contained multiple lines for the same parameter, each with a different filter, up to now, SLAnalytics would only take into account the lines that were being monitored. From now on, as soon as one line related to a specific parameter is being monitored, SLAnalytics will take into account all lines related to that parameter.
+
+#### ReIndexElasticSearchIndexes tool: Enhancements [ID_39614]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+A number of enhancements have been made to the *ReIndexElasticSearchIndexes* tool, which must be used when [migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch).
+
+- Up to now, when iterating over all indexes, the process would stop when it reached an index that could not be re-indexed. From now on, all indexes will always be processed, and a list of failed indexes will be written to disk.
+
+- Up to now, logging would only be available during program execution. No logging would be written to file. From now on, a log file will be kept, allowing investigation of any failures that occurred during a re-indexing process.
+
+- Up to now, when a re-indexing process failed, a generic error would be visible in the logging. From now on, the underlying failures detailing the root cause will also be logged.
+
+- Up to now, when a re-indexing process failed, the temporary index that was created would not be deleted. From now on, an attempt will be made to properly delete it.
+
+- Up to now, when the aliases were checked, a correction would be attempted before continuing. However, when a correction was necessary, the process would not continue. From now on, a retry will be made after a correction attempt.
+
+- A command-line option has been added to allow you to retry the failed indexes (which will now be stored in the failed indexes list on disk). This can prove useful if, after investigation, the cause of the failure to re-index has been resolved.
+
+  `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`
 
 #### SNMP++: Trap processing enhancements [ID_39629]
 
@@ -227,3 +253,9 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 When an SLNet connection was made to the IPv6 loopback address, the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to the primary IPv6 address.
 
 Also, when an SLNet connection was made to a FQDN which points to a loopback address, the system would incorrectly use a TCP connection to the primary IPv4 address.
+
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+In some cases, a deadlock would occur during startup of the SLDataMiner process when services with duplicate IDs were loaded in.

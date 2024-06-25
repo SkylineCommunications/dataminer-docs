@@ -11,19 +11,19 @@ You can configure actions for different types of events in DataMiner Low-Code Ap
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
 
+- *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
+
 - *On close*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682 + 39668-->. This event takes place when a page or panel is closed.
 
   - A page can be closed either by manually navigating away using the sidebar or via an action.
 
-  - A panel can be closed either by clicking an overlay or when a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is executed.
+  - A panel can be closed by clicking outside of it (if it was opened as an overlay), or when a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is executed.
 
   > [!NOTE]
   >
   > - Navigating to the next page is blocked until all configured actions are executed.
   > - A panel will close only after all configured actions are executed.
   > - Actions linked to an *On close* page or panel event will not be executed when you close the app.
-
-- *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
 
 Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
 
@@ -79,9 +79,17 @@ To configure an event to open a panel of the app:
 
 1. In the *Width* box, specify the width of the panel (in %) compared to the rest of the app.
 
-1. If the panel should be opened as an overlay, toggle the *As overlay* button.
+1. Specify how the panel should be opened:
 
-   If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside it.
+   - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39649-->, you can select one of the following options:
+
+     - *Basic*: The panel opens on top of the page.
+
+     - *As overlay*: If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside of it. This is the default setting.
+
+     - *Draggable*: This option is only available when *Where* is set to open the panel in a pop-up window. When the panel is draggable, you can move the panel by left-clicking and dragging the header of the panel to its destination.
+
+   - Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, to set the panel to open as an overlay, toggle the *As overlay* button.
 
 ## Closing a panel of the app
 
@@ -98,6 +106,9 @@ Available from DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-
 To configure an event to close all panels of the app:
 
 - Select *Close all panels*.
+
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7, navigating to a different low-code app page would close any open panels. From DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards, panels remain open when you navigate to a different page. To ensure older apps function correctly after upgrading to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 or higher, an *On close* page event with a *Close all panels* action is automatically configured for each page of apps created before the upgrade<!--RN 39632-->. New pages and new apps added after the upgrade will not have these events configured.
 
 ## Opening an app
 

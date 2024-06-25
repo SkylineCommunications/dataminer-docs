@@ -449,11 +449,51 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### Elasticsearch/OpenSearch: Limit set on queries retrieving DOM instances will now be applied to the result set [ID_39686]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
+
+#### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
+
+#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+
+`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+
+#### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+
+#### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID_39910]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
 ### Fixes
 
@@ -548,6 +588,14 @@ When MessageBroker received a Subscribe call while it was reconnecting, in some 
 
 In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
 
+#### Service & Resource Management: Error occurring when the Service Manager fails to delete a service was incorrectly logged as 'information' instead of 'error' [ID_39738]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, the error thrown when the Service Manager fails to delete a service was incorrectly logged as "information" instead of "error". From now on, this error will be logged as error with log level 0.
+
+Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
+
 #### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
@@ -555,6 +603,14 @@ In some rare cases, TraceData generated during NATSCustodian startup would re-ap
 After a quarantine had been forced during a booking update, in some cases, the SRM framework would stop responding.
 
 See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
+
+#### SLAnalytics - Alarm template monitoring: Problem when processing template removals [ID_39819]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When all elements were removed from an alarm template, SLAnalytics would correctly remove the template from its cache. However, when that entire alarm template was removed later on, SLAnalytics would incorrectly add an incorrect version of that template to its cache.
+
+Also, when a user created a template and then removed it without assigning elements to it, SLAnalytics would add it to its cache, but would never remove it from its cache.
 
 #### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
 
@@ -572,3 +628,9 @@ When a join operation was performed with two of the following data sources, in s
 - *Get behavioral change events*
 - *Get trend data pattern events*
 - *Get trend data patterns*
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.

@@ -2,7 +2,7 @@
 uid: Investigating_OpenSearch_Issues
 ---
 
-# Investigating OpenSearch issues
+# Troubleshooting – OpenSearch
 
 Search the OpenSearch logging for exceptions: `/var/log/opensearch/[cluster.name].log`
 

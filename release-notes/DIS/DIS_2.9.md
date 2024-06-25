@@ -15,7 +15,7 @@ DIS can now also be used to create and edit Automation script XML files.
 To create a new Automation script XML file, do the following:
 
 1. Open the *File* menu, and select *New \> File ...*
-2. Select *DataMiner Automation Script Template*, and click *Open*.
+1. Select *DataMiner Automation Script Template*, and click *Open*.
 
 When editing an Automation script, the editor allows you to insert a number of basic snippets, edit the C# code blocks in the script, include DLL files, and add namespace references.
 
