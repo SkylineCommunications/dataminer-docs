@@ -11,15 +11,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 19 June 2024 - Fix - Catalog - Email of user not shown in user menu [ID_39960]
 
-A bug was fixed that prevented the user's email from showing up in the user menu of the Catalog.
+It could occur that the user's email could not be shown in the user menu of the Catalog. This issue has been resolved.
 
-#### 19 June 2024 - Fix - Catalog - Selected organization is not remembered cross cloud apps or after reloading the catalog app [ID_39913]
+#### 19 June 2024 - Fix - Catalog - Selected organization not remembered across dataminer.services apps or after reloading the Catalog [ID_39913]
 
-When using the catalog app and selecting an organization, reloading the app would "forget" the previous selected organization and always select the first one.
-Coming over from another cloud app (e.g. Admin), a different organization would be selected (in most cases the first one alphabetically).
-The organization is now correctly saved and shared arross apps or across app reloads.
+If an organization was selected in the Catalog app, it could occur that this selection was not remembered when the app was reloaded, and a different organization was selected again (usually, the first organization alphabetically). Similarly, when you switched from one dataminer.services app to another, the organization selection was not remembered.
 
-#### 19 June 2024 - Enhancement - Catalog - Register catalog item moved to user-menu [ID_39906]
+Now the organization selection will be correctly saved and shared across apps or across app reloads.
+
+#### 19 June 2024 - Enhancement - Catalog - Register catalog item moved to user menu [ID_39906]
 
 The button to open the form in order to register a catalog item has been moved from the header to the user menu.
 
