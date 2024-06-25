@@ -455,12 +455,6 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
-#### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
-
 #### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

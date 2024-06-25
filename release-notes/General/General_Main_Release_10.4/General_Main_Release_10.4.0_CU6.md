@@ -12,7 +12,11 @@ uid: General_Main_Release_10.4.0_CU6
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
 
 ### Fixes
 
