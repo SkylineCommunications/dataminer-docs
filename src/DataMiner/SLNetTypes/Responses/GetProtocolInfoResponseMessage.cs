@@ -82,18 +82,18 @@ namespace Skyline.DataMiner.Net.Messages
 		#endregion
 
 		/// <summary>
-		/// Gets or sets a value indicating whether it has no element prefix.
+		/// Gets or sets a value indicating whether this protocol has no element prefix.
 		/// </summary>
-		/// <value><c>true</c> if it has no element prefix; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if the protocol has no element prefix; otherwise, <c>false</c>.</value>
 		public bool HasNoElementPrefix
 		{
 			get; set;
 		}
 
 		/// <summary>
-		/// Gets or sets a value indicating whether it has connectivity interfaces.
+		/// Gets or sets a value indicating whether this protocol has connectivity interfaces.
 		/// </summary>
-		/// <value><c>true</c> if it has connectivity interfaces; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if the protocol has connectivity interfaces; otherwise, <c>false</c>.</value>
 		public bool HasConnectivityInterfaces
 		{
 			get; set;
@@ -129,9 +129,9 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Gets or sets a value indicating whether "view"-type tables in this protocol cannot be automatically refreshed by the client.
+		/// Gets or sets a value indicating whether "view" type tables in this protocol cannot be automatically refreshed by the client.
 		/// </summary>
-		/// <value><c>true</c> if "view"-type tables in this protocol cannot be automatically refreshed by the client.</value>
+		/// <value><c>true</c> if "view" type tables in this protocol cannot be automatically refreshed by the client.</value>
 		public bool DisableViewRefresh
 		{
 			get;
@@ -224,9 +224,9 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Gets or sets a value indicating whether this protocol has a signature
+		/// Gets or sets a value indicating whether this protocol has a signature.
 		/// </summary>
-		/// <value><c>true</c> it this protocol has a signature.</value>
+		/// <value><c>true</c> if this protocol has a signature.</value>
 		public bool IsSigned
 		{
 			get; set;
@@ -252,9 +252,9 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Returns a value indication whether this protocol is a virtual function.
+		/// Returns a value indication of whether this protocol is a virtual function.
 		/// </summary>
-		/// <returns><c>true</c> of this protocol is a virtual function; otherwise, <c>false</c>.</returns>
+		/// <returns><c>true</c> if this protocol is a virtual function; otherwise, <c>false</c>.</returns>
 		public bool IsVirtualFunction()
 		{
 			return !string.IsNullOrEmpty(FunctionGUID);
@@ -285,7 +285,7 @@ namespace Skyline.DataMiner.Net.Messages
 		public SearchChain[] TopologySearchChains { get; set; }
 
 		/// <summary>
-		/// Gets all topology chains (combination of TopologyChains and SearchChains) in order as defined in the protocol.xml.
+		/// Gets all topology chains (combination of TopologyChains and SearchChains) in the order defined in the protocol.xml.
 		/// </summary>
 		/// <value>All topology chains.</value>
 		public IEnumerable<IProtocolTopologyChain> TopologyAllChains
@@ -311,9 +311,9 @@ namespace Skyline.DataMiner.Net.Messages
 		public SearchControl[] SearchControls { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether this protocol contains at least one active param that will be indexed as DynamicData.
+		/// Gets or sets a value indicating whether this protocol contains at least one active parameter that will be indexed as DynamicData.
 		/// </summary>
-		/// <value><c>true</c> if this protocol contains at least one active param that will be indexed as DynamicData.</value>
+		/// <value><c>true</c> if this protocol contains at least one active parameter that will be indexed as DynamicData.</value>
 		public bool IsIndexing { get; set; }
 
 		/// <summary>
@@ -329,7 +329,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <summary>
 		/// Gets or sets the provider.
 		/// </summary>
-		/// <value>The provider</value>
+		/// <value>The provider.</value>
 		public String Provider { get; set; }
 
 		/// <summary>
@@ -339,7 +339,7 @@ namespace Skyline.DataMiner.Net.Messages
 		public String AdvancedSecurity { get; set; }
 
 		/// <summary>
-		/// Gets or sets the name of the parent protocol for which the protocol was exported. (For exported protocols).
+		/// Gets or sets the name of the parent protocol for which the protocol was exported. (For exported protocols.)
 		/// </summary>
 		/// <value>For exported protocols, the name of the parent protocol for which the protocol was exported.</value>
 		public string ParentProtocolName { get; set; }
@@ -356,9 +356,9 @@ namespace Skyline.DataMiner.Net.Messages
 		public VersionHistory VersionHistory { get; set; }
 
 		/// <summary>
-		/// Gets or sets the process automation info.
+		/// Gets or sets the Process Automation info.
 		/// </summary>
-		/// <value>The process automation info.</value>
+		/// <value>The Process Automation info.</value>
 		public ProcessAutomationInfo ProcessAutomationInfo { get; set; }
 
 		/// <summary>
@@ -430,7 +430,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// The extra port types/names "type1:name1;type2:name2"
+		/// The extra port types/names "type1:name1;type2:name2".
 		/// </summary>
 		public String AdvancedTypes;
 
@@ -440,7 +440,7 @@ namespace Skyline.DataMiner.Net.Messages
 		public String DefaultPage;
 
 		/// <summary>
-		/// Name of the Information template to use. 
+		/// Name of the information template to use. 
 		/// </summary>
 		public String Information;
 
@@ -497,7 +497,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// Gets or sets the application type.
 		/// </summary>
 		/// <value>The application type.</value>
-		/// <remarks>When an application type is filled out, the elements using this protocol will be displayed as Application items in DataMiner Cube.</remarks>
+		/// <remarks>When an application type is specified, the elements using this protocol will be displayed as Application items in DataMiner Cube.</remarks>
 		public string AppType { get; set; }
 
 		/// <summary>
@@ -519,7 +519,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <summary>
 		/// Gets or sets a value indicating whether this protocol needs to enable partitioning on the trend tables.
 		/// </summary>
-		/// <value><c>true</c> this protocol needs to enable partitioning on the trend tables; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if this protocol needs to enable partitioning on the trend tables; otherwise, <c>false</c>.</value>
 		public bool IsPartitionedTrendingEnabled { get; set; }
 
 		/// <summary>
@@ -569,13 +569,13 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <summary>
 		/// Gets or sets a value indicating whether this protocol is a production protocol.
 		/// </summary>
-		/// <value><c>true</c> this protocol is a production protocol; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if this protocol is a production protocol; otherwise, <c>false</c>.</value>
 		public bool IsProduction { get; set; }
 
 		/// <summary>
 		/// Gets or sets a value indicating whether this protocol defines RCA.
 		/// </summary>
-		/// <value><c>true</c> this protocol defines RCA; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if this protocol defines RCA; otherwise, <c>false</c>.</value>
 		public bool DefinesRCA { get; set; }
 
 		/// <summary>
@@ -585,7 +585,7 @@ namespace Skyline.DataMiner.Net.Messages
 		public string Icon { get; set; }
 
 		/// <summary>
-		/// If protocol defines internal RCA chains (RCA/Protocol/Link), the maximum depth. Otherwise, -1.
+		/// If the protocol defines internal RCA chains (RCA/Protocol/Link), the maximum depth. Otherwise, -1.
 		/// </summary>
 		/// <value>The maximum depth.</value>
 		public int MaxProtocolRCA { get; set; }
@@ -636,7 +636,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <param name="parameterID">The parameter ID.</param>
 		/// <param name="rawValue">The raw value.</param>
 		/// <param name="isFromRawString">Whether the origin of the value is raw-based. Default is <c>true</c>.</param>
-		/// <param name="includeUnits">Whether Units should be included in the value. Default is <c>true</c>.</param>
+		/// <param name="includeUnits">Whether units should be included in the value. Default is <c>true</c>.</param>
 		/// <returns>The parameter display value.</returns>
 		public string GetUIParameterDisplayValue(int parameterID, string rawValue, bool isFromRawString = true, bool includeUnits = true)
 		{
@@ -650,7 +650,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <param name="parameterID">The parameter ID.</param>
 		/// <param name="rawValue">The raw value.</param>
 		/// <param name="isFromRawString">Whether the origin of the value is raw-based. Default is true.</param>
-		/// <param name="includeUnits">Whether Units should be included in the value. Default is true.</param>
+		/// <param name="includeUnits">Whether units should be included in the value. Default is true.</param>
 		/// <returns></returns>
 		public string GetParameterDisplayValue(int parameterID, string rawValue, bool isFromRawString = true, bool includeUnits = true)
 		{
@@ -663,8 +663,8 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <param name="parameterID">The parameter ID.</param>
 		/// <param name="rawValue">The raw value.</param>
 		/// <param name="isFromRawString">Whether the origin of the value is raw-based. Default is true.</param>
-		/// <param name="includeUnits">Whether Units should be included in the value. Default is true.</param>
-		/// <param name="culture">Override the default culture (InvariantCulture). Use ParameterInfo.DataMinerNumberCulture if you want to use the default DataMiner number grouping separator.</param>
+		/// <param name="includeUnits">Whether units should be included in the value. Default is true.</param>
+		/// <param name="culture">Overrides the default culture (InvariantCulture). Use ParameterInfo.DataMinerNumberCulture if you want to use the default DataMiner number grouping separator.</param>
 		/// <param name="displayNumberGroupSeparator">If <c>true</c>, the digits will be grouped using the number group separator of the culture.</param>
 		/// <returns>The parameter display value.</returns>
 		public string GetParameterDisplayValue(int parameterID, string rawValue, CultureInfo culture, bool displayNumberGroupSeparator, bool isFromRawString = true, bool includeUnits = true)
@@ -673,12 +673,12 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Converts the given parameter value into a format that is ready for display
+		/// Converts the given parameter value into a format that is ready for display.
 		/// </summary>
 		/// <param name="parameterID">The parameter ID.</param>
 		/// <param name="value">The value.</param>
-		/// <param name="culture">Override the default culture (InvariantCulture). Use ParameterInfo.DataMinerNumberCulture if you want to use the default DataMiner number grouping separator.</param>
-		/// <param name="displayNumberGroupSeparator">If True, the digits will be grouped using the number group separator of the culture.</param>
+		/// <param name="culture">Overrides the default culture (InvariantCulture). Use ParameterInfo.DataMinerNumberCulture if you want to use the default DataMiner number grouping separator.</param>
+		/// <param name="displayNumberGroupSeparator">If true, the digits will be grouped using the number group separator of the culture.</param>
 		/// <returns>The display value.</returns>
 		public string GetParameterDisplayValue(int parameterID, ParameterValue value, CultureInfo culture, bool displayNumberGroupSeparator)
 		{
@@ -710,7 +710,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Returns the <see cref="ParameterInfo"/> object for the parameter with given ID. When no parameter found, returns <see langword="null"/>.
+		/// Returns the <see cref="ParameterInfo"/> object for the parameter with the given ID. When no parameter is found, returns <see langword="null"/>.
 		/// </summary>
 		/// <param name="parameterID">The parameter ID.</param>
 		/// <returns>The parameter info.</returns>
@@ -730,7 +730,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Returns the <see cref="ParameterInfo"/> object for the parameter with given description. When no parameter was found, returns <see langword="null"/>.
+		/// Returns the <see cref="ParameterInfo"/> object for the parameter with the given description. When no parameter is found, returns <see langword="null"/>.
 		/// </summary>
 		/// <param name="parameterDescription">Description of the parameter to look for.</param>
 		/// <returns>The parameter info.</returns>
@@ -743,7 +743,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// Finds the specified parameter.
 		/// </summary>
 		/// <param name="parameterDescription">The parameter description.</param>
-		/// <param name="writeParameter">If <c>true</c>, specifically looks for write parameter.</param>
+		/// <param name="writeParameter">If <c>true</c>, specifically looks for a write parameter.</param>
 		/// <returns>The parameter info.</returns>
 		public ParameterInfo FindParameter(string parameterDescription, bool writeParameter)
 		{
@@ -763,7 +763,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// Finds the parameter by the specified mask.
 		/// </summary>
 		/// <param name="parameterDescriptionMask">Mask with wildcards '*' and '?'.</param>
-		/// <param name="writeParameter">If <c>true</c>, specifically looks for write parameter.</param>
+		/// <param name="writeParameter">If <c>true</c>, specifically looks for a write parameter.</param>
 		/// <returns>The parameter info or <see langword="null"/> or empty if nothing was found.</returns>
 		public ParameterInfo[] FindParametersByMask(string parameterDescriptionMask, bool writeParameter)
 		{
@@ -962,7 +962,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Filters and/or sorts a collection of parameters, given a combination of selection options. e.g. returns a collection with only the analog parameters if <see pref="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
+		/// Filters and/or sorts a collection of parameters, given a combination of selection options. E.g. returns a collection with only the analog parameters if <see pref="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
 		/// </summary>
 		/// <param name="options">The options.</param>
 		/// <returns>The filtered parameters.</returns>
@@ -972,7 +972,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Filters and/or sorts a collection of parameters, given a combination of selection options. e.g. returns a collection with only the analog parameters if <see pref="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
+		/// Filters and/or sorts a collection of parameters, given a combination of selection options. E.g. returns a collection with only the analog parameters if <see pref="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
 		/// </summary>
 		/// <param name="options">The options.</param>
 		/// <param name="extraFilter">Callback function to extra filter. Function should return <c>true</c> only when the object needs to be included.</param>.
@@ -984,13 +984,13 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Gets or sets the Unique Cache ID.
+		/// Gets or sets the unique cache ID.
 		/// </summary>
 		/// <value>The unique cache key.</value>
 		public Guid UniqueCacheKey { get; set; }
 
 		/// <summary>
-		/// Retrives a CSV for the protocol parameters.
+		/// Retrieves a CSV for the protocol parameters.
 		/// </summary>
 		/// <returns>A CSV for the protocol parameters.</returns>
 		public string GetExportProtocolCsv()
