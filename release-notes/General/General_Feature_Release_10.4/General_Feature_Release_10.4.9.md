@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.4.9
 
 When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
 
+#### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+
 ### Fixes
 
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
