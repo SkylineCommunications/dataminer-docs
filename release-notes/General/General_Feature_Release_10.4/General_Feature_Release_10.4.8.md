@@ -126,7 +126,7 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.4.0 [CU6] - FR 10.4.8 -->
 
 From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
 

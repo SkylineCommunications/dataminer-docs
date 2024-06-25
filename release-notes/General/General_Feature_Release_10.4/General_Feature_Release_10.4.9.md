@@ -40,11 +40,13 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
-#### Native processes will now close the MessageBroker connection immediately when stopping [ID_39863]
+#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-Up to now, when a native process (e.g. SLDataMiner) was stopping, in some rare cases, it would wait for 30 seconds before it closed the MessageBroker connection. From now on, it will close the MessageBroker connection immediately.
+When a native process (e.g. SLDataMiner) is stopping, it will by default for 30 seconds before it closes the MessageBroker connection.
+
+However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
 ### Fixes
 

@@ -473,19 +473,13 @@ From now on, when a QAction throws an unhandled exception, an attempt will be ma
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
-#### Native processes will now close the MessageBroker connection immediately when stopping [ID_39863]
+#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-Up to now, when a native process (e.g. SLDataMiner) was stopping, in some rare cases, it would wait for 30 seconds before it closed the MessageBroker connection. From now on, it will close the MessageBroker connection immediately.
+When a native process (e.g. SLDataMiner) is stopping, it will by default for 30 seconds before it closes the MessageBroker connection.
 
-#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
-
-<!-- MR 10.5.0 - FR 10.4.8 -->
-
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
-
-`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
 #### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
 
