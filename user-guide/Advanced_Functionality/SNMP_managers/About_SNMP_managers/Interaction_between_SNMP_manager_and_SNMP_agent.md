@@ -26,7 +26,7 @@ The SLSNMPManager process communicates with devices acting as SNMP agents.
 
 - By default, it uses SNMP++ to receive notifications from devices.
 
-- There's an separate SLSNMPManager process for each SNMP version (SNMPv1, SNMPv2 and SNMPv3).
+- For each SNMP version (SNMPv1, SNMPv2, and SNMPv3), there is a separate SLSNMPManager process.
 
 The UDP ports to be used are set as follows:
 
