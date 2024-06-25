@@ -42,6 +42,12 @@ From now on, when a client connects to the DataMiner System, an attempt will fir
 
 ### Fixes
 
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

@@ -656,3 +656,9 @@ When a join operation was performed with two of the following data sources, in s
 <!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
+
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
