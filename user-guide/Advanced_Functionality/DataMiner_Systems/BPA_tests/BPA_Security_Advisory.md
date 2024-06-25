@@ -14,6 +14,9 @@ Currently, the following parts of the system are covered:
   - Legacy components: Verifies if the v0 web API, the legacy Reporter and Dashboards module, and the legacy Annotations module are disabled.
   - NATS: Verifies if NATS is configured to use TLS (only from DataMiner 10.4.3 onwards).
 
+    > [!NOTE]
+    > Prior to DataMiner 10.4.0 CU5/10.3.0 CU17/10.4.8, the BPA also checks if NATS is configured to use TLS if the DMS consists of only one Agent. However, as this is not necessary in such case, this is no longer checked in later DataMiner versions.<!-- RN 39792 -->
+
 - IIS
 
   - HTTP: Verifies if HTTP is disabled, restricted to localhost, or configured to redirect to HTTPS.
