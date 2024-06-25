@@ -757,8 +757,6 @@ items:
       topicUid: ClassLibraryLazyLoading
     - name: Element creation
       topicUid: ClassLibraryElementCreation
-    - name: InterApp classes
-      topicUid: ClassLibraryInterAppClasses
     - name: Monitors
       topicUid: ClassLibraryMonitors
       items:
@@ -778,6 +776,27 @@ items:
       topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
+  - name: InterAppCalls
+    items:
+      - name: Introduction
+        topicUid: InterAppCalls_Introduction
+      - name: Getting started
+        topicUid: InterAppCalls_GettingStarted
+        items:
+          - name: Creating an API
+            topicUid: InterAppCalls_GettingStarted_CreatingApi
+          - name: Creating an executor
+            topicUid: InterAppCalls_GettingStarted_CreatingExecutor
+          - name: Receiving a call
+            topicUid: InterAppCalls_GettingStarted_ReceivingCall
+          - name: Sending a call
+            topicUid: InterAppCalls_GettingStarted_SendingCall
+      - name: Known Types
+        topicUid: InterAppCalls_KnownTypes
+      - name: Customizations
+        topicUid: InterAppCalls_Customizations
+      - name: Examples
+        topicUid: InterAppCalls_Examples
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
