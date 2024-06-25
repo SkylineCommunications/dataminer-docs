@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.4.9
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID_39961]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, on a mobile device, you entered your credentials on the authentication page of a DataMiner web app and pressed ENTER, you would incorrectly not be logged in. Instead, the authentication page would simply refresh.
