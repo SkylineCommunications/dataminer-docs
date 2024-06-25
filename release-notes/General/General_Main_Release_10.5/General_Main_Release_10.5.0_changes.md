@@ -477,7 +477,7 @@ The trend change detection accuracy has been improved, especially after a restar
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-When a native process (e.g. SLDataMiner) is stopping, it will by default for 30 seconds before it closes the MessageBroker connection.
+When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
