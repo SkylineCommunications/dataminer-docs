@@ -2,8 +2,12 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
+      - name: Getting started tutorials
+        topicUid: Getting_Started_Tutorials
       - name: DataMiner Analytics tutorials
         topicUid: Analytics_Tutorials
+      - name: Business Intelligence tutorials
+        topicUid: Business_intelligence_tutorials
       - name: ChatOps Custom Command tutorials
         topicUid: ChatOps_Tutorials
       - name: CI/CD tutorials
@@ -28,4 +32,3 @@ items:
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
         topicUid: Visio_Tutorials
-

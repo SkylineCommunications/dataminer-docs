@@ -193,6 +193,10 @@ Using Kibana, you can restore the snapshot in the following way:
    | -Password or -P | The user password |
    | -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
    | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+   | -RetryFile or -R &lt;path to failed indexes file&gt; | File path for a file containing failed indexes, to be provided in case the reindexer should retry reindexing previously failed indexes (supported from 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 [CU0] onwards). |
+
+   > [!NOTE]
+   > In case the re-indexing fails, a file `<runId>_failed.json` will be created in the folder where the tool is located, listing all failed indexes. This file can be used with the `-R <path to failed indexes file>` option to retry the failed indexes. To find out why these indexes failed, check the log file created in the *logging* folder located in the folder where the tool is available. Before retrying the re-indexing, make sure the failures are resolved.
 
 1. Take a snapshot of the re-indexed data by sending the following request:
 

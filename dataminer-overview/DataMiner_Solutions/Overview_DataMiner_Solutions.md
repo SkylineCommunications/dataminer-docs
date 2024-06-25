@@ -33,6 +33,7 @@ The icons of sample applications are not marked with a DataMiner icon.
 These are the main solutions that are currently available:
 
 - [dataminer.MediaOps](xref:Overview_dataminer_MediaOps)
+- [DOM Viewer](xref:domviewer_about)
 
 ## Common data model
 

@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID_39983]
+
+Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g. when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
+
+#### 19 June 2024 - Fix - Remote access automatic login showed error page when failing [ID_39982]
+
+When the automatic login with a user's linked DataMiner account failed, up to now a blue error page was shown displaying that there was an unexpected error. Now, the login page will be shown instead, where users can manually log in as a fallback.
+
 #### 19 June 2024 - Fix - Catalog - Email of user not shown in user menu [ID_39960]
 
 It could occur that the user's email could not be shown in the user menu of the Catalog. This issue has been resolved.

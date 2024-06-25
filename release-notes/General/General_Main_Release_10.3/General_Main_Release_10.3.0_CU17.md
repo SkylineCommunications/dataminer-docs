@@ -32,6 +32,12 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
 
+#### DataMiner backup: 'RemoteServices' folder by default added to backup packages that contain services [ID_39993]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+
 ### Fixes
 
 #### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
@@ -114,8 +120,24 @@ In some cases, a fatal error could occur in SLASPConnection when an email messag
 
 When invalid optional parameters were defined on a response (see [optional attribute](xref:Protocol.Responses.Response.Content-optional)), SLProtocol would stop working.
 
+#### Protocols: SNMP groups with a condition could get stuck [ID_39885]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+If a protocol contained an SNMP group with a condition, and that group was first executed with the condition being false and then with the condition being true, the group could get stuck depending on how quickly the device responded.
+
+See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition)
+
 #### Problem with SLElement when assigning an alarm template to an element included in a service [ID_39886]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
+
+#### Problem while setting up serial connections when starting an element [ID_39943]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When an element was started, up to now, its serial connections were set up too early, which would cause issues when credentials were required. From now on, serial connections will be set up after the parameters have been loaded, especially SSH connections that require credentials stored in parameters.
+
+Also, an SSH connect request that receives a bad credentials response will no longer try to connect indefinitely. Instead, after the initial fail, it will only try as often as the configured retry attempts.

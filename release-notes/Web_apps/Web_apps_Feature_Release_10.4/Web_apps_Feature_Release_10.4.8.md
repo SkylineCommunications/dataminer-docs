@@ -36,6 +36,12 @@ A number of enhancements have been made with regard to the validation of theme c
 
 When you specify invalid colors or invalid regex patterns, you will not be able to click *Save* until all invalid values have been corrected.
 
+#### Low-Code Apps: Default table cell hyperlink will no longer contain the URL of the DMA [ID_39963]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Up to now, a table cell hyperlink would by default be the URL of the DataMiner Agent, followed by `{cellValue}`. From now on, a table cell hyperlink will by default be `{cellValue}`, without the URL of the DataMiner Agent.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Interactive Automation scripts launched from a node edge graph or a context menu action would not inherit the theme of the dashboard or low-code app [ID_39664]
@@ -82,6 +88,12 @@ In some cases, a run-time error could occur when configuring a *Node edge graph*
 
 When, in edit mode, you removed a bar from a *Colum & bar chart* component, in some cases, the chart and the legend would show different colors.
 
+#### Dashboards app & Low-Code Apps - Maps component: Problem when changing a layer setting [ID_39855]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When you changed a value in the layer settings of a *Maps* component, all settings would be reloaded and the text box containing the value you changed would go out of bounds.
+
 #### Dashboards app: Problem when updating the name of a dashboard folder while a dashboard was open [ID_39873]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
@@ -106,7 +118,7 @@ When a pie chart disappeared to allow an error message to get displayed, in some
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\<username>\\* folder.
+Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\\<username\>\\* folder.
 
 From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
 
@@ -122,8 +134,22 @@ When clicked *Preview draft* immediately after refreshing the browser window, in
 
 When you deleted a low-code app while the dashboard cache was still being initialized, in some cases, an exception could be thrown, and when, later on, you tried to open an app, a `Dashboard was not found` error would be displayed.
 
+#### Dashboards app & Low-Code Apps: Parameter page component would incorrectly not use the time zone specified in the C:\\Skyline DataMiner\\users\\ClientSettings.json file [ID_39947]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In dashboards and low-code apps, the *Parameter page* component would incorrectly not use the time zone specified in the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
+
+From now on, this component will correctly use the time zone specified in the above-mentioned *ClientSettings.json* file.
+
 #### Low-Code Apps - Timeline component: Timeline items would no longer be visible when you zoomed out on them [ID_39962]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you kept on zooming out on a timeline item, at some point, that item would no longer be visible.
+
+#### Dashboards app & Low-Code Apps - Query filters: Problem with highlight filtering on an enum value linked to a DOM object [ID_39971]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Highlight filtering on an enum value linked to a DOM object would no longer work.

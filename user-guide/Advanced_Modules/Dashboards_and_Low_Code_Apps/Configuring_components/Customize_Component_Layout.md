@@ -34,6 +34,8 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        To add a conditional color:
 
+       1. Expand the *Conditional colors* section below *Data colors*.
+
        1. Select *Add conditional color*.
 
        1. Enter a regular expression to match the display label. For example, entering `Tot` will match data labeled `Total`, while entering `^Tot$` will only match data labeled `Tot`.

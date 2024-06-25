@@ -51,7 +51,7 @@ User errors, such as an empty route, are not included in this, as the exception 
 
 Logging related to the **installation** is placed in that same folder in the file `UserDefinableApiEndpointInstaller.txt`.  Only the logging of the last installation is kept.
 
-The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. If there are issues and the logging contains errors related to NATS, refer to [Investigating NATS issues](xref:Investigating_NATS_Issues).
+The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. If there are issues and the logging contains errors related to NATS, refer to [Troubleshooting – NATS](xref:Investigating_NATS_Issues).
 
 ## Configuring HTTPS
 

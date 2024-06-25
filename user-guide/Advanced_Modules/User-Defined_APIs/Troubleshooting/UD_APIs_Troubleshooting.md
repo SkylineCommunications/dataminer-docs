@@ -128,7 +128,7 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
 
    - For the manager in SLNet, you can check the [SLUserDefinableApiManager.txt](#logging) log file and check for a log line with the exact same message. After that, you should also see a line stating that a subscription was made on a subject ending with "UserDefinableApiTriggerRequest".
 
-   - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If you do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [investigating NATS issues](xref:Investigating_NATS_Issues).
+   - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If you do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [Troubleshooting – NATS](xref:Investigating_NATS_Issues).
 
 1. Make sure the **version of the UserDefinableApiEndpoint DxM is compatible with the DMA**.
 

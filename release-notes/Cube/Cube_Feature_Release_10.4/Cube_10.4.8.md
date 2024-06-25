@@ -96,6 +96,13 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 > - If the regular expression or the input are empty, the placeholder will return an empty string.
 > - The ']' character cannot be used as a separator.
 
+#### Element cards: Documents page now supports subfolders [ID_39876]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- See also 'Fixes' -->
+
+On element/service level, it is now possible to use subfolders on the *Documents* page.
+
 ## Changes
 
 ### Enhancements
@@ -105,6 +112,63 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 In the Cube logging, entries regarding known UI issues will now include a link to a page on <https://docs.dataminer.services/> where you can find more information about the issue in question.
+
+#### Surveyor: Root view will always be expanded when no expanded views can be found in the user settings of the user [ID_39848]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When a user expands a view in the Surveyor, this is saved in the user settings of that user. That way, when a user logs in to DataMiner Cube, all views that were expanded the last time the user logged out will automatically be expanded again.
+
+From now on, the root view will always be expanded when no expanded views can be found in the user settings of the user.
+
+#### Some user permissions will no longer be visible when Cube is connected to a DaaS system [ID_39870]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+When Cube is connected to a DaaS system, the following user permissions will no longer be visible:
+
+- *Modules > System Configuration > Backup*
+- *Modules > System Configuration > Database > Configure local/general DB*
+- *Modules > System Configuration > Indexing engine*
+- *Modules > System Configuration > Tools > Allow access to query executor*
+
+#### System Center - Logging: Additional log files available in DataMiner tab [ID_39938]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In the *Logging* section of *System Center*, a number of additional log files can now be consulted in the *DataMiner* tab:
+
+- ALARM_LEVEL_FORWARDING
+- AZURE_AD_MANAGER
+- BPA_MANAGER
+- CASSANDRA_HEALTH
+- CCAEN
+- CLOSED_LOGWRITES
+- CLOUD_FEED_MANAGER
+- CLOUD_STORAGE
+- CLUSTER_MANAGER
+- CONFIGURATION_MANAGER
+- DATA_API_MANAGER
+- DIRECTVIEW_SUBSCRIPTION_MANAGER
+- FAILOVER_PROXY_MANAGER
+- FAILOVER_SCRIPT_MANAGER
+- FILEINFO_MANAGER
+- HANGING_CALLS
+- HELPER
+- HELPER_WRAPPER
+- LEGACY_PIPE_CONNECTION
+- MEDIATIONSNIPPETINFO
+- MODELHOST_MANAGER
+- NATS_CUSTODIAN
+- PHOTOS_MANAGER
+- PROTOBUF_SERIALIZATION
+- REPORTSANDDASHBOARDS_MANAGER
+- TOPOLOGY_ITEM_HOSTINGCACHE_MANAGER
+- TRANSACTION_LOG
+- UMS_ENDPOINT_MANAGER
+
+> [!NOTE]
+> The DATA_API_MANAGER log file will only be available if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled.
 
 ### Fixes
 
@@ -139,8 +203,30 @@ When, in the Alarm Console, you tried to sort alarms by the *PollingIP* column, 
 
 When a shape was configured to be shown or hidden depending on the value of a placeholder that included a [DataMinerTime] placeholder, in some cases, the show/hide condition would not be evaluated correctly.
 
+#### Problem when clicking a 'DataMiner web apps' link when using a STaaS or DaaS system [ID_39840]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In DataMiner Cube, there are two places where you can find a link to your DMA's root page (e.g. <https://myDMA/root/>):
+
+- the *DataMiner web apps* link on the Cube home page, and
+- the *Open DataMiner web apps* link on the user menu.
+
+Up to now, when you clicked one of those links when using a STaaS or DaaS system, an ERR_NAME_NOT_RESOLVED error would be returned.
+
 #### URLs pointing to the DataMiner Agent to which Cube was connected via gRPC would contain an incorrect hostname [ID_39851]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When Cube was connected to a DataMiner Agent via a gRPC connection, in some cases, the URLs of e.g. log files would contain an incorrect hostname, making it impossible to retrieve those files from the DataMiner Agent.
+
+#### Documents: Issues fixed [ID_39876]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- See also 'New features' -->
+
+With regard to document management, the following issues have been fixed:
+
+- When you uploaded element documents that were larger than 64 kB, in some cases, they would get corrupted.
+- It would not be possible to downloading element documents while being connected to the hosting agent.
+- In the *Documents* app, in some cases, you would incorrectly be able to see documents of elements to which you did not have access.

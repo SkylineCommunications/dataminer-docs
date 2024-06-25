@@ -91,6 +91,8 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
          To add a conditional color:
 
+         1. Expand the *Conditional colors* section below *Data colors*.
+
          1. Select *Add conditional color*.
 
          1. Enter a regular expression to match the display label. For example, entering `Tot` will match data labeled `Total`, while entering `^Tot$` will only match data labeled `Tot`.
