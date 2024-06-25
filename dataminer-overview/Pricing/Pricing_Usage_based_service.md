@@ -102,7 +102,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Connector Services* | Sum of used connectors delivered by Skyline. | 8 |
 | *Script Runs* | Sum of script runs. | Starting at 5 for 1k script runs.<br>Unit credit rate decreases with increased quantities. |
 | *Cloud Data Consumption* | Sum of total GB of traffic. | 1 |
-| *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M data points stored.<br>0.3 per 10M element data updates. |
+| *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M trend data points.<br>0.3 per 10M element data updates. |
 | *DataMiner as a Service (DaaS)* | Sum of metrics of all managed objects hosted. | 0.1 |
 
 > [!TIP]
