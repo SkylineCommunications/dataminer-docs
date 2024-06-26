@@ -26,6 +26,12 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
+#### Storage as a Service: Event hub throttling errors will now be logged as 'Warning' instead of 'Error' [ID_40018]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
+
 ### Fixes
 
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
