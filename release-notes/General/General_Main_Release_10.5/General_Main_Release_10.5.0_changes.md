@@ -467,6 +467,52 @@ From now on, when a client connects to the DataMiner System, an attempt will fir
 
 From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
 
+#### Service & Resource Management: Changing the cache settings of the Resource Manager without restarting DataMiner [ID_39795]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The ResourceManager configuration contains settings that limit the numbers of items that will be cached. These settings have now been updated:
+
+| Setting | Former value | New value |
+|---|---|---|
+| IdCacheConfiguration-MaxObjectsInCache        | 500  | 10000 |
+| TimeRangeCacheConfiguration-MaxObjectsInCache | 3000 | 50000 |
+
+Also, from now on, it will be possible to change these settings without having to restart DataMiner.
+
+To do so, send a `ResourceManagerConfigInfoMessage` containing an `IdCacheConfiguration`, a `TimeRangeCacheConfiguration`, or a `HostedReservationInstanceCacheConfiguration`. Only when the `CleanupCheckInterval` (in case of `TimeRangeCacheConfiguration`) or `CheckInterval` (in case of `HostedReservationInstanceCacheConfiguration`) property has been changed, should the ResourceManager be reinitialized.
+
+See the following example:
+
+```csharp
+var request = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMessage.ConfigInfoType.Set)
+{
+    StorageSettings = new StorageSettings(ResourceStorageType.Elastic),
+    IdCacheConfiguration = new IdCacheConfiguration()
+    {
+        MaxObjectsInCache = 5000,
+        ObjectsLifeSpan = TimeSpan.FromMinutes(10)
+    },
+    TimeRangeCacheConfiguration = new TimeRangeCacheConfiguration()
+    {
+        CleanupCheckInterval = TimeSpan.FromMinutes(10),
+        MaxObjectsInCache = 5000,
+        TimeRangeLifeSpan = TimeSpan.FromMinutes(10)
+    },
+    HostedReservationInstanceCacheConfiguration = new HostedReservationInstanceCacheConfiguration()
+    {
+        CheckInterval = TimeSpan.FromMinutes(10),
+        InitialLoadDays = TimeSpan.FromMinutes(10)
+    }
+};
+var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManagerConfigInfoResponseMessage;
+```
+
+> [!NOTE]
+>
+> - Sending a `ResourceManagerConfigInfoMessage` to a DataMiner Agent will only update the cache settings of that specific agent. If you want to update the settings of all agents in the cluster, you will have to sent a `ResourceManagerConfigInfoMessage` to every agent in that cluster.
+> - To retrieve the above-mentioned settings, you can a `ResourceManagerConfigInfoMessage` of type `Get`.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
