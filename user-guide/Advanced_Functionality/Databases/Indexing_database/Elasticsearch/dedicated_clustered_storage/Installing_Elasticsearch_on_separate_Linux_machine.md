@@ -169,3 +169,6 @@ If you use self-hosted DataMiner storage instead of the recommended [Storage as 
 1. If your system uses a dedicated clustered storage setup, configure the Elasticsearch cluster database in System Center. See [Configuring Elasticsearch in System Center](xref:Configuring_DataMiner_Indexing).
 
    If your system uses storage per DMA, you will need to [manually connect your DMA to the Elasticsearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
+
+> [!TIP]
+> If you encounter issues with Elasticsearch nodes, you can increase the log level for better diagnostics. See [Logging](https://www.elastic.co/guide/en/elasticsearch/reference/current/logging.html).
