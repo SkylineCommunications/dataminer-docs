@@ -13,7 +13,9 @@ If you use self-hosted DataMiner storage instead of the recommended [Storage as 
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
 
 > [!TIP]
-> See also: [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html) in the Elasticsearch reference information.
+>
+> - For more information about installing Elasticsearch, refer to the [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html).
+> - If you encounter issues with Elasticsearch nodes, you can increase the log level for better diagnostics. See [Logging](https://www.elastic.co/guide/en/elasticsearch/reference/current/logging.html).
 
 1. Install the Elasticsearch software (version 6.8) on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/deb.html) in the official Elasticsearch documentation.
 
@@ -169,6 +171,3 @@ If you use self-hosted DataMiner storage instead of the recommended [Storage as 
 1. If your system uses a dedicated clustered storage setup, configure the Elasticsearch cluster database in System Center. See [Configuring Elasticsearch in System Center](xref:Configuring_DataMiner_Indexing).
 
    If your system uses storage per DMA, you will need to [manually connect your DMA to the Elasticsearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
-
-> [!TIP]
-> If you encounter issues with Elasticsearch nodes, you can increase the log level for better diagnostics. See [Logging](https://www.elastic.co/guide/en/elasticsearch/reference/current/logging.html).
