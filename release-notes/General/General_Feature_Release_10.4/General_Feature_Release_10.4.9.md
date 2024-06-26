@@ -84,7 +84,7 @@ var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManage
 > [!NOTE]
 >
 > - Sending a `ResourceManagerConfigInfoMessage` to a DataMiner Agent will only update the cache settings of that specific agent. If you want to update the settings of all agents in the cluster, you will have to sent a `ResourceManagerConfigInfoMessage` to every agent in that cluster.
-> - To retrieve the above-mentioned settings, you can a `ResourceManagerConfigInfoMessage` of type `Get`.
+> - To retrieve the above-mentioned settings, you can send a `ResourceManagerConfigInfoMessage` of type `Get`.
 
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
@@ -105,12 +105,6 @@ When the trend data of a parameter appears to have frequent flatline periods, th
 Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
 
 ### Fixes
-
-#### Problem with SLAnalytics while starting up [ID_39955]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
 
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 

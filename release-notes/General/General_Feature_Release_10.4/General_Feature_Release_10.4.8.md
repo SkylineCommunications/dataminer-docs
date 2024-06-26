@@ -323,6 +323,12 @@ When an element was started, up to now, its serial connections were set up too e
 
 Also, an SSH connect request that receives a bad credentials response will no longer try to connect indefinitely. Instead, after the initial fail, it will only try as often as the configured retry attempts.
 
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
 #### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->

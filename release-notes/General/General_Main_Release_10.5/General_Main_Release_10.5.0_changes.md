@@ -511,7 +511,7 @@ var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManage
 > [!NOTE]
 >
 > - Sending a `ResourceManagerConfigInfoMessage` to a DataMiner Agent will only update the cache settings of that specific agent. If you want to update the settings of all agents in the cluster, you will have to sent a `ResourceManagerConfigInfoMessage` to every agent in that cluster.
-> - To retrieve the above-mentioned settings, you can a `ResourceManagerConfigInfoMessage` of type `Get`.
+> - To retrieve the above-mentioned settings, you can send a `ResourceManagerConfigInfoMessage` of type `Get`.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
 
@@ -709,7 +709,7 @@ When the NATS server was down, SLElement would leak memory while trying to push 
 
 #### Problem with SLAnalytics while starting up [ID_39955]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
 
