@@ -145,3 +145,11 @@ When you kept on zooming out on a timeline item, at some point, that item would 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 Highlight filtering on an enum value linked to a DOM object would no longer work.
+
+#### Low-Code Apps: Empty actions would incorrectly be considered invalid [ID_40027]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
+
+Up to now, empty actions would incorrectly be considered invalid, causing a `This action is invalid` error to be thrown whenever they were executed.
+
+As empty actions are added by default when you open the action editor of an event, from now on, empty actions will no longer be considered invalid. An error will only be thrown when an action has an invalid configuration.

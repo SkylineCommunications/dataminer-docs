@@ -26,6 +26,14 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
+#### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID_39994]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the *C:\\Skyline DataMiner\\* folder that should be deleted during the upgrade procedure. From now on, the *ResetConfig.txt* file will no longer be added to that list of files to be deleted.
+
+The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
+
 #### Storage as a Service: Event hub throttling errors will now be logged as 'Warning' instead of 'Error' [ID_40018]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
