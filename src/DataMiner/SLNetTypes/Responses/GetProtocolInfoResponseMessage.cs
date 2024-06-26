@@ -31,7 +31,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Links all of the child parameter info object to this object.
+		/// Links all of the child parameter info objects to this object.
 		/// </summary>
 		public void LinkParametersToProtocol()
 		{
