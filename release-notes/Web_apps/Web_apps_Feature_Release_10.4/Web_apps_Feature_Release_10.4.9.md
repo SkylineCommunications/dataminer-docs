@@ -59,3 +59,11 @@ When, in the *Parameters* data set, you filtered by protocol, the parameters lis
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the *C:\\Skyline DataMiner\\users\\ClientSettings.json* file.
+
+#### Low-Code Apps: Empty actions would incorrectly be considered invalid [ID_40027]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, empty actions would incorrectly be considered invalid, causing a `This action is invalid` error to be thrown whenever they were executed.
+
+As empty actions are added by default when you open the action editor of an event, from now on, empty actions will no longer be considered invalid. An error will only be thrown when an action has an invalid configuration.
