@@ -48,6 +48,16 @@ When a native process (e.g. SLDataMiner) is stopping, it will by default wait fo
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made to the algorithm that detects change points of type "flatline".
+
+When the trend data of a parameter appears to have frequent flatline periods, the chance of a flatline change point being detected and a suggestion event being created for it has now decreased.
+
+Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
+
 ### Fixes
 
 #### Problem with SLAnalytics while starting up [ID_39955]
@@ -61,3 +71,9 @@ In some rare cases, while starting up, SLAnalytics appeared to leak memory and c
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 At startup, in some cases, the CloudEndpointManager in SLNet could throw an exception when the NATS and NAS services were not installed.
+
+#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.

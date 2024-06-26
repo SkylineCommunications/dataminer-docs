@@ -481,6 +481,16 @@ When a native process (e.g. SLDataMiner) is stopping, it will by default wait fo
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made to the algorithm that detects change points of type "flatline".
+
+When the trend data of a parameter appears to have frequent flatline periods, the chance of a flatline change point being detected and a suggestion event being created for it has now decreased.
+
+Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
+
 #### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -612,7 +622,7 @@ Up to now, the error thrown when the Service Manager fails to delete a service w
 
 Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
 
-#### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
+#### Service & Resource Management: Deadlock when forcing quarantine during a booking update [ID_39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
 
@@ -656,3 +666,9 @@ When the NATS server was down, SLElement would leak memory while trying to push 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
+#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.

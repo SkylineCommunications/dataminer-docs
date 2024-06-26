@@ -32,7 +32,7 @@ For detailed information about the changes included in those versions, refer to 
 
 ### Fixes
 
-#### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
+#### Service & Resource Management: Deadlock when forcing quarantine during a booking update [ID_39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
 
