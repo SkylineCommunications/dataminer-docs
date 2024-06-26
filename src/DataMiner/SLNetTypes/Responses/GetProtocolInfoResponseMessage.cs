@@ -410,7 +410,7 @@ namespace Skyline.DataMiner.Net.Messages
 		public String MainConnectionName;
 
 		/// <summary>
-		/// Converts the specified type to <see cref="¨ProtocolType"/>.
+		/// Converts the specified type to <see cref="ProtocolType"/>.
 		/// </summary>
 		/// <param name="unparsed">The protocol type.</param>
 		/// <returns>The corresponding <see cref="¨ProtocolType"/>.</returns>
