@@ -413,7 +413,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// Converts the specified type to <see cref="ProtocolType"/>.
 		/// </summary>
 		/// <param name="unparsed">The protocol type.</param>
-		/// <returns>The corresponding <see cref="¨ProtocolType"/>.</returns>
+		/// <returns>The corresponding <see cref="ProtocolType"/>.</returns>
 		public static ProtocolType ToProtocolType(string unparsed)
 		{
 			return ProtocolType.Unknown;
