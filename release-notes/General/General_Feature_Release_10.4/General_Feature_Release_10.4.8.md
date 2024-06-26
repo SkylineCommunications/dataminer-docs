@@ -16,10 +16,6 @@ uid: General_Feature_Release_10.4.8
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.8](xref:Web_apps_Feature_Release_10.4.8).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 #### Correlation log file will now include correlation rule statistics [ID_39301]

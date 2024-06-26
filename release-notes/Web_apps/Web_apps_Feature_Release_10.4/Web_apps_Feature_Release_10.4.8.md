@@ -10,14 +10,6 @@ uid: Web_apps_Feature_Release_10.4.8
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.8](xref:General_Feature_Release_10.4.8).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
-
 ## Changes
 
 ### Enhancements
