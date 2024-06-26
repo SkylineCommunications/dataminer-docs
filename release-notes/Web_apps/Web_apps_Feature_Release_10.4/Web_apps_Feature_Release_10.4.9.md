@@ -38,7 +38,11 @@ In the settings of the component, you can also opt to have the component either 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app & Low-Code Apps - Time range component: Reset button added [ID_40011]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+The *Time range* feed component now has a *Reset* button. Clicking this button will reset the time range to the default range (i.e. "Today so far").
 
 ### Fixes
 
