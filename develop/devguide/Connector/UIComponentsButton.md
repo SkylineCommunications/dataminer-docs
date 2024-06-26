@@ -41,6 +41,7 @@ To define a button:
 
 > [!NOTE]
 > Typically, the description tag is left empty when a button is defined.
+> Please be aware that if you are using the button to trigger a QAction if you have setter="true" attribute you may cause your Qaction to get triggered twice. This attribute should not be present on this parameter type. 
 
 ![alt text](../../images/uibutton.png "DataMiner Cube button")
 
