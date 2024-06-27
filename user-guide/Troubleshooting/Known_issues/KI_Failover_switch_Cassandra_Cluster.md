@@ -10,7 +10,7 @@ Failover systems with Cassandra Cluster setup from DataMiner 10.4.2 onwards.
 
 ## Cause
 
-Blocking calls in the SLASPConnection process cause a Failover switch to take a long time. A likely cause for this is inefficient alarm distribution queries sent by SLASPConnection to SLDataGateway, but this is currently still being investigated.
+Blocking calls in the SLASPConnection process cause a Failover switch to take a long time. This is likely related to the alarm load in the system: the more alarms are active, the longer the Failover switch will take (with a maximum of 10 minutes).
 
 ## Fix
 
