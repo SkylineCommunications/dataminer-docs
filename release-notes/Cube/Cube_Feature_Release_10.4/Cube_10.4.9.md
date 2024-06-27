@@ -26,4 +26,8 @@ uid: Cube_Feature_Release_10.4.9
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When *Children* shapes were being used, in some cases, *Get protocol* requests would be sent in an incorrect thread.
