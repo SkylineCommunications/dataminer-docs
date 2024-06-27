@@ -209,6 +209,8 @@ items:
     items:
       - name: Installing dataminer.MediaOps
         topicUid: Installing_MediaOps
+      - name: Common Data Model (CDM)
+        topicUid: CDM
       - name: MediaOps applications
         topicUid: MediaOps_apps
         items:
