@@ -12,18 +12,18 @@ These best pratices should allow you to create intuitive, visually appealing app
 
 <!-- TOC start -->
 
-- [Style guide](#style-guide)
-   * [Colors / Themes](#colors-themes)
-   * [Navigation](#navigation)
+- [Colors / Themes](#colors-themes)
+- [Layout](#layout)
+- [Navigation](#navigation)
+- [Panels](#panels)
+- [Components ](#components)
    * [Titles](#titles)
    * [Buttons](#buttons)
    * [DOM Forms](#dom-forms)
    * [Tables](#tables)
    * [Grids](#grids)
    * [Using templates for tables and grids](#using-templates-for-tables-and-grids)
-   * [Panels](#panels)
-   * [Layout](#layout)
-   * [LCA inspiration](#lca-inspiration)
+- [LCA inspiration](#lca-inspiration)
 
 <!-- TOC end -->
 
@@ -61,6 +61,19 @@ These best pratices should allow you to create intuitive, visually appealing app
   |----------|--------------------------------------|
   |![Sample UI](~/user-guide/images/LCA_Style_Guide_Sample_UI.webp)|![Sample UI Result](~/user-guide/images/LCA_Style_Guide_Sample_UI_Result.png)|
 
+## Layout
+
+Make sure components on a page/panel are aligned vertically and horizontally
+
+| 👍 Good | 👎 Bad |
+|------|-----|
+|![Good Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Good.png)|![Bad Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Bad.png)|
+
+- Use consistent spacing/margin on a page on the left and right edge across pages. Avoid stretching components to the edge of the page with no spacing. 
+- Use the available space, avoid huge empty areas on page. At the same time , don't clutter the interface with too much information, hide additional information on panels.
+- Try to limit the number of different font styles and font sizes. Less is more!
+- Adjust the size of components to how much information they contain , so avoid very big ring/status components or very small tables and timelines.
+
 ## Navigation
 
 In order to have consistent navigation it is recommended to stick to the following order:
@@ -76,7 +89,18 @@ In order to have consistent navigation it is recommended to stick to the followi
 > [!CAUTION]
 > It is generally **not** advised to use buttons for navigation.
 
-## Titles
+## Panels
+
+- Panels should primarly be used to show additional information about an item selected on a page. 
+  For example : a DOM Form, additional details/metadata which were not shown on the original page
+- Panels can be shown on the left/right of the screen or as a pop-up. Try to be consistent in an app to always show it in the same location, same width, ... A good default is show DOM forms in a popup, show additional information on selected table row in a right-hand side panel. 
+
+  ![Form Popup](~/user-guide/images/LCA_Style_Guide_Form_Popup.gif)
+- Every Panel should have a close button on top right, this could be in the menu bar or a separate button. 
+
+## Components 
+
+### Titles
 
 - Titles are optional on pages. Depends on the fact if it needs to give more context to the user what he/she is actually looking at. Avoid repeating the app name as title on the pages.
 - do not use a background color for titles
@@ -101,7 +125,7 @@ Result
 
 ![Title Good](~/user-guide/images/LCA_Style_Guide_Title_Good.png)
 
-## Buttons
+### Buttons
 
 Buttons can trigger different actions on page or panel. Some attention points when using buttons:
 - Use short labels
@@ -113,7 +137,7 @@ Buttons can trigger different actions on page or panel. Some attention points wh
 
 - Add icon to the button whenever possible, this will allow a user to understand more easily what is possible 
 
-## DOM Forms
+### DOM Forms
 
 - Forms can best be shown in a popup or side panel. If you choose one over the other, make it consistent across the apps you build.
 - Use the "As overlay" option when opening the popup/panel, this way the focus is on the popup/panel and not on the background
@@ -126,7 +150,7 @@ A good example of a DOM Form with a stepper component inside a panel with save a
 
 ![Example DOM Form](~/user-guide/images/LCA_Style_Guide_Form_Good.png)
 
-## Tables
+### Tables
 
 - Tables should only contain the most relevant data, try to limit the number of columns.
 - It's generally good practice to add a title to the table component (via Layout > Title) to indicate what the content of the table is.
@@ -148,7 +172,7 @@ A good example of a DOM Form with a stepper component inside a panel with save a
 
     ![Good Table](~/user-guide/images/LCA_Style_Guide_Table_Good.png)
 
-## Grids
+### Grids
 
 Displaying multiple records in a LCA can be done by using a grid or a table. In most cases a table makes more sense as you have sorting and filtering options out of the box. Only when very specific visuals are needed with horizontal and/or vertical rows, it makes more sense to use a grid. Here are some examples 
 
@@ -166,7 +190,7 @@ Displaying multiple records in a LCA can be done by using a grid or a table. In 
 |-----------------|
 |![Grid Filter Vertical](~/user-guide/images/LCA_Style_Guide_Grid_Filter_Vertical.png)|
 
-## Using templates for tables and grids
+### Using templates for tables and grids
 
 When using HTML inside a grid or table template make sure you have an **outer HTML element** with an empty title attribute, otherwise the HTML will show up on hover:
 
@@ -202,27 +226,6 @@ When using HTML inside a grid or table template make sure you have an **outer HT
 
 </td>
 </table>
-
-## Panels
-
-- Panels should primarly be used to show additional information about an item selected on a page. 
-  For example : a DOM Form, additional details/metadata which were not shown on the original page
-- Panels can be shown on the left/right of the screen or as a pop-up. Try to be consistent in an app to always show it in the same location, same width, ... A good default is show DOM forms in a popup, show additional information on selected table row in a right-hand side panel. 
-  ![Form Popup](~/user-guide/images/LCA_Style_Guide_Form_Popup.gif)
-- Every Panel should have a close button on top right, this could be in the menu bar or a separate button. 
-
-## Layout
-
-Make sure components on a page/panel are aligned vertically and horizontally
-
-| 👍 Good | 👎 Bad |
-|------|-----|
-|![Good Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Good.png)|![Bad Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Bad.png)|
-
-- Use consistent spacing/margin on a page on the left and right edge across pages. Avoid stretching components to the edge of the page with no spacing. 
-- Use the available space, avoid huge empty areas on page.
-- Try to limit the number of different font styles and font sizes. Less is more!
-- Adjust the size of components to how much information they contain , so avoid very big ring/status components or very small tables and timelines.
 
 
 ## LCA inspiration
