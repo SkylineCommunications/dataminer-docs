@@ -59,7 +59,7 @@ These best pratices should allow you to create intuitive, visually appealing app
 
   |Sample UI | Resulting app with same color palette|
   |----------|--------------------------------------|
-  |![Sample UI](~/user-guide/images/LCA_Style_Guide_Sample_UI.png)|![Sample UI Result](~/user-guide/images/LCA_Style_Guide_Sample_UI_Result.png)|
+  |![Sample UI](~/user-guide/images/LCA_Style_Guide_Sample_UI.webp)|![Sample UI Result](~/user-guide/images/LCA_Style_Guide_Sample_UI_Result.png)|
 
 ## Navigation
 
