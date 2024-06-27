@@ -38,6 +38,12 @@ In the settings of the component, you can also opt to have the component either 
 
 ### Enhancements
 
+#### Dashboards app & Low-Code Apps: Enhanced retrieval of element/protocol parameters [ID_39954]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, from now on, all components that retrieve element/protocol parameters will do so more efficiently.
+
 #### Dashboards app & Low-Code Apps - Time range component: Reset button added [ID_40011]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
