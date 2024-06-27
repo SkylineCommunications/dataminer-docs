@@ -132,24 +132,27 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
 
-## Cost Estimation
+## Cost estimation
 
-To request a cost estimation, please contact a Skyline representative or <staas@dataminer.services>.
+To request a cost estimation, follow the procedure below:
 
-### Steps for Cost Estimation:
+1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-1. Complete steps 1 to 6 of the [Setup](#setting-up-staas).
-2. Once the above requirement is met, an automation script will be provided to you along with instructions on how to run it.
-3. Let the script run for 24 hours without restarting the DataMiner System (DMS).
-4. After the 24-hour period, restart the DMS to stop the estimation process.
-5. Notify your Skyline representative or email <staas@dataminer.services> to complete the process.
-6. You will then receive a detailed cost estimation.
+   At this point, an Automation script will be provided to you along with instructions on how to run it.
+
+1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
+
+1. After the 24-hour period, restart the DMS to stop the estimation process.
+
+1. Notify your Skyline representative or email <staas@dataminer.services> to complete the process.
+
+   You will then receive a detailed cost estimation.
 
 > [!NOTE]
-> If your DataMiner System uses a proxy setup, ensure that DataMiner Feature Release v10.4.7 is installed.
-> 
-> [!NOTE]
-> Cost Estimations can currently only be performed for West Europe and UK South regions.
+> If your DataMiner System uses a proxy setup, make sure you have installed DataMiner Feature Release 10.4.7 or higher.
+
+> [!IMPORTANT]
+> Cost estimations can currently only be performed for the West Europe and UK South regions.
 
 ## Limitations
 
