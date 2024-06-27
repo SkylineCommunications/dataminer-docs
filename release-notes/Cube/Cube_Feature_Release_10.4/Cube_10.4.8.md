@@ -229,5 +229,5 @@ When Cube was connected to a DataMiner Agent via a gRPC connection, in some case
 With regard to document management, the following issues have been fixed:
 
 - When you uploaded element documents that were larger than 64 kB, in some cases, they would get corrupted.
-- It would not be possible to downloading element documents while being connected to the hosting agent.
+- It is now possible to download element documents while being connected to the hosting agent.
 - In the *Documents* app, in some cases, you would incorrectly be able to see documents of elements to which you did not have access.
