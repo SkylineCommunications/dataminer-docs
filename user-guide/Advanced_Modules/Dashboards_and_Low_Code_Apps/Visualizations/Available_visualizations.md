@@ -192,6 +192,9 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Grid.html" title="Grid" target="_self"><img src="~/user-guide/images/Grid.svg" style="width:100%"></a>
   </div>
   <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Interactive_automation_script.html" title="Interactive Automation script" target="_self"><img src="~/user-guide/images/IAS.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Node_edge_graph.html" title="Node Edge Graph" target="_self"><img src="~/user-guide/images/Node_Edge_Graph.svg" style="width:100%"></a>
   </div>
   <div class="column">
@@ -200,12 +203,12 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Service_definition.html" title="Service Definition" target="_self"><img src="~/user-guide/images/Service_Definition.svg" style="width:100%"></a>
   </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Spectrum_analyzer.html" title="Spectrum Analyzer" target="_self"><img src="~/user-guide/images/Spectrum_Analyzer.svg" style="width:100%"></a>
-  </div>  
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Spectrum_analyzer.html" title="Spectrum Analyzer" target="_self"><img src="~/user-guide/images/Spectrum_Analyzer.svg" style="width:100%"></a>
+  </div>  
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Visual_Overview_component.html" title="Visual Overview" target="_self"><img src="~/user-guide/images/Visual_Overview.svg" style="width:100%"></a>
   </div>
@@ -288,4 +291,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardTextInputFeed.html" title="Text Input" target="_self"><img src="~/user-guide/images/Text_Input.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardSearchInputFeed.html" title="DropDown" target="_self"><img src="~/user-guide/images/Search_Input.svg" style="width:100%"></a>
+  </div>
 </div>

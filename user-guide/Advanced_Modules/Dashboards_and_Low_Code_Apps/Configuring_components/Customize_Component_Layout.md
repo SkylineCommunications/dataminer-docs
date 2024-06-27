@@ -26,9 +26,21 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        You can also further customize your title with *Bold*, *Italics*, and *Underline*.
 
-     - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format or by using the color picker box on the right.
+     - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
-       From DataMiner 10.0.12 onwards, under *Colors* > *Color palette*, you can customize additional component colors, e.g. for the lines in a line chart.
+       Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g. for the lines in a line chart.
+
+       From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, under *Colors* > *Data colors*, you can specify conditional colors. If a display label of the data matches the specified text, that data will inherit the conditional color. These conditional colors override the normal data colors.
+
+       To add a conditional color:
+
+       1. Expand the *Conditional colors* section below *Data colors*.
+
+       1. Select *Add conditional color*.
+
+       1. Enter a regular expression to match the display label. For example, entering `Tot` will match data labeled `Total`, while entering `^Tot$` will only match data labeled `Tot`.
+
+       1. Choose a custom color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
      - In the *Spacing* section, specify the following:
 
@@ -61,7 +73,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        - *Thickness*: The thickness (in pixels) of the border that should be displayed around the components.
 
-       - *Color*: Specify a custom border color, either by specifying the color in RGB format or by using the color picker box on the right.
+       - *Color*: Specify a custom border color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
      - In the *Shadow* section, select the size of the shadow displayed behind the components.
 

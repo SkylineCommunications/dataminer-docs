@@ -72,6 +72,9 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
    For more information on the different options, refer to the [Reaper documentation](http://cassandra-reaper.io/docs/configuration/).
   
+   > [!NOTE]
+   > By default, Reaper logs do not contain timestamps. To add timestamps to the log output, add *%date{ISO8601}* to the *logFormat* setting in *cassandra-reaper.yaml*. For example: `logFormat: "%date{ISO8601} %-6level [%t] %logger{5} - %msg %n"`
+
 1. Run the following command to enable automatic startup of the Reaper service:
 
    `$ systemctl enable cassandra-reaper.service`

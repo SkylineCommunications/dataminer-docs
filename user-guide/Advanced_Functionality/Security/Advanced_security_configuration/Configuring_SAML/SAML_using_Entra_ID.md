@@ -58,6 +58,8 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Set *Entity ID* to the IP address or the DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
 
+      If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID.
+
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
       - From DataMiner 10.3.5 onwards:
@@ -88,15 +90,20 @@ To set up external authentication, you first need to create an enterprise applic
 
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
+      > [!NOTE]
+      > If your DMS consists of DMAs accessible via different URLs, specify all of those URLs under *Reply URL*, as detailed above. Otherwise, if a URL is used that is not specified there, this will result in an error.
+
       ![Editing the basic SAML configuration](~/user-guide/images/SAML_Reply_URLs.png)
 
    1. Set *Sign on URL* to the IP address or DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
+
+      If your DMS consists of DMAs accessible via different URLs, specify only the most commonly used URL here.
 
    1. In the top-left corner, click *Save*.
 
 1. Still on the *Single sign-on* page, look for the *SAML Certificates* section and copy the *App Federation Metadata Url*.
 
-   You will need this later when [configuring DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
+   You will need this later, for the *ipMetadata* [configuration in DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
 
 ### Creating a DataMiner metadata file
 
@@ -145,7 +152,7 @@ To set up external authentication, you first need to create an enterprise applic
        </md:SPSSODescriptor>
      ```
 
-1. Replace [ENTITYID] with the IP address or the DNS name of your DataMiner System. This must be the same as the *Entity ID* you specified while setting up the Microsoft Entra ID Enterprise application.
+1. Replace [ENTITYID] with the URL or IP address you specified as the *Entity ID* while setting up the Microsoft Entra ID Enterprise application.
 
 1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. The specified URL(s) must match the *Reply URL* you specified while setting up the Microsoft Entra ID Enterprise application.
 

@@ -6,6 +6,8 @@ uid: DashboardParameterTable
 
 This component displays a data table of an element.
 
+![Parameter table](~/user-guide/images/Parameter_Table.png)<br>*Parameter table component in DataMiner 10.4.1*
+
 To configure the component:
 
 1. Apply a table parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).

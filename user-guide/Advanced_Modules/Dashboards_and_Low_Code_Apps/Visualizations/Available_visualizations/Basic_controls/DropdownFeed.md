@@ -6,6 +6,8 @@ uid: DashboardDropdown
 
 This basic control allows the user to select an item in a dropdown list. The selectable items can be based on any data feed.
 
+![Dropdown](~/user-guide/images/Dropdown.png)<br>*Dropdown component in DataMiner 10.4.6*
+
 > [!NOTE]
 > Prior to DataMiner 10.3.5/10.4.0<!--  RN 35902 -->, this component is available under *Feeds*.
 

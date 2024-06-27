@@ -6,6 +6,9 @@ uid: Protocol.Chains.Chain.Field
 
 Each field in a chain is a possible block in the drill-down diagram displayed on the visual pages of an EPM (formerly known as CPE) element.
 
+> [!TIP]
+> See also: [EPM chains and fields configuration](xref:EPMManagerChainsAndFields)
+
 ## Parent
 
 [Chain](xref:Protocol.Chains.Chain)

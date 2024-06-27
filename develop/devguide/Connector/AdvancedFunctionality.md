@@ -16,4 +16,3 @@ In this section:
 - <xref:AdvancedCustomProperties>
 - <xref:AdvancedDataMinerDataPersistence>
 - <xref:AdvancedDataMinerMediationLayer>
-- <xref:AdvancedEpm>

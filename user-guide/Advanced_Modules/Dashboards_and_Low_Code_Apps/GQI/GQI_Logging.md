@@ -6,9 +6,13 @@ uid: GQI_Logging
 
 Logging for GQI is available from DataMiner 10.4.0/10.4.4 onwards.<!-- RN 38870 -->
 
-Errors and warnings are logged to log files in the folder *C:\Skyline DataMiner\Logging\GQI*.
+Errors and warnings are logged to log files in the folder `C:\Skyline DataMiner\Logging\GQI`.
 
 If this folder does not exist, it will be created automatically with the first log.
+
+From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet requests is also logged to the log files in the `C:\Skyline DataMiner\Logging\GQI` folder, if the minimum log level is set to *Debug* or lower.
+
+From DataMiner 10.4.0 [CU3]/10.4.5 onwards, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`.
 
 > [!NOTE]
 > The logs are buffered and written asynchronously, so it may take a few seconds for them to appear in the file.
@@ -28,6 +32,8 @@ The [minimum log level](https://github.com/serilog/serilog/wiki/Configuration-Ba
 
 You can change the minimum log level to include less or more information in the log file. For example, to investigate potential issues, it can be useful to lower the minimum log level to *Debug*.
 
+From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum log level to *Debug* or lower, information about requests sent to SLNet is also logged.
+
 To change the minimum log level, change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
 
 ```xml
@@ -37,6 +43,11 @@ To change the minimum log level, change the configuration in the *appSettings* s
     ...
 </appSettings>
 ```
+
+> [!IMPORTANT]
+> Prior to DataMiner 10.4.6/10.5.0, a change to the minimum log level requires an SLHelper restart. From DataMiner 10.4.6/10.5.0 onwards<!--RN 39309-->, it is no longer necessary to restart SLHelper. The change takes effect immediately upon saving the *SLHelper.exe.config* file.
+
+For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards, the query name is included in the logging. However, if you set the minimum log level to *Debug*, the full query is logged instead.
 
 > [!NOTE]
 > Any changes to the configuration file are reset after a full DataMiner upgrade or downgrade.

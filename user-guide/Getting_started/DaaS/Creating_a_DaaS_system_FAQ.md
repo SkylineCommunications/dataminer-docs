@@ -17,7 +17,7 @@ The DataMiner credit balance of an organization is displayed in the [Admin app](
 
 ### How can I acquire more DataMiner credits?
 
-You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner Credits](xref:Order_DataMiner_credits).
+You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
 
 For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
@@ -30,7 +30,7 @@ A DataMiner Community Edition DaaS system will be scheduled to expire as soon as
 
 ### What happens when my DaaS system expires or is deleted?
 
-Your DaaS system along with all its associated resources and data will be irreversibly deleted.
+Your DaaS system along with all its associated resources and data will be decommissioned. The DataMiner System will still be recoverable for a further 7 days after the expiration or deletion. To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
@@ -90,3 +90,9 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
 See also: [User management](xref:User_management).
+
+## Are there specific limitations that apply for DaaS?
+
+As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
+
+In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).

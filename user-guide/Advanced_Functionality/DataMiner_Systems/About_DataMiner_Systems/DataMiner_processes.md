@@ -160,7 +160,7 @@ The DataMiner Automation process.
 The DataMiner Correlation process.
 
 > [!TIP]
-> See also: [DataMiner Correlation](xref:correlation)
+> See also: [DataMiner Correlation](xref:About_DMS_Correlation)
 
 ### SLGSMGateway
 

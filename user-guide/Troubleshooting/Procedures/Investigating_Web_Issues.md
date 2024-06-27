@@ -2,7 +2,7 @@
 uid: Investigating_Web_Issues
 ---
 
-# Investigating web issues
+# Troubleshooting – web
 
 ## Client web app
 

@@ -49,17 +49,19 @@ There are many different types of cards, such as:
 
 - Spectrum analyzer cards
 
-Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [Experience and Performance Management](xref:EPM)).
+Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or [EPM Manager](xref:EPM) cards.
 
 ## Card navigation pane
 
-On the left side of view cards, service cards and element cards, a navigation pane is displayed.
+On the left side of view cards, service cards, and element cards, a navigation pane is displayed.
 
 You can collapse and expand this pane with the arrow button in the top-right corner of the pane. You can also change the size of the pane by dragging its edge.
 
 The pane consists of a tree view with several fixed nodes:
 
 - **VISUAL**: Contains all available Visual Overview pages.
+
+  ![Visual page](~/user-guide/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.4.5*
 
   > [!NOTE]
   >
@@ -69,6 +71,8 @@ The pane consists of a tree view with several fixed nodes:
   > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).
 
 - **DATA**: Contains all available Data Display pages.
+
+  ![Data Display pages](~/user-guide/images/Data_Display.png)<br>*Data Display page in DataMiner 10.4.5*
 
   > [!NOTE]
   >
@@ -96,6 +100,8 @@ The pane consists of a tree view with several fixed nodes:
   - Each note can be removed with the x in its top-right corner.
 
   - Expired notes are only displayed if you select *Show expired notes* in the top-right corner of the card. They are then displayed in a different color, so you can clearly see the difference with the notes that are not expired.
+
+  ![Notes](~/user-guide/images/Notes.png)<br>*Notes in DataMiner 10.4.5*
 
 - **ANNOTATIONS**: Displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
@@ -169,7 +175,11 @@ However, you can also open items in a new card next to any cards that are alread
 
 To change the card layout on the fly, drag the edge of a card to adjust its size.
 
-To select a preconfigured Cube card layout, click the user icon in the top-right corner of the Cube UI and select *Change layout*. This will open a side panel where you can select a card layout.
+![Drag card edge](~/user-guide/images/Drag_Edge_Card.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
+
+To select a preconfigured Cube card layout, click the user icon in the top-right corner of the Cube UI (1) and select *Change layout* (2). This will open a side panel where you can select a card layout (3).
+
+![Card layout](~/user-guide/images/Card_Layout.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
 
 The following layout options are available:
 
@@ -189,6 +199,8 @@ The following layout options are available:
 ## Dragging cards
 
 It is possible to drag a card, by left-clicking and dragging the top edge of the card to its destination.
+
+![Dragging a card](~/user-guide/images/Dragging_a_Card.png)<br>*DataMiner 10.4.5*
 
 You can drag a card:
 

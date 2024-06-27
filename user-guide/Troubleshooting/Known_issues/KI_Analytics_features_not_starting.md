@@ -21,7 +21,7 @@ Restart the *SLAnalytics* service (e.g. via the Task Manager) after DataMiner ha
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU12] or 10.4.3<!--38600-->.
 
 ## Description
 

@@ -345,16 +345,3 @@ General Parameters (DataMiner Element Control Protocol):
 >- DVEs will not follow the values of the main element. Alarms on values that are exported to a DVE will only use that DVE's general parameter values. This is both for alarm templates set on the DVE and the main element.
 >- Setting these general parameters will not overwrite the values defined by the topology cell definition.
 >- Creating alarms when using virtual functions causes the alarms to be linked to the main element rather than the virtual function (virtual element). This means that the [Alarm System Type] and [Alarm System Name] parameters of the main element will be applicable for all the alarms. These parameters on the virtual functions do not have any function at the moment. However, if in the future these alarms are linked to the virtual functions instead, these parameter values will be applied.
-
-## Other
-
-For the other protocol constructs such as triggers, commands, responses, pairs, groups, timers, actions, QActions, parameter groups, etc. the following applies:
-
-|Range|Owner|Minimum DMA version|Allowed|
-|--- |--- |--- |--- |
-|[1, 63 999]|Protocol|1.0.0|Yes|
-|[64 000, 999 999]|DataMiner|1.0.0|No|
-|[1 000 000, 9 999 999]|Protocol|9.0.4|Yes|
-|10 000 000 or above|-|-|No|
-
-For parameter groups, IDs larger than or equal to 10 000 should be avoided for existing drivers, as well as for drivers intended to be used with DataMiner versions before 9.0.4 (ID range 10 000+ was used for dynamic parameter groups prior to version 9.0.4. Previously assigned IDs remain reserved for existing elements).

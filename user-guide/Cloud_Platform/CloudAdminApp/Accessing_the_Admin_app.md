@@ -22,7 +22,7 @@ You can also go to the app via dataminer.services:
 
    If you are not interested in a specific DMS, click the *Admin* icon under *Apps*.
 
-![DMS in the home app](~/user-guide/images/CcaHomeApp.png)
+   ![DMS in the home app](~/user-guide/images/CcaHomeApp.png)
 
 > [!NOTE]
 > If you cannot find your DMS in the list, make sure the correct organization is selected in the top-right corner.

@@ -10,7 +10,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### Application Setup settings
 
-- **Default Virtual Platform**: The virtual platform of the Booking Manager. This is used among others to filter service definitions and resources. In the Booking Wizard, service definitions will only be shown if their *Virtual Platform* property is set to the identifier specified in this setting. For resources, the name of a resource pool that should be used with this virtual platform should start with the specified identifier followed by a period. For example, if *Default Virtual Platform* is set to *VPA*, a valid name for a resource pool would be *VPA.Decoder*.
+- **Default Virtual Platform**: The [virtual platform](xref:srm_instantiations#virtual-platform) of the Booking Manager. This is used among others to filter service definitions and resources. In the Booking Wizard, service definitions will only be shown if their *Virtual Platform* property is set to the identifier specified in this setting. For resources, the name of a resource pool that should be used with this virtual platform should start with the specified identifier followed by a period. For example, if *Default Virtual Platform* is set to *VPA*, a valid name for a resource pool would be *VPA.Decoder*.
 
 - **Resource Pool**: Deprecated. Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard. This setting is no longer available from SRM 1.2.12 onwards. <!-- RN 29276 -->
 

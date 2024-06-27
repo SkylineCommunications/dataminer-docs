@@ -92,6 +92,17 @@ This tag can have several subtags:
 
 In addition, the tag can have one optional attribute, **publicDNS**. When a DNS name is specified for this attribute, it will be used instead of the DataMiner IP address for links to the DataMiner user interface in notification emails.
 
+### DataMiner.ExternalAuthentication
+
+This tag is used to configure external authentication.
+
+For more information, see:
+
+- [Configuring SAML with Microsoft Entra ID as identity provider](xref:SAML_using_Entra_ID)
+- [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)
+- [Configuring Atlassian Crowd settings](xref:Configuring_Atlassian_Crowd_settings)
+- [Configuring RADIUS settings](xref:Configuring_RADIUS_settings)
+
 ### DataMiner.ID
 
 Information about the ID ranges to be used for e.g. view creation. This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts.
@@ -321,7 +332,9 @@ See:
 
 ### DataMiner.SnmpTrapDistribution
 
-Available from DataMiner 9.6.5 onwards. If set to false, SNMP trap distribution will be disabled within the DMS.
+SNMP trap distribution is a process where SNMP traps or inform messages are shared across DataMiner Agents in the cluster. When a trap arrives at one Agent, it is processed there first. If other Agents in the cluster have elements that listen for traps, the trap will be distributed to those Agents. However, Agents without interested elements will not receive it.
+
+If this is set to false, SNMP trap distribution will be disabled within the DMS.
 
 Example:
 
