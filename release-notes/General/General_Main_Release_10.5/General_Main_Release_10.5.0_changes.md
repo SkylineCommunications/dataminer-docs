@@ -628,12 +628,6 @@ When, on a STaaS system, an attempt was made to delete data from the database us
 
 This issue has now been fixed.
 
-#### Problem with SLElement while processing table parameter updates [ID_39462]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-In some cases, SLElement could stop working while processing table parameter updates.
-
 #### Problem when disposing an ISession with multiple subscriptions [ID_39483]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->

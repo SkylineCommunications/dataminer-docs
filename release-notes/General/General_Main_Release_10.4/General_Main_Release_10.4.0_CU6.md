@@ -42,6 +42,12 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 
 ### Fixes
 
+#### Problem with SLElement while processing table parameter updates [ID_39462]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, SLElement could stop working while processing table parameter updates.
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

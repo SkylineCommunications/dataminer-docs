@@ -122,7 +122,7 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, SLElement could stop working while processing table parameter updates.
 
