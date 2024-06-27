@@ -50,6 +50,14 @@ Because of a number of enhancements, from now on, all components that retrieve e
 
 The *Time range* feed component now has a *Reset* button. Clicking this button will reset the time range to the default range (i.e. "Today so far").
 
+#### Web API: DOM methods will no longer check whether DOM object GUIDs are empty [ID_40024]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the DOM methods in the web API would check whether a DOM object GUID was empty, and would block the call if this was the case.
+
+As the DOM SLNet API support objects with empty GUIDs, all empty GUID checks have now been removed from the web API.
+
 ### Fixes
 
 #### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID_39961]
