@@ -6,7 +6,7 @@ uid: KI_Failover_switch_Cassandra_Cluster
 
 ## Affected versions
 
-Failover systems running DataMiner version 10.4.2 or higher in conjunction with a Cassandra Cluster database.
+Failover systems running DataMiner feature release version 10.4.2 or higher in conjunction with a Cassandra Cluster database.
 
 ## Cause
 
