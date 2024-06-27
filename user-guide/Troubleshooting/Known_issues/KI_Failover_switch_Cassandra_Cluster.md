@@ -18,4 +18,4 @@ No fix is available yet.
 
 ## Description
 
-On systems with a Cassandra Cluster database, a Failover switch can take a long time due to blocking calls on SLASPConnection.
+A Failover switch can take a long time due to blocking calls on SLASPConnection.
