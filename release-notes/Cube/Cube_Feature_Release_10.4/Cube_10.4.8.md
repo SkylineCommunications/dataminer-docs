@@ -13,6 +13,7 @@ uid: Cube_Feature_Release_10.4.8
 ## Highlights
 
 - [Enabling or disabling SLAnalytics features either system-wide or for specific parameters [ID_39692]](#enabling-or-disabling-slanalytics-features-either-system-wide-or-for-specific-parameters-id_39692)
+- [Visual Overview: New RegexMatch placeholder [ID_39763]](#visual-overview-new-regexmatch-placeholder-id_39763)
 
 ## New features
 

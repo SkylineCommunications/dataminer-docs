@@ -44,13 +44,18 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
 
-#### DxMs upgraded [ID_39991]
+#### DxMs upgraded [ID_39991] [ID_39992]
 
 <!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- RN 39992: MR 10.4.0 [CU5] - FR TBD -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
+- DataMiner ArtifactDeployer: version 1.7.1
 - DataMiner CoreGateway: version 2.14.8
+- DataMiner FieldControl: version 2.10.6
+- DataMiner Orchestrator: version 1.6.0
+- DataMiner SupportAssistant: version 1.6.9
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
