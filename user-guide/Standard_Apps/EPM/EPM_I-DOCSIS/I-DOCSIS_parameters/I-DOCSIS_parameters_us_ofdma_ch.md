@@ -2,11 +2,11 @@
 uid: I-DOCSIS_parameters_us_ofdma_ch
 ---
 
-# I-DOCSIS parameters – US OFDMA CH
+# Integrated DOCSIS parameters – US OFDMA CH
 
 These parameters are only available in elements running the CISCO CBR-8 CCAP Platform connector.
 
-This page contains an overview of the US OFDMA CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the US OFDMA CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
 ## OFDMA Channels
 

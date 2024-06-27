@@ -3,11 +3,11 @@ uid: I-DOCSIS_parameters
 ---
 
 
-# Available parameters in I-DOCSIS
+# Available parameters in Integrated DOCSIS
 
-## Aggregated parameters in I-DOCSIS
+## Aggregated parameters in Integrated DOCSIS
 
-This section lists the aggregated parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
+This section lists the aggregated parameters for each topology level in the Integrated DOCSIS branch of the EPM Solution.
 
 | KPIs | Network | Market | Hub | CCAP Core | DS Linecard | US Linecard | DS Port | US Port | Node Segment | Service Group [Fiber Node] | DS Service Group | US Service Group |
 | :---: | :-----: | :----: | :---: | :-----: | :---------: | :---------: | :-----: | :-----: | :----------: | :------------------------: | :--------------: | :--------------: |
@@ -33,9 +33,9 @@ This section lists the aggregated parameters for each topology level in the I-DO
 | Percentage DS Utilization|||||||X||X|X|X||
 | Percentage US Utilization||||||||X|X|X||X|
 
-## Unique parameters in I-DOCSIS
+## Unique parameters in Integrated DOCSIS
 
-Below, you can find the pages listing unique aggregated and calculated parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
+Below, you can find the pages listing unique aggregated and calculated parameters for each topology level in the Integrated DOCSIS branch of the EPM Solution.
 
 - [Node Segment](xref:I-DOCSIS_parameters_node_segment)
 

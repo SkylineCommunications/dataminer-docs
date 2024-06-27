@@ -2,9 +2,9 @@
 uid: I-DOCSIS_parameters_node_segment
 ---
 
-# I-DOCSIS parameters – Node Segment
+# Integrated DOCSIS parameters – Node Segment
 
-This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution from version 6.1.5 onwards.
+This page contains an overview of the Node Segment parameters available in the Integrated DOCSIS branch of the EPM Solution from version 6.1.5 onwards.
 
 ## KPIs & KQIs
 
@@ -48,9 +48,6 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by Pre-MTTER being Out of Spec (OOS) or Post-MTTER being Out of Spec (OOS).
 
-  > [!NOTE]
-  > Note that prior to EPM I-DOCSIS 6.1.7<!-- RN 36344 -->, **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS** parameters were affected by NMTTER being out of spec. This was because the parameter **Percentage CM Group Delay or Reflection OOS** did not have a relation with **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS**.
-
   The following table provides information about the group delay and reflection status for different cable modems in a given service group. The table consists of three rows: *Group Delay Status*, *Reflection Status*, and *Group Delay or Reflection Status*. Each row represents a specific aspect of the cable modem performance.
 
   | Cable Modem Number | Group Delay Status | Reflection Status | Group Delay or Reflection Status |
@@ -80,7 +77,7 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Name \[IDX]**: Direct value. The display name of the node segment.
 
-  Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
+  Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the Integrated DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
 
 - **DS Port**: Direct value. The DS port associated with the node segment.
 

@@ -2,7 +2,7 @@
 uid: I-DOCSIS_supported_technologies
 ---
 
-# Supported technologies for I-DOCSIS
+# Supported technologies for Integrated DOCSIS
 
 The table below provides an overview of supported technology and the corresponding connectors.
 
