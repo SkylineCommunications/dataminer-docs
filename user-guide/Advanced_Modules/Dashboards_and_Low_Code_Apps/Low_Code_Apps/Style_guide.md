@@ -68,7 +68,7 @@ In order to have consistent navigation it is recommended to stick to the followi
 
 ## Titles
 
-- Titles are optional on pages. Depends on the fact if it needs to give more context to the user what he is actually looking at. Avoid repeating the app name as title on the pages.
+- Titles are optional on pages. Depends on the fact if it needs to give more context to the user what he/she is actually looking at. Avoid repeating the app name as title on the pages.
 - do not use a background color for titles
 - don't make the titles too big, focus should be on the content of the page
 
