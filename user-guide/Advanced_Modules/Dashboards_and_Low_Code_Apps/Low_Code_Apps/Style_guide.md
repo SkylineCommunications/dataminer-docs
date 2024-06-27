@@ -36,32 +36,42 @@ These best pratices should allow you to create intuitive, visually appealing app
   |------------------|----------------|
   |#F2F2F2           |#1E232F         |
 - make sure your theme has a component style with a transparent background. Use this component style for titles, images, buttons.
+
   ![Transparent Theme](~/user-guide/images/LCA_Style_Guide_Theme_Transparent.png)
-- also make a component style with a background color which differs from the page/panel background, this way they can easily be distinguish from the background. This can be used for query filters, tables, timelines, ... (anything but titles, images, buttons). Choose a slightly lighter color then the page/panel background, some good defaults below:
+- also make a component style with a background color which differs from the page/panel background, this way they can easily be distinguished from the background. This can be used for query filters, tables, timelines, ... (anything but titles, images, buttons). Choose a slightly lighter color then the page/panel background, some good defaults below:
   
   |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
   |#FDFDFD           |#282F3E         |
+  |![Component light style](~/user-guide/images/LCA_Style_Guide_Component_Style_Light.png)|![Component dark style](~/user-guide/images/LCA_Style_Guide_Component_Style_Dark.png)|
 - Make sure when picking colors, that there is enough contrast on text and icons in comparison with the background. This will greatly improve readability for the end user.
 
   |👍 Good |👎 Bad |
   |------|-----|
   |![Good Contrast](~/user-guide/images/LCA_Style_Guide_Contrast_Good.png)|![Bad Contrast](~/user-guide/images/LCA_Style_Guide_Contrast_Bad.png)|
-- Same thing applies when picking a color for the app itself. If you choose an app color, the app will determine itself what the color of the text is based on the chosen background color. Be sure to pick a color which results in enough contrast between the text and background color.  
+- Same thing applies when picking a color for the app itself. If you choose an app color, the app will determine itself what the color of the text is based on the chosen background color. Be sure to pick a color which results in enough contrast between the text and background color, especially in the left-hand pages menu, as this will be a slightly darker color then the chosen app color.   
 
   |👍 Good |👎 Bad |
   |------|-----|
   |![Good App Color](~/user-guide/images/LCA_Style_Guide_App_Color_Good.png)|![Bad App Color](~/user-guide/images/LCA_Style_Guide_App_Color_Bad.png)|
 - Limit the number of colors that you use in an app, don't make it too colorfull nor too monotone.
-- Picking good colors to start from is often a challenge, one way to approach it is to pick some colours from a layout you find online, like this sample below: 
-  ![Sample UI](~/user-guide/images/LCA_Style_Guide_Sample_UI.webp)
+- Picking good colors to start from is often a challenge. One way to approach it is to pick some colours from a layout you find online, like this sample below: 
+
+  |Sample UI | Resulting app with same color palette|
+  |----------|--------------------------------------|
+  |![Sample UI](~/user-guide/images/LCA_Style_Guide_Sample_UI.png)|![Sample UI Result](~/user-guide/images/LCA_Style_Guide_Sample_UI_Result.png)|
 
 ## Navigation
 
 In order to have consistent navigation it is recommended to stick to the following order:
 
-1. Sidebar : main navigation should be the different pages defined in the app.
+1. Sidebar : main navigation should be the different pages defined in the app
+
+   ![Navigation via sidebar](~/user-guide/images/LCA_Style_Guide_Navigation_Pages.png)
+
 1. Menubar : use this for navigation within a page, this can open up hidden page. In this case it make sense to change the title of each page to show where you are. 
+
+   ![Navigation via menubar](~/user-guide/images/LCA_Style_Guide_Navigation_Menu.gif)
 
 > [!CAUTION]
 > It is generally **not** advised to use buttons for navigation.
