@@ -17,6 +17,27 @@ Up to now, if the connected DMA that was used to serve the web API requests for 
 
 When the automatic login with a user's linked DataMiner account failed, up to now a blue error page was shown displaying that there was an unexpected error. Now, the login page will be shown instead, where users can manually log in as a fallback.
 
+#### 19 June 2024 - Fix - Catalog - Email of user not shown in user menu [ID_39960]
+
+It could occur that the user's email could not be shown in the user menu of the Catalog. This issue has been resolved.
+
+#### 19 June 2024 - Fix - Catalog - Selected organization not remembered across dataminer.services apps or after reloading the Catalog [ID_39913]
+
+If an organization was selected in the Catalog app, it could occur that this selection was not remembered when the app was reloaded, and a different organization was selected again (usually, the first organization alphabetically). Similarly, when you switched from one dataminer.services app to another, the organization selection was not remembered.
+
+Now the organization selection will be correctly saved and shared across apps or across app reloads.
+
+#### 19 June 2024 - Enhancement - Catalog - Register catalog item moved to user menu [ID_39906]
+
+The button to open the form in order to register a catalog item has been moved from the header to the user menu.
+
+> [!NOTE]
+> To be able to see the button, you need to be a member of at least one organization.
+
+#### 19 June 2024 - Enhancement - Catalog - Documentation link shown after Catalog item is registered [ID_39904]
+
+​After registering an item, users will now get a link to the documentation guiding them to the next step, i.e. uploading a version.
+
 #### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID_39881]
 
 From now on, if Remote Access to the web apps is enabled, this allows access to the entire folder `/Documents/`, so that it is possible to access the documents available in Cube. Previously, only the `/Documents/DMA_COMMON_DOCUMENTS/` folder was accessible.

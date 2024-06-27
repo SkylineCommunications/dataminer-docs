@@ -455,11 +455,63 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
+#### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+
 #### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
 From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
+
+#### Service & Resource Management: Changing the cache settings of the Resource Manager without restarting DataMiner [ID_39795]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The ResourceManager configuration contains settings that limit the numbers of items that will be cached. These settings have now been updated:
+
+| Setting | Former value | New value |
+|---|---|---|
+| IdCacheConfiguration-MaxObjectsInCache        | 500  | 10000 |
+| TimeRangeCacheConfiguration-MaxObjectsInCache | 3000 | 50000 |
+
+Also, from now on, it will be possible to change these settings without having to restart DataMiner.
+
+To do so, send a `ResourceManagerConfigInfoMessage` containing an `IdCacheConfiguration`, a `TimeRangeCacheConfiguration`, or a `HostedReservationInstanceCacheConfiguration`. Only when the `CleanupCheckInterval` (in case of `TimeRangeCacheConfiguration`) or `CheckInterval` (in case of `HostedReservationInstanceCacheConfiguration`) property has been changed, should the ResourceManager be reinitialized.
+
+See the following example:
+
+```csharp
+var request = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMessage.ConfigInfoType.Set)
+{
+    StorageSettings = new StorageSettings(ResourceStorageType.Elastic),
+    IdCacheConfiguration = new IdCacheConfiguration()
+    {
+        MaxObjectsInCache = 5000,
+        ObjectsLifeSpan = TimeSpan.FromMinutes(10)
+    },
+    TimeRangeCacheConfiguration = new TimeRangeCacheConfiguration()
+    {
+        CleanupCheckInterval = TimeSpan.FromMinutes(10),
+        MaxObjectsInCache = 5000,
+        TimeRangeLifeSpan = TimeSpan.FromMinutes(10)
+    },
+    HostedReservationInstanceCacheConfiguration = new HostedReservationInstanceCacheConfiguration()
+    {
+        CheckInterval = TimeSpan.FromMinutes(10),
+        InitialLoadDays = TimeSpan.FromMinutes(10)
+    }
+};
+var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManagerConfigInfoResponseMessage;
+```
+
+> [!NOTE]
+>
+> - Sending a `ResourceManagerConfigInfoMessage` to a DataMiner Agent will only update the cache settings of that specific agent. If you want to update the settings of all agents in the cluster, you will have to sent a `ResourceManagerConfigInfoMessage` to every agent in that cluster.
+> - To retrieve the above-mentioned settings, you can send a `ResourceManagerConfigInfoMessage` of type `Get`.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
 
@@ -467,13 +519,23 @@ From now on, when a QAction throws an unhandled exception, an attempt will be ma
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
-#### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
+#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
 
-`SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
+However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made to the algorithm that detects change points of type "flatline".
+
+When the trend data of a parameter appears to have frequent flatline periods, the chance of a flatline change point being detected and a suggestion event being created for it has now decreased.
+
+Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
 
 #### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
 
@@ -606,7 +668,7 @@ Up to now, the error thrown when the Service Manager fails to delete a service w
 
 Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
 
-#### Service & Resource Manager: Deadlock when forcing quarantine during a booking update [ID_39755]
+#### Service & Resource Management: Deadlock when forcing quarantine during a booking update [ID_39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
 
@@ -644,3 +706,15 @@ When a join operation was performed with two of the following data sources, in s
 <!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
+
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
+#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.

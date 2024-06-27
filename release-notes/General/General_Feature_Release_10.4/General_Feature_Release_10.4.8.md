@@ -16,10 +16,6 @@ uid: General_Feature_Release_10.4.8
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.8](xref:Web_apps_Feature_Release_10.4.8).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 #### Correlation log file will now include correlation rule statistics [ID_39301]
@@ -126,7 +122,7 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
 From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
 
@@ -326,6 +322,12 @@ In some cases, SLElement could stop working when you assigned an alarm template 
 When an element was started, up to now, its serial connections were set up too early, which would cause issues when credentials were required. From now on, serial connections will be set up after the parameters have been loaded, especially SSH connections that require credentials stored in parameters.
 
 Also, an SSH connect request that receives a bad credentials response will no longer try to connect indefinitely. Instead, after the initial fail, it will only try as often as the configured retry attempts.
+
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
 
 #### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
 
