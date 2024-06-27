@@ -22,7 +22,23 @@ uid: Cube_Feature_Release_10.4.9
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center - Agents: Some buttons will no longer be visible when Cube is connected to a DaaS system [ID_40013]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When Cube is connected to a DaaS system, the following buttons will no longer be visible in the *Agents* section of *System Center*:
+
+- *Stop*
+- *Shut down*
+- *Reboot*
+- *Failover...*
+
+Also, the user permissions that control access to these buttons will no longer be visible:
+
+- *Modules > System configuration > Agents > Stop*
+- *Modules > System configuration > Agents > Shut down*
+- *Modules > System configuration > Agents > Reboot*
+- *Modules > System configuration > Agents > Configure Failover*
 
 ### Fixes
 
