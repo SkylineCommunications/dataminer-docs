@@ -39,13 +39,14 @@ To add C# code to a script:
      > [!NOTE]
      > - This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
      > - The following using statements are added by default:
-     >     - using System
-     >     - using System.IO
-     >     - using Skyline.DataMiner.Automation
-     >     - using Skyline.DataMiner.Net
-     >     - using Skyline.DataMiner.Net.Exceptions
-     >     - using Skyline.DataMiner.Net.Messages
-     >     - using Skyline.DataMiner.Net.AutomationUI
+     >
+     >   - using System
+     >   - using System.IO
+     >   - using Skyline.DataMiner.Automation
+     >   - using Skyline.DataMiner.Net
+     >   - using Skyline.DataMiner.Net.Exceptions
+     >   - using Skyline.DataMiner.Net.Messages
+     >   - using Skyline.DataMiner.Net.AutomationUI
 
    - *DLL references*: Allows you to reference DLLs that are required by the Automation script.
 

@@ -22,6 +22,7 @@ In the Correlation module, the *Alarm Filter* section of the details pane allows
 1. If you want to delete one of the filter conditions, click the X to the right of the filter.
 
 > [!NOTE]
+>
 > - If no alarm filtering is applied, the conditions will be evaluated for all alarms. As such, it is generally good practice to use alarm filtering whenever possible in order to reduce the load on the system.
 > - In case you want a Correlation rule to be triggered upon DataMiner startup, from DataMiner 9.6.11 onwards, an information event is generated after startup that can be used for this purpose. The event has the following properties:
 >   - Element Name: *\[name of the DMA\]*

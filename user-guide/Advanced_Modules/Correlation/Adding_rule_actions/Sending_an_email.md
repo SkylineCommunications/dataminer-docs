@@ -32,7 +32,7 @@ In the *Actions* section of the details pane:
    > [!NOTE]
    > The email subject and message can contain placeholders. To insert a placeholder, right-click inside the subject or message, click *Insert placeholder*, and select the placeholder. For more information on the different placeholders, see [Notification template placeholders](xref:Customizing_the_layout_of_notification_messages#notification-template-placeholders).
    >
-   > Note that prior to DataMiner 10.0.5, placeholders in the subject only are not supported. To use a placeholder in the subject, you must also use one in the message. From DataMiner 10.0.5 onwards, this limitation no longer applies
+   > Note that prior to DataMiner 10.0.5, placeholders in the subject only are not supported. To use a placeholder in the subject, you must also use one in the message. From DataMiner 10.0.5 onwards, this limitation no longer applies.
 
 1. To send a plain text email, select *Plain text*.
 
