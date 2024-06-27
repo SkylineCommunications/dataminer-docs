@@ -10,7 +10,24 @@ These best pratices should allow you to create intuitive, visually appealing app
 > [!TIP]
 > See also: [Kata #19: Transform low-code apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
-## Colours / Themes
+<!-- TOC start -->
+
+- [Style guide](#style-guide)
+   * [Colors / Themes](#colors-themes)
+   * [Navigation](#navigation)
+   * [Titles](#titles)
+   * [Buttons](#buttons)
+   * [DOM Forms](#dom-forms)
+   * [Tables](#tables)
+   * [Grids](#grids)
+   * [Using templates for tables and grids](#using-templates-for-tables-and-grids)
+   * [Panels](#panels)
+   * [Layout](#layout)
+   * [LCA inspiration](#lca-inspiration)
+
+<!-- TOC end -->
+
+## Colors / Themes
 
 - when starting to work on a app it essential to start from a good **theme**. If you like the look and feel of certain app duplicate it and start tuning it for your own app. For more information on how customize a theme, see [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 - when defining a background color for pages and panels (as part of the theme), never use full white (#FFFFFF) or full black (#000000). Some good defaults below:
@@ -96,7 +113,8 @@ Buttons can trigger different actions on page or panel. Some attention points wh
 - If you make the popup/panel max 35% of the width the labels of the form will be shown above the inputs, which might be easier to read.
 
 A good example of a DOM Form with a stepper component inside a panel with save and close button:
-[Example DOM Form](~/user-guide/images/LCA_Style_Guide_Form_Good.png)
+
+![Example DOM Form](~/user-guide/images/LCA_Style_Guide_Form_Good.png)
 
 ## Tables
 
@@ -119,6 +137,24 @@ A good example of a DOM Form with a stepper component inside a panel with save a
     See example of a good visualization of a table below:
 
     ![Good Table](~/user-guide/images/LCA_Style_Guide_Table_Good.png)
+
+## Grids
+
+Displaying multiple records in a LCA can be done by using a grid or a table. In most cases a table makes more sense as you have sorting and filtering options out of the box. Only when very specific visuals are needed with horizontal and/or vertical rows, it makes more sense to use a grid. Here are some examples 
+
+- Use a grid component to create a button panel.
+
+![Control Surface](~/user-guide/images/LCA_Style_Guide_Control_Surface.png)
+
+- Use a grid for button-style filters:
+
+| Horizontal filter |
+|-------------------|
+|![Grid Filter Horizontal](~/user-guide/images/LCA_Style_Guide_Grid_Filter_Horizontal.png)|
+
+| Vertical Filter |
+|-----------------|
+|![Grid Filter Vertical](~/user-guide/images/LCA_Style_Guide_Grid_Filter_Vertical.png)|
 
 ## Using templates for tables and grids
 
@@ -177,8 +213,6 @@ Make sure components on a page/panel are aligned vertically and horizontally
 - Use the available space, avoid huge empty areas on page.
 - Try to limit the number of different font styles and font sizes. Less is more!
 - Adjust the size of components to how much information they contain , so avoid very big ring/status components or very small tables and timelines.
-
-## Grids
 
 
 ## LCA inspiration
