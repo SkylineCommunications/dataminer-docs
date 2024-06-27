@@ -147,6 +147,9 @@ To request a cost estimation, please contact a Skyline representative or <staas@
 
 > [!NOTE]
 > If your DataMiner System uses a proxy setup, ensure that DataMiner Feature Release v10.4.7 is installed.
+> 
+> [!NOTE]
+> Cost Estimations can currently only be performed for West Europe and UK South regions.
 
 ## Limitations
 
