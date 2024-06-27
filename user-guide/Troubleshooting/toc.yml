@@ -224,6 +224,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Failover switch can take a long time on systems with a Cassandra Cluster
+            topicUid: KI_Failover_switch_Cassandra_Cluster
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: NATS services missing after reboot

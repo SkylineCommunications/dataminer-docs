@@ -6,17 +6,15 @@ uid: KI_Failover_switch_Cassandra_Cluster
 
 ## Affected versions
 
-Failover systems with a Cassandra Cluster database.
+Failover systems running DataMiner version 10.4.2 or higher in conjunction with a Cassandra Cluster database.
 
 ## Cause
 
 The problem is probably caused by inefficient alarm distribution queries sent by SLASPConnection to SLDataGateway.
 
-## Workaround
-
-None.
-
 ## Fix
+
+No fix is available yet.
 
 ## Description
 
