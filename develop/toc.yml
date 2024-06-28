@@ -5324,7 +5324,7 @@ items:
   items:
     - name: DataMiner Integration Studio (DIS)
       items:
-        - name: Introduction
+        - name: About DIS
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
         - name: Features
           topicUid: DataMiner_Integration_Studio_Features
