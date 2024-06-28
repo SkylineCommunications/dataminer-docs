@@ -30,7 +30,7 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
 
 - Parameters in auto-generated connectors:
 
-  - ~~Lack units, with no adjustable configuration.~~ No longer a limitation since [DataAPI 1.1.3](xref:DataAPI_change_log#1-april-2024---new-feature---dataapi-113---new-configuration-endpoint-for-units-and-decimals-id_39016)
+  - Only prior to [DataAPI 1.1.3](xref:DataAPI_change_log#1-april-2024---new-feature---dataapi-113---new-configuration-endpoint-for-units-and-decimals-id_39016), lack units, with no adjustable configuration.
 
   - Are automatically assigned to pages in the element layout, and this allocation cannot be modified.
 
