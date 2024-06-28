@@ -35,15 +35,15 @@ These best pratices should allow you to create intuitive, visually appealing app
   |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
   |#F4F4F5          |#1E2530         |
-- make sure your theme has a component style with a transparent background. Use this component style for titles, images, buttons.
-
-  ![Transparent Theme](~/user-guide/images/LCA_Style_Guide_Theme_Transparent.png)
 - also make a component style with a background color which differs from the page/panel background, this way they can easily be distinguished from the background. This can be used for query filters, tables, timelines, ... (anything but titles, images, buttons). Choose a slightly lighter color then the page/panel background, some good defaults below:
   
   |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
   |#FDFDFD           |#272E38        |
   |![Component light style](~/user-guide/images/LCA_Style_Guide_Component_Style_Light.png)|![Component dark style](~/user-guide/images/LCA_Style_Guide_Component_Style_Dark.png)|
+- make sure your theme has a component style with a transparent background. Use this component style for titles, images, buttons.
+
+  ![Transparent Theme](~/user-guide/images/LCA_Style_Guide_Theme_Transparent.png)
 - Make sure when picking colors, that there is enough contrast on text and icons in comparison with the background. This will greatly improve readability for the end user.
 
   |👍 Good |👎 Bad |
