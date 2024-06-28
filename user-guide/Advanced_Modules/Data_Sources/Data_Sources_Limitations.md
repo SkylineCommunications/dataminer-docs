@@ -33,6 +33,8 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
   - Lack units, with no adjustable configuration.
 
   - Are automatically assigned to pages in the element layout, and this allocation cannot be modified.
+    
+  - Cannot use any of the names in the [Prohibited names](xref:Parameter_names) list
 
 > [!NOTE]
 > Certain limitations are expected to be addressed in future DataMiner versions.
