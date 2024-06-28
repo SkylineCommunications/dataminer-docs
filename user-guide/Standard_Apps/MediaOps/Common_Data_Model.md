@@ -8,7 +8,7 @@ Several low-code apps available in the DataMiner Catalog, including all [MediaOp
 
 Definitions that are functionally related are grouped into modules. Below is an overview of the different modules.
 
-#### Contracts
+### Contracts
 
 <table>
 	<thead>
@@ -205,7 +205,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Cost Ratecards
+### Cost Ratecards
 
 <table>
 	<thead>
@@ -293,7 +293,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Billing Ratecards
+### Billing Ratecards
 
 <table>
 	<thead>
@@ -381,7 +381,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### App Data
+### App Data
 
 <table>
 	<thead>
@@ -407,7 +407,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Currencies
+### Currencies
 
 <table>
 	<thead>
@@ -447,7 +447,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Capability
+### Capability
 
 <table>
 	<thead>
@@ -480,7 +480,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### CapabilityEnumValue
+### CapabilityEnumValue
 
 <table>
 	<thead>
@@ -513,7 +513,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### ResourceProperty
+### ResourceProperty
 
 <table>
 	<thead>
@@ -539,7 +539,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Capacity
+### Capacity
 
 <table>
 	<thead>
@@ -600,7 +600,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### ResourcePool
+### ResourcePool
 
 <table>
 	<thead>
@@ -760,7 +760,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Resource
+### Resource
 
 <table>
 	<thead>
@@ -1092,7 +1092,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Slots
+### Slots
 
 <table>
 	<thead>
@@ -1167,7 +1167,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Transponder Plans
+### Transponder Plans
 
 <table>
 	<thead>
@@ -1231,7 +1231,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Beams
+### Beams
 
 <table>
 	<thead>
@@ -1285,7 +1285,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Transponders
+### Transponders
 
 <table>
 	<thead>
@@ -1360,7 +1360,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Satellites
+### Satellites
 
 <table>
 	<thead>
@@ -1493,7 +1493,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Experience
+### Experience
 
 <table>
 	<thead>
@@ -1519,7 +1519,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Skills
+### Skills
 
 <table>
 	<thead>
@@ -1545,7 +1545,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Category
+### Category
 
 <table>
 	<thead>
@@ -1571,7 +1571,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Role
+### Role
 
 <table>
 	<thead>
@@ -1597,7 +1597,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### People
+### People
 
 <table>
 	<thead>
@@ -1719,7 +1719,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Teams
+### Teams
 
 <table>
 	<thead>
@@ -1821,7 +1821,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Expertises
+### Expertises
 
 <table>
 	<thead>
@@ -1847,7 +1847,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Organizations
+### Organizations
 
 <table>
 	<thead>
@@ -1897,7 +1897,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Workflows
+### Workflows
 
 <table>
 	<thead>
@@ -2208,7 +2208,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Job Statuses
+### Job Statuses
 
 <table>
 	<thead>
@@ -2255,7 +2255,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Session Data
+### Session Data
 
 <table>
 	<thead>
@@ -2315,7 +2315,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### App Settings
+### App Settings
 
 <table>
 	<thead>
@@ -2369,7 +2369,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Jobs
+### Jobs
 
 <table>
 	<thead>
@@ -3031,7 +3031,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Recurrences
+### Recurrences
 
 <table>
 	<thead>
@@ -3071,7 +3071,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Rates
+### Rates
 
 <table>
 	<thead>
@@ -3125,7 +3125,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Job Node Relationship Actions
+### Job Node Relationship Actions
 
 <table>
 	<thead>
@@ -3189,7 +3189,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Level
+### Level
 
 <table>
 	<thead>
@@ -3236,7 +3236,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### VirtualSignalGroup
+### VirtualSignalGroup
 
 <table>
 	<thead>
@@ -3379,7 +3379,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Workflow Mappings
+### Workflow Mappings
 
 <table>
 	<thead>
@@ -3429,7 +3429,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Virtual Signal Group Types
+### Virtual Signal Group Types
 
 <table>
 	<thead>
@@ -3455,7 +3455,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Flow
+### Flow
 
 <table>
 	<thead>
@@ -3654,7 +3654,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Connection
+### Connection
 
 <table>
 	<thead>
@@ -3746,7 +3746,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Area
+### Area
 
 <table>
 	<thead>
@@ -3800,7 +3800,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 	</tbody>
 </table>
 
-#### Domain
+### Domain
 
 <table>
 	<thead>
@@ -3849,7 +3849,7 @@ Definitions that are functionally related are grouped into modules. Below is an 
 			<td>List`1</td>
 			<td></td>
 			<td>Read/Write</td>
-			<td>Optional</td>****
+			<td>Optional</td>
 		</tr>
 	</tbody>
 </table>
