@@ -34,7 +34,7 @@ These best pratices should allow you to create intuitive, visually appealing app
 
   |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
-  |#F2F2F2           |#1E232F         |
+  |#F4F4F5          |#1E2530         |
 - make sure your theme has a component style with a transparent background. Use this component style for titles, images, buttons.
 
   ![Transparent Theme](~/user-guide/images/LCA_Style_Guide_Theme_Transparent.png)
@@ -42,7 +42,7 @@ These best pratices should allow you to create intuitive, visually appealing app
   
   |☀️  Light background |🌙 Dark background|
   |------------------|----------------|
-  |#FDFDFD           |#282F3E         |
+  |#FDFDFD           |#272E38        |
   |![Component light style](~/user-guide/images/LCA_Style_Guide_Component_Style_Light.png)|![Component dark style](~/user-guide/images/LCA_Style_Guide_Component_Style_Dark.png)|
 - Make sure when picking colors, that there is enough contrast on text and icons in comparison with the background. This will greatly improve readability for the end user.
 
@@ -82,7 +82,7 @@ In order to have consistent navigation it is recommended to stick to the followi
 
    ![Navigation via sidebar](~/user-guide/images/LCA_Style_Guide_Navigation_Pages.png)
 
-1. Menubar : use this for navigation within a page, this can open up hidden page. In this case it make sense to change the title of each page to show where you are. 
+1. Headerbar : use this for navigation within a page, this can open up hidden page. In this case it make sense to change the title of each page to show where you are. 
 
    ![Navigation via menubar](~/user-guide/images/LCA_Style_Guide_Navigation_Menu.gif)
 
@@ -137,6 +137,10 @@ Buttons can trigger different actions on page or panel. Some attention points wh
 
 - Add icon to the button whenever possible, this will allow a user to understand more easily what is possible 
 
+### Images
+
+- Do not add customer logos on the apps. This might look useful for marketing purposes, but for a customer it brings very little value.
+
 ### DOM Forms
 
 - Forms can best be shown in a popup or side panel. If you choose one over the other, make it consistent across the apps you build.
@@ -158,7 +162,7 @@ A good example of a DOM Form with a stepper component inside a panel with save a
 - Be consistent when using tables in your app(s), they should all have similar look and feel.
 - Use a visual indication (using table templates) on first column to show clearly what row is selected:  
   ![Good Table Actions](~/user-guide/images/LCA_Style_Guide_Table_Select.gif)
-- For adding actions (e.g. edit the row) you can add icons to the first column or as the last column. The disadvantage of using the last column is that the table quick filter often blocks the access to the last column of the first row of a table. As long as that issue exists it is advised to use the first column. Use a context menu (...) to hide secondary actions. 
+- For adding actions (e.g. edit the row) you can add icons to the first column or as the last column. The disadvantage of using the last column is that the table quick filter often blocks the access to the last column of the first row of a table. As long as that issue exists it is advised to use the first column. Use a context menu (...) to hide actions if there are more than 3. 
 
   | 👍 Good | 👎 Bad |
   |------|-----|
