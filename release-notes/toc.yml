@@ -32,7 +32,6 @@ items:
           - name: IDP release notes
             href: IDP/toc.yml
           - name: MbgNMS release notes
-            topicUid: MbgNMS_1.2.3
             href: MbgNMS/toc.yml
           - name: PA release notes
             topicUid: PA_1.3.1
