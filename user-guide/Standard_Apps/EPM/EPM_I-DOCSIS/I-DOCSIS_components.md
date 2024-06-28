@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_components
+keywords: I-DOCSIS components
 ---
 
 # EPM Integrated DOCSIS components

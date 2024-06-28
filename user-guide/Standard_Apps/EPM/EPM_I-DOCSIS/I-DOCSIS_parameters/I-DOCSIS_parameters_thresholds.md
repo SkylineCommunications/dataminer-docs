@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters_thresholds
+keywords: I-DOCSIS parameters
 ---
 
 # Integrated DOCSIS parameters – Thresholds

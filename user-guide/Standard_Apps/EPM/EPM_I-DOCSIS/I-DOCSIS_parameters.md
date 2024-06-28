@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters
+keywords: I-DOCSIS parameters
 ---
 
 

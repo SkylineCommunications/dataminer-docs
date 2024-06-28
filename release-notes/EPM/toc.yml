@@ -29,7 +29,7 @@ items:
     items:
       - name: EPM 1.0.1 GPON - Preview
         topicUid: EPM_1.0.1_GPON
-  - name: I-DOCSIS
+  - name: Integrated DOCSIS
     items:
       - name: EPM 7.0.5 I-DOCSIS (preview)
         topicUid: EPM_7.0.5_I-DOCSIS

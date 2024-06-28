@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters_cm_ds_qam_ch
+keywords: I-DOCSIS parameters
 ---
 
 # Integrated DOCSIS parameters – CM DS QAM CH

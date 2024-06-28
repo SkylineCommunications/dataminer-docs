@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters_ds_ofdm_ch
+keywords: I-DOCSIS parameters
 ---
 
 # Integrated DOCSIS parameters – DS OFDM CH

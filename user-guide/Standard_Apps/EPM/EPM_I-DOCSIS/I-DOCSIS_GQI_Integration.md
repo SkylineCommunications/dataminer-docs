@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_GQI_Integration
+keywords: I-DOCSIS GQI integration
 ---
 
 # Integrated DOCSIS GQI integration

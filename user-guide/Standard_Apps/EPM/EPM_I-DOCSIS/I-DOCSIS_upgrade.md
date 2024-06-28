@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_upgrade
+keywords: I-DOCSIS upgrade
 ---
 
 # EPM Integrated DOCSIS upgrade

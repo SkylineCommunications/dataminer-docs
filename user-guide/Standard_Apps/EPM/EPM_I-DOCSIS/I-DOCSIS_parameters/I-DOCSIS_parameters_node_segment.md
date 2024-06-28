@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters_node_segment
+keywords: I-DOCSIS parameters
 ---
 
 # Integrated DOCSIS parameters – Node Segment

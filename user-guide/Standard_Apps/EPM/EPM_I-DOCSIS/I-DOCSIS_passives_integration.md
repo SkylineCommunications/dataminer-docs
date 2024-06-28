@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_passives_integration
+keywords: I-DOCSIS passives integration
 ---
 
 # Passives integration

@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters_cable_modem
+keywords: I-DOCSIS parameters
 ---
 
 # Integrated DOCSIS parameters – Cable Modem

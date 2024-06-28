@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_deployment
+keywords: I-DOCSIS deployment
 ---
 
 # EPM Integrated DOCSIS deployment
@@ -55,7 +56,11 @@ To deploy the Integrated DOCSIS branch of the EPM Solution:
 
    Optionally, select the default alarm and trend templates during element creation to have a starting point for monitored KPIs.
 
-1. Create one back-end element per DMA where a CCAP Collector will reside. The back-end element will be in charge of all CCAP collectors in the same DMA. The CM Collectors can be placed in DMA's with no back-end element. Place these elements in the view *System* > *DataMiner EPM* > *EPM BE*.
+1. Create one back-end element per DMA where a CCAP collector will reside.
+
+   The back-end element will be in charge of all CCAP collectors on the same DMA. The CM collectors can be placed on DMAs without a back-end element.
+
+   Place these elements in the view *System* > *DataMiner EPM* > *EPM BE*.
 
    Optionally, select the default alarm and trend templates during element creation to have a starting point for monitored KPIs.
 

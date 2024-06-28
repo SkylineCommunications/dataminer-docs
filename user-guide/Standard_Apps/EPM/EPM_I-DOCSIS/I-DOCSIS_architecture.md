@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_architecture
+keywords: I-DOCSIS architecture
 ---
 
 # EPM Integrated DOCSIS architecture

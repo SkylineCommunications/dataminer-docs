@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_supported_technologies
+keywords: I-DOCSIS supported technologies
 ---
 
 # Supported technologies for Integrated DOCSIS

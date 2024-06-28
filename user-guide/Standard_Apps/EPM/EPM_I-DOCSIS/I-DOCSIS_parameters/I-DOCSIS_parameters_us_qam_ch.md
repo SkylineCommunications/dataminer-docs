@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_parameters_us_qam_ch
+keywords: I-DOCSIS parameters
 ---
 
 # Integrated DOCSIS parameters – US QAM CH

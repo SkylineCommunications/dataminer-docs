@@ -1,6 +1,8 @@
 ---
 uid: I-DOCSIS_maps_deployment
+keywords: I-DOCSIS maps deployment
 ---
+
 # EPM Integrated DOCSIS maps deployment
 
 There are two different ways to deploy the Integrated DOCSIS EPM maps to a DataMiner System, depending on the number of elements using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209) protocol:
