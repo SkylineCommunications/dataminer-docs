@@ -30,21 +30,23 @@ Expected duration: 5 minutes
 
 1. Go to <https://catalog.dataminer.services/details/7d78f8c4-323f-4d30-bc27-c9a7194c2f5f>.
 
-1. Click the *Deploy* button to deploy the *Dashboard web component tutorial* package on your DMS.
+1. Click the *Deploy* button to deploy the *Dashboard web component tutorial* package onto your DMS.
 
    This package contains a "Web component tutorial" low-code app and a GQI ad-hoc data source that contains details of KATAs.
 
 ## Step 2: Configure static web components
 
-1. Open the *Web component tutorial* low-code app, which is available on the DataMiner landing page.
+1. Go to your DataMiner landing page (e.g. <https://myDataMiner/root/>), and click the *Web component tutorial* low-code app.
 
-1. [Edit the app](xref:Editing_custom_apps), and make sure the *Static* page of the app is open.
+1. Go to [edit mode](xref:Editing_custom_apps).
 
-1. On this page, there are two assignments. Scroll down to the first assignment, which is to embed another web page.
+1. Make sure you are on the *Static* page, and click the *Edit* button next to the title "Static" on the left. On this page, you will find two assignments.
 
-   1. Click the [web component](xref:DashboardWeb) to select it.
+1. Scroll down to the first assignment, which is to embed a web page by specifying a static URL.
 
-   1. Go to the settings pane.
+   1. Click the [web component](xref:DashboardWeb) to select it. By default, this component will show the home page of <https://docs.dataminer.services>.
+
+   1. On the right, open the *Settings* pane.
 
    1. Set *Type* to "Webpage".
 
@@ -52,37 +54,45 @@ Expected duration: 5 minutes
 
    1. Preview or publish the app to see the embedded webpage.
 
-1. Scroll down to the second assignment, which is to enter your own HTML code.
+1. Go back to edit mode, make sure you are again on the *Static* page, and click its *Edit* button.
 
-   1. Go to the setting of the [web component](xref:DashboardWeb), and set *Type* to "Custom HTML".
+1. Scroll down to the second assignment, which is to embed a web page by specifying custom HTML code.
 
-   1. Enter the desired HTML code. For example, you can enter "Hello there!" in the existing *H1* tag.
+   1. Click the [web component](xref:DashboardWeb), and open the *Settings* pane.
+
+   1. Set *Type* to "Custom HTML", and enter the desired HTML code. For example, you can enter `<h1>Hello there!</h1>`.
 
    1. Preview or publish the app to see your configured content.
 
 ## Step 3: Leverage feeds
 
-1. [Edit the app](xref:Editing_custom_apps), and make sure the *Dynamic* page of the app is open.
+1. Go to [edit mode](xref:Editing_custom_apps).
 
-1. You will notice a [dropdown component](xref:DashboardDropdown) containing different KATAs.
+1. Make sure you are on the *Using feeds* page, and click the *Edit* button next to the title "Using feeds" on the left. On this page, you will find a [table component](xref:DashboardTable) containing different KATAs and two assignments.
 
-1. In the first assignment of this page, you will use the selected item of a dropdown component in the embedded web page.
+1. In the first assignment, you will make sure the video linked to the item selected in the dropdown component is visualized in the web component.
 
-   1. Go to the setting of the [web component](xref:DashboardWeb) to see an initial URL.
+   1. Click the [web component](xref:DashboardWeb), and open the *Settings* pane. You will notice a partial URL has already been entered.
 
    1. Place your mouse cursor at the end of the URL, so that you can extend it. Type a curly bracket ("{") to show the feed intellisense. This will guide you in configuring a placeholder that will be replaced by the corresponding feed value.
 
-   1. Enter "{FEED."Current view"."Dropdown 2"."Selected item"."Query rows".VideoId}" to link to the *VideoId* property of the selected dropdown item.
+   1. Enter `{FEED."Current view"."Dropdown 2"."Selected item"."Query rows".VideoId}` to link to the *VideoId* property of the item selected in the dropdown component.
 
    1. Preview or publish the app to see the selected KATA embedded in your page.
 
-1. Now do the same for the HTML content in the second assignment of the *Dynamic* page.
+1. In the second assignment, you will make sure that, in your HTML code, the title, the number of views and the length of the video will be replaced by the title, the number of view and the length of the video of the item selected in the dropdown component.
 
-   1. Go to the setting of the [web component](xref:DashboardWeb) to see some preconfigured HTML code.
+   1. Click the [web component](xref:DashboardWeb), and open the *Settings* pane. In the *HTML* box, you will see preconfigured HTML code.
 
-   2. Replace the static "Title" in your HTML code by the following feed placeholder: "{FEED."Current view"."Dropdown 9"."Selected item"."Query rows".Title}". Do the same for the *Views* and *Duration* properties.
+   1. Make the following changes to the preconfigured HTML code:
 
-   3. Preview or publish the app to see the selected KATA embedded in your page.
+      - In the `<h1>` tag, replace the static "Title" by the following feed placeholder: `{FEED."Current view"."Dropdown 9"."Selected item"."Query rows".Title}`.
+
+      - In the `<h2>` tag, replace the static "Views" by the following feed placeholder: `{FEED."Current view"."Dropdown 9"."Selected item"."Query rows".Views}`.
+
+      - In the `<h2>` tag, replace the static "Duration" by the following feed placeholder: `{FEED."Current view"."Dropdown 9"."Selected item"."Query rows".Length}`.
+
+   1. Preview or publish the app to see the selected KATA embedded in your page.
 
 ## Learning paths
 
