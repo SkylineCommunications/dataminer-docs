@@ -52,8 +52,8 @@ The flow of the receiver of the merge request is as follows:
        <Type>write</Type>
        <Interprete>
            <RawType>numeric text</RawType>
-           <LengthType>next param</LengthType>
            <Type>double</Type>
+           <LengthType>next param</LengthType>
        </Interprete>
    </Param>
    ```
