@@ -167,8 +167,8 @@ Buttons can trigger different actions on page or panel. Some attention points wh
 ### DOM Forms
 
 - Forms can best be shown in a popup or side panel. If you choose one over the other, make it consistent across the apps you build.
-- Use the "As overlay" option when opening the popup/panel, this way the focus is on the popup/panel and not on the background
-- Add any form actions, like **save** and **delete** as buttons on top of the form. 
+- Use the "As overlay" option when opening the popup/panel, this way the focus is on the popup/panel and not on the background.
+- Add any form actions, like **save** and **delete** in the header bar of the popup/panel.
 - You **must** enable the **Fit to view** setting on a Form in a panel, this will make sure you form scales with the available screen size of the user. 
 - If you make the popup/panel max 35% of the width the labels of the form will be shown above the inputs, which might be easier to read.
 - If the Dom instance shown in the form has states, always show a stepper component on top showing the current state of the instance.
