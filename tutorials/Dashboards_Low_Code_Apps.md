@@ -11,7 +11,6 @@ keywords: low-code, low code, lowcode
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
 | [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio) | Embed a dynamic dashboard for an element using a specific connector in Visual Overview. |
-| [Leverage feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
@@ -30,6 +29,7 @@ keywords: low-code, low code, lowcode
 | [Using a header bar](xref:Tutorial_Apps_Headerbar) | Use a header bar in a low-code app. |
 | [Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) | Run a script when a page of a low-code app is opened. |
 | [Chaining actions](xref:Tutorial_Apps_Chaining_Actions) | Perform consecutive actions in a low-code app. |
+| [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
