@@ -24,18 +24,12 @@ This feature is supported from DataMiner 9.6.7 onwards<!-- RN 21711 -->.
    <Description>Element Manager Type</Description>
    <Information>
       <Subtext>Element Manager Type: Front-End or Back-End</Subtext>
-      <Includes>
-         <Include>time</Include>
-         <Include>range</Include>
-         <Include>steps</Include>
-         <Include>units</Include>
-      </Includes>
    </Information>
    <Type>read</Type>
    <Interprete>
       <RawType>numeric text</RawType>
-      <LengthType>next param</LengthType>
       <Type>double</Type>
+      <LengthType>next param</LengthType>
    </Interprete>
    <Display>
       <RTDisplay>true</RTDisplay>
