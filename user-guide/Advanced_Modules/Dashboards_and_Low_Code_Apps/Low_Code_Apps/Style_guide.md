@@ -72,11 +72,11 @@ These best pratices should allow you to create intuitive, visually appealing app
    
 ## Layout
 
-Make sure components on a page/panel are aligned vertically and horizontally
+- Make sure components on a page/panel are aligned vertically and horizontally
 
-| 👍 Good | 👎 Bad |
-|------|-----|
-|![Good Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Good.png)|![Bad Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Bad.png)|
+   | 👍 Good | 👎 Bad |
+   |------|-----|
+   |![Good Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Good.png)|![Bad Alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Bad.png)|
 
 - Use consistent spacing/margin on a page on the left and right edge across pages. Avoid stretching components to the edge of the page with no spacing. 
 - Use the available space, avoid huge empty areas on page. At the same time , don't clutter the interface with too much information, hide additional information on panels.
@@ -217,7 +217,7 @@ Displaying multiple records in a LCA can be done by using a grid or a table. In 
 
 - to create a button panel.
 
-![Control Surface](~/user-guide/images/LCA_Style_Guide_Control_Surface.png)
+   ![Control Surface](~/user-guide/images/LCA_Style_Guide_Control_Surface.png)
 
 - for button-style filters:
 
