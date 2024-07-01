@@ -1,8 +1,8 @@
 ---
-uid: Support_services_terms
+uid: Support_Terms_On_Premises
 ---
 
-# Support services terms
+# Support services terms: on premises
 
 ## Introduction
 
@@ -13,22 +13,39 @@ This document sets out the terms of Skyline's Support Services for its Software 
 For the purpose of these Terms, the following terms shall have the meanings indicated below:
 
 - "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Miami, or Singapore), excluding respective public holidays.
+
 - "**Service Credit(s)**" means credits that can be utilized by the User for one of the following services: optimization services, performance reviews, architecture reviews, design workshops, or other consultancy services.
+
 - "**Corrective Action**" means a solution, workaround or action plan that provides resolution of the User's Issue.
+
 - "**Corrective time**" means that part of the processing time when the Issue is being handled by Skyline in order to provide a Corrective Action to the User.
+
 - "**DataMiner**" means Skyline's monitoring and orchestration software platform commercialized under the trademark DataMiner.
+
 - "**dataminer.services**" means Skyline's collaboration platform located at <https://dataminer.services/>.
+
 - "**Failure**" means the situation where the Response time in [Schedule 1](#schedule-1-support-plan) is not met.
+
 - "**Issue**" has the meaning given to it in its corresponding priority level in [Schedule 1](#schedule-1-support-plan).
+
 - "**Party**" means Skyline or the User.
+
 - "**Parties**" means both Skyline and the User.
+
 - "**Response time**" means the time given to Skyline to provide a notification of proper receipt and follow-up to the User.
+
 - "**Skyline**" means Skyline Communications N.V. and any other group company.
+
 - "**Software**" means Skyline's DataMiner and accompanying software (if any).
+
 - "**Support**" means Skyline's technical assistance through its dataminer.services platform and by telephone or remote connection.
+
 - "**Support Services**" means the service of providing of Upgrades, Updates, Support, and other assistance services for the Software.
+
 - "**Updates**" means optimizations and bug fixes for the Software.
+
 - "**Upgrades**" means the provision of improvements and new functionalities for the Software.
+
 - "**User**" means the customer that uses Software licenses.
 
 ## Support plans

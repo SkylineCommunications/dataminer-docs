@@ -23,6 +23,7 @@ Expected duration: 15 minutes.
 - [Step 1: Create the ad hoc data source](#step-1-create-the-ad-hoc-data-source)
 - [Step 2: Fetch the client connections from the DMS](#step-2-fetch-the-client-connections-from-the-dms)
 - [Step 3: Transform DMS responses into a GQIPage](#step-3-transform-dms-responses-into-a-gqipage)
+- [Step 4: Configure the script to compile as library](#step-4-configure-the-script-to-compile-as-library)
 
 ## Step 1: Create the ad hoc data source
 
@@ -136,3 +137,18 @@ Transform the responses into a [GQIPage](xref:GQI_GQIPage). Each `LoginInfoRespo
 
 > [!NOTE]
 > Ensure `DateTime` values are in UTC. Although the `ConnectTime` value is in UTC, it is not explicitly marked as such. Therefore, this is specified in the example.
+
+## Step 4: Configure the script to compile as library
+
+In order for GQI to work, the script must be configured to compile as a library.
+
+To do so:
+
+- If you use DIS, add the following to the *Script.Exe* tag in the script XML:
+
+  ```xml
+     <Param type="preCompile">true</Param>
+     <Param type="libraryName">Kata Clients Connections</Param>
+  ```
+
+- If you do not use DIS, in the Automation module in Cube, select the *Compile as library* option. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).

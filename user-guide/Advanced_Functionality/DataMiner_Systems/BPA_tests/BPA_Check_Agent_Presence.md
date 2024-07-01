@@ -46,7 +46,7 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 ## Impact when issues detected
 
 - Impact: RTEs and errors might occur.
-- Corrective action: Check the NATS config on all Agents. See [Investigating NATS issues](xref:Investigating_NATS_Issues).
+- Corrective action: Check the NATS config on all Agents. See [Troubleshooting – NATS](xref:Investigating_NATS_Issues).
 
 ## Limitations
 

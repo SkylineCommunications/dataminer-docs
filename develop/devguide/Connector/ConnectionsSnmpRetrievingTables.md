@@ -246,22 +246,16 @@ In the example below, table 1100 will retrieve a filtered set of rows for the co
 
 ```xml
 <Param id="1100" trending="false">
-  <Name>PortListTable</Name>
-  <Description>Port List</Description>
-  <Information>
-     <Text>Port List</Text>
-     <Subtext>This shows Information about the Ports on this Device.</Subtext>
-  </Information>
+  <Name>Ports</Name>
+  <Description>Ports</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-     <ColumnOption idx="0" pid="1101" type="snmp" options=""/>
-     <ColumnOption idx="1" pid="1102" type="snmp" options=""/>
+     <ColumnOption idx="0" pid="1101" type="snmp" />
+     <ColumnOption idx="1" pid="1102" type="snmp" />
   </ArrayOptions>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-   </Interprete>
+  <Information>
+     <Subtext>This shows Information about the Ports on this Device.</Subtext>
+  </Information>
    <SNMP>
       <Enabled>true</Enabled>
      <OID type="complete" options="instance"></OID>
@@ -271,34 +265,27 @@ In the example below, table 1100 will retrieve a filtered set of rows for the co
   <Name>Port Index</Name>
   <Description>Port Index</Description>
   <Type>read</Type>
-   <Interprete>
+  <Interprete>
       <RawType>other</RawType>
-      <LengthType>next param</LengthType>
       <Type>string</Type>
-   </Interprete>
+      <LengthType>next param</LengthType>
+  </Interprete>
 </Param>
 <Param id="1102" trending="false">
   <Name>Port Type</Name>
   <Description>Port Type</Description>
   <Type>read</Type>
+  <Information>
+     <Subtext>The type of the port.</Subtext>
+  </Information>
   <SNMP>
      <Enabled>true</Enabled>
      <OID type="complete" id="1">1.2.3.4.*</OID>
   </SNMP>
-  <Information>
-     <Text>Port Type</Text>
-     <Subtext>Port Type</Subtext>
-     <Includes>
-        <Include>range</Include>
-        <Include>units</Include>
-        <Include>steps</Include>
-        <Include>time</Include>
-     </Includes>
-  </Information>
   <Interprete>
      <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
      <Type>double</Type>
+     <LengthType>next param</LengthType>
   </Interprete>
 ...
 </Param>

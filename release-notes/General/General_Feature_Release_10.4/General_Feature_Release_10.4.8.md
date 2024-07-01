@@ -16,10 +16,6 @@ uid: General_Feature_Release_10.4.8
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.8](xref:Web_apps_Feature_Release_10.4.8).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 #### Correlation log file will now include correlation rule statistics [ID_39301]
@@ -65,11 +61,11 @@ For more information, see [Function resource settings](xref:Function_resource_se
 
 Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
 
-#### Elasticsearch/OpenSearch: Result set of queries retrieving DOM instances can now be limited [ID_39686]
+#### Elasticsearch/OpenSearch: Limit set on queries retrieving DOM instances will now be applied to the result set [ID_39686]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
-From now on, it is possible to limit the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database. This will enhance overall performance of this type of queries.
+Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
@@ -91,13 +87,15 @@ When the [Security Advisory](xref:BPA_Security_Advisory) BPA test was run on a s
 
 As NATS does not need TLS enabled on single DataMiner Agents, from now on, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will only report an issue regarding NATS TLS when, on a single DataMiner Agent, firewall ports 4222 and 6222 are open.
 
-#### DxMs upgraded [ID_39802]
+#### DxMs upgraded [ID_39802] [ID_39991]
 
 <!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.7.1
+- DataMiner CoreGateway: version 2.14.8
 - DataMiner FieldControl: version 2.10.6
 - DataMiner Orchestrator: version 1.6.0
 - DataMiner SupportAssistant: version 1.6.9
@@ -124,7 +122,7 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
 From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
 
@@ -142,7 +140,41 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
 
+#### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the *VerifyNoLegacyReportsDashboards* prerequisite verifies that no legacy reports and legacy dashboards still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
+
+Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or higher. From now on, this will no longer be the case.
+
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
+
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+
+#### DataMiner backup: 'RemoteServices' folder by default added to backup packages that contain services [ID_39993]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+
 ### Fixes
+
+#### Documents: Issues fixed [ID_39076]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+With regard to document management, the following issues have been fixed:
+
+- In some cases, element documents hosted on a Failover system could incorrectly get deleted when a Failover switch occurred.
+- When you renamed an element, in some cases, its documents would incorrectly no longer be linked to it.
+- When you renamed a document folder with subfolders containing files, in some cases, that folder would not be synchronized correctly among the agent in the cluster.
 
 #### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
 
@@ -282,3 +314,23 @@ See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtoco
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
+
+#### Problem while setting up serial connections when starting an element [ID_39943]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When an element was started, up to now, its serial connections were set up too early, which would cause issues when credentials were required. From now on, serial connections will be set up after the parameters have been loaded, especially SSH connections that require credentials stored in parameters.
+
+Also, an SSH connect request that receives a bad credentials response will no longer try to connect indefinitely. Instead, after the initial fail, it will only try as often as the configured retry attempts.
+
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
+#### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+When initializing a data migration to a Cassandra cluster, in some cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw a KeyNotFoundException, causing the initialization to fail.

@@ -10,14 +10,6 @@ uid: Web_apps_Feature_Release_10.4.8
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.8](xref:General_Feature_Release_10.4.8).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
-
 ## Changes
 
 ### Enhancements
@@ -118,7 +110,7 @@ When a pie chart disappeared to allow an error message to get displayed, in some
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\<username>\\* folder.
+Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\\<username\>\\* folder.
 
 From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
 
@@ -134,8 +126,30 @@ When clicked *Preview draft* immediately after refreshing the browser window, in
 
 When you deleted a low-code app while the dashboard cache was still being initialized, in some cases, an exception could be thrown, and when, later on, you tried to open an app, a `Dashboard was not found` error would be displayed.
 
+#### Dashboards app & Low-Code Apps: Parameter page component would incorrectly not use the time zone specified in the C:\\Skyline DataMiner\\users\\ClientSettings.json file [ID_39947]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+In dashboards and low-code apps, the *Parameter page* component would incorrectly not use the time zone specified in the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
+
+From now on, this component will correctly use the time zone specified in the above-mentioned *ClientSettings.json* file.
+
 #### Low-Code Apps - Timeline component: Timeline items would no longer be visible when you zoomed out on them [ID_39962]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you kept on zooming out on a timeline item, at some point, that item would no longer be visible.
+
+#### Dashboards app & Low-Code Apps - Query filters: Problem with highlight filtering on an enum value linked to a DOM object [ID_39971]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+
+Highlight filtering on an enum value linked to a DOM object would no longer work.
+
+#### Low-Code Apps: Empty actions would incorrectly be considered invalid [ID_40027]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
+
+Up to now, empty actions would incorrectly be considered invalid, causing a `This action is invalid` error to be thrown whenever they were executed.
+
+As empty actions are added by default when you open the action editor of an event, from now on, empty actions will no longer be considered invalid. An error will only be thrown when an action has an invalid configuration.

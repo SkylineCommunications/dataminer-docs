@@ -1,8 +1,8 @@
 ---
-uid: Commercial_Terms
+uid: Terms_of_Sale
 ---
 
-# Commercial terms
+# Terms of sale
 
 ## Glossary
 
