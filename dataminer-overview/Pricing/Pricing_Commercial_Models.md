@@ -8,9 +8,9 @@ The DataMiner software is available in two commercial models: [**Perpetual-Use L
 
 | Deploy models | DataMiner nodes | Storage nodes | Commercial models available |
 |--|--|--|--|
-| Private | Private/public cloud or on-premises | Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
-| Hybrid  | Private/public cloud or on-premises | Storage as a Service (STaaS) | Perpetual-Use Licenses<br>Usage-based services |
-| Hosted  | DataMiner as a Service (DaaS) |  STaaS (default with DaaS) | Usage-based services |
+| Self-managed | Private/public cloud or on-premises | Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
+| Hybrid | Private/public cloud or on-premises | Storage as a Service (STaaS) | Perpetual-Use Licenses<br>Usage-based services |
+| Managed service | DataMiner as a Service (DaaS) |  STaaS | Usage-based services |
 
 ## Perpetual-Use Licenses
 
@@ -26,7 +26,7 @@ Perpetual-Use Licenses are a one-off expenditure.
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner Credits**. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
+DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
 
 By default, it works on a Pay-per-Use model, where the number of credits consumed matches the actual utilization measured or recorded in any given month.
 
@@ -34,11 +34,11 @@ In addition, you also have the option to subscribe to certain services, by reser
 
 ### DataMiner Community Edition
 
-The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on private infrastructure or as a service.
+The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on self-managed infrastructure or as a service.
 
 This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer. When ready to scale up, you can move to the standard usage-based services by purchasing credits.
 
-- **Private instance**: Community Edition systems deployed on your own infrastructure (on-premises or in a private/public cloud) are free, but must be renewed every 12 months.
+- **Self-managed**: Community Edition systems deployed on your own infrastructure (on-premises or in a private/public cloud) are free, but must be renewed every 12 months.
 
 - **DataMiner as a Service**: Community Edition systems [deployed as a service](xref:Creating_a_DMS_in_the_cloud) are free for the first 7 days, with a subscription after that.
 
@@ -84,4 +84,4 @@ Usage-based services are charged based on the actual monthly usage of services, 
 > DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as a usage-based service.
 
 > [!IMPORTANT]
-> The system must be connected to dataminer.services in order to enable metering for systems that are privately hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
+> The system must be connected to dataminer.services in order to enable metering for systems that are self-managed by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.

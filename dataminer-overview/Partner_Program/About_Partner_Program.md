@@ -16,7 +16,7 @@ The moment you become our partner, you start receiving benefits.
 
 ## Partner skill levels
 
-Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a Fiscal Year determines your skill level, which remains valid from the moment you earn it until the end of the following year.
+Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a calendar year determines your skill level, which remains valid from the moment you earn it until the end of the following year.
 
 There are 3 types of skill level depending on your engagement:
 
@@ -30,18 +30,18 @@ A partner can obtain these levels based on business skills, technical skills, or
 
 ## Rewards
 
-Your skill level allows you to buy DataMiner Licenses, DataMiner Credits, and Support Services at discounted rates. The discount rates vary with your skill Level.
+Your skill level allows you to buy DataMiner Licenses, DataMiner credits, and Support Services at discounted rates. The discount rates vary with your skill Level.
 
 *For example: As a partner, you achieved the Technical Creator level, while also having the Business Collaborator level. To determine your Base Discount, we look at the highest level, which in this example is the Technical Creator level.*
 
 The credits you accumulate serve a dual purpose. Not only do they allow you to achieve higher skill levels, you can also translate them to commercial value:
 
-- Sales transactions: Use credits to reduce software license or usage-based services (DataMiner Credits) prices when selling to customers, in addition to your level's Base Discounts.
+- Sales transactions: Use credits to reduce software license or usage-based services (DataMiner credits) prices when selling to customers, in addition to your level's Base Discounts.
 
 - Self-use: reduce your subscriptions costs, training, and certifications.
 
 > [!NOTE]
-> The total number of credits utilized in any given order cannot exceed 5% of the DataMiner Licenses or Usage-based Services ordered for an end customer, 25% of DataMiner Credits when ordering for self-use (e.g. setting up a lab or a demo system), or 50% for your training and certifications.
+> The total number of credits utilized in any given order cannot exceed 5% of the DataMiner Licenses or Usage-based Services ordered for an end customer, 25% of DataMiner credits when ordering for self-use (e.g. setting up a lab or a demo system), or 50% for your training and certifications.
 
 ## Earning Credits  
 
@@ -58,7 +58,7 @@ Technical skills:
 | Metric | Measure | # Credits earned |
 |--|--|--|
 | Formal knowledge | Number of certifications obtained per month | 10 |
-| Community engagement | DevOps Points added per month | 5 per 500 DevOps Points |
+| Community engagement | DevOps Points added per month | 5 per 500 DevOps Points per month |
 | Community engagement | # of downloads per month<br>Automation scripts<br>Applications<br>Connectors<br>Dashboards<br>Visio | 10 per 5 downloads |
 | Supporting infrastructure | Existing Demo System Lab* | 10 per CY |
 
@@ -80,7 +80,7 @@ Business skills:
 | Digital presence | Dojo profile | 10 |
 | Digital presence | # blog posts and PRs | 10 |
 | Sales | Achieving the yearly sales target | 50 |
-| Sales | Per deal registered with Partner Management* |  50 |
+| Sales | Per new deal registered with Partner Management* |  50 |
 | Sales | Per new customer added | 100 |
 
 *\* Only attributed if the opportunity results in a successful business transaction for Skyline, regardless of if the deal was closed by the partner.*

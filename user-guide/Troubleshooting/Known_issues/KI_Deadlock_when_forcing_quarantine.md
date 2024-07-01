@@ -6,7 +6,7 @@ uid: KI_Deadlock_when_forcing_quarantine
 
 ## Affected versions
 
-From DataMiner 10.4.6 onwards.
+DataMiner 10.4.6
 
 ## Cause
 
@@ -14,7 +14,7 @@ In specific circumstances, a new feature introduced in DataMiner 10.4.6 ([ID 392
 
 ## Fix
 
-No fix is available yet.<!-- RN 39755 -->
+Install DataMiner 10.4.6 [CU1].<!-- RN 39755 -->
 
 ## Description
 

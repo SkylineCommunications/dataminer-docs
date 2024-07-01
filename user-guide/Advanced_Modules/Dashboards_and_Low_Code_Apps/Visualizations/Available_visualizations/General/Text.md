@@ -6,6 +6,8 @@ uid: DashboardText
 
 This component displays a block of static text.
 
+![Text](~/user-guide/images/Text_Component.png)<br>*Text component in DataMiner 10.4.5*
+
 To configure this component:
 
 - In the *Component* > *Settings* tab, add the text in the *Text* box.

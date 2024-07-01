@@ -154,8 +154,11 @@ items:
             topicUid: Excluding_alarms_that_affect_the_SLA
       - name: SLA reporting
         topicUid: SLA_reporting
+      - name: Tutorials
+        items:
+          - name: Using an SLA to monitor a power service
+            topicUid: SLA_tutorial
   - name: Correlation
-    topicUid: correlation
     items:
       - name: About DataMiner Correlation
         topicUid: About_DMS_Correlation
@@ -443,12 +446,12 @@ items:
                 topicUid: LineAndAreaChart
               - name: Pie & donut chart
                 topicUid: PieAndDonutChart
-              - name: Bar chart (horizontal)
-                topicUid: BarChartHorizontal
           - name: Other
             items:
               - name: Grid
                 topicUid: DashboardGrid
+              - name: Interactive Automation script
+                topicUid: InteractiveAutomationScript
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
               - name: Parameter page
@@ -582,6 +585,8 @@ items:
                         topicUid: Ad_hoc_Tutorials
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
+                      - name: Building a GQI data source that retrieves data from a DMS
+                        topicUid: Ad_hoc_Tutorials_GQIDMS
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
@@ -1226,7 +1231,9 @@ items:
       - name: SRM code snippets
         topicUid: SRM_code_snippets
       - name: Advanced SRM settings
-        topicUid: Advanced_SRM_settings
+        items:
+          - name: Function resource settings
+            topicUid: Function_resource_settings
       - name: SRM reporting
         topicUid: SRM_reporting
         items:

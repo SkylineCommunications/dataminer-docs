@@ -5,7 +5,7 @@ uid: Service_Orchestration_LSO_script
 # Service Orchestration: LSO script configuration
 
 > [!TIP]
-> An example LSO script is available as part of the framework: *SRM_LSOTemplate*.
+> An example LSO script is available as part of the framework: *SRM_LSOTemplate*.<!-- RN 23626 -->
 
 LSO scripts are responsible for orchestrating the configuration of resources, i.e. launching Profile-Load Scripts to configure the resources included in bookings. See [Life cycle Service Orchestration (LSO) script](xref:srm_scripting#life-cycle-service-orchestration-lso-script).
 

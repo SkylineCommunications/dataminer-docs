@@ -10,14 +10,11 @@ Remote access can be controlled both on organization level and on DMS level. If 
 
 If you have the Owner or Admin role on dataminer.services for an organization, you can enable or disable the [remote access](xref:Cloud_Remote_Access) features.
 
-1. In the Admin app, check whether the correct organization is mentioned in the header bar.
-
-   > [!TIP]
-   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *Organization*, select the *Settings* page.
+1. In the sidebar on the left, under *Organization*, select the *Settings* page.
 
 1. Toggle the *Remote Access* settings to *On* or *Off*, depending on whether you want this to be allowed or disabled for all the DataMiner Systems in this organization.
 
@@ -32,14 +29,11 @@ If you have the Owner or Admin role on dataminer.services for an organization, y
 
 If you have the Owner or Admin role on dataminer.services for a DMS, you can enable or disable the [remote access](xref:Cloud_Remote_Access) features.
 
-1. In the Admin app, check whether the correct organization is mentioned in the header bar.
-
-   > [!TIP]
-   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Settings* page.
+1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *Settings* page.
 
 1. Toggle the *Remote Access* settings to *On* or *Off*, depending on whether you want this to be enabled or not.
 

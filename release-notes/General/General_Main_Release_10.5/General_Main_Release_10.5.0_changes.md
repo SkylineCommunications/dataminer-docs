@@ -126,19 +126,21 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278]
+#### DxMs upgraded [ID_38499] [ID_38596] [ID_38743] [ID_38900] [ID_39278] [ID_39802] [ID_39803]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
 <!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
+<!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
+<!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.6.8
-- DataMiner CoreGateway: version 2.14.6
-- DataMiner FieldControl: version 2.10.5
-- DataMiner Orchestrator: version 1.5.8
-- DataMiner SupportAssistant: version 1.6.8
+- DataMiner ArtifactDeployer: version 1.7.1
+- DataMiner CoreGateway: version 2.14.7
+- DataMiner FieldControl: version 2.10.6
+- DataMiner Orchestrator: version 1.6.0
+- DataMiner SupportAssistant: version 1.6.9
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
@@ -447,6 +449,124 @@ From now on, SLLogCollector packages will also include the contents of the follo
 - *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
 - *C:\\Skyline DataMiner\\Logging\\Web*
 
+#### Elasticsearch/OpenSearch: Limit set on queries retrieving DOM instances will now be applied to the result set [ID_39686]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
+
+#### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+
+#### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when a QAction throws an unhandled exception, an attempt will be made to log that exception in *SLManagedScripting.txt* as an error before the crash dump is created.
+
+#### Service & Resource Management: Changing the cache settings of the Resource Manager without restarting DataMiner [ID_39795]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The ResourceManager configuration contains settings that limit the numbers of items that will be cached. These settings have now been updated:
+
+| Setting | Former value | New value |
+|---|---|---|
+| IdCacheConfiguration-MaxObjectsInCache        | 500  | 10000 |
+| TimeRangeCacheConfiguration-MaxObjectsInCache | 3000 | 50000 |
+
+Also, from now on, it will be possible to change these settings without having to restart DataMiner.
+
+To do so, send a `ResourceManagerConfigInfoMessage` containing an `IdCacheConfiguration`, a `TimeRangeCacheConfiguration`, or a `HostedReservationInstanceCacheConfiguration`. Only when the `CleanupCheckInterval` (in case of `TimeRangeCacheConfiguration`) or `CheckInterval` (in case of `HostedReservationInstanceCacheConfiguration`) property has been changed, should the ResourceManager be reinitialized.
+
+See the following example:
+
+```csharp
+var request = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMessage.ConfigInfoType.Set)
+{
+    StorageSettings = new StorageSettings(ResourceStorageType.Elastic),
+    IdCacheConfiguration = new IdCacheConfiguration()
+    {
+        MaxObjectsInCache = 5000,
+        ObjectsLifeSpan = TimeSpan.FromMinutes(10)
+    },
+    TimeRangeCacheConfiguration = new TimeRangeCacheConfiguration()
+    {
+        CleanupCheckInterval = TimeSpan.FromMinutes(10),
+        MaxObjectsInCache = 5000,
+        TimeRangeLifeSpan = TimeSpan.FromMinutes(10)
+    },
+    HostedReservationInstanceCacheConfiguration = new HostedReservationInstanceCacheConfiguration()
+    {
+        CheckInterval = TimeSpan.FromMinutes(10),
+        InitialLoadDays = TimeSpan.FromMinutes(10)
+    }
+};
+var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManagerConfigInfoResponseMessage;
+```
+
+> [!NOTE]
+>
+> - Sending a `ResourceManagerConfigInfoMessage` to a DataMiner Agent will only update the cache settings of that specific agent. If you want to update the settings of all agents in the cluster, you will have to sent a `ResourceManagerConfigInfoMessage` to every agent in that cluster.
+> - To retrieve the above-mentioned settings, you can send a `ResourceManagerConfigInfoMessage` of type `Get`.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID_39805]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
+
+#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
+
+However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made to the algorithm that detects change points of type "flatline".
+
+When the trend data of a parameter appears to have frequent flatline periods, the chance of a flatline change point being detected and a suggestion event being created for it has now decreased.
+
+Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
+
+#### STaaS: Result set of queries against custom data types can now be limited [ID_39902]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+
+#### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID_39910]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
+
+#### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the *VerifyNoLegacyReportsDashboards* prerequisite verifies that no legacy reports and legacy dashboards still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
+
+Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or higher. From now on, this will no longer be the case.
+
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
+
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -533,3 +653,68 @@ From now on, when an imported element is deleted and then imported again, SLAnal
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
+
+#### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+In some rare cases, TraceData generated during NATSCustodian startup would re-appear later linked to another thread.
+
+#### Service & Resource Management: Error occurring when the Service Manager fails to delete a service was incorrectly logged as 'information' instead of 'error' [ID_39738]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+Up to now, the error thrown when the Service Manager fails to delete a service was incorrectly logged as "information" instead of "error". From now on, this error will be logged as error with log level 0.
+
+Also, when the above-mentioned error is thrown, the *SLResourceManagerAutomation.txt* log file will no longer log "Done deleting service". Instead, it will log that an error occurred and that more information can be found in the *SLServiceManager.txt* log file.
+
+#### Service & Resource Management: Deadlock when forcing quarantine during a booking update [ID_39755]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+After a quarantine had been forced during a booking update, in some cases, the SRM framework would stop responding.
+
+See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
+
+#### SLAnalytics - Alarm template monitoring: Problem when processing template removals [ID_39819]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When all elements were removed from an alarm template, SLAnalytics would correctly remove the template from its cache. However, when that entire alarm template was removed later on, SLAnalytics would incorrectly add an incorrect version of that template to its cache.
+
+Also, when a user created a template and then removed it without assigning elements to it, SLAnalytics would add it to its cache, but would never remove it from its cache.
+
+#### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
+
+<!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
+
+In some cases, SLProtocol would stop working after it had tried to read beyond the size of a table.
+
+#### GQI: Problem when performing a join operation [ID_39844]
+
+<!-- MR 10.5.0 - FR 10.4.8 -->
+
+When a join operation was performed with two of the following data sources, in some cases, the GQI query would fail and return a `Cannot add custom table to the registry as the registry is already built.` error.
+
+- *Get alarms*
+- *Get behavioral change events*
+- *Get trend data pattern events*
+- *Get trend data patterns*
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
+
+#### Problem with SLAnalytics while starting up [ID_39955]
+
+<!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
+
+In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
+#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.

@@ -12,6 +12,8 @@ This filter box can be used in different ways:
 
 - Like any other quick filter in Cube, by adding text in the filter box. While you are typing, suggestions will be displayed above the box. When you empty the filter box, or return the focus to the filter box after it had been elsewhere, history items will also be displayed. To search for a suggested word or history item, select it in the list.
 
+  ![Quick filter](~/user-guide/images/Quick_Filter.png)<br>*Alarm Console in DataMiner 10.4.5*
+
 - Alternatively, it is also possible to add items to the quick filter box, or remove items from the quick filter box, by highlighting them in the Alarm Console. To do so, while pressing the key configured for this in the user settings (by default the left Ctrl key), click on the words you wish to add. You can also press this key and right-click a word to open a context menu with the following options:
 
   - *Add \[highlighted text\] to filter*
@@ -73,6 +75,8 @@ To add such a filtered tab page:
 
 1. Click *Select a filter* to create or select a filter, then select the field you want to filter on.
 
+   ![Alarm filter](~/user-guide/images/Alarm_Filter.png)<br>*Applying an alarm filter in an Alarm Console tab in DataMiner 10.4.5*
+
    > [!NOTE]
    > If any filters have been saved on your DMS, you will be able to choose them in this step. See [Working with saved alarm filters](#working-with-saved-alarm-filters).
 
@@ -115,11 +119,15 @@ To create such a tab:
 
    - Add one or more search terms in the search box. As soon as you start typing, suggestions will be displayed below the box.
 
+     ![Search tab](~/user-guide/images/Search_Tab.png)<br>*Creating a search tab in DataMiner 10.4.5*
+
    - Next to the search box, indicate the time span in which the alarms should occur. By default, this is set to *Last 24 hours*.
 
    - By default, different instances of the same alarm will be combined in a single alarm tree in the results. If you want them to be displayed separately instead, disable the *History tracking* checkbox.
 
    Press Enter or select a suggestion to begin the search. The alarms matching your search phrase will then be retrieved in batches of 50. If there are more than 50 alarms matching the search phrase, a *More results* button will be displayed at the bottom of the list.
+
+![Search tab](~/user-guide/images/SearchTab.png)<br>*Search tab in DataMiner 10.4.5*
 
 Once the first 50 alarms have been retrieved, a graphical representation of the alarm distribution will be displayed at the bottom of the tab.
 

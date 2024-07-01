@@ -2,7 +2,7 @@
 uid: Investigating_NATS_Issues
 ---
 
-# Investigating NATS issues
+# Troubleshooting – NATS
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:
 
@@ -17,10 +17,10 @@ To investigate NATS issues, follow the actions detailed below, in the specified 
 1. [Check if port is already in use](#check-if-port-is-already-in-use)
 1. [Remaining steps](#remaining-steps)
 
-
 It may also be useful to understand the [algorithms used by DataMiner to configure NATS](#algorithms-used-by-dataminer-to-configure-nats).
 
 > [!NOTE]
+>
 > - These are advanced procedures that are only meant for administrators. If you do not feel confident applying any of these procedures, contact Skyline Communications.
 > - Some steps may refer to interfaces/classes of SLMessageBroker.dll, the wrapper for the NATS interface. These will likely only be useful for developers.
 

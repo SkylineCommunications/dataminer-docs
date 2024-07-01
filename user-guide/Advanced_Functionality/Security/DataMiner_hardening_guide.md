@@ -58,6 +58,41 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
+### Disable legacy components
+
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component, the legacy *Reports and Dashboards* component, and the v0 api.
+
+#### Annotations and legacy Reports and Dashboards
+
+To disable both the *Annotations* component and the legacy *Reports and Dashboards* component:
+
+1. Add the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
+
+   ```xml
+   <SLNet>
+      <LegacyAnnotations>false</LegacyAnnotations>
+      <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
+   </SLNet>
+   ```
+
+1. To make the changes take effect, run the *ConfigureIIS.bat* script, located in the `C:\Skyline DataMiner\Tools` folder, as Administrator.
+
+> [!NOTE]
+> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+
+#### v0 API
+
+To disable the v0 API:
+
+1. Open the file `C:\Skyline DataMiner\Webpages\API\Web.config`.
+
+1. Add the tag `<add key="enableLegacyV0Interface" value="false"/>` tag under `<appSettings>`, and save the file.
+
+1. Restart IIS.
+
+> [!NOTE]
+> The v0 API is disabled by default as from DataMiner versions 10.2.0/10.1.6. It is not possible to enable the v0 API when your DMS is connected to dataminer.services.
+
 ## DataMiner Webpages hardening
 
 ### HTTPS
@@ -81,22 +116,6 @@ There are some other HTTP headers that can improve security. However, their valu
 - [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
 
 - [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
-
-### Disable legacy components
-
-DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
-
-```xml
-<SLNet>
-   <LegacyAnnotations>false</LegacyAnnotations>
-   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
-</SLNet>
-```
-
-To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
-
-> [!NOTE]
-> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 ## Operating system hardening
 

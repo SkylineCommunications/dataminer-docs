@@ -41,9 +41,9 @@ The procedures below specify how you can make the Cassandra nodetool accessible 
 1. In the same file, add the following lines:
 
     ```txt
-    -Dcassandra.jmx.remote.port=7199
-    -Dcom.sun.management.jmxremote.rmi.port=7199
-    -Djava.rmi.server.hostname=10.11.1.44 (a publicly accessibly IP address to which the rmi server will listen)
+    JVM_OPTS="$JVM_OPTS -Dcassandra.jmx.remote.port=7199"
+    JVM_OPTS="$JVM_OPTS -Dcom.sun.management.jmxremote.rmi.port=7199"
+    JVM_OPTS="$JVM_OPTS -Djava.rmi.server.hostname=10.11.1.44" (a publicly accessibly IP address to which the rmi server will listen)
     ```
 
 1. On the host, add an inbound firewall rule to expose port 7199.
@@ -54,3 +54,10 @@ The procedures below specify how you can make the Cassandra nodetool accessible 
     sudo systemctl stop cassandra
     sudo systemctl start cassandra
     ```
+
+> [!NOTE]
+> When nodetool is made accessible remotely, JMX authentication needs to be factored in. Additional options can be set in the *cassandra-env.sh* file to either enable or disable this.
+>
+> ```txt
+> JVM_OPTS="$JVM_OPTS -Dcom.sun.management.jmxremote.authenticate=false" <Disables authentication, which is enabled by default>
+> ```
