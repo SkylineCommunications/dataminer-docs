@@ -1,10 +1,11 @@
 ---
 uid: I-DOCSIS_parameters_thresholds
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – Thresholds
+# Integrated DOCSIS parameters – Thresholds
 
-This page contains an overview of the Thresholds parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the Thresholds parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
 ## Upstream QAM Channel Thresholds
 

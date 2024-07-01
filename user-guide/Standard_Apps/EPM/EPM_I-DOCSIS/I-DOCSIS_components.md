@@ -1,8 +1,9 @@
 ---
 uid: I-DOCSIS_components
+keywords: I-DOCSIS components
 ---
 
-# EPM I-DOCSIS components
+# EPM Integrated DOCSIS components
 
 ## Connectors
 
@@ -12,7 +13,7 @@ Collector connectors interface with the main data sources (CMTS and CCAP devices
 
 While these connectors ship out with the solution packages, they need to be contracted separately as necessary.
 
-For an overview of the available collector connectors, see [Supported technologies for I-DOCSIS](xref:I-DOCSIS_supported_technologies).
+For an overview of the available collector connectors, see [Supported technologies for Integrated DOCSIS](xref:I-DOCSIS_supported_technologies).
 
 ### EPM connectors
 
@@ -24,12 +25,9 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 - [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
 
-> [!NOTE]
-> In versions prior to I-DOCSIS 6.1.7<!-- RN 36326 -->, Correlation rules and Automation scripts are used to enable communication between the back end and the Workflow Manager. However, starting from I-DOCSIS 6.1.7, inter-app communication is used for this instead, making those Correlation rules and Automation scripts unnecessary. This change in communication methodology should be taken into consideration when developing software for recent I-DOCSIS versions.
-
 ## Automation scripts
 
-The I-DOCSIS EPM Solution uses the following Automation scripts:
+The Integrated DOCSIS EPM Solution uses the following Automation scripts:
 
 - **EpmConfig**: Sets the front-end configuration in the DMS to improve topology app performance.
 - **EPM_I_DOCSIS_EpmFeToEpmBe**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
@@ -50,7 +48,7 @@ The I-DOCSIS EPM Solution uses the following Automation scripts:
 
 ## Dashboards
 
-The I-DOCSIS EPM Solution includes the following dashboards:
+The Integrated DOCSIS EPM Solution includes the following dashboards:
 
 - AMPLIFIER/01. CM OVERVIEW
 - AMPLIFIER/02. OFFLINE CM OVERVIEW
@@ -83,7 +81,7 @@ The I-DOCSIS EPM Solution includes the following dashboards:
 
 ## Visuals
 
-The I-DOCSIS EPM Solution includes the following visual overviews:
+The Integrated DOCSIS EPM Solution includes the following visual overviews:
 
 - Network
 - Market
