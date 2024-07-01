@@ -4,75 +4,115 @@ uid: PO_Managing_Contacts
 
 # Managing contacts
 
-The *People Overview* page enables you to manage all contacts efficiently. To access the main functionalities, click the buttons in the header bar.
+The *People Overview* page serves as the application's landing page. It allows you to switch between two tabs: *Overview* and *List*, each offering different perspectives on your contacts.
 
-![Header bar](~/user-guide/images/PO_Header_Bar.png)
+You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *People Overview* page.
 
-The page consists of four main components:
+- The *Overview* tab provides a **snapshot of key metrics** across teams, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information at a glance.
 
-- **The *Overview* page**: Highlights [key metrics](#accessing-key-metrics).
+  ![Overview page](~/user-guide/images/PO_People_Overview_Example.png)
 
-- **The *List* page**: Allows for [searching, navigating, and managing contacts](#searching-navigating-and-managing-contacts).
+- The *List* tab provides an **overview of all contacts**, along with their state, email address, skill, experience level, and organization name. This tab allows you access and review contact details in one centralized location.
 
-- **The *Skills* panel**: Enables you to [manage skills](#managing-skills), which can be assigned to individuals.
+  To obtain more information about a specific contact, click the ![Details](~/user-guide/images/PO_Details.png) button in the corresponding row of the list.
 
-- **The *Experience* panel**: Enables you to [manage experience](#managing-experience), which can be assigned to individuals.
+## Searching contacts
 
-## Accessing key metrics
+To search within the list of contacts:
 
-The *Overview* page serves as the application's landing page. It provides a **snapshot of key metrics** across teams, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts.
+1. Navigate to the *List* tab.
 
-![Overview page](~/user-guide/images/PO_People_Overview_Example.png)
+1. Hover your mouse pointer over the contacts list.
 
-## Searching, navigating, and managing contacts
+   In the top-right corner of the list, you will see a magnifying glass icon.
 
-The *List* page allows you to **search, navigate, and manage contacts**. It lists all contacts along with their details such as name, state, email address, skill, experience level, and organization name.
+1. Click the magnifying glass icon to activate the search bar.
 
-To search within the contacts list, hover over the list and click the magnifying glass icon in the top-right corner. For example, typing "Audio Mixer" will show all individuals with "Audio Mixer" as their skill.
+1. Type in your search query.
 
-![Audio Mixer](~/user-guide/images/PO_Search_List.png)
+   You can search based on any of the columns visible in the contacts list, such as name, state, email address, skill level, experience, or organization name.
 
-### Adding a new contact
+   As you type, the list will dynamically update to show contacts that match your search criteria. For example, typing "Audio Mixer" will filter and display all contacts who have "Audio Mixer" listed as their skill.
+
+   ![Audio Mixer](~/user-guide/images/PO_Search_List.png)
+
+> [!NOTE]
+> To clear your search and return to the full list of contacts, delete the text in the search box and click outside of the search box to close it.
+
+## Adding a new contact
 
 To add a new contact:
 
-1. In the header bar of the *List* page, select *+ New contact*.
+1. Navigate to the *List* tab.
+
+1. In the header bar, select *+ New contact*.
 
 1. Provide the necessary people and contact information, and select an organization.
 
 1. Select *Save* in the top-right corner of the panel.
 
-   The *Drafts* panel will open. The new contact is now saved as a draft and needs to be activated.
+   The *Drafts* panel will open. The new contact is now saved as a draft.
 
-1. If you want to activate your newly created contact, select the contact in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel.
+   - If you want to activate your new contact, select the contact in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel.
+
+     > [!NOTE]
+     > To activate all drafts simultaneously, click *Activate All*.
+
+   - If you want to activate your new contact later, click the "X" in the top-right corner of the panel to close it.
+
+     To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
+
+## Editing a contact
+
+To edit an existing contact:
+
+1. Navigate to the *List* tab.
+
+1. Locate the contact you want to edit and click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the contact's details.
+
+   A panel will appear.
+
+1. Select *Edit* in the lower right corner of the panel.
+
+1. Make the necessary changes to the contact details.
+
+1. After making your edits, select *Activate* in the lower right corner.
 
    > [!NOTE]
-   >
-   > - To activate all drafts simultaneously, click *Activate All*.
-   > - If you want to activate the contact later, you can return to the *Drafts* panel by clicking *Drafts* in the header bar of the *List* page.
+   > Skipping this step will keep the contact in an inactive *Edit* state.
 
-### Editing a contact
+1. Select *Save* in the top-right corner to save your changes.
 
-To view detailed information about a contact, click the ![Details](~/user-guide/images/PO_Details.png) button. This includes phone number, address, role, and more.
-
-To edit contact information, click the ![Edit](~/user-guide/images/PO_Edit.png) button.
-
-### Deprecating a contact
+## Deprecating a contact
 
 To deprecate an existing contact:
 
-- Select the contact in the list and click *Deprecate Selected* in the header bar, or
+1. Navigate to the *List* tab.
 
-- Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the contact in question, and select *Deprecate*.
+1. Select the contact you want to deprecate.
 
-> [!NOTE]
-> To access an overview of all deprecated contacts, click *Deprecated* in the header bar of the *List* page.
+1. Click *Deprecate Selected* in the header bar.
 
-## Managing skills
+   An overview of all deprecated contacts will appear. This will include the contact you have just deprecated.
 
-The *Skills* panel provides an **overview of all available skills, with options to edit and create new ones**.
+   > [!NOTE]
+   > To access this overview of deprecated contacts at a later point, click *Deprecated* in the header bar of the *List* page.
 
-Assigning skills to individuals streamlines the booking process by allowing you to quickly identify and assign tasks to qualified individuals. This ensures tasks are delegated efficiently, reducing delays and avoiding confusion.
+## Managing skills and experience
+
+On both the *Overview* and *List* tabs, you can access the *Skills* and *Experience* panels by clicking the *Skills* and *Experience* buttons in the header bar respectively.
+
+![Header bar](~/user-guide/images/PO_Header_Bar.png)
+
+- The *Skills* panel provides an overview of all available skills, with options to edit and create new ones.
+
+  Assigning skills to individuals streamlines the booking process by allowing you to quickly identify and assign tasks to qualified individuals.
+
+- The *Experience* panel provides an overview of all experience entries, with options to edit and create new ones.
+
+  Assigning experience to individuals streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
+
+You can view a contact's skill and experience level in the *Skill* and *Experience* columns on the *List* page.
 
 ### Adding a new skill
 
@@ -97,12 +137,6 @@ To edit an existing skill:
 To assign a skill, enter the appropriate skill in the *Personal skills* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
 
 ![Personal skills](~/user-guide/images/Personal_Skills.png)
-
-## Managing experience
-
-The *Experience* panel provides an **overview of all available levels of experience, with options to edit and create new ones**.
-
-Assigning experience to individuals streamlines the booking process by allowing you to quickly identify and assign tasks to qualified individuals. This ensures tasks are delegated efficiently, reducing delays and avoiding confusion.
 
 ### Adding a new experience entry
 
