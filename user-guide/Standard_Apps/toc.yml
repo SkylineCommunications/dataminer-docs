@@ -205,24 +205,9 @@ items:
           - name: Getting started with configuration backups
             topicUid: IDP_Tutorial_TakeConfigurationBackup
   - name: dataminer.MediaOps
-    topicUid: MediaOps
     items:
-      - name: Installing dataminer.MediaOps
-        topicUid: Installing_MediaOps
       - name: Common Data Model (CDM)
         topicUid: CDM
-      - name: MediaOps applications
-        topicUid: MediaOps_apps
-        items:
-          - name: People & Organizations
-            topicUid: People_Organizations
-            items:
-              - name: Managing contacts
-                topicUid: PO_Managing_Contacts
-              - name: Managing teams
-                topicUid: PO_Managing_Teams
-              - name: Managing organizations
-                topicUid: PO_Managing_Organizations
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
