@@ -50,7 +50,7 @@ items:
             topicUid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
           - name: Restoring the DMA configuration only
             topicUid: Restoring_the_DMA_configuration_only
-          - name: Restoring the database only
+          - name: Restoring the database only (legacy)
             topicUid: Restoring_the_database_only
           - name: Maintaining the dataminer.services connection when restoring a DMA
             topicUid: Maintaining_cloud_connection_when_restoring

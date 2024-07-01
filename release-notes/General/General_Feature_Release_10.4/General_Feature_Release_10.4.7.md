@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.7
 ---
 
-# General Feature Release 10.4.7 – Preview
+# General Feature Release 10.4.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -15,10 +15,6 @@ uid: General_Feature_Release_10.4.7
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.7](xref:Cube_Feature_Release_10.4.7).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.7](xref:Web_apps_Feature_Release_10.4.7).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -93,7 +89,7 @@ A number of enhancements have been made with regard to the replication buffering
 
 - When DataMiner restarted with an active ReplicationBuffer storage file, at the end of its startup routine, it would incorrectly not flush the contents of the file once the replication connection was re-established.
 
-- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. Also, there will only be one ReplicationBuffer file per replicated element.
+- When, after a DataMiner restart, the replication connection was not re-established, a new buffer would be created (with a new hash in the file name), and the old buffer would be left on the disk, never to be used again. From now on, ReplicationBuffer files will no longer have a unique hash in their file name. As a result, there will only be one ReplicationBuffer file per replicated element.
 
 ##### Manually removing old ReplicationBuffer files
 
@@ -180,6 +176,32 @@ When an alarm template contained multiple lines for the same parameter, each wit
 
 A number of security enhancements have been made.
 
+#### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
+
+<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
+
+#### ReIndexElasticSearchIndexes tool: Enhancements [ID_39614]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+A number of enhancements have been made to the *ReIndexElasticSearchIndexes* tool, which must be used when [migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch).
+
+- Up to now, when iterating over all indexes, the process would stop when it reached an index that could not be re-indexed. From now on, all indexes will always be processed, and a list of failed indexes will be written to disk.
+
+- Up to now, logging would only be available during program execution. No logging would be written to file. From now on, a log file will be kept, allowing investigation of any failures that occurred during a re-indexing process.
+
+- Up to now, when a re-indexing process failed, a generic error would be visible in the logging. From now on, the underlying failures detailing the root cause will also be logged.
+
+- Up to now, when a re-indexing process failed, the temporary index that was created would not be deleted. From now on, an attempt will be made to properly delete it.
+
+- Up to now, when the aliases were checked, a correction would be attempted before continuing. However, when a correction was necessary, the process would not continue. From now on, a retry will be made after a correction attempt.
+
+- A command-line option has been added to allow you to retry the failed indexes (which will now be stored in the failed indexes list on disk). This can prove useful if, after investigation, the cause of the failure to re-index has been resolved.
+
+  `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`
+
 #### SNMP++: Trap processing enhancements [ID_39629]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
@@ -200,7 +222,7 @@ From now on, one thread will read the raw data from the UDP buffer and add it to
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Advanced_SRM_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
+When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Function_resource_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
 
 When you create a booking that needs to start immediately, SLNet will enable the DVEs and wait for up to 1 minute until they are active before trying to start the booking. If the DVEs take more than 1 minute to activate, the booking will fail to start since the DVEs need to be activated before the booking can be started.
 
@@ -232,7 +254,7 @@ namespace Script
 
 ##### Waiting for DVE activation confirmation will now be processed asynchronously
 
-Waiting for DVEs to get activated will now be processed asynchronously. This will avoid that function DVEs that take longer to get activated obfuscate the ones that get activated faster.
+Waiting for DVEs to get activated will now be processed asynchronously. This will avoid that bookings with function DVEs that take longer to get activated will prevent other bookings with function DVEs that get activated faster from starting.
 
 ### Fixes
 
@@ -331,8 +353,28 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
-#### Problem when setting up SLNet connections to the IPv6 loopback address [ID_39667]
+#### Problem when setting up SLNet connections to the IPv6 loopback address or an FQDN pointing to a loopback address [ID_39667]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When an SLNet connection was made to the IPv6 loopback address using the FQDN (e.g. when replicating elements on the same DataMiner Agent), the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to one of the IP addresses the FQDN pointed to.
+When an SLNet connection was made to the IPv6 loopback address, the system would incorrectly not use a connection to `ipc://slnet-ipc-callback`. Instead, it would use a TCP connection to the primary IPv6 address.
+
+Also, when an SLNet connection was made to a FQDN which points to a loopback address, the system would incorrectly use a TCP connection to the primary IPv4 address.
+
+#### GQI: 'Get trend data patterns' data source would incorrectly return the pattern ID instead of the linked pattern ID [ID_39811]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.7 [CU0] -->
+
+The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.
+
+#### SLElement would leak memory while NATS was down [ID_39889]
+
+<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
+
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
+
+<!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
+
+In some cases, a deadlock would occur during startup of the SLDataMiner process when services with duplicate IDs were loaded in.

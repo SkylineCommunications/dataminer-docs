@@ -2,17 +2,36 @@
 uid: Web_apps_Feature_Release_10.4.7
 ---
 
-# DataMiner web apps Feature Release 10.4.7 – Preview
+# DataMiner web apps Feature Release 10.4.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.7](xref:General_Feature_Release_10.4.7).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID_39451] [ID_39638]](#low-code-apps---interactive-automation-scripts-ui-can-now-be-hidden-id_39451-id_39638)
+
+## Breaking changes
+
+#### Dashboards app & Low-Code Apps: More consistent use of colors in graphs [ID_39739]
+
+<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+
+The way in which colors are assigned to graphs has been enhanced. Across all components, charts displaying the same data will now use the same colors. This will greatly improve visual coherence and data interpretation.
+
+Instead of each component independently taking the next color from its color palette, components will now check if another component has already requested a color for the same data. If so, the same color will be applied.
+
+Data is considered identical if the display label used in the chart legend is identical. For example, if multiple charts display data labeled "SLNet:0", they will all use the same color for this label.
+
+Note that, by default, colors will not be consistent across different sessions. Refreshing the application may result in different colors being used for the same data. If you want to maintain consistent colors across multiple sessions, you can now define conditional colors in a component theme's color palette by binding colors to specific regular expressions that match the display labels of the data.
+
+> [!NOTE]
+>
+> - If a low-code app created prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 relies on the color order assigned in the theme's color palette, you will need to manually bind these colors to the data using conditional coloring to achieve the same result.
+> - If you want to revert to the former color assignment behavior where a single color is used across all graphs, include only one color in the component theme's color palette.
 
 ## New features
 
@@ -38,7 +57,7 @@ cy.get(`[data-cy="TextComponent"]`)
 
 In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
 
-To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class. Contrary to the `ShowUI()` method, the `HideUI()` method does not require a response and will not return any result.
+To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class.
 
 Example:
 
@@ -179,21 +198,6 @@ Up to now, all open panels would by default be closed when you switched from one
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements with regard to subscription reuse and WebSocket communication, overall performance of the web API has increased.
-
-#### Dashboards app & Low-Code Apps: More consistent use of colors in graphs [ID_39739]
-
-<!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
-
-The way in which colors are assigned to graphs has been enhanced. Across all components, charts displaying the same data will now use the same colors. This will greatly improve visual coherence and data interpretation.
-
-Instead of each component independently taking the next color from its color palette, components will now check if another component has already requested a color for the same data. If so, the same color will be applied.
-
-Data is considered identical if the display label used in the chart legend is identical. For example, if multiple charts display data labeled "SLNet:0", they will all use the same color for this label.
-
-Note that, by default, colors will not be consistent across different sessions. Refreshing the application may result in different colors being used for the same data. If you want to maintain consistent colors across multiple sessions, you can now define conditional colors in a component theme's color palette by binding colors to specific regular expressions that match the display labels of the data.
-
-> [!NOTE]
-> If you want to revert to the former color assignment behavior where a single color is used across all graphs, include only one color in the component theme's color palette.
 
 ### Fixes
 

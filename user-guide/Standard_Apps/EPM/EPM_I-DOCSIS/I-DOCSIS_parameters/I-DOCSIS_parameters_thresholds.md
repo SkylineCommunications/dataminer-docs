@@ -78,7 +78,7 @@ This page contains an overview of the Thresholds parameters available in the I-D
 
 ## D3.0 PNM Thresholds
 
-- **Non-Main-Tap Energy Ratio (NMTER) Threshold**: Calculated. The upper boundary for acceptable NMTER from the cable modem perspective in relation to its upstream (US) channels.
+- **Non-Main Tap Energy Ratio (NMTER) Threshold**: Calculated. The upper boundary for acceptable NMTER from the cable modem perspective in relation to its upstream (US) channels.
 
   Targets the CM Group Delay or Reflection Status parameter using the US QAM Ch NMTER Alarm Status for the underlying business logic.
 
@@ -86,7 +86,7 @@ This page contains an overview of the Thresholds parameters available in the I-D
 
   If at least one associated US channel reports its US QAM Ch NMTER Alarm Status as OOS, the CM Group Delay or Reflection Status will be set to OOS.
 
-- **Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold**: Calculated. The upper boundary for acceptable PreMTTER from the cable modem perspective in relation to its upstream (US) channels.
+- **Pre-Main Tap to Total Energy Ratio (PreMTTER) Threshold**: Calculated. The upper boundary for acceptable PreMTTER from the cable modem perspective in relation to its upstream (US) channels.
 
   Targets the CM Group Delay Status parameter using the US QAM Ch PreMTTER Alarm Status for the underlying business logic.
 
@@ -94,7 +94,7 @@ This page contains an overview of the Thresholds parameters available in the I-D
 
   If at least one associated US Channel reports its US QAM Ch PreMTTER Alarm Status as OOS, the CM Group Delay Status will be set to OOS.
 
-- **Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold**: Calculated. The upper boundary for acceptable PostMTTER from the cable modem perspective in relation to its upstream (US) channels.
+- **Post-Main Tap to Total Energy Ratio (PostMTTER) Threshold**: Calculated. The upper boundary for acceptable PostMTTER from the cable modem perspective in relation to its upstream (US) channels.
 
   Targets the CM Reflection Status parameter using the US QAM Ch PostMTTER Alarm Status for the underlying business logic.
 

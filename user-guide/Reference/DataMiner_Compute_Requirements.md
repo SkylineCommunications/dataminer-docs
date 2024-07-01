@@ -84,7 +84,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 > We recommend always upgrading to the latest .NET Framework version.
 
 > [!IMPORTANT]
-> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) first.
+> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.6-windows-hosting-bundle-installer) first.
 
 ### Microsoft Visual C++
 
@@ -115,7 +115,7 @@ A minimum of 4 GB will be required to smoothly run the necessary services on the
 
 ### CPU
 
-The processes are not CPU-heavy and do not require a lot of parallel computing. That is why we recommend at least 4 cores.
+The processes are not CPU-heavy and do not require a lot of parallel computing. This means that 4 cores should be enough.
 
 ### Network
 

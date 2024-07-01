@@ -246,8 +246,6 @@ items:
                 topicUid: SLNetClientTest_exporting_data_to_csv
               - name: Inspecting parameter table rows in SLProtocol and SLElement
                 topicUid: SLNetClientTest_Inspecting_parameter_table_rows
-              - name: Inspecting the active replication buffers
-                topicUid: SLNetClientTest_inspecting_active_replication_buffers
               - name: Inspecting the contents of a table parameter
                 topicUid: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
               - name: Inspecting the parameter notification queue
@@ -329,6 +327,8 @@ items:
                 topicUid: SLNetClientTest_having_rca_chains_updated
               - name: Increasing the maximum upload size for upgrade packages in a DMS
                 topicUid: SLNetClientTest_increasing_max_upload
+              - name: Inspecting the active replication buffers
+                topicUid: SLNetClientTest_inspecting_active_replication_buffers
               - name: Making DataMiner Cube ignore view updates
                 topicUid: SLNetClientTest_making_Cube_ignore_view_updates
               - name: Managing base subscriptions
@@ -517,8 +517,8 @@ items:
     items:
       - name: Connecting devices using RS-232/RS-422/RS-485
         topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
-  - name: NatsCustodian
-    topicUid: NatsCustodian
+      - name: NatsCustodian
+        topicUid: NatsCustodian
   - name: Frequently asked questions
     topicUid: faq
     items:

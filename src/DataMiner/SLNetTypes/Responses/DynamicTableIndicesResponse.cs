@@ -46,7 +46,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <returns>A string that represents the current object.</returns>
 		public override string ToString()
 		{
-			return String.Format(CultureInfo.InvariantCulture, "{0} table indices ({1}/{2}/{3})", Tools.Length(Indices), DataMinerID, ElementID, ParameterID);
+			return String.Empty;
 		}
 
 		/// <summary>
@@ -92,8 +92,6 @@ namespace Skyline.DataMiner.Net.Messages
 
 			return null;
 		}
-
-
 	}
 }
 

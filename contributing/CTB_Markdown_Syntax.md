@@ -223,6 +223,9 @@ For example:
 > [!NOTE]
 > To upload images, use GitHub Desktop. See [Getting started with your documentation tools](xref:CTB_Documentation_Tools).
 
+> [!IMPORTANT]
+> Make sure image names do not contain any spaces; otherwise, the images will not be shown correctly.
+
 ## Video
 
 To embed a video, use the following syntax:

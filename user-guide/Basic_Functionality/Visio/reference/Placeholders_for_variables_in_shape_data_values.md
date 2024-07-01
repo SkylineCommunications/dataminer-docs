@@ -461,6 +461,31 @@ If you want to override the above-mentioned general rule, you can add to the sha
 > [!NOTE]
 > If the specified property refers to a non-existing element, service or redundancy group, then the shape will not be displayed.
 
+### \[RegexMatch:x,y,options\]
+
+Available from DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards.<!-- RN 39763 -->
+
+This placeholder takes a regular expression and input, and it returns the parts of the input matching the regular expression. For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e. "ac".
+
+When multiple matches are found within the input, by default, all matches will be concatenated and returned as one single string, without any separators. You can specify options to customize this behavior:
+
+- If you want the matches to be separated, you can specify a separator.
+
+  For example, `[RegexMatch: [a-z], aBc, separator=%]` will return "a%c".
+
+- If you do not want all matches to be concatenated, you can use the "index=" option to indicate the specific match you want to have returned.
+
+  For example, `[RegexMatch: [a-z], aBc, index=0]` will return "a".
+
+If the regular expression or the input includes the default separator (","), you can use the [sep:] placeholder to replace it with another one.
+
+For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]`, the default separator has been replaced with "%".
+
+> [!NOTE]
+>
+> - If the regular expression or the input are empty, the placeholder will return an empty string.
+> - The "]" character cannot be used as a separator.
+
 ### \[RegexReplace:x,y,z\]
 
 Use this placeholder to have a value placed in a text string based on the result of a regular expression.
