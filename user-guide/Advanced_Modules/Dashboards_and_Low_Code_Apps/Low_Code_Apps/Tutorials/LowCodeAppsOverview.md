@@ -26,7 +26,6 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 - [Using a header bar](xref:Tutorial_Apps_Headerbar)
 - [Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load)
 - [Chaining actions](xref:Tutorial_Apps_Chaining_Actions)
-- [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component)
 - [Using the stepper component in a low-code app](xref:TutorialStepper)
 - [Styling a table component](xref:Tutorial_Apps_Style_A_Table)
 - [Using the maps component in a low-code app](xref:TutorialMaps)

@@ -6,7 +6,7 @@ uid: Tutorial_Dashboards_Feeds_Web_Component
 
 In this tutorial, you will learn how to embed another webpage directly into a dashboard or low-code app using a [web component](xref:DashboardWeb). You will also find out how you can configure HTML code, the language behind any web page, and you will explore how to utilize feeds to dynamically enhance both approaches.
 
-In the tutorial, a low-code app is used, but this same functionality is also available in dashboards.
+In the tutorial, a low-code app is used, but this component works in exactly the same way in a dashboard.
 
 Expected duration: 5 minutes
 
