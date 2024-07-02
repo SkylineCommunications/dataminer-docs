@@ -9,4 +9,3 @@ The class library contains classes that make it possible to perform operations o
 ## See also
 
 - [Retrieving a parameter value](xref:ClassLibraryExamples#retrieving-a-parameter-value)
-- [InterApp classes](xref:ClassLibraryInterAppClasses)
