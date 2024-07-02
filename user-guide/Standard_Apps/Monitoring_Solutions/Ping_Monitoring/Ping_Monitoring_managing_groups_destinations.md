@@ -16,7 +16,7 @@ uid: Ping_Monitoring_managing_groups_destinations
 
    This will open the *Create New Group* window.
 
-1. Specify a name, description, alarm template, and trend template.
+1. Specify a name, description, hosting DMA, alarm template, and trend template.
 
    For example:
 
