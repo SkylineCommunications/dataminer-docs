@@ -583,6 +583,12 @@ See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Da
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
+#### DataMiner Object Models: SLModuleSettingsManager.txt log file will now contain the IDs of the modules that were created, updated or deleted [ID_40028]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
