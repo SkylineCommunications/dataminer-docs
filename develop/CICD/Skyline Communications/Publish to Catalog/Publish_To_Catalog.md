@@ -16,9 +16,9 @@ This platform is constantly getting improved. At present, several workarounds ar
 
 ## Publishing connectors
 
-Connectors (also known as protocols or drivers) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the catalog.
+Connectors (also known as protocols or drivers) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
 
-All connectors are public catalog items. Perform the following steps to release a connector version:
+All connectors are public Catalog items. Perform the following steps to release a connector version:
 
 1. Make sure the following prerequisites are available:
 
@@ -64,7 +64,7 @@ You can monitor the release pipeline:
 
 ## Publishing DataMiner install packages
 
-DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the catalog.
+DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
 
 1. Make sure the following prerequisites are available:
 
@@ -78,7 +78,10 @@ DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, 
 
 1. Open the source code:
 
-   1. Find or create a new install package in the SLC SE RepoManager under the tab *Packages*. Bear in mind to use the correct *Constraint* field to define the appropriate visibility of the catalog item. See [Creating a repository](xref:Creating_a_repository).
+   1. Find or create a new install package in the SLC SE RepoManager under the tab *Packages*.
+
+      > [!NOTE]
+      > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
    1. Open the solution using Visual Studio.
 
@@ -124,15 +127,15 @@ You can monitor the release pipeline:
 
 Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new Automation scripts should be created on GitHub**.
 
-If you use **SLC SE RepoManager**, Jenkins will be used to automatically publish scripts to the catalog when tagging. For this, you should [follow the same steps as described for connectors](#publishing-connectors) above.
+If you use **SLC SE RepoManager**, Jenkins will be used to automatically publish scripts to the Catalog when tagging. For this, you should [follow the same steps as described for connectors](#publishing-connectors) above.
 
-If you use **GitHub**, the scripts will be published as private catalog items. They can be made public by contacting the Cloud domain.
+If you use **GitHub**, the scripts will be published as private Catalog items. You can have them made public by contacting the Cloud domain.
 
 ## Publishing dashboards
 
-Dashboards are JSON files with configuration settings that can be imported into DataMiner to create a DataMiner dashboard. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the catalog.
+Dashboards are JSON files with configuration settings that can be imported into DataMiner to create a DataMiner dashboard. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
 
-Dashboards are currently published as private catalog items and have type *Unknown*. You can find them in Catalog by searching on their name.
+Dashboards are currently published as private Catalog items with type *Unknown*. You can find them in the Catalog by searching on their name.
 
 As dashboards are a purely visual artifact, the source code is rarely changed directly within the JSON file. Instead, adjustments are made using the Dashboards app UI. Once those adjustments are finished, the JSON is exported.
 
@@ -152,7 +155,10 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
    1. Open the SLC SE RepoManager.
 
-   1. Navigate to the *Dashboards* tab and click the + button on the right to create a new repository. Bear in mind to use the correct *Constraint* field to define the appropriate visibility of the catalog item. See [Creating a repository](xref:Creating_a_repository).
+   1. Navigate to the *Dashboards* tab and click the + button on the right to create a new repository.
+
+      > [!NOTE]
+      > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
    1. Select your new repository and click the clone button in the top-right corner.
 
@@ -180,11 +186,13 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
    1. Optionally, tag a commit to release a stable version.
 
-1. To make sure the deployed dashboard is listed as a public item in catalog. You can either contact the Cloud domain or create an install package as explained below.
+1. If you want to make sure the deployed dashboard is listed as a public item in the Catalog, either contact the Cloud domain or create an install package as explained below.
 
    1. Open the SLC SE RepoManager.
 
-   1. Follow the steps for [install packages](#publishing-dataminer-install-packages) to create and release a new install package containing the dashboard. Bear in mind to use the correct *Constraint* field to make sure your package is listed as a public catalog item. See [Creating a repository](xref:Creating_a_repository).
+   1. Follow the steps for [install packages](#publishing-dataminer-install-packages) to create and release a new install package containing the dashboard.
+
+      Make sure you use the correct *Constraint* field to make sure your package is listed as a public Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
       In *manifest.xml*, add a *Dashboard* tag using the SLC SE RepoManager path to your repository as the repo path and the name of your branch as the range. You can easily get this value by clicking the *Copy* button at the top of the SLC SE RepoManager when you have selected your dashboard.
 
@@ -211,12 +219,15 @@ Visio files can be used as a custom user interface for elements, services, or vi
 
    1. Open the SLC SE RepoManager.
 
-   1. Navigate to the *Visios* tab and click the + button on the right to create a new repository. Bear in mind to use the correct *Constraint* field to define the appropriate visibility of the catalog item. See [Creating a repository](xref:Creating_a_repository).
+   1. Navigate to the *Visios* tab and click the + button on the right to create a new repository.
+
+      > [!NOTE]
+      > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
    1. Select your new repository and click the clone button in the top-right corner.
 
    1. Browse to the repository in File Explorer.
-  
+
    1. Copy the .vsdx file in the repository.
 
 1. Trigger the Visio pipeline
