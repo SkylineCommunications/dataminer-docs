@@ -90,8 +90,8 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 > - [Linking rows to DataMiner objects](xref:Ad_hoc_Metadata)
 > - [Modifying links to DataMiner objects](xref:CO_Metadata)
 
-#### Dashboards app & Low-Code Apps: Time range component would pass along a reversed time range [ID_40056]
+#### Dashboards app & Low-Code Apps: Time range component would pass along a reversed time range to another time range component [ID_40056]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In some cases, a time range feed component would pass along a reversed time range.
+When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
