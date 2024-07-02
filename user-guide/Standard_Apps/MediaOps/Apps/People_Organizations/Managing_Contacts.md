@@ -8,36 +8,15 @@ The *People Overview* page serves as the application's landing page. It allows y
 
 You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *People Overview* page.
 
-- The *Overview* tab provides a **snapshot of key metrics** across teams, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information at a glance.
+![Header bar](~/user-guide/images/PO_HeaderBar.png)
+
+- The *Overview* tab provides a **snapshot of key metrics**, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information at a glance.
 
   ![Overview page](~/user-guide/images/PO_People_Overview_Example.png)
 
-- The *List* tab provides an **overview of all contacts**, along with their state, email address, skill, experience level, and organization name. This tab allows you access and review contact details in one centralized location.
+- The *List* tab provides an **overview of all contacts**, along with their state, email address, skill, experience level, and organization name. This tab allows you to access and review contact details in one centralized location. It also provides an efficient way to [filter through the list of contacts](#searching-within-the-list-of-contacts) based on the provided contact information.
 
   To obtain more information about a specific contact, click the ![Details](~/user-guide/images/PO_Details.png) button in the corresponding row of the list.
-
-## Searching contacts
-
-To search within the list of contacts:
-
-1. Navigate to the *List* tab.
-
-1. Hover your mouse pointer over the contacts list.
-
-   In the top-right corner of the list, you will see a magnifying glass icon.
-
-1. Click the magnifying glass icon to activate the search bar.
-
-1. Type in your search query.
-
-   You can search based on any of the columns visible in the contacts list, such as name, state, email address, skill level, experience, or organization name.
-
-   As you type, the list will dynamically update to show contacts that match your search criteria. For example, typing "Audio Mixer" will filter and display all contacts who have "Audio Mixer" listed as their skill.
-
-   ![Audio Mixer](~/user-guide/images/PO_Search_List.png)
-
-> [!NOTE]
-> To clear your search and return to the full list of contacts, delete the text in the search box and click outside of the search box to close it.
 
 ## Adding a new contact
 
@@ -96,68 +75,101 @@ To deprecate an existing contact:
    An overview of all deprecated contacts will appear. This will include the contact you have just deprecated.
 
    > [!NOTE]
-   > To access this overview of deprecated contacts at a later point, click *Deprecated* in the header bar of the *List* page.
+   > To access this overview of deprecated contacts at a later point, click *Deprecated* in the header bar of the *List* tab.
 
-## Managing skills and experience
+## Searching within the list of contacts
 
-On both the *Overview* and *List* tabs, you can access the *Skills* and *Experience* panels by clicking the *Skills* and *Experience* buttons in the header bar respectively.
+To search within the list of contacts:
+
+1. Navigate to the *List* tab.
+
+1. Hover your mouse pointer over the contacts list.
+
+   In the top-right corner of the list, you will see a magnifying glass icon.
+
+1. Click the magnifying glass icon to activate the search bar.
+
+1. Type in your search query.
+
+   You can search based on any of the columns visible in the contacts list, such as name, state, email address, skill level, experience, or organization name.
+
+   As you type, the list will dynamically update to show contacts that match your search criteria. For example, typing "Audio Mixer" will filter and display all contacts who have "Audio Mixer" listed as their skill.
+
+   ![Audio Mixer](~/user-guide/images/PO_Search_List.png)
+
+> [!NOTE]
+> To clear your search and return to the full list of contacts, delete the text in the search box and click outside of the search box to close it.
+
+## Assigning a skill and experience to a contact
+
+On both the *Overview* and *List* tabs, you can access the *Skills* and *Experience* panels by clicking the respective buttons in the header bar.
 
 ![Header bar](~/user-guide/images/PO_Header_Bar.png)
 
-- The *Skills* panel provides an overview of all available skills, with options to edit and create new ones.
+- The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) and [create new ones](#adding-a-new-skill).
 
   Assigning skills to individuals streamlines the booking process by allowing you to quickly identify and assign tasks to qualified individuals.
 
-- The *Experience* panel provides an overview of all experience entries, with options to edit and create new ones.
+- The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) and [create new ones](#adding-a-new-experience-entry).
 
   Assigning experience to individuals streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
 
-You can view a contact's skill and experience level in the *Skill* and *Experience* columns on the *List* page.
+You can view a contact's skill and experience level in the *Skill* and *Experience* columns on the *List* tab.
+
+To assign a skill or experience, enter the appropriate skill and experience entry in the *Personal skills* field (1) and *Experience level* field (2) respectively when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
+
+![Assigning skills & experience](~/user-guide/images/Assigning_Skills_Experience.png)
 
 ### Adding a new skill
 
 To add a new skill:
 
-1. In the header bar of the *Skills* panel, select *+ New skill*.
+1. In the header bar, click *Skills* to open the *Skills* panel.
 
-1. Enter a name for the skill, e.g. `Video Editor`.
+1. Select *+ New skill*.
+
+1. Enter a name for the new skill in the *Skill* field, e.g. `Video Editor`.
 
 1. Select *Save* in the top-right corner.
+
+   Your new skill will now appear in the list of skills in the *Skills* panel.
 
 ### Editing a skill
 
 To edit an existing skill:
 
-1. In the *Skills* panel, click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the skill you want to edit.
+1. In the header bar, click *Skills* to open the *Skills* panel.
+
+1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the skill you want to edit.
 
 1. Edit the name of the skill and select *Save* in the top-right corner.
 
-### Assigning skills to people
-
-To assign a skill, enter the appropriate skill in the *Personal skills* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
-
-![Personal skills](~/user-guide/images/Personal_Skills.png)
+> [!NOTE]
+> You may need to refresh the page for the change to become visible in the *Skill* column on the *List* tab.
 
 ### Adding a new experience entry
 
 To create a new experience entry:
 
-1. In the header bar of the *Experience* panel, select *+ New experience*.
+1. In the header bar, click *Experience* to open the *Experience* panel.
 
-1. Enter a name for the experience entry, e.g. `Manager`.
+1. Select *+ New experience*.
+
+1. Enter a name for the new experience entry, e.g. `Manager`.
 
 1. Select *Save* in the top-right corner.
+
+   Your new experience entry will now appear in the list of experience levels in the *Experience* panel.
 
 ### Editing an experience entry
 
 To edit an existing experience entry:
 
-1. In the *Experience* panel, click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the entry you want to edit.
+1. In the header bar, click *Experience* to open the *Experience* panel.
+
+1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the entry you want to edit.
 
 1. Edit the name of the experience level and select *Save* in the top-right corner.
 
-### Assigning experience to people
-
-To assign experience, enter the appropriate level of experience in the *Experience level* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
-
-![Experience level](~/user-guide/images/Experience_Level.png)
+> [!NOTE]
+> You may need to refresh the page for the change to become visible in the *Experience* column on the *List* tab.
