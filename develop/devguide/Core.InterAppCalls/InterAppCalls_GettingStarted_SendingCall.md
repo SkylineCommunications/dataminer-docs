@@ -10,7 +10,7 @@ uid: InterAppCalls_GettingStarted_SendingCall
     public static void SendMessages(SLProtocol protocol, int dmaId, int elementId)
     {
         // Prepare necessary mappings
-        List<Type> knownTypes = new List<Type> { typeof(MyMessage), typeof(MyResponse) };
+        List<Type> knownTypes = new List<Type> { typeof(MyMessage) };
 
         // Create new IInterAppCall
         IInterAppCall myCommands = InterAppCallFactory.CreateNew();

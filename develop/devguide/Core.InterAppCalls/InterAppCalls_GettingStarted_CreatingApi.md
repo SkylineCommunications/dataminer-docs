@@ -9,8 +9,8 @@ The first step is to create your API, with the classes that will represent your 
 - Creating the API in a new solution and adding it as a NuGet package, or
 - Creating the API in a precompile QAction and copying it to where you need it.
 
-> [!NOTE]
-> Namespaces you use have to be the same in the source and destination. We strongly recommend creating the API in a separate custom solution and using NuGet packages.
+> [!IMPORTANT]
+> Namespaces you use have to be the same in the source and destination. Due to issues with assembly resolving (see [Assembly Binding](xref:Assembly_Binding)) we strongly recommend copying the Message class definitions into the different scripts and connectors as you need them.
 
 The InterApp framework allows a lot of freedom in the creation of the message classes. The default internal serializer was created to be able to handle almost anything: custom classes, inheritance, abstraction, interfaces, private fields, public properties, objects, etc. There is no need to worry about any JSON properties, or anything to do with how it serializes in the background. Just create the classes as you see fit. Any class that you want to define as a possible message you simply inherit from the InterAppCalls.CallSingle.Message class.
 

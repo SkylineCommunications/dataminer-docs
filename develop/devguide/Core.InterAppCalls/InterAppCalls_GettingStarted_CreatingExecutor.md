@@ -96,11 +96,21 @@ public override Message CreateReturnMessage()
 }
 ```
 
+The executor is following a design pattern called **Template Method** pattern.
+
+Benefits:
+
+- Consistency: The overall process is consistent and follows the defined sequence.
+- Flexibility: Specific steps can be overridden in subclasses if different behavior is needed for certain executors.
+- Clarity: The sequence of steps is clearly defined in one place (the execute method of Executor).
+
+This design pattern ensures that the core structure of the execution process remains intact while allowing for customization and extension where necessary.
+
 > [!NOTE]
 > A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods or QActions within your own connector. This can also be returned.
 
 > [!TIP]
->If your logic does not require the standard Method Template, consider using the  [simple executor](xref:InterAppCalls_Customizations#creating-a-simple-executor). This approach is ideal for simpler situations and helps avoid code bloat.
+> If your logic does not require the standard Method Template, consider using the [simple executor](xref:InterAppCalls_Customizations#creating-a-simple-executor). This approach is ideal for simpler situations and helps avoid code bloat.
 
 ## See also
 
