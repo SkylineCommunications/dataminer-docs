@@ -68,7 +68,7 @@ To create a new repository, click the *Create repository* button in the correspo
 
 - **Constraint**: Defines the visibility of the catalog item.
   - **Customers**: Repositories created specifically for one specific customer. The catalog item will be private.
-  - **Generic**: Repositories that can be reused. The catalog item will be public. This does not apply to dashboard, these are currently private catalog items.
-  - **Internal**: Repositories that are not meant to be published on their own. They are part of an install package or are exclusively for internal use by Skyline.
+  - **Generic**: Repositories that can be reused. The catalog item will be public. This does not apply to dashboards, these are currently private catalog items.
+  - **Internal**: Repositories that are not meant to be published on their own. They are part of an install package or are exclusively for internal use by Skyline. The catalog item will be private.
 - **Category**: The category beneath the constraint.
 - **Name**: The user-friendly name of the repository.
