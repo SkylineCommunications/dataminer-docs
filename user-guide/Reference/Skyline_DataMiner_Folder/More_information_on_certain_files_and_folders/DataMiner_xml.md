@@ -316,8 +316,6 @@ See:
 
 - [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings)
 
-- [Disabling element SNMP agent functionality](xref:Disabling_element_SNMP_agent_functionality)
-
 - [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)
 
 - [Adjusting the SNMP inform message cache size](xref:Adjusting_the_SNMP_inform_message_cache_size)
