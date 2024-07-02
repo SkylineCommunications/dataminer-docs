@@ -519,6 +519,18 @@ var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManage
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### Service & Resource Management: SRM master synchronization now takes into account the Resource Manager state [ID_39835]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, the SRM master synchronization only took into account the DMA state, not the Resource Manager state. In some cases, that could lead to requests being sent to a DataMiner Agent of which the Resource Manager was down.
+
+From now on, the SRM master synchronization will also take into account the Resource Manager state. A DataMiner Agent will only be appointed SRM master if DataMiner is running and if the Resource Manager is initialized.
+
+Note that the DatMiner Agent with the lowest DataMiner ID will be appointed SRM master, based on when the event confirming its status is received. For example, when among the agents in a cluster, a DMA that does not have the lowest ID responds faster than the one with the lowest ID, that DMA will briefly become SRM master before a switch will be made to the one with the lowest ID.
+
+Also, the logging with regard to the SRM master synchronization and master election process has been enhanced.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
