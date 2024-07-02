@@ -101,7 +101,7 @@ The file includes the following tags:
   - **profile** (optional): The GUID of the profile corresponding to the interface.
   - **broadcast** (optional): When set to "true", this attribute indicates that there is no actual DCF connection, but the interface acts as a broadcaster to one or more receiving interfaces.
 
-- **Function.Graphical**: Contains a CDATA tag with the configuration of the function’s icon. Both XAML and SVG format are supported. |
+- **Function.Graphical**: Contains a CDATA tag with the configuration of the function’s icon. Both XAML and SVG format are supported.
 
 The following example illustrates how a XAML or SVG icon can be configured:
 
