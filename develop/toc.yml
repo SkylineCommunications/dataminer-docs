@@ -5131,7 +5131,7 @@
     items:
     - name: Quality Gate
       topicUid: CICD_Quality_Gate_Github
-    items:
+      items:
       - name: GitHub Quality Gate
         topicUid: CICD_Quality_Gate_Github
     - name: Publishing artifacts to the DataMiner Catalog
