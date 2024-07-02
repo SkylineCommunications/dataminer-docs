@@ -192,7 +192,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
    1. Follow the steps for [install packages](#publishing-dataminer-install-packages) to create and release a new install package containing the dashboard.
 
-      Make sure you use the correct *Constraint* field to make sure your package is listed as a public Catalog item. See [Creating a repository](xref:Creating_a_repository).
+      Make sure you use the correct *Constraint* field so your package is listed as a public Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
       In *manifest.xml*, add a *Dashboard* tag using the SLC SE RepoManager path to your repository as the repo path and the name of your branch as the range. You can easily get this value by clicking the *Copy* button at the top of the SLC SE RepoManager when you have selected your dashboard.
 
