@@ -132,7 +132,7 @@ If you use **GitHub**, the scripts will be published as private catalog items. T
 
 Dashboards are JSON files with configuration settings that can be imported into DataMiner to create a DataMiner dashboard. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the catalog.
 
-Dashboards are currently published as private catalog items and have type *Unkown*. You can find them in Catalog by searching on their name.
+Dashboards are currently published as private catalog items and have type *Unknown*. You can find them in Catalog by searching on their name.
 
 As dashboards are a purely visual artifact, the source code is rarely changed directly within the JSON file. Instead, adjustments are made using the Dashboards app UI. Once those adjustments are finished, the JSON is exported.
 
