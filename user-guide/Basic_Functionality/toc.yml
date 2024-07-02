@@ -659,7 +659,9 @@ items:
         items:
           - name: Getting started with basic shapes
             topicUid: Getting_started_with_basic_shapes
-          - name: Using Visio to control dashboard feed components
+          - name: Embedding a connector dashboard in Visual Overview
+            topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+          - name: Using Visual Overview to control dashboard feed components
             topicUid: Using_visio_to_control_dashboard_feed_components
       - name: Miscellaneous
         topicUid: Miscellaneous
