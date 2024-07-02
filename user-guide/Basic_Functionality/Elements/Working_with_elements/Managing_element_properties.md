@@ -82,9 +82,7 @@ To add a custom property to a DataMiner item, which can be an element, but also 
    The same options will be available as when adding a new property.
 
    > [!NOTE]
-   >
-   > - If you change the property name, the value of that property will be lost.
-   > - From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
+   > To change a property name, you will need to delete the property with the old name and create a property with the new name. The value of the property will be lost.
 
 ## Deleting a custom property
 

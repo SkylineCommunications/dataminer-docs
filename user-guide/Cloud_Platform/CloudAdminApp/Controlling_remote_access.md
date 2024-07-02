@@ -22,7 +22,7 @@ If you have the Owner or Admin role on dataminer.services for an organization, y
 >
 > - If a setting is disabled on organization level, it will not be possible to enable it for the DataMiner Systems in this organization.
 > - When you change a *Remote Access* setting from *On* to *Off*, it can take a minute before the change is applied.
-> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
+> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.
 > - The Remote Access feature can also be disabled locally on a specific server. See [Disabling Remote Access and Live Sharing locally](xref:Disabling_Remote_Access_and_Live_Sharing).
 
 ## Controlling the remote access settings of a DMS in your organization
@@ -41,5 +41,5 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 >
 > - If a setting is disabled on organization level, it will not be possible to enable it for a DataMiner System in that organization.
 > - When you change a *Remote Access* setting from *On* to *Off*, it can take a minute before the change is applied.
-> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
+> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.
 > - The Remote Access feature can also be disabled locally on a specific server. See [Disabling Remote Access and Live Sharing locally](xref:Disabling_Remote_Access_and_Live_Sharing).
