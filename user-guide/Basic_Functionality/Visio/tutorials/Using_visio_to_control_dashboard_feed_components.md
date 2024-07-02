@@ -2,7 +2,7 @@
 uid: Using_visio_to_control_dashboard_feed_components
 ---
 
-# Using Visio to control dashboard feed components
+# Using Visual Overview to control dashboard feed components
 
 In this tutorial, you will learn how to feed data into a dashboard URL in order to automate selections on feed components when the dashboard is opened. The data to be fed into the URL will be defined on an element's visual overview through the clever use of shape data.
 

@@ -17,4 +17,4 @@ With the DataMiner Dashboards module, you can create custom dashboards that inte
 > See also:
 >
 > - [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio)
-> - [Using Visio to control dashboard feed components](xref:Using_visio_to_control_dashboard_feed_components)
+> - [Using Visual Overview to control dashboard feed components](xref:Using_visio_to_control_dashboard_feed_components)
