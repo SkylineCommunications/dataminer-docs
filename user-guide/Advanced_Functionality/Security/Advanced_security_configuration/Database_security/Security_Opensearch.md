@@ -10,7 +10,7 @@ keywords: updating OpenSearch, upgrading OpenSearch, OpenSearch security
 
 ## TLS Encryption
 
-For information on how to enable both client-server and inter-node TLS encryption, refer to [TLS configuration](xref:Installing_OpenSearch_database#tls-configuration)
+For information on how to enable both client-server and inter-node TLS encryption, refer to [TLS configuration](xref:Installing_OpenSearch_database#tls-and-user-configuration)
 
 ## Upgrading OpenSearch
 

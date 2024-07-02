@@ -6,6 +6,8 @@ uid: DashboardNumericInputFeed
 
 Available from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. This basic control allows the user to enter numbers, which will then be available as a number feed in the dashboard or low-code app. The number feed can be used by queries and by script parameters in low-code app actions.
 
+![Numeric input](~/user-guide/images/Numeric_Input.png)<br>*Numeric input component in DataMiner 10.4.6*
+
 The following options are available to fine-tune the component layout:
 
 - *Label*: Text that will be displayed next to the numeric input box.
@@ -27,3 +29,6 @@ In the *Settings* tab, you can also configure the following optional settings:
 - *Minimum*: The minimum value for the numeric input.
 
 - *Maximum*: The maximum value for the numeric input.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag a data feed to the component to link it to that feed, or [specify a feed in the URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the feed, but users will still be able to modify the value.

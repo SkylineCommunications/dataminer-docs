@@ -9,7 +9,7 @@ uid: Troubleshooting_Critical_Issues_Alarm_Console
 
 ## Errors in Alarm Console troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -48,11 +48,11 @@ class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RT
 class StickyYes,TogglingYes LightGray;
 class Sticky,Toggling Blue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```
 
 ### Errors in Alarm Console
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -83,7 +83,7 @@ class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RT
 class StickyYes,TogglingYes LightGray;
 class Sticky,Toggling Blue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```
 
 ## Typical errors
 

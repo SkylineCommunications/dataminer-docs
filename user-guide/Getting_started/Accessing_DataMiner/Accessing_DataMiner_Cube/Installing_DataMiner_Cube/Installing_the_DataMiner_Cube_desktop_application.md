@@ -4,9 +4,10 @@ uid: Installing_the_DataMiner_Cube_desktop_application
 
 # Installing the DataMiner Cube desktop application
 
-## Standard installation
+> [!IMPORTANT]
+> Make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
 
-### [From DataMiner 10.0.9 onwards](#tab/tabid-1)
+## Standard installation
 
 1. Log on to [dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
@@ -23,21 +24,6 @@ uid: Installing_the_DataMiner_Cube_desktop_application
 >
 > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
 > - Administrators can [enforce the use of a specific Cube version](xref:DMA_configuration_related_to_client_applications#managing-client-versions) when you connect to a DMA.
-
-### [Prior to DataMiner 10.0.9](#tab/tabid-2)
-
-1. Browse to the IP or hostname of your DMA or to `https://[Your DMA]/root`, depending on your configuration.
-
-   > [!TIP]
-   > See also: [Configuring the landing page of a DMA](xref:Configuring_the_landing_page)
-
-1. Install Cube in one of the following ways, depending on your DataMiner version:
-
-   - From DataMiner 10.0.4 onwards, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
-
-   - Prior to DataMiner 10.0.4, on the landing page, click the user icon in the top-right corner and select the DataMiner Cube installation option you prefer under *Standalone applications*.
-
-***
 
 ## MSI installation
 

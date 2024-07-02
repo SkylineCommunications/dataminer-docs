@@ -4,7 +4,7 @@ uid: Troubleshooting_SLNet_Correlation_Engine
 
 # SLNet - correlation engine
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - sub page on Correlation Engine issues
@@ -61,7 +61,7 @@ class FOUNDYES classSolution
 class PRESENTNO,PRESENT classDecision;
 class START,ENDING,CONTACT classTerminal;
 class HOME,BACK classExternalRef;
-</div>
+```
 
 ## Investigating the data
 

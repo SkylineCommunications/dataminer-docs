@@ -7,7 +7,7 @@ uid: Troubleshooting_Startup_Issues
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -39,4 +39,4 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 class START classTerminal;
 class CHECK1 classDecision;
 class HOME,licensing,nicpriority,dbOffloading,failingHeartbeats,others classExternalRef;
-</div>
+```

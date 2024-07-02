@@ -2,7 +2,7 @@
 uid: EPM_1.0.6_VSAT
 ---
 
-# EPM 1.0.6 VSAT - preview
+# EPM 1.0.6 VSAT
 
 ## New features
 
@@ -18,10 +18,6 @@ In addition, two new dashboards are now included in the solution:
 Both of these dashboards can be used to query historical information events for a user-defined selection of circuits and for a selected time period.
 
 ## Changes
-
-### Enhancements
-
-*No enhancements have been added to this release yet.*
 
 ### Fixes
 

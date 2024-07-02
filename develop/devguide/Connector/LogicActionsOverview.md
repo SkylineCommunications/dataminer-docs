@@ -49,7 +49,7 @@ uid: LogicActionsOverview
 |[set and get with wait](xref:LogicActionSetAndGetWithWait)|Performs an SNMP set and get, and waits until it is executed on the device.|parameter|
 |[set info](xref:LogicActionSetInfo)|Dynamically changes sequence and scale.|parameter|
 |[set next](xref:LogicActionSetNext)|Sets the time to wait before the next pair is executed.|pair|
-|[set with wait](xref:LogicActionSetWithWait)|Performs an SNMP set and waits until it is executed on the device or performs an SNMP set and waits until it is executed on the device..|group, parameter|
+|[set with wait](xref:LogicActionSetWithWait)|Performs an SNMP set and waits until it is executed on the device.|group, parameter|
 |[sleep](xref:LogicActionSleep)|Pauses execution of the thread that executes this action.|protocol|
 |[start](xref:LogicActionStart)|Starts a timer.|timer|
 |[stop](xref:LogicActionStop)|Stops a timer.|timer|

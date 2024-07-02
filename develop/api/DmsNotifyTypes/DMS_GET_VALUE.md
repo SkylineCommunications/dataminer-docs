@@ -4,6 +4,9 @@ uid: DMS_GET_VALUE
 
 # DMS_GET_VALUE (87)
 
+> [!WARNING]
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+
 Retrieves details about a parameter (including the value).
 
 ```csharp
@@ -23,16 +26,21 @@ dms.Notify(type/*DMS_GET_VALUE*/ , subType, ids, parameterID, out result);
 object[] parameterDetails = (object[])result;
 ```
 
-## Parameters:
+## Parameters
 
 - type (int): Specifies the notify type. To perform a DMS_GET_VALUE call, set this to 87.
 - subType (int): Specifies the sub type. Not applicable for DMS_GET_VALUE calls. Set this to 0.
+
   - ids (uint[]):
+
     - ids[0]: DataMiner Agent ID
     - ids[1]: element ID
+
   - parameterID (int): ID of the requested parameter.
   - result (object):
+
     - In case a standalone parameter was retrieved, the returned object is an object array containing the following information:
+
       - result[0] (int): parameter ID
       - result[1] (string): parameter description
       - result[2] (string):
@@ -46,6 +54,7 @@ object[] parameterDetails = (object[])result;
       - result[10] (int): Alarm status (1: Normal, 2: Warning, 3: Minor, 4: Major, 5: Critical)
       - result[11] (int):
       - result[12] (int):
+
     - In case a table or matrix was retrieved, the returned object is an object array. result[4] will hold the table data and be of type object[]. Each element from this array represents a column.
 
 ## Remarks

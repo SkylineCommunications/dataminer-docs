@@ -10,7 +10,7 @@ SLScheduler is a helper process that is called upon when the Windows Task Schedu
 
 ## SLScheduler troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 %% Define styles %%
@@ -67,7 +67,7 @@ class RTE1,RTE2,RTE3,RTE4,RTE5,InfoEvents,End LightGray;
 class RTE,ScheduledEvent,Errors Blue;
 class Home,SLLogCollector,Investigation LightBlue;
 class Config,ErrorYes,Win Gray;
-</div>
+```
 
 ## Scheduled task/event configuration checklist
 

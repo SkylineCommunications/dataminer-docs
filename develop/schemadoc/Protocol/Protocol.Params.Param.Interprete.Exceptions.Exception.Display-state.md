@@ -6,6 +6,8 @@ uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state
 
 Displays the parameter displayed in gray when set to "disabled".
 
+The default state is "enabled".
+
 ## Content Type
 
 [EnumDisplayState](xref:Protocol-EnumDisplayState)

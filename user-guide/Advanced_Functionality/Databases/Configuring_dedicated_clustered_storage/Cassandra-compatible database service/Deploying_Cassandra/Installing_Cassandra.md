@@ -16,18 +16,16 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
    - For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
 
    > [!IMPORTANT]
-   > Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
+   > Make sure that the time of all servers in the cluster is in sync. Even a slight time difference between servers may result in Cassandra nodes failing to join the cluster. We recommend configuring an NTP server to maintain time synchronization between the nodes.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
 
-   - There is a default firewall on Ubuntu, but this is disabled by default. To enable the firewall, use the following command:
+   - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
 
-     `$ sudo ufw enable`
+     `$ sudo ufw allow 22/tcp && sudo ufw enable`
 
      > [!IMPORTANT]
-     > If you connect to your linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
-     >
-     > For this, use the following command: `$ sudo ufw allow 22/tcp`
+     > The first part of the command above ensures that the TCP port 22 used for SSH connections remains open when the firewall is enabled. Enabling the firewall without defining the rule for incoming SSH connections may result in loss of connectivity to the server.
 
    - To add the correct ports to the firewall, you can for example use the following commands for a 3-node cluster:
 

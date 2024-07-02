@@ -13,4 +13,6 @@ The Data Aggregator module is available as a DxM ([DataMiner Extension Module](x
 - [Configuring GQI queries](xref:Data_Aggregator_queries)
 
 > [!IMPORTANT]
-> As no authentication is required to use Data Aggregator (including its REST API and WebSocket interface), in principle anyone could access it. To restrict access, use a firewall.
+>
+> - As no authentication is required to use Data Aggregator (including its REST API and WebSocket interface), in principle anyone could access it. To restrict access, use a firewall.
+> - When upgrading the Data Aggregator module from version 2.x.x to 3.0.0 or higher, and if your prior installation included configured GQI queries, a one-time migration process using the [Data Aggregator Migrator](xref:Data_Aggregator_Migrator) is necessary.

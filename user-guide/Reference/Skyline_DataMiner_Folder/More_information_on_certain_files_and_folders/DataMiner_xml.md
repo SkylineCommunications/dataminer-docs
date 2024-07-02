@@ -92,6 +92,17 @@ This tag can have several subtags:
 
 In addition, the tag can have one optional attribute, **publicDNS**. When a DNS name is specified for this attribute, it will be used instead of the DataMiner IP address for links to the DataMiner user interface in notification emails.
 
+### DataMiner.ExternalAuthentication
+
+This tag is used to configure external authentication.
+
+For more information, see:
+
+- [Configuring SAML with Microsoft Entra ID as identity provider](xref:SAML_using_Entra_ID)
+- [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)
+- [Configuring Atlassian Crowd settings](xref:Configuring_Atlassian_Crowd_settings)
+- [Configuring RADIUS settings](xref:Configuring_RADIUS_settings)
+
 ### DataMiner.ID
 
 Information about the ID ranges to be used for e.g. view creation. This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts.
@@ -218,7 +229,7 @@ This tag has the following two subtags:
 
 ### DataMiner.NetworkAdapters
 
-From DataMiner 9.0.0 CU20/9.5.0 CU3/9.5.7 onwards, you can use this tag to override the order of the network adapters on a DataMiner Agent. This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter).
+You can use this tag to override the order of the network adapters on a DataMiner Agent. This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter).
 
 To do so, specify a number of *\<MAC>* subtags, each containing a MAC address.
 
@@ -305,8 +316,6 @@ See:
 
 - [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings)
 
-- [Disabling element SNMP agent functionality](xref:Disabling_element_SNMP_agent_functionality)
-
 - [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)
 
 - [Adjusting the SNMP inform message cache size](xref:Adjusting_the_SNMP_inform_message_cache_size)
@@ -321,7 +330,9 @@ See:
 
 ### DataMiner.SnmpTrapDistribution
 
-Available from DataMiner 9.6.5 onwards. If set to false, SNMP trap distribution will be disabled within the DMS.
+SNMP trap distribution is a process where SNMP traps or inform messages are shared across DataMiner Agents in the cluster. When a trap arrives at one Agent, it is processed there first. If other Agents in the cluster have elements that listen for traps, the trap will be distributed to those Agents. However, Agents without interested elements will not receive it.
+
+If this is set to false, SNMP trap distribution will be disabled within the DMS.
 
 Example:
 
@@ -332,6 +343,9 @@ Example:
   ...
 </DataMiner>
 ```
+
+> [!NOTE]
+> From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the number of distribution traps is limited to 250,000. When the processing queue of distribution traps contains 250,000 traps, new traps will be rejected until the number of traps in the queue has dropped to 100,000. These limits are fixed and cannot be configured.<!--- RN34525 --->
 
 ### DataMiner.Telnet
 

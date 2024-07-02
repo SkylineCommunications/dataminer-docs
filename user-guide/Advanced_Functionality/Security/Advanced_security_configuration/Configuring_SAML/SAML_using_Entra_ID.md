@@ -58,6 +58,8 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Set *Entity ID* to the IP address or the DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
 
+      If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID.
+
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
       - From DataMiner 10.3.5 onwards:
@@ -88,15 +90,20 @@ To set up external authentication, you first need to create an enterprise applic
 
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
+      > [!NOTE]
+      > If your DMS consists of DMAs accessible via different URLs, specify all of those URLs under *Reply URL*, as detailed above. Otherwise, if a URL is used that is not specified there, this will result in an error.
+
       ![Editing the basic SAML configuration](~/user-guide/images/SAML_Reply_URLs.png)
 
    1. Set *Sign on URL* to the IP address or DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
+
+      If your DMS consists of DMAs accessible via different URLs, specify only the most commonly used URL here.
 
    1. In the top-left corner, click *Save*.
 
 1. Still on the *Single sign-on* page, look for the *SAML Certificates* section and copy the *App Federation Metadata Url*.
 
-   You will need this later when [configuring DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
+   You will need this later, for the *ipMetadata* [configuration in DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
 
 ### Creating a DataMiner metadata file
 
@@ -145,7 +152,7 @@ To set up external authentication, you first need to create an enterprise applic
        </md:SPSSODescriptor>
      ```
 
-1. Replace [ENTITYID] with the IP address or the DNS name of your DataMiner System. This must be the same as the *Entity ID* you specified while setting up the Microsoft Entra ID Enterprise application.
+1. Replace [ENTITYID] with the URL or IP address you specified as the *Entity ID* while setting up the Microsoft Entra ID Enterprise application.
 
 1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. The specified URL(s) must match the *Reply URL* you specified while setting up the Microsoft Entra ID Enterprise application.
 
@@ -198,8 +205,11 @@ Once authentication has been configured, you need to make sure users are provisi
 
 ### Configuring DataMiner to import users and groups from Microsoft Entra ID
 
-> [!NOTE]
+> [!IMPORTANT]
 > If you import over 1000 users or groups, it may take some time before the import is complete. Avoid importing over 10,000 users and groups, as this can result in a timeout.
+
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU12]/10.4.3<!-- RN 38154 -->, the following are not supported: usernames with non-ASCII characters, multiple users with the same first name and surname, and users for which the first name and surname are not provisioned.
 
 #### [From DataMiner 10.1.11/10.2.0 onwards](#tab/tabid-1)
 
@@ -287,6 +297,9 @@ Once authentication has been configured, you need to make sure users are provisi
 1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
    Users will now be able to log in to DataMiner with any of the Entra ID user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
+
+   > [!NOTE]
+   > Prior to DataMiner 10.3.0 [CU12]/10.4.3<!-- RN 38154 -->, usernames of imported users have the format `{organization}\{givenName}.{surname}`. From DataMiner 10.3.0 [CU12]/10.4.3 onwards, they have the format `{domain}\{username}`. For example, the username "ZIINE\Björn.Waldegård" in older DataMiner versions becomes "ziine.com\bjorn.waldegard" from DataMiner 10.3.0 [CU12]/10.4.3 onwards.
 
 #### [Older DataMiner versions](#tab/tabid-2)
 
@@ -396,7 +409,11 @@ There are two ways to configure this setup: with or without group claims.
 
       With this option, the groups you configured when [setting up the application](#setting-up-a-microsoft-entra-id-enterprise-application) will be included in the group claim.
 
-   1. Under *Source attribute*, we recommend selecting *sAMAccountName*.
+   1. Under *Source attribute*, select one of the following options from the dropdown list, depending on your setup:
+
+      1. If Entra ID is synced with an on-premises Active Directory, select *sAMAccountName*.
+
+      1. If the groups only exist on Azure, select *Cloud-only group display names*.
 
    1. Optionally, expand the advanced options to add a filter or customize the name of the group claim.
 
@@ -404,8 +421,10 @@ There are two ways to configure this setup: with or without group claims.
 
    ![Group claim configuration](~/user-guide/images/SAML_Group_claim_config.png)
 
-   > [!NOTE]
-   > The account name of the group will only be sent via SAML when the groups are synchronized (from an on-premises AD). Otherwise, the ID of the group will be sent instead.
+   > [!IMPORTANT]
+   > Double-check which settings you should use: only select *sAMAccountName* if Entra ID is synced with an on-premises Active Directory. If the groups only exist on Azure, set the *Source attribute* to *Cloud-only group display names*.
+   >
+   > This is because the account name of the group will only be sent via SAML when the groups are synchronized (from an on-premises AD). Otherwise, the ID of the group will be sent instead.
 
 1. In DataMiner Cube, add the groups corresponding with the groups you included in the group claim in Entra ID. See [Adding a user group](xref:Adding_a_user_group).
 
@@ -427,7 +446,7 @@ There are two ways to configure this setup: with or without group claims.
          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-         <Groups claims="true">[group claim name]</Groups>
+         <Groups claims="true">http://schemas.microsoft.com/ws/2008/06/identity/claims/groups</Groups>
        </AutomaticUserCreation>
      </ExternalAuthentication>
      ...

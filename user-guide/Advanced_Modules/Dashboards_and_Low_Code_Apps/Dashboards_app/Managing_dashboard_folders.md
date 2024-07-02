@@ -38,9 +38,9 @@ uid: Managing_dashboard_folders
 
 1. Select the folder in the navigation pane.
 
-1. Either right-click the folder in the dashboards list or click the ... button in the top-right corner of the list and select *Rename*.
+1. Either right-click the folder in the dashboards list or click the ... button in the top-right corner of the list. From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->, select *Settings*. Prior to DataMiner 10.3.0 [CU12]/10.4.3, select *Rename*.
 
-1. Enter a new folder name, and click OK.
+1. Enter a new folder name, and click *Apply* or *OK*, depending on your DataMiner version.
 
 > [!NOTE]
 >
@@ -52,7 +52,19 @@ uid: Managing_dashboard_folders
 
 ## Moving a dashboard to a different folder
 
-This is possible from DataMiner 10.0.0/10.0.2 onwards:
+## [From DataMiner 10.3.0 [CU12]/10.4.3 onwards](#tab/tabid-1)
+
+1. Right-click the dashboard in the navigation pane and select *Settings*<!--RN 38278-->.
+
+   The *Dashboard settings* pop-up window will be displayed.
+
+1. Click the *Location* box and either manually specify the new location for the dashboard, or select it in the tree view below.
+
+   You can also create folders at this point, by hovering the mouse pointer over the folder in the tree view where you want to create a folder and clicking the + icon. Then specify the folder name and click the check mark icon.
+
+1. Click *Apply*.
+
+## [Prior to DataMiner 10.3.0 [CU12]/10.4.3](#tab/tabid-2)
 
 1. Right-click the dashboard in the navigation pane and select *Move*.
 
@@ -63,6 +75,8 @@ This is possible from DataMiner 10.0.0/10.0.2 onwards:
    You can also create folders at this point, by hovering the mouse pointer over the folder in the tree view where you want to create a folder and clicking the + icon. Then specify the folder name and click the check mark icon.
 
 1. Click *OK*.
+
+***
 
 > [!NOTE]
 > It is not possible to move a dashboard that is currently being shared. To move such a dashboard, you will need to temporarily stop sharing it and then share it again once it has been moved.

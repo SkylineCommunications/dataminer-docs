@@ -2,7 +2,7 @@
 uid: DaaS_hosting
 ---
 
-# DataMiner as a Service: DataMiner nodes and storage nodes as a service
+# DataMiner as a Service
 
 Today's applications need to be highly responsive and always online. To achieve low latency and high availability, instances of these applications need to be deployed in data centers that are close to their users. Applications need to respond in real time to large changes in usage at peak hours, store ever increasing volumes of data, and make this data available to users in milliseconds.
 
@@ -45,21 +45,18 @@ DataMiner as a Service will allow you to spin up your DataMiner System in the cl
 
   DaaS will enable you to seamlessly monitor your entire infrastructure regardless of whether it is located on premises or off premises.
 
-  ![Pillars_NMS](~/dataminer-overview/images/Hosting_DaaS_overview.png)
+  ![DaaS](~/user-guide/images/DaaS.svg)
 
-## Azure Cosmos DB
+## Effortless storage with STaaS
 
-Azure Cosmos DB offers single-digit millisecond response times, and automatic and instant scalability, along with guaranteed speed at any scale. Business continuity is assured with SLA-backed availability and enterprise-grade security.
-
-As a fully managed service, Azure Cosmos DB takes database administration off your hands with automatic management, updates, and patching. It also handles capacity management with cost-effective serverless and automatic scaling options that respond to application needs to match capacity with demand.
+For its data storage, DataMiner as a Service makes use of DataMiner Storage as a Service (STaaS), which is powered by Azure's cloud-native storage solutions, such as [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction). With automatic management, updates, and patching, database administration is completely taken off your hands. Capacity management is handled with cost-effective serverless and automatic scaling options that respond to application needs to match capacity with demand.
 
 > [!TIP]
 > See also:
 >
-> - [Key benefits of Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction)
-> - [Azure Cosmos DB - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cosmos-db/)
-> - [High availability in Azure Cosmos DB - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cosmos-db/high-availability)
-> - [Business continuity management program in Azure - Microsoft Learn](https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program)
+> - [Data location and redundancy](xref:STaaS#data-location-and-redundancy)
+> - [Data resilience and backups](xref:STaaS#data-resilience-and-backups)
+> - [Data security and availability](xref:STaaS#data-security-and-availability)
 
 ## DataMiner as a Service: a complete cloud-native experience
 

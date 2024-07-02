@@ -70,7 +70,7 @@ From DataMiner 9.5.1 onwards, the following attributes are available to further 
 >
 > - Centering on a single marker.
 > - Centering on an entire layer.
-> - Centering on "lat" and "long" coordinates passed via URL parameters. (See [lat=](xref:Options_for_opening_DataMiner_Cube#lat) and [long=](xref:Options_for_opening_DataMiner_Cube#long))
+> - Centering on "lat" and "long" coordinates passed via URL parameters. (See [Displaying a DataMiner map in a web browser](xref:Displaying_a_DataMiner_map_in_a_web_browser))
 > - Centering on static coordinates defined in the \<Center> tag of the map configuration.
 
 ## FilterBox

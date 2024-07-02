@@ -19,11 +19,18 @@ To test sending a request, you can use a tool like Postman.
 
 To send a request to *UserDefinableApiEndpoint*, use a URL in the format `http(s)://{hostname}/api/custom/{route}`. (See [Route](xref:UD_APIs_Define_New_API#route).)
 
+> [!NOTE]
+> If your DataMiner System is connected to dataminer.services and [the setting for remote access to the User-Defined APIs](xref:Controlling_remote_access) is enabled, you can also call your user-defined API through dataminer.services. To do so, replace the `{hostname}` part of the URL with the remote access URL of your system (see [Remote access](xref:Cloud_Remote_Access)).
+
+> [!WARNING]
+> Always use HTTPS when calling a user-defined API through dataminer.services. If you use the HTTP protocol, the call may fail, as the HTTP method will be set to GET by default and the request body will be cleared.
+
 Examples:
 
 ```
 http://staging-agent-b3/api/custom/switchers/status
 https://production-agent-a1/api/custom/encoder/main/status
+https://ziine-skyline.on.dataminer.services/api/custom/encoder/main/status
 ```
 
 ### HTTP methods
@@ -62,7 +69,11 @@ The endpoint supports the following content types:
 The Content-Length header is calculated and filled in automatically depending on how you send the request. It contains the length of the body in bytes. *UserDefinableApiEndpoint* will only read the number of bytes of the body specified in the Content-Length header.
 
 > [!IMPORTANT]
-> The endpoint limits the size of requests to 30 MB.
+> Depending on the DataMiner version, the endpoint limits the size of requests as follows:
+>
+> - DataMiner 10.3.6: 30 MB
+> - DataMiner 10.3.8: 16.7 MB
+> - DataMiner 10.4.0/10.4.1: 29 MB
 
 ### Body
 
@@ -128,6 +139,7 @@ The *errorCode* field of an error contains an error code that can be used by the
 | InvalidAutomationActionResult | 13 | 500 | The result returned by the Automation script was null or invalid. |
 | FailedToGetScriptInfo | 15 | 500 | Could not get the script info required to execute the script. |
 | MissingScriptParameters | 16 | 400 | There are missing script parameters in the request body. The "error" JSON object will contain the missing script parameters as a `missingScriptParameters` array. |
+| ResponseBodyTooLarge | 17 | 500 | The response body returned by the API exceeds the limit of 29 MB. |
 | NatsRequestFailed | 1001 | 500 | Failed to send the NATS request to the DataMiner Agent. |
 | UnknownStatusCode | 1002 | 500 | The response code returned by the Automation script was invalid. |
 | InvalidContentType | 1003 | 415 | The [Content-Type](#content-type) HTTP header is not supported. |
@@ -136,8 +148,9 @@ The *errorCode* field of an error contains an error code that can be used by the
 | MessageBrokerNotInitialized | 1006 | 503 | The message broker and session used to connect to NATS have not been initialized yet. |
 | FailedToReadBody | 1007 | 500 | An exception was thrown while reading the request body. |
 | AuthenticationHeaderInvalid | 1008 | 401 | The HTTP [authentication](#authentication) header is not valid. Make sure the token is passed as a `Bearer` token. |
-| BodyTooLarge | 1009 | 413 | The body size is limited to 30 MB. This error will be thrown if the size is larger than that. |
+| BodyTooLarge | 1009 | 413 | The body size is limited to 29 MB. This error will be thrown if the size is larger than that. |
 | AuthenticationFailed | 1010 | 401 | The passed secret is empty, is invalid, is disabled, cannot be found, or is not allowed for this API definition. |
+| QueryStringTooLarge | 1011 | 414 | The query string size is limited to 2 KB. This error will be thrown if the size is larger than that. |
 
 > [!NOTE]
 > For some of these errors, more information will also be logged in the *UserDefinableApiEndpoint.txt* log file. The location of this log file depends on the [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#consulting-logging-for-the-dxm).

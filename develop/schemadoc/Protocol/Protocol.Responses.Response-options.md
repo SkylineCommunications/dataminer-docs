@@ -22,7 +22,7 @@ In this attribute, you can specify the following options.
 
 This option allows you to specify the ID of the connection (in case of multiple ports).
 
-Adding the connection ID at response level is only done in protocols of type “Smart serial”.
+Adding the connection ID at response level is only done in protocols of type “smart-serial” or “websocket”.
 
 Example:
 

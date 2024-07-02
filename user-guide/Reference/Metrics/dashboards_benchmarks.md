@@ -8,7 +8,7 @@ uid: dashboards_benchmarks
 
 - Intel Core i7-9700 CPU \@3.20 GHz
 - 8 cores
-- 32GB RAM
+- 32 GB RAM
 - SSD
 - Cassandra
 - Windows 10 Enterprise

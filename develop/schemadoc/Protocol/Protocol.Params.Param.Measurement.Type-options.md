@@ -175,7 +175,10 @@ Read parameters with options=”time:hour” will not display seconds if their v
 
 #### date
 
-The parameter will be displayed as a date. The value represents the total number of seconds. The Interprete.Decimals and Display.Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
+The parameter will be displayed as a date. The value represents the total number of seconds.
+
+> [!IMPORTANT]
+> The Interprete.Decimals and Display.Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
 
 Example:
 
@@ -192,7 +195,10 @@ The timestamp is stored internally as an OLE Automation date: a decimal number i
 
 #### datetime
 
-The parameter will be displayed as a datetime. The value represents a decimal number indicating the total number of days that have passed since midnight 1899-12-30. The Interprete/Decimals and Display/Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
+The parameter will be displayed as a datetime. The value represents a decimal number indicating the total number of days that have passed since midnight 1899-12-30.
+
+> [!IMPORTANT]
+> The Interprete/Decimals and Display/Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
 
 Example:
 

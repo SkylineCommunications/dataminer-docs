@@ -10,6 +10,9 @@ From DataMiner 10.2.0/10.1.5 onwards, you can retrieve a parameter table from an
 
 From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane if you use this data source. When you enable this, the component will automatically refresh the data when changes are detected.
 
+> [!TIP]
+> If you encounter problems with protocol changes not appearing in the query results, please refer to the following troubleshooting steps: [What should I do if I do not see my protocol changes applied in a GQI query result?](xref:Dashboards_and_Low_Code_Apps_FAQ#what-should-i-do-if-i-do-not-see-my-protocol-changes-applied-in-a-gqi-query-result)
+
 ## Updates
 
 From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36789 -->, this data source supports real-time updates.

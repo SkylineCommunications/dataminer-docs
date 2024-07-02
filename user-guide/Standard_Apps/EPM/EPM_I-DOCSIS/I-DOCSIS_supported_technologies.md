@@ -1,8 +1,9 @@
 ---
 uid: I-DOCSIS_supported_technologies
+keywords: I-DOCSIS supported technologies
 ---
 
-# Supported technologies for I-DOCSIS
+# Supported technologies for Integrated DOCSIS
 
 The table below provides an overview of supported technology and the corresponding connectors.
 
@@ -14,6 +15,7 @@ The table below provides an overview of supported technology and the correspondi
 | Casa System CMTS     | [Casa Systems CCAP Platform](https://catalog.dataminer.services/result/driver/7040)     |
 | Huawei CMTS          | [Huawei 5688-5800 CCAP Platform](https://catalog.dataminer.services/result/driver/7042) |
 | Generic DOCSIS CM Collector | [Generic DOCSIS CM Collector](https://catalog.dataminer.services/result/driver/4207) |
+| Harmonic CableOs | [Harmonic CableOs](https://catalog.dataminer.services/details/connector/6391) |
 
 > [!NOTE]
 > The Cisco CMTS CCAP Platform connector is required for legacy Cisco CMTSs. This technology has been replaced by the Cisco CBR-8 Platform, but it is still used in older DOCSIS deployments.

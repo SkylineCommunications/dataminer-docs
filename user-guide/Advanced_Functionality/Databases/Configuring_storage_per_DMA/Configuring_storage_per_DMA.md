@@ -17,10 +17,10 @@ By default, when you install a new self-hosted DataMiner System, a Cassandra dat
 - Alarm Console enhancements: heatline columns, reports view
 - Heatmap reports (in the legacy Reporter app)
 
-> [!NOTE]
-> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If you prefer to keep using self-hosted storage, for many of the above-mentioned features, an [indexing database](xref:Configuring_indexing_database_per_DMS) will also be required.
-
 ![storage per DMA](~/user-guide/images/Storage_per_DMA.svg)
+
+> [!IMPORTANT]
+> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If you prefer to keep using self-hosted storage, we highly recommend installing an [indexing database](xref:Indexing_Database) to get access to additional features such as SRM and DOM.
 
 ## MySQL database
 

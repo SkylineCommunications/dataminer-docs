@@ -20,7 +20,7 @@ The table below lists the properties of the `DomInstance` object. It also indica
 | ID | DomInstanceId | Yes | The ID of the `DomInstance`. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the `DomDefinition` that this instance is linked to. |
 | Sections | List\<Section> | Yes | The `Sections` that contain the actual values for the `FieldDescriptors` wrapped in `FieldValues` |
-| Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the `DomInstanceNameDefinition` in the `ModuleSettings`. |
+| Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) in the `ModuleSettings` or `DomDefinition`. |
 | StatusId | string | Yes | The ID of the current status of this `DomInstance` (if statuses are used). |
 
 ## Requirements
@@ -40,7 +40,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | Reason | Description |
 |--|--|
 | DomInstanceSectionInvalidFieldValueTypes | Attempted to create or update a `DomInstance` with a `FieldValue` that does not match the type of its `FieldDescriptor`. Available properties: *DomInstance*, *Section*, *FieldValue*, *FieldDescriptor* |
-| DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition | The given `DomInstance` had a `Section` that did not contain a `FieldValue` for every non-optional `FieldDescriptor` of its `SectionDefinition`. Available properties: *DomInstance*, *Section*, *FieldDescriptor* |
+| DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition | The given `DomInstance` had a `Section` that did not contain a `FieldValue` for every non-optional `FieldDescriptor` of its `SectionDefinition`. Available properties: *DomInstance*, *Section*, *FieldDescriptor*. [Empty list values](xref:DOM_SectionDefinition#multiple-values) are equivalent to not providing a `FieldValue`.|
 | DomInstanceRequiresLinkToValidDomDefinition | The `DomInstance` has no valid and/or existing `DomDefinitionID` configured. Available properties: *DomInstance*. |
 | SectionsUsedInDomInstanceDoNotMatchRequirementsOfDomDefinition | The `DomInstance` does not contain at least one `Section` for each `SectionDefinition` defined on the `DomDefinition` or contains `Sections` for `SectionDefinitions` that are not defined on that `DomDefinition`. Available properties: *DomInstance*, *DomDefinition*, *MissingSections*, *InvalidSections* |
 | DomInstanceDoesNotContainRequiredModuleSections | The `DomInstance` does not contain exactly one `Section` for each required `SectionDefinition` defined for this module. Available properties: *DomInstance*, *MissingSections*, *InvalidSections* |
@@ -52,7 +52,7 @@ The errors below are solely related to the status system. For each error, the *D
 | Reason | Description |
 |--|--|
 | DomInstanceContainsInvalidStatus | The `DomInstance` contains a status ID that cannot be found on the linked `DomBehaviorDefinition`. *StatusId* contains the invalid status. |
-| DomInstanceHasMissingRequiredFieldsForCurrentStatus | The `DomInstance` does not contain all fields that are required for the status it is currently in (or transitioning to). *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the missing fields. |
+| DomInstanceHasMissingRequiredFieldsForCurrentStatus | The `DomInstance` does not contain all fields that are required for the status it is currently in (or transitioning to). *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the missing fields. [Empty list values](xref:DOM_SectionDefinition#multiple-values) are equivalent to not providing a `FieldValue`.|
 | DomInstanceHasInvalidFieldsForCurrentStatus | The `DomInstance` contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same `SectionDefinition` and `FieldDescriptor`, only one entry will be included. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the invalid fields. |
 | ReadOnlyFieldsChangedForCurrentStatus | There is at least one `FieldValue` marked as read-only for the current status that was changed. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the read-only fields that were changed. |
 | DomInstanceContainsUnknownFieldsForCurrentStatus | There is at least one `FieldValue` defined on the `DomInstance` for which no link could be found in the associated `DomBehaviorDefinition` for the current status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the unknown fields. |

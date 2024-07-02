@@ -133,15 +133,16 @@ If ServiceA has the following two properties:
 
 ### \[Avg:X,Y,Z\]
 
-Available from DataMiner 9.5.8 onwards.
-
 Average of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 ### \[cardvar:VariableName\]
 
 Reference to a session variable (scope: current DataMiner Cube card).
 
-As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholder to refer to a parameter containing an empty string.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option in the placeholder to keep it from being resolved until the variable is set to a value. See [Using the current value of a session variable in an expression](xref:Making_a_shape_display_the_current_value_of_a_variable#using-the-current-value-of-a-session-variable-in-an-expression).
 
 ### [color:severity=...]
 
@@ -204,16 +205,12 @@ By default, the regional date/time format will be used. To use a different forma
 
 ### \[DestinationInterfaceElementID\]
 
-Available from DataMiner 9.5.3 onwards.
-
 The DMA ID and element ID of the destination interface of the connection that was clicked.
 
 > [!TIP]
 > See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceElementName\]
-
-Available from DataMiner 9.5.3 onwards.
 
 The element name of the destination interface of the connection that was clicked.
 
@@ -222,8 +219,6 @@ The element name of the destination interface of the connection that was clicked
 
 ### \[DestinationInterfaceIdx\]
 
-Available from DataMiner 9.5.3 onwards.
-
 The interface ID of the destination interface of the connection that was clicked.
 
 > [!TIP]
@@ -231,16 +226,12 @@ The interface ID of the destination interface of the connection that was clicked
 
 ### \[DestinationInterfaceLinkedIdx\]
 
-Available from DataMiner 9.5.3 onwards.
-
 The primary key of the table row to which the destination interface of the connection that was clicked is linked.
 
 > [!TIP]
 > See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceName\]
-
-Available from DataMiner 9.5.3 onwards.
 
 The interface name of the destination interface of the connection that was clicked.
 
@@ -276,17 +267,17 @@ Available from DataMiner 10.1.12/10.2.0 onwards.
 
 This placeholder can be used to refer to the name or the ID of an element.
 
-- *\<input>* should be either an element name or an element ID (in the format DMA ID/element ID).
+- `<input>` should be either an element name or an element ID (in the format DMA ID/element ID).
 
-- *\<output>* can be either *Name* or *ID*.
+- `<output>` can be either *Name* or *ID*.
 
-For example: *\[Element:231/15,Name\]*
+For example: `[Element:231/15,Name]`
 
 ### \[EscapeDataString:x\]
 
 Use this placeholder to insert a URL-encoded string into the value of a shape data field.
 
-If, for example, you enter “\[EscapeDataString:String to be encoded+?\]” in a shape data field, this will be resolved to “String%20to%20be%20encoded%2B%3F%20”.
+If, for example, you enter `[EscapeDataString:String to be encoded+?]` in a shape data field, this will be resolved to `String%20to%20be%20encoded%2B%3F%20`.
 
 Note that the string to be encoded can itself contain dynamic placeholders.
 
@@ -388,7 +379,10 @@ Minimum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 Reference to a session variable (scope: current Visio page).
 
-As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholder to refer to a parameter containing an empty string.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option in the placeholder to keep it from being resolved until the variable is set to a value. See [Using the current value of a session variable in an expression](xref:Making_a_shape_display_the_current_value_of_a_variable#using-the-current-value-of-a-session-variable-in-an-expression).
 
 ### \[param:DmaID/ElementID,ParameterID\]
 
@@ -466,6 +460,31 @@ If you want to override the above-mentioned general rule, you can add to the sha
 
 > [!NOTE]
 > If the specified property refers to a non-existing element, service or redundancy group, then the shape will not be displayed.
+
+### \[RegexMatch:x,y,options\]
+
+Available from DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards.<!-- RN 39763 -->
+
+This placeholder takes a regular expression and input, and it returns the parts of the input matching the regular expression. For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e. "ac".
+
+When multiple matches are found within the input, by default, all matches will be concatenated and returned as one single string, without any separators. You can specify options to customize this behavior:
+
+- If you want the matches to be separated, you can specify a separator.
+
+  For example, `[RegexMatch: [a-z], aBc, separator=%]` will return "a%c".
+
+- If you do not want all matches to be concatenated, you can use the "index=" option to indicate the specific match you want to have returned.
+
+  For example, `[RegexMatch: [a-z], aBc, index=0]` will return "a".
+
+If the regular expression or the input includes the default separator (","), you can use the [sep:] placeholder to replace it with another one.
+
+For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]`, the default separator has been replaced with "%".
+
+> [!NOTE]
+>
+> - If the regular expression or the input are empty, the placeholder will return an empty string.
+> - The "]" character cannot be used as a separator.
 
 ### \[RegexReplace:x,y,z\]
 
@@ -967,7 +986,10 @@ By default, this time will be displayed in the regional date/time format. If you
 
 Reference to a session variable (scope: current DataMiner Cube session).
 
-As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholder to refer to a parameter containing an empty string.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option in the placeholder to keep it from being resolved until the variable is set to a value. See [Using the current value of a session variable in an expression](xref:Making_a_shape_display_the_current_value_of_a_variable#using-the-current-value-of-a-session-variable-in-an-expression).
 
 ### \[xpos\]
 

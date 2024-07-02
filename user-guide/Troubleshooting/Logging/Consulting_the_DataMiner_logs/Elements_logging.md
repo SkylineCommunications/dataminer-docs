@@ -21,6 +21,7 @@ This page consists of three sections:
 >
 > - It is possible to retrieve a previous version of a log file by right-clicking an element in the list and selecting *Open previous*. If there is no previous log file, this option is not available.
 > - To quickly go to the logging for a particular element from the Surveyor, right-click the element in the Surveyor and select *View \> Log*.
+> - From DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 38623-->, to quickly go to the logging for a particular enhanced service (i.e. a service that uses a service protocol), right-click the service in the Surveyor and select *View > Log*. Alternatively, open the card of the enhanced service, access its hamburger menu, and select *View > Log*.
 > - If an element is renamed, the log file for that element will also be renamed.
 
 ## Changing log levels

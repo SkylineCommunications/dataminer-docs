@@ -74,5 +74,5 @@ If you are still using a legacy setup with a MySQL or MSSQL database, you can co
 
 > [!NOTE]
 >
-> - If you use a MSSQL database, a Microsoft SQL Server Enterprise Edition license is required if partitioned data tables are used. Otherwise, the Express edition is sufficient. To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
+> - If you use a MSSQL database, a Microsoft SQL Server Enterprise Edition license is required if partitioned data tables are used. Otherwise, the Community edition is sufficient. To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
 > - If you use an MSSQL database, prior to DataMiner v8.5.8, only user accounts of type NT AUTHORITY\\SYSTEM are supported. In more recent DataMiner versions, you can use other domain accounts, either by using a connection string containing “*Integrated Security=true;user id:Domain\\User Name;Password:PWD*”, or by setting the tag *\<IntegratedSecurity>* to true in *DB.xml*.

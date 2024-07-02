@@ -68,7 +68,7 @@ To specify a custom SNMPv3 trap reception port:
    ```xml
    <DataMiner>
      ...
-     <SNMPv3 trapPort=”10162”/>
+     <SNMPv3 trapPort="10162"/>
      ...
    </DataMiner>
    ```

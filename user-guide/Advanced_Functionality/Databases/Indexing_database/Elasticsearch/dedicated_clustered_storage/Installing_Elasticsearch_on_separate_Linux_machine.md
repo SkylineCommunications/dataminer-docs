@@ -5,15 +5,17 @@ uid: Installing_Elasticsearch_on_separate_Linux_machine
 # Installing Elasticsearch on a separate Linux machine
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend that you either use [Storage as a Service](xref:STaaS) instead or use [OpenSearch](xref:OpenSearch_database).
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose a self-hosted dedicated clustered storage setup, and you want to use an Elasticsearch cluster for your DMS, install Elasticsearch on a Linux machine as detailed below.
+If you use self-hosted DataMiner storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, and you want to use an Elasticsearch cluster for your DMS, you can install Elasticsearch on a Linux machine as detailed below.
 
 > [!NOTE]
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
 
 > [!TIP]
-> See also: [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html) in the Elasticsearch reference information.
+>
+> - For more information about installing Elasticsearch, refer to the [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html).
+> - If you encounter issues with Elasticsearch nodes, you can increase the log level for better diagnostics. See [Logging](https://www.elastic.co/guide/en/elasticsearch/reference/current/logging.html).
 
 1. Install the Elasticsearch software (version 6.8) on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/deb.html) in the official Elasticsearch documentation.
 
@@ -21,12 +23,10 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
    - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
 
-     `$ sudo ufw enable`
+     `$ sudo ufw allow 22/tcp && sudo ufw enable`
 
      > [!IMPORTANT]
-     > If you connect to your Linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
-     >
-     > For this, use the following command: `$ sudo ufw allow 22/tcp`
+     > The first part of the command above ensures that the TCP port 22 used for SSH connections remains open when the firewall is enabled. Enabling the firewall without defining the rule for incoming SSH connections may result in loss of connectivity to the server.
 
    - To add the correct ports to the firewall, you can for example use the following commands:
 
@@ -168,4 +168,6 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      ![Elasticsearch example2](~/user-guide/images/Elasticsearch_example2.png)
 
-1. Configure the Elasticsearch cluster database in System Center. See [Configuring Elasticsearch in System Center](xref:Configuring_DataMiner_Indexing).
+1. If your system uses a dedicated clustered storage setup, configure the Elasticsearch cluster database in System Center. See [Configuring Elasticsearch in System Center](xref:Configuring_DataMiner_Indexing).
+
+   If your system uses storage per DMA, you will need to [manually connect your DMA to the Elasticsearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)

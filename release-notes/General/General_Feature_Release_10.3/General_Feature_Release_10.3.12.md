@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.3.12
 
 ## New features
 
-#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37250] [ID_37334] [37434]
+#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37334] [37434]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -250,6 +250,19 @@ For performance reasons, the page size when retrieving element data from a Cassa
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
+#### DxMs upgraded [ID_37895]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.5.2
+- DataMiner FieldControl: version 2.9.1
+- DataMiner Orchestrator: version 1.4.1
+- DataMiner SupportAssistant: version 1.5.3
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
@@ -409,6 +422,12 @@ When you imported a DELT package that contained protocol VDX files linked to ele
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
 When, in the SLNetClientTest tool, you went to *Advanced > Migration*, the migration overview would not indicate that a migration of profiles towards Elasticsearch/OpenSearch had failed due to a profile object with a name longer than 32,766 characters.
+
+#### Cassandra Cluster & STaaS: Correlation matchinfo and slidingwindow records could be overwritten [ID_37813]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+On systems using a Cassandra Cluster database or STaaS, in some cases, DataMiner Agents could overwrite each other's correlation matchinfo and slidingwindow records.
 
 #### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
 

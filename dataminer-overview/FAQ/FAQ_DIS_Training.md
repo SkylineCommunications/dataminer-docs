@@ -7,4 +7,4 @@ uid: FAQ_DIS_Training
 Training on the features and capabilities of DIS and how to use them is available on our DataMiner Dojo community website as an [online training module](https://community.dataminer.services/learning/courses/).
 
 > [!NOTE]
-> In order to access the DIS training course, you'll need to log in with your DOJO account. If you don't have an account yet, don't worry! Creating one is quick and easy.
+> In order to access the DIS training course, you will need to log in with your DOJO account. If you do not have an account yet, you can easily and quickly create one.

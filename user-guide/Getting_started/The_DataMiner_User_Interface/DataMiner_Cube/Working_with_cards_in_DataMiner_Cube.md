@@ -16,14 +16,12 @@ On this page, you can find:
 
 - News items related to DataMiner. Depending on your user permissions, this may include information about protocol updates or DataMiner software updates.
 
-- Weather information. Only available up to DataMiner 9.6.0/9.6.4. Up to DataMiner 9.5.11, this is only displayed if a location can be established (e.g. via the *Location* service in Windows 10). From DataMiner 9.5.12 onwards, you can select a location yourself via the location icon next to the *Weather* title.
-
 - A link to the landing page for the DataMiner web apps on the right-hand side.
 
 > [!NOTE]
 >
 > - Depending on your user permissions, some of these items may not be displayed.
-> - From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](xref:User_settings#cube-settings).
+> - In the [Cube user settings](xref:User_settings#cube-settings), you can customize which information is shown on this page.
 
 ## Card types
 
@@ -51,17 +49,19 @@ There are many different types of cards, such as:
 
 - Spectrum analyzer cards
 
-Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [Experience and Performance Management](xref:EPM)).
+Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or [EPM Manager](xref:EPM) cards.
 
 ## Card navigation pane
 
-On the left side of view cards, service cards and element cards, a navigation pane is displayed.
+On the left side of view cards, service cards, and element cards, a navigation pane is displayed.
 
 You can collapse and expand this pane with the arrow button in the top-right corner of the pane. You can also change the size of the pane by dragging its edge.
 
 The pane consists of a tree view with several fixed nodes:
 
 - **VISUAL**: Contains all available Visual Overview pages.
+
+  ![Visual page](~/user-guide/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.4.5*
 
   > [!NOTE]
   >
@@ -72,12 +72,14 @@ The pane consists of a tree view with several fixed nodes:
 
 - **DATA**: Contains all available Data Display pages.
 
+  ![Data Display pages](~/user-guide/images/Data_Display.png)<br>*Data Display page in DataMiner 10.4.5*
+
   > [!NOTE]
   >
   > - Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](xref:User_settings#card-settings).
   > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button “Up to \[parent page name\]” is displayed, which allows you to quickly go to the parent page.
   > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
-  > - Prior to DataMiner 9.6.7, a view has a DATA node with pages listing the items within the view. From DataMiner 9.6.7 onwards, this node is called “BELOW THIS VIEW” instead.
+  > - Instead of a DATA node, a view has a “BELOW THIS VIEW” node with pages listing the items within the view.
 
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
@@ -86,10 +88,10 @@ The pane consists of a tree view with several fixed nodes:
 
 - **REPORTS**: Displays graphical reports of the alarm distribution, alarm events, alarm states, and alarms on a timeline.
 
-- **DASHBOARDS**: Displays the legacy *Dashboards* app.
+- **DASHBOARDS**: Displays the legacy *Dashboards* module.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+  > The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
 
 - **NOTES**: Allows users to add short notes to DataMiner items:
 
@@ -99,10 +101,12 @@ The pane consists of a tree view with several fixed nodes:
 
   - Expired notes are only displayed if you select *Show expired notes* in the top-right corner of the card. They are then displayed in a different color, so you can clearly see the difference with the notes that are not expired.
 
+  ![Notes](~/user-guide/images/Notes.png)<br>*Notes in DataMiner 10.4.5*
+
 - **ANNOTATIONS**: Displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
+  > The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
 
 Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
 
@@ -171,11 +175,11 @@ However, you can also open items in a new card next to any cards that are alread
 
 To change the card layout on the fly, drag the edge of a card to adjust its size.
 
-To select a preconfigured Cube card layout:
+![Drag card edge](~/user-guide/images/Drag_Edge_Card.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
 
-- From DataMiner 10.0.0/10.0.2 onwards: Click the user icon in the top-right corner of the Cube UI and select *Change layout*. This will open a side panel where you can select a card layout.
+To select a preconfigured Cube card layout, click the user icon in the top-right corner of the Cube UI (1) and select *Change layout* (2). This will open a side panel where you can select a card layout (3).
 
-- Using a DataMiner version prior to DataMiner 10.0.0/10.0.2: Click the card layout icon to the right of the user name and DMS time in the Cube header bar, and select the card layout you want.
+![Card layout](~/user-guide/images/Card_Layout.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
 
 The following layout options are available:
 
@@ -195,6 +199,8 @@ The following layout options are available:
 ## Dragging cards
 
 It is possible to drag a card, by left-clicking and dragging the top edge of the card to its destination.
+
+![Dragging a card](~/user-guide/images/Dragging_a_Card.png)<br>*DataMiner 10.4.5*
 
 You can drag a card:
 

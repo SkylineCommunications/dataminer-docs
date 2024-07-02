@@ -22,7 +22,7 @@ SLNet controls all communication among DataMiner Agents, and between DataMiner A
 
 ## SLNet troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - main page
@@ -84,7 +84,7 @@ class OTHER,CORR,THREAD,FAILOVER,DISC,STARTUP classActionClickable;
 class MODULES classDecision;
 class START classTerminal;
 class HOME classExternalRef;
-</div>
+```
 
 ### Configuring SLNet settings
 

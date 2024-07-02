@@ -48,7 +48,7 @@ When you click in the selection box in the *Condition* column, the following act
 
 - To remove a condition, select *\<No condition>*, or click the *x* next to the condition.
 
-- To add another condition for the same parameter, hover the mouse over the condition and click the *+* sign that appears next to it.
+- To add another condition for the same parameter, hover the mouse pointer over the condition and click the *+* sign that appears next to it.
 
   > [!NOTE]
   > If there are multiple alarm template entries for the same parameter, each with a different condition, then the first entry of which the condition is false, starting from the top, will be applied.

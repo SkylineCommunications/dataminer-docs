@@ -60,7 +60,7 @@ The `DomBehaviorDefinition` has several properties related to the buttons and ac
 
 - To **create or update** a `DomBehaviorDefinition`:
 
-  - The string IDs of the statuses and transitions must not contain duplicates and should all be lowercase.
+  - The string IDs of the statuses, transitions, actions, and buttons must not contain duplicates and should all be lowercase.
 
   - When there is a `ModuleDomBehaviorDefinition` defined, this definition must inherit from it. If this is not defined, the *ParentId* property should be empty.
 

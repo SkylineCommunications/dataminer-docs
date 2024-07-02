@@ -34,40 +34,43 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Text.html" title="Text" target="_self"><img src="~/user-guide/images/Text.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_digital.html" title="Clock" target="_self"><img src="~/user-guide/images/Clock.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Icon.html" title="Icon" target="_self"><img src="~/user-guide/images/Icon.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/DashboardForm.html" title="Form" target="_self"><img src="~/user-guide/images/Form.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_analog.html" title="Clock (Analog)" target="_self"><img src="~/user-guide/images/Clock_Analog.svg" style="width:100%"></a>
   </div>  
 </div>
 
 <div class="row"> 
   <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/DashboardForm.html" title="Form" target="_self"><img src="~/user-guide/images/Form.svg" style="width:100%"></a>
+  </div>  
+  <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Image.html" title="Image" target="_self"><img src="~/user-guide/images/Image.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Icon.html" title="Icon" target="_self"><img src="~/user-guide/images/Icon.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Generic_map.html" title="Generic Map" target="_self"><img src="~/user-guide/images/Generic_Map.svg" style="width:100%"></a>
+  </div>  
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_digital.html" title="Clock" target="_self"><img src="~/user-guide/images/Clock.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Block.html" title="Block" target="_self"><img src="~/user-guide/images/Block.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Group.html" title="Group" target="_self"><img src="~/user-guide/images/Group.svg" style="width:100%"></a>
+  </div>  
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/DL_Maps.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Stepper.html" title="Stepper" target="_self"><img src="~/user-guide/images/Stepper.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Web.html" title="Web" target="_self"><img src="~/user-guide/images/Web.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Generic_map.html" title="Generic Map" target="_self"><img src="~/user-guide/images/Generic_Map.svg" style="width:100%"></a>
-  </div>  
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_analog.html" title="Clock (Analog)" target="_self"><img src="~/user-guide/images/Clock_Analog.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Block.html" title="Block" target="_self"><img src="~/user-guide/images/Block.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Group.html" title="Group" target="_self"><img src="~/user-guide/images/Group.svg" style="width:100%"></a>
   </div>  
 </div>
 
@@ -186,6 +189,12 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 <div class="row"> 
   <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Grid.html" title="Grid" target="_self"><img src="~/user-guide/images/Grid.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Interactive_automation_script.html" title="Interactive Automation script" target="_self"><img src="~/user-guide/images/IAS.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Node_edge_graph.html" title="Node Edge Graph" target="_self"><img src="~/user-guide/images/Node_Edge_Graph.svg" style="width:100%"></a>
   </div>
   <div class="column">
@@ -194,18 +203,21 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Service_definition.html" title="Service Definition" target="_self"><img src="~/user-guide/images/Service_Definition.svg" style="width:100%"></a>
   </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Spectrum_analyzer.html" title="Spectrum Analyzer" target="_self"><img src="~/user-guide/images/Spectrum_Analyzer.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Trend_statistics.html" title="Trend Statistics" target="_self"><img src="~/user-guide/images/Trend_Statistics.svg" style="width:100%"></a>
-  </div>  
 </div>
 
 <div class="row"> 
   <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Spectrum_analyzer.html" title="Spectrum Analyzer" target="_self"><img src="~/user-guide/images/Spectrum_Analyzer.svg" style="width:100%"></a>
+  </div>  
+  <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Visual_Overview_component.html" title="Visual Overview" target="_self"><img src="~/user-guide/images/Visual_Overview.svg" style="width:100%"></a>
   </div>
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Timeline_component.html" title="Timeline" target="_self"><img src="~/user-guide/images/Timeline.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Trend_statistics.html" title="Trend Statistics" target="_self"><img src="~/user-guide/images/Trend_Statistics.svg" style="width:100%"></a>
+  </div>  
 </div>
 
 ### Feeds
@@ -279,4 +291,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardTextInputFeed.html" title="Text Input" target="_self"><img src="~/user-guide/images/Text_Input.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardSearchInputFeed.html" title="DropDown" target="_self"><img src="~/user-guide/images/Search_Input.svg" style="width:100%"></a>
+  </div>
 </div>

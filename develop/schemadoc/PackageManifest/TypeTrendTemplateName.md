@@ -4,7 +4,7 @@ uid: Manifest-TypeTrendTemplateName
 
 # TypeTrendTemplateName simple type
 
-Trend template name.
+Trend template name. This represents the file name.
 
 ## Content Type
 

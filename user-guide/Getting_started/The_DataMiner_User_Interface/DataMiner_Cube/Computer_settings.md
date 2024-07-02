@@ -6,7 +6,7 @@ uid: Computer_settings
 
 Any user preferences in DataMiner Cube pertaining to the user’s computer are grouped in the *computer* tab of the *Settings* window.
 
-Like the user settings, the DataMiner Cube computer settings are divided in several different sections:
+Like the [user settings](xref:User_settings), the DataMiner Cube computer settings are divided in several different sections:
 
 - [Connection settings](#connection-settings)
 
@@ -26,17 +26,9 @@ To access the computer settings in DataMiner Cube:
 
 1. Go to the *Settings* window:
 
-   - From DataMiner 10.0.0/10.0.2 onwards:
+   - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel, or
 
-     - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel, or
-
-     - Click the user icon in the header bar and select *Settings* in the menu.
-
-   - Prior to DataMiner 10.0.0/10.0.2:
-
-     - In the navigation pane, click the apps button and select *Settings*, or
-
-     - Click the current user in the header bar, and click *Settings*.
+   - Click the user icon in the header bar and select *Settings* in the menu.
 
 1. Click the *computer* tab.
 
@@ -55,15 +47,12 @@ On this page, you can select settings related to the connection of your computer
 
 - **Connection type**: Select a connection type in the drop-down list. By default, this is set to *Auto*. If you select *Remoting* instead, more settings will be displayed that need to be specified (destination port, polling interval, etc.).
 
-  > [!NOTE]
-  > Prior to DataMiner 10.0.0 \[CU6\]/10.0.11, you can also select the option *Web Services*. However, as WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
-
   > [!TIP]
   > See also: [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)
 
 ### Cube settings
 
-This page is available from DataMiner 10.0.12 onwards. It contains the following setting:
+This page contains the following setting:
 
 - **Display cluster name in header**: Select this option to have the name of the DataMiner System displayed in the Cube header by default.
 
@@ -78,19 +67,16 @@ This page contains the following debug settings:
 
 - **Trace mode**: When you enable this setting, Cube debug logging is saved in a file in the following folder: *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\Traces*. This mode is meant to solve issues, and will not be needed in normal circumstances.
 
-- **Enable trend logging**: This setting is available from DataMiner 9.5.11 onwards. If you enable this setting, a number of log files will be kept with regard to trending.
+- **Enable trend logging**: If you enable this setting, a number of log files will be kept with regard to trending.
 
   > [!NOTE]
-  > This setting is disabled by default. Enabling it will cause memory usage to increase substantially. Therefore, it is recommended to only enable it temporarily for debugging purposes.
+  > This setting is disabled by default. Enabling it will cause memory usage to increase substantially. Therefore, we recommend only enabling it temporarily for debugging purposes.
 
 ### Performance settings
 
 This page contains settings that are related to your computer’s performance:
 
 - **Use of animation**: Enables animations in the Cube UI.
-
-  > [!NOTE]
-  > Up to DataMiner 9.0.3, this setting is called *3D effects*.
 
 - **Use hardware rendering**: Select this setting to set the graphics rendering mode to hardware rendering.
 
@@ -99,7 +85,7 @@ This page contains settings that are related to your computer’s performance:
   > [!NOTE]
   > When you change this frame rate setting, restart DataMiner Cube to have the change take effect.
 
-- **Trend update frame rate**: Available from DataMiner 9.5.7 onwards. Determines the rate at which trend graphs are redrawn.
+- **Trend update frame rate**: Determines the rate at which trend graphs are redrawn.
 
 ### Visual Overview settings
 

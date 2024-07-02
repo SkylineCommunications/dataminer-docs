@@ -29,12 +29,12 @@ items:
     - name: DataMiner hosting and high availability
       topicUid: Overview_hosting
       items:
-        - name: Self-hosted DataMiner nodes and storage nodes
-          topicUid: DM_and_storage_selfhosted
-        - name: Self-hosted DataMiner nodes with Storage as a Service
-          topicUid: DM_selfhosted_and_StaaS
         - name: DataMiner as a Service
           topicUid: DaaS_hosting
+        - name: Self-hosted DataMiner nodes with Storage as a Service
+          topicUid: DM_selfhosted_and_StaaS
+        - name: Self-hosted DataMiner nodes and storage nodes
+          topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
       topicUid: Overview_DCP
       items:
@@ -65,10 +65,41 @@ items:
           topicUid: Stack_Data_Connectivity
         - name: Data Aggregation
           topicUid: Stack_Data_Aggregation
-        - name: SLA Management
+        - name: Service Management
           topicUid: Stack_SLA_Management
         - name: Third-Party Integrations
           topicUid: Stack_Third_Party_Integrations
+    - name: DataMiner Solutions
+      topicUid: Overview_DataMiner_Solutions
+      items:
+        - name: dataminer.MediaOps
+          topicUid: Overview_dataminer_MediaOps
+          items:
+            - name: MediaOps apps
+              topicUid: Overview_MediaOps_Apps
+              items:
+                - name: Virtual Signal Groups
+                  topicUid: Overview_MediaOps_Virtual_Signal_Groups
+                - name: Control Surface
+                  topicUid: Overview_MediaOps_Control_Surface
+                - name: Flow Engineering
+                  topicUid: Overview_MediaOps_Flow_Engineering
+                - name: Flow Monitoring
+                  topicUid: Overview_MediaOps_Flow_Monitoring
+                - name: Scheduling
+                  topicUid: Overview_MediaOps_Scheduling
+                - name: Workflow Designer
+                  topicUid: Overview_MediaOps_Workflow_Designer
+                - name: Cost and Billing
+                  topicUid: Overview_MediaOps_Cost_and_Billing
+                - name: People and Organizations
+                  topicUid: Overview_MediaOps_People_and_Organization
+                - name: Resource Studio
+                  topicUid: Overview_MediaOps_Resource_Studio
+            - name: Supported connectors
+              topicUid: Overview_MediaOps_supported_connectors
+        - name: DOM Viewer
+          topicUid: domviewer_about
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -78,6 +109,13 @@ items:
           topicUid: Overview_Agile_Partnership_principles
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
+        - name: Compliance statements
+          topicUid: Overview_Compliance_Statements_intro
+          items:
+            - name: Requirements vs. goals and objectives
+              topicUid: Overview_Compliance_Statements_RvsG_O
+            - name: Tender compliancy (licenses / engineering days)
+              topicUid: Overview_Compliance_Statements_Tender_Compliancy
     - name: DevOps
       topicUid: Overview_DevOps_index
       items:
@@ -101,6 +139,21 @@ items:
               topicUid: What_is_DataMiner_DevOps_Enablement
             - name: The DataMiner DevOps Professional Program
               topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
+            - name: DevOps Enablement Playbook
+              topicUid: DevOps_Enablement_Playbook
+              items:
+                - name: Tooling and infrastructure
+                  topicUid: Tooling_Infrastructure
+                - name: Onboarding
+                  topicUid: DEP_Onboarding
+                - name: Learning resources
+                  topicUid: Learning_Resources
+                - name: Certification
+                  topicUid: DEP_Certification
+                - name: Levelling up your DevOps status
+                  topicUid: Levelling_up_DevOps_status
+                - name: Reporting progress to the stakeholders
+                  topicUid: Reporting_Progress_to_Stakeholders
         - name: DataMiner DevOps Creative Collective
           topicUid: DataMiner_DevOps_Creative_Collective
           items:
@@ -116,6 +169,8 @@ items:
               topicUid: Recommended_Policies
             - name: Unlimited opportunity
               topicUid: Unlimited_Opportunity
+        - name: Glossary
+          topicUid: DevOps_Glossary
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -132,7 +187,7 @@ items:
     - name: Pricing
       topicUid: Pricing
       items:
-      - name: Commercial models summary
+      - name: Commercial and deploy models summary
         topicUid: Pricing_Commercial_Models
       - name: Usage-based services
         topicUid: Pricing_Usage_based_service
@@ -147,22 +202,17 @@ items:
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: CCA Support Services
-          topicUid: CCA_Support_Services
-        - name: Support services terms
-          topicUid: Support_services_terms
-    - name: Compliance statements
-      topicUid: Overview_Compliance_Statements_intro
-      items:
-        - name: Requirements vs. goals and objectives
-          topicUid: Overview_Compliance_Statements_RvsG_O
-        - name: Tender compliancy (licenses / engineering days)
-          topicUid: Overview_Compliance_Statements_Tender_Compliancy
+        - name: Proactive Support
+          topicUid: Proactive_Support
+        - name: Partner support lines
+          topicUid: Partner_support_lines
+        - name: User Operations Support application
+          topicUid: User_operations_support
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
-        - name: Becoming a DataMiner Partner
-          topicUid: Becoming_a_DataMiner_Partner
+        - name: About the Partner Program
+          topicUid: About_Partner_Program
         - name: Getting started with the Partner Program
           topicUid: Getting_Started_with_the_Partner_Program
           items:
@@ -176,16 +226,18 @@ items:
           topicUid: Deal_Registration
         - name: Bidding DataMiner
           topicUid: Bidding_DataMiner
+        - name: Partner responsibilities
+          items:
+            - name: Support level roles
+              topicUid: Support_Level_Roles
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
         - name: DataMiner Solution Deployment Methodology
-          topicUid: DeploymentMethodology
           items:
             - name: About Digital Transformation
               topicUid: DeploymentMethodology
             - name: Managing technology deployments
-              topicUid: Managing_technology_deployments
               items:
                 - name: Methodology is key to success
                   topicUid: Managing_technology_deployments
@@ -217,6 +269,20 @@ items:
               topicUid: Agile_Time_Materials_Methodology
             - name: Some Use Cases & Practical Examples
               topicUid: Some_Use_Cases_Practical_Examples
+    - name: Legal
+      items:
+        - name: Commercial terms
+          items:
+            - name: Terms of sale
+              topicUid: Terms_of_Sale
+            - name: Terms for online deployments
+              topicUid: Terms_Online_Deployments
+        - name: Support terms
+          items:
+            - name: On premises
+              topicUid: Support_Terms_On_Premises
+            - name: SaaS
+              topicUid: Support_Terms_SaaS
     - name: Frequently asked questions
       topicUid: FAQs
       items:

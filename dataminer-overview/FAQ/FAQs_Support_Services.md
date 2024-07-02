@@ -22,13 +22,15 @@ uid: FAQs_Support_Services
   
 - **What happens when my renewal of my support plan is overdue (Perpetual-Use plan only)?**
 
-  By default, support plan contracts renew automatically every year, unless they have been stopped by the user in advance of the anniversary date of the agreement. For more details, see [Pricing - Term](xref:Support_services_terms#pricing---term).
+  By default, support plans renew automatically every year, unless they have been stopped by the user in advance of the end date of the plan.
 
-  In case the support plan has not been deactivated, and the user failed to renew the program in time by sending a valid PO, on the day after the anniversary date of the agreement, the service (i.e. Continuity or Evolve plan) will automatically be stopped along with all related services linked to it. As a user, you can still continue to consult content and resources on the Dojo Community portal.
+  Skyline will provide you with a renewal proposal for the support services at least three months prior to the end date of your support plan. Unless you provide Skyline with a written notice of your wish not to renew the support plan no later than thirty days prior to the end date of the plan, it is automatically renewed for another year, and Skyline will invoice the amount of the renewal proposal. All amounts due to Skyline are payable up front before the provision of any support services. If you terminate the support services early, this does not entitle you to a refund.
 
-- **What happens if I don't have active support on a perpetual support plan?**
+  In case the support plan has not been deactivated, and you fail to pay your invoice(s) or issue a PO (if required) in time, on the day after the end date of the plan, the service may be stopped along with all related services linked to it. However, you can still continue to consult content and resources on the Dojo Community portal.
 
-  - You don't have access to the Skyline IOC technical support team.
+- **What happens if I do not have active support on a perpetual support plan?**
+
+  - You do not have access to the Skyline IOC technical support team.
   - Your platform is exposed to technical & security vulnerabilities.
   - New purchased connectors added to your DataMiner platform are at risk to not be (fully) supported because an outdated DataMiner software version is in use.
   - You have the option to get support for the DataMiner core & connectors (except for upgrades). This is charged as [professional credit services](https://community.dataminer.services/professional-service-credits/).
@@ -40,3 +42,10 @@ uid: FAQs_Support_Services
   On an annual basis, Skyline's leadership team will assess the official inflation trends by considering the preceding six months' data metrics and forecasting the trend for the subsequent six months. Subsequently, the APA% will be finalized and established as the new baseline for pricing in support renewals, encompassing the forthcoming period.
 
   The revised APA% rate will be formally communicated and integrated into the support renewal process, commencing three months prior to the anniversary date of the users' ongoing support plan.
+
+- **How are my personal data handled?**
+
+  If Skyline processes personal data on behalf of you in performing support services, these data will only be processed for the purpose of the support services. Skyline will take appropriate technical and organizational measures to protect your personal data against unauthorized or unlawful processing to prevent accidental loss, destruction, damage, alteration, or disclosure. Skyline may employ its employees, affiliates, and third parties worldwide in the performance of the support services, but it will always remain the primary responsible party for the handling of your data. This may involve a transfer of personal data outside of the European Economic Area if at least one of the following conditions is satisfied:
+
+  - The personal data is transferred to a country that is recognized by the European Commission as providing an adequate level of protection in relation to the data that is transferred.
+  - A processing agreement that incorporates the standard model contractual clauses for data transfers approved by the European Commission is executed between the applicable parties.

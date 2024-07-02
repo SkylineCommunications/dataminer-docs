@@ -12,7 +12,7 @@ SLDataMiner is also responsible for the offloading of data, if an offload databa
 
 ## SLDataMiner troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -60,7 +60,7 @@ class Start,Revert,LogCollector1,LogCollector2,CheckLogs,StopElement,InfoEventsA
 class Watchdog,ThreadsDB,Offload,ThreadsSecondary,MemoryLeak LightGray;
 class RTE,Threads,InfoEvents,ElementActive,LinkLeak Blue;
 class StartPage,CassandraTb LightBlue;
-</div>
+```
 
 > [!NOTE]
 >

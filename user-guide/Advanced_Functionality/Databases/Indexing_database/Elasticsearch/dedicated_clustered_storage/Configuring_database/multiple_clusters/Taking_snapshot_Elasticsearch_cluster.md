@@ -5,7 +5,7 @@ uid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
 # Taking a snapshot of one Elasticsearch cluster and restoring it to another
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
 
 1. Prepare the source and target Elasticsearch clusters by following the steps under [Preparing and configuring the repositories](xref:Configuring_Elasticsearch_backups_Windows_Linux#preparing-and-configuring-the-repositories).
 

@@ -4,7 +4,7 @@ uid: Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard
 
 # Displaying a DataMiner Map in a DataMiner dashboard
 
-Using the new *Dashboards* app (from DataMiner 9.6.11 onwards):
+Using the Dashboards app:
 
 1. Select a dashboard and click the *Start editing* button in the header bar.
 

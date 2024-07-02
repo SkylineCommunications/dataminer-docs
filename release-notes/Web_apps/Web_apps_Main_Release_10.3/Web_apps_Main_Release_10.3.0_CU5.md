@@ -61,6 +61,12 @@ For each of the columns of type "discrete" in the *Get parameters for elements w
 
 ### Fixes
 
+#### Dashboards app & Low-Code Apps: Feed would not be cleared when data was refetched [ID_36478]
+
+<!-- MR 10.3.0 [CU5] - FR TBD -->
+
+Up to now, when the data of a GQI component was refetched, the selection was cleared, but the feed would not. From now on, the feed will also be cleared when the data is refetched.
+
 #### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
@@ -102,6 +108,12 @@ When the feed data linked to a query was grouped, changes to that feed data woul
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
 
 When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.
+
+#### Low-Code Apps: Problem when immediately deleting a newly created app [ID_36648]
+
+<!-- MR 10.3.0 [CU5] - FR TBD -->
+
+When you immediately deleted a newly created low-code app, in some cases, a `Cannot read properties of undefined` error message would appear.
 
 #### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
 

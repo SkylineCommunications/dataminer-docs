@@ -9,7 +9,7 @@ uid: Troubleshooting_Alarm_Console
 
 ## Overview
 
-<div class="mermaid">
+```mermaid
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -42,7 +42,7 @@ flowchart TD
     class START classTerminal;
     class Rte,dberror,Notice,InfoEvent,TimeOut,Alarms classExternalRef;
     class Error classActionClickable;
-</div>
+```
 
 | **Flow item** | **Meaning** |
 |--|--|

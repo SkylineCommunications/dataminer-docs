@@ -29,7 +29,7 @@ The navigation pane on the left side of a view card contains a tree view with th
 
 - [VISUAL](#visual)
 
-- [BELOW THIS VIEW / DATA](#below-this-view--data)
+- [BELOW THIS VIEW](#below-this-view)
 
 - [ALARMS](#alarms)
 
@@ -54,9 +54,11 @@ Under the *VISUAL* node, one or more pages are displayed that contain a graphic 
 > [!NOTE]
 > For more information on how to change the Visio file linked to a particular view, see [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
 
-### BELOW THIS VIEW / DATA
+### BELOW THIS VIEW
 
-Under the BELOW THIS VIEW (from DataMiner 9.6.7 onwards) or DATA node (prior to DataMiner 9.6.7), there is a page for each type of item that can be contained within the view. Next to the item name, a number is displayed that indicates how many of these items are in the view. Click a page in the tree view to display a list of the items in question.
+Under the BELOW THIS VIEW node, there is a page for each type of item that can be contained within the view. Next to the item name, a number is displayed that indicates how many of these items are in the view. Click a page in the tree view to display a list of the items in question.
+
+![BELOW THIS VIEW](~/user-guide/images/Below_This_View.png)<br>*BELOW THIS VIEW page in DataMiner 10.5.4*
 
 The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower right corner of the page.
 
@@ -69,6 +71,8 @@ The data pages can be displayed in several ways. You can change the way they are
 #### List view
 
 In the list view, a detailed list of the items in the view is displayed, with information such as the name, alarm state, alarm count, protocol, alarm and trend template, ID, etc. The information is automatically updated when objects in the view are added, updated or deleted.
+
+![List view](~/user-guide/images/List_View.png)<br>*List view in DataMiner 10.4.5*
 
 The list can be manipulated to display data according to your preference:
 
@@ -141,6 +145,8 @@ The list consists of the following columns:
 
 In the summary view, you can choose to view one of four different lists showing limited information about the items in the view. The lists are automatically updated when items in the view are added, updated or deleted.
 
+![Summary view](~/user-guide/images/Summary_View.png)<br>*Summary view in DataMiner 10.4.5*
+
 | List                 | Description                                                   |
 |----------------------|---------------------------------------------------------------|
 | All                  | All items in the view.                                        |
@@ -191,10 +197,10 @@ A graphic representation of the alarm distribution, alarm events and alarm state
 
 ### DASHBOARDS
 
-This page links to the legacy DMS Dashboards app
+This page links to the legacy DMS Dashboards module.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
 
 ### AGGREGATION
 
@@ -250,4 +256,4 @@ On this page, you can add short notes to the view. For more information, see [Ca
 On this page, you can add, view and edit extensive annotations to the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.

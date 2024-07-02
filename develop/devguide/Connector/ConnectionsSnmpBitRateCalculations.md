@@ -9,7 +9,7 @@ DataMiner communicates with devices asynchronously. This makes it difficult to a
 > [!NOTE]
 >
 > - The extra communication cycle information is only available for SNMP devices.
-> - An example protocol "SLC SDF Rates - SNMP" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> - An example protocol "Skyline Example Rates SNMP" is available in the [SkylineCommunications/SLC-C-Example_Rates-SNMP](https://github.com/SkylineCommunications/SLC-C-Example_Rates-SNMP) GitHub repository.
 
 ## Counters tracked by SLSNMPManager
 

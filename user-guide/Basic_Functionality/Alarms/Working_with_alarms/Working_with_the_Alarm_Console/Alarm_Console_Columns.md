@@ -73,9 +73,11 @@ For more information on changing the column layout, see [Changing the column lay
 
   - **Name** changed: An alarm caused by a parameter of which the name has been changed.
   
-  - **Service** impact changed: An alarm for which the number of affected services has changed.
+  - **Service impact changed**: An alarm for which the number of affected services has changed.
 
   - **View impact changed**: An alarm for which the affected views have changed.
+  
+  - **Base alarms changed**: An alarm for which the base alarms have changed. This type only applies to correlated alarms and alarm groups.
 
 - **Severity duration**: The length of time that the alarm has had its current severity
 

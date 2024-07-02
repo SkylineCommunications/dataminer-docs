@@ -9,7 +9,7 @@ Runs an action.
 ```csharp
 int actionID = 1;
 
-protocol.NotifyProtocol(221/*NT_RUN_ACTION*/, vactionID, null);
+protocol.NotifyProtocol(221/*NT_RUN_ACTION*/, actionID, null);
 ```
 
 ## Parameters

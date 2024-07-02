@@ -32,7 +32,7 @@ To securely host your DataMiner Agent, we recommend that you make sure HTTPS con
    1. Click *OK*.
 
 > [!TIP]
-> It is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
+> If you do not [configure HTTP to HTTPS redirection](#configuring-http-to-https-redirection), it is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
 
 ## Configuring HTTPS in DataMiner
 
@@ -179,7 +179,7 @@ The following auto-detect methods can be specified:
 
 - **I can no longer launch DataMiner Cube from the DataMiner Cube start window**
 
-    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Opening_the_desktop_app).
+    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Using_the_desktop_app).
 
 - **The webpage could not be found (HTTP 404 error)**
 

@@ -25,6 +25,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. Go to *Apps* > *System Center* > *Database*.
 
+   > [!NOTE]
+   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Database* > *General* page is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as it is not possible to customize the database configuration of a DaaS system.
+
 1. Choose **Type**: *Database per cluster*.
 
 1. Specify the following database settings for the Cassandra nodes:
@@ -36,7 +39,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
       > [!NOTE]
       > The prefix has a maximum length of 20 characters. Prior to DataMiner 10.3.0 [CU5]/10.3.8<!-- RN 36503 -->, it has a maximum length of 11 characters.
 
-   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g. `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
 
    - **User**: Username with which the DMA has to log on to Cassandra.
 
@@ -55,6 +58,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
    - **Password**: The password with which the DMA has to log on to the indexing database (if applicable).
 
      ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
+
+   > [!TIP]
+   > See also: [Configuring an indexing database](xref:Indexing_Database)
 
 <!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
 
@@ -114,6 +120,9 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 > [!NOTE]
 > Ensure your server version is compatible with OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e. running DataMiner 10.3.0/10.3.3 or higher).
+
+> [!TIP]
+> See also: [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service)
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
 

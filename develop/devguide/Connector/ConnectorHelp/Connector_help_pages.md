@@ -14,7 +14,10 @@ When you develop a connector using DIS, you can generate the connector documenta
 
 To make sure your page can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file name and place the file in the correct folder:
 
-- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* documentation page has to be *Microsoft_Platform.md*.
+- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* documentation page has to be *Microsoft_Platform.md*. Make sure the casing is the same, and do not replace any other characters with underscores. Any mismatch between the file name and the connector name will make the documentation **unavailable** in the Catalog.
+
+  > [!IMPORTANT]
+  > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the DataMiner Catalog.
 
 - Add your documentation file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector/doc*
 
@@ -31,7 +34,7 @@ When you add a new page to the connector documentation, you will need to add it 
   ```
 
 > [!TIP]
-> The value you need to specify next to "topicUid:" is a UID that should be specified at the top of the markdown file. See [Adding a page](xref:contributing#adding-a-new-page).
+> The value you need to specify next to "topicUid:" is a UID that should be specified at the top of the markdown file. See [Adding a page](xref:CTB_Adding_New_Page).
 
 > [!NOTE]
 > If you do not configure the table of contents correctly, the automatic checks that run after you submit your pull request will fail. You can then click *Details* to find out what exactly went wrong.
@@ -44,7 +47,7 @@ When you write connector documentation, keep the instructions below in mind.
 
 ### Markdown syntax
 
-Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:contributing#markdown-syntax).
+Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:CTB_Markdown_Syntax).
 
 ### Title
 

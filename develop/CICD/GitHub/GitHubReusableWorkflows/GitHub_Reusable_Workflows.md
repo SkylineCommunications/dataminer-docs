@@ -4,7 +4,7 @@ uid: github_reusable_workflows
 
 # GitHub reusable workflows
 
-Where a [GitHub Action](xref:Deploying_Automation_scripts_from_a_GitHub_repository) can provide an easy access point to a single key action, the reusable workflow takes this up a notch. A GitHub reusable workflow allows the re-use of a combination of many different GitHub actions and other scripts, running across several jobs combined into a single easy call.
+Where a [GitHub Action](xref:Marketplace_deployment_action) can provide an easy access point to a single key action, the reusable workflow takes this up a notch. A GitHub reusable workflow allows the re-use of a combination of many different GitHub actions and other scripts, running across several jobs combined into a single easy call.
 
 It provides versioning and can be called in such a way to always use the latest stable version. This is different from [starter workflows](xref:github_starter_workflows), which copy and paste a template workflow without the ability to run the "latest version".
 
@@ -61,3 +61,6 @@ jobs:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
 ```
+
+> [!NOTE]
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.

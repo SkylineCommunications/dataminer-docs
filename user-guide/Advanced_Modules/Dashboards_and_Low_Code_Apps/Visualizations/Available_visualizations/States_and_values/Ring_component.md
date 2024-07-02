@@ -6,9 +6,16 @@ uid: DashboardRing
 
 This component displays the name and, if applicable, the value of a DataMiner object within a colored ring matching the state of the object. This can be an element, a view, a parameter, etc.
 
+![Ring](~/user-guide/images/Ring.png)<br>*Ring component in DataMiner 10.4.6*
+
 To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+
+   - Column parameter feeds are supported.
+
+     > [!NOTE]
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
 
    - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
@@ -40,7 +47,7 @@ To configure the component:
      - *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
 
      > [!NOTE]
-     > Prior to DataMiner 10.0.10, the component does not support feeds with multiple elements, services, views or redundancy groups. From that DataMiner version onwards, these are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
+     > Feeds with multiple elements, services, views, or redundancy groups are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
 
    - The *Style* section, the following options are available:
 

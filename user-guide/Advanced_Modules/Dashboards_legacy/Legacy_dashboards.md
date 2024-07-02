@@ -4,7 +4,7 @@ uid: dashboards
 
 # DMS Dashboards (legacy)
 
-DMS Dashboards is a legacy module that allows you to design and view customized dashboards. While a more user-friendly Dashboards app is available from DataMiner 9.6.9 onwards, this legacy module remains available both within DataMiner Cube and as a standalone app.
+DMS Dashboards is a legacy module that allows you to design and view customized dashboards, both within DataMiner Cube and in a standalone app. In recent DataMiner versions, this module has been replaced by the [Dashboards app](xref:newR_D).
 
 - [Accessing dashboards](xref:Accessing_dashboards)
 
@@ -17,9 +17,7 @@ DMS Dashboards is a legacy module that allows you to design and view customized 
 - [Legacy Dashboard Gateway installation](xref:Legacy_Dashboard_Gateway_installation)
 
 > [!NOTE]
->
-> - For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D#dashboards-app).
-> - From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards module can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+> This module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using the legacy Dashboards module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
 
 > [!CAUTION]
 > This module is being retired. For more detailed information, see [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). ![EOL](~/user-guide/images/EOL_Duo.png)

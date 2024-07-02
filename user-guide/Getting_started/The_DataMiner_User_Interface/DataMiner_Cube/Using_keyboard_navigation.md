@@ -10,7 +10,7 @@ The following keyboard shortcuts are available in Cube:
 
     | Shortcut                 | Action                                                                                                        |
     |----------------------------|---------------------------------------------------------------------------------------------------------------|
-    | Ctrl + F                   | Obsolete from DataMiner 10.0.0/10.0.2 onwards. Starts a new search in the Surveyor.                           |
+    | Ctrl + F                   | Starts a search in the header search bar. In versions before 10.0.0/10.0.2 this starts a new search in the Surveyor.                           |
     | Ctrl + E                   | Close the selected card.                                                                                      |
     | Ctrl + M                   | Show the menu of the selected card.                                                                           |
     | Ctrl + L                   | Change the card layout.                                                                                       |
@@ -25,7 +25,7 @@ The following keyboard shortcuts are available in Cube:
     | Alt + Right                | When on a card, go to the next card.                                                                          |
     | "+" and "-"                | When in a trend graph, zoom in/out.                                                                           |
     | Arrow left/right           | When in a trend graph, pan to the left/right.                                                                 |
-    | Ctrl + Num. key pad arrows | When in a Visio drawing, pan in the direction of the pressed arrow key.                                       |
+    | Ctrl + Num. keypad arrows | When in a Visio drawing, pan in the direction of the pressed arrow key.                                       |
     | Ctrl + "+"                 | When in a Visio drawing, zoom in.                                                                             |
     | Ctrl + "-"                 | When in a Visio drawing, zoom out.                                                                            |
 

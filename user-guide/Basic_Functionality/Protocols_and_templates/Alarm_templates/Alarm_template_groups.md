@@ -87,12 +87,12 @@ To create a new alarm template group:
    > [!NOTE]
    > Under the list with the added alarm templates, the consolidated alarm template is shown. You can use this as a reference to see the combined effect of the different alarm templates in the group.
 
-1. Hover the mouse over an alarm templates and click the small up and down arrows to change the order, if necessary.
+1. Hover the mouse pointer over an alarm template and click the small up and down arrows to change the order, if necessary.
 
    > [!NOTE]
    > The order of the alarm templates in a template group is very important as every alarm template in the group overrules the one below it.
 
-1. To remove an alarm template from the group, hover the mouse over the alarm template and click the *x*.
+1. To remove an alarm template from the group, hover the mouse pointer over the alarm template and click the *x*.
 
 1. Click *OK*.
 

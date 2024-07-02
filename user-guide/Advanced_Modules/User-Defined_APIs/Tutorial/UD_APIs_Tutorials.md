@@ -12,7 +12,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 - [DataMiner Cube](https://community.dataminer.services/dataminer-cube-installer/)
 - [User-Defined APIs user permissions](xref:DataMiner_user_permissions#modules--user-defined-apis)
 - [Automation user permissions](xref:DataMiner_user_permissions#modules--automation)
-- [Visual Studio 2022 with DataMiner Integration Studio 2.42+](xref:Installing_and_configuring_the_software)
+- [Visual Studio 2019 or later with DataMiner Integration Studio 2.42+](xref:Installing_and_configuring_the_software)
 - [Postman](https://www.postman.com/downloads/)
 
 ## Tutorials
@@ -21,7 +21,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 - [Retrieving elements in alarm](xref:UD_APIs_Elements_in_alarm_tutorial)
 
 > [!NOTE]
-> The Automation script solution that is created and used in the tutorials is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to a DataMiner System [connected to dataminer.services](xref:AboutCloudPlatform) using the corresponding [DataMiner Catalog item](https://catalog.dataminer.services/catalog/5162).
+> The Automation script solution that is created and used in the tutorials is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to a DataMiner System [connected to dataminer.services](xref:AboutCloudPlatform) using the corresponding [DataMiner Catalog item](https://catalog.dataminer.services/details/package/5162).
 
 > [!TIP]
 >

@@ -6,6 +6,8 @@ uid: DashboardState
 
 This component displays the state, name and, if applicable, the value of a DataMiner object. This can be an element, a view, a parameter, etc.
 
+![State](~/user-guide/images/State.png)<br>*State component in DataMiner 10.4.6*
+
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as a feed for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
 
@@ -13,9 +15,14 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
+   - Column parameter feeds are supported.
+
+     > [!NOTE]
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+
    - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
-   - Column parameter feeds are supported from DataMiner 10.0.12 onwards.
+   - This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
@@ -51,8 +58,6 @@ To configure the component:
 
    - In the *Style* section, the following options are available:
 
-     From DataMiner 10.0.9 onwards, if the component uses a parameter feed, or from DataMiner 10.0.10 onwards regardless of the type of feed:
-
      - *Design*: Allows you to select one of the following options:
 
        - *Small:* The component displays a single line containing a label and value.
@@ -76,19 +81,5 @@ To configure the component:
      - *Layout flow*: Allows you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will be displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
      - Alignment: Available from DataMiner 10.1.0/10.1.3 onwards. Only displayed if *Design* is set to *Large* or *Auto Size*. Allows you to align the contents of the components to the left, in the center or to the right.
-
-     Prior to DataMiner 10.0.9, or prior to DataMiner 10.0.10 if the component does not use a parameter feed:
-
-     - *Use available space*: If this option is selected, the text displayed in the component is rescaled when the component is resized, so that it is always displayed as large as possible.
-
-     - *Align font sizes*: Only available if the *Use available space* option is selected, in which case this option is also selected by default. This option causes the font size to be aligned with the font size of other “State” components using this option.
-
-     - *Show progress*: Only available if the component displays an analog parameter. In that case, a darker color within the bar indicating the alarm color of the parameter will indicate the current parameter value.
-
-     - *LED position*: Determines whether the bar indicating the alarm color of the parameter is displayed on the left side of the component or at the bottom.
-
-     - *Show icon*: Determines whether an icon is displayed for the parameter. You can select which icon is displayed in a drop-down list.
-
-        For trended parameters, by default a trend icon is displayed. Clicking this icon will open the corresponding trend graph in the Monitoring app.
 
    - If a parameter was added as a feed, in the *Labels* section, you can select whether the parameter name, element name or index should be displayed in the component.

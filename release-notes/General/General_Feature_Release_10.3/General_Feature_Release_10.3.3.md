@@ -207,12 +207,6 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
-#### Maps: Zoom range can now be set by means of a slider [ID_35381]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-The zoom range of a map can now be set by means of a slider.
-
 #### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

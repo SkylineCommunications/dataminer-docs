@@ -10,7 +10,7 @@ uid: visual_overview_benchmarks
 
 - Intel Core i7-9700 CPU @ 3.00GHz
 - 6 cores
-- 32GB RAM
+- 32 GB RAM
 - SSD
 - Cassandra & Elasticsearch
 - Windows 10 Pro
@@ -21,7 +21,7 @@ Server:
 
 - Intel Xeon CPU E5-2620 v4 @ 2.1GHz
 - 8 cores
-- 22GB RAM
+- 22 GB RAM
 - SSD
 - Cassandra (single node) & Elasticsearch
 - Windows Server 2016 Standard
@@ -30,7 +30,7 @@ Client:
 
 - Intel Core i5-4590 CPU @ 3.30GHz
 - 4 cores
-- 16GB RAM
+- 16 GB RAM
 - Windows 10 Pro 20H2
 
 ### Metric 3
@@ -39,7 +39,7 @@ Server:
 
 - Intel i7-10750H
 - 12 cores
-- 40GB RAM
+- 40 GB RAM
 - SSD
 - Windows 10
 

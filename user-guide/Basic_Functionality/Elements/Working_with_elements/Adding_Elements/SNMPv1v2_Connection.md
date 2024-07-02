@@ -10,6 +10,9 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 
 - **IP address/host**: The polling IP or URL of the destination.
 
+  > [!IMPORTANT]
+  > Do not fill in a hostname instead of an IP address if this connection will be used to receive SNMP traps. Using a hostname is not supported for SNMP trap reception.
+
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
 - **Port number**: By default 161.

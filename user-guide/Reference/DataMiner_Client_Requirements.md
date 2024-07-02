@@ -30,13 +30,10 @@ Recommended DataMiner client configuration:
 
 ### Microsoft .NET Framework
 
-Microsoft .NET Framework 4.6.2
+Microsoft .NET Framework 4.7.2
 
 > [!IMPORTANT]
 > We recommend always upgrading to the latest .NET Framework version.
-
-> [!NOTE]
-> When you connect to DataMiner using HTTPS, TLS 1.0 is required to install Cube. It is also possible to use TLS 1.1 or TLS 1.2, but in that case Microsoft .NET Framework 4.6.2 is required.
 
 ### Skyline certificates
 
@@ -56,17 +53,6 @@ To install the Skyline certificates:
 > - The tool will try to install the certificates for all users of the computer. If this is not possible because of insufficient rights, it will try to install the certificates for the current user only.
 > - When the installation is complete, a message "Certificates have been installed (current user)" or "Certificates have been installed (all users)" will be displayed.
 > - This tool (SLRegCerts.exe) also supports a "/silent" option that suppresses any message box output, so that it can be used in automatic installations.
-
-### Web browser
-
-If DataMiner Cube will be run as a web application instead of a desktop application, you will need one of the following browsers:
-
-- Microsoft Internet Explorer (v9.0 or above)
-
-- Microsoft Edge (using IE compatibility mode)
-
-> [!TIP]
-> For more information, see [Internet Explorer Support](https://community.dataminer.services/documentation/internet-explorer-support/).
 
 ### Optional software
 

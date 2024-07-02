@@ -18,7 +18,7 @@ string
 
 > [!NOTE]
 >
-> - To specify multiple values, use a semicolon as separator ((“;”)
+> - To specify multiple values, use a semicolon as separator (“;”).
 > - To denote an exception value, prepend the exception value with a dollar character (“$”).
 
 ## Examples

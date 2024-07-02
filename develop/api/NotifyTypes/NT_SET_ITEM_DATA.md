@@ -11,22 +11,22 @@ Sets the values stored for the specified parameters in the ElementData.xml file.
 Setting a **single value**:
 
 ```csharp
-string parameterName =  "ExampleParameter";
-string value = "Data";
+string paramName = "ExampleParameter";
+string paramValue = "Data";
 
-protocol.NotifyProtocol(89, parameterName, value);
+protocol.NotifyProtocol(89, paramName, paramValue);
 ```
 
-- parameterName (string): The name of the parameter.
-- values (string[]): The value to set.
+- paramName (string): The name of the parameter.
+- paramValue (string): The value to set.
 
 Setting **multiple values**:
 
 ```csharp
-string[] parameterNames =  new string[]{"ExampleParameter"};
-string[] values = new string[] { "Data" };
+string[] paramNames =  new string[] { "ExampleParameter" };
+string[] paramValues = new string[] { "Data" };
 
-object result = protocol.NotifyProtocol(89, parameterNames, values);
+object result = protocol.NotifyProtocol(89, paramNames, paramValues);
 
 if (result != null)
 {
@@ -38,8 +38,8 @@ else
 }
 ```
 
-- parameterNames (string[]): The names of the parameters.
-- values (string[]): The values to set.
+- paramNames (string[]): The names of the parameters.
+- paramValues (string[]): The values to set.
 
 ## Return Value
 

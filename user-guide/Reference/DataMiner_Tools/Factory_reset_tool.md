@@ -12,7 +12,9 @@ From DataMiner 10.0.12 onwards, this tool is available on each DMA server in the
 > There is no automatic backup of the DMA before the factory reset is performed. Make sure you have taken any backups you need before you run this tool.
 
 > [!NOTE]
-> The factory reset will also remove all known users of the DataMiner System, so you will only be able to log in with the built-in Administrator account afterwards.
+>
+> - The factory reset will also **remove all known users** of the DataMiner System, so you will only be able to log in with the built-in Administrator account afterwards.
+> - The factory reset tool will not modify settings related to the connection to dataminer.services. This means that the DMA **will still be connected to dataminer.services** after you have executed the factory reset.
 
 Optionally, you can run the tool with the `–y` input argument in order to skip prompts that ask you for permission to run specific actions.
 
@@ -39,6 +41,7 @@ It will always perform the following actions, regardless of whether the DMA is r
   This action deletes any unnecessary files in the folder `C:\Skyline DataMiner\`. It uses a whitelist to determine which files to keep. When it is first executed, the default whitelist is added to `C:\Skyline DataMiner\Files\ResetConfig.txt`. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
 
 - ResetDataMinerXml
+- ResetNodeIdAndRestartModules (from DataMiner 10.4.5/10.5.0 onwards)<!-- RN 39092 -->
 - ResetNotifyMail
 - ResetDoNotRemoveFiles
 - ResetSLNetExeConfig
@@ -60,6 +63,14 @@ It will always perform the following actions, regardless of whether the DMA is r
 - Cleanclustereddatabases
 
   Available from DataMiner 10.1.0 \[CU6\]/10.1.9 onwards. Prior to DataMiner 10.2.0 \[CU9\]/10.2.12, this action will remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From DataMiner 10.2.0 \[CU9\]/10.2.12 onwards, this action will remove the tables, keyspaces, and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+
+- DeleteAllDxmCustomAppSettings
+
+  Available from DataMiner 10.4.7/10.5.0 onwards<!--RN 39530-->. This action removes the *appsettings.custom.json* file, which contains custom DxM settings that are preserved during a DxM upgrade. As a result, all custom DxM settings will be reset.
+
+- ResetCloudConnection
+
+  Available from DataMiner 10.4.7/10.5.0 onwards<!--RN 39524-->. This action deletes the CloudGateway data folder that contains the identity and authentication tokens for connecting to dataminer.services. Running this action disconnects the DataMiner Agent from dataminer.services, allowing you to set up a fresh connection to dataminer.services.
 
 ## SLDataGateway.Tools.Database.exe
 

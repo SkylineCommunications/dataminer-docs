@@ -16,7 +16,7 @@ During the migration to a Cassandra Cluster setup, paging handler objects in SLD
 
 ## Fix
 
-Install DataMiner 10.1.0 [CU22], 10.2.0 [CU10], or 10.3.1
+Install DataMiner 10.1.0 [CU22], 10.2.0 [CU10], or 10.3.1.
 
 ## Issue description
 

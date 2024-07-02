@@ -2,14 +2,12 @@ items:
   - name: PA 1.3.1
     topicUid: PA_1.3.1
   - name: PA 1.3.0
-    topicUid: PA_1.3.0
     items:
       - name: New features and changes
         topicUid: PA_1.3.0
       - name: Addendum CU1
         topicUid: PA_1.3.0_CU1
   - name: PA 1.2.2
-    topicUid: PA_1.2.2
     items:
       - name: New features and changes
         topicUid: PA_1.2.2

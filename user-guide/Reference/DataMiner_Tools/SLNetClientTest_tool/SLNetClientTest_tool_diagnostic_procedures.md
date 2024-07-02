@@ -19,7 +19,6 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Debugging callback timeout errors](xref:SLNetClientTest_debugging_callback_timeout_errors)
 - [Exporting data to a CSV file](xref:SLNetClientTest_exporting_data_to_csv)
 - [Inspecting parameter table rows in SLProtocol and SLElement](xref:SLNetClientTest_Inspecting_parameter_table_rows)
-- [Inspecting the active replication buffers](xref:SLNetClientTest_inspecting_active_replication_buffers)
 - [Inspecting the contents of a table parameter](xref:SLNetClientTest_Inspecting_the_contents_of_a_table_parameter)
 - [Inspecting the parameter notification queue](xref:SLNetClientTest_Inspecting_the_parameter_notification_queue)
 - [Inspecting the SLNet event subscriptions](xref:SLNetClientTest_viewing_connection_details)
@@ -35,3 +34,4 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Verifying sync rules](xref:SLNetClientTest_verifying_sync_rules)
 - [Viewing SLNet calls being sent](xref:SLNetClientTest_Viewing_SLNet_calls_being_sent)
 - [Viewing the connection timeout states of an element](xref:SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element)
+- [Viewing the memory usage of elements, parameters, and tables](xref:SLNetClientTest_Viewing_memory_usage)

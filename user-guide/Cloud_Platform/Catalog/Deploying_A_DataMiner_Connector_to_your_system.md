@@ -1,28 +1,42 @@
 ---
-uid: Deploying_A_DataMiner_Connector_to_your_system
+uid: Deploying_a_catalog_item
 ---
 
-# Deploying a DataMiner connector to your system
+# Deploying a Catalog item to your system
 
-To deploy a connector to your DataMiner System from the Catalog module:
+To deploy an item from the DataMiner Catalog (e.g. a connector or package) to your DataMiner System:
 
 1. Make sure the following requirements are met:
 
    - Your DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
    - Your organization has been verified. This is necessary for dataminer.services to be able to check for which connectors your organization has acquired a license. See [Getting your organization verified](xref:CloudConnectionVerification).
+
    - Your dataminer.services account is linked to a DataMiner user account. See [Linking your DataMiner account to your dataminer.services account](xref:Linking_your_DataMiner_and_DCP_account).
 
-1. Look up the connector in the catalog. See [Looking up a DataMiner connector](xref:Looking_up_a_DataMiner_connector).
+1. Look up the item in the Catalog. See [Looking up an item in the Catalog](xref:Looking_up_an_item_in_the_catalog).
 
-1. Click the *Deploy* button.
+   ![Microsoft Platform](~/user-guide/images/Catalog_Microsoft.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+
+1. If you cannot see the *Deploy* button yet, go to the *Versions* tab and expand the version you want to deploy.
+
+   If you do see a *Deploy* button immediately, but you want to deploy a specific version, also go to the *Versions* tab and expand the version you want to deploy.
 
    > [!NOTE]
    >
-   > - The *Deploy* button is only available if your organization has a license for the displayed connector. Otherwise, it is grayed out and displays the text "No License". In that case, to be able to deploy the connector, contact <licensing@skyline.be>.
-   > - All dataminer.services users in your organization have the rights to deploy connectors to your DataMiner Systems, regardless of the [permissions](xref:DataMiner_user_permissions) that have been configured for them in DataMiner. Note that this will be adjusted in the near future.
-   > - To deploy a specific version of a connector, click the version history of the connector, and then click the *Deploy* button next to the relevant version.
+   > - If your organization does not have a license for the displayed item, the *Deploy trial* button will be displayed instead, which you can use to test the item in a staging environment. To get a license to deploy the item in a Production system, contact <licensing@skyline.be>.<!-- RN 39205 -->
+   > - To be able to deploy an item to your DataMiner System, the DataMiner user profile linked to your dataminer.services user profile has to have the following permissions:
+   >   - [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages).
+   >   - [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute).
+   > - For Skyline employees only, a *Download* button can be available instead. To get access to this button as a Skyline employee, click the user icon and select *Toggle privileged options*.
 
-1. Select the target DataMiner System and confirm the deployment. The connector will then be pushed to the DataMiner System.
+1. Click the *Deploy* button.
+
+   ![Deploy connector](~/user-guide/images/Deploy_Connector.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+
+1. Select the target DataMiner System and click *Deploy*.
+
+   The item will be pushed to the DataMiner System. In the Admin app, you can check the status of the deployment. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
 
 > [!NOTE]
-> Deploying a connector from the catalog will never change the production version for that connector in the DataMiner System.
+> Deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.

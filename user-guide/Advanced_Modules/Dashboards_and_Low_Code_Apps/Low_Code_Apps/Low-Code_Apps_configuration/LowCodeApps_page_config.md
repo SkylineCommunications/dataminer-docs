@@ -20,7 +20,7 @@ To configure a page:
 
 1. Click the pencil icon to configure the components on the page. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
 
-1. If one or more actions should be triggered when the page is loaded, in the page configuration pane, open the *Events* section and click the configuration button next to *On page load*. Then configure the action(s) that should be triggered. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. If one or more actions should be triggered when the page is loaded or closed, in the page configuration pane, open the *Events* section and click the *Configure actions* button next to [*On open* (or *On page load*) or *On close*](xref:LowCodeApps_event_config). Then configure the action(s) that should be triggered.
 
 1. If you want to hide the page from the sidebar:
 
@@ -32,8 +32,8 @@ To configure a page:
 
 > [!NOTE]
 >
-> - From DataMiner 10.3.6/10.4.0 onwards, to delete a page, click the ellipsis button next to the page name in the pane on the left, select *Delete*, and click the confirmation icon.<!-- RN 36097 --> Prior to DataMiner 10.3.6/10.4.0, to delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
-> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a page, click the ellipsis button next to the page name in the pane on the left, and select *Duplicate*. <!-- RN 36097 -->
+> - From DataMiner 10.3.6/10.4.0 onwards, to **delete** a page, click the ellipsis button next to the page name in the pane on the left, select *Delete*, and click the confirmation icon.<!-- RN 36097 --> Prior to DataMiner 10.3.6/10.4.0, to delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
+> - From DataMiner 10.3.6/10.4.0 onwards, to **duplicate** a page, click the ellipsis button next to the page name in the pane on the left, and select *Duplicate*.<!-- RN 36097 --> The duplicated page will contain the same configuration, including feed references. However note that while feed references are maintained when you duplicate a page, other pages that consume feeds from the original page will not receive values from the duplicated page.
 
 > [!TIP]
 > See also: [Tutorials - Managing the pages of an app](xref:Tutorial_Apps_Managing_Pages)

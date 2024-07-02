@@ -1,8 +1,9 @@
 ---
 uid: I-DOCSIS_architecture
+keywords: I-DOCSIS architecture
 ---
 
-# EPM I-DOCSIS architecture
+# EPM Integrated DOCSIS architecture
 
 The EPM Solution makes use of the following components:
 
@@ -10,16 +11,31 @@ The EPM Solution makes use of the following components:
 - [Back-end connectors](#back-end-connectors): These connectors take care of technology-specific aggregation of the data from the collector connectors.
 - [Front-end connector](#front-end-connector): This connector takes care of technology-agnostic data presentation. It allows users to view KPIs and other information based on the data received from the back-end connectors.
 - [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution.
-
+<!--
 ![EPM architecture](~/user-guide/images/EPM_docsis_architecture.png)
+-->
+```mermaid
+%%{init: {'flowchart':{'curve':'monotoneY'}}}%%
+flowchart TB
+  subgraph Integrated DOCSIS architecture
+    direction TB
+    style Front-End fill:#00aff0
+    style Back-End fill:#00517d
+    style CM-Collector fill:#898989
+    style CCAP fill:#898989
+    Front-End(front end) <--> Back-End(back end)
+    Back-End(back end) <--> CM-Collector(CM collector)
+    Back-End(back end) <--> CCAP(CCAP collector)
+  end
+```
 
 ## Collector connectors
 
 At the core of the solution are collector connectors capable of interfacing with any physical or virtual data source (devices, APIs, etc.).
 
-In a typical I-DOCSIS deployment, there are various types of service-delivery entities such as CMTSs, Fiber and Optical Nodes, and cable modems (CMs).
+In a typical Integrated DOCSIS deployment, there are various types of service-delivery entities such as CMTSs, Fiber and Optical Nodes, and cable modems (CMs).
 
-![I-DOCSIS collectors](~/user-guide/images/EPM_I-docsis_collectors.png)
+![Integrated DOCSIS collectors](~/user-guide/images/EPM_I-docsis_collectors.png)
 
 The EPM Solution integrates with these entity types, regardless of technology or vendor, via specific or generic connectors. These "collector" connectors operate at the lowest level of the EPM Solution. The connectors are optimized for data gathering and initial processing. Parameters stored at this level typically correspond to direct readings from data sources.
 

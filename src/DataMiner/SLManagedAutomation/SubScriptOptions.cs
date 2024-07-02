@@ -65,9 +65,26 @@ namespace Skyline.DataMiner.Automation
 		public bool WaitWhenLocked { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether the script will return more detailed error information instead of throwing an exception. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// Gets or sets a value indicating whether the script will return more detailed error information instead of throwing an exception. These can be retrieved with method <see cref="SubScriptOptions.GetErrorMessages"/>. This is supported from DataMiner 10.3.0/10.2.7 onwards (RN 33306).
 		/// </summary>
 		/// <value><c>true</c> if the script will return more detailed error info instead of throwing an exception; otherwise, <c>false</c>.</value>
+		/// <example>
+		/// <code>
+		/// var script = engine.PrepareSubScript("SRM_PFL_Ericsson_Decoder");
+		/// script.ExtendedErrorInfo = true;
+		/// script.SelectScriptParam("Info", "{}");
+		/// script.SelectScriptParam("ProfileInstance", "{}");
+		/// script.SelectDummy("dummy1", dmaId, elementId);
+		/// 
+		/// script.StartScript();
+		///
+		/// if (script.HadError)
+		/// {
+		///   string[] errors = script.GetErrorMessages();
+		///   // Handle errors.
+		///   }
+		/// </code>
+		/// </example>
 		public bool ExtendedErrorInfo { get; set; }
 
 		/// <summary>
