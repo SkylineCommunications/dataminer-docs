@@ -5236,10 +5236,9 @@ items:
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
-    - name: Quality Gate
-      topicUid: CICD_Quality_Gate_Github
+    - name: Quality gate
       items:
-      - name: GitHub Quality Gate
+      - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
     - name: Publishing artifacts to the DataMiner Catalog
       topicUid: publish_to_catalog

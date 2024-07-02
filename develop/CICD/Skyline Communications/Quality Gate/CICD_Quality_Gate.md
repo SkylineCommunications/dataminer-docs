@@ -3,15 +3,15 @@ uid: CICD_Quality_Gate_Github
 keywords: CICD, SonarQube, SonarCloud, Quality Gate, Quality
 ---
 
-# CI/CD Quality Gate Github
+# CI/CD quality gate GitHub
 
-A CI/CD Pipeline allows deployment to automatically block if it does not meet a certain quality standard. These standards are configured at each organization and sometimes tweaked for specific departments or outputs. They supplement manual efforts in quality control, such as code reviews and manual testing procedures.
+With a CI/CD pipeline, deployment can be automatically blocked if it does not meet certain quality standards. These standards are configured per organization and are sometimes tweaked for specific departments or outputs. They supplement manual efforts in quality control, such as code reviews and manual testing procedures.
 
-At Skyline Communications' GitHub organization, we strive to reuse the same quality gate for all our coding artifacts (Connectors, Automation Scripts, Libraries, Tooling, etc.).
+Within Skyline Communications' GitHub organization, we strive to reuse the same quality gate for all our coding artifacts (connectors, Automation scripts, libraries, tooling, etc.).
 
-## Valid Compilation
+## Valid compilation
 
-Firstly, if you provide a Visual Studio solution, we will attempt to compile it on the GitHub runner agents. This often catches assembly mistakes. For example, when a developer references code from a third-party assembly but forgets to add that assembly to their repository. If we did not catch these, things might compile okay on their machine but would not compile on other developers' machines.
+If you provide a Visual Studio solution, we will first attempt to compile it on the GitHub runner agents. This often catches assembly mistakes, for example when a developer references code from a third-party assembly but forgets to add that assembly to their repository. If such mistakes were not caught, things might compile okay on the machine of the original developer but would not compile on other machines.
 
 To accomplish this, we run:
 
@@ -21,13 +21,13 @@ dotnet build "./NameOfSolution.sln" -p:DefineConstants="DCFv1%3BDBInfo%3BALARM_S
 
 Any compilation failure will trigger the quality gate and block a release.
 
-## Automated Tests
+## Automated tests
 
 We will attempt to run any tests defined next to the source code. These could be written in MSTest, NUnit, or other frameworks. As long as they are recognized by .NET as tests, we will run them.
 
-For GitHub, we currently only run Unit Tests. For Integration Tests, we are looking into the concept of DAAS to run such code against.
+For GitHub, we currently only run unit tests. For integration tests, we are looking into the concept of DAAS to run such code against.
 
-You can define an integration test by specifying the test category to the test: **IntegrationTest**. These are filtered out when running Unit Tests in the pipeline.
+You can define an integration test by specifying the test category for the test: **IntegrationTest**. These are filtered out when unit tests are run in the pipeline.
 
 To accomplish this, we run:
 
@@ -37,17 +37,17 @@ dotnet test "./NameOfSolution.sln" --filter TestCategory!=IntegrationTest --logg
 
 Any test failure will trigger the quality gate and block a release.
 
-## Static Code Analysis
+## Static code analysis
 
 As part of our clean code and quality standards, Skyline has been using SonarQube and SonarCloud for many years. This service performs code analysis and looks for common mistakes or bad practices. It helps keep our code below a certain complexity and catches bugs before manual validation procedures might catch them.
 
 SonarCloud does not offer an export and import functionality, so below are the settings used for artifacts created on GitHub. You can use these either as a starting point or just for your information.
 
-### SonarCloud Quality Gate
+### SonarCloud quality gate
 
-The following are the conditions of the quality gate we use. This was balanced to handle the large amount of legacy code while also considering completely new code we write. More focus is given to ensuring new code stays as clean as possible while also trying to avoid impacting the ability to perform quick-fixes within SLA times.
+The following are the conditions of the quality gate we use. This was balanced to handle the large amount of legacy code while also considering completely new code we write. More focus is given to ensuring new code stays as clean as possible while also trying to avoid impacting the ability to perform quick fixes within SLA times.
 
-#### Fail Conditions on New Code
+#### Fail conditions on new code
 
 | Metric            | Operator       | Value  |
 |-------------------|----------------|--------|
@@ -58,7 +58,7 @@ The following are the conditions of the quality gate we use. This was balanced t
 | Major Issues      | is greater than| 10     |
 | Minor Issues      | is greater than| 10     |
 
-#### Fail Conditions on Overall Code
+#### Fail conditions on overall code
 
 | Metric            | Operator       | Value  |
 |-------------------|----------------|--------|
@@ -69,16 +69,16 @@ The following are the conditions of the quality gate we use. This was balanced t
 | Major Issues      | is greater than| 300    |
 | Minor Issues      | is greater than| 300    |
 
-### SonarCloud Rule Tweaks
+### SonarCloud rule tweaks
 
-Some specific rules by SonarCloud have been disabled or tweaked to account for legacy code and specifics to connector and automation script developments. We also disabled some rules after finding their ROI to be lacking for our developments.
+Some specific rules by SonarCloud have been disabled or tweaked to account for legacy code and specifics to connector and Automation script developments. We have also disabled some rules after finding their ROI to be lacking for our developments.
 
-Currently, our quality profile for C# has 79 rules disabled and 1 overridden rules:
+Currently, our quality profile for C# has 79 rules disabled and 1 overridden rule:
 
 - **Last evaluation:** 9 December 2022
 - **Note:** This Quality Profile needs re-evaluation by a team of our senior members.
 
-#### Overridden Rules
+#### Overridden rules
 
 - **Control flow statements "if", "switch", "for", "foreach", "while", "do" and "try" should not be nested too deeply**
   - **Category:** Maintainability
@@ -87,7 +87,7 @@ Currently, our quality profile for C# has 79 rules disabled and 1 overridden rul
   - **Updated Value:** 5
   - **Reason:** Investment to adjust in legacy code is too high for provided simplification.
 
-#### Disabled Rules
+#### Disabled rules
 
 - **"Contains" should be used instead of "Any" for simple equality checks**
   - **Category:** Maintainability
@@ -111,7 +111,7 @@ Currently, our quality profile for C# has 79 rules disabled and 1 overridden rul
   - **Category:** Maintainability
   - **Type:** Code Smell
   - **Tags:** performance, Activate
-  - **Reason:** Compatibility with older codebases.
+  - **Reason:** Compatibility with older code bases.
 
 - **"for" loop increment clauses should modify the loops' counters**
   - **Category:** Maintainability
@@ -470,7 +470,7 @@ Currently, our quality profile for C# has 79 rules disabled and 1 overridden rul
   - **Category:** Maintainability
   - **Type:** Code Smell
   - **Tags:** logging, Activate
-  - **Reason:** Extensive logging is necessary for debugging automation scripts.
+  - **Reason:** Extensive logging is necessary for debugging Automation scripts.
 
 - **The collection should be filtered before sorting by using "Where" before "OrderBy"**
   - **Category:** Maintainability
