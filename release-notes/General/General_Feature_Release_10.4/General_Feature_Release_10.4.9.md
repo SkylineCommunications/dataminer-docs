@@ -96,6 +96,12 @@ From now on, the SRM master synchronization will also take into account the Reso
 
 Also, the logging with regard to the SRM master synchronization and master election process has been enhanced.
 
+#### Time-scoped relation learning: Enhanced accuracy [ID_39841]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
