@@ -183,43 +183,49 @@ items:
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
-      - name: Cassandra does not start up after a server restart
-        topicUid: Cassandra_not_starting_up_after_server_restart
       - name: Collecting DataMiner Cube memory dumps
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
-      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-        topicUid: Elastic_not_starting_after_upgrade_cleanup
-      - name: Investigating dataminer.services issues
+      - name: Troubleshooting – Cassandra
+        topicUid: Troubleshooting_Cassandra
         items:
-        - name: Investigating dataminer.services connection issues
-          topicUid: Cloud_Connection_Issues
-        - name: Investigating dataminer.services feature issues
-          topicUid: Investigating_Dataminerservices_Feature_Issues
-      - name: Investigating NATS issues
+          - name: Cassandra does not start up after a server restart
+            topicUid: Cassandra_not_starting_up_after_server_restart
+      - name: Troubleshooting – dataminer.services
+        items:
+          - name: Investigating dataminer.services connection issues
+            topicUid: Cloud_Connection_Issues
+          - name: Investigating dataminer.services feature issues
+            topicUid: Investigating_Dataminerservices_Feature_Issues
+      - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
-      - name: Investigating OpenSearch issues
+      - name: Troubleshooting – OpenSearch
         topicUid: Investigating_OpenSearch_Issues
-      - name: Investigating web issues
-        topicUid: Investigating_Web_Issues
-      - name: Keeping a DMA from running out of disk space
-        topicUid: Keeping_a_DMA_from_running_out_of_disk_space
-      - name: Manually removing old alarms from an Elasticsearch cluster
-        topicUid: Manually_removing_old_alarms_from_ES
-      - name: Re-registering DataMiner services and DLLs
-        topicUid: Re-registering_DataMiner_services_and_DLLs
-      - name: Sharing dashboard window does not disappear
-        topicUid: Sharing_dashboard_window_does_not_disappear
-      - name: Troubleshooting STaaS issues
+        items:
+          - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
+            topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues
+      - name: Troubleshooting – web
+        topicUid: Investigating_Web_Issues
+      - name: Troubleshooting – Miscellaneous
+        items:
+          - name: Manually removing old alarms from an Elasticsearch cluster
+            topicUid: Manually_removing_old_alarms_from_ES
+          - name: Re-registering DataMiner services and DLLs
+            topicUid: Re-registering_DataMiner_services_and_DLLs
+          - name: Sharing dashboard window does not disappear
+            topicUid: Sharing_dashboard_window_does_not_disappear
+          - name: Keeping a DMA from running out of disk space
+            topicUid: Keeping_a_DMA_from_running_out_of_disk_space
   - name: Known issues
     topicUid: Known_issues
     items:
       - name: Current issues
         items:
-          - name: SLProtocol RTE caused by SNMP group with condition
-            topicUid: KI_SLProtocol_RTE_SNMP_group_condition
+          - name: Failover switch taking a long time on systems with Cassandra Cluster setup
+            topicUid: KI_Failover_switch_Cassandra_Cluster
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: NATS services missing after reboot
@@ -250,6 +256,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: SLProtocol RTE caused by SNMP group with condition
+            topicUid: KI_SLProtocol_RTE_SNMP_group_condition
           - name: Deadlock in service loading during startup
             topicUid: KI_deadlock_service_loading
           - name: Deadlock when forcing quarantine during booking update

@@ -10,9 +10,13 @@ keywords: low-code, low code, lowcode
 | Name | Description |
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
+| [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
+
+> [!NOTE]
+> Most of the content in the Dashboards tutorials also applies for Low-Code Apps, as the functionality of these modules overlaps. Components that can be used in a dashboard can usually be used in exactly the same way in a low-code app. Consequently, it can occur that a low-code app is used as an example within a Dashboards tutorial.
 
 > [!TIP]
 > See also:

@@ -4,7 +4,7 @@ uid: Protocols_Templates_tutorials
 
 # Protocols & Templates tutorials
 
-### Information template tutorials
+## Information template tutorials
 
 | Name | Description |
 |--|--|

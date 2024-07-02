@@ -44,17 +44,38 @@ A number of enhancements have been made to the [Security Advisory](xref:BPA_Secu
 
 When performing the firewall port test, the [Security Advisory](xref:BPA_Security_Advisory) BPA test will now take into account that the SNMP agent port can be a custom port.
 
-#### DxMs upgraded [ID_39991]
+#### DxMs upgraded [ID_39991] [ID_39992]
 
 <!-- RN 39991: MR 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- RN 39992: MR 10.4.0 [CU5] - FR TBD -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
+- DataMiner ArtifactDeployer: version 1.7.1
 - DataMiner CoreGateway: version 2.14.8
+- DataMiner FieldControl: version 2.10.6
+- DataMiner Orchestrator: version 1.6.0
+- DataMiner SupportAssistant: version 1.6.9
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### DataMiner backup: 'RemoteServices' folder by default added to backup packages that contain services [ID_39993]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+
 ### Fixes
+
+#### Documents: Issues fixed [ID_39076]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+With regard to document management, the following issues have been fixed:
+
+- In some cases, element documents hosted on a Failover system could incorrectly get deleted when a Failover switch occurred.
+- When you renamed an element, in some cases, its documents would incorrectly no longer be linked to it.
+- When you renamed a document folder with subfolders containing files, in some cases, that folder would not be synchronized correctly among the agent in the cluster.
 
 #### Failover configuration would incorrectly be ended when SLNet failed to parse DMS.xml [ID_39157]
 
@@ -167,6 +188,14 @@ See also: [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtoco
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 In some cases, SLElement could stop working when you assigned an alarm template to an element that was included in a service.
+
+#### Problem while setting up serial connections when starting an element [ID_39943]
+
+<!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
+
+When an element was started, up to now, its serial connections were set up too early, which would cause issues when credentials were required. From now on, serial connections will be set up after the parameters have been loaded, especially SSH connections that require credentials stored in parameters.
+
+Also, an SSH connect request that receives a bad credentials response will no longer try to connect indefinitely. Instead, after the initial fail, it will only try as often as the configured retry attempts.
 
 #### Cassandra Cluster Migrator: Problem when initializing a data migration to a Cassandra cluster [ID_39974]
 

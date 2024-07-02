@@ -24,11 +24,9 @@ Overview of an element’s active alarms or history alarms, with the following o
 
 - It is possible to include only certain severities and alarm types.
 
-- In order to only include certain parameters, you can apply a filter.
+- In order to only include certain parameters, you can apply one of the alarm filters saved in the DMS.
 
-  Up to DataMiner 9.5.0, you can enter a filter directly, in order to filter on parameter name. Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information, see [Using quick filters](xref:Using_quick_filters).
-
-  From DataMiner 9.5.1 onwards, you can select one of the alarm filters saved in the DMS. For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
+  For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
 
 - You can choose to sort the list either by element name or by alarm time.
 

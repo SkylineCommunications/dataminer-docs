@@ -154,6 +154,10 @@ items:
             topicUid: Excluding_alarms_that_affect_the_SLA
       - name: SLA reporting
         topicUid: SLA_reporting
+      - name: Tutorials
+        items:
+          - name: Using an SLA to monitor a power service
+            topicUid: SLA_tutorial
   - name: Correlation
     items:
       - name: About DataMiner Correlation
@@ -298,6 +302,8 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
+              - name: Leveraging feeds in a web component
+                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Leveraging controls and feeds to create a dynamic GQI query
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
@@ -444,6 +450,8 @@ items:
             items:
               - name: Grid
                 topicUid: DashboardGrid
+              - name: Interactive Automation script
+                topicUid: InteractiveAutomationScript
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
               - name: Parameter page
@@ -791,7 +799,7 @@ items:
               - name: ReservationFieldDescriptor
                 topicUid: DOM_ReservationFieldDescriptor
               - name: ResourceFieldDescriptor
-                topicUid: DOM_ResourceFieldDescriptor              
+                topicUid: DOM_ResourceFieldDescriptor
               - name: ServiceDefinitionFieldDescriptor
                 topicUid: DOM_ServiceDefinitionFieldDescriptor
               - name: StaticTextFieldDescriptor

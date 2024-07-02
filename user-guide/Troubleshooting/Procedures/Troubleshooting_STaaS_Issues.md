@@ -2,7 +2,7 @@
 uid: Troubleshooting_STaaS_Issues
 ---
 
-# Troubleshooting STaaS issues
+# Troubleshooting – STaaS
 
 This page provides solutions to common issues that you may encounter while using STaaS. It covers problems related to dataminer.services connectivity, registration, token expiration, and service reachability.
 

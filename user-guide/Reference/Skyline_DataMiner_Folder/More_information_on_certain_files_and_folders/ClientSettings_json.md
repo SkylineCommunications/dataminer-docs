@@ -80,9 +80,9 @@ To be able to select a demo language, do the following:
 
 ## Limiting the properties to which Cube subscribes
 
-To improve the memory usage of DataMiner Cube in systems with many properties, from DataMiner 9.5.0 \[CU6\]/9.5.10 onwards, it is possible to configure Cube so that it only subscribes to a subset of properties, instead of all the properties of the DMS.
+To improve the memory usage of DataMiner Cube in systems with many properties, you can configure Cube so that it only subscribes to a subset of properties, instead of all the properties of the DMS.
 
-This can be done using the settings *commonServer.ui.Subscribe_To_All_Properties* and *commonServer.ui.Property_Cache* in the *ClientSettings.json* file:
+You can do so using the settings *commonServer.ui.Subscribe_To_All_Properties* and *commonServer.ui.Property_Cache* in the *ClientSettings.json* file:
 
 1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
 

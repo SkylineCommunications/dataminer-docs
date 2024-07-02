@@ -138,3 +138,7 @@ items:
     topicUid: Getting_started_community
   - name: Ziine Demo System
     topicUid: ZiineDemoSystem
+  - name: Tutorials
+    items:
+      - name: Creating your first element on a DaaS system
+        topicUid: Creating_your_first_element_on_a_DaaS_system

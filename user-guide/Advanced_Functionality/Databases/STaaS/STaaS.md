@@ -32,7 +32,7 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 > - This setup is not needed for [DataMiner as a Service (DaaS) systems](xref:Creating_a_DMS_in_the_cloud), as these automatically use STaaS.
 > - If you want to add a DMA to an existing DMS that uses STaaS, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
-1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to version 10.3.10 [CU1] or higher.
+1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to version 10.4.0 [CU0] or higher.
 
    > [!IMPORTANT]
    > We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates.
@@ -132,6 +132,28 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
 
+## Cost estimation
+
+To request a cost estimation, follow the procedure below:
+
+1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
+
+   At this point, an Automation script will be provided to you along with instructions on how to run it.
+
+1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
+
+1. After the 24-hour period, restart the DMS to stop the estimation process.
+
+1. Notify your Skyline representative or email <staas@dataminer.services> to complete the process.
+
+   You will then receive a detailed cost estimation.
+
+> [!NOTE]
+> If your DataMiner System uses a proxy setup, make sure you have installed DataMiner Feature Release 10.4.7 or higher.
+
+> [!IMPORTANT]
+> Cost estimations can currently only be performed for the West Europe and UK South regions.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
@@ -172,7 +194,7 @@ In addition, the following **other limitations** currently apply:
 
 ## Troubleshooting
 
-For troubleshooting information related to STaaS, see [Troubleshooting STaaS issues](xref:Troubleshooting_STaaS_Issues).
+For troubleshooting information related to STaaS, see [Troubleshooting – STaaS](xref:Troubleshooting_STaaS_Issues).
 
 > [!NOTE]
 > If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the available troubleshooting information, contact <staas@dataminer.services>.

@@ -33,6 +33,8 @@ In DataMiner Cube, you can enable this feature in System Center, via *System set
 
 - *Enabled*: Allows you to activate or deactivate this feature.
 
+- *Run on trended parameters by default*: Available from DataMiner 10.4.8/10.5.0 onwards<!-- RN 39691+39692 -->. If this option is enabled (default setting), proactive cap detection is enabled by default for trended numeric parameters that are not part of partial tables and have explicitly specified value bounds, but you can override this setting for specific parameters in a trend template. If this option is disabled, proactive cap detection is disabled system-wide, except for trended parameters of which the *Proactive alarms* setting has explicitly been enabled in the trend template. See [Configuring trend templates](xref:Configuring_trend_templates).
+
 - *Minimum alarm severity*: Allows you to configure the lowest alarm threshold severity that will be taken into account for proactive cap detection. If this is for example set to *Major*, proactive cap detection will alert the operator whenever a parameter is predicted to go out of range or is predicted to trigger a major or critical alarm.
 
 > [!NOTE]
