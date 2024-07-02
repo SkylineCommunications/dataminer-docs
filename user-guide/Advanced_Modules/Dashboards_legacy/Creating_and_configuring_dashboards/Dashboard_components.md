@@ -14,21 +14,16 @@ The available dashboard components are divided in seven groups, according to wha
 This group consists of the following components:
 
 - [Aggregation](#aggregation)
-
 - [Aggregation bar graph](#aggregation-bar-graph)
-
 - [Aggregation pie graph](#aggregation-pie-graph)
-
 - [Aggregation trend graph](#aggregation-trend-graph)
-
 - [Aggregation graph filters](#aggregation-graph-filters)
 
 > [!NOTE]
 > The Aggregation components can only be used when the DMA is licensed for Correlation.
 
 > [!TIP]
-> See also:
-> [Working with aggregation rules](xref:Working_with_aggregation_rules)
+> See also: [Working with aggregation rules](xref:Working_with_aggregation_rules)
 
 ### Aggregation
 
@@ -104,8 +99,8 @@ Component-specific options for each added aggregation rule:
 
 - *Graph fill*: Select this option to fill the area underneath the graph.
 
-    > [!NOTE]
-    > The *Graph fill* option cannot be used together with the *Error bars* option.
+  > [!NOTE]
+  > The *Graph fill* option cannot be used together with the *Error bars* option.
 
 - *Initially visible*: Clear this option in order to not show the graph immediately. Instead a legend will be shown where the graph can be enabled.
 
@@ -184,13 +179,9 @@ These filters can be specified in two ways:
 This group consists of the following components:
 
 - [Alarm count element](#alarm-count-element-alarms)
-
 - [Alarm count service](#alarm-count-service-alarms)
-
 - [Alarm list](#alarm-list-alarms)
-
 - [Alarm state element](#alarm-state-element-alarms)
-
 - [Alarm state service](#alarm-state-service-alarms)
 
 ### Alarm count element (alarms)
@@ -235,25 +226,24 @@ Component-specific options:
 
 - *Advanced filter*: In this box, you can enter an alarm filter to limit what alarms are shown in the list. For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
-    For example, for an alarm filter called “Major”, which is a shared filter, enter the following:
+  For example, for an alarm filter called “Major”, which is a shared filter, enter the following:
 
-    ```xml
-    <Major (shared filter)>
-    ```
+  ```xml
+  <Major (shared filter)>
+  ```
 
-    It is also possible to combine multiple filters using “or”. For example
+  It is also possible to combine multiple filters using “or”. For example
 
-    ```xml
-    <Major (shared filter)> or <open alarms (shared filter)>
-    ```
+  ```xml
+  <Major (shared filter)> or <open alarms (shared filter)>
+  ```
 
 - *Feed filter*: In this box, enter a parameter, element, service, view or protocol feed to limit the alarms shown in the list.
 
-    The filter feed can also be used when the alarm list is part of a dynamic list type dashboard. In that case, the feed filter will be combined with the selection for the current row. This allows e.g. a dynamic list dashboard to iterate over elements and to show an element-limited dashboard for each of the elements.
+  The filter feed can also be used when the alarm list is part of a dynamic list type dashboard. In that case, the feed filter will be combined with the selection for the current row. This allows e.g. a dynamic list dashboard to iterate over elements and to show an element-limited dashboard for each of the elements.
 
-    > [!TIP]
-    > See also:
-    > [Creating a dashboard with a dynamic list layout](xref:Creating_a_dashboard_with_a_dynamic_list_layout)
+  > [!TIP]
+  > See also: [Creating a dashboard with a dynamic list layout](xref:Creating_a_dashboard_with_a_dynamic_list_layout)
 
 - *Column Order*: Use the arrows next to each column to change the order in which the columns will appear. It is also possible to add additional columns, e.g. the *Active time*, which is the time since the alarm has been generated.
 
@@ -296,19 +286,12 @@ Component-specific options:
 This group consists of the following components:
 
 - [Alarm count element](#alarm-count-element-element)
-
 - [Alarm state element](#alarm-state-element-element)
-
 - [Alarm state service](#alarm-state-service-element)
-
 - [All monitored parameters](#all-monitored-parameters-element)
-
 - [Data Display page](#data-display-page-element)
-
 - [Element state LED](#element-state-led-element)
-
 - [Reporter severity legend](#reporter-severity-legend-element)
-
 - [Visual overview element](#visual-overview-element-element)
 
 > [!NOTE]
@@ -394,33 +377,19 @@ Component-specific options:
 This group consists of the following components:
 
 - [All monitored parameters](#all-monitored-parameters-parameter)
-
 - [Data Display page](#data-display-page-parameter)
-
 - [Generic real-time parameter](#generic-real-time-parameter-parameter)
-
 - [Generic real-time parameter](#generic-real-time-parameter-parameter)
-
 - [Histogram](#histogram-parameter)
-
 - [Parameter state LED](#parameter-state-led-parameter)
-
 - [Set parameter](#set-parameter-parameter)
-
 - [Spectrum thumbnail](#spectrum-thumbnail-parameter)
-
 - [Table column bar graph](#table-column-bar-graph-parameter)
-
 - [Trend histogram parameter](#trend-histogram-parameter-parameter)
-
 - [Trend parameter](#trend-parameter-parameter)
-
 - [Trend parameter with history](#trend-parameter-with-history-parameter)
-
 - [Trend parameter with reference value](#trend-parameter-with-reference-value-parameter)
-
 - [Trend sparkline](#trend-sparkline-parameter)
-
 - [Trend statistics](#trend-statistics-parameter)
 
 ### All monitored parameters (parameter)
@@ -545,8 +514,8 @@ Component-specific options for each added table column parameter:
 
 - *Sort*: Sorts the graph by this table column parameter. This option can also be applied on a hidden table column parameter.
 
-    > [!NOTE]
-    > The *Sort* option should only be selected for one column parameter, as otherwise it wil not work.
+  > [!NOTE]
+  > The *Sort* option should only be selected for one column parameter, as otherwise it will not work.
 
 Component-specific options:
 
@@ -586,8 +555,8 @@ Component-specific options for each added parameter:
 
 - *Graph fill*: Select this option to fill the area underneath the graph.
 
-    > [!NOTE]
-    > The *Graph fill* option cannot be used together with the *Error bars* option.
+  > [!NOTE]
+  > The *Graph fill* option cannot be used together with the *Error bars* option.
 
 - *Initially visible*: Clear this option in order to not show the graph immediately. Instead a legend will be shown where the graph can be enabled.
 
@@ -647,8 +616,8 @@ Component-specific options for each added parameter:
 
 - *Graph fill*: Select this option to fill the area underneath the graph.
 
-    > [!NOTE]
-    > The *Graph fill* option cannot be used together with the *Error bars* option.
+  > [!NOTE]
+  > The *Graph fill* option cannot be used together with the *Error bars* option.
 
 - *Initially visible*: Clear this option in order to not show the graph immediately. Instead a legend will be shown where the graph can be enabled.
 
@@ -736,25 +705,15 @@ Displays the min/max/avg value for a trended parameter over the specified time.
 This group consists of the following components:
 
 - [Alarm count service](#alarm-count-service-service)
-
 - [All monitored service parameters](#all-monitored-service-parameters-service)
-
 - [Generic real-time service parameter](#generic-real-time-service-parameter-service)
-
 - [Reporter severity legend](#reporter-severity-legend-service)
-
 - [Service parameter state LED](#service-parameter-state-led-service)
-
 - [Service parameter trend sparkline](#service-parameter-trend-sparkline-service)
-
 - [Service parameter trend statistics](#service-parameter-trend-statistics-service)
-
 - [Service state LED](#service-state-led-service)
-
 - [Service trend parameter](#service-trend-parameter-service)
-
 - [Set service parameter](#set-service-parameter-service)
-
 - [Visual overview service](#visual-overview-service-service)
 
 ### Alarm count service (service)
@@ -921,21 +880,12 @@ Component-specific options:
 This group consists of the following components:
 
 - [DataMiner map](#dataminer-map)
-
 - [Feed info](#feed-info)
-
 - [Feed selector](#feed-selector)
-
 - [Generic text part](#generic-text-part)
-
-- [Google gadget](#google-gadget)
-
 - [Group](#group)
-
 - [Image component](#image-component)
-
 - [Inline frame](#inline-frame)
-
 - [Video](#video)
 
 ### DataMiner map
@@ -1015,8 +965,8 @@ Component-specific options:
 
 - *URL*: In the box, fill in the URL of the website that should be displayed in the frame.
 
-    > [!NOTE]
-    > The URL can contain the placeholder *%elementname%*. When the component is rendered, this placeholder will be resolved with the URL-encoded element name specified in the parameter feed, if any.
+  > [!NOTE]
+  > The URL can contain the placeholder *%elementname%*. When the component is rendered, this placeholder will be resolved with the URL-encoded element name specified in the parameter feed, if any.
 
 - *Custom height*: In the box, fill in the height of the component in pixels
 
@@ -1040,5 +990,4 @@ Component-specific options:
 - *Movie width*: In the box, fill in the width of the component in pixels.
 
 > [!TIP]
-> See also:
-> [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
+> See also: [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
