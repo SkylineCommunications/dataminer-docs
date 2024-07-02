@@ -47,3 +47,9 @@ Also, the user permissions that control access to these buttons will no longer b
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When *Children* shapes were being used, in some cases, *Get protocol* requests would be sent in an incorrect thread.
+
+#### Alarm templates and trend templates: Incorrectly possible to configure analytics features for parameters that did not support those features [ID_39952]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When configuring alarm templates and trend templates, up to now, it would incorrectly be possible to configure behavioral anomaly detection, proactive cap detection and trend icons for parameters that did not support those features.
