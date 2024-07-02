@@ -229,7 +229,7 @@ This tag has the following two subtags:
 
 ### DataMiner.NetworkAdapters
 
-From DataMiner 9.0.0 CU20/9.5.0 CU3/9.5.7 onwards, you can use this tag to override the order of the network adapters on a DataMiner Agent. This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter).
+You can use this tag to override the order of the network adapters on a DataMiner Agent. This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter).
 
 To do so, specify a number of *\<MAC>* subtags, each containing a MAC address.
 
