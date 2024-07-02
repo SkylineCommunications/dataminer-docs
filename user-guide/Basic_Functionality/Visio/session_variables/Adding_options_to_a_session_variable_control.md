@@ -378,7 +378,7 @@ To turn a shape into a tree control:
 
      Supported operators: ==, !=, \>, \>=, \<, \<=
 
-     For columns of type String only the "==" and "!=" operators can be used.
+     For columns of type String, only the "==" and "!=" operators can be used.
 
      For examples, see [Examples of SetVarOptions using conditions](#examples-of-setvaroptions-using-conditions).
 
