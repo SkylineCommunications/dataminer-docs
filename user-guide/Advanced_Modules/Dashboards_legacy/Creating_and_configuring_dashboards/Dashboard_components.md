@@ -76,11 +76,7 @@ Pie chart representing the aggregated values for one or more aggregation rules i
 
 Component-specific options:
 
-- *Views*: Select one or more views to apply a view filter to the pie graph. This option is no longer available from DataMiner 9.5.2 onwards. Instead, a view feed can be added to select a single view.
-
 - *Feed view*: A view feed for the dashboard, which makes it possible to dynamically set a view from the feed selector on the dashboard page or in the URL.
-
-- *Include sub-views*: Select this option to also include child views of the selected views. This option is no longer available from DataMiner 9.5.2 onwards.
 
 - *Show legend*: Select this option to display a legend explaining which colors match which aggregation rules.
 
@@ -556,7 +552,7 @@ Component-specific options:
 
 - *Sort*: Determines whether sorting happens in ascending or descending order.
 
-- *Limit amount of values*: Allows you to limit the number of rows that are taken into account for the graph. This can for instance be used in combination with sorting in order to only show the “top x” or “bottom x” of a particular table column. (Available from DataMiner 9.5.13 onwards.)
+- *Limit amount of values*: Allows you to limit the number of rows that are taken into account for the graph. This can for instance be used in combination with sorting in order to only show the “top x” or “bottom x” of a particular table column.
 
 - *Range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the bar graph range.
 
@@ -974,12 +970,6 @@ Component-specific options:
 
 - *Text*: In this box, enter the text that is to be displayed in the component.
 
-### Google gadget
-
-This component was used in older versions of DataMiner to add a Google Gadget to the dashboard.
-
-However, from November 2013 onwards, iGoogle Gadgets are no longer available. For this reason, this component is also no longer available in the *Dashboards* app from DataMiner version 8.5.6 onwards.
-
 ### Group
 
 Places a group of components within a custom layout. The group includes components currently used in the dashboard, which are then only shown in the group.
@@ -1019,14 +1009,14 @@ Optionally, a feed can be used with this component. This can for instance be of 
 > [!NOTE]
 >
 > - If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter-parameter).
-> - From DataMiner 9.5.5 onwards, webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, including the DataMiner Monitoring & Control app, DataMiner Ticketing and DataMiner Maps.
+> - Webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, such as the Monitoring app.
 
 Component-specific options:
 
 - *URL*: In the box, fill in the URL of the website that should be displayed in the frame.
 
     > [!NOTE]
-    > From DataMiner 9.5.5 onwards, the URL can contain the placeholder *%elementname%*. When the component is rendered, this placeholder will be resolved with the URL-encoded element name specified in the parameter feed, if any.
+    > The URL can contain the placeholder *%elementname%*. When the component is rendered, this placeholder will be resolved with the URL-encoded element name specified in the parameter feed, if any.
 
 - *Custom height*: In the box, fill in the height of the component in pixels
 
