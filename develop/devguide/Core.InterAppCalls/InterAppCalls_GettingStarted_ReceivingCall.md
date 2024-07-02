@@ -56,7 +56,7 @@ You get the raw value from the parameter and you use the `InterAppCallFactory` t
         {
             if (message.TryExecute(protocol, protocol, msgToExecutor, out Message returnMessage))
             {
-                returnMessage.Reply(protocol.SLNet.RawConnection, returnMessage, knownTypes);
+                message.Reply(protocol.SLNet.RawConnection, returnMessage, knownTypes);
             }
         }
     }

@@ -100,7 +100,7 @@ public override Message CreateReturnMessage()
 > A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods or QActions within your own connector. This can also be returned.
 
 > [!TIP]
-> See the [simple executor](xref:InterAppCalls_Customizations#creating-a-simple-executor) if more simplicity is needed.
+>If your logic does not require the standard Method Template, consider using the  [simple executor](xref:InterAppCalls_Customizations#creating-a-simple-executor). This approach is ideal for simpler situations and helps avoid code bloat.
 
 ## See also
 

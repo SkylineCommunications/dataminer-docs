@@ -9,7 +9,7 @@ InterApp, available through the NuGet package [Skyline.DataMiner.Core.InterAppCa
 
 - From element to element and back.
 - From Automation script to element and back.
-- From external application to element and back.
+- From application on the same server to element and back.
 
 Its main features are:
 

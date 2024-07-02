@@ -120,7 +120,7 @@ public static class QAction
         {
             if (message.TryExecute(protocol, protocol, MsgToExecutor, out Message returnMessage))
             {
-                returnMessage.Reply(protocol.SLNet.RawConnection, returnMessage, KnownTypes);
+                message.Reply(protocol.SLNet.RawConnection, returnMessage, KnownTypes);
             }
         }
     }
