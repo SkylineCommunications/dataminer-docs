@@ -9,6 +9,97 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 3 July 2024 - New Feature - Catalog - Version 2 of the User Catalog API
+
+The User Catalog API has been updated to V2.
+
+This version will include the following routes:
+
+- **GET api/user-catalog/v2-0/catalogs/search** (UPDATED)
+
+  Search for catalog items.
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}** (UPDATED)
+  
+  Fetch a catalog item by id.
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/download** (NEW)
+  
+  Download a specific version of a specific catalog item.
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/ranges?organizationId={organizationId}** (NEW)
+
+  Fetch the ranges for a specific catalog item.
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}?organizationId={organizationId}/custom-tag** (NEW)
+
+  Update a custom tag of a specific range of a specific catalog item.
+- **DELETE api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}?organizationId={organizationId}/custom-tag** (NEW)
+
+  Remove a custom tag of a specific range of a specific catalog item.
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions?organizationId={organizationId}&rangeId={rangeId}** (NEW)
+
+  Fetches the versions for a specific catalog item
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/latest?organizationId={organizationId}** (NEW)
+
+  Fetches the latest available version of a specific catalog item.
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/recommended?organizationId={organizationId}** (NEW)
+
+  Fetches the recommended versions of a specific catalog item.
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/can-deploy?organizationId={organizationId}** (NEW)
+
+  Verify if a catalog item version can be deployed
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/can-deploy-dms?organizationId={organizationId}** (NEW)
+
+  Verify if a catalog item version can be deployed on the available dataminer systems
+- **POST api/user-catalog/v2-0/catalogs/{catalogId}/ranges/versions/{versionId}/deploy** (UPDATED)
+
+  Deploy a specific version of a specific catalog item.
+- **POST api/user-catalog/v2-0/catalogs/register**
+
+  Register a catalog item.
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/publishing-state?organizationId={organizationId}**
+
+  Set the publishing state of a catalog item
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/version/{versionId}/publishing-state?organizationId={organizationId}**
+
+  Set the publishing state of a catalog version
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}/state?organizationId={organizationId}**
+
+  Set the state of a specific range of a specific catalog item.
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/state?organizationId={organizationId}**
+
+  Set the state of a specific version of a specific catalog item.
+
+#### 3 July 2024 - New Feature - Catalog - Change state support [ID_40096]
+
+When viewing an item on the catalog, it will now be possible to change the state of a range or version.
+
+#### 3 July 2024 - New Feature - Catalog - Custom tag support [ID_40030]
+
+When viewing an item on the catalog, it will now be possible to give a custom tag to ranges.
+
+#### 3 July 2024 - New Feature - Catalog - Version history [ID_39903]
+
+When viewing an item on the catalog, the versions tab will now include a version history section.
+The version history section will by default show all supported ranges and versions.
+A toggle has also been introduced to include unsupported ranges and versions.
+
+Supported ranges: Active / Main
+Unsupported ranges: Deprecated
+
+Supported versions: Released
+Unsupported versions: Known issues / Development / Deprecated
+
+#### 3 July 2024 - New Feature - Catalog - Version and range tag support [ID_39899]
+
+When viewing an item on the catalog, the versions and ranges will now have tag support for the following cases:
+
+- The state of a range
+- The state of a version
+- If a version is private
+
+#### 3 July 2024 - New Feature - Catalog - Versions rework [ID_39846]
+
+When viewing an connector item on the catalog, the 'Versions' tab will now group all the versions by range.
+Ranges are defined by the first 3 numbers of a version.
+
 #### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID_39983]
 
 Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g. when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
