@@ -140,6 +140,12 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
 
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
@@ -147,6 +153,12 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, SLElement could stop working while processing table parameter updates.
+
+#### Alarms generated for an element with a virtual function would incorrectly not get exported to that virtual function [ID_39536]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
 
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
 
@@ -164,6 +176,6 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 #### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
