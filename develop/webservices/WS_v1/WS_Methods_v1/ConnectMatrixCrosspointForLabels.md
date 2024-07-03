@@ -16,8 +16,8 @@ Available from DataMiner version 9.5.1 onwards.
 | dmaID       | Integer | The DataMiner Agent ID.                                        |
 | elementID   | Integer | The element ID.                                                |
 | parameterID | Integer | The matrix parameter ID.                                       |
-| inputLabel  | Integer | The label of the input.                                        |
-| outputLabel | Integer | The label of the output.                                       |
+| inputLabel  | String  | The label of the input.                                        |
+| outputLabel | String  | The label of the output.                                       |
 | connect     | Boolean | Indicates whether the connection should be created or removed. |
 
 ## Output

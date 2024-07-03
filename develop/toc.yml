@@ -4572,6 +4572,8 @@ items:
             topicUid: DMAAutomationScriptMemoryFile
           - name: DMAAutomationScriptParameter
             topicUid: DMAAutomationScriptParameter
+          - name: DMAAutomationVariableInfo
+            topicUid: DMAAutomationVariableInfo
           - name: DMABaseline
             topicUid: DMABaseline
           - name: DMABooking

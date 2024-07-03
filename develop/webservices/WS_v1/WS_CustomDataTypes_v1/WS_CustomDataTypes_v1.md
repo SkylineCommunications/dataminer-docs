@@ -48,6 +48,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter)
 
+- [DMAAutomationVariableInfo](xref:DMAAutomationVariableInfo)
+
 - [DMABaseline](xref:DMABaseline)
 
 - [DMABooking](xref:DMABooking)
