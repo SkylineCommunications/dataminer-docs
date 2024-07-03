@@ -5,27 +5,10 @@ uid: Style_guide
 # Style guide
 
 Use this guide as a basis to build or improve low-code apps. 
-These best pratices should allow you to create intuitive, visually appealing apps which have a consistent behavior with other apps.
+These best practices should allow you to create intuitive, visually appealing apps which have a consistent behavior with other apps.
 
 > [!TIP]
 > See also: [Kata #19: Transform low-code apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-<!-- TOC start -->
-
-- [Colors / Themes](#colors-themes)
-- [Layout](#layout)
-- [Navigation](#navigation)
-- [Panels](#panels)
-- [Components ](#components)
-   * [Titles](#titles)
-   * [Buttons](#buttons)
-   * [DOM Forms](#dom-forms)
-   * [Tables](#tables)
-   * [Grids](#grids)
-   * [Using templates for tables and grids](#using-templates-for-tables-and-grids)
-- [LCA inspiration](#lca-inspiration)
-
-<!-- TOC end -->
 
 ## Colors / Themes
 
