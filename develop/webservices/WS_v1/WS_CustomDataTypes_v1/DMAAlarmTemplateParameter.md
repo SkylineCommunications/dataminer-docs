@@ -23,9 +23,7 @@ uid: DMAAlarmTemplateParameter
 | VarianceMonitor   | Boolean | Whether alarms for variance changes are enabled. Obsolete from DataMiner 10.3.12/10.4.0 onwards<!--RN 37434-->. |
 | TrendMonitor      | Boolean | Whether alarms for trend changes are enabled. Obsolete from DataMiner 10.3.12/10.4.0 onwards<!--RN 37434-->. |
 | LevelShiftMonitor | Boolean | Whether alarms for level shift anomalies are enabled. Obsolete from DataMiner 10.3.12/10.4.0 onwards<!--RN 37434-->. |
-
 | FlatlineMonitor   | Boolean | Whether alarms for flatline anomalies are enabled. Obsolete from DataMiner 10.3.12/10.4.0 onwards<!--RN 37434-->. |
-
 | HysteresisPerSeverity | DMAHysteresisInfo | See [DMAHysteresisInfo](xref:DMAHysteresisInfo). |
 | SmartBaseLine         | DMABaseline       | See [DMABaseline](xref:DMABaseline). |
 | DisabledIf            | String            | A condition that determines when monitoring is disabled. |
