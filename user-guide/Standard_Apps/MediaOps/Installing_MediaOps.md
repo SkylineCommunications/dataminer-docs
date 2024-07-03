@@ -11,7 +11,7 @@ uid: Installing_MediaOps
   > [!NOTE]
   > If you are using a DaaS system, you are automatically connected to the dataminer.services platform.
 
-- You need the following user permissions:
+- The following user permissions:
 
   - [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access)
 

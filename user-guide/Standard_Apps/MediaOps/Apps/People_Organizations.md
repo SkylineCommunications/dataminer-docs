@@ -6,7 +6,7 @@ uid: People_Organizations
 
 The People & Organizations app simplifies the management of people, teams, and organizations within a company. Its intuitive interface allows you to create, edit, and organize [contacts](xref:PO_Managing_Contacts), [teams](xref:PO_Managing_Teams), and [organizations](xref:PO_Managing_Organizations), helping you track key metrics and details.
 
-You can assign [skills and experience levels](xref:PO_Managing_Contacts#assigning-a-skill-and-experience-to-a-contact) to contact, [areas of expertise and roles](xref:PO_Managing_Teams#assigning-areas-of-expertise-and-roles) to teams, and [categories](xref:PO_Managing_Organizations#assigning-organization-categories) to organizations, to easily match the right person, team, or organization with a task.
+You can assign [skills and experience levels](xref:PO_Managing_Contacts#assigning-a-skill-and-experience-to-a-contact) to contacts, [areas of expertise and roles](xref:PO_Managing_Teams#assigning-areas-of-expertise-and-roles) to teams, and [categories](xref:PO_Managing_Organizations#assigning-organization-categories) to organizations, to easily match the right person, team, or organization with a task.
 
 ![People & Organizations app](~/user-guide/images/People_Organizations.gif)
 

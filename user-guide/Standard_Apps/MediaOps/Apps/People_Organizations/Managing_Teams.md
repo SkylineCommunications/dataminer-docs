@@ -10,7 +10,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
 ![Header bar](~/user-guide/images/Teams_Header_Bar.png)
 
-- The *Overview* tab provides a **snapshot of key metrics**, including the teams with the most people, the number of teams, deprecated teams, and drafts, and the five most recently added teams. This tab gives you a quick view of important information at a glance.
+- The *Overview* tab provides a **snapshot of key metrics**, including the teams with the most people, the number of teams, deprecated teams, and drafts, and the five most recently added teams. This tab gives you a quick view of important information.
 
   ![Overview page](~/user-guide/images/PO_Teams_Overview_Example.png)
 
@@ -40,7 +40,7 @@ To add a new team:
      To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
 
 > [!IMPORTANT]
-> After creating a new team, it will not have any members. Make sure to [add members](#configuring-team-members) via the *Details* panel.
+> After creating a new team, it will not have any members. Make sure to [add members](#configuring-team-members) in the *Details* panel.
 
 ## Editing a team
 

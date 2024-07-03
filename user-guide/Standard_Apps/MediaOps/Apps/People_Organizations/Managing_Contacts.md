@@ -10,7 +10,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
 ![Header bar](~/user-guide/images/PO_HeaderBar.png)
 
-- The *Overview* tab provides a **snapshot of key metrics**, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information at a glance.
+- The *Overview* tab provides a **snapshot of key metrics**, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information.
 
   ![Overview page](~/user-guide/images/PO_People_Overview_Example.png)
 
@@ -91,7 +91,7 @@ To search within the list of contacts:
 
 1. Type in your search query.
 
-   You can search based on any of the columns visible in the contacts list, such as name, state, email address, skill level, experience, or organization name.
+   You can search based on the following columns of the contacts list: name, email, skill, experience, and organization name.
 
    As you type, the list will dynamically update to show contacts that match your search criteria. For example, typing "Audio Mixer" will filter and display all contacts who have "Audio Mixer" listed as their skill.
 
@@ -159,7 +159,7 @@ To create a new experience entry:
 
 1. Select *Save* in the top-right corner.
 
-   Your new experience entry will now appear in the list of experience levels in the *Experience* panel.
+   Your new experience entry will now appear in the list on the *Experience* panel.
 
 ### Editing an experience entry
 

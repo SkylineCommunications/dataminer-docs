@@ -10,7 +10,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
 ![Header bar](~/user-guide/images/Organizations_Header_Bar.png)
 
-- The *Overview* tab provides a **snapshot of key metrics**, including the most prominent organization categories, the top 5 organizations with the most members, the number of organizations, deprecated organizations, and drafts, and the five most recently added organizations. This tab gives you a quick view of aggregated organizational data at a glance.
+- The *Overview* tab provides a **snapshot of key metrics**, including the most prominent organization categories, the top 5 organizations with the most members, the number of organizations, deprecated organizations, and drafts, and the five most recently added organizations. This tab gives you a quick view of aggregated organizational data.
 
   ![Overview page](~/user-guide/images/PO_Organizations_Overview_Example.png)
 
@@ -40,7 +40,7 @@ To add a new organization:
      To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
 
 > [!IMPORTANT]
-> After creating a new organization, it will not have any members. Make sure to [add members](#configuring-organization-members) via the *Details* panel.
+> After creating a new organization, it will not have any members. Make sure to [add members](#configuring-organization-members) in the *Details* panel.
 
 ## Editing an organization
 
@@ -148,15 +148,15 @@ On both the *Overview* and *List* tabs, you can access the *Categories* panel by
 
 ![Header bar](~/user-guide/images/Organizations_HeaderBar.png)
 
-- The *Categories* panel provides an overview of all available organization categories, with options to [edit](#editing-an-organization-category) and [create new ones](#adding-a-new-organization-category).
+The *Categories* panel provides an overview of all available organization categories, with options to [edit](#editing-an-organization-category) and [create new ones](#adding-a-new-organization-category).
 
-  Assigning a category to organizations streamlines the booking process by making it easier to find and select organizations based on their type.
+Assigning a category to organizations streamlines the booking process by making it easier to find and select organizations based on their type.
 
-  - You can view an organization's category in the *Organization category* column on the *List* tab.
+- You can view an organization's category in the *Organization category* column on the *List* tab.
 
-  - To assign a category to an organization, enter the appropriate category in the *Category* field when you [create a new organization](#adding-a-new-organization) or [edit an existing organization](#editing-an-organization).
+- To assign a category to an organization, enter the appropriate category in the *Category* field when you [create a new organization](#adding-a-new-organization) or [edit an existing organization](#editing-an-organization).
 
-    ![Assigning categories](~/user-guide/images/Assigning_Category.png)
+  ![Assigning categories](~/user-guide/images/Assigning_Category.png)
 
 ### Adding a new organization category
 
