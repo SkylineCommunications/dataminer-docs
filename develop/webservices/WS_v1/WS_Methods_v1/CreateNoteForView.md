@@ -18,4 +18,4 @@ Use this method to create a note for a specific view.
 
 | Item                     | Format  | Description         |
 |--------------------------|---------|---------------------|
-| CreateNoteForViewResult | Integer | The ID of the note. |
+| CreateNoteForViewResult  | Integer | The ID of the note. |

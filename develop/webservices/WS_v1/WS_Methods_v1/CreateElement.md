@@ -13,11 +13,12 @@ Use this method to create a new element on the specified DataMiner Agent.
 | connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
 | dmaID         | Integer                  | The DataMiner Agent ID.                                                             |
 | viewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| configuration | DMAElementConfiguration  | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
+| configuration | DMAElementConfiguration  | See [DMAElementConfiguration](xref:DMAElementConfiguration).                        |
 
 > [!NOTE]
-> -  When you create an element, the “State” property of the DMAElementConfiguration object should be *Active*, *Paused* or *Stopped*.
-> -  From DataMiner 9.5.5 onwards, it is possible to specify a different SNMP version than is configured in the protocol. For more information on the configuration, refer to the examples below.
+>
+> - When you create an element, the "State" property of the DMAElementConfiguration object should be *Active*, *Paused* or *Stopped*.
+> - From DataMiner 9.5.5 onwards, it is possible to specify a different SNMP version than is configured in the protocol. For more information on the configuration, refer to the examples below.
 
 ## Output
 

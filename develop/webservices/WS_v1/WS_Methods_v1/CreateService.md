@@ -8,12 +8,12 @@ Use this method to create a new service on a specified DataMiner Agent.
 
 ## Input
 
-| Item          | Format                   | Description                                                                         |
-|---------------|--------------------------|-------------------------------------------------------------------------------------|
-| connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
-| dmaID         | Integer                  | The DataMiner Agent ID.                                                             |
-| viewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| configuration | DMAServiceConfiguration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
+| Item          | Format                   | Description                                                  |
+|---------------|--------------------------|--------------------------------------------------------------|
+| connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).    |
+| dmaID         | Integer                  | The DataMiner Agent ID.                                      |
+| viewIDs       | Array of Integer         | The IDs of the views in which the element should be created. |
+| configuration | DMAServiceConfiguration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration).  |
 
 ## Output
 

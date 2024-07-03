@@ -21,7 +21,7 @@ uid: DMAElementConfiguration
 | EnableTelnet | Boolean | Indicates whether the element’s Telnet interface is enabled. |
 | IsHidden | Boolean | Indicates whether the element is hidden. |
 | IsReadOnly | Boolean | Indicates whether the element is a read-only element. |
-| IsReplication | Boolean | Indicates whether the element is replicated. |
+| IsReplicationActive | Boolean | Indicates whether the element is replicated. |
 | KeepOnline | Boolean | Used in a Failover setup to indicate that the element needs to keep running even when the DMA is offline |
 | SnmpReadCommunityString | String | The community string used to read values from the device. |
 | SnmpWriteCommunityString | String | The community string used to set values on the device. |
