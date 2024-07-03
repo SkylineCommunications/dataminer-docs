@@ -148,6 +148,12 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 In some cases, SLElement could stop working while processing table parameter updates.
 
+#### Alarms generated for an element with a virtual function would incorrectly not get exported to that virtual function [ID_39536]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
+
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
