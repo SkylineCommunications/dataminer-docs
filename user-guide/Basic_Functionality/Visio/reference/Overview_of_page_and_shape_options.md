@@ -57,6 +57,12 @@ Used to completely disable a parameter control shape.
 
 See [Dynamically disabling a parameter control](xref:Turning_a_shape_into_a_parameter_control#dynamically-disabling-a-parameter-control).
 
+## AllowCustomIndex
+
+Shape-level option.
+
+See [Making a shape use a different index than that of the original row](xref:Generating_shapes_based_on_table_rows#making-a-shape-use-a-different-index-than-that-of-the-original-row).
+
 ## AllowDynamicShapeType=ParameterControl
 
 Shape-level option.
