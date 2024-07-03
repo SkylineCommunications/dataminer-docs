@@ -71,9 +71,17 @@ This version will include the following routes:
 
 When viewing an item on the catalog, it will now be possible to change the state of a range or version.
 
+#### 3 July 2024 - New Feature - Catalog - Source link [ID_40046]
+
+When viewing an item on the catalog, the informational section on the right will now contain a link to the source.
+
 #### 3 July 2024 - New Feature - Catalog - Custom tag support [ID_40030]
 
 When viewing an item on the catalog, it will now be possible to give a custom tag to ranges.
+
+#### 3 July 2024 - Enhancement - Home - Deploy prevention of DataMiner as a Service [ID_39995]
+
+When spinning up a new DataMiner as a Service on Home, it will now prevent any deployments if there are not enough DataMiner credits available.
 
 #### 3 July 2024 - New Feature - Catalog - Version history [ID_39903]
 
