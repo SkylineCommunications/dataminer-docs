@@ -13,7 +13,7 @@ Use this method to delete a job section definition field.
 | connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | domainID            | String | The domain ID.                                       |
 | sectionDefinitionID | String | The ID of the job section definition.                |
-| fieldID            | String | The ID of the job section definition field.          |
+| fieldID             | String | The ID of the job section definition field.          |
 
 ## Output
 
