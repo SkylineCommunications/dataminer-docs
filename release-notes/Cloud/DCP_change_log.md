@@ -69,7 +69,7 @@ This version will include the following routes:
 
 #### 3 July 2024 - New Feature - Catalog - Change state support [ID_40096]
 
-When viewing an item on the catalog, it will now be possible to change the state of a range or version.
+Skyline employees will now be able to change the state of a range or version when they view an item in the Catalog.
 
 #### 3 July 2024 - New Feature - Catalog - Source link [ID_40046]
 
