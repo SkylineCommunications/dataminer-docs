@@ -84,14 +84,11 @@ uid: Adding_elements
      > [!TIP]
      > See also: [Installation and configuration of a spectrum analyzer](xref:Installation_and_configuration_of_a_spectrum_analyzer)
 
-   - For a **WebSocket** connection (available from DataMiner 9.5.3 onwards), see [WebSocket connection](xref:WebSocket_Connection).
+   - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
 1. If the protocol is configured to allow you to test the connections, optionally click the button *Test connection* below any connections you want to test.
 
    After you click the button, a message will display the results of the test.
-
-   > [!NOTE]
-   > Feature introduced in DataMiner 9.5.7. However, testing SNMPv3 connections is only possible from DataMiner 9.5.12 onwards.
 
 1. Specify the timeout settings per connection:
 
