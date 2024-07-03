@@ -14,7 +14,7 @@ Use this method to retrieve the connection string (GUID) needed to be able to co
 | Item               | Format | Description                                                                              |
 |--------------------|--------|------------------------------------------------------------------------------------------|
 | host               | String | The host name. Obsolete. Keep this field empty.                                          |
-| login              | String | The username.                                                                           |
+| login              | String | The username.                                                                            |
 | password           | String | The password.                                                                            |
 | clientAppName      | String | The name of the client application                                                       |
 | clientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |

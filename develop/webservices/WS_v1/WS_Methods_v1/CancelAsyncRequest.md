@@ -13,7 +13,7 @@ Use this method to cancel an asynchronous request for a specific ticket.
 
 | Item   | Format | Description                                                     |
 |--------|--------|-----------------------------------------------------------------|
-| ticket | String | The ticket returned by the *ExecuteGenericAsyncRequest* method. |
+| ticket | String | The ticket returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
 
 ## Output
 
