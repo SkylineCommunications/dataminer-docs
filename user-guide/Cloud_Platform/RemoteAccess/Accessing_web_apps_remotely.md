@@ -13,4 +13,4 @@ If [remote access to the web apps is enabled](xref:Controlling_remote_access) fo
 - [Accessing the Ticketing app via dataminer.services](xref:Accessing_the_Ticketing_app#accessing-the-ticketing-app-via-dataminerservices)
 
 > [!NOTE]
-> To access the web apps, you will need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
+> To access the web apps, you will need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.

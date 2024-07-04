@@ -519,6 +519,22 @@ var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManage
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### Service & Resource Management: SRM master synchronization now takes into account the Resource Manager state [ID_39835]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, the SRM master synchronization only took into account the DMA state, not the Resource Manager state. In some cases, that could lead to requests being sent to a DataMiner Agent of which the Resource Manager was down.
+
+From now on, the SRM master synchronization will also take into account the Resource Manager state. A DataMiner Agent will only be appointed SRM master if DataMiner is running and if the Resource Manager is initialized.
+
+Also, the logging with regard to the SRM master synchronization and master election process has been enhanced.
+
+#### Time-scoped relation learning: Enhanced accuracy [ID_39841]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -566,6 +582,18 @@ See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Da
 *SLASPConnection.exe* is now a 64-bit process.
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+
+#### DataMiner Object Models: SLModuleSettingsManager.txt log file will now contain the IDs of the modules that were created, updated or deleted [ID_40028]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
+
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
 
 ### Fixes
 
@@ -712,9 +740,3 @@ When the NATS server was down, SLElement would leak memory while trying to push 
 <!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
-
-#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.

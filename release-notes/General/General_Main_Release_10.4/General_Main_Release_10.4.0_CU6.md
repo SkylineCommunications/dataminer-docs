@@ -18,6 +18,12 @@ uid: General_Main_Release_10.4.0_CU6
 
 When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
 
+#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
+
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
@@ -48,8 +54,28 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 
 In some cases, SLElement could stop working while processing table parameter updates.
 
+#### Alarms generated for an element with a virtual function would incorrectly not get exported to that virtual function [ID_39536]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
+
+#### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTypes would simultaneously be initialized on multiple threads, causing the following exception to be thrown:
+
+`Timeout while inspecting metadata; this may indicate a deadlock. This can often be avoided by preparing necessary serializers during application initialization, rather than allowing multiple threads to perform the initial metadata inspection; please also see the LockContended event`
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 At startup, in some cases, the CloudEndpointManager in SLNet could throw an exception when the NATS and NAS services were not installed.
+
+#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.

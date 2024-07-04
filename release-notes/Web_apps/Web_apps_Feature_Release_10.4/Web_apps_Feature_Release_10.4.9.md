@@ -78,6 +78,12 @@ When, in the *Parameters* data set, you filtered by protocol, the parameters lis
 
 When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the *C:\\Skyline DataMiner\\users\\ClientSettings.json* file.
 
+#### Dashboards app & Low-Code Apps - Table component: Problem when grouping an empty table by a column [ID_40012]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, when an empty table was grouped by a column, the grouping would not be applied.
+
 #### Dashboards app & Low-Code Apps - Ad hoc data sources & custom operators: Timespan metadata would not be converted to the local time zone [ID_40033]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -89,3 +95,9 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 >
 > - [Linking rows to DataMiner objects](xref:Ad_hoc_Metadata)
 > - [Modifying links to DataMiner objects](xref:CO_Metadata)
+
+#### Dashboards app & Low-Code Apps: Time range component would pass along a reversed time range to another time range component [ID_40056]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.

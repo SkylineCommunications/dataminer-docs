@@ -30,7 +30,7 @@ The following methods can be specified:
 
 - `Remoting`: The default method. Creates a remoting connection that uses polling, and verifies that connection every second. Expected outcome: `Connection OK!`
 
-The tool wil repeat the test every second, until you press `Ctrl + C`. If the remoting method is used, the polling connection status will be verified every second.
+The tool will repeat the test every second, until you press `Ctrl + C`. If the remoting method is used, the polling connection status will be verified every second.
 
 If an unexpected exception occurs, for example because the server cannot be reached, the application quits with an exception printed to the console.
 

@@ -52,7 +52,7 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
   Control=FilterComboBox
   ```
 
-  The **SetVar** text box will be turned into a combo box control with search box, to allow easy filtering. Available from DataMiner 10.0.3 onwards. See [Creating a filtered combo box control](#creating-a-filtered-combo-box-control).
+  The **SetVar** text box will be turned into a combo box control with search box, to allow easy filtering. See [Creating a filtered combo box control](#creating-a-filtered-combo-box-control).
 
 - **DateTime control**:
 
@@ -89,7 +89,7 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
 
 - **Control displayed as a custom Visio shape**:
 
-  From DataMiner 9.0.5 onwards, by default the SetVar shape is shown as a basic button shape, even if a custom shape is configured in Visio. To revert to the legacy behavior and show the custom shape, add the following option in the **SetVarOptions** shape data field:
+  In recent DataMiner versions, by default the SetVar shape is shown as a basic button shape, even if a custom shape is configured in Visio. To revert to legacy behavior and show the custom shape, add the following option in the **SetVarOptions** shape data field:
 
   ```txt
   Control=Shape
@@ -105,7 +105,7 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
 
 - **Control that does not update the variable when the source is updated:**
 
-  From DataMiner 9.5.6 onwards, by default all SetVar shapes are updated when their source is updated (e.g. the session variable is cleared when an item is selected in a list box and the corresponding row is deleted from the source table). However, you can prevent this by specifying the following **SetVarOptions** value:
+  By default all SetVar shapes are updated when their source is updated (e.g. the session variable is cleared when an item is selected in a list box and the corresponding row is deleted from the source table). However, you can prevent this by specifying the following **SetVarOptions** value:
 
   ```txt
   DisableSetOnSourceUpdate
@@ -176,7 +176,7 @@ To turn a **SetVar** box into a combo box control:
 
    - Refer to a table parameter containing a number of values (optionally using dynamic placeholders).
 
-     By default, the primary key of a row is used as set value and the display key is used to display that value in the combo box. From DataMiner 9.5.0/9.5.3 onwards, by default, the list of values is sorted by the display column. In previous versions of DataMiner, it is sorted by the primary key.
+     By default, the primary key of a row is used as set value and the display key is used to display that value in the combo box. The list of values is sorted by the display column.
 
 1. In the **SetVarOptions** shape data field, you can then use the following options to override the default behavior, using a pipe character ("\|") as separator:
 
@@ -235,7 +235,7 @@ A list box can be populated in two ways. In the shape data field of type **SetVa
 - Specify a list of fixed values, or
 - Refer to a table parameter containing a number of values.
 
-  By default, the primary key of a row is used as set value and the display key is used to display that value in the list box. From DataMiner 9.5.0/9.5.3 onwards, by default, the list is sorted by the display column. In previous versions of DataMiner, it is sorted by the primary key.
+  By default, the primary key of a row is used as set value and the display key is used to display that value in the list box. The list is sorted by the display column.
 
   The following options are available to override the default behavior:
 
@@ -301,7 +301,7 @@ MultipleValueSep=;
 ```
 
 > [!NOTE]
-> Up to DataMiner 9.5.1, only a single character can be specified as a separator after "MultipleValueSep". From DataMiner 9.5.2 onwards, you can also specify separators that consist of multiple characters. E.g.: "MultipleValueSep=-AND-"
+> It is possible to specify separators that consist of multiple characters, e.g. `MultipleValueSep=-AND-`.
 
 By default, when no checkboxes are selected, the value of the session variable will be empty. If, however, you want the session variable to have a fixed value in case none of the checkboxes are selected, then add a shape data field of type **SetVarOptions** to the shape and set its value to "EmptyValue=", followed by the value of your choice:
 
@@ -322,9 +322,9 @@ InitNewCheckBoxChecked
 ```
 
 > [!NOTE]
-> In DataMiner Cube, from version 9.5.1 onwards, right-clicking a multiple checkbox control displays a context menu that allows you to select or deselect all checkboxes, or invert the current selection.
+> In DataMiner Cube, right-clicking a multiple checkbox control displays a context menu that allows you to select or deselect all checkboxes, or invert the current selection.
 
-From DataMiner 9.5.0/9.5.3 onwards, by default, the checkboxes are sorted by the display key. To override this default order, use the SetVarOption "SortColumn=\[Column parameter ID\]".
+By default, the checkboxes are sorted by the display key. To override this default order, use the SetVarOption "SortColumn=\[Column parameter ID\]".
 
 For example:
 
@@ -350,22 +350,42 @@ To turn a shape into a tree control:
 
    The following options can be used:
 
-   | SetVarOption | Description |
-   | ------------ | ----------- |
-   | DisplayColumn | The ID of the column to be used for the tree item. Default: Primary key. |
-   | IconColumn | The ID of the column that contains the icon to be shown in front of the tree item.<br>Note: All icons must have a height of exactly 16 px. |
-   | MultipleValueSep | The session variable will contain the names of the selected tree items, separated by pipe characters. When, for example, tree items 1, 2 and 4 are selected, the session variable will contain the value "X\|Y\|Z" (note: X, Y, Z depending on the above-mentioned *SetColumn* setting). If you want to use another separator, add a shape data field of type **SetVarOptions** to the shape and set its value to "MultipleValueSep=", followed by the character of your choice.<br>Note that from DataMiner 9.5.2 onwards, you can also specify a separator consisting of multiple characters, e.g. "MultipleValueSep=-AND-". |
-   | SetColumn | The ID of the column of which the value will be assigned to the session variable. |
-   | SingleSelectionMode | Specify this option if users are only allowed to select one single item in the tree control. By default, users are allowed to select multiple items. |
-   | SortColumn | Specify this option to configure the way items are sorted in the tree control. If you set the value to "SortColumn=*ParameterId*,*ParameterId*,...", each tree level will sort its items based on the values of the specified column. If no sorting column is specified, the items are sorted based on the display value. String values are sorted using natural sorting. |
-   | ViewColumn | One or more column IDs, separated by commas, referring to columns with view names in the table containing the tree items to be shown. For example: "ViewColumn=2011,3011"<br>If the indicated columns contain a view for a particular tree item, that tree item will only be visible for users with permission to access that view. Tree items of which the view columns are empty will be visible to all users. |
-   | VisibilityColumn | The ID of the column that will determine whether the item is shown in the tree control. If this column contains "1", then the item will be shown.<br>Note: VisibilityColumn may refer to a parameter of type "discreet". |
-   | VisibilityConditionColumn= | Available from DataMiner 9.0.5 onwards. Allows you to use the value of a column in a condition. If the condition is true, the tree item is shown, otherwise it is hidden. If a tree control is populated by multiple tables, you can configure a condition for each of those tables.<br>Supported operators: ==, !=, \>, \>=, \<, \<=<br>For columns of type String only the "==" and "!=" operators can be used.<br>For examples, see [Examples of SetVarOptions using conditions](#examples-of-setvaroptions-using-conditions). |
+   - **DisplayColumn**: The ID of the column to be used for the tree item. Default: Primary key.
+
+   - **IconColumn**: The ID of the column that contains the icon to be shown in front of the tree item.
+  
+     > [!NOTE]
+     > All icons must have a height of exactly 16 px.
+
+   - **MultipleValueSep**: The session variable will contain the names of the selected tree items, separated by pipe characters. When, for example, tree items 1, 2, and 4 are selected, the session variable will contain the value "X\|Y\|Z" (note: X, Y, Z depending on the above-mentioned *SetColumn* setting). If you want to use another separator, add a shape data field of type **SetVarOptions** to the shape and set its value to `MultipleValueSep=`, followed by the character or characters of your choice.
+
+   - **SetColumn**: The ID of the column of which the value will be assigned to the session variable.
+
+   - **SingleSelectionMode**: Specify this option if users are only allowed to select one single item in the tree control. By default, users are allowed to select multiple items.
+
+   - **SortColumn**: Specify this option to configure the way items are sorted in the tree control. If you set the value to "SortColumn=*ParameterId*,*ParameterId*,...", each tree level will sort its items based on the values of the specified column. If no sorting column is specified, the items are sorted based on the display value. String values are sorted using natural sorting.
+
+   - **ViewColumn**: One or more column IDs, separated by commas, referring to columns with view names in the table containing the tree items to be shown. For example: `ViewColumn=2011,3011`.
+
+     If the indicated columns contain a view for a particular tree item, that tree item will only be visible for users with permission to access that view. Tree items of which the view columns are empty will be visible to all users.
+
+   - **VisibilityColumn**: The ID of the column that will determine whether the item is shown in the tree control. If this column contains "1", then the item will be shown.
+  
+     > [!NOTE]
+     > VisibilityColumn may refer to a parameter of type "discreet".
+
+   - **VisibilityConditionColumn**: Allows you to use the value of a column in a condition. If the condition is true, the tree item is shown, otherwise it is hidden. If a tree control is populated by multiple tables, you can configure a condition for each of those tables.
+
+     Supported operators: ==, !=, \>, \>=, \<, \<=
+
+     For columns of type String, only the "==" and "!=" operators can be used.
+
+     For examples, see [Examples of SetVarOptions using conditions](#examples-of-setvaroptions-using-conditions).
 
    > [!NOTE]
    > The border and background of the tree control can be configured by setting the border and background of the shape.
 
-1. From DataMiner 10.0.5 onwards, if you want to use one or more subscription filters, add the **SubscriptionFilter** shape data field. Set this field to one or more filters, separated by pipe characters, to apply these to the table(s) specified in the **SetVar** shape data field. See [Example of tree control with subscription filters](#example-of-tree-control-with-subscription-filters).
+1. If you want to use one or more subscription filters, add the **SubscriptionFilter** shape data field. Set this field to one or more filters, separated by pipe characters, to apply these to the table(s) specified in the **SetVar** shape data field. See [Example of tree control with subscription filters](#example-of-tree-control-with-subscription-filters).
 
 1. If you want to customize the status line, then draw an extra shape and add a shape data field to it of type **SetVarOptions**.
 

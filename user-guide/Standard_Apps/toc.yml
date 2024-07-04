@@ -79,35 +79,35 @@ items:
               - name: EPM GPON ONT parameters
                 topicUid: GPON_ONT
       #GPON TOC END
-      - name: DataMiner EPM I-DOCSIS
+      - name: DataMiner EPM Integrated DOCSIS
         topicUid: EPM_I-DOCSIS
         items:
-          - name: EPM I-DOCSIS architecture
+          - name: EPM Integrated DOCSIS architecture
             topicUid: I-DOCSIS_architecture
-          - name: EPM I-DOCSIS components
+          - name: EPM Integrated DOCSIS components
             topicUid: I-DOCSIS_components
-          - name: Supported technologies for I-DOCSIS
+          - name: Supported technologies for Integrated DOCSIS
             topicUid: I-DOCSIS_supported_technologies
-          - name: EPM I-DOCSIS deployment
+          - name: EPM Integrated DOCSIS deployment
             topicUid: I-DOCSIS_deployment
-          - name: EPM I-DOCSIS maps deployment
+          - name: EPM Integrated DOCSIS maps deployment
             topicUid: I-DOCSIS_maps_deployment
             items:
               - name: Systems with one back-end element
                 topicUid: I-DOCSIS_maps_deployment_one_backend
               - name: Systems with multiple back-end elements
                 topicUid: I-DOCSIS_maps_deployment_multiple_backends
-          - name: EPM I-DOCSIS GQI integration
+          - name: EPM Integrated DOCSIS GQI integration
             topicUid: I-DOCSIS_GQI_Integration
-          - name: EPM I-DOCSIS passives integration
+          - name: EPM Integrated DOCSIS passives integration
             topicUid: I-DOCSIS_passives_integration
-          - name: EPM I-DOCSIS upgrade
+          - name: EPM Integrated DOCSIS upgrade
             topicUid: I-DOCSIS_upgrade
           - name: Creating a new CCAP/CM pair
             topicUid: I-DOCSIS_Create_CCAP_CM_pair
           - name: Deleting a CCAP/CM pair
             topicUid: I-DOCSIS_Delete_CCAP_CM_pair
-          - name: Available parameters in I-DOCSIS
+          - name: Available parameters in Integrated DOCSIS
             topicUid: I-DOCSIS_parameters
             items:
               - name: Node Segment
