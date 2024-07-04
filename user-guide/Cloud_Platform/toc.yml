@@ -66,6 +66,8 @@ items:
         topicUid: Register_Catalog_Item
       - name: Deploying a Catalog item
         topicUid: Deploying_a_catalog_item
+      - name: Catalog API
+        topicUid: Catalog_API
   - name: DataMiner Sharing
     topicUid: Sharing
     items:
