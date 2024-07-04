@@ -4,12 +4,6 @@ uid: InterAppCalls_Examples
 
 # Examples
 
-## Full example with a connector, Automation script and NuGet package
-
-- [Connector](https://github.com/SkylineCommunications/SLC-C-Example_InterAppCalls)
-- [Automation Script](https://github.com/SkylineCommunications/SLC-AS-Example_InterAppCalls)
-- [NuGet](https://github.com/SkylineCommunications/SLC-S-Example_InterAppCalls)
-
 ## Simple FillArray
 
 In this example, the QAction receives a message to fill in a table.
