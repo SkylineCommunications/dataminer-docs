@@ -5,7 +5,7 @@ uid: InterAppCalls_GettingStarted
 # Getting Started
 
 > [!NOTE]
-> An example is available in the [SkylineCommunications/SLC-S-Example_InterAppCalls](https://github.com/SkylineCommunications/SLC-S-Example_InterAppCalls) GitHub repository.
+> An example for [Automation script](https://github.com/SkylineCommunications/SLC-AS-Example_InterAppCalls), [connector](https://github.com/SkylineCommunications/SLC-C-Example_InterAppCalls) and [NuGet](https://github.com/SkylineCommunications/SLC-S-Example_InterAppCalls) can be found on GitHub.
 
 Begin by checking and applying everything to meet the DataMiner, DIS, connector and optional Automation script requirements.
 
