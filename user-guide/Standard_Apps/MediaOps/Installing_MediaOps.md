@@ -13,7 +13,7 @@ uid: Installing_MediaOps
 
 - The following user permissions:
 
-  - [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access)
+  - [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps)
 
   - [General > Elements > Access](xref:DataMiner_user_permissions#general--elements--access)
 
