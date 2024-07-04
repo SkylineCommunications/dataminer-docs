@@ -142,7 +142,7 @@ To search within the list of organizations:
 > [!NOTE]
 > To clear your search and return to the full list of organizations, delete the text in the search box and click outside of the search box to close it.
 
-## Assigning organization categories
+## Managing organization categories
 
 On both the *Overview* and *List* tabs, you can access the *Categories* panel by clicking the *Categories* button in the header bar.
 
@@ -150,13 +150,7 @@ On both the *Overview* and *List* tabs, you can access the *Categories* panel by
 
 The *Categories* panel provides an overview of all available organization categories, with options to [edit](#editing-an-organization-category) and [create new ones](#adding-a-new-organization-category).
 
-Assigning a category to organizations streamlines the booking process by making it easier to find and select organizations based on their type.
-
-- You can view an organization's category in the *Organization category* column on the *List* tab.
-
-- To assign a category to an organization, enter the appropriate category in the *Category* field when you [create a new organization](#adding-a-new-organization) or [edit an existing organization](#editing-an-organization).
-
-  ![Assigning categories](~/user-guide/images/Assigning_Category.png)
+[Assigning a category to organizations](#assigning-an-organization-category) streamlines the booking process by making it easier to find and select organizations based on their type.
 
 ### Adding a new organization category
 
@@ -181,3 +175,11 @@ To edit an existing organization category:
 1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the category you want to edit.
 
 1. Edit the name of the category and select *Save* in the top-right corner.
+
+### Assigning an organization category
+
+To assign a category to an organization, enter the appropriate category in the *Category* field when you [create a new organization](#adding-a-new-organization) or [edit an existing organization](#editing-an-organization).
+
+![Assigning categories](~/user-guide/images/Assigning_Category.png)
+
+You can view an organization's category in the *Organization category* column on the *List* tab.

@@ -145,41 +145,15 @@ To search within the list of teams:
 > [!NOTE]
 > To clear your search and return to the full list of teams, delete the text in the search box and click outside of the search box to close it.
 
-## Assigning areas of expertise and roles
+## Managing areas of expertise
 
-On both the *Overview* and *List* tabs, you can access the *Expertise* and *Roles* panels by clicking the respective buttons in the header bar.
+On both the *Overview* and *List* tabs, you can access the *Expertise* panel by clicking the *Expertise* button in the header bar.
 
-![Header bar](~/user-guide/images/Teams_HeaderBar.png)
+<!--new screenshot-->
 
-- The *Expertise* panel provides an overview of all available areas of expertise, with options to [edit](#editing-an-area-of-expertise) and [create new ones](#adding-a-new-area-of-expertise).
+The *Expertise* panel provides an overview of all available areas of expertise, with options to [edit](#editing-an-area-of-expertise) and [create new ones](#adding-a-new-area-of-expertise).
 
-  Assigning an area of expertise to teams streamlines the booking process by making it easier to match teams with tasks that suit their level of expertise.
-
-  - You can view a team's area of expertise in the *Expertise* column on the *List* tab.
-
-  - To assign an area of expertise to a team, enter the appropriate area of expertise in the *Team expertise(s)* field when you [create a new team](#adding-a-new-team) or [edit an existing team](#editing-a-team).
-
-    ![Assigning expertise](~/user-guide/images/Assigning_Expertise.png)
-
-- The *Roles* panel provides an overview of all roles, with options to [edit](#editing-a-role) and [create new ones](#adding-a-new-role).
-
-  Assigning roles to team members streamlines the booking process by clearly defining responsibilities and ensuring tasks are efficiently allocated based on each member's designated functions.
-
-  - To view the roles given to team members in a team, click the ![Details](~/user-guide/images/PO_Details.png) button next to the team's details. In the *Details* panel, you can find the different roles under *Members*.
-
-    ![Roles](~/user-guide/images/PO_Roles.png)
-
-  - To assign a role to a team member:
-
-    1. On the *List* tab, click the ![Details](~/user-guide/images/PO_Details.png) button next to the appropriate team.
-
-    1. Under *Members*, click the role listed in the *Role* column next to the team member you wish to assign a role to. If no role has been assigned yet, click the ![Role](~/user-guide/images/PO_Role_Icon.png) icon.
-
-       The *Set Team Role* pop-up window will appear.
-
-    1. Select a role from the dropdown menu.
-
-    1. Click *Ok*.
+[Assigning an area of expertise](#assigning-an-area-of-expertise) to teams streamlines the booking process by making it easier to match teams with tasks that suit their level of expertise.
 
 ### Adding a new area of expertise
 
@@ -208,6 +182,24 @@ To edit an existing area of expertise:
 > [!NOTE]
 > You may need to refresh the page for the change to become visible in the *Expertise* column on the *List* tab.
 
+### Assigning an area of expertise
+
+To assign an area of expertise to a team, enter the appropriate area of expertise in the *Team expertise(s)* field when you [create a new team](#adding-a-new-team) or [edit an existing team](#editing-a-team).
+
+![Assigning expertise](~/user-guide/images/Assigning_Expertise.png)
+
+You can view a team's area of expertise in the *Expertise* column on the *List* tab.
+
+## Managing roles
+
+On both the *Overview* and *List* tabs, you can access the *Roles* panel by clicking the *Roles* button in the header bar.
+
+<!--new screenshot-->
+
+The *Roles* panel provides an overview of all roles, with options to [edit](#editing-a-role) and [create new ones](#adding-a-new-role).
+
+[Assigning roles to team members](#assigning-a-role) streamlines the booking process by clearly defining responsibilities and ensuring tasks are efficiently allocated based on each member's designated functions.
+
 ### Adding a new role
 
 To create a new role:
@@ -231,3 +223,21 @@ To edit an existing role:
 1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the role you want to edit.
 
 1. Edit the name of the role and select *Save* in the top-right corner.
+
+### Assigning a role
+
+To assign a role to a team member:
+
+1. On the *List* tab, click the ![Details](~/user-guide/images/PO_Details.png) button next to the appropriate team.
+
+1. Under *Members*, click the role listed in the *Role* column next to the team member you wish to assign a role to. If no role has been assigned yet, click the ![Role](~/user-guide/images/PO_Role_Icon.png) icon.
+
+   The *Set Team Role* pop-up window will appear.
+
+1. Select a role from the dropdown menu.
+
+1. Click *Ok*.
+
+To view the roles given to team members in a team, click the ![Details](~/user-guide/images/PO_Details.png) button next to the team's details. In the *Details* panel, you can find the different roles under *Members*.
+
+![Roles](~/user-guide/images/PO_Roles.png)

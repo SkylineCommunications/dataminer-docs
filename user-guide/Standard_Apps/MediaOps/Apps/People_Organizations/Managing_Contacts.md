@@ -100,25 +100,15 @@ To search within the list of contacts:
 > [!NOTE]
 > To clear your search and return to the full list of contacts, delete the text in the search box and click outside of the search box to close it.
 
-## Assigning a skill and experience to a contact
+## Managing skills
 
-On both the *Overview* and *List* tabs, you can access the *Skills* and *Experience* panels by clicking the respective buttons in the header bar.
+On both the *Overview* and *List* tabs, you can access the *Skills* panel by clicking the *Skills* button in the header bar.
 
-![Header bar](~/user-guide/images/PO_Header_Bar.png)
+<!--new screenshot-->
 
-- The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) them or [create new ones](#adding-a-new-skill).
+The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) them or [create new ones](#adding-a-new-skill).
 
-  Assigning skills to individuals streamlines the booking process by allowing you to quickly identify qualified individuals to assign tasks to.
-
-- The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) them or [create new ones](#adding-a-new-experience-entry).
-
-  Assigning experience to individuals streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
-
-You can view a contact's skill and experience level in the *Skill* and *Experience* columns on the *List* tab.
-
-To assign a skill or experience, enter the appropriate skill and experience entry in the *Personal skills* field (1) and *Experience level* field (2) respectively when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
-
-![Assigning skills & experience](~/user-guide/images/Assigning_Skills_Experience.png)
+[Assigning skills to individuals](#assigning-a-skill) streamlines the booking process by allowing you to quickly identify qualified individuals to assign tasks to.
 
 ### Adding a new skill
 
@@ -147,6 +137,24 @@ To edit an existing skill:
 > [!NOTE]
 > You may need to refresh the page for the change to become visible in the *Skill* column on the *List* tab.
 
+### Assigning a skill
+
+To assign a skill, enter the appropriate skill in the *Personal skills* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
+
+<!--new screenshot-->
+
+You can view a contact's skill in the *Skill* column on the *List* tab.
+
+## Managing experience
+
+On both the *Overview* and *List* tabs, you can access the *Experience* panel by clicking the *Experience* button in the header bar.
+
+<!--new screenshot-->
+
+The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) them or [create new ones](#adding-a-new-experience-entry).
+
+[Assigning experience to individuals](#assigning-experience) streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
+
 ### Adding a new experience entry
 
 To create a new experience entry:
@@ -173,3 +181,11 @@ To edit an existing experience entry:
 
 > [!NOTE]
 > You may need to refresh the page for the change to become visible in the *Experience* column on the *List* tab.
+
+## Assigning experience
+
+To assign experience, enter the appropriate experience entry in the *Experience level* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
+
+<!--new screenshot-->
+
+You can view a contact's experience level in the *Experience* column on the *List* tab.
