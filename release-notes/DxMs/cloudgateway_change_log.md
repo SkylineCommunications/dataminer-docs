@@ -4,11 +4,19 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 13 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging
+#### 4 July 2024 - Enhancement - CloudGateway 2.13.12 - Connection testing improvements [ID_40108]
+
+The ConnectionTester tool included with CloudGateway and the at runtime connection testing by CloudGateway have been improved.
+
+#### 20 June 2024 - Enhancement - CloudGateway 2.13.11 - Remove log spam when the DMS identity token can not be automatically refreshed [ID_39261]
+
+From now on, if the refresh token for your dataminer.services DMS identity is expired or invalid, it will only be logged once instead of every 10 seconds.
+
+#### 14 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging [ID_39631]
 
 The CloudGateway DxM will now no longer add logging every minute when a dataminer.services endpoint is unreachable.
 
-#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server
+#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server [ID_]
 
 The CloudGateway DxM has been extended with the capability to offload data when installed on a DMZ or proxy server.
 
