@@ -8,10 +8,10 @@ Use this method to retrieve alarms matching a DMAAlarmFilterV2 object. (Availabl
 
 ## Input
 
-| Item             | Format | Description                                                                                                  |
-|------------------|--------|--------------------------------------------------------------------------------------------------------------|
-| connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                                         |
-| filter           | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2)  | The filter that the alarms must match. |
+| Item             | Format | Description                                                               |
+|------------------|--------|---------------------------------------------------------------------------|
+| connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                     |
+| filter           | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2) | The filter that the alarms must match. |
 
 ## Output
 
