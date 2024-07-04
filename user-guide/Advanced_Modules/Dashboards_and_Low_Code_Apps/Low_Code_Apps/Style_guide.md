@@ -14,7 +14,10 @@ Use this guide as a basis to build or improve dashboards and low-code apps. Thes
 
 ## Colors/themes
 
-- When you create a new app or dashboard, it essential to start from a good **theme**. You can for example [duplicate a dashboard](xref:Duplicating_a_dashboard) or [duplicate an app](xref:Creating_custom_apps#duplicating-an-existing-low-code-app) with a similar look and feel to what you have in mind, and then fine-tune [the dashboard layout](xref:Configuring_the_dashboard_layout) or the [app layout](xref:LowCodeApps_Layout).
+- When you create a new app or dashboard, it essential to start from a good **theme**. The same themes exist across the Dashboards and Low-Code Apps module within a DMS. The themes are primarily managed in the Dashboards app. If the theme you want to use does not exist yet, start by **duplicating a theme in the Dashboards app** that has a similar look and feel to what you have in mind, and then fine-tune it. In a low-code app, you can then select this theme on page level. Use the same theme for every page.
+
+  > [!TIP]
+  > See also: [Creating a new dashboard theme](xref:Configuring_the_dashboard_layout#creating-a-new-dashboard-theme)
 
 - Each theme **must** have a component style with a transparent background. Use this component style for titles, images, and buttons.
 
