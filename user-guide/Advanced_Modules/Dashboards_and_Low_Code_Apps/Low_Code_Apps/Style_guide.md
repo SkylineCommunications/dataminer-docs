@@ -45,7 +45,7 @@ Use this guide as a basis to build or improve dashboards and low-code apps. Thes
    |------|-----|
    |![Good app color](~/user-guide/images/LCA_Style_Guide_App_Color_Good.png)|![Bad app color](~/user-guide/images/LCA_Style_Guide_App_Color_Bad.png)|
 
-- The colors for states in tables and charts **must** be used consistently, so that the same color is always used to represent the same state.
+- The colors for states in tables and charts **must** be used consistently, so that the same color is always used to represent the same state. To best way to achieve this in charts is by using [conditional colors](xref:LowCodeApps_Layout#creating-a-new-theme-for-a-low-code-app-page) as part of the theme, which allows to map a display label to a specific color consistently across components.
 
    ![State color](~/user-guide/images/LCA_Style_Guide_Color_State.png)
 
@@ -117,7 +117,7 @@ In order to have consistent navigation, we recommend applying the following orde
 
 - Do not make the titles too big: the focus should be on the content of the page.
 
-- The best way to add a title to a page is as a web component. For example:
+- It is recommended to add a title to a page as a web component instead of just text. For example:
 
   - HTML code:
 
@@ -142,13 +142,13 @@ In order to have consistent navigation, we recommend applying the following orde
 
 - Use short labels.
 
+- Add an icon to a button whenever possible. This will make it easier for users to see at a glance what the button is for.
+
 - Make sure buttons have a transparent background.
 
    | 👍 Good | 👎 Bad |
    |------|-----|
    |![Good button](~/user-guide/images/LCA_Style_Guide_Button_Good.png)|![Bad button](~/user-guide/images/LCA_Style_Guide_Button_Bad.png)|
-
-- Add an icon to a button whenever possible. This will make it easier for users to see at a glance what the button is for.
 
 ### Images/icons
 
