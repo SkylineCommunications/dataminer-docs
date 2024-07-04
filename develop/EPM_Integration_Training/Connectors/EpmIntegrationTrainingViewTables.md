@@ -92,8 +92,8 @@ Since you are essentially duplicating the information from the local table to a 
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
-        <LengthType>next param</LengthType>
         <Type>string</Type>
+        <LengthType>next param</LengthType>
     </Interprete>
     <Display>
         <RTDisplay>true</RTDisplay>

@@ -86,6 +86,28 @@ var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManage
 > - Sending a `ResourceManagerConfigInfoMessage` to a DataMiner Agent will only update the cache settings of that specific agent. If you want to update the settings of all agents in the cluster, you will have to sent a `ResourceManagerConfigInfoMessage` to every agent in that cluster.
 > - To retrieve the above-mentioned settings, you can send a `ResourceManagerConfigInfoMessage` of type `Get`.
 
+#### Service & Resource Management: SRM master synchronization now takes into account the Resource Manager state [ID_39835]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, the SRM master synchronization only took into account the DMA state, not the Resource Manager state. In some cases, that could lead to requests being sent to a DataMiner Agent of which the Resource Manager was down.
+
+From now on, the SRM master synchronization will also take into account the Resource Manager state. A DataMiner Agent will only be appointed SRM master if DataMiner is running and if the Resource Manager is initialized.
+
+Also, the logging with regard to the SRM master synchronization and master election process has been enhanced.
+
+#### Time-scoped relation learning: Enhanced accuracy [ID_39841]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
+
+#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -118,6 +140,18 @@ The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the f
 
 From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
 
+#### DataMiner Object Models: SLModuleSettingsManager.txt log file will now contain the IDs of the modules that were created, updated or deleted [ID_40028]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
+
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
@@ -125,6 +159,20 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, SLElement could stop working while processing table parameter updates.
+
+#### Alarms generated for an element with a virtual function would incorrectly not get exported to that virtual function [ID_39536]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
+
+#### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTypes would simultaneously be initialized on multiple threads, causing the following exception to be thrown:
+
+`Timeout while inspecting metadata; this may indicate a deadlock. This can often be avoided by preparing necessary serializers during application initialization, rather than allowing multiple threads to perform the initial metadata inspection; please also see the LockContended event`
 
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
@@ -134,6 +182,6 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 #### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
