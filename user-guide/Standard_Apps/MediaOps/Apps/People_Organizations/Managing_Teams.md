@@ -4,7 +4,7 @@ uid: PO_Managing_Teams
 
 # Managing teams
 
-The *Teams Overview* page focuses on your managed teams. It allows you to switch between two tabs: *Overview* and *List*, each offering different perspectives on the available teams.
+The *Teams Overview* page focuses on your managed teams. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available teams.
 
 You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *Teams Overview* page.
 
@@ -40,7 +40,7 @@ To add a new team:
      To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
 
 > [!IMPORTANT]
-> After creating a new team, it will not have any members. Make sure to [add members](#configuring-team-members) in the *Details* panel.
+> When a new team is created, it will not have any members. Make sure to [add members](#configuring-team-members) in the *Details* panel.
 
 ## Editing a team
 
@@ -56,7 +56,7 @@ To edit an existing team:
 
 1. Make the necessary changes to the team information.
 
-1. After making your edits, select *Activate* in the lower right corner.
+1. After making your changes, select *Activate* in the lower right corner.
 
    > [!NOTE]
    > Skipping this step will keep the team in an inactive *Edit* state.
@@ -82,7 +82,7 @@ To configure team members for an existing team:
 
 1. Click the "X" button in the top-right corner to close the panel.
 
-Your chosen team members will now appear in the list of members in the *Details* panel.
+The selected team members will now appear in the list of members in the *Details* panel.
 
 ## Making a team bookable
 
@@ -105,7 +105,7 @@ To make a team bookable:
    ![Bookable](~/user-guide/images/PO_Bookable.png)
 
    > [!NOTE]
-   > This toggle button is only visible when the team has been activated.
+   > This toggle button is only visible when the team has been activated. See [Adding a new team](#adding-a-new-team) or [Editing a team](#editing-a-team).
 
 ## Deprecating a team
 

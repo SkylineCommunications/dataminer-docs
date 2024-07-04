@@ -4,7 +4,7 @@ uid: PO_Managing_Organizations
 
 # Managing organizations
 
-The *Organizations Overview* page focuses on your managed organizations. It allows you to switch between two tabs: *Overview* and *List*, each offering different perspectives on the available organizations.
+The *Organizations Overview* page focuses on your managed organizations. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available organizations.
 
 You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *Organizations Overview* page.
 
@@ -40,7 +40,7 @@ To add a new organization:
      To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
 
 > [!IMPORTANT]
-> After creating a new organization, it will not have any members. Make sure to [add members](#configuring-organization-members) in the *Details* panel.
+> When a new organization is created, it will not have any members. Make sure to [add members](#configuring-organization-members) in the *Details* panel.
 
 ## Editing an organization
 
@@ -56,7 +56,7 @@ To edit an existing organization:
 
 1. Make the necessary changes to the organization information.
 
-1. After making your edits, select *Activate* in the lower right corner.
+1. After making your changes, select *Activate* in the lower right corner.
 
    > [!NOTE]
    > Skipping this step will keep the organization in an inactive *Edit* state.
@@ -82,7 +82,7 @@ To configure organization members for an existing organization:
 
 1. Click the "X" button in the top-right corner to close the panel.
 
-Your chosen organization members will now appear in the list of members on the *Details* panel.
+The selected organization members will now appear in the list of members on the *Details* panel.
 
 ## Assigning a contract to an organization
 

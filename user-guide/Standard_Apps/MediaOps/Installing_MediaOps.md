@@ -4,6 +4,9 @@ uid: Installing_MediaOps
 
 # Installing dataminer.MediaOps
 
+> [!NOTE]
+> The MediaOps package is currently not yet available for installation. It will become available soon, so check back frequently for updates.
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)

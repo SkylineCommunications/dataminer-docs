@@ -4,7 +4,7 @@ uid: PO_Managing_Contacts
 
 # Managing contacts
 
-The *People Overview* page serves as the application's landing page. It allows you to switch between two tabs: *Overview* and *List*, each offering different perspectives on your contacts.
+The *People Overview* page serves as the application's landing page. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on your contacts.
 
 You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *People Overview* page.
 
@@ -55,7 +55,7 @@ To edit an existing contact:
 
 1. Make the necessary changes to the contact details.
 
-1. After making your edits, select *Activate* in the lower right corner.
+1. After making your changes, select *Activate* in the lower right corner.
 
    > [!NOTE]
    > Skipping this step will keep the contact in an inactive *Edit* state.
@@ -106,11 +106,11 @@ On both the *Overview* and *List* tabs, you can access the *Skills* and *Experie
 
 ![Header bar](~/user-guide/images/PO_Header_Bar.png)
 
-- The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) and [create new ones](#adding-a-new-skill).
+- The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) them or [create new ones](#adding-a-new-skill).
 
-  Assigning skills to individuals streamlines the booking process by allowing you to quickly identify and assign tasks to qualified individuals.
+  Assigning skills to individuals streamlines the booking process by allowing you to quickly identify qualified individuals to assign tasks to.
 
-- The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) and [create new ones](#adding-a-new-experience-entry).
+- The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) them or [create new ones](#adding-a-new-experience-entry).
 
   Assigning experience to individuals streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
 
