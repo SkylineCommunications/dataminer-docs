@@ -104,7 +104,7 @@ Because of a number of enhancements, the accuracy of the time-scoped relation le
 
 #### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
 
-<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
 
