@@ -102,6 +102,12 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
+#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
