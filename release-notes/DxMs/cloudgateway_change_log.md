@@ -16,7 +16,7 @@ From now on, if the refresh token for your dataminer.services DMS identity is ex
 
 The CloudGateway DxM will now no longer add logging every minute when a dataminer.services endpoint is unreachable.
 
-#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server [ID_]
+#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server [ID_39444]
 
 The CloudGateway DxM has been extended with the capability to offload data when installed on a DMZ or proxy server.
 
