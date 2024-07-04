@@ -25,7 +25,7 @@ Any compilation failure will trigger the quality gate and block a release.
 
 We will attempt to run any tests defined next to the source code. These could be written in MSTest, NUnit, or other frameworks. As long as they are recognized by .NET as tests, we will run them.
 
-For GitHub, we currently only run unit tests. For integration tests, we are looking into the concept of DAAS to run such code against.
+For GitHub, we currently only run unit tests. For integration tests, we are looking into using DaaS instances to run such code against.
 
 You can define an integration test by specifying the test category for the test: **IntegrationTest**. These are filtered out when unit tests are run in the pipeline.
 
