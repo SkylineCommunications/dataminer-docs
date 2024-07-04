@@ -206,7 +206,7 @@ To enable inter-node TLS encryption:
 
 ## Connecting with DataMiner
 
-1. Ensure TLS encryption is working by connecting to the Cassandra database through DevCenter.
+1. Verify that client-server connections via TLS are possible. This can be done by connecting to the Cassandra database via DevCenter, or by running the command `cqlsh -u <username> -p <password> --ssl` on the Cassandra server itself. 
 
 1. Stop the DataMiner agent.
 
