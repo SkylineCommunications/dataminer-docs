@@ -32,11 +32,11 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
-#### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for main DVE elements will now also be taken into account [ID_39988]
+#### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for child DVE elements using a parameter ID from the main DVE element will now also be taken into account [ID_39988]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-From now on, alarms generated for main DVE elements can also get a focus value and, as a result, be grouped by Automatic incident tracking.
+From now on, alarms generated for child DVE elements using a parameter ID from the main DVE element can also get a focus value and, as a result, be grouped by Automatic incident tracking.
 
 #### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID_39994]
 
