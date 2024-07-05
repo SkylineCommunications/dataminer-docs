@@ -1,17 +1,17 @@
 ---
 uid: InterAppCalls_Introduction
-keywords: InterAppCalls, introduction, InterApp
+keywords: InterAppCalls, InterApp
 ---
 
-# InterApp
+# About the InterApp framework
 
-InterApp, available through the NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provides a C# message and response architecture that can be used:
+The InterApp framework, available through the NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provides a C# message and response architecture that can be used in several ways:
 
 - From element to element and back.
 - From Automation script to element and back.
 - From application on the same server to element and back.
 
-Its main features are:
+Using InterApp calls provides you with:
 
 - The ability to send a message to an element.
 - The ability to wait for a return message.
@@ -19,23 +19,65 @@ Its main features are:
 - A user-friendly and flexible way to define any class you want as a message.
 - The ability to balance maintainability versus messaging speed as needed for your project.
 
-Its main purpose is for use within large projects where inter-element or inter-automation communication is required, where you can adjust source and destination code to create and parse the messages.
+The InterApp framework is mainly intended to be used within large projects where inter-element or inter-Automation communication is required, so you can adjust source and destination code to create and parse the messages.
 
 ## Requirements
 
 ### DataMiner requirements
 
 - The InterApp classes require DataMiner 10.1.0 or higher to function correctly.
-- To take advantage of significant efficieny increases, use DataMiner 10.3.12 or higher.
 
-## Metrics
+- Using DataMiner **10.3.12 or higher is highly recommended**, as this version introduces significant efficiency increases, as illustrated in the metrics below.
 
-When returning messages, a significant efficiency increase has been introduced that starts working when you are using DataMiner 10.3.12 or higher.
+   ![small-medium size messages graph](~/develop/images/InterApp_Metrics_SmallMedium.png)
 
-![small-medium size messages graph](../../images/InterApp_Metrics_SmallMedium.png)
+   ![huge size messages graph](~/develop/images/InterApp_Metrics_Huge.png)
 
-![huge size messages graph](../../images/InterApp_Metrics_Huge.png)
+### Connector requirements
 
-## Release notes
+Two parameters have been reserved to be used in every protocol that wants to communicate with the InterApp classes. However, you can add additional different custom parameters within a project if you have control over every protocol and Automation script used in it. This can be efficient in situations where there are many external sources requiring responses from a single element. A few extra receiver-return parameters can reduce traffic in the DataMiner System.
 
-- [Range 1.0](xref:Skyline_DataMiner_Core_InterAppCalls_Range_1.0)
+The following two parameters must always be added and processed:
+
+```xml
+<Param id="9000000" trending="false">
+   <Name>interApp_receive</Name>
+   <Description>Inter App Receiver</Description>
+   <Information>
+      <Subtext>Contains the raw serialized InterApp Command (InterAppCall or Message) sent from an external source.</Subtext>
+   </Information>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
+   <Display>
+      <!--Used for Inter App communication.-->
+      <RTDisplay onAppLevel="true">true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
+</Param>
+<Param id="9000001" trending="false">
+   <Name>interApp_return</Name>
+   <Description>Inter App Return</Description>
+   <Information>
+      <Subtext>Contains the raw serialized Message that serves as a response to an external source.</Subtext>
+   </Information>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
+   <Display>
+      <!--Used for Inter App communication.-->
+      <RTDisplay onAppLevel="true">true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
+</Param>
+```

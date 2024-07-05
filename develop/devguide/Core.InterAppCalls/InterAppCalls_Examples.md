@@ -2,7 +2,7 @@
 uid: InterAppCalls_Examples
 ---
 
-# Examples
+# InterApp examples
 
 ## Simple FillArray
 

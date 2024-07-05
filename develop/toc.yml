@@ -776,11 +776,11 @@ items:
       topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
-  - name: InterAppCalls
+  - name: InterApp framework
     items:
-      - name: Introduction
+      - name: About the InterApp framework
         topicUid: InterAppCalls_Introduction
-      - name: Getting started
+      - name: Getting started with the InterApp framework
         topicUid: InterAppCalls_GettingStarted
         items:
           - name: Creating an API
@@ -791,7 +791,7 @@ items:
             topicUid: InterAppCalls_GettingStarted_ReceivingCall
           - name: Sending a call
             topicUid: InterAppCalls_GettingStarted_SendingCall
-      - name: Known Types
+      - name: Known types
         topicUid: InterAppCalls_KnownTypes
       - name: Customizations
         topicUid: InterAppCalls_Customizations

@@ -62,9 +62,3 @@ You get the raw value from the parameter and you use the `InterAppCallFactory` t
         }
     }
 ```
-
-## See also
-
-- [Creating an API with messages that define the data you want to share.](xref:InterAppCalls_GettingStarted_CreatingApi)
-- [Creating executors that define how to process a message.](xref:InterAppCalls_GettingStarted_CreatingExecutor)
-- [Sending a call.](xref:InterAppCalls_GettingStarted_SendingCall)

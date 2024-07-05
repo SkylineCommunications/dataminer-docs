@@ -5,7 +5,7 @@ keywords: Executor
 
 # Creating an executor
 
-Where the API describes the different messages and their content, the executor will define how it should handle an incoming message.
+When you have [created an API](xref:InterAppCalls_GettingStarted_CreatingApi) describing the different messages and their content, the next thing to do is to create an executor that will define how an incoming message should be handled.
 
 The executor is never shared between connectors or Automation scripts. You create it at the destination of a message and it is unique to that connector. It will hold all the methods that can access the content of the message and do something with it.
 
@@ -13,10 +13,10 @@ A few common examples:
 
 - The methods in the executor could be used to translate the content of your InterApp message into a serial, SNMP, HTTP, etc. command to be sent to the device.
 - The methods could be used to perform parameter gets and sets based on the message content.
-- An executor could be created in an Automation script to simply create an information message to indicate that a message was received.
+- An executor could be created in an Automation script to create an information message to indicate that a message was received.
 - etc.
 
-You create it by making a new class that inherits from the `MessageExecutor<T>`, where T is a class from your messages defined in the API.
+You create an executor by making a new class that inherits from `MessageExecutor<T>`, where T is a class from your messages defined in the API.
 
 ```csharp
 public class MyMessageExecutor : MessageExecutor<MyMessage>
@@ -24,7 +24,7 @@ public class MyMessageExecutor : MessageExecutor<MyMessage>
 
 The Visual Studio IDE will then assist you in correctly implementing your executor.
 
-![alt text](../../images/InterApp_VS1.png "Executor implementation in Visual Studio")
+![Executor implementation in Visual Studio](~/develop/images/InterApp_VS1.png)
 
 The executor has several methods that will by default be called when a message is executed (in the specified order):
 
@@ -68,7 +68,7 @@ public override bool Validate ()
 }
 ```
 
-Some methods, like DataSets and DataGets, have an object argument. This will mostly be `SLProtocol` or `IEngine`. These can also be used for a custom class with data, a database object, etc so you as a developer have more flexibility.
+Some methods, like *DataSets* and *DataGets*, have an object argument. This will mostly be `SLProtocol` or `IEngine`. These can also be used for a custom class with data, a database object, etc so you as a developer have more flexibility.
 
 ```csharp
 public override void DataSets(object dataDestination)
@@ -78,7 +78,7 @@ public override void DataSets(object dataDestination)
 }
 ```
 
-Lastly, you will also find one method that has a return type, the CreateReturnMessage. This is optional. It can be used to create a message to return and have it bubble up to the calling methods. If you do not need this, you can just return null. You could consider it as the "return" for the entire executor.
+Lastly, you will also find one method that has a return type, i.e. *CreateReturnMessage*. This is optional. It can be used to create a message to return and have it bubble up to the calling methods. If you do not need this, you can just return null. You could consider it the "return" for the entire executor.
 
 ```csharp
 public override Message CreateReturnMessage()
@@ -96,9 +96,7 @@ public override Message CreateReturnMessage()
 }
 ```
 
-The executor is following a design pattern called **Template Method** pattern.
-
-Benefits:
+The executor follows a design pattern called the **Template Method** pattern. This has the following benefits:
 
 - Consistency: The overall process is consistent and follows the defined sequence.
 - Flexibility: Specific steps can be overridden in subclasses if different behavior is needed for certain executors.
@@ -111,9 +109,3 @@ This design pattern ensures that the core structure of the execution process rem
 
 > [!TIP]
 > If your logic does not require the standard Method Template, consider using the [simple executor](xref:InterAppCalls_Customizations#creating-a-simple-executor). This approach is ideal for simpler situations and helps avoid code bloat.
-
-## See also
-
-- [Creating an API with messages that define the data you want to share.](xref:InterAppCalls_GettingStarted_CreatingApi)
-- [Receiving a call.](xref:InterAppCalls_GettingStarted_ReceivingCall)
-- [Sending a call.](xref:InterAppCalls_GettingStarted_SendingCall)
