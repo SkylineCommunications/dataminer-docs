@@ -135,3 +135,4 @@ else
 
 - Feature introduced in DataMiner 9.5.12 (RN 18369).
 - From DataMiner 9.6.3 (RN 20727) onwards, if the “multiple get” Boolean (settings[5]) is false, separate SNMP messages will be used to poll each OID, and if the “multiple get” Boolean (settings[5]) is true, a single SNMP message will be used to poll the OIDs.
+- Retrieving SNMP data using this method, doesn't have an impact on the timeout state of the element.
