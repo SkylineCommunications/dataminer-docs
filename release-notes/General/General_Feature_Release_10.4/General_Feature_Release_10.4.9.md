@@ -126,6 +126,12 @@ When the trend data of a parameter appears to have frequent flatline periods, th
 
 Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
 
+#### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for main DVE elements will now also be taken into account [ID_39988]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, alarms generated for main DVE elements can also get a focus value and, as a result, be grouped by Automatic incident tracking.
+
 #### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID_39994]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
