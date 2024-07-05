@@ -337,5 +337,4 @@ string sysNameOidValue = Convert.ToString(result[0]);
   - 129: noSuchInstance
 - From DataMiner 9.6.3 (RN 20727) onwards, if the “multiple get” flag (elementInfo[2]) is 0, separate SNMP messages will be used to poll each OID, and if the “multiple get” flag (elementInfo[2]) is 1, a single SNMP message will be used to poll the OIDs.
 - To perform an SNMP Get request in protocol that has no SNMP connection defined, refer to <xref:NT_SNMP_RAW_GET>.
-- Retrieving SNMP data using this method, doesn't have an impact on the timeout state of the element.
-  
+- Retrieving SNMP data using this method does not affect the timeout state of the element.
