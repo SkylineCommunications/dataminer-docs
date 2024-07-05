@@ -104,7 +104,7 @@ To search within the list of contacts:
 
 On both the *Overview* and *List* tabs, you can access the *Skills* panel by clicking the *Skills* button in the header bar.
 
-<!--new screenshot-->
+![Header bar](~/user-guide/images/PO_Skills_Header_Bar.png)
 
 The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) them or [create new ones](#adding-a-new-skill).
 
@@ -141,7 +141,7 @@ To edit an existing skill:
 
 To assign a skill, enter the appropriate skill in the *Personal skills* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
 
-<!--new screenshot-->
+![Personal skills](~/user-guide/images/PO_Personal_Skills.png)
 
 You can view a contact's skill in the *Skill* column on the *List* tab.
 
@@ -149,7 +149,7 @@ You can view a contact's skill in the *Skill* column on the *List* tab.
 
 On both the *Overview* and *List* tabs, you can access the *Experience* panel by clicking the *Experience* button in the header bar.
 
-<!--new screenshot-->
+![Header bar](~/user-guide/images/PO_Experience_Header_Bar.png)
 
 The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) them or [create new ones](#adding-a-new-experience-entry).
 
@@ -186,6 +186,6 @@ To edit an existing experience entry:
 
 To assign experience, enter the appropriate experience entry in the *Experience level* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
 
-<!--new screenshot-->
+![Experience level](~/user-guide/images/PO_Experience_Level.png)
 
 You can view a contact's experience level in the *Experience* column on the *List* tab.

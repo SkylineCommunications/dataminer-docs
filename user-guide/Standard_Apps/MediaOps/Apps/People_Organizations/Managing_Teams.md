@@ -149,7 +149,7 @@ To search within the list of teams:
 
 On both the *Overview* and *List* tabs, you can access the *Expertise* panel by clicking the *Expertise* button in the header bar.
 
-<!--new screenshot-->
+![Header bar](~/user-guide/images/PO_Expertise_Header_Bar.png)
 
 The *Expertise* panel provides an overview of all available areas of expertise, with options to [edit](#editing-an-area-of-expertise) and [create new ones](#adding-a-new-area-of-expertise).
 
@@ -194,7 +194,7 @@ You can view a team's area of expertise in the *Expertise* column on the *List* 
 
 On both the *Overview* and *List* tabs, you can access the *Roles* panel by clicking the *Roles* button in the header bar.
 
-<!--new screenshot-->
+![Header bar](~/user-guide/images/PO_Roles_Header_Bar.png)
 
 The *Roles* panel provides an overview of all roles, with options to [edit](#editing-a-role) and [create new ones](#adding-a-new-role).
 
