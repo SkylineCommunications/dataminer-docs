@@ -20,7 +20,7 @@ uid: user-defined_API_benchmarks
 
 ## Benchmark DataMiner 10.4.9
 
-In DataMiner 10.4.9, a cache was introduced for the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) and [ApiToken](xref:UD_APIs_Objects_ApiToken) objects which improves the overall performance of the feature.
+In DataMiner 10.4.9, changes have been done to User-Defined APIs that improved the performance of the feature.
 
 ### Specifications of the test client
 
