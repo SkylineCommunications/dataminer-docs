@@ -17,7 +17,7 @@ uid: Adding_a_regular_DataMiner_Agent
 
 1. On the *Manage* tab, select the DataMiner Agent to which you are connected.
 
-1. In the pane on the right, next to *Cluster*, enter the name of the DMS, and then click *Add Cluster* (prior to DataMiner 10.0.13) or *Join cluster* (from DataMiner 10.0.13 onwards).
+1. In the pane on the right, next to *Cluster*, enter the name of the DMS, and then click *Join cluster*.
 
 1. On a DMA that is currently already in the cluster, go to the *System Center* module and select the *Agents* page.
 
