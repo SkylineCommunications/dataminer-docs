@@ -21,8 +21,11 @@ You can find the following functionalities in the header bar of the application:
 - On the [*Destinations* page](#the-destinations-page):
 
   - **Refresh**: Allows you to reload the data on the page.
+
   - **Add destination**: Allows you to [add a new destination](xref:Ping_Monitoring_managing_groups_destinations#adding-a-new-destination).
+
   - **Edit**: Allows you to [edit the selected destination](xref:Ping_Monitoring_managing_groups_destinations#editing-a-destination).
+
   - **Delete**: Allows you to [delete the selected destination](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-destination).
 
 - On the [*Grid View* page](#the-grid-view-page):
@@ -32,8 +35,11 @@ You can find the following functionalities in the header bar of the application:
 - On the [*Groups* page](#the-groups-page):
 
   - **Refresh**: Allows you to reload the data on the page.
+
   - **Create group**: Allows you to [create a new group](xref:Ping_Monitoring_managing_groups_destinations#creating-a-new-group).
+
   - **Edit**: Allows you to [edit the selected group](xref:Ping_Monitoring_managing_groups_destinations#editing-a-group).
+
   - **Delete**: Allows you to [delete the selected group](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-group).
 
 - On the [*Alarms* page](#the-alarms-page):
