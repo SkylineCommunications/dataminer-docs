@@ -73,3 +73,11 @@ When configuring alarm templates and trend templates, up to now, it would incorr
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When dynamic values were used in interface shapes that were child shapes on an element group, and those shapes did not have the *AllowCentralConnectivity* option enabled, in some cases, the DCF connections would incorrectly be drawn from the center of the shapes instead of their interfaces.
+
+#### Router Control: Problem when connecting an already connected output to a new input [ID_40076]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the *Router Control* module, you connect an already connected output to a new input, the output first needs to be disconnected. Up to now, Cube would then send two messages: one to disconnect the output and another one to connect the output to the input. In some cases, those messages would be sent in the wrong order, causing the operation to fail.
+
+From now on, disconnecting the output and connecting the output to the input will be performed in one single message.
