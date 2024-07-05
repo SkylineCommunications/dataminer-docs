@@ -48,6 +48,14 @@ Also, the user permissions that control access to these buttons will no longer b
 
 When *Children* shapes were being used, in some cases, *Get protocol* requests would be sent in an incorrect thread.
 
+#### System Center - Agents: BPA tests would incorrectly show 'Execution failed' when connected to a DaaS system [ID_39929]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When DataMiner Cube was connected to a DaaS system, up to now, the test result of BPA tests than could not be run on a DaaS system would incorrectly be set to "Execution failed". From now on, BPA tests can have the status "Not applicable". If a BPA test cannot be run on a DaaS system, it will now correctly be flagged as "Not applicable".
+
+For example, the *Minimum Requirements Check*, which cannot be run on a DaaS system, will now be set to "Not applicable" when Cube is connected to a DaaS system.
+
 #### Alarm templates and trend templates: Incorrectly possible to configure analytics features for parameters that did not support those features [ID_39952]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
