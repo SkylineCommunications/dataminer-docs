@@ -54,9 +54,6 @@ Since the analytics trending features cannot be used for general parameters, fro
 
 Also, when a general parameter is being trended, it will no longer be possible to create a trend pattern for that parameter.
 
-> [!NOTE]
-> From now on, it is also no longer be possible to create trend patterns for discrete parameters.
-
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
