@@ -46,6 +46,17 @@ Also, the user permissions that control access to these buttons will no longer b
 
 The color of the light bulb in the top-right corner of trend graphs has been made brighter to make the light bulb better visible in the Skyline Black theme.
 
+#### Alarm templates & trend templates: Analytics trending features can no longer be configured for general parameters [ID_40086]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Since the analytics trending features cannot be used for general parameters, from now on, the options to configure these features will no longer be available when you are configuring general parameters in an alarm template or a trend template.
+
+Also, when a general parameter is being trended, it will no longer be possible to create a trend pattern for that parameter.
+
+> [!NOTE]
+> From now on, it is also no longer be possible to create trend patterns for discrete parameters.
+
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
