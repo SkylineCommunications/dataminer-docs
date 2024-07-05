@@ -12,6 +12,9 @@ uid: Part5StandardApps
     <a href="/user-guide/Standard_Apps/IDP/IDP.html" title="IDP" target="_self"><img src="~/user-guide/images/IDP.svg" style="width:100%"></a>
   </div>
   <div class="column">
+    <a href="/user-guide/Standard_Apps/MediaOps.html" title="MediaOps" target="_self"><img src="~/user-guide/images/MediaOps.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions.html" title="Monitoring & Management Solutions" target="_self"><img src="~/user-guide/images/Monitoring_Solutions.svg" style="width:100%"></a>
   </div>
 </div>
