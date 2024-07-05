@@ -46,6 +46,12 @@ The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the f
 
 From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
 
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
