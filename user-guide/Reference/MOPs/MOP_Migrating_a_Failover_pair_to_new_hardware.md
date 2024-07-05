@@ -60,17 +60,34 @@ Access to the DMAs with administrator rights. This requires a connection dedicat
 #### Steps
 
 1. Take screenshots of the root view elements list on the old primary DMA to see the element state of each element.
-1. Remove the old Failover pair from the cluster and shut down the servers. For more information, see [Removing a DataMiner Agent from a DataMiner System](xref:Removing_a_DataMiner_Agent_from_a_DataMiner_System).
-1. *Optional:* Replace the IPs in the new Failover pair with those of the old pair.
-1. Load the backup package from the old primary DMA onto the new primary DMA. See [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility)
-1. Confirm that the new DMA and elements are running fine.
-1. Add the same cluster name to the new DMAs as the old production cluster name. [Starting a restored DataMiner Agent in a cluster](xref:Starting_a_restored_DataMiner_Agent_in_a_cluster)
-1. Check if the other DMAs in the cluster can see the new agent and if the views structure in Surveyor remains the same.
-1. If you see issues with the Surveyor structure, replace the *Views.xml* files with the copies you made earlier and restart the DMAs.
-1. Check with the screenshots of the root view element list that you took in the first step to ensure the elements in the new pair are in the same element states.
-1. Configure Failover on the new agent. [Failover configuration in Cube](xref:Failover_configuration_in_Cube)
-1. Test the Failover setup by switching back and forth between the online and offline DMAs, and checking if both DMAs are visually the same.
 
+1. Remove the old Failover pair from the cluster and shut down the servers.
+
+   See [Removing a DataMiner Agent from a DataMiner System](xref:Removing_a_DataMiner_Agent_from_a_DataMiner_System).
+
+1. Optionally, replace the IPs in the new Failover pair with those of the old pair.
+
+1. Load the backup package from the old primary DMA onto the new primary DMA.
+
+   See [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
+
+1. Confirm that the new DMA and elements are running fine.
+
+1. Set the DMS name in the new DMA and add it to the cluster.
+
+   See [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
+
+1. Check if the other DMAs in the cluster can see the new Agent and if the views structure in the Surveyor remains the same.
+
+1. If you see issues with the Surveyor structure, replace the *Views.xml* files with the copies you made earlier and restart the DMAs.
+
+1. Check with the screenshots of the root view element list that you took in the first step to ensure the elements in the new pair are in the same element states.
+
+1. Configure Failover on the new Agent.
+
+   See [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
+
+1. Test the Failover setup by switching back and forth between the online and offline DMAs, and checking if both DMAs are visually the same.
 
 ## Time estimate
 
