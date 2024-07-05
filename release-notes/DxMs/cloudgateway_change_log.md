@@ -4,17 +4,25 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 13 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging
+#### 4 July 2024 - Enhancement - CloudGateway 2.13.12 - Connection testing improvements [ID_40108]
 
-The CloudGateway DxM will now no longer add logging every minute when a dataminer.services endpoint is unreachable.
+The ConnectionTester tool included with CloudGateway and the at-runtime connection testing by CloudGateway have been improved.
 
-#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server
+#### 20 June 2024 - Enhancement - CloudGateway 2.13.11 - Remove log spam when the DMS identity token cannot be automatically refreshed [ID_39261]
+
+From now on, if the refresh token for a dataminer.services DMS identity is expired or invalid, this will only be logged once instead of every 10 seconds.
+
+#### 14 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging [ID_39631]
+
+Up to now, the CloudGateway DxM added logging every minute when a dataminer.services endpoint could not be reached. This excessive logging will no longer occur.
+
+#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server [ID_39444]
 
 The CloudGateway DxM has been extended with the capability to offload data when installed on a DMZ or proxy server.
 
 #### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID_39113]
 
-It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM. 
+It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM.
 
 To do so, set *RemoteAccessAndSharing:IsDisabled* to *true* in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify *appsettings.custom.json* with the following configuration:
 
