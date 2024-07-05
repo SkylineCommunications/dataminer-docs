@@ -40,6 +40,12 @@ Also, the user permissions that control access to these buttons will no longer b
 - *Modules > System configuration > Agents > Reboot*
 - *Modules > System configuration > Agents > Configure Failover*
 
+#### Trending: Light bulb in top-right corner of trend graphs is now better visible in the Skyline Black theme [ID_40059]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+The color of the light bulb in the top-right corner of trend graphs has been made brighter to make the light bulb better visible in the Skyline Black theme.
+
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
