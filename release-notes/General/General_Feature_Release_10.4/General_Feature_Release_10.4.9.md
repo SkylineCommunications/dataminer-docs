@@ -174,6 +174,12 @@ On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTyp
 
 `Timeout while inspecting metadata; this may indicate a deadlock. This can often be avoided by preparing necessary serializers during application initialization, rather than allowing multiple threads to perform the initial metadata inspection; please also see the LockContended event`
 
+#### Service & Resource Management: Problem when deleting a discrete value of a profile parameter [ID_39867]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When two capability parameters shared the same discrete value, and the value of one of those parameters was included in a resource, up to now, it would not be possible to delete that value for the parameter that was not used.
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
