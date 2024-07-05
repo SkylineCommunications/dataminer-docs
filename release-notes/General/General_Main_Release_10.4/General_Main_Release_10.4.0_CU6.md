@@ -58,6 +58,14 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 
 A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
 
+#### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file, assuming that it would always be executed from the *C:\\Skyline DataMiner\\Files* folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+
+From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
