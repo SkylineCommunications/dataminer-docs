@@ -16,6 +16,6 @@ Use this method to retrieve a link to open the annotations page of the specified
 
 ## Output
 
-| Item                                | Format | Description                                      |
-|-------------------------------------|--------|--------------------------------------------------|
+| Item                               | Format | Description                                      |
+|------------------------------------|--------|--------------------------------------------------|
 | GetAnnotationsLinkForElementResult | String | The link to the annotations page of the element. |

@@ -14,6 +14,6 @@ Use this method to retrieve a list of all Automation scripts.
 
 ## Output
 
-| Item                        | Format          | Description                                  |
-|-----------------------------|-----------------|----------------------------------------------|
+| Item                       | Format          | Description                                  |
+|----------------------------|-----------------|----------------------------------------------|
 | GetAutomationScriptsResult | Array of string | A list of all Automation scripts in the DMS. |
