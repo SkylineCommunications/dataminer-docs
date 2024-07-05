@@ -86,6 +86,6 @@ When dynamic values were used in interface shapes that were child shapes on an e
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in the *Router Control* module, you connect an already connected output to a new input, the output first needs to be disconnected. Up to now, Cube would then send two messages: one to disconnect the output and another one to connect the output to the input. In some cases, those messages would be sent in the wrong order, causing the operation to fail.
+When, in the *Router Control* module, you connect an already connected output to a new input, the output first needs to be disconnected. Up to now, Cube would then send two messages: one to disconnect the output and another one to connect the output to the input. In some cases, those messages would be processed in the wrong order, causing the operation to fail.
 
 From now on, disconnecting the output and connecting the output to the input will be performed in one single message.

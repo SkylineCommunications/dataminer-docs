@@ -28,6 +28,15 @@ uid: General_Feature_Release_10.4.9
 
 ### Enhancements
 
+#### Enhanced performance when processing SNMPv3 elements [ID_39356]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when processing SNMPv3 elements.
+
+> [!IMPORTANT]
+> When, on older DataMiner systems, you import DELT packages containing elements exported on systems running DataMiner Main Release version 10.5.0 or Feature Release version 10.4.9 (or newer), all SNMPv3 credentials will be lost and will have to be re-entered manually.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -205,3 +214,9 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+
+#### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID_40084]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.

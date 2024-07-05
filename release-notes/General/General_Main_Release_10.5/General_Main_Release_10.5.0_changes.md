@@ -348,6 +348,15 @@ Types of log entries related to SLNet requests:
   - *RequestID*: The unique ID of request.
   - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
 
+#### Enhanced performance when processing SNMPv3 elements [ID_39356]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when processing SNMPv3 elements.
+
+> [!IMPORTANT]
+> When, on older DataMiner systems, you import DELT packages containing elements exported on systems running DataMiner Main Release version 10.5.0 or Feature Release version 10.4.9 (or newer), all SNMPv3 credentials will be lost and will have to be re-entered manually.
+
 #### Enhanced error message 'Failed to create one or more storages' [ID_39360]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
