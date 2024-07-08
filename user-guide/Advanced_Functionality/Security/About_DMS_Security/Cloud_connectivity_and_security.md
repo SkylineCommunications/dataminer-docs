@@ -22,10 +22,12 @@ dataminer.services is hosted in Microsoft Azure on the following endpoints:
 At present, the following IP addresses are used to connect to dataminer.services:
 
 - 52.149.106.174
-- 20.50.2.35
 - 20.50.217.191
-- 20.103.147.5
 - 20.31.240.20
+
+In addition, the following backup address should also be accessible, as this may be required in the future:
+
+- 20.103.147.5
 
 When emails are sent from dataminer.services, these come from the `dataminer.services` domain.
 
