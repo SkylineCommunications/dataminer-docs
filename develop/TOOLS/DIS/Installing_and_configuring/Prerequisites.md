@@ -33,7 +33,6 @@ https://*.skyline.be/*
 > [!IMPORTANT]
 >
 > - DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise. Visual Studio Code and Visual Studio for Mac are not supported.
-> - DIS currently does not work with ARM64.
 
 ### Required user permissions
 
