@@ -519,28 +519,27 @@ In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "a
 Not active by default.
 
 > [!NOTE]
-> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 ### Trending.TimeSpan1HourRecords
 
 In the *TimeSpan1HourRecords* tag, you can customize the interval of the 1-hour "average trending" records to be something other than the default 1 hour. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
-> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 ### Trending.TimeSpan5MinRecords
 
 In the *TimeSpan5MinRecords* tag, you can customize the interval of the 5-minute "average trending" records to be something other than the default 5 minutes. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
-> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 ### Trending.WarningLevel
 
-This deprecated tag was used to specify the number of records as from which a special warning message appeared in Trend Display (Element Display) and Trend Overview (System Display).
+**Obsolete**
 
-> [!NOTE]
-> The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
+This tag was used in older DataMiner versions to configure a trending warning message in the now obsolete Element Display and System Display applications.
 
 ### WatchDog
 
@@ -548,12 +547,12 @@ In this tag, the settings of the DataMiner WatchDog process are specified. This 
 
 You can configure Watchdog to:
 
-- Initiate a Failover switch in case of a runtime error, by specifying the value “*switch*” in the tag. Optionally, to exclude certain threads from initiating a Failover switch, add the *\<FailoverOnRTE>* subtag and specify the threads in *\<SkipRTE>* subtags.
+- Initiate a Failover switch in case of a runtime error, by specifying the value "switch" in the tag. Optionally, to exclude certain threads from initiating a Failover switch, add the *\<FailoverOnRTE>* subtag and specify the threads in *\<SkipRTE>* subtags.
 
     > [!NOTE]
     >
-    > - If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as “offline”.
-    > - If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to “Manual” in the Failover settings.
+    > - If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as "offline".
+    > - If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to "Manual" in the Failover settings.
 
 - Initiate an element restart in case of a runtime error on an element-related SLProtocol thread, by adding the attribute *restartElementOnProtocolRTE*, and setting it to *true*.
 

@@ -42,6 +42,4 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | Views.xml | View configuration. | Yes |
 
 > [!NOTE]
->
-> - Files marked as “synchronized” in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms).
-> - From DataMiner 9.5.9 onwards, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* have been moved to the Database subfolder, along with a number of other database-related files.
+> Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms).
