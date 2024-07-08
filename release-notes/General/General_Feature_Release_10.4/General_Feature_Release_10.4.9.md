@@ -28,6 +28,15 @@ uid: General_Feature_Release_10.4.9
 
 ### Enhancements
 
+#### Enhanced performance when processing SNMPv3 elements [ID_39356]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when processing SNMPv3 elements.
+
+> [!IMPORTANT]
+> When, on older DataMiner systems, you import DELT packages containing elements exported on systems running DataMiner Main Release version 10.5.0 or Feature Release version 10.4.9 (or newer), all SNMPv3 credentials will be lost and will have to be re-entered manually.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -102,6 +111,12 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
+#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -119,6 +134,12 @@ A number of enhancements have been made to the algorithm that detects change poi
 When the trend data of a parameter appears to have frequent flatline periods, the chance of a flatline change point being detected and a suggestion event being created for it has now decreased.
 
 Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
+
+#### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for child DVE elements using a parameter ID from the main DVE element will now also be taken into account [ID_39988]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, alarms generated for child DVE elements using a parameter ID from the main DVE element can also get a focus value and, as a result, be grouped by Automatic incident tracking.
 
 #### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID_39994]
 
@@ -142,9 +163,17 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 #### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
+
+#### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file, assuming that it would always be executed from the *C:\\Skyline DataMiner\\Files* folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+
+From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
 ### Fixes
 
@@ -168,6 +197,12 @@ On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTyp
 
 `Timeout while inspecting metadata; this may indicate a deadlock. This can often be avoided by preparing necessary serializers during application initialization, rather than allowing multiple threads to perform the initial metadata inspection; please also see the LockContended event`
 
+#### Service & Resource Management: Problem when deleting a discrete value of a profile parameter [ID_39867]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When two capability parameters shared the same discrete value, and the value of one of those parameters was included in a resource, up to now, it would not be possible to delete that value for the parameter that was not used.
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -179,3 +214,9 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+
+#### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID_40084]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.

@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 4 July 2024 - Enhancement - Remote Access, Remote Cube, and Live Sharing stability improvements [ID_40106]
+
+An enhancement has been done to improve the stability when the web apps or Cube are accessed remotely or when live sharing is used.
+
 #### 3 July 2024 - New feature - Catalog - Version 2 of the User Catalog API [ID_39839] [ID_39958] [ID_40034]
 
 The User Catalog API has been updated to V2.

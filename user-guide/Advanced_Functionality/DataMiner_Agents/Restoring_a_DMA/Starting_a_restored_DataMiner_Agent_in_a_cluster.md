@@ -18,14 +18,8 @@ If you have restored a DMA in a cluster without using the Taskbar Utility, or if
 
 1. Start the DataMiner software.
 
-## Adding the DMA to the DMS
+## Adding the restored DMA to the DMS
 
-1. In DataMiner Cube, go to *Apps* > *System Center*.
-
-1. In System Center, select the *Agents* tab.
-
-1. In the lower left corner, click the *Add*.
-
-1. Enter the IP of the DMA and click *Add*.
+Follow the procedure for [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
 
 At the end of this procedure, DataMiner will start synchronizing with the other DMAs. This process could take a while. The progress can be followed in the *Information Events* tab of the Alarm Console.
