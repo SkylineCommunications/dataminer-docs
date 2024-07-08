@@ -60,6 +60,9 @@ public override bool TryExecute(object dataSource, object dataDestination, out M
 > [!NOTE]
 > A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods, or QActions within your own connector. This can also be returned.
 
+> [!TIP]
+> If your logic does is more complex and need better structure, consider using the [executor](xref:InterAppCalls_GettingStarted_CreatingExecutor). This approach is ideal for complex situations and allows for clarity and flexibility.
+
 ## Disabling message broker
 
 When InterApp calls are used with DataMiner 10.3.12 or higher, by default the message broker will be used instead of SLNet subscriptions for the responses. This results in a big improvement on scalability and performance.
