@@ -10,7 +10,6 @@ items:
       - name: Overview of the different subfolders
         topicUid: Overview_of_the_different_subfolders
       - name: More information on certain files and folders
-        topicUid: More_information_on_certain_files_and_folders
         items:
           - name: Aggregation
             topicUid: Aggregation
@@ -26,8 +25,8 @@ items:
             topicUid: DB_xml
           - name: DBConfiguration.xml
             topicUid: DBConfiguration_xml
-          - name: DBMaintenance.xml and DBMaintenanceDMS.xml
-            topicUid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
+          - name: DBMaintenanceDMS.xml
+            topicUid: DBMaintenanceDMS_xml
           - name: DMS.xml
             topicUid: DMS_xml
           - name: Elements
@@ -62,8 +61,6 @@ items:
             topicUid: System_Cache
           - name: SyncRules.xml
             topicUid: SyncRules_xml
-          - name: SLAnalytics.config
-            topicUid: SLAnalytics_config
   - name: Tools
     topicUid: DataminerTools
     items:
