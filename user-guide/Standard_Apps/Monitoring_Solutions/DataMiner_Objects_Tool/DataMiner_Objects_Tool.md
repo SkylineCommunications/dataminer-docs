@@ -4,9 +4,9 @@ uid: DataMiner_Objects_Tool
 
 # DataMiner Objects Tool
 
-The DataMiner Objects Tool addresses the need for **finding, viewing and interacting with DataMiner objects**, offering an interactive automation script where the user can define a combination of filters to query the DataMiner system for any of the following objects:
+The DataMiner Objects Tool addresses the need for **finding, viewing and interacting with DataMiner objects**. With an interactive Automation script, it allows you to define a combination of filters to query the DataMiner System for any of the following objects:
 
-- Reservation instances
+- Reservation (i.e. booking) instances
 - DOM instances
 - Resources
 - Profile parameters
@@ -14,7 +14,7 @@ The DataMiner Objects Tool addresses the need for **finding, viewing and interac
 - Tickets
 - Service definitions
 
-Once the result of the query has been manually finetuned, the user can choose to view the selected objects as JSON objects or the user can choose to delete the selected objects.
+You can then manually fine-tune the result of the query, view the selected objects as JSON objects, or even delete selected objects.
 
 > [!TIP]
 > See also: [Use case: DataMiner Objects Tool](https://community.dataminer.services/use-case/) on DataMiner Dojo
