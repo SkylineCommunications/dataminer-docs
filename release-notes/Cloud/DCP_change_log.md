@@ -13,6 +13,114 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 An enhancement has been done to improve the stability when the web apps or Cube are accessed remotely or when live sharing is used.
 
+#### 3 July 2024 - New feature - Catalog - Version 2 of the User Catalog API [ID_39839] [ID_39958] [ID_40034]
+
+The User Catalog API has been updated to V2.
+
+This version will include the following routes:
+
+- **GET api/user-catalog/v2-0/catalogs/search** (UPDATED)
+
+  Searches for Catalog items.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}** (UPDATED)
+
+  Fetches a Catalog item by ID.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/download** (NEW)
+
+  Downloads a specific version of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/ranges?organizationId={organizationId}** (NEW)
+
+  Fetches the ranges for a specific Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}?organizationId={organizationId}/custom-tag** (NEW)
+
+  Updates a custom tag of a specific range of a specific Catalog item.
+
+- **DELETE api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}?organizationId={organizationId}/custom-tag** (NEW)
+
+  Removes a custom tag of a specific range of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions?organizationId={organizationId}&rangeId={rangeId}** (NEW)
+
+  Fetches the versions for a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/latest?organizationId={organizationId}** (NEW)
+
+  Fetches the latest available version of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/recommended?organizationId={organizationId}** (NEW)
+
+  Fetches the recommended versions of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/can-deploy?organizationId={organizationId}** (NEW)
+
+  Verifies if a Catalog item version can be deployed.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/can-deploy-dms?organizationId={organizationId}** (NEW)
+
+  Verifies if a Catalog item version can be deployed on the available DataMiner Systems.
+
+- **POST api/user-catalog/v2-0/catalogs/{catalogId}/ranges/versions/{versionId}/deploy** (UPDATED)
+
+  Deploys a specific version of a specific Catalog item.
+
+- **POST api/user-catalog/v2-0/catalogs/register**
+
+  Registers a Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/publishing-state?organizationId={organizationId}**
+
+  Sets the publishing state of a Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/version/{versionId}/publishing-state?organizationId={organizationId}**
+
+  Sets the publishing state of a Catalog version.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}/state?organizationId={organizationId}**
+
+  Sets the state of a specific range of a specific Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/state?organizationId={organizationId}**
+
+  Sets the state of a specific version of a specific Catalog item.
+
+#### 3 July 2024 - New feature - Catalog - Change state support [ID_40096]
+
+Skyline employees will now be able to change the state of a range or version when they view an item in the Catalog.
+
+#### 3 July 2024 - New feature - Catalog - Source link [ID_40046]
+
+When you view an item in the Catalog, the informational section on the right will now contain a link to the source.
+
+#### 3 July 2024 - New feature - Catalog - Custom tag support [ID_40030]
+
+When you view an item in the Catalog, if you are a member of the organization that published the item, you will now be able to assign a custom tag to ranges.
+
+#### 3 July 2024 - Enhancement - Home - Deploy prevention of DataMiner as a Service [ID_39995]
+
+When you try to spin up a new DataMiner as a Service system from the dataminer.services home page, this will now be blocked if your organization does not have enough DataMiner credits available.
+
+#### 3 July 2024 - New feature - Catalog - Version history [ID_39903]
+
+When you view an item in the Catalog, the versions tab will now include a version history section. This section will by default show all supported ranges and versions.
+
+A toggle button has also been introduced that allows you to show or hide unsupported ranges and versions. Active and main ranges are considered supported, while deprecated ranges are considered unsupported. For versions, released versions are considered supported, while versions marked as known issues, development, or deprecated are considered unsupported.
+
+#### 3 July 2024 - New feature - Catalog - Version and range tag support [ID_39899]
+
+In the Catalog, the versions and ranges shown when you view an item will now have tag support for the following cases:
+
+- The state of a range.
+- The state of a version.
+- Whether a version is private.
+
+#### 3 July 2024 - New feature - Catalog - Versions rework [ID_39846]
+
+When you view a connector item in the Catalog, the *Versions* tab will now group all the versions by range. Ranges are defined by the first three numbers of a version.
+
 #### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID_39983]
 
 Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g. when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
@@ -464,7 +572,7 @@ When you deploy something (e.g. a connector) from the catalog to a DMA, a notifi
 
 When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
 
-#### 3 April 2023 - New Feature - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
+#### 3 April 2023 - New feature - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
 
 The following Chat Integration features have been added:
 
