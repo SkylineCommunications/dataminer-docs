@@ -17,4 +17,4 @@ Then follow these steps for development:
 
 - [Known types](xref:InterAppCalls_KnownTypes)
 - [Customizations](xref:InterAppCalls_Customizations)
-- [Examples](xref:InterAppcalls_Examples)
+- [Examples](xref:InterAppCalls_Examples)
