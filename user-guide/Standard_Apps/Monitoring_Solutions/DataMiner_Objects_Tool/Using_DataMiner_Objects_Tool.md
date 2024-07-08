@@ -6,23 +6,17 @@ uid: Using_DataMiner_Objects_Tool
 
 ## Low-Code App
 
-All functionality of the tool is accessible via the *Filter All DataMiner Objects* button, highlighted in the screenshot below. It launches an interactive Automation script *DataMiner Objects Tool* giving an overview of each supported DataMiner object type. Pressing one of the types will open a new dialog where the filters can be defined.
-
-![Filter All Button](~/user-guide/images/Using_DataMiner_Objects_Tool_FilterAllButton.png)
+All functionality of the tool is accessible via the *Filter All DataMiner Objects* button, highlighted in the screenshot below by number 1. It launches an interactive Automation script *DataMiner Objects Tool* giving an overview of each supported DataMiner object type. Pressing one of the types will open a new dialog where the filters can be defined.
 
 There are 3 more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation instances and DOM instances. For each of these types, the app shows some high level statistics about the system.
 
-For **reservation instances**, the app shows the total number of reservation instances in the system along with a pie chart that groups the reservation instances by state. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances.
+For **reservation instances**, the app shows the total number of reservation instances in the system along with a pie chart that groups the reservation instances by state.  The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances. This part is indicated in the screenshot by number 2.
 
-![Reservation instances](~/user-guide/images/Using_DataMiner_Objects_Tool_ReservationInstances.png)
+For **resources**, the app shows the total number of resources in the system along with a pie chart that groups the resources by resource pool.  The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter resources. This part is indicated in the screenshot by number 3.
 
-For **resources**, the app shows the total number of resources in the system along with a pie chart that groups the resources by resource pool. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter resources.
+For **DOM instances**, the app shows the total number of DOM instances in the system along with a pie chart that groups the DOM instances by module.  The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter DOM instances. This part is indicated in the screenshot by number 4.
 
-![Resources](~/user-guide/images/Using_DataMiner_Objects_Tool_Resources.png)
-
-For **DOM instances**, the app shows the total number of DOM instances in the system along with a pie chart that groups the DOM instances by module. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter DOM instances.
-
-![DOM instances](~/user-guide/images/Using_DataMiner_Objects_Tool_DomInstances.png)
+![Low-Code App buttons](~/user-guide/images/Using_DataMiner_Objects_Tool.png)
 
 ## Interactive Automation script
 
