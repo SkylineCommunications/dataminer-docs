@@ -221,7 +221,7 @@ If you specify this option, the DataMiner ID and Element ID of the Dynamic Virtu
 A special kind of indexColumn, i.e. the parameter ID of the table containing the primary keys referred to in this column.
 
 > [!NOTE]
-> The foreign key is automatically saved in the database.
+> The foreign key is automatically saved in the database.For more info about persistent data in tables see [Persisting tables](xref:AdvancedDataMinerDataPersistencePersistingTables)
 
 ## groupby
 
