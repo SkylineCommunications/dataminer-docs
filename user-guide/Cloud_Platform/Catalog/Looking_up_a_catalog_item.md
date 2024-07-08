@@ -23,3 +23,8 @@ When you open up the Catalog, a search box is displayed.
 1. If you see the item you are looking for, click it to open a page where you can see information about that item and its versions.
 
    From here, you can also [deploy the item to your DataMiner System](xref:Deploying_a_catalog_item).
+
+> [!NOTE]
+>
+> - Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as known issues, development, or deprecated) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
+> - Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector. If you are a member of the organization that published an item, you can manage these tags via the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button for each item.<!-- RN 40030 -->
