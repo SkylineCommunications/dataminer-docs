@@ -9,6 +9,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 9 July 2024 - New feature - Catalog - Extended catalog item type support
+
+New types have been introduced for Catalog items:
+
+- Chat ops extension
+- Data API
+- Data grabber
+- GQI ad-hoc data source
+- GQI Operator
+- Lifecycle service orchestration
+- Process activity
+- Profile load script
+- Solution
+- User-defined API
+
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
 When you deploy a DaaS system in the Home app. You will now be able to select a time zone for the DataMiner System you are deploying.
