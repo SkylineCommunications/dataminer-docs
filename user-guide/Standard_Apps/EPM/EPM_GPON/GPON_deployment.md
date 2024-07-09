@@ -1,10 +1,10 @@
 ---
-uid: GPON_deployment
+uid: xPON_deployment
 ---
 
-# EPM GPON deployment
+# EPM xPON deployment
 
-To deploy the GPON branch of the EPM Solution:
+To deploy the xPON branch of the EPM Solution:
 
 1. Make sure the following prerequisites are met:
 
