@@ -161,12 +161,6 @@ From now on, event hub throttling errors will be logged as 'Warning' instead of 
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
 
-#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
-
-<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
-
-A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
-
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

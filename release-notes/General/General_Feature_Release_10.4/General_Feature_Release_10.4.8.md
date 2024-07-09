@@ -164,6 +164,12 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
 
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
+
 ### Fixes
 
 #### Documents: Issues fixed [ID_39076]
