@@ -215,6 +215,16 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
+#### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
+
+As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
+
+From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
+
 #### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID_40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

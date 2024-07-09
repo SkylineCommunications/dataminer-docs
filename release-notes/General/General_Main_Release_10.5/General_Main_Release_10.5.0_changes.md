@@ -749,3 +749,13 @@ When the NATS server was down, SLElement would leak memory while trying to push 
 <!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
+
+#### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
+
+As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
+
+From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
