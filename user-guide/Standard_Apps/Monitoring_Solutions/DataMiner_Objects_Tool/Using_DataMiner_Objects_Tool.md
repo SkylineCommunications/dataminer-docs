@@ -62,3 +62,14 @@ Once the items have been retrieved based on the filters you have configured, you
 - The **number of selected items** (3) is also displayed, so you can see how many are included in your current selection.
 
 - In the scrollable checkbox list at the bottom (4), you can **select individual items** or clear the selection to fine-tune the result according to your preferences.
+
+## Actions for selected objects
+
+After manually fine-tuning the results, the script provides 2 possible actions to execute for the selected objects.
+
+- The *Show JSON* button (1) will add a new multi-line textbox to the dialog containing all selected objects serialized in JSON format.
+
+- The *Delete* button (2) will delete the selected objects from the system. As this is a quite impactful operation, the script requires the user to confirm by checking the *Confirm* checkbox (3) before pressing the *Delete* button.
+
+![Actions](~/user-guide/images/Using_DataMiner_Objects_Tool_Actions.png)
+
