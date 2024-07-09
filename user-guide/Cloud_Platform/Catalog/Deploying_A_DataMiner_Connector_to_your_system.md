@@ -32,9 +32,14 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
 1. Click the *Deploy* button.
 
-   ![Deploy connector](~/user-guide/images/Deploy_Connector.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+   ![Deploy connector](~/user-guide/images/Catalog_Deploy_Account_Not_Linked.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
 
-1. Select the target DataMiner System and click *Deploy*.
+1. Select the target DataMiner System.
+
+    > [!NOTE]
+    > If your account is not linked to one of the selected DataMiner systems, a message will be displayed indicating which systems the account is not linked to yet.
+    > Clicking the name of the DataMiner System will open a new tab to link your account.
+    > After the account linking process is complete, navigating back to the original tab will revalidate the account linking.
 
    The item will be pushed to the DataMiner System. In the Admin app, you can check the status of the deployment. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
 
