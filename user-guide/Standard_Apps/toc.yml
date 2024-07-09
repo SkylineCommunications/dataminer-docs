@@ -253,6 +253,13 @@ items:
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview
             topicUid: Implementing_DITT_in_Visio
+      - name: DataMiner Objects Tool
+        topicUid: DataMiner_Objects_Tool
+        items:
+          - name: Installing the DataMiner Objects Tool
+            topicUid: Installing_DataMiner_Objects_Tool
+          - name: Working with the DataMiner Objects Tool
+            topicUid: Using_DataMiner_Objects_Tool
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:
