@@ -71,4 +71,6 @@ After you have manually fine-tuned the results, you can execute the following ac
 
 - To add a new multi-line textbox to the dialog containing all selected objects serialized in JSON format, click **Show JSON** (1).
 
+  This can for instance be used to investigate or debug issues, or to export the objects and import them in other applications.
+
 - To delete the selected objects from the system, first select the **Confirm** checkbox (3), and then click **Delete** (2). This confirmation is required first because deleting objects can have a large impact on the system.
