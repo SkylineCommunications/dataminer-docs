@@ -18,11 +18,11 @@ The UI of the DataMiner Objects Tool app consists of the following main componen
 
 ![Low-Code App buttons](~/user-guide/images/Using_DataMiner_Objects_Tool.png)
 
-All functionality of the tool is accessible via the *Filter All DataMiner Objects* button (1). Clicking the button launches an interactive Automation script that gives an overview of each supported DataMiner object type. You can then select one of the types to open a new dialog where filters can be defined.
+All functionality of the tool is accessible via the *Filter All DataMiner Objects* button (1). Clicking the button launches the *DataMiner Objects Tool* interactive Automation script, which gives an overview of each supported DataMiner object type. You can then select one of the types to open a new dialog where filters can be defined.
 
-There are three more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation instances and DOM instances. For each of these types, the app shows some high level statistics about the system.
+There are three more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation (i.e. booking) instances, and DOM instances. For each of these types, the app shows some high-level statistics for the system.
 
-For **reservation instances** (2), the app shows the total number of reservation (i.e. booking) instances in the system along with a pie chart that groups the reservation instances by state. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances.
+For **reservation instances** (2), the app shows the total number of reservation instances in the system along with a pie chart that groups the reservation instances by state. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances.
 
 For **resources** (3), the app shows the total number of resources in the system along with a pie chart that groups the resources by resource pool. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter resources.
 
@@ -57,19 +57,18 @@ Once the items have been retrieved based on the filters you have configured, you
 
 - The **number of matching items** (1) is displayed to give a quick view on how many items in the system match the filters.
 
-- Buttons are available to **select or unselect all items** (2).
+- Buttons are available to **select all or unselect all items** (2).
 
 - The **number of selected items** (3) is also displayed, so you can see how many are included in your current selection.
 
 - In the scrollable checkbox list at the bottom (4), you can **select individual items** or clear the selection to fine-tune the result according to your preferences.
 
-## Actions for selected objects
+## Executing actions on selected objects
 
-After manually fine-tuning the results, the script provides 2 possible actions to execute for the selected objects.
-
-- The *Show JSON* button (1) will add a new multi-line textbox to the dialog containing all selected objects serialized in JSON format.
-
-- The *Delete* button (2) will delete the selected objects from the system. As this is a quite impactful operation, the script requires the user to confirm by checking the *Confirm* checkbox (3) before pressing the *Delete* button.
+After you have manually fine-tuned the results, you can execute the following actions for the selected objects:
 
 ![Actions](~/user-guide/images/Using_DataMiner_Objects_Tool_Actions.png)
 
+- To add a new multi-line textbox to the dialog containing all selected objects serialized in JSON format, click **Show JSON** (1).
+
+- To delete the selected objects from the system, first select the **Confirm** checkbox (3), and then click **Delete** (2). This confirmation is required first because deleting objects can have a large impact on the system.
