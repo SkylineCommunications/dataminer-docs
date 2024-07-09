@@ -74,7 +74,7 @@ The following information is available for each destination:
 
 - **Admin status**: The status (enabled or disabled) of the destination.
 
-- **Ping result**: The time it took for the server to reply to the last ping command, e.g. *4 ms*.
+- **Ping result**: The time it took each destination to reply to the last ping command, e.g. *4 ms*.
 
 - **Cycle packet loss**: The percentage of lost packets during ping command and response process, e.g. *0.00 %*.
 
@@ -124,4 +124,4 @@ On the *Destinations* and *Grid View* pages, a filter pane on the left enables y
 
 To limit the filter pane to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
 
-In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System. Also, a progress bar above those destinations will count down to the next ping command.
+In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System. Also, a progress bar above those destinations will count down to the next page refresh.
