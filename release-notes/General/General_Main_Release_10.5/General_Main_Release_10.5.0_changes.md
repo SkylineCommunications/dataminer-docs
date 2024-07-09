@@ -592,6 +592,12 @@ See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Da
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
+#### SLNet: Enhanced performance when sending requests to SLDataGateway [ID_40023]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
+
 #### DataMiner Object Models: SLModuleSettingsManager.txt log file will now contain the IDs of the modules that were created, updated or deleted [ID_40028]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

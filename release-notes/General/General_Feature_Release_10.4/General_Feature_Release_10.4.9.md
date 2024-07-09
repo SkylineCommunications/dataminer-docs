@@ -155,6 +155,12 @@ The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the f
 
 From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
 
+#### SLNet: Enhanced performance when sending requests to SLDataGateway [ID_40023]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
+
 #### DataMiner Object Models: SLModuleSettingsManager.txt log file will now contain the IDs of the modules that were created, updated or deleted [ID_40028]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
