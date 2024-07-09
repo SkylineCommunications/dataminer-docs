@@ -14,7 +14,7 @@ To change element states using this tool:
 
 1. Make sure the DMA where you want to change element states is stopped.
 
-1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools` and run *ChangeElementStatesOffline.exe*.
+1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools` (prior to DataMiner 10.4.9/10.5) or `C:\Skyline DataMiner\Tools\Change Element States Offline` (from to DataMiner 10.4.9/10.5 onwards) and run *ChangeElementStatesOffline.exe*.
 
    By default, the *Elements by Name* tab is displayed, where you can see all the elements on the DMA, listed by name. From DataMiner 10.0.13 onwards, the state of the element is displayed in parentheses after the name. From DataMiner 10.0.13 onwards, there is also an *Elements by Protocol* tab, with a tree structure that allows you to drill down to elements using specific protocol and protocol version.
 
@@ -24,7 +24,7 @@ To change element states using this tool:
 
    - In the *Elements by Protocol* tab, select the checkboxes in front of the elements for which you want to change the state. If you select the checkbox in front of a protocol or protocol version, the state of all elements using that protocol or protocol version will be changed. To search for specific items in the tree view, add a search term in the box on the right.
 
-   - From DataMiner 10.0.13 onwards, an option is available to reload the displayed elements, to make sure that any recent changes on the disk are taken into account. This *Reload from Disk* option is available via the file menu.
+   - From DataMiner 10.0.13 onwards, an option is available to reload the displayed elements, to make sure that any recent changes on the disk are taken into account. This *Reload from Disk* (or *Reload from Database via StorageModule*) option is available via the file menu.
 
 1. Set the target state. By default, *Stopped* is selected.
 
