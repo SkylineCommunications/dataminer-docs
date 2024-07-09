@@ -15,6 +15,6 @@ Use this method to retrieve a booking.
 
 ## Output
 
-| Item             | Format                                               | Description            |
-|------------------|------------------------------------------------------|------------------------|
+| Item             | Format                        | Description            |
+|------------------|-------------------------------|------------------------|
 | GetBookingResult | [DMABooking](xref:DMABooking) | The specified booking. |
