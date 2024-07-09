@@ -39,9 +39,12 @@ Extra labels can be assigned to versions to indicate that a certain version is n
 Catalog items can have multiple versions which are grouped by range.
 Ranges will be defined by the first 3 indicators of a version (e.g. **7.1.2**.33).
 
+> [!NOTE]
+> Ranges will only be displayed for Catalog items of type **Connector**.
+
 The Catalog Module will recommend certain versions based on the following conditions:
 
-- The latest version of a range that is tagged as the Main version. (visualized visualized in green)
+- The latest version of a range that is tagged as the Main version. (visualized in green)
 - The latest version of a range that is tagged with a custom tag. (visualized in gray)
 
 If the above conditions did not find any recommendations, the latest version of the highest active range will be recommended.

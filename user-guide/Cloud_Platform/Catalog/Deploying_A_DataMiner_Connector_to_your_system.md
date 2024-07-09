@@ -16,7 +16,7 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
 1. Look up the item in the Catalog. See [Looking up an item in the Catalog](xref:Looking_up_an_item_in_the_catalog).
 
-   ![Microsoft Platform](~/user-guide/images/Catalog_Microsoft.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+   ![Microsoft Platform](~/user-guide/images/Catalog_Microsoft.png)
 
 1. If you cannot see the *Deploy* button yet, go to the *Versions* tab and expand the version you want to deploy.
 
@@ -32,7 +32,7 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
 1. Click the *Deploy* button.
 
-   ![Deploy connector](~/user-guide/images/Catalog_Deploy_Account_Not_Linked.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+   ![Deploy connector](~/user-guide/images/Catalog_Deploy_Account_Not_Linked.png)
 
 1. Select the target DataMiner System.
 
