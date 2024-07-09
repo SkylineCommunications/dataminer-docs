@@ -33,21 +33,15 @@ A Catalog item is a small package that contains one or more artifacts that can b
 
 ### Versioning of Catalog items
 
-To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced.
-Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
-Catalog items can have multiple versions which are grouped by range.
-Ranges will be defined by the first 3 indicators of a version (e.g. **7.1.2**.33).
+For Catalog items of type **Connector**, versions are grouped by **range**. A range is defined by the first three indicators of a version (e.g. **7.1.2**.33).
 
-> [!NOTE]
-> Ranges will only be displayed for Catalog items of type **Connector**.
+The Catalog will recommend certain versions based on the following conditions:
 
-The Catalog Module will recommend certain versions based on the following conditions:
-
-- The latest version of a range that is tagged as the Main version. (visualized in green)
-- The latest version of a range that is tagged with a custom tag. (visualized in gray)
-
-If the above conditions did not find any recommendations, the latest version of the highest active range will be recommended.
+- The latest version of a range that is tagged as the "Main" version (visualized in green).
+- The latest version of a range that is tagged with a custom tag (visualized in gray).
+- If neither of the above apply, the latest version of the highest active range will be recommended.
 
 > [!NOTE]
 > For items of type Connector, the version must have the format mentioned under [Protocol version semantics](xref:ProtocolVersionSemantics).
