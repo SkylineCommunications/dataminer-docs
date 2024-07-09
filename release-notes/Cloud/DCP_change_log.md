@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 9 July 2024 - New feature - Catalog - Extended catalog item type support
+#### 9 July 2024 - New feature - Catalog - Extended catalog item type support [ID_40144]
 
 New types have been introduced for Catalog items:
 
