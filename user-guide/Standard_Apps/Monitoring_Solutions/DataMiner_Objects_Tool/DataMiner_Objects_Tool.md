@@ -15,6 +15,3 @@ The DataMiner Objects Tool addresses the need for **finding, viewing, and intera
 - Service definitions
 
 You can then manually fine-tune the result of the query, view the selected objects as JSON objects, or even delete selected objects.
-
-> [!TIP]
-> See also: [Use case: DataMiner Objects Tool](https://community.dataminer.services/use-case/) on DataMiner Dojo
