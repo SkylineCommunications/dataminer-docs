@@ -1,16 +1,16 @@
 ---
-uid: EPM_GPON
+uid: EPM_xPON
 ---
 
-# DataMiner EPM GPON
+# DataMiner EPM xPON
 
-The GPON branch of the DataMiner EPM Solution is designed to manage Gigabit Passive Optical Network (GPON) deployments.
+The xPON branch of the DataMiner EPM Solution is designed to manage Gigabit Passive Optical Network (xPON) deployments.
 
-In a typical GPON deployment, there are four main components:
+In a typical xPON deployment, there are four main components:
 
-- **Optical Line Termination (OLT)**: The main traffic concentrator and control device for the underlying network. Its main function is to control the traffic flow in both directions (upstream and downstream, i.e. TX and RX in GPON).
+- **Optical Line Termination (OLT)**: The main traffic concentrator and control device for the underlying network. Its main function is to control the traffic flow in both directions (upstream and downstream, i.e. TX and RX in xPON).
 
-- **Optical Fiber**: The GPON transmission medium. Its size (in number of fiber strands) depends on each implementation.
+- **Optical Fiber**: The xPON transmission medium. Its size (in number of fiber strands) depends on each implementation.
 
 - **Optical Splitter**: In basic terms, this is a prism. A single strand of fiber enters it, and its signal can be divided up to four times at each stage.
 
