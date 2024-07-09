@@ -2,53 +2,63 @@
 uid: Using_DataMiner_Objects_Tool
 ---
 
-# Using the DataMiner Objects Tool
+# Working with the DataMiner Objects Tool
 
-## Low-Code App
+To access the DataMiner Objects Tool:
 
-All functionality of the tool is accessible via the *Filter All DataMiner Objects* button, highlighted in the screenshot below by number 1. It launches an interactive Automation script *DataMiner Objects Tool* giving an overview of each supported DataMiner object type. Pressing one of the types will open a new dialog where the filters can be defined.
+1. Go to `http(s)://[DMA name]/root`.
 
-There are 3 more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation instances and DOM instances. For each of these types, the app shows some high level statistics about the system.
+1. Select *DataMiner Objects Tool* to start using the tool.
 
-For **reservation instances**, the app shows the total number of reservation instances in the system along with a pie chart that groups the reservation instances by state.  The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances. This part is indicated in the screenshot by number 2.
+   ![DataMiner Objects Tool](~/user-guide/images/DataMiner_Objects_Tool.png)
 
-For **resources**, the app shows the total number of resources in the system along with a pie chart that groups the resources by resource pool.  The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter resources. This part is indicated in the screenshot by number 3.
+## The DataMiner Objects Tool user interface
 
-For **DOM instances**, the app shows the total number of DOM instances in the system along with a pie chart that groups the DOM instances by module.  The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter DOM instances. This part is indicated in the screenshot by number 4.
+The UI of the DataMiner Objects Tool app consists of the following main components:
 
 ![Low-Code App buttons](~/user-guide/images/Using_DataMiner_Objects_Tool.png)
 
-## Interactive Automation script
+All functionality of the tool is accessible via the *Filter All DataMiner Objects* button (1). Clicking the button launches an interactive Automation script that gives an overview of each supported DataMiner object type. You can then select one of the types to open a new dialog where filters can be defined.
 
-### Configuring Filters
+There are three more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation instances and DOM instances. For each of these types, the app shows some high level statistics about the system.
 
-See the screenshot below for more details.
+For **reservation instances** (2), the app shows the total number of reservation (i.e. booking) instances in the system along with a pie chart that groups the reservation instances by state. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances.
 
-1. **Including/excluding filters** can be done by checking or unchecking the checkbox next to the item property name.
+For **resources** (3), the app shows the total number of resources in the system along with a pie chart that groups the resources by resource pool. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter resources.
 
-1. **Filter type** can be selected using the dropdowns marked with number 2. Different properties allow different filter types depending on their possible values.
+For **DOM instances** (4), the app shows the total number of DOM instances in the system along with a pie chart that groups the DOM instances by module. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter DOM instances.
 
-1. **Filter value** can be filled in in the boxes marked with number 3. Depending on the property that is being filtered on, this will we strings, integers, Guids or datetimes.
+## Configuring filters
 
-1. **Adding more filters** can be done using the duplicate button, marked with number 4. There is no limit on the amount of filters you can include.
+To configure a filter:
 
-1. **Executing the query** with the included filters can be done using the button at the bottom. Marked in the screenshot below with number 5.
+![Configuring filters](~/user-guide/images/Using_DataMiner_Objects_Tool_ConfiguringFilters.png)
+
+1. **Include or exclude filters** by selecting or clearing the checkbox next to an item property name.
+
+1. Select the **filter type** in the dropdown boxes. Different properties allow different filter types depending on their possible values.
+
+1. Fill in the **filter value**. Depending on the property you filter on, this can be a string, integer, GUID, or datetime.
+
+1. If you want to **add more filters**, use the *Duplicate* button.
+
+   There is no limit to the number of filters you can include.
+
+1. Click the button at the bottom of the window to **execute the query** with the included filters.
 
 > [!IMPORTANT]
 > All included filters will be combined with an AND operation. There is currently no way of adding OR filters.
 
-![Configuring filters](~/user-guide/images/Using_DataMiner_Objects_Tool_ConfiguringFilters.png)
+## Fine-tuning results
 
-### Fine-tuning results
-
-Once the items are retrieved based on the filters, there is the possibility to fine-tune the selection manually, as shown in the screenshot below.
-
-1. The **amount of matching items** is displayed to give a quick view on how many total items are in the system that match the filters.
-
-1. **Selecting/unselecting all items** can be done using the buttons marked with number 2.
-
-1. The **amount of selected items** is also displayed to keep the user aware of his current selection.
-
-1. A scrollable checkbox list allows users to **individually select/unselect** items to fine-tune the result to their wishes.
+Once the items have been retrieved based on the filters you have configured, you can manually fine-tune the selection:
 
 ![Fine-tuning results](~/user-guide/images/Using_DataMiner_Objects_Tool_FinetuningResults.png)
+
+- The **number of matching items** (1) is displayed to give a quick view on how many items in the system match the filters.
+
+- Buttons are available to **select or unselect all items** (2).
+
+- The **number of selected items** (3) is also displayed, so you can see how many are included in your current selection.
+
+- In the scrollable checkbox list at the bottom (4), you can **select individual items** or clear the selection to fine-tune the result according to your preferences.

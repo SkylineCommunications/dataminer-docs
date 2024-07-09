@@ -241,7 +241,7 @@ items:
         items:
           - name: Installing the DataMiner Objects Tool
             topicUid: Installing_DataMiner_Objects_Tool
-          - name: Using the DataMiner Objects Tool
+          - name: Working with the DataMiner Objects Tool
             topicUid: Using_DataMiner_Objects_Tool
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring

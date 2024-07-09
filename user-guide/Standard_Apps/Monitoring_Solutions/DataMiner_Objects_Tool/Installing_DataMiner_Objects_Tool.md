@@ -17,13 +17,3 @@ uid: Installing_DataMiner_Objects_Tool
 1. Click the *Deploy* button.
 
 1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
-
-## Accessing the DataMiner Objects Tool
-
-To access the DataMiner Objects Tool:
-
-1. Go to `http(s)://[DMA name]/root`.
-
-1. Select *DataMiner Objects Tool* to start using the tool.
-
-   ![DataMiner Objects Tool](~/user-guide/images/DataMiner_Objects_Tool.png)
