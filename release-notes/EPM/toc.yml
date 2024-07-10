@@ -25,10 +25,10 @@ items:
         topicUid: EPM_6.0.0_D-DOCSIS
       - name: EPM 5.0.0 D-DOCSIS
         topicUid: EPM_5.0.0_D-DOCSIS
-  - name: GPON
+  - name: xPON
     items:
-      - name: EPM 1.0.1 GPON - Preview
-        topicUid: EPM_1.0.1_GPON
+      - name: EPM 1.0.1 xPON - Preview
+        topicUid: EPM_1.0.1_xPON
   - name: Integrated DOCSIS
     items:
       - name: EPM 7.0.5 I-DOCSIS (preview)

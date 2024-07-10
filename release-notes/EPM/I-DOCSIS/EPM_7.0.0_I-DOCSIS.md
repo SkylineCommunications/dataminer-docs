@@ -35,7 +35,7 @@ When you view all channels associated with a cable modem, now only the active ch
 Alignment errors on the Visual pages for Port, Distribution, and FAT (Forwarding Access Terminal) pages have been corrected. These Visual pages now include parent shapes, making it possible to identify the hub and the Optical Line Terminal (OLT) associated with each entity.
 
 > [!NOTE]
-> This change is related to the EPM GPON Solution because of shared components across solutions.
+> This change is related to the EPM xPON Solution because of shared components across solutions.
 
 #### Visual enhancements to EPM entity tables [ID_37776]
 
