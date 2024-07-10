@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 10 July 2024 - Enhancement -CloudGateway 2.13.13 - 	Improvement for cloud token refresh [ID 40032]
+
+The credentials used by CloudGateway are now refreshed daily so even when a system is disconnected from the internet or shutdown the token will still be valid as long as its not longer then 6 days.
+
 #### 4 July 2024 - Enhancement - CloudGateway 2.13.12 - Connection testing improvements [ID_40108]
 
 The ConnectionTester tool included with CloudGateway and the at-runtime connection testing by CloudGateway have been improved.
