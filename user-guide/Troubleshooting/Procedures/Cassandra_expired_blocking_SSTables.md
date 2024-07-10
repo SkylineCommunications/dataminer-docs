@@ -4,7 +4,7 @@ uid: Cassandra_expired_blocking_SSTables
 
 # Expired SSTables blocking other tables from being dropped
 
-In case the only data SSTables in Cassandra contain is tombstones, and the tables are therefore expired, they could block other tables that are also expired from being dropped. This could result in various issues, such as an increase in the disk usage of the Cassandra data partition, or memory leak behavior in the TWCS keyspaces (*trend_data_medium*, *trend_data_short*, and *trend_data_long*).
+In case the only data SSTables in Cassandra contain is tombstones, and the tables are therefore expired, they could block other tables that are also expired from being dropped. This could result in various issues, such as an increase in the disk usage of the Cassandra data partition or a continuous increase of the size of the TWCS keyspaces on the disk (*trend_data_medium*, *trend_data_short*, and *trend_data_long*).
 
 You can check if you are indeed encountering this issue using the Cassandra tools, for example with the following commands (on Linux):
 
