@@ -67,6 +67,14 @@ Because of a number of enhancements, overall performance of SLElement has increa
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
+#### DataMiner Object Models: Enhanced performance when using Equals or NotEquals operators in DOM state filters [ID_39712] [ID_40107]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
+
+Previously, when a count query of DOM instances was executed, and that query contained a filter for a particular DOM state, the GQI query would return all the DOM instances in the database and make a post-filter to count them. In case there were a lot of DOM instances in the database, the query could take a long time to resolve. A performance improvement has therefore been introduced by sending the filter by state to the database, resulting in a much faster response from the GQI query.
+
+If you use a filter with a *contains*, *not contains*, *regex*, or *not regex* operator, a post-filter will still be used. When you filter on a DOM state field, we therefore recommend using the *equals* or *not equals* operators.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
@@ -170,15 +178,6 @@ From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default 
 
 A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
 
-#### DataMiner Object Models: Enhanced performance when post-filtering DOM status filters [ID_40107]
-
-<!-- MR 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
-
-Because of a number of enhancements, overall performance has increased when executing GQI queries with DOM state filters using *Contains*, *NotContains*, *Regex*, or *NotRegex* comparers.
-
-> [!NOTE]
-> When using a DOM status filter, it is recommended to always use an *Equals* or a *NotEquals* comparer.
-
 ### Fixes
 
 #### Documents: Issues fixed [ID_39076]
@@ -258,12 +257,6 @@ In some cases, SLProtocol could stop working while processing a FillArray reques
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When SLNet was using FileInfoHelper, in some cases, it would not process errors correctly.
-
-#### DataMiner Object Models: Problem when applying a DOM state filter in a DOM instance count query [ID_39712]
-
-<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
-
-When a DOM state filter was applied in a DOM instance count query, an `InvalidOperationException: Sequence contains more than one matching element` error could be thrown when multiple DOM behavior definitions shared the same DOM state name.
 
 #### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
 
