@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
+
+When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+
+#### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID_40147]
+
+If all ranges of a Catalog item were either labeled as main or as deprecated, in the version history on the details page of the Catalog item, the main range could incorrectly be filtered out when the unsupported versions were set not to be shown (with the *Unsupported versions* toggle button). Now the main range will be shown correctly in the version history.
+
 #### 4 July 2024 - Enhancement - Remote Access, Remote Cube, and Live Sharing stability improvements [ID_40106]
 
 An enhancement has been done to improve the stability when the web apps or Cube are accessed remotely or when live sharing is used.
