@@ -73,7 +73,7 @@ Up to now, when a limit was set on the result set of queries that retrieve DOM i
 
 Previously, when a count query of DOM instances was executed, and that query contained a filter for a particular DOM state, the GQI query would return all the DOM instances in the database and make a post-filter to count them. In case there were a lot of DOM instances in the database, the query could take a long time to resolve. A performance improvement has therefore been introduced by sending the filter by state to the database, resulting in a much faster response from the GQI query.
 
-If you use a filter with a *Contains*, *NotContains*, *Regex*, or *NotRegex* operator, a post-filter will still be used. When you filter on a DOM state field, we therefore recommend using the *Equals* or *NotEquals* operators.
+If you use a filter with a *contains*, *not contains*, *regex*, or *not regex* operator, a post-filter will still be used. When you filter on a DOM state field, we therefore recommend using the *equals* or *not equals* operators.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
