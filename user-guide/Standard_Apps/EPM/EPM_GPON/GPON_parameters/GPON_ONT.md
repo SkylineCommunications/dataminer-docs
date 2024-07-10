@@ -1,14 +1,14 @@
 ---
-uid: GPON_ONT
+uid: xPON_ONT
 --- 
 
-# EPM GPON ONT parameters
+# EPM xPON ONT parameters
 
-Below you can find the indexable parameters for an ONT in the GPON EPM solution.
+Below you can find the indexable parameters for an ONT in the xPON EPM solution.
 
 These are parameters that will not be available in an alarm template, but that can be used by queries or Automation scripts to execute complex actions.
 
-- **Serial number**: The serial number reported by the vendor. This value will be the index for this ONT element through all GPON EPM queries and aggregations.
+- **Serial number**: The serial number reported by the vendor. This value will be the index for this ONT element through all xPON EPM queries and aggregations.
 
 - **Manufacturer**: The creator of the ONT. This field can be used in user-defined dashboards with [GQI](xref:About_GQI) to get insights in performance and recalls.
 

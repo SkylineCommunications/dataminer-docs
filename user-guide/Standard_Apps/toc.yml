@@ -56,29 +56,29 @@ items:
                 topicUid: D-DOCSIS_parameters_cin_interface
               - name: Manufacturer
                 topicUid: D-DOCSIS_parameters_manufacturer
-      #GPON TOC
-      - name: DataMiner EPM GPON
-        topicUid: EPM_GPON
+      #xPON TOC
+      - name: DataMiner EPM xPON
+        topicUid: EPM_xPON
         items:
-          - name: EPM GPON architecture
-            topicUid: GPON_architecture
-          - name: EPM GPON components
-            topicUid: GPON_components
+          - name: EPM xPON architecture
+            topicUid: xPON_architecture
+          - name: EPM xPON components
+            topicUid: xPON_components
             items:
-              - name: EPM GPON supported technologies
-                topicUid: GPON_supported_technologies
-              - name: Standard EPM GPON ONT JSON definition
-                topicUid: GPON_ONT_Json_definition
-          - name: EPM GPON deployment
-            topicUid: GPON_deployment
-          - name: Available parameters in EPM GPON
-            topicUid: GPON_KPI
+              - name: EPM xPON supported technologies
+                topicUid: xPON_supported_technologies
+              - name: Standard EPM xPON ONT JSON definition
+                topicUid: xPON_ONT_Json_definition
+          - name: EPM xPON deployment
+            topicUid: xPON_deployment
+          - name: Available parameters in EPM xPON
+            topicUid: xPON_KPI
             items:
-              - name: EPM GPON parameter thresholds
-                topicUid: GPON_parameters_thresholds
-              - name: EPM GPON ONT parameters
-                topicUid: GPON_ONT
-      #GPON TOC END
+              - name: EPM xPON parameter thresholds
+                topicUid: xPON_parameters_thresholds
+              - name: EPM xPON ONT parameters
+                topicUid: xPON_ONT
+      #xPON TOC END
       - name: DataMiner EPM Integrated DOCSIS
         topicUid: EPM_I-DOCSIS
         items:
