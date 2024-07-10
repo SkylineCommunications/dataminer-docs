@@ -192,6 +192,8 @@ items:
         items:
           - name: Cassandra does not start up after a server restart
             topicUid: Cassandra_not_starting_up_after_server_restart
+          - name: Expired SSTables blocking other tables from being dropped
+            topicUid: Cassandra_expired_blocking_SSTables
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
