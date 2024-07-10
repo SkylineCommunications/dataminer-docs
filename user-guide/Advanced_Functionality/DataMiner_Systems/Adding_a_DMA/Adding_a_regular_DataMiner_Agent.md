@@ -11,7 +11,7 @@ uid: Adding_a_regular_DataMiner_Agent
 > [!IMPORTANT]
 >
 > - Before you add a DataMiner Agent, make sure the IP network ports are configured correctly. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
-> - If the DataMiner System uses [Dedicated clustered storage](xref:Dedicated_clustered_storage), the new agent should be configured to use the same clustered storage in order to join the DMS.
+> - If the DataMiner System uses [Dedicated clustered storage](xref:Dedicated_clustered_storage), make sure the new DMA is configured to use the same clustered storage as the DMS you are about to add it to (by modifying the general database settings in its [DB.xml](xref:DB_xml) file to match those of the other DMAs and then restarting the DMA).
 > - If the DataMiner System uses STaaS, additional steps are required. See [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
 1. On the DMA you intend to add to the cluster, go to the *System Center* module and select the *Agents* page.
