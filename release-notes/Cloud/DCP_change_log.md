@@ -11,13 +11,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
-When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying.
-By default the current time zone of the browser is selected.
+When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
 
-#### 9 July 2024 - Fix - Catalog - Main ranges have been fixed in the version history [ID_40147]
+#### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID_40147]
 
-When opening the details page of a catalog item, there was a case where all the ranges where either main or deprecated. This resulted in having recommendations but in the version history the main range accidently got filtered out when the unsupported version toggle was off.
-Now it should correctly show the main range in the version history
+If all ranges of a Catalog item were either labeled as main or as deprecated, in the version history on the details page of the Catalog item, the main range could incorrectly be filtered out when the unsupported versions were set not to be shown (with the *Unsupported versions* toggle button). Now the main range will be shown correctly in the version history.
 
 #### 4 July 2024 - Enhancement - Remote Access, Remote Cube, and Live Sharing stability improvements [ID_40106]
 
