@@ -71,14 +71,11 @@ From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default 
 
 A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
 
-#### DataMiner Object Models: Enhanced performance when post-filtering DOM status filters [ID_40107]
+#### DataMiner Object Models: Enhanced performance when using Equals or NotEquals operators in DOM state filters [ID_40107]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
 
-Because of a number of enhancements, overall performance has increased when executing GQI queries with DOM state filters using *Contains*, *NotContains*, *Regex*, or *NotRegex* comparers.
-
-> [!NOTE]
-> When using a DOM status filter, it is recommended to always use an *Equals* or a *NotEquals* comparer.
+Performance has increased when GQI queries use DOM state filters with *Equals* or *NotEquals* operators. When you filter on a DOM state field, we therefore recommend using these operators.
 
 ### Fixes
 
