@@ -4,11 +4,25 @@ uid: Cassandra_expired_blocking_SSTables
 
 # Expired SSTables blocking other tables from being dropped
 
-In case the only data SSTables in Cassandra contain is tombstones, and the tables are therefore expired, they could block other tables that are also expired from being dropped.
+In case the only data SSTables in Cassandra contain is tombstones, and the tables are therefore expired, they could block other tables that are also expired from being dropped. This could result in various issues, such as an increase in the disk usage of the Cassandra data partition, or memory leak behavior in the TWCS keyspaces (*trend_data_medium*, *trend_data_short*, and *trend_data_long*).
 
-To resolve this issue, you can enable the *unsafe_aggressive_sstable_expiration* option for the Cassandra database. This is something that should only be done to troubleshoot this issue, because it is considered a risky option otherwise. The data in the expired SSTables will be dropped without being checked, but as it consists entirely of tombstone data in this case, this is not a problem.
+You can check if you are indeed encountering this issue using the Cassandra tools, for example with the following commands (on Linux):
 
-To enable this option, follow the steps below.
+```txt
+yum install cassandra-tools
+
+sudo systemctl stop cassandra
+
+sstableexpiredblockers zm1_cc_trend_data_short trend_data_short
+
+for f in *Data.db; do meta=$(sudo sstablemetadata $f); echo -e "Max:" $(date --date=@$(echo "$meta" | grep Maximum\ time | cut -d" " -f3| cut -c 1-10) '+%m/%d/%Y') "Min:" $(date --date=@$(echo "$meta" | grep Minimum\ time | cut -d" " -f3| cut -c 1-10) '+%m/%d/%Y') $(echo "$meta" | grep droppable) ' \t ' $(ls -lh $f | awk '{print $5" "$6" "$7" "$8" "$9}'); done | sort
+```
+
+With the output of the sstableexpiredblockers, you can see which tables are blocking others from being dropped. If the percentage of tombstones in the SSTable is higher than 1, you can assume that all data is tombstone data.
+
+To resolve this issue, we recommend enabling the *unsafe_aggressive_sstable_expiration* option for the Cassandra database. This is something that should only be done to troubleshoot this issue, because it is considered a risky option otherwise. The data in the expired SSTables will be dropped without being checked, but as it consists entirely of tombstone data in this case, this is not a problem.
+
+To enable this option, follow the steps below. These steps are intended for a Linux system, since this is the recommended operating system for a Cassandra cluster.
 
 > [!NOTE]
 > Ideally, this should be done on one node at a time to reduce the downtime for the Cassandra Cluster. However, whether your cluster can cope with one node being down at a time depends on its configuration and architecture. To check this, you can use the [ecyrd.com Cassandra calculator](https://www.ecyrd.com/cassandracalculator/).
@@ -46,4 +60,4 @@ To enable this option, follow the steps below.
    - PREFIXPLACEHOLDER_trend_data_rt
    - PREFIXPLACEHOLDER_trend_data_short
 
-   To find out what the PREFIXPLACEHOLDER is, navigate to cd /data/cassandra/data.
+   To find out what the PREFIXPLACEHOLDER is, navigate to the `/data/cassandra/data` folder and check the name used in that folder.
