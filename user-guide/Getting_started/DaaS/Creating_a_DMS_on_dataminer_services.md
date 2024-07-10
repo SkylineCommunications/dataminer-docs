@@ -34,7 +34,7 @@ uid: Creating_a_DMS_on_dataminer_services
 
 1. Optionally, in the *Time zone* box, select the time zone for your DataMiner System.
 
-   By default, the time zone is set to UTC.
+   By default, the time zone is set to the time zone of your current location.
 
 1. Enter a username and password for your DataMiner account.
 
