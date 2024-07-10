@@ -18,19 +18,19 @@ uid: General_Main_Release_10.4.0_CU5
 
 Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
-
-<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
-
-A number of enhancements have been made to the process that determines whether a flatline change point is considered to be anomalous or not.
-
-#### DataMiner Object Models: Enhanced performance when using Equals or NotEquals operators in DOM state filters [ID_39721] [ID_40107]
+#### DataMiner Object Models: Enhanced performance when using Equals or NotEquals operators in DOM state filters [ID_39712] [ID_40107]
 
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
 
 Previously, when a count query of DOM instances was executed, and that query contained a filter for a particular DOM state, the GQI query would return all the DOM instances in the database and make a post-filter to count them. In case there were a lot of DOM instances in the database, the query could take a long time to resolve. A performance improvement has therefore been introduced by sending the filter by state to the database, resulting in a much faster response from the GQI query.
 
 If you use a filter with a *Contains*, *NotContains*, *Regex*, or *NotRegex* operator, a post-filter will still be used. When you filter on a DOM state field, we therefore recommend using the *Equals* or *NotEquals* operators.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made to the process that determines whether a flatline change point is considered to be anomalous or not.
 
 #### 'Security Advisory' BPA test will no longer report an issue when NATS does not have TLS enabled on a single DMA [ID_39792]
 
