@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
-When you deploy a DaaS system in the Home app. You will now be able to select a time zone for the DataMiner System you are deploying.
+When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying.
 By default the current time zone of the browser is selected.
 
 #### 9 July 2024 - Fix - Catalog - Main ranges have been fixed in the version history [ID_40147]
