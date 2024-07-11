@@ -105,3 +105,9 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+
+#### Service & Resource Management: Booking events could be triggered multiple times when a database issue occurred while DataMiner was starting up [ID_40114]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
