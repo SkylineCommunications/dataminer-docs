@@ -91,22 +91,19 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *DataMiner as a Service (DaaS)* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
 
 > [!NOTE]
-> Only active and paused Managed Objects are counted for Managed Objects, Connectors and DaaS.
-> Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems.
+> Only active and paused Managed Objects are counted for Managed Objects, Connector Services, and DaaS. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems.
 
 #### Metering units
 
 | Service | Metering unit | Credits |
 |---|---|---|
-| *Standard Managed Object* | Count of 10K metrics on managed objects with more than 200 metrics | 0.4 |
-| *Light Managed Object* | Sum of metrics on managed objects with less than 200 metrics | 2.5 for 1000 metrics |
+| *Standard Managed Object* | Count of 10K metrics on Managed Objects with more than 200 metrics | 0.4 |
+| *Light Managed Object* | Sum of metrics on Managed Objects with less than 200 metrics | 2.5 for 1000 metrics |
 | *Connector Services* | Sum of connectors delivered by Skyline, concurrently used | 8 |
 | *Script Runs* | Sum of script runs. | Starting at 5 for 1k script runs.<br>Unit credit rate decreases with increased quantities. |
 | *Cloud Data Consumption* | Sum of total GB of traffic. | 1 |
 | *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M trend data points.<br>0.3 per 10M element data updates. |
-| *DataMiner as a Service (DaaS)* | Sum of metrics of all managed objects hosted. | 0.1 for 10000 metrics|
-
-
+| *DataMiner as a Service (DaaS)* | Sum of metrics of all Managed Objects hosted. | 0.1 for 10000 metrics|
 
 > [!TIP]
 > While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.
@@ -116,14 +113,16 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 ### Metering Period
 
-Metering works in monthly cycles, starting on the first day of each month. The units above reflect the base credit rates per month, metering is pro-rated per day. 
+Metering works in monthly cycles, starting on the first day of each month. The units above reflect the base credit rates per month; metering is pro-rated per day.
 
-**Example** 
-For March, the number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by 31 days:
-- March 1 through 7, the maximum number of concurrent connectors used each day was 5. 
-- The rest of the month, the maximum number of concurrent connectors used each day was always 4.
+Example:
+
+- March 1 through 7, the maximum number of concurrent connectors used each day is 5.
+- For the rest of the month, the maximum number of concurrent connectors used each day is always 4.
+
+The number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by 31 days (for March):
+
 - Monthly Service Consumption = 5 connectors x 7 days x 8 credits / 31 + 4 connectors x 24 days x 8 credits / 31 days
- 
 
 ### Cancellation
 
