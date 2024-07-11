@@ -191,7 +191,7 @@ When alarms were generated for an element with a virtual function, those alarms 
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
 
