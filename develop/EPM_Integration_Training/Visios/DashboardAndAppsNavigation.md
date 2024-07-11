@@ -8,7 +8,9 @@ From DataMiner 10.0.8 onwards, you can configure a shape in Visual Overview so t
 
 To do so, use a **Link** shape data field. The value has to be the dashboard or app URL, which will contain a JSON configuration. For example:
 
-![Link shape data configuration example](~/develop/images/EPM_dashboards_navigation.png)
+```text
+http://<DMAIP>/dashboard/#/db/Training/Station/01.%20Device%20Overview.dmadb?data={"version":1,"feed":null,"components":[{"cid":1,"select":{"epm-selections":["[param:[cardVar: _elementInfo],901]/5502/[fieldId]"]}}],"feedAndSelect":{}}
+```
 
 For detailed information about the JSON syntax, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
 
@@ -16,6 +18,9 @@ To link to EPM objects in this JSON syntax, you will need to use the **epm-selec
 
 ![Component ID location in dashboard](~/develop/images/EPM_Retrieving_component_ID2.png)<br>
 *Component ID in a dashboard in DataMiner 10.4.3*
+
+![image](https://github.com/user-attachments/assets/4db1ed7c-b5e7-45fc-a55b-cd7ae9f533f0)
+*Example of a live system*
 
 > [!NOTE]
 > While in the example above the primary key is retrieved dynamically, it is also possible to hard-code everything in the URL. However, this is not recommended as it is not an efficient way of working in an EPM environment.
