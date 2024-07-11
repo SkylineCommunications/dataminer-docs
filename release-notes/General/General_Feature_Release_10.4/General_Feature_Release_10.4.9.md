@@ -189,6 +189,14 @@ In some cases, SLElement could stop working while processing table parameter upd
 
 When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
 
+#### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+
+To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -217,7 +225,7 @@ When you connected to an offline agent in a Failover setup with a DataMiner Cube
 
 #### SLAnalytics: Issues fixed with regard to alarm template monitoring mechanism [ID_39948]
 
-<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 A number of issues have been fixed with regard to the internal SLAnalytics alarm template monitoring mechanism.
 

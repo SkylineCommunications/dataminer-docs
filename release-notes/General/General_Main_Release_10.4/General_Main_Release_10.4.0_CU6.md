@@ -102,7 +102,7 @@ When you connected to an offline agent in a Failover setup with a DataMiner Cube
 
 #### SLAnalytics: Issues fixed with regard to alarm template monitoring mechanism [ID_39948]
 
-<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 A number of issues have been fixed with regard to the internal SLAnalytics alarm template monitoring mechanism.
 

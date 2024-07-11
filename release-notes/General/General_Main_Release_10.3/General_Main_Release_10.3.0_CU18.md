@@ -88,6 +88,12 @@ When a service had been migrated from one DataMiner Agent to another within a Da
 
 When you connected to an offline agent in a Failover setup with a DataMiner Cube that used external authentication, an `External authentication failed` error would appear. As a result, it would not be possible to force that offline agent to go online.
 
+#### SLAnalytics: Issues fixed with regard to alarm template monitoring mechanism [ID_39948]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of issues have been fixed with regard to the internal SLAnalytics alarm template monitoring mechanism.
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

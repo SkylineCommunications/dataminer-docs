@@ -713,6 +713,14 @@ After a quarantine had been forced during a booking update, in some cases, the S
 
 See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
 
+#### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+
+To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+
 #### SLAnalytics - Alarm template monitoring: Problem when processing template removals [ID_39819]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
