@@ -16,7 +16,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Main Release | The Main Release of DataMiner is the upgrade track of the DataMiner software that has one major upgrade per year as well as regular Cumulative Updates (CUs) with all the latest fixes. In general, no new features are added in this track, except for specific isolated cases that do not affect existing functionality. Using this upgrade track is recommended for production environments that do not require specific features only available in the Feature Release. |
 | MAM | Media Asset Management. Management of typically large-sized video and media files. |
 | Managed inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are managed by IDP.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
-| Maps | DataMiner module that allows you to visualize real-time data from the DMS on top of geographical maps provided by online map services.<br>See [Maps](xref:maps). |
+| Maps | DataMiner module that allows you to visualize real-time data from the DMS on top of geographical maps provided by online map services.<br>See [Maps](xref:About_DMS_Maps). |
 | Masking | Marking a DataMiner object as to be ignored for alarm monitoring. |
 | Matrix parameter | A parameter that combines a series of inputs and outputs in a matrix, allowing users to connect inputs and outputs using the crosspoints in the matrix.<br>See [Matrix parameters](xref:Matrix_parameters). |
 | MCPC | Multiple Channels Per Carrier. Technology where multiple broadcasting streams are multiplexed together into a single bit stream. |
@@ -69,7 +69,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
 | OpenSearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database.<br>See [OpenSearch database](xref:OpenSearch_database). |
 | OPEX | Operating expense. The ongoing cost to run a product, system or business. |
-| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
+| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:About_DMS_Maps). |
 | OSPF | Open Shortest Path First. Routing protocol for IP networks used to find the best path between the source and destination router within an autonomous system. |
 | OSS | Operations Support System. Software system that allows service providers to monitor, control, analyze and manage their network. |
 | OTA | Over-The-Air. Refers to wireless transmission, typically in the context of software updates distributed to mobile devices or TV and radio broadcasts transmitted wirelessly. |
@@ -77,7 +77,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
 | Outage | In the context of DataMiner Business Intelligence, the temporary unavailability of the service monitored by an SLA.<br>See [Business Intelligence](xref:sla). |
 | Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
-| OWM | OpenWeatherMap. Online service that provides weather data, which can be integrated in DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
+| OWM | OpenWeatherMap. Online service that provides weather data and that can be integrated in DataMiner Maps.<br>See [Maps](xref:About_DMS_Maps). |
 
 ## P
 

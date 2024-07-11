@@ -4,32 +4,28 @@ uid: Adding_a_custom_legend_to_a_map
 
 # Adding a custom legend to a map
 
-It is possible to add a custom legend to a map, which is then visualized as a table. In this legend, you have to define table columns and a row filter. When a user clicks one of the rows in the legend, the contents of that row are then used to filter the markers of all layers of sourceType “table”.
+It is possible to add a custom legend to a map, which is then visualized as a table. In this legend, you have to define table columns and a row filter. When a user clicks one of the rows in the legend, the contents of that row are then used to filter the markers of all layers of sourceType "table".
 
 ## Custom legend configuration
 
-To configure a custom legend, add a *\<CustomLegendBox>* tag, and configure it as follows.
+To configure a custom legend, add a `<CustomLegendBox>` tag, and configure it as follows.
 
-- Attributes of the *\<CustomLegendBox>* tag:
+- Attributes of the `<CustomLegendBox>` tag:
 
-    | Attribute | Description                                                                                                                                                                                                                            |
-    |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | visible     | Determines whether the legend is displayed on the map.                                                                                                                                                                                 |
-    | width       | The width of the legend box in pixels.                                                                                                                                                                                                 |
-    | height      | The height of the legend box in pixels.                                                                                                                                                                                                |
-    | filterVars  | Optional. Can be used to link a table filter to a URL variable.<br> This attribute functions in the same way as when used in the *\<TableSourceInfo>* tag. See [filterVars](xref:TableSourceInfo#filtervars). |
+  - **visible**: Determines whether the legend is displayed on the map.
+  - **width**: The width of the legend box in pixels.
+  - **height**: The height of the legend box in pixels.
+  - **filterVars**: Optional. Can be used to link a table filter to a URL variable. This attribute functions in the same way as when used in the `<TableSourceInfo>` tag. See [filterVars](xref:TableSourceInfo#filtervars).
 
-- Subtags of the *\<CustomLegendBox>* tag:
+- Subtags of the `<CustomLegendBox>` tag:
 
-    | Subtag        | Description                                                                                                                                                                                 |
-    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Name            | The label that users will be able to click in order to open the legend.                                                                                                                     |
-    | DataMinerID     | The ID of the table that has to be displayed in the legend.                                                                                                                                 |
-    | ElementID       |                                                                                                                                                                                             |
-    | TableID         |                                                                                                                                                                                             |
-    | TableColumnPIDs | The IDs of the table column parameters that have to be displayed in the legend. If none are specified, all columns will be displayed.                                                       |
-    | TableFilters    | The table row filters. This subtag functions in the same way as when used in the *\<TableSourceInfo>* tag. See [TableFilters](xref:TableSourceInfo#tablefilters). |
-    | FilterColumnPID | The ID of the table column parameter that contains the value to be used to filter the layers.                                                                                               |
+  - **Name**: The label that users will be able to click in order to open the legend.
+  - **DataMinerID**: The ID of the table that has to be displayed in the legend.
+  - **ElementID**
+  - **TableID**
+  - **TableColumnPIDs**: The IDs of the table column parameters that have to be displayed in the legend. If none are specified, all columns will be displayed.
+  - **TableFilters**: The table row filters. This subtag functions in the same way as when used in the `<TableSourceInfo>` tag. See [TableFilters](xref:TableSourceInfo#tablefilters).
+  - **FilterColumnPID**: The ID of the table column parameter that contains the value to be used to filter the layers.
 
 Example:
 

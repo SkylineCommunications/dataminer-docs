@@ -54,7 +54,7 @@ uid: Part4AdvancedModules
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Maps/DMS_Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/Maps.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Maps/About_DMS_Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/Maps.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Mobile_Gateway/Mobile_Gateway.html" title="Mobile Gateway" target="_self"><img src="~/user-guide/images/Mobile_Gateway.svg" style="width:100%"></a>

@@ -9,9 +9,7 @@ uid: Layer_types
 Set the *sourceType* attribute of a layer to "clouds" if you want that layer to display cloud information.
 
 > [!NOTE]
-> For Google Maps, the Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
->
-> As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
+> For Google Maps, the Weather and Cloud layers are deprecated. As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
 
 ## Layers of sourceType 'connectivity'
 
@@ -424,7 +422,7 @@ Example:
   >
   > - To make sure correct results are returned, `<SourceTableID>` and `<DestinationTableID>` have to be in the correct order.
   > - Optionally, the `<LineOptions>` tag can be used in this tag. See [LineOptions](xref:LineOptions).
-  > - From DataMiner 10.0.3 onwards, the *recursivefullfilter* option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+  > - For table filters, you can use the *recursivefullfilter* option. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 - From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute in the `<ForeignKeyRelationsSourceInfo>` tag (e.g. with value "myElement") to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
 
@@ -476,15 +474,11 @@ Set the *sourceType* attribute of a layer to "traffic" if you want that layer to
 Set the *sourceType* attribute of a layer to "weather" if you want that layer to display weather information with temperatures in degrees Celsius.
 
 > [!NOTE]
-> For Google Maps, the Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
->
-> As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
+> For Google Maps, the Weather and Cloud layers are deprecated. As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
 
 ## Layers of sourceType 'weatherf'
 
 Set the *sourceType* attribute of a layer to "weatherf" if you want that layer to display weather information with temperatures in degrees Fahrenheit.
 
 > [!NOTE]
-> For Google Maps, the Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
->
-> As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
+> For Google Maps, the Weather and Cloud layers are deprecated. As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
