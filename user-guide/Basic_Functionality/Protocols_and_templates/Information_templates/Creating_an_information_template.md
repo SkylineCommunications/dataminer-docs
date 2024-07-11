@@ -28,29 +28,27 @@ To create an information template:
 
    - **Custom name**: An alternative parameter name (i.e. alias) that can be used in Visual Overview, poll socket requests, Dashboards, Automation, etc.
 
-     Suppose you use three protocols that have an identical parameter but with a slightly different name. In that case, you could use this “custom name” to assign the same alias to those three parameters and then use that alias in a Visio drawing shared by the three protocols.
+     Suppose you use three protocols that have an identical parameter but with a slightly different name. In that case, you could use this "custom name" to assign the same alias to those three parameters and then use that alias in a Visio drawing shared by the three protocols.
 
    - **Category**: A custom category that will be assigned to the parameter.
 
      To visualize this information in the user interface, add the *Category* column to the Alarm Console.
 
-   - **Key point**: The exact location in the signal chain where the error has occurred. E.g. “Encoding”, “Decoding”, “Reception”, etc.
+   - **Key point**: The exact location in the signal chain where the error has occurred. E.g. "Encoding", "Decoding", "Reception", etc.
 
      This is used in DataMiner Business Intelligence.
 
-   - **Component info**: More information about the nature of the alarm. E.g. “Audio”, “Video”, etc.
+   - **Component info**: More information about the nature of the alarm. E.g. "Audio", "Video", etc.
 
      This is used in DataMiner Business Intelligence.
 
      > [!TIP]
      > See also: [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter)
 
-   - **Hide parameter:** Allows you to hide this parameter in the Cube UI. Available from DataMiner 9.5.6/9.6.0 onwards.
+   - **Hide parameter:** Allows you to hide this parameter in the Cube UI.
 
      > [!NOTE]
-     >
-     > - While hiding page buttons via an information template is possible from DataMiner 9.5.6/9.6.0 onwards, hiding regular button or toggle button parameters is only possible from DataMiner 10.0.13/10.1.0 onwards.
-     > - Primary and display key column parameters cannot be hidden.
+     > Primary and display key column parameters cannot be hidden.
 
    - **Alarm description**: Extra information for the operator describing the problem in case an alarm is generated.
 
@@ -67,7 +65,7 @@ To create an information template:
      > [!TIP]
      > See also: [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA)
 
-   - **Alarm properties**: Can be used from DataMiner 9.5.3 onwards to override alarm properties for the parameter.
+   - **Alarm properties**: Can be used to override alarm properties for the parameter.
 
      To override alarm properties, select *Override* and specify the alarm property name(s) and value(s). In the *Value* field, you can directly refer to other parameters by typing *parameter.* and then selecting the parameter in the drop-down list. Note that the alarm property name must not contain a semicolon.
 
@@ -78,7 +76,7 @@ To create an information template:
 
     > [!NOTE]
     >
-    > - To quickly find a parameter in the parameter list, use the filter box in the top right corner. You can also filter the displayed parameters with the button at the top of the parameter list, in order to view *Only edited parameters*, *Only protocol parameters* or *All parameters (protocol + general)*.
+    > - To quickly find a parameter in the parameter list, use the filter box in the top right corner. You can also filter the displayed parameters with the button at the top of the parameter list, in order to view *Only edited parameters*, *Only protocol parameters*, or *All parameters (protocol + general)*.
     > - In the top-right corner of the parameter details pane, click *Clear* to clear all data in the details pane on the right for the currently selected parameter.
     > - For table parameters, a field is available in the pane on the left that allows you to specify a filter, so that the information template configuration is only applied on a filtered selection of available rows of the dynamic table. As a result, alarm description, alarm category and corrective action can differ based on the display key of a table. You can also duplicate table parameters in the list in order to apply different filters at the same time.
 

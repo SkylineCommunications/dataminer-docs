@@ -204,7 +204,7 @@ recursivefullfilter=(1002 > 0)
 ```
 
 > [!NOTE]
-> This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](xref:Configuring_the_DataMiner_Maps).
+> This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](xref:Top-level_structure_of_a_DataMiner_Maps_configuration_file).
 
 ## NODIRECTVIEW=
 

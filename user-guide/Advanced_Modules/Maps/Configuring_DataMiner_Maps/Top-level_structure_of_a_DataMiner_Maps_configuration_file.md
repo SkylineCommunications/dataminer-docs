@@ -4,6 +4,11 @@ uid: Top-level_structure_of_a_DataMiner_Maps_configuration_file
 
 # Top-level structure of a DataMiner Maps configuration file
 
+On a DataMiner Agent, the configuration files for the DataMiner Maps have to be placed in the `C:\Skyline DataMiner\Maps\Configs` directory.
+
+> [!NOTE]
+> DataMiner Map configuration files are not automatically synchronized throughout a DataMiner System. Therefore, if you create or update a configuration file on a particular DMA, always perform a [force synchronization](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms) of that configuration file.
+
 This is an example of a DataMiner Maps configuration file:
 
 ```xml
