@@ -1107,6 +1107,8 @@ items:
             topicUid: Service_reports
           - name: Business reports
             topicUid: Business_reports
+          - name: Booking reports
+            topicUid: Booking_reports
           - name: Using the View filter for built-in reports
             topicUid: Using_the_View_filter_for_built-in_reports
       - name: Creating report templates
@@ -1236,13 +1238,6 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
-      - name: SRM reporting
-        topicUid: SRM_reporting
-        items:
-          - name: Bookings / Reservations tab
-            topicUid: Bookings_Reservations_tab
-          - name: Bookings / Reservations component of custom templates
-            topicUid: Bookings_Reservations_component_of_custom_templates
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:
