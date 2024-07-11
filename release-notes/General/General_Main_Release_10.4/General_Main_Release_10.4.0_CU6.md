@@ -88,6 +88,18 @@ On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTyp
 
 When two capability parameters shared the same discrete value, and the value of one of those parameters was included in a resource, up to now, it would not be possible to delete that value for the parameter that was not used.
 
+#### No longer possible to edit a service that had been migrated from one DMA to another within a DMS [ID_39893]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a service had been migrated from one DataMiner Agent to another within a DataMiner System, it would no longer be possible to edit that service. The messages would incorrectly be sent to the DataMiner Agent that hosted the service previously.
+
+#### Failover: Problem when connecting to an offline agent with a DataMiner Cube that used external authentication [ID_39925]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you connected to an offline agent in a Failover setup with a DataMiner Cube that used external authentication, an `External authentication failed` error would appear. As a result, it would not be possible to force that offline agent to go online.
+
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
