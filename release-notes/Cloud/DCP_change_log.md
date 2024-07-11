@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 12 July 2024 - Enhancement - Remote Access and Live Sharing timed out request handling improvements [ID_40173]
+
+An enhancement has been done on how timed out request are handled when the web apps are accessed remotely or when live sharing is used.
+
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
 When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
