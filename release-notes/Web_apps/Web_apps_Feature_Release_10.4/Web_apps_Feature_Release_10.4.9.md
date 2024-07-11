@@ -50,6 +50,12 @@ Because of a number of enhancements, from now on, all components that retrieve e
 
 The *Time range* feed component now has a *Reset* button. Clicking this button will reset the time range to the default range (i.e. "Today so far").
 
+#### Dashboards app & Low-Code Apps: All components now support zooming in/out using CTRL+Scroll [ID_40017]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, in all components, you will be able to zoom in and out using CTRL+Scroll.
+
 #### Web API: DOM methods will no longer check whether DOM object GUIDs are empty [ID_40024]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
