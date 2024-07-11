@@ -9,7 +9,7 @@ uid: CommunicationGateway_change_log
 When multiple CommunicationGateway nodes were deployed in a cluster, and an element was set up that would for instance use the OpenConfig middleware, eventually all CommunicationGateway nodes set up a connection with the endpoint, instead of only one as was intended. To prevent this, an extra step has been added to the connection process.
 
 > [!NOTE]
-> In order for this extra step to be initiated, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 4.2.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x#extra-step-added-to-the-connection-process-id_39548) or higher.
+> For this extra step to be initiated, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 4.2.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x#extra-step-added-to-the-connection-process-id_39548) or higher.
 
 #### 21 February 2024 - Enhancement - CommunicationGateway 3.0.1 - Error information when IP address is not formatted correctly [ID_38755]
 
