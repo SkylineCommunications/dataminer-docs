@@ -113,3 +113,9 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
+
+#### Web API would throw a 'Compatibility Manager not initialized yet' error [ID_40148]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, the web API would throw a `Compatibility Manager not initialized yet` error. Error handling has now been enhanced to prevent this error from being thrown.
