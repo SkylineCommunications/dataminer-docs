@@ -58,7 +58,8 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
 
-1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it corresponding to your setup:
+1.  Before proceeding with this step, make sure that the registration is complete and, if applicable, that the migration has been verified upon completion.
+    On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it corresponding to your setup:
 
    - For setups **without proxy**, use the following configuration:
 
