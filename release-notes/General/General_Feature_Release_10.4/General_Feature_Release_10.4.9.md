@@ -167,6 +167,12 @@ Because of a number of enhancements made to SLNet, overall performance has incre
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
 
+#### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
+
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
