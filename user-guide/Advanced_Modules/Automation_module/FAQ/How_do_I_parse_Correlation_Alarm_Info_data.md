@@ -38,6 +38,6 @@ for (int i=0; i<amountProperties; i++)
     engine.GenerateInformation("Property " + propertyName + " == " + propertyValue);
 }
 
-// in 10.5 and up, use the ID below to refer to the alarm tree
+// in 10.4.9 / 10.5 and up, use the ID below to refer to the alarm tree
 AlarmTreeID treeId = new AlarmTreeID(dmaID, elementID, rootAlarmID);
 ```
