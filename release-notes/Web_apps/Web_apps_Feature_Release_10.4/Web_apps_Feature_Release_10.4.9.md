@@ -64,6 +64,12 @@ Up to now, the DOM methods in the web API would check whether a DOM object GUID 
 
 As the DOM SLNet API support objects with empty GUIDs, all empty GUID checks have now been removed from the web API.
 
+#### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
+
 ### Fixes
 
 #### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID_39961]
