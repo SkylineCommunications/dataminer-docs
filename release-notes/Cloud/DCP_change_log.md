@@ -9,9 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 12 July 2024 - Enhancement - Improved handling of timed out Remote Access and Live Sharing requests [ID_40173]
+#### 11 July 2024 - Enhancement - ChatOps - Notification summary [ID_]
 
-An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
+A new version (1.2.5) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to add a summary to your Chat Integration notifications. This summary will be used for the actual activity notification, so you can easily read what is going on from the summary without opening the notification. In case the notification is an adaptive card it will also be used for the immersive reader functionality in Microsoft Teams.
+
+The behavoir will stay the same as before if the summary is not explicitly defined. For text, the default behavoir is to show the first part of the text. In case the notification is an adaptive card, it will show "Card' by default.
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
@@ -188,7 +190,7 @@ On the overview page of a DMS in the Admin app, the *Open in desktop app* button
 
 #### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
-A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
+A new version (1.2.4) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
 
 These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
 
@@ -252,7 +254,7 @@ From now on, it is possible to skip the confirmation message when running a cust
 
 You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.
 
-A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in adaptive cards.
+A new version of (1.2.3) [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in adaptive cards.
 
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
@@ -425,7 +427,7 @@ Available buttons:
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
@@ -444,7 +446,7 @@ Available buttons:
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
 
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
@@ -466,7 +468,7 @@ It is now possible to provide remote access via dataminer.services to files or w
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.0 to easily interact with Microsoft Teams.
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
@@ -618,7 +620,7 @@ The following features are available:
 - Fetching a private chat between someone and the DataMiner Teams bot
 - Sending notifications in those private chats in the name of the DataMiner Teams bot
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper)  to easily interact with Microsoft Teams.
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
