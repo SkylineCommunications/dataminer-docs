@@ -10,8 +10,6 @@ uid: Changing_group_membership_of_a_user
 
 1. Go to the *Group membership* tab.
 
-1. If you are using a version of DataMiner prior to 9.5.4, click the *Edit* button in the lower right corner.
-
 1. User the *ADD \>\>* and *\<\< REMOVE* buttons to move different groups to or from the *Available groups* and *Included in groups* columns.
 
 1. Click the *Apply* button.
