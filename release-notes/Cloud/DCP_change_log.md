@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 12 July 2024 - Enhancement - Catalog - Infinite scroll [ID_40167]
+
+​On the catalog browse page, when users now scroll to the bottom of the page a new page will load if there is any. (The results are still capped at 50 items per page)
+
 #### 11 July 2024 - Enhancement - ChatOps - Notification summary [ID_40182]
 
 A new version (1.2.5) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to add a summary to Chat Integration notifications using Adaptive Cards. This summary will be used for the actual activity notification, so you can easily read what is going on from the summary without opening the notification itself. The summary will also be used for the immersive reader functionality in Microsoft Teams.
