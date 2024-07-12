@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 12 July 2024 - Enhancement - Catalog - Infinite scroll [ID_40167]
 
-​On the catalog browse page, when users now scroll to the bottom of the page a new page will load if there is any. (The results are still capped at 50 items per page)
+​On the catalog browse page, when users now scroll to the bottom of the page a new page will load if there are any more catalog items to show.
 
 #### 11 July 2024 - Enhancement - ChatOps - Notification summary [ID_40182]
 
