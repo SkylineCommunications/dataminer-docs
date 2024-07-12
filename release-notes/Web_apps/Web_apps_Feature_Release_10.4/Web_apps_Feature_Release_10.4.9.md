@@ -139,3 +139,9 @@ Since DataMiner version 10.4.6, a bookings feed would incorrectly no longer retu
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, components could lose focus after having been resized.
+
+#### Low-Code Apps: Description of 'Close all panels' action set to 'Do nothing' after a migration from a version older than 10.4.7 [ID_40191]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you opened a low-code app that was migrated from a version older than version 10.4.7, the *Close all panels* action had an incorrect description. Instead of "Close all panels", the description was incorrectly set to "Do nothing".
