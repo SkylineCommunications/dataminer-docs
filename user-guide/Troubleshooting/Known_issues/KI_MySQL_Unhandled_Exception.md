@@ -2,7 +2,7 @@
 uid: KI_MySQL_Unhandled_Exception
 ---
 
-# MySQL.Data.dll can cause service crashes
+# Process crashes when trying to connect to MySQL database
 
 ## Affected versions
 
