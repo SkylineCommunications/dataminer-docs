@@ -120,13 +120,11 @@ When a time range feed component fed a time range to another time range feed com
 
 In some cases, the web API would throw a `Compatibility Manager not initialized yet` error. Error handling has now been enhanced to prevent this error from being thrown.
 
-#### Low-Code Apps - DOM: No bookings would incorrectly be returned when passing an amount of -1 [ID_40157]
+#### Dashboards app & Low-Code Apps: Bookings feed would no longer return any bookings matching the filter [ID_40157]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in a DOM form, an amount of -1 was passed when retrieving bookings, instead of returning all bookings, the call would incorrectly return no bookings at all.
-
-From now on, when an amount smaller than 0 is passed when retrieving bookings, all bookings will be returned.
+Since DataMiner version 10.4.6, a bookings feed would incorrectly no longer return any bookings matching the filter. From now on, the bookings feed will again return all bookings that match the filter.
 
 #### Dashboards app & Low-Code Apps: Components could lose focus after having been resized [ID_40180]
 
