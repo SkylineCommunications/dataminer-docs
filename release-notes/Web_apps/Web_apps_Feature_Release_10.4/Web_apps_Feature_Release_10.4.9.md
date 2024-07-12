@@ -64,6 +64,14 @@ Up to now, the DOM methods in the web API would check whether a DOM object GUID 
 
 As the DOM SLNet API support objects with empty GUIDs, all empty GUID checks have now been removed from the web API.
 
+#### Low-Code Apps: Enhancements with regard to concurrent editing [ID_40075]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of enhancements have been made to prevent issues from occurring when a low-code app is being edited by multiple users at the same time.
+
+When one user makes a change to a low-code app, all other users who are editing the same app will receive a notice saying that they should reload the app because changes were made. If a user ignores that notice and tries to make changes anyway, the header bar will show an error message saying that the edit has failed.
+
 #### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
