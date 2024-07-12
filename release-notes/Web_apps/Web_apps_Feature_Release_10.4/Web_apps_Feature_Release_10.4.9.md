@@ -119,3 +119,9 @@ When a time range feed component fed a time range to another time range feed com
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, the web API would throw a `Compatibility Manager not initialized yet` error. Error handling has now been enhanced to prevent this error from being thrown.
+
+#### Dashboards app & Low-Code Apps: Components could lose focus after having been resized [ID_40180]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, components could lose focus after having been resized.
