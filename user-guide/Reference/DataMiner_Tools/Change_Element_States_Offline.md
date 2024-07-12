@@ -24,13 +24,13 @@ To change element states using this tool:
 
    - In the *Elements by Protocol* tab, select the checkboxes in front of the elements for which you want to change the state. If you select the checkbox in front of a protocol or protocol version, the state of all elements using that protocol or protocol version will be changed. To search for specific items in the tree view, add a search term in the box on the right.
 
-   - To reload the displayed elements, so that any recent changes on the disk are taken into account, use the *Reload from Disk* or *Reload from Database via StorageModule* option in the file menu.
+   - To reload the displayed elements, so that any recent changes on the disk are taken into account, use the *Reload from Disk* or *Reload from Database* option in the file menu.
 
 1. Set the target state by selecting the target state in the dropdown box on the right and clicking SET STATE. By default, *Stopped* is selected.
 
-When you have done this, the tool will update all *Element.xml* files with the new state. The *Output* tab of the tool, which lists all warnings and actions of the tool, will display information whether changes have been executed successfully or not.
+When you have done this, the tool will update all *Element.xml* files on disk or *ElementConfig* entries in database with the new state. The *Output* tab of the tool, which lists all warnings and actions of the tool, will display information whether changes have been executed successfully or not.
 
 The tool also allows you to export the element states in CSV or XML format. To do so, go to the *File* menu, select *Export*, and select your preferred export format.
 
 > [!NOTE]
-> The tool may not function correctly when updating an element state in case an element folder contains other element folders where an *Element.xml* file is missing.
+> When working with files on disk, the tool may not function correctly when updating an element state in case an element folder contains other element folders where an *Element.xml* file is missing.
