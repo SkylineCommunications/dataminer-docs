@@ -58,7 +58,7 @@ If you want the text in a "Selectable" shape to be copied to a session variable 
 
 ### Having the Selectable shape copied to multiple session variables
 
-From DataMiner 9.5.1 onwards, it is possible to have the text of a "Selectable" shape copied to multiple session variables when a shape is clicked.
+It is possible to have the text of a "Selectable" shape copied to multiple session variables when a shape is clicked.
 
 To do so, instead of specifying one variable name, as described above, specify a comma-separated list of session variables. The text displayed in the selectable shape will be copied to each of the listed variables when the shape is clicked.
 
@@ -68,7 +68,7 @@ To do so, instead of specifying one variable name, as described above, specify a
 
 ### Having specific information copied to particular session variables
 
-From DataMiner 9.5.1 onwards, you can also have the session variables listed in a "SelectionVar=" clause set to a particular piece of information about the item to which the clicked Selectable shape is linked.
+When a Selectable shape is clicked, you can have information about the item to which the shape is linked get copied to the session variables listed in a "SelectionVar=" clause.
 
 To do so, after you specify the variable, also specify the information to be set, using the same keywords as when making a shape display information about an item it is linked to.
 
