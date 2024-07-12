@@ -11,9 +11,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 11 July 2024 - Enhancement - ChatOps - Notification summary [ID_40182]
 
-A new version (1.2.5) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to add a summary to your Chat Integration notifications in case the notification is an adaptive card. This summary will be used for the actual activity notification, so you can easily read what is going on from the summary without opening the notification itself. The summary will also be used for the immersive reader functionality in Microsoft Teams.
+A new version (1.2.5) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to add a summary to Chat Integration notifications using Adaptive Cards. This summary will be used for the actual activity notification, so you can easily read what is going on from the summary without opening the notification itself. The summary will also be used for the immersive reader functionality in Microsoft Teams.
 
-If the summary is not explicitly defined, the behavior will stay the same as before where "Card" is shown by default.
+If the summary is not explicitly defined, the behavior will stay the same, and "Card" will be shown by default.
 
 #### 11 July 2024 - Enhancement - Improved handling of timed out Remote Access and Live Sharing requests [ID_40173]
 
@@ -196,7 +196,7 @@ On the overview page of a DMS in the Admin app, the *Open in desktop app* button
 
 A new version (1.2.4) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
 
-These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
+These IDs, which had to be hardcoded before, can now be used for the buttons added in Adaptive Cards.
 
 You can fetch them using the following example:
 
@@ -258,7 +258,7 @@ From now on, it is possible to skip the confirmation message when running a cust
 
 You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.
 
-A new version of (1.2.3) [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in adaptive cards.
+A new version of (1.2.3) [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in Adaptive Cards.
 
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
