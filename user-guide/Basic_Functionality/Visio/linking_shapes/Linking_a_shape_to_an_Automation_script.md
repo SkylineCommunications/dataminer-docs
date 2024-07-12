@@ -62,7 +62,7 @@ To link a shape to an Automation script:
     | ---------------- | ---------------------------------------------------------------------------------------------- |
     | Execute          | Script:\<myScript>\|Tooltip:\<myTooltip>\|Parameters:paramA=\<myParam>\|Options:NoConfirmation |
 
-- From DataMiner 9.5.7 onwards, the **Execute** shape data field can be combined with other shape data that make the shape perform an action when clicked. In that case, the Automation script specified in the **Execute** field will be executed before the main action is performed.
+- The **Execute** shape data field can be combined with other shape data that make the shape perform an action when clicked. In that case, the Automation script specified in the **Execute** field will be executed before the main action is performed.
 
   For example, if the following shape data are specified, the Automation script in the Execute field will be used to set parameters before the main action shows these in a pop-up window.
 
@@ -74,7 +74,7 @@ To link a shape to an Automation script:
 
 ## Specifying a script to be executed when the page is closed
 
-From DataMiner 9.5.7 onwards, you can link a page to a script, which is then executed when the card, pop-up window or tooltip showing the page is closed.
+It is possible to link a page to a script, which is then executed when the card, pop-up window, or tooltip showing the page is closed.
 
 To do so, add an **OnClose** shape data field to the page, and set it to the script that is to be executed. To specify more than one script, use a dash ("-") as the separator character.
 
@@ -86,7 +86,7 @@ For example:
 
 ## Using an alternative separator character
 
-From DataMiner 9.0.5 onwards, it is possible to specify an alternative separator character with a \[sep:XY\] tag.
+It is possible to specify an alternative separator character with a \[sep:XY\] tag.
 
 For example, in the configuration below, the first-level separator "\|" is replaced by "\*" and the "=" separator is replaced by "?".
 
@@ -99,7 +99,7 @@ For example, in the configuration below, the first-level separator "\|" is repla
 
 ## Passing Automation script output to session variables
 
-From DataMiner 10.0.13 onwards, when an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
+When an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
 
 To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 

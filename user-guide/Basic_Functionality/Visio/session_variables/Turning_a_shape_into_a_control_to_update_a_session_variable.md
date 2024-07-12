@@ -83,7 +83,7 @@ Session variables can have one of following scopes:
 - Current DataMiner Cube session (default scope)
 - Current DataMiner Cube card
 - Current Visio page
-- Current workspace (from DataMiner 9.5.9 onwards)
+- Current workspace
 
 To a scope other than the default scope, add an additional shape data field of type **Options** to the shape, and specify the following value:
 
