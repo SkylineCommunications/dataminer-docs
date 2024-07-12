@@ -15,7 +15,7 @@ An enhancement has been done to the way timed out requests are handled when the 
 
 #### 12 July 2024 - New feature - Admin - Usage page to view STaaS consumption [ID 40172]
 
-Admin or Owners of their organization can now view the usage of their STaaS systems on admin.dataminer.services. 
+In the Admin app, a new *Usage* page is now available for users with the Admin or Owner role in an organization. This page shows information about the usage of the STaaS systems in the organization.
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
