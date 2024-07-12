@@ -6,6 +6,8 @@ uid: DMABookingLite
 
 | Item           | Format       | Description     |
 |----------------|--------------|-----------------|
+| ID             | GUID         | The GUID of the booking. |
+| Name           | String       | The name of the booking. |
 | Description    | String       | The description of the booking. |
 | CreatedAt      | Long Integer | The time when the booking was created. |
 | CreatedBy      | String       | The user who created the booking. |
