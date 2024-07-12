@@ -799,3 +799,9 @@ From now on, the *Connect to cloud/DCP* user permission is no longer required to
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.
+
+#### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In some cases, new change points would incorrectly be generated shortly after the SLAnalytics process had been restarted, even though no changes in trend behavior had been detected.

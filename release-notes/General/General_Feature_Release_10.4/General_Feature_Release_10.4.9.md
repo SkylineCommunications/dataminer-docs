@@ -310,3 +310,9 @@ Up to now, an Automation script could fail because a zero or negative sleep inte
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
+
+#### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In some cases, new change points would incorrectly be generated shortly after the SLAnalytics process had been restarted, even though no changes in trend behavior had been detected.
