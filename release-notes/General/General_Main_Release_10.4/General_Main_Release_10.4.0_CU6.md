@@ -12,6 +12,14 @@ uid: General_Main_Release_10.4.0_CU6
 
 ### Enhancements
 
+#### Enhanced performance and error handling when loading virtual elements [ID_39478]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading virtual elements.
+
+Also, error handling when loading virtual elements has been improved.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

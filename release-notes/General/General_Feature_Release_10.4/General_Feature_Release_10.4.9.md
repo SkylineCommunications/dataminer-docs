@@ -37,6 +37,14 @@ Because of a number of enhancements, overall performance has increased when proc
 > [!IMPORTANT]
 > When, on older DataMiner systems, you import DELT packages containing elements exported on systems running DataMiner Main Release version 10.5.0 or Feature Release version 10.4.9 (or newer), all SNMPv3 credentials will be lost and will have to be re-entered manually.
 
+#### Enhanced performance and error handling when loading virtual elements [ID_39478]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading virtual elements.
+
+Also, error handling when loading virtual elements has been improved.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
