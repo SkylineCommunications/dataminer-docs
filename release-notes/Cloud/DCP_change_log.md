@@ -13,6 +13,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
 
+#### 12 July 2024 - New feature - Admin - Usage page to view STaaS consumption [ID 40172]
+
+In the Admin app, a new *Usage* page is now available for users with the Admin or Owner role in an organization. This page shows information about the usage of the STaaS systems in the organization.
+
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
 When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
