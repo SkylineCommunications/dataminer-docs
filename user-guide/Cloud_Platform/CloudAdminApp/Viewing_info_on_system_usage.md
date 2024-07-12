@@ -16,7 +16,7 @@ Currently the only feature that reports usage data is Storage as a Service (STaa
 1. In the organization overview menu, go to the Usage page.
 
 1. On this page you can view per month how much your DataMiner systems consumed.
-using the month filter. It is possible to filter on months even though you do not have anything consumed in that month. By selecting one or multiple DataMiner systems you can view the usage for those specific systems.
+It is possible to filter on months although you do not have anything consumed during that period. By selecting one or multiple DataMiner systems you can view the usage for selected systems.
 
 > [!NOTE]
 >
