@@ -57,6 +57,34 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
+#### Automation scripts: Resources can now be retrieved page by page [ID_39743]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, in Automation scripts, it is possible to retrieve resources page by page.
+
+See the following example, which shows how to implement this.
+
+```csharp
+var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+var result = new List<Resource>();
+var pagingSize = 100;
+var pagingHelper = helper.PrepareResourcePaging(new TRUEFilterElement<Resource>().ToQuery(), pagingSize);
+
+while (true)
+{
+    if (!pagingHelper.MoveToNextPage())
+    {
+        break;
+    }
+
+    result.AddRange(pagingHelper.GetCurrentPage());
+ }
+```
+
+Default page size: 200
+
 #### Service & Resource Management: Changing the cache settings of the Resource Manager without restarting DataMiner [ID_39795]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
