@@ -40,9 +40,7 @@ To link a shape to an Automation script:
       | Execute          | Script:MyScript |
 
       > [!NOTE]
-      >
-      > - If a script uses a parameter that has a memory file assigned to it, users can right-click the shape and select a value from the memory file. This way, the parameter can be set immediately, without confirmation.
-      > - Up to DataMiner 9.0.4, it is not possible to execute an Automation script from Visual Overview if some values for the parameters still have to be entered by the operator.
+      > If a script uses a parameter that has a memory file assigned to it, users can right-click the shape and select a value from the memory file. This way, the parameter can be set immediately, without confirmation.
 
 - From DataMiner 10.2.0/10.1.1 onwards, an alternative syntax can be used where each component is marked by a prefix. The advantage of this alternative syntax is that you do not have to define empty components in case there are no dummies, no memory files, etc.
 
@@ -138,7 +136,7 @@ In the **Execute** shape data value, you can use the following options (separate
 
 - **ForceLock**: If elements used in the script are locked by another script being executed simultaneously, they will be unlocked and then locked again by this script.
 
-- **FullScreen**: Forces the dialog boxes of the interactive script to be displayed in fullscreen mode.
+- **FullScreen**: Forces the dialog boxes of the interactive script to be displayed in full-screen mode.
 
 - **Lock**: All elements used in the script will be locked during the execution of the script.
 
