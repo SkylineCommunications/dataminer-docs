@@ -226,6 +226,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Process crashes when trying to connect to MySQL database
+            topicUid: KI_MySQL_Unhandled_Exception
           - name: Failover switch taking a long time on systems with Cassandra Cluster setup
             topicUid: KI_Failover_switch_Cassandra_Cluster
           - name: Timetrace data is no longer written during Cassandra Cluster migration
