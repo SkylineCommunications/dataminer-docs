@@ -34,6 +34,9 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to version 10.4.0 [CU0] or higher.
 
+   > [!NOTE]
+   > To be able to use non-indexed logger tables, upgrade to DataMiner version 10.4.0 [CU5]/10.4.8 or higher. <!-- RN 40066 -->
+
    > [!IMPORTANT]
    > We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates.
 
