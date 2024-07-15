@@ -17,9 +17,6 @@ From DataMiner 10.3.0/10.3.2 onwards, you can use DataMiner Cube to access your 
 - You [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software) and all [client requirements](xref:DataMiner_Client_Requirements) are met.
 - Your user account has been granted access to the DataMiner System.
 
-> [!IMPORTANT]
-> At present, the following **limitation** applies: If a DMS has **SAML** authentication configured, you will not be able to access the DMS remotely with Cube.
-
 ## Starting a remote access session with DataMiner Cube
 
 To access the DMS remotely via Cube, use the [remote access URL](xref:Cloud_Remote_Access_URL) without the protocol prefix `https://`.
