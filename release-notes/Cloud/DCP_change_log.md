@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
-From now on SAML can be used for accessing Cube remotely.
+From now on, SAML can be used to access Cube remotely.
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
