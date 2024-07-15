@@ -13,7 +13,7 @@ The legacy *Dashboards* app can be customized in several ways:
 - [Customizing the memory cache size](#customizing-the-memory-cache-size)
 
 > [!NOTE]
-> These procedures do not influence the new Dashboards app, available from DataMiner 9.6.9 onwards. For information on advanced settings to customize the new app, see [Customizing the Dashboards app](xref:Customizing_the_Dashboards_app).
+> These procedures only apply for the legacy Dashboards app, which is deprecated as of DataMiner 10.4.x. For information on customizing the current Dashboards app, see [Customizing the Dashboards app](xref:Customizing_the_Dashboards_app).
 
 ### Activating two-step authentication
 
@@ -56,9 +56,7 @@ It is possible to configure the *Dashboards* app to show a custom provider logo.
 
 ### Customizing the memory cache size
 
-When the Dashboards app requests protocols from the server, by default the 100 most recently used objects are cached. However, in some cases, it can be useful to override this default setting. This is possible from DataMiner 9.5.5 onwards.
-
-For example, if a large number of users will need to use dashboards at the same time, to reduce the load on the CPU of the DMA, the memory cache size can be increased.
+When the Dashboards app requests protocols from the server, by default the 100 most recently used objects are cached. However, in some cases, it can be useful to override this default setting. For example, if a large number of users will need to use dashboards at the same time, to reduce the load on the CPU of the DMA, the memory cache size can be increased.
 
 To modify the memory cache size:
 

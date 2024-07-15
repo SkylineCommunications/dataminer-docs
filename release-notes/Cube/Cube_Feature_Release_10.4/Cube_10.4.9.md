@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.9
 
 ### Enhancements
 
+#### Visual Overview will now only subscribe on the specified properties when property placeholders are being used [ID_40008]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in a visual overview, a property placeholder was used, up to now, the visual overview would always subscribe on all placeholders associated with the linked object, regardless of the property specified in the property placeholder. From now on, the visual overview will only subscribe on the property name that is specified.
+
 #### System Center - Agents: Some buttons will no longer be visible when Cube is connected to a DaaS system [ID_40013]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->

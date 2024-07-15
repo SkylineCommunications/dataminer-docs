@@ -29,9 +29,7 @@ To create a redundancy group:
    1. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
 
       > [!NOTE]
-      >
-      > - The elements in the redundancy group must use the same protocol and protocol version, and must be hosted by the same DataMiner Agent.
-      > - Prior to DataMiner 9.6.0/9.5.10, elements that were imported using DELT are not supported in redundancy groups.
+      > The elements in the redundancy group must use the same protocol and protocol version, and must be hosted by the same DataMiner Agent.
 
    1. Click *OK*. The primary elements you have added will be displayed in the *Primary elements* list.
 
@@ -96,7 +94,7 @@ To create a redundancy group:
 
    1. If more conditions are necessary, click *Add* and configure the new conditions as described above.
 
-   1. If the redundancy group state should be set to *Undefined* in case switching detection cannot be resolved, select the checkbox at the top of the *Switching Detection* section (available from DataMiner 9.6.11 onwards).
+   1. If the redundancy group state should be set to *Undefined* in case switching detection cannot be resolved, select the checkbox at the top of the *Switching Detection* section.
 
 1. On the *Views* tab page, specify the view(s) where the redundancy group and its virtual primary element(s) will be placed:
 
@@ -110,7 +108,6 @@ To create a redundancy group:
 >
 > - To make changes to an existing redundancy group, right-click it in the Surveyor and select *Edit*.
 > - A redundancy group can also be created by a parent element. In that case, it is possible that it is not or only partly editable, except by an Administrator or via the parent element.
-> - Elements that have been migrated from one DMA to another can only be used in redundancy groups from DataMiner version 9.5.1 onwards.
 
 > [!TIP]
 > See also: [Automation scripts triggered from redundancy groups](xref:Automation_scripts_triggered_from_redundancy_groups)
@@ -133,11 +130,6 @@ In the *\<Link>* tag of that *Connectivity.xml* file, the *itemB* attribute refe
      > In the *\<Map>* tag of the *Connectivity.xml* file, the *propertyB* attribute refers to the Connection Property name.
 
    - If you are switching from primary to backup, make sure that the new value you specify for the backup is the same as the value that was previously specified for the primary.
-
-> [!NOTE]
->
-> - Prior to DataMiner 9.5.5, the connectivity path is only calculated starting from an internal connection, so that a connectivity chain path with only external connections cannot cause a redundancy group to switch. From DataMiner 9.5.5 onwards, this restriction no longer applies.
-> - If a *Connectivity.xml* file with the *includeValueInContext* option is used, up to DataMiner 9.5.6, multiple matching values are not supported. From DataMiner 9.5.7 onwards, multiple paths to the shared destination interface are allowed in the connections matching the switching criteria.
 
 > [!TIP]
 > See also: [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)

@@ -37,6 +37,14 @@ Because of a number of enhancements, overall performance has increased when proc
 > [!IMPORTANT]
 > When, on older DataMiner systems, you import DELT packages containing elements exported on systems running DataMiner Main Release version 10.5.0 or Feature Release version 10.4.9 (or newer), all SNMPv3 credentials will be lost and will have to be re-entered manually.
 
+#### Enhanced performance and error handling when loading virtual elements [ID_39478]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading virtual elements.
+
+Also, error handling when loading virtual elements has been improved.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -48,6 +56,34 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+
+#### Automation scripts: Resources can now be retrieved page by page [ID_39743]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, in Automation scripts, it is possible to retrieve resources page by page.
+
+See the following example, which shows how to implement this.
+
+```csharp
+var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+var result = new List<Resource>();
+var pagingSize = 100;
+var pagingHelper = helper.PrepareResourcePaging(new TRUEFilterElement<Resource>().ToQuery(), pagingSize);
+
+while (true)
+{
+    if (!pagingHelper.MoveToNextPage())
+    {
+        break;
+    }
+
+    result.AddRange(pagingHelper.GetCurrentPage());
+ }
+```
+
+Default page size: 200
 
 #### Service & Resource Management: Changing the cache settings of the Resource Manager without restarting DataMiner [ID_39795]
 
@@ -167,6 +203,12 @@ Because of a number of enhancements made to SLNet, overall performance has incre
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
 
+#### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
+
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -189,6 +231,14 @@ In some cases, SLElement could stop working while processing table parameter upd
 
 When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
 
+#### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+
+To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -202,6 +252,24 @@ On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTyp
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When two capability parameters shared the same discrete value, and the value of one of those parameters was included in a resource, up to now, it would not be possible to delete that value for the parameter that was not used.
+
+#### No longer possible to edit a service that had been migrated from one DMA to another within a DMS [ID_39893]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a service had been migrated from one DataMiner Agent to another within a DataMiner System, it would no longer be possible to edit that service. The messages would incorrectly be sent to the DataMiner Agent that hosted the service previously.
+
+#### Failover: Problem when connecting to an offline agent with a DataMiner Cube that used external authentication [ID_39925]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you connected to an offline agent in a Failover setup with a DataMiner Cube that used external authentication, an `External authentication failed` error would appear. As a result, it would not be possible to force that offline agent to go online.
+
+#### SLAnalytics: Issues fixed with regard to alarm template monitoring mechanism [ID_39948]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of issues have been fixed with regard to the internal SLAnalytics alarm template monitoring mechanism.
 
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
@@ -225,8 +293,26 @@ As a result, in DataMiner Cube, users without the above-mentioned user permissio
 
 From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
 
+#### MessageBroker: Reconnection mechanism could cause the overall CPU load to rise [ID_40071]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.
+
 #### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID_40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+
+#### Service & Resource Management: Booking events could be triggered multiple times when a database issue occurred while DataMiner was starting up [ID_40114]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
+
+#### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, new change points would incorrectly be generated shortly after the SLAnalytics process had been restarted, even though no changes in trend behavior had been detected.

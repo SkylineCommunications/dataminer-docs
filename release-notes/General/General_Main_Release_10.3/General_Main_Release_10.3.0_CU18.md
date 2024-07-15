@@ -62,6 +62,14 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 
 When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
 
+#### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+
+To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -75,6 +83,24 @@ On heavily loaded systems, in some cases, the protobuf-net framework in SLNetTyp
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When two capability parameters shared the same discrete value, and the value of one of those parameters was included in a resource, up to now, it would not be possible to delete that value for the parameter that was not used.
+
+#### No longer possible to edit a service that had been migrated from one DMA to another within a DMS [ID_39893]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a service had been migrated from one DataMiner Agent to another within a DataMiner System, it would no longer be possible to edit that service. The messages would incorrectly be sent to the DataMiner Agent that hosted the service previously.
+
+#### Failover: Problem when connecting to an offline agent with a DataMiner Cube that used external authentication [ID_39925]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you connected to an offline agent in a Failover setup with a DataMiner Cube that used external authentication, an `External authentication failed` error would appear. As a result, it would not be possible to force that offline agent to go online.
+
+#### SLAnalytics: Issues fixed with regard to alarm template monitoring mechanism [ID_39948]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of issues have been fixed with regard to the internal SLAnalytics alarm template monitoring mechanism.
 
 #### SLNet - CloudEndpointManager: Problem at startup when NATS and NAS services were not installed [ID_39980]
 
@@ -93,3 +119,9 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+
+#### Service & Resource Management: Booking events could be triggered multiple times when a database issue occurred while DataMiner was starting up [ID_40114]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.

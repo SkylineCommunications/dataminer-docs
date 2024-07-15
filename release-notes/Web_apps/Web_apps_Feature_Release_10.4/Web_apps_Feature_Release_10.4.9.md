@@ -50,6 +50,12 @@ Because of a number of enhancements, from now on, all components that retrieve e
 
 The *Time range* feed component now has a *Reset* button. Clicking this button will reset the time range to the default range (i.e. "Today so far").
 
+#### Dashboards app & Low-Code Apps: All components now support zooming in/out using CTRL+Scroll [ID_40017]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, in all components, you will be able to zoom in and out using CTRL+Scroll.
+
 #### Web API: DOM methods will no longer check whether DOM object GUIDs are empty [ID_40024]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -57,6 +63,20 @@ The *Time range* feed component now has a *Reset* button. Clicking this button w
 Up to now, the DOM methods in the web API would check whether a DOM object GUID was empty, and would block the call if this was the case.
 
 As the DOM SLNet API support objects with empty GUIDs, all empty GUID checks have now been removed from the web API.
+
+#### Low-Code Apps: Enhancements with regard to concurrent editing [ID_40075]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of enhancements have been made to prevent issues from occurring when a low-code app is being edited by multiple users at the same time.
+
+When one user makes a change to a low-code app, all other users who are editing the same app will receive a notice saying that they should reload the app because changes were made. If a user ignores that notice and tries to make changes anyway, the header bar will show an error message saying that the edit has failed.
+
+#### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
 
 ### Fixes
 
@@ -101,3 +121,27 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
+
+#### Web API would throw a 'Compatibility Manager not initialized yet' error [ID_40148]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, the web API would throw a `Compatibility Manager not initialized yet` error. Error handling has now been enhanced to prevent this error from being thrown.
+
+#### Dashboards app & Low-Code Apps: Bookings feed would no longer return any bookings matching the filter [ID_40157]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Since DataMiner version 10.4.6, a bookings feed would incorrectly no longer return any bookings matching the filter. From now on, the bookings feed will again return all bookings that match the filter.
+
+#### Dashboards app & Low-Code Apps: Components could lose focus after having been resized [ID_40180]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, components could lose focus after having been resized.
+
+#### Low-Code Apps: Description of 'Close all panels' action set to 'Do nothing' after a migration from a version older than 10.4.7 [ID_40191]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you opened a low-code app that was migrated from a version older than version 10.4.7, the *Close all panels* action had an incorrect description. Instead of "Close all panels", the description was incorrectly set to "Do nothing".

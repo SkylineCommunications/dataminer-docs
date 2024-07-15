@@ -12,7 +12,7 @@ In the `<PopupSkeleton>` tag, specify all fixed content, including the necessary
 
 > [!NOTE]
 >
-> - Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called “tabs”, have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
+> - Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called "tabs", have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
 > - The placeholders [latitude], [longitude], and [alarmstate] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
 > - You can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
 
@@ -180,7 +180,7 @@ Instead of *[view subtype]*, depending on what should be retrieved, specify the 
 
 In each `<Detail>` tag, the attributes that should be specified depend on what is to be retrieved:
 
-- To retrieve cell values from the currently selected dynamic table row, in case of a layer of sourceType “table”, use the following configuration:
+- To retrieve cell values from the currently selected dynamic table row, in case of a layer of sourceType "table", use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
@@ -188,7 +188,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | type      | *parameter_samerow* |
   | pid       | The column ID |
 
-- To retrieve property values belonging to the current element, service, or view, in case of a layer of sourceType “properties”, use the following configuration for the `<PopupDetail>` tags:
+- To retrieve property values belonging to the current element, service, or view, in case of a layer of sourceType "properties", use the following configuration for the `<PopupDetail>` tags:
 
   | Attribute | Value |
   |-----------|-------|
@@ -196,7 +196,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | type      | *property* |
   | property  | The name of the property that is to be retrieved |
 
-- To retrieve parameter values belonging to an element, in case of a layer of sourceType “parameters”, use the following configuration:
+- To retrieve parameter values belonging to an element, in case of a layer of sourceType "parameters", use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
@@ -205,7 +205,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | pid       | The ID of the parameter that is to be retrieved. For a table parameter, this should be the column ID. |
   | idx       | The row index, in case the parameter is a table parameter. (Optional) |
 
-- To show property values from an element included in a service on the map, in case of a layer of sourceType “properties” or “parameters”, use the following configuration:
+- To show property values from an element included in a service on the map, in case of a layer of sourceType "properties" or "parameters", use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
@@ -214,7 +214,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | alias     | The alias of the element in the service. If no alias is configured, specify the actual name of the element instead. |
   | property  | The name of the property that is to be retrieved |
 
-- To show parameter values from an element included in a service on the map, in case of a layer of sourceType “properties” or “parameters”, use the following configuration:
+- To show parameter values from an element included in a service on the map, in case of a layer of sourceType "properties" or "parameters", use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
@@ -346,13 +346,13 @@ An example of a marker balloon containing a map layer:
 > [!NOTE]
 > The layer name can also be a placeholder for a variable defined in the `<PopupDetails>` section.
 >
-> Example: `<a href=”#” class=”showlayer”><small>[Network]</small></a>`
+> Example: `<a href="#" class="showlayer"><small>[Network]</small></a>`
 
 ### Showing values returned by an SQL query
 
-On a layer of sourceType “sql”, you can show marker balloons containing values returned by an SQL query.
+On a layer of sourceType "sql", you can show marker balloons containing values returned by an SQL query.
 
-The “column” attributes of the `<Detail>` tags have to contain name of columns in the SQL query result.
+The "column" attributes of the `<Detail>` tags have to contain name of columns in the SQL query result.
 
 > [!NOTE]
 > The SQL query has to return unique PrimaryKey values.
@@ -480,7 +480,7 @@ On the map, the above-mentioned code will be rendered in the following way.
 
 ### Displaying EPM tables in a marker pop-up balloon
 
-In the following example, the contents of columns 7002, 7005, and 7006 from table 7000 will be displayed in divisions #CM, #eMTA, and #STB respectively, and they will be filtered based on the content of column 7003, which will be compared against the value of the “data-cpe-type” attribute.
+In the following example, the contents of columns 7002, 7005, and 7006 from table 7000 will be displayed in divisions #CM, #eMTA, and #STB respectively, and they will be filtered based on the content of column 7003, which will be compared against the value of the "data-cpe-type" attribute.
 
 ```xml
 <PopupSkeleton>

@@ -470,6 +470,34 @@ Up to now, when a limit was set on the result set of queries that retrieve DOM i
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
+#### Automation scripts: Resources can now be retrieved page by page [ID_39743]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, in Automation scripts, it is possible to retrieve resources page by page.
+
+See the following example, which shows how to implement this.
+
+```csharp
+var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+var result = new List<Resource>();
+var pagingSize = 100;
+var pagingHelper = helper.PrepareResourcePaging(new TRUEFilterElement<Resource>().ToQuery(), pagingSize);
+
+while (true)
+{
+    if (!pagingHelper.MoveToNextPage())
+    {
+        break;
+    }
+
+    result.AddRange(pagingHelper.GetCurrentPage());
+ }
+```
+
+Default page size: 200
+
 #### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -603,6 +631,12 @@ Because of a number of enhancements made to SLNet, overall performance has incre
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
+
+#### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
 ### Fixes
 
@@ -759,3 +793,9 @@ Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the Data
 As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
 
 From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
+
+#### MessageBroker: Reconnection mechanism could cause the overall CPU load to rise [ID_40071]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.
