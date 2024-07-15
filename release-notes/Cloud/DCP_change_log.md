@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 18 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
+#### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
 From now on SAML can be used for accessing Cube remotely.
 
