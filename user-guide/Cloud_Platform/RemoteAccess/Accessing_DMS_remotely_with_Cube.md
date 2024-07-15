@@ -37,6 +37,6 @@ You can start the Cube session in different ways:
   > [!NOTE]
   > If your DMS is not listed, check if the correct organization is selected in the top-right corner.
 
-- **With the button on admin.dataminer.services**: Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services), and go to the overview of your system. Here you will find the button *Open Desktop Application*. This works in the same way as the button on dataminer.services.
+- **With the button on admin.dataminer.services**: Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services), and go to the overview of your system. Here you will find the button *Open in desktop app*. This works in the same way as the button on dataminer.services.
 
   ![Remote Cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)
