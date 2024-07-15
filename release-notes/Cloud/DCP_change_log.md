@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
+
+From now on, SAML can be used to access Cube remotely.
+
+#### 12 July 2024 - New feature - Admin - Usage page to view STaaS consumption [ID 40172]
+
+In the Admin app, a new *Usage* page is now available for users with the Admin or Owner role in an organization. This page shows information about the usage of the STaaS systems in the organization.
+
 #### 12 July 2024 - Enhancement - Catalog - Infinite scroll [ID_40167]
 
 ​On the Catalog browse page, when users now scroll to the bottom of the page, a new page will load if there are more Catalog items to show.
@@ -22,10 +30,6 @@ If the summary is not explicitly defined, the behavior will stay the same, and "
 #### 11 July 2024 - Enhancement - Improved handling of timed out Remote Access and Live Sharing requests [ID_40173]
 
 An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
-
-#### 12 July 2024 - New feature - Admin - Usage page to view STaaS consumption [ID 40172]
-
-In the Admin app, a new *Usage* page is now available for users with the Admin or Owner role in an organization. This page shows information about the usage of the STaaS systems in the organization.
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
 
