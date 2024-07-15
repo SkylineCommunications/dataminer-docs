@@ -114,6 +114,8 @@ items:
         topicUid: Viewing_info_on_deployments
       - name: Viewing information on shares
         topicUid: Viewing_info_on_shares
+      - name: Viewing information on system usage
+        topicUid: Viewing_info_on_system_usage
   - name: DataMiner ChatOps
     topicUid: ChatOps
     items:
