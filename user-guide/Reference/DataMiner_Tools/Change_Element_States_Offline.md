@@ -26,9 +26,9 @@ To change element states using this tool:
 
    - To reload the displayed elements, so that any recent changes are taken into account, use the *Reload from Disk* or *Reload from Database* option in the file menu.
 
-1. Set the target state by selecting the target state in the dropdown box on the right and clicking SET STATE. By default, *Stopped* is selected.
+1. Set the target state by selecting the target state in the dropdown box on the right and clicking *SET STATE*. By default, *Stopped* is selected.
 
-When you have done this, the tool will update all *Element.xml* files on disk or *ElementConfig* entries in database with the new state. The *Output* tab of the tool, which lists all warnings and actions of the tool, will display information whether changes have been executed successfully or not.
+When you have done this, the tool will update all *Element.xml* files on disk or *ElementConfig* entries in the database with the new state. The *Output* tab of the tool, which lists all warnings and actions of the tool, will display information whether changes have been executed successfully or not.
 
 The tool also allows you to export the element states in CSV or XML format. To do so, go to the *File* menu, select *Export*, and select your preferred export format.
 
