@@ -72,12 +72,17 @@ The Integrated DOCSIS EPM Solution includes the following dashboards:
 - TAP/01. CM OVERVIEW
 - TAP/02. OFFLINE CM OVERVIEW
 - TAP/03. CPE MAP
+- Top 50/DS FN Peak Utilization
+- Top 50/US FN Peak Utilization
 - SERVICE GROUP/01. CM OVERVIEW
 - SERVICE GROUP/02. OFFLINE CM OVERVIEW
 - SERVICE GROUP/03. DS QAM CHANNELS
 - SERVICE GROUP/04. US QAM CHANNELS
 - SERVICE GROUP/05. OFDM CHANNELS
 - SERVICE GROUP/06. OFDMA CHANNELS
+
+> [!NOTE]
+> To use the Top 50 dashboards, Data Aggregator must be installed and configured with certain queries. Please reach out to your Skyline representative to set this up if you would like to use those dashboards.
 
 ## Visuals
 
