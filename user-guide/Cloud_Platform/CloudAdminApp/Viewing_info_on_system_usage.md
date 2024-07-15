@@ -4,8 +4,8 @@ uid: Viewing_info_on_system_usage
 
 # Viewing information on system usage
 
-In the Admin app, you can view information about the usage of certain 'features' in a DataMiner System. Usage is reported in DataMiner credits but it does not mean that this credit amount will be billed at the end of the month.
-Currently the only feature that reports usage data is Storage as a Service (STaaS), which reports amount of operations per data type, but the list of 'features' will grow in the future.
+In the Admin app, you can view information about the usage of certain 'features' in a DataMiner System. Usage is reported in DataMiner credits.
+Currently the only feature that reports usage data is Storage as a Service (STaaS), which reports amount of ingest operations per data type, but the list of 'features' will grow in the future. For more information about the metering and conversion rates, see this [Page].(https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Usage_based_service.html#metering-units)
 
 ## How to view your usage
 
