@@ -6,9 +6,9 @@ uid: Troubleshooting_SLAnalytics_exe
 
 ## About SLAnalytics
 
-This process was introduced in DataMiner 9.0 and only starts on a DMA that uses a **Cassandra database**. The process supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection and alarm focus calculation.
+This process only starts on a DMA that uses a **Cassandra database** or [DataMiner Storage as a Service](xref:STaaS). The process supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection, and alarm focus calculation.
 
-At present most of the communication for SLAnalytics happens via the **SLNet** process. This means that requests and responses from users or other processes go via SLNet, through the IPC connection, to SLAnalytics.
+At present, most of the communication for SLAnalytics happens via the **SLNet** process. This means that requests and responses from users or other processes go via SLNet, through the IPC connection, to SLAnalytics.
 
 Another process connected to SLAnalytics is **SLDataGateway**. This connection is solely used for receiving all parameter changes of the DataMiner Agent. This is a COM connection.
 

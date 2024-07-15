@@ -28,11 +28,11 @@ The Scheduler module consists of different tabs that each provide a different pe
   >
   > - In the *Last runtime result* column, the color of the entry reflects the result: red indicates that the task failed, green indicates success, and gray corresponds to a currently running task.
   > - To quickly find a particular scheduled task, you can use the quick filter box in the top-right corner. It can be used to filter on the task name or on the content of any of the other columns.
-  > - It is possible to execute a scheduled task immediately, regardless of when it is scheduled, by selecting the task and then clicking the *Execute* button at the bottom of the card. If you do so, the task will be executed again at the time when it was originally scheduled. However, note that in DataMiner versions prior to 9.0.0 CU9, the manual execution of a non-recurring task instead replaces the scheduled execution.
+  > - It is possible to execute a scheduled task immediately, regardless of when it is scheduled, by selecting the task and then clicking the *Execute* button at the bottom of the card. If you do so, the task will be executed again at the time when it was originally scheduled.
 
 - In the *timeline* tab, two different subtabs provide a different view on the scheduled tasks:
 
-  - Under *TASKS* you can view all scheduled tasks, including events based on Scheduler templates. For the latter, two tasks will be displayed, a “START” and a “STOP” task. The tasks are displayed as dots on the timeline.
+  - Under *TASKS* you can view all scheduled tasks, including events based on Scheduler templates. For the latter, two tasks will be displayed, a "START" and a "STOP" task. The tasks are displayed as dots on the timeline.
 
   - Under *EVENTS* you can view only events based on Scheduler templates. These are displayed as colored rectangles: tasks that have already been completed are displayed as gray rectangles, tasks that are currently being executed as green rectangles, and future tasks as blue rectangles.
 

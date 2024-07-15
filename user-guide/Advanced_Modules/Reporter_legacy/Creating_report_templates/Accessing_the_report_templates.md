@@ -30,4 +30,4 @@ On the report templates page, you can:
 - Generate reports based on custom templates. See [Report template components](xref:Report_template_components).
 
 > [!NOTE]
-> From DataMiner 9.0.0 onwards, the Reporter user interface functions as a single-page application. This means that when you work with the *http(s)://\[MyDataMiner\]/reports* page, you can bookmark the URL of a particular report, or copy the URL in order to make a direct link to the report, for example in Visual Overview.
+> The Reporter user interface functions as a single-page application. This means that when you work with the *http(s)://\[MyDataMiner\]/reports* page, you can bookmark the URL of a particular report, or copy the URL in order to make a direct link to the report, for example in Visual Overview.

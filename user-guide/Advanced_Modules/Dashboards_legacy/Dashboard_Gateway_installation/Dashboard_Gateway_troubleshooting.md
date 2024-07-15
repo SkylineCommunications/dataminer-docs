@@ -48,16 +48,13 @@ The following issues may occur when you try to access the Dashboard Gateway:
     </location>
     ```
 
-    > [!NOTE]
-    > Private KML files can only be loaded via a Dashboard Gateway from DataMiner 9.0 onwards.
-
 - **The Dashboard Gateway is no longer working after a DataMiner upgrade or update.**
 
     In case the Dashboard Gateway no longer responds immediately after DataMiner has been upgraded or updated, do the following:
 
     1. Make a backup of the *Dashboards* folder on the Gateway server.
 
-    2. In the *Dashboards* folder on the Gateway server, delete the following files and folders:
+    1. In the *Dashboards* folder on the Gateway server, delete the following files and folders:
 
         - App_Themes
 
@@ -115,8 +112,8 @@ The following issues may occur when you try to access the Dashboard Gateway:
 
         - ViewFolder.aspx
 
-    3. Go to the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards* of the DataMiner Agent, and copy the same files and folders as you have just deleted on the Gateway server.
+    1. Go to the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards* of the DataMiner Agent, and copy the same files and folders as you have just deleted on the Gateway server.
 
-    4. Paste the files and folders in the *Dashboards* folder on the Gateway server.
+    1. Paste the files and folders in the *Dashboards* folder on the Gateway server.
 
-    5. Restart IIS.
+    1. Restart IIS.
