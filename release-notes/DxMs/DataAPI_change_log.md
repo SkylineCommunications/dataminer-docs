@@ -7,6 +7,22 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 1 July - Enhancement - DataAPI 1.2.1 - Extra protections added to not use parameter IDs outside allowed ranges [ID_39860]
+	
+Added protections in DataAPI to not use IDs outside of the allowed range (10M to 11M)
+
+When reading faulty connectors from DataMiner, DataAPI will sanitize its in-memory representation to not have those unallowed parameters and will publish a fixed version.
+
+### 1 July - Fix - DataAPI 1.2.1 - Prevent DxM crashing when NATS is not available at startup [ID_39827]
+
+When starting up Data API DxM before NATS is completely started, it would cause a critical error to be thrown during the initialization mechanism.
+
+A protection has been added to prevent this error and a more robust recovery mechanism has been implemented to keep trying to initialize until NATS is fully up and running.
+
+### 1 July - Enhancement - DataAPI 1.2.1 - Upgrade NuGet dependencies with known vulnerabilities [ID_39760]
+
+The ​Data API now uses updated NuGet package versions, which address known vulnerabilities.
+
 ### 29 April - Enhancement - DataAPI 1.2.0 - Improved performance when creating new connectors [ID_39401]
 
 The ​Data API now uses an updated version of the [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) NuGet package, which improves performance when creating a new connector with many standalone parameters.
