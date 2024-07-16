@@ -76,11 +76,11 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 
 In some cases, SLElement could stop working while processing table parameter updates.
 
-#### Alarms generated for an element with a virtual function would incorrectly not get exported to that virtual function [ID_39536]
+#### Alarms generated for an element with a virtual function would incorrectly get exported to that virtual function [ID_39536]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When alarms were generated for an element with a virtual function, those alarms would incorrectly not get exported to the virtual function, even though the export option was set to true in the element protocol.
+When alarms were generated for an element with a virtual function, those alarms would incorrectly get exported to the virtual function, even though the export option was set to true in the element protocol.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
