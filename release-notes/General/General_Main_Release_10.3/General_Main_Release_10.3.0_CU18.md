@@ -62,6 +62,12 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 
 When alarms were generated for an element with a virtual function, those alarms would incorrectly get exported to the virtual function.
 
+#### SLDataGateway: Problem when retrieving data page by page [ID_39581]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When SLDataGateway retrieved data from the database page by page, in some cases, paging handlers that had already fetched all their data and had already been deleted would incorrectly be used, causing exceptions to be thrown.
+
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
