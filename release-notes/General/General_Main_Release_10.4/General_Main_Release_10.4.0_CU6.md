@@ -68,6 +68,14 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you decommission a Failover setup, from now on, the DataMiner Agent that was online when you started the decommission process will be restarted as soon as the decommission process has finished.
+
+The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
