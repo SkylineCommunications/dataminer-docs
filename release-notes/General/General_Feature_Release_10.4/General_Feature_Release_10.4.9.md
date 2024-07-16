@@ -246,6 +246,12 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### BPA tests can now be marked 'upgrade only' [ID_40163]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]

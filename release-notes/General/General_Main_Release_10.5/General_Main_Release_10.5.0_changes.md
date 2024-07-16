@@ -667,6 +667,12 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
+#### BPA tests can now be marked 'upgrade only' [ID_40163]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
