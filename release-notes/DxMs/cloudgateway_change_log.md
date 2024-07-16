@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13 [ID_]
+
+A new installer was generated because the certificate used to sign CloudGateway 2.13.13 was revoked. CloudGateway 2.13.13 was unlisted to avoid issues during the the digital signature validation while running the installer.
+
 #### 10 July 2024 - Enhancement - CloudGateway 2.13.13 - Improvement for cloud token refresh [ID_40032]
 
 The credentials used by CloudGateway are now refreshed daily, so that even when a system is temporarily disconnected from the internet or shut down, the token will remain valid, provided that this does not last longer than 6 days.
