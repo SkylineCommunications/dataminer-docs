@@ -4,7 +4,7 @@ uid: Viewing_info_on_system_usage
 
 # Viewing information on system usage
 
-In the Admin app, you can view information about the DataMiner credits used for certain DataMiner features your organization is making use of.
+In the Admin app, you can view information about the usage of certain DataMiner features in your organization and the number of DataMiner credits that correspond with this usage. This does not take into account any subscriptions or other benefits you may have.
 
 Currently, only usage data for Storage as a Service (STaaS) are displayed, i.e. the number of ingest operations per data type. In the future, more information will become available here.
 
