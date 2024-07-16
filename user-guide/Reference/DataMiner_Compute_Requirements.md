@@ -57,7 +57,7 @@ As a rule of thumb, a CPU passmark of >10K is OK, but >20K is needed in EPM/CPE 
 
 The network speed and latency are also an important factor in DataMiner performance. Pure inter-DataMiner communication mostly uses smaller messages, so a small latency is important. For read and write actions to the storage nodes, a decent throughput is recommended. The common gigabit networks will not be overloaded by a DataMiner System. We understand that keeping the latency low is not always possible towards remote sites. As such, having a higher latency is not problematic for synchronization of your cluster, but it could become an issue if a high number of values need to be transferred between remote nodes. Check with Skyline if this is the case for you.
 
-As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a latency ranging from < 50 ms to < 30 ms.
+As a rule of thumb, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a latency ranging from < 50 ms to < 30 ms.
 
 ### Operating System
 
