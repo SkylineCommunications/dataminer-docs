@@ -4,6 +4,22 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 11 July 2024 - Enhancement - SupportAssistant 1.6.10 - Offloading of GQI and web logs/metrics [ID_39426]
+
+The files from the following folders will now be added to the offloads zip package:
+
+- `C:\Skyline DataMiner\Logging\GQI`
+- `C:\Skyline DataMiner\Logging\GQI\Metrics`
+- `C:\Skyline DataMiner\Logging\Web`
+- `C:\Skyline DataMiner\Logging\Web\Client`
+
+Files from these folders will end up in the zip file with the following file names:
+
+- GQI_log\<TimeStamp>.txt
+- GQI_metrics\<TimeStamp>.txt
+- Web_web\<TimeStamp>.log
+- Web_web.clientmetric\<TimeStamp>.log
+
 #### 26 April 2024 - Fix - SupportAssistant 1.6.9 - Inconsistent cloud endpoint detection failures [ID_39514]
 
 An issue has been resolved that could make features like Remote Log Collection and data offloads for proactive support inconsistently fail.
