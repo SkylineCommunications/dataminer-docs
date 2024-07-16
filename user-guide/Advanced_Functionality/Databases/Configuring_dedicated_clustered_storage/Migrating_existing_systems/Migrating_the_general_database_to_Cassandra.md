@@ -82,8 +82,8 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
       > [!NOTE]
       >
       > - The version number specified in the [MinimumRequiredVersion](xref:Protocol.Compliancies.MinimumRequiredVersion) element must have the following syntax:
-      >   - major.minor.month.week, e.g. *9.0.3.7*, or
-      >   - major.minor.month.week-xxxx (in which xxxx is the four-digit build number), e.g. *9.0.3.7-5687*.
+      >   - major.minor.month.week, e.g. *10.3.3.7*, or
+      >   - major.minor.month.week-xxxx (in which xxxx is the four-digit build number), e.g. *10.3.3.7-5687*.
       > - To have incompatible protocols that are managed by Skyline upgraded for use with Cassandra, contact your Technical Account Manager.
 
 1. Under *Automation Script System Requirements*, check if any Automation scripts are indicated. If there are, the scripts may need to be updated to be compatible with Cassandra.
