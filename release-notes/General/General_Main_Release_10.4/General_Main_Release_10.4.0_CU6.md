@@ -80,7 +80,7 @@ In some cases, SLElement could stop working while processing table parameter upd
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When alarms were generated for an element with a virtual function, those alarms would incorrectly get exported to the virtual function, even though the export option was set to true in the element protocol.
+When alarms were generated for an element with a virtual function, those alarms would incorrectly get exported to the virtual function.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
@@ -139,6 +139,18 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+
+#### SLProtocol would leak memory when performing an SNMP Set [ID_40112]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In the following cases, SLProtocol would leak memory:
+
+- When performing an SNMP Set on a cell in a table.
+
+- When performing an SNMP Set on a standalone parameter with part of the OID coming from a different standalone parameter. See the following example:
+
+  `<OID type="complete" id="9901">1.3.6.1.4.1.14014.1.1.1.6.1.1.6.*</OID>`
 
 #### Service & Resource Management: Booking events could be triggered multiple times when a database issue occurred while DataMiner was starting up [ID_40114]
 
