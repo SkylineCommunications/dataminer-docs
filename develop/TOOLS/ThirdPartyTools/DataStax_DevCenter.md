@@ -5,40 +5,48 @@ uid: DataStax_DevCenter
 # DataStax DevCenter
 
 > [!NOTE]
-> - The recommended setup for DataMiner storage is [Storage as a Service](xref:STaaS).
-> - Since Dataminer Installer v10.2, this tool is not automatically deployed anymore, nor does it set the JAVA_HOME variable anymore.
+> The recommended setup for DataMiner storage is [Storage as a Service](xref:STaaS).
+
+This tool allows you to perform CQL queries or run scripts on a Cassandra database. It can be used on any DMA using a Cassandra local database.
+
+Older DataMiner installers included this tool, but recent DataMiner installers (v10.2 or higher) do not deploy this tool and do not set the JAVA_HOME variable during installation, which means you will need to install it yourself and [set the JAVA_HOME variable](#setting-the-java_home-variable).
 
 > [!TIP]
-> - To download the tool, see [Downloading DataStax DevCenter](https://downloads.datastax.com/#devcenter).
-> - To install the tool, see [Installing DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcInstallation.html).
-> - To use this tool, see [Using DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcToc.html).
+>
+> - To download this tool, see [Downloading DataStax DevCenter](https://downloads.datastax.com/#devcenter).
+> - To install this tool, see [Installing DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcInstallation.html).
+> - For general information on how to use this tool, see [Using DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcToc.html).
 
-
-This tool allows you to perform CQL queries or run scripts on a Cassandra database.
-
-The tool can be used on any DMA using a Cassandra local database. 
-
-To open the tool, go to the folder `C:\Program Files\Cassandra\DevCenter\` on the DMA server and double-click *Run DevCenter.lnk*.
+If the tool has been installed on the DMA, to open the tool, go to the folder `C:\Program Files\Cassandra\DevCenter\` and double-click *Run DevCenter.lnk*.
 
 ![DataStax_DevCenter](~/develop/images/DataStax_DevCenter.png)
 
-## JAVA_HOME variable
+## Setting the JAVA_HOME variable
 
-Setting the JAVA_HOME variable can be done in 2 ways.
+To be able to use this tool, the JAVA_HOME variable must be set. You can set this variable by either [creating a shortcut](#creating-a-shortcut) or [changing the system variable](#changing-the-system-variable).
 
 ### Creating a shortcut
 
-Create a shortcut of `C:\Program Files\Cassandra\DevCenter\DevCenter.exe`.
+1. Create a shortcut of `C:\Program Files\Cassandra\DevCenter\DevCenter.exe`.
 
-In the properties of that shortcut, fill in the following Target.
-`%windir%\System32\cmd.exe /c "set JAVA_HOME=C:\PROGRA~1\CASSAN~1\Java && set PATH=C:\PROGRA~1\CASSAN~1\Java\bin;%PATH% && start C:\PROGRA~1\CASSAN~1\DEVCEN~1\DEVCEN~1.EXE"`
+1. In the properties of that shortcut, fill in the following target:
+
+   ```txt
+   %windir%\System32\cmd.exe /c "set JAVA_HOME=C:\PROGRA~1\CASSAN~1\Java && set PATH=C:\PROGRA~1\CASSAN~1\Java\bin;%PATH% && start C:\PROGRA~1\CASSAN~1\DEVCEN~1\DEVCEN~1.EXE"
+   ```
 
 ### Changing the system variable
 
-Open the Command Prompt as administrator and set the environment variable as follows:
-`setx /m JAVA_HOME "C:\Program Files\Cassandra\Java"`
+1. Open a command prompt as administrator and set the environment variable as follows:
 
-You can verify if all was set properly by restarting the Command Prompt and use following command:
-`echo %JAVA_HOME%`
+   ```txt
+   setx /m JAVA_HOME "C:\Program Files\Cassandra\Java"
+   ```
 
-The result should show the configured path.
+1. Verify if the system variable has been set correctly by opening a new command prompt and entering the following command:
+
+   ```txt
+   echo %JAVA_HOME%
+   ```
+
+   The result should show the configured path.
