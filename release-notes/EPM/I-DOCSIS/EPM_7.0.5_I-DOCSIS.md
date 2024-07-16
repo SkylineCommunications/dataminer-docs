@@ -2,14 +2,7 @@
 uid: EPM_7.0.5_I-DOCSIS
 ---
 
-# EPM 7.0.5 I-DOCSIS (preview)
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be added, modified, or moved to a later release. Check back soon for updates!
-
-## New features
-
-*No new features have been added to this release yet.*
+# EPM 7.0.5 I-DOCSIS
 
 ## Changes
 
