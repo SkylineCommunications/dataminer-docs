@@ -4,7 +4,11 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13 [ID_]
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 -  [ID_40194] [ID_40208]
+
+If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway will try to return an internal server response immediately.
+
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13
 
 A new installer was generated because the certificate used to sign CloudGateway 2.13.13 was revoked. CloudGateway 2.13.13 was unlisted to avoid issues during the the digital signature validation while running the installer.
 
