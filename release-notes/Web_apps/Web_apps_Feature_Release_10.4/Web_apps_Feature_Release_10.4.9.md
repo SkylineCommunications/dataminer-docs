@@ -72,6 +72,12 @@ When one user makes a change to a low-code app, all other users who are editing 
 
 Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
 
+#### Security enhancements [ID_40210]
+
+<!-- 40210: MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID_39961]
