@@ -90,6 +90,14 @@ Up to now, when an SNMP table took a long time to be polled, a run-time error co
 
 To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
 
+#### Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process [ID_39769]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+On Failover systems with a Cassandra Cluster setup, a Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process.
+
+See also: [Failover switch taking a long time on systems with Cassandra Cluster setup](xref:KI_Failover_switch_Cassandra_Cluster)
+
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID_39807]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
