@@ -139,3 +139,9 @@ In some cases, components could lose focus after having been resized.
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When you opened a low-code app that was migrated from a version older than version 10.4.7, the *Close all panels* action had an incorrect description. Instead of "Close all panels", the description was incorrectly set to "Do nothing".
+
+#### Dashboards app & Low-Code Apps - Table component: Table filter would incorrectly take into account hidden columns [ID_40196]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you used the search box to apply a general filter across a table, up to now, matches in hidden columns would incorrectly also be taken into account. As a result, after you had applied a filter, in some cases, rows without any visual match could get filtered out.
