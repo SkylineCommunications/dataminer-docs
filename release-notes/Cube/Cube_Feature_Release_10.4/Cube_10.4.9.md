@@ -60,6 +60,14 @@ Since the analytics trending features cannot be used for general parameters, fro
 
 Also, when a general parameter is being trended, it will no longer be possible to create a trend pattern for that parameter.
 
+#### System Center - Agents: BPA tests that have not been scheduled will now be displayed in a lighter font [ID_40113]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In the *BPA* tab of the *Agents* section, BPA tests that have not been scheduled will now be displayed in a lighter font.
+
+Also, next to each BPA test in the list, you can now find a button that, when clicked, will open a page showing more information about that test. When you click the information button in the *Name* header, the [Running BPA tests](xref:Running_BPA_tests) page will open.
+
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
