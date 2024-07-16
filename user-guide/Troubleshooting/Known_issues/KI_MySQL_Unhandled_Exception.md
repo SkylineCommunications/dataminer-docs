@@ -16,7 +16,7 @@ An issue in the MySQL.Data.dll version 8.0.33 and higher causes an unhandled exc
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet.<!-- RN 40200 -->
 
 ## Workaround
 
