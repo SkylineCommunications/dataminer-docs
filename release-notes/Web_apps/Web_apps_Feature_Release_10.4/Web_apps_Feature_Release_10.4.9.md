@@ -145,3 +145,9 @@ When you opened a low-code app that was migrated from a version older than versi
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When you used the search box to apply a general filter across a table, up to now, matches in hidden columns would incorrectly also be taken into account. As a result, after you had applied a filter, in some cases, rows without any visual match could get filtered out.
+
+#### Dashboards app & Low-Code Apps: Query used as a 'start from' query and linked to a feed and a Trigger component would no longer be updated following a feed update once the Trigger component had been triggered [ID_40207]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a query used as a "start from" query was linked to a feed and a *Trigger* component, in some cases, feed updates would no longer update the query once the Trigger component had been triggered.
