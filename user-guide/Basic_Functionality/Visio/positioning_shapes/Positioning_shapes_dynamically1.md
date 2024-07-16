@@ -184,7 +184,7 @@ In the protocol, check the definition of the table parameter that will supply th
 
 ### Applying a row filter before dynamically positioned shapes are generated
 
-From DataMiner 9.0.5 onwards, it is possible to apply a row filter when dynamically positioning shapes based on table data. Using this filter can considerably increase overall performance.
+It is possible to apply a row filter when dynamically positioning shapes based on table data. Using this filter can considerably increase overall performance.
 
 To do so, add a shape data field of type **Filter** to the shape mentioned above, and enter a row filter, using the same syntax as for extended shape manipulation conditions.
 

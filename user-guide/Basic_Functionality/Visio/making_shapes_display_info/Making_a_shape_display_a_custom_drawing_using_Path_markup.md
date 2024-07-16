@@ -112,9 +112,7 @@ It is possible to have one or more subshapes display units of measure. To do so:
 
 ## Enabling horizontal zooming
 
-From DataMiner 9.0.5 onwards, it is possible to enable horizontal zooming on a shape configured to display a custom drawing using path markup.
-
-To do so, add the following option to the shape:
+To enable horizontal zooming on a shape configured to display a custom drawing using path markup, add the following option to the shape:
 
 | Shape data field | Value                |
 | ---------------- | -------------------- |
