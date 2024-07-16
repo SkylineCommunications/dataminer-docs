@@ -84,6 +84,14 @@ When DataMiner Cube was connected to a DaaS system, up to now, the test result o
 
 For example, the *Minimum Requirements Check*, which cannot be run on a DaaS system, will now be set to "Not applicable" when Cube is connected to a DaaS system.
 
+#### Trending: Trend graph windows could display duplicate graphs [ID_39930]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in Data Display, you drilled down to a trend graph of a particular parameter, in some cases, a second, duplicate graph would incorrectly be displayed.
+
+Also, in some cases, a nullreference exception could be thrown when a trend graph was being drawn.
+
 #### Alarm templates and trend templates: Incorrectly possible to configure analytics features for parameters that did not support those features [ID_39952]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
