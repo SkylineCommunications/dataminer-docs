@@ -237,7 +237,7 @@ On the *Cube* page, the following settings are available:
 
 - **Show the news section**: Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
 
-- **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
+- **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. No longer available since DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
 - **Display the workspace buttons in the header**: Determines whether the four squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
@@ -340,7 +340,7 @@ On the *Regional* page, the following settings are available:
 
 On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page, the following settings are available:
 
-- **Sidebar docking position**: Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left. Prior to DataMiner 10.0.0/10.0.2, the similar setting *Surveyor docking position* is available instead.
+- **Sidebar docking position**: Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left.
 
 - **Allow to expand/collapse service nodes**: Select this setting to enable users to expand services in the Surveyor to see the child items of the services.
 
