@@ -4,9 +4,11 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 16 July 2024 - Fix - CloudGateway 2.13.14 -  [ID_40194] [ID_40208]
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Requests could get no response in an edge case leading to timeouts [ID_40208]
 
 If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway will try to return an internal server response immediately.
+
+Also a warning log has been added if a remote access web API call would take longer than 25 seconds.
 
 #### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13
 
