@@ -117,3 +117,9 @@ When dynamic values were used in interface shapes that were child shapes on an e
 When, in the *Router Control* module, you connect an already connected output to a new input, the output first needs to be disconnected. Up to now, Cube would then send two messages: one to disconnect the output and another one to connect the output to the input. In some cases, those messages would be processed in the wrong order, causing the operation to fail.
 
 From now on, disconnecting the output and connecting the output to the input will be performed in one single message.
+
+#### Visual Overview: Router control shapes could flicker when session variables were updated [ID_40102]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When, on the same visual overview, multiple router control shapes were linked to the same session variables, in some cases, a router control shape could flicker when a session variable update was triggered by e.g. a SetVar shape update.
