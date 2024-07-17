@@ -7,7 +7,7 @@ uid: DataStax_DevCenter
 > [!NOTE]
 > The recommended setup for DataMiner storage is [Storage as a Service](xref:STaaS).
 
-This tool allows you to perform CQL queries or run scripts on a Cassandra database. It can be used on any DMA using a Cassandra local database.
+This tool allows you to perform CQL queries or run scripts on a Cassandra database. It can be used on any server using a Cassandra database.
 
 Older DataMiner installers included this tool, but recent DataMiner installers (v10.2 or higher) do not deploy this tool and do not set the JAVA_HOME variable during installation, which means you will need to install it yourself and [set the JAVA_HOME variable](#setting-the-java_home-variable).
 
