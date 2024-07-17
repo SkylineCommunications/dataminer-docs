@@ -4,15 +4,12 @@ uid: Adding_a_service
 
 # Adding a service
 
+To add a service or enhanced service, follow the steps below.
+
 > [!TIP]
 > See also: [Rui’s Rapid Recap – Creating a service](https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/) ![Video](~/user-guide/images/video_Duo.png)
 
 1. Right-click in the Surveyor and select *New \> Service* to add a new service.
-
-   > [!NOTE]
-   >
-   > - A service that uses a service protocol can also be created via the Protocols & Templates module. To do so, in the Protocols & Templates module, select the service protocol, the version, the alarm template and the trend template, right-click in the *Elements* column and select *New service*.
-   > - If a view has no child views, it is also possible to transform that view into a service. The child elements in the view will become child elements of the new service. To transform a view into a service, right-click the view and select *Actions* > *Upgrade to service*. If necessary, you can then still edit the new service in order to fine-tune it according to the procedure below.
 
 1. Enter a **unique name** for the service.
 
@@ -48,13 +45,13 @@ uid: Adding_a_service
 
    - If you do not want timeouts to be included in the alarm status of the service, clear the checkbox *Include timeouts in alarm status of the service*. By default, this option is selected.
 
-   - Add a service protocol (also known as "service definition" in earlier versions of DataMiner):
+   - To create an enhanced service:
 
-        1. Select an existing service protocol.
+        1. Select a service protocol (also known as "service definition" in earlier versions of DataMiner).
 
-        1. Choose a version from the available options.
+        1. Select the version of the service protocol.
 
-        1. Choose an alarm or trend template, if available.
+        1. Select an alarm or trend template, if available.
 
            > [!NOTE]
            >
@@ -136,5 +133,7 @@ uid: Adding_a_service
 
 > [!NOTE]
 >
+> - If a view has no child views, it is also possible to directly transform that view into a service. The child elements in the view will become child elements of the new service. To transform a view into a service, right-click the view and select *Actions* > *Upgrade to service*. If necessary, you can then still edit the new service in order to fine-tune it according to the procedure below.
 > - If you want to edit the settings of a service after creation, right-click the service in the Surveyor, and select *Edit*. You will then have the same options as during the creation of the service.
 > - A service can also be created by a parent element. In that case, it is possible that it is not or only partly editable, except by an Administrator or via the parent element.
+> - You can also create an enhanced service via the Protocols & Templates module. To do so, in the Protocols & Templates module, select the service protocol, the version, the alarm template, and the trend template, right-click in the *Elements* column and select *New service*.
