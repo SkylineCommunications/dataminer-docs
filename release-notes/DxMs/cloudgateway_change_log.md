@@ -8,11 +8,11 @@ uid: cloudgateway_change_log
 
 If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway will try to return an internal server response immediately.
 
-Also a warning log has been added if a remote access web API call would take longer than 25 seconds.
+If a remote access web API call takes longer than 25 seconds, this will now also be mentioned in a warning log.
 
 #### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13
 
-A new installer was generated because the certificate used to sign CloudGateway 2.13.13 was revoked. CloudGateway 2.13.13 was unlisted to avoid issues during the the digital signature validation while running the installer.
+Because the certificate used to sign CloudGateway 2.13.13 has been revoked, a new installer has been generated. To avoid issues during the digital signature validation while running the installer, CloudGateway 2.13.13 is now unlisted.
 
 #### 10 July 2024 - Enhancement - CloudGateway 2.13.13 - Improvement for cloud token refresh [ID_40032]
 
