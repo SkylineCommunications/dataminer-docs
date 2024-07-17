@@ -6,7 +6,7 @@ uid: coregateway_change_log
 
 #### 16 July 2024 - Fix - CoreGateway 2.14.9 - Replaced installer for CoreGateway 2.14.8
 
-A new installer was generated because the certificate used to sign CoreGateway 2.14.8 was revoked. CoreGateway 2.14.8 was unlisted to avoid issues during the the digital signature validation while running the installer.
+Because the certificate used to sign CoreGateway 2.14.8 has been revoked, a new installer has been generated. To avoid issues during the digital signature validation while running the installer, CoreGateway 2.14.8 is now unlisted.
 
 #### 20 June 2024 - Fix - CoreGateway 2.14.8 - Problem when DMA switched between online and offline [ID_39928]
 
