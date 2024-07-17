@@ -213,6 +213,8 @@ items:
     items:
       - name: Installing dataminer.MediaOps
         topicUid: Installing_MediaOps
+      - name: Profile Config
+        topicUid: MediaOps_ProfileConfig
       - name: MediaOps applications
         topicUid: MediaOps_apps
         items:
