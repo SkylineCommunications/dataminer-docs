@@ -157,10 +157,7 @@ Permission to update and delete protected spectrum analyzer presets.
 
 #### General \> Elements \> Data Display \> Spectrum \> Take device from other client
 
-Permission to terminate a spectrum client sessions of another user in order to start a session yourself, in case the maximum number of concurrent client sessions is limited.
-
->[!NOTE]
-> This feature is no longer available from DataMiner 9.6.0 onwards.
+Obsolete. The feature for which this user permission is applied is no longer available.
 
 #### General \> Elements \> Data Display \> Spectrum \> Take priority over monitors
 
