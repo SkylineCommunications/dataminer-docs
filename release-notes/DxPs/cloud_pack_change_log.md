@@ -10,6 +10,16 @@ uid: Cloud_Pack_change_log
 > [!TIP]
 > For more information about the Cloud Pack, see [DataMiner Cloud Pack](xref:CloudPackages).
 
+#### 17 July 2024 - DataMiner Cloud Pack 3.1.12.0
+
+- [DataMiner ArtifactDeployer 1.7.1](xref:artifactdeployer_change_log)
+- [DataMiner CloudFeed 1.3.0](xref:cloudfeed_change_log)
+- [DataMiner CloudGateway 2.13.14](xref:cloudgateway_change_log)
+- [DataMiner CoreGateway 2.14.9](xref:coregateway_change_log)
+- [DataMiner FieldControl 2.10.6](xref:fieldcontrol_change_log)
+- [DataMiner Orchestrator 1.6.0](xref:orchestrator_change_log)
+- [DataMiner SupportAssistant 1.6.9](xref:supportassistant_change_log)
+
 #### 08 July 2024 - DataMiner Cloud Pack 3.1.11.0
 
 - [DataMiner ArtifactDeployer 1.7.1](xref:artifactdeployer_change_log)
