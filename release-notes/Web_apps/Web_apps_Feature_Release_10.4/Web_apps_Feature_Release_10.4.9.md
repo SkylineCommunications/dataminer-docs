@@ -80,6 +80,12 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive Automation script [ID_39862]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in a interactive Automation script launched from a dashboard or a low-code app, a tree view component was expanded or collapsed, in some cases, multiple *Continue* messages would incorrectly be sent to the script. From now on, when a tree view component is expanded or collapsed, only one *Continue* message will be sent.
+
 #### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID_39961]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
