@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 16 July 2024 - Fix - CloudGateway 2.13.14 - Requests could get no response in an edge case leading to timeouts [ID_40208]
 
-If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway will try to return an internal server response immediately.
+If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway DxM will try to return an internal server response immediately.
 
 If a remote access web API call takes longer than 25 seconds, this will now also be mentioned in a warning log.
 
