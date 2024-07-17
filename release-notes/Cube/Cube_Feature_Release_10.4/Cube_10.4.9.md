@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.9
 
 ### Enhancements
 
+#### Visual Overview: Enhanced performance when loading AlarmSummary shapes [ID_39593]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading AlarmSummary shapes.
+
 #### Visual Overview will now only subscribe on the specified properties when property placeholders are being used [ID_40008]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
