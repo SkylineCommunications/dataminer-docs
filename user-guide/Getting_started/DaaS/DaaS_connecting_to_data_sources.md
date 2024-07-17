@@ -26,4 +26,4 @@ These are the default encryption and authentication combinations:
   - 3DES and SHA1
   - AES256 and SHA256
 
-This can be [customized](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq) by contacting <daas@dataminer.services>.
+If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), contact <daas@dataminer.services>.
