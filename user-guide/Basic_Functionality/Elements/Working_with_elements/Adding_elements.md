@@ -1,5 +1,6 @@
 ---
 uid: Adding_elements
+description: How to add elements to a DataMiner System
 ---
 
 # Adding elements
