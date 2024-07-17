@@ -200,6 +200,12 @@ When the trend data of a parameter appears to have frequent flatline periods, th
 
 Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
 
+#### SLAutomation: Enhanced compilation of Automation scripts [ID_39965]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made with regard to the compilation of Automation scripts.
+
 #### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for child DVE elements using a parameter ID from the main DVE element will now also be taken into account [ID_39988]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

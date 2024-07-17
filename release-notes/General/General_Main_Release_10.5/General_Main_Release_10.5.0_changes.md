@@ -641,6 +641,12 @@ Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or hi
 
 See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
+#### SLAutomation: Enhanced compilation of Automation scripts [ID_39965]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+A number of enhancements have been made with regard to the compilation of Automation scripts.
+
 #### SLASPConnection is now a 64-bit process [ID_39978]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
