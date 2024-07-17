@@ -31,14 +31,36 @@ A Catalog item is a small package that contains one or more artifacts that can b
 
 Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
+For Catalog items of type **Connector**, versions are grouped by **range**. A range is defined by the first three indicators of a version (e.g. **7.1.2**.33).
+
+Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector. If you are a member of the organization that published an item, you can manage these tags via the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button for each item.<!-- RN 40030 -->
+
+The Catalog will recommend certain versions based on the following conditions:
+
+- The latest version of a range that is tagged as the "Main" version (visualized in green).
+- The latest version of a range that is tagged with a custom tag (visualized in gray).
+- If neither of the above apply, the latest version of the highest active range will be recommended.
+
 > [!NOTE]
-> For items of type Connector, the version must have the format mentioned under [Protocol version semantics](xref:ProtocolVersionSemantics).
+>
+> - For items of type Connector, the version must have the format mentioned under [Protocol version semantics](xref:ProtocolVersionSemantics).
+> - Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as known issues, development, or deprecated) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
 
 ### Supported Catalog item types
 
 At present, the following types of Catalog items are supported:
 
-- Automation script
 - Application package
+- Automation script
+- ChatOps Extension
 - Connector
-- Visio file
+- Data API
+- Data grabber
+- GQI ad hoc data source
+- GQI operator
+- Life cycle service orchestration
+- Process activity
+- Profile-load script
+- Solution
+- User-defined API
+- Visio drawing
