@@ -37,24 +37,20 @@ This feed component allows the user to select multiple parameters from a predefi
      > - Prior to DataMiner 10.3.6/10.4.0<!--  RN 35984 -->, this setting is called *Feed Defaults* instead.
      > - From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter feed.
 
-   - *Auto-select number of indices*: Available up to DataMiner 10.0.12. To automatically include a specific number of indices when at least one element and one parameter have been selected in the component, specify the number in this box. If the number of indices specified is greater than the number of indices that are being displayed, the indices that are not shown will be selected in memory.
-
-   - *Auto-select all indices*: Available up to DataMiner 10.0.12. Select this option to automatically include all indices when at least one element and one parameter have been selected in the component.
-
-   - *Auto-select all*: Replaced the previous auto-select options. When this option is selected, all items will be selected according to the “Select all behavior” settings below.
+   - *Auto-select all*: When this option is selected, all items will be selected according to the "Select all behavior" settings below.
 
      > [!NOTE]
      > From DataMiner 10.2.11/10.3.0 onwards, this option is not available if the component uses EPM identifiers as its data source.
 
    - *Select all behavior* > *Select all items*: If this option is selected, "Select all" will select all items. For a [partial table](xref:Table_parameters#partial-tables), only the items from the first page will be selected.
 
-   - *Select all behavior* > *Select specific number of items*: If you select this option, a box is displayed below it. In this box, you should specify how many items “Select all” should select. For a [partial table](xref:Table_parameters#partial-tables), these items will be selected across different pages.
+   - *Select all behavior* > *Select specific number of items*: If you select this option, a box is displayed below it. In this box, you should specify how many items "Select all" should select. For a [partial table](xref:Table_parameters#partial-tables), these items will be selected across different pages.
 
    - *Auto-expand parameters*: Select this option to expand all tables and groups in the component by default.
 
    - *Default grouping*: See [Customizing the default grouping](#customizing-the-default-grouping).
 
-   - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box. For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to “Y”, the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
+   - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box. For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to "Y", the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
 
    - To group parameters in the selector, under *Parameter groups*, click *Add parameter group*. Then specify a group name and select the parameters that should be in the group. Repeat this for every parameter group you want to configure.
 
@@ -65,7 +61,7 @@ This feed component allows the user to select multiple parameters from a predefi
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-   - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed. Available from DataMiner 9.6.13 onwards.
+   - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed.
 
 > [!NOTE]
 > After selecting column parameter indices in a parameter feed, you can feed those selected indices to other components that support the same data. From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter feeds listing EPM parameters.
