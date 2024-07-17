@@ -266,6 +266,16 @@ The DataMiner Agent that was offline when you started the decommission process w
 
 BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
 
+#### DxMs upgraded [ID_40231]
+
+<!-- RN 40231: MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CoreGateway: version 2.14.9
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
