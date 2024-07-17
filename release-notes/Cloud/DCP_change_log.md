@@ -9,6 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 17 July 2024 - New Feature - Catalog Api - Catalog version registration allows for a readme to be included [ID_40241]
+
+It is possible to include a readme.md file in the zip archive used to register a new catalog version. It is not supported (yet) to have images include in the readme file.
+
+#### 17 July 2024 - Fix - Catalog - Showing ranges without active versions [ID_40218]
+
+The detail page of a catalog will no longer show a range if it has no active versions.
+
+#### 17 July 2024 - Enhancement - Catalog - Improved version loading [ID_40217]
+
+Performance of loading versions included in a range of a catalog has been improved by introducing caching.
+
+#### 17 July 2024 - Fix - Catalog - Incorrect empty search result when initiated from home page [ID_40232]
+
+When initiating a search request from the home page in Catalog it would always show an empty result in the browse page, until the page was reloaded. The correct search result will be shown immediately now.
+
+#### 17 July 2024 - Enhancement - Catalog - Improved Vendor logo loading [ID_40235] 
+
+Catalog search results are loaded faster by introducing caching for vendor logos.
+
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
 From now on, SAML can be used to access Cube remotely.
