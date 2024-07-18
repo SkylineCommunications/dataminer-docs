@@ -4,7 +4,7 @@ uid: Creating_Anomaly_Overview_Dashboard
 
 # Creating an anomaly overview dashboard
 
-This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) in the context of Dashboards and Loc code apps. It has two main objectives. First objective is showing you how to get access to the behavioral change event data in a dashboard. Second objective is to show you how to deal with some of the challenges you might face, how to resolve them.
+This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) in the context of Dashboards and Low code apps. It has two main objectives. First objective is showing you how to get access to the behavioral change event data in a dashboard. Second objective is to show you how to deal with some of the challenges you might face, how to resolve them.
 
 Estimated duration: 45 minutes.
 
