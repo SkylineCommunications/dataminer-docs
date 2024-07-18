@@ -18,10 +18,6 @@ It is now possible to see on the organization overview page what type of DMS you
 It was possible to try add a user to your organization/DMS. But you would get a error that you don't have the right permissions to do this.
 Now you won't be able to try and add a user. The button will be disabled when you don't have de right permissions.
 
-#### 18 July 2024 - Enhancement - Catalog - Vendor logos loading speed [ID_40235]
-
-Vendor logos will now load faster on the brose page of catalog. Images are now being fetched once and are cached in the browser.
-
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
 From now on, SAML can be used to access Cube remotely.
