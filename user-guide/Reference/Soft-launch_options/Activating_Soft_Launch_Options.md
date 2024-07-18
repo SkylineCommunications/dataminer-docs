@@ -4,7 +4,7 @@ uid: Activating_Soft_Launch_Options
 
 # Activating soft-launch options
 
-For most soft-launch options, you will need the following file on your DataMiner server: `C:\Skyline DataMiner\SoftLaunchOptions.xml`, create it if needed. In this file, for each feature you want to activate, you can add a specific tag and set it to the value "true".
+For most soft-launch options, you will need the following file on your DataMiner server: `C:\Skyline DataMiner\SoftLaunchOptions.xml`. If this file is not present yet, you will need to create it. In this file, for each feature you want to activate, you can add a specific tag and set it to the value "true".
 
 For example, this *SoftLaunchOptions.xml* configuration activates the "AlarmSquashing" and "CloudConnectedAgents" features:
 
@@ -15,9 +15,10 @@ For example, this *SoftLaunchOptions.xml* configuration activates the "AlarmSqua
 </SLNet>
 ```
 
-> [!NOTES]
+> [!NOTE]
+>
 > - All XML tags in *SoftLaunchOptions.xml* are case-sensitive.
-> - All soft-launch flags (e.g. `<AlarmSquashing>`) must be put inside the `<SLNet>` parent-tag.
+> - All soft-launch flags (e.g. `<AlarmSquashing>`) must be placed within the `<SLNet>` parent tag.
 
 After you have modified this configuration file, you must **restart your DataMiner Agent** to activate the changes. If you have a cluster of DataMiner Agents, every DataMiner Agent in the cluster will need to be restarted. Many of the soft-launch options also require an **IIS restart** when they are activated.
 
