@@ -78,6 +78,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 A number of security enhancements have been made.
 
+#### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In all DataMiner web applications, placeholders in text boxes will now be displayed more clearly, especially in dark mode.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive Automation script [ID_39862]
