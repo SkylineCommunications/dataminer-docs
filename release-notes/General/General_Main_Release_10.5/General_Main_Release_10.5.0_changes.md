@@ -673,6 +673,12 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 
 BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
 
+#### DataMiner Object Models: Enhanced storage of DOM instances [ID_40242]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]

@@ -266,6 +266,12 @@ The DataMiner Agent that was offline when you started the decommission process w
 
 BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
 
+#### DataMiner Object Models: Enhanced storage of DOM instances [ID_40242]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
+
 #### DxMs upgraded [ID_40231] [ID_40254]
 
 <!-- RN 40231: MR 10.4.0 [CU6] - FR 10.4.9 -->
