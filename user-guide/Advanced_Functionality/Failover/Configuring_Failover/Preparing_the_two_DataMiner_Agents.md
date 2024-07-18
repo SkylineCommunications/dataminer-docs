@@ -14,6 +14,7 @@ Before you start the actual configuration, make sure you have the following:
 
   > [!NOTE]
   > To avoid possible conflicts, make sure these IP addresses are not used anywhere else and that these are reserved for the Failover pair.
+  > WinPCap or NPCap must be installed for DataMiner Failover based on virtual IP systems. As mentioned in here: [Before you run the installer](#before-you-run-the-installer).
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
 
