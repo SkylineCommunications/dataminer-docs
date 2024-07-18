@@ -34,4 +34,4 @@ uid: DMAElementConfiguration
 | TimeoutTime | Integer | The time after which an element goes into timeout (between 0 and 120,000 ms). |
 | SlowPoll | Array | Array consisting of:<br> -  Base (string): “*TIME*”, “*NUMBER*” or “*NO*”<br> -  Value (integer): Depending on the Base configuration, this is a time value (between 1000 and 300,000 ms), the number of timeouts (between 1 and 500), or empty, respectively.<br> -  PingInterval (integer): Between 1000 and 300,000 ms. |
 | State | String | The element state, which can be *Undefined*, *Active*, *Hidden*, *Paused*, *Stopped*, *Deleted*, *Error*, *Restart* or *Masked*. |
-| Ports | Array | Array of [DMAElementBasePortInfo](xref:DMAElementBasePortInfo). |
+| Ports | Array of [DMAElementBasePortInfo](xref:DMAElementBasePortInfo) | The different ports of the element. |

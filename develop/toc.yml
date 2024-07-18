@@ -3979,6 +3979,8 @@ items:
             topicUid: GetDataMinerAgentTime
           - name: GetDataMinerAgentTimeUTC
             topicUid: GetDataMinerAgentTimeUTC
+          - name: GetDataMinerAgentTimeZone
+            topicUid: GetDataMinerAgentTimeZone  
           - name: GetDataMinerAgentsInfo
             topicUid: GetDataMinerAgentsInfo
           - name: GetDataMinerAgentsLicenseInfo

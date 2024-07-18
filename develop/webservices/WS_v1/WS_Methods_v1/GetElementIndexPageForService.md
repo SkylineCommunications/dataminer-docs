@@ -16,6 +16,6 @@ Use this method to retrieve the first letters of all the elements in a service.
 
 ## Output
 
-| Item                                 | Format          | Description                                                     |
-|--------------------------------------|-----------------|-----------------------------------------------------------------|
+| Item                                | Format          | Description                                                     |
+|------------------------ ------------|-----------------|-----------------------------------------------------------------|
 | GetElementIndexPageForServiceResult | Array of string | The first letters of all the elements in the specified service. |

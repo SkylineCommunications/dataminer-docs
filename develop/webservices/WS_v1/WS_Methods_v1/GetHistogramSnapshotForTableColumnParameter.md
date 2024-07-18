@@ -16,7 +16,7 @@ Use this method to retrieve a snapshot of trend data for a specified table colum
 | parameterID    | Integer         | The parameter ID.                                                                                  |
 | filters        | Array of string | Any filters applied to the table column parameter.                                                 |
 | intervalAmount | Integer         | The number of intervals used in the histogram. Obsolete. This field is no longer supported.        |
-| asPercentage   | Boolean         | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false). |
+| asPercentages  | Boolean         | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false). |
 
 ## Output
 
