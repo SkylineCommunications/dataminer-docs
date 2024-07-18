@@ -4,7 +4,7 @@ uid: Change_email_cloud_account
 
 # Changing the email address associated with your dataminer.services account
 
-To use a different email address for your existing dataminer.services account, you will need to re-register by creating a new dataminer.services account and then have us transfer your existing data.
+If you already have a dataminer.services account, but you want to start using a different email address, you will need to re-register by creating a new dataminer.services account and then have us transfer your existing data on DataMiner Dojo.
 
 > [!IMPORTANT]
 > If you change the email address associated with your account, any progress you have made on courses and quizzes in the [Learning module](https://community.dataminer.services/learning/) will be lost, so you will need to start over in this module. Also, any comments you have made in the [Questions module](https://community.dataminer.services/questions/) will still be displayed as posted with your old account.
@@ -19,6 +19,6 @@ To use a different email address for your existing dataminer.services account, y
 
 1. Visit [community.dataminer.services](https://community.dataminer.services/) with the new account.
 
-1. Contact ? to have your existing data transferred to the new account.
+1. Contact <back.office@skyline.be> to have your existing data transferred to the new account.
 
    You will be asked for confirmation before the data are transferred.
