@@ -13,8 +13,10 @@ Before you start the actual configuration, make sure you have the following:
 - A [pair of additional IP addresses or a hostname](#additional-ip-addresses-or-hostname)
 
   > [!NOTE]
-  > To avoid possible conflicts, make sure these IP addresses are not used anywhere else and that these are reserved for the Failover pair.
-  > WinPCap or NPCap must be installed for DataMiner Failover based on virtual IP systems. As mentioned in here: [Before you run the installer](#before-you-run-the-installer).
+  > If you use IP addresses instead of a hostname:
+  >
+  > - Make sure WinPCap or [NPCap](https://nmap.org/npcap/) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
+  > - To avoid possible conflicts, make sure the IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
 
