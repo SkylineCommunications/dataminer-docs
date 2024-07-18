@@ -9,25 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 18 July 2024 - New Feature - Catalog Api - Catalog version registration allows for a readme to be included [ID_40241]
+#### 18 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
 
-It is possible to include a readme.md file in the zip archive used to register a new catalog version. It is not supported (yet) to have images include in the readme file.
+It is now possible to include a readme.md file in the zip archive used to register a new version of a Catalog item. Images are not (yet) supported in the readme file.
 
-#### 18 July 2024 - Fix - Catalog - Showing ranges without active versions [ID_40218]
+#### 18 July 2024 - Fix - Catalog - Range without active versions shown [ID_40218]
 
-The detail page of a catalog will no longer show a range if it has no active versions.
+Previously, if a range had no active versions, it was still shown on the details page of a Catalog item. Now such a range will no longer be shown.
 
 #### 18 July 2024 - Enhancement - Catalog - Improved version loading [ID_40217]
 
-Performance of loading versions included in a range of a catalog has been improved by introducing caching.
+A new caching mechanism has been introduced that will improve performance when the versions included in a range of a Catalog item are loaded.
 
 #### 18 July 2024 - Fix - Catalog - Incorrect empty search result when initiated from home page [ID_40232]
 
-When initiating a search request from the home page in Catalog it would always show an empty result in the browse page, until the page was reloaded. The correct search result will be shown immediately now.
+When a search request was initiated from the home page of the DataMiner Catalog, an empty result was shown on the browse page until the page was reloaded. The correct search result will now be shown immediately.
 
-#### 18 July 2024 - Enhancement - Catalog - Improved Vendor logo loading [ID_40235] 
+#### 18 July 2024 - Enhancement - Catalog - Improved vendor logo loading [ID_40235]
 
-Catalog search results are loaded faster by introducing caching for vendor logos.
+Caching has been introduced for vendor logos, which will make Catalog search results load faster.
 
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
