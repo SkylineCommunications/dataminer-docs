@@ -9,6 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 18 July 2024 - Enhancement - Admin - DataMiner Systems will now show what type they are [ID_40123]
+
+It is now possible to see on the organization overview page what type of DMS you are running. This can be a DaaS or Self-hosted system. This information is now also available on the DMS overview page.
+
+#### 18 July 2024 - Enhancement - Admin - Disable the "Add user" button when you don't have the right permissions [ID_40123]
+
+It was possible to try add a user to your organization/DMS. But you would get a error that you don't have the right permissions to do this.
+Now you won't be able to try and add a user. The button will be disabled when you don't have de right permissions.
+
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
 From now on, SAML can be used to access Cube remotely.
