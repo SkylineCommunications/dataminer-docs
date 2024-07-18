@@ -11,7 +11,7 @@ For operators (or automatic orchestration scripts) to configure resources correc
 The first step will be to create [Profile parameters](https://docs.dataminer.services/user-guide/Standard_Apps/SRM/srm_concepts/srm_definitions.html#profile-parameter) and [Profile definitions](https://docs.dataminer.services/user-guide/Standard_Apps/SRM/srm_concepts/srm_definitions.html#profile-definition).
 
 > [!TIP]
-> Only define the parameters that can differentiate between jobs to keep the configuration work minimal for operators. Make sure your profile parameters are easy to understand for operators. For example, video formats (e.g. 1080p, 1080i, 720p, ...) are more intuitive compared to defining BW that is needed on network level and the BW could be calculated based on the video format used.
+> Only define the parameters that can differentiate between jobs to keep the configuration work minimal for operators. Make sure your profile parameters are easy to understand for operators. For example, video formats (e.g. 1080p, 1080i, 720p, ...) are more intuitive compared to defining BW that is needed on network level and the BW could be calculated based on the video format used. However, when capacity management is needed on a resource, then you need to define the capacity parameter on the corresponding node.
 
 ## Profile instances or presets
 
@@ -19,7 +19,7 @@ Optionally, when all the values for a profile definition are known upfront and c
 
 ## Linking profile definitions to resources
 
-The next step, is to define what configuration parameters are expected for a resource or resource pool. When a profile definition is linked on resource level everything on resource pool level will be ignored.
+The next step, is to define what configuration parameters are expected for a resource or resource pool. When a profile definition is linked on resource level everything on resource pool level will be ignored. Only one profile definition can be linked to a resource or resource pool.
 
 ## Adding nodes to jobs/workflows with configuration
 
@@ -33,4 +33,4 @@ Configuration parameters are inherited from the resource or resource pool at the
 
 **What will happen when my resource is available in multiple resource pools?**
 
-When a resource is added as node to a job/workflow and the resource is included in multiple resource pools at that time, then the profile definitions on the first resource pool found will be used (unless profile definitions are defined on resource level).
+When a resource is added as node to a job/workflow and the resource is included in multiple resource pools at that time, then the profile definition on the first resource pool found will be used (unless profile definitions are defined on resource level).
