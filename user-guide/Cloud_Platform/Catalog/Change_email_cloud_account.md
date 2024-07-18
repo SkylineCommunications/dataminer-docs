@@ -19,6 +19,6 @@ If you already have a dataminer.services account, but you want to start using a 
 
 1. Visit [community.dataminer.services](https://community.dataminer.services/) with the new account.
 
-1. Contact <back.office@skyline.be> to have your existing data transferred to the new account.
+1. Contact [back.office@skyline.be](mailto:back.office@skyline.be?subject=Request%20to%20transfer%20my%20DataMiner%20Dojo%20data&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20transfer%20my%20DataMiner%20Dojo%20data.%0D%0AThe%20accounts%20involved%20are%20listed%20below%3A%0D%0A%0D%0AFrom%3A%0D%0A%3Cfill%20in%20email%20address%3E%0D%0A%0D%0ATo%20(new%20account)%3A%0D%0A%3Cfill%20in%20email%20address%3E%0D%0A) to have your existing data transferred to the new account.
 
    You will be asked for confirmation before the data are transferred.
