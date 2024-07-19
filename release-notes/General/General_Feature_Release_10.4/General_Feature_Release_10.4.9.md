@@ -308,7 +308,7 @@ When SLDataGateway retrieved data from the database page by page, in some cases,
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-Events that created, updated or deleted DOM objects would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
+Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
