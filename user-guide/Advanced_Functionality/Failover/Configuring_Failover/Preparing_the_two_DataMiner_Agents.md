@@ -15,7 +15,7 @@ Before you start the actual configuration, make sure you have the following:
   > [!NOTE]
   > If you use IP addresses instead of a hostname:
   >
-  > - Make sure WinPCap (deprecated) or [NPCap](https://nmap.org/npcap/) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
+  > - Make sure [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
   > - To avoid possible conflicts, make sure the IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).

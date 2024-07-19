@@ -38,8 +38,7 @@ Once the installation process has started, the installer will go through the fol
    > [!NOTE]
    >
    > - The installer requires that at least .Net Framework 4.5 is already installed. If this is not the case, you will not be able to run the installer.
-   > - When DataMiner Failover based on virtual IP is needed, WinPcap (deprecated) or [NPCap](https://nmap.org/npcap/) can only be installed during an attended installation. 
-       For an unattended installation, make sure it is installed beforehand on both DMAs.
+   > - When DataMiner Failover based on virtual IP will be used, [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) can only be installed during an attended installation. For an unattended installation, make sure it is installed beforehand on both DMAs.
 
 1. Installation of the DataMiner version provided in the installer.
 

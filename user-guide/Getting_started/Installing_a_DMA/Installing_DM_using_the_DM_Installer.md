@@ -32,7 +32,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
-> The default installation requires that WinPCap (deprecated) or [NPCap](https://nmap.org/npcap/) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. WinPCap can be installed with a custom installation using the DataMiner 10.0 installer; however, note that WinPCap is considered obsolete since 2018. For now, NPCap is not included in the DataMiner Installer.
+> The default installation requires that [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. WinPCap can be installed with a custom installation using the DataMiner 10.0 installer; however, note that WinPCap is considered obsolete since 2018. For now, NPCap is not included in the DataMiner Installer.
 
 ### Default DataMiner installation
 
@@ -120,7 +120,7 @@ At this point, the basic installation is complete. However, to be able to make f
    - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover based on virtual IP, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
      > [!NOTE]
-     > The DataMiner 10.2 installer no longer supports WinPCap as it is depcrecated. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.
+     > The DataMiner 10.2 installer no longer supports WinPCap as it is deprecated. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.
 
    - If the built-in Administrator account is not enabled, select *Create administrator account for current user* to create a Windows user account.
 
