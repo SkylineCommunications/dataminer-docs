@@ -14,7 +14,7 @@ After installation, we recommend that you do the following checks in order to be
   - Microsoft Visual C++ 2005 Redistributable (x64) (if working on a x64 system)
   - Microsoft Visual C++ 2010 x86 Redistributable
   - Microsoft Visual C++ 2010 x64 Redistributable (if working on a x64 system)
-  - WinPcap (only needed for Failover systems)
+  - WinPCap (deprecated) or [NPCap](https://nmap.org/npcap/) (This is only needed for DataMiner Failover based on virtual IP. Make sure it is installed on both DMAs.)
   - MySQL Server (optional)
   - MySQL Workbench (optional)
 
