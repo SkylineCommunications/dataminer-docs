@@ -418,6 +418,6 @@ In some cases, new change points would incorrectly be generated shortly after th
 
 #### Service & Resource Management: Problem when retrieving resources filtered by property [ID_40209]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a request was sent to a DataMiner Agent to retrieve resources filtered by property, in some cases, the DataMiner Agent would throw a `NullReferenceException` when one of the resources had "null" properties.

@@ -209,3 +209,9 @@ When a database issue occurred while DataMiner was starting up, in some cases, b
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, new change points would incorrectly be generated shortly after the SLAnalytics process had been restarted, even though no changes in trend behavior had been detected.
+
+#### Service & Resource Management: Problem when retrieving resources filtered by property [ID_40209]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a request was sent to a DataMiner Agent to retrieve resources filtered by property, in some cases, the DataMiner Agent would throw a `NullReferenceException` when one of the resources had "null" properties.
