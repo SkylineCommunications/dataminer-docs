@@ -737,7 +737,6 @@ items:
       - name: Customizing the legacy Dashboards app
         topicUid: Customizing_the_legacy_Dashboards_app
       - name: Legacy Dashboard Gateway installation
-        topicUid: Legacy_Dashboard_Gateway_installation
         items:
           - name: Installing a DMS Dashboard Gateway
             topicUid: Installing_a_DMS_Dashboard_Gateway

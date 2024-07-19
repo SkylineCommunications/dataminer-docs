@@ -4,7 +4,7 @@ uid: DashboardGroup
 
 # Group
 
-This component can be used to display a group of other components. This is especially used in order to repeat the same components for each data item in a group feed, for example for each parameter in a group of parameters. Available from DataMiner 9.6.12 onwards.
+This component can be used to display a group of other components. This is especially used in order to repeat the same components for each data item in a group feed, for example for each parameter in a group of parameters.
 
 As soon as more than one data item is displayed by the group component, the component will display a legend on the right-hand side, listing the included items. You can show and hide data items by clicking them in this legend. Next to each item in the legend, the color is displayed that is associated with it in the group. If you click an item in the group, all related information in parameter state, line chart and pivot table components within the group will be highlighted with this color.
 
