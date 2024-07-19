@@ -9,23 +9,50 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 18 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
+#### 19 July 2024 - New Feature - Catalog - Allow to search on catalog tags [ID_40259]
+
+It is now possible to search on catalog tags and a catalog item search result will display which tags are present on the catalog item.
+
+#### 19 July 2024 - New Feature - Catalog - Suppport for more catalog types [ID_40144]
+
+The following new catalog types are supported and can be used during catalog registration and search filtering.
+
+- Ad Hoc Data Source 
+- User-defined API
+- Testing Solution
+- Standard Solution
+- Solution
+- Scripted Connector
+- SLA Model
+- Sample Solution
+- Profile-Load Script 
+- Low-Code App 
+- Life Cycle Service Orchestration
+- Function Definition
+- Enhanced Service Model 
+- Data Transformer
+- Data Query
+- Dashboard
+- ChatOps Extension
+- Best Practices Analyzer 
+
+#### 19 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
 
 It is now possible to include a readme.md file in the zip archive used to register a new version of a Catalog item. Images are not (yet) supported in the readme file.
 
-#### 18 July 2024 - Fix - Catalog - Range without active versions shown [ID_40218]
+#### 19 July 2024 - Fix - Catalog - Range without active versions shown [ID_40218]
 
 Previously, if a range had no active versions, it was still shown on the details page of a Catalog item. Now such a range will no longer be shown.
 
-#### 18 July 2024 - Enhancement - Catalog - Improved version loading [ID_40217]
+#### 19 July 2024 - Enhancement - Catalog - Improved version loading [ID_40217]
 
 A new caching mechanism has been introduced that will improve performance when the versions included in a range of a Catalog item are loaded.
 
-#### 18 July 2024 - Fix - Catalog - Incorrect empty search result when initiated from home page [ID_40232]
+#### 19 July 2024 - Fix - Catalog - Incorrect empty search result when initiated from home page [ID_40232]
 
 When a search request was initiated from the home page of the DataMiner Catalog, an empty result was shown on the browse page until the page was reloaded. The correct search result will now be shown immediately.
 
-#### 18 July 2024 - Enhancement - Catalog - Improved vendor logo loading [ID_40235]
+#### 19 July 2024 - Enhancement - Catalog - Improved vendor logo loading [ID_40235]
 
 Caching has been introduced for vendor logos, which will make Catalog search results load faster.
 
