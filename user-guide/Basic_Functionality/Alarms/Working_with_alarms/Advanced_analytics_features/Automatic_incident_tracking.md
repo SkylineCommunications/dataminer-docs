@@ -6,30 +6,34 @@ uid: Automatic_incident_tracking
 
 This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
 
-Several factors are taken into account for the grouping:
+The following factors, in order, are taken into account for the grouping:
+
+- Time
+
+- Alarm focus information (see [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)).
 
 - The polling IP (for timeout alarms only)
 
 - Service information
+
+- Relation Learning: parameter relationship data (from DataMiner 10.3.1/10.4.0 onwards) and alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards)<!--RN 36337-->, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
 - The IDP location
 
   > [!NOTE]
   > The IDP location will only be taken into account if IDP is deployed and the option *Update alarms on value changed* is selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
-- Element information
+- View information
 
 - Parameter information
 
-- View information
-
-- Time
-
-- Alarm focus information (see [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)).
+- Element information
 
 - Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
 
-- Parameter relationship data (from DataMiner 10.3.1/10.4.0 onwards) and alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards)<!--RN 36337-->, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+If one factor is used, this factor is mentioned in the value of the created alarm group. Note that the above factors are applied in order: e.g. if 2 alarms belong to the same device (element factor) and the same service (service factor), then the value of the alarm group refers to the service, not the element. 
+
+Sometimes multiple of the above factors are combined to create an alarm group: e.g. assume you have a device with 2 alarms (element factor) and the relation learning factor tells us that one of those alarms is related to a completely different alarm on another element. In this case, a group of 3 alarms is created and the alarm group's value contains "multiple reasons group".
 
 If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
