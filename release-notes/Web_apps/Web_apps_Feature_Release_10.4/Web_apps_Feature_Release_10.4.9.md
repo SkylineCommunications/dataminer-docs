@@ -169,3 +169,9 @@ When you used the search box to apply a general filter across a table, up to now
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a query used as a "start from" query was linked to a feed and a *Trigger* component, in some cases, feed updates would no longer update the query once the Trigger component had been triggered.
+
+#### Web API - GQI: Query version would incorrectly not be equal to the GQI version after a migration [ID_40216]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+After a GQI query had been migrated, in some cases, the query version would incorrectly not be equal to the GQI version, leading to unexpected behavior.
