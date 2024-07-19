@@ -4,7 +4,7 @@ uid: SLNetClientTest_creating_enhanced_view
 
 # Creating an enhanced view
 
-From DataMiner 10.0.0/9.6.1 onwards, it is possible to enhance a view with an element, so that the alarm level of the element will affect the alarm level of the view, even if the element is not part of the view, and so that the data pages of this element will be displayed on the card of the view.
+It is possible to enhance a view with an element, so that the alarm level of the element will affect the alarm level of the view, even if the element is not part of the view, and so that the data pages of this element will be displayed on the card of the view.
 
 To create such an enhanced view:
 
