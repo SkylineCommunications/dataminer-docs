@@ -840,3 +840,9 @@ From now on, the *Connect to cloud/DCP* user permission is no longer required to
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.
+
+#### Service & Resource Management: Problem when retrieving resources filtered by property [ID_40209]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a request was sent to a DataMiner Agent to retrieve resources filtered by property, in some cases, the DataMiner Agent would throw a `NullReferenceException` when one of the resources had "null" properties.
