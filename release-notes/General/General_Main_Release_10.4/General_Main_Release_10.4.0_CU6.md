@@ -66,6 +66,16 @@ The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the f
 
 From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
 
+#### Service & Resource Management: Enhanced logging when booking objects are added to, updated in or deleted from the cache [ID_40043]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When booking objects are added to, updated in or deleted from the cache, from now on, the following properties of the booking in question will be logged:
+
+- Booking status
+- Booking resources
+- Time when the booking was last modified
+
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

@@ -46,6 +46,16 @@ Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists
 
 The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
 
+#### Service & Resource Management: Enhanced logging when booking objects are added to, updated in or deleted from the cache [ID_40043]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When booking objects are added to, updated in or deleted from the cache, from now on, the following properties of the booking in question will be logged:
+
+- Booking status
+- Booking resources
+- Time when the booking was last modified
+
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

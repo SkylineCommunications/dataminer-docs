@@ -238,6 +238,16 @@ Because of a number of enhancements made to SLNet, overall performance has incre
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
 
+#### Service & Resource Management: Enhanced logging when booking objects are added to, updated in or deleted from the cache [ID_40043]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When booking objects are added to, updated in or deleted from the cache, from now on, the following properties of the booking in question will be logged:
+
+- Booking status
+- Booking resources
+- Time when the booking was last modified
+
 #### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
