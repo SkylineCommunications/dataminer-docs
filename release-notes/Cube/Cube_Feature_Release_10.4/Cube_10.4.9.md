@@ -110,6 +110,17 @@ When configuring alarm templates and trend templates, up to now, it would incorr
 
 When dynamic values were used in interface shapes that were child shapes on an element group, and those shapes did not have the *AllowCentralConnectivity* option enabled, in some cases, the DCF connections would incorrectly be drawn from the center of the shapes instead of their interfaces.
 
+#### Visual Overview: Problem with 'EnableLoading=False' option [ID_40065]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+The page and shape option `EnableLoading=False` would no longer work when shapes had pending properties (e.g. properties of which the value contained unresolved placeholders).
+
+> [!NOTE]
+>
+> - The `VisioLoadTimeMetric` SPI will now report on all shapes, regardless of whether they show their loading state or not.
+> - From now on, the `EnableLoading` option is case insensitive.
+
 #### Router Control: Problem when connecting an already connected output to a new input [ID_40076]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
