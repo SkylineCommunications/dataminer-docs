@@ -9,32 +9,6 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 19 July 2024 - New Feature - Catalog - Allow to search on catalog tags [ID_40259]
-
-It is now possible to search on catalog tags and a catalog item search result will display which tags are present on the catalog item.
-
-#### 19 July 2024 - New Feature - Catalog - Suppport for more catalog types [ID_40144]
-
-The following new catalog types are supported and can be used during catalog registration and search filtering.
-
-- Ad Hoc Data Source 
-- User-defined API
-- Testing Solution
-- Standard Solution
-- Solution
-- Scripted Connector
-- SLA Model
-- Sample Solution
-- Profile-Load Script 
-- Low-Code App 
-- Life Cycle Service Orchestration
-- Function Definition
-- Enhanced Service Model 
-- Data Transformer
-- Data Query
-- Dashboard
-- ChatOps Extension
-- Best Practices Analyzer 
 
 #### 19 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
 
