@@ -22,24 +22,24 @@ It is now possible to search on catalog tags and a catalog item search result wi
 
 The following new catalog types are supported and can be used during catalog registration and search filtering.
 
-Ad Hoc Data Source
-User-defined API
-Testing Solution
-Standard Solution
-Solution
-Scripted Connector
-SLA Model
-Sample Solution
-Profile-Load Script
-Low-Code App
-Life Cycle Service Orchestration
-Function Definition
-Enhanced Service Model
-Data Transformer
-Data Query
-Dashboard
-ChatOps Extension
-Best Practices Analyzer
+- Ad Hoc Data Source
+- User-defined API
+- Testing Solution
+- Standard Solution
+- Solution
+- Scripted Connector
+- SLA Model
+- Sample Solution
+- Profile-Load Script
+- Low-Code App
+- Life Cycle Service Orchestration
+- Function Definition
+- Enhanced Service Model
+- Data Transformer
+- Data Query
+- Dashboard
+- ChatOps Extension
+- Best Practices Analyzer
 
 #### 22 July 2024 - Enhancement - Admin - DataMiner Systems will now show what type they are [ID_40123]
 
