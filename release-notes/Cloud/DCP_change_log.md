@@ -14,11 +14,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 On the details page, the back button spanned the whole height of the container.
 This now has been reduced to the back button itself only.
 
-#### 19 July 2024 - New Feature - Catalog - Allow to search on catalog tags [ID_40259]
+#### 22 July 2024 - New Feature - Catalog - Allow to search on catalog tags [ID_40259]
 
 It is now possible to search on catalog tags and a catalog item search result will display which tags are present on the catalog item.
 
-#### 19 July 2024 - New Feature - Catalog - Suppport for more catalog types [ID_40144]
+#### 22 July 2024 - New Feature - Catalog - Suppport for more catalog types [ID_40144]
 
 The following new catalog types are supported and can be used during catalog registration and search filtering.
 
@@ -41,11 +41,11 @@ Dashboard
 ChatOps Extension
 Best Practices Analyzer
 
-#### 18 July 2024 - Enhancement - Admin - DataMiner Systems will now show what type they are [ID_40123]
+#### 22 July 2024 - Enhancement - Admin - DataMiner Systems will now show what type they are [ID_40123]
 
 It is now possible to see on the organization overview page what type of DMS you are running. This can be a DaaS or Self-hosted system. This information is now also available on the DMS overview page.
 
-#### 18 July 2024 - Enhancement - Admin - Disable the "Add user" button when you don't have the right permissions [ID_40234]
+#### 22 July 2024 - Enhancement - Admin - Disable the "Add user" button when you don't have the right permissions [ID_40234]
 
 It was possible to try add a user to your organization/DMS. But you would get a error that you don't have the right permissions to do this.
 Now you won't be able to try and add a user. The button will be disabled when you don't have de right permissions.
