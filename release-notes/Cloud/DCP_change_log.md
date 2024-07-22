@@ -9,6 +9,38 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 22 July 2024 - Fix - Catalog - Back button spanning whole height of container [ID 40245]
+
+On the details page, the back button spanned the whole height of the container.
+This now has been reduced to the back button itself only.
+
+#### 19 July 2024 - New Feature - Catalog - Allow to search on catalog tags [ID_40259]
+
+It is now possible to search on catalog tags and a catalog item search result will display which tags are present on the catalog item.
+
+#### 19 July 2024 - New Feature - Catalog - Suppport for more catalog types [ID_40144]
+
+The following new catalog types are supported and can be used during catalog registration and search filtering.
+
+Ad Hoc Data Source
+User-defined API
+Testing Solution
+Standard Solution
+Solution
+Scripted Connector
+SLA Model
+Sample Solution
+Profile-Load Script
+Low-Code App
+Life Cycle Service Orchestration
+Function Definition
+Enhanced Service Model
+Data Transformer
+Data Query
+Dashboard
+ChatOps Extension
+Best Practices Analyzer
+
 #### 18 July 2024 - Enhancement - Admin - DataMiner Systems will now show what type they are [ID_40123]
 
 It is now possible to see on the organization overview page what type of DMS you are running. This can be a DaaS or Self-hosted system. This information is now also available on the DMS overview page.
