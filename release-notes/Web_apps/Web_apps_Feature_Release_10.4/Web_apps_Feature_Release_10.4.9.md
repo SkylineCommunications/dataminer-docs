@@ -34,6 +34,17 @@ In the settings of the component, you can also opt to have the component either 
 > - The component will not ask for any missing parameters or dummies. It expects them to be filled in either in its settings or via feeds. When input is missing, the script will not be launched and the component will be blank.
 > - By default, scripts will time out after 15 minutes. If a script times out, an error will be displayed in the component.
 
+#### Low-Code Apps: New 'Set value' action [ID_40252]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+It is now possible to configure a *Set value* action for a *Numeric input*, *Text input* or *Search input* component.
+
+This action will allow users to set the current value of the component in question to either a static value or a feed.
+
+When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed.
+If the component does not have this option enabled, the value will only be passed as the component's feed on `Enter` or `Focus lost`.
+
 ## Changes
 
 ### Enhancements
