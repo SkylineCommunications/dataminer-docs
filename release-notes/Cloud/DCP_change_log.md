@@ -9,9 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 24 July 2024 - Enhancement - New DMS setting to limit Remote Cube access based on IP address [ID_]
+#### 24 July 2024 - Enhancement - New remote access setting to restrict remote Cube access based on IP addresses [ID_]
 
-The dataminer.services settings, configurable from the Admin app, have been enhanced so you can limit remote access to Cube for each specific DMS based on (public) IP address.
+An enhancement has been made to the remote access settings in the Admin app, which allows you to restrict remote Cube access based on specified (public) IP addresses.
+
+> [!TIP]
+> See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 

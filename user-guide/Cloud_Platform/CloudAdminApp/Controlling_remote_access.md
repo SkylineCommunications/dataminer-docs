@@ -37,6 +37,20 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
 1. Toggle the *Remote Access* settings to *On* or *Off*, depending on whether you want this to be enabled or not.
 
+   If the main *Remote Access* setting is enabled, the following settings are also available:
+
+   - *DataMiner Cube (desktop app)*: Enable or disable remote access to the DataMiner System(s) via the desktop app.
+
+   - *Remote Cube allowed IPs*: Only available if the *DataMiner Cube (desktop app)* setting is enabled. This setting allows you to restrict access to the DMS based on specified IP addresses.
+
+     When enabled, click the *Manage* button to access the list of IP addresses permitted for remote access to the DMS.
+
+     ![Managing IP addresses](~/user-guide/images/Managing_IP_Addresses.png)
+
+   - *Web apps*: Enable or disable remote access to the DataMiner System(s) via the web apps.
+
+   - *User-Defined APIs*: Enable or disable remote access to the DataMiner System(s) via User-Defined APIs.
+
 > [!NOTE]
 >
 > - If a setting is disabled on organization level, it will not be possible to enable it for a DataMiner System in that organization.
