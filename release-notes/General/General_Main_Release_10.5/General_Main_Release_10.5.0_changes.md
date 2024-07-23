@@ -650,6 +650,14 @@ See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Da
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
 
+#### NT_SNMP_RAW_GET, NT_SNMP_GET, NT_SNMP_RAW_SET and NT_SNMP_SET calls will take the SnmpPollingSnmpPlusPlusOnly soft-launch option into account [ID_40019]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls will take the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option into account.
+
+In other words, from now on, when this soft-launch option is set to true, these calls will be executed using SNMP++ instead of WinSNMP.
+
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID_40023]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
