@@ -189,3 +189,9 @@ After a GQI query had been migrated, in some cases, the query version would inco
 Up to now, the action editor window could get too wide to fit onto a screen. Its width has now been limited.
 
 Also, up to now, while a *Navigate to a URL* action would automatically add a `http://` or `https://` prefix, its favicon incorrectly would not. This has now been fixed.
+
+#### Dashboards app: Table and State components would not be rendered correctly when generating PDF reports [ID_40261]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+when you generated a PDF report based on a dashboard, in some cases, Table and State components would not be rendered correctly.
