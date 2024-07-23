@@ -181,3 +181,11 @@ When a query used as a "start from" query was linked to a feed and a *Trigger* c
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 After a GQI query had been migrated, in some cases, the query version would incorrectly not be equal to the GQI version, leading to unexpected behavior.
+
+#### Low-code Apps - Action editor: Problems with window width and 'Navigate to a URL' action favicon [ID_40239]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the action editor window could get too wide to fit onto a screen. Its width has now been limited.
+
+Also, up to now, while a *Navigate to a URL* action would automatically add a `http://` or `https://` prefix, its favicon incorrectly would not. This has now been fixed.
