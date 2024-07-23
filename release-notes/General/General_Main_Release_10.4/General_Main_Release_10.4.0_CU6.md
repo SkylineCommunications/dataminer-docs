@@ -225,3 +225,11 @@ In some cases, new change points would incorrectly be generated shortly after th
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a request was sent to a DataMiner Agent to retrieve resources filtered by property, in some cases, the DataMiner Agent would throw a `NullReferenceException` when one of the resources had "null" properties.
+
+#### Problem when NATSMigration called SLKill to stop the NATS service [ID_40271]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When the NATSMigration process called SLKill to stop the NATS service, up to now, SLKill would incorrectly also kill the NATSMigration process.
+
+From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".
