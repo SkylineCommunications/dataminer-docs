@@ -78,6 +78,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 A number of security enhancements have been made.
 
+#### Dashboards app & Low-Code Apps: Time range feed will now automatically adapt its color scheme and width [ID_40226]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, a *Time range* feed would always have a white background and take the full width of the dashboard or low-code app. From now on, it will automatically adapt its color scheme to the dashboard theme and adjust its width depending on the number of columns it has to show in its filter pane.
+
 #### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
