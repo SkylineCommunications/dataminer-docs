@@ -48,7 +48,7 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
      ![Managing IP addresses](~/user-guide/images/Managing_IP_Addresses.png)
 
      > [!NOTE]
-     > Only public IP addresses can be specified in the pop-up window.
+     > Only public IP addresses can be added to the list of trusted IP addresses.
 
    - *Web apps*: Enable or disable remote access to the DataMiner System(s) via the web apps.
 
