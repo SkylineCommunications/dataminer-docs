@@ -22,6 +22,28 @@ Also, a button has now been added to the solution explorer that will allow you t
 
 DIS can now also be installed and run on 64-bit ARM platforms.
 
+#### Macro's have support for ValueTuple [ID_40297]
+
+A macro will be able to be executed when using ValueTuples.
+
 ### Validator
 
-DIS now uses [Validator version 1.1.7](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.7).
+DIS now uses [Validator version 1.1.8](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.8).
+
+## Changes
+
+### Enhancements
+
+#### QAction logs are now interpolated strings [ID_40178]
+
+The snippets and templates of the plugins have been updated to use interpolated strings for the QAction Log method.
+
+### Fixes
+
+#### Editing macro's have support for PresentationFramework and PresentationCore [ID_40297]
+
+When editing a macro, the reference to PresentationFramework and PresentationCore have been added correctly again. This gives access to the MessageBox and Clipboard.
+
+#### Fix intendation for generated code and files [ID_40179]
+
+All generated code and files will be indented by tabs. This is the default indentation defined in the editorconfig of our Automation script solution and connection solution.
