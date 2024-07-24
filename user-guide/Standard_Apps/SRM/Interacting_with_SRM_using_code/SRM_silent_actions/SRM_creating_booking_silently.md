@@ -131,12 +131,12 @@ bool WaitForCorrectBooking()
         isCorrectState = reservation.GetBookingLifeCycle() == GeneralStatus.Stopping;
     }
 
-    if (!isCorrect)
+    if (!isCorrectState)
     {
         reservation = SrmManagers.ResourceManager.GetReservationInstance(reservation.ID);
     }
 
-    return isCorrect;
+    return isCorrectState;
 }
 
 if (reservation.Start <= DateTime.UtcNow)
