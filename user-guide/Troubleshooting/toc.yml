@@ -224,6 +224,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Unable to override information events TTL of 5 years
+            topicUid: KI_Information_events_TTL_five_years
           - name: Process crashes when trying to connect to MySQL database
             topicUid: KI_MySQL_Unhandled_Exception
           - name: Timetrace data is no longer written during Cassandra Cluster migration
