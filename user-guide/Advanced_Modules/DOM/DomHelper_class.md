@@ -107,9 +107,9 @@ To specify which `DomInstances` need to be retrieved from the database, you can 
 |DomDefinitionId      |Guid        |Equal, NotEqual |
 |Name                 |string      |Equal, NotEqual, Contains, NotContains |
 |StatusId             |string      |Equal, NotEqual, Contains, NotContains |
-|LastModified         |DateTime    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|LastModified         |DateTime    |LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
 |LastModifiedBy       |string      |Equal, NotEqual, Contains, NotContains |
-|CreatedAt            |DateTime    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|CreatedAt            |DateTime    |LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
 |CreatedBy            |string      |Equal, NotEqual, Contains, NotContains |
 
 **Fields:**
@@ -126,9 +126,9 @@ These are the supported comparers when filtering on `DomInstance` values using t
 |DateTime                  |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
 |GenericEnum (int)         |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
 |List GenericEnum (int)    |Contains, NotContains |
-|GenericEnum (string)      |Equal, NotEqual, Contains, NotContains|
+|GenericEnum (string)      |Equal, NotEqual, Contains, NotContains |
 |List GenericEnum (string) |Contains, NotContains |
-|Guid                      |Equals, NotEquals   |
+|Guid                      |Equals, NotEquals |
 |List Guid                 |Contains, NotContains |
 
 > [!NOTE]
