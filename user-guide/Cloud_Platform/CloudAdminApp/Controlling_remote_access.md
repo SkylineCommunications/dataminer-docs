@@ -49,13 +49,14 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
      > [!NOTE]
      >
-     > - Only public IP addresses can be added to the list of trusted IP addresses. Private IP addresses are hidden behind public IP addresses and cannot be used for communication outside of their local network.
+     > - Only public IP addresses can be added to the list of trusted IP addresses. Private IP addresses, which are hidden behind public IP addresses, cannot be used for communication outside of their local network.
      > - To find your public IP address:
      >
      >   1. Open a command prompt as Administrator.
      >   1. Execute the `curl ifconfig.me` command.
      >
-     >   Note that if you are using a VPN, your own IP address is hidden behind another public IP address.
+     >   Note that if you are using a VPN, the IP address displayed will be the public IP address assigned by the VPN, not your actual public IP address. Add this VPN-assigned IP address to the list.
+     > - Make sure you have a static IP address. If you are using a VPN, confirm it is configured with a static IP address. If you are not using a VPN, contact your Internet Service Provider (ISP) to verify or obtain a static IP address. A dynamic IP address can change periodically, which may result in losing remote access to the DMS if it changes. Additionally, someone else might be assigned your previous public IP address, allowing them remote access to the DMS (though they would still need to log in).
 
    - *Web apps*: Enable or disable remote access to the DataMiner System(s) via the web apps.
 
