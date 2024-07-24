@@ -34,6 +34,17 @@ In the settings of the component, you can also opt to have the component either 
 > - The component will not ask for any missing parameters or dummies. It expects them to be filled in either in its settings or via feeds. When input is missing, the script will not be launched and the component will be blank.
 > - By default, scripts will time out after 15 minutes. If a script times out, an error will be displayed in the component.
 
+#### Low-Code Apps: New 'Set value' action [ID_40252]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+It is now possible to configure a *Set value* action for a *Numeric input*, *Text input* or *Search input* component.
+
+This action will allow users to set the current value of the component in question to either a static value or a feed.
+
+When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed.
+If the component does not have this option enabled, the value will only be passed as the component's feed on `Enter` or `Focus lost`.
+
 ## Changes
 
 ### Enhancements
@@ -44,11 +55,11 @@ In the settings of the component, you can also opt to have the component either 
 
 Because of a number of enhancements, from now on, all components that retrieve element/protocol parameters will do so more efficiently.
 
-#### Dashboards app & Low-Code Apps - Time range component: Reset button added [ID_40011]
+#### Dashboards app & Low-Code Apps: All components now support zooming in/out using CTRL+Scroll [ID_40017]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-The *Time range* feed component now has a *Reset* button. Clicking this button will reset the time range to the default range (i.e. "Today so far").
+From now on, in all components, you will be able to zoom in and out using CTRL+Scroll.
 
 #### Web API: DOM methods will no longer check whether DOM object GUIDs are empty [ID_40024]
 
@@ -58,7 +69,45 @@ Up to now, the DOM methods in the web API would check whether a DOM object GUID 
 
 As the DOM SLNet API support objects with empty GUIDs, all empty GUID checks have now been removed from the web API.
 
+#### Low-Code Apps: Enhancements with regard to concurrent editing [ID_40075]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of enhancements have been made to prevent issues from occurring when a low-code app is being edited by multiple users at the same time.
+
+When one user makes a change to a low-code app, all other users who are editing the same app will receive a notice saying that they should reload the app because changes were made. If a user ignores that notice and tries to make changes anyway, the header bar will show an error message saying that the edit has failed.
+
+#### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
+
+#### Security enhancements [ID_40210]
+
+<!-- 40210: MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of security enhancements have been made.
+
+#### Dashboards app & Low-Code Apps: Time range feed will now automatically adapt its color scheme and width [ID_40226]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, a *Time range* feed would always have a white background and take the full width of the dashboard or low-code app. From now on, it will automatically adapt its color scheme to the dashboard theme and adjust its width depending on the number of columns it has to show in its filter pane.
+
+#### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In all DataMiner web applications, placeholders in text boxes will now be displayed more clearly, especially in dark mode.
+
 ### Fixes
+
+#### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive Automation script [ID_39862]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in a interactive Automation script launched from a dashboard or a low-code app, a tree view component was expanded or collapsed, in some cases, multiple *Continue* messages would incorrectly be sent to the script. From now on, when a tree view component is expanded or collapsed, only one *Continue* message will be sent.
 
 #### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID_39961]
 
@@ -101,3 +150,59 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
+
+#### Web API would throw a 'Compatibility Manager not initialized yet' error [ID_40148]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, the web API would throw a `Compatibility Manager not initialized yet` error. Error handling has now been enhanced to prevent this error from being thrown.
+
+#### Dashboards app & Low-Code Apps: Bookings feed would no longer return any bookings matching the filter [ID_40157]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Since DataMiner version 10.4.6, a bookings feed would incorrectly no longer return any bookings matching the filter. From now on, the bookings feed will again return all bookings that match the filter.
+
+#### Dashboards app & Low-Code Apps: Components could lose focus after having been resized [ID_40180]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, components could lose focus after having been resized.
+
+#### Low-Code Apps: Description of 'Close all panels' action set to 'Do nothing' after a migration from a version older than 10.4.7 [ID_40191]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you opened a low-code app that was migrated from a version older than version 10.4.7, the *Close all panels* action had an incorrect description. Instead of "Close all panels", the description was incorrectly set to "Do nothing".
+
+#### Dashboards app & Low-Code Apps - Table component: Table filter would incorrectly take into account hidden columns [ID_40196]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you used the search box to apply a general filter across a table, up to now, matches in hidden columns would incorrectly also be taken into account. As a result, after you had applied a filter, in some cases, rows without any visual match could get filtered out.
+
+#### Dashboards app & Low-Code Apps: Query used as a 'start from' query and linked to a feed and a Trigger component would no longer be updated following a feed update once the Trigger component had been triggered [ID_40207]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a query used as a "start from" query was linked to a feed and a *Trigger* component, in some cases, feed updates would no longer update the query once the Trigger component had been triggered.
+
+#### Web API - GQI: Query version would incorrectly not be equal to the GQI version after a migration [ID_40216]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+After a GQI query had been migrated, in some cases, the query version would incorrectly not be equal to the GQI version, leading to unexpected behavior.
+
+#### Low-code Apps - Action editor: Problems with window width and 'Navigate to a URL' action favicon [ID_40239]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the action editor window could get too wide to fit onto a screen. Its width has now been limited.
+
+Also, up to now, while a *Navigate to a URL* action would automatically add a `http://` or `https://` prefix, its favicon incorrectly would not. This has now been fixed.
+
+#### Dashboards app: Table and State components would not be rendered correctly when generating PDF reports [ID_40261]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+when you generated a PDF report based on a dashboard, in some cases, Table and State components would not be rendered correctly.

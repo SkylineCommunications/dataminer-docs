@@ -10,7 +10,7 @@ A device is represented using the Node and the Parameter type. Each node may hav
 
 #### Querying data provider
 
-To query a data provider, a GetDirectory command can be issued. You can do so by appending the GetDirectory command to the node you want the get the children from. The data provider then responds with the same structure, but appends the child nodes and parameters (if any).
+To query a data provider, a GetDirectory command can be issued. You can do so by appending the GetDirectory command to the node you want to get the children from. The data provider then responds with the same structure, but appends the child nodes and parameters (if any).
 
 #### Updating a parameter
 

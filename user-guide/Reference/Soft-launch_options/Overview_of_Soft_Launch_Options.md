@@ -242,7 +242,7 @@ Enables or disables the legacy Reports and Dashboards modules.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)) before upgrading or uploading a 10.4.x upgrade package.
 
 ### MonitoringAndControl
 
@@ -401,7 +401,7 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 > [!IMPORTANT]
 >
 > - This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
-> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET) and [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) calls do not take this soft-launch option into account yet. As a result, SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always executed by WinSNMP.
+> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls take this soft-launch option into account as from DataMiner versions 10.5.0/10.4.9.<!-- RN 40019 --> Prior to DataMiner versions 10.5.0/10.4.9, SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always executed using WinSNMP.
 
 ### SrmOwnServices
 

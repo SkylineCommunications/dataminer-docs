@@ -553,6 +553,8 @@ items:
             topicUid: Enabling_DataMiner_SNMP_agent_functionality
           - name: Adjusting the SNMP inform message cache size
             topicUid: Adjusting_the_SNMP_inform_message_cache_size
+          - name: Generating SMIv2 MIB files
+            topicUid: Generating_SMIv2_MIB_files
       - name: Resending alarms to an SNMP manager
         topicUid: Resending_alarms_to_an_SNMP_manager
       - name: DataMiner SNMP notification definition

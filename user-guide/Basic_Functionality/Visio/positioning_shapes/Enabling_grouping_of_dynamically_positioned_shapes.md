@@ -4,12 +4,9 @@ uid: Enabling_grouping_of_dynamically_positioned_shapes
 
 # Enabling grouping of dynamically positioned shapes
 
-To get a cleaner look for Visual Overviews containing many dynamically positioned shapes that are very close together, you can enable shape grouping. This way, dynamically positioned shapes that overlap will be grouped.
+To get a cleaner look for Visual Overviews containing many dynamically positioned shapes that are very close together, you can enable shape grouping. This way, dynamically positioned shapes that overlap will be grouped. Clicking the grouped shape will open a details pane with more information on the different shapes it combines.
 
-> [!NOTE]
-> For dynamically positioned shapes based on tables, grouping is possible from DataMiner 9.5.1 onwards. For dynamically positioned shapes based on properties, grouping is possible from DataMiner 9.5.3 onwards.
-
-To enable grouping of dynamically positioned shapes, add a shape with shape data *ShapeGrouping* to the Visual Overview and set its value to “All”.
+To enable grouping of dynamically positioned shapes, add a shape with shape data *ShapeGrouping* to the Visual Overview and set its value to "All".
 
 | Shape data field | Value |
 |------------------|-------|
@@ -19,10 +16,8 @@ The size and geometry of the group shapes will be the same as that of the shape 
 
 > [!NOTE]
 >
-> - To display the number of shapes that are grouped into a single group shape, add an asterisk (“\*”) in the *ShapeGrouping* shape.
+> - To display the number of shapes that are grouped into a single group shape, add an asterisk ("\*") in the *ShapeGrouping* shape.
 > - From DataMiner 10.3.1/10.4.0 onwards, to display the number of children in a group of dynamically positioned shapes, add "[Count]" in the *ShapeGrouping* shape. Alternatively, to display the parameter value of the shape data *GroupBy* of the first child of the group, add "[GroupValue]" in the *ShapeGrouping* shape. If the *GroupBy* value has multiple column parameters or properties, these will be separated by commas. You can also use the "[GroupValue]" and "[Count]" placeholders together to create more complex labels, e.g. `[GroupValue]([Count])`, which might result in "MyFirstChildGroupValue (5)".
-> - From DataMiner 9.5.2 onwards, clicking the grouped shape will open a details pane with more information on the different shapes it combines.
-> - Displaying DCF connections between grouped shapes is possible from DataMiner 9.5.3 onwards. In that case, when an element is represented by a group shape, all connections to that element will be drawn to the group shape.
 
 ## Optional grouping configuration
 

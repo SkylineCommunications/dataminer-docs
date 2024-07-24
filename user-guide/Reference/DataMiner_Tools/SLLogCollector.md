@@ -6,9 +6,9 @@ uid: SLLogCollector
 
 SLLogCollector is a tool that can be used to easily collect log information and memory dumps from a DataMiner Agent. Log collection can be very useful to troubleshoot issues in DataMiner.
 
-This log collector tool is available on every DMA from DataMiner 10.0.5 onwards. It is located in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
+This log collector tool is available on every DMA in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
 
-From DataMiner 9.6.0 \[CU23\], 10.0.0 \[CU13\], 10.1.0 \[CU2\] and 10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector.*
+From DataMiner 10.1.0 \[CU2\]/10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector*.
 
 If SLLogCollector is not installed on your DataMiner Agent, you can download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
 

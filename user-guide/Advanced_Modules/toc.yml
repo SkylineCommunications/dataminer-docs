@@ -101,14 +101,12 @@ items:
     topicUid: sla
     items:
       - name: Creating an SLA
-        topicUid: Creating_an_SLA
         items:
           - name: Creating a new SLA
             topicUid: Creating_a_new_SLA
           - name: Replicating an existing SLA
             topicUid: Replicating_an_existing_SLA
       - name: Configuring an SLA
-        topicUid: Configuring_an_SLA
         items:
           - name: Setting the SLA Window
             topicUid: Setting_the_SLA_Window
@@ -133,7 +131,6 @@ items:
           - name: Changing an SLA into an enhanced service
             topicUid: Changing_an_SLA_into_an_enhanced_service
       - name: Viewing SLA information
-        topicUid: Viewing_SLA_information
         items:
           - name: Consulting general SLA information
             topicUid: Consulting_general_SLA_information
@@ -146,7 +143,6 @@ items:
           - name: Viewing a list of current active service alarms
             topicUid: Viewing_a_list_of_current_active_service_alarms
       - name: Making corrections to existing outages
-        topicUid: Making_corrections_to_existing_outages
         items:
           - name: Correcting an outage in the outage list
             topicUid: Correcting_an_outage_in_the_outage_list
@@ -696,6 +692,8 @@ items:
             topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
+      - name: Style Guide
+        topicUid: LCA_Style_guide
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
   - name: DMS Dashboards (legacy)
@@ -739,7 +737,6 @@ items:
       - name: Customizing the legacy Dashboards app
         topicUid: Customizing_the_legacy_Dashboards_app
       - name: Legacy Dashboard Gateway installation
-        topicUid: Legacy_Dashboard_Gateway_installation
         items:
           - name: Installing a DMS Dashboard Gateway
             topicUid: Installing_a_DMS_Dashboard_Gateway
@@ -1001,7 +998,6 @@ items:
       - name: Working with job templates
         topicUid: Working_with_job_templates
   - name: Maps
-    topicUid: maps
     items:
       - name: About DataMiner Maps
         topicUid: About_DMS_Maps
@@ -1017,7 +1013,6 @@ items:
       - name: Configuring the DataMiner Maps host servers
         topicUid: Configuring_the_DataMiner_Maps_host_servers
       - name: Configuring the DataMiner Maps
-        topicUid: Configuring_the_DataMiner_Maps
         items:
           - name: Top-level structure of a DataMiner Maps configuration file
             topicUid: Top-level_structure_of_a_DataMiner_Maps_configuration_file
@@ -1105,6 +1100,8 @@ items:
             topicUid: Service_reports
           - name: Business reports
             topicUid: Business_reports
+          - name: Booking reports
+            topicUid: Booking_reports
           - name: Using the View filter for built-in reports
             topicUid: Using_the_View_filter_for_built-in_reports
       - name: Creating report templates
@@ -1234,13 +1231,6 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
-      - name: SRM reporting
-        topicUid: SRM_reporting
-        items:
-          - name: Bookings / Reservations tab
-            topicUid: Bookings_Reservations_tab
-          - name: Bookings / Reservations component of custom templates
-            topicUid: Bookings_Reservations_component_of_custom_templates
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

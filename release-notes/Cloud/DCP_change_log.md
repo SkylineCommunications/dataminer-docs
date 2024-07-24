@@ -9,6 +9,168 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 19 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
+
+It is now possible to include a readme.md file in the zip archive used to register a new version of a Catalog item. Images are not (yet) supported in the readme file.
+
+#### 19 July 2024 - Fix - Catalog - Range without active versions shown [ID_40218]
+
+Previously, if a range had no active versions, it was still shown on the details page of a Catalog item. Now such a range will no longer be shown.
+
+#### 19 July 2024 - Enhancement - Catalog - Improved version loading [ID_40217]
+
+A new caching mechanism has been introduced that will improve performance when the versions included in a range of a Catalog item are loaded.
+
+#### 19 July 2024 - Fix - Catalog - Incorrect empty search result when initiated from home page [ID_40232]
+
+When a search request was initiated from the home page of the DataMiner Catalog, an empty result was shown on the browse page until the page was reloaded. The correct search result will now be shown immediately.
+
+#### 19 July 2024 - Enhancement - Catalog - Improved vendor logo loading [ID_40235]
+
+Caching has been introduced for vendor logos, which will make Catalog search results load faster.
+
+#### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
+
+From now on, SAML can be used to access Cube remotely.
+
+#### 12 July 2024 - New feature - Admin - Usage page to view STaaS consumption [ID 40172]
+
+In the Admin app, a new *Usage* page is now available for users with the Admin or Owner role in an organization. This page shows information about the usage of the STaaS systems in the organization.
+
+#### 12 July 2024 - Enhancement - Catalog - Infinite scroll [ID_40167]
+
+​On the Catalog browse page, when users now scroll to the bottom of the page, a new page will load if there are more Catalog items to show.
+
+#### 11 July 2024 - Enhancement - ChatOps - Notification summary [ID_40182]
+
+A new version (1.2.5) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to add a summary to Chat Integration notifications using Adaptive Cards. This summary will be used for the actual activity notification, so you can easily read what is going on from the summary without opening the notification itself. The summary will also be used for the immersive reader functionality in Microsoft Teams.
+
+If the summary is not explicitly defined, the behavior will stay the same, and "Card" will be shown by default.
+
+#### 11 July 2024 - Enhancement - Improved handling of timed out Remote Access and Live Sharing requests [ID_40173]
+
+An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
+
+#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID_40121]
+
+When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+
+#### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID_40147]
+
+If all ranges of a Catalog item were either labeled as main or as deprecated, in the version history on the details page of the Catalog item, the main range could incorrectly be filtered out when the unsupported versions were set not to be shown (with the *Unsupported versions* toggle button). Now the main range will be shown correctly in the version history.
+
+#### 4 July 2024 - Enhancement - Remote Access, Remote Cube, and Live Sharing stability improvements [ID_40106]
+
+An enhancement has been done to improve the stability when the web apps or Cube are accessed remotely or when live sharing is used.
+
+#### 3 July 2024 - New feature - Catalog - Version 2 of the User Catalog API [ID_39839] [ID_39958] [ID_40034]
+
+The User Catalog API has been updated to V2.
+
+This version will include the following routes:
+
+- **GET api/user-catalog/v2-0/catalogs/search** (UPDATED)
+
+  Searches for Catalog items.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}** (UPDATED)
+
+  Fetches a Catalog item by ID.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/download** (NEW)
+
+  Downloads a specific version of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/ranges?organizationId={organizationId}** (NEW)
+
+  Fetches the ranges for a specific Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}?organizationId={organizationId}/custom-tag** (NEW)
+
+  Updates a custom tag of a specific range of a specific Catalog item.
+
+- **DELETE api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}?organizationId={organizationId}/custom-tag** (NEW)
+
+  Removes a custom tag of a specific range of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions?organizationId={organizationId}&rangeId={rangeId}** (NEW)
+
+  Fetches the versions for a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/latest?organizationId={organizationId}** (NEW)
+
+  Fetches the latest available version of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/recommended?organizationId={organizationId}** (NEW)
+
+  Fetches the recommended versions of a specific Catalog item.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/can-deploy?organizationId={organizationId}** (NEW)
+
+  Verifies if a Catalog item version can be deployed.
+
+- **GET api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/can-deploy-dms?organizationId={organizationId}** (NEW)
+
+  Verifies if a Catalog item version can be deployed on the available DataMiner Systems.
+
+- **POST api/user-catalog/v2-0/catalogs/{catalogId}/ranges/versions/{versionId}/deploy** (UPDATED)
+
+  Deploys a specific version of a specific Catalog item.
+
+- **POST api/user-catalog/v2-0/catalogs/register**
+
+  Registers a Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/publishing-state?organizationId={organizationId}**
+
+  Sets the publishing state of a Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/version/{versionId}/publishing-state?organizationId={organizationId}**
+
+  Sets the publishing state of a Catalog version.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/ranges/{rangeId}/state?organizationId={organizationId}**
+
+  Sets the state of a specific range of a specific Catalog item.
+
+- **PATCH api/user-catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/state?organizationId={organizationId}**
+
+  Sets the state of a specific version of a specific Catalog item.
+
+#### 3 July 2024 - New feature - Catalog - Change state support [ID_40096]
+
+Skyline employees will now be able to change the state of a range or version when they view an item in the Catalog.
+
+#### 3 July 2024 - New feature - Catalog - Source link [ID_40046]
+
+When you view an item in the Catalog, the informational section on the right will now contain a link to the source.
+
+#### 3 July 2024 - New feature - Catalog - Custom tag support [ID_40030]
+
+When you view an item in the Catalog, if you are a member of the organization that published the item, you will now be able to assign a custom tag to ranges.
+
+#### 3 July 2024 - Enhancement - Home - Deploy prevention of DataMiner as a Service [ID_39995]
+
+When you try to spin up a new DataMiner as a Service system from the dataminer.services home page, this will now be blocked if your organization does not have enough DataMiner credits available.
+
+#### 3 July 2024 - New feature - Catalog - Version history [ID_39903]
+
+When you view an item in the Catalog, the versions tab will now include a version history section. This section will by default show all supported ranges and versions.
+
+A toggle button has also been introduced that allows you to show or hide unsupported ranges and versions. Active and main ranges are considered supported, while deprecated ranges are considered unsupported. For versions, released versions are considered supported, while versions marked as known issues, development, or deprecated are considered unsupported.
+
+#### 3 July 2024 - New feature - Catalog - Version and range tag support [ID_39899]
+
+In the Catalog, the versions and ranges shown when you view an item will now have tag support for the following cases:
+
+- The state of a range.
+- The state of a version.
+- Whether a version is private.
+
+#### 3 July 2024 - New feature - Catalog - Versions rework [ID_39846]
+
+When you view a connector item in the Catalog, the *Versions* tab will now group all the versions by range. Ranges are defined by the first three numbers of a version.
+
 #### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID_39983]
 
 Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g. when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
@@ -64,9 +226,9 @@ On the overview page of a DMS in the Admin app, the *Open in desktop app* button
 
 #### 7 June 2024 - Enhancement - ChatOps - Possibility to fetch the dataminer.services organization ID & DMS ID in Automation [ID_39878]
 
-A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
+A new version (1.2.4) of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has been released, which allows you to fetch the dataminer.services organization ID and DMS ID.
 
-These IDs, which had to be hardcoded before, can now be used for the buttons added in adaptive cards.
+These IDs, which had to be hardcoded before, can now be used for the buttons added in Adaptive Cards.
 
 You can fetch them using the following example:
 
@@ -128,7 +290,7 @@ From now on, it is possible to skip the confirmation message when running a cust
 
 You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.
 
-A new version of [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in adaptive cards.
+A new version of (1.2.3) [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in Adaptive Cards.
 
 #### 16 May 2024 - Fix - Catalog - Legacy routes not resolved correctly [ID_39653]
 
@@ -301,7 +463,7 @@ Available buttons:
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
@@ -320,7 +482,7 @@ Available buttons:
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
 
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
@@ -342,7 +504,7 @@ It is now possible to provide remote access via dataminer.services to files or w
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.0 to easily interact with Microsoft Teams.
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
@@ -460,7 +622,7 @@ When you deploy something (e.g. a connector) from the catalog to a DMA, a notifi
 
 When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
 
-#### 3 April 2023 - New Feature - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
+#### 3 April 2023 - New feature - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
 
 The following Chat Integration features have been added:
 

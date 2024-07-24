@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.8
 ---
 
-# General Feature Release 10.4.8 – Preview
+# General Feature Release 10.4.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -66,6 +66,14 @@ Because of a number of enhancements, overall performance of SLElement has increa
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
+
+#### DataMiner Object Models: Enhanced performance when using Equals or NotEquals operators in DOM state filters [ID_39712] [ID_40107]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
+
+Previously, when a count query of DOM instances was executed, and that query contained a filter for a particular DOM state, the GQI query would return all the DOM instances in the database and make a post-filter to count them. In case there were a lot of DOM instances in the database, the query could take a long time to resolve. A performance improvement has therefore been introduced by sending the filter by state to the database, resulting in a much faster response from the GQI query.
+
+If you use a filter with a *contains*, *not contains*, *regex*, or *not regex* operator, a post-filter will still be used. When you filter on a DOM state field, we therefore recommend using the *equals* or *not equals* operators.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
@@ -164,6 +172,12 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
 
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
+
 ### Fixes
 
 #### Documents: Issues fixed [ID_39076]
@@ -243,12 +257,6 @@ In some cases, SLProtocol could stop working while processing a FillArray reques
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When SLNet was using FileInfoHelper, in some cases, it would not process errors correctly.
-
-#### DataMiner Object Models: Problem when applying a DOM state filter in a DOM instance count query [ID_39712]
-
-<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
-
-When a DOM state filter was applied in a DOM instance count query, an `InvalidOperationException: Sequence contains more than one matching element` error could be thrown when multiple DOM behavior definitions shared the same DOM state name.
 
 #### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
 

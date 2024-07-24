@@ -7,13 +7,14 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [Failover switch taking a long time on systems with Cassandra Cluster setup](xref:KI_Failover_switch_Cassandra_Cluster) | Failover systems with Cassandra Cluster setup from DataMiner 10.4.2 onwards |  | June 27, 2024 |
+| [Process crashes when trying to connect to MySQL database](xref:KI_MySQL_Unhandled_Exception) | From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 <br>onwards | | July 15, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | | May 26, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Failover switch taking a long time on systems with Cassandra Cluster setup](xref:KI_Failover_switch_Cassandra_Cluster) | Failover systems with Cassandra Cluster setup from DataMiner 10.4.2 onwards | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | June 27, 2024 |
 | [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition) |From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards | DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 | June 6, 2024 |
 | [Deadlock in service loading during DataMiner startup](xref:KI_deadlock_service_loading) | From DataMiner 10.3.0 [CU10]/10.4.1 onwards | DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 [CU0] | June 11, 2024 |
 | [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine) | DataMiner 10.4.6 | DataMiner 10.4.6 [CU1] | May 24, 2024 |

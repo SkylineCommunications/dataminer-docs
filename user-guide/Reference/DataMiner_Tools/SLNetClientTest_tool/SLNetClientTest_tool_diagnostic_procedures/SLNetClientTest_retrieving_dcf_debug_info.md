@@ -4,7 +4,7 @@ uid: SLNetClientTest_retrieving_dcf_debug_info
 
 # Retrieving DCF debug information
 
-To get debug information on DCF connections, from DataMiner 9.0.0 CU16/9.5.3 onwards, you can send SLNet requests for DCF path highlighting with a DEBUG flag.
+To get debug information on DCF connections, you can send SLNet requests for DCF path highlighting with a DEBUG flag.
 
 Responses will then contain a *DebugInfo* string with additional information on why certain connections were added and others were not. This information also includes the service context match or mismatch, the direction that was used to resolve the connections, the element path found, the top 10 most frequent connections in case of a circular dependency, and protocol links that were not applied.
 

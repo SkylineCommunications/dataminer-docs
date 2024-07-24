@@ -34,12 +34,18 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to version 10.4.0 [CU0] or higher.
 
+   > [!NOTE]
+   > To be able to use non-indexed logger tables, upgrade to DataMiner version 10.4.0 [CU5]/10.4.8 or higher. <!-- RN 40066 -->
+
    > [!IMPORTANT]
    > We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates.
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Make sure that all Agents in your DataMiner System have internet access.
+1. Make sure that all Agents in your DataMiner System have internet access and are able to reach the following endpoints, depending on the data location that will be used:
+
+   - STaaS West Europe: 20.76.71.123
+   - STaaS UK South: 20.162.131.128
 
    > [!NOTE]
    > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
@@ -51,9 +57,11 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
    > [!NOTE]
    > If you have a specific preference with respect to the [data location and redundancy setup](#data-location-and-redundancy), let us know when you register your system.
 
-1. Wait until you receive confirmation that the registration is completed.
+1. Wait until you receive confirmation that the **registration is completed**.
 
 1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
+
+   If you do so, wait until the migration has been completed and verified before continuing with this procedure.
 
 1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it corresponding to your setup:
 

@@ -44,7 +44,7 @@ To resolve this issue, go to Task Manager and restart the *DataMiner CloudGatewa
 
 ## The session token has expired
 
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
+Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than six days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
 
 When you encounter this issue, you will find entries similar to the examples below in the *SLCloudStorage.txt* log file:
 

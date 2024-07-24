@@ -4,7 +4,7 @@ uid: Embedding_a_Profile_Manager_component
 
 # Embedding a Profile Manager component
 
-From DataMiner 9.6.7 onwards, for systems with the appropriate licenses, it is possible to embed a Profile Manager component in Visio. With this component, you can essentially embed the *Profiles* module in Visio.
+For systems with the appropriate licenses, it is possible to embed a Profile Manager component in Visio. With this component, you can essentially embed the *Profiles* module in Visio.
 
 To do so:
 

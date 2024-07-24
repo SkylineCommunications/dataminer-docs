@@ -4,7 +4,7 @@ uid: SLNetClientTest_active_merge_actions_protocols
 
 # Requesting a list of active merge actions for a protocol
 
-From DataMiner 9.5.14 onwards, it is possible to request a list of currently active merge actions for protocols doing aggregation actions. This can be useful as debug information in case aggregated values do not update as intended.
+It is possible to request a list of currently active merge actions for protocols doing aggregation actions. This can be useful as debug information in case aggregated values do not update as intended.
 
 To do so:
 

@@ -7,7 +7,7 @@ uid: Troubleshooting_SLDataGateway_exe
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 
-From DataMiner version 9.0 onwards, this process calculates the average trending information. If a Cassandra database is installed, this process also handles the following:
+This process calculates the average trending information. If a Cassandra database is installed, this process also handles the following:
 
 - All communication with Cassandra (communication with legacy databases happens via SLElement).
 

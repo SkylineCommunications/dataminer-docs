@@ -5,7 +5,7 @@ uid: Dashboard_components
 # Dashboard components
 
 > [!IMPORTANT]
-> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). We recommend using the [Dashboards app](xref:newR_D) instead.
 
 The available dashboard components are divided in seven groups, according to what they represent.
 
@@ -142,7 +142,7 @@ Other component-specific options:
 
 - *Show legend upon mouseover*: In the drop-down list, select where the legend should be displayed when the mouse pointer passes over the graph: as an overlay over the graph, next to the graph, or below the graph.
 
-- *Average history duration*: Enter a unit for the number of trend ranges to take in account for the calculation of the average history trend. The average history trend line will then be displayed as a dotted line on the graph. If “0” is entered, this option is disabled.
+- *Average history duration*: Enter a unit for the number of trend ranges to take in account for the calculation of the average history trend. The average history trend line will then be displayed as a dotted line on the graph. If "0" is entered, this option is disabled.
 
 - *Overlay legend width*, *Minimum visible gap size, Y-axis label width*, *Axis label font size*, etc.: Adjust these settings to fine-tune the layout of the trend graph.
 
@@ -154,9 +154,9 @@ In all aggregation graph components, filters can be specified, similar to the fi
 
 These filters can be specified in two ways:
 
-- You can enter any value, for example “myvalue”. DataMiner will automatically translate this to a filter of the type “value=PK == myvalue\*”.
+- You can enter any value, for example "myvalue". DataMiner will automatically translate this to a filter of the type "value=PK == myvalue\*".
 
-- You can specify a column filter directly, for example “value=4010 == myvalue\*”, where 4010 is the column parameter ID of the table.
+- You can specify a column filter directly, for example "value=4010 == myvalue\*", where 4010 is the column parameter ID of the table.
 
   For aggregation, the following column value IDs can be used:
 
@@ -226,13 +226,13 @@ Component-specific options:
 
 - *Advanced filter*: In this box, you can enter an alarm filter to limit what alarms are shown in the list. For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
-  For example, for an alarm filter called “Major”, which is a shared filter, enter the following:
+  For example, for an alarm filter called "Major", which is a shared filter, enter the following:
 
   ```xml
   <Major (shared filter)>
   ```
 
-  It is also possible to combine multiple filters using “or”. For example
+  It is also possible to combine multiple filters using "or". For example
 
   ```xml
   <Major (shared filter)> or <open alarms (shared filter)>
@@ -521,7 +521,7 @@ Component-specific options:
 
 - *Sort*: Determines whether sorting happens in ascending or descending order.
 
-- *Limit amount of values*: Allows you to limit the number of rows that are taken into account for the graph. This can for instance be used in combination with sorting in order to only show the “top x” or “bottom x” of a particular table column.
+- *Limit amount of values*: Allows you to limit the number of rows that are taken into account for the graph. This can for instance be used in combination with sorting in order to only show the "top x" or "bottom x" of a particular table column.
 
 - *Range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the bar graph range.
 
@@ -657,7 +657,7 @@ Other component-specific options:
 
 - *Show legend upon mouseover*: In the drop-down list, select where the legend should be displayed when the mouse pointer passes over the graph: as an overlay over the graph, next to the graph, or below the graph.
 
-- *Average history duration*: Enter a unit for the number of trend ranges to take in account for the calculation of the average history trend. The average history trend line will then be displayed as a dotted line on the graph. If “0” is entered, this option is disabled.
+- *Average history duration*: Enter a unit for the number of trend ranges to take in account for the calculation of the average history trend. The average history trend line will then be displayed as a dotted line on the graph. If "0" is entered, this option is disabled.
 
 - *Minimum visible gap size, Overlay legend width*, *Y-axis label width*, *Axis label font size*, etc.: Adjust these settings to fine-tune the layout of the graph.
 

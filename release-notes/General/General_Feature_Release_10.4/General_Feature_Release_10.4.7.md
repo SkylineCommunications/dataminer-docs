@@ -18,11 +18,11 @@ uid: General_Feature_Release_10.4.7
 
 ## New features
 
-#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+#### API Gateway version and status can now be checked in the Admin app [ID_39381]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
-On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
+For DataMiner Systems that are connected to dataminer.services, you can now check the current version and current status of the API Gateway DxM in the Admin app (available at <https://admin.dataminer.services>).
 
 #### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
 
@@ -175,12 +175,6 @@ When an alarm template contained multiple lines for the same parameter, each wit
 <!-- 39387: MR 10.5.0 - FR 10.4.7 -->
 
 A number of security enhancements have been made.
-
-#### DataMiner Object Models: Enhanced performance of DOM instance count queries with a DOM state filter [ID_39405]
-
-<!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
-
-Because of a number of enhancements, overall performance has increased when executing a DOM instance count query with a DOM state filter.
 
 #### ReIndexElasticSearchIndexes tool: Enhancements [ID_39614]
 

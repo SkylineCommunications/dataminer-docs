@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU5
 ---
 
-# General Main Release 10.4.0 CU5 - Preview
+# General Main Release 10.4.0 CU5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -17,6 +17,14 @@ uid: General_Main_Release_10.4.0_CU5
 <!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
 
 Because of a number of enhancements, overall performance of SLElement has increased when processing service impact updates.
+
+#### DataMiner Object Models: Enhanced performance when using Equals or NotEquals operators in DOM state filters [ID_39712] [ID_40107]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
+
+Previously, when a count query of DOM instances was executed, and that query contained a filter for a particular DOM state, the GQI query would return all the DOM instances in the database and make a post-filter to count them. In case there were a lot of DOM instances in the database, the query could take a long time to resolve. A performance improvement has therefore been introduced by sending the filter by state to the database, resulting in a much faster response from the GQI query.
+
+If you use a filter with a *contains*, *not contains*, *regex*, or *not regex* operator, a post-filter will still be used. When you filter on a DOM state field, we therefore recommend using the *equals* or *not equals* operators.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of anomalous flatline change points [ID_39720]
 
@@ -64,6 +72,12 @@ For detailed information about the changes included in those versions, refer to 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+
+#### Storage as a Service: Enhanced storage of non-indexed logger tables [ID_40066]
+
+<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
+
+A number of enhancements have been made with regard to the storage of non-indexed logger tables on STaaS systems.
 
 ### Fixes
 
@@ -144,12 +158,6 @@ In some cases, SLProtocol could stop working while processing a FillArray reques
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
 When SLNet was using FileInfoHelper, in some cases, it would not process errors correctly.
-
-#### DataMiner Object Models: Problem when applying a DOM state filter in a DOM instance count query [ID_39712]
-
-<!-- MR 10.4.0 [CU5] - FR 10.4.8 -->
-
-When a DOM state filter was applied in a DOM instance count query, an `InvalidOperationException: Sequence contains more than one matching element` error could be thrown when multiple DOM behavior definitions shared the same DOM state name.
 
 #### Service & Resource Management: Booking events would be executed in incorrect order [ID_39748]
 

@@ -9,7 +9,7 @@ This tutorial, which comes after the [Chat notifications](xref:ChatOps_Tutorials
 Estimated duration: 15 minutes.
 
 > [!TIP]
-> See also: [Kata #27: Custom ChatOps Operator: Use buttons in adaptive cards](https://community.dataminer.services/courses/kata-27/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #27: Custom ChatOps Operator: Use buttons in Adaptive Cards](https://community.dataminer.services/courses/kata-27/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 

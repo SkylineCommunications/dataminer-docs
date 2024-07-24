@@ -1,14 +1,14 @@
 ---
-uid: GPON_parameters_thresholds
+uid: xPON_parameters_thresholds
 ---
 
-# EPM GPON parameter thresholds
+# EPM xPON parameter thresholds
 
 The EPM Solution is aimed to detect behavioral patterns in a network. As such, it will never generate alarms at the lower CPE level, in this case an ONT, as a massive failure would generate an alarm storm, which would make troubleshooting and follow-up difficult for the NOC operators or automatic systems receiving the notifications. For that reason, the ONT's operational levels need to be compared to a set of conditions to know if the ONT (and by aggregation) the network is behaving as expected or if there is any issue that needs to be fixed.
 
-These conditions are called **thresholds**, and they can be configured by the GPON EPM administrator with the values that are most suited for the normal behavior of the network.
+These conditions are called **thresholds**, and they can be configured by the xPON EPM administrator with the values that are most suited for the normal behavior of the network.
 
-As mentioned under [GPON Architecture](xref:GPON_architecture#ont-data-connector) all operational data related to the ONTs is acquired from a third-party stream, then parsed, and finally stored for analysis. The storage takes place in the OLT connector detecting the ONT. The threshold configuration needs to be done in the OLT element. If multiple elements use the same connector, you can use the [multiple set feature](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) to speed up the process.
+As mentioned under [xPON Architecture](xref:xPON_architecture#ont-data-connector), all operational data related to the ONTs is acquired from a third-party stream, then parsed, and finally stored for analysis. The storage takes place in the OLT connector detecting the ONT. The threshold configuration needs to be done in the OLT element. If multiple elements use the same connector, you can use the [multiple set feature](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) to speed up the process.
 
 ## Available configuration
 

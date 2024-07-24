@@ -28,7 +28,7 @@ Two types of reference lines are available:
 
 ## Linking reference lines to measurement points
 
-From DataMiner version 9.0.3 onwards, reference lines can be linked to measurement points. This way, if you switch to a measurement point, only the reference lines that are linked to it are displayed.
+Reference lines can be linked to measurement points. This way, if you switch to a measurement point, only the reference lines that are linked to it are displayed.
 
 If you create a new reference line, and one or more measurement points are selected in the current preset, the reference line will automatically be linked to these measurement points.
 

@@ -1,8 +1,8 @@
 ---
-uid: EPM_1.0.1_GPON
+uid: EPM_1.0.1_xPON
 ---
 
-# EPM 1.0.1 GPON - Preview
+# EPM 1.0.1 xPON - Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -18,11 +18,11 @@ In order to suppress alarms for routes, distributions, and FAT levels, the alarm
 
 Both of these conditions must be met for the alarm to be suppressed.
 
-The Skyline EPM Platform GPON has been modified to calculate the percentage of ONTs that are offline. This information is used to determine if the alarm should be suppressed.
+The Skyline EPM Platform xPON has been modified to calculate the percentage of ONTs that are offline. This information is used to determine if the alarm should be suppressed.
 
-#### GPON maps integration [ID_36995]
+#### xPON maps integration [ID_36995]
 
-The QUICK topology now allows access to GPON system maps, with the following three levels: Route, Distribution, and FATs.
+The QUICK topology now allows access to xPON system maps, with the following three levels: Route, Distribution, and FATs.
 
 - At Route level, the map displays subscribers and the split FATs connected to them. Because no latitude and longitude information is available for distribution, this is not shown on this map.
 - At Distribution level, the map displays subscribers and associated split FATs.
@@ -54,4 +54,4 @@ The logic that calculates the Number ONT KPI at network level has been adjusted 
 
 #### Improved EPM front-end ID request flow [ID_37036]
 
-To improve the EPM front-end ID request flow, so that new entities are available to the user more quickly, the EPM front-end element now no longer has to assign IDs to the GPON CPE devices.
+To improve the EPM front-end ID request flow, so that new entities are available to the user more quickly, the EPM front-end element now no longer has to assign IDs to the xPON CPE devices.

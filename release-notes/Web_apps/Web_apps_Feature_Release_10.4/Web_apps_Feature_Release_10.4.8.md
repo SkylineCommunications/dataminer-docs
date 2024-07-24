@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.4.8
 ---
 
-# DataMiner web apps Feature Release 10.4.8 – Preview
+# DataMiner web apps Feature Release 10.4.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.8](xref:General_Feature_Release_10.4.8).
@@ -153,3 +153,9 @@ Highlight filtering on an enum value linked to a DOM object would no longer work
 Up to now, empty actions would incorrectly be considered invalid, causing a `This action is invalid` error to be thrown whenever they were executed.
 
 As empty actions are added by default when you open the action editor of an event, from now on, empty actions will no longer be considered invalid. An error will only be thrown when an action has an invalid configuration.
+
+#### Dashboards app & Low-Code Apps: App could become unresponsive due incorrectly configured overrides in GQI templates [ID_40171]
+
+<!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 [CU0] -->
+
+In some cases, a GQI template could throw a large number of exceptions, causing the app to become unresponsive. This would occur when a GQI template in a GQI visual contained shapes that had overrides in which not all conditions had been filled in.

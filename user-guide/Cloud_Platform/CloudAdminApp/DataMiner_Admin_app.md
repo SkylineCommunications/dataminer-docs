@@ -28,6 +28,8 @@ The Admin app is intended for the management of DataMiner Systems connected to d
 
 - [Viewing information on shares](xref:Viewing_info_on_shares)
 
+- [Viewing information on system usage](xref:Viewing_info_on_system_usage)
+
 > [!WARNING]
 >
 > - Depending on your user permissions, some pages in the Admin app may not be available for you.

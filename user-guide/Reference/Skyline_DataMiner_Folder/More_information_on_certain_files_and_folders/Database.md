@@ -4,7 +4,7 @@ uid: Database
 
 # Database
 
-This subfolder is present from DataMiner 9.5.9 onwards. It contains a number of files related to the database:
+This subfolder contains a number of files related to the database:
 
 - CassandraMigrationConfiguration.txt
 
@@ -16,15 +16,11 @@ This subfolder is present from DataMiner 9.5.9 onwards. It contains a number of 
 
 - DBConfiguration.xml (not added automatically)
 
-    See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) and [DBConfiguration.xml](xref:DBConfiguration_xml)
-
-- DBMaintenance.xml
-
-    See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+  See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) and [DBConfiguration.xml](xref:DBConfiguration_xml)
 
 - DBMaintenanceDMS.xml
 
-    See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+  See [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 - Indexing.xml
 

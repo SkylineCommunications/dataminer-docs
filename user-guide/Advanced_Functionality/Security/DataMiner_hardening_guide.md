@@ -178,13 +178,13 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-- TCP port **9004** can always be closed from DataMiner 10.0.11 CU0 and 10.0.0 CU6 onwards.
+- TCP port **9004** can always be closed in the currently supported DataMiner versions.
 
 - TCP port **8222** can always be closed. The port is closed by default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
 
 - The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
 
-- UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is the case by default from DataMiner 9.6.11 onwards. However, if a DMA was installed prior to DataMiner 9.6.11 and is upgraded to DataMiner 9.6.11 or higher, this functionality will remain enabled until it is manually disabled. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
+- UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is by default the case in the currently supported DataMiner versions. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
 
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.

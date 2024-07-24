@@ -15,7 +15,6 @@ items:
     topicUid: Part5StandardApps
     href: Standard_Apps/toc.yml
   - name: dataminer.services
-    topicUid: AboutCloudPlatform
     href: Cloud_Platform/toc.yml
   - name: Troubleshooting
     topicUid: Part6Troubleshooting

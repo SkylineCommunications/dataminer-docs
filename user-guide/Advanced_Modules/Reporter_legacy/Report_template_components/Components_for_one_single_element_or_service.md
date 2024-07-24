@@ -99,9 +99,19 @@ Pie graph showing the number of alarms for each alarm severity. You can choose b
 
 A parameter report with current reading and trending information for each parameter contained in the report. Each parameter will be displayed with a background color matching its alarm state.
 
-## Bookings / Reservations
+## Bookings
 
-Requires the appropriate Service & Resource Management licenses. See [Bookings / Reservations component of custom templates](xref:Bookings_Reservations_component_of_custom_templates#bookings--reservations-component-of-custom-templates).
+Requires the appropriate Service & Resource Management licenses. Allows you to select one of the following types of booking reports:
+
+- **List**: A list of bookings within a particular time span. Optionally, an extra filter and the properties that should be shown in the list can be configured.
+
+- **Details**: A list of static and variable properties
+
+- **Image**: The signal path image from a service definition
+
+- **Resources**: Affected resources
+
+- **Timeline**: timeline of alarms on the booking service during the booking time span
 
 ## SLA Historic Service Alarm List
 

@@ -25,9 +25,7 @@ In this table, you can give an interface a custom name by entering a custom valu
 The connections table allows you to view and configure the connections between interfaces.
 
 > [!NOTE]
->
-> - When an element is restarted, connections and properties that cannot be linked to an existing interface will automatically be deleted.
-> - Resolving multiple external connections on the same interface is only supported from DataMiner 9.5.5 onwards.
+> When an element is restarted, connections and properties that cannot be linked to an existing interface will automatically be deleted.
 
 ### Adding a connection
 
@@ -43,7 +41,7 @@ The connections table allows you to view and configure the connections between i
 
 1. Optionally, enter a filter in the column *\[Connections Filter\]*.
 
-    This filter is the same as the filter you can add in the Connectivity tab of the element’s Properties window. See [Editing element connections in the Properties window](xref:Editing_element_connections_in_the_Properties_window).
+   This filter is the same as the filter you can add in the Connectivity tab of the element’s Properties window. See [Editing element connections in the Properties window](xref:Editing_element_connections_in_the_Properties_window).
 
 > [!NOTE]
 > If you want to set up a connection between two elements, make sure to add a connection to the connections table of both elements.
