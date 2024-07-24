@@ -88,6 +88,92 @@ while (pagingHelper.MoveToNextPage())
 }
 ```
 
+Once you have read the `DomInstance`, you can get or alter the field values. See the [examples](xref:DOM_Altering_values_of_a_DomInstance) for more info on how to do this.
+
+> [!TIP]
+> When you need to read multiple `DomInstances` using their IDs, it is more efficient to build one big OR filter and read them in one call instead of retrieving them one by one. There is a helper method available for this called `Tools.RetrieveBigOrFilter()` see the [DOM best practices page](xref:DOM_best_practices#try-to-limit-the-number-of-crud-calls) for more info.
+
+#### Filtering
+
+To specify which `DomInstances` need to be retrieved from the database, you can build filters using the `FilterElement` structures. To start a filter, you need to specify the field you want to filter on using the `DomInstanceExposers` class. Once a field is selected, you can choose the comparer and provide a value. These filters can then be concatenated to each other with AND and OR conditions.
+
+**Base properties:**
+
+|Field                |Type        |Supported Comparer |
+|---------------------|------------|-------------------|
+|Id                   |string      |Equal, NotEqual |
+|SectionDefinitionIds |List\<Guid> |Contains, NotContains |
+|SectionIds           |List\<Guid> |Contains, NotContains |
+|DomDefinitionId      |Guid        |Equal, NotEqual |
+|Name                 |string      |Equal, NotEqual, Contains, NotContains |
+|StatusId             |string      |Equal, NotEqual, Contains, NotContains |
+|LastModified         |DateTime    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|LastModifiedBy       |string      |Equal, NotEqual, Contains, NotContains |
+|CreatedAt            |DateTime    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|CreatedBy            |string      |Equal, NotEqual, Contains, NotContains |
+
+**Fields:**
+
+These are the supported comparers when filtering on `DomInstance` values using the `DomInstanceExposers.FieldValues.DomInstanceField()` exposer.
+
+|Field Type                |Supported Comparer |
+|--------------------------|-------------------|
+|string                    |Equal, NotEqual, Contains, NotContains |
+|double                    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|long                      |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|TimeSpan                  |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|Boolean                   |Equal, NotEqual |
+|DateTime                  |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|GenericEnum (int)         |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|List GenericEnum (int)    |Contains, NotContains |
+|GenericEnum (string)      |Equal, NotEqual, Contains, NotContains|
+|List GenericEnum (string) |Contains, NotContains |
+|Guid                      |Equals, NotEquals   |
+|List Guid                 |Contains, NotContains |
+
+> [!NOTE]
+> The filters on `string` values are case insensitive.
+
+**Examples:**
+
+```csharp
+var domHelper = new DomHelper(engine.SendSLNetMessages, "vehicles_app");
+
+// DOM instances that are linked to a specific DOM definition
+var domDefinitionId = Guid.Parse("838fbabb-3651-43fb-84ea-568995b4d066"); // Vehicles definition
+var definitionFilter = DomInstanceExposers.DomDefinitionId.Equal(domDefinitionId);
+var allForDefinition = domHelper.DomInstances.Read(definitionFilter);
+
+// DOM instances that are in the 'maintenance' status
+var statusFilter = DomInstanceExposers.StatusId.Equal("maintenance");
+var inMaintenance = domHelper.DomInstances.Read(statusFilter);
+
+// DOM instances that were updated in the last 24h
+var lastModifiedFilter = DomInstanceExposers.LastModified.GreaterThan(DateTime.UtcNow.AddHours(-1));
+var recentlyModified = domHelper.DomInstances.Read(lastModifiedFilter);
+
+// DOM instances where the value for FieldDescriptor with the given ID equals 'AZN-070'
+var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("aa675f01-c841-4572-83c9-b2710f41ea39")); // Car license plate
+var valueFilter = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId).Equal("AZN-070");
+var specificCar = domHelper.DomInstances.Read(valueFilter);
+
+// DOM instances that match all of the above using an AND filter
+var andFilter = new ANDFilterElement<DomInstance>(definitionFilter, statusFilter, lastModifiedFilter, valueFilter);
+var andResult = domHelper.DomInstances.Read(andFilter);
+
+// DOM instances that match any of the above using OR filter 
+var orFilter = new ORFilterElement<DomInstance>(definitionFilter, statusFilter, lastModifiedFilter, valueFilter);
+var orResult = domHelper.DomInstances.Read(orFilter);
+
+// Combinations of OR and AND filters
+orFilter = new ORFilterElement<DomInstance>(lastModifiedFilter, statusFilter, valueFilter);
+andFilter = new ANDFilterElement<DomInstance>(definitionFilter, orFilter);
+var combinedResult = domHelper.DomInstances.Read(andFilter);
+```
+
+> [!NOTE]
+> Although, this section explained reading `DomInstances`, the same principles apply to all other DOM objects. Building filters is done using exposer classes and read using the `DomHelper`. E.g. for `SectionDefinitions`, this could be `domHelper.SectionDefinitions.Read(SectionDefinitionExposers.Name.Contains("My Name"))`.
+
 ### Multiple instances
 
 When multiple `DomInstances` need to get created, updated, or deleted, we recommend calling the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->.
