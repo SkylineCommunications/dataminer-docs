@@ -9,6 +9,64 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
+
+The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
+
+#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID_40259]
+
+It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
+
+#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID_40144]
+
+The following new Catalog types are now supported:
+
+- Ad Hoc Data Source
+
+- User-defined API
+
+- Testing Solution
+
+- Standard Solution
+
+- Solution
+
+- Scripted Connector
+
+- SLA Model
+
+- Sample Solution
+
+- Profile-Load Script
+
+- Low-Code App
+
+- Life Cycle Service Orchestration
+
+- Function Definition
+
+- Enhanced Service Model
+
+- Data Transformer
+
+- Data Query
+
+- Dashboard
+
+- ChatOps Extension
+
+- Best Practices Analyzer
+
+These new Catalog types can now be selected when [registering a Catalog item](xref:Register_Catalog_Item) and have been added to the filters on the left of the search results page.
+
+#### 23 July 2024 - Enhancement - Admin - Organization and DMS overview pages now display DMS type [ID_40123]
+
+The Admin organization overview page and the DMS overview page now show the type of DMS you are running, indicating whether it is a DaaS or Self-hosted system.
+
+#### 23 July 2024 - Enhancement - Admin - 'Add user' button disabled for users without permissions [ID_40234]
+
+On the Admin organization users page, the *Add user* button will now be disabled if you do not have the appropriate permissions. Previously, attempting to add a user without the right permissions would result in an error.
+
 #### 19 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
 
 It is now possible to include a readme.md file in the zip archive used to register a new version of a Catalog item. Images are not (yet) supported in the readme file.
