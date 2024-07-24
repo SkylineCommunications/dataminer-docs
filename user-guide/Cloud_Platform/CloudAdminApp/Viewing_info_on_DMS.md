@@ -22,7 +22,7 @@ To do so:
 
    - **Status**: The status of your dataminer.services connection.
 
-   - **Type**: The type of DMS you are running (DaaS or Self-hosted).
+   - **Type**: The type of DMS you are running (DaaS or Self-hosted)<!--RN 40123-->.
 
 1. To access more detailed information about a specific DMS, click the DMS name under *DataMiner Systems*.
 
@@ -34,7 +34,7 @@ To do so:
 
    - The landing page URL (2)
 
-   - The type of DMS (DaaS or Self-hosted) (3)
+   - The type of DMS (DaaS or Self-hosted)<!--RN 40123--> (3)
 
    - An option to access this DMS in DataMiner Cube by clicking the *Open in desktop app* button. (4)
 
