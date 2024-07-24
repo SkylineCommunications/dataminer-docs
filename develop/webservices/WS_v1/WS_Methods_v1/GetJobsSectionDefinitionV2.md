@@ -16,6 +16,6 @@ Use this method to retrieve a job section definition from a specific domain. Ava
 
 ## Output
 
-| Item                              | Format                                                                                                        | Description                           |
-|-----------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| Item | Format | Description |
+|------|--------|-------------|
 | GetJobsSectionDefinitionV2Result | Array of [DMASectionDefinition](xref:DMASectionDefinition) | The requested job section definition. |
