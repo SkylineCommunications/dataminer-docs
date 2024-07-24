@@ -27,7 +27,7 @@ The default TTL for information events is set to 5 years instead of the preferre
    </TTL>
    ```
 
-   This configuration sets a default TTL of 1 year but specifies a TTL of 3 months and 5 days for local storage and indexing.
+   This configuration sets a default TTL of 1 year but specifies an actual TTL of 3 months and 5 days.
 
    > [!NOTE]
    > Replace `3M5D` (3 months, 5 days) with your preferred TTL value.
