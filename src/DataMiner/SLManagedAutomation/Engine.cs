@@ -1537,6 +1537,11 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Sleep(100);
 		/// </code>
 		/// </example>
+                /// <remarks>
+		/// <note type="note">
+		/// <description>In DataMiner versions prior to 10.4.9/10.3.0 (CU18)/10.4.0 (CU6), this method will not throw the DataMinerException anymore when passing a negative time.</description>
+		/// </note>
+		/// </remarks>
 		public void Sleep(int timeInMilliseconds) { }
 
 		/// <summary>
