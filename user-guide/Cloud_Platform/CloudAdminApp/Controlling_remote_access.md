@@ -48,7 +48,14 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
      ![Managing IP addresses](~/user-guide/images/Managing_IP_Addresses.png)
 
      > [!NOTE]
-     > Only public IP addresses can be added to the list of trusted IP addresses.
+     >
+     > - Only public IP addresses can be added to the list of trusted IP addresses. Private IP addresses are hidden behind public IP addresses and cannot be used for communication outside of their local network.
+     > - To find your public IP address:
+     >
+     >   1. Open a command prompt as Administrator.
+     >   1. Execute the `curl ifconfig.me` command.
+     >
+     >   Note that if you are using a VPN, your own IP address is hidden behind another public IP address.
 
    - *Web apps*: Enable or disable remote access to the DataMiner System(s) via the web apps.
 
