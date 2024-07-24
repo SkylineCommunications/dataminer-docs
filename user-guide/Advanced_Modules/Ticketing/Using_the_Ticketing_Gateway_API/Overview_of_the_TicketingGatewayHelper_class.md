@@ -6,12 +6,6 @@ uid: Overview_of_the_TicketingGatewayHelper_class
 
 Below, you can find an overview of all methods, properties and events of the *TicketingGatewayHelper* class.
 
-- [Methods](#methods)
-
-- [Properties](#properties)
-
-- [Events](#events)
-
 ## Methods
 
 ### DriverSync
@@ -111,9 +105,6 @@ Parameters:
 
 - **filter**: The filter to use when searching the tickets.
 
-    > [!NOTE]
-    > Filtering on ticket link is possible from DataMiner 9.6.2 onwards.
-
 - **CacheOnly**: Indicates whether to only check the cache (true) or also the DB (false).
 
 Returns:
@@ -141,9 +132,6 @@ Parameters:
 - **links**: The links to be used when searching the tickets.
 
 - **filter**: The filter to use when searching the tickets.
-
-    > [!NOTE]
-    > Filtering on ticket link is possible from DataMiner 9.6.2 onwards.
 
 - **CacheOnly**: Indicates whether to only check the cache (true) or also the database (false).
 

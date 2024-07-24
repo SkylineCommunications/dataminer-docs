@@ -41,8 +41,8 @@ To every shape that you want to place inside the grid, add a shape data field of
 | Grid.Row= | The row in which to put the shape. |
 | Grid.RowSpan= | The number of rows the shape has to span. |
 | Margin= | The margin between the shape and the cell borders.<br>Order: left,top,right,bottom |
-| VerticalAlignment= | The vertical alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Top*<br>- *Center*<br>- *Bottom*<br>- *Stretch* (from DataMiner 9.6.12 onwards) |
-| HorizontalAlignment= | The horizontal alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Left*<br>- *Center*<br>- *Right*<br>- *Stretch* (from DataMiner 9.6.12 onwards) |
+| VerticalAlignment= | The vertical alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Top*<br>- *Center*<br>- *Bottom*<br>- *Stretch* |
+| HorizontalAlignment= | The horizontal alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Left*<br>- *Center*<br>- *Right*<br>- *Stretch* |
 | Width= | The width of the shape. |
 | MinWidth= | The minimum width of the shape. |
 | MaxWidth= | The maximum width of the shape. |

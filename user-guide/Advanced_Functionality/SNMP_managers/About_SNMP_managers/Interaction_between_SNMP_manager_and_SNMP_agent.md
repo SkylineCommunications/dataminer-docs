@@ -72,5 +72,5 @@ The UDP ports to be used are set as follows:
 
 > [!NOTE]
 >
-> - The DataMiner SNMP agent function is disabled by default. It can be enabled in the file *DataMiner.xml* (see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)). Note that this only affects DataMiner itself, not the virtual SNMP agents that can be enabled for elements, which means that only active alarms and general DataMiner information cannot by polled by default.
+> - The DataMiner SNMP agent function is disabled by default. It can be enabled in the file *DataMiner.xml* (see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)). Note that this only affects DataMiner itself, not the virtual SNMP agents that can be enabled for elements, which means that only active alarms and general DataMiner information cannot be polled by default.
 > - By default, the SLSNMPAgent process listens for Get and Set messages using the same port as the Windows SNMP service. As such, if the latter has to run alongside SLSNMPAgent, either change the port used by the Windows SNMP service or change the port used by SLSNMPAgent. For more information, see [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports).

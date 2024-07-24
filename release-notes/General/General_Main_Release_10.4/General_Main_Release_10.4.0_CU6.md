@@ -66,6 +66,16 @@ The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the f
 
 From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
 
+#### Service & Resource Management: Enhanced logging when booking objects are added to, updated in or deleted from the cache [ID_40043]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When booking objects are added to, updated in or deleted from the cache, from now on, the following properties of the booking in question will be logged:
+
+- Booking status
+- Booking resources
+- Time when the booking was last modified
+
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -82,13 +92,15 @@ When you decommission a Failover setup, from now on, the DataMiner Agent that wa
 
 The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
 
-#### DxMs upgraded [ID_40231]
+#### DxMs upgraded [ID_40231] [ID_40254]
 
 <!-- RN 40231: MR 10.4.0 [CU6] - FR 10.4.9 -->
+<!-- RN 40254: MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner CoreGateway: version 2.14.9
+- DataMiner SupportAssistant: version 1.6.10
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
@@ -111,6 +123,12 @@ When alarms were generated for an element with a virtual function, those alarms 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When SLDataGateway retrieved data from the database page by page, in some cases, paging handlers that had already fetched all their data and had already been deleted would incorrectly be used, causing exceptions to be thrown.
+
+#### DataMiner Object Models: CRUD events would incorrectly be of type 'DomCrudEvent\<T\>' [ID_39696]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
@@ -201,3 +219,17 @@ When a database issue occurred while DataMiner was starting up, in some cases, b
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, new change points would incorrectly be generated shortly after the SLAnalytics process had been restarted, even though no changes in trend behavior had been detected.
+
+#### Service & Resource Management: Problem when retrieving resources filtered by property [ID_40209]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a request was sent to a DataMiner Agent to retrieve resources filtered by property, in some cases, the DataMiner Agent would throw a `NullReferenceException` when one of the resources had "null" properties.
+
+#### Problem when NATSMigration called SLKill to stop the NATS service [ID_40271]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When the NATSMigration process called SLKill to stop the NATS service, up to now, SLKill would incorrectly also kill the NATSMigration process.
+
+From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".

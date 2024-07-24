@@ -8,6 +8,8 @@ items:
         topicUid: dataminer_services_home_page
       - name: Linking your DataMiner account to your dataminer.services account
         topicUid: Linking_your_DataMiner_and_DCP_account
+      - name: Changing the email address associated with your dataminer.services account
+        topicUid: Change_email_cloud_account
       - name: Cloud data storage policies
         topicUid: Cloud_data_storage_policies
       - name: DataMiner Cloud Packs

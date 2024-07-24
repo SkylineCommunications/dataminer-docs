@@ -5,7 +5,7 @@ uid: Dashboard_Gateway_troubleshooting
 # Dashboard Gateway troubleshooting
 
 > [!IMPORTANT]
-> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). We recommend using the [Dashboards app](xref:newR_D) instead.
 
 The following issues may occur when you try to access the Dashboard Gateway:
 
@@ -17,7 +17,7 @@ The following issues may occur when you try to access the Dashboard Gateway:
 
     The Dashboard Gateway can no longer connect to the DataMiner Agent. Check if it is possible to make a connection from the Dashboard Gateway to the DataMiner Agent.
 
-- **Message: Connection Lost. Web Server Unavailable: The server method “IsAlive” failed.**
+- **Message: Connection Lost. Web Server Unavailable: The server method "IsAlive" failed.**
 
     There is no longer a connection between the client PC and the DataMiner Gateway. Check if the DataMiner Gateway is still available from the client PC.
 

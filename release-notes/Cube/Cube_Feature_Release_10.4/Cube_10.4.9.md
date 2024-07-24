@@ -74,6 +74,14 @@ In the *BPA* tab of the *Agents* section, BPA tests that have not been scheduled
 
 Also, next to each BPA test in the list, you can now find a button that, when clicked, will open a page showing more information about that test. When you click the information button in the *Name* header, the [Running BPA tests](xref:Running_BPA_tests) page will open.
 
+#### SPI event log entry "Cube Connection" will now be sent to the DMA before the initial data is fetched [ID_40214]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, Cube would send an SPI event log entry "Cube Connection" to the DataMiner Agent after it had fetched and processed the initial data.
+
+From now on, it will send this SPI event log entry, which indicated how long it took for Cube to connect to the DataMiner Agent, before it fetches the initial data.
+
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
@@ -109,6 +117,17 @@ When configuring alarm templates and trend templates, up to now, it would incorr
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When dynamic values were used in interface shapes that were child shapes on an element group, and those shapes did not have the *AllowCentralConnectivity* option enabled, in some cases, the DCF connections would incorrectly be drawn from the center of the shapes instead of their interfaces.
+
+#### Visual Overview: Problem with 'EnableLoading=False' option [ID_40065]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+The page and shape option `EnableLoading=False` would no longer work when shapes had pending properties (e.g. properties of which the value contained unresolved placeholders).
+
+> [!NOTE]
+>
+> - The `VisioLoadTimeMetric` SPI will now report on all shapes, regardless of whether they show their loading state or not.
+> - From now on, the `EnableLoading` option is case insensitive.
 
 #### Router Control: Problem when connecting an already connected output to a new input [ID_40076]
 
