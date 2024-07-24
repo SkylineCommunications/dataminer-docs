@@ -200,6 +200,14 @@ When the trend data of a parameter appears to have frequent flatline periods, th
 
 Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
 
+#### Service & Resource Management: New 'SkipServiceHandling' option to allow the 'SRMServiceInfo' object check to be skipped when starting/stopping a booking [ID_39939]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
+
+In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+
 #### SLAutomation: Enhanced compilation of Automation scripts [ID_39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
