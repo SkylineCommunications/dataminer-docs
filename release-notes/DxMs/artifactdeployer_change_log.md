@@ -6,8 +6,7 @@ uid: artifactdeployer_change_log
 
 #### 25 July 2024 - Enhancement - ArtifactDeployer 1.7.2 - Dependencies updated & event handling improved [ID_40308]
 
-Several dependencies have been updated.
-In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
+Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
 
 #### 30 May 2024 - Fix - ArtifactDeployer 1.7.1 - Missing Azure.Core.dll after upgrading to ArtifactDeployer 1.7.0 [ID_39783]
 
