@@ -26,4 +26,4 @@ Use this method to retrieve the data to create a scatter chart for an array of e
 
 | Item | Format | Description |
 |--|--|--|
-| GetScatterDataForElementsResult | Array of XValues, YValues and Labels | The values for the X- and Y-axis of the scatter chart and the corresponding labels |
+| GetScatterDataForElementsResult | Array of XValues, YValues and Labels | The values for the X and Y axis of the scatter chart and the corresponding labels |

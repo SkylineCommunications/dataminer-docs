@@ -6,7 +6,7 @@ uid: DMASLAElementConfiguration
 
 | Item | Format | Description |
 |------|--------|-------------|
-| Name            | String           | The name of the SLA element.<br> A limit of at most 150 characters applies. |
+| Name            | String           | The name of the SLA element.<br>A limit of at most 150 characters applies. |
 | Service         | Array of integer | Array consisting of the DataMinerID and service ID of the service monitored by the SLA. |
 | Description     | String           | The description of the SLA. |
 | ProtocolName    | String           | The name of the SLA protocol. |

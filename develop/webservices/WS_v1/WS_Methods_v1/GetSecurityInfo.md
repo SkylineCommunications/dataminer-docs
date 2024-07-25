@@ -8,8 +8,8 @@ Use this method to retrieve the permissions granted to the current user account.
 
 ## Input
 
-| Item       | Format | Description                                                                      |
-|------------|--------|----------------------------------------------------------------------------------|
+| Item       | Format | Description                                           |
+|------------|--------|-------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
