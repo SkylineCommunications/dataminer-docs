@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 25 July 2024 - Enhancement - New remote access setting to restrict remote Cube access based on IP addresses [ID_40288]
 
-An enhancement has been made to the remote access settings in the Admin app, which allows you to restrict remote Cube access based on specified public IP addresses.
+An enhancement has been made to the remote access settings in the Admin app, which allows you to restrict remote Cube access per DMS based on specified public IP addresses.
 
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
