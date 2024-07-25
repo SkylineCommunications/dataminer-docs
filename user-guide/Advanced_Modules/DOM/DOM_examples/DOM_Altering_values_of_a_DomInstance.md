@@ -3,9 +3,9 @@ uid: DOM_Altering_values_of_a_DomInstance
 ---
 # Altering and getting values of a DomInstance - examples
 
-This page contains simple examples of how you can get, add or update values of a `DomInstance`, which are linked to `SectionDefinitions` and their `FieldDescriptors`.
+This page contains simple examples of how you can get, add, or update values of a `DomInstance`, which are linked to `SectionDefinitions` and their `FieldDescriptors`.
 
-There are two main ways to achieve this:
+There are two main ways to get, add, or update values:
 
 - Use the [extension methods](xref:DOM_Altering_values_of_a_DomInstance#simple-extension-methods).
 
@@ -36,7 +36,7 @@ There are two main ways to achieve this:
   ```
 
 > [!NOTE]
-> These code examples behave as if they were wrapped in an Automation script that contains the required using statements and a `DomHelper`.
+> These code examples behave as if wrapped in an Automation script that contains the required using statements and a `DomHelper`.
 
 ## Simple extension methods
 

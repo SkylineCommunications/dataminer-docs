@@ -59,7 +59,7 @@ if (!traceData.HasSucceeded())
 
 ### Reading DOM data
 
-When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommend. This ensures that a response is not too large, as large responses can have a negative impact on performance. It also gives you the chance to make a decision in the code to abort the action without having to retrieve all records.
+When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommended. This ensures that a response is not too large, as large responses can have a negative impact on performance. It also gives you the chance to make a decision in the code to abort the action without having to retrieve all records.
 
 **Read all without paging:**
 
@@ -91,11 +91,13 @@ while (pagingHelper.MoveToNextPage())
 Once you have read the `DomInstance`, you can get or alter the field values. See the [examples](xref:DOM_Altering_values_of_a_DomInstance) for more info on how to do this.
 
 > [!TIP]
-> When you need to read multiple `DomInstances` using their IDs, it is more efficient to build one big OR filter and read them in one call instead of retrieving them one by one. There is a helper method available for this called `Tools.RetrieveBigOrFilter()` see the [DOM best practices page](xref:DOM_best_practices#try-to-limit-the-number-of-crud-calls) for more info.
+> When reading multiple `DomInstances` using their IDs, it is more efficient to build one large OR filter and read them in a single call instead of retrieving them one by one. The `Tools.RetrieveBigOrFilter()` helper method is available for this. See [DOM best practices](xref:DOM_best_practices#try-to-limit-the-number-of-crud-calls) for more info.
 
 #### Filtering
 
-To specify which `DomInstances` need to be retrieved from the database, you can build filters using the `FilterElement` structures. To start a filter, you need to specify the field you want to filter on using the `DomInstanceExposers` class. Once a field is selected, you can choose the comparer and provide a value. These filters can then be concatenated to each other with AND and OR conditions.
+To specify which `DomInstances` need to be retrieved from the database, you can build filters using the `FilterElement` structures.
+
+Start a filter by specifying the field you want to filter on using the `DomInstanceExposers` class. Once a field is selected, choose the comparer and provide a value. These filters can then be concatenated with AND and OR conditions.
 
 **Base properties:**
 
@@ -132,26 +134,26 @@ These are the supported comparers when filtering on `DomInstance` values using t
 |List Guid                 |Contains |
 |List string               |Contains |
 
-*Only supported on [STaaS](xref:STaaS)
+*Only supported for [STaaS](xref:STaaS)
 
 > [!NOTE]
-> The filters on `string` values are case insensitive.
+> The filters on `string` values are case-insensitive.
 
 **Examples:**
 
 ```csharp
 var domHelper = new DomHelper(engine.SendSLNetMessages, "vehicles_app");
 
-// DOM instances that are linked to a specific DOM definition
+// DOM instances linked to a specific DOM definition
 var domDefinitionId = Guid.Parse("838fbabb-3651-43fb-84ea-568995b4d066"); // Vehicles definition
 var definitionFilter = DomInstanceExposers.DomDefinitionId.Equal(domDefinitionId);
 var allForDefinition = domHelper.DomInstances.Read(definitionFilter);
 
-// DOM instances that are in the 'maintenance' status
+// DOM instances in the 'maintenance' status
 var statusFilter = DomInstanceExposers.StatusId.Equal("maintenance");
 var inMaintenance = domHelper.DomInstances.Read(statusFilter);
 
-// DOM instances that were updated in the last 24h
+// DOM instances updated in the last 24 hours
 var lastModifiedFilter = DomInstanceExposers.LastModified.GreaterThan(DateTime.UtcNow.AddHours(-1));
 var recentlyModified = domHelper.DomInstances.Read(lastModifiedFilter);
 
@@ -160,11 +162,11 @@ var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("aa675f01-c841-4572-83c
 var valueFilter = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId).Equal("AZN-070");
 var specificCar = domHelper.DomInstances.Read(valueFilter);
 
-// DOM instances that match all of the above using an AND filter
+// DOM instances matching all of the above using an AND filter
 var andFilter = new ANDFilterElement<DomInstance>(definitionFilter, statusFilter, lastModifiedFilter, valueFilter);
 var andResult = domHelper.DomInstances.Read(andFilter);
 
-// DOM instances that match any of the above using OR filter 
+// DOM instances matching any of the above using OR filter 
 var orFilter = new ORFilterElement<DomInstance>(definitionFilter, statusFilter, lastModifiedFilter, valueFilter);
 var orResult = domHelper.DomInstances.Read(orFilter);
 
@@ -175,7 +177,7 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 ```
 
 > [!NOTE]
-> Although, this section explained reading `DomInstances`, the same principles apply to all other DOM objects. Building filters is done using exposer classes and read using the `DomHelper`. E.g. for `SectionDefinitions`, this could be `domHelper.SectionDefinitions.Read(SectionDefinitionExposers.Name.Contains("My Name"))`.
+> Although, this section explained reading `DomInstances`, the same principles apply to all other DOM objects. Building filters is done using exposer classes and reading is done using the `DomHelper`. For example, for `SectionDefinitions`, this could be `domHelper.SectionDefinitions.Read(SectionDefinitionExposers.Name.Contains("My Name"))`.
 
 ### Multiple instances
 
