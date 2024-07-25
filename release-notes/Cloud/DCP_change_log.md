@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 26 July 2024 - Enhancement - Admin - Formatting of big operation numbers in metric table
+
+The numbers of the usage table are now formatted with K, M, or B suffix to make it more digestible
+
+#### 26 July 2024 - Enhancement - Catalog - Show documentation for all types [ID 40190]
+
+Users can now see the documenation for all items if it is provided.
+
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
