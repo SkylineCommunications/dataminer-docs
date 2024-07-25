@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 25 July 2024 - Enhancement - CloudGateway 2.13.15 - Dependencies updated & event handling improved [ID_40279]
 
-Several dependencies have been updated. Events sent by DxMs via the CloudGateway DxM, that are rejected by dataminer.services, will be indicated so the senders know to not retry but discard those events.
+Several dependencies have been updated. Events sent by DxMs via the CloudGateway DxM that are rejected by dataminer.services will now be indicated so the senders know not to retry but to discard those events.
 
 #### 16 July 2024 - Fix - CloudGateway 2.13.14 - Requests could get no response in an edge case leading to timeouts [ID_40208]
 
