@@ -16,7 +16,7 @@ The following factors, in order, are taken into account for the grouping:
 
 - Service information
 
-- Relation Learning: parameter relationship data (from DataMiner 10.3.1/10.4.0 onwards) and alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards)<!--RN 36337-->, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+- Relation Learning: parameter relationship data (from DataMiner 10.3.1/10.4.0 onwards) and alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards)<!--RN 36337-->, on DataMiner Agents that are connected to dataminer.services, have the [DataMiner Extension Module *ModelHost*](xref:DataMinerExtensionModules#modelhost) installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
 - The IDP location
 
@@ -31,9 +31,11 @@ The following factors, in order, are taken into account for the grouping:
 
 - Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
 
-If one factor is used, this factor is mentioned in the value of the created alarm group. Note that the above factors are applied in order: e.g. if 2 alarms belong to the same device (element factor) and the same service (service factor), then the value of the alarm group refers to the service, not the element. 
+If a single factor is used, it is mentioned in the value of the created alarm group.
 
-Sometimes multiple of the above factors are combined to create an alarm group: e.g. assume you have a device with 2 alarms (element factor) and the relation learning factor tells us that one of those alarms is related to a completely different alarm on another element. In this case, a group of 3 alarms is created and the alarm group's value contains "multiple reasons group".
+The above-mentioned factors are applied in order, meaning that if multiple factors apply, the one listed first takes precedence. For example, if two alarms are from the same device (element factor) and also belong to the same service (service factor), the value of the alarm group will refer to the service, not the device, because the *Service information* factor is listed before the *Element information* factor.
+
+Sometimes, multiple factors are combined to create an alarm group. For example, if you have a device with two alarms (*Element information* factor), and Relation Learning indicates one of these alarms is related to a different alarm on another element, a group of three alarms is created. In this case, the alarm group's value will indicate it is a "multiple reasons group".
 
 If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
