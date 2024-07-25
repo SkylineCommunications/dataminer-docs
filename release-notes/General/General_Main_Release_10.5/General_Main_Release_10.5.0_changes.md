@@ -690,6 +690,12 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
+
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

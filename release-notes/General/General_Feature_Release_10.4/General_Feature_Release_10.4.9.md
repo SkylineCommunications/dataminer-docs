@@ -284,6 +284,12 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
+
 #### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
