@@ -38,7 +38,23 @@ Catalog items can have multiple versions. To make sure that the versioning of it
 
 At present, the following types of Catalog items are supported:
 
+- Ad Hoc Data Source
 - Automation script
-- Application package
+- Best Practices Analyzer
+- ChatOps Extension
 - Connector
-- Visio file
+- Dashboard
+- Data Query
+- Data Transformer
+- Enhanced Service Model
+- Function Definition
+- Life Cycle Service Orchestration
+- Low-Code App
+- Profile-Load Script
+- Sample Solution
+- Scripted Connector
+- SLA Model
+- Solution
+- Standard Solution
+- User-defined API
+- Visual Overview
