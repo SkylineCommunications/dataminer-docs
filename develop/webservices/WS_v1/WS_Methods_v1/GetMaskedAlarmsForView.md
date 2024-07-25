@@ -8,10 +8,10 @@ Use this method to retrieve the list of all the masked alarms of a particular vi
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| viewID     | Integer | The view ID.                                                                     |
+| viewID     | Integer | The view ID.                                          |
 
 ## Output
 

@@ -10,13 +10,13 @@ Available from DataMiner version 9.5.1 onwards.
 
 ## Input
 
-| Item        | Format  | Description                                                                      |
-|-------------|---------|----------------------------------------------------------------------------------|
+| Item        | Format  | Description                                           |
+|-------------|---------|-------------------------------------------------------|
 | connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID       | Integer | The DataMiner Agent ID.                                                          |
-| elementID   | Integer | The element ID.                                                                  |
-| parameterID | Integer | The matrix parameter ID.                                                         |
-| outputLabel | String  | The label of the output.                                                         |
+| dmaID       | Integer | The DataMiner Agent ID.                               |
+| elementID   | Integer | The element ID.                                       |
+| parameterID | Integer | The matrix parameter ID.                              |
+| outputLabel | String  | The label of the output.                              |
 
 ## Output
 
