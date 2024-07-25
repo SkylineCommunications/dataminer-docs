@@ -10,6 +10,8 @@ The type of data required depends on the type of issue you are experiencing:
 
 - For Cube-related issues: [Cube Debug information](#cube-debug-information)
 
+- For issues in Web Apps: [Web App recordings](#web-app-recordings)
+
 - For element or service-related issues: [DELT export packages](#delt-export-packages)
 
 - For element communication issues: [Stream Viewer traces](#stream-viewer-traces)
@@ -53,7 +55,7 @@ To export Cube debug information:
 
 1. In the *general* tab, select *Export debug information*.
 
-![Export debug information](~/user-guide/images/Debug_information.png)<br/>*DataMiner Cube version 10.3.10*
+   ![Export debug information](~/user-guide/images/Debug_information.png)<br/>*DataMiner Cube version 10.3.10*
 
 ### Cube is unable to connect to your DMA
 
@@ -69,9 +71,37 @@ To investigate why Cube could not connect to your DMA:
 
 1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
 
-![View Logging](~/user-guide/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
+   ![View Logging](~/user-guide/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
 
 1. In the *Logs* folder, find the file named corresponding to the current date, e.g. `log20230904.txt` for September 4th, 2023.
+
+## Web app recordings
+
+For troubleshooting of issues with Web Applications: Dashboards, Monitoring, Low-Code Apps, etc. - we recommend using the DataMiner Web Support Assistant plugin. The plugin can be installed from Chrome Web Store on any Chromium-based browser: [DataMiner Web Support Assistant - Chrome Web Store](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge)
+
+> [!IMPORTANT]
+> After adding the extension for the first time, it is recommended to restart the browser before creating a recording.
+
+Once the plugin is installed: 
+
+1. Navigate to the tab where a bug or issue is experienced in the DataMiner Web App.
+
+1. Open the extension by clicking its icon in the top right corner. If the extension is not pinned, click the puzzle icon and then select the extension.
+
+   ![Web Support Assistant icon and popup](~/user-guide/images/Web_Support_Assistant_icon_popup.png)
+
+1. Click the large red record button to start the recording. The extension will minimize, indicating that the recording has begun. The maximum duration for a recording is 10 minutes.
+
+1. Replicate the process that led to encountering the bug or issue in the web app.
+
+1. When the issue has been successfully replicated, reopen the extension and click the "END" button to stop the recording.
+
+1. Allow the extension to finish processing the data, this will be indicated by a loading screen. Do not close the extension during this process.
+
+1. Once the recording is ready, download the ZIP file containing all the necessary data. This concludes the recording process.
+
+> [!IMPORTANT]
+> The extension only collects data from the tab in which the recording was started. Ensure to stay within that tab to recreate the issue accurately.
 
 ## DELT export packages
 
