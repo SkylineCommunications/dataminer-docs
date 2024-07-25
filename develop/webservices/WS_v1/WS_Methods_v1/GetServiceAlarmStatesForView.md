@@ -10,12 +10,12 @@ Use this method to retrieve the relative duration (in percent) of each alarm sev
 
 | Item | Format | Description |
 |--|--|--|
-| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| viewID | Integer | The view ID. |
-| limit | Integer | The number of services that should be included. |
-| sortASC | Boolean | Indicates whether the info should be retrieved for the services that were in an alarm state for the longest time or for the shortest time. |
+| connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID       | Integer | The view ID. |
+| limit        | Integer | The number of services that should be included. |
+| sortASC      | Boolean | Indicates whether the info should be retrieved for the services that were in an alarm state for the longest time or for the shortest time. |
 | utcStartTime | Long integer | The start time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| utcEndTime | Long integer | The end time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcEndTime   | Long integer | The end time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 
 ## Output
 
