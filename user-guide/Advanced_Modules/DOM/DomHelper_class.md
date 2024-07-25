@@ -137,7 +137,7 @@ These are the supported comparers when filtering on `DomInstance` values using t
 *Only supported for [STaaS](xref:STaaS)
 
 > [!NOTE]
-> Prior to DataMiner version 10.4.5/10.4.0 (CU2), `string` filters were handled as case-sensitive when using the OpenSearch database. This was changed so they are always handled as case-insensitive, which is how STaaS has handled `string` reads since its introduction.
+> From DataMiner 10.4.5/10.4.0 [CU2] onwards, `string` filters are handled as case-insensitive when using the OpenSearch database (which is how STaaS has handled `string` reads since its introduction). Prior to DataMiner version 10.4.5/10.4.0 [CU2], `string` filters are handled as case-sensitive.
 
 **Examples:**
 
