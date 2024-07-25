@@ -206,3 +206,9 @@ Also, up to now, while a *Navigate to a URL* action would automatically add a `h
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 when you generated a PDF report based on a dashboard, in some cases, Table and State components would not be rendered correctly.
+
+#### Web API: Problem when a low-code app was created while a page was being added to another low-code app [ID_40280]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a low-code app was created while a page was being added to another low-code app, in some cases, the web API could get into a deadlock, causing all low-code apps to become unresponsive.
