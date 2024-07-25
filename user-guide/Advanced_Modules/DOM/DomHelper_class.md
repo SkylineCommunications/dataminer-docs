@@ -107,9 +107,9 @@ To specify which `DomInstances` need to be retrieved from the database, you can 
 |DomDefinitionId      |Guid        |Equal, NotEqual |
 |Name                 |string      |Equal, NotEqual, Contains, NotContains |
 |StatusId             |string      |Equal, NotEqual, Contains, NotContains |
-|LastModified         |DateTime    |LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|LastModified         |DateTime    |LessThan, GreaterThan |
 |LastModifiedBy       |string      |Equal, NotEqual, Contains, NotContains |
-|CreatedAt            |DateTime    |LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|CreatedAt            |DateTime    |LessThan, GreaterThan |
 |CreatedBy            |string      |Equal, NotEqual, Contains, NotContains |
 
 **Fields:**
@@ -121,15 +121,18 @@ These are the supported comparers when filtering on `DomInstance` values using t
 |string                    |Equal, NotEqual, Contains, NotContains |
 |double                    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
 |long                      |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
-|TimeSpan                  |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
-|Boolean                   |Equal, NotEqual |
-|DateTime                  |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|TimeSpan                  |Equal, LessThan*, GreaterThan* |
+|Boolean                   |Equal |
+|DateTime                  |Equal, NotEqual, LessThan, GreaterThan |
 |GenericEnum (int)         |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
-|List GenericEnum (int)    |Contains, NotContains |
+|List GenericEnum (int)    |Contains |
 |GenericEnum (string)      |Equal, NotEqual, Contains, NotContains |
-|List GenericEnum (string) |Contains, NotContains |
+|List GenericEnum (string) |Contains |
 |Guid                      |Equals, NotEquals |
-|List Guid                 |Contains, NotContains |
+|List Guid                 |Contains |
+|List string               |Contains |
+
+*Only supported on [STaaS](xref:STaaS)
 
 > [!NOTE]
 > The filters on `string` values are case insensitive.
