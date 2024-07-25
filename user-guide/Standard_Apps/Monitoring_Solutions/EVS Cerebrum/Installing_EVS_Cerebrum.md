@@ -6,7 +6,7 @@ uid: Installing_EVS_Cerebrum
 
 ## Prerequisites
 
-- DataMiner version 10.4.5 or higher
+- DataMiner version 10.4.4 or higher
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
