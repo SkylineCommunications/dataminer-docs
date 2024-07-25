@@ -74,6 +74,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 Also, error handling when loading virtual elements has been improved.
 
+#### User-defined APIs: ApiToken and ApiDefinition objects will now be cached [ID_39701]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
