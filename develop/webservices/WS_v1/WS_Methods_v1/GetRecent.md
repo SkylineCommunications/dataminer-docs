@@ -8,8 +8,8 @@ Use this method to retrieve the list of all the items in the Recent list.
 
 ## Input
 
-| Item       | Format | Description                                                                      |
-|------------|--------|----------------------------------------------------------------------------------|
+| Item       | Format | Description                                           |
+|------------|--------|-------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output

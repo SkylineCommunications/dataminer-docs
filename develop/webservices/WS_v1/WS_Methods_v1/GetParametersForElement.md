@@ -8,11 +8,11 @@ Use this method to retrieve the data of all the parameters of a particular eleme
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer | The DataMiner Agent ID.                                                          |
-| elementID  | Integer | The element ID.                                                                  |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| elementID  | Integer | The element ID.                                       |
 
 ## Output
 

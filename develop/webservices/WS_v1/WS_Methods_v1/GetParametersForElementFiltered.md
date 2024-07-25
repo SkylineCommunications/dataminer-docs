@@ -4,13 +4,15 @@ uid: GetParametersForElementFiltered
 
 # GetParametersForElementFiltered
 
-Use this method to retrieve the parameters of a particular element that match a specified filter. Available from DataMiner 9.6.7 onwards.
+Use this method to retrieve the parameters of a particular element that match a specified filter.
+
+Available from DataMiner 9.6.7 onwards.
 
 ## Input
 
 | Item                 | Format  | Description                                                                      |
 |----------------------|---------|----------------------------------------------------------------------------------|
-| connection           | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection           | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
 | dmaID                | Integer | The ID of the DMA where the element was originally created.                      |
 | elementID            | Integer | The ID of the element.                                                           |
 | filter.IncludeHidden | Boolean | Determines whether protocol parameters without display positions are included.   |
