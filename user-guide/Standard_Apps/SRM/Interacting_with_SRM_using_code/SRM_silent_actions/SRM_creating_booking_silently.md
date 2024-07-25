@@ -115,33 +115,33 @@ When you create a booking with a start date in the past, we strongly recommended
 Use the following code to ensure the booking is correctly started after creation:
 
 ```csharp
-bool WaitForCorrectBooking()
+bool IsBookingLifeCycleCorrect(ReservationInstance booking)
 {
-    var isCorrectState = true;
-    if (reservation.IsInPreRoll())
-    {
-        isCorrectState = reservation.GetBookingLifeCycle() == GeneralStatus.Starting;
-    }
-    else if (reservation.IsRunning())
-    {
-        isCorrectState = reservation.GetBookingLifeCycle() == GeneralStatus.Running;
-    }
-    else if (reservation.IsInPostRoll())
-    {
-        isCorrectState = reservation.GetBookingLifeCycle() == GeneralStatus.Stopping;
-    }
-
-    if (!isCorrectState)
-    {
-        reservation = SrmManagers.ResourceManager.GetReservationInstance(reservation.ID);
-    }
-
-    return isCorrectState;
+ if (booking.IsInPreRoll())
+ {
+  return booking.GetBookingLifeCycle() == GeneralStatus.Starting;
+ }
+ else if (booking.IsRunning())
+ {
+  return booking.GetBookingLifeCycle() == GeneralStatus.Running;
+ }
+ else if (booking.IsInPostRoll())
+ {
+  return booking.GetBookingLifeCycle() == GeneralStatus.Stopping;
+ }
+ 
+ return true;
 }
 
-if (reservation.Start <= DateTime.UtcNow)
+bool CheckCorrectBookingLifeCycle()
 {
-    Skyline.DataMiner.Core.SRM.Utils.MiscExtensionMethods.RetryUntilSuccessOrTimeout(WaitForCorrectBooking, bookingManager.RetryTimeout, bookingManager.RetryInterval);
+ reservation = SrmManagers.ResourceManager.GetReservationInstance(reservation.ID);
+ return IsBookingLifeCycleCorrect(reservation);
+}
+
+if (reservation.Start <= DateTime.UtcNow && !IsBookingLifeCycleCorrect(reservation))
+{
+ Skyline.DataMiner.Core.SRM.Utils.MiscExtensionMethods.RetryUntilSuccessOrTimeout(CheckCorrectBookingLifeCycle, bookingManager.RetryTimeout, bookingManager.RetryInterval);
 }
 ```
 
