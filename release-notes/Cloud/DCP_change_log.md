@@ -16,6 +16,84 @@ An enhancement has been made to the remote access settings in the Admin app, whi
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
+#### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
+
+The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
+
+#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID_40259]
+
+It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
+
+#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID_40144]
+
+The following new Catalog types are now supported:
+
+- Ad Hoc Data Source
+
+- User-defined API
+
+- Testing Solution
+
+- Standard Solution
+
+- Solution
+
+- Scripted Connector
+
+- SLA Model
+
+- Sample Solution
+
+- Profile-Load Script
+
+- Low-Code App
+
+- Life Cycle Service Orchestration
+
+- Function Definition
+
+- Enhanced Service Model
+
+- Data Transformer
+
+- Data Query
+
+- Dashboard
+
+- ChatOps Extension
+
+- Best Practices Analyzer
+
+These new Catalog types can now be selected when [registering a Catalog item](xref:Register_Catalog_Item) and have been added to the filters on the left of the search results page.
+
+#### 23 July 2024 - Enhancement - Admin - Organization and DMS overview pages now display DMS type [ID_40123]
+
+The Admin organization overview page and the DMS overview page now show the type of DMS you are running, indicating whether it is a DaaS or Self-hosted system.
+
+#### 23 July 2024 - Enhancement - Admin - 'Add user' button disabled for users without permissions [ID_40234]
+
+On the Admin organization users page, the *Add user* button will now be disabled if you do not have the appropriate permissions. Previously, attempting to add a user without the right permissions would result in an error.
+
+#### 19 July 2024 - New feature - Catalog API - Catalog version registration allows inclusion of readme file [ID_40241]
+
+It is now possible to include a readme.md file in the zip archive used to register a new version of a Catalog item. Images are not (yet) supported in the readme file.
+
+#### 19 July 2024 - Fix - Catalog - Range without active versions shown [ID_40218]
+
+Previously, if a range had no active versions, it was still shown on the details page of a Catalog item. Now such a range will no longer be shown.
+
+#### 19 July 2024 - Enhancement - Catalog - Improved version loading [ID_40217]
+
+A new caching mechanism has been introduced that will improve performance when the versions included in a range of a Catalog item are loaded.
+
+#### 19 July 2024 - Fix - Catalog - Incorrect empty search result when initiated from home page [ID_40232]
+
+When a search request was initiated from the home page of the DataMiner Catalog, an empty result was shown on the browse page until the page was reloaded. The correct search result will now be shown immediately.
+
+#### 19 July 2024 - Enhancement - Catalog - Improved vendor logo loading [ID_40235]
+
+Caching has been introduced for vendor logos, which will make Catalog search results load faster.
+
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID_40176]
 
 From now on, SAML can be used to access Cube remotely.

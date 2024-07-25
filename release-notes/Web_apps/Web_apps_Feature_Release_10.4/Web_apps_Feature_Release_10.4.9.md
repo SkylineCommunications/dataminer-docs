@@ -34,6 +34,17 @@ In the settings of the component, you can also opt to have the component either 
 > - The component will not ask for any missing parameters or dummies. It expects them to be filled in either in its settings or via feeds. When input is missing, the script will not be launched and the component will be blank.
 > - By default, scripts will time out after 15 minutes. If a script times out, an error will be displayed in the component.
 
+#### Low-Code Apps: New 'Set value' action [ID_40252]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+It is now possible to configure a *Set value* action for a *Numeric input*, *Text input* or *Search input* component.
+
+This action will allow users to set the current value of the component in question to either a static value or a feed.
+
+When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed.
+If the component does not have this option enabled, the value will only be passed as the component's feed on `Enter` or `Focus lost`.
+
 ## Changes
 
 ### Enhancements
@@ -77,6 +88,12 @@ Because of a number of enhancements, overall performance has increased when load
 <!-- 40210: MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
+
+#### Dashboards app & Low-Code Apps: Time range feed will now automatically adapt its color scheme and width [ID_40226]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, a *Time range* feed would always have a white background and take the full width of the dashboard or low-code app. From now on, it will automatically adapt its color scheme to the dashboard theme and adjust its width depending on the number of columns it has to show in its filter pane.
 
 #### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
 
@@ -175,3 +192,17 @@ When a query used as a "start from" query was linked to a feed and a *Trigger* c
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 After a GQI query had been migrated, in some cases, the query version would incorrectly not be equal to the GQI version, leading to unexpected behavior.
+
+#### Low-code Apps - Action editor: Problems with window width and 'Navigate to a URL' action favicon [ID_40239]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the action editor window could get too wide to fit onto a screen. Its width has now been limited.
+
+Also, up to now, while a *Navigate to a URL* action would automatically add a `http://` or `https://` prefix, its favicon incorrectly would not. This has now been fixed.
+
+#### Dashboards app: Table and State components would not be rendered correctly when generating PDF reports [ID_40261]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+when you generated a PDF report based on a dashboard, in some cases, Table and State components would not be rendered correctly.

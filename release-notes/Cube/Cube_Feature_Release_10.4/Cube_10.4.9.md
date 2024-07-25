@@ -74,6 +74,14 @@ In the *BPA* tab of the *Agents* section, BPA tests that have not been scheduled
 
 Also, next to each BPA test in the list, you can now find a button that, when clicked, will open a page showing more information about that test. When you click the information button in the *Name* header, the [Running BPA tests](xref:Running_BPA_tests) page will open.
 
+#### SPI event log entry "Cube Connection" will now be sent to the DMA before the initial data is fetched [ID_40214]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, Cube would send an SPI event log entry "Cube Connection" to the DataMiner Agent after it had fetched and processed the initial data.
+
+From now on, it will send this SPI event log entry, which indicated how long it took for Cube to connect to the DataMiner Agent, before it fetches the initial data.
+
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]
@@ -134,3 +142,11 @@ From now on, disconnecting the output and connecting the output to the input wil
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When, on the same visual overview, multiple router control shapes were linked to the same session variables, in some cases, a router control shape could flicker when a session variable update was triggered by e.g. a SetVar shape update.
+
+#### Visual Overview: Problems with ClosePage and AutoClosePopup [ID_40131]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a *SetVar* shape on a pop-up window was configured to close that pop-up window (by means of a *ClosePage* or *AutoClosePopup* option on the parent shape), the popup would incorrectly not close unless *Control=Shape* had been added to the *SetVarOptions* data field.
+
+Also, when a popup was opened from a subshape of a *Children* shape, neither the *ClosePage* option nor the *AutoClosePopup* option would work.

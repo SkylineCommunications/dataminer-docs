@@ -24,6 +24,8 @@ The Admin app is intended for the management of DataMiner Systems connected to d
 
 - [Managing dataminer.services keys](xref:Managing_DCP_keys)
 
+- [Viewing information on DataMiner Systems](xref:Viewing_info_on_DMS)
+
 - [Viewing information on deployments](xref:Viewing_info_on_deployments)
 
 - [Viewing information on shares](xref:Viewing_info_on_shares)
