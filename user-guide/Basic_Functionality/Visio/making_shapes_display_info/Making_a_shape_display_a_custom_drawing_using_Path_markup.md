@@ -24,7 +24,7 @@ See below for more information on the different components of the Path string.
 - **Fill**: The line color (name of color or "#aarrggbb").
 - **Strokethickness**: The line thickness.
 - **Tooltip**: The tooltip text.
-- **YAxisUp**: false or true. If false, the coordinates (0,0) will be in the top-left corner, similar to image editing programs such as Inkscape or Illustrator. If true, the coordinates (0,0) will be in the lower left corner, as typically used in data visualization graphics.
+- **YAxisUp**: false or true. If false, the 0,0 coordinates will be in the top-left corner, similar to image editing programs such as Inkscape or Illustrator. If true, the 0,0 coordinates will be in the lower left corner, as typically used in data visualization graphics.
 - **bottomLeftX;bottomLeftY;topRightX;topRightY**: The coordinates of the lower left and top-right corner of the shape. To be used when using relative positioning.
 - **link**: The name or the ID of the element or service to jump to when the shape is clicked. When you right-click the shape, you will see the default shortcut menu of that element or service.
 
