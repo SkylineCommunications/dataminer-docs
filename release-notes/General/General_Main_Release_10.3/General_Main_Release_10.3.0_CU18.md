@@ -72,6 +72,14 @@ When you decommission a Failover setup, from now on, the DataMiner Agent that wa
 
 The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
 
+#### MySQL.data.dll downgraded to version 8.0.32 to prevent known MySQL issue [ID_40200]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In order to prevent the following known MySQL issue from occurring, the *Mysql.Data.dll* driver has been downgraded to version 8.0.32.
+
+- [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
+
 ### Fixes
 
 #### Alarms generated for an element with a virtual function would incorrectly get exported to that virtual function [ID_39536]
