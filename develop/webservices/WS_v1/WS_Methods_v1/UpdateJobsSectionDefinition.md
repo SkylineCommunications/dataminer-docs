@@ -27,6 +27,6 @@ Use this method to update a job section definition.
 
 ## Output
 
-| Item                               | Format | Description                                   |
-|------------------------------------|--------|-----------------------------------------------|
+| Item                              | Format | Description                                   |
+|-----------------------------------|--------|-----------------------------------------------|
 | UpdateJobsSectionDefinitionResult | String | The ID of the updated job section definition. |

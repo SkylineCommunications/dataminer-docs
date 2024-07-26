@@ -10,7 +10,7 @@ Use this method to update a particular parameter.
 
 | Item           | Format  | Description                                                                                                 |
 |----------------|---------|-------------------------------------------------------------------------------------------------------------|
-| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
+| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                                                       |
 | dmaID          | Integer | The DataMiner Agent ID.                                                                                     |
 | elementID      | Integer | The element ID.                                                                                             |
 | parameterID    | Integer | The parameter ID.                                                                                           |
