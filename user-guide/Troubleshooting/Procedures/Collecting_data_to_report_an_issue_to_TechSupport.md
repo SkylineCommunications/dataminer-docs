@@ -10,7 +10,7 @@ The type of data required depends on the type of issue you are experiencing:
 
 - For Cube-related issues: [Cube Debug information](#cube-debug-information)
 
-- For issues in Web Apps: [Web App recordings](#web-app-recordings)
+- For DataMiner web apps issues: [Web App recordings](#web-app-recordings)
 
 - For element or service-related issues: [DELT export packages](#delt-export-packages)
 
@@ -77,31 +77,42 @@ To investigate why Cube could not connect to your DMA:
 
 ## Web app recordings
 
-For troubleshooting of issues with Web Applications: Dashboards, Monitoring, Low-Code Apps, etc. - we recommend using the DataMiner Web Support Assistant plugin. The plugin can be installed from Chrome Web Store on any Chromium-based browser: [DataMiner Web Support Assistant - Chrome Web Store](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge)
+For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the DataMiner Web Support Assistant browser extension.
 
-> [!IMPORTANT]
-> After adding the extension for the first time, it is recommended to restart the browser before creating a recording.
+This extension is available for Google Chrome or any Chromium-based browser.
 
-Once the plugin is installed: 
+### Installing the DataMiner Web Support Assistant
 
-1. Navigate to the tab where a bug or issue is experienced in the DataMiner Web App.
+1. Look up the [*DataMiner Web Support Assistant*](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) extension in the Chrome Web Store.
 
-1. Open the extension by clicking its icon in the top right corner. If the extension is not pinned, click the puzzle icon and then select the extension.
+1. Click *Add to Chrome* in the top-right corner.
+
+1. Restart your browser.
+
+### Creating a recording with the DataMiner Web Support Assistant
+
+1. Navigate to the tab where you are experiencing an issue with a DataMiner web app.
+
+1. Click the puzzle icon in the top-right corner of your browser and select *DataMiner Web Support Assistant* from the list of available extensions.
+
+1. Click the large red recording button to start the recording.
 
    ![Web Support Assistant icon and popup](~/user-guide/images/Web_Support_Assistant_icon_popup.png)
 
-1. Click the large red record button to start the recording. The extension will minimize, indicating that the recording has begun. The maximum duration for a recording is 10 minutes.
+   The extension will minimize, indicating that the recording has begun. The maximum duration for a recording is 10 minutes.
 
-1. Replicate the process that led to encountering the bug or issue in the web app.
+1. Replicate the process that led to the bug or issue in the web app.
 
-1. When the issue has been successfully replicated, reopen the extension and click the "END" button to stop the recording.
+1. When the issue has been successfully replicated, reopen the extension and click the red *END* button to stop the recording.
 
-1. Allow the extension to finish processing the data, this will be indicated by a loading screen. Do not close the extension during this process.
+1. Allow the extension to finish processing the data. This will be indicated by a loading screen. Do not close the extension during this process.
 
-1. Once the recording is ready, download the ZIP file containing all the necessary data. This concludes the recording process.
+   Once the recording is ready, a green checkmark will be displayed.
+
+1. Click *Download* to download the ZIP file containing all the necessary data. This concludes the recording process.
 
 > [!IMPORTANT]
-> The extension only collects data from the tab in which the recording was started. Ensure to stay within that tab to recreate the issue accurately.
+> The extension only collects data from the tab in which the recording was started. Ensure to stay within that tab to accurately recreate the issue.
 
 ## DELT export packages
 
