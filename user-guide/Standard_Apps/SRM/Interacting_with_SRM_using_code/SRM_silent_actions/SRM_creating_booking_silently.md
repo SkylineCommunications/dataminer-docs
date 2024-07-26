@@ -110,7 +110,7 @@ public class Script
 
 ## Handling bookings with a start date in the past
 
-When you create a booking with a start date in the past, we strongly recommended waiting until the booking is fully started before performing any other operations. This prevents updates made during the start process from being overridden.
+When you create a booking with a start date in the past, we strongly recommend waiting until the booking is fully started before performing any other operations. This prevents updates made during the start process from being overridden.
 
 Use the following code to ensure the booking is correctly started after creation:
 
