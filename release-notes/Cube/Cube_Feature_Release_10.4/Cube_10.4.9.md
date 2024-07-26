@@ -66,6 +66,14 @@ Since the analytics trending features cannot be used for general parameters, fro
 
 Also, when a general parameter is being trended, it will no longer be possible to create a trend pattern for that parameter.
 
+#### Visual Overview: WPF Path markup parsing will now be culture invariant [ID_40094]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when you made a custom drawing by entering WPF Path markup in a shape data field of type *Path*, the decimal separator had to match the one that was set on the client computer.
+
+From now on, the WPF Path markup parsing will be culture invariant, accepting both "." and "," as decimal separator.
+
 #### System Center - Agents: BPA tests that have not been scheduled will now be displayed in a lighter font [ID_40113]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -73,6 +81,14 @@ Also, when a general parameter is being trended, it will no longer be possible t
 In the *BPA* tab of the *Agents* section, BPA tests that have not been scheduled will now be displayed in a lighter font.
 
 Also, next to each BPA test in the list, you can now find a button that, when clicked, will open a page showing more information about that test. When you click the information button in the *Name* header, the [Running BPA tests](xref:Running_BPA_tests) page will open.
+
+#### SPI event log entry "Cube Connection" will now be sent to the DMA before the initial data is fetched [ID_40214]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, Cube would send an SPI event log entry "Cube Connection" to the DataMiner Agent after it had fetched and processed the initial data.
+
+From now on, it will send this SPI event log entry, which indicated how long it took for Cube to connect to the DataMiner Agent, before it fetches the initial data.
 
 ### Fixes
 
@@ -110,6 +126,23 @@ When configuring alarm templates and trend templates, up to now, it would incorr
 
 When dynamic values were used in interface shapes that were child shapes on an element group, and those shapes did not have the *AllowCentralConnectivity* option enabled, in some cases, the DCF connections would incorrectly be drawn from the center of the shapes instead of their interfaces.
 
+#### Visual Overview: Linked session variable would incorrectly not update when the selection changed in a multiple checkbox control [ID_40035]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when you changed the selection in a multiple checkbox control, in some cases, the linked session variable would incorrectly not be updated, causing the control and the variable to get out of sync.
+
+#### Visual Overview: Problem with 'EnableLoading=False' option [ID_40065]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+The page and shape option `EnableLoading=False` would no longer work when shapes had pending properties (e.g. properties of which the value contained unresolved placeholders).
+
+> [!NOTE]
+>
+> - The `VisioLoadTimeMetric` SPI will now report on all shapes, regardless of whether they show their loading state or not.
+> - From now on, the `EnableLoading` option is case insensitive.
+
 #### Router Control: Problem when connecting an already connected output to a new input [ID_40076]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -117,3 +150,17 @@ When dynamic values were used in interface shapes that were child shapes on an e
 When, in the *Router Control* module, you connect an already connected output to a new input, the output first needs to be disconnected. Up to now, Cube would then send two messages: one to disconnect the output and another one to connect the output to the input. In some cases, those messages would be processed in the wrong order, causing the operation to fail.
 
 From now on, disconnecting the output and connecting the output to the input will be performed in one single message.
+
+#### Visual Overview: Router control shapes could flicker when session variables were updated [ID_40102]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When, on the same visual overview, multiple router control shapes were linked to the same session variables, in some cases, a router control shape could flicker when a session variable update was triggered by e.g. a SetVar shape update.
+
+#### Visual Overview: Problems with ClosePage and AutoClosePopup [ID_40131]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When a *SetVar* shape on a pop-up window was configured to close that pop-up window (by means of a *ClosePage* or *AutoClosePopup* option on the parent shape), the popup would incorrectly not close unless *Control=Shape* had been added to the *SetVarOptions* data field.
+
+Also, when a popup was opened from a subshape of a *Children* shape, neither the *ClosePage* option nor the *AutoClosePopup* option would work.

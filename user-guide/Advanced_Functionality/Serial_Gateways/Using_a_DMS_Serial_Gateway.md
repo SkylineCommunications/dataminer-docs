@@ -18,7 +18,7 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
 
 ### Preparing the Serial Gateway
 
-1. Open a command prompt and enter “telnet \[IP Address of Serial Gateway\]”.
+1. Open a command prompt and enter "telnet \[IP Address of Serial Gateway\]".
 
    A telnet session with the Serial Gateway will be established.
 
@@ -28,9 +28,11 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
    > - A telnet session left open on a Serial Gateway will automatically be terminated after a certain time.
    > - Alternatively, on recent versions, you can open a web browser to the IP address of the Serial Gateway instead.
    > - With recent versions, the front panel of the device also has a navigation menu that is very similar to the telnet interface, where you can configure the same settings.
-   > - From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](xref:DataMiner_xml#dataminerxml).
 
-1. Press *Enter* to confirm the console terminal type as “ansi/vt100”.
+   > [!IMPORTANT]
+   > By default, the Telnet interface is deactivated. You can activate it using the *Telnet* tag in [DataMiner.xml](xref:DataMiner_xml).
+
+1. Press *Enter* to confirm the console terminal type as "ansi/vt100".
 
    You will now get a menu in which you can easily navigate using the arrows keys on your keyboard.
 
@@ -43,7 +45,7 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
 
    > [!NOTE]
    >
-   > - If this setting is not properly configured, the stream of the associated element will throw a “socket error 10061”. This means that the Serial Gateway actively refused the connection.
+   > - If this setting is not properly configured, the stream of the associated element will throw a "socket error 10061". This means that the Serial Gateway actively refused the connection.
    > - If at this point a warning appears that you must restart the Serial Gateway, do not do so yet.
 
 1. Press *Esc* to leave the operating settings.
@@ -65,7 +67,7 @@ Your Serial Gateway is now set up to handle all communication between the DMA an
 
 ## Adding the elements to the DMS
 
-For every element connected via the Serial Gateway, do the following.
+For every element connected via the Serial Gateway, do the following:
 
 1. Right-click the view where you want to create a new element in the Surveyor, and select *New \> Element*.
 
@@ -100,13 +102,13 @@ After you have added all elements, to make sure that they have been correctly se
 
      Communication with the DMA has been established, and all is working fine.
 
-   - If the icon does not show an alarm severity color and contains either a “Stopped” symbol (black square) or a “Paused” symbol (two vertical bars):
+   - If the icon does not show an alarm severity color and contains either a "Stopped" symbol (black square) or a "Paused" symbol (two vertical bars):
 
      The element is currently either stopped or paused. The DMA is not communicating with the device, nor is it trying to.
 
      Right-click the element in the Surveyor, and choose *Set State \> Active*.
 
-   - If the icon does not show an alarm severity color and contains a “Not Responding” symbol (red x):
+   - If the icon does not show an alarm severity color and contains a "Not Responding" symbol (red x):
 
      The DMA is trying to communicate with the element, but the element is not responding.
 

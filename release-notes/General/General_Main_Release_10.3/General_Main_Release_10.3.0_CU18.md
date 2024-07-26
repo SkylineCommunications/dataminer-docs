@@ -46,6 +46,16 @@ Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists
 
 The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
 
+#### Service & Resource Management: Enhanced logging when booking objects are added to, updated in or deleted from the cache [ID_40043]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When booking objects are added to, updated in or deleted from the cache, from now on, the following properties of the booking in question will be logged:
+
+- Booking status
+- Booking resources
+- Time when the booking was last modified
+
 #### Factory reset tool will now use an absolute path to locate ResetConfig.txt [ID_40074]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -61,6 +71,14 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 When you decommission a Failover setup, from now on, the DataMiner Agent that was online when you started the decommission process will be restarted as soon as the decommission process has finished.
 
 The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
+
+#### MySQL.data.dll downgraded to version 8.0.32 to prevent known MySQL issue [ID_40200]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In order to prevent the following known MySQL issue from occurring, the *Mysql.Data.dll* driver has been downgraded to version 8.0.32.
+
+- [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
 
 ### Fixes
 
@@ -159,3 +177,11 @@ In the following cases, SLProtocol would leak memory:
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
+
+#### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, SLProtocol would stop working when it loaded a connector containing parameters with IDs that exceeded the boundaries (see [Reserved parameter IDs](xref:ReservedIDsParameters)).
+
+From now on, SLProtocol will no longer stop working when loading such a connector. However, if any parameters are found with IDs that exceed the boundaries, they will not be loaded.

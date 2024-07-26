@@ -74,6 +74,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 Also, error handling when loading virtual elements has been improved.
 
+#### User-defined APIs: ApiToken and ApiDefinition objects will now be cached [ID_39701]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
+
 #### SLAnalytics: Alarms and suggestion events for virtual functions will now be generated on the parent element [ID_39707]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -200,6 +206,14 @@ When the trend data of a parameter appears to have frequent flatline periods, th
 
 Also, a parameter will need to have had at least one day of fluctuating trend data behavior before the flatline detection functionality will detect the start of a flatline period.
 
+#### Service & Resource Management: New 'SkipServiceHandling' option to allow the 'SRMServiceInfo' object check to be skipped when starting/stopping a booking [ID_39939]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
+
+In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+
 #### SLAutomation: Enhanced compilation of Automation scripts [ID_39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
@@ -226,6 +240,14 @@ The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the f
 
 From now on, event hub throttling errors will be logged as 'Warning' instead of 'Error'.
 
+#### NT_SNMP_RAW_GET, NT_SNMP_GET, NT_SNMP_RAW_SET and NT_SNMP_SET calls will take the SnmpPollingSnmpPlusPlusOnly soft-launch option into account [ID_40019]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls will take the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option into account.
+
+In other words, from now on, when this soft-launch option is set to true, these calls will be executed using SNMP++ instead of WinSNMP.
+
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID_40023]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -237,6 +259,16 @@ Because of a number of enhancements made to SLNet, overall performance has incre
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
+
+#### Service & Resource Management: Enhanced logging when booking objects are added to, updated in or deleted from the cache [ID_40043]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When booking objects are added to, updated in or deleted from the cache, from now on, the following properties of the booking in question will be logged:
+
+- Booking status
+- Booking resources
+- Time when the booking was last modified
 
 #### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
 
@@ -252,6 +284,12 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
+
 #### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -265,6 +303,38 @@ The DataMiner Agent that was offline when you started the decommission process w
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
+
+#### MySQL.data.dll downgraded to version 8.0.32 to prevent known MySQL issue [ID_40200]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In order to prevent the following known MySQL issue from occurring, the *Mysql.Data.dll* driver has been downgraded to version 8.0.32.
+
+- [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
+
+#### Security enhancements [ID_40229]
+
+<!-- 40229: MR 10.5.0 - FR 10.4.9 -->
+
+A number of security enhancements have been made.
+
+#### DxMs upgraded [ID_40231] [ID_40254]
+
+<!-- RN 40231: MR 10.4.0 [CU6] - FR 10.4.9 -->
+<!-- RN 40254: MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CoreGateway: version 2.14.9
+- DataMiner SupportAssistant: version 1.6.10
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### DataMiner Object Models: Enhanced storage of DOM instances [ID_40242]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
 
 ### Fixes
 
@@ -285,6 +355,12 @@ When alarms were generated for an element with a virtual function, those alarms 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When SLDataGateway retrieved data from the database page by page, in some cases, paging handlers that had already fetched all their data and had already been deleted would incorrectly be used, causing exceptions to be thrown.
+
+#### DataMiner Object Models: CRUD events would incorrectly be of type 'DomCrudEvent\<T\>' [ID_39696]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID_39756]
 
@@ -386,8 +462,30 @@ In the following cases, SLProtocol would leak memory:
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
 
+#### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, SLProtocol would stop working when it loaded a connector containing parameters with IDs that exceeded the boundaries (see [Reserved parameter IDs](xref:ReservedIDsParameters)).
+
+From now on, SLProtocol will no longer stop working when loading such a connector. However, if any parameters are found with IDs that exceed the boundaries, they will not be loaded.
+
 #### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 In some cases, new change points would incorrectly be generated shortly after the SLAnalytics process had been restarted, even though no changes in trend behavior had been detected.
+
+#### Service & Resource Management: Problem when retrieving resources filtered by property [ID_40209]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a request was sent to a DataMiner Agent to retrieve resources filtered by property, in some cases, the DataMiner Agent would throw a `NullReferenceException` when one of the resources had "null" properties.
+
+#### Problem when NATSMigration called SLKill to stop the NATS service [ID_40271]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When the NATSMigration process called SLKill to stop the NATS service, up to now, SLKill would incorrectly also kill the NATSMigration process.
+
+From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".

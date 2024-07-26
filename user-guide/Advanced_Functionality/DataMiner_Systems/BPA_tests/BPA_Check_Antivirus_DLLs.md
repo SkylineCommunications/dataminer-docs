@@ -8,7 +8,7 @@ When installed on a DataMiner Agent, [antivirus software must be configured to e
 
 The *Check Antivirus DLLs* BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.4 onwards, it is available by default.
+This BPA test is available by default from DataMiner 10.1.4 onwards.
 
 ## Metadata
 

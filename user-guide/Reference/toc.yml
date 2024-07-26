@@ -318,8 +318,6 @@ items:
                 topicUid: SLNetClientTest_finetuning_CPECollectorHelper
               - name: Forcing file synchronization between DMAs
                 topicUid: SLNetClientTest_forcing_file_sync
-              - name: Generating SMIv2 MIB files
-                topicUid: SLNetClientTest_generating_mib_files
               - name: Having RCA chains updated by the DCF engine
                 topicUid: SLNetClientTest_having_rca_chains_updated
               - name: Increasing the maximum upload size for upgrade packages in a DMS

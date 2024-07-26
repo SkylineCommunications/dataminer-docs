@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 25 July 2024 - Enhancement - CoreGateway 2.14.10 - Dependencies updated [ID_40312]
+
+Several dependencies have been updated.
+
 #### 16 July 2024 - Fix - CoreGateway 2.14.9 - Replaced installer for CoreGateway 2.14.8
 
 Because the certificate used to sign CoreGateway 2.14.8 has been revoked, a new installer has been generated. To avoid issues during the digital signature validation while running the installer, CoreGateway 2.14.8 is now unlisted.
