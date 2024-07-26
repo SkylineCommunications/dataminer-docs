@@ -107,3 +107,42 @@ public class Script
 >
 > - In case a null service definition is provided, SRM will use a dynamically generated blank service definition.<!-- RN 30324 -->
 > - To add a resource without linking it to a node in the service definition, do not provide the *Id* attribute of the *Function* object.<!-- RN 30324 -->
+
+## Handling bookings with a start date in the past
+
+When you create a booking with a start date in the past, we strongly recommended waiting until the booking is fully started before performing any other operations. This prevents updates made during the start process from being overridden.
+
+Use the following code to ensure the booking is correctly started after creation:
+
+```csharp
+bool IsBookingLifeCycleCorrect(ReservationInstance booking)
+{
+ if (booking.IsInPreRoll())
+ {
+  return booking.GetBookingLifeCycle() == GeneralStatus.Starting;
+ }
+ else if (booking.IsRunning())
+ {
+  return booking.GetBookingLifeCycle() == GeneralStatus.Running;
+ }
+ else if (booking.IsInPostRoll())
+ {
+  return booking.GetBookingLifeCycle() == GeneralStatus.Stopping;
+ }
+ 
+ return true;
+}
+
+bool CheckCorrectBookingLifeCycle()
+{
+ reservation = SrmManagers.ResourceManager.GetReservationInstance(reservation.ID);
+ return IsBookingLifeCycleCorrect(reservation);
+}
+
+if (reservation.Start <= DateTime.UtcNow && !IsBookingLifeCycleCorrect(reservation))
+{
+ Skyline.DataMiner.Core.SRM.Utils.MiscExtensionMethods.RetryUntilSuccessOrTimeout(CheckCorrectBookingLifeCycle, bookingManager.RetryTimeout, bookingManager.RetryInterval);
+}
+```
+
+This approach ensures that the booking process completes correctly before any further actions are taken.
