@@ -126,6 +126,12 @@ When configuring alarm templates and trend templates, up to now, it would incorr
 
 When dynamic values were used in interface shapes that were child shapes on an element group, and those shapes did not have the *AllowCentralConnectivity* option enabled, in some cases, the DCF connections would incorrectly be drawn from the center of the shapes instead of their interfaces.
 
+#### Visual Overview: Linked session variable would incorrectly not update when the selection changed in a multiple checkbox control [ID_40035]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when you changed the selection in a multiple checkbox control, in some cases, the linked session variable would incorrectly not be updated, causing the control and the variable to get out of sync.
+
 #### Visual Overview: Problem with 'EnableLoading=False' option [ID_40065]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
