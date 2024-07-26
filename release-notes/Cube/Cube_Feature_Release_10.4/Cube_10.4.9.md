@@ -66,6 +66,14 @@ Since the analytics trending features cannot be used for general parameters, fro
 
 Also, when a general parameter is being trended, it will no longer be possible to create a trend pattern for that parameter.
 
+#### Visual Overview: WPF Path markup parsing will now be culture invariant [ID_40094]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when you made a custom drawing by entering WPF Path markup in a shape data field of type *Path*, the decimal separator had to match the one that was set on the client computer.
+
+From now on, the WPF Path markup parsing will be culture invariant, accepting both "." and "," as decimal separator.
+
 #### System Center - Agents: BPA tests that have not been scheduled will now be displayed in a lighter font [ID_40113]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
