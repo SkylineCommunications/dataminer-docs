@@ -29,7 +29,7 @@ The following factors, in order, are taken into account for the grouping:
 
 - Element information
 
-- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
+- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Advanced Configuration](#advanced-configuration)).
 
 If a single factor is used, it is mentioned in the value of the created alarm group.
 
