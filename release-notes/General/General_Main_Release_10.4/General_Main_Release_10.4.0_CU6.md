@@ -92,6 +92,14 @@ When you decommission a Failover setup, from now on, the DataMiner Agent that wa
 
 The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
 
+#### MySQL.data.dll downgraded to version 8.0.32 to prevent known MySQL issue [ID_40200]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In order to prevent the following known MySQL issue from occurring, the *Mysql.Data.dll* driver has been downgraded to version 8.0.32.
+
+- [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
+
 #### DxMs upgraded [ID_40231] [ID_40254]
 
 <!-- RN 40231: MR 10.4.0 [CU6] - FR 10.4.9 -->
@@ -213,6 +221,14 @@ In the following cases, SLProtocol would leak memory:
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
+
+#### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, SLProtocol would stop working when it loaded a connector containing parameters with IDs that exceeded the boundaries (see [Reserved parameter IDs](xref:ReservedIDsParameters)).
+
+From now on, SLProtocol will no longer stop working when loading such a connector. However, if any parameters are found with IDs that exceed the boundaries, they will not be loaded.
 
 #### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
 

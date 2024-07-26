@@ -101,6 +101,12 @@ Up to now, a *Time range* feed would always have a white background and take the
 
 In all DataMiner web applications, placeholders in text boxes will now be displayed more clearly, especially in dark mode.
 
+#### Dashboards app: Improved positioning of WebSocket connection status indicator on shared dashboards [ID_40294]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+On shared dashboards, the position of the WebSocket connection status indicator in the top-right corner of the screen has been improved.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive Automation script [ID_39862]
@@ -206,3 +212,9 @@ Also, up to now, while a *Navigate to a URL* action would automatically add a `h
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 when you generated a PDF report based on a dashboard, in some cases, Table and State components would not be rendered correctly.
+
+#### Web API: Problem when a low-code app was created while a page was being added to another low-code app [ID_40280]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a low-code app was created while a page was being added to another low-code app, in some cases, the web API could get into a deadlock, causing all low-code apps to become unresponsive.

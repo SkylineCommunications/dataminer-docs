@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 25 July 2024 - Enhancement - SupportAssistant 1.6.10 - Dependencies updated & event handling improved [ID_40307]
+
+Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
+
 #### 26 April 2024 - Fix - SupportAssistant 1.6.9 - Inconsistent cloud endpoint detection failures [ID_39514]
 
 An issue has been resolved that could make features like Remote Log Collection and data offloads for proactive support inconsistently fail.

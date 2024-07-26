@@ -494,6 +494,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
+#### User-defined APIs: ApiToken and ApiDefinition objects will now be cached [ID_39701]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
+
 #### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -632,6 +638,14 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
 
+#### Service & Resource Management: New 'SkipServiceHandling' option to allow the 'SRMServiceInfo' object check to be skipped when starting/stopping a booking [ID_39939]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
+
+In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+
 #### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -675,6 +689,12 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
+
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 

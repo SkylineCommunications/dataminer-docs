@@ -112,6 +112,8 @@ items:
         topicUid: Managing_cloud-connected_nodes
       - name: Managing dataminer.services keys
         topicUid: Managing_DCP_keys
+      - name: Viewing information on DataMiner Systems
+        topicUid: Viewing_info_on_DMS
       - name: Viewing information on deployments
         topicUid: Viewing_info_on_deployments
       - name: Viewing information on shares
