@@ -17,7 +17,7 @@ uid: AnalogTrendDataResponseMessage
 | FailReason   | String            | If the requested trend data could not be retrieved, this field will contain the error message. |
 | Data         | Array of Double   | The trend values (real-time trending or average trending). |
 | Timestamps   | Array of DateTime | The timestamps of the data points in Avg, *Max*, *Min* and *Status*. |
-| Status       | Array of Integer  | iStatus values: 0, 5, 60, ..., or negative values indicating gaps in the graph.<br>See the list of [iStatus values](Structure_of_the_offload_database#istatus-values). |
+| Status       | Array of Integer  | iStatus values: 0, 5, 60, ..., or negative values indicating gaps in the graph.<br>See the list of [iStatus values](xref:Structure_of_the_offload_database#istatus-values). |
 
 > [!NOTE]
 > The arrays *Avg*,* Min*, *Max*, *Status* and *Timestamps* always have the same number of values.
