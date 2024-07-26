@@ -8,12 +8,12 @@ Use this method to retrieve the topology fields of a particular chain of a CPE e
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer | The DataMiner Agent ID.                                                          |
-| elementID  | Integer | The element ID.                                                                  |
-| chain      | String  | The name of the chain.                                                           |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| elementID  | Integer | The element ID.                                       |
+| chain      | String  | The name of the chain.                                |
 
 ## Output
 

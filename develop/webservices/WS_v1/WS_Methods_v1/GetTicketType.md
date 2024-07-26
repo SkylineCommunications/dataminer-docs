@@ -16,10 +16,10 @@ Use this method to retrieve the ticket type for a ticket with a specific ID.
 
 ## Input
 
-| Item         | Format | Description                                                                      |
-|--------------|--------|----------------------------------------------------------------------------------|
+| Item         | Format | Description                                           |
+|--------------|--------|-------------------------------------------------------|
 | connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ticketTypeID | String | The ticket ID.                                                                   |
+| ticketTypeID | String | The ticket ID.                                        |
 
 ## Output
 

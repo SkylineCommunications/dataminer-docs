@@ -272,6 +272,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMATrendData](xref:DMATrendData)
 
+- [DMATrendDataStatisticsService](xref:DMATrendDataStatisticsService)
+
 - [DMAUser](xref:DMAUser)
 
 - [DMAUserGroup](xref:DMAUserGroup)

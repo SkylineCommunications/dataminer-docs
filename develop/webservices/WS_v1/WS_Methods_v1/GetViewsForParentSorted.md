@@ -11,13 +11,13 @@ Use this method to retrieve a specific number of subviews from a particular view
 
 ## Input
 
-| Item         | Format  | Description                                                                      |
-|--------------|---------|----------------------------------------------------------------------------------|
-| connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| parentViewID | Integer | The parent view ID.                                                              |
-| index        | Integer | The point from which to start returning views.                                   |
-| count        | Integer | The number of views to be returned.                                              |
-| orderBy      | String  | The field(s) by which to order the views (separated by semicolons).              |
+| Item         | Format  | Description                                                         |
+|--------------|---------|---------------------------------------------------------------------|
+| connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp).               |
+| parentViewID | Integer | The parent view ID.                                                 |
+| index        | Integer | The point from which to start returning views.                      |
+| count        | Integer | The number of views to be returned.                                 |
+| orderBy      | String  | The field(s) by which to order the views (separated by semicolons). |
 
 ## Output
 

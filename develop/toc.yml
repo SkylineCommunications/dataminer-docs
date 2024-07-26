@@ -4819,6 +4819,8 @@ items:
             topicUid: DMATopologyFieldValues
           - name: DMATrendData
             topicUid: DMATrendData
+          - name: DMATrendDataStatisticsService
+            topicUid: DMATrendDataStatisticsService  
           - name: DMAUser
             topicUid: DMAUser
           - name: DMAUserGroup
