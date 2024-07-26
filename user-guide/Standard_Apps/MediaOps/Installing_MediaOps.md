@@ -12,9 +12,7 @@ uid: Installing_MediaOps
 - A DaaS system.
 
   > [!NOTE]
-  >
-  > - If you do not have a DaaS system available yet, [spin up a new DaaS system](xref:Creating_a_DMS_on_dataminer_services).
-  > - A DaaS system is required to deploy MediaOps. While it is technically possible to deploy MediaOps on a self-hosted system, all MediaOps applications have been thoroughly tested on a DaaS system. Therefore, we strongly recommend using a DaaS setup, as we cannot provide appropriate support for self-hosted systems.
+  > If you do not have a DaaS system available yet, [spin up a new DaaS system](xref:Creating_a_DMS_on_dataminer_services).
 
 - The latest version of the [SRM framework](xref:deploying_srm).
 
