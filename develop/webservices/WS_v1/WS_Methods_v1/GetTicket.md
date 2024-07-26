@@ -18,15 +18,15 @@ Use this method to retrieve a particular ticket.
 
 ## Input
 
-| Item           | Format  | Description                                                                      |
-|----------------|---------|----------------------------------------------------------------------------------|
-| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID          | Integer | The ID of the DMA.                                                               |
-| ticketID       | Integer | The ID of the ticket.                                                            |
-| includeHistory | Boolean | Determines whether the revision history of the ticket is included.               |
+| Item           | Format  | Description                                                        |
+|----------------|---------|--------------------------------------------------------------------|
+| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp).              |
+| dmaID          | Integer | The ID of the DMA.                                                 |
+| ticketID       | Integer | The ID of the ticket.                                              |
+| includeHistory | Boolean | Determines whether the revision history of the ticket is included. |
 
 ## Output
 
-| Item            | Format    | Description                                             |
-|-----------------|-----------|---------------------------------------------------------|
+| Item            | Format                      | Description           |
+|-----------------|-----------------------------|-----------------------|
 | GetTicketResult | [DMATicket](xref:DMATicket) | The requested ticket. |

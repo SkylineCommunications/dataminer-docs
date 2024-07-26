@@ -4779,12 +4779,16 @@ items:
             topicUid: DMASpectrumBuffer
           - name: DMASpectrumMeasptModel
             topicUid: DMASpectrumMeasptModel
+          - name: DMASpectrumMonitor
+            topicUid: DMASpectrumMonitor
           - name: DMASpectrumPreset
             topicUid: DMASpectrumPreset
           - name: DMAStatistics
             topicUid: DMAStatistics
           - name: DMASTString
             topicUid: DMASTString
+          - name: DMAThirdPartyNotice
+            topicUid: DMAThirdPartyNotice
           - name: DMATicket
             topicUid: DMATicket
           - name: DMATicketField

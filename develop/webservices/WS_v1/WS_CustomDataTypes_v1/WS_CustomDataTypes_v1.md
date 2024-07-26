@@ -234,11 +234,15 @@ uid: WS_CustomDataTypes_v1
 
 - [DMASpectrumMeasptModel](xref:DMASpectrumMeasptModel)
 
+- [DMASpectrumMonitor](xref:DMASpectrumMonitor)
+
 - [DMASpectrumPreset](xref:DMASpectrumPreset)
 
 - [DMAStatistics](xref:DMAStatistics)
 
 - [DMASTString](xref:DMASTString)
+
+- [DMAThirdPartyNotice](xref:DMAThirdPartyNotice)
 
 - [DMATicket](xref:DMATicket)
 
