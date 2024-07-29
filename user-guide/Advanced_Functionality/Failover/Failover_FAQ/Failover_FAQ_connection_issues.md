@@ -4,11 +4,11 @@ uid: Failover_FAQ_connection_issues
 
 # What if I have connection issues after a Failover switch?
 
-It is possible that, after a Failover switch, you run into connection issues because the routing mechanism to contact the correct agent may be incorrect.
+It is possible that, after a Failover switch, you run into connection issues because of incorrect routing mechanisms to the correct Agent.
 
-## [Virtual IP](#tab/tabid-1)
+## [Virtual IP addresses](#tab/tabid-1)
 
-Failover Pairs using virtual IP may run into connection issues because the servers' routing tables have been altered. This problem is caused by the way persistent routes have been defined.
+Failover pairs using virtual IP addresses may run into connection issues because the servers' routing tables have been altered. This problem is caused by the way persistent routes have been defined.
 
 To fix the problem, you need to recreate the routes and explicitly specify an interface for them to bind to.
 
@@ -53,47 +53,54 @@ To fix the problem, you need to recreate the routes and explicitly specify an in
 
 Once the routes have been recreated with an interface number assigned, they will no longer disappear from the list of active routes when the virtual IP address is removed because the DMA is stopped or goes offline.
 
-
 ## [Shared hostname](#tab/tabid-2)
 
-Failover pairs using a Shared hostname rely on the “Application Request Routing” extension in IIS, which is responsible to redirect requests from the 
-offline agent to the online agent. Issues with the configuration or the state of these rule may result in connection issues.
+Failover pairs using a shared hostname rely on the [*Application Request Routing* IIS extension](https://www.iis.net/downloads/microsoft/application-request-routing), which redirects requests from the offline Agent to the online Agent. Configuration or state issues with these rules may result in connection issues.
 
-You can check these rules by opening Internet Information Services (IIS) Manager→Sites→Default Web Site→URL Rewrite.
-![IIS URL Rewrite](~/user-guide/images/FailoverIISUrlRewrite.png)
+1. Open Internet Information Services (IIS) and navigate to *Manager > Sites > Default Web Site > URL Rewrite*.
 
-In the list of rules you should find a rule with the name "dataminer-failover-reverseproxy-rule".
+   ![IIS URL Rewrite](~/user-guide/images/FailoverIISUrlRewrite.png)
 
-> [!NOTE]
-> This rule should be enabled on the offline agent in the pair and disabled on the online agent, during switching the state of the rule should change to reflect this.
-> If the state of the rule is not correct you can manually change the state by selecting the rule and clicking on "Enable/Disable Rule" in the right section.
-![Change Rule State](~/user-guide/images/FailoverIISRewriteRuleChangeState.png)
+1. In the list of rules, look for a rule named `dataminer-failover-reverseproxy-rule`.
 
-Double-click the rule to see its properties. The rule should contain the following:
-- Match URL
+   This rule should be enabled on the offline Agent and disabled on the online Agent. During a switch, the state of the rule should reflect this change.
 
-![Failover Rewrite Rule Match URL Property](~/user-guide/images/FailoverRewriteMatchURLProperty.png)
-- Conditions
+1. If the state of the `dataminer-failover-reverseproxy-rule` rule is incorrect, manually change it by selecting the rule and clicking *Enable Rule* or *Disable Rule* in the right section.
 
-![Failover Rewrite Rule Conditions Property](~/user-guide/images/FailoverRewriteConditionsProperty.png)
-- Action
+   ![Change Rule State](~/user-guide/images/FailoverIISRewriteRuleChangeState.png)
 
-![Failover Rewrite Rule Action Property](~/user-guide/images/FailoverRewriteActionProperty.png)
+1. Double-click the rule to view its properties, which should include:
 
-If there are any inconsistencies with the rules. You can fix these with the following steps.
+   - Match URL
 
-1. Open an elevated Powershell Command Line
-2. Navigate to C:\\Skyline Dataminer\\Tools
-3. Execute the following command:
+     ![Failover Rewrite Rule Match URL Property](~/user-guide/images/FailoverRewriteMatchURLProperty.png)
 
-   ```txt
-    .\Failover-ARR-WriteInboundRule.ps1 <Buddy ip>
-    ```
+   - Conditions
 
-4. Execute the following command
+     ![Failover Rewrite Rule Conditions Property](~/user-guide/images/FailoverRewriteConditionsProperty.png)
 
-   ```txt
-    .\Failover-ARR-ToggleInboundRule.ps1 <true|false> 
+   - Action
 
-    Use true if the agent is the offline one in the pair, otherwise use false
-    ```
+     ![Failover Rewrite Rule Action Property](~/user-guide/images/FailoverRewriteActionProperty.png)
+
+1. To fix any inconsistencies in the rules, follow these steps:
+
+   1. Open a Powershell console as Administrator.
+
+   1. Navigate to `C:\Skyline Dataminer\Tools`.
+
+   1. Execute the following command:
+
+      ```txt
+      .\Failover-ARR-WriteInboundRule.ps1 <Buddy ip>
+      ```
+
+   1. Execute the following command:
+
+      ```txt
+      .\Failover-ARR-ToggleInboundRule.ps1 <true|false> 
+      ```
+
+      Use `true` if the Agent is the offline Agent in the Failover pair. Otherwise, use `false`.
+
+***
