@@ -14,7 +14,7 @@ If you encounter issues with [dataminer.services](xref:AboutCloudPlatform) featu
 
 ## Check the status on dataminer.services
 
-When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status per DMS in your organization that you are a member of.
+When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status per DMS in your organization that you are a member of:
 
 - An **orange** status indicates that the Cloud Gateway cannot reach the DataMiner System, but the dataminer.services connection is valid.
 
