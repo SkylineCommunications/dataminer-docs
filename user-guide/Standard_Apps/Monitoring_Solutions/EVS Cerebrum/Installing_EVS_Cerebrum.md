@@ -2,7 +2,7 @@
 uid: Installing_EVS_Cerebrum
 ---
 
-# Installing the EVS Cerebrum Application
+# Installing the EVS Cerebrum application
 
 ## Prerequisites
 

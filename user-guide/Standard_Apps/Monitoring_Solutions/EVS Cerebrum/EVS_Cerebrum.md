@@ -2,7 +2,7 @@
 uid: EVS_Cerebrum
 ---
 
-# EVS Cerebrum
+# The EVS Cerebrum app
 
 Cerebrum is a Broadcast Control System from EVS designed for flexible control and monitoring of broadcast environments. Its integration with DataMiner allows for reading and setting crosspoints, salvos, and mnemonics.
 

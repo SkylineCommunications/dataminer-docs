@@ -2,36 +2,42 @@
 uid: Using_EVS_Cerebrum
 ---
 
-# Working with the EVS Cerebrum Application
+# Working with the EVS Cerebrum application
 
-To acces the application:
+To access the application:
 
 1. Go to `http(s)://[DMA name]/root`.
 
 1. Select *EVS Cerebrum* to start using the application.
 
-## The EVS Cerebrum User Interface
+## The EVS Cerebrum user interface
 
-The UI of the EVS Cerebrum app consists of the following main components:
+The UI of the EVS Cerebrum app consists of five main components:
 
 ![Low-Code App buttons](~/user-guide/images/EVS_Cerebrum_UI.png)
 
-**Levels**, all available levels from a selected destination. Also each level visualizes the source it's connected to if applicable.
+**Levels** (1): All available levels for a selected destination, including the connected source, if applicable.
 
-**Categories**, all existing categories applied on sources and destinations. Based on category selection, sources and destinations will be filtered accordingly.
+**Categories** (2): All existing categories applied to sources and destinations. Filtering of sources and destinations is based on the selected category.
 
-**Sources**, All source mnemonics available in Cerebrum.
+**Sources** (3): All source mnemonics available in Cerebrum.
 
-**Destinations**, All destination mnemonics available in Cerebrum. Each destination button will show the connected source if applicable.
+**Destinations** (4): All destination mnemonics available in Cerebrum. Each destination button indicates the connected source, if applicable.
 
-**Take**, There are two buttons available, *Take* and *All Level Take*.
+**Buttons** (5): Contains two buttons (*Take* and *All Level Take*) that allow you to start the route connection setup.
 
-## Setup a Route Connection
+## Establishing a route connection
 
-- To setup a route, you must select a source, destination and level. To trigger route creation for the selected level(s), *Take* button can be used.
+To establish a route connection:
 
-- If there is a need to set up routes for all levels simultaneously, you can use the *All Level Take* button.
+1. Select the *Take* button.
 
+1. Select a source, destination, and level.
 
+<!--Add step-by-step instructions once app is available -->
 
+To set up routes for all levels simultaneously:
 
+1. Select the *All level Take* button.
+
+<!--Add step-by-step instructions once app is available -->
