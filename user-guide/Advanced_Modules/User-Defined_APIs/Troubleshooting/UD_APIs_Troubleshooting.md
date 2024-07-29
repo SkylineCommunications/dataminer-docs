@@ -57,7 +57,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
   1. Go to the .NET download page of the version matching your DxM version. and download the latest ASP.NET Core Runtime Hosting Bundle.
       - You can find the matching version on the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint#version).
 
-  1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint 1.X.X.X.msi`.
+  1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint X.X.X.X.msi`.
 
 - **Found rewrite rule, but it has inconsistencies:**
 
@@ -73,7 +73,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
   When the DxM is upgraded or automatically repaired during the execution of a DataMiner upgrade package, it can occur that the files in question are locked. This prevents the installer from continuing until they are unlocked. The installer will log a message if this is the case, and it will continuously check every 5 seconds for a maximum of 60 seconds until the files are unlocked. If they are still locked, this message is logged, and the installer will try to continue. This may result in files not being copied, and other errors may occur. The log lines mentioned should contain the names of the process or processes that are locking the files. You may need to terminate these and try the upgrade again.
 
-- **Serivce 'DataMiner UserDefinableApiEndpoint' failed to start. Verify that you have sufficient privileges to start system services.**
+- **Service 'DataMiner UserDefinableApiEndpoint' failed to start. Verify that you have sufficient privileges to start system services.**
 
   This is a generic message that can mean a lot of things. One of the issues that often trigger this is an incorrect installation of .NET. Make sure you installed the ASP.NET Core Runtime Hosting Bundle of the .NET version matching your DxM version, you can find the matching version on the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint#versions).
 
