@@ -67,7 +67,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. If the server has the nats-server service installed:
 
-   1. Open the appsettings.runtime.json file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*
+   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
@@ -146,7 +146,7 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
 1. If the server has the nats-server service installed:
 
-   1. Open the appsettings.runtime.json file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*
+   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
@@ -226,7 +226,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
 1. If the server has the nats-server service installed, do the following **on both DMAs**:
 
-   1. Open the appsettings.runtime.json file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*
+   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
@@ -245,7 +245,9 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 1. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
 
 1. From DataMiner 10.1.1 onwards, the following additional step is required in order to reset NATS.
-   This step is only needed when the NATS service is installed. Not with the nats-server service:
+
+   > [!NOTE]
+   > This step is only required when the NATS service is installed, not when the nats-server service is installed.
 
    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
@@ -332,18 +334,20 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. If the server has the nats-server service installed:
 
-   1. Open the appsettings.runtime.json file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*
+   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Restart the DataMiner BrokerGateway service.
 
-
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
 
-1. Reset NATS. This step is only needed when the NATS service is installed. Not with the nats-server service:
+1. Reset NATS.
+
+   > [!NOTE]
+   > This step is only required when the NATS service is installed, not when the nats-server service is installed.
 
    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
