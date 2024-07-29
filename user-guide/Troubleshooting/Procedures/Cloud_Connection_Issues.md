@@ -14,7 +14,7 @@ If you encounter issues with [dataminer.services](xref:AboutCloudPlatform) featu
 
 ## Check the status on dataminer.services
 
-When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status per DMS of which you are a member in your organization:
+When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status per DMS in your organization that you are a member of.
 
 - An **orange** status indicates that the Cloud Gateway cannot reach the DataMiner System, but the dataminer.services connection is valid.
 
@@ -28,7 +28,8 @@ When you navigate to [dataminer.services](https://dataminer.services/), you can 
 
   If the status is green, but you are still encountering issues with [dataminer.services](xref:AboutCloudPlatform) features, refer to [Investigating dataminer.services feature issues](xref:Investigating_Dataminerservices_Feature_Issues).
 
-- If your system is not listed here, make sure that you are in the correct organization and that you are a member of this DMS.  refer to [Check the status of the DMS](#check-the-status-of-the-dms).
+> [!IMPORTANT]
+> If your system is not listed here, make sure that you are in the correct organization and that you are a member of this DMS. See [Check the status of the DMS](#check-the-status-of-the-dms).
 
 ## Check the status of the DMS
 
@@ -82,9 +83,13 @@ Manually renewing the cloud identity can be necessary if dataminer.services coul
    > [!NOTE]
    > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* or *Admin* role](xref:Changing_the_role_of_a_DCP_user) in the DMS.
 
-### Renew session failing
+### Handling 'Renew session' failures
 
-Should the 'Renew session' fail with the following error: "*The DataMiner System could not be found.*", then it means the cloud identity has been removed without unregistering the linked DataMiner System. To resolve this issue, follow the steps documented in [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) to remove the link between the DataMiner System and the removed cloud identity. After doing so, the system can be cloud connected again in Cube under a new identity. For more information about how to register a system to dataminer.services, refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+If the *Renew session* action fails with the `The DataMiner System could not be found` error, it indicates that the cloud identity has been removed without unregistering the linked DataMiner System.
+
+To resolve this issue, follow the steps in [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) to remove the link between the DataMiner System and the removed cloud identity.
+
+Once completed, you can reconnect the system to dataminer.services in Cube under a new identity. For more information on registering a system to dataminer.services, refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Contact support
 
