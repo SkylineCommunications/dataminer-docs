@@ -232,3 +232,9 @@ When a low-code app was created while a page was being added to another low-code
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When data was being loading into a table component of which the appearance of a column had been customized, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
+
+#### Web API: Problem with client logging due to errors being serialized to invalid JSON [ID_40352]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When an app threw an error, that error would be serialized to invalid JSON. As a result, it would get added to the client logs in invalid JSON format.
