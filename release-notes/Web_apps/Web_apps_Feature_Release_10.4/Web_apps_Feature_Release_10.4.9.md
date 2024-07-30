@@ -238,3 +238,9 @@ When data was being loading into a table component of which the appearance of a 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When an app threw an error, that error would be serialized to invalid JSON. As a result, it would get added to the client logs in invalid JSON format.
+
+#### Dashboards app & Low-Code Apps: Parameter subscriptions would not be closed due to a memory leak in the State component [ID_40360]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Due to a memory leak in the *State* component, parameter subscriptions would incorrectly not be closed.
