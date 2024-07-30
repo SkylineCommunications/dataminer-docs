@@ -28,29 +28,23 @@ The UI of the EVS Cerebrum app consists of five main components:
 
 ## Establishing a route connection
 
-To establish a route connection:
+- To establish a route connection:
 
-1. Select a source, destination, and level.
+  1. Select a source, destination, and level.
 
-1. Click on the *Take* button.
+  1. Click the *Take* button.
 
-1. Once route is established, connected source will be visible on the designated destination and level(s).
+     Once the route is established, the connected source will be visible on the designated destination and level(s).
 
-<!--Add step-by-step instructions -->
+- To set up routes for all levels simultaneously, click the *All level Take* button.
 
-To set up routes for all levels simultaneously:
+- To access an overview of the established route connections, navigate to the *Routes* page.
 
-1. Click on the *All level Take* button.
+  ![*Routes* page](~/user-guide/images/Routes_page.png)
 
-<!--Add step-by-step instructions -->
+  The *Routes* table lists each destination level along with its corresponding source level.
 
-To access an overview of the established route connections, navigate to the *Routes* page.
-
-![*Routes* page](~/user-guide/images/Routes_page.png)
-
-The *Routes* table lists each destination level along with its corresponding source level.
-
-> [!NOTE]
-> Hover the mouse pointer over the table to access easy filtering.
->
-> ![Easy filtering](~/user-guide/images/Easy_Filtering.png)
+  > [!NOTE]
+  > Hover the mouse pointer over the table to access easy filtering.
+  >
+  > ![Easy filtering](~/user-guide/images/Easy_Filtering.png)
