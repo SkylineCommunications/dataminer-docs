@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 25 July 2024 - Enhancement - Orchestrator 1.6.1 - Dependencies updated & event handling improved [ID_40309]
+
+Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
+
 #### 30 April 2024 - Enhancement - Orchestrator 1.6.0 - Retries after failed DxM installation [ID_39519]
 
 The Orchestrator will now retry the installation of a DxM when the installation was interrupted.  

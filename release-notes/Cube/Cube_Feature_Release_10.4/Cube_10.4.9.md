@@ -66,6 +66,14 @@ Since the analytics trending features cannot be used for general parameters, fro
 
 Also, when a general parameter is being trended, it will no longer be possible to create a trend pattern for that parameter.
 
+#### Visual Overview: WPF Path markup parsing will now be culture invariant [ID_40094]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when you made a custom drawing by entering WPF Path markup in a shape data field of type *Path*, the decimal separator had to match the one that was set on the client computer.
+
+From now on, the WPF Path markup parsing will be culture invariant, accepting both "." and "," as decimal separator.
+
 #### System Center - Agents: BPA tests that have not been scheduled will now be displayed in a lighter font [ID_40113]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -117,6 +125,12 @@ When configuring alarm templates and trend templates, up to now, it would incorr
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When dynamic values were used in interface shapes that were child shapes on an element group, and those shapes did not have the *AllowCentralConnectivity* option enabled, in some cases, the DCF connections would incorrectly be drawn from the center of the shapes instead of their interfaces.
+
+#### Visual Overview: Linked session variable would incorrectly not update when the selection changed in a multiple checkbox control [ID_40035]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when you changed the selection in a multiple checkbox control, in some cases, the linked session variable would incorrectly not be updated, causing the control and the variable to get out of sync.
 
 #### Visual Overview: Problem with 'EnableLoading=False' option [ID_40065]
 
