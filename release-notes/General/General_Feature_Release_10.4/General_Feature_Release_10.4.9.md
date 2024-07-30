@@ -495,3 +495,9 @@ When a request was sent to a DataMiner Agent to retrieve resources filtered by p
 When the NATSMigration process called SLKill to stop the NATS service, up to now, SLKill would incorrectly also kill the NATSMigration process.
 
 From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".
+
+#### Certain processes could get restarted while DataMiner was being stopped [ID_40337]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.
