@@ -77,6 +77,14 @@ A number of enhancements have been made to prevent issues from occurring when a 
 
 When one user makes a change to a low-code app, all other users who are editing the same app will receive a notice saying that they should reload the app because changes were made. If a user ignores that notice and tries to make changes anyway, the header bar will show an error message saying that the edit has failed.
 
+#### Low-Code Apps: Header bar enhancements [ID_40077]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In the header bar of a low-code app, all app options (e.g. *Versions*, *Settings*, *Duplicate app*, etc.) have been moved from the user menu to a separate menu.
+
+In published and previewed apps, the *Edit* button will now always be displayed directly in the header bar. It will no longer be in a separate menu.
+
 #### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
