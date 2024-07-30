@@ -178,6 +178,12 @@ In the following cases, SLProtocol would leak memory:
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
 
+#### Problem with SLProtocol when elements with multiple connections were in slow poll mode [ID_40119]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, SLProtocol could stop working when elements with multiple connections were in slow poll mode.
+
 #### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
