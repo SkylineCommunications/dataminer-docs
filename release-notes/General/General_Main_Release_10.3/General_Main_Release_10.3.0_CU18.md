@@ -18,12 +18,6 @@ uid: General_Main_Release_10.3.0_CU18
 
 When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
 
-#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
-
-<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
-
-When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
-
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
