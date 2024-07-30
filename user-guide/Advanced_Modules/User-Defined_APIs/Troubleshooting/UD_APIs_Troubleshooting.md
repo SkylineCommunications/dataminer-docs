@@ -55,7 +55,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
   To fix this:
 
   1. Go to the .NET download page of the version matching your DxM version. and download the latest ASP.NET Core Runtime Hosting Bundle.
-      - You can find the matching version on the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint#version).
+      - You can find the matching version on the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint#versions).
 
   1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint X.X.X.X.msi`.
 
