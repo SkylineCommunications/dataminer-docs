@@ -84,6 +84,12 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID_40109]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, SLLogCollector will now use less CPU resources when you selected the *Include memory dump* option.
+
 #### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
