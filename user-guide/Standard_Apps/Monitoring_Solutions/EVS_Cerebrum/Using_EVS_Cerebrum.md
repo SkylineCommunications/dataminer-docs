@@ -32,7 +32,7 @@ To establish a route connection:
 
 1. Select a source, destination, and level.
 
-1. Select the *Take* button.
+1. Click on the *Take* button.
 
 1. Once route is established, connected source will be visible on the designated destination and level(s).
 
@@ -40,7 +40,7 @@ To establish a route connection:
 
 To set up routes for all levels simultaneously:
 
-1. Select the *All level Take* button.
+1. Click on the *All level Take* button.
 
 <!--Add step-by-step instructions -->
 
