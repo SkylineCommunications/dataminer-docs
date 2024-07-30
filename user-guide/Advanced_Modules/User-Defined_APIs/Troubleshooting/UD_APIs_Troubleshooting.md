@@ -50,12 +50,18 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Could not find AspNetCore installed on this system**
 
-  DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer can generate this error. Since .NET 8, DataMiner doesn't install .NET anymore.
+  DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer can generate this error. Since .NET 8, DataMiner no longer installs .NET automatically.
 
   To fix this:
 
-  1. Go to the .NET download page of the version matching your DxM version. and download the latest ASP.NET Core Runtime Hosting Bundle.
-      - You can find the matching version on the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint#versions).
+  1. Go to the [.NET download page](https://dotnet.microsoft.com/en-us/download/dotnet).
+
+  1. Click the name of the .NET version that matches your DxM version.
+
+     > [!NOTE]
+     > To find the .NET version that matches your DxM version, see [Versions](xref:UD_APIs_UserDefinableApiEndpoint#versions).
+
+  1. Under *ASP.NET Core Runtime x.x.x*, select *Hosting Bundle*.
 
   1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint X.X.X.X.msi`.
 
@@ -75,7 +81,16 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Service 'DataMiner UserDefinableApiEndpoint' failed to start. Verify that you have sufficient privileges to start system services.**
 
-  This is a generic message that can mean a lot of things. One of the issues that often trigger this is an incorrect installation of .NET. Make sure you installed the ASP.NET Core Runtime Hosting Bundle of the .NET version matching your DxM version, you can find the matching version on the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint#versions).
+  This is a generic error message that can have multiple causes, often related to incorrect .NET installation. Make sure you have installed the ASP.NET Core Runtime Hosting Bundle of the .NET version that matches your DxM version:
+
+  1. Go to the [.NET download page](https://dotnet.microsoft.com/en-us/download/dotnet).
+
+  1. Click the name of your preferred .NET version.
+
+  1. Under *ASP.NET Core Runtime x.x.x*, select *Hosting Bundle*.
+
+  > [!NOTE]
+  > To find the .NET version that matches your DxM version, see [Versions](xref:UD_APIs_UserDefinableApiEndpoint#versions).
 
 ## Issues when triggering user-defined APIs
 

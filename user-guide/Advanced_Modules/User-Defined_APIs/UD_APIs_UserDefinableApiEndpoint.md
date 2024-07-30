@@ -40,9 +40,8 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 
 > [!NOTE]
 >
-> - Versions that are not listed in the overview above were not released in official DataMiner upgrade packages.
-> - When installing .NET, make sure you always pick the ASP.NET Core Runtime Hosting bundle.
-> - Since .NET 8, DataMiner doesn't automatically install .NET anymore, you will have to do this manually. You can find the download on the [.NET 8 download page](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+> - Versions not listed above were not released in official DataMiner upgrade packages.
+> - As of .NET 8, DataMiner no longer installs .NET automatically. Manually install the [ASP.NET Core Runtime Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet) available for the .NET version that matches your DxM version.
 
 ## Consulting logging for the DxM
 
