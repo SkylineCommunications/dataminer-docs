@@ -95,11 +95,11 @@ A number of security enhancements have been made.
 
 Up to now, a *Time range* feed would always have a white background and take the full width of the dashboard or low-code app. From now on, it will automatically adapt its color scheme to the dashboard theme and adjust its width depending on the number of columns it has to show in its filter pane.
 
-#### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
+#### Web apps: Placeholders in empty text boxes will now be displayed more clearly [ID_40233]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In all DataMiner web applications, placeholders in text boxes will now be displayed more clearly, especially in dark mode.
+In all DataMiner web applications, placeholders in empty text boxes will now be displayed more clearly, especially when a dark theme is being used.
 
 #### Dashboards app: Improved positioning of WebSocket connection status indicator on shared dashboards [ID_40294]
 
