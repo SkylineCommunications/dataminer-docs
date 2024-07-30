@@ -30,9 +30,11 @@ The UI of the EVS Cerebrum app consists of five main components:
 
 To establish a route connection:
 
+1. Select a source, destination, and level.
+
 1. Select the *Take* button.
 
-1. Select a source, destination, and level.
+1. Once route is established, connected source will be visible on the designated destination and level(s).
 
 <!--Add step-by-step instructions -->
 
