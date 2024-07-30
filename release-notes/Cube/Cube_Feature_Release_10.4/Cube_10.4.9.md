@@ -164,3 +164,9 @@ When, on the same visual overview, multiple router control shapes were linked to
 When a *SetVar* shape on a pop-up window was configured to close that pop-up window (by means of a *ClosePage* or *AutoClosePopup* option on the parent shape), the popup would incorrectly not close unless *Control=Shape* had been added to the *SetVarOptions* data field.
 
 Also, when a popup was opened from a subshape of a *Children* shape, neither the *ClosePage* option nor the *AutoClosePopup* option would work.
+
+#### View card would incorrectly be empty when opened [ID_40302]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you opened a view card, in some cases, the card would incorrectly be empty.
