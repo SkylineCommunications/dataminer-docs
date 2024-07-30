@@ -24,7 +24,7 @@ The UI of the EVS Cerebrum app consists of five main components:
 
 **Destinations** (4): All destination mnemonics available in Cerebrum. Each destination button indicates the connected source, if applicable.
 
-**Buttons** (5): Contains two buttons (*Take* and *All Level Take*) that allow you to start the route connection setup.
+**Route connection buttons** (5): Contains two buttons (*Take* and *All Level Take*) that allow you to start the route connection setup.
 
 ## Establishing a route connection
 
@@ -34,10 +34,21 @@ To establish a route connection:
 
 1. Select a source, destination, and level.
 
-<!--Add step-by-step instructions once app is available -->
+<!--Add step-by-step instructions -->
 
 To set up routes for all levels simultaneously:
 
 1. Select the *All level Take* button.
 
-<!--Add step-by-step instructions once app is available -->
+<!--Add step-by-step instructions -->
+
+To access an overview of the established route connections, navigate to the *Routes* page.
+
+![*Routes* page](~/user-guide/images/Routes_page.png)
+
+The *Routes* table lists each destination level along with its corresponding source level.
+
+> [!NOTE]
+> Hover the mouse pointer over the table to access easy filtering.
+>
+> ![Easy filtering](~/user-guide/images/Easy_Filtering.png)
