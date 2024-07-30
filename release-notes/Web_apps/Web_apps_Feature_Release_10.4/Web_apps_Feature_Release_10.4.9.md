@@ -226,3 +226,9 @@ when you generated a PDF report based on a dashboard, in some cases, Table and S
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a low-code app was created while a page was being added to another low-code app, in some cases, the web API could get into a deadlock, causing all low-code apps to become unresponsive.
+
+#### Dashboards app & Low-Code Apps - Table component: Loading bar would incorrectly be displayed behind the data in the first table row [ID_40325]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, when data was being loading into a table component, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
