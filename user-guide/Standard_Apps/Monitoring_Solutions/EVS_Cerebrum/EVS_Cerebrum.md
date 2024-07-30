@@ -11,3 +11,6 @@ DataMiner typically acts as a top-level orchestration platform in projects, mana
 For event preparation, DataMiner establishes connectivity by setting crosspoints between pre-reserved resources, such as pre-configuring feeds for fiber contribution jobs in the MCR. Crosspoint commands are sent to Cerebrum for this purpose.
 
 To set these crosspoints easily and intuitively, the EVS Cerebrum application enables you to select the router level, source, and destination to establish a route connection.
+
+> [!TIP]
+> See also: [EVS Cerebrum - use case](https://community.dataminer.services/use-case/evs-cerebrum-2/)
