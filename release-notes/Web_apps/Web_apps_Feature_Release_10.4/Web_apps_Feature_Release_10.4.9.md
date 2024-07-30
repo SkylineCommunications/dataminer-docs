@@ -231,4 +231,4 @@ When a low-code app was created while a page was being added to another low-code
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, when data was being loading into a table component, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
+When data was being loading into a table component of which the appearance of a column had been customized, the "Loading" bar would incorrectly be displayed behind the data in the first table row.

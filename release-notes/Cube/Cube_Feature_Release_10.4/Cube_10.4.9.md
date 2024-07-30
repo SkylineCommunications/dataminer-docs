@@ -170,3 +170,15 @@ Also, when a popup was opened from a subshape of a *Children* shape, neither the
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When you opened a view card, in some cases, the card would incorrectly be empty.
+
+#### Alarm Console - Hyperlinks.xml: Hyperlink of type 'openservice' would not show all affected services [ID_40318]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the *Hyperlinks.xml* file, you had configured a hyperlink that showed the services affected by an alarm in an Alarm Console column (see the example below), that column would incorrectly contain only one service affected by the alarm, even when multiple services were affected.
+
+Example of a hyperlink that shows the services affected by an alarm in an Alarm Console column:
+
+```xml
+<HyperLink id="4" version="2" menu="root" name="Open Service" type="openservice" combineParameters="true" alarmColumn="True">[SID]</HyperLink>
+```
