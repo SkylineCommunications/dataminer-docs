@@ -10,7 +10,7 @@ You can configure this by adding a shape data field of type **AlarmSummary** to 
 
 | Shape data field | Value syntax                                                                          |
 |------------------|---------------------------------------------------------------------------------------|
-| AlarmSummary     | type\|sharedfiltername\|ApplyLinkedViewServiceOrElementFilter\|Alarm\|FilterContext=X |
+| AlarmSummary     | ```texttype\|sharedfiltername\|ApplyLinkedViewServiceOrElementFilter\|Alarm\|FilterContext=X``` |
 
 The *FilterContext* option will allow you to link the shape to an EPM object by using one of the following options (supported from DataMiner 10.3.0/10.2.3 onwards):
 
@@ -24,3 +24,6 @@ Example:
 
 > [!TIP]
 > For more detailed information, see [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter).
+
+Live system example:
+![image](https://github.com/user-attachments/assets/3c6d3910-8042-4141-8d00-8fa5b689b92b)
