@@ -164,3 +164,21 @@ When, on the same visual overview, multiple router control shapes were linked to
 When a *SetVar* shape on a pop-up window was configured to close that pop-up window (by means of a *ClosePage* or *AutoClosePopup* option on the parent shape), the popup would incorrectly not close unless *Control=Shape* had been added to the *SetVarOptions* data field.
 
 Also, when a popup was opened from a subshape of a *Children* shape, neither the *ClosePage* option nor the *AutoClosePopup* option would work.
+
+#### View card would incorrectly be empty when opened [ID_40302]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you opened a view card, in some cases, the card would incorrectly be empty.
+
+#### Alarm Console - Hyperlinks.xml: Hyperlink of type 'openservice' would not show all affected services [ID_40318]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the *Hyperlinks.xml* file, you had configured a hyperlink that showed the services affected by an alarm in an Alarm Console column (see the example below), that column would incorrectly contain only one service affected by the alarm, even when multiple services were affected.
+
+Example of a hyperlink that shows the services affected by an alarm in an Alarm Console column:
+
+```xml
+<HyperLink id="4" version="2" menu="root" name="Open Service" type="openservice" combineParameters="true" alarmColumn="True">[SID]</HyperLink>
+```

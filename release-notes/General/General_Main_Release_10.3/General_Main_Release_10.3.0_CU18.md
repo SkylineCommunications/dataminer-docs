@@ -18,12 +18,6 @@ uid: General_Main_Release_10.3.0_CU18
 
 When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
 
-#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
-
-<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
-
-When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
-
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
@@ -63,6 +57,12 @@ When booking objects are added to, updated in or deleted from the cache, from no
 Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file, assuming that it would always be executed from the *C:\\Skyline DataMiner\\Files* folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
+
+#### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID_40109]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, SLLogCollector will now use less CPU resources when you selected the *Include memory dump* option.
 
 #### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
 
@@ -178,6 +178,12 @@ In the following cases, SLProtocol would leak memory:
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
 
+#### Problem with SLProtocol when elements with multiple connections were in slow poll mode [ID_40119]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, SLProtocol could stop working when elements with multiple connections were in slow poll mode.
+
 #### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -185,3 +191,9 @@ When a database issue occurred while DataMiner was starting up, in some cases, b
 Up to now, SLProtocol would stop working when it loaded a connector containing parameters with IDs that exceeded the boundaries (see [Reserved parameter IDs](xref:ReservedIDsParameters)).
 
 From now on, SLProtocol will no longer stop working when loading such a connector. However, if any parameters are found with IDs that exceed the boundaries, they will not be loaded.
+
+#### Certain processes could get restarted while DataMiner was being stopped [ID_40337]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.

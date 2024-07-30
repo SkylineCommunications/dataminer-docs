@@ -77,6 +77,14 @@ A number of enhancements have been made to prevent issues from occurring when a 
 
 When one user makes a change to a low-code app, all other users who are editing the same app will receive a notice saying that they should reload the app because changes were made. If a user ignores that notice and tries to make changes anyway, the header bar will show an error message saying that the edit has failed.
 
+#### Low-Code Apps: Header bar enhancements [ID_40077]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In the header bar of a low-code app, all app options (e.g. *Versions*, *Settings*, *Duplicate app*, etc.) have been moved from the user menu to a separate menu.
+
+In published and previewed apps, the *Edit* button will now always be displayed directly in the header bar. It will no longer be in a separate menu.
+
 #### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -95,11 +103,11 @@ A number of security enhancements have been made.
 
 Up to now, a *Time range* feed would always have a white background and take the full width of the dashboard or low-code app. From now on, it will automatically adapt its color scheme to the dashboard theme and adjust its width depending on the number of columns it has to show in its filter pane.
 
-#### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
+#### Web apps: Placeholders in empty text boxes will now be displayed more clearly [ID_40233]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In all DataMiner web applications, placeholders in text boxes will now be displayed more clearly, especially in dark mode.
+In all DataMiner web applications, placeholders in empty text boxes will now be displayed more clearly, especially when a dark theme is being used.
 
 #### Dashboards app: Improved positioning of WebSocket connection status indicator on shared dashboards [ID_40294]
 
@@ -218,3 +226,9 @@ when you generated a PDF report based on a dashboard, in some cases, Table and S
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a low-code app was created while a page was being added to another low-code app, in some cases, the web API could get into a deadlock, causing all low-code apps to become unresponsive.
+
+#### Dashboards app & Low-Code Apps - Table component: Loading bar would incorrectly be displayed behind the data in the first table row [ID_40325]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When data was being loading into a table component of which the appearance of a column had been customized, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
