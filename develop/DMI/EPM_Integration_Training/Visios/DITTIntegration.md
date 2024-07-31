@@ -12,14 +12,9 @@ Example:
 
 ![DITT integration example](~/develop/images/EPM_DITT_integration.png)
 
-
 The following shape data fields are used in this example:
 
-- **Execute**: Defines the variables that will be passed to DITT to perform the desired command. A code snippet is below, also you can refer to this page for more details (See [Configuring a page to execute a script](xref:Configuring_a_page_to_execute_a_script_automatically).)
-
-  ```text
-  Script:DITT Controller||UserSession=[cardVar:_Guid];OperationType=Ping;OperationArguments=[param:[cardvar:_partitionElement],2002,[cardvar:_field]];UserName=[thisusername];HostingDma=[cardVar:_DmaId]||Click to Ping Device|NoConfirmation
-  ```
+- **Execute**: Defines the variables that will be passed to DITT to perform the desired command. (See [Configuring a page to execute a script](xref:Configuring_a_page_to_execute_a_script_automatically).)
 
 - **Element**: Indicates the element that the visual overview is used for. (See [Linking a shape to an element](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group).)
 
