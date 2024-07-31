@@ -25,5 +25,6 @@ Example:
 > [!TIP]
 > For more detailed information, see [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter).
 
-Live system example:
-![image](https://github.com/user-attachments/assets/3c6d3910-8042-4141-8d00-8fa5b689b92b)
+Example of a live system:
+
+![Live system](~/develop/images/Filtering_alarms.png)
