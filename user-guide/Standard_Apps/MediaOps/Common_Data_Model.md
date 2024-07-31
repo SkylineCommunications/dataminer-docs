@@ -1635,6 +1635,13 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Mandatory</td>
 		</tr>
 		<tr>
+			<td>Profile Image</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Contact info</td>
 		</tr>
 		<tr>
@@ -1771,6 +1778,13 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
+			<td>Icon</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource Pool</td>
 		</tr>
 		<tr>
@@ -1876,6 +1890,13 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>i.e. Software Company, Social Media, Production Studio, etc...</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Icon</td>
+			<td>String</td>
+			<td>The relative qualified path to this organization's icon. This is a backend field descriptor/</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
 		</tr>
 		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Contracts</td>
@@ -3144,21 +3165,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Relationship</td>
 			<td>Guid</td>
-			<td></td>
+			<td>Relationship type to which this instance is linked</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Booking Action</td>
 			<td>GenericEnum`1</td>
-			<td></td>
+			<td>Action taken when node is added to a job</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Delete Action</td>
 			<td>GenericEnum`1</td>
-			<td></td>
+			<td>Action taken when node is removed from a job</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -3168,21 +3189,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Replace Action</td>
 			<td>GenericEnum`1</td>
-			<td></td>
+			<td>Action taken when node is replaced from a job</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Execute Pool Links</td>
 			<td>Boolean</td>
-			<td></td>
+			<td>Defines if pool links needs to be applied (if available) during a replace action</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Execute Booking Extension Script</td>
 			<td>Boolean</td>
-			<td></td>
+			<td>Defines if booking extension scripts needs to get executed (if available) during a replace action</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
