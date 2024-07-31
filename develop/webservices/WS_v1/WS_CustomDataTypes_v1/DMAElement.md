@@ -26,6 +26,7 @@ uid: DMAElement
 | IsDerived | Boolean | Whether the element is a derived element. |
 | IsMonitored | Boolean | Whether an alarm template has been assigned to the element. |
 | HasTrendTemplate | Boolean | Whether a trend template has been assigned to the element. |
+| HasVisio | Boolean | Whether a Visio file has been linked to the element. |
 | HideParameters | Boolean | Only used for CPE elements. If the “CPEOnly” option is used in the element protocol, *HideParameters* will be true, indicating that only the CPE UI should be displayed in the client, and not the Data Display pages. However, clients can ignore this property if necessary, as it is still possible to retrieve parameters with the web APIs even when *HideParameters* is true. |
 | Type | String | “Element”, “Service” or “Redundancy Group”. |
 | PollingIP | String | The polling IP of the element. |
