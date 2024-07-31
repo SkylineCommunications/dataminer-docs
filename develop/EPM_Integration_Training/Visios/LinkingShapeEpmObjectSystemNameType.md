@@ -10,9 +10,9 @@ You can configure this by adding the **SystemType** and **SystemName** shape dat
 
 For example:
 
-![image](https://github.com/user-attachments/assets/9fc4b1cc-0355-45d3-a0fe-654545a41d98)
+![Shape example with placeholder](~/develop/images/EPM_link_shape_to_object_shape.png)
 
-![image](https://github.com/user-attachments/assets/bc31c668-67a6-4a12-b446-b133342e9a76)
+![Shape data configuration example](~/develop/images/EPM_link_shape_to_object_field.png)
 
 > [!NOTE]
 > In the example above, `[field]` is the name of the EPM object. This makes it dynamic within an EPM environment.
@@ -20,6 +20,6 @@ For example:
 > [!TIP]
 > For more detailed information, see [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object).
 
+Example of a live system:
 
-Example of Live system:
-![image](https://github.com/user-attachments/assets/70cb9ff5-0f35-42cf-954e-800e82829b76)
+![Example live system](~/develop/images/Linking_Shape_to_EPM_Object.png)
