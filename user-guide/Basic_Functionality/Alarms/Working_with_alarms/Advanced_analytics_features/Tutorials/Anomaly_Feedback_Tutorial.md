@@ -4,16 +4,17 @@ uid: Anomaly_Feedback_Tutorial
 
 # Improving anomaly detection using feedback
 
-DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) automatically detects when a parameter in your system is behaving in an unexpected way. It does this by modeling the behavior of a parameter based on its recent history, and generating a suggestion event or alarm when the behavior of the parameter deviates significantly from that model. However, in some cases, DataMiner may not work optimally out of the box and, for example, it may generate an anomaly too quickly.
+DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) automatically detects when a parameter in your system is behaving in an unexpected way. It does this by modeling the behavior of the parameter based on its recent history, and generating a suggestion event or alarm when that behavior deviates significantly from that model. However, in some cases, DataMiner may not work optimally out of the box and it may, for example, generate an anomaly too quickly.
 In this tutorial we will learn how to improve the detection of new anomalies by providing feedback on detected anomalies.
 
-This tutorial does not require any prior knowledge of anomaly detection in DataMiner. However, if you want to learn more about its basic features and how to configure alarming based on detected anomalies, we recommend you to complete the tutorial [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial).
+This tutorial does not require any prior knowledge of anomaly detection in DataMiner. However, if you want to learn more about its basic features and how to configure alarming based on anomalies, we recommend you to complete the tutorial [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial).
 
-By default, behavioral anomaly detection is enabled for on trended parameters. As in the tutorial [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial) we will use [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to simulate parameters with historical trend data. The parameters used in this tutorial have trending enabled by default.
+By default, behavioral anomaly detection is enabled on trended parameters. As in the tutorial [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial) we will use [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to simulate parameters with historical trend data. The parameters used in this tutorial have trending enabled by default.
 
 Estimated duration: 25 minutes
 
 TODO: let someone else estimate too
+
 TODO: probably also refer to some docs page on feedback?
 
 ## Prerequisites
@@ -42,7 +43,7 @@ This tutorial consists of the following steps:
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create several DataMiner elements on your system that will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Feedback Tutorial*.
+   This will create several DataMiner elements on your system that will be used throughout the rest of this tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Feedback Tutorial*.
 
 ## Step 2: Getting rid of unwanted anomalies
 
@@ -71,7 +72,7 @@ In this step, we will give negative feedback on unwanted level shift anomalies o
 
 1. Give negative feedback to the level shift anomaly by hovering over the suggestion event in the *Anomalies* tab, and pressing the thumbs down icon on the right hand side of the alarm console.
 
-   Anomaly detection will learn from this feedback and will be less likely to trigger similar anomalies in the future, both on the same parameter instance, on other instances of the parameter in the same table, or on another element using the same protocol.
+   Anomaly detection will learn from this feedback and will be less likely to trigger similar anomalies in the future, both on the same parameter instance, on other instances of the parameter in the same table, and on other elements using the same protocol.
 
    ![Giving negative feedback to the level shift anomaly](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_negative_feedback.gif)
 
@@ -101,7 +102,7 @@ In the previous step, we used only negative feedback to get rid of certain anoma
 
 1. Select the element *Anomaly Feedback Tutorial - Average Download Bit Rate* in the Surveyor.
 
-   This element simulates parameters monitoring the average download bit rate in a terrestrial network per sector (i.e. per town or neighborhood). This bit rate can fluctuate over time, depending on whether several households or companies are generating heavy traffic, but if there is a significant sudden drop, it may be an indication of an outage.
+   This element simulates parameters monitoring the average download bit rate in a terrestrial network per sector (i.e. per town or neighborhood). This bit rate can fluctuate over time, depending on whether connected households or companies are generating heavy traffic, or not. If there is a significant sudden drop however, it may be an indication of an outage.
 
 1. Generate data for a network sector by clicking the *Generate Data* button.
 
@@ -156,7 +157,7 @@ In the previous step, we used only negative feedback to get rid of certain anoma
 
 ## Step 4: Use suggested improvements for alarm templates
 
-As we mentioned earlier, a light bulb icon can appear next to the thumbs up and thumbs down icons you give feedback. This light bulb can suggest certain follow-up actions that might make sense based on your feedback. For example, in [Step 2](#step-2-getting-rid-of-unwanted-anomalies) we used it to clear a suggestion event. In this step we will use it to configure an alarm template for anomalies. This will allow us to get a similar result as in [Step 3](#step-3-fine-tune-anomaly-detection), while requiring less feedback and providing more control over the process.
+As we mentioned earlier, a light bulb icon can appear next to the thumbs up and thumbs down icons after you give feedback. This light bulb proposes certain follow-up actions that might make sense based on your feedback. For example, in [Step 2](#step-2-getting-rid-of-unwanted-anomalies) we used it to clear a suggestion event. In this step we will use it to configure an alarm template for anomalies. This will allow us to get a similar result as in [Step 3](#step-3-fine-tune-anomaly-detection), while requiring less feedback and providing you with more control over the process.
 
 1. Select the element *Anomaly Feedback Tutorial - Task Manager* in the Surveyor.
 
@@ -190,7 +191,7 @@ As we mentioned earlier, a light bulb icon can appear next to the thumbs up and 
 
 1. Open the trend graph for the memory usage of *Java Runtime*.
 
-   Notice that also here, the data ends with a jump up, but a much smaller one. However, DataMiner still detects it as an anomaly, and since we enabled alarming in the previous step, a critical alarm is generated.
+   Notice that also here, the data ends with a jump up, but a much smaller one. However, DataMiner still detects it as an anomaly. Moreover, since we enabled alarming in the previous step, a critical alarm is generated.
 
    ![Memory usage of Java Runtime with relatively small jump at the end](~/user-guide/images/Memory_Usage_Java_Runtime_Trend_Graph.png)
 
@@ -219,7 +220,6 @@ As we mentioned earlier, a light bulb icon can appear next to the thumbs up and 
    Note that this time, alarming based on a relative threshold of 40% is proposed. This threshold means that anomaly alarms will be generated whenever the relative size of the jump with respect to the starting value is greater than 40%. A relative threshold is chosen over an absolute threshold here because an absolute threshold cannot satisfy both our negative feedback on this last jump and the negative feedback on the slightly smaller jump for the *Google Chrome* process. However, alarming on a relative threshold can satisfy both, since the jump for *Google Chrome* was large relative to the value at the start of the jump, while the jumps for *Java Runtime* and *Microsoft Visual Studio* were small relative to their start values.
 
    ![Popup suggesting to set a relative threshold for level increases](~/user-guide/images/Memory_Usage_Visual_Studio_Template_Improvement.gif)
-TODO: maybe make these gifs again, since there is still 'Other elements using the same alarm range: Task manager on there
 
    > [!TIP]
    > Click the clock icon next to the line on *level increases* to compare the proposed configuration with the currently active configuration.
