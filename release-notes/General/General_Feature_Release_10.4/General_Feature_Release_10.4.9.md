@@ -336,6 +336,12 @@ For detailed information about the changes included in those versions, refer to 
 
 Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
+
 #### DataMiner Object Models: Exception thrown when trying to use unsupported field types will now include the full type name [ID_40339]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
@@ -344,11 +350,24 @@ The exception that is thrown when an attempt is made to serialize a DOM instance
 
 Example of the former exception:
 
-`System.NotSupportedException: This type of ValueWrapper is not supported (ValueWrapper`1)`
+```txt
+System.NotSupportedException: This type of ValueWrapper is not supported (ValueWrapper`1)
+```
 
 Example of the new exception:
 
-`System.NotSupportedException: This type of ValueWrapper is not supported (Skyline.DataMiner.Net.Sections.ValueWrapper`1[[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomInstanceId, SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12]])`
+```txt
+System.NotSupportedException: This type of ValueWrapper is not supported (Skyline.DataMiner.Net.Sections.ValueWrapper`1[[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomInstanceId, SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12]])
+```
+
+#### SLNetClientTest - DataMiner Object Models: DOM instance overview now shows DOM definition names [ID_40341]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+In the SLNetClientTest tool, you can go to *Advanced > Apps > DataMiner Object Model...* to get a list of all DOM modules. When you drill down to get a list of all DOM objects in a particular module, the first tab shows a subset of the recently updated DOM instances including their ID, their name, and some additional metadata. This view will now have an extra column containing the name of the DOM definitions to which the instances are linked.
+
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ### Fixes
 

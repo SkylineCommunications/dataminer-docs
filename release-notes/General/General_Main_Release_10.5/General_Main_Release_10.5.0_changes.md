@@ -708,6 +708,12 @@ BPA tests can now be marked "upgrade only". That way, tests marked as such can b
 
 Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
