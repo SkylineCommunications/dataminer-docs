@@ -165,6 +165,12 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 
 When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
 
+#### Monitoring app - Visual Overview: Pop-up window would incorrectly not open when navigating from another card page [ID_40140]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the Monitoring app, you navigated from a card page to a visual overview page, and then tried to open a pop-up window, that pop-up window would incorrectly not open.
+
 #### Web API would throw a 'Compatibility Manager not initialized yet' error [ID_40148]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -232,6 +238,14 @@ When a low-code app was created while a page was being added to another low-code
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When data was being loading into a table component of which the appearance of a column had been customized, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
+
+#### Dashboards app: State components would not be rendered correctly when generating a PDF report [ID_40327]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you shared a dashboard as a PDF report, *State* components would not be rendered correctly when you had not selected the *Stack components* option.
+
+Also, when you shared a dashboard as a PDF report, component templates containing text boxes would not be rendered correctly.
 
 #### Web API: Problem with client logging due to errors being serialized to invalid JSON [ID_40352]
 
