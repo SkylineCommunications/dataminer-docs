@@ -10,19 +10,21 @@ To display data from an EPM element in a visual overview on an EPM object card, 
 
 The *cardvar* will provide a static variable for the visual overview, which will prevent it from doing a lookup on the placeholder every time.
 
-Code snippet example:
-```text
+![cardVar variable example](~/develop/images/EPM_cardVar_with_element_info.png)
+
+In the example above:
+
+```txt
 InitVar = _field:
 ```
-```text
+
+```txt
 Execute = [sep:-$]SET|CardVariable|_field|[Field]|SetTrigger=ValueChanged
 ```
 
-![cardVar variable example](~/develop/images/EPM_cardVar_with_element_info.png)
+Example of a live system:
 
-Live system example:
-![image](https://github.com/user-attachments/assets/dd612a1d-14ee-43cb-8908-7888e669cc0b)
-
+![Live system](~/develop/images/Cardvar_Placeholder_Live_System_Example.png)
 
 ## Use a DMA ID/element ID column in the EPM Object table to retrieve data from remote elements
 
@@ -34,19 +36,20 @@ The card variable should be set using the *Execute* shape data field. In the val
 
 For example, this will create an empty card variable named "_partitionElement":
 
-```text
+```txt
 InitVar = _field:|_partitionElement:|_epmFe:[this element]
 ```
-```text
+
+```txt
 Execute = _partitionElement|[param:[cardVar:_epmFe],2509,[cardVar:_field]]|SetTrigger=ValueChanged
 ```
+
+Example of a live system:
+
+![Live system](~/develop/images/Retrieve_Data_from_Remote_Elements_Live_System_Example.png)
 
 > [!TIP]
 > See also:
 >
 > - [Initializing a session variable](xref:Initializing_a_session_variable).
 > - [Configuring a page to update a session variable](xref:Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes)
-
-Live system example:
-![image](https://github.com/user-attachments/assets/ebdc0080-a798-4d15-b9aa-6010df134f1c)
-
