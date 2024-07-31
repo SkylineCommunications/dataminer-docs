@@ -4,14 +4,16 @@ uid: GetServiceDefinition
 
 # GetServiceDefinition
 
-Use this method to retrieve a specific service definition. Available from DataMiner 10.0.2 onwards.
+Use this method to retrieve a specific service definition.
+
+Available from DataMiner 10.0.2 onwards.
 
 ## Input
 
-| Item                | Format | Description                                                                          |
-|---------------------|--------|--------------------------------------------------------------------------------------|
+| Item                | Format | Description                                               |
+|---------------------|--------|-----------------------------------------------------------|
 | connection          | String | The connection string. See [ConnectApp](xref:ConnectApp). |
-| serviceDefinitionID | String | The ID of the service definition.                                                    |
+| serviceDefinitionID | String | The ID of the service definition.                         |
 
 ## Output
 

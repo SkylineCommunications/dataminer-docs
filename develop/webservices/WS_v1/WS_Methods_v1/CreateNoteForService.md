@@ -19,4 +19,4 @@ Use this method to create a note for a specific service.
 
 | Item                        | Format  | Description         |
 |-----------------------------|---------|---------------------|
-| CreateNoteForServiceResult | Integer | The ID of the note. |
+| CreateNoteForServiceResult  | Integer | The ID of the note. |

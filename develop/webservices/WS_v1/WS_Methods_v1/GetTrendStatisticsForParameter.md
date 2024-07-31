@@ -4,7 +4,9 @@ uid: GetTrendStatisticsForParameter
 
 # GetTrendStatisticsForParameter
 
-Use this method to retrieve the trend statistics for a specified parameter. Available from DataMiner 9.5.8 onwards.
+Use this method to retrieve the trend statistics for a specified parameter.
+
+Available from DataMiner 9.5.8 onwards.
 
 ## Input
 
@@ -24,4 +26,9 @@ Use this method to retrieve the trend statistics for a specified parameter. Avai
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendStatisticsForParameterResponse | Array | The parameter name and element name, the unit used for the parameter, and the minimum, average and maximum trend values. |
+| ParameterName  | String | The name of the parameter. |
+| ElementName    | String | The name of the element. |
+| Unit           | String | The parameter unit. |
+| DisplayMinimum | String | The minimum value. |
+| DisplayAverage | String | The average value. |
+| DisplayMaximum | String | The maximum value. |

@@ -4,7 +4,9 @@ uid: GetJobsSectionDefinitions
 
 # GetJobsSectionDefinitions
 
-Use this method to retrieve all job section definitions. Can only be used in case there is only one job domain. Otherwise, use [GetJobsSectionDefinitionsV2](xref:GetJobsSectionDefinitionsV2).
+Use this method to retrieve all job section definitions.
+
+Can only be used in case there is only one job domain. Otherwise, use [GetJobsSectionDefinitionsV2](xref:GetJobsSectionDefinitionsV2).
 
 ## Input
 

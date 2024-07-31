@@ -15,6 +15,6 @@ None.
 
 ## Output
 
-| Item                             | Format           | Description                                    |
-|----------------------------------|------------------|------------------------------------------------|
+| Item                            | Format           | Description                                    |
+|---------------------------------|------------------|------------------------------------------------|
 | GetDataMinerProviderThemeResult | [DMAProviderTheme](xref:DMAProviderTheme) | The provider’s theme and branding information. |

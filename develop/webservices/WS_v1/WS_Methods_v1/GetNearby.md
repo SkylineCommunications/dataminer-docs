@@ -8,12 +8,12 @@ Use this method to retrieve all the nearby elements and services based on latitu
 
 ## Input
 
-| Item       | Format | Description                                                                      |
-|------------|--------|----------------------------------------------------------------------------------|
+| Item       | Format | Description                                           |
+|------------|--------|-------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| latitude   | Double | Latitude.                                                                        |
-| longitude  | Double | Longitude.                                                                       |
-| accuracy   | Double | Accuracy (in meters).                                                            |
+| latitude   | Double | Latitude.                                             |
+| longitude  | Double | Longitude.                                            |
+| accuracy   | Double | Accuracy (in meters).                                 |
 
 ## Output
 

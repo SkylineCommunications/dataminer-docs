@@ -15,6 +15,6 @@ Use this method to retrieve the current alarm state of a view.
 
 ## Output
 
-| Item                        | Format | Description                                    |
-|-----------------------------|--------|------------------------------------------------|
+| Item                       | Format | Description                                    |
+|----------------------------|--------|------------------------------------------------|
 | GetAlarmStateForViewResult | String | The current alarm state of the specified view. |

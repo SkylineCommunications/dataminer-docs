@@ -4,7 +4,9 @@ uid: GetTrendStatisticsForService
 
 # GetTrendStatisticsForService
 
-Use this method to retrieve the trend statistics for a specified service. Available from DataMiner 9.5.8 onwards.
+Use this method to retrieve the trend statistics for a specified service.
+
+Available from DataMiner 9.5.8 onwards.
 
 ## Input
 
@@ -23,4 +25,4 @@ Use this method to retrieve the trend statistics for a specified service. Availa
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendStatisticsForServiceResponse | Array of DMATrendDataStatisticsService | A list of the parameters that have trending enabled within the specified service, with their trend statistics. |
+| GetTrendStatisticsForServiceResult | Array of [DMATrendDataStatisticsService](xref:DMATrendDataStatisticsService) | A list of the parameters that have trending enabled within the specified service, with their trend statistics. |

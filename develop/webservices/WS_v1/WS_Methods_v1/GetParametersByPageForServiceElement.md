@@ -8,14 +8,14 @@ Use this method to retrieve the data of all the parameters on a particular Data 
 
 ## Input
 
-| Item         | Format  | Description                                                                      |
-|--------------|---------|----------------------------------------------------------------------------------|
+| Item         | Format  | Description                                           |
+|--------------|---------|-------------------------------------------------------|
 | connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| serviceDmaID | Integer | The DataMiner Agent ID that is linked to the service.                            |
-| serviceID    | Integer | The service ID.                                                                  |
-| elementDmaID | Integer | The DataMiner Agent ID that is linked to the element.                            |
-| elementID    | Integer | The element ID.                                                                  |
-| pageName     | String  | The name of the element page.                                                    |
+| serviceDmaID | Integer | The DataMiner Agent ID that is linked to the service. |
+| serviceID    | Integer | The service ID.                                       |
+| elementDmaID | Integer | The DataMiner Agent ID that is linked to the element. |
+| elementID    | Integer | The element ID.                                       |
+| pageName     | String  | The name of the element page.                         |
 
 ## Output
 

@@ -10,7 +10,7 @@ Use this method to retrieve the data of a particular parameter.
 
 | Item        | Format  | Description                                                                                                 |
 |-------------|---------|-------------------------------------------------------------------------------------------------------------|
-| connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
+| connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                                                       |
 | dmaID       | Integer | The DataMiner Agent ID.                                                                                     |
 | elementID   | Integer | The element ID.                                                                                             |
 | parameterID | Integer | The parameter ID.                                                                                           |
@@ -18,6 +18,6 @@ Use this method to retrieve the data of a particular parameter.
 
 ## Output
 
-| Item               | Format                                                   | Description                          |
-|--------------------|----------------------------------------------------------|--------------------------------------|
+| Item               | Format                            | Description                          |
+|--------------------|-----------------------------------|--------------------------------------|
 | GetParameterResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter. |
