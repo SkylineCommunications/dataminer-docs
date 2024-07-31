@@ -239,6 +239,14 @@ When a low-code app was created while a page was being added to another low-code
 
 When data was being loading into a table component of which the appearance of a column had been customized, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
 
+#### Dashboards app: State components would not be rendered correctly when generating a PDF report [ID_40327]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you shared a dashboard as a PDF report, *State* components would not be rendered correctly when you had not selected the *Stack components* option.
+
+Also, when you shared a dashboard as a PDF report, component templates containing text boxes would not be rendered correctly.
+
 #### Web API: Problem with client logging due to errors being serialized to invalid JSON [ID_40352]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
