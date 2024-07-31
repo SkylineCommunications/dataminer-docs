@@ -182,12 +182,6 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
-#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
-
-<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
-
-When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
-
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -290,6 +284,12 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
+#### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID_40109]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, SLLogCollector will now use less CPU resources when you selected the *Include memory dump* option.
+
 #### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -303,6 +303,14 @@ The DataMiner Agent that was offline when you started the decommission process w
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
+
+#### MySQL.data.dll downgraded to version 8.0.32 to prevent known MySQL issue [ID_40200]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In order to prevent the following known MySQL issue from occurring, the *Mysql.Data.dll* driver has been downgraded to version 8.0.32.
+
+- [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
 
 #### Security enhancements [ID_40229]
 
@@ -454,6 +462,20 @@ In the following cases, SLProtocol would leak memory:
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
 
+#### Problem with SLProtocol when elements with multiple connections were in slow poll mode [ID_40119]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, SLProtocol could stop working when elements with multiple connections were in slow poll mode.
+
+#### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, SLProtocol would stop working when it loaded a connector containing parameters with IDs that exceeded the boundaries (see [Reserved parameter IDs](xref:ReservedIDsParameters)).
+
+From now on, SLProtocol will no longer stop working when loading such a connector. However, if any parameters are found with IDs that exceed the boundaries, they will not be loaded.
+
 #### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
@@ -473,3 +495,15 @@ When a request was sent to a DataMiner Agent to retrieve resources filtered by p
 When the NATSMigration process called SLKill to stop the NATS service, up to now, SLKill would incorrectly also kill the NATSMigration process.
 
 From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".
+
+#### GQI: Data returned by multiple queries for the same user would incorrectly get mixed [ID_40293]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When multiple GQI queries were run for the same user, using the same data source, and with real-time updates enabled, in some cases, the data returned by those queries would incorrectly get mixed.
+
+#### Certain processes could get restarted while DataMiner was being stopped [ID_40337]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.

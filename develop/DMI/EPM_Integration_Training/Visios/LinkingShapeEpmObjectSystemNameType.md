@@ -19,3 +19,7 @@ For example:
 
 > [!TIP]
 > For more detailed information, see [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object).
+
+Example of a live system:
+
+![Example live system](~/develop/images/Linking_Shape_to_EPM_Object.png)

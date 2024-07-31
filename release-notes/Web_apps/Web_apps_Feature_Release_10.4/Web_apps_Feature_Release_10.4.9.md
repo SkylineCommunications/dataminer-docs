@@ -77,6 +77,14 @@ A number of enhancements have been made to prevent issues from occurring when a 
 
 When one user makes a change to a low-code app, all other users who are editing the same app will receive a notice saying that they should reload the app because changes were made. If a user ignores that notice and tries to make changes anyway, the header bar will show an error message saying that the edit has failed.
 
+#### Low-Code Apps: Header bar enhancements [ID_40077]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In the header bar of a low-code app, all app options (e.g. *Versions*, *Settings*, *Duplicate app*, etc.) have been moved from the user menu to a separate menu.
+
+In published and previewed apps, the *Edit* button will now always be displayed directly in the header bar. It will no longer be in a separate menu.
+
 #### Dashboards app & Low-Code Apps: Enhanced performance when loading dashboards, pages and panels that contain trend graphs [ID_40079]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -95,11 +103,17 @@ A number of security enhancements have been made.
 
 Up to now, a *Time range* feed would always have a white background and take the full width of the dashboard or low-code app. From now on, it will automatically adapt its color scheme to the dashboard theme and adjust its width depending on the number of columns it has to show in its filter pane.
 
-#### Web apps: Placeholders in text boxes will now be displayed more clearly [ID_40233]
+#### Web apps: Placeholders in empty text boxes will now be displayed more clearly [ID_40233]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In all DataMiner web applications, placeholders in text boxes will now be displayed more clearly, especially in dark mode.
+In all DataMiner web applications, placeholders in empty text boxes will now be displayed more clearly, especially when a dark theme is being used.
+
+#### Dashboards app: Improved positioning of WebSocket connection status indicator on shared dashboards [ID_40294]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+On shared dashboards, the position of the WebSocket connection status indicator in the top-right corner of the screen has been improved.
 
 ### Fixes
 
@@ -150,6 +164,12 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
+
+#### Monitoring app - Visual Overview: Pop-up window would incorrectly not open when navigating from another card page [ID_40140]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the Monitoring app, you navigated from a card page to a visual overview page, and then tried to open a pop-up window, that pop-up window would incorrectly not open.
 
 #### Web API would throw a 'Compatibility Manager not initialized yet' error [ID_40148]
 
@@ -212,3 +232,29 @@ when you generated a PDF report based on a dashboard, in some cases, Table and S
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 When a low-code app was created while a page was being added to another low-code app, in some cases, the web API could get into a deadlock, causing all low-code apps to become unresponsive.
+
+#### Dashboards app & Low-Code Apps - Table component: Loading bar would incorrectly be displayed behind the data in the first table row [ID_40325]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When data was being loading into a table component of which the appearance of a column had been customized, the "Loading" bar would incorrectly be displayed behind the data in the first table row.
+
+#### Dashboards app: State components would not be rendered correctly when generating a PDF report [ID_40327]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When you shared a dashboard as a PDF report, *State* components would not be rendered correctly when you had not selected the *Stack components* option.
+
+Also, when you shared a dashboard as a PDF report, component templates containing text boxes would not be rendered correctly.
+
+#### Web API: Problem with client logging due to errors being serialized to invalid JSON [ID_40352]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When an app threw an error, that error would be serialized to invalid JSON. As a result, it would get added to the client logs in invalid JSON format.
+
+#### Dashboards app & Low-Code Apps: Parameter subscriptions would not be closed due to a memory leak in the State component [ID_40360]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+Due to a memory leak in the *State* component, parameter subscriptions would incorrectly not be closed.

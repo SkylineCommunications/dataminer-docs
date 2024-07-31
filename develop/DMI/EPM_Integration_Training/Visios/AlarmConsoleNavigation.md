@@ -10,7 +10,7 @@ When a shape is used to [filter alarms based on System Name and/or type](xref:Fi
 
 | Shape data field | Value syntax       |
 |------------------|--------------------|
-| AlarmTab         | Name=MyFilteredTab |
+| AlarmTab         | `Name=MyFilteredTab` |
 
 Example:
 
@@ -18,3 +18,7 @@ Example:
 
 > [!TIP]
 > For more detailed information, see [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter).
+
+Example of a live system:
+
+![Live system](~/develop/images/Linking_shape_to_filtered_alarm_tab.png)
