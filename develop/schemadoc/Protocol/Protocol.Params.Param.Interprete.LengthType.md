@@ -67,7 +67,7 @@ The parameter has a variable length, which depends on the next (fixed-length) pa
 If the expected response will contain a number with a length up to 5 digits, followed by a point, you can define two parameters:
 
 - A first one with a LengthType equal to “next param” to catch the number, and
-- A second one with a LengthType equal to “fixed” to catch to point.
+- A second one with a LengthType equal to “fixed” to catch the point.
 
 ### other param
 
