@@ -112,6 +112,20 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### DataMiner Object Models: Exception thrown when trying to use unsupported field types will now include the full type name [ID_40339]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+The exception that is thrown when an attempt is made to serialize a DOM instance containing unsupported value types will now include the full type name. The text of the exception will now indicate more clearly which type is not supported.
+
+Example of the former exception:
+
+`System.NotSupportedException: This type of ValueWrapper is not supported (ValueWrapper`1)`
+
+Example of the new exception:
+
+`System.NotSupportedException: This type of ValueWrapper is not supported (Skyline.DataMiner.Net.Sections.ValueWrapper`1[[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomInstanceId, SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12]])`
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
