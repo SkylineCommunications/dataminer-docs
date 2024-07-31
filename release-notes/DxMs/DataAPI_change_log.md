@@ -11,7 +11,7 @@ uid: DataAPI_change_log
 
 The ability to debug two running instances of the DxM to test inter-DxM communication has been added.
 
-### 30 July - Fix - DataAPI 1.2.2 - Ensuring case-insensitive handling push and config requests [ID_40100]
+### 30 July - Fix - DataAPI 1.2.2 - Case-insensitive handling of push and config requests [ID_40100]
 
 Previously, when data was sent to *DataAPI*, the field names in the request body were modified according to title case rules during connector setup. If subsequent requests did not use the same casing, this could lead to mismatches, causing the request to fail. This update ensures that the request fields are now case-insensitive.
 
