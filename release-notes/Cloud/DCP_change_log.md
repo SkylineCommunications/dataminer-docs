@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 26 July 2024 - Enhancement - Admin - Formatting of large operation numbers in metric table
+#### 26 July 2024 - Enhancement - Admin - Formatting of large operation numbers in metric table [ID_40377]
 
 Numbers in the usage table are now formatted with K, M, or B suffixes to improve readability.
 
