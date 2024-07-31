@@ -165,6 +165,12 @@ When you link dataminer objects to rows in an ad hoc data source or when you con
 
 When a time range feed component fed a time range to another time range feed component, in some cases, it would pass along a reversed time range.
 
+#### Monitoring app - Visual Overview: Pop-up window would incorrectly not open when navigating from another card page [ID_40140]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the Monitoring app, you navigated from a card page to a visual overview page, and then tried to open a pop-up window, that pop-up window would incorrectly not open.
+
 #### Web API would throw a 'Compatibility Manager not initialized yet' error [ID_40148]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
