@@ -10,16 +10,15 @@ When a shape is used to [filter alarms based on System Name and/or type](xref:Fi
 
 | Shape data field | Value syntax       |
 |------------------|--------------------|
-| AlarmTab         | ```text Name=MyFilteredTab``` |
+| AlarmTab         | `Name=MyFilteredTab` |
 
 Example:
 
-![image](https://github.com/user-attachments/assets/d0962a8e-6c93-4468-acf0-038a6fac52f7)
-
+![AlarmTab configuration example](~/develop/images/EPM_alarm_console_navigation_example.png)
 
 > [!TIP]
 > For more detailed information, see [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter).
 
-Live system example:
-![image](https://github.com/user-attachments/assets/43d16a91-a3af-4bce-b943-cc79d4cd3b74)
+Example of a live system:
 
+![Live system](~/develop/images/Linking_shape_to_filtered_alarm_tab.png)
