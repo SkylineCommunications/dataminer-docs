@@ -16,6 +16,12 @@ The following shape data fields are used in this example:
 
 - **Execute**: Defines the variables that will be passed to DITT to perform the desired command. (See [Configuring a page to execute a script](xref:Configuring_a_page_to_execute_a_script_automatically).)
 
+  In the example above:
+
+  ```text
+  Script:DITT Controller||UserSession=[cardVar:_Guid];OperationType=Ping;OperationArguments=[param:[cardvar:_partitionElement],2002,[cardvar:_field]];UserName=[thisusername];HostingDma=[cardVar:_DmaId]||Click to Ping Device|NoConfirmation
+  ```
+
 - **Element**: Indicates the element that the visual overview is used for. (See [Linking a shape to an element](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group).)
 
 - **VdxPage**: This is used to open a pop-up window to show the results of the command. (See [Making a shape display a particular page](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing).)
