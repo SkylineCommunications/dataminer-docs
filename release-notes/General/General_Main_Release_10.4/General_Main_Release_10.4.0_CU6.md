@@ -256,6 +256,18 @@ When the NATSMigration process called SLKill to stop the NATS service, up to now
 
 From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".
 
+#### Video thumbnail of type 'Generic Images' would not be reloaded [ID_40328]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When no proxy was used to show a video thumbnail of type *Generic Images*, in some cases, the specified image would incorrectly not be reloaded at the configured refresh rate.
+
+Example:
+
+```html
+http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&refresh=5000&proxy=false
+```
+
 #### Certain processes could get restarted while DataMiner was being stopped [ID_40337]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
