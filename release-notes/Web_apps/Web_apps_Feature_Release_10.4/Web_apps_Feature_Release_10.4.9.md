@@ -258,3 +258,9 @@ When an app threw an error, that error would be serialized to invalid JSON. As a
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 Due to a memory leak in the *State* component, parameter subscriptions would incorrectly not be closed.
+
+#### Dashboards app & Low-Code Apps - Query filter feed: Icon of 'Toggle free form'/'Toggle checklist' button would not match its label [ID_40367]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+In a *Query filter feed* component, next to columns containing discrete values of type string or number, you can find a button that allows you to change how the possible values are displayed when you hover your mouse over it. This button will have a label that reads either *Toggle free form* or *Toggle checklist*. Up now on, the button's icon would not match the button's label.
