@@ -33,6 +33,14 @@ An enhancement has been made to the remote access settings in the Admin app, whi
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
+#### 26 July 2024 - Enhancement - Admin - Formatting of large operation numbers in metric table [ID_40377]
+
+Numbers in the usage table are now formatted with K, M, or B suffixes to improve readability.
+
+#### 26 July 2024 - Enhancement - Catalog - Show documentation for all types [ID_40190]
+
+Users can now view documentation for all items, if provided.
+
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
