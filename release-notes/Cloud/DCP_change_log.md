@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 1 August 2024 - Fix - Admin - Formatting of numbers under a thousand having a K suffix [ID 40383]
+
+Smaller numbers will no longer be formatted with suffixes to improve readability. Previously, navigating to the usage page in Admin you could find numbers under the operation column to be formatted with the K suffix which would result in 0.x K formatting.
+
 #### 1 August 2024 - Enhancement - New remote access setting to restrict remote Cube access based on IP addresses [ID_40288]
 
 An enhancement has been made to the remote access settings in the Admin app, which allows you to restrict remote Cube access per DMS based on specified public IP addresses.
