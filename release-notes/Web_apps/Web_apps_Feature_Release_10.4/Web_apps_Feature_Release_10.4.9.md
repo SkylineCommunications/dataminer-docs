@@ -91,9 +91,10 @@ In published and previewed apps, the *Edit* button will now always be displayed 
 
 Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
 
-#### Security enhancements [ID_40210]
+#### Security enhancements [ID_40210] [ID_40290]
 
 <!-- 40210: MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+<!-- 40290: MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 
