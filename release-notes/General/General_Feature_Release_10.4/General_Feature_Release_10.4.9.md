@@ -558,3 +558,14 @@ http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.
+
+#### SLLogCollector would incorrectly report a null reference exception when a DataMiner Agent did not have Failover configured [ID_40376]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39526 -->
+
+Up to now, SLLogCollector would incorrectly report the following null reference exception when a DataMiner Agent did not have Failover configured:
+
+```txt
+ERROR - Object reference not set to an instance of an object.   at LogCollectorWPF.Helper.DataMiner.DataMinerHelper.get_FailoverHostname()
+```
