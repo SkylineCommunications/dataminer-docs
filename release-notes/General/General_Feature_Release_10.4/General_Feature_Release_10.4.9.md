@@ -298,6 +298,12 @@ When you decommission a Failover setup, from now on, the DataMiner Agent that wa
 
 The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
 
+#### DataMiner startup: Listening for incoming traps will now delayed until SLNet is fully initialized [ID_40162]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, listening for incoming traps would start once SLSNMPManager was up and running. In order to reduce the time it takes for DataMiner to start up, listening for incoming traps will now be delayed until SLNet is fully initialized. As a result, SLNet will only be requested to distribute traps once all DataMiner modules are loaded.
+
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

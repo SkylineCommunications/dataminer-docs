@@ -696,6 +696,12 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
+#### DataMiner startup: Listening for incoming traps will now delayed until SLNet is fully initialized [ID_40162]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, listening for incoming traps would start once SLSNMPManager was up and running. In order to reduce the time it takes for DataMiner to start up, listening for incoming traps will now be delayed until SLNet is fully initialized. As a result, SLNet will only be requested to distribute traps once all DataMiner modules are loaded.
+
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
