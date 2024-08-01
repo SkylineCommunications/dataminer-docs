@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.4.9
 
 #### Table sizes will now be limited [ID_39836]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Table sizes will now be limited to protect DataMiner against ever-growing tables in elements.
 
