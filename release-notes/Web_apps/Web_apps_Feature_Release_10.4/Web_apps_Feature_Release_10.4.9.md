@@ -259,6 +259,12 @@ When an app threw an error, that error would be serialized to invalid JSON. As a
 
 Due to a memory leak in the *State* component, parameter subscriptions would incorrectly not be closed.
 
+#### Monitoring app: 'Connection has been interrupted' message would not disappear when the connection was restored [ID_40364]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When the Monitoring app is connected to a DaaS system, a "Connection has been interrupted" message will appear when the connection is lost. Up to now, when you reloaded the app, the "Connection has been interrupted" message would incorrectly not disappear when the connection was restored.
+
 #### Dashboards app & Low-Code Apps - Query filter feed: Icon of 'Toggle free form'/'Toggle checklist' button would not match its label [ID_40367]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
