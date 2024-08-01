@@ -13,9 +13,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 On the details page, "contributors" have now been renamed "owners".
 
-#### 1 August 2024 - Fix - Catalog - Filters set on the list page would incorrectly be reset when returning from a details page [ID_40332]
+#### 1 August 2024 - Fix - Catalog - Filters set on the browse page would incorrectly be reset when returning from a details page [ID_40332]
 
-Up to now, when you had set filters in the list page and then went to a details page, the filters would incorrectly get reset when you returned to the list page. From now on, all filters will be restored when you return to the list page.
+Up to now, when you had set filters in the browse page and then went to a details page, the filters would incorrectly get reset when you returned to the browse page. From now on, all filters will be restored when you return to the browse page.
 
 #### 1 August 2024 - Fix - Cloud apps - White page was displayed when using an old browser [ID_40347]
 
