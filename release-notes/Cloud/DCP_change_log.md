@@ -9,6 +9,31 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 1 August 2024 - Enhancement - Catalog - Contributors have been renamed owners [ID_40378]
+
+On the details page, "contributors" have now been renamed "owners".
+
+#### 1 August 2024 - Fix - Catalog - Filters set on the browse page would incorrectly be reset when returning from a details page [ID_40332]
+
+Up to now, when you had set filters in the browse page and then went to a details page, the filters would incorrectly get reset when you returned to the browse page. From now on, all filters will be restored when you return to the browse page.
+
+#### 1 August 2024 - Fix - Cloud apps - White page was displayed when using an old browser [ID_40347]
+
+When you were using an old browser (e.g. Microsoft Internet Explorer), a white page would be displayed due to JavaScript not loading correctly.
+
+From now on, a notice will appear, saying that your browser is no longer supported and that you should use a newer one.
+
+#### 1 August 2024 - Fix - Admin - Formatting of numbers under a thousand having a K suffix [ID 40383]
+
+Smaller numbers will no longer be formatted with suffixes to improve readability. Previously, navigating to the usage page in Admin you could find numbers under the operation column to be formatted with the K suffix which would result in 0.x K formatting.
+
+#### 1 August 2024 - Enhancement - New remote access setting to restrict remote Cube access based on IP addresses [ID_40288]
+
+An enhancement has been made to the remote access settings in the Admin app, which allows you to restrict remote Cube access per DMS based on specified public IP addresses.
+
+> [!TIP]
+> See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
+
 #### 26 July 2024 - Enhancement - Admin - Formatting of large operation numbers in metric table [ID_40377]
 
 Numbers in the usage table are now formatted with K, M, or B suffixes to improve readability.
