@@ -9,6 +9,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 1 August 2024 - Enhancement - Catalog - Renamed contributors section to owners [ID_40378]
+
+All references to contributors have been renamed owners on the catalog details page
+
+#### 1 August 2024 - Fix - Catalog - Filters are not restored on browse page opening browse page [ID_40332]
+
+When users start from the browse page and set some filters these will now be restored if they come back from a details page; before all the filters would be reset.
+
+#### 1 August 2024 - Fix - Cloud apps - Unsuported page is never shown [ID_40347]
+
+When a user is using an old browser (e.g. IE) a white page would be displayed due to the JS not loading in correctly.
+This has been resolved so the user now sees that his/her browser is no longer supported and should use a newer one.
+
 #### 1 August 2024 - Fix - Admin - Formatting of numbers under a thousand having a K suffix [ID 40383]
 
 Smaller numbers will no longer be formatted with suffixes to improve readability. Previously, navigating to the usage page in Admin you could find numbers under the operation column to be formatted with the K suffix which would result in 0.x K formatting.
