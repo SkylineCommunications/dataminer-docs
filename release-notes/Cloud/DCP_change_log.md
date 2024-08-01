@@ -9,18 +9,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 1 August 2024 - Enhancement - Catalog - Renamed contributors section to owners [ID_40378]
+#### 1 August 2024 - Enhancement - Catalog - Contributors have been renamed owners [ID_40378]
 
-All references to contributors have been renamed owners on the catalog details page
+On the details page, "contributors" have now been renamed "owners".
 
-#### 1 August 2024 - Fix - Catalog - Filters are not restored on browse page opening browse page [ID_40332]
+#### 1 August 2024 - Fix - Catalog - Filters set on the list page would incorrectly be reset when returning from a details page [ID_40332]
 
-When users start from the browse page and set some filters these will now be restored if they come back from a details page; before all the filters would be reset.
+Up to now, when you had set filters in the list page and then went to a details page, the filters would incorrectly get reset when you returned to the list page. From now on, all filters will be restored when you return to the list page.
 
-#### 1 August 2024 - Fix - Cloud apps - Unsuported page is never shown [ID_40347]
+#### 1 August 2024 - Fix - Cloud apps - White page was displayed when using an old browser [ID_40347]
 
-When a user is using an old browser (e.g. IE) a white page would be displayed due to the JS not loading in correctly.
-This has been resolved so the user now sees that his/her browser is no longer supported and should use a newer one.
+When you were using an old browser (e.g. Microsoft Internet Explorer), a white page would be displayed due to JavaScript not loading correctly.
+
+From now on, a notice will appear, saying that your browser is no longer supported and that you should use a newer one.
 
 #### 1 August 2024 - Fix - Admin - Formatting of numbers under a thousand having a K suffix [ID 40383]
 
