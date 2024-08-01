@@ -361,15 +361,20 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
 
    > [!IMPORTANT]
    > The user and password provided should be defined in the `\etc\opensearch\opensearch-security\internal_users.yml` file.
-1. After installing certs, Check MMC to make sure the RootCA is correctly installed.
-   > Open Run in your machine.
-   > Open MMC on the Run window.
-   > If you have an empty Console Root folder, do the following:
-      a. Add or Remove Snap-ins
-      b. Add Certificates
-      c. Select Computer Account
-      d. Local Computer
-   > Look for the Root.ca inside the Trusted Root Certification Authorities folder.
+
+1. Check Microsoft Management Console (MMC) to make sure the root certificate was installed correctly.
+
+   1. Press Win+R to open the *Run* dialog box.
+   1. Type "mmc" and click *OK* or press Enter.
+   1. If the Console Root folder is empty, do the following:
+
+      1. From the *File* menu, select *Add/Remove Snap-in...*.
+      1. From the *Available snap-ins* list, choose *Certificates*, and click *Add*.
+      1. In the *Certificates snap-in* window, select *Computer account*, and click *Next*.
+      1. In the *Select Computer* window, leave *Local computer* selected, and click *Finish*.
+
+   1. Go to the *Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates* folder, and make sure it contains the root certificate.
+
 1. Test Connection from Dataminer Servers to New Opensearch cluster using browser - https://[CLUSTERNODEIP]:9200/_cat/nodes?v
 
 1. Restart the DataMiner Agent.
