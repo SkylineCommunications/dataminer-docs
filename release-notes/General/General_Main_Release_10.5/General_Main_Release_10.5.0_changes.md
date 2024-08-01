@@ -494,6 +494,12 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
+#### User-defined APIs: ApiToken and ApiDefinition objects will now be cached [ID_39701]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
+
 #### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -684,6 +690,12 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
+
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -695,6 +707,12 @@ BPA tests can now be marked "upgrade only". That way, tests marked as such can b
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
+
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
 
 ### Fixes
 

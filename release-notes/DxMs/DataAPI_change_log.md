@@ -7,6 +7,14 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 30 July - Enhancement - DataAPI 1.2.2 - Dual instance for debugging [ID_40192]
+
+The ability to debug two running instances of the DxM to test inter-DxM communication has been added.
+
+### 30 July - Fix - DataAPI 1.2.2 - Case-insensitive handling of push and config requests [ID_40100]
+
+Previously, when data was sent to *DataAPI*, the field names in the request body were modified according to title case rules during connector setup. If subsequent requests did not use the same casing, this could lead to mismatches, causing the request to fail. This update ensures that the request fields are now case-insensitive.
+
 ### 1 July - Enhancement - DataAPI 1.2.1 - Extra protections added to not use parameter IDs outside allowed ranges [ID_39860]
 
 Protections have been added in the DataAPI DxM so that no IDs can be used outside of the allowed range (10M to 11M).

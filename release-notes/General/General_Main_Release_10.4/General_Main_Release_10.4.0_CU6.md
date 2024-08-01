@@ -26,11 +26,66 @@ Also, error handling when loading virtual elements has been improved.
 
 When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
 
-#### SLDataGateway will start up earlier in the DataMiner startup process [ID_39842]
+#### Table sizes will now be limited [ID_39836]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When DataMiner starts up, from now on, SLDataGateway will start up earlier in the startup process.
+Table sizes will now be limited to protect DataMiner against ever-growing tables in elements.
+
+> [!NOTE]
+> These limits do not apply to logger tables, partial tables, and general parameter tables.
+
+##### Row count limit for non-partial tables
+
+If a table reaches 85000 rows:
+
+- A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
+
+If a table reaches 105000 rows:
+
+- The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
+- An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
+- The following entry will be added to the log file of the element:
+
+  `Table [<table description> [table id]]: Reached maximum number of rows, adding new rows is not allowed. Current number of rows [<row count>]`
+
+If the row count of a table drops:
+
+- If the row count of a table drops below 100000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
+- If the row count of a table drops below 80000, both the notice alarm and the notice alarm banner will be removed.
+
+##### Alarms for volatile tables with RTDisplay set to false
+
+If a table reaches 805000 rows:
+
+- A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
+
+if a table reaches 1005000 rows:
+
+- The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
+- An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
+- The following entry will be added to the log file of the element:
+
+  `Table [<table description> [table id]]: Reached maximum number of rows, adding new rows is not allowed. Current number of rows [<row count>]`
+
+If the row count of a table drops:
+
+- If the row count of a table drops below 1000000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
+- If the row count of a table drops below 800000, both the notice alarm and the notice alarm banner will be removed.
+
+##### Format of alarms and banner messages
+
+The notice alarm and banner message will have the following format:
+
+`Table [<table description> [table id]] on page [<page name>] contains over [80K or 800K] rows. While there is no operational impact now, no more rows will be added once the table contains over [100K or 1000K] rows.`
+
+The error alarm and banner message will have the following format:
+
+`Table [<table description> [table id]] on page [<page name>] contains over [100K or 1000K] rows. No more rows will be added to this table until the number of rows drops below [100K or 1000K].`
+
+When multiple tables generate an alarm for the same element, the banner will display the following message:
+
+`Multiple tables have exceeded the row limit. Please check the alarms.`
 
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID_39871]
 
@@ -84,6 +139,12 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID_40109]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, SLLogCollector will now use less CPU resources when you selected the *Include memory dump* option.
+
 #### Failover: Online agent will be restarted at the end of the decommissioning process [ID_40161]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -91,6 +152,20 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 When you decommission a Failover setup, from now on, the DataMiner Agent that was online when you started the decommission process will be restarted as soon as the decommission process has finished.
 
 The DataMiner Agent that was offline when you started the decommission process will, as before, be reset by the factory reset tool *SLReset.exe*.
+
+#### DataMiner startup: Listening for incoming traps will now delayed until SLNet is fully initialized [ID_40162]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, listening for incoming traps would start once SLSNMPManager was up and running. In order to reduce the time it takes for DataMiner to start up, listening for incoming traps will now be delayed until SLNet is fully initialized. As a result, SLNet will only be requested to distribute traps once all DataMiner modules are loaded.
+
+#### MySQL.data.dll downgraded to version 8.0.32 to prevent known MySQL issue [ID_40200]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In order to prevent the following known MySQL issue from occurring, the *Mysql.Data.dll* driver has been downgraded to version 8.0.32.
+
+- [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
 
 #### DxMs upgraded [ID_40231] [ID_40254]
 
@@ -103,6 +178,33 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner SupportAssistant: version 1.6.10
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### DataMiner Object Models: Exception thrown when trying to use unsupported field types will now include the full type name [ID_40339]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+The exception that is thrown when an attempt is made to serialize a DOM instance containing unsupported value types will now include the full type name. The text of the exception will now indicate more clearly which type is not supported.
+
+Example of the former exception:
+
+```txt
+System.NotSupportedException: This type of ValueWrapper is not supported (ValueWrapper`1)
+```
+
+Example of the new exception:
+
+```txt
+System.NotSupportedException: This type of ValueWrapper is not supported (Skyline.DataMiner.Net.Sections.ValueWrapper`1[[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomInstanceId, SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12]])
+```
+
+#### SLNetClientTest - DataMiner Object Models: DOM instance overview now shows DOM definition names [ID_40341]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+In the SLNetClientTest tool, you can go to *Advanced > Apps > DataMiner Object Model...* to get a list of all DOM modules. When you drill down to get a list of all DOM objects in a particular module, the first tab shows a subset of the recently updated DOM instances including their ID, their name, and some additional metadata. This view will now have an extra column containing the name of the DOM definitions to which the instances are linked.
+
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ### Fixes
 
@@ -214,6 +316,20 @@ In the following cases, SLProtocol would leak memory:
 
 When a database issue occurred while DataMiner was starting up, in some cases, booking events could be triggered multiple times.
 
+#### Problem with SLProtocol when elements with multiple connections were in slow poll mode [ID_40119]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, SLProtocol could stop working when elements with multiple connections were in slow poll mode.
+
+#### Problem with SLProtocol when loading a connector with forbidden parameter IDs [ID_40127]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, SLProtocol would stop working when it loaded a connector containing parameters with IDs that exceeded the boundaries (see [Reserved parameter IDs](xref:ReservedIDsParameters)).
+
+From now on, SLProtocol will no longer stop working when loading such a connector. However, if any parameters are found with IDs that exceed the boundaries, they will not be loaded.
+
 #### SLAnalytics - Behavioral anomaly detection: Change points would incorrectly be generated after an SLAnalytics process restart [ID_40156]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
@@ -233,3 +349,27 @@ When a request was sent to a DataMiner Agent to retrieve resources filtered by p
 When the NATSMigration process called SLKill to stop the NATS service, up to now, SLKill would incorrectly also kill the NATSMigration process.
 
 From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".
+
+#### GQI: Data returned by multiple queries for the same user would incorrectly get mixed [ID_40293]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When multiple GQI queries were run for the same user, using the same data source, and with real-time updates enabled, in some cases, the data returned by those queries would incorrectly get mixed.
+
+#### Video thumbnail of type 'Generic Images' would not be reloaded [ID_40328]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When no proxy was used to show a video thumbnail of type *Generic Images*, in some cases, the specified image would incorrectly not be reloaded at the configured refresh rate.
+
+Example:
+
+```html
+http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&refresh=5000&proxy=false
+```
+
+#### Certain processes could get restarted while DataMiner was being stopped [ID_40337]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.
