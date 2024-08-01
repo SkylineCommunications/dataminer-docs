@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.9
 
 ### Enhancements
 
+#### Security enhancements [ID_39585]
+
+<!-- 39585: MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+A number of security enhancements have been made.
+
 #### Visual Overview: Enhanced performance when loading AlarmSummary shapes [ID_39593]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
