@@ -116,6 +116,15 @@ In all DataMiner web applications, placeholders in empty text boxes will now be 
 
 On shared dashboards, the position of the WebSocket connection status indicator in the top-right corner of the screen has been improved.
 
+#### Dashboards app & Low-Code Apps: Number of GQI queries is now limited [ID_40370]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, the number of GQI queries that can be added to a dashboard or a low-code app will be limited.
+
+- A dashboard can contain a maximum of 30 GQI queries.
+- A low-code app can contain a maximum of 200 GQI queries.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive Automation script [ID_39862]
