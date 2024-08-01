@@ -531,7 +531,7 @@ From now on, SLKill will no longer kill the NATSMigration process when it is ask
 
 #### GQI: Data returned by multiple queries for the same user would incorrectly get mixed [ID_40293]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
 When multiple GQI queries were run for the same user, using the same data source, and with real-time updates enabled, in some cases, the data returned by those queries would incorrectly get mixed.
 

@@ -283,6 +283,12 @@ When the NATSMigration process called SLKill to stop the NATS service, up to now
 
 From now on, SLKill will no longer kill the NATSMigration process when it is asked to kill all processes of which the name starts with "NATS".
 
+#### GQI: Data returned by multiple queries for the same user would incorrectly get mixed [ID_40293]
+
+<!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
+
+When multiple GQI queries were run for the same user, using the same data source, and with real-time updates enabled, in some cases, the data returned by those queries would incorrectly get mixed.
+
 #### Video thumbnail of type 'Generic Images' would not be reloaded [ID_40328]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->

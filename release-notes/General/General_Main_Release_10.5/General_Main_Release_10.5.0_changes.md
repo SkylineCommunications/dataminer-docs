@@ -875,9 +875,3 @@ From now on, the *Connect to cloud/DCP* user permission is no longer required to
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.
-
-#### GQI: Data returned by multiple queries for the same user would incorrectly get mixed [ID_40293]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-When multiple GQI queries were run for the same user, using the same data source, and with real-time updates enabled, in some cases, the data returned by those queries would incorrectly get mixed.
