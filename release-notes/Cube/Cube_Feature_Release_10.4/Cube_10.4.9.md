@@ -188,3 +188,9 @@ Example of a hyperlink that shows the services affected by an alarm in an Alarm 
 ```xml
 <HyperLink id="4" version="2" menu="root" name="Open Service" type="openservice" combineParameters="true" alarmColumn="True">[SID]</HyperLink>
 ```
+
+#### Problem when clicking too close to a threshold line in a spectrum graph [ID_40365]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+When you wanted to zoom, pan or right-click a spectrum graph, but you clicked too close to a threshold line, the mouse events would incorrectly not work.
