@@ -408,7 +408,7 @@ Because of a number of enhancements, from now on, less storage space will be nee
 From now on, all Cassandra driver logging will be stored in the *SLCassandraDriver.txt* file.
 
 > [!NOTE]
-> The logging of the SQLite driver, which is used when offloading data to file, will now be stored in the *SQLiteDriver.txt* file.
+> The logging of the SQLite driver, which is used when offloading data to file, will now be stored in the *SLSQLiteDriver.txt* file.
 
 #### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
 

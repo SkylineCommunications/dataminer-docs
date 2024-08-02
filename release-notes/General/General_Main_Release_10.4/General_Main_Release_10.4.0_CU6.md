@@ -186,7 +186,7 @@ For detailed information about the changes included in those versions, refer to 
 From now on, all Cassandra driver logging will be stored in the *SLCassandraDriver.txt* file.
 
 > [!NOTE]
-> The logging of the SQLite driver, which is used when offloading data to file, will now be stored in the *SQLiteDriver.txt* file.
+> The logging of the SQLite driver, which is used when offloading data to file, will now be stored in the *SLSQLiteDriver.txt* file.
 
 #### DataMiner Object Models: Exception thrown when trying to use unsupported field types will now include the full type name [ID_40339]
 
