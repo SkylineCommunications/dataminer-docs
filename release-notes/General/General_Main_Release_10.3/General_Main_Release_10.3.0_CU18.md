@@ -147,6 +147,12 @@ In order to prevent the following known MySQL issue from occurring, the *Mysql.D
 
 - [Bug #110789 - OpenAsync throws unhandled exception from thread pool](https://bugs.mysql.com/bug.php?id=110789)
 
+#### Enhanced CPU usage when storing table rows in EPM environments [ID_40380]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, less CPU resources will now be used when storing table rows in EPM environments.
+
 ### Fixes
 
 #### Alarms generated for an element with a virtual function would incorrectly get exported to that virtual function [ID_39536]

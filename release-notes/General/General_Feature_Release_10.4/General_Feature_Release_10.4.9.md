@@ -434,6 +434,12 @@ In the SLNetClientTest tool, you can go to *Advanced > Apps > DataMiner Object M
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Enhanced CPU usage when storing table rows in EPM environments [ID_40380]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Because of a number of enhancements, less CPU resources will now be used when storing table rows in EPM environments.
+
 ### Fixes
 
 #### Problem with SLElement while processing table parameter updates [ID_39462]
