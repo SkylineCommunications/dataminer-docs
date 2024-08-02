@@ -91,6 +91,14 @@ In published and previewed apps, the *Edit* button will now always be displayed 
 
 Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
 
+#### Review of all interactive Automation script components to make sure they fully inherit the correct theme [ID_40092]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+As from DataMiner version 10.4.4, when an interactive Automation script is launched from a web app, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched.
+
+All interactive Automation scripts components have now been reviewed to make sure they fully inherit the correct theme.
+
 #### Security enhancements [ID_40210] [ID_40290]
 
 <!-- 40210: MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
