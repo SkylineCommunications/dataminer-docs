@@ -401,6 +401,15 @@ For detailed information about the changes included in those versions, refer to 
 
 Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
 
+#### All Cassandra driver logging will now be stored in the SLCassandraDriver.txt file [ID_40268]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+From now on, all Cassandra driver logging will be stored in the *SLCassandraDriver.txt* file.
+
+> [!NOTE]
+> The logging of the SQLite driver, which is used when offloading data to file, will now be stored in the *SQLiteDriver.txt* file.
+
 #### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
