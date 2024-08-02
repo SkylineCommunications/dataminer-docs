@@ -343,6 +343,12 @@ From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMi
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
+#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID_40104]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+
 #### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID_40109]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
@@ -625,6 +631,21 @@ Example:
 
 ```html
 http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&refresh=5000&proxy=false
+```
+
+#### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When the user's SLNet connection was lost, the GQI session of a query with realtime updates enabled would incorrectly persist, potentially causing both an unhandled exception to be thrown when GQI tried to send an update to the user and SLHelper to crash.
+
+Also, *GenIfAggregateException* messages would not be serialized correctly, causing the following exception to be added to the SLHelperWrapper log file:
+
+```txt
+2024/07/25 15:25:35.636|SLNet.exe|SendMessage|ERR|0|264|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Runtime.Serialization.SerializationException: Member 'InnerExceptions' was not found.
+   at System.Runtime.Serialization.SerializationInfo.GetElement(String name, Type& foundType)
+   at System.Runtime.Serialization.SerializationInfo.GetValue(String name, Type type)
+   at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
 ```
 
 #### Certain processes could get restarted while DataMiner was being stopped [ID_40337]

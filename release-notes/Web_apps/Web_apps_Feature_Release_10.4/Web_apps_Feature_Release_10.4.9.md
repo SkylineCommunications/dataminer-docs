@@ -299,6 +299,6 @@ In a *Query filter feed* component, next to columns containing discrete values o
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in the sidebar, you hovered the mouse pointer over a long dashboard name, the list of available dashboards would shift.
+When, in the sidebar, you hovered the mouse pointer over an ellipsed long dashboard name, the full name would be displayed on two lines, causing the entire list to shift.
 
-From now on, in the sidebar, long dashboard names will automatically be ellipsed, and when you hover the mouse pointer over an ellipsed name, the full name will be shown in a tooltip.
+From now on, when you hover the mouse pointer over an ellipsed long dashboard name, the full name will be shown in a tooltip instead.

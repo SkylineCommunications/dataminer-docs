@@ -139,6 +139,12 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
 
+#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID_40104]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+
 #### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID_40109]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
