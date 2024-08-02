@@ -149,6 +149,12 @@ The page and shape option `EnableLoading=False` would no longer work when shapes
 > - The `VisioLoadTimeMetric` SPI will now report on all shapes, regardless of whether they show their loading state or not.
 > - From now on, the `EnableLoading` option is case insensitive.
 
+#### Redundancy group editor would incorrectly allow saving a redundancy group containing script actions with empty dummies [ID_40068]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, the redundancy group editor would incorrectly allow you to save a redundancy group containing script actions with empty dummies.
+
 #### Router Control: Problem when connecting an already connected output to a new input [ID_40076]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
