@@ -277,6 +277,12 @@ When an app threw an error, that error would be serialized to invalid JSON. As a
 
 Due to a memory leak in the *State* component, parameter subscriptions would incorrectly not be closed.
 
+#### Dashboards app & Low-Code Apps - Dropdown component: Problem with 'Select first item by default' option [ID_40362]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When a *Dropdown* component had its *Select first item by default* option selected, the first item would incorrectly not get selected when the items in that component depended on another *Dropdown* component in which the first item was selected.
+
 #### Monitoring app: 'Connection has been interrupted' message would not disappear when the connection was restored [ID_40364]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
@@ -288,3 +294,11 @@ When the Monitoring app is connected to a DaaS system, a "Connection has been in
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
 In a *Query filter feed* component, next to columns containing discrete values of type string or number, you can find a button that allows you to change how the possible values are displayed when you hover your mouse over it. This button will have a label that reads either *Toggle free form* or *Toggle checklist*. Up now on, the button's icon would not match the button's label.
+
+#### Dashboards app: Problem when hovering over a long dashboard name in the sidebar [ID_40390]
+
+<!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
+
+When, in the sidebar, you hovered the mouse pointer over a long dashboard name, the list of available dashboards would shift.
+
+From now on, in the sidebar, long dashboard names will automatically be ellipsed, and when you hover the mouse pointer over an ellipsed name, the full name will be shown in a tooltip.
