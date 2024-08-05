@@ -50,7 +50,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Could not find AspNetCore installed on this system**
 
-  DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer can generate this error. Since .NET 8, DataMiner no longer installs .NET automatically.
+  The required ASP.NET Core version must be installed, depending on the [DxM version](xref:UD_APIs_UserDefinableApiEndpoint#versions). DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer will generate this error. .NET 8 must be installed manually.
 
   To fix this:
 
