@@ -14,7 +14,7 @@ If you encounter issues with [dataminer.services](xref:AboutCloudPlatform) featu
 
 ## Check the status on dataminer.services
 
-When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status for each DMS in your organization of which you are a member:
+When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status for each DMS in your organization, if you are a member of this DMS:
 
 - An **orange** status indicates that the Cloud Gateway cannot reach the DataMiner System, but the dataminer.services connection is valid.
 
@@ -89,7 +89,7 @@ If the *Renew session* action fails with the `The DataMiner System could not be 
 
 To resolve this issue, follow the steps in [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) to remove the link between the DataMiner System and the removed cloud identity.
 
-Once completed, you can reconnect the system to dataminer.services in Cube under a new identity. For more information on registering a system to dataminer.services, refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+When this is done, you can reconnect the system to dataminer.services in Cube under a new identity. For more information on registering a system to dataminer.services, refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Contact support
 
