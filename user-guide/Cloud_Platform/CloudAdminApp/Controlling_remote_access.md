@@ -41,7 +41,7 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
    - If you want remote access to be enabled, switch on the main *Remote Access* setting. If it should only be enabled for specific DataMiner features, below this setting, switch off the features for which remote access should be disabled.
 
-   - If you want remote access to be restricted based on IP address for a specific DataMiner features, when you have enabled a feature as detailed above, also switch on the *Restrict by IP address* option, click *Manage*, and specify the IP addresses for which remote access should be allowed. Remote access for this feature will then only possible based on the specified public client IP addresses.
+   - If you want remote access to be restricted based on IP address for a specific DataMiner features, when you have enabled a feature as detailed above, also switch on the *Restrict by IP address* option, click *Manage*, and specify the public IP addresses for which remote access should be allowed.
 
      ![Managing IP addresses](~/user-guide/images/Managing_IP_Addresses.png)
 
