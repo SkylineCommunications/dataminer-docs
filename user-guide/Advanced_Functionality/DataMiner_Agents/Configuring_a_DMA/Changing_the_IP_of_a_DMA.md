@@ -158,8 +158,10 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
 1. In System Center, go to the Agents page and remove the old IP address from the list of DMAs in the cluster.
 
-1. From DataMiner 10.1.1 onwards, the following additional step is required in order to reset NATS.
-   This step is only needed when the NATS service is installed. Not with the nats-server service:
+1. From DataMiner 10.1.1 onwards, the following additional steps are required in order to reset NATS:
+
+   > [!NOTE]
+   > The steps below are only needed when the NATS service is installed. They are not needed with the nats-server service.
 
    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
