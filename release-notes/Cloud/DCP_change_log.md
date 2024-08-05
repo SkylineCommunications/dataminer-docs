@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### TBD - Enhancement - Admin - New options to restrict remote access to web apps and/or user-defined APIs based on IP address
 
-In the Admin app, it is now possible to restrict remote access to the web apps and/or user-defined APIs based on IP address. Previously, this was only possible for the DataMiner Cube desktop app.
+In the Admin app, it is now possible to restrict remote access to the web apps and/or user-defined APIs for a specific DMS based on IP address. Previously, this was only possible for the DataMiner Cube desktop app.
 
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
