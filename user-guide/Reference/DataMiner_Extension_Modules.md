@@ -74,7 +74,8 @@ The CloudGateway module is responsible for connecting a DataMiner System to data
 
 ### CloudFeed
 
-The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
+The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are alarm, changepoint, SRM, elementconfiguration and feedback events.
+From CloudFeed version 1.4.0 on, the DataMiner version needs to be higher or equal than 10.4.10. 
 
 ### DataAggregator
 
