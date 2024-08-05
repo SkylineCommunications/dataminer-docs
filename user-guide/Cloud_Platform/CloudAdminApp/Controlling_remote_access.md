@@ -35,15 +35,13 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
 1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *Settings* page.
 
-1. Toggle the *Remote Access* settings to *On* or *Off*, depending on whether you want this to be enabled or not.
+1. Select how remote access should be limited:
 
-   If the main *Remote Access* setting is enabled, the following settings are also available:
+   - If you want remote access to be disabled completely, switch off the main *Remote Access* toggle button.
 
-   - *DataMiner Cube (desktop app)*: Enable or disable remote access to the DataMiner System(s) via the desktop app.
+   - If you want remote access to be enabled, switch on the main *Remote Access* setting. If it should only be enabled for specific DataMiner features, below this setting, switch off the features for which remote access should be disabled.
 
-     - *Restrict by IP address*<!--RN 40288-->: Only available if the *DataMiner Cube (desktop app)* setting is enabled. This setting allows you to restrict remote access to the DMS via the desktop app based on the specified client public IP addresses.
-
-     When enabled, click the *Manage* button to access the list of IP addresses permitted for remote access to the DMS.
+   - If you want remote access to be restricted based on IP address for a specific DataMiner features, when you have enabled a feature as detailed above, also switch on the *Restrict by IP address* option, click *Manage*, and specify the IP addresses for which remote access should be allowed. Remote access for this feature will then only possible based on the specified public client IP addresses.
 
      ![Managing IP addresses](~/user-guide/images/Managing_IP_Addresses.png)
 
@@ -57,10 +55,6 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
      >
      >   Note that if you are using a VPN, the IP address displayed will be the public IP address assigned by the VPN, not your actual public IP address. Add this VPN-assigned IP address to the list.
      > - Make sure you have a static IP address. If you are using a VPN, confirm it is configured with a static IP address. If you are not using a VPN, contact your Internet Service Provider (ISP) to verify or obtain a static IP address. A dynamic IP address can change periodically, which may result in losing remote access to the DMS if it changes. Additionally, someone else might be assigned your previous public IP address, allowing them remote access to the DMS (though they would still need to log in).
-
-   - *Web apps*: Enable or disable remote access to the DataMiner System(s) via the web apps.
-
-   - *User-Defined APIs*: Enable or disable remote access to the DataMiner System(s) via User-Defined APIs.
 
 > [!NOTE]
 >

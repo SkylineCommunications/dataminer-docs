@@ -9,6 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Admin - New options to restrict remote access to web apps and/or user-defined APIs based on IP address
+
+In the Admin app, it is now possible to restrict remote access to the web apps and/or user-defined APIs based on IP address. Previously, this was only possible for the DataMiner Cube desktop app.
+
+> [!TIP]
+> See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
+
 #### 1 August 2024 - Enhancement - Catalog - Contributors have been renamed owners [ID_40378]
 
 On the details page, "contributors" have now been renamed "owners".
