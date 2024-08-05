@@ -6,7 +6,7 @@ uid: Controlling_cloudfeed_data_offloads
 
 When a DMS is connected to dataminer.services, it will start offloading alarm and change point events to dataminer.services. This data can then be used to improve DataMiner AI/Analytics features.
 
-Performance and usage data offloads can be controlled both on organization level and on DMS level. If performance and usage data offloads are disabled for an organization, it is automatically also disabled for all DataMiner Systems within that organization.
+Performance and usage data offloads can be controlled both on organization level and on DMS level. If performance and usage data offloads are disabled for an organization, these are automatically also disabled for all DataMiner Systems within that organization.
 
 ## Controlling the performance and usage data offload setting of your organization
 
