@@ -26,7 +26,7 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
   You can [use the Admin app](xref:Managing_cloud-connected_nodes) to check if the *DataMiner CloudFeed* DxM is installed.
 
-- The option *Allow performance and usage data offload* must be enabled. See [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads).
+- The option *Allow performance and usage data offload* must be enabled. See [Controlling performance and usage data offloads](xref:Controlling_cloudfeed_data_offloads).
 
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards, the light bulb icon is always displayed in the top-right corner of the trend graph, regardless of whether DataMiner was able to find related parameters. If no related parameters were found, the light bulb icon will not be "lit up" with an accent color as it would be otherwise. <!-- RN 35868 --> Clicking the icon will prompt a message indicating that the necessary requirements have not been met, hereby explaining why the feature could not find related parameters. <!--RN 36157-->

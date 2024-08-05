@@ -106,7 +106,7 @@ items:
         topicUid: DCP_Auditing
       - name: Granting admin consent for Teams Chat Integration
         topicUid: Granting_admin_consent
-      - name: Controlling cloud feed data offloads
+      - name: Controlling performance and usage data offloads
         topicUid: Controlling_cloudfeed_data_offloads
       - name: Managing the nodes of a DMS connected to dataminer.services
         topicUid: Managing_cloud-connected_nodes
