@@ -654,6 +654,12 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
 
 In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.
 
+#### Progress information updates no longer available during DataMiner upgrade [ID_40348]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In some cases, it could occur that progress information updates during a DataMiner upgrade were no longer available. This was caused by long timeouts in gRPC connections. These could also trigger a race condition, causing the logic checking for progress updates on the client side to override a successful upgrade event. The timeouts will now occur more quickly, so that a reconnection occurs faster and updates become available again.
+
 #### SLLogCollector would incorrectly report a null reference exception when a DataMiner Agent did not have Failover configured [ID_40376]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
