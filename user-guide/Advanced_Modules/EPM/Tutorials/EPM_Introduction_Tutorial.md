@@ -6,7 +6,7 @@ uid: EPM_Introduction_Tutorial
 
 This tutorial will provide a brief introduction on the EPM architecure and how you can use many EPM specific features.
 
-Expected duration: 20 minutes
+Expected duration: 30 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.5.
@@ -118,9 +118,9 @@ This tutorial consists of the following steps:
 
 5. Back in the data section, go to the Queries section and create a new query. Name it *All Endpoints* and select the *Get parameters for elements where* data source. Select the Skyline EPM Integration Training Collector Protocol and then the Production version. 
 
-6. Once the parameters populate, select the Endpoint Overview Table. Afterwards, select the *Select* operator and select the Index, IP, Customer, Jitter, Latency, Packet Loss Rate, and RTT parameters. 
+6. Once the parameters populate, select the *Endpoint Overview Table*. Afterwards, select the *Select* operator and select the Index, IP, Customer, Jitter, Latency, Packet Loss Rate, and RTT parameters. 
 
-7. Now that we have all the information we want from all of the Endpoints, we will now filter to only show the Endpoints associated to the Customer selected in the EPM Feed. Select Filter in the operator and select the Customer Name parameter. The Filter Method will be equals and for the value, we will link the field to the EPM Feed component. Select the little chain icon on the right and then select EPM Feed 1 for the feed and then the System name property. Once done it should look like this: 
+7. Now that we have all the **Endpoint** information we want from all of the **Collectors**, we will now filter to only show the Endpoints associated to the Customer selected in the EPM Feed. Select Filter in the operator and select the *Customer Name* parameter. The Filter method will be *equals* and for the value, we will link the field to the EPM Feed component. Select the little chain icon on the right and then select *EPM Feed 1* for the feed and then the *System name* property. Once done it should look like this: 
 
     ![alt text](image-15.png)
 
