@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| [39495](xref:General_Feature_Release_10.4.9#parameter-latch-states-will-now-be-reset-after-every-dataminer-restart-id_39495) | DataMiner 10.5.0/10.4.9 | In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart. |
 | [39739](xref:Web_apps_Feature_Release_10.4.7#dashboards-app--low-code-apps-more-consistent-use-of-colors-in-graphs-id_39739) | DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 | From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards, components displaying the same data use the same data color by default. Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, each component independently takes the next color from the theme's assigned color palette. |
 | [38950](xref:General_Feature_Release_10.4.5#dom-string-fields-will-now-be-filtered-case-insensitively-id_38950) | DataMiner 10.4.0 [CU2]/10.4.5 | DOM string fields will now by default be filtered case-insensitively. |
 | [39027](xref:Web_apps_Feature_Release_10.4.5#low-code-apps-parameters-of-a-script-action-linked-to-an-empty-feed-will-now-be-filled-with-an-empty-array-id_39027) | DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 | From now on, linking a script parameter to an empty feed will fill it with an empty array. |

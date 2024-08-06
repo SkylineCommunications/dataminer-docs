@@ -39,7 +39,7 @@ There are two ways to configure this setup: with or without group claims. If gro
      > [!TIP]
      > We recommend using a PNG image with a transparent background and a landscape orientation.
 
-1. Configure the Okta SAML settings:
+1. Configure the Okta SAML settings and the user groups:
 
    - **Single sign on URL**: The location where the SAML assertion is sent with a POST operation.
 
@@ -120,39 +120,62 @@ There are two ways to configure this setup: with or without group claims. If gro
       > - The name fields can be anything you want, but we recommend giving them a name that clearly reflects the claim they refer to. All of these are case-sensitive.
       > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.
 
+   - **When not using group claims**, create a group in DataMiner to which users will be added when they log in. You can for instance name it *Auto-imported users*.
+
 1. Stop DataMiner.
 
 1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-1. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+1. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as detailed below:
 
-   ```xml
-   <DataMiner ...>
-     ...
-     <ExternalAuthentication
-       type="SAML"
-       ipMetadata="[Path/URL of the identity provider’s metadata file]"
-       spMetadata="[Path/URL of the service provider’s metadata file]"
-       timeout="300">
-       <AutomaticUserCreation enabled="true">
-         <EmailClaim>[email claim name]</EmailClaim>
-         <Givenname>[firstname claim name]</Givenname>
-         <Surname>[lastname claim name]</Surname>
-         <Groups claims="true">[group claim name]</Groups>
-       </AutomaticUserCreation>
-     </ExternalAuthentication>
-     ...
-   </DataMiner>
-   ```
+   - **When using group claims**, set the *claims* attribute of the *Groups* element to "true", and add the name of the SAML attribute that will contain the group names in the XML element (i.e. *userGroups*):
+
+     ```xml
+     <DataMiner ...>
+       ...
+       <ExternalAuthentication
+         type="SAML"
+         ipMetadata="[Path/URL of the identity provider’s metadata file]"
+         spMetadata="[Path/URL of the service provider’s metadata file]"
+         timeout="300">
+         <AutomaticUserCreation enabled="true">
+           <EmailClaim>[email claim name]</EmailClaim>
+           <Givenname>[firstname claim name]</Givenname>
+           <Surname>[lastname claim name]</Surname>
+           <Groups claims="true">userGroups</Groups>
+         </AutomaticUserCreation>
+       </ExternalAuthentication>
+       ...
+     </DataMiner>
+     ```
+
+   - **When not using group claims**, set the *claims* attribute of the *Groups* element to "false", and add the name of the DataMiner group into which users will be imported in the XML element (e.g. *Auto-imported users*):
+
+     ```xml
+     <DataMiner ...>
+       ...
+       <ExternalAuthentication
+         type="SAML"
+         ipMetadata="[Path/URL of the identity provider’s metadata file]"
+         spMetadata="[Path/URL of the service provider’s metadata file]"
+         timeout="300">
+         <AutomaticUserCreation enabled="true">
+           <EmailClaim>[email claim name]</EmailClaim>
+           <Givenname>[firstname claim name]</Givenname>
+           <Surname>[lastname claim name]</Surname>
+           <Groups claims="false">[DataMiner user group]</Groups>
+         </AutomaticUserCreation>
+       </ExternalAuthentication>
+       ...
+     </DataMiner>
+     ```
 
    > [!NOTE]
    >
    > - The claim name refers to the attribute statement names that were added in Okta.
-   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
-   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
-   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
-   >   - It will only be possible to add a user to a single group.
-   >   - The user information that is created will not be updated.
+   > - In both setups, user groups have to exist in DataMiner, so make sure these have been added. In case group claims are used, make sure all the necessary groups have been added, as users can only be added in DataMiner if the groups they belong to also exist in DataMiner. Also, keep in mind that the group names are case-sensitive.
+   > - When no group claims are used, it will only be possible to add a user to a single group, and the user information that is created will not be updated.
+   > - Group membership is synced on each login. This means that if, for example, you manually add an OKTA user to the Administrators group, and that group is not specified in the groups claims on the next login, the user will be removed again.
 
 1. Save the *DataMiner.xml* file.
 

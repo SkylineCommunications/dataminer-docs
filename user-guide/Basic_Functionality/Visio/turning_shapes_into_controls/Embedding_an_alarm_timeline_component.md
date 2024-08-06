@@ -105,7 +105,6 @@ To configure a shape as an alarm timeline component:
 
    > [!NOTE]
    >
-   > - Prior to DataMiner 9.6.0 \[CU21\]/10.0.0 \[CU9\]/10.1.1, only filters with properties are supported.
    > - You can define a custom name for the alarm tab page by adding "TabName=", followed by the custom name to the value of the **AlarmFilter** data field, separated from the actual alarm filter with a pipe character ("\|").
    > - In certain EPM environments, filters can be specified to the left of the timeline in Visual Overview. You can insert these filters in the alarm filter by using the following placeholders:
    >   - *\[ServiceFilterName\]* refers to the left column.

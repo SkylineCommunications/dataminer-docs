@@ -230,6 +230,8 @@ items:
           items:
             - name: Support level roles
               topicUid: Support_Level_Roles
+        - name: Adding third-party connectors
+          topicUid: Overview_adding_third_party_connectors
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:

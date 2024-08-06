@@ -22,7 +22,7 @@ If you have the Owner or Admin role on dataminer.services for an organization, y
 >
 > - If a setting is disabled on organization level, it will not be possible to enable it for the DataMiner Systems in this organization.
 > - When you change a *Remote Access* setting from *On* to *Off*, it can take a minute before the change is applied.
-> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
+> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.
 > - The Remote Access feature can also be disabled locally on a specific server. See [Disabling Remote Access and Live Sharing locally](xref:Disabling_Remote_Access_and_Live_Sharing).
 
 ## Controlling the remote access settings of a DMS in your organization
@@ -37,9 +37,34 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
 1. Toggle the *Remote Access* settings to *On* or *Off*, depending on whether you want this to be enabled or not.
 
+   If the main *Remote Access* setting is enabled, the following settings are also available:
+
+   - *DataMiner Cube (desktop app)*: Enable or disable remote access to the DataMiner System(s) via the desktop app.
+
+     - *Restrict by IP address*<!--RN 40288-->: Only available if the *DataMiner Cube (desktop app)* setting is enabled. This setting allows you to restrict remote access to the DMS via the desktop app based on the specified client public IP addresses.
+
+     When enabled, click the *Manage* button to access the list of IP addresses permitted for remote access to the DMS.
+
+     ![Managing IP addresses](~/user-guide/images/Managing_IP_Addresses.png)
+
+     > [!NOTE]
+     >
+     > - Only public IP addresses can be added to the list of trusted IP addresses. Private IP addresses, which are hidden behind public IP addresses, cannot be used for communication outside of their local network.
+     > - To find your public IP address:
+     >
+     >   1. Open a command prompt as Administrator.
+     >   1. Execute the `curl ifconfig.me` command.
+     >
+     >   Note that if you are using a VPN, the IP address displayed will be the public IP address assigned by the VPN, not your actual public IP address. Add this VPN-assigned IP address to the list.
+     > - Make sure you have a static IP address. If you are using a VPN, confirm it is configured with a static IP address. If you are not using a VPN, contact your Internet Service Provider (ISP) to verify or obtain a static IP address. A dynamic IP address can change periodically, which may result in losing remote access to the DMS if it changes. Additionally, someone else might be assigned your previous public IP address, allowing them remote access to the DMS (though they would still need to log in).
+
+   - *Web apps*: Enable or disable remote access to the DataMiner System(s) via the web apps.
+
+   - *User-Defined APIs*: Enable or disable remote access to the DataMiner System(s) via User-Defined APIs.
+
 > [!NOTE]
 >
 > - If a setting is disabled on organization level, it will not be possible to enable it for a DataMiner System in that organization.
 > - When you change a *Remote Access* setting from *On* to *Off*, it can take a minute before the change is applied.
-> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
+> - Users will only be able to use the remote access features if they have been given access to the DMS on dataminer.services. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.
 > - The Remote Access feature can also be disabled locally on a specific server. See [Disabling Remote Access and Live Sharing locally](xref:Disabling_Remote_Access_and_Live_Sharing).

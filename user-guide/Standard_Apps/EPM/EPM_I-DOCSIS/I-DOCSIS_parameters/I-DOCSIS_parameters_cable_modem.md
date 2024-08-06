@@ -1,12 +1,13 @@
 ---
 uid: I-DOCSIS_parameters_cable_modem
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – Cable Modem
+# Integrated DOCSIS parameters – Cable Modem
 
-This page contains an overview of the Cable Modem parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the Cable Modem parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
-These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboards.
+These parameters are displayed for the Cable Modem level in the Integrated DOCSIS dashboards.
 
 ## CM Info
 
@@ -91,7 +92,7 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
   The EPM engine makes this association via import operation.
 
-- **Node Segment Name**: Direct value. The node segment is the unique combination of a DS (downstream) port and US (upstream) port. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service.
+- **Node Segment Name**: Direct value. The node segment is the unique combination of a DS (downstream) port and US (upstream) port. This entity is dynamically created by the connector logic from the perspective of the Integrated DOCSIS service.
 
   The EPM engine makes this association via import operation.
 

@@ -4,17 +4,43 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 13 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging
+#### 25 July 2024 - Enhancement - CloudGateway 2.13.15 - Dependencies updated & event handling improved [ID_40279]
 
-The CloudGateway DxM will now no longer add logging every minute when a dataminer.services endpoint is unreachable.
+Several dependencies have been updated. Events sent by DxMs via the CloudGateway DxM that are rejected by dataminer.services will now be indicated so the senders know not to retry but to discard those events.
 
-#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Requests could get no response in an edge case leading to timeouts [ID_40208]
+
+If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway DxM will try to return an internal server response immediately.
+
+If a remote access web API call takes longer than 25 seconds, this will now also be mentioned in a warning log.
+
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13
+
+Because the certificate used to sign CloudGateway 2.13.13 has been revoked, a new installer has been generated. To avoid issues during the digital signature validation while running the installer, CloudGateway 2.13.13 is now unlisted.
+
+#### 10 July 2024 - Enhancement - CloudGateway 2.13.13 - Improvement for cloud token refresh [ID_40032]
+
+The credentials used by CloudGateway are now refreshed daily, so that even when a system is temporarily disconnected from the internet or shut down, the token will remain valid, provided that this does not last longer than 6 days.
+
+#### 4 July 2024 - Enhancement - CloudGateway 2.13.12 - Connection testing improvements [ID_40108]
+
+The ConnectionTester tool included with CloudGateway and the at-runtime connection testing by CloudGateway have been improved.
+
+#### 20 June 2024 - Enhancement - CloudGateway 2.13.11 - Remove log spam when the DMS identity token cannot be automatically refreshed [ID_39261]
+
+From now on, if the refresh token for a dataminer.services DMS identity is expired or invalid, this will only be logged once instead of every 10 seconds.
+
+#### 14 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging [ID_39631]
+
+Up to now, the CloudGateway DxM added logging every minute when a dataminer.services endpoint could not be reached. This excessive logging will no longer occur.
+
+#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server [ID_39444]
 
 The CloudGateway DxM has been extended with the capability to offload data when installed on a DMZ or proxy server.
 
 #### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID_39113]
 
-It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM. 
+It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM.
 
 To do so, set *RemoteAccessAndSharing:IsDisabled* to *true* in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify *appsettings.custom.json* with the following configuration:
 

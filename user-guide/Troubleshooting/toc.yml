@@ -190,8 +190,8 @@ items:
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
-          - name: Cassandra does not start up after a server restart
-            topicUid: Cassandra_not_starting_up_after_server_restart
+          - name: Expired SSTables blocking other tables from being dropped
+            topicUid: Cassandra_expired_blocking_SSTables
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
@@ -224,8 +224,10 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Failover switch taking a long time on systems with Cassandra Cluster setup
-            topicUid: KI_Failover_switch_Cassandra_Cluster
+          - name: Unable to override information events TTL of 5 years
+            topicUid: KI_Information_events_TTL_five_years
+          - name: Process crashes when trying to connect to MySQL database
+            topicUid: KI_MySQL_Unhandled_Exception
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: NATS services missing after reboot
@@ -256,6 +258,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Failover switch taking a long time on systems with Cassandra Cluster setup
+            topicUid: KI_Failover_switch_Cassandra_Cluster
           - name: SLProtocol RTE caused by SNMP group with condition
             topicUid: KI_SLProtocol_RTE_SNMP_group_condition
           - name: Deadlock in service loading during startup

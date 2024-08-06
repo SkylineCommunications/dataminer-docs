@@ -21,6 +21,9 @@ If users have a dataminer.services account (i.e. they are registered on <https:/
 
 1. At the top of the window, click *Add user*.
 
+   > [!NOTE]
+   > If you do not have sufficient rights to add users to your organization, this button will be disabled<!--RN 40234-->.
+
 1. Specify the email address that is used for the user on dataminer.services and click *Add*.
 
 1. Select the *Users* page for the DataMiner System you want to add the user to.

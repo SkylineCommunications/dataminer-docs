@@ -4,6 +4,14 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x
 
 # Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 4.x
 
+## 4.2.0
+
+#### Extra step added to the connection process [ID_39548]
+
+The OpenConfig library has been updated to the latest *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig* version (i.e. 3.2.0). It will now initiate a `DiscoveryRequest`, and the first CommunicationGateway DxM that answers will be used to handle all further communication.
+
+Minimum required version: [CommunicationGateway 3.2.0](xref:CommunicationGateway_change_log#26-june-2024---fix---communicationgateway-320---multiple-communicationgateway-nodes-in-cluster-setting-up-connection-with-endpoint-instead-of-only-one-id_39548)
+
 ## 4.1.0
 
 #### Additional logging for subscriptions and overloads for Subscribe methods [ID_39077]

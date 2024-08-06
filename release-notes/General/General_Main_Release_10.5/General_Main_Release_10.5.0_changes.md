@@ -9,15 +9,45 @@ uid: General_Main_Release_10.5.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### Parameter latch states will now be reset after every DataMiner restart [ID_39495]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart.
+
+If you want to have persistent parameter latch states, do the following:
+
+1. Open the *MaintenanceSettings.xml* file.
+
+1. In the `AlarmSettings` section, add the `PersistParameterLatchState` option, and set it to true.
+
+   ```xml
+   <AlarmSettings>
+      ...
+      <PersistParameterLatchState>true</PersistParameterLatchState>
+      ...
+   </AlarmSettings>
+   ```
+
+1. Restart the DataMiner Agent.
+
+> [!IMPORTANT]
+>
+> - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
+> - Element, service and view latch states will remain persistent as before.
+
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38869] [ID_38951] [ID_39387]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38869] [ID_38951] [ID_39387] [ID_40229]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38869: MR 10.5.0 - FR 10.4.6 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
 <!-- 39387: MR 10.5.0 - FR 10.4.7 -->
+<!-- 40229: MR 10.5.0 - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 
@@ -348,6 +378,15 @@ Types of log entries related to SLNet requests:
   - *RequestID*: The unique ID of request.
   - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
 
+#### Enhanced performance when processing SNMPv3 elements [ID_39356]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, overall performance has increased when processing SNMPv3 elements.
+
+> [!IMPORTANT]
+> When, on older DataMiner systems, you import DELT packages containing elements exported on systems running DataMiner Main Release version 10.5.0 or Feature Release version 10.4.9 (or newer), all SNMPv3 credentials will be lost and will have to be re-entered manually.
+
 #### Enhanced error message 'Failed to create one or more storages' [ID_39360]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -455,11 +494,45 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
+#### User-defined APIs: ApiToken and ApiDefinition objects will now be cached [ID_39701]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
+
 #### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+
+#### Automation scripts: Resources can now be retrieved page by page [ID_39743]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, in Automation scripts, it is possible to retrieve resources page by page.
+
+See the following example, which shows how to implement this.
+
+```csharp
+var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+var result = new List<Resource>();
+var pagingSize = 100;
+var pagingHelper = helper.PrepareResourcePaging(new TRUEFilterElement<Resource>().ToQuery(), pagingSize);
+
+while (true)
+{
+    if (!pagingHelper.MoveToNextPage())
+    {
+        break;
+    }
+
+    result.AddRange(pagingHelper.GetCurrentPage());
+ }
+```
+
+Default page size: 200
 
 #### Unhandled exceptions thrown by QActions will now be logged in SLManagedScripting.txt [ID_39779]
 
@@ -519,6 +592,22 @@ var response = _engine.SendSLNetSingleResponseMessage(request) as ResourceManage
 
 The trend change detection accuracy has been improved, especially after a restart of the SLAnalytics process.
 
+#### Service & Resource Management: SRM master synchronization now takes into account the Resource Manager state [ID_39835]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Up to now, the SRM master synchronization only took into account the DMA state, not the Resource Manager state. In some cases, that could lead to requests being sent to a DataMiner Agent of which the Resource Manager was down.
+
+From now on, the SRM master synchronization will also take into account the Resource Manager state. A DataMiner Agent will only be appointed SRM master if DataMiner is running and if the Resource Manager is initialized.
+
+Also, the logging with regard to the SRM master synchronization and master election process has been enhanced.
+
+#### Time-scoped relation learning: Enhanced accuracy [ID_39841]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -549,6 +638,14 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
 
+#### Service & Resource Management: New 'SkipServiceHandling' option to allow the 'SRMServiceInfo' object check to be skipped when starting/stopping a booking [ID_39939]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
+
+In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+
 #### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -566,6 +663,56 @@ See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Da
 *SLASPConnection.exe* is now a 64-bit process.
 
 This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+
+#### NT_SNMP_RAW_GET, NT_SNMP_GET, NT_SNMP_RAW_SET and NT_SNMP_SET calls will take the SnmpPollingSnmpPlusPlusOnly soft-launch option into account [ID_40019]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls will take the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option into account.
+
+In other words, from now on, when this soft-launch option is set to true, these calls will be executed using SNMP++ instead of WinSNMP.
+
+#### SLNet: Enhanced performance when sending requests to SLDataGateway [ID_40023]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
+
+#### DataMiner Object Models: SLModuleSettingsManager.txt log file will now contain the IDs of the modules that were created, updated or deleted [ID_40028]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
+
+#### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
+
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
+
+#### BPA tests can now be marked 'upgrade only' [ID_40163]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
+
+#### DataMiner Object Models: Enhanced storage of DOM instances [ID_40242]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
+
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
 
 ### Fixes
 
@@ -713,8 +860,18 @@ When the NATS server was down, SLElement would leak memory while trying to push 
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
 
-#### Service & Resource Management: Problem when a DMA did not respond during the midnight sync of the Resource Manager [ID_40021]
+#### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
+
+As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
+
+From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
+
+#### MessageBroker: Reconnection mechanism could cause the overall CPU load to rise [ID_40071]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.

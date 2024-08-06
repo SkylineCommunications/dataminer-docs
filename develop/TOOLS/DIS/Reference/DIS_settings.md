@@ -176,6 +176,10 @@ Select the *Only show unresolved links* option if you only want to see the virtu
 > See also:
 > [Virtual comments](xref:XML_editor#virtual-comments)
 
+### Automatically sync solution folders
+
+Select the *Automatically sync solution folders* option if you want the physical solution folders in Windows file explorer to automatically be synchronized whenever you add, move or delete a file in the Visual Studio solution explorer.
+
 ### Task URL String Format
 
 In this box, you can configure the format of the task references, which, in the Version editor, you can link to protocol versions.

@@ -1,8 +1,9 @@
 ---
 uid: I-DOCSIS_upgrade
+keywords: I-DOCSIS upgrade
 ---
 
-# EPM I-DOCSIS upgrade
+# EPM Integrated DOCSIS upgrade
 
 When you have upgraded the EPM solution, execute the following procedure:
 

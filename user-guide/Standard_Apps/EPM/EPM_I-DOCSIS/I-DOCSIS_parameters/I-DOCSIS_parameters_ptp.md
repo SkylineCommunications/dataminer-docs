@@ -1,12 +1,13 @@
 ---
 uid: I-DOCSIS_parameters_ptp
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – PTP
+# Integrated DOCSIS parameters – PTP
 
 These parameters are only available in elements running the Harmonic CableOS connector, on the PTP page.
 
-Currently, these parameters are not shown on the topology chains available in I-DOCSIS. However, you can access this information using a dashboard, low-code app, or custom visual overview.
+Currently, these parameters are not shown on the topology chains available in Integrated DOCSIS. However, you can access this information using a dashboard, low-code app, or custom visual overview.
 
 - **CCAP PTP Clock State**: Direct value. This attribute represents the current state of the clock.
 

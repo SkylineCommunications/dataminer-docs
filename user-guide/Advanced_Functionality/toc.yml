@@ -547,14 +547,14 @@ items:
             topicUid: Changing_SNMP_agent_ports
           - name: Configuring SNMP agent community strings
             topicUid: Configuring_SNMP_agent_community_strings
-          - name: Disabling element SNMP agent functionality
-            topicUid: Disabling_element_SNMP_agent_functionality
           - name: Enabling notifications in case SNMPv3 traps cannot be processed
             topicUid: Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed
           - name: Enabling DataMiner SNMP agent functionality
             topicUid: Enabling_DataMiner_SNMP_agent_functionality
           - name: Adjusting the SNMP inform message cache size
             topicUid: Adjusting_the_SNMP_inform_message_cache_size
+          - name: Generating SMIv2 MIB files
+            topicUid: Generating_SMIv2_MIB_files
       - name: Resending alarms to an SNMP manager
         topicUid: Resending_alarms_to_an_SNMP_manager
       - name: DataMiner SNMP notification definition
