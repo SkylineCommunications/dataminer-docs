@@ -6,7 +6,10 @@ uid: CDM
 
 Several low-code apps available in the DataMiner Catalog, including all MediaOps applications, are built on the Common Data Model (CDM). In this model, each object is described by a definition.
 
-Definitions that are functionally related are grouped into modules. Below, you can find an overview of the different modules.
+Definitions that are functionally related are grouped into modules to enhance data management, interoperability, and efficiency. Below, you can find an overview of the different modules.
+
+> [!TIP]
+> See also: [Common Data Model](xref:Overview_DataMiner_Solutions#common-data-model)
 
 ### Contracts
 
