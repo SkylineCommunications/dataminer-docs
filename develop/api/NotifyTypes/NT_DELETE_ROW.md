@@ -52,5 +52,5 @@ int rowCount = (int)protocol.NotifyDataMiner(156 /*NT_DELETE_ROW*/, ids, primary
 
 ## See also
 
-- DeleteRow
-- ClearAllKeys
+- [DeleteRow](xref:Skyline.DataMiner.Scripting.NotifyProtocol.DeleteRow*)
+- [ClearAllKeys](xref:Skyline.DataMiner.Scripting.SLProtocol.ClearAllKeys*)
