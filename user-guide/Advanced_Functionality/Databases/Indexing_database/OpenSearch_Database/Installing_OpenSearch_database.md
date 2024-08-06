@@ -362,20 +362,25 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
    > [!IMPORTANT]
    > The user and password provided should be defined in the `\etc\opensearch\opensearch-security\internal_users.yml` file.
 
-1. Check Microsoft Management Console (MMC) to make sure the root certificate was installed correctly.
+1. Check the Microsoft Management Console (MMC) to make sure the root certificate has been installed correctly:
 
-   1. Press Win+R to open the *Run* dialog box.
-   1. Type "mmc" and click *OK* or press Enter.
-   1. If the Console Root folder is empty, do the following:
+   1. Press Win+R to open the *Run* dialog box, and enter `mmc`.
 
-      1. From the *File* menu, select *Add/Remove Snap-in...*.
-      1. From the *Available snap-ins* list, choose *Certificates*, and click *Add*.
-      1. In the *Certificates snap-in* window, select *Computer account*, and click *Next*.
-      1. In the *Select Computer* window, leave *Local computer* selected, and click *Finish*.
+      This will open the Microsoft Management Console. You may need to click *Yes* first to confirm that changes can be made from the console.
 
-   1. Go to the *Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates* folder, and make sure it contains the root certificate.
+   1. If the *Console Root* folder is empty, do the following:
 
-1. Test Connection from Dataminer Servers to New Opensearch cluster using browser - https://[CLUSTERNODEIP]:9200/_cat/nodes?v
+      1. In the *File* menu, select *Add/Remove Snap-in*.
+
+      1. In the *Available snap-ins* list, select *Certificates*, and click *Add*.
+
+      1. In the *Certificates snap-in* pop-up window, select *Computer account*, and click *Next*.
+
+      1. Leave *Local computer* selected, and click *Finish*.
+
+   1. Go to the *Certificates (Local Computer)* > *Trusted Root Certification Authorities* > *Certificates* folder, and make sure it contains the root certificate.
+
+1. Test the connection from the DataMiner server to the new OpenSearch cluster by entering a URL in the following format in a browser: `https://[CLUSTERNODEIP]:9200/_cat/nodes?v`.
 
 1. Restart the DataMiner Agent.
 
