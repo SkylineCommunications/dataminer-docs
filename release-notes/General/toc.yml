@@ -116,6 +116,8 @@ items:
             topicUid: General_Main_Release_10.3.0_CU17
           - name: General Main Release 10.3.0 CU18 - Preview
             topicUid: General_Main_Release_10.3.0_CU18
+          - name: General Main Release 10.3.0 CU19 - Preview
+            topicUid: General_Main_Release_10.3.0_CU19
       - name: Feature Release
         items:
           - name: General Feature Release 10.3.12

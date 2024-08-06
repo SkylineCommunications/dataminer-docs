@@ -875,9 +875,3 @@ From now on, the *Connect to cloud/DCP* user permission is no longer required to
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.
-
-#### Progress information updates no longer available during DataMiner upgrade [ID_40348]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-In some cases, it could occur that progress information updates during a DataMiner upgrade were no longer available. This was caused by long timeouts in gRPC connections. These could also trigger a race condition, causing the logic checking for progress updates on the client side to override a successful upgrade event. The timeouts will now occur more quickly, so that a reconnection occurs faster and updates become available again.
