@@ -22,12 +22,12 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Contract Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Contract info</td>
 		</tr>
 		<tr>
 			<td>Name</td>
 			<td>String</td>
-			<td>The name of the contract</td>
+			<td>The name of the contract.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -51,14 +51,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Uplift (%)</td>
 			<td>Double</td>
-			<td>The amount in percentage by which the charged rates will be increased when calculating the bill.</td>
+			<td>The amount (in percentage) by which the charged rates will be increased when calculating the bill.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Discount (%)</td>
 			<td>Double</td>
-			<td>The amount in percentage that the calculated total amount will be reduced when producing the bill.</td>
+			<td>The amount (in percentage) by which the calculated total amount will be reduced when producing the bill.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -99,7 +99,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Hours before event start</td>
 			<td>Double</td>
-			<td>The amount of hours before the start of the job, that is possible to cancel before incurring higher fees.</td>
+			<td>The number of hours before the start of the job during which it can be canceled without incurring higher fees.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -123,21 +123,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Billing type</td>
 			<td>GenericEnum`1</td>
-			<td>Determines whether this contract will bill based on workflow only, resource only or both</td>
+			<td>Determines whether this contract will bill based on workflow only, resource only, or both.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Default workflow ratecard</td>
 			<td>Guid</td>
-			<td>The unique identifier to another DOM object representing the ratecard to be used on workflows by default.</td>
+			<td>The unique identifier for another DOM object representing the default ratecard to be used for workflows.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Default resource ratecard</td>
 			<td>Guid</td>
-			<td>The unique identifier to another DOM object representing the ratecard to be used on resources by default.</td>
+			<td>The unique identifier for another DOM object representing the default ratecard to be used for resources..</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -219,7 +219,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard info</td>
 		</tr>
 		<tr>
 			<td>Name</td>
@@ -231,38 +231,38 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Ratecard currency</td>
 			<td>Guid</td>
-			<td>A unique identifier to another DOM object representing the currency to be used by this ratecard.</td>
+			<td>A unique identifier for another DOM object representing the currency to be used by this ratecard.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard Details</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard details</td>
 		</tr>
 		<tr>
 			<td>Minimal time interval</td>
 			<td>Double</td>
-			<td>The minimum amount of time that will be charged even of the job duration is shorter.</td>
+			<td>The minimum amount of time that will be charged, even if the job duration is shorter.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Minimal time interval unit</td>
 			<td>GenericEnum`1</td>
-			<td> The unit of time qualifying the minimal time interval numeric value.</td>
+			<td>The unit of time that specifies the minimum time interval's numeric value.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Minimal time increment</td>
 			<td>Double</td>
-			<td>The increment of time in multiples of which the job duration will be charged if that duration extends beyond the minimal time interval.</td>
+			<td>The increment of time in multiples of which the job duration will be charged if that duration extends beyond the minimum time interval.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Minimal time increment unit</td>
 			<td>GenericEnum`1</td>
-			<td>The unit of time qualifying the minimal time increment numeric value.</td>
+			<td>The unit of time that specifies the minimum time increment's numeric value.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -279,14 +279,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Rate</td>
 			<td>Double</td>
-			<td>The amount to be charged per each unit of time that the node or workflow was in use.</td>
+			<td>The amount to be charged for each unit of time that the node or workflow was in use.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Unit</td>
 			<td>GenericEnum`1</td>
-			<td> The unit of time that qualifies the rate specified on the Rate field.</td>
+			<td> The unit of time that qualifies the rate specified in the 'Rate' field.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -307,7 +307,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard info</td>
 		</tr>
 		<tr>
 			<td>Name</td>
@@ -319,38 +319,38 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Ratecard currency</td>
 			<td>Guid</td>
-			<td>A unique identifier to another DOM object representing the currency to be used by this ratecard.</td>
+			<td>A unique identifier for another DOM object representing the currency to be used by this ratecard.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard Details</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Ratecard details</td>
 		</tr>
 		<tr>
 			<td>Minimal time interval</td>
 			<td>Double</td>
-			<td>The minimum amount of time that will be charged even of the job duration is shorter.</td>
+			<td>The minimum amount of time that will be charged, even if the job duration is shorter.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Minimal time interval unit</td>
 			<td>GenericEnum`1</td>
-			<td> The unit of time qualifying the minimal time interval numeric value.</td>
+			<td>The unit of time that specifies the minimum time interval's numeric value.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Minimal time increment</td>
 			<td>Double</td>
-			<td>The increment of time in multiples of which the job duration will be charged if that duration extends beyond the minimal time interval.</td>
+			<td>The increment of time in multiples of which the job duration will be charged if that duration extends beyond the minimum time interval.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Minimal time increment unit</td>
 			<td>GenericEnum`1</td>
-			<td>The unit of time qualifying the minimal time increment numeric value.</td>
+			<td>The unit of time that specifies the minimum time increment's numeric value.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -367,14 +367,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Rate</td>
 			<td>Double</td>
-			<td>The amount to be charged per each unit of time that the node or workflow was in use.</td>
+			<td>The amount to be charged for each unit of time that the node or workflow was in use.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Unit</td>
 			<td>GenericEnum`1</td>
-			<td> The unit of time that qualifies the rate specified on the Rate field.</td>
+			<td> The unit of time that qualifies the rate specified in the 'Rate' field.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -395,7 +395,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">App Data Currencies</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">App data currencies</td>
 		</tr>
 		<tr>
 			<td>Nominal Currency</td>
@@ -426,14 +426,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Currency</td>
 			<td>GenericEnum`1</td>
-			<td>The currency ISO code</td>
+			<td>The currency ISO code.</td>
 			<td>Read</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Rate to nominal</td>
 			<td>Double</td>
-			<td> The rate of converstion against the currency set as nominal.</td>
+			<td> The conversion rate against the currency set as nominal.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -626,21 +626,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Allow bookings on pool level</td>
 			<td>Boolean</td>
-			<td>Indicates if the pool is bookable in case it does not matter what actual resource in the pool is booked</td>
+			<td>Indicates whether the pool is bookable regardless of the specific resource within it.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Error details</td>
 			<td>String</td>
-			<td>Details in case an error occurs in synchronizing with DMA</td>
+			<td>Details provided when an error occurs during synchronization with DMA.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Domain</td>
 			<td>Guid</td>
-			<td>Pools can be grouped into domains for filtering purposes in certain apps</td>
+			<td>Pools can be grouped into domains for filtering purposes in certain apps.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -650,7 +650,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Cost ratecard</td>
 			<td>Guid</td>
-			<td>Default ratecard for all resource in the pool to calculate cost of usage</td>
+			<td>Default ratecard for all resources in the pool to calculate cost of usage.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -660,21 +660,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>resource_ids</td>
 			<td>String</td>
-			<td>comma separated list of guids of resource DOMs that belong to the resource pool</td>
+			<td>Comma-separated list of GUIDs representing the resource DOMs that belong to the resource pool.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>pool_resource_id</td>
 			<td>Guid</td>
-			<td>guid of the resource in dataminer representing the pool in case the pool is bookable</td>
+			<td>GUID of the resource in DataMiner representing the pool if the pool is bookable.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>resource_pool_id</td>
 			<td>String</td>
-			<td>guid of the resource pool in dataminer</td>
+			<td>GUID of the resource pool in DataMiner.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -708,14 +708,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Linked resource pool</td>
 			<td>Guid</td>
-			<td>When booking the current resource pool , a resource from the linked resource pool will also need to be booked (automatic or manual)</td>
+			<td>When booking the current resource pool, a resource from the linked resource pool must also be booked (automatically or manually).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Resource selection type</td>
 			<td>GenericEnum`1</td>
-			<td>Should a resource from the linked resource pool be selected automatically or manually selected by the user?</td>
+			<td>Specifies whether a resource from the linked resource pool should be selected automatically or manually by the user.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -723,37 +723,37 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">External metadata</td>
 		</tr>
 		<tr>
-			<td>Module Id</td>
+			<td>Module ID</td>
 			<td>String</td>
-			<td>The module id of the DOM definition that the resource was created for</td>
+			<td>The module ID of the DOM definition for which the resource was created.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>DOM instance id</td>
+			<td>DOM instance ID</td>
 			<td>String</td>
-			<td>the DOM instance id of the instance that the resource was created from</td>
+			<td>The DOM instance ID of the instance for which the resource was created.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Error script</td>
 			<td>String</td>
-			<td>Name of automation script to execute when error occurs in managing the resource in Resource Studio</td>
+			<td>Name of the Automation script to execute when an error occurs in managing the resource in Resource Studio.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Externally managed</td>
 			<td>Boolean</td>
-			<td>Indicates if this resource was created from another app or managed solely  by resource studio</td>
+			<td>Indicates whether this resource was created from another app or managed solely by Resource Studio.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Booking Extension Script</td>
 			<td>String</td>
-			<td>Script which will be triggered when the current resource is being booked. This allows to include related resources into the same booking based on predefined relations or custom logic. </td>
+			<td>Script that will be triggered when the current resource is being booked. This allows related resources to be included in the same booking based on predefined relations or custom logic.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -793,49 +793,49 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Error details</td>
 			<td>String</td>
-			<td>Details in case an error occurs while synchronizing with DMA</td>
+			<td>Details provided when an error occurs during synchronization with DMA.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Favourite</td>
+			<td>Favorite</td>
 			<td>Boolean</td>
-			<td>Indicates that this resource can be used as a default for resource duplication/bulk creation</td>
+			<td>Indicates that this resource can be used as a default for resource duplication/bulk creation.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Pending</td>
 			<td>Boolean</td>
-			<td>Indicates if the resource is already in place or not. To be used for resources that will become available in the future, but can already be added to jobs in the future. </td>
+			<td>Indicates if the resource is already in place or not. To be used for resources that will become available in the future, but can already be added to future jobs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Element</td>
 			<td>String</td>
-			<td>If resource is of type Element, select a specific element to link the resource to</td>
+			<td>If the resource is of type 'Element', select a specific element to link to the resource.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Service</td>
 			<td>String</td>
-			<td>If resource is of type Service, define a specific service to link the resource to</td>
+			<td>If the resource is of type 'Service', define a specific service to link to the resource.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Concurrency</td>
 			<td>Int64</td>
-			<td>indicates how many times this resource can be booked during the same time interval</td>
+			<td>Indicates the number of times this resource can be booked within the same time interval.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Link details</td>
 			<td>String</td>
-			<td>summarizes how the resource is linked (to an element, function...)</td>
+			<td>Summarizes how the resource is linked (e.g. to an element, function).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -845,14 +845,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>pool_ids</td>
 			<td>String</td>
-			<td>comma separated list of guids of resource pool DOMs to which the resource belongs</td>
+			<td>Comma-separated list of GUIDs representing the resource pool DOMs to which the resource belongs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>resource_id</td>
 			<td>Guid</td>
-			<td>resource in DataMiner</td>
+			<td>Resource in DataMiner.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -890,14 +890,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>input vSGs</td>
 			<td>Guid</td>
-			<td>link resource to input virtual signal groups that can be used to setup connections to the resource</td>
+			<td>Links the resource to input virtual signal groups that can be used to set up connections to the resource.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>output vSGs</td>
 			<td>Guid</td>
-			<td>link resource to input virtual signal groups that can be used to output connections from the resource</td>
+			<td>Links the resource to output virtual signal groups that can be used to output connections from the resource.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -941,7 +941,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Automation script name</td>
 			<td>String</td>
-			<td>Specify script to configure resource ad-hoc</td>
+			<td>Specifies the script used to configure the resource ad hoc.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1013,7 +1013,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>URL</td>
 			<td>String</td>
-			<td>link to visio or monitoring page for resource</td>
+			<td>Link to Visio or Monitoring page for resource.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1055,37 +1055,37 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">External metadata</td>
 		</tr>
 		<tr>
-			<td>Module Id</td>
+			<td>Module ID</td>
 			<td>String</td>
-			<td>The module id of the DOM definition that the resource was created for</td>
+			<td>The module ID of the DOM definition for which the resource was created.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>DOM instance id</td>
+			<td>DOM instance ID</td>
 			<td>String</td>
-			<td>the DOM instance id of the instance that the resource was created from</td>
+			<td>The DOM instance ID of the instance for which the resource was created.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Error script</td>
 			<td>String</td>
-			<td>Name of automation script to execute when error occurs in managing the resource in Resource Studio</td>
+			<td>Name of the Automation script to execute when an error occurs in managing the resource in Resource Studio.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Externally managed</td>
 			<td>Boolean</td>
-			<td>Indicates if this resource was created from another app or managed solely  by resource studio</td>
+			<td>Indicates whether this resource was created from another app or managed solely by Resource Studio.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Booking Extension Script</td>
 			<td>String</td>
-			<td>Script which will be triggered when the current resource is being booked. This allows to include related resources into the same booking based on predefined relations or custom logic. </td>
+			<td>Script that will be triggered when the current resource is being booked. This allows related resources to be included in the same booking based on predefined relations or custom logic.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1181,12 +1181,12 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Transponder Plan</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Transponder plan</td>
 		</tr>
 		<tr>
 			<td>Plan name</td>
 			<td>String</td>
-			<td>A meaningful name for this plan such as “Standard C Band 36MHz.”</td>
+			<td>A meaningful name for this plan, such as 'Standard C Band 36MHz'.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1198,7 +1198,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Slot Definition</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Slot definition</td>
 		</tr>
 		<tr>
 			<td>Definition Slot name</td>
@@ -1210,21 +1210,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Definition Slot size</td>
 			<td>Double</td>
-			<td>Defined the size of slot that will be created. For ex., if the slots size is 9MHz and this plan is applied to a full transponder, four 9MHz slots would be created.</td>
+			<td>Defines the size of the slot to be created. For example, if the slot size is 9 MHz and this plan is applied to a full transponder, four 9 MHz slots will be created.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Relative start frequency</td>
 			<td>Double</td>
-			<td>This value provides an offset from the transponder’s start frequency where the slots will start to be generated. For ex., if you want slots to only be created on the bottom half of a 36MHz transponder, this Relative start frequency would be 18.</td>
+			<td>This value provides an offset from the transponder's start frequency for slot generation. For example, to create slots only on the bottom half of a 36 MHz transponder, the relative start frequency would be 18.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Relative end frequency</td>
 			<td>Double</td>
-			<td>Similar to the Relative start frequency, this value is an offset from the transponders start frequency at which point the slots will stop being built. For ex., if the Relative start frequency is 0 and the Relative end frequency is 18, slots will only be built for the first 18 units of the transponder.</td>
+			<td>Similar to the relative start frequency, this value provides an offset from the transponder's end frequency at which slot generation stops. For example, if the relative start frequency is 0 and the relative end frequency is 18, slots will only be created for the first 18 units of the transponder.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1250,7 +1250,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Beam name</td>
 			<td>String</td>
-			<td>A descriptive name of the Beam. For ex., AMC 11 – C Band Americas.</td>
+			<td>A descriptive name for the beam, e.g. AMC 11 – C Band Americas.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1264,14 +1264,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Link type</td>
 			<td>GenericEnum`1</td>
-			<td>An enumeration that describes if this is a Feeder or User type.</td>
+			<td>An enumeration that describes if this is a 'Feeder' or 'User' type.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Transmission type</td>
 			<td>GenericEnum`1</td>
-			<td>Describes if this beam is a Transmit, Receive or Carrier in Carrier type beam.</td>
+			<td>Describes if this beam is a 'Transmit', 'Receive' or 'Carrier in Carrier' type beam.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1318,7 +1318,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Transponder name</td>
 			<td>String</td>
-			<td>The name of the transponder. For ex, Galaxy 19 T01.</td>
+			<td>The name of the transponder, e.g. Galaxy 19 T01.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1379,14 +1379,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Satellite name</td>
 			<td>String</td>
-			<td>The full name of the Satellite that will be the primary reference throughout the application.</td>
+			<td>The full name of the satellite, which will be the primary reference throughout the application.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Satellite abbreviation</td>
 			<td>String</td>
-			<td>A short abbreviation (3-5 characters are suggested) that will be used to reference this satellite when a shorter name reference is needed like when building slot names. For ex., Galaxy 19 might be shortened to G19 or GAL19.</td>
+			<td>A short abbreviation (3-5 characters are suggested) that will be used to reference this satellite when a shorter name is needed, such as when building slot names. For example, Galaxy 19 might be shortened to G19 or GAL19.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1431,7 +1431,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Operator</td>
 			<td>String</td>
-			<td>The company that operates the Satellite.</td>
+			<td>The company that operates the satellite.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1445,7 +1445,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Applications</td>
 			<td>String</td>
-			<td>Describes the general application for this satellite.</td>
+			<td>Describes the general application of this satellite.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1469,12 +1469,12 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Country</td>
 			<td>String</td>
-			<td>The country from which the satellite originated.</td>
+			<td>The satellite's country of origin.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Launch Information</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Launch information</td>
 		</tr>
 		<tr>
 			<td>Launch info</td>
@@ -1512,7 +1512,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Experience</td>
 			<td>String</td>
-			<td>i.e. Junior, Senior, Manager, etc...</td>
+			<td>For example, Junior, Senior, Manager, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1538,7 +1538,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Skill</td>
 			<td>String</td>
-			<td>i.e. Producer, Director, Video Editor, Audio Mixer, etc...</td>
+			<td>For example, Producer, Director, Video Editor, Audio Mixer, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1564,7 +1564,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Category</td>
 			<td>String</td>
-			<td>i.e. Software Company, Social Media, Production Studio, etc...</td>
+			<td>For example, Software Company, Social Media, Production Studio, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1585,12 +1585,12 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Role Information</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Role information</td>
 		</tr>
 		<tr>
 			<td>Role</td>
 			<td>String</td>
-			<td>The role a contact takes when assigned to a team</td>
+			<td>The role a contact assumes when assigned to a team.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1616,21 +1616,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Full name</td>
 			<td>String</td>
-			<td>This contact's full name</td>
+			<td>This contact's full name.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Personal skills</td>
 			<td>Guid</td>
-			<td>i.e. Producer, Director, Video Editor, Audio Mixer</td>
+			<td>For example, Producer, Director, Video Editor, Audio Mixer, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Experience level</td>
 			<td>Guid</td>
-			<td>i.e. Junior, Senior, Manager, etc...</td>
+			<td>For example, Junior, Senior, Manager, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1647,42 +1647,42 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Email</td>
 			<td>String</td>
-			<td>This contact's email address</td>
+			<td>This contact's email address.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Phone</td>
 			<td>String</td>
-			<td>This contact's phone number</td>
+			<td>This contact's phone number.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Street address</td>
 			<td>String</td>
-			<td>This contact's current residing street address</td>
+			<td>This contact's current street address of residence.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>City</td>
 			<td>String</td>
-			<td>This contact's current residing city</td>
+			<td>This contact's current city of residence.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Zip</td>
+			<td>ZIP</td>
 			<td>Int64</td>
-			<td>This contact's current zip code</td>
+			<td>This contact's current ZIP code.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Country</td>
 			<td>GenericEnum`1</td>
-			<td>This contact's current residing country</td>
+			<td>This contact's current country of residence.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1692,7 +1692,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Organization</td>
 			<td>Guid</td>
-			<td>This contact's current organization</td>
+			<td>This contact's current organization.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1702,14 +1702,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Team</td>
 			<td>Guid</td>
-			<td>This contact's team membership</td>
+			<td>This contact's team membership.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Team role</td>
 			<td>Guid</td>
-			<td>This contact's current role in the specified team</td>
+			<td>This contact's current role in the specified team.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1745,35 +1745,35 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Team name</td>
 			<td>String</td>
-			<td>This team's name</td>
+			<td>This team's name.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Team email</td>
 			<td>String</td>
-			<td>This team's email address</td>
+			<td>This team's email address.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Team description</td>
 			<td>String</td>
-			<td>What does this team do?</td>
+			<td>A description of the team's functions and responsibilities.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Team expertise(s)</td>
 			<td>Guid</td>
-			<td>i.e. Video Editing, Audio Mixing, Contribution, OTT</td>
+			<td>For example, Video Editing, Audio Mixing, Contribution, OTT, etc.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Bookable</td>
 			<td>Boolean</td>
-			<td>Can this team's time be booked and scheduled?</td>
+			<td>Indicates whether this team's time can be booked and scheduled.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1785,7 +1785,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource Pool</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool</td>
 		</tr>
 		<tr>
 			<td>Linked Resource Pool</td>
@@ -1854,7 +1854,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Expertise</td>
 			<td>String</td>
-			<td>i.e. Video Editing, Audio Mixing, Contribution, OTT, etc...</td>
+			<td>For example, Video Editing, Audio Mixing, Contribution, OTT, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1880,21 +1880,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Organization name</td>
 			<td>String</td>
-			<td>The name of this organization</td>
+			<td>The name of this organization.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Category</td>
 			<td>Guid</td>
-			<td>i.e. Software Company, Social Media, Production Studio, etc...</td>
+			<td>For example, Software Company, Social Media, Production Studio, etc.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Icon</td>
 			<td>String</td>
-			<td>The relative qualified path to this organization's icon. This is a backend field descriptor/</td>
+			<td>The relative qualified path to the organization's icon. This is a backend field descriptor.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1932,74 +1932,74 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow info</td>
 		</tr>
 		<tr>
 			<td>Workflow name</td>
 			<td>String</td>
-			<td>A short name for the Workflow. </td>
+			<td>A short name for the workflow. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Workflow description</td>
 			<td>String</td>
-			<td>A description of the Workflow that could include what the workflow does, steps, etc. </td>
+			<td>A description of the workflow, which can include its purpose, steps, and functionality.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Favorite</td>
 			<td>Boolean</td>
-			<td>Flag that indicates if this Workflow is a favorite. </td>
+			<td>Flag that indicates whether this workflow is a favorite. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Priority</td>
 			<td>GenericEnum`1</td>
-			<td>Describes the relative importance of the Workflow.</td>
+			<td>Describes the relative importance of the workflow.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow Execution</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow execution</td>
 		</tr>
 		<tr>
 			<td>Workflow execution script</td>
 			<td>String</td>
-			<td>Can optionally be used to specify a script that should be triggered when this workflow is executed</td>
+			<td>Specifies a script to be triggered when this workflow is executed (optional).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring Settings</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring settings</td>
 		</tr>
 		<tr>
 			<td>At job start</td>
 			<td>GenericEnum`1</td>
-			<td>Determines if and when a service will be created for this workflow. </td>
+			<td>Determines whether and when a service will be created for this workflow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>At job end</td>
 			<td>GenericEnum`1</td>
-			<td>If a service was created for this workflow, should it be deleted.</td>
+			<td>Determines whether and when a service will be deleted for this workflow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Monitoring service template</td>
 			<td>String</td>
-			<td>The name of the Service Template that will be used to create a service when the Workflow is run. </td>
+			<td>The name of the service template, which will be used to create a service when the workflow is run. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Monitoring service ID</td>
 			<td>String</td>
-			<td>The ID of the service associated to this Job. </td>
+			<td>The ID of the service associated to this job. </td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
@@ -2009,147 +2009,154 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Node ID</td>
 			<td>String</td>
-			<td>An auto-assigned value representing the ID of this Node within the Job.</td>
+			<td>An auto-assigned value representing the ID of this node within the job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node alias</td>
 			<td>String</td>
-			<td>Allows the user to provide a more user friendly name for the node. </td>
+			<td>Allows the user to provide a more user-friendly name for the node. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node type</td>
 			<td>GenericEnum`1</td>
-			<td>Specifies the category or function of a node within a Job.</td>
+			<td>Specifies the category or function of a node within a job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node reference ID</td>
 			<td>String</td>
-			<td>The DOM GUID of the resource, resource pool, etc that this node represents. </td>
+			<td>The DOM GUID of the resource, resource pool, or other entity that this node represents.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node parent reference ID</td>
 			<td>String</td>
-			<td>The DOM GUID of the parent resource, resource pool, etc that this node represents. </td>
+			<td>The DOM GUID of the parent resource, resource pool, or other entity that this node represents.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node icon</td>
 			<td>String</td>
-			<td>The name of the Icon that will be used for the Workflow visualization.</td>
+			<td>The name of the icon that will be used for the workflow visualization.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Automatic configuration?</td>
 			<td>Boolean</td>
-			<td>Indicates if the Node needs to be configured when the Job is run.</td>
+			<td>Indicates if the node needs to be configured when the job is run.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Configuration parameters</td>
 			<td>String</td>
-			<td>A JSON defining a list of configuration parameters and values for elements and virtual functions for the user to set. </td>
+			<td>A JSON object defining a list of configuration parameters and values for elements and virtual functions for user configuration.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Ad-hoc control script</td>
 			<td>String</td>
-			<td>Is an automation script name that will be run to configure this node. </td>
+			<td>An Automation script name that will be executed to configure this node.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Visualization order</td>
 			<td>Int64</td>
-			<td>Controls the order in which the Nodes are shown in the visualization. </td>
+			<td>Controls the order in which the nodes are shown in the visualization. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node configuration execution order</td>
 			<td>Int64</td>
-			<td>Indicates the order in which the Nodes will be configured. </td>
+			<td>Indicates the order in which the nodes will be configured. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Manual configuration complete?</td>
 			<td>Boolean</td>
-			<td>This flag is TRUE if the node still need some sort of manual configuration applied. </td>
+			<td>This flag is TRUE if the node still requires some form of manual configuration. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Reserve node?</td>
 			<td>Boolean</td>
-			<td>If checked, a booking will be created for this Node and therefore guarantee reource availability. Leave unchecked if the Node doesn't require a booking.  </td>
+			<td>If checked, a booking will be created for this node to ensure resource availability. Leave unchecked if the node does not require a booking.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Hidden?</td>
 			<td>Boolean</td>
-			<td>When makred TRUE, this node will be reserved as part of the booking, however it will not be shown as part of the Job, nor will it factor in the calculation of rates or costs. </td>
+			<td>When marked TRUE, this node will be reserved as part of the booking but will not be displayed in the job or included in the calculation of rates or costs.</td>
 			<td>Read</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Capability requirements</td>
 			<td>String</td>
-			<td>Specifies which capabilities are requried for this node. </td>
+			<td>Specifies which capabilities are required for this node.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Capacity requirements</td>
 			<td>String</td>
-			<td>Specifies who much capacity will be consumed for this node. </td>
+			<td>Specifies how much capacity will be consumed by this node.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node start time</td>
 			<td>DateTime</td>
-			<td>If different from the Job Start time, the time when the resource started being used.</td>
+			<td>If different from the Job Start time, this indicates when the resource started being used.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node end time</td>
 			<td>DateTime</td>
-			<td>If different from the Job End time, the time when the resource was finished being used.</td>
+			<td>"If different from the Job End time, this indicates when the resource finished being used.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Linked booking IDs</td>
 			<td>String</td>
-			<td>If the Node resource has an associated SRM Booking, this field stores the Booking ID from SRM. </td>
+			<td>If the node resource has an associated SRM booking, this field stores the corresponding booking ID from SRM.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Resource select mode</td>
 			<td>GenericEnum`1</td>
-			<td>Indicates how and at what time the resource assignment is expected to be done</td>
+			<td>Indicates how and when the resource assignment is expected to be made.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Resource select state</td>
 			<td>GenericEnum`1</td>
-			<td>Indicates in what state the resource selection process is</td>
+			<td>Indicates the current state of the resource selection process.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Billable?</td>
+			<td>Boolean</td>
+			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2159,70 +2166,70 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Connection ID</td>
 			<td>String</td>
-			<td>An auto-assigned value representing the ID of this Edge within the Workflow.</td>
+			<td>An auto-assigned value representing the ID of this edge within the workflow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Source node ID</td>
 			<td>String</td>
-			<td>The ID of the Node that is the Source of this connection.</td>
+			<td>The ID of the node that is the source of this connection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Destination node ID</td>
 			<td>String</td>
-			<td>The ID of the Node that is the Destination of this connection.</td>
+			<td>The ID of the node that is the destination of this connection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection alias</td>
 			<td>String</td>
-			<td>An optional user friendly name for the connection should the user wish to provide one. </td>
+			<td>An optional user-friendly name for the connection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection execution order</td>
 			<td>Int64</td>
-			<td>Indicates the oder in which the connections will be made. </td>
+			<td>Indicates the order in which the connections will be made. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection type</td>
 			<td>GenericEnum`1</td>
-			<td>Defines if this connection will be made based on the levels or the tags of its source and destination</td>
+			<td>Defines whether this connection is based on the levels or tags of its source and destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection subtype</td>
 			<td>GenericEnum`1</td>
-			<td>Further specifies how connection will be made. 'All': all matching levels or tags between source node and destination node will be connected. 'Predefined subset': only valid for level-based connections. In this case, only a subset of the matching levels between source node and destination node will be connected, for example all audio levels. 'Custom subset': the subset of matching levels or tags that will be connected can be freely defined, for example level three to five. Shuffle: levels or tags can be freely mapped from source to destination.</td>
+			<td>Further specifies how the connection will be made. 'All': All matching levels or tags between the source and destination nodes will be connected. 'Predefined subset': Only valid for level-based connections. Only a predefined subset of matching levels between the source and destination nodes will be connected, for example, all audio levels. 'Custom subset': A freely defined subset of matching levels or tags will be connected, for example, level three to five. 'Shuffle': Levels or tags can be freely mapped from source to destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Predefined subset</td>
 			<td>GenericEnum`1</td>
-			<td>In case of a level-based connection of subtype 'predefined subset', this indicates the subset of levels to be used. This subset is combination of all video levels ('V'), all audio levels ('A') and/or all data levels ('D').</td>
+			<td>In the case of a level-based connection of subtype 'predefined subset,' this indicates the subset of levels to be used. This subset is a combination of all video levels ('V'), all audio levels ('A'), and/or all data levels ('D').</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Connection Details</td>
+			<td>Connection details</td>
 			<td>String</td>
-			<td>In case of a 'custom subset' or 'shuffle' connection, this field contains the exact mapping of levels or tags between source and destination.</td>
+			<td>For 'custom subset' or 'shuffle' connections, this field contains the exact mapping of levels or tags between the source and destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection execution script</td>
 			<td>String</td>
-			<td>Can optionally be used to specify a script that should be used when setting up this connection during during execution of the workfow or job</td>
+			<td>Optionally specifies a script to be used when setting up this connection during the execution of the workflow or job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2243,33 +2250,33 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job States</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job states</td>
 		</tr>
 		<tr>
 			<td>Job State</td>
 			<td>String</td>
-			<td>A user defined Job Status that allows more customization over how Jobs are processed.</td>
+			<td>A user-defined job status that allows more customization over how jobs are processed.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Job DOM state</td>
 			<td>GenericEnum`1</td>
-			<td>User defined status for a job. The job DOM state is the base job state that this userdefined job status maps to. </td>
+			<td>A user-defined status for a job. The job DOM state is the base job state that this user-defined job status maps to. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Default</td>
 			<td>Boolean</td>
-			<td>The default state to set on creation of a job</td>
+			<td>The default state assigned upon the creation of a job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Active</td>
 			<td>Boolean</td>
-			<td>Only active states will be available on the job</td>
+			<td>Only active states will be available for the job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2290,7 +2297,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Session Data User</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Session data user</td>
 		</tr>
 		<tr>
 			<td>user</td>
@@ -2300,7 +2307,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Session Data Store</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Session data store</td>
 		</tr>
 		<tr>
 			<td>Job Id</td>
@@ -2310,7 +2317,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Session Filter</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Session filter</td>
 		</tr>
 		<tr>
 			<td>Filter Type</td>
@@ -2322,14 +2329,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Filter Key</td>
 			<td>String</td>
-			<td>Guid of the DOM instance which represents the key we are filtering on</td>
+			<td>The GUID of the DOM instance representing the key being filtered.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Filter Values</td>
 			<td>String</td>
-			<td>Values to filter on (comma separated list of DOM guids)  </td>
+			<td>Values to filter on (a comma-separated list of DOM GUIDs).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2350,38 +2357,38 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job Settings</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job settings</td>
 		</tr>
 		<tr>
-			<td>Job id prefix</td>
+			<td>Job ID prefix</td>
 			<td>String</td>
-			<td>The prefix is a string that will be pre-pended to each Job ID</td>
+			<td>The prefix is a string that will be prepended to each Job ID.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job id minimum digits</td>
+			<td>Job ID minimum digits</td>
 			<td>Int64</td>
-			<td>Defines the minimum number of digits in the auto generated value. Values should be limited between 1 and 20</td>
+			<td>Defines the minimum number of digits in the auto-generated value, which must be between 1 and 20.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job id starting seed</td>
+			<td>Job ID starting seed</td>
 			<td>Int64</td>
-			<td>Provides the "starting seed" when first configuring the Job IDs</td>
+			<td>Provides the "starting seed" when first configuring the job IDs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job id increment</td>
+			<td>Job ID increment</td>
 			<td>Int64</td>
-			<td>an integer that defines the increment in which the auto generated ID increases. </td>
+			<td>An integer defining the increment by which the auto-generated ID increases.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job id next sequence</td>
+			<td>Job ID next sequence</td>
 			<td>Int64</td>
 			<td></td>
 			<td>Read/Write</td>
@@ -2404,26 +2411,26 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job info</td>
 		</tr>
 		<tr>
 			<td>Job ID</td>
 			<td>String</td>
-			<td>Human-readable ID of a job, auto-generated for each job instance in a certain format, e.g. SLC_0001.</td>
+			<td>A human-readable ID for a job, auto-generated for each job instance in a specific format, e.g. SLC_0001.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Name</td>
+			<td>Job name</td>
 			<td>String</td>
-			<td>A short name for the Job. </td>
+			<td>A short name for the job. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Job Description</td>
+			<td>Job description</td>
 			<td>String</td>
-			<td>A description of the Workflow that could include what the workflow does, steps, etc.</td>
+			<td>A description of the workflow, including its purpose, steps, and functionality.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2435,23 +2442,23 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Status</td>
+			<td>Job status</td>
 			<td>Guid</td>
-			<td>The user defined status value indicting where in it's life cycle a job is at. </td>
+			<td>The user-defined status value indicating where a job is in its life cycle.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Start</td>
+			<td>Job start</td>
 			<td>DateTime</td>
-			<td>The time the Job starts. </td>
+			<td>The time the job starts. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Job End</td>
+			<td>Job end</td>
 			<td>DateTime</td>
-			<td>The time the Job ends. </td>
+			<td>The time the job ends. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -2465,14 +2472,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Approx out time</td>
 			<td>DateTime</td>
-			<td>Optional time that could be used at the end of a Job if the Job goes longer than the scheduled End Time. </td>
+			<td>An optional time that may be used at the end of a job if it exceeds the scheduled end time.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Priority</td>
+			<td>Job priority</td>
 			<td>GenericEnum`1</td>
-			<td>Describes the relative importance of the Job. </td>
+			<td>Describes the relative importance of the job. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -2484,92 +2491,92 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Source</td>
+			<td>Job source</td>
 			<td>String</td>
-			<td>Tracks the source of a Job. Potential values would be from a user, from the API, from an element, etc. </td>
+			<td>Tracks the source of a job, with potential values including user, API, element, etc.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Notes</td>
+			<td>Job notes</td>
 			<td>String</td>
-			<td>General note field to communicate on anything job related</td>
+			<td>A general note field for job-related communication.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Original Job Start</td>
+			<td>Original job start</td>
 			<td>DateTime</td>
-			<td>The start date/time of the job at the time of job confirmation</td>
+			<td>The start date/time of the job at the time of job confirmation.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Original Job End</td>
+			<td>Original job end</td>
 			<td>DateTime</td>
-			<td>The end date/time of the job at the time of job confirmation</td>
+			<td>The end date/time of the job at the time of job confirmation.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Confirmation</td>
+			<td>Job confirmation</td>
 			<td>DateTime</td>
-			<td>The date/time the job was set to confirmed</td>
+			<td>The date/time the job was confirmed.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Cancellation</td>
+			<td>Job cancellation</td>
 			<td>DateTime</td>
-			<td>The date/time the job was canceled</td>
+			<td>The date/time the job was canceled.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Action Status</td>
+			<td>Action status</td>
 			<td>GenericEnum`1</td>
-			<td>Indicates if the job still needs manual resource selection</td>
+			<td>Indicates if the job still needs manual resource selection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring Settings</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring settings</td>
 		</tr>
 		<tr>
 			<td>At job start</td>
 			<td>GenericEnum`1</td>
-			<td>Determines if and when a service will be created for this workflow. </td>
+			<td>Determines whether and when a service will be created for this workflow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>At job end</td>
 			<td>GenericEnum`1</td>
-			<td>If a service was created for this workflow, should it be deleted.</td>
+			<td>Determines whether and when a service will be deleted for this workflow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Monitoring service template</td>
 			<td>String</td>
-			<td>The name of the Service Template that will be used to create a service when the Workflow is run. </td>
+			<td>The name of the service template, which will be used to create a service when the workflow is run. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Monitoring service ID</td>
 			<td>String</td>
-			<td>The ID of the service associated to this Job. </td>
+			<td>The ID of the service associated to this job. </td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job Execution </td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job execution </td>
 		</tr>
 		<tr>
-			<td>Job Execution</td>
+			<td>Job execution</td>
 			<td>String</td>
-			<td>A script that will be run when the Job is started. </td>
+			<td>A script that will run when the job starts.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2579,147 +2586,154 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Node ID</td>
 			<td>String</td>
-			<td>An auto-assigned value representing the ID of this Node within the Job.</td>
+			<td>An auto-assigned value representing the ID of this node within the job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node alias</td>
 			<td>String</td>
-			<td>Allows the user to provide a more user friendly name for the node. </td>
+			<td>Allows the user to provide a more user-friendly name for the node. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node type</td>
 			<td>GenericEnum`1</td>
-			<td>Specifies the category or function of a node within a Job.</td>
+			<td>Specifies the category or function of a node within a job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node reference ID</td>
 			<td>String</td>
-			<td>The DOM GUID of the resource, resource pool, etc that this node represents. </td>
+			<td>The DOM GUID of the resource, resource pool, or other entity that this node represents.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node parent reference ID</td>
 			<td>String</td>
-			<td>The DOM GUID of the parent resource, resource pool, etc that this node represents. </td>
+			<td>The DOM GUID of the parent resource, resource pool, or other entity that this node represents.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node icon</td>
 			<td>String</td>
-			<td>The name of the Icon that will be used for the Workflow visualization.</td>
+			<td>The name of the icon that will be used for the workflow visualization.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Automatic configuration?</td>
 			<td>Boolean</td>
-			<td>Indicates if the Node needs to be configured when the Job is run.</td>
+			<td>Indicates if the node needs to be configured when the job is run.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Configuration parameters</td>
 			<td>String</td>
-			<td>A JSON defining a list of configuration parameters and values for elements and virtual functions for the user to set. </td>
+			<td>A JSON object defining a list of configuration parameters and values for elements and virtual functions for user configuration.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Ad-hoc control script</td>
 			<td>String</td>
-			<td>Is an automation script name that will be run to configure this node. </td>
+			<td>An Automation script name that will be executed to configure this node.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Visualization order</td>
 			<td>Int64</td>
-			<td>Controls the order in which the Nodes are shown in the visualization. </td>
+			<td>Controls the order in which the nodes are shown in the visualization. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node configuration execution order</td>
 			<td>Int64</td>
-			<td>Indicates the order in which the Nodes will be configured. </td>
+			<td>Indicates the order in which the nodes will be configured. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Manual configuration complete?</td>
 			<td>Boolean</td>
-			<td>This flag is TRUE if the node still need some sort of manual configuration applied. </td>
+			<td>This flag is TRUE if the node still requires some form of manual configuration. </td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Reserve node?</td>
 			<td>Boolean</td>
-			<td>If checked, a booking will be created for this Node and therefore guarantee reource availability. Leave unchecked if the Node doesn't require a booking.  </td>
+			<td>If checked, a booking will be created for this node to ensure resource availability. Leave unchecked if the node does not require a booking.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Hidden?</td>
 			<td>Boolean</td>
-			<td>When makred TRUE, this node will be reserved as part of the booking, however it will not be shown as part of the Job, nor will it factor in the calculation of rates or costs. </td>
+			<td>When marked TRUE, this node will be reserved as part of the booking but will not be displayed in the job or included in the calculation of rates or costs.</td>
 			<td>Read</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Capability requirements</td>
 			<td>String</td>
-			<td>Specifies which capabilities are requried for this node. </td>
+			<td>Specifies which capabilities are required for this node.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Capacity requirements</td>
 			<td>String</td>
-			<td>Specifies who much capacity will be consumed for this node. </td>
+			<td>Specifies how much capacity will be consumed by this node.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node start time</td>
 			<td>DateTime</td>
-			<td>If different from the Job Start time, the time when the resource started being used.</td>
+			<td>If different from the Job Start time, this indicates when the resource started being used.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node end time</td>
 			<td>DateTime</td>
-			<td>If different from the Job End time, the time when the resource was finished being used.</td>
+			<td>"If different from the Job End time, this indicates when the resource finished being used.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Linked booking IDs</td>
 			<td>String</td>
-			<td>If the Node resource has an associated SRM Booking, this field stores the Booking ID from SRM. </td>
+			<td>If the node resource has an associated SRM booking, this field stores the corresponding booking ID from SRM.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Resource select mode</td>
 			<td>GenericEnum`1</td>
-			<td>Indicates how and at what time the resource assignment is expected to be done</td>
+			<td>Indicates how and when the resource assignment is expected to be made.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Resource select state</td>
 			<td>GenericEnum`1</td>
-			<td>Indicates in what state the resource selection process is</td>
+			<td>Indicates the current state of the resource selection process.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Billable?</td>
+			<td>Boolean</td>
+			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2729,94 +2743,94 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Connection ID</td>
 			<td>String</td>
-			<td>An auto-assigned value representing the ID of this Edge within the Workflow.</td>
+			<td>An auto-assigned value representing the ID of this edge within the workflow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Source node ID</td>
 			<td>String</td>
-			<td>The ID of the Node that is the Source of this connection.</td>
+			<td>The ID of the node that is the source of this connection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Destination node ID</td>
 			<td>String</td>
-			<td>The ID of the Node that is the Destination of this connection.</td>
+			<td>The ID of the node that is the destination of this connection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection alias</td>
 			<td>String</td>
-			<td>An optional user friendly name for the connection should the user wish to provide one. </td>
+			<td>An optional user-friendly name for the connection.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection execution order</td>
 			<td>Int64</td>
-			<td>Indicates the oder in which the connections will be made. </td>
+			<td>Indicates the order in which the connections will be made. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection type</td>
 			<td>GenericEnum`1</td>
-			<td>Defines if this connection will be made based on the levels or the tags of its source and destination</td>
+			<td>Defines whether this connection is based on the levels or tags of its source and destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection subtype</td>
 			<td>GenericEnum`1</td>
-			<td>Further specifies how connection will be made. 'All': all matching levels or tags between source node and destination node will be connected. 'Predefined subset': only valid for level-based connections. In this case, only a subset of the matching levels between source node and destination node will be connected, for example all audio levels. 'Custom subset': the subset of matching levels or tags that will be connected can be freely defined, for example level three to five. Shuffle: levels or tags can be freely mapped from source to destination.</td>
+			<td>Further specifies how the connection will be made. 'All': All matching levels or tags between the source and destination nodes will be connected. 'Predefined subset': Only valid for level-based connections. Only a predefined subset of matching levels between the source and destination nodes will be connected, for example, all audio levels. 'Custom subset': A freely defined subset of matching levels or tags will be connected, for example, level three to five. 'Shuffle': Levels or tags can be freely mapped from source to destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Predefined subset</td>
 			<td>GenericEnum`1</td>
-			<td>In case of a level-based connection of subtype 'predefined subset', this indicates the subset of levels to be used. This subset is combination of all video levels ('V'), all audio levels ('A') and/or all data levels ('D').</td>
+			<td>In the case of a level-based connection of subtype 'predefined subset,' this indicates the subset of levels to be used. This subset is a combination of all video levels ('V'), all audio levels ('A'), and/or all data levels ('D').</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Connection Details</td>
+			<td>Connection details</td>
 			<td>String</td>
-			<td>In case of a 'custom subset' or 'shuffle' connection, this field contains the exact mapping of levels or tags between source and destination.</td>
+			<td>For 'custom subset' or 'shuffle' connections, this field contains the exact mapping of levels or tags between the source and destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Connection execution script</td>
 			<td>String</td>
-			<td>Can optionally be used to specify a script that should be used when setting up this connection during during execution of the workfow or job</td>
+			<td>Optionally specifies a script to be used when setting up this connection during the execution of the workflow or job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Costing and Billing</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Costing and billing</td>
 		</tr>
 		<tr>
 			<td>Organization</td>
 			<td>Guid</td>
-			<td>The Organziation that owns this Job or for which the Job is being performed. The Organization drives which Contacts and Contracts can be assigned to the Job. </td>
+			<td>The organization that owns this job or for which the job is being performed. The organization determines which contacts and contracts can be assigned to the job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Owner</td>
+			<td>Job owner</td>
 			<td>Guid</td>
-			<td>The main contact for this Job. </td>
+			<td>The main contact for this job. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Additional Contacts</td>
+			<td>Additional contacts</td>
 			<td>List`1</td>
-			<td>Contacts associated to this particular Job.</td>
+			<td>Contacts associated with this particular job.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2830,155 +2844,155 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Job status</td>
 			<td>String</td>
-			<td>The status of the job at the moment when the cost or billing calculation started</td>
+			<td>The status of the job when cost or billing calculation started.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Contract uplift (%)</td>
 			<td>Double</td>
-			<td>Tracks the amount a Job's Rate will be increased, if any. </td>
+			<td>Tracks the percentage by which a job's rate will be increased, if any.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Contract discount (%)</td>
 			<td>Double</td>
-			<td>Tracks the amount the Job is discounted, if any. </td>
+			<td>Tracks the percentage by which the job is discounted, if any.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Speed order increment on top of billing price (%)</td>
 			<td>Double</td>
-			<td>The billing price based % to be charged on top of the billing price if the job started earlier than scheduled</td>
+			<td>The percentage added to the billing price if the job starts earlier than scheduled.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Speed order fixed fee</td>
 			<td>Double</td>
-			<td>A fixed fee to be charged in addition to the % on top of the billing price if the job started earlier than scheduled</td>
+			<td>If a job starts earlier than scheduled, a fixed fee will be added to the existing percentage fee calculated on the total billing price.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Cancellation % of billing price</td>
 			<td>Double</td>
-			<td>% of the billing price to be charged due to job cancellation</td>
+			<td>Percentage of the billing price to be charged due to job cancellation.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Cancellation fixed fee</td>
 			<td>String</td>
-			<td>A fixed fee to be charged in addition to the % of the billing price if the job was cancelled</td>
+			<td>If a job was canceled, a fixed fee will be added to the existing percentage fee calculated on the total billing price.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Last bill calculation</td>
 			<td>DateTime</td>
-			<td>The date and time the of the last calculation of costs and pricing. </td>
+			<td>The date and time of the last calculation of costs and pricing. </td>
 			<td>Read</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Total bill net amount</td>
 			<td>Double</td>
-			<td>Result of total bill after fees</td>
+			<td>The total bill amount after fees.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Total bill net override amount</td>
 			<td>Double</td>
-			<td>Override value for the total bill net amount</td>
+			<td>An override value for the total bill net amount.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Total cost net amount</td>
 			<td>Double</td>
-			<td>Result of total cost calculation</td>
+			<td>The result of the total cost calculation.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Total cost net override amount</td>
 			<td>Double</td>
-			<td>Override value for the total cost net amount</td>
+			<td>An override value for the total cost net amount.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Bill currency</td>
 			<td>Guid</td>
-			<td>The currency used for Rate calculations. By Default the Currency for the Job is set by the selected Contract. READ ONLY</td>
+			<td>The currency used for rate calculations. By default, the job's currency is set by the selected contract. READ ONLY.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Costing and Billing Details </td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Costing and billing details </td>
 		</tr>
 		<tr>
 			<td>Line item type</td>
 			<td>GenericEnum`1</td>
-			<td>Determines whether this cost and billing record is a billing or costing record</td>
+			<td>Determines whether this record is a billing or costing record.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Object Type</td>
+			<td>Object type</td>
 			<td>GenericEnum`1</td>
-			<td>The type of the object whose cost or billing is being calculated. Can be a Node or a Workflow</td>
+			<td>The type of object for which cost or billing is being calculated (node or workflow).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Object ID</td>
 			<td>String</td>
-			<td>Captures the Object ID for which the Cost & Billing applies. Depending on the Object Type field, this can be either the ID of a Workflow or a Node</td>
+			<td>Captures the object ID for which the cost & billing apply. Depending on the object type, this can be the ID of either a workflow or a node.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Description </td>
 			<td>String</td>
-			<td>A system field that describes the Cost & Billing entry. This could be the name of the node that generated the entry, the name of the Workflow, etc. </td>
+			<td>A system field describing the cost and billing entry, such as the name of the node or the workflow that generated it.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Rate card</td>
 			<td>Guid</td>
-			<td>The Rate Card associated to the node or workflow that is used to calculate the total amount.</td>
+			<td>The rate card associated with the node or workflow used to calculate the total amount.</td>
 			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Total net override amount</td>
 			<td>Double</td>
-			<td>Allows a user override for the Total Net Amount and is the value used by the system when calculating the total Rate of the Job.</td>
+			<td>Allows a user override for the total net amount and is the value used by the system to calculate the job's total rate.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Currency</td>
 			<td>Guid</td>
-			<td>The currency in which the total net amount, or its override will be expressed in. When billing, this currency is dervied from the Contract. When calculating Cost, this currency will be dervied from the rate card in use</td>
+			<td>The currency in which the total net amount or its override will be expressed. When billing, this currency is derived from the contract. When calculating cost, this currency is derived from the rate card in use.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Rates</td>
 			<td>List`1</td>
-			<td>The rates used to charge the current workflow or node containing total amount and total net amount after discount</td>
+			<td>The rates used to charge the current workflow or node, including the total amount and total net amount after discounts.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node Capacities</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node capacities</td>
 		</tr>
 		<tr>
 			<td>Capacity</td>
@@ -3002,7 +3016,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node Relationships</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node relationships</td>
 		</tr>
 		<tr>
 			<td>Parent node ID</td>
@@ -3026,7 +3040,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job Error</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job error</td>
 		</tr>
 		<tr>
 			<td>Error Type</td>
@@ -3111,35 +3125,35 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Qty</td>
 			<td>Int64</td>
-			<td>The quantity of units ( units being expressed in Qty Type) ex: 10 EUR per Hour</td>
+			<td>The quantity of units (expressed in Qty Type), e.g. 10 EUR per hour.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Qty type</td>
 			<td>GenericEnum`1</td>
-			<td>Determines whether this rate is charging by the minute, hour, day or per use</td>
+			<td>Determines whether this rate is charged by the minute, hour, day, or per use.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Amount per unit</td>
 			<td>Double</td>
-			<td>The price by each the quantity type. Quantity type being determined by Qty Type field and can be minute, hour, day or per use. </td>
+			<td>The price per unit based on the quantity type, which can be minute, hour, day, or per use.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Total amount</td>
 			<td>Double</td>
-			<td>The quantity multiplied by the amount per unit, before discount</td>
+			<td>The quantity multiplied by the amount per unit, before applying any discounts.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Total net amount</td>
 			<td>Double</td>
-			<td>The total amount with the discount applied</td>
+			<td>The total amount after applying the discount.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3160,50 +3174,50 @@ Definitions that are functionally related are grouped into modules. Below, you c
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job Node Relationship General Actions</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job node relationship general actions</td>
 		</tr>
 		<tr>
 			<td>Relationship</td>
 			<td>Guid</td>
-			<td>Relationship type to which this instance is linked</td>
+			<td>Relationship type to which this instance is linked.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Booking Action</td>
+			<td>Booking action</td>
 			<td>GenericEnum`1</td>
-			<td>Action taken when node is added to a job</td>
+			<td>Action taken when a node is added to a job.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Delete Action</td>
+			<td>Delete action</td>
 			<td>GenericEnum`1</td>
-			<td>Action taken when node is removed from a job</td>
+			<td>Action taken when a node is removed from a job.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job Node Relationship Replace Actions</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job node relationship replace actions</td>
 		</tr>
 		<tr>
-			<td>Replace Action</td>
+			<td>Replace action</td>
 			<td>GenericEnum`1</td>
-			<td>Action taken when node is replaced from a job</td>
+			<td>Action taken when a node is replaced in a job.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Execute Pool Links</td>
+			<td>Execute pool links</td>
 			<td>Boolean</td>
-			<td>Defines if pool links needs to be applied (if available) during a replace action</td>
+			<td>Defines whether to apply pool links (if available) during a replace action.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Execute Booking Extension Script</td>
+			<td>Execute booking extension script</td>
 			<td>Boolean</td>
-			<td>Defines if booking extension scripts needs to get executed (if available) during a replace action</td>
+			<td>Defines whether to execute booking extension scripts (if available) during a replace action.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3227,9 +3241,9 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Level.Info</td>
 		</tr>
 		<tr>
-			<td>Level Number</td>
+			<td>Level number</td>
 			<td>Int64</td>
-			<td>Unique numerical identifier of a level</td>
+			<td>Unique numerical identifier for a level.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -3243,14 +3257,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>TypeOld</td>
 			<td>GenericEnum`1</td>
-			<td>Select a level type (Video, Audio or Data).</td>
+			<td>Select a level type (Video, Audio, or Data).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Type</td>
 			<td>List`1</td>
-			<td>Indicates whether this level is meant to contain a signal carrying video, audio, data or a combination of these three</td>
+			<td>Indicates whether this level is meant to carry a signal that includes video, audio, data, or a combination of these three.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -3295,30 +3309,30 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Operational State</td>
+			<td>Operational state</td>
 			<td>GenericEnum`1</td>
 			<td>Indicate whether this virtual signal group is currently operational or not.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Administrative State</td>
+			<td>Administrative state</td>
 			<td>GenericEnum`1</td>
-			<td>Indicate whether this virtual signal group can currently be used by operators or not. As long as the Administrative state is set to 'Down' this virtual signal group will not appear in operator control panels.</td>
+			<td>Indicate whether this virtual signal group can currently be used by operators or not. As long as the administrative state is set to 'Down', this virtual signal group will not appear in operator control panels.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Type</td>
 			<td>Guid</td>
-			<td>This Virtual Signal Group Type will be used to determine the behavior when connecting this virtual signal group</td>
+			<td>This virtual signal group type will define the behavior when connecting to this virtual signal group.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Locked By</td>
+			<td>Locked by</td>
 			<td>String</td>
-			<td>Indicated who locked this virtual signal group.</td>
+			<td>Indicates who locked this virtual signal group.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3326,14 +3340,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">VirtualSignalGroup.SystemLabels</td>
 		</tr>
 		<tr>
-			<td>UMD Label</td>
+			<td>UMD label</td>
 			<td>String</td>
 			<td>This label will be shown below monitor displays.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Button Label</td>
+			<td>Button label</td>
 			<td>String</td>
 			<td>This shorter label will be shown on control panels because there is not enough room to display the entire name of the virtual signal group.</td>
 			<td>Read/Write</td>
@@ -3343,23 +3357,23 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">VirtualSignalGroup.LinkedFlows</td>
 		</tr>
 		<tr>
-			<td>Flow Level</td>
+			<td>Flow level</td>
 			<td>Guid</td>
-			<td>Level on which this virtual signal group is to contain a sender or receiver</td>
+			<td>Level on which this virtual signal group contains a sender or receiver.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Blue Flow ID</td>
+			<td>Blue flow ID</td>
 			<td>Guid</td>
-			<td>ID of the flow senders or receiver assigned as 'blue' on this level </td>
+			<td>ID of the flow senders or receivers assigned as 'blue' on this level.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Red Flow ID</td>
+			<td>Red flow ID</td>
 			<td>Guid</td>
-			<td>ID of the flow senders or receiver assigned as 'red' on this level </td>
+			<td>ID of the flow senders or receivers assigned as 'red' on this level.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3369,14 +3383,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Domains</td>
 			<td>List`1</td>
-			<td>List of Domains this Virtual Signal Group is part of</td>
+			<td>List of domains to which this virtual signal group belongs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Domain IDs</td>
 			<td>String</td>
-			<td>Comma separated string of Domains this Virtual Signal Group is part of</td>
+			<td>Comma-separated string of domains to which this virtual signal group belongs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3386,14 +3400,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Areas</td>
 			<td>List`1</td>
-			<td>List of Areas this Virtual Signal Group is part of</td>
+			<td>List of areas to which this virtual signal group belongs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Area IDs</td>
 			<td>String</td>
-			<td>Comma separated string of Areas this Virtual Signal Group is part of</td>
+			<td>Comma-separated string of areas to which this virtual signal group belongs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3426,7 +3440,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Workflow</td>
 			<td>Guid</td>
-			<td>Link to the workflow DOM instance</td>
+			<td>Link to the workflow DOM instance.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3434,14 +3448,14 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow.VirtualSignalGroupTypes</td>
 		</tr>
 		<tr>
-			<td>Source Type</td>
+			<td>Source type</td>
 			<td>Guid</td>
 			<td>Type of source virtual signal group that should trigger this workflow.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Destination Type</td>
+			<td>Destination type</td>
 			<td>Guid</td>
 			<td>Type of destination virtual signal group that should trigger this workflow.</td>
 			<td>Read/Write</td>
@@ -3469,7 +3483,7 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Name</td>
 			<td>String</td>
-			<td>Name of this Virtual Signal Group Type</td>
+			<td>Name of this virtual signal group type.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -3500,21 +3514,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Transport Type</td>
+			<td>Transport type</td>
 			<td>GenericEnum`1</td>
-			<td>Select a transport technology type (IP, SDI, SRT ...).</td>
+			<td>Select a transport technology type (e.g. IP, SDI, SRT, etc.).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Operational State</td>
+			<td>Operational state</td>
 			<td>GenericEnum`1</td>
 			<td>Indicate whether this flow is currently operational or not.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Administrative State</td>
+			<td>Administrative state</td>
 			<td>GenericEnum`1</td>
 			<td>Indicate whether this flow can currently be used by operators or not.</td>
 			<td>Read/Write</td>
@@ -3526,28 +3540,28 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Element</td>
 			<td>String</td>
-			<td>Specify the element on which this flow sender/receiver is present</td>
+			<td>Specify the element on which this flow sender/receiver is present.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Interface</td>
 			<td>String</td>
-			<td>Optionally specify the interface on which this flow sender/receiver is present on the element (DCF Interface ID)</td>
+			<td>Optionally specify the interface on which this flow sender/receiver is present on the element (DCF Interface ID).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Interface Name</td>
+			<td>Interface name</td>
 			<td>String</td>
 			<td>Specify the interface name of the element on which this flow originates/is received (optional).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Sub Interface</td>
+			<td>Sub interface</td>
 			<td>String</td>
-			<td>Identifier of the row in parameter table where this sender/receiver can be found. For example: for flows on NMOS IS-05 elements, specify the ID of the NMOS senders/receiver to be used for this flow.</td>
+			<td>Identifier of the row in the parameter table where this sender/receiver can be found. For example, specify the ID of the NMOS sender/receiver for flows on NMOS IS-05 elements.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3559,21 +3573,21 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Source Flow</td>
+			<td>Source flow</td>
 			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Path Order</td>
+			<td>Path order</td>
 			<td>Int64</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Flow Direction</td>
+			<td>Flow direction</td>
 			<td>GenericEnum`1</td>
 			<td>Indicate whether this flow is a sender (Tx) or receiver (Rx).</td>
 			<td>Read/Write</td>
@@ -3585,73 +3599,73 @@ Definitions that are functionally related are grouped into modules. Below, you c
 		<tr>
 			<td>Source IP</td>
 			<td>String</td>
-			<td>Source IP address of this flow. Only applies to IP flows, can be left empty for other flows.</td>
+			<td>Source IP address of this flow. Only applicable to IP flows; can be left empty for other flow types.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Destination IP</td>
 			<td>String</td>
-			<td>Destination IP address of this flow, typically a multicast address. Only applies to IP flows, can be left empty for other flows.</td>
+			<td>Destination IP address of this flow, typically a multicast address. Only applicable to IP flows; can be left empty for other flow types.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Destination Port</td>
+			<td>Destination port</td>
 			<td>Int64</td>
-			<td>Destination port of this flow. Only applies to IP flows, can be left empty for other flows.</td>
+			<td>Destination port for this flow. Only applicable to IP flows; can be left empty for other flow types.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Bitrate (Mbps)</td>
 			<td>Double</td>
-			<td>Bitrate that needs to be transported over the media network for this flow. Only applies to IP flows, can be left empty for other flows.</td>
+			<td>Bitrate that must be transported over the media network for this flow. Only applicable to IP flows; can be left empty for other flow types.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>CoS</td>
 			<td>GenericEnum`1</td>
-			<td>Specify service class for this flow.</td>
+			<td>Specify the service class for this flow.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">SRT Transport</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">SRT transport</td>
 		</tr>
 		<tr>
-			<td>SRT Mode</td>
+			<td>SRT mode</td>
 			<td>GenericEnum`1</td>
-			<td>Indicates the SRT mode of this senders/receiver (caller, listener or rendezvous)</td>
+			<td>Indicates the SRT mode of this senders/receiver (caller, listener, or rendezvous).</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>SRT Listener IP</td>
+			<td>SRT listener IP</td>
 			<td>String</td>
-			<td>IP address of the listener</td>
+			<td>IP address of the listener.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>SRT Listener port</td>
+			<td>SRT listener port</td>
 			<td>Int64</td>
-			<td>Port on which listener listens for a caller</td>
+			<td>Port on which a listener listens for a caller.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>SRT Source port</td>
+			<td>SRT source port</td>
 			<td>Int64</td>
-			<td>Port that SRT source is using</td>
+			<td>Port used by the SRT source.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>SRT Destination port</td>
+			<td>SRT destination port</td>
 			<td>Int64</td>
-			<td>Port that SRT desination is using</td>
+			<td>Port used by the SRT destination.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3791,16 +3805,16 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Button Label</td>
+			<td>Button label</td>
 			<td>String</td>
-			<td>This label will is used on control panels where there is not enough room to display the entire name of the area.</td>
+			<td>This label will be used on control panels where there is insufficient room to display the full name of the area.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Administrative State</td>
+			<td>Administrative state</td>
 			<td>GenericEnum`1</td>
-			<td>Indicate whether this area can currently be used by operators or not. As long as the Admin state is set to 'Down' this area will not appear in operator control panels.</td>
+			<td>Indicates whether this area can currently be used by operators or not. As long as the admin state is set to 'Down', this area will not appear in operator control panels.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -3845,16 +3859,16 @@ Definitions that are functionally related are grouped into modules. Below, you c
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Button Label</td>
+			<td>Button label</td>
 			<td>String</td>
-			<td>This label will is used on control panels where there is not enough room to display the entire name of the domain.</td>
+			<td>This label will be used on control panels where there is insufficient room to display the full name of the domain.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Administrative State</td>
+			<td>Administrative state</td>
 			<td>GenericEnum`1</td>
-			<td>Indicate whether this domain can currently be used by operators or not. As long as the Admin state is set to 'Down' this domain will not appear in operator control panels.</td>
+			<td>Indicates whether this domain can currently be used by operators or not. As long as the admin state is set to 'Down', this domain will not appear in operator control panels.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
