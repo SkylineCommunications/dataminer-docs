@@ -1,4 +1,6 @@
 items:
+  - name: Common Data Model (CDM)
+    topicUid: CDM
   - name: DataMiner EPM Solution
     topicUid: SolEPM
     items:
