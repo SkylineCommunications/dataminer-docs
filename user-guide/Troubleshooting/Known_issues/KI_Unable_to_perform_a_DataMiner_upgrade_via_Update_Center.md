@@ -13,7 +13,7 @@ DataMiner 10.4.0 and higher
 Update Center downloads a version of an upgrade package that only contains the changes since the base version. The package incorrectly does not include the BPA Executor.
 
 > [!TIP]
-> To test whether the package contains the BPA Executor, open the package, and check whether the *update.zip* file contains the StandaloneBpaExecutor in the *update.zip/prerequisites/executor* folder.
+> To check whether the package contains the BPA Executor, open the package as if it were a zip file, and check whether the *update.zip* file contains the StandaloneBpaExecutor in the *update.zip/prerequisites/executor* folder.
 
 ## Workaround
 
