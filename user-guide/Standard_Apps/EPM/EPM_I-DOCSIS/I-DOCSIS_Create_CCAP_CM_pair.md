@@ -107,6 +107,9 @@ The elements will be created with the following specifications:
 > [!NOTE]
 > It may take some time before the elements are created. The larger the cluster, the longer it will take to create the elements.
 
+> > [!NOTE]
+> If a CISCO CBR-8 element was created, OFDM information will not be polled by and the Service Group names will use the Interface Alias by default. To change this, navigate to the newly created element(s) and update the Extra Configurations as needed.
+
 ## Creating CCAP/CM pairs in bulk from a CSV file
 
 <!-- RN 37262 -->
