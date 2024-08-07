@@ -22,6 +22,43 @@ uid: General_Feature_Release_10.4.9
 
 ## New features
 
+#### Configuration of multiple threads for the same connection [ID_38887]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Control messages can now be sent in a thread of their own, which will prevent them from being blocked by ongoing polling actions on the same connections.
+
+Previously, it was already possible to create multiple group execution queues for different connections. For example:
+
+```xml
+<Threads>
+    <Thread connection="1" />
+    <Thread connection="1002" />
+</Threads>
+```
+
+Now you can also do this for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes. As a specific thread can have multiple connections linked to it, you will also need to specify the connection (by default 0). For example:
+
+```xml
+<Threads>
+    <Thread id="1" name="HTTP Polling Thread" connection="0"/>
+    <Thread id="2" name="HTTP Control Thread" connection="0"/>
+</Threads>
+```
+
+> [!NOTE]
+> If you want to use a thread definition with an ID, all thread definitions will need to have an ID. Combining thread definitions with and without ID is not supported.
+
+You can then execute a group on a thread of your choice by specifying the thread ID on the group:
+
+```xml
+<Group id="1002" threadId="1">
+```
+
+In the element logging, the log entry for starting a thread will include the thread ID and thread name if these are defined.
+
+For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why. If you try to execute a group on a thread that has not been created for this reason, the group will be executed on the main protocol thread.
+
 #### Table sizes will now be limited [ID_39836]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
