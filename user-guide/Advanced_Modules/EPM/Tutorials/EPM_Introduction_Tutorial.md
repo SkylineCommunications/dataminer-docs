@@ -4,7 +4,7 @@ uid: EPM_Introduction_Tutorial
 
 # Getting started with EPM
 
-This tutorial will provide a brief introduction on the EPM architecure and how you can use many EPM specific features.
+This tutorial will provide a brief introduction on the EPM architecture and how you can use many EPM specific features.
 
 Expected duration: 30 minutes
 
