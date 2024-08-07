@@ -19,7 +19,9 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 1. Clear the selection from any items you do not want to include in the export.
 
    > [!NOTE]
-   > If you have selected to include a redundancy group, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   >
+   > - If you have selected to include a redundancy group, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   > - From DataMiner 10.4.9/10.5.0 onwards<!--RN 39356-->, if you have selected to include SNMPv3 elements, importing this package on DataMiner Systems prior to DataMiner 10.4.9/10.5.0 will cause all SNMPv3 credentials to be lost and must be re-entered manually.
 
 1. Specify which additional information should be included (if any) using the checkboxes below this:
 
