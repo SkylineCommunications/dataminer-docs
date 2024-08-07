@@ -215,6 +215,8 @@ items:
         topicUid: Installing_MediaOps
       - name: Profile Config
         topicUid: MediaOps_ProfileConfig
+      - name: Jobs
+        topicUid: MediaOps_Jobs
       - name: MediaOps applications
         topicUid: MediaOps_apps
         items:
