@@ -13,9 +13,9 @@ uid: EPM_7.0.6_Integrated_DOCSIS
 
 On the Brokers/Authentication page of the Generic KAFKA Consumer connector, a new *Certificate Authentication* parameter is now available, which can be used to enable or disable verification for the SSL certificate.
 
-#### New Automatic CMTS Removal toggle button [ID_40401]
+#### Skyline EPM Platform DOCSIS: New 'Automatic CMTS Removal' toggle button [ID_40401] [ID_40432]
 
-In the front-end element, you can now enable or disable automatic CMTS removal using a toggle button. This button is available both on the data and visual pages. By default, it is set to disabled for new installations.
+Both in the front-end and back-end element, you can now enable or disable automatic CMTS removal using a toggle button. This button is available both on the data and visual pages. By default, it is set to disabled for new installations.
 
 ## Changes
 
