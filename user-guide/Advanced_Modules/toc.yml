@@ -925,6 +925,10 @@ items:
             topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
       - name: EPM integration training
         topicUid: EPM_Integration_Training
+      - name: Tutorials
+        items:
+          - name: Getting started with EPM
+            topicUid: EPM_Introduction_Tutorial
   - name: Inventory & Asset Management
     topicUid: AssetManagement
     items:
