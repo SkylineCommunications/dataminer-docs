@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 08 August 2024 - Feature - A catalog is limited to have 5 tags [ID_40349]
+
+Registering of a catalog with more than 5 tags will fail and is not supported.
+
 ### 08 August 2024 - Enhancement - Vendor and marketname of a connector are now seen as dedicated properties [ID_40423]
 
 Vendor and market name of a connector were until now part of the tags of a catalog item and therefore visible on the search results.
