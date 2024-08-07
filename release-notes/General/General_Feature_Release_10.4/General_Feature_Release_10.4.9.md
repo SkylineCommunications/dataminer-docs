@@ -20,6 +20,35 @@ uid: General_Feature_Release_10.4.9
 
 *No highlights have been selected yet.*
 
+## Breaking changes
+
+#### Parameter latch states will now be reset after every DataMiner restart [ID_39495]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart.
+
+If you want to have persistent parameter latch states, do the following:
+
+1. Open the *MaintenanceSettings.xml* file.
+
+1. In the `AlarmSettings` section, add the `PersistParameterLatchState` option, and set it to true.
+
+   ```xml
+   <AlarmSettings>
+      ...
+      <PersistParameterLatchState>true</PersistParameterLatchState>
+      ...
+   </AlarmSettings>
+   ```
+
+1. Restart the DataMiner Agent.
+
+> [!IMPORTANT]
+>
+> - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
+> - Element, service and view latch states will remain persistent as before.
+
 ## New features
 
 #### Configuration of multiple threads for the same connection [ID_38887]
@@ -121,35 +150,6 @@ When multiple tables generate an alarm for the same element, the banner will dis
 `Multiple tables have exceeded the row limit. Please check the alarms.`
 
 ## Changes
-
-### Breaking changes
-
-#### Parameter latch states will now be reset after every DataMiner restart [ID_39495]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart.
-
-If you want to have persistent parameter latch states, do the following:
-
-1. Open the *MaintenanceSettings.xml* file.
-
-1. In the `AlarmSettings` section, add the `PersistParameterLatchState` option, and set it to true.
-
-   ```xml
-   <AlarmSettings>
-      ...
-      <PersistParameterLatchState>true</PersistParameterLatchState>
-      ...
-   </AlarmSettings>
-   ```
-
-1. Restart the DataMiner Agent.
-
-> [!IMPORTANT]
->
-> - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
-> - Element, service and view latch states will remain persistent as before.
 
 ### Enhancements
 
