@@ -342,7 +342,7 @@ Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 Enables the guides in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: To be determined
+- **Estimated release version**:  Will not be released (deprecated)
 
 ### ReportsAndDashboardsPTP
 
