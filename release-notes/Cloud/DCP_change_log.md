@@ -9,6 +9,23 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 08 August 2024 - Enhancement - Vendor and marketname of a connector are now seen as dedicated properties [ID_40423]
+
+Vendor and market name of a connector were until now part of the tags of a catalog item and therefore visible on the search results.
+This has been changed so that vendor and marketname are properties that can be seen on the details page of a catalog item.
+
+### 08 August 2024 - Feature - Catalog - Case insenstive searching on tags [ID_40368]
+
+Search results on tags are now case insensitive.
+
+### 08 August 2024 - Feature - Catalog - Search supports sorting on name and type of a catalog item [ID_40368]
+
+In the browse page, a user is able to sort on the name and type of the items in ascending or descending order. By default items will be sorted on name in ascending order.
+
+### 08 August 2024 - Fix - Catalog - Recommended versions are shown correctly for non-connector items [ID_40346]
+
+When a user went to the versions tab of a non-connector they would not see any recommended version. From now on a recommended version will always be shown.
+
 #### 1 August 2024 - Enhancement - Catalog - Contributors have been renamed owners [ID_40378]
 
 On the details page, "contributors" have now been renamed "owners".
