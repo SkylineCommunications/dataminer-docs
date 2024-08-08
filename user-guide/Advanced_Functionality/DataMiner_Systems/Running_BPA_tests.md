@@ -17,7 +17,7 @@ The *BPA* page shows a list of all the BPA tests that are currently available in
 For a group item, the *Status* column displays the number of individual entries in the group with a colored LED indicating their status: green for a successful test, red if issues were detected, light gray if no results are available, and dark gray if the test is not applicable. If the execution of a test has failed, a warning icon will be displayed in the *Status* column instead of a colored LED. For each individual item within a group, this same column can display the following status information: *No result available*, *Test running*, *OK*, *Warning*, *Issues detected*, *Execution failed*, or *Not applicable*.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39929-->, if you are using a DaaS system, BPA tests that could not be run display the *Not applicable* status. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, tests that could not be run display the *Execution failed* status.
+> From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39929-->, BPA tests that could not be run display the *Not applicable* status. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, tests that could not be run display the *Execution failed* status.
 
 From DataMiner 10.1.4 onwards, the *Schedule* column allows you to configure at which interval a specific test should be executed, e.g. every 12 hours.
 
