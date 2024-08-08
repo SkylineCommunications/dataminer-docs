@@ -10,7 +10,7 @@ uid: Failover_configuration_in_Cube
 ## [From DataMiner 10.1.8 onwards](#tab/tabid-1)
 
 > [!NOTE]
-> Failover is automatically configured as part of [DaaS](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Failover* button is therefore no longer available on the *Apps* > *System Center* > *Agents* page if you are using a DaaS system.
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. Therefore, a Failover configuration is, by default, not available for DaaS<!--RN 40013-->.
 
 To enable Failover using DataMiner version **10.1.8 or higher**:
 
