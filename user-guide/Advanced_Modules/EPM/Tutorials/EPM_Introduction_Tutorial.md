@@ -4,7 +4,7 @@ uid: EPM_Introduction_Tutorial
 
 # Getting started with EPM
 
-This tutorial will provide a brief introduction on the EPM architecture and how you can use many EPM specific features.
+This tutorial will provide a brief introduction on how you can use many EPM-specific features.
 
 Expected duration: 30 minutes
 
@@ -13,14 +13,17 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and where the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch option is enabled.
+
+> [!TIP]
+> A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box and has most soft-launch options enabled, so it automatically meets this requirement.
 
 ## Overview
 
 This tutorial consists of the following steps:
 
 - [Step 1: Deploy the DataMiner EPM Integration Training package from the Catalog](#step-1-deploy-the-dataminer-epm-integration-training-package-from-the-catalog)
-- [Step 2: Create a new Collector element and rebalance system](#step-2-create-a-new-collector-element-and-rebalance-system)
+- [Step 2: Create a new collector element and rebalance the system](#step-2-create-a-new-collector-element-and-rebalance-the-system)
 - [Step 3: Use EPM relations to filter out alarms](#step-3-use-epm-relations-to-filter-out-alarms)
 - [Step 4: Using the EPM Feed in Dashboards and Low-Code Apps](#step-4-using-the-epm-feed-in-dashboards-and-low-code-apps)
 - [Step 5: Link EPM entities to Views](#step-5-link-epm-entities-to-views)
@@ -36,43 +39,63 @@ This tutorial consists of the following steps:
 
 1. Open DataMiner Cube and check whether the following items have been added to your DataMiner Agent:
 
-   - A view named *EPM Training*
+   - A **view** named *EPM Training*.
 
-   - A **Frontend** element named *EPM Training FE*
+   - A **front-end element** named *EPM Training FE*.
 
-   - Two **Backend** elements named *EPM Training BE 1* and *EPM Training BE 2*
+   - Two **back-end elements** named *EPM Training BE 1* and *EPM Training BE 2*.
 
-   - Three **Collector** elements names *EPM Training Collector 1* and *EPM Training Collector 2* and *EPM Training Collector 3*
+   - Three **collector elements** named *EPM Training Collector 1*, *EPM Training Collector 2*, and *EPM Training Collector 3*.
 
-   - The **Topology app** in between the Surveyor and Activity module
+   - The **Topology app** in between the Surveyor and Activity module.
+
+   ![Cube sidebar with Topology app](~/user-guide/images/EPM_GS_step_1.png)
 
 > [!NOTE]
 > If the Topology app does not show up right away, restart the Cube client.
 
-![Cube sidebar with Topology app](~/user-guide/images/EPM_GS_step_1.png)
+## Step 2: Create a new collector element and rebalance the system
 
-## Step 2: Create a new Collector element and rebalance system
+1. Create a new collector element in the *EPM Training* view:
 
-1. Create a new **Collector** element in the EPM Training view called *EPM Training Collector 4* using the Skyline EPM Integration Training Collector protocol
+   1. Open the Surveyor in DataMiner Cube.
 
-   > [!NOTE]
-   > If installed in a DMS cluster, create the Collector element on the same DMA as the EPM Training BE 2 element.
+   1. Right-click the *EPM Training* view (e.g. the root view), and select *New* > *Element*.
+
+   1. Enter the element name *EPM Training Collector 4*, select the DMA where the element should be added, select the *Skyline EPM Integration Training Collector* protocol, and click *Create*.
+
+      > [!NOTE]
+      > If you are using a DMS consisting of multiple DMAs, select the same DMA as the one hosting the *EPM Training BE 2* element. If you do not know which DMA is hosting this element, right-click this element and select *Properties*. The DMA ID is the first number in the ID, before the slash.
 
    ![Creation of new Collector element](~/user-guide/images/EPM_GS_step_2_1.png)
 
-1. Copy the DMA ID/element ID of the newly created Collector element. Easiest way is to view the element's properties
+1. Right-click the newly created element, select *Properties*, and copy the DMA ID/element ID of the element.
 
    ![DMA ID/element ID in element properties](~/user-guide/images/EPM_GS_step_2_2.png)
 
-1. Open the *EPM Training BE 2* (1) element and navigate to the *Configuration* visual page (2) and then the *Collectors* tab (3). Add the new Collector DMA ID/Element ID to the registration table by pasting the **Collector DMA ID/Element IDs** in the textbox and pressing the *SET* button (4). This will make the *EPM Training BE 2* element the parent manager of the *EPM Training Collector 4* element.
+1. Configure the *EPM Training BE 2* element as the parent manager of the *EPM Training Collector 4* element:
+
+   1. Open the *EPM Training BE 2* (1) element, and go to the *Configuration* visual page (2) and then the *Collectors* tab (3).
+
+   1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (4).
 
    ![Collectors tab back-end element](~/user-guide/images/EPM_GS_step_2_3.png)
 
-1. Go to the front-end configuration by selecting the *Configuration* Topology Chain in the **Topology** app (1) then navigate to the *Configuration* visual page (2) and then the *Collectors* tab (3). Add the new **Collector DMA ID/Element ID** to the registration table the same way as the Backend element
+1. Register the new element in the front-end configuration:
+
+   1. Open the **Topology** app (1) and select the *Configuration* topology chain.
+
+   1. Go to the *Configuration* visual page (2) and then the *Collectors* tab (3).
+
+   1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (4).
 
    ![Collectors tab front-end element](~/user-guide/images/EPM_GS_step_2_4.png)
 
-1. Navigate to the *General* visual page (1) and press the *Import* button (2) to initiate the front-end provisioning cycle.
+1. Initiate the front-end provisioning cycle:
+
+   1. Navigate to the *General* visual page (1) of the *EPM Training FE* element.
+
+   1. Next to *Import*, click the *SET* button (2).
 
    ![Import button on General page](~/user-guide/images/EPM_GS_step_2_5.png)
 
@@ -84,23 +107,37 @@ This tutorial consists of the following steps:
 
 ## Step 3: Use EPM relations to filter out alarms
 
-1. At this point, all of the collectors have pinged their endpoint devices and there are a lot of **Station** alarms created. This is caused because many of these **Stations** only have 1 **Endpoint** associated to them. You can filter these out to only show **Station** alarms where the issue is only present on the **Station**, and not an alarm on the **Hub** level, the parent entity.
+At this point, all of the collectors have pinged their endpoint devices, and a lot of station alarms are created. This happens because many of these stations only have 1 endpoint associated with them. You can filter these alarms to only show station alarms where the issue is only present on the station and not on the "Hub" parent entity level.
 
-1. Open the alarm template assigned to the *EPM Training FE* element. This can be done in the right click menu.
+1. Right-click the *EPM Training FE* element and select *Protocols & Templates* > *View alarm template 'Alarm_Default'*.
+
+   This will open the alarm template assigned to the *EPM Training FE* element.
 
    ![Opening the alarm template from the context menu](~/user-guide/images/EPM_GS_step_3_1.png)
 
-1. Navigate to the **Station** alarms, they should be all the way to the bottom. Take note of the row for *Percentage Unreachable Endpoints* and scroll all the way to the right. Under the conditions column, select that cell and *\<New>*
+1. In the alarm template, scroll down to the *Station* section and locate the *Percentage Unreachable Endpoints* parameter, then scroll to the right until you can see the *Condition* column.
+
+1. In the *Condition* column, click the row of the *Percentage Unreachable Endpoints* parameter, and select *\<New>*.
 
    ![Adding a new condition](~/user-guide/images/EPM_GS_step_3_2.gif)
 
-1. Here we will be creating the relation to filter any *Station Unreachable Endpoints* alarms when the parent Hub is also in alarm for the same KPI. Name the relation *Hub Relation*. Under the condition filter, select the *Hub Overview Table: Percentage Unreachable Endpoints* parameter. Change the *Equal to* comparer to *Greater than* and in the *\<Click to select>* field we will put 24.9 so if the parent hub has more than or equal to 25% Unreachable Endpoints the Station alarm will be ignored.
+1. Configure an alarm template condition to filter out any *Station Unreachable Endpoints* alarms when the parent hub is also in alarm for the same KPI:
+
+   1. Name the condition *Hub Relation*.
+
+   1. Click *Select a filter* and select the *Hub Overview Table: Percentage Unreachable Endpoints* parameter.
+
+   1. Click *Equal to* and select *Greater than* instead.
+
+   1. Click *\<Click to select>* and enter the value `24.9`.
+
+   With this configuration, if the parent hub has 25% or more unreachable endpoints, the station alarm will be ignored.
 
    ![Alarm condition configuration](~/user-guide/images/EPM_GS_step_3_3.png)
 
-1. click *OK* to save the condition and *OK* again to save the alarm template.
+1. Click *OK* to save the condition and *OK* again to save the alarm template.
 
-   The system should now have a large decrease in critical alarms.
+The system should now have a large decrease in critical alarms.
 
 ## Step 4: Using the EPM Feed in Dashboards and Low-Code Apps
 
