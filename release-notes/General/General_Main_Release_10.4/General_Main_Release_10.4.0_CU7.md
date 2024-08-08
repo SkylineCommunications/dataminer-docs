@@ -12,7 +12,11 @@ uid: General_Main_Release_10.4.0_CU7
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
+
+<!-- MR MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
+
+Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
 ### Fixes
 
