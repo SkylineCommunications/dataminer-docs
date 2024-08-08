@@ -9,26 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 08 August 2024 - Feature - A catalog item is limited to have 5 tags [ID_40349]
+### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID_40349]
 
-Registering a catalog item with more than 5 tags will fail and is not supported.
+When you try to register a Catalog item with more than 5 tags, this will now fail, as this is not supported.
 
-### 08 August 2024 - Enhancement - Vendor and marketname of a connector are now seen as dedicated properties [ID_40423]
+### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID_40423]
 
-Vendor and market name of a connector were until now part of the tags of a catalog item and therefore visible on the search results.
-This has been changed so that vendor and marketname are properties that can be seen on the details page of a catalog item.
+Up to now, the vendor and market name of a connector were among the tags of a Catalog item and therefore visible in the search results. This has been changed so that vendor and market name are properties that can be seen on the details page of a Catalog item.
 
-### 08 August 2024 - Feature - Catalog - Case insenstive searching on tags [ID_40368]
+### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID_40368]
 
 Search results on tags are now case insensitive.
 
-### 08 August 2024 - Feature - Catalog - Search supports sorting on name and type of a catalog item [ID_40368]
+### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID_40368]
 
-In the browse page, a user is able to sort on the name and type of the items in ascending or descending order. By default items will be sorted on name in ascending order.
+On the browse page, you can now sort by the name and type of the items in ascending or descending order. By default, items will be sorted by name in ascending order.
 
-### 08 August 2024 - Enhancement - Catalog - Recommended versions are shown for all catalog item types [ID_40346]
+### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID_40346]
 
-Recommended versions are now shown for all catalog item types. Until now only connector catalog items would have a recommended version available.
+Recommended versions are now shown for all Catalog item types. Previously, only connector Catalog items had a recommended version available.
 
 #### 1 August 2024 - Enhancement - Catalog - Contributors have been renamed owners [ID_40378]
 
