@@ -27,6 +27,10 @@ The dashboards of the Integrated DOCSIS Solution now no longer include Skyline a
 
 In addition, the extra table on the OFDM Channels (Node Segment) is now no longer included.
 
+#### CISCO CBR-8 CCAP Platform: Additional configuration parameters on visual page [ID_40444]
+
+On the CISCO CBR-8 CCAP Platform visual page, the *Poll OFDM/OFDMA* and *Service Group Naming Convention* configuration parameters have been added.
+
 ### Fixes
 
 #### Incorrect PNM column headers in CM US QAM dashboard [ID_40355]
