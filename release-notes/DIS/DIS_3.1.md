@@ -28,7 +28,7 @@ From now on, it will be possible to execute DIS macros using ValueTuples.
 
 ### Validator
 
-DIS now uses [Validator version 1.1.8](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.8).
+DIS now uses [Validator version 1.1.9](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.9).
 
 ## Changes
 
