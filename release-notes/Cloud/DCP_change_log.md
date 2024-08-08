@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 08 August 2024 - Feature - A catalog is limited to have 5 tags [ID_40349]
+### 08 August 2024 - Feature - A catalog item is limited to have 5 tags [ID_40349]
 
-Registering of a catalog with more than 5 tags will fail and is not supported.
+Registering a catalog item with more than 5 tags will fail and is not supported.
 
 ### 08 August 2024 - Enhancement - Vendor and marketname of a connector are now seen as dedicated properties [ID_40423]
 
@@ -26,9 +26,9 @@ Search results on tags are now case insensitive.
 
 In the browse page, a user is able to sort on the name and type of the items in ascending or descending order. By default items will be sorted on name in ascending order.
 
-### 08 August 2024 - Fix - Catalog - Recommended versions are shown correctly for non-connector items [ID_40346]
+### 08 August 2024 - Enhancement - Catalog - Recommended versions are shown for all catalog item types [ID_40346]
 
-When a user went to the versions tab of a non-connector they would not see any recommended version. From now on a recommended version will always be shown.
+Recommended versions are now shown for all catalog item types. Until now only connector catalog items would have a recommended version available.
 
 #### 1 August 2024 - Enhancement - Catalog - Contributors have been renamed owners [ID_40378]
 
