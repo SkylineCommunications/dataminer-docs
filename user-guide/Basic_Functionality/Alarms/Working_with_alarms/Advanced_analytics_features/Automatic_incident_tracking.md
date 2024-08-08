@@ -182,11 +182,10 @@ In addition, the following configuration is needed in the *configuration.xml* fi
   </item>
   ```
 
-After editing and saving the configuration file, **restart the SLAnalytics process on the leader agent** to make sure the desired changes take effect.
+After editing and saving the configuration file, **restart the SLAnalytics process on the leader Agent** to make sure the desired changes take effect.
 
 > [!TIP]
-> The *configuration.xml* files are not yet synced across a dataminer cluster. For this reason, it is important to always edit the file on the leader agent.
-> If possible, it is good practice to manually replace the file on all Agents in the cluster at the same time. This way, no unwanted behavior will occur when changing the leader agent at a later moment.
+> The *configuration.xml* files are not synced across a DataMiner cluster. For this reason, it is important to always edit the file on the leader Agent. If possible, it is good practice to manually replace the file on all Agents in the cluster at the same time. This way, no unwanted behavior will occur when the leader Agent is changed at a later moment.
 
 ### Troubleshooting advanced configuration
 
