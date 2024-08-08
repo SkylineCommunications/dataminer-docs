@@ -6,7 +6,7 @@ uid: orchestrator_change_log
 
 #### 8 August 2024 - Enhancement - Orchestrator 1.7.0 - Upgrade to .NET 8 [ID_40438]
 
-DataMiner Orchestrator has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version. [NET 8 is included since DataMiner 10.X](xref:change log of DM version that includes net8).
+DataMiner Orchestrator has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
 
 #### 25 July 2024 - Enhancement - Orchestrator 1.6.1 - Dependencies updated & event handling improved [ID_40309]
 

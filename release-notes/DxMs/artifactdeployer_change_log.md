@@ -6,7 +6,7 @@ uid: artifactdeployer_change_log
 
 #### 8 August 2024 - Enhancement - ArtifactDeployer 1.8.0 - Upgrade to .NET 8 [ID_40441]
 
-DataMiner ArtifactDeployer has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version. [NET 8 is included since DataMiner 10.X](xref:change log of DM version that includes net8).
+DataMiner ArtifactDeployer has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
 
 #### 25 July 2024 - Enhancement - ArtifactDeployer 1.7.2 - Dependencies updated & event handling improved [ID_40308]
 

@@ -6,7 +6,7 @@ uid: cloudfeed_change_log
 
 #### 2 May 2024 - Enhancement - CloudFeed 1.3.1 - Upgrade to .NET 8 [ID_39033]
 
-DataMiner CloudFeed has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version. [NET 8 is included since DataMiner 10.X](xref:change log of DM version that includes net8).
+DataMiner CloudFeed has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
 
 #### 2 October 2023 - Enhancement - CloudFeed 1.3.0 - Upgrade to .NET 6 [ID_36940]
 
