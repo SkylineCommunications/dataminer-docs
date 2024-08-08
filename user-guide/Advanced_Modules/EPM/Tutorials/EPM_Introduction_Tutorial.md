@@ -56,6 +56,8 @@ This tutorial consists of the following steps:
 
 ## Step 2: Create a new collector element and rebalance the system
 
+The EPM architecture allows horizontal scaling: you can add more collector elements at any time to reduce the load on individual elements without adding any load to the front-end element. In this step, you will add such a collector element and then rebalance the system.
+
 1. Create a new collector element in the *EPM Training* view:
 
    1. Open the Surveyor in DataMiner Cube.
