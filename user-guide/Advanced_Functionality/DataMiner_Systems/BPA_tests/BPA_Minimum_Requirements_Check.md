@@ -19,7 +19,7 @@ This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards
 
 For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
-If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance. As such, this BPA test cannot be run on a DaaS system. From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39929-->, this BPA test will, by default, be given the *Not applicable* status on a DaaS system.
+If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance. As such, this BPA test cannot be run on a DaaS system. From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39929-->, this BPA test will by default have the status *Not applicable* on a DaaS system.
 
 ## Metadata
 
