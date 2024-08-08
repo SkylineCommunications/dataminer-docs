@@ -12,7 +12,7 @@ Defines an additional thread.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[connection](xref:Protocol.Threads.Thread-connection)|[TypeSemicolonSeparatedNumbers](xref:Protocol-TypeSemicolonSeparatedNumbers)|Yes|Specifies the connection ID, or a comma-separated list of different connection IDs.|
 |[id](xref:Protocol.Threads.Thread-id)|[TypeNonLeadingZeroUnsignedInt](xref:Protocol-TypeNonLeadingZeroUnsignedInt)|No|Specifies a unique ID that can be used as a target for group execution.|
@@ -26,9 +26,7 @@ Each new thread will have its own group execution queue and runtime error thread
 
 The main protocol queue is always active.
 
-Starting from DataMiner 10.4.9 (RN 38887), you can create different threads for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes.
-
-For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why.
+Starting from DataMiner 10.4.9 (RN 38887), you can create different threads for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes. For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why.
 
 > [!NOTE]
 > If you want to use a thread definition with an ID, all thread definitions will need to have an ID. Combining thread definitions with and without ID is not supported.
@@ -68,7 +66,7 @@ To link a group to a thread, set the connection attribute to the connection ID o
 </Group>
 ```
 
-In the following example, 2 threads will be created for the same HTTP connection.
+In the following example, two threads will be created for the same HTTP connection.
 
 ```xml
 <Threads>
@@ -77,7 +75,7 @@ In the following example, 2 threads will be created for the same HTTP connection
 </Threads>
 ```
 
-All polling requests can be executed on the *HTTP Polling Thread* and simultaneously all control requests can be executed on the *HTTP Control Thread*. This allows for control requests to be sent out as soon as they are triggered rather than having to wait for a polling request to complete.
+All polling requests can be executed on the *HTTP Polling Thread*, and simultaneously all control requests can be executed on the *HTTP Control Thread*. This way, control requests can be sent out as soon as they are triggered, instead of having to wait for a polling request to complete.
 
 > [!NOTE]
 > When multiple threads are used, it is important that each poll group has the [connection](xref:Protocol.Groups.Group-connection) attribute defined to indicate which connection/thread to use. This prevents unexpected behavior in SLPort when the same group is executed on different threads in a similar time frame.

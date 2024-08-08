@@ -3,7 +3,7 @@ uid: Protocol.Threads.Thread-name
 ---
 # name attribute
 
-Name of the thread that is only used for logging purposes.
+Name of the thread. This is only used for logging purposes.
 
 ## Content Type
 
