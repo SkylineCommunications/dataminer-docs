@@ -85,17 +85,19 @@ The EPM architecture allows horizontal scaling: you can add more collector eleme
 
 1. Register the new element in the front-end configuration:
 
-   1. Open the **Topology** app (1) and select the *Configuration* topology chain.
+   1. Open the **Topology** app (1), select the *Configuration* topology chain (2), and click the sideward arrow (3).
 
-   1. Go to the *Configuration* visual page (2) and then the *Collectors* tab (3).
+      ![Topology chain](~/user-guide/images/EPM_Tutorial_Topology_Chain.png)
 
-   1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (4).
+   1. Go to the *Configuration* visual page (1) and then the *Collectors* tab (2).
 
-   ![Collectors tab front-end element](~/user-guide/images/EPM_GS_step_2_4.png)
+   1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (3).
+
+      ![Collectors tab front-end element](~/user-guide/images/EPM_GS_step_2_4.png)
 
 1. Initiate the front-end provisioning cycle:
 
-   1. Navigate to the *General* visual page (1) of the *EPM Training FE* element.
+   1. Navigate to the *General* tab (1) of the *EPM Training FE* element.
 
    1. Next to *Import*, click the *SET* button (2).
 
