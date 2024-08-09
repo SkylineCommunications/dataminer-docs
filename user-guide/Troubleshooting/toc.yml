@@ -224,6 +224,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Inconsistent service impact of alarms after element is stopped and restarted
+            topicUid: KI_Inconsistent_service_impact
           - name: Unable to perform a DataMiner upgrade via Update Center
             topicUid: KI_Unable_to_perform_a_DataMiner_upgrade_via_Update_Center
           - name: Unable to override information events TTL of 5 years
