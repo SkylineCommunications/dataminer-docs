@@ -19,8 +19,6 @@ The NMS manages a network element by communicating with the network element usin
 
 The management data that an SNMP Agent exposes (often referred to as managed objects or variables) are described by the Management Information Base (MIB). The MIB is a hierarchical structure containing object identifiers (OIDs), where each OID identifies a variable.
 
-The name of a variable is an object identifier (OID), which is a concatenation of the object identifier of the corresponding object-type (the so-called object identifier prefix of the variable) and an object identifier fragment identifying the instance. For scalar objects, the instance will always be 0.
-
 Three versions of SNMP are currently defined: SNMPv1, SNMPv2 and SNMPv3. DataMiner supports all three versions.
 
 The following illustration displays a conceptual overview of a DataMiner Agent hosting an element running a protocol that communicates with a network element via SNMP.
