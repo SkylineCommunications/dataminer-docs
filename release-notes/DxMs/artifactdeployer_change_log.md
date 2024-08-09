@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 8 August 2024 - Enhancement - ArtifactDeployer 1.8.0 - Upgrade to .NET 8 [ID_40441]
+
+DataMiner ArtifactDeployer has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
 #### 25 July 2024 - Enhancement - ArtifactDeployer 1.7.2 - Dependencies updated & event handling improved [ID_40308]
 
 Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
