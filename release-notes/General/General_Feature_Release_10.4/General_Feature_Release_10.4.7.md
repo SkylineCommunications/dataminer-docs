@@ -131,7 +131,7 @@ Because of a number of enhancements, it will now take less time for a Failover a
 
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 

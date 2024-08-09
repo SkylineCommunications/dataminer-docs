@@ -20,7 +20,73 @@ uid: General_Feature_Release_10.4.9
 
 *No highlights have been selected yet.*
 
+## Breaking changes
+
+#### Parameter latch states will now be reset after every DataMiner restart [ID_39495]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart.
+
+If you want to have persistent parameter latch states, do the following:
+
+1. Open the *MaintenanceSettings.xml* file.
+
+1. In the `AlarmSettings` section, add the `PersistParameterLatchState` option, and set it to true.
+
+   ```xml
+   <AlarmSettings>
+      ...
+      <PersistParameterLatchState>true</PersistParameterLatchState>
+      ...
+   </AlarmSettings>
+   ```
+
+1. Restart the DataMiner Agent.
+
+> [!IMPORTANT]
+>
+> - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
+> - Element, service and view latch states will remain persistent as before.
+
 ## New features
+
+#### Configuration of multiple threads for the same connection [ID_38887]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Control messages can now be sent in a thread of their own, which will prevent them from being blocked by ongoing polling actions on the same connections.
+
+Previously, it was already possible to create multiple group execution queues for different connections. For example:
+
+```xml
+<Threads>
+    <Thread connection="1" />
+    <Thread connection="1002" />
+</Threads>
+```
+
+Now you can also do this for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes. As a specific thread can have multiple connections linked to it, you will also need to specify the connection (by default 0). For example:
+
+```xml
+<Threads>
+    <Thread id="1" name="HTTP Polling Thread" connection="0"/>
+    <Thread id="2" name="HTTP Control Thread" connection="0"/>
+</Threads>
+```
+
+> [!NOTE]
+> If you want to use a thread definition with an ID, all thread definitions will need to have an ID. Combining thread definitions with and without ID is not supported.
+
+You can then execute a group on a thread of your choice by specifying the thread ID on the group:
+
+```xml
+<Group id="1002" threadId="1">
+```
+
+In the element logging, the log entry for starting a thread will include the thread ID and thread name if these are defined.
+
+For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why. If you try to execute a group on a thread that has not been created for this reason, the group will be executed on the main protocol thread.
 
 #### Table sizes will now be limited [ID_39836]
 
@@ -84,35 +150,6 @@ When multiple tables generate an alarm for the same element, the banner will dis
 `Multiple tables have exceeded the row limit. Please check the alarms.`
 
 ## Changes
-
-### Breaking changes
-
-#### Parameter latch states will now be reset after every DataMiner restart [ID_39495]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart.
-
-If you want to have persistent parameter latch states, do the following:
-
-1. Open the *MaintenanceSettings.xml* file.
-
-1. In the `AlarmSettings` section, add the `PersistParameterLatchState` option, and set it to true.
-
-   ```xml
-   <AlarmSettings>
-      ...
-      <PersistParameterLatchState>true</PersistParameterLatchState>
-      ...
-   </AlarmSettings>
-   ```
-
-1. Restart the DataMiner Agent.
-
-> [!IMPORTANT]
->
-> - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
-> - Element, service and view latch states will remain persistent as before.
 
 ### Enhancements
 
@@ -635,9 +672,9 @@ http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>
 
 #### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
 
-When the user's SLNet connection was lost, the GQI session of a query with realtime updates enabled would incorrectly persist, potentially causing both an unhandled exception to be thrown when GQI tried to send an update to the user and SLHelper to crash.
+When the user's SLNet connection was lost, the GQI session of a query with real-time updates enabled would incorrectly persist, potentially causing both an unhandled exception to be thrown when GQI tried to send an update to the user and SLHelper to crash.
 
 Also, *GenIfAggregateException* messages would not be serialized correctly, causing the following exception to be added to the SLHelperWrapper log file:
 
@@ -653,6 +690,12 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 In some rare cases, certain processes could get restarted while DataMiner was being stopped. This would then cause issue when DataMiner was restarted.
+
+#### Progress information updates no longer available during DataMiner upgrade [ID_40348]
+
+<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+
+In some cases, it could occur that progress information updates during a DataMiner upgrade were no longer available. This was caused by long timeouts in gRPC connections. These could also trigger a race condition, causing the logic checking for progress updates on the client side to override a successful upgrade event. The timeouts will now occur more quickly, so that a reconnection occurs faster and updates become available again.
 
 #### SLLogCollector would incorrectly report a null reference exception when a DataMiner Agent did not have Failover configured [ID_40376]
 

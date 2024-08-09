@@ -18,6 +18,7 @@ Defines a group.
 |[connectionPID](xref:Protocol.Groups.Group-connectionPID)|unsignedInt||Allows to dynamically select an HTTP connection by referring to the connection by means of a parameter ID.|
 |[id](xref:Protocol.Groups.Group-id)|[TypeObjectId](xref:Protocol-TypeObjectId)|Yes|The unique group ID.|
 |[ping](xref:Protocol.Groups.Group-ping)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies whether this is the group to be used when testing the connection in the element wizard.|
+|[threadId](xref:Protocol.Groups.Group-threadId)|int|No|Specifies the ID of the thread that should execute the group.|
 
 ## Children
 

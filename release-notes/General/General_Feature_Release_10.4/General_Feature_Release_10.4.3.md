@@ -26,47 +26,7 @@ To be able to upgrade to DataMiner 10.4.3, you will first need to install the [M
 
 If this requirement is not met, a new prerequisite check during the upgrade will notify you that you will first need to take care of this before you can install the upgrade.
 
-## New features
-
-#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you can now find the following new commands:
-
-| Command | Function |
-|---------|----------|
-| Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
-| Health Stats (SLProtocol) > Details... | Show all details of a specific element.          |
-
-#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
-
-<!-- MR 10.4.0 - FR 10.4.3 -->
-
-In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
-
-```xml
-<ForeignKeyRelationsSourceInfo elementVar="myElement">
-...
-</ForeignKeyRelationsSourceInfo>
-```
-
-This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
-
-```txt
-maps.aspx?config=MyConfigFile&dmyElement=7/46840
-maps.aspx?config=MyConfigFile&dmyElement=VesselData
-```
-
-#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
-
-<!-- MR 10.5.0 - FR 10.4.2 -->
-
-The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
-
-## Changes
-
-### Breaking changes
+## Breaking changes
 
 #### Microsoft Entra ID: Enhanced user and group import [ID_38154]
 
@@ -122,6 +82,46 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 
 > [!IMPORTANT]
 > This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
+
+## New features
+
+#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you can now find the following new commands:
+
+| Command | Function |
+|---------|----------|
+| Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
+| Health Stats (SLProtocol) > Details... | Show all details of a specific element.          |
+
+#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
+
+```xml
+<ForeignKeyRelationsSourceInfo elementVar="myElement">
+...
+</ForeignKeyRelationsSourceInfo>
+```
+
+This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
+
+```txt
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
+maps.aspx?config=MyConfigFile&dmyElement=VesselData
+```
+
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
+## Changes
 
 ### Enhancements
 

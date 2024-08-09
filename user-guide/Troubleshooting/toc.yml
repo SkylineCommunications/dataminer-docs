@@ -224,10 +224,10 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Unable to perform a DataMiner upgrade via Update Center
+            topicUid: KI_Unable_to_perform_a_DataMiner_upgrade_via_Update_Center
           - name: Unable to override information events TTL of 5 years
             topicUid: KI_Information_events_TTL_five_years
-          - name: Process crashes when trying to connect to MySQL database
-            topicUid: KI_MySQL_Unhandled_Exception
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: NATS services missing after reboot
@@ -258,6 +258,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Process crashes when trying to connect to MySQL database
+            topicUid: KI_MySQL_Unhandled_Exception
           - name: Failover switch taking a long time on systems with Cassandra Cluster setup
             topicUid: KI_Failover_switch_Cassandra_Cluster
           - name: SLProtocol RTE caused by SNMP group with condition
