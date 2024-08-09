@@ -25,7 +25,7 @@ This tutorial consists of the following steps:
 - [Step 1: Deploy the DataMiner EPM Integration Training package from the Catalog](#step-1-deploy-the-dataminer-epm-integration-training-package-from-the-catalog)
 - [Step 2: Create a new collector element and rebalance the system](#step-2-create-a-new-collector-element-and-rebalance-the-system)
 - [Step 3: Use EPM relations to filter out alarms](#step-3-use-epm-relations-to-filter-out-alarms)
-- [Step 4: Using the EPM Feed in Dashboards and Low-Code Apps](#step-4-using-the-epm-feed-in-dashboards-and-low-code-apps)
+- [Step 4: Using the EPM feed in dashboards and low-code apps](#step-4-using-the-epm-feed-component-in-dashboards-and-low-code-apps)
 - [Step 5: Link EPM entities to Views](#step-5-link-epm-entities-to-views)
 
 ## Step 1: Deploy the *DataMiner EPM Integration Training* package from the Catalog
@@ -85,15 +85,15 @@ The EPM architecture allows horizontal scaling: you can add more collector eleme
 
 1. Register the new element in the front-end configuration:
 
-   1. Open the **Topology** app (1), select the *Configuration* topology chain (2), and click the sideward arrow (3).
+   1. Open the **Topology** app (1), select the *Configuration* topology chain (2), and click the ">" button (3).
 
       ![Topology chain](~/user-guide/images/EPM_Tutorial_Topology_Chain.png)
 
    1. Go to the *Configuration* visual page (1) and then the *Collectors* tab (2).
 
-   1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (3).
-
       ![Collectors tab front-end element](~/user-guide/images/EPM_GS_step_2_4.png)
+
+   1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (3).
 
 1. Initiate the front-end provisioning cycle:
 
@@ -135,35 +135,83 @@ At this point, all of the collectors have pinged their endpoint devices, and a l
 
    1. Click *\<Click to select>* and enter the value `24.9`.
 
-   With this configuration, if the parent hub has 25% or more unreachable endpoints, the station alarm will be ignored.
-
    ![Alarm condition configuration](~/user-guide/images/EPM_GS_step_3_3.png)
 
 1. Click *OK* to save the condition and *OK* again to save the alarm template.
 
-The system should now have a large decrease in critical alarms.
+With this configuration, if the parent hub has 25% or more unreachable endpoints, the station alarm will be ignored. The system should now have a large decrease in critical alarms.
 
-## Step 4: Using the EPM Feed in Dashboards and Low-Code Apps
+## Step 4: Using the EPM feed component in dashboards and low-code apps
 
-1. In the Dashboards module, create a folder called *Customer* under the Training folder. Then create a new dashboard called *01. Device Overview* in the new Customer folder.
+In the dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element.
+
+1. [Open the DataMiner Dashboards app](xref:Accessing_the_Dashboards_app).
+
+1. Create a new *Customer* folder in the *Training* folder:
+
+   1. Right-click the *Training* folder and select *Create folder*.
+
+   1. Enter the name *Customer* and click *Create*.
+
+1. Create a new dashboard in the new folder:
+
+   1. Right-click the *Customer* folder and select *Create dashboard*.
+
+   1. Enter the name *01. Device Overview* and click *Create*.
 
    ![Device Overview folder](~/user-guide/images/EPM_GS_step_4_1.png)
 
-1. Add the EPM Feed component to the dashboard. You can quickly find it by searching *EPM* in the component search.
+   The new dashboard will automatically be opened in edit mode.
 
-   ![EPM Feed component](~/user-guide/images/EPM_GS_step_4_2.png)
+1. Add the EPM feed component to the dashboard:
 
-1. The EPM Feed component is an exclusive component that can only be linked to a Frontend EPM Manager element. To do so, add the EPM Training FE Element under the Elements tab in the Data section.
+   1. Hover the mouse pointer over the sidebar on the left, so that the components pane is shown.
 
-   ![Adding data to the EPM Feed component](~/user-guide/images/EPM_GS_step_4_3.gif)
+   1. In the search box at the top, enter *EPM*.
 
-1. Now that the element data is in the component, the topology information needs to be configured. To do so, navigate to the settings section of the EPM Feed component and changing the CPE Chain from *Location Topology* to *Customer Topology* and then checking the Customer chain filter. Once configured, feel free to expand the component to fill in more of the dashboard.
+   1. Click and drag the EPM feed component to the top of the dashboard.
+
+   ![EPM feed component](~/user-guide/images/EPM_GS_step_4_2.png)
+
+1. Link the component to the front-end element:
+
+   1. In the *Data* pane on the right, expand the *Elements* item and select *EPM Training FE*.
+
+   1. Drag the *EPM Training FE* item to the component you added earlier.
+
+   ![Adding data to the EPM feed component](~/user-guide/images/EPM_GS_step_4_3.gif)
+
+1. Configure the topology information for the component:
+
+   1. Make sure the EPM feed component is selected on the dashboard, and navigate to the *Settings* tab in the pane on the right.
+
+   1. Under *General*, in the *CPE Chain* box, select *Customer Topology*.
+
+   1. Select the checkbox next to *Customer*.
 
    ![Component settings](~/user-guide/images/EPM_GS_step_4_4.png)
 
-1. Back in the data section, go to the *Queries* section and create a new query. Name it *All Endpoints* and select the *Get parameters for elements where* data source. Select the Skyline EPM Integration Training Collector Protocol and then the Production version.
+1. Adjust the component size by dragging its edges, until it takes up most of the top of the dashboard.
 
-1. Once the parameters populate, select the *Endpoint Overview Table*. Afterwards, select the *Select* operator and select the Index, IP, Customer, Jitter, Latency, Packet Loss Rate, and RTT parameters.
+1. Create a new query:
+
+   1. In the *Data* pane, expand to the *Queries* section and click the "+" button.
+
+   1. Enter the name *All Endpoints*.
+
+   1. Select the data source *Get parameters for elements where*
+
+   1. In the *Type* box, select *Protocol*.
+
+   1. In the *Protocol* box, select *Skyline EPM Integration Training Collector*.
+
+   1. In the *Protocol Version* box, select *Production*.
+
+   1. In the list of parameters, select *Endpoint* to select the *Endpoint Overview Table*.
+
+   1. Below this, add the *Select* operator, so you will be able to select specific columns from the *Endpoint Overview Table*.
+
+   1. Make sure only the following parameters are selected: *Index*, *IP*, *Customer Name*, *Jitter*, *Latency*, *Packet Loss Rate*, and *RTT*.
 
 1. Now that we have all the **Endpoint** information we want from all of the **Collectors**, we will now filter to only show the Endpoints associated to the Customer selected in the EPM Feed. Select Filter in the operator and select the *Customer Name* parameter. The Filter method will be *equals* and for the value, we will link the field to the EPM Feed component. Select the little chain icon on the right and then select *EPM Feed 1* for the feed and then the *System name* property. Once done it should look like this:
 
