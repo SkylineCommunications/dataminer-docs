@@ -105,10 +105,9 @@ The elements will be created with the following specifications:
   - **System password**: The password to access the shared folder.
 
 > [!NOTE]
-> It may take some time before the elements are created. The larger the cluster, the longer it will take to create the elements.
-
-> > [!NOTE]
-> If a CISCO CBR-8 element was created, OFDM information will not be polled by and the Service Group names will use the Interface Alias by default. To change this, navigate to the newly created element(s) and update the Extra Configurations as needed.
+>
+> - It may take some time before the elements are created. The larger the cluster, the longer it will take to create the elements.
+> - If a CISCO CBR-8 element is created, OFDM information will not be polled, and the service group names will use the interface alias by default. To change this, navigate to the *configuration* visual page of the newly created element and update the *Extra Configurations* settings as needed.
 
 ## Creating CCAP/CM pairs in bulk from a CSV file
 
