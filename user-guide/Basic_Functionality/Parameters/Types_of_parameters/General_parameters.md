@@ -42,8 +42,6 @@ This general parameter indicates how many masked alarms are present on the eleme
 
 This general parameter indicates the highest alarm level that has occurred on the element since the last time the latch state was reset. To reset the latch state, click the *Reset* button underneath this parameter.
 
-From DataMiner 10.4.9/10.5.0 onwards<!--RN 39495-->, the latch state will be reset after every DataMiner restart. To re-enable persistent latch states, see [AlarmSettings.PersistParameterLatchState](xref:MaintenanceSettings_xml#alarmsettingspersistparameterlatchstate).
-
 ### [RCA Level]
 
 If the element is part of an RCA chain, this general parameter indicates its RCA level.
