@@ -36,29 +36,35 @@ uid: Tutorials
     <a href="/tutorials/Data_sources_tutorials.html" title="Data Sources tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Data_Sources.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/tutorials/IDP_Tutorials.html" title="IDP tutorials" target="_self"><img src="~/tutorials/images/Tutorials_IDP.svg" style="width:100%"></a>
+    <a href="/tutorials/EPM_tutorials.html" title="EPM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_EPM.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/tutorials/IDP_Tutorials.html" title="IDP tutorials" target="_self"><img src="~/tutorials/images/Tutorials_IDP.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/tutorials/DOM_tutorials.html" title="DOM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DOM.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/tutorials/Protocols_Templates_Tutorials.html" title="Protocols & Templates tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Protocols_Templates.svg" style="width:100%"></a>
-  </div>  
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/tutorials/Protocols_Templates_Tutorials.html" title="Protocols & Templates tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Protocols_Templates.svg" style="width:100%"></a>
+  </div>  
   <div class="column">
     <a href="/tutorials/Spectrum_Analysis_tutorials.html" title="Spectrum Analysis tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Spectrum_Analysis.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/tutorials/User-defined_APIs_Tutorials.html" title="User-defined APIs tutorials" target="_self"><img src="~/tutorials/images/Tutorials_User-Defined_APIs.svg" style="width:100%"></a>
   </div> 
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/tutorials/Visio_Tutorials.html" title="Visual Overview tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Visual_Overview.svg" style="width:100%"></a>
   </div>  
