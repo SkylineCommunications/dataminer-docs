@@ -26,3 +26,19 @@ To configure this component:
 >
 > - Spectrum components are currently not yet supported in visual overviews within dashboards or low-code apps.
 > - Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
+
+## Zooming
+
+Zooming functionalities are available for the Visual Overview component.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40017-->:
+
+  - To zoom in, press CTRL while scrolling up.
+
+  - To zoom out, press CTRL while scrolling down.
+
+- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+
+  - To zoom in, scroll up.
+
+  - To zoom out, scroll down.
