@@ -26,3 +26,12 @@ In the *Settings* tab, you can also configure the following optional settings:
 
 > [!NOTE]
 > From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag a data feed to the component to link it to that feed, or [specify a feed in the URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the feed, but users will still be able to modify the value.
+
+## Component actions
+
+From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, when you have added a text input component to a low-code app, you can configure the following [component action](xref:LowCodeApps_event_config#executing-a-component-action) in your low-code app to interact with the component:
+
+- *Set value*: Allows you to set the current value of the component to either a static value or a feed.
+
+  > [!NOTE]
+  > When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed. If this option is not enabled, the value will only be passed when pressing Enter (if the *General > Feed value on > Enter* option is enabled) or when the focus is no longer on the box (if the *General > Feed value on > Focus lost* option is enabled).
