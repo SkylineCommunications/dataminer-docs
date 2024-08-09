@@ -4,7 +4,7 @@ uid: EPM_Introduction_Tutorial
 
 # Getting started with EPM
 
-This tutorial will provide a brief introduction on how you can use many EPM-specific features.
+This tutorial will provide a brief introduction on how you can use many EPM-specific features, including how you can add a new collector to your EPM setup, filter out irrelevant EPM alarms, use EPM feeds in dashboards and low-code apps, and link EPM entities to views.
 
 Expected duration: 30 minutes
 
@@ -13,10 +13,10 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and where the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch option is enabled.
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
-> A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box and has most soft-launch options enabled, so it automatically meets this requirement.
+> A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box, so it automatically meets this requirement.
 
 ## Overview
 
@@ -26,7 +26,7 @@ This tutorial consists of the following steps:
 - [Step 2: Create a new collector element and rebalance the system](#step-2-create-a-new-collector-element-and-rebalance-the-system)
 - [Step 3: Use EPM relations to filter out alarms](#step-3-use-epm-relations-to-filter-out-alarms)
 - [Step 4: Use the EPM feed in a dashboard](#step-4-use-the-epm-feed-in-a-dashboard)
-- [Step 5: Link EPM entities to Views](#step-5-link-epm-entities-to-views)
+- [Step 5: Link EPM entities to views](#step-5-link-epm-entities-to-views)
 
 ## Step 1: Deploy the *DataMiner EPM Integration Training* package from the Catalog
 
@@ -37,7 +37,12 @@ This tutorial consists of the following steps:
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-1. Open DataMiner Cube and check whether the following items have been added to your DataMiner Agent:
+1. Connect to the DMS with DataMiner Cube using the argument `ENABLEFEATURE=CPEINTEGRATION`, so that the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch features are enabled.
+
+   > [!TIP]
+   > See also: [Connecting to a DMS using arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments)
+
+1. In DataMiner Cube, check whether the following items have been added to your DataMiner Agent:
 
    - A **view** named *EPM Training*.
 
@@ -52,7 +57,7 @@ This tutorial consists of the following steps:
    ![Cube sidebar with Topology app](~/user-guide/images/EPM_GS_step_1.png)
 
 > [!NOTE]
-> If the Topology app does not show up right away, restart the Cube client.
+> If the Topology app does not show up right away, close and reopen Cube.
 
 ## Step 2: Create a new collector element and rebalance the system
 
@@ -89,7 +94,9 @@ The EPM architecture allows horizontal scaling: you can add more collector eleme
 
       ![Topology chain](~/user-guide/images/EPM_Tutorial_Topology_Chain.png)
 
-   1. Go to the *Configuration* visual page (1) and then the *Collectors* tab (2).
+      This will open the *Configuration* visual page of the EPM front-end element.
+
+   1. On the *Configuration* visual page (1), go the *Collectors* tab (2).
 
       ![Collectors tab front-end element](~/user-guide/images/EPM_GS_step_2_4.png)
 
@@ -103,7 +110,7 @@ The EPM architecture allows horizontal scaling: you can add more collector eleme
 
    ![Import button on General page](~/user-guide/images/EPM_GS_step_2_5.png)
 
-   The Manager connectors will now redistribute the load on the collectors, to prevent one element from having too much data.
+   The Manager connector will now redistribute the load on the collectors, to prevent one element from having too much data.
 
 1. To confirm whether this has been completed successfully, open the *EPM Training Collector 4* element and check whether the *Number Endpoints* parameter on the *General* page is filled in.
 
@@ -139,11 +146,13 @@ At this point, all of the collectors have pinged their endpoint devices, and a l
 
 1. Click *OK* to save the condition and *OK* again to save the alarm template.
 
-With this configuration, if the parent hub has 25% or more unreachable endpoints, the station alarm will be ignored. The system should now have a large decrease in critical alarms.
+With this configuration, if the parent hub has 25% or more unreachable endpoints, the station alarm will be ignored.
+
+The system should now have a large decrease in critical alarms.
 
 ## Step 4: Use the EPM feed in a dashboard
 
-In the dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element. While the steps below describe how you can do this in a dashboard, this is very similar in a low-code app.
+In dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element. While the steps below describe how you can do this in a dashboard, this is very similar in a low-code app.
 
 1. [Open the DataMiner Dashboards app](xref:Accessing_the_Dashboards_app).
 
@@ -163,13 +172,13 @@ In the dashboards and low-code apps, you can add an EPM feed component to allow 
 
    The new dashboard will automatically be opened in edit mode.
 
-1. Add the EPM feed component to the dashboard:
+1. Add an EPM feed component to the dashboard:
 
-   1. Hover the mouse pointer over the sidebar on the left, so that the components pane is shown.
+   1. Hover the mouse pointer over the sidebar on the left, so that the visualizations pane is shown.
 
    1. In the search box at the top, enter *EPM*.
 
-   1. Click and drag the EPM feed component to the top of the dashboard.
+   1. Click and drag the *EPM feed* visualization to the top of the dashboard.
 
    ![EPM feed component](~/user-guide/images/EPM_GS_step_4_2.png)
 
@@ -183,7 +192,7 @@ In the dashboards and low-code apps, you can add an EPM feed component to allow 
 
 1. Configure the topology information for the component:
 
-   1. Make sure the EPM feed component is selected on the dashboard, and navigate to the *Settings* tab in the pane on the right.
+   1. Make sure the EPM feed component is selected on the dashboard, and go to the *Settings* tab in the pane on the right.
 
    1. Under *General*, in the *CPE Chain* box, select *Customer Topology*.
 
@@ -191,15 +200,15 @@ In the dashboards and low-code apps, you can add an EPM feed component to allow 
 
    ![Component settings](~/user-guide/images/EPM_GS_step_4_4.png)
 
-1. Adjust the component size by dragging its edges, until it takes up most of the top of the dashboard.
+1. Adjust the component size by dragging its edges, until it covers the top area of the dashboard.
 
 1. Create a new query:
 
-   1. In the *Data* pane, expand to the *Queries* section and click the "+" button.
+   1. In the *Data* pane, expand the *Queries* section and click the "+" button.
 
    1. Enter the name *All Endpoints*.
 
-   1. Select the data source *Get parameters for elements where*
+   1. Select the data source *Get parameters for elements where*.
 
    1. In the *Type* box, select *Protocol*.
 
@@ -207,7 +216,7 @@ In the dashboards and low-code apps, you can add an EPM feed component to allow 
 
    1. In the *Protocol Version* box, select *Production*.
 
-   1. In the list of parameters, select *Endpoint* to select the *Endpoint Overview Table*.
+   1. In the list of parameters, select *Endpoint* to get the parameters from the *Endpoint Overview Table*.
 
    1. Below this, add the *Select* operator, so you will be able to select specific columns from the *Endpoint Overview Table*.
 
@@ -249,16 +258,28 @@ In the dashboards and low-code apps, you can add an EPM feed component to allow 
 
    ![Selecting a customer in the EPM feed](~/user-guide/images/EPM_GS_step_4_8.gif)
 
-## Step 5: Link EPM entities to Views
+## Step 5: Link EPM entities to views
 
-1. Create a View under the Root view called *Florida*, then a view under the Florida view called *Miami*, and finally a view under the Miami view called *South Beach*. This is to simulate the tree structure of the relationships.
+In this final step, you will learn how you can link EPM entities to views in DataMiner Cube, so that selecting such a view will show the relevant EPM information.
+
+1. In DataMiner Cube, add several new views to create a tree structure showing the relationships between specific locations:
+
+   1. In the Surveyor, right-click the root view and select *New* > *View*, then name the new view *Florida*.
+
+   1. Right-click the view *Florida* and select *New* > *View*, then name the new view *Miami*.
+
+   1. In the same way, add the new view *South Beach* to the view *Miami*.
 
    ![South Beach view](~/user-guide/images/EPM_GS_step_5_1.png)
 
-1. Navigate to the Frontend configuration page (can be accessed by selecting the Configuration Topology Chain in the Topology app) and press the Update Views button on the General page
+1. Update the views in the front-end element:
 
-   ![Update Views button](~/user-guide/images/EPM_GS_step_5_2.png)
+   1. In the Topology app, select the *Configuration* topology chain, and click the ">" button.
 
-All of the views are now linked to their EPM objects and inherit their alarm properties from the EPM entity. Selecting any of the views will show a data section displaying the EPM KPI information.
+   1. Next to *Update Views*, click the *SET* button.
+
+      ![Update Views button](~/user-guide/images/EPM_GS_step_5_2.png)
+
+All the views will now be linked to their EPM objects and inherit their alarm properties from the EPM entity. Selecting any of the views will show a data section displaying the EPM KPI information.
 
 ![Data section with EPM KPI information](~/user-guide/images/EPM_GS_step_5_3.png)
