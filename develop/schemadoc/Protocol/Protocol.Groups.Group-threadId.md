@@ -8,7 +8,7 @@ Specifies the ID of the thread that should execute the group.
 
 ## Content Type
 
-[TypeNonLeadingZeroUnsignedInt](xref:Protocol-TypeNonLeadingZeroUnsignedInt)
+int
 
 ## Parent
 
