@@ -115,3 +115,19 @@ The following actions are available:
 
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
+
+## Zooming
+
+Zooming functionalities are available for the maps component.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40017-->:
+
+  - To zoom in, press CTRL while scrolling up.
+
+  - To zoom out, press CTRL while scrolling down.
+
+- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+
+  - To zoom in, scroll up.
+
+  - To zoom out, scroll down.
