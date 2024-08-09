@@ -25,7 +25,7 @@ This tutorial consists of the following steps:
 - [Step 1: Deploy the DataMiner EPM Integration Training package from the Catalog](#step-1-deploy-the-dataminer-epm-integration-training-package-from-the-catalog)
 - [Step 2: Create a new collector element and rebalance the system](#step-2-create-a-new-collector-element-and-rebalance-the-system)
 - [Step 3: Use EPM relations to filter out alarms](#step-3-use-epm-relations-to-filter-out-alarms)
-- [Step 4: Using the EPM feed in dashboards and low-code apps](#step-4-using-the-epm-feed-component-in-dashboards-and-low-code-apps)
+- [Step 4: Use the EPM feed in a dashboard](#step-4-use-the-epm-feed-in-a-dashboard)
 - [Step 5: Link EPM entities to Views](#step-5-link-epm-entities-to-views)
 
 ## Step 1: Deploy the *DataMiner EPM Integration Training* package from the Catalog
@@ -141,9 +141,9 @@ At this point, all of the collectors have pinged their endpoint devices, and a l
 
 With this configuration, if the parent hub has 25% or more unreachable endpoints, the station alarm will be ignored. The system should now have a large decrease in critical alarms.
 
-## Step 4: Using the EPM feed component in dashboards and low-code apps
+## Step 4: Use the EPM feed in a dashboard
 
-In the dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element.
+In the dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element. While the steps below describe how you can do this in a dashboard, this is very similar in a low-code app.
 
 1. [Open the DataMiner Dashboards app](xref:Accessing_the_Dashboards_app).
 
@@ -213,19 +213,39 @@ In the dashboards and low-code apps, you can add an EPM feed component to allow 
 
    1. Make sure only the following parameters are selected: *Index*, *IP*, *Customer Name*, *Jitter*, *Latency*, *Packet Loss Rate*, and *RTT*.
 
-1. Now that we have all the **Endpoint** information we want from all of the **Collectors**, we will now filter to only show the Endpoints associated to the Customer selected in the EPM Feed. Select Filter in the operator and select the *Customer Name* parameter. The Filter method will be *equals* and for the value, we will link the field to the EPM Feed component. Select the little chain icon on the right and then select *EPM Feed 1* for the feed and then the *System name* property. Once done it should look like this:
+      At this point, the query will return all the endpoint information from all of the collectors.
+
+   1. Select the *Filter* operator.
+
+      With this additional operator, you will filter the results so only the endpoints associated with the customer selected in the EPM feed are returned.
+
+   1. In the *Column* box, select *Customer Name*.
+
+   1. In the *Filter method* box, select *equals*.
+
+   1. In the *Value*, click the link icon on the right, select *EPM Feed 1* in the *Feed* box and *System name* in the *Property* box, and click *Apply*.
+
+   At this point, your query should look like this:
 
    ![Query configuration](~/user-guide/images/EPM_GS_step_4_5.png)
 
-1. Drag the query onto the dashboard to create an empty component. Once created, hover over the component and select the Pie Graph icon to change the component to a Table component.
+1. Drag the query onto the dashboard to create an empty component.
+
+1. Hover the mouse pointer over the new component, click the pie graph icon in the menu that appears below it, and select the *Table* visualization.
+
+   This will change the new component into a table component.
 
    ![Component selection](~/user-guide/images/EPM_GS_step_4_6.png)
 
-1. Once the table component has been created, stretch it out to cover the remaining white space and stop editing the dashboard. It should look similar to this:
+1. Drag the edges of the component so that it takes up the remaining white space of the dashboard.
+
+1. In the top-right corner, click *Stop editing*.
+
+   Your dashboard should now look similar to this:
 
    ![Stretched out table component](~/user-guide/images/EPM_GS_step_4_7.png)
 
-1. Now selecting a Customer on the EPM Feed will update the table below to show all of the Endpoints associated to the selected Customer.
+1. To test the dashboard, select a customer in the EPM feed, and check if the table below is updated to show all the endpoints associated with the selected customer.
 
    ![Selecting a customer in the EPM feed](~/user-guide/images/EPM_GS_step_4_8.gif)
 
