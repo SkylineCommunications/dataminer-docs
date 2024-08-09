@@ -62,7 +62,7 @@ Tables in SNMP provide a structured way to group and represent multiple instance
 
 ## Table row indexing
 
-Tables in SNMP can define row indexes in various ways,  each suited to different data structures and needs. These can involve single keys, external references, multiple key combinations, or can different data types than integer.
+Tables in SNMP can define row indexes in various ways,  each suited to different data structures and needs. These can involve single keys, external references, multiple key combinations, or different data types than integer.
 
 ### Single key column
 
