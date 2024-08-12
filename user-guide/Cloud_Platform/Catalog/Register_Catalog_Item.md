@@ -55,7 +55,7 @@ This file will contain all necessary information to register a Catalog item or v
 
 ```yml
 # [Required]
-# A short description of the types can be found here: [Catalog types](https://aka.dataminer.services/catalogitemtypes).
+# A short description of the types can be found here: https://aka.dataminer.services/catalogitemtypes.
 # Possible values: 
 # - connector
 # - automationscript
