@@ -51,7 +51,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 DataMiner is very demanding in concurrency, as a lot of actions usually happen in parallel. Though typically the performed actions are not lengthy or bulky, heavy actions can occur in EPM/CPE environments where a lot of aggregation is needed.
 
-As a rule of thumb, a CPU passmark of >10K is OK, but >20K is needed in EPM/CPE environments. We recommend at least 4 cores, but 16 cores are preferable.
+As a rule of thumb, a CPU passmark of >10K is OK, but >20K is needed in EPM/CPE environments. We recommend at least 4 vCPUs, but 16 vCPUs are preferable.
 
 ### Network
 
@@ -115,7 +115,7 @@ A minimum of 4 GB will be required to smoothly run the necessary services on the
 
 ### CPU
 
-The processes are not CPU-heavy and do not require a lot of parallel computing. This means that 4 cores should be enough.
+The processes are not CPU-heavy and do not require a lot of parallel computing. This means that 4 vCPUs should be enough.
 
 ### Network
 
@@ -160,7 +160,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 Like DataMiner, Cassandra requires high concurrency. It also needs significant CPU power for actions like compaction and repair, and the write speed is bound to the performance of the CPU.
 
-We recommend 16 logical cores and a passmark of >10K.
+We recommend 16 vCPUs and a passmark of >10K.
 
 ### Network
 
@@ -196,7 +196,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 ### CPU
 
-A passmark of >10K is sufficient. Having an extra logical core in favor of a few extra CPU cycles is preferred.
+A passmark of >10K is sufficient. Having an extra vCPU in favor of a few extra CPU cycles is preferred.
 
 ### Network
 
