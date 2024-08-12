@@ -70,6 +70,12 @@ In some cases, an `InvalidOperationException` could be thrown when a .NET Framew
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
+#### SLElement memory leak while NATS is down [ID_39889]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 [CU0] -->
+
+When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
+
 #### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
