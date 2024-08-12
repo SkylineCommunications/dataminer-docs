@@ -64,6 +64,12 @@ When a native process (e.g. SLDataMiner) is stopping, it will by default wait fo
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
+#### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
+
+From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
+
 ### Fixes
 
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]

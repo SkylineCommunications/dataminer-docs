@@ -362,7 +362,7 @@ When booking objects are added to, updated in or deleted from the cache, from no
 
 #### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
