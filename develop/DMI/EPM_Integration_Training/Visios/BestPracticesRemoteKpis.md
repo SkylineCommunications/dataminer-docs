@@ -12,6 +12,20 @@ The *cardvar* will provide a static variable for the visual overview, which will
 
 ![cardVar variable example](~/develop/images/EPM_cardVar_with_element_info.png)
 
+In the example above:
+
+```txt
+InitVar = _field:
+```
+
+```txt
+Execute = [sep:-$]SET|CardVariable|_field|[Field]|SetTrigger=ValueChanged
+```
+
+Example of a live system:
+
+![Live system](~/develop/images/Cardvar_Placeholder_Live_System_Example.png)
+
 ## Use a DMA ID/element ID column in the EPM Object table to retrieve data from remote elements
 
 In an EPM environment, it can occur that data from other elements needs to be displayed in a visual overview. In this case, we recommend using a DMA ID/element ID column in the EPM Object table. This will allow for more efficient retrieval of data from the different elements.
@@ -22,9 +36,17 @@ The card variable should be set using the *Execute* shape data field. In the val
 
 For example, this will create an empty card variable named "_partitionElement":
 
-![InitVar shape data example](~/develop/images/EPM_full_syntax_example_partitionElement.png)
+```txt
+InitVar = _field:|_partitionElement:|_epmFe:[this element]
+```
 
-![Execute shape data example](~/develop/images/EPM_syntax_example_partitionElement2.png)
+```txt
+Execute = _partitionElement|[param:[cardVar:_epmFe],2509,[cardVar:_field]]|SetTrigger=ValueChanged
+```
+
+Example of a live system:
+
+![Live system](~/develop/images/Retrieve_Data_from_Remote_Elements_Live_System_Example.png)
 
 > [!TIP]
 > See also:

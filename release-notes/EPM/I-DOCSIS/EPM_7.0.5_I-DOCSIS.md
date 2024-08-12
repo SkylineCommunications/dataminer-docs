@@ -2,14 +2,21 @@
 uid: EPM_7.0.5_I-DOCSIS
 ---
 
-# EPM 7.0.5 I-DOCSIS (preview)
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be added, modified, or moved to a later release. Check back soon for updates!
+# EPM 7.0.5 I-DOCSIS
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### New dashboards for fiber node utilization reporting [ID_40111]
+
+New dashboards have been implemented to generate a report for both the upstream and downstream peak channel utilization for the fiber nodes over a large period of time.
+
+The **Upstream** dashboard shows the fiber node name, the maximum utilization of SC-QAM of the low channels, the maximum utilization of SC-QAM  of the high channels, the maximum utilization of OFDM channels, and the number of CMs belonging to that fiber node.
+
+The **Downstream** dashboard shows the fiber node name, the maximum utilization of SC-QAM channels within a specific time range, the maximum utilization of OFDM channels within a specific time range, and the number of CMs belonging to that fiber node.
+
+You can filter each column using a query filter located on the left side of the dashboard, and you can select the desired time range for the dashboard in the top-left corner.
+
+These dashboards use an ad hoc data source script, which in turn executes another script that obtains the files provided by Data Aggregator.
 
 ## Changes
 
@@ -18,6 +25,10 @@ uid: EPM_7.0.5_I-DOCSIS
 #### Add_New_CCAP_Pair script now only shows DMAs with back-end element for selection as CCAP element host [ID_40025]
 
 When a single CCAP pair is added using the *Add_New_CCAP_Pair* script, only DMAs where back-end elements are running will now be shown as possible hosts for the CCAP element, since this is a requirement in the EPM I-DOCSIS architecture.
+
+#### Improved back end CCAP cleanup [ID_40026]
+
+The back-end elements will now wait for 24 hours before they begin to perform their daily CCAP registration cleanup.
 
 #### Generic DOCSIS CM Collector: Enhanced debug logging [ID_40137]
 

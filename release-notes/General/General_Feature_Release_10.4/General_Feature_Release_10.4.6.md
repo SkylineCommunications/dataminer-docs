@@ -20,7 +20,7 @@ uid: General_Feature_Release_10.4.6
 
 #### MessageBroker: New NATS reconnection algorithm [ID_38809]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
 
@@ -104,7 +104,7 @@ This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection)
 
 #### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
 
@@ -115,13 +115,13 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 
 #### Security enhancements [ID_38869]
 
-<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 A number of security enhancements have been made.
 
 #### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
 

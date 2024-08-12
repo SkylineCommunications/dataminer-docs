@@ -737,7 +737,6 @@ items:
       - name: Customizing the legacy Dashboards app
         topicUid: Customizing_the_legacy_Dashboards_app
       - name: Legacy Dashboard Gateway installation
-        topicUid: Legacy_Dashboard_Gateway_installation
         items:
           - name: Installing a DMS Dashboard Gateway
             topicUid: Installing_a_DMS_Dashboard_Gateway
@@ -857,7 +856,7 @@ items:
             topicUid: DOM_Invoice_app_example
           - name: Status system example
             topicUid: DOM_status_system_example
-          - name: Altering values of a DomInstance - examples
+          - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
             topicUid: DOM_BulkProcessing_Example

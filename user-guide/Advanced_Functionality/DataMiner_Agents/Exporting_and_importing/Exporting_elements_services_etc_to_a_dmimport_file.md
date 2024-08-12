@@ -14,9 +14,9 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
    > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
    > - If you export from a list of items on a view card, only the item you right-clicked will be included in the export to a .dmimport file.
 
-1. From DataMiner 9.6.3 onwards, in the *Export* window, select *Export to DataMiner package*.
+1. In the *Export* window, select *Export to DataMiner package*.
 
-1. In the *Export* window, clear the selection from any items you do not want to include in the export.
+1. Clear the selection from any items you do not want to include in the export.
 
    > [!NOTE]
    > If you have selected to include a redundancy group, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.

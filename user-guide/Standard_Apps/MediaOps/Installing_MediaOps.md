@@ -5,14 +5,16 @@ uid: Installing_MediaOps
 # Installing dataminer.MediaOps
 
 > [!NOTE]
-> The MediaOps package is currently not yet available for installation. It will become available soon, so check back frequently for updates.
+> The MediaOps package is currently not yet available for deployment from the Catalog.
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- A DaaS system.
 
   > [!NOTE]
-  > If you are using a DaaS system, you are automatically connected to the dataminer.services platform.
+  > If you do not have a DaaS system available yet, [spin up a new DaaS system](xref:Creating_a_DMS_on_dataminer_services).
+
+- The latest version of the [SRM framework](xref:deploying_srm).
 
 - The following user permissions:
 
@@ -42,4 +44,9 @@ uid: Installing_MediaOps
 
 ## Deploying the MediaOps package
 
-dataminer.MediaOps will soon be available in the DataMiner Catalog.
+dataminer.MediaOps is not yet available in the DataMiner Catalog, but a package can be provided upon request.
+
+If you want to try out the apps using demo data, you can then run the *Generate Demo Data* script in the Automation module in DataMiner Cube. This script is included in the MediaOps package. Keep in mind that this script will generate a significant amount of data and will take some time to complete. It will also generate a number of elements in the system. If you no longer want these later, you will need to remove them manually.
+
+> [!TIP]
+> If you have any questions or need assistance to get started with dataminer.mediaOps, contact <support.mediaops@skyline.be>.

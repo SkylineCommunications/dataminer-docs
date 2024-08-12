@@ -9,15 +9,44 @@ uid: General_Main_Release_10.5.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### Parameter latch states will now be reset after every DataMiner restart [ID_39495]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart.
+
+If you want to have persistent parameter latch states, do the following:
+
+1. Open the *MaintenanceSettings.xml* file.
+
+1. In the `AlarmSettings` section, add the `PersistParameterLatchState` option, and set it to true.
+
+   ```xml
+   <AlarmSettings>
+      ...
+      <PersistParameterLatchState>true</PersistParameterLatchState>
+      ...
+   </AlarmSettings>
+   ```
+
+1. Restart the DataMiner Agent.
+
+> [!IMPORTANT]
+>
+> - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
+> - Element, service and view latch states will remain persistent as before.
+
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38869] [ID_38951] [ID_39387]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38951] [ID_39387] [ID_40229]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
-<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
 <!-- 39387: MR 10.5.0 - FR 10.4.7 -->
+<!-- 40229: MR 10.5.0 - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 
@@ -144,17 +173,6 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
-
-<!-- MR 10.5.0 - FR 10.4.6 -->
-
-When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
-
-The dynamic timeout will be calculated as the time it would take to send the chunk at a speed of 1 Mbps, rounded up to the nearest second.
-
-> [!NOTE]
-> The minimum timeout will always be 5 seconds.
-
 #### GQI: Ad hoc data source now supports real-time updates [ID_38643]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
@@ -186,12 +204,6 @@ A number of enhancements have been made with regard to the sorting of indexed lo
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
-
-#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
-
-<!-- MR 10.5.0 - FR 10.4.6 -->
-
-The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
 
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
@@ -424,12 +436,6 @@ A number of enhancements have been made to prevent SLLogCollector from experienc
 
 Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
 
-#### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
-
-<!-- MR 10.5.0 - FR 10.4.7 -->
-
-Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
-
 #### SLAnalytics - Behavioral anomaly detection: Enhanced rounding of anomaly threshold values & optimized linking of severities to anomaly thresholds [ID_39492]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -464,11 +470,11 @@ From now on, SLLogCollector packages will also include the contents of the follo
 
 Up to now, when a limit was set on the result set of queries that retrieve DOM instances from an Elasticsearch or OpenSearch database, that limit would only be applied in memory, causing the entire result set to be returned. From now on, a limited result set will be returned instead. This will enhance overall performance of this type of queries.
 
-#### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
+#### User-defined APIs: ApiToken and ApiDefinition objects will now be cached [ID_39701]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
 
 #### Automation scripts: Resources can now be retrieved page by page [ID_39743]
 
@@ -572,14 +578,6 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
-#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
-
-However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
-
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -602,6 +600,14 @@ From now on, when using STaaS, it is possible to limit the result set of queries
 
 On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flagged as "Not applicable".
 
+#### Service & Resource Management: New 'SkipServiceHandling' option to allow the 'SRMServiceInfo' object check to be skipped when starting/stopping a booking [ID_39939]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
+
+In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+
 #### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID_39964]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
@@ -612,13 +618,13 @@ Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or hi
 
 See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
-#### SLASPConnection is now a 64-bit process [ID_39978]
+#### NT_SNMP_RAW_GET, NT_SNMP_GET, NT_SNMP_RAW_SET and NT_SNMP_SET calls will take the SnmpPollingSnmpPlusPlusOnly soft-launch option into account [ID_40019]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.5.0 - FR 10.4.9 -->
 
-*SLASPConnection.exe* is now a 64-bit process.
+From now on, [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls will take the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option into account.
 
-This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+In other words, from now on, when this soft-launch option is set to true, these calls will be executed using SNMP++ instead of WinSNMP.
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID_40023]
 
@@ -632,11 +638,29 @@ Because of a number of enhancements made to SLNet, overall performance has incre
 
 From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of the modules that were created, updated or deleted.
 
-#### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
+#### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID_40082]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
+Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
+
+#### BPA tests can now be marked 'upgrade only' [ID_40163]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+BPA tests can now be marked "upgrade only". That way, tests marked as such can be ignored by the DataMiner installer.
+
+#### DataMiner Object Models: Enhanced storage of DOM instances [ID_40242]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
+
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
 
 ### Fixes
 
@@ -683,12 +707,6 @@ A *ModelHostException* could be thrown while checking whether the DataMiner Syst
 
 In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
 
-#### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
-
-<!-- MR 10.5.0 - FR 10.4.7 -->
-
-In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
-
 #### STaaS: Problem when using a delete statement with a filter [ID_39416]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
@@ -698,12 +716,6 @@ When, on a STaaS system, an attempt was made to delete data from the database us
 `Provided delete filter resulted in a post filter, post filtering is not supported for cloud delete requests.`
 
 This issue has now been fixed.
-
-#### Problem when disposing an ISession with multiple subscriptions [ID_39483]
-
-<!-- MR 10.5.0 - FR 10.4.7 -->
-
-In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
 #### API Gateway: Problem when processing a large number of parallel calls [ID_39550]
 
@@ -718,12 +730,6 @@ When API Gateway had to process a large number of parallel calls, up to now, thi
 When an imported element was deleted and then imported again, up to now, SLAnalytics would incorrectly considered that element as being deleted for at least a day. As a result, it would for example not detect any change points for that element during that time frame.
 
 From now on, when an imported element is deleted and then imported again, SLAnalytics will no longer considered that element as being deleted.
-
-#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
-
-<!-- MR 10.5.0 - FR 10.4.7 -->
-
-When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
 #### TraceData generated during NATSCustodian startup would re-appear later linked to another thread [ID_39731]
 
@@ -772,12 +778,6 @@ When a join operation was performed with two of the following data sources, in s
 - *Get trend data pattern events*
 - *Get trend data patterns*
 
-#### SLElement would leak memory while NATS was down [ID_39889]
-
-<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
-
-When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
-
 #### Problem with SLAnalytics while starting up [ID_39955]
 
 <!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
@@ -793,9 +793,3 @@ Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the Data
 As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
 
 From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
-
-#### MessageBroker: Reconnection mechanism could cause the overall CPU load to rise [ID_40071]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Due to an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to rise. This issue has now been fixed.

@@ -4,6 +4,24 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 8 August 2024 - Enhancement - CloudGateway 2.14.0 - Upgrade to .NET 8 [ID_40431]
+
+DataMiner CloudGateway has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
+#### 25 July 2024 - Enhancement - CloudGateway 2.13.15 - Dependencies updated & event handling improved [ID_40279]
+
+Several dependencies have been updated. Events sent by DxMs via the CloudGateway DxM that are rejected by dataminer.services will now be indicated so the senders know not to retry but to discard those events.
+
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Requests could get no response in an edge case leading to timeouts [ID_40208]
+
+If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway DxM will try to return an internal server response immediately.
+
+If a remote access web API call takes longer than 25 seconds, this will now also be mentioned in a warning log.
+
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13
+
+Because the certificate used to sign CloudGateway 2.13.13 has been revoked, a new installer has been generated. To avoid issues during the digital signature validation while running the installer, CloudGateway 2.13.13 is now unlisted.
+
 #### 10 July 2024 - Enhancement - CloudGateway 2.13.13 - Improvement for cloud token refresh [ID_40032]
 
 The credentials used by CloudGateway are now refreshed daily, so that even when a system is temporarily disconnected from the internet or shut down, the token will remain valid, provided that this does not last longer than 6 days.

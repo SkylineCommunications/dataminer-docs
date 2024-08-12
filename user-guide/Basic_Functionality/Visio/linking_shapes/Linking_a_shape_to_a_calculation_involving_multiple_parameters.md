@@ -78,9 +78,7 @@ Element:Parameter:Index
 
   - From DataMiner 10.2.1/10.3.0 onwards, you can refer to the index using a subscription filter. This can be any filter that can be passed to a parameter change subscription (e.g. "VALUE=\<PID> == \<value>", "fullFilter=(...)", etc.). For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-  - From DataMiner 9.6.7 onwards, it is possible to refer to several rows, a column, or a full table. For instance, to refer to all rows that start with "SL", you can specify "101/201:500:SL\*\|". To refer to a column, specify the column parameter, e.g. "101/201:501". To refer to an entire table, specify the table parameter, e.g. "101/201:500".
-
-  - Up to DataMiner 9.6.0, if you specify a table parameter, only one row is allowed to match the filter.
+  - It is possible to refer to several rows, a column, or a full table. For instance, to refer to all rows that start with "SL", you can specify "101/201:500:SL\*\|". To refer to a column, specify the column parameter, e.g. "101/201:501". To refer to an entire table, specify the table parameter, e.g. "101/201:500".
 
 > [!NOTE]
 >

@@ -131,7 +131,7 @@ Because of a number of enhancements, it will now take less time for a Failover a
 
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
@@ -274,7 +274,7 @@ In some rare cases, an error could occur in SLNet when information on hanging ca
 
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
 
 In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
 
@@ -297,7 +297,7 @@ Also, when a group contained single parameters in combination with a partial tab
 
 #### Problem when disposing an ISession with multiple subscriptions [ID_39483]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
@@ -343,7 +343,7 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 
 #### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 
@@ -361,9 +361,9 @@ Also, when an SLNet connection was made to a FQDN which points to a loopback add
 
 The *Get trend data patterns* data source would incorrectly return the pattern ID instead of the linked pattern ID.
 
-#### SLElement would leak memory while NATS was down [ID_39889]
+#### SLElement memory leak while NATS is down [ID_39889]
 
-<!-- MR 10.5.0 - FR 10.4.7 [CU0] -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 [CU0] -->
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
 

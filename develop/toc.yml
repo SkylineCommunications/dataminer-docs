@@ -365,6 +365,8 @@ items:
         items:
         - name: Introduction
           topicUid: ConnectionsSnmpIntroduction
+        - name: OIDs
+          topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
           topicUid: ConnectionsSnmpRetrievingAVariable
         - name: Retrieving multiple variables
@@ -1457,6 +1459,8 @@ items:
             topicUid: Protocol.Groups.Group-id
           - name: '@ping'
             topicUid: Protocol.Groups.Group-ping
+          - name: '@threadId'
+            topicUid: Protocol.Groups.Group-threadId
           - name: Condition
             topicUid: Protocol.Groups.Group.Condition
           - name: Content
@@ -2749,6 +2753,10 @@ items:
           items: 
           - name: '@connection'
             topicUid: Protocol.Threads.Thread-connection
+          - name: '@id'
+            topicUid: Protocol.Threads.Thread-id
+          - name: '@name'
+            topicUid: Protocol.Threads.Thread-name
       - name: Timers
         topicUid: Protocol.Timers
         items: 

@@ -342,7 +342,7 @@ Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 Enables the guides in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: To be determined
+- **Estimated release version**:  Will not be released (deprecated)
 
 ### ReportsAndDashboardsPTP
 
@@ -401,7 +401,7 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 > [!IMPORTANT]
 >
 > - This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
-> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET) and [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) calls do not take this soft-launch option into account yet. As a result, SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always executed by WinSNMP.
+> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls take this soft-launch option into account as from DataMiner versions 10.5.0/10.4.9.<!-- RN 40019 --> Prior to DataMiner versions 10.5.0/10.4.9, SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always executed using WinSNMP.
 
 ### SrmOwnServices
 

@@ -27,9 +27,8 @@ For each field, the following configuration is possible.
     - *Auto increment*: Select this type to create an automatic counter. If a user specifies -1 in this field, DataMiner will automatically look up the next available number and use this, so that with every new job this number increases. If the user specifies a different number in this field, that number will be used instead. When you select this type, you can optionally specify a prefix and/or a suffix that will be added to the number.
 
         > [!NOTE]
-        > - From DataMiner 9.6.11 onwards, you can no longer edit the value of the auto increment field. The field will only be displayed after a job has been created and the value of the field is filled in by the system. This field can also no longer be optional from this version onwards, so the *Required* checkbox is not available in the configuration of this field.
-        > - This field is only available for filtering from DataMiner 10.0.4 onwards.
-        > - Changing the format of auto-increment fields when these are used in existing jobs is possible from DataMiner 10.0.4 onwards. However, the existing jobs will keep using the old format.
+        > - It is not possible to edit the value of the auto-increment field. The field will only be displayed after a job has been created and the value of the field is filled in by the system. This field can also not be set as optional, so the *Required* checkbox is not available in the configuration for this field.
+        > - If you change the format of auto-increment fields when these are used in existing jobs, the existing jobs will keep using the old format.
 
     - *User*: Select this type to create a drop-down list in which one of the users available in the DataMiner System will need to be selected.
 
@@ -54,5 +53,4 @@ For each field, the following configuration is possible.
 When the configuration is ready, click *Save*.
 
 > [!NOTE]
-> Up to DataMiner 9.6.11, if a field is used by existing jobs, it cannot be modified. From DataMiner 9.6.11 onwards, in that case it is possible to modify the type as well as any selectable *Dropdown* options.
->
+> If a field is used by existing jobs, you can modify its type as well as any selectable *Dropdown* options.

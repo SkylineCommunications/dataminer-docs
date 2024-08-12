@@ -5,7 +5,7 @@ uid: SLNetClientTest_consulting_license_info
 # Consulting license information for a DMA
 
 > [!NOTE]
-> To view license information regarding third-party software, go to *http(s)://**\[DMA name or IP\]**/Licenses* (available from DataMiner 9.5.14 onwards).
+> To view license information regarding third-party software, go to *http(s)://**\[DMA name or IP\]**/Licenses*.
 
 After you have [connected to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), do the following to get a list of all the applications the DMA is licensed for, the license verification method, and the license expiration date:
 

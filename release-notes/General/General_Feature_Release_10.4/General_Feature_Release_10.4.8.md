@@ -160,7 +160,7 @@ See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Da
 
 #### SLASPConnection is now a 64-bit process [ID_39978]
 
-<!-- MR 10.5.0 - FR 10.4.8 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.8 -->
 
 *SLASPConnection.exe* is now a 64-bit process.
 

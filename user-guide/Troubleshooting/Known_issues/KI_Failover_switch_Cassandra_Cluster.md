@@ -6,7 +6,7 @@ uid: KI_Failover_switch_Cassandra_Cluster
 
 ## Affected versions
 
-Failover systems with Cassandra Cluster setup from DataMiner 10.4.2 onwards.
+Failover systems with Cassandra Cluster setup from DataMiner 10.4.2 to 10.4.8.
 
 ## Cause
 
@@ -14,7 +14,7 @@ Blocking calls in the SLASPConnection process cause a Failover switch to take a 
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU18], 10.4.0 [CU6], or 10.4.9.
 
 ## Description
 

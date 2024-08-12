@@ -86,7 +86,7 @@ The following shape data fields can be added to a shape that has to represent a 
       > [!NOTE]
       > The *Timeout* alarm severity is currently not supported in the **ChildrenFilter** field.
 
-    - Using placeholders such as "\[var:\]" and "\[param:\]" within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
+    - Placeholders such as "\[var:\]" and "\[param:\]" are supported within **ChildrenFilter** shape data. This can for instance be used to filter the child shapes using a session variable in the filter value.
 
   - From DataMiner 10.2.0/10.1.2 onwards, you can filter service, view and element children by name, by specifying a regular expression in the following format in the shape data: *Name=Regex*.
 
