@@ -280,7 +280,7 @@ Because of a number of enhancements, the accuracy of the time-scoped relation le
 
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
 
 When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
 

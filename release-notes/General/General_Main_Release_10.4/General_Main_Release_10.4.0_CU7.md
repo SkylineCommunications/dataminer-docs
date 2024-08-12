@@ -50,6 +50,14 @@ The *Subscribe* method of the `NatsSession` class has now been made completely t
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
+#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
+
+When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
+
+However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
+
 ### Fixes
 
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]

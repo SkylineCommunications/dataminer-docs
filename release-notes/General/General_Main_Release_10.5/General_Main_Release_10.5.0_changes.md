@@ -584,14 +584,6 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
-#### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
-
-However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
-
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
