@@ -476,12 +476,6 @@ Up to now, when a limit was set on the result set of queries that retrieve DOM i
 
 SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
 
-#### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
-
 #### Automation scripts: Resources can now be retrieved page by page [ID_39743]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

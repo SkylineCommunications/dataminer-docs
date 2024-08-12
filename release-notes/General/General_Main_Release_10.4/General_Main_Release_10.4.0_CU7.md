@@ -50,6 +50,12 @@ The *Subscribe* method of the `NatsSession` class has now been made completely t
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
+#### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
+
+From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->

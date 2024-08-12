@@ -184,7 +184,7 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 #### MessageBroker: Clients will now first attempt to connect via the local NATS node [ID_39727]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
