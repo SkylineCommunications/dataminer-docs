@@ -64,6 +64,14 @@ When a native process (e.g. SLDataMiner) is stopping, it will by default wait fo
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
+#### SLASPConnection is now a 64-bit process [ID_39978]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.8 -->
+
+*SLASPConnection.exe* is now a 64-bit process.
+
+This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
+
 #### SLNet.txt log file will no longer contain any logging from MessageBroker [ID_40061]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->

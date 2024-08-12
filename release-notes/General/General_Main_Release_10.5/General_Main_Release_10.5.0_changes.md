@@ -618,14 +618,6 @@ Up to now, this prerequisite would also be run on DMAs with version 10.4.0 or hi
 
 See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
-#### SLASPConnection is now a 64-bit process [ID_39978]
-
-<!-- MR 10.5.0 - FR 10.4.8 -->
-
-*SLASPConnection.exe* is now a 64-bit process.
-
-This will prevent out of memory exceptions from being thrown, especially on larger DataMiner Systems.
-
 #### NT_SNMP_RAW_GET, NT_SNMP_GET, NT_SNMP_RAW_SET and NT_SNMP_SET calls will take the SnmpPollingSnmpPlusPlusOnly soft-launch option into account [ID_40019]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
