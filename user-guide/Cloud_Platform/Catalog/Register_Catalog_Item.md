@@ -55,11 +55,28 @@ This file will contain all necessary information to register a Catalog item or v
 
 ```yml
 # [Required]
+# A short description of the types can be found here: https://aka.dataminer.services/catalogitemtypes.
 # Possible values: 
-#   - automationscript: If the catalog item is an Automation Script that can be deployed on a DataMiner System.
-#   - package: If the catalog item is a Solution Package that can be deployed on a DataMiner System.
-#   - connector: If the catalog item is a Protocol that can be deployed on a DataMiner System.
-#   - visio: If the catalog item is a Visio file that can be deployed on a DataMiner System.
+# - connector
+# - automationscript
+# - solution
+# - testingsolution
+# - samplesolution
+# - standardsolution
+# - dashboard
+# - lowcodeapp
+# - chatopsextension
+# - userdefinedapi
+# - datatransformer
+# - lifecycleserviceorchestration
+# - profileloadscript
+# - processactivity
+# - functiondefinition
+# - slamodel
+# - enhancedservicemodel
+# - scriptedconnector
+# - adhocdatasource
+# - bestpracticesanalyzer
 type: 'automationscript'
 
 # [Required] 
