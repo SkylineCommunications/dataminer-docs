@@ -12,6 +12,17 @@ uid: General_Main_Release_10.4.0_CU7
 
 ### Enhancements
 
+#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
+
+When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
+
+The dynamic timeout will be calculated as the time it would take to send the chunk at a speed of 1 Mbps, rounded up to the nearest second.
+
+> [!NOTE]
+> The minimum timeout will always be 5 seconds.
+
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
 <!-- MR MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->

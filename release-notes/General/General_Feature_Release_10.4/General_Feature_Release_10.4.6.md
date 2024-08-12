@@ -104,7 +104,7 @@ This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection)
 
 #### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
 
