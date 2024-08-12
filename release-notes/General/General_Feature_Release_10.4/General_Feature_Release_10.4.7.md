@@ -343,7 +343,7 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 
 #### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
 
 When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
 

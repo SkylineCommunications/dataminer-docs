@@ -64,6 +64,12 @@ In some rare cases, an exception could be thrown when MessageBroker tried to rea
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
+#### MessageBroker: Problem when receiving a Subscribe call while reconnecting [ID_39633]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
+
+When MessageBroker received a Subscribe call while it was reconnecting, in some cases, the subscription could fail.
+
 #### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
