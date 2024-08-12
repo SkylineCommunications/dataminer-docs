@@ -7,6 +7,7 @@ uid: ConnectionsSnmp
 In this section:
 
 - <xref:ConnectionsSnmpIntroduction>
+- <xref:ConnectionsSnmpOids>
 - <xref:ConnectionsSnmpRetrievingAVariable>
 - <xref:ConnectionsSnmpRetrievingMultipleVariables>
 - <xref:ConnectionsSnmpDynamicallyRetrievingAVariable>
