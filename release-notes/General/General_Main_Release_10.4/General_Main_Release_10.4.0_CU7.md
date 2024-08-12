@@ -52,6 +52,12 @@ Information regarding protocol signature validation will now be cached. This wil
 
 ### Fixes
 
+#### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
+
+In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
+
 #### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->

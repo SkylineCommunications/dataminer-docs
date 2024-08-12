@@ -735,12 +735,6 @@ A *ModelHostException* could be thrown while checking whether the DataMiner Syst
 
 In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
 
-#### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
-
-<!-- MR 10.5.0 - FR 10.4.7 -->
-
-In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
-
 #### STaaS: Problem when using a delete statement with a filter [ID_39416]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
