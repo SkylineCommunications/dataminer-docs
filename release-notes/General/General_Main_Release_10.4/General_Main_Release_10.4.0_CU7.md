@@ -32,6 +32,12 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
+#### Security enhancements [ID_38869]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
+
+A number of security enhancements have been made.
+
 #### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.6 -->

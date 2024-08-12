@@ -115,7 +115,7 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 
 #### Security enhancements [ID_38869]
 
-<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 A number of security enhancements have been made.
 
