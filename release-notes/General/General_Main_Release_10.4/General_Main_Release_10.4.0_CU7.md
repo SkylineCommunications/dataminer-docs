@@ -104,3 +104,9 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
    at System.Runtime.Serialization.SerializationInfo.GetValue(String name, Type type)
    at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
 ```
+
+#### MessageBroker: Reconnection mechanism could cause the overall CPU load to increase [ID_40071]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
+
+Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Because of an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to increase. This issue has now been fixed.
