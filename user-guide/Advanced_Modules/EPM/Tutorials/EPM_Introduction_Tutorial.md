@@ -13,10 +13,10 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and where the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch option is enabled.
 
 > [!TIP]
-> A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box, so it automatically meets this requirement.
+> A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box and has most soft-launch options enabled, so it automatically meets this requirement.
 
 ## Overview
 
@@ -36,11 +36,6 @@ This tutorial consists of the following steps:
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
-
-1. Connect to the DMS with DataMiner Cube using the argument `ENABLEFEATURE=CPEINTEGRATION`, so that the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch features are enabled.
-
-   > [!TIP]
-   > See also: [Connecting to a DMS using arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments)
 
 1. In DataMiner Cube, check whether the following items have been added to your DataMiner Agent:
 

@@ -118,7 +118,7 @@ Allows you to [create a ticket](xref:Creating_a_ticket) as a Correlation action.
 
 ### CPEIntegration
 
-This is a Cube-only feature that can only be activated with the argument `ENABLEFEATURE=CPEINTEGRATION`. Note that you also need specific protocol changes in order to benefit from this.
+Enables the Topology app in DataMiner Cube. Note that you also need specific protocol changes in order to benefit from this. See [Topology app configuration](xref:Topology_app_configuration).
 
 - **Minimum version**: 9.6.7
 - **Estimated Release version**: To be determined
