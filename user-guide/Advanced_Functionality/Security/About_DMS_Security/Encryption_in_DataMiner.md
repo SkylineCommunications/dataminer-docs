@@ -97,7 +97,7 @@ For DataMiner Systems configured to use an Elasticsearch database, we recommend 
 
 From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted.
 
-Please refer to the official NATS documentation on [enabling TLS encryption](https://docs.nats.io/running-a-nats-service/configuration/securing_nats/tls).
+Please refer to [Securing NATS](xref:Security_NATS) to learn how to set up TLS for NATS.
 
 ## Encryption at rest
 
