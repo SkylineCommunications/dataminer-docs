@@ -58,6 +58,12 @@ Information regarding protocol signature validation will now be cached. This wil
 
 In some rare cases, an exception could be thrown when MessageBroker tried to read a file that was being updated by another process.
 
+#### Problem when disposing an ISession with multiple subscriptions [ID_39483]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
+
+In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+
 #### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->

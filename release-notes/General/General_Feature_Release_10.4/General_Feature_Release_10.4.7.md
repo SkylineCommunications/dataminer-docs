@@ -297,7 +297,7 @@ Also, when a group contained single parameters in combination with a partial tab
 
 #### Problem when disposing an ISession with multiple subscriptions [ID_39483]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
 
 In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
