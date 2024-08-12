@@ -31,15 +31,6 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
-#### MessageBroker: New NATS reconnection algorithm [ID_38809]
-
-<!-- MR 10.5.0 - FR 10.4.6 -->
-
-From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
-
-1. Re-read the MessageBroker configuration file.
-1. Update the endpoints to which MessageBroker will connect.
-
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

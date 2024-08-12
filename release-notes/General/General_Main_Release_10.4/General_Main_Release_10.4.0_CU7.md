@@ -23,6 +23,15 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 > [!NOTE]
 > The minimum timeout will always be 5 seconds.
 
+#### MessageBroker: New NATS reconnection algorithm [ID_38809]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
+
+From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
+
+1. Re-read the MessageBroker configuration file.
+1. Update the endpoints to which MessageBroker will connect.
+
 #### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
