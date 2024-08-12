@@ -121,7 +121,7 @@ A number of security enhancements have been made.
 
 #### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
 

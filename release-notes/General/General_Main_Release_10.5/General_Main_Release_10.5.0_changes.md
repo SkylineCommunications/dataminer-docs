@@ -206,12 +206,6 @@ A number of enhancements have been made with regard to the sorting of indexed lo
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
-#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
-
-<!-- MR 10.5.0 - FR 10.4.6 -->
-
-The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
-
 #### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->

@@ -23,6 +23,12 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 > [!NOTE]
 > The minimum timeout will always be 5 seconds.
 
+#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
+
+The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
+
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
 <!-- MR MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
