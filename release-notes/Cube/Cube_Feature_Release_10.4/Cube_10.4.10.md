@@ -30,4 +30,10 @@ In the AlarmFilter shape data value, dynamic values (e.g. session variables) are
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### False-positive warning log entry when Services or Profiles module was opened [ID_40385]
+
+When the Services or Profiles module was opened in Cube, a false-positive warning entry could be added to the Cube logging, with the following message:
+
+```txt
+Profile and Services - The visio file name was empty or null. Check the response message from the server
+```
