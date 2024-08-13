@@ -16,6 +16,12 @@ The method of displaying images in Visual Overview was modified to prevent freez
 
 ## Fix
 
+No fix is available yet.
+
+<!--
+
+RN 40454:
+
 - For Cube clients without internet access:
 
   1. Request an upgrade package from an Administrator working on a DMS that has not been impacted by this issue.
@@ -27,8 +33,7 @@ The method of displaying images in Visual Overview was modified to prevent freez
   1. Navigate to *System Center* > *System settings* > *Manage client versions*.
 
   1. Select a Cube version higher than 10.4.2425.2536. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
-
-<!--RN 40454-->
+-->
 
 ## Description
 
