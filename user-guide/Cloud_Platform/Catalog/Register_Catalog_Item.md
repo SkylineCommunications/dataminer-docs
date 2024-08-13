@@ -34,6 +34,9 @@ To register a new Catalog item:
 
    This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item using the [API](#using-the-catalog-api).
 
+> [!NOTE]
+> If the archive containing the new Catalog item version contains a readme.md file, the content of this file will be shown in the description tab for the Catalog item. Note that images are currently not yet supported in this readme file.<!-- RN 40190+40241 -->
+
 ## Using the Catalog API
 
 ### Authentication
