@@ -20,4 +20,14 @@ uid: Cube_Feature_Release_10.4.10
 
 ## Changes
 
-*No changes have been added yet.*
+### Enhancements
+
+#### Visual Overview: Support for dynamic values in AlarmFilter shape data value [ID_40228]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In the AlarmFilter shape data value, dynamic values (e.g. session variables) are now supported.
+
+### Fixes
+
+*No fixes have been added yet.*
