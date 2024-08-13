@@ -8,7 +8,7 @@ uid: KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected
 
 - DataMiner 10.4.8, if your Cube client does not have internet access.
 
-- Cube clients that have been enforced to use Cube version 10.4.2425.2536 or lower, which can be configured using the *Force a specific version* setting in *System Center* > *System settings* > *Manage client versions*.
+- Cube clients that have been enforced to use a Cube version prior to 10.4.2425.2536, which can be configured using the *Force a specific version* setting in *System Center* > *System settings* > *Manage client versions*.
 
 ## Cause
 
