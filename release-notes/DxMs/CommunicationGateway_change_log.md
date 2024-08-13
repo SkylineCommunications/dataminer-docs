@@ -4,6 +4,10 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 13 August 2024 - Enhancement - CommunicationGateway 3.2.1 - Upgrade to .NET 8 [ID_40424]
+
+DataMiner CommunicationGateway has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
 #### 26 June 2024 - Fix - CommunicationGateway 3.2.0 - Multiple CommunicationGateway nodes in cluster setting up connection with endpoint instead of only one [ID_39548]
 
 When multiple CommunicationGateway nodes were deployed in a cluster, and an element was set up that would for instance use the OpenConfig middleware, eventually all CommunicationGateway nodes set up a connection with the endpoint, instead of only one as was intended. To prevent this, an extra step has been added to the connection process.
