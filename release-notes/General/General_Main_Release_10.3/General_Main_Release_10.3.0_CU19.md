@@ -18,6 +18,12 @@ uid: General_Main_Release_10.3.0_CU19
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
+#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID_40104]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
+
+Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]

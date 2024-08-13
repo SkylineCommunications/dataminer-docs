@@ -375,7 +375,7 @@ Because a number of database operations have been optimized, overall performance
 
 #### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID_40104]
 
-<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
 
 Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
 
