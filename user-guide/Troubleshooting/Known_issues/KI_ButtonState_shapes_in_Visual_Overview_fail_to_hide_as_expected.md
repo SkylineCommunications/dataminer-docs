@@ -30,7 +30,7 @@ No fix is available yet.
 
   1. Navigate to *System Center* > *System settings* > *Manage client versions*.
 
-  1. Select a Cube version higher than 10.4.2425.2536. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
+  1. Select Cube version 10.4.2425.2536 or higher. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
 
 ## Description
 
