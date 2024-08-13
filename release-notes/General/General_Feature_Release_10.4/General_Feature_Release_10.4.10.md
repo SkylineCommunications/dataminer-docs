@@ -26,4 +26,14 @@ uid: General_Feature_Release_10.4.10
 
 ## Changes
 
-*No changes have been added yet.*
+### Enhancements
+
+#### Improved performance when alarm filters containing operators are used [ID_39732]
+
+<!-- 10.4.0 [CU7] - FR 10.4.10 -->
+
+Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
+
+### Fixes
+
+*No fixes have been added yet.*

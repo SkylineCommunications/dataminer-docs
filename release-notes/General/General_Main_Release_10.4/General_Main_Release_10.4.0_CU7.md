@@ -56,6 +56,12 @@ Information regarding protocol signature validation will now be cached. This wil
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
+#### Improved performance when alarm filters containing operators are used [ID_39732]
+
+<!-- 10.4.0 [CU7] - FR 10.4.10 -->
+
+Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
+
 #### When stopping, native processes will only wait for 30 seconds to close the MessageBroker connection when necessary [ID_39863]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
