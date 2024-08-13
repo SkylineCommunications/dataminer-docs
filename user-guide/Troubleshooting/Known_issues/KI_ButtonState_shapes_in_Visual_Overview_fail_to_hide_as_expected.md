@@ -16,21 +16,9 @@ The method of displaying images in Visual Overview was modified to prevent freez
 
 ## Fix
 
-No fix is available yet.
+- For Cube clients without internet access: No fix is available yet.
 
-## Workaround
-
-- For Cube clients without internet access:
-
-  1. Request an upgrade package from an Administrator working on a DMS that has not been impacted by this issue.
-
-  1. Manually upgrade your DMA using the provided package. See [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
-
-- For clients enforced to use a version older than 10.4.2425.2536:
-
-  1. Navigate to *System Center* > *System settings* > *Manage client versions*.
-
-  1. Select Cube version 10.4.2425.2536 or higher. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
+- For clients enforced to use a version older than 10.4.2425.2536: Make sure the client uses version 10.4.2425.2536 or higher. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
 
 ## Description
 
