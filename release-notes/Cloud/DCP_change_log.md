@@ -9,13 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 13 August 2024 - Enhancement - Admin - Adding a new user will now be blocked when the user is not compliant with the configured allowed email domains [ID_40459]
+#### 13 August 2024 - Enhancement - Admin - Adding new user now blocked when user does not comply with configured allowed email domains [ID_40459]
 
-When you try to add a user to your organiation in the Admin app. You will now be restricted to only add users that comply with the configured allowed email domains setting.
+When you try to add a user to your organization in the Admin app, this will now only be possible if the user you add complies with the configured allowed email domains setting.
 
-#### 13 August 2024 - Enhancement - Admin - Showing non compliant users in your organization [ID_40469]
+#### 13 August 2024 - Enhancement - Admin - Non-compliant users in organization now shown [ID_40469]
 
-Users in your organization that do not comply with the configured allowed email domains setting will now be shown with a warning next to it. This is to inform the user that this user was added before the setting was active.
+Users in an organization that do not comply with the configured allowed email domains setting will now be shown with a warning next to them, so that it is clear that these users were added before the allowed email domains setting was enforced.
 
 #### 13 August 2024 - Fix - Catalog - Deploy issues coordination name [ID_40470]
 
