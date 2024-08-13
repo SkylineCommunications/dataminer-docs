@@ -224,6 +224,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: ButtonState shapes in Visual Overview fail to hide as expected
+            topicUid: KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected
           - name: Inconsistent service impact of alarms after element is stopped and restarted
             topicUid: KI_Inconsistent_service_impact
           - name: Unable to perform a DataMiner upgrade via Update Center
