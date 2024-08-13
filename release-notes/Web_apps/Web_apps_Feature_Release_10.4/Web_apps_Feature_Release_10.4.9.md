@@ -71,6 +71,8 @@ From now on, you will be able to zoom in and out using CTRL+Scroll on the follow
 
 - Visual Overview
 
+- Timeline
+
 #### Web API: DOM methods will no longer check whether DOM object GUIDs are empty [ID_40024]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
