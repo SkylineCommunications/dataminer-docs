@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 13 August 2024 - Enhancement - Admin - Adding a new user will now be blocked when the user is not compliant with the configured allowed email domains [ID_40459]
+
+When you try to add a user to your organiation in the Admin app. You will now be restricted to only add users that comply with the configured allowed email domains setting.
+
+#### 13 August 2024 - Enhancement - Admin - Showing non compliant users in your organization [ID_40469]
+
+Users in your organization that do not comply with the configured allowed email domains setting will now be shown with a warning next to it. This is to inform the user that this user was added before the setting was active.
+
+#### 13 August 2024 - Fix - Catalog - Deploy issues coordination name [ID_40470]
+
+When opening the deploy issues pop-up window. A user will now correctly see the name of the DMS which has an issue. Instead of a fixed text.
+
 #### 9 August 2024 - Enhancement - Admin - New options to restrict remote access to web apps and/or user-defined APIs based on IP address [ID_40460]
 
 In the Admin app, it is now possible to restrict remote access to the web apps and/or user-defined APIs for a specific DMS based on IP address. Previously, this was only possible for the DataMiner Cube desktop app.
