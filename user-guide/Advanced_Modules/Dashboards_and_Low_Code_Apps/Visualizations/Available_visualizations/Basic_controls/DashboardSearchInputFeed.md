@@ -29,4 +29,4 @@ From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, when yo
 - *Set value*: Allows you to set the current value of the component to either a static value or a feed.
 
   > [!NOTE]
-  > When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed. If this option is not enabled, the value will only be passed when pressing Enter (if the *General > Feed value on > Enter* option is enabled) or when the focus is no longer on the box (if the *General > Feed value on > Focus lost* option is enabled).
+  > When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed. If this option is not enabled, the value will only be passed when Enter is pressed (if the *General > Feed value on > Enter* option is enabled) or when the focus is no longer on the box (if the *General > Feed value on > Focus lost* option is enabled).
