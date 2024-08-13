@@ -18,9 +18,7 @@ The method of displaying images in Visual Overview was modified to prevent freez
 
 No fix is available yet.
 
-<!--
-
-RN 40454:
+## Workaround
 
 - For Cube clients without internet access:
 
@@ -33,7 +31,6 @@ RN 40454:
   1. Navigate to *System Center* > *System settings* > *Manage client versions*.
 
   1. Select a Cube version higher than 10.4.2425.2536. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
--->
 
 ## Description
 
