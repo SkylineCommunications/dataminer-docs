@@ -225,6 +225,13 @@ items:
                 topicUid: PO_Managing_Teams
               - name: Managing organizations
                 topicUid: PO_Managing_Organizations
+      - name: Interacting with MediaOps
+        topicUid: MediaOps_Interacting
+        items:
+          - name: Resource Studio
+            topicUid: MediaOps_Interacting_ResourceStudio
+          - name: Scheduling
+            topicUid: MediaOps_Interacting_Scheduling
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
