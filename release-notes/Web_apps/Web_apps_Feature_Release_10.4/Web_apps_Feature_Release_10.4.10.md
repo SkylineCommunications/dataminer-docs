@@ -35,3 +35,9 @@ When one or more required arguments for an ad hoc data source are missing becaus
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When special characters such as "(" were used when configuring a feed, Intellisense no longer worked correctly.
+
+#### Dashboards: Dashboard PDF set to A0 format generated as A4 instead [ID_40398]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you created a PDF of a dashboard, and you set the *Paper format* to A0, the dashboard was incorrectly generated in A4 format instead.
