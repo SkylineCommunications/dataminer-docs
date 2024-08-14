@@ -19,7 +19,7 @@ Users in an organization that do not comply with the configured allowed email do
 
 #### 13 August 2024 - Fix - Catalog - Deploy issues coordination name [ID_40470]
 
-When opening the deploy issues pop-up window. A user will now correctly see the name of the DMS which has an issue. Instead of a fixed text.
+When you opened the deployment issues pop-up window, this did not correctly display the name of the DMS with the issue. Now the DMS name will be shown correctly.
 
 #### 9 August 2024 - Enhancement - Admin - New options to restrict remote access to web apps and/or user-defined APIs based on IP address [ID_40460]
 
