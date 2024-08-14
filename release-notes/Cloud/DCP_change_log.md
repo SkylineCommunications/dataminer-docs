@@ -17,7 +17,7 @@ When you try to add a user to your organization in the Admin app, this will now 
 
 Users in an organization that do not comply with the configured allowed email domains setting will now be shown with a warning next to them, so that it is clear that these users were added before the allowed email domains setting was enforced.
 
-#### 13 August 2024 - Fix - Catalog - Deploy issues coordination name [ID_40470]
+#### 13 August 2024 - Fix - Catalog - Deployment issues pop-up window did not display DMS name correctly [ID_40470]
 
 When you opened the deployment issues pop-up window, this did not correctly display the name of the DMS with the issue. Now the DMS name will be shown correctly.
 
