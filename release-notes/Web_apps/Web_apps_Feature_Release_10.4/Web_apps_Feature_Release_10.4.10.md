@@ -65,3 +65,9 @@ When the "New draft available" pop-up message for a low-code app was closed imme
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 In some cases, it could occur that DOM instances in a form component within a dashboard or low-code app were no longer updated when they transitioned to a different state.
+
+#### Dashboards/Low-Code Apps: Column in table component showing incorrect values after being moved [ID_40425]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+If a template was applied to a column in a table component and that column was dragged to a different location, it could occur that it then showed the values of a different column.
