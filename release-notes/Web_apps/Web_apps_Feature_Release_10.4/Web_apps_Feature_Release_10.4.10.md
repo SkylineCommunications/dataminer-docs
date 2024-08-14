@@ -48,8 +48,14 @@ When special characters such as "(" were used when configuring a feed, Intellise
 
 When you created a PDF of a dashboard, and you set the *Paper format* to A0, the dashboard was incorrectly generated in A4 format instead.
 
-#### Empty header bar menu shown for users without necessary rights to execute actions [ID_40403]
+#### Low-Code Apps: Empty header bar menu shown for users without necessary rights to execute actions [ID_40403]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-In some cases, it could occur that the "..." button to open a menu with actions was shown in the header bar of an app even when a user did not have the rights to execute any actions, so that an empty menu was shown when the user clicked the button.
+In some cases, it could occur that the "..." button to open a menu with actions was shown in the header bar of a low-code app even when a user did not have the rights to execute any actions, so that an empty menu was shown when the user clicked the button.
+
+#### Low-Code Apps: 'New draft available' pop-up message shown twice [ID_40406]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When the "New draft available" pop-up message for a low-code app was closed immediately after it appeared, it could occur that it was incorrectly shown a second time.
