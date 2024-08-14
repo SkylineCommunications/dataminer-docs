@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.4.10
 
 Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
 
+#### DxMs upgraded to versions requiring .NET 8 [ID_40445]
+
+<!-- 10.4.0 [CU7] - FR 10.4.10 -->
+
+All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]

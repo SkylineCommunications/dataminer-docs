@@ -84,6 +84,12 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
+#### DxMs upgraded to versions requiring .NET 8 [ID_40445]
+
+<!-- 10.4.0 [CU7] - FR 10.4.10 -->
+
+All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
+
 ### Fixes
 
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]
