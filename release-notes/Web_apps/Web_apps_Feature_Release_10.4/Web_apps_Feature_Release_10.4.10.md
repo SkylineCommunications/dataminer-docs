@@ -71,3 +71,9 @@ In some cases, it could occur that DOM instances in a form component within a da
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 If a template was applied to a column in a table component and that column was dragged to a different location, it could occur that it then showed the values of a different column.
+
+#### Dashboards/Low-Code Apps: GQI real-time updates not correctly applied in timeline component when grouping was applied [ID_40474]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In a timeline component of a dashboard or low-code app, it could occur that real-time updates from GQI were not applied correctly when the timeline was grouped by a column. Deleted rows were not correctly reflected in the component, and an update could result in a duplicate entry getting added.
