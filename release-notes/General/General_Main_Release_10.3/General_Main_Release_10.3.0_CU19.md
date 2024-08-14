@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_CU19
 
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
-<!-- MR MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
@@ -28,7 +28,7 @@ Up to now, using the *Engine.Sleep* method in an Automation script could cause i
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]
 
-<!-- 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When redundancy groups were configured to switch based on connectivity, it could occur that the signals sent to SLDataMiner contained duplicates. In a system with a heavy load, this could cause too many of these to be sent, which would cause a memory leak in the SLDataMiner process and eventually caused the process to crash.
 
@@ -48,7 +48,7 @@ Performance improvements have now been implemented to avoid sending duplicate si
 
 #### Changes implemented with parameter-specific template editors not saved correctly [ID_40125]
 
-<!-- 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When you changed the alarm or trend template for a table parameter (e.g. by going to the templates tab on the parameter card), it could occur that the wrong line from the template was edited. For example, if a template contained exactly one line for a column in a table, and that line was configured with the filter "SL*", the parameter template editor would show the configuration corresponding to the line in the template with the filter even if that line was not applicable for the current cell. Now, instead an empty template configuration will be shown, corresponding to the filter "\*". When you edit and save this configuration, a new line with filter "\*" will be added to the template.
 

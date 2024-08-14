@@ -793,3 +793,9 @@ Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the Data
 As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
 
 From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
+
+#### DELT import failed if element name contained curly bracket [ID_40330]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.

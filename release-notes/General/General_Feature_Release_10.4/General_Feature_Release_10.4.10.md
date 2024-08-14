@@ -30,13 +30,13 @@ uid: General_Feature_Release_10.4.10
 
 #### Improved performance when alarm filters containing operators are used [ID_39732]
 
-<!-- 10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
 
 #### DxMs upgraded to versions requiring .NET 8 [ID_40445]
 
-<!-- 10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
 
@@ -44,7 +44,7 @@ All DxMs included in the DataMiner upgrade package have now been upgraded to ver
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]
 
-<!-- 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When redundancy groups were configured to switch based on connectivity, it could occur that the signals sent to SLDataMiner contained duplicates. In a system with a heavy load, this could cause too many of these to be sent, which would cause a memory leak in the SLDataMiner process and eventually caused the process to crash.
 
@@ -64,10 +64,16 @@ Performance improvements have now been implemented to avoid sending duplicate si
 
 #### Changes implemented with parameter-specific template editors not saved correctly [ID_40125]
 
-<!-- 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When you changed the alarm or trend template for a table parameter (e.g. by going to the templates tab on the parameter card), it could occur that the wrong line from the template was edited. For example, if a template contained exactly one line for a column in a table, and that line was configured with the filter "SL*", the parameter template editor would show the configuration corresponding to the line in the template with the filter even if that line was not applicable for the current cell. Now, instead an empty template configuration will be shown, corresponding to the filter "\*". When you edit and save this configuration, a new line with filter "\*" will be added to the template.
 
 In addition, when there were two or more lines in the trend template for a table parameter, but none were applicable for the current cell for which you edited the trend template, the parameter template editor would show and create a new line in the template corresponding to an empty filter, instead of to the filter "\*". This has now also been fixed.
 
 Finally, if you changed the information template for a parameter, and the information template did not contain a line for the current parameter, the ID was not saved correctly. In addition, for table parameters, a line with an empty filter would be saved, instead of the filter "\*".
+
+#### DELT import failed if element name contained curly bracket [ID_40330]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
