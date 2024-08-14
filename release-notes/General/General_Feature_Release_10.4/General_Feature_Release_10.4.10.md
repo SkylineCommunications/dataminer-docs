@@ -72,6 +72,12 @@ In addition, when there were two or more lines in the trend template for a table
 
 Finally, if you changed the information template for a parameter, and the information template did not contain a line for the current parameter, the ID was not saved correctly. In addition, for table parameters, a line with an empty filter would be saved, instead of the filter "\*".
 
+#### Problem in SLProtocol because virtual primary element behaved like regular element [ID_40321]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a race condition, it could occur that a virtual primary element in a redundancy group behaved as if it were a regular DataMiner element. This could cause a run-time error in the SLProtocol process and could eventually cause the process to crash.
+
 #### DELT import failed if element name contained curly bracket [ID_40330]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->

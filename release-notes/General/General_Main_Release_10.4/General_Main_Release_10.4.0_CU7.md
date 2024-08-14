@@ -116,21 +116,6 @@ When MessageBroker received a Subscribe call while it was reconnecting, in some 
 
 When the NATS server was down, SLElement would leak memory while trying to push data to the NATS connection.
 
-#### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
-
-<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
-
-When the user's SLNet connection was lost, the GQI session of a query with real-time updates enabled would incorrectly persist, potentially causing both an unhandled exception to be thrown when GQI tried to send an update to the user and SLHelper to crash.
-
-Also, *GenIfAggregateException* messages would not be serialized correctly, causing the following exception to be added to the SLHelperWrapper log file:
-
-```txt
-2024/07/25 15:25:35.636|SLNet.exe|SendMessage|ERR|0|264|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Runtime.Serialization.SerializationException: Member 'InnerExceptions' was not found.
-   at System.Runtime.Serialization.SerializationInfo.GetElement(String name, Type& foundType)
-   at System.Runtime.Serialization.SerializationInfo.GetValue(String name, Type type)
-   at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
-```
-
 #### MessageBroker: Reconnection mechanism could cause the overall CPU load to increase [ID_40071]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
@@ -166,3 +151,24 @@ When you changed the alarm or trend template for a table parameter (e.g. by goin
 In addition, when there were two or more lines in the trend template for a table parameter, but none were applicable for the current cell for which you edited the trend template, the parameter template editor would show and create a new line in the template corresponding to an empty filter, instead of to the filter "\*". This has now also been fixed.
 
 Finally, if you changed the information template for a parameter, and the information template did not contain a line for the current parameter, the ID was not saved correctly. In addition, for table parameters, a line with an empty filter would be saved, instead of the filter "\*".
+
+#### Problem in SLProtocol because virtual primary element behaved like regular element [ID_40321]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a race condition, it could occur that a virtual primary element in a redundancy group behaved as if it were a regular DataMiner element. This could cause a run-time error in the SLProtocol process and could eventually cause the process to crash.
+
+#### GQI: Problems with persisting GQI sessions and incorrectly serialized GenIfAggregateException messages [ID_40333]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
+
+When the user's SLNet connection was lost, the GQI session of a query with real-time updates enabled would incorrectly persist, potentially causing both an unhandled exception to be thrown when GQI tried to send an update to the user and SLHelper to crash.
+
+Also, *GenIfAggregateException* messages would not be serialized correctly, causing the following exception to be added to the SLHelperWrapper log file:
+
+```txt
+2024/07/25 15:25:35.636|SLNet.exe|SendMessage|ERR|0|264|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Runtime.Serialization.SerializationException: Member 'InnerExceptions' was not found.
+   at System.Runtime.Serialization.SerializationInfo.GetElement(String name, Type& foundType)
+   at System.Runtime.Serialization.SerializationInfo.GetValue(String name, Type type)
+   at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
+```
