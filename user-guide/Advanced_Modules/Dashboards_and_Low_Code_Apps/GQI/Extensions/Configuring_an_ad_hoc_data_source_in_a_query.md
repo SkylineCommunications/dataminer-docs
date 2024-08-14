@@ -6,6 +6,15 @@ uid: Configuring_an_ad_hoc_data_source_in_a_query
 
 When you create a query, you can also use an ad hoc data source (i.e. external data source).
 
+> [!TIP]
+> If you are using [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio 2022, you can use a template in Visual Studio to create ad hoc data sources more easily. To do so:
+>
+> 1. Create a new project in Visual Studio 2022.
+> 1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
+> 1. Specify a name for the solution.
+> 1. Under *Additional information*, fill in the name and author for the data source, and select the life cycle interfaces you want to implement.
+> 1. Click *Create*.
+
 To use an ad hoc data source in a query:
 
 1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource).
