@@ -47,3 +47,9 @@ When special characters such as "(" were used when configuring a feed, Intellise
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When you created a PDF of a dashboard, and you set the *Paper format* to A0, the dashboard was incorrectly generated in A4 format instead.
+
+#### Empty header bar menu shown for users without necessary rights to execute actions [ID_40403]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, it could occur that the "..." button to open a menu with actions was shown in the header bar of an app even when a user did not have the rights to execute any actions, so that an empty menu was shown when the user clicked the button.
