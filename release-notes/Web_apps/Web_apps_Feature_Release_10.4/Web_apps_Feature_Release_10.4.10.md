@@ -59,3 +59,9 @@ In some cases, it could occur that the "..." button to open a menu with actions 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When the "New draft available" pop-up message for a low-code app was closed immediately after it appeared, it could occur that it was incorrectly shown a second time.
+
+#### Dashboards/Low-Code Apps: DOM instances not updated in form component [ID_40412]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, it could occur that DOM instances in a form component within a dashboard or low-code app were no longer updated when they transitioned to a different state.
