@@ -27,7 +27,7 @@ This descriptor type uses the `IncrementManager` to generate the next number. Th
 
 > [!IMPORTANT]
 > - Using the `AutoIncrementFieldDescriptor` may affect performance when creating `DomInstances` because the incrementing system needs to synchronize with other Agents in the cluster. When high-performance create actions are required, we advise against using this `FieldDescriptor` type.
-> - Please note that the calculation of incrementing numbers is performed on a 'best effort' basis. While the system aims to avoid duplicates, it cannot guarantee complete uniqueness. In scenarios where the database experiences significant issues or there are frequent disconnections of agents, duplicate numbers may occur in very rare occassions. For solutions where duplicates are unacceptable, we strongly recommend using and storing a non-incrementing identifier, such as a 'Guid'. The ID of the `DomInstance` could already serve this purpose.
+> - Due to the inherent challenges of distributed computing, please be aware that incrementing numbers are calculated on a 'best effort' basis across multiple systems. While our system is designed to minimize the possibility of duplicates, complete uniqueness cannot be guaranteed in all scenarios. Under conditions such as significant database issues or frequent disconnections of agents, there is a very small chance that duplicate numbers could occur. For critical applications where uniqueness is essential, we recommend using and storing a non-incrementing identifier, such as a 'GUID'. The ID of the DomInstance could serve this purpose.
 
 ## Defining the FieldDescriptor
 
