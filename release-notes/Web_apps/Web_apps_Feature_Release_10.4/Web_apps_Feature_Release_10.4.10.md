@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.4.10
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps: Queries with ad hoc data source with missing argument no longer executed [ID_40361]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When one or more required arguments for an ad hoc data source are missing because of an empty feed, the query using the data source will now no longer be executed and an empty visual will be shown. Previously, an error about the missing argument was thrown instead in this situation.
 
 ### Fixes
 
