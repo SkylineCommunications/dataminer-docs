@@ -13,7 +13,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 When you try to add a user to your organization in the Admin app, this will now only be possible if the user you add complies with the configured allowed email domains setting.
 
-#### 13 August 2024 - Enhancement - Admin - Non-compliant users in organization now shown [ID_40469]
+#### 13 August 2024 - Enhancement - Admin - Users overview now shows when users are non-compliant [ID_40469]
 
 Users in an organization that do not comply with the configured allowed email domains setting will now be shown with a warning next to them, so that it is clear that these users were added before the allowed email domains setting was enforced.
 
