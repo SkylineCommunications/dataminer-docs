@@ -86,7 +86,7 @@ In this step, we will give negative feedback on unwanted level shift anomalies o
 
    ![Giving negative feedback to all three level shift anomalies](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_negative_feedback_3.gif)
 
-1. Generate an additional audio channel by pressing *Generate Single Channel*. Note that for this channel, only a variance change anomaly is generated, and no longer a level shift anomaly, because anomaly detection has learned from the provided feedback that level shifts are not interesting.
+1. Generate an additional audio channel by pressing *Generate Single Channel*. Note that for this channel, only a variance change anomaly is generated, and no longer a level shift anomaly, because anomaly detection has learned from the provided feedback that level shifts of this size are not interesting.
 
    ![Alarm Console with a variance change for Channel 5, but no level shift](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_no_level_shift_alarm_console.png)
 
