@@ -10,7 +10,11 @@ To go back to a previous version of a low-code app:
 
 1. Open the application from the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
 
-1. Click the user icon in the top-right corner and select *Versions*. This will show the version history of the app.
+1. Access the version history of the app:
+
+   - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->, click the ellipsis button ("...") in the top-right corner and select *Versions*.
+
+   - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click the user icon in the top-right corner and select *Versions*. This will show the version history of the app.
 
    ![Version history](~/user-guide/images/Version_History.png)<br>*Low-Code App version history in DataMiner 10.4.6*
 
