@@ -12,6 +12,9 @@ In a trend graph showing trend information for one single parameter ([univariate
 
 There are now two ways to define the pattern, a quick way where you use all default options, and a more extensive way where you can customize those options.<!-- RN 36114 -->
 
+> [!NOTE]
+> It is not possible to define a pattern in a trend graph that shows trend information for a [generic parameter](xref:General_parameters)<!--RN 40086-->.
+
 - To **quickly** define a pattern, click the tag icon, enter a name for the pattern definition, and click the check mark icon.
 
 - To define a pattern with **custom** options:
