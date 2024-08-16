@@ -179,6 +179,17 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 > [!NOTE]
 > Although, this section explained reading `DomInstances`, the same principles apply to all other DOM objects. Building filters is done using exposer classes and reading is done using the `DomHelper`. For example, for `SectionDefinitions`, this could be `domHelper.SectionDefinitions.Read(SectionDefinitionExposers.Name.Contains("My Name"))`.
 
+> [!IMPORTANT]
+> On a DataMiner agent that is using Elasticsearch or OpenSearch, there is a default limit of 1024 clauses in a query. This means that you can e.g. only concatenate a max. of 1024 field filters using an 'OR' filter. Note that this can decrease significantly when adding additional filters to each sub-filter. Adding an additional AND filter will divide the maximum OR clauses as the flattened version of the complete filter will have the AND clause applied to each sub-filter. We recommend limiting the query size as much as possible to reduce the chances of this limit causing failed reads. If this limit would not be sufficient, it can be adjusted using the 'indices.query.bool.max_clause_count' option on both [Elasticseach](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-settings.html) and [OpenSearch](https://opensearch.org/docs/latest/install-and-configure/configuring-opensearch/index-settings/).
+>
+> For STaaS there is no such hard limit defined, but we do also recommend keeping the queries short.
+> 
+> Example:
+>
+> - OR filter with "100 x 'Field X = Y'" results in 100 clauses
+> - OR filter with "100 x 'Field X = Y' AND 'Field A = B'" results in 200 clauses
+> - OR filter with "100 x 'Field X = Y' AND 'Field A = B' AND 'Field C = D'" results in 300 clauses
+
 ### Multiple instances
 
 When multiple `DomInstances` need to get created, updated, or deleted, we recommend calling the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->.
