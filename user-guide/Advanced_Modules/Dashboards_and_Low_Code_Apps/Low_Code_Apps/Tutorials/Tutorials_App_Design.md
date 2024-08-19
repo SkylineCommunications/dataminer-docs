@@ -214,7 +214,7 @@ Now that you have created a theme, you can apply it to your low-code app.
 
    - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click your user icon in the top-right corner, and select *Edit*.
 
-1. Make sure the *Contacts* page is selected in the leftmost pane of the app editor. If necessary, click the pencil icon, depending on your DataMiner version.
+1. Make sure the *Contacts* page is selected in the leftmost pane of the app editor. Depending on your DataMiner version, you may need to click the pencil icon next to "Contacts".
 
 1. Make sure no components are selected, and navigate to the *Layout* tab in the pane to the right.
 
