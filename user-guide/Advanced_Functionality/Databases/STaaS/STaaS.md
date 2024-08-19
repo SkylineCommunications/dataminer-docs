@@ -146,7 +146,7 @@ To request a cost estimation, follow the procedure below:
 
 1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-1. An Automation script can be found in the catalog along with instructions on how to run it.
+1. An [Automation script](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) can be found in the catalog along with documentation on how to run it.
 
 1. Make sure 'replication only' is selected, and select all datatypes to have the most accurate estimation of your system when running the script.
 
@@ -155,6 +155,7 @@ To request a cost estimation, follow the procedure below:
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
 1. The next morning you will be able to view your cost estimation in the [Admin](https://admin.dataminer.services) 'Usage' module under the organization which the DMS is a part of.
+   
 > [!NOTE]
 > You will only be able to see the 'Usage' module if you are an Owner or Admin of the organization.
 
