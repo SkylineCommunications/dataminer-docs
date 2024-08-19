@@ -8,7 +8,9 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 An indexing database is required for many DataMiner features, including:
 
-- DataMiner Advanced Analytics features such as pattern matching (see [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) and [Advanced analytics in trend graphs](xref:Advanced_analytics_trending))
+- Some DataMiner Advanced Analytics features (see [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) and [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)), more specifically
+  - [Pattern Matching](xref:Working_with_pattern_matching)
+  - [Time-Scoped Relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 
 - [DataMiner Object Models (DOM)](xref:DOM)
 
