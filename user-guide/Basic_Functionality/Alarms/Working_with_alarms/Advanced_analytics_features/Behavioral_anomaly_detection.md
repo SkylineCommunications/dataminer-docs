@@ -19,9 +19,7 @@ Please note the following regarding suggestion events:
 
 - Suggestion events generated to indicate a behavioral anomaly are automatically cleared 2 hours after their creation time or their last update time. From DataMiner 10.2.11/10.3.0 onwards, they are also cleared in case a new behavioral change is detected that ends the previous anomalous behavioral change. For example, when an alarm was created for an anomalous level increase at 1 PM, and a behavioral change point is detected at 2 PM when the level drops again, then the alarm created at 1 PM will be closed at 2 PM.
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39707-->, suggestion events generated to indicate a behavioral anomaly for [virtual functions](xref:srm_definitions#virtual-function) are generated on the parent element. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, these suggestion events are generated on the child element.
-
-- Suggestion events generated to indicate a behavioral anomaly for [dynamic virtual elements](xref:Dynamic_virtual_elements) are generated on the child element.
+- Suggestion events generated to indicate a behavioral anomaly for [dynamic virtual elements](xref:Dynamic_virtual_elements) are generated on the child element. However, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39707-->, suggestion events for [virtual functions](xref:srm_definitions#virtual-function) are generated on the parent element. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, these suggestion events are generated on the child element as well.
 
 - Depending on the DataMiner version, different limitations are in place as to how many suggestion events can be generated for anomalous behavioral changes:
 

@@ -32,6 +32,4 @@ The following limitations apply:
 
 Please note the following regarding suggestion events:
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39707-->, suggestion events triggered when a specific pattern is detected for [virtual functions](xref:srm_definitions#virtual-function) are generated on the parent element. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, these suggestion events are generated on the child element.
-
-- Suggestion events triggered when a specific pattern is detected for [dynamic virtual elements](xref:Dynamic_virtual_elements) are generated on the child element.
+- Suggestion events triggered when a specific pattern is detected for [dynamic virtual elements](xref:Dynamic_virtual_elements) are generated on the child element. However, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39707-->, suggestion events for [virtual functions](xref:srm_definitions#virtual-function) are generated on the parent element. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, these suggestion events are generated on the child element as well.
