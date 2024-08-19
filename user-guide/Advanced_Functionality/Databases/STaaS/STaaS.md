@@ -146,15 +146,19 @@ To request a cost estimation, follow the procedure below:
 
 1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-   At this point, an Automation script will be provided to you along with instructions on how to run it.
+1. An Automation script can be found in the catalog along with instructions on how to run it.
+
+1. Make sure 'replication only' is selected, and select all datatypes to have the most accurate estimation of your system when running the script.
 
 1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
-1. Notify your Skyline representative or email <staas@dataminer.services> to complete the process.
+1. The next morning you will be able to view your cost estimation in the [Admin](https://admin.dataminer.services) 'Usage' module under the organization which the DMS is a part of.
+> [!NOTE]
+> You will only be able to see the 'Usage' module if you are an Owner or Admin of the organization.
 
-   You will then receive a detailed cost estimation.
+If there are any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!NOTE]
 > If your DataMiner System uses a proxy setup, make sure you have installed DataMiner Feature Release 10.4.7 or higher.
