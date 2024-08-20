@@ -32,8 +32,16 @@ In the AlarmFilter shape data value, dynamic values (e.g. session variables) are
 
 #### False-positive warning log entry when Services or Profiles module was opened [ID_40385]
 
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
 When the Services or Profiles module was opened in Cube, a false-positive warning entry could be added to the Cube logging, with the following message:
 
 ```txt
 Profile and Services - The visio file name was empty or null. Check the response message from the server
 ```
+
+#### Services: Problem when trying to edit a service that had been edited previously [ID_40493]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, while editing a service, you added an element or another service to that service and applied the changes, it would no longer be possible to edit the service again. When you tried to do so, the service card would be empty.

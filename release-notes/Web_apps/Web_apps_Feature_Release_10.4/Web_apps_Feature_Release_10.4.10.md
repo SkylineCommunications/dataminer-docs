@@ -22,6 +22,14 @@ uid: Web_apps_Feature_Release_10.4.10
 
 ### Enhancements
 
+#### Web apps - Visual Overview: Each instance will now have its own context [ID_40225] [ID_40497]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, in a web application, you opened multiple instances of the same visual overview with user context (e.g. a visual overview with card variables), up to now, the contexts of those instances would be shared. When, for example, you clicked a button on one instance, the same button would also be clicked on the other instances. From now on, each instance of the same visual overview will have its own context. In other words, each instance will act independently.
+
+Also, when you open a pop-up window in a visual overview, the context of this visual overview will now be transferred to the pop-up window. As a result, in web applications, card variables will now work exactly like they work in DataMiner Cube.
+
 #### Dashboards/Low-Code Apps: Queries with ad hoc data source with missing argument no longer executed [ID_40361]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
