@@ -9,13 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 16 August 2024 - Fix - Admin - Remove users from organization [ID_40506]
+#### 16 August 2024 - Fix - Admin - Not possible to remove users from organization [ID_40506]
 
-Fixed a bug that prevented users from being removed from organizations.
+It could occur that it was not possible to remove users from their organization in the Admin app even though you had the necessary rights to do so.
 
 #### 16 August 2024 - Enhancement - Admin - DxM upgrade .NET 8 warning [ID_40461]
 
-A warning will now be shown when upgrading a DxM that requires .NET 8.
+When you try to upgrade a DxM to a version that requires .NET 8, a warning will now be displayed.
 
 #### 13 August 2024 - Enhancement - Admin - Adding new user now blocked when user does not comply with configured allowed email domains [ID_40459]
 
