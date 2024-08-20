@@ -81,4 +81,4 @@ These values are included in an authenticated message sent to or received from t
 
 *A non-authoritative SNMP engine must keep local notions of these values (snmpEngineBoots, snmpEngineTime and latestReceivedEngineTime) for each authoritative SNMP engine with which it wishes to communicate.  Since each authoritative SNMP engine is uniquely and unambiguously identified by its value of snmpEngineID, the non-authoritative SNMP engine may use this value as a key in order to cache its local notions of these values.*
 
-If you would have multiple devices with the same *snmpEngineID*, this could result in the the non-authoritative SNMP engine to only be able to keep track of the notion of time of one authoritative SNMP engine (which could lead to communication issues with all SNMP engines that have the same value for *snmpEngineID*).
+If you would have multiple devices with the same *snmpEngineID*, this could result in the non-authoritative SNMP engine to only be able to keep track of the notion of time of one authoritative SNMP engine (which could lead to communication issues with all SNMP engines that have the same value for *snmpEngineID*).
