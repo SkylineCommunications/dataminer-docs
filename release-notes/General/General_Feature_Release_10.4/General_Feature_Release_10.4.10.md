@@ -34,6 +34,14 @@ uid: General_Feature_Release_10.4.10
 
 Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
 
+#### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, all BPA tests would be executed immediately after DataMiner had been started. From now on, all BPA tests except the *Report Active RTE* test will be executed between 10 and 60 minutes after DataMiner was started.
+
+The *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and will then be executed again every 8 minutes.
+
 #### DxMs upgraded to versions requiring .NET 8 [ID_40445]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->

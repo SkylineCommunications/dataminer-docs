@@ -4,6 +4,9 @@ uid: Cube_Feature_Release_10.4.9
 
 # DataMiner Cube Feature Release 10.4.9
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.9](xref:General_Feature_Release_10.4.9).
 
