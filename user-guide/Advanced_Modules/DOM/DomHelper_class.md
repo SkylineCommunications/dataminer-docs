@@ -180,9 +180,9 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 > Although, this section explained reading `DomInstances`, the same principles apply to all other DOM objects. Building filters is done using exposer classes and reading is done using the `DomHelper`. For example, for `SectionDefinitions`, this could be `domHelper.SectionDefinitions.Read(SectionDefinitionExposers.Name.Contains("My Name"))`.
 
 > [!IMPORTANT]
-> On a DataMiner agent that is using Elasticsearch or OpenSearch, there is a default limit of 1024 clauses in a query. This means that you can only concatenate a max. of 1024 field filters using an 'OR' filter. If this limit would not be sufficient, it can be adjusted using the 'indices.query.bool.max_clause_count' option on both [Elasticseach](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-settings.html) and [OpenSearch](https://opensearch.org/docs/latest/install-and-configure/configuring-opensearch/index-settings/).
+> On a DataMiner Agent that is using OpenSearch or Elasticsearch, there is a default limit of 1024 clauses in a query. This means that you can only concatenate a maximum of 1024 field filters using an "OR" filter. If this limit is not sufficient, you can adjust it using the "indices.query.bool.max_clause_count" option in [OpenSearch](https://opensearch.org/docs/latest/install-and-configure/configuring-opensearch/index-settings/) or [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-settings.html).
 >
-> For STaaS there is no such hard limit defined, but we do recommend keeping the queries short.
+> For STaaS, there is no such hard limit, but we do recommend keeping the queries short.
 
 ### Multiple instances
 
