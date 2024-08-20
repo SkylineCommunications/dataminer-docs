@@ -73,7 +73,7 @@ Additionally, the app does not have a customized, identifiable icon. These are t
 
 1. Click the user icon in the top-right corner of the app and select *Edit*.
 
-   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards or higher)<!--RN 40077-->, click the pencil icon in the top-right corner instead.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards or higher<!--RN 40077-->), click the pencil icon in the top-right corner instead.
 
 1. Click the clipboard icon in the top-left corner to open the app's theme editor. Here you can change your app's icon and color.
 
