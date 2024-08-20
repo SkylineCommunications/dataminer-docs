@@ -91,3 +91,9 @@ Because of a race condition, it could occur that a virtual primary element in a 
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
 When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
+
+#### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.

@@ -180,3 +180,9 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
    at System.Runtime.Serialization.SerializationInfo.GetValue(String name, Type type)
    at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
 ```
+
+#### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.

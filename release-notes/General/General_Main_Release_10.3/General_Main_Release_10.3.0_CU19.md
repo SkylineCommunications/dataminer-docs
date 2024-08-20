@@ -63,3 +63,9 @@ When you changed the alarm or trend template for a table parameter (e.g. by goin
 In addition, when there were two or more lines in the trend template for a table parameter, but none were applicable for the current cell for which you edited the trend template, the parameter template editor would show and create a new line in the template corresponding to an empty filter, instead of to the filter "\*". This has now also been fixed.
 
 Finally, if you changed the information template for a parameter, and the information template did not contain a line for the current parameter, the ID was not saved correctly. In addition, for table parameters, a line with an empty filter would be saved, instead of the filter "\*".
+
+#### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
