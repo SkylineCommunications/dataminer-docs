@@ -42,6 +42,12 @@ When you share a dashboard in the cloud, the loader that is shown while a new ta
 
 When special characters such as "(" were used when configuring a feed, Intellisense no longer worked correctly.
 
+#### Dashboards/Low-Code Apps: Query filter feed would show a 'Statistics are missing' error when linked to a query that did not return any rows [ID_40371]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you linked a query that did not return any rows to a query filter feed with filter assistance enabled, the latter would show a "Statistics are missing" error.
+
 #### Dashboards: Dashboard PDF set to A0 format generated as A4 instead [ID_40398]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
