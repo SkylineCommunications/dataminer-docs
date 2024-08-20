@@ -146,18 +146,36 @@ To request a cost estimation, follow the procedure below:
 
 1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-1. An [Automation script](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) can be found in the catalog along with documentation on how to run it.
+1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
 
-1. Make sure 'replication only' is selected, and select all datatypes to have the most accurate estimation of your system when running the script.
+   On the Catalog page for this package, you can also find more information on how to run the script.
+
+1. In the Automation app in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
+
+1. Initialize the migration:
+
+   1. Optionally, configure a proxy. This is supported from DataMiner 10.4.6 onwards.
+
+   1. Click *Init migration*.
+
+1. Start the migration:
+
+   1. Make sure *Replication only* is selected.
+
+   1. Select all data types.
+
+      This way you will have the most accurate estimation of your system when running the script.
+
+   1. Click *Start migration*.
 
 1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
-1. The next morning you will be able to view your cost estimation in the [Admin](https://admin.dataminer.services) 'Usage' module under the organization which the DMS is a part of.
-   
+1. The next morning you will be able to view your cost estimation in the [Admin](https://admin.dataminer.services) *Usage* module under the organization which the DMS is a part of.
+
 > [!NOTE]
-> You will only be able to see the 'Usage' module if you are an Owner or Admin of the organization.
+> You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
 
 If there are any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
