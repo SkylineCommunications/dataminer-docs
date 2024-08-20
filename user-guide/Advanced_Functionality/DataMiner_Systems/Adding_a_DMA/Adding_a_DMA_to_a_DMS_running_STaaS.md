@@ -27,13 +27,27 @@ uid: Adding_a_DMA_to_a_DMS_running_STaaS
 1. Restart the DMA.
 1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a failover agent.
 
+The DMA should now be connected to the DMS running STaaS.
+
 ## Using a local database
 
 > [!IMPORTANT]
-> Make sure you have a local database configured.
+> Make sure you have a local database configured in *DB.xml*.
 
-1. 
-1. 
-1. 
-1. 
+1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml* and make sure there is a local database configured.
 1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a failover agent.
+1. Once the DMA has successfully joined the cluster, enable STaaS in *DB.xml*:
+    1. Stop the DMA.
+    1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml*.
+    1. Configure the *Database* tag with *type="CloudStorage"* as follows:
+
+      ```xml
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
+      </DataBases>
+      ```
+
+    1. Restart the DMA.
+
+The DMA should now be connected to the DMS running STaaS.
