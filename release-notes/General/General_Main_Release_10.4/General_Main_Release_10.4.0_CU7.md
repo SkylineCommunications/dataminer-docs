@@ -88,9 +88,9 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
-Up to now, all BPA tests would be executed immediately after DataMiner had been started. From now on, all BPA tests except the *Report Active RTE* test will be executed between 10 and 60 minutes after DataMiner was started.
+Up to now, all BPA tests would be executed immediately after DataMiner had been started.
 
-The *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and will then be executed again every 8 minutes.
+From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
 
 #### DxMs upgraded to versions requiring .NET 8 [ID_40445]
 
