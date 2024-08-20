@@ -70,7 +70,7 @@ If this is not the case, this can lead to communication issues:
 
 Every SNMP engine maintains two values:
 
-- *snmpEngineBoots*: a count of the number of times the SNMP engine has re-booted/re-initialized since *snmpEngineID* was last configured
+- *snmpEngineBoots*: a count of the number of times the SNMP engine has rebooted/reinitialized since *snmpEngineID* was last configured
 - *snmpEngineTime*: the number of seconds since the *snmpEngineBoots* counter was last incremented
 
 Together, these provide an indication of time at that specific SNMP engine.
