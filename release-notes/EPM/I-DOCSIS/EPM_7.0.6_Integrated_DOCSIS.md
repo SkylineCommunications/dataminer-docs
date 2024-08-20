@@ -2,16 +2,9 @@
 uid: EPM_7.0.6_Integrated_DOCSIS
 ---
 
-# EPM 7.0.6 Integrated DOCSIS - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# EPM 7.0.6 Integrated DOCSIS
 
 ## New features
-
-#### Generic KAFKA Consumer: New Certificate Authentication parameter [ID_40342]
-
-On the Brokers/Authentication page of the Generic KAFKA Consumer connector, a new *Certificate Authentication* parameter is now available, which can be used to enable or disable verification for the SSL certificate.
 
 #### Skyline EPM platform: New Automatic CMTS Removal toggle button [ID_40401]
 
