@@ -65,7 +65,7 @@ The following SNMPv3 authentication and encryption (privacy) protocols are suppo
 
 *Within an administrative domain, an snmpEngineID is the unique and unambiguous identifier of an SNMP engine. Since there is a one-to-one association between SNMP engines and SNMP entities, it also uniquely and unambiguously identifies the SNMP entity within that administrative domain. Note that it is possible for SNMP entities in different administrative domains to have the same value for snmpEngineID. Federation of administrative domains may necessitate assignment of new values.*
 
-Therefore, if DataMiner manages multiple SNMP entities, it is important that these all configured with a different value for *snmpEngineID*.
+Therefore, if DataMiner manages multiple SNMP entities, it is important that these are all configured with a different value for *snmpEngineID*.
 If this is not the case, this can lead to communication issues:
 
 Every SNMP engine maintains two values:
