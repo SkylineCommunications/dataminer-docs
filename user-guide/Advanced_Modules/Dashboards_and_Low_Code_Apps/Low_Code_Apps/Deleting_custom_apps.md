@@ -22,6 +22,9 @@ From **within an application**:
 
   1. Click the ellipsis button ("...") in the top-right corner and select *Delete app*.
 
+    > [!NOTE]
+    > To delete the current draft version of the app instead, select *Discard draft*.
+
   1. In the pop-up window, click *Delete*.
 
 - From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 37878-->:
