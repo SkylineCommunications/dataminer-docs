@@ -10,10 +10,7 @@ Before DataMiner Analytics can track specific patterns, you first need to define
 
 In a trend graph showing trend information for one single parameter ([univariate patterns](xref:Working_with_pattern_matching#univariate-patterns)) or multiple parameters ([multivariate patterns](xref:Working_with_pattern_matching#multivariate-patterns)), **first select the section of the graph** that you identify as a recurring pattern. The way you can do so depends on the configuration of the trending user settings. See [Trending settings](xref:User_settings#trending-settings).
 
-There are now two ways to define the pattern, a quick way where you use all default options, and a more extensive way where you can customize those options.<!-- RN 36114 -->
-
-> [!NOTE]
-> It is not possible to define a pattern in a trend graph that shows trend information for a [generic parameter](xref:General_parameters)<!--RN 40086-->.
+There are two ways to define the pattern, a quick way where you use all default options, and a more extensive way where you can customize those options.<!-- RN 36114 -->
 
 - To **quickly** define a pattern, click the tag icon, enter a name for the pattern definition, and click the check mark icon.
 
@@ -45,3 +42,8 @@ There are now two ways to define the pattern, a quick way where you use all defa
 1. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. DataMiner will then also monitor the affected parameters in real time and save every pattern occurrence. For more information, see [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns).
 
 1. Click the check mark to save the pattern definition.
+
+***
+
+> [!NOTE]
+> Pattern matching is not supported for [general parameters](xref:General_parameters)<!--RN 40086-->.
