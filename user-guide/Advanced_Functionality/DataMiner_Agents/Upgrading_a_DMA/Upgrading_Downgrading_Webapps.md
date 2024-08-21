@@ -25,7 +25,7 @@ After the upgrade process, your dashboards and low-code apps may be migrated to 
 
 ## Downgrading the DataMiner web apps
 
-Since dashboards and low-code apps can automatically get migrated after a software upgrade, from then onwards these no longer work in combination with older versions of the software.
+Since dashboards and low-code apps can automatically get migrated after a software upgrade, these will then no longer work in combination with older versions of the software.
 
 When downgrading the software, these steps need to be executed manually:
 
@@ -37,4 +37,4 @@ When downgrading the software, these steps need to be executed manually:
 > [!NOTE]
 >
 > - Any changes that have been done on the dashboards and low-code apps after the backup was created will be lost.
-> - New web functionality that depends on new features in the core processes will not be available anymore.
+> - New web functionality that depends on new features in the core processes will no longer be available.
