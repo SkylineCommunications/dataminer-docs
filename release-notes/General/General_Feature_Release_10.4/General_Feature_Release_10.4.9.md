@@ -577,6 +577,7 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 #### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- Not added to MR 10.5.0 - Reverted in FR 10.4.10 by RN 40395 -->
 
 Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
 

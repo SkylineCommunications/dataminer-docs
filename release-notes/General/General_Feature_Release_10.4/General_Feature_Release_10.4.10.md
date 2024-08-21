@@ -42,6 +42,15 @@ Up to now, all BPA tests would be executed immediately after DataMiner had been 
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
 
+#### New 'IsCloudConnected' message to check whether the DataMiner System is connected to dataminer.services [ID_40395]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, you can check whether the DataMiner System is connected to dataminer.services by sending either a *GetCCAGatewayGlobalStateRequest* message or an *IsCloudConnected* message.
+
+- The *IsCloudConnected* message does not require any special user permissions.
+- The *GetCCAGatewayGlobalStateRequest* message did no longer require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission as from DataMiner feature version 10.4.9. From now on, this message will again require said permission.
+
 #### DxMs upgraded to versions requiring .NET 8 [ID_40445]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->

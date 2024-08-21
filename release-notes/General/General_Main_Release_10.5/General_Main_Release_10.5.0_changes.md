@@ -662,6 +662,15 @@ Because of a number of enhancements, from now on, less storage space will be nee
 
 The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
 
+#### New 'IsCloudConnected' message to check whether the DataMiner System is connected to dataminer.services [ID_40395]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, you can check whether the DataMiner System is connected to dataminer.services by sending either a *GetCCAGatewayGlobalStateRequest* message or an *IsCloudConnected* message.
+
+- The *IsCloudConnected* message does not require any special user permissions.
+- The *GetCCAGatewayGlobalStateRequest* message requires the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -783,16 +792,6 @@ When a join operation was performed with two of the following data sources, in s
 <!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
-
-#### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
-
-As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
-
-From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
 
 #### DELT import failed if element name contained curly bracket [ID_40330]
 
