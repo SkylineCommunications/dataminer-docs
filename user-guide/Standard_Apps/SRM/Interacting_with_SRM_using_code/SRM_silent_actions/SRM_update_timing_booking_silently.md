@@ -49,3 +49,8 @@ public class Script
  }
 }
 ```
+
+> [!NOTE]
+> Since SRM Framework 1.2.37/2.0.2 <!-- RN40481 --> it's possible to finish a permanent booking while defining post-roll. To do so, the timing of that booking should be changed, by changing the end date to a time in the near future and setting the appropriate post-roll time.
+> Finishing a permanent booking will not support defining any post-roll.
+> Although the reservation time of contributing bookings will adapt accordingly, if appropriate, no post-roll will be set. When orchestration would be required, the timing can be changed for each of them separately.
