@@ -48,6 +48,12 @@ When the Services or Profiles module was opened in Cube, a false-positive warnin
 Profile and Services - The visio file name was empty or null. Check the response message from the server
 ```
 
+#### Visual Overview: Shapes with ButtonState data would fail to hide as expected [ID_40454]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Shapes with *ButtonState* data would fail to hide as expected.
+
 #### Services: Problem when trying to edit a service that had been edited previously [ID_40493]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
