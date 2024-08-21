@@ -42,6 +42,14 @@ When one or more required arguments for an ad hoc data source are missing becaus
 
 When you share a dashboard in the cloud, the loader that is shown while a new tab opens where you can configure the cloud share will now have the same background as the pop-up window containing the loader. Previously, there was a slight color difference between the loader background and the rest of the pop-up window.
 
+#### Web API - DataMiner Object Models: Enhanced performance when fetching bookings from a DOM form [ID_40411]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements, overall performance has increased when fetching bookings from a DOM form.
+
+From now on, the web API will no longer retrieve all available bookings. Instead, it will only retrieve a maximum of 200 bookings at a time, of which only the first 100 will initially be displayed.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Intellisense no longer working when feed is configured with special character [ID_40340] [ID_40446]
