@@ -278,3 +278,6 @@ In this final step, you will learn how you can link EPM entities to views in Dat
 All the views will now be linked to their EPM objects and inherit their alarm properties from the EPM entity. Selecting any of the views will show a data section displaying the EPM KPI information.
 
 ![Data section with EPM KPI information](~/user-guide/images/EPM_GS_step_5_3.png)
+
+> [!IMPORTANT]
+> As EPM setups can use quite a lot of element data, if you have completed the tutorial and you no longer need the setup from this tutorial, we highly recommend stopping or removing the elements that were added during the tutorial.
