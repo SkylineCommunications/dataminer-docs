@@ -48,7 +48,7 @@ Typically, a protocol with an SNMP connection contains logic to:
 - Change parameter values on the device by sending SNMP Set messages.
 - Receive unsolicited SNMP traps from the device.
 
-DataMiner runs three processes with name *SLSNMPManager* (one for each version of SNMP) which controls all communication from and to devices running SNMP agents.
+DataMiner runs three processes with the name *SLSNMPManager* (one for each version of SNMP), which control all communication from and to devices running SNMP agents.
 
 > [!NOTE]
 >
