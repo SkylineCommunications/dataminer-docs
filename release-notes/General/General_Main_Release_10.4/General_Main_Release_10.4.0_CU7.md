@@ -181,6 +181,12 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
    at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
 ```
 
+#### Protocols: Problem when a response with a 'next param' and a 'fixed length' parameter did not have a trailer defined [ID_40430]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when a response contained a parameter with a LengthType equal to "next param" and another parameter with a LengthType equal to "fixed" but no trailer, SLPort would incorrectly return the payload to SLProtocol as soon as it read at least the number of bytes that was configured in the fixed length parameter.
+
 #### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
