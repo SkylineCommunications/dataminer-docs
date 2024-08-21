@@ -56,14 +56,6 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 From now on, the web API will no longer retrieve all available bookings. Instead, it will only retrieve a maximum of 200 bookings at a time, of which only the first 100 will initially be displayed.
 
-#### Dashboards app & Low-Code Apps: Backing up all existing dashboards and low-code apps during a DataMiner upgrade now requires .NET 8 [ID_40498]
-
-<!-- MR 10.5.0 - FR 10.4.10 -->
-
-When you install a DataMiner upgrade (either a full upgrade or a web-only upgrade), since DataMiner version 10.3.11, a backup of all existing dashboards and low-code apps on the system is made.
-
-Making such a backup now requires Microsoft .NET 8 to be installed.
-
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Intellisense no longer working when feed is configured with special character [ID_40340] [ID_40446]
