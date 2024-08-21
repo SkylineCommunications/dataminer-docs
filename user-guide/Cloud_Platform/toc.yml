@@ -26,7 +26,6 @@ items:
       - name: Connecting to dataminer.services with a DMZ setup
         topicUid: Connect_to_cloud_with_DMZ
   - name: Project Collaboration
-    topicUid: Collaboration
     items:
       - name: About the Project Collaboration module
         topicUid: About_the_Project_Collaboration_module
