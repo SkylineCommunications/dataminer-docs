@@ -58,7 +58,7 @@ uid: META_WhatsApp_Messaging_Installation
 1. Look up the [*META WhatsApp Messaging* solution](https://catalog.dataminer.services/details/909de004-7a8f-43bd-b40c-824051fe3fe1) in the DataMiner Catalog.
 1. Click the *Deploy* button.
 1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
-    - *If this is the first time you install the solution, a new automation script named **"Meta Alarm Detection"**, a new view called **"Dataminer Apps & Solutions"** and an element named **"META WhatsApp Alerter"** will automatically be created. Optionally, you can rename the element and view, and you can change their location in the Surveyor.*
+    - *If this is the first time you install the solution, a new automation script named **"Meta Alarm Detection"**, a new view called **"Dataminer Apps & Solutions"** and an element named **"META WhatsApp Alerter"** will automatically be created. Optionally, you can rename any of them and change their locations.*
 1. Create a correlation rule.
     1. Set the alarm filter desired to trigger the correlation.
     1. Set an action to run the ***"META Alarm Detection"*** script recently included in the proper DMA.
