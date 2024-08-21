@@ -578,6 +578,14 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
+#### DataMiner upgrade: 'C:\\Skyline Dataminer\\Logging\\FormatterExceptions' folder will now be emptied during the upgrade process [ID_39894]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The *C:\\Skyline Dataminer\\Logging\\FormatterExceptions* folder will now be emptied each time a DataMiner upgrade is performed.
+
+This folder is used by Skyline developers to keep track of serialization issues.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

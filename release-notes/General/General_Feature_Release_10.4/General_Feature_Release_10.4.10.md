@@ -34,6 +34,14 @@ uid: General_Feature_Release_10.4.10
 
 Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
 
+#### DataMiner upgrade: 'C:\\Skyline Dataminer\\Logging\\FormatterExceptions' folder will now be emptied during the upgrade process [ID_39894]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The *C:\\Skyline Dataminer\\Logging\\FormatterExceptions* folder will now be emptied each time a DataMiner upgrade is performed.
+
+This folder is used by Skyline developers to keep track of serialization issues.
+
 #### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
