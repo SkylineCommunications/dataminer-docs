@@ -35,7 +35,8 @@ uid: META_WhatsApp_Messaging_Installation
 - Select the recipient's phone number and send the test message by pressing the "*Send Message*" button.
 - Save the ***"Phone Number Identifier"*** and the ***"WhatsApp Business Account ID"*** located just below the sender's number for the **connector configuration**.
 
-****Note that here you need to add all the recipient numbers to which you want to send the WhatsApp alarm notifications.***
+> [!NOTE]
+> Note that here you need to add all the recipient numbers to which you want to send the WhatsApp alarm notifications.
 
 ![META App](~/user-guide/images/META_WhatsApp_Messaging_MetaApp.png)
 
