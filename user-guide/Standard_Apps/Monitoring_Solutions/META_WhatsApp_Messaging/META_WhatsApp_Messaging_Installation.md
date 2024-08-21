@@ -66,6 +66,9 @@ uid: META_WhatsApp_Messaging_Installation
 
 *For more info about correlation rules visit [Orchestration & Automation courses](https://community.dataminer.services/learning/courses/orchestration-automation/) and [About DataMiner Correlation](https://docs.dataminer.services/user-guide/Advanced_Modules/Correlation/About_DMS_Correlation.html)*.
 
+> [!IMPORTANT]
+> You can create as many correlation rules and elements as you need to different alarms to different contacts.
+
 ### Connector Configuration
 
 For the instructions to configure the ***META WhatsApp Messaging connector***, refer to the [***connector documentation***](https://docs.dataminer.services/connector/doc/META_WhatsApp_Messaging.html).
