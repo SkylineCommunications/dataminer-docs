@@ -37,10 +37,10 @@ Project Collaboration is always available to assist with time and budget trackin
 > [!TIP]
 > See also:
 >
-> - Direct link: [Project Collaboration](https://collaboration.dataminer.services/)
+> - For more detailed information about the Project Collaboration module, see [Project Collaboration](xref:About_the_Project_Collaboration_module) in our user guide.
+> - Direct link to the module: [Project Collaboration](https://collaboration.dataminer.services/)
 > - [Course about the Project Collaboration module](https://community.dataminer.services/courses/dataminer-cloud-platform/lessons/project-collaboration/)
-> - [Prioritizing and risk management with Project Collaboration](https://community.dataminer.services/prioritizing-and-risk-management-with-project-collaboration)
-> - [Project Collaboration User Guide](xref:Collaboration)
+> - Blog: [Prioritizing and risk management with Project Collaboration](https://community.dataminer.services/prioritizing-and-risk-management-with-project-collaboration)
 
 ## CI/CD
 

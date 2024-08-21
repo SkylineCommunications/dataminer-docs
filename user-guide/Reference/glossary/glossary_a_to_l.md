@@ -132,7 +132,7 @@ uid: glossary_a_to_l
 | DataMiner ID | The unique ID of a DataMiner Agent. |
 | DataMiner Live Data Sharing Service | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
-| DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:Collaboration#project-collaboration). |
+| DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:About_the_Project_Collaboration_module). |
 | dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:AboutCloudPlatform). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
