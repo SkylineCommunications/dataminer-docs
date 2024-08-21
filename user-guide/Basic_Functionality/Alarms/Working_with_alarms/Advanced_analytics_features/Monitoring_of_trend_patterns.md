@@ -29,3 +29,7 @@ The following limitations apply:
   - DataMiner checks all changes made to parameters for which patterns are being monitored in real time. If there are more than 6000 parameter changes per second, the following notice will be displayed in the Alarm Console:
 
     *High load on pattern matching functionality: reduced pattern match accuracy.*
+
+Please note the following regarding suggestion events:
+
+- Suggestion events triggered when a specific pattern is detected for [dynamic virtual elements](xref:Dynamic_virtual_elements) are generated on the child element. However, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39707-->, suggestion events for [virtual functions](xref:srm_definitions#virtual-function) are generated on the parent element. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, these suggestion events are generated on the child element as well.
