@@ -652,6 +652,14 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
+#### Correlation engine now supports separate alarm ID ranges per element [ID_40089]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The Correlation engine now supports separate alarm ID ranges per element.
+
+Also, *GetAlarmDetailsMessage* and *GetAlarmTreeDetailsMessage* now support separate alarm ID ranges per element and take AlarmTreeID instances as input.
+
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->

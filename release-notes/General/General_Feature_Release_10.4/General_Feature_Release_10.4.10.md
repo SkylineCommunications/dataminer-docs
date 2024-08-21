@@ -42,6 +42,14 @@ The *C:\\Skyline Dataminer\\Logging\\FormatterExceptions* folder will now be emp
 
 This folder is used by Skyline developers to keep track of serialization issues.
 
+#### Correlation engine now supports separate alarm ID ranges per element [ID_40089]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The Correlation engine now supports separate alarm ID ranges per element.
+
+Also, *GetAlarmDetailsMessage* and *GetAlarmTreeDetailsMessage* now support separate alarm ID ranges per element and take AlarmTreeID instances as input.
+
 #### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
