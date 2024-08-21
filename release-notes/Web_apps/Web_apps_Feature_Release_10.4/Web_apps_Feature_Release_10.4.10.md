@@ -99,3 +99,9 @@ If a template was applied to a column in a table component and that column was d
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 In a timeline component of a dashboard or low-code app, it could occur that real-time updates from GQI were not applied correctly when the timeline was grouped by a column. Deleted rows were not correctly reflected in the component, and an update could result in a duplicate entry getting added.
+
+#### Dashboards: Problem when dragging a button parameter onto a Button component [ID_40486]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, while editing a dashboard, you dragged a button parameter onto a *Button* component, no button would appear. Instead, the component would be empty.
