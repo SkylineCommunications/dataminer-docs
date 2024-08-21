@@ -20,9 +20,9 @@ uid: Web_apps_Feature_Release_10.4.10
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When configuring a *Line & area chart* component, you can now use the *Show title* option to either show or hide the chart title.
+When configuring a *Line & area chart* component, you can now use the *Show title* option to either show or hide the automatically generated chart title.
 
-By default, the chart title will be shown.
+By default, this chart title will be shown.
 
 ## Changes
 
