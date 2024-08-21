@@ -27,10 +27,10 @@ After the upgrade process, your dashboards and low-code apps may be migrated to 
 
 Since dashboards and low-code apps can automatically get migrated after a software upgrade, these will then no longer work in combination with older versions of the software.
 
-When downgrading the software, these steps need to be executed manually:
+To deal with this, after a downgrade, follow the steps below:
 
 1. Optionally, create a copy of the current files in *C:\Skyline DataMiner\Applications* and *C:\Skyline DataMiner\Dashboards*.
-1. Go to *C:\Skyline DataMiner\System Cache\Web\Backups* and locate the most recent zip package (or the zip package that got created on the version where you want to downgrade back to).
+1. Go to *C:\Skyline DataMiner\System Cache\Web\Backups* and locate the most recent zip package (or the zip package that originally got created on the version you have now downgraded to).
 1. Extract this zip package in *C:\Skyline DataMiner* and let it replace the files in the *Applications* and *Dashboards* folders.
 1. Do the same on every DMA in cluster.
 
