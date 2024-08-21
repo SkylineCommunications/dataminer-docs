@@ -365,6 +365,8 @@ items:
         items:
         - name: Introduction
           topicUid: ConnectionsSnmpIntroduction
+        - name: SNMPv3
+          topicUid: ConnectionsSnmpSnmpv3
         - name: OIDs
           topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable

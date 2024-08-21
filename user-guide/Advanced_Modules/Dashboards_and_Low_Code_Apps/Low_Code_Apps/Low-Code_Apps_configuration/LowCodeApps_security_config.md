@@ -6,7 +6,11 @@ uid: LowCodeApps_security_config
 
 To configure which users can access and/or edit a low-code application:
 
-1. In the app editor, click the user icon in the top-right corner and select *Settings*.
+1. Access the application settings:
+
+   - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->, click the ellipsis button ("...") in the top-right corner and select *Settings*.
+
+   - Prior to From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click the user icon in the top-right corner and select *Settings*.
 
 1. In the *Allowed to view the application* box, specify the names of the users and/or groups that should be allowed to view the app.
 

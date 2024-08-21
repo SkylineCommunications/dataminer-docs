@@ -24,6 +24,14 @@ Information regarding protocol signature validation will now be cached. This wil
 
 Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
 
+#### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, all BPA tests would be executed immediately after DataMiner had been started.
+
+From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]
@@ -55,3 +63,23 @@ When you changed the alarm or trend template for a table parameter (e.g. by goin
 In addition, when there were two or more lines in the trend template for a table parameter, but none were applicable for the current cell for which you edited the trend template, the parameter template editor would show and create a new line in the template corresponding to an empty filter, instead of to the filter "\*". This has now also been fixed.
 
 Finally, if you changed the information template for a parameter, and the information template did not contain a line for the current parameter, the ID was not saved correctly. In addition, for table parameters, a line with an empty filter would be saved, instead of the filter "\*".
+
+#### Protocols: Problem when a response with a 'next param' and a 'fixed length' parameter did not have a trailer defined [ID_40430]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when a response contained a parameter with a LengthType equal to "next param" and another parameter with a LengthType equal to "fixed" but no trailer, SLPort would incorrectly return the payload to SLProtocol as soon as it read at least the number of bytes that was configured in the fixed length parameter.
+
+#### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When a focus event was cleared because an element had been deleted, up to now, the time of arrival of the new focus event (i.e. the time at which the focus event had been cleared) would incorrectly be identical to the time of arrival of the focus event that had been cleared.
+
+From now on, the time of arrival of the new focus event will instead be the current time (i.e. the time at which the element was deleted).

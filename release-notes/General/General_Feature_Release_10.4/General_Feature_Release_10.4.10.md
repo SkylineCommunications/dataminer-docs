@@ -34,6 +34,39 @@ uid: General_Feature_Release_10.4.10
 
 Alarm filters that contain the operators AND, OR, or NOT (without brackets) will now be translated to OpenSearch queries, which will improve the performance of these filters. This will for example lead to improved performance when filtering alarms on a specific element and on severity.
 
+#### DataMiner upgrade: 'C:\\Skyline Dataminer\\Logging\\FormatterExceptions' folder will now be emptied during the upgrade process [ID_39894]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The *C:\\Skyline Dataminer\\Logging\\FormatterExceptions* folder will now be emptied each time a DataMiner upgrade is performed.
+
+This folder is used by Skyline developers to keep track of serialization issues.
+
+#### Correlation engine now supports separate alarm ID ranges per element [ID_40089]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The Correlation engine now supports separate alarm ID ranges per element.
+
+Also, *GetAlarmDetailsMessage* and *GetAlarmTreeDetailsMessage* now support separate alarm ID ranges per element and take AlarmTreeID instances as input.
+
+#### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, all BPA tests would be executed immediately after DataMiner had been started.
+
+From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
+
+#### New 'IsCloudConnected' message to check whether the DataMiner System is connected to dataminer.services [ID_40395]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, you can check whether the DataMiner System is connected to dataminer.services by sending either a *GetCCAGatewayGlobalStateRequest* message or an *IsCloudConnected* message.
+
+- The *IsCloudConnected* message does not require any special user permissions.
+- The *GetCCAGatewayGlobalStateRequest* message did no longer require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission as from DataMiner feature version 10.4.9. From now on, this message will again require said permission.
+
 #### DxMs upgraded to versions requiring .NET 8 [ID_40445]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
@@ -83,3 +116,23 @@ Because of a race condition, it could occur that a virtual primary element in a 
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
 When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
+
+#### Protocols: Problem when a response with a 'next param' and a 'fixed length' parameter did not have a trailer defined [ID_40430]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when a response contained a parameter with a LengthType equal to "next param" and another parameter with a LengthType equal to "fixed" but no trailer, SLPort would incorrectly return the payload to SLProtocol as soon as it read at least the number of bytes that was configured in the fixed length parameter.
+
+#### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When a focus event was cleared because an element had been deleted, up to now, the time of arrival of the new focus event (i.e. the time at which the focus event had been cleared) would incorrectly be identical to the time of arrival of the focus event that had been cleared.
+
+From now on, the time of arrival of the new focus event will instead be the current time (i.e. the time at which the element was deleted).

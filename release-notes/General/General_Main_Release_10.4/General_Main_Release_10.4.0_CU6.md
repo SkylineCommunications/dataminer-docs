@@ -4,6 +4,9 @@ uid: General_Main_Release_10.4.0_CU6
 
 # General Main Release 10.4.0 CU6
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 

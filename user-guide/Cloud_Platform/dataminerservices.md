@@ -12,7 +12,7 @@ uid: dataminerservices
     <a href="/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html" title="Connecting to dataminer.services" target="_self"><img src="~/user-guide/images/Connecting_To_DataMiner_Services.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Cloud_Platform/Collaboration/Project_Collaboration.html" title="Project Collaboration" target="_self"><img src="~/user-guide/images/Project_Collaboration.svg" style="width:100%"></a>
+    <a href="/user-guide/Cloud_Platform/Collaboration/About_the_Project_Collaboration_module.html" title="Project Collaboration" target="_self"><img src="~/user-guide/images/Project_Collaboration.svg" style="width:100%"></a>
   </div>  
 </div>
 

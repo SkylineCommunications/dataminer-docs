@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.4.9
 
 # General Feature Release 10.4.9
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
 
@@ -574,6 +577,7 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 #### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- Not added to MR 10.5.0 - Reverted in FR 10.4.10 by RN 40395 -->
 
 Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
 

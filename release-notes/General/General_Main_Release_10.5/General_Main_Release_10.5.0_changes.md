@@ -578,6 +578,14 @@ Also, the logging with regard to the SRM master synchronization and master elect
 
 Because of a number of enhancements, the accuracy of the time-scoped relation learning algorithm has increased.
 
+#### DataMiner upgrade: 'C:\\Skyline Dataminer\\Logging\\FormatterExceptions' folder will now be emptied during the upgrade process [ID_39894]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The *C:\\Skyline Dataminer\\Logging\\FormatterExceptions* folder will now be emptied each time a DataMiner upgrade is performed.
+
+This folder is used by Skyline developers to keep track of serialization issues.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' [ID_39898]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -644,6 +652,14 @@ From now on, the *SLModuleSettingsManager.txt* log file will contain the IDs of 
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
+#### Correlation engine now supports separate alarm ID ranges per element [ID_40089]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+The Correlation engine now supports separate alarm ID ranges per element.
+
+Also, *GetAlarmDetailsMessage* and *GetAlarmTreeDetailsMessage* now support separate alarm ID ranges per element and take AlarmTreeID instances as input.
+
 #### BPA tests can now be marked 'upgrade only' [ID_40163]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -661,6 +677,15 @@ Because of a number of enhancements, from now on, less storage space will be nee
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
 The UserDefinableApiEndpoint DxM has been upgraded to version 3.2.3. It now requires .NET version 8.
+
+#### New 'IsCloudConnected' message to check whether the DataMiner System is connected to dataminer.services [ID_40395]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, you can check whether the DataMiner System is connected to dataminer.services by sending either a *GetCCAGatewayGlobalStateRequest* message or an *IsCloudConnected* message.
+
+- The *IsCloudConnected* message does not require any special user permissions.
+- The *GetCCAGatewayGlobalStateRequest* message requires the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
 
 ### Fixes
 
@@ -783,16 +808,6 @@ When a join operation was performed with two of the following data sources, in s
 <!-- MR 10.5.0 - FR 10.4.8 [CU0] -->
 
 In some rare cases, while starting up, SLAnalytics appeared to leak memory and could stop working.
-
-#### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID_40051]
-
-<!-- MR 10.5.0 - FR 10.4.9 -->
-
-Up to now, sending a *GetCCAGatewayGlobalStateRequest* to check whether the DataMiner System is connected to dataminer.services would incorrectly require the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
-
-As a result, in DataMiner Cube, users without the above-mentioned user permission would not be able to see any relations after clicking the light bulb icon in the top-right corner of a trend graph.
-
-From now on, the *Connect to cloud/DCP* user permission is no longer required to be able to send a *GetCCAGatewayGlobalStateRequest*.
 
 #### DELT import failed if element name contained curly bracket [ID_40330]
 
