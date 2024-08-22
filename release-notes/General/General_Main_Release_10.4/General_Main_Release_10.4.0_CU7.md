@@ -106,7 +106,7 @@ From now on, the *Report Active RTE* test will be executed for the first time ex
 
 #### Service & Resource Management: Enhanced synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System [ID_40389]
 
-<!-- MR 10.4.0 [CU7] - FR TBD -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 A number of enhancements have been made with regard to the synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System. This should improve performance when creating resources on non-master agents.
 
