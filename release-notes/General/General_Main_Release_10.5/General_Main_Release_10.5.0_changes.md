@@ -814,3 +814,9 @@ In some rare cases, while starting up, SLAnalytics appeared to leak memory and c
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
 When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
+
+#### SLAnalytics - Pattern matching: Problem when a pattern was deleted on one DMA while it was being edited on another DMA [ID_40471]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.

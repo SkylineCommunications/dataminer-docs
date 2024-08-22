@@ -146,6 +146,12 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
 
+#### SLAnalytics - Pattern matching: Problem when a pattern was deleted on one DMA while it was being edited on another DMA [ID_40471]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
+
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
