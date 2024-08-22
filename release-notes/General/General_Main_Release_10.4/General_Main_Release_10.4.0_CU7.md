@@ -84,6 +84,12 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
+#### MessageBroker: NuGet packages upgraded [ID_40164]
+
+<!-- MR 10.4.0 [CU7] - FR TBD -->
+
+The *DataMinerMessageBroker.API* and *DataMinerMessageBroker.API.Native* NuGet packages have been upgraded to version 2.7.3.
+
 #### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
