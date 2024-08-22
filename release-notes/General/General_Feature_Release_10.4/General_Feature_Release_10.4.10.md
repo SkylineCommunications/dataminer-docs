@@ -22,7 +22,24 @@ uid: General_Feature_Release_10.4.10
 
 ## New features
 
-*No new features have been added yet.*
+#### Protocols: Newly installed connector will automatically be promoted to production version [ID_40291]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, after you had installed a connector for the first time, you typically had to promote it to "production version" afterwards. From now on, when you install a connector for the first time, DataMiner will automatically promote it to "production version" and add the following entry to the *SLNet.txt* log file:
+
+``Initial upload of protocol '{protocolName}'. Version '{protocolVersion}' will be automatically set as production.``
+
+For example, when I install *MyConnector 1.0.0.1* for the first time, it will automatically be promoted to "production version", but when I later deploy *MyConnector 1.0.0.2*, version 1.0.0.1 will remain the production version.
+
+A connector will only be promoted to "production version" if its first version is installed/uploaded in one of the following ways:
+
+- When it is published from within DataMiner Integration Studio (DIS).
+- When it is deployed from the [DataMiner Catalog](https://catalog.dataminer.services/).
+- When its *.dmprotocol* file is uploaded from the *Protocols & Templates* app in DataMiner Cube.
+
+> [!NOTE]
+> When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
 
 ## Changes
 
