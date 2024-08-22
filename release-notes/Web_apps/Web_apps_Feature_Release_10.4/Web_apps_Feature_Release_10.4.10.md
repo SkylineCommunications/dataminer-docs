@@ -131,3 +131,14 @@ In a timeline component of a dashboard or low-code app, it could occur that real
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When, while editing a dashboard, you dragged a button parameter onto a *Button* component, no button would appear. Instead, the component would be empty.
+
+#### Dashboards/Low-Code Apps: 'Cannot read property of null (reading 'IsTable')' error [ID_40514]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, the following error could appear in the *State*, *Dropdown*, and *Parameter table* components:
+
+``Cannot read property of null (reading 'IsTable')``
+
+> [!NOTE]
+> When this error appeared in a *Parameter table* component, the dashboard would keep on loading.
