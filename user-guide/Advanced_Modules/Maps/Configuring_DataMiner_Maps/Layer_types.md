@@ -387,6 +387,9 @@ Set the *sourceType* attribute of a layer to "properties" if you want that layer
 
 Set the *sourceType* attribute of a layer to "relations" if you want that layer to display lines between objects that are related via foreign key relationships in a DataMiner element. If, for example, an EPM element has a "Household" and an "Amplifier" table that are linked by means of foreign key relationships, the links between those two tables can be visualized on a map.
 
+> [!IMPORTANT]
+> Do note that the Source Table is the Table having the Foreign Key Column. The Destination table is the table pointed to by the Foreign Key defined in the Source table. Switching the configuration will fail to show the relation.
+
 Example:
 
 ```xml
