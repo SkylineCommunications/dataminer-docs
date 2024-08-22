@@ -64,6 +64,18 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 From now on, the web API will no longer retrieve all available bookings. Instead, it will only retrieve a maximum of 200 bookings at a time, of which only the first 100 will initially be displayed.
 
+#### Dashboards/Low-Code Apps - Table and Grid components: Lazy loading [ID_40463]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Both the *Table* and the *Grid* component now support lazy loading.
+
+- When multiple queries are configured in a *Table* component, the component will now only load the visible table.
+- When a *Grid* component has paging enabled (i.e. when it has a fixed number of rows and columns), it will now only retrieve items that are being displayed on the page.
+
+> [!NOTE]
+> When items selected in the URL are not included in the data that was loaded, they will also be loaded.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Intellisense no longer working when feed is configured with special character [ID_40340] [ID_40446]
