@@ -146,18 +146,40 @@ To request a cost estimation, follow the procedure below:
 
 1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-   At this point, an Automation script will be provided to you along with instructions on how to run it.
+1. Wait until you have received confirmation of your registration by email.
+
+1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
+
+   The Catalog page for this package also contains more information about this script. However, you will only need to run the script to get an estimation, not to do the full migration, so you can ignore the information on the Catalog page and follow the procedure below instead.
+
+1. In the Automation app in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
+
+1. Initialize the migration:
+
+   1. Optionally, configure a proxy. This is supported from DataMiner 10.4.6 onwards.
+
+   1. Click *Init migration*.
+
+1. Start the migration:
+
+   1. Make sure *Replication only* is selected.
+
+   1. Select all data types.
+
+      This way you will have the most accurate estimation of your system when running the script.
+
+   1. Click *Start migration*.
 
 1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
-1. Notify your Skyline representative or email <staas@dataminer.services> to complete the process.
+1. After this, at approximately 2 AM CEST, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
 
-   You will then receive a detailed cost estimation.
+   > [!NOTE]
+   > You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
 
-> [!NOTE]
-> If your DataMiner System uses a proxy setup, make sure you have installed DataMiner Feature Release 10.4.7 or higher.
+If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!IMPORTANT]
 > Cost estimations can currently only be performed for the West Europe and UK South regions.
