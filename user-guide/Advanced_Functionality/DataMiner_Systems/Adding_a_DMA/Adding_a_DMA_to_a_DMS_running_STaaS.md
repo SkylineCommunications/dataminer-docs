@@ -12,7 +12,6 @@ uid: Adding_a_DMA_to_a_DMS_running_STaaS
 1. Configure *DB.xml* with STaaS:
 
    1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml*.
-
    1. Configure the *Database* tag with *type="CloudStorage"* as follows:
 
       ```xml
@@ -22,7 +21,7 @@ uid: Adding_a_DMA_to_a_DMS_running_STaaS
       </DataBases>
       ```
 
-1. Copy the persisted data folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data` of an agent that is already in the cluster.
+1. Copy the persisted data folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data` of an agent that is already in the cluster that has an active CloudGateway.
 1. Restart the CloudGateway of the DMA you want to add.
 1. Restart the DMA.
 1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a failover agent.
@@ -31,12 +30,12 @@ The DMA should now be connected to the DMS running STaaS.
 
 ## Using a local database
 
-> [!IMPORTANT]
-> Make sure you have a local database configured in *DB.xml*.
+> [!NOTE]
+> This flow can be used for agents that don't have an internet connection.
 
-1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml* and make sure there is a local database configured.
+1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml* and make sure there is a working local database configured.
 1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a failover agent.
-1. Once the DMA has successfully joined the cluster, enable STaaS in *DB.xml*:
+1. Once the DMA has successfully joined the cluster, enable STaaS:
     1. Stop the DMA.
     1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml*.
     1. Configure the *Database* tag with *type="CloudStorage"* as follows:
@@ -48,6 +47,6 @@ The DMA should now be connected to the DMS running STaaS.
       </DataBases>
       ```
 
-    1. Restart the DMA.
+1. Start the DMA.
 
 The DMA should now be connected to the DMS running STaaS.
