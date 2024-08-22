@@ -293,6 +293,12 @@ The accuracy of proactive cap detection events (i.e. forecasted alarms) reportin
 
 Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
 
+#### MessageBroker: Clients will now throw a DataMinerMessageBrokerException when a single NATS node is stopped while they are busy writing data [ID_38523]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.3 -->
+
+When a single NATS node was stopped because it needed to be reconfigured, up to now, clients that were busy writing data would throw a *NotSupportedException*. From now on, they will throw a *DataMinerMessageBrokerException* instead.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->

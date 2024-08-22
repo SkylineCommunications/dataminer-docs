@@ -163,7 +163,7 @@ When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retrie
 
 #### SLAnalytics - Pattern matching: Problem when a pattern was deleted on one DMA while it was being edited on another DMA [ID_40471]
 
-<!-- MR 10.5.0 - FR 10.4.10 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
 

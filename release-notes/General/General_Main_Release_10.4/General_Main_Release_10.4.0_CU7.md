@@ -12,6 +12,12 @@ uid: General_Main_Release_10.4.0_CU7
 
 ### Enhancements
 
+#### MessageBroker: Clients will now throw a DataMinerMessageBrokerException when a single NATS node is stopped while they are busy writing data [ID_38523]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.3 -->
+
+When a single NATS node was stopped because it needed to be reconfigured, up to now, clients that were busy writing data would throw a *NotSupportedException*. From now on, they will throw a *DataMinerMessageBrokerException* instead.
+
 #### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
@@ -198,6 +204,12 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### SLAnalytics - Pattern matching: Problem when a pattern was deleted on one DMA while it was being edited on another DMA [ID_40471]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 
