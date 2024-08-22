@@ -188,6 +188,8 @@ items:
                         items:
                           - name: Definition
                             topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
+          - name: Skyline Health Check Installer
+            topicUid: Skyline_Health_Check_Installer
           - name: Trap sender
             topicUid: Trap_sender
             items:
