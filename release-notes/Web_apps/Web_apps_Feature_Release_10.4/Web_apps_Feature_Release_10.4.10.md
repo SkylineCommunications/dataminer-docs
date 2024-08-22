@@ -16,6 +16,14 @@ uid: Web_apps_Feature_Release_10.4.10
 
 ## New features
 
+#### Dashboards/Low-Code Apps: Access permissions on folder level & view/edit permissions on low-code apps [ID_40501]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In the Dashboards app, it is now possible to grant or deny users access to specific dashboard folders.
+
+Also, the way in which to grant or deny users permission to view and/or edit a low-code app has been enhanced.
+
 #### Dashboards/Low-Code Apps - Line & area chart component: New 'Show title' option [ID_40504]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
