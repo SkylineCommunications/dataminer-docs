@@ -829,3 +829,11 @@ When the default logic was used, up to now, when you stopped an element before t
 In order to remedy this behavior, the `DeInit` method of the `protocol` object has now been updated. It will now always wait for the *SNMP Get* operations to finish before proceeding.
 
 Also, up to now, the thread that handles the *SNMP Get* operations would not correctly catch exceptions, which resulted in no crashdump files being automatically generated when exceptions occurred. This made it difficult to diagnose the issue, as it required setting up a procdump and waiting for the issue to occur again.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.

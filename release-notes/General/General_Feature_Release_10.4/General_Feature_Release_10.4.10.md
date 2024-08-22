@@ -167,6 +167,14 @@ When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retrie
 
 In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
 
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.
+
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
