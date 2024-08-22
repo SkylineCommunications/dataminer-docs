@@ -146,7 +146,7 @@ To request a cost estimation, follow the procedure below:
 
 1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-1. Wait until you received confirmation of your registration by email.
+1. Wait until you have received confirmation of your registration by email.
 
 1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
 
@@ -174,12 +174,12 @@ To request a cost estimation, follow the procedure below:
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
-1. At approximately 02:00 CEST you will be able to view your cost estimation in the [Admin](https://admin.dataminer.services) *Usage* module under the organization which the DMS is a part of.
+1. After this, at approximately 2 AM CEST, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
 
-> [!NOTE]
-> You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
+   > [!NOTE]
+   > You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
 
-If there are any questions regarding this cost estimation, please contact <staas@dataminer.services>.
+If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!IMPORTANT]
 > Cost estimations can currently only be performed for the West Europe and UK South regions.
