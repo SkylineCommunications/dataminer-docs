@@ -48,6 +48,12 @@ When the Services or Profiles module was opened in Cube, a false-positive warnin
 Profile and Services - The visio file name was empty or null. Check the response message from the server
 ```
 
+#### Problem when logging on to a DataMiner System that required an additional logon through a portal [ID_40387]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you tried to log on via DataMiner Cube to a DataMiner System that required an additional logon through a portal, up to now, the logon would fail because an incorrect response would be passed on to the server. From now on, the correct response will be passed on.
+
 #### Visual Overview: Shapes with ButtonState data would fail to hide as expected [ID_40454]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
