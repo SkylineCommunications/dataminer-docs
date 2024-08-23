@@ -5732,6 +5732,17 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+    - name: mbgNMS
+      topicUid: mbgNMS
+      items:
+      - name: Releases
+        topicUid: mbgNMS_Releases
+      - name: Security
+        topicUid: mbgNMS_Security
+      - name: Meinberg NMS or DataMiner
+        topicUid: mbgNMS_MeinbergOrDataMiner
+      - name: Additional Information
+        topicUid: mbgNMS_Additional_Information
 - name: Best practices
   topicUid: Best_practices
   items:
