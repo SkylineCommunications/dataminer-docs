@@ -199,6 +199,21 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
    at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
 ```
 
+#### Problem with SLProtocol when using a timer to perform 'SNMP Get' operations [ID_40402]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When using a timer to perform *SNMP Get* operations on all rows in a table, you have two options:
+
+- the thread pool option (which you activate by specifying the *threadPool* keyword), or
+- the default logic (which you activate by not specifying the *threadPool* keyword).
+
+When the default logic was used, up to now, when you stopped an element before the *SNMP Get* operations were completed, resources that were still required would incorrectly be cleaned up, leading to the SLProtocol process being stopped.
+
+In order to remedy this behavior, the `DeInit` method of the `protocol` object has now been updated. It will now always wait for the *SNMP Get* operations to finish before proceeding.
+
+Also, up to now, the thread that handles the *SNMP Get* operations would not correctly catch exceptions, which resulted in no crashdump files being automatically generated when exceptions occurred. This made it difficult to diagnose the issue, as it required setting up a procdump and waiting for the issue to occur again.
+
 #### Protocols: Problem when a response with a 'next param' and a 'fixed length' parameter did not have a trailer defined [ID_40430]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->

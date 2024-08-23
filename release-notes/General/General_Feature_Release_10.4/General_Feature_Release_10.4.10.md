@@ -142,7 +142,7 @@ When an element name contained a curly bracket ("{" or "}"), exporting the eleme
 
 #### Problem with SLProtocol when using a timer to perform 'SNMP Get' operations [ID_40402]
 
-<!-- MR 10.5.0 - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When using a timer to perform *SNMP Get* operations on all rows in a table, you have two options:
 
