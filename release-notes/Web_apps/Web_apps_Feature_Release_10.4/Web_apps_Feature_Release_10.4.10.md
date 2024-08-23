@@ -142,3 +142,9 @@ In some cases, the following error could appear in the *State*, *Dropdown*, and 
 
 > [!NOTE]
 > When this error appeared in a *Parameter table* component, the dashboard would keep on loading.
+
+#### Dashboards/Low-Code Apps: Problem when you removed a component and then added another component [ID_40525]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you removed a component from a dashboard, and then added another component by first dropping data onto the dashboard and then picking the visualization afterwards, in some cases, run-time errors could be thrown that would make the dashboard unusable until you refreshed the app.
