@@ -262,6 +262,13 @@ items:
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview
             topicUid: Implementing_DITT_in_Visio
+      - name: META Whatsapp Messaging solution
+        topicUid: META_WhatsApp_Messaging
+        items:
+          - name: Installing the META WhatsApp Messaging solution
+            topicUid: META_WhatsApp_Messaging_Installation
+          - name: Using the META WhatsApp Messaging solution
+            topicUid: Using_META_WhatsApp_Messaging
       - name: DataMiner Objects Tool
         topicUid: DataMiner_Objects_Tool
         items:

@@ -6,27 +6,55 @@ uid: META_WhatsApp_Messaging_Installation
 
 ## Prerequisites
 
-### 1. Register on Meta Developers platform
+- Make sure you are [registered as a Meta Developer](https://developers.facebook.com/docs/development/register).
 
-- Follow the steps described in the following page to [*register as META developer*](https://developers.facebook.com/docs/development/register).
-- Once registered, go to *“My Apps”* and then, press *“Create App”*.
-- Select *“I don't want to connect a business portfolio yet”*.
-- For use case, select *“Other”*.
-- The app type should be *“Business”* in this case.
-- Give a name to the app and attach an email to it.
+## Create the 'DataMiner Alarm Notification' app
 
-![App in META Developers Account](~/user-guide/images/META_WhatsApp_Messaging_MetaRegister.png)
+1. Navigate to *My Apps* and select *Create App*.
 
-### 2. Create a Business Manager account
+1. Select *I don't want to connect a business portfolio yet*.
 
-- Go to the [*Meta Business Suite*](https://business.facebook.com/).
-- Create a new account by specifying a business name, the owner name, and the email desired to be associated with the business.
-- Set the required details of the business.
-- Confirm the business email address.
+1. Select *Other* as the use case.
+
+1. Set the app type to *Business*.
+
+1. Specify the following app details:
+
+     - Name: `DataMiner Alarm Notification`
+
+     - Email address: The email address to be used to contact you about this app
+
+1. Click *Create App*.
+
+   Your app will be loaded in the app Dashboard.
+
+   ![App in META Developers Account](~/user-guide/images/META_WhatsApp_Messaging_MetaRegister.png)
+
+> [!TIP]
+> See also: [App Type Creation Flow](https://developers.facebook.com/docs/development/create-an-app/other-app-types)
+
+## Create a Business Manager account
+
+1. Go to the [*Meta Business Suite*](https://business.facebook.com/) and select *Create an account*.
+
+1. Provide the following information:
+
+   - Your business name
+
+   - Your name (i.e. the owner)
+
+   - Your business email (i.e. the email address you will use to conduct company business)
+
+     > [!NOTE]
+     > Make sure you choose an email address you have access to as you will need to confirm it later.
+
+1. Specify the required details of the business.
+
+1. Confirm the business email address.
 
 ![META Business Account](~/user-guide/images/META_WhatsApp_Messaging_BusinessAccount.png)
 
-### 3. Add WhatsApp to the App and send Test Message
+## Add WhatsApp to the app and send test message
 
 - Back on the developer page, in the *"Add Products"* section, find WhatsApp and press *"Set up"*.
 - Go to the WhatsApp *"Quick Start"* and select the commercial portfolio you created in the previous step.
@@ -40,7 +68,7 @@ uid: META_WhatsApp_Messaging_Installation
 
 ![META App](~/user-guide/images/META_WhatsApp_Messaging_MetaApp.png)
 
-### 4. Create a System User
+### Create a System User
 
 - Go to [*Meta Business Suite*](https://business.facebook.com/) again.
 - In the *Users > System Users* section, add a new system user giving it a name and a role (*Employee* or *Admin*).

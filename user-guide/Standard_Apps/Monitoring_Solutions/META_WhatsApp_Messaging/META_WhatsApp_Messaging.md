@@ -4,11 +4,11 @@ uid: META_WhatsApp_Messaging
 
 # META WhatsApp Messaging solution
 
-The **META WhatsApp Messaging** solution acts as a link between your DataMiner system Alarm Console and the WhatsApp API, enabling you to deliver critical alarms directly to designated users WhatsApp devices.
-
-By eliminating the need for constant monitoring of the DataMiner Alarm Console by support or management teams, this solution empowers authorized personnel to stay informed about system status and respond promptly to issues, regardless of their location.
-
-> [!NOTE]
-> Take into account that there are some *prerequisites* to be fulfilled before installing this solution. Check [***the installation guide***](xref:META_WhatsApp_Messaging_Installation) for more details.
+The META WhatsApp Messaging solution acts as a link between the [Alarm Console](xref:Working_with_the_Alarm_Console) (1) and the WhatsApp API, allowing critical alarms to be sent directly to designated users' WhatsApp devices (2).
 
 ![META WhatsApp Messaging cover](~/user-guide/images/META_WhatsApp_Messaging_Cover.png)
+
+This solution eliminates the need for constant monitoring of the Alarm Console by support or management teams, enabling authorized personnel to stay informed about system status and respond to issues promptly, regardless of their location.
+
+> [!IMPORTANT]
+> Before installing this solution, ensure that you meet all [prerequisites](xref:META_WhatsApp_Messaging_Installation#prerequisites).
