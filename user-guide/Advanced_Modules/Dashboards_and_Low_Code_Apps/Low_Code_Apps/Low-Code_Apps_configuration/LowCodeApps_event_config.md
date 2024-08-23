@@ -158,7 +158,7 @@ Examples:
 
 - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInputFeed), [text input](xref:DashboardTextInputFeed), or [search input](xref:DashboardSearchInputFeed) component, you can configure this action on, for example, the button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to a feed.
 
-  ![Set value](~/user-guide/images/Set_Value.gif)
+  ![Set value](~/user-guide/images/Set_Value.gif)<br>*Grid, text input, and table components in DataMiner 10.4.9*
 
 ## Showing a context menu
 

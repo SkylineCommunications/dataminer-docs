@@ -814,3 +814,11 @@ In some rare cases, while starting up, SLAnalytics appeared to leak memory and c
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
 When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.

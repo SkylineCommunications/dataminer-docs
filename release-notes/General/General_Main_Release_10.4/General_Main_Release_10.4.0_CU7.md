@@ -12,6 +12,12 @@ uid: General_Main_Release_10.4.0_CU7
 
 ### Enhancements
 
+#### MessageBroker: Clients will now throw a DataMinerMessageBrokerException when a single NATS node is stopped while they are busy writing data [ID_38523]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.3 -->
+
+When a single NATS node was stopped because it needed to be reconfigured, up to now, clients that were busy writing data would throw a *NotSupportedException*. From now on, they will throw a *DataMinerMessageBrokerException* instead.
+
 #### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
@@ -84,6 +90,12 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 From now on, by default, the *SLNet.txt* log file will no longer contain any logging from MessageBroker.
 
+#### MessageBroker: NuGet packages upgraded [ID_40164]
+
+<!-- MR 10.4.0 [CU7] - FR TBD -->
+
+The *DataMinerMessageBroker.API* and *DataMinerMessageBroker.API.Native* NuGet packages have been upgraded to version 2.7.3.
+
 #### BPA tests will no longer be executed immediately after a DataMiner restart [ID_40201]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
@@ -91,6 +103,12 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 Up to now, all BPA tests would be executed immediately after DataMiner had been started.
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
+
+#### Service & Resource Management: Enhanced synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System [ID_40389]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+A number of enhancements have been made with regard to the synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System. This should improve performance when creating resources on non-master agents.
 
 #### DxMs upgraded to versions requiring .NET 8 [ID_40445]
 
@@ -181,6 +199,21 @@ Also, *GenIfAggregateException* messages would not be serialized correctly, caus
    at Skyline.DataMiner.Analytics.GenericInterface.GenIfAggregateException..ctor(SerializationInfo info, StreamingContext context)
 ```
 
+#### Problem with SLProtocol when using a timer to perform 'SNMP Get' operations [ID_40402]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When using a timer to perform *SNMP Get* operations on all rows in a table, you have two options:
+
+- the thread pool option (which you activate by specifying the *threadPool* keyword), or
+- the default logic (which you activate by not specifying the *threadPool* keyword).
+
+When the default logic was used, up to now, when you stopped an element before the *SNMP Get* operations were completed, resources that were still required would incorrectly be cleaned up, leading to the SLProtocol process being stopped.
+
+In order to remedy this behavior, the `DeInit` method of the `protocol` object has now been updated. It will now always wait for the *SNMP Get* operations to finish before proceeding.
+
+Also, up to now, the thread that handles the *SNMP Get* operations would not correctly catch exceptions, which resulted in no crashdump files being automatically generated when exceptions occurred. This made it difficult to diagnose the issue, as it required setting up a procdump and waiting for the issue to occur again.
+
 #### Protocols: Problem when a response with a 'next param' and a 'fixed length' parameter did not have a trailer defined [ID_40430]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
@@ -192,6 +225,12 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### SLAnalytics - Pattern matching: Problem when a pattern was deleted on one DMA while it was being edited on another DMA [ID_40471]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 

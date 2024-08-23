@@ -16,6 +16,14 @@ uid: Web_apps_Feature_Release_10.4.10
 
 ## New features
 
+#### Dashboards/Low-Code Apps: Access permissions on folder level & view/edit permissions on low-code apps [ID_40501]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In the Dashboards app, it is now possible to grant or deny users access to specific dashboard folders.
+
+Also, the way in which to grant or deny users permission to view and/or edit a low-code app has been enhanced.
+
 #### Dashboards/Low-Code Apps - Line & area chart component: New 'Show title' option [ID_40504]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
@@ -55,6 +63,18 @@ When you share a dashboard in the cloud, the loader that is shown while a new ta
 Because of a number of enhancements, overall performance has increased when fetching bookings from a DOM form.
 
 From now on, the web API will no longer retrieve all available bookings. Instead, it will only retrieve a maximum of 200 bookings at a time, of which only the first 100 will initially be displayed.
+
+#### Dashboards/Low-Code Apps - Table and Grid components: Lazy loading [ID_40463]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Both the *Table* and the *Grid* component now support lazy loading.
+
+- When multiple queries are configured in a *Table* component, the component will now only load the visible table.
+- When a *Grid* component has paging enabled (i.e. when it has a fixed number of rows and columns), it will now only retrieve items that are being displayed on the page.
+
+> [!NOTE]
+> When items selected in the URL are not included in the data that was loaded, they will also be loaded.
 
 ### Fixes
 
@@ -111,3 +131,20 @@ In a timeline component of a dashboard or low-code app, it could occur that real
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When, while editing a dashboard, you dragged a button parameter onto a *Button* component, no button would appear. Instead, the component would be empty.
+
+#### Dashboards/Low-Code Apps: 'Cannot read property of null (reading 'IsTable')' error [ID_40514]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, the following error could appear in the *State*, *Dropdown*, and *Parameter table* components:
+
+``Cannot read property of null (reading 'IsTable')``
+
+> [!NOTE]
+> When this error appeared in a *Parameter table* component, the dashboard would keep on loading.
+
+#### Dashboards/Low-Code Apps: Problem when you removed a component and then added another component [ID_40525]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you removed a component from a dashboard, and then added another component by first dropping data onto the dashboard and then picking the visualization afterwards, in some cases, run-time errors could be thrown that would make the dashboard unusable until you refreshed the app.

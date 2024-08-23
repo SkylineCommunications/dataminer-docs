@@ -73,10 +73,11 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner Feature Release 10.4.3 and higher<!--RN 37969--><br>DataMiner Main Release 10.3.0 [CU12] and higher<br>DataMiner Main Release 10.4.0 and higher | Microsoft .NET Framework 4.8, .NET 6.0 and .NET 8.0 |
+| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | Microsoft .NET Framework 4.8 and .NET 8.0 |
+| DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | Microsoft .NET Framework 4.8, .NET 6.0 and .NET 8.0 |
 | DataMiner Feature Release 10.3.9 to 10.4.2 | Microsoft .NET Framework 4.8 and .NET 6.0 |
-| DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 CU3 to 10.3.0 CU11 | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
-| DataMiner Feature Release 10.1.12 to 10.3.2<br>DataMiner Main Release 10.3.0 CU2 | Microsoft .NET Framework 4.8 and .NET 5.0 |
+| DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 [CU3] to 10.3.0 [CU11] | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
+| DataMiner Feature Release 10.1.12 to 10.3.2<br>DataMiner Main Release 10.3.0 [CU2] | Microsoft .NET Framework 4.8 and .NET 5.0 |
 | DataMiner 10.1.11 | Microsoft .NET Framework 4.8 |
 | DataMiner versions prior to 10.1.11 | Microsoft .NET Framework 4.6.2 |
 

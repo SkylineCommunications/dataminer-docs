@@ -22,7 +22,24 @@ uid: General_Feature_Release_10.4.10
 
 ## New features
 
-*No new features have been added yet.*
+#### Protocols: Newly installed connector will automatically be promoted to production version [ID_40291]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, after you had installed a connector for the first time, you typically had to promote it to "production version" afterwards. From now on, when you install a connector for the first time, DataMiner will automatically promote it to "production version" and add the following entry to the *SLNet.txt* log file:
+
+``Initial upload of protocol '{protocolName}'. Version '{protocolVersion}' will be automatically set as production.``
+
+For example, when I install *MyConnector 1.0.0.1* for the first time, it will automatically be promoted to "production version", but when I later deploy *MyConnector 1.0.0.2*, version 1.0.0.1 will remain the production version.
+
+A connector will only be promoted to "production version" if its first version is installed/uploaded in one of the following ways:
+
+- When it is published from within DataMiner Integration Studio (DIS).
+- When it is deployed from the [DataMiner Catalog](https://catalog.dataminer.services/).
+- When its *.dmprotocol* file is uploaded from the *Protocols & Templates* app in DataMiner Cube.
+
+> [!NOTE]
+> When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
 
 ## Changes
 
@@ -57,6 +74,12 @@ Also, *GetAlarmDetailsMessage* and *GetAlarmTreeDetailsMessage* now support sepa
 Up to now, all BPA tests would be executed immediately after DataMiner had been started.
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
+
+#### Service & Resource Management: Enhanced synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System [ID_40389]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+A number of enhancements have been made with regard to the synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System. This should improve performance when creating resources on non-master agents.
 
 #### New 'IsCloudConnected' message to check whether the DataMiner System is connected to dataminer.services [ID_40395]
 
@@ -117,6 +140,21 @@ Because of a race condition, it could occur that a virtual primary element in a 
 
 When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
 
+#### Problem with SLProtocol when using a timer to perform 'SNMP Get' operations [ID_40402]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When using a timer to perform *SNMP Get* operations on all rows in a table, you have two options:
+
+- the thread pool option (which you activate by specifying the *threadPool* keyword), or
+- the default logic (which you activate by not specifying the *threadPool* keyword).
+
+When the default logic was used, up to now, when you stopped an element before the *SNMP Get* operations were completed, resources that were still required would incorrectly be cleaned up, leading to the SLProtocol process being stopped.
+
+In order to remedy this behavior, the `DeInit` method of the `protocol` object has now been updated. It will now always wait for the *SNMP Get* operations to finish before proceeding.
+
+Also, up to now, the thread that handles the *SNMP Get* operations would not correctly catch exceptions, which resulted in no crashdump files being automatically generated when exceptions occurred. This made it difficult to diagnose the issue, as it required setting up a procdump and waiting for the issue to occur again.
+
 #### Protocols: Problem when a response with a 'next param' and a 'fixed length' parameter did not have a trailer defined [ID_40430]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
@@ -128,6 +166,20 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### SLAnalytics - Pattern matching: Problem when a pattern was deleted on one DMA while it was being edited on another DMA [ID_40471]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 
