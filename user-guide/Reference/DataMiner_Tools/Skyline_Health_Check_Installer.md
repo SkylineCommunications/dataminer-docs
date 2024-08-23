@@ -14,9 +14,7 @@ Before you install the *Skyline Health Check* package, make sure your Dataminer 
 
 To install the *Skyline Health Check* package, do the following:
 
-1. Download the package from the [Dataminer Catalog](https://catalog.dataminer.services/details/56b1b9e0-ffe1-4bd2-b5d2-06c17d97c6b1).
-
-1. Install the package on a random DataMiner Agent within your DataMiner System.
+1. Go to the [DataMiner Health Check solution](https://catalog.dataminer.services/details/56b1b9e0-ffe1-4bd2-b5d2-06c17d97c6b1) page in the [Dataminer Catalog](https://catalog.dataminer.services), and deploy the package on your DataMiner System.
 
 1. Create an element that uses the *Skyline Health Check Manager* connector. This element will allow you to configure system tests and monitor overall health.
 
