@@ -114,6 +114,8 @@ items:
         topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: DataMiner Health Check
+        topicUid: DataMiner_Health_Check
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
@@ -188,8 +190,6 @@ items:
                         items:
                           - name: Definition
                             topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
-          - name: Skyline Health Check
-            topicUid: Skyline_Health_Check
           - name: Trap sender
             topicUid: Trap_sender
             items:
