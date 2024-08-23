@@ -24,6 +24,6 @@ Adding a DataMiner agent to a DMS running STaaS is possible by copying the cloud
 1. Copy the persisted data folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data` of an agent that is already in the cluster that has an active CloudGateway.
 1. Restart the CloudGateway of the DMA you want to add.
 1. Start the DMA.
-1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a failover agent.
+1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a Failover Agent.
 
 The DMA should now be connected to the DMS running STaaS.
