@@ -16,7 +16,61 @@ In case DataMiner training is needed for a large group of people, this option br
 
 ## Open training sessions
 
-Skyline organizes training sessions on a regular basis, where individuals from different organizations can join to enhance their DataMiner skills and knowledge.
+DataMiner Open Training sessions are open public sessions offering a complete training program with four separate tracks: DataMiner Fundamentals, DataMiner Configurator Level 1, DataMiner Configurator Level 2, and DataMiner Sys Admin.
+
+Each track includes theoretical presentations, demonstrations, and hands-on exercises. You can follow the entire program or specific tracks, depending on your level of experience.
+
+The schedule of the next open training sessions and the registration form can be found on [Dataminer Dojo](https://community.dataminer.services/open-training/).
+
+The daily schedule of the open training sessions looks as follow. Slight changes in the schedule are always possible. 
+
+Day 1: DataMiner Fundamentals
+- Welcome
+- DataMiner intro
+- Getting Connected
+
+Lunch break
+
+- Elements: real-time data
+- Elements: performance data
+- Element enhancements
+
+Day 2: DataMiner Fundamentals
+- Alarms
+
+Lunch break
+
+- Dashboards & Low-Code Apps
+- Notifications
+
+Day 3: DataMiner Configurator Level 1
+- Connectors
+- Elements
+- Trend templates
+
+Lunch break
+
+- Alarm templates
+- Views, services and SLAs
+
+Day 4: DataMiner Configurator level 2
+- Creating Visio files
+- Dashboards
+
+Lunch break
+
+- Low-Code Apps
+- User management
+- Automation info
+
+Day 5: DataMiner SysAdmin
+- System Center
+- Scripted Connectors
+
+Lunch break
+
+- Automation pro
+- Correlation
 
 ## Online training consultancy
 
