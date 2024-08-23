@@ -76,7 +76,7 @@ uid: META_WhatsApp_Messaging_Installation
 - Assign your app and give the user the appropriate permissions.
 - Then press “*Generate token*”.
 - Select the app.
-- Choose the desired time for the token to expire (60 recommended for security).
+- Choose the desired time for the token to expire (60 days recommended for security).
 - Assign the following permissions: *business_management, whats_app_business_messaging, whats_app_business_management*
 - Save the **generated token** in a safe place, as it will be needed for the **connector configuration**.
 
@@ -95,7 +95,7 @@ uid: META_WhatsApp_Messaging_Installation
 *For more info about correlation rules visit [Orchestration & Automation courses](https://community.dataminer.services/learning/courses/orchestration-automation/) and [About DataMiner Correlation](https://docs.dataminer.services/user-guide/Advanced_Modules/Correlation/About_DMS_Correlation.html)*.
 
 > [!IMPORTANT]
-> You can create as many correlation rules and elements as you need to different alarms to different contacts.
+> You can create as many correlation rules and elements as you need to send different alarms to different contacts.
 
 ### Connector Configuration
 
