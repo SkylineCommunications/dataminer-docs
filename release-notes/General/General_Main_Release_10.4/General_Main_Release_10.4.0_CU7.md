@@ -41,7 +41,7 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 #### Security enhancements [ID_38869] [ID_40229]
 
 <!-- 38869: MR 10.4.0 [CU7] - FR 10.4.6 -->
-<!-- 40229: MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.6 -->
+<!-- 40229: MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 
@@ -232,6 +232,14 @@ When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retrie
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 

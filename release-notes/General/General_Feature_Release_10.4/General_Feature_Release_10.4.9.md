@@ -418,7 +418,7 @@ In order to prevent the following known MySQL issue from occurring, the *Mysql.D
 
 #### Security enhancements [ID_40229]
 
-<!-- 40229: MR 10.5.0 - FR 10.4.9 -->
+<!-- 40229: MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 

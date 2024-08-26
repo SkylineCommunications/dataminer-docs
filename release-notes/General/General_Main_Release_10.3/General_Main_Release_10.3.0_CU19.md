@@ -34,7 +34,7 @@ From now on, the *Report Active RTE* test will be executed for the first time ex
 
 #### Security enhancements [ID_40229]
 
-<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.6 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 ### Fixes
@@ -95,6 +95,14 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 
