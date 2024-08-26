@@ -42,7 +42,7 @@ The overview below illustrates four basic migration scenarios.
 > - *3 Requires one license per third-party product instance.  
 > - *4 Engineering services on top of mbgNMS, e.g. add visual or create an automation script. The Meinberg Element Manager app itself cannot be changed.  
 > - *5 No need to order Meinberg connectors or Meinberg Element Manager; those will be transitioned to the DataMiner platform.  
-> - *6 DataMiner IDP app needs to be purchased separately. Please reach out to your Skyline sales representative in case you already have IDP running on your system. Checks will be required to make sure the existing >system will be compatible.  
+> - *6 DataMiner IDP app needs to be purchased separately. Please reach out to your Skyline sales representative in case you already have IDP running on your system. Checks will be required to make sure the existing system will be compatible.  
 > - *7 LANTIME connectors:
 >
 >   - LANTIME Modular series requires SYSII-connector (includes all connectors to manage all supported LANTIME cards).
