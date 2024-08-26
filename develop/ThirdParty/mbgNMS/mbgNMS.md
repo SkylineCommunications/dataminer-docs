@@ -17,14 +17,14 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 
 - Latest release: [Meinberg Element Manager 1.3.0](https://community.dataminer.services/download/meinberg-element-manager-1-3-0/)
 
-- Release notes: [Release notes mbgNMS 1.3.0](https://docs.dataminer.services/release-notes/MbgNMS/MbgNMS_1.3.0.html)
+- Release notes: [Release notes mbgNMS 1.3.0](xref:MbgNMS_1.3.0)
 
 - Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-14511-cu4/)
 
 ![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
 
 > [!IMPORTANT]
-> In case you are not upgrading to the DataMiner version that immediately follows your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
+> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
 > Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
 
 ## Content
