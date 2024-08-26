@@ -23,4 +23,4 @@ The SNMP information retrieval process has been improved, so that users will now
 
 #### Incorrect bit rate calculation for slow interfaces [ID_40530]
 
-In the Slow Interfaces table, it could occur that incorrect error rates and bit rates were shown.
+In the Interface table, it could occur that incorrect error rates and bit rates were shown for slow interfaces.
