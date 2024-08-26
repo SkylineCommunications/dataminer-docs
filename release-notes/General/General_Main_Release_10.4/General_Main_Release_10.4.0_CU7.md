@@ -38,9 +38,10 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-#### Security enhancements [ID_38869]
+#### Security enhancements [ID_38869] [ID_40229]
 
-<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
+<!-- 38869: MR 10.4.0 [CU7] - FR 10.4.6 -->
+<!-- 40229: MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.6 -->
 
 A number of security enhancements have been made.
 

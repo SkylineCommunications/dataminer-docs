@@ -40,13 +40,12 @@ If you want to have persistent parameter latch states, do the following:
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38951] [ID_39387] [ID_40229]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38951] [ID_39387]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
 <!-- 39387: MR 10.5.0 - FR 10.4.7 -->
-<!-- 40229: MR 10.5.0 - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 

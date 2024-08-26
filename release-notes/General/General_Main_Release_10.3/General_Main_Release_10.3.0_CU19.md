@@ -32,6 +32,11 @@ Up to now, all BPA tests would be executed immediately after DataMiner had been 
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
 
+#### Security enhancements [ID_40229]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.6 -->
+
+A number of security enhancements have been made.
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]
