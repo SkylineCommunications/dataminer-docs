@@ -387,9 +387,6 @@ Set the *sourceType* attribute of a layer to "properties" if you want that layer
 
 Set the *sourceType* attribute of a layer to "relations" if you want that layer to display lines between objects that are related via foreign key relationships in a DataMiner element. If, for example, an EPM element has a "Household" and an "Amplifier" table that are linked by means of foreign key relationships, the links between those two tables can be visualized on a map.
 
-> [!IMPORTANT]
-> The source table is the table that contains the foreign key column. The destination table is the table pointed to by the foreign key defined in the source table. Switching the configuration will fail to show the relation.
-
 Example:
 
 ```xml
@@ -410,6 +407,13 @@ Example:
 </Layer>
 ```
 
+- To make sure correct results are returned, `<SourceTableID>` and `<DestinationTableID>` have to be in the correct order.
+
+  > [!IMPORTANT]
+  > The source table is the table that contains the foreign key column. The destination table is the table pointed to by the foreign key defined in the source table. Make sure you specify the right tables as source and destination, as otherwise the configuration will fail to show the relation.
+
+- Optionally, the `<LineOptions>` tag can be used in this tag. See [LineOptions](xref:LineOptions).
+
 - Within the `<ForeignKeyRelationsSourceInfo>` element, the following additional filters can be specified to filter the possible connection lines: `<SourceTableFilters>`, `<DestinationTableFilters>`, and `<ParentFilter>`.
 
   `<ParentFilter>` is specifically designed to enhance performance when filtering large tables based on another (parent) table. In the following example, the connection lines of the layer where the filter is defined are filtered based on the foreign key relation to the table in which column 1002 is equal to the value of the *SelectedRow* placeholder (received via the URL parameter "dSelectedRow"):
@@ -422,10 +426,7 @@ Example:
   ```
 
   > [!NOTE]
-  >
-  > - To make sure correct results are returned, `<SourceTableID>` and `<DestinationTableID>` have to be in the correct order.
-  > - Optionally, the `<LineOptions>` tag can be used in this tag. See [LineOptions](xref:LineOptions).
-  > - For table filters, you can use the *recursivefullfilter* option. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+  > For table filters, you can use the *recursivefullfilter* option. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 - From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute in the `<ForeignKeyRelationsSourceInfo>` tag (e.g. with value "myElement") to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
 
