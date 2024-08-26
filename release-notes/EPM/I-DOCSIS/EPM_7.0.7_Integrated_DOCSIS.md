@@ -24,3 +24,7 @@ The SNMP information retrieval process has been improved, so that users will now
 #### Incorrect bit rate calculation for slow interfaces [ID_40530]
 
 In the Interface table, it could occur that incorrect error rates and bit rates were shown for slow interfaces.
+
+#### Channels information polling issue [ID_40553]
+
+During network congestion, it could occur that information about channels was only partially retrieved and service group mappings were lost. To resolve this, the partialSNMP option will no longer be used to poll the channels information.
