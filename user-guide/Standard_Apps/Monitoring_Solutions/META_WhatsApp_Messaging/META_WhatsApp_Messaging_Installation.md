@@ -6,9 +6,17 @@ uid: META_WhatsApp_Messaging_Installation
 
 ## Prerequisites
 
-- Make sure you are [registered as a Meta Developer](https://developers.facebook.com/docs/development/register).
+Before installing the *META WhatsApp Messaging* connector, ensure you meet all the prerequisites:
 
-## Create the 'DataMiner Alarm Notification' app
+1. Make sure you are [registered as a Meta Developer](https://developers.facebook.com/docs/development/register).
+
+1. [Create the *DataMiner Alarm Notification* app](#create-the-dataminer-alarm-notification-app).
+
+1. [Create a Business Manager account](#create-a-business-manager-account).
+
+1. [Add WhatsApp to your app and send a test message](#add-whatsapp-to-your-app-and-send-a-test-message).
+
+### Create the 'DataMiner Alarm Notification' app
 
 1. Navigate to *My Apps* and select *Create App*.
 
@@ -20,9 +28,9 @@ uid: META_WhatsApp_Messaging_Installation
 
 1. Specify the following app details:
 
-     - Name: `DataMiner Alarm Notification`
+   - Name: `DataMiner Alarm Notification`
 
-     - Email address: The email address to be used to contact you about this app
+   - Email address: The email address to be used to contact you about this app
 
 1. Click *Create App*.
 
@@ -33,7 +41,7 @@ uid: META_WhatsApp_Messaging_Installation
 > [!TIP]
 > See also: [App Type Creation Flow](https://developers.facebook.com/docs/development/create-an-app/other-app-types)
 
-## Create a Business Manager account
+### Create a Business Manager account
 
 1. Go to the [*Meta Business Suite*](https://business.facebook.com/) and select *Create an account*.
 
@@ -54,35 +62,54 @@ uid: META_WhatsApp_Messaging_Installation
 
 ![META Business Account](~/user-guide/images/META_WhatsApp_Messaging_BusinessAccount.png)
 
-## Add WhatsApp to the app and send test message
+### Add WhatsApp to your app and send a test message
 
-- Back on the developer page, in the *"Add Products"* section, find WhatsApp and press *"Set up"*.
-- Go to the WhatsApp *"Quick Start"* and select the commercial portfolio you created in the previous step.
-- In the *“API Configuration”* section, add a new recipient’s phone number.
-- Enter the verification code you received in the recipient's WhatsApp app to verify the phone number.
-- Select the recipient's phone number and send the test message by pressing the "*Send Message*" button.
-- Save the ***"Phone Number Identifier"*** and the ***"WhatsApp Business Account ID"*** located just below the sender's number for the **connector configuration**.
+1. Go to the App Dashboard of the *DataMiner Alarm Notification* app.
 
-> [!NOTE]
-> Note that here you need to add all the recipient numbers to which you want to send the WhatsApp alarm notifications.
+1. Locate *WhatsApp* under the *Add Products* section and select *Set up*.
+
+1. Click *Quick Start* and select the commercial portfolio you previously created.
+
+1. Navigate to *API Configuration* > *Send and receive messages* and follow steps 1 and 2:
+
+   1. Add a new recipient’s phone number.
+
+      > [!NOTE]
+      > Add all the recipient numbers you want the WhatsApp alarm notifications to be sent to.
+
+   1. Verify the new phone number by entering the verification code you have received via WhatsApp.
+
+   1. Select the recipient's phone number.
+
+   1. To send a test message to your newly added phone number, click *Send message* in the lower right corner.
+
+1. Save the *Phone number identifier* and the *WhatsApp Business Account ID*, which you can find right below the sender's number.
 
 ![META App](~/user-guide/images/META_WhatsApp_Messaging_MetaApp.png)
 
 ### Create a System User
 
-- Go to [*Meta Business Suite*](https://business.facebook.com/) again.
-- In the *Users > System Users* section, add a new system user giving it a name and a role (*Employee* or *Admin*).
-- Select the user you created, press the three dots button and select the “*Assign assets*”.
-- Assign your app and give the user the appropriate permissions.
-- Then press “*Generate token*”.
-- Select the app.
+1. Go to [*Meta Business Suite*](https://business.facebook.com/).
+
+1. Go to *Users > System Users* and select *+ Add* in the top-right corner.
+
+1. Give your new system user a name and a role (*Employee* or *Admin*).
+
+1. Select the user you created, click the ellipsis button ("..."), and select *Assign assets*.
+
+1. Assign your app to the new user, and give them the appropriate permissions.
+
+1. Select *Generate token*.
+
+1. Select the app.
+
 - Choose the desired time for the token to expire (60 days recommended for security).
 - Assign the following permissions: *business_management, whats_app_business_messaging, whats_app_business_management*
 - Save the **generated token** in a safe place, as it will be needed for the **connector configuration**.
 
 ![META Business Account](~/user-guide/images/META_WhatsApp_Messaging_UserToken.png)
 
-## Installation
+## Installing the 'META WhatsApp Messaging' connector
 
 1. Look up the [*META WhatsApp Messaging* solution](https://catalog.dataminer.services/details/909de004-7a8f-43bd-b40c-824051fe3fe1) in the DataMiner Catalog.
 1. Click the *Deploy* button.
@@ -96,7 +123,3 @@ uid: META_WhatsApp_Messaging_Installation
 
 > [!IMPORTANT]
 > You can create as many correlation rules and elements as you need to send different alarms to different contacts.
-
-### Connector Configuration
-
-For the instructions to configure the ***META WhatsApp Messaging connector***, refer to the [***connector documentation***](https://docs.dataminer.services/connector/doc/META_WhatsApp_Messaging.html).
