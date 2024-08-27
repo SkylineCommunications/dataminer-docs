@@ -36,7 +36,19 @@ Before it displays the relation learning light bulb in the top-right corner of a
 
 During that requirements check, up to now, it would use the *GetCCAGatewayGlobalStateRequest* message to check whether the DataMiner System is connected to dataminer.services. From now on, it will use the new *IsCloudConnected* message instead.
 
+#### Cube home page: 'Did you know?' list will now show the 5 latest Dojo blog posts
+
+When you open DataMiner Cube, from now on, the *Did you know?* list will show the 5 latest [DataMiner Dojo blog posts](https://community.dataminer.services/blog/).
+
+Clicking the title of one of those posts, will open the post in a new browser window.
+
 ### Fixes
+
+#### Interactive Automation script could become unresponsive while it was waiting for user input [ID_40358]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+While an interactive Automation script was waiting for user input, in some cases, it could become responsive, especially when Cube was connected to a heavily loaded DaaS system.
 
 #### False-positive warning log entry when Services or Profiles module was opened [ID_40385]
 
