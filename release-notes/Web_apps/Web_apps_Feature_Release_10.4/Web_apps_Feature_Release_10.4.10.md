@@ -76,6 +76,14 @@ Both the *Table* and the *Grid* component now support lazy loading.
 > [!NOTE]
 > When items selected in the URL are not included in the data that was loaded, they will also be loaded.
 
+#### Dashboards app: Users who duplicate a dashboard they are not allowed to edit will now be allowed to edit the newly created duplicate [ID_40556]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you duplicated a dashboard you were not allowed to edit, up to now, you would also not be allowed to edit the newly created duplicate.
+
+From now on, when you duplicate a dashboard you are not allowed to edit, you will be allowed to edit the newly created duplicate.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Intellisense no longer working when feed is configured with special character [ID_40340] [ID_40446]
