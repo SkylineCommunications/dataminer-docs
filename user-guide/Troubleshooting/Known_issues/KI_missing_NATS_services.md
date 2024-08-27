@@ -6,11 +6,11 @@ uid: KI_missing_NATS_services
 
 ## Affected versions
 
-Any  version of DataMiner
+Any version of DataMiner
 
 ## Cause
 
-Most likely caused by AntiVirus software quarantining NATS binaries.
+This is most likely caused by antivirus software quarantining NATS binaries.
 
 ## Workaround
 
