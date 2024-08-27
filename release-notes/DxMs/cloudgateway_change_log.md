@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 8 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID_40527]
+#### 27 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID_40527]
 
 CloudGateway will no longer sync its cloud endpoint with other DxMs if it does not have internet access. 
 
