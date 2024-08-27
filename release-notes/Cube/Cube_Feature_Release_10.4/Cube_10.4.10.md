@@ -79,3 +79,9 @@ When, while editing a service, you added an element or another service to that s
 In some cases, the counter showing the number of unread alarms in an alarm tab page could get out of sync.
 
 When you disabled history tracking and marked an alarm as read, the counter would get out of sync as soon as the alarm you marked as read received an update. In some cases, the counter could even show a negative number of alarms.
+
+#### Trending: Protocol selection box in Create Pattern window would be empty [ID_40539]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, in a trend graph, you created a pattern, in some cases, the protocol selection box would incorrectly be empty.
