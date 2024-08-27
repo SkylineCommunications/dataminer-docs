@@ -323,8 +323,8 @@ foreach (var booking in quarantinedBookings)
 
     booking.QuarantinedResources.Clear();
 
+    // 'FindBookingManager' and 'RemoveFromQuarantine' is an extension method provided by the SRM framework
     var bookingManager = booking.FindBookingManager();
-    // 'RemoveFromQuarantine' is an extension method provided by the SRM framework
     helper.RemoveFromQuarantine(booking, bookingManager);
 }
 ```
@@ -426,8 +426,8 @@ foreach (var booking in quarantinedBookings)
     }
     booking.QuarantinedResources.Clear();    
 
+    // 'FindBookingManager' and 'RemoveFromQuarantine' is an extension method provided by the SRM framework
     var bookingManager = booking.FindBookingManager();
-    // 'RemoveFromQuarantine' is an extension method provided by the SRM framework
     helper.RemoveFromQuarantine(booking, bookingManager);
 }
 ```
