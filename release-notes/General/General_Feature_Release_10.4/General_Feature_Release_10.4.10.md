@@ -96,6 +96,12 @@ From now on, you can check whether the DataMiner System is connected to datamine
 
 All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
 
+#### SLAnalytics: Reduced memory usage [ID_40450]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
+
 #### Storage as a Service: Maximum page size can now be specified in queries sent to dataminer.services [ID_40477]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 [CU1] -->

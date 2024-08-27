@@ -686,6 +686,12 @@ From now on, you can check whether the DataMiner System is connected to datamine
 - The *IsCloudConnected* message does not require any special user permissions.
 - The *GetCCAGatewayGlobalStateRequest* message requires the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
 
+#### SLAnalytics: Reduced memory usage [ID_40450]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]

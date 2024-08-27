@@ -180,3 +180,9 @@ From now on, that warning message will no longer appear if the person in questio
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When a DOM instance subscription was stopped (e.g. by closing a browser tab) while another DOM instance was being updated, up to now, that DOM instance update could incorrectly get lost.
+
+#### Dashboards app: Problem when trying to rename a dashboard folder [ID_40585]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some rare cases, an error could be thrown when you tried to rename a dashboard folder.
