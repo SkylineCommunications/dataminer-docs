@@ -10,7 +10,9 @@ To deploy or upgrade the DataMiner PTP app:
 
 ### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
 
-Deploy the package as described under [Installing an app package](xref:Installing_an_app_package).
+First, contact your Skyline representative to deliver the package. Skyline employees can get [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the DataMiner Catalog.
+
+Next, deploy the package as described under [Installing an app package](xref:Installing_an_app_package).
 
 ### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
 
