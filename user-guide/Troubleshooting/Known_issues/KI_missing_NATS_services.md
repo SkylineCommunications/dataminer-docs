@@ -18,7 +18,7 @@ Manually reinstall NATS on the DMA.
 
 ## Fix
 
-Exclude DataMiner folders from the AntiVirus as described [here](xref:Regarding_antivirus_software)
+Exclude the DataMiner folders from the antivirus software as detailed under [Regarding antivirus software](xref:Regarding_antivirus_software), and then manually reinstall NATS on the DMA.
 
 ## Description
 
