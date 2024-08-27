@@ -96,6 +96,20 @@ From now on, you can check whether the DataMiner System is connected to datamine
 
 All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
 
+#### Storage as a Service: Maximum page size can now be specified in queries sent to dataminer.services [ID_40477]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 [CU1] -->
+
+When a query was sent to dataminer.services, up to now, the maximum page size would always be set to 1000 (i.e. the default setting).
+
+From now on, the maximum page size can be specified in the query. This will considerable enhance overall query performance.
+
+> [!TIP]
+> See also:
+>
+> - [Class CrudHelperComponent\<T\>](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1)
+> - [Method PreparePaging](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1.PreparePaging*)
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]
