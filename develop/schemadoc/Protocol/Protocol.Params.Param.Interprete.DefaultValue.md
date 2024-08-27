@@ -28,5 +28,6 @@ string
 	<DefaultValue>This is the default value</DefaultValue>
 </Interprete>
 ```
+
 > [!NOTE]
 > Default values can only be assigned to standalone parameters. They do not work for table columns.
