@@ -4,6 +4,11 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 8 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID_40527]
+
+- CloudGateway will no longer sync it's cloud endpoint with other DxMs if it does not have internet access anyway. 
+- CloudGateway will now also sync the Web API/DMA state with dataminer.services at a regular interval of approximately one minute, even if it was synced already after a detected change. This will ensure an in sync and auto healing connection state, also on failover systems where sometimes a restart of the CloudGateway was needed to get the connection synced and working again.
+
 #### 8 August 2024 - Enhancement - CloudGateway 2.14.0 - Upgrade to .NET 8 [ID_40431]
 
 DataMiner CloudGateway has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
