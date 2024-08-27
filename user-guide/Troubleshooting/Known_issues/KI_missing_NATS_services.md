@@ -12,10 +12,6 @@ Any version of DataMiner
 
 This is most likely caused by antivirus software quarantining NATS binaries.
 
-## Workaround
-
-Manually reinstall NATS on the DMA.
-
 ## Fix
 
 Exclude the DataMiner folders from the antivirus software as detailed under [Regarding antivirus software](xref:Regarding_antivirus_software), and then manually reinstall NATS on the DMA.
