@@ -182,3 +182,11 @@ In some rare cases, an error could be thrown when you tried to rename a dashboar
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 In some cases, an error could be thrown when you tried to delete a dashboard folder.
+
+#### Dashboards/Low-Code Apps - Form component: Problem in case of multiple open connections [ID_40599]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, only one connection could subscribe to *DOMInstanceChangeEvents* per DOM module. This meant that only the first connection would receive events to update the Form component in the client, and that every subsequent connection would not receive any updates as long as the first connection stayed open.
+
+From now on, every *DOMInstanceChangeEvents* subscription will get a unique connection ID.
