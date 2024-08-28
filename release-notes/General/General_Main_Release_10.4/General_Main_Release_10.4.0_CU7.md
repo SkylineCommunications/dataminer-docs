@@ -267,6 +267,12 @@ In some rare cases, SLAnalytics could stop working when a pattern was deleted on
 
 When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
 
+#### Problem with SNMPv3 communication when the same device was polled with different credentials [ID_40502]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When two SNMPv3 interfaces pointing to the same device, either on the same element or on two different elements, were using different credentials, SNMP communication using one set of credentials would break as soon as an SNMP operation was executed using the other set of credentials. An element restart was required to get communication working again.
+
 #### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
