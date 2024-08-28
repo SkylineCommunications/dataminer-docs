@@ -154,11 +154,10 @@ The response message *PcapInfoResponseMessage* contains a property called *Info*
 
 The *Info* object has the following properties:
 
-| Property           | Description |
-|--------------------|-------------|
-| HasWinPcap         | If true, this means that WinPcap is installed.<br>If Null, this means that a problem might have occurred. If so, then open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
-| NPcap              | If true, this means that NPcap is installed.<br>If Null, this means that a problem might have occurred. If so, then open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
-| ResultUTCTimeStamp | The time of the last Pcap check (in UTC format). |
+| Property | Type | Possible values |
+|----------|------|-------------|
+| WinPcapDetection | PcapDetectionType | - PcapDetected: WinPcap is installed.<br>- NoPcapDetected: WinPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector".  |
+| NpcapDetection   | PcapDetectionType | - PcapDetected: NPcap is installed.<br>- NoPcapDetected: NPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
 
 ### Protocols
 
