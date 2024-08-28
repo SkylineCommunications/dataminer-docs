@@ -127,7 +127,7 @@ All DxMs included in the DataMiner upgrade package have now been upgraded to ver
 
 #### SLAnalytics: Reduced memory usage [ID_40450]
 
-<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
 

@@ -692,6 +692,17 @@ From now on, you can check whether the DataMiner System is connected to datamine
 - The *IsCloudConnected* message does not require any special user permissions.
 - The *GetCCAGatewayGlobalStateRequest* message requires the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
 
+#### SNMP traps can now be received from SNMP connections other than the main connection [ID_40511]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+When SLSNMPManager received a trap, up to now, it would check whether the IP address of the trap matched the IP address of the main connection.
+
+From now on, SLSNMPManager will check whether the IP address of the trap matches the IP address of any of the SNMP connections of the protocol that is being used by the element.
+
+> [!NOTE]
+> The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]

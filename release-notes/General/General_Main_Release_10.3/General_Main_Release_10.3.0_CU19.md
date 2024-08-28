@@ -46,6 +46,12 @@ From now on, the *Report Active RTE* test will be executed for the first time ex
 
 A number of security enhancements have been made.
 
+#### SLAnalytics: Reduced memory usage [ID_40450]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]

@@ -128,7 +128,7 @@ All DxMs included in the DataMiner upgrade package have now been upgraded to ver
 
 #### SLAnalytics: Reduced memory usage [ID_40450]
 
-<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
 
@@ -145,6 +145,17 @@ From now on, the maximum page size can be specified in the query. This will cons
 >
 > - [Class CrudHelperComponent\<T\>](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1)
 > - [Method PreparePaging](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1.PreparePaging*)
+
+#### SNMP traps can now be received from SNMP connections other than the main connection [ID_40511]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+When SLSNMPManager received a trap, up to now, it would check whether the IP address of the trap matched the IP address of the main connection.
+
+From now on, SLSNMPManager will check whether the IP address of the trap matches the IP address of any of the SNMP connections of the protocol that is being used by the element.
+
+> [!NOTE]
+> The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
 
 ### Fixes
 
