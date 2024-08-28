@@ -37,6 +37,9 @@ The *Info* object has the following properties:
 | WinPcapDetection | PcapDetectionType | - PcapDetected: WinPcap is installed.<br>- NoPcapDetected: WinPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector".  |
 | NpcapDetection   | PcapDetectionType | - PcapDetected: NPcap is installed.<br>- NoPcapDetected: NPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
 
+> [!NOTE]
+> The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user is configuring Failover. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message.
+
 #### Protocols: Newly installed connector will automatically be promoted to production version [ID_40291]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
