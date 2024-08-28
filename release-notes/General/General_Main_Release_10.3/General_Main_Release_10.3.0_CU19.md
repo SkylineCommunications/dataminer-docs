@@ -12,6 +12,14 @@ uid: General_Main_Release_10.3.0_CU19
 
 ### Enhancements
 
+#### BPA test 'Check Antivirus DLLs' will now also check known antivirus file paths [ID_32567]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+The *Check Antivirus DLLs* test will now also check the path of the loaded antivirus DLL files to check whether they were loaded from a known antivirus path.
+
+This means that the test will now be able to report a fail when a new antivirus DLL file is added or when an existing antivirus DLL file is renamed, even when the file location remains the same.
+
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
@@ -37,6 +45,7 @@ From now on, the *Report Active RTE* test will be executed for the first time ex
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]

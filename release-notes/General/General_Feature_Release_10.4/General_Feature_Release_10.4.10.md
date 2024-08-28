@@ -45,6 +45,14 @@ A connector will only be promoted to "production version" if its first version i
 
 ### Enhancements
 
+#### BPA test 'Check Antivirus DLLs' will now also check known antivirus file paths [ID_32567]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+The *Check Antivirus DLLs* test will now also check the path of the loaded antivirus DLL files to check whether they were loaded from a known antivirus path.
+
+This means that the test will now be able to report a fail when a new antivirus DLL file is added or when an existing antivirus DLL file is renamed, even when the file location remains the same.
+
 #### Improved performance when alarm filters containing operators are used [ID_39732]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
