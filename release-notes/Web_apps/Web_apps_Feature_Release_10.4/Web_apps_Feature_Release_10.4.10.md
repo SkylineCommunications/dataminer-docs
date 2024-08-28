@@ -186,3 +186,9 @@ When a DOM instance subscription was stopped (e.g. by closing a browser tab) whi
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 In some rare cases, an error could be thrown when you tried to rename a dashboard folder.
+
+#### Dashboards app: Problem when trying to delete a dashboard folder [ID_40586]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, an error could be thrown when you tried to delete a dashboard folder.
