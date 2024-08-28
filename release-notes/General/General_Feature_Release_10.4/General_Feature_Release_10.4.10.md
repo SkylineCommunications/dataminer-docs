@@ -83,6 +83,12 @@ Up to now, all BPA tests would be executed immediately after DataMiner had been 
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
 
+#### Alarms: Enhanced performance when calculating baselines [ID_40298]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Because of a number of enhancements, overall performance has increased when calculating baselines.
+
 #### Service & Resource Management: Enhanced synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System [ID_40389]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
