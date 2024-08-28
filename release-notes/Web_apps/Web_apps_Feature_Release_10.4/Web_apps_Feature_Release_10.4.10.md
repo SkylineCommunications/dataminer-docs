@@ -157,16 +157,6 @@ In some cases, the following error could appear in the *State*, *Dropdown*, and 
 
 When you removed a component from a dashboard, and then added another component by first dropping data onto the dashboard and then picking the visualization afterwards, in some cases, run-time errors could be thrown that would make the dashboard unusable until you refreshed the app.
 
-#### Dashboards/Low-Code Apps - Form component: Empty DOM definition sections would incorrectly not be shown [ID_40535]
-
-<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
-
-When a Form component contained a DOM definition of which some sections were empty, up to now, the empty sections would incorrectly not be shown.
-
-From now on, when a DOM definition has empty sections, those empty sections will also be shown, and any fields that do not have a value will show their default value.
-
-Also, if a section can have multiple instances, one instance will be shown by default.
-
 #### Dashboards app: Incorrect warning message would appear when stripping a dashboard (folder) creator of the edit permission [ID_40540]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
