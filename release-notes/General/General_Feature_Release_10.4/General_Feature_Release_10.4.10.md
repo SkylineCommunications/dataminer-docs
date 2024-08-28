@@ -22,6 +22,22 @@ uid: General_Feature_Release_10.4.10
 
 ## New features
 
+#### Failover: New SLNettypes message to check whether Pcap is installed on a DataMiner Agent [ID_40257]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, the new SLNettypes message *PcapInfoRequestMessage* can be used to check whether Pcap is installed on a DataMiner Agent.
+
+The response message *PcapInfoResponseMessage* contains a property called *Info* of type *PcapInfo*.
+
+The *Info* object has the following properties:
+
+| Property           | Description |
+|--------------------|-------------|
+| HasWinPcap         | If true, this means that WinPcap is installed.<br>If Null, this means that a problem might have occurred. If so, then open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
+| NPcap              | If true, this means that NPcap is installed.<br>If Null, this means that a problem might have occurred. If so, then open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
+| ResultUTCTimeStamp | The time of the last Pcap check (in UTC format). |
+
 #### Protocols: Newly installed connector will automatically be promoted to production version [ID_40291]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
@@ -112,7 +128,7 @@ All DxMs included in the DataMiner upgrade package have now been upgraded to ver
 
 #### SLAnalytics: Reduced memory usage [ID_40450]
 
-<!-- MR 10.5.0 - FR 10.4.10 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
 
