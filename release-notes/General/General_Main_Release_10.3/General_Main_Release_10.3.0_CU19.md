@@ -111,6 +111,12 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
 
+#### Cassandra Cluster Migrator: Problem when initializing a migration [ID_40476]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
+
 #### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->

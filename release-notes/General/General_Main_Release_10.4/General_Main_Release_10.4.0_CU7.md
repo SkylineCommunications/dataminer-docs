@@ -261,6 +261,12 @@ When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retrie
 
 In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
 
+#### Cassandra Cluster Migrator: Problem when initializing a migration [ID_40476]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
+
 #### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
