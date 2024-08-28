@@ -704,3 +704,10 @@ Up to now, SLLogCollector would incorrectly report the following null reference 
 ```txt
 ERROR - Object reference not set to an instance of an object.   at LogCollectorWPF.Helper.DataMiner.DataMinerHelper.get_FailoverHostname()
 ```
+
+#### SLAnalytics: Behavioral anomaly detection, proactive cap detection and trend icons could not be started on systems without indexing database [ID_40505]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39691 -->
+
+On systems without an indexing database, SLAnalytics would incorrectly not be able to start the behavioral anomaly detection, proactive cap detection and trend icons features.
