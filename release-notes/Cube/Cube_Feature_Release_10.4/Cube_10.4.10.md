@@ -16,7 +16,28 @@ uid: Cube_Feature_Release_10.4.10
 
 ## New features
 
-*No new features have been added yet.*
+#### Failover Config window will now show information regarding the Pcap libraries that are installed on the DMAs [ID_40267]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, in the *Failover Config* window, you have configured Failover with virtual IP addresses, the *Status* window will now also show information regarding the Pcap libraries that are installed on the two DataMiner Agents in the Failover setup.
+
+For each of the two DataMiner Agents, one of the following messages will be displayed:
+
+| Message | Description |
+|---------|-------------|
+| *No message shown*    | Either WinPcap or Npcap are installed on the DataMiner Agent. Hence, this agent can be used in a Failover setup with virtual IP addresses. |
+| Pcap not installed    | Neither WinPcap nor Npcap are installed on the DataMiner Agent. Hence, it is not recommended to use this agent in a Failover setup with virtual IP addresses. |
+| Could not be detected | A problem has occurred while trying to detect the presence of the WinPcap and Npcap libraries. |
+
+To detect the presence of Pcap libraries on a DataMiner Agent, Cube will send a *PcapInfoRequestMessage* to the agent in question each time the *Failover Config* window is opened, and will then store the response in the Cube logging with keyword "PcapInfo". See also [RN 40257](xref:General_Feature_Release_10.4.10#failover-new-slnettypes-message-to-check-whether-pcap-is-installed-on-a-dataminer-agent-id_40257).
+
+> [!NOTE]
+>
+> - These changes will only work in conjunction with DataMiner server version 10.4.9 or newer.
+> - While it is not mandatory to install Pcap libraries on DataMiner Agents, it is highly recommended to install them on DataMiner Agents that will be used in Failover setups with virtual IP addresses.
+> - As WinPcap is considered deprecated, it is recommended to use Npcap instead.
+> - Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send a *PcapInfoRequestMessage*. When you do not have this permission, an error message will appear.
 
 ## Changes
 
