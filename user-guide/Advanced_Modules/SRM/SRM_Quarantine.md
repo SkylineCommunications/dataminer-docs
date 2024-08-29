@@ -4,13 +4,15 @@ uid: SRM_Quarantine
 
 # Quarantine
 
-## What is the quarantine state?
+## About the quarantine state
 
-The quarantine state is a special state of a booking, that indicates the booking cannot start because one or more resources that were assigned are no longer available. Bookings are automatically moved to this state when the ResourceManager detects such a situation. Usually this is because overlapping bookings using the same resource are added or modified and the resource does not have enough capacity or concurrency to support all bookings.
+The quarantine state is a special state of a booking, which indicates that the booking cannot start because one or more resources that were assigned to it are no longer available. Bookings are automatically moved to this state when the Resource Manager detects such a situation.
 
-Bookings that are in a quarantine state will have the ``IsQuarantined`` flag set to true on the ``ReservationInstance`` object, and will have the status set to ``Pending``. These bookings will still reserve the non-quarantined resources, the same way they would if they were in a regular ``Pending`` state. The resources that are no longer available are still present on the booking in the ``QuarantinedResources`` collection, along with some information about why these resources were moved to quarantine.
+Usually, this happens when a booking is added or edited so that overlapping bookings use the same resource, and the resource does not have enough capacity or concurrency to support all bookings.
 
-## Practical examples
+If a booking is in the quarantine state, the *IsQuarantined* flag is set to true on the corresponding *ReservationInstance* object, and the state of the booking will be set to *Pending*. Such bookings will still reserve the non-quarantined resources, in the same way as if they were in the regular *Pending* state. The resources that are no longer available are included in the *QuarantinedResources* collection of the booking, along with some information about why these resources have been moved to quarantine.
+
+## Examples
 
 ### Concurrency conflict
 
@@ -18,62 +20,64 @@ Consider a system that has a booking with two resources *Resource A* and *Resour
 
 ![Quarantine concurrency example before](~/user-guide/images/quarantine_example_concurrencies_existing.png)
 
-If a second booking is added to the system that overlaps with the first booking and also wants to use *Resource A*, there will be a scheduling conflict. *Resource A* does not have enough concurrency to support the second booking. If the addition of the second booking is forced anyway, the ResourceManager would resolve the conflict as follows:
+If a second booking is added to the system that overlaps with the first booking and that also wants to use *Resource A*, there will be a scheduling conflict. *Resource A* does not have enough concurrency to support the second booking. If the addition of the second booking is forced anyway, the Resource Manager will resolve the conflict as follows:
 
 ![Quarantine concurrency example result](~/user-guide/images/quarantine_example_concurrencies_result.png)
 
-In the diagram above *Booking one* was moved to quarantine, because it has the lowest priority (see [Quarantine priority](#quarantine-priority)). *Booking one* will not start until the quarantine conflict is resolved. *Resource B* is however still assigned to *Booking one*, meaning if another booking is created that overlaps with *Booking one* and tries to use *Resource B*, another scheduling conflict will arise. 
+In the diagram above, *Booking one* has been moved to quarantine, because it has the lowest priority (see [Quarantine priority](#quarantine-priority)). *Booking one* will not start until the quarantine conflict is resolved. However, *Resource B* remains assigned to *Booking one*, which means that if another booking is created that overlaps with *Booking one* and that tries to use *Resource B*, another scheduling conflict will arise.
 
 ### Capacity conflict
 
-Consider a system that has two existing bookings in the confirmed state, each using a resource *Resource A*. *Resource A* has a concurrency of 10, so it can be used by 10 bookings at the same time, and has a capacity defined, with a maximum bookable value of 10.
+Consider a system that has two existing bookings in the confirmed state, each using a resource *Resource A*. *Resource A* has a concurrency of 10, so it can be used by 10 bookings at the same time, and it has a capacity defined with a maximum bookable value of 10.
 
 ![Quarantine example before](~/user-guide/images/quarantine_example_existing.png)
 
-If a third booking is added as configured below, there would not be enough capacity on *Resource A* to support this booking. If the addition of *Booking three* is forced anyway, the ResourceManager would resolve the conflict as follows: 
+If a third booking is added as configured below, there is not enough capacity on *Resource A* to support this booking. If the addition of *Booking three* is forced anyway, the Resource Manager will resolve the conflict as follows:
 
 ![Quarantine example result](~/user-guide/images/quarantine_example_result.png)
 
-In the diagram above *Booking two* was moved to quarantine, because it has the lowest priority (see [Quarantine priority](#quarantine-priority)). *Resource A* is still partially assigned to *Booking two*, only the capacity necessary to resolve the conflict has been moved to quarantine. Since *Resource A* has a capacity of 10, only 1 capacity needed to be moved.
+In the diagram above, *Booking two* has been moved to quarantine, because it has the lowest priority (see [Quarantine priority](#quarantine-priority)). *Resource A* is still partially assigned to *Booking two*, because only the capacity necessary to resolve the conflict has been moved to quarantine. Since *Resource A* has a capacity of 10, only 1 capacity needed to be moved.
 
+## Quarantine priority
 
-## General quarantine concepts
+When the Resource Manager detects that some usage will need to be quarantined in order to resolve a conflict, it will remove usage from bookings according to a set priority. The priority of a booking is determined as follows:
 
-### Quarantine priority
+1. **Quarantined bookings**
 
-When the ResourceManager detects some usages will need to be quarantined in order to resolve a conflict, it will remove usages from bookings according to a set priority. The priority of a booking is determined as follows: 
+   Bookings that are already in quarantine have the lowest priority and will be the first to have their resource usage removed.
 
-1. **Quarantined bookings** \
-Bookings that are already in quarantine have the lowest priority and will be the first to have their resource usages removed.
+1. **Bookings with *HasAbsoluteQuarantinePriority* flag**
 
-1. **Bookings with ``HasAbsoluteQuarantinePriority`` flag**\
-Bookings with the ``HasAbsoluteQuarantinePriority`` flag set have the highest priority, unless they are already in quarantine. The usages of these bookings will be moved last when resource usages need to be moved to resolve scheduling conflicts.
+   Bookings with the *HasAbsoluteQuarantinePriority* flag set have the highest priority, unless they are already in quarantine. The usage of these bookings will be moved last when resource usage needs to be moved to resolve scheduling conflicts.
 
-1. **Bookings with the ``Pending`` Status**\
-Bookings that are in a ``Pending`` status have a lower priority and will have their resource usages removed before other non-quarantined bookings.
+1. **Bookings in the *Pending* state**
 
-1. **Start Time**\
-Among bookings with similar statuses, those with a later start time will have a lower priority.
+   Bookings that are in the *Pending* state have a lower priority and will have their resource usage removed before other non-quarantined bookings.
 
-1. **Alphabetical Order**\
-If bookings have the same status, start time, and priority, a deterministic resolution is achieved through an alphabetical comparison of booking names. Bookings with names that come later alphabetically will have a lower priority.
+1. **Start Time**
 
+   Among bookings in similar states, those with a later start time will have a lower priority.
+
+1. **Alphabetical Order**
+
+   If bookings have the same state, start time, and priority, a deterministic resolution is achieved through an alphabetical comparison of booking names. Bookings with names that come later alphabetically will have a lower priority.
 
 > [!NOTE]
-> 
-> 1. The booking that is being created or added is also considered for quarantining. 
-> 1. Bookings that are already ongoing can also be moved to quarantine. 
+>
+> - A booking that is being created or added is also considered for quarantining.
+> - Bookings that are already ongoing can also be moved to quarantine.
 
+## Dealing with different quarantine reasons
 
-## Handling quarantine on booking updates
+### Quarantine on booking updates
 
-When an add or update of a booking would cause bookings to go to quarantine, errors will be in the ``TraceData`` indicating quarantine is needed to solve conflicts. The bookings will only be saved if the ``forceQuarantine`` parameter is set to true.
+When the adding or updating of a booking causes bookings to go to quarantine, errors in the *TraceData* will indicate that quarantine is needed to solve conflicts. The bookings will only be saved if the *forceQuarantine* parameter is set to true.
 
-The error in the ``TraceData`` will be of type ``ReservationUpdateCausedReservationsToGoToQuarantine``, and the property ``MustBeMovedToQuarantine`` will contain all bookings and their usages that must be moved to quarantine in order to solve the scheduling conflict. The bookings that will be moved to quarantine will be selecting according to their priority (see [Quarantine priority](#quarantine-priority)).
+The error in the *TraceData* will be of type *ReservationUpdateCausedReservationsToGoToQuarantine*, and the property *MustBeMovedToQuarantine* will contain all the bookings and their usage that must be moved to quarantine in order to solve the scheduling conflict. The bookings that will be moved to quarantine will be selected according to their priority (see [Quarantine priority](#quarantine-priority)).
 
-If the ``forceQuarantine`` flag is passed, no error will be returned, instead a warning of type ``ReservationInstancesMovedToQuarantine`` will be present in the ``TraceData``, and the ``SubjectIds`` property of the warning will contain the IDs of the bookings that were moved to quarantine.
+If the *forceQuarantine* flag is passed, no error will be returned. Instead a warning of type *ReservationInstancesMovedToQuarantine* will be present in the *TraceData*, and the *SubjectIds* property of the warning will contain the IDs of the bookings that have been moved to quarantine.
 
-The below code snippet shows an example on how this error in the ``TraceData`` can be used to retrieve information about the scheduling conflict.
+The code snippet below shows an example of how this error in the *TraceData* can be used to retrieve information about the scheduling conflict.
 
 ```csharp
 // Create a new ResourceManagerHelper
@@ -124,7 +128,7 @@ foreach (var error in errors)
 }
 ```
 
-When saving with the ``forceQuarantine`` flag set tot ``true``, there will be warnings about the bookings that were automatically moved to quarantine.
+When a booking is saved with the *forceQuarantine* flag set to *true*, there will be warnings about the bookings that have automatically been moved to quarantine.
 
 ```csharp
 // Save a 'ReservationInstance' and force quarantine
@@ -158,22 +162,22 @@ foreach (var warning in traceData.WarningData)
 }
 ```
 
-## Handling quarantine on resource updates
+### Quarantine on resource updates
 
-Quarantine on resource updates works almost the same as quarantine on booking updates. Similar as for booking updates, bookings will only be moved to quarantine if the ``forceQuarantine`` flag is passed.
+Quarantine on resource updates works almost the same as quarantine on booking updates. Similar as for booking updates, bookings will only be moved to quarantine if the *forceQuarantine* flag is passed.
 
 The following updates to resources can trigger quarantine:
 
-1. Decreasing the ``MaxConcurrency`` of a resource.
-2. Changing the mode of a resource to ``Maintenance``, this will move all bookings using that resource to quarantine.
-3. Deleting a capacity or capability. All reservations using the deleted capacity/capability of this resource will be moved to quarantine.
-4. Decreasing a maximum capacity in way that existing bookings are no longer supported.
-5. Changing or removing a capability in a way that currently booked values are no longer supported.
+1. Decreasing the *MaxConcurrency* of a resource.
+2. Changing the mode of a resource to *Maintenance*. This will move all bookings using that resource to quarantine.
+3. Deleting a capacity or capability. All bookings using the deleted capacity/capability of this resource will be moved to quarantine.
+4. Decreasing a maximum capacity in such a way that existing bookings are no longer supported.
+5. Changing or removing a capability in such a way that currently booked values are no longer supported.
 
 > [!NOTE]
-> Deletion of a resource will not trigger quarantine, but will always be blocked if the resource is in use by a future or ongoing booking.
+> Deletion of a resource will not trigger quarantine, but this will always be blocked if the resource is in use in a future or ongoing booking.
 
-If a quarantine conflict arises when a resource is updated and the call is not forced, the returned error in the ``TraceData`` will be of type ``ResourceUpdateCausedReservationsToGoToQuarantine``.
+If a quarantine conflict arises when a resource is updated and the call is not forced, the returned error in the *TraceData* will be of type *ResourceUpdateCausedReservationsToGoToQuarantine*.
 
 ```csharp
 // Create a new ResourceManagerHelper
@@ -220,41 +224,42 @@ foreach (var error in errors)
 }
 ```
 
-Saving a resource with the ``forceQuarantine`` flag set to true will return a warning of type ``ReservationInstancesMovedToQuarantine`` in the ``TraceData``. [Handling quarantine on booking updates](#handling-quarantine-on-booking-updates) contains an example script showing how to retrieve that information.
+Saving a resource with the *forceQuarantine* flag set to true will return a warning of type *ReservationInstancesMovedToQuarantine* in the *TraceData*. Under [Quarantine on booking updates](#quarantine-on-booking-updates), you can find an example script showing how to retrieve that information.
 
-## Quarantine on interrupted contributing bookings
+### Quarantine on interrupted contributing bookings
 
-On startup of the ResourceManager, the bookings in the database will be checked, to see if there are any bookings that should have started, stopped or have an event run while the ResourceManager was not running. Such bookings will be put in an ``Interrupted`` state. If a contributing booking is moved to an ``Interrupted`` state, the bookings making use of the corresponding contributing resource will be moved to a quarantined state. The ``QuarantineTrigger`` will have value ``ContributingResourceNotAvailable`` for the ``QuarantineReason`` field in that case.
+When the Resource Manager starts up, the bookings in the database will be checked to see if they should have started or stopped or had an event run while the Resource Manager was not running. If any such bookings are found, they will be put in the *Interrupted* state. If a contributing booking is moved to the *Interrupted* state, the bookings making use of the corresponding contributing resource will be moved to the quarantine state. The *QuarantineTrigger* will have the value *ContributingResourceNotAvailable* for the *QuarantineReason* field in that case.
 
-## Overview of possible ``QuarantineReason`` values
+### Overview of possible *QuarantineReason* values
 
-The script examples above show how the quarantine related errors in the ``TraceData`` can be used to retrieve information about the scheduling conflict. Each quarantined ``ResourceUsageDefinition`` will have a ``QuarantineTrigger`` with a ``QuarantineReason`` to keep track of why a usage was moved to quarantine. Below table contains the possible values for the ``QuarantineReason`` field:
+The script examples above show how the quarantine-related errors in the *TraceData* can be used to retrieve information about the scheduling conflict. Each quarantined *ResourceUsageDefinition* will have a *QuarantineTrigger* with a *QuarantineReason* to keep track of why a usage was moved to quarantine.
 
-|``QuarantineReason``   | Used when  |
+These are the possible values for the *QuarantineReason* field:
+
+|*QuarantineReason* value   | Used when  |
 |---|---|
 | CapacityDeleted  | A capacity was completely removed from a resource. |
 | CapabilityDeleted  | A capability was completely removed from a resource. |
-| CapacityDowngraded  | A capacity was downgraded on a resource, meaning the maximum capacity value was lowered. |
-| CapabilityDowngraded  | A capability was downgraded on a resource. This could be a rangepoint capability where the min-max range was narrowed, or a discrete capability where a discrete value was removed.  |
-| ConcurrencyDowngraded  | The maximum concurrency of a resource was lowered.  |
-| MovedToMaintenance  | The resource was moved to the *Maintenance* status. |
-| ReservationInstanceUpdated  | A ``ReservationInstance`` was added or updated and caused a scheduling conflict. |
+| CapacityDowngraded  | A capacity was downgraded on a resource, meaning that the maximum capacity value was lowered. |
+| CapabilityDowngraded  | A capability was downgraded on a resource. This could be a range point capability where the min-max range was narrowed, or a discrete capability where a discrete value was removed. |
+| ConcurrencyDowngraded  | The maximum concurrency of a resource was lowered. |
+| MovedToMaintenance  | The resource was moved to the *Maintenance* state. |
+| ReservationInstanceUpdated  | A *ReservationInstance* was added or updated and caused a scheduling conflict. |
 | ContributingResourceNotAvailable  | A contributing resource is not available. This can happen when contributing bookings are interrupted, or when trying to assign an unavailable contributing resource to a booking. |
 
-
-## Moving bookings out of the quarantine state.
+## Moving bookings out of the quarantine state
 
 > [!NOTE]
-> The SRM framework provides a feature to recover bookings from a quarantined state. By default this will trigger the *SRM_LeaveQuarantineState* script,
-> but this can be customized: see [using custom scripts](xref:SRM_custom_scripts#configuring-the-booking-manager-app-to-use-custom-scripts)
+> The SRM framework provides a feature to recover bookings from the quarantine state. By default, this will trigger the *SRM_LeaveQuarantineState* script, but this can be customized. See [using custom scripts](xref:SRM_custom_scripts#configuring-the-booking-manager-app-to-use-custom-scripts).
 
-To resolve the quarantined state, the quarantined usages on the booking can be inspected, and they can either be restored or a new resource can be assigned.
+To resolve the quarantine state, you can inspect the quarantined usage of a booking, and you can either restore it or assign a new resource.
+
 The script example below will show how to restore resources that were put in quarantine. This approach will only work if the bookings that caused the conflict have been updated so the resources are available again for the quarantined booking.
 
 ```csharp
 var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
 
-// All bookings in the quarantined state can be retrieved with a filter.
+// All bookings in the quarantine state can be retrieved with a filter.
 // An extra filter is added here to only retrieve quarantined bookings that need to start in the next 7 days.
 var filter = ReservationInstanceExposers.IsQuarantined.Equal(true)
                                         .AND(ReservationInstanceExposers.End.GreaterThan(DateTime.UtcNow))
@@ -263,7 +268,7 @@ var quarantinedBookings = helper.GetReservationInstances(filter);
 
 foreach (var booking in quarantinedBookings)
 {
-    // Create a dictionary of the usages that still exist on the booking and their quarantine reference.
+    // Create a dictionary of the usage that still exists on the booking and its quarantine reference.
     var existingUsagesWithQuarantineReference = booking.ResourcesInReservationInstance
                                                        .Where(r => r.QuarantineReference != Guid.Empty)
                                                        .ToDictionary(r => r.QuarantineReference);
@@ -329,7 +334,7 @@ foreach (var booking in quarantinedBookings)
 }
 ```
 
-In order to select a new resource, some code will need to be written to select this new resource according to some criteria. Below is a simple example script that shows how to select a new resource based of the result of a ``GetEligibleResources`` call:
+In order to select a new resource, some code will need to be written to select this new resource according to some criteria. Below is a simple example script that shows how to select a new resource based of the result of a *GetEligibleResources* call:
 
 ```csharp
 ...
@@ -338,7 +343,7 @@ var contextIdsToUsages = new Dictionary<Guid, ResourceUsageDefinition>();
 
 foreach (var booking in quarantinedBookings)
 {
-    // Create a dictionary of the usages that still exist on the booking and their quarantine reference.
+    // Create a dictionary of the usage that still exists on the booking and its quarantine reference.
     var existingUsagesWithQuarantineReference = booking.ResourcesInReservationInstance
                                                        .Where(r => r.QuarantineReference != Guid.Empty)
                                                        .ToDictionary(r => r.QuarantineReference);
@@ -347,7 +352,7 @@ foreach (var booking in quarantinedBookings)
     {
         ResourceUsageDefinition usage = null;
 
-        // If there is still an existing usage we need to merge the required capacities and capabilities
+        // If there is still existing usage, we need to merge the required capacities and capabilities
         if (existingUsagesWithQuarantineReference.TryGetValue(usage.QuarantineReference, out var stillBooked))
         {
             usage = stillBooked;

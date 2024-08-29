@@ -1231,10 +1231,6 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
-      - name: Advanced SRM concepts
-        items:
-          - name: Quarantine
-            topicUid: SRM_Quarantine
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:
