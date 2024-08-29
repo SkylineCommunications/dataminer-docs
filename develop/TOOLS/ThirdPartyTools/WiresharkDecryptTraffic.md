@@ -6,17 +6,23 @@ uid: WiresharkDecrypt
 
 ## SNMPv3
 
-Wireshark allows decrypting an encrypted SNMPv3 stream.
+Wireshark allows the decrypting of an encrypted SNMPv3 stream.
 
-Go to *Edit* > *Preferences...*. From the Preferences window, expand *Protocols* and select *SNMP*. Press the *Edit...* button for Users Table.
+1. Go to *Edit* > *Preferences*.
 
-This opens the SNMP Users window. Press the *+* icon and provide the necessary details for:
+1. In the *Preferences* window, expand *Protocols* and select *SNMP*.
 
-- Engine ID
-- Username
-- Authentication model
-- Authentication password
-- Privacy protocol
-- Privacy password
+1. Click the *Edit* button next to *Users Table*.
 
-If the provided info is correct, the package stream now shows the decryped data.
+   This will open the *SNMP Users* window.
+
+1. Click the *+* button and provide the necessary details for:
+
+   - Engine ID
+   - Username
+   - Authentication model
+   - Authentication password
+   - Privacy protocol
+   - Privacy password
+
+If the provided info is correct, the package stream will now show the decrypted data.
