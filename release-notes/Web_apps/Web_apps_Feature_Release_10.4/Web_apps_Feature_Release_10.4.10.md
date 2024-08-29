@@ -76,6 +76,14 @@ Both the *Table* and the *Grid* component now support lazy loading.
 > [!NOTE]
 > When items selected in the URL are not included in the data that was loaded, they will also be loaded.
 
+#### Dashboards/Low-Code Apps: Optimized feed value resolution [ID_40513]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when you used to *Link to feed* option to e.g. link feed values to GQI query nodes, data would sometimes be retrieved unnecessarily.
+
+A number of enhancements have now been made to optimize feed value resolution.
+
 #### Dashboards app: Users who duplicate a dashboard they are not allowed to edit will now be allowed to edit the newly created duplicate [ID_40556]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
