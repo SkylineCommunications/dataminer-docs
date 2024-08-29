@@ -5631,6 +5631,9 @@ items:
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
+        items:
+        - name: Wireshark stream decryption
+          topicUid: WiresharkDecrypt
 - name: DataMiner device-specific integrations
   topicUid: DSI
   items:
