@@ -232,6 +232,17 @@ Also, up to now, the thread that handles the *SNMP Get* operations would not cor
 
 Up to now, when a response contained a parameter with a LengthType equal to "next param" and another parameter with a LengthType equal to "fixed" but no trailer, SLPort would incorrectly return the payload to SLProtocol as soon as it read at least the number of bytes that was configured in the fixed length parameter.
 
+#### DataMiner root page 'default.asp' incorrectly still used XBAP URLs to open Cube [ID_40433]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, when *defaultApp* was set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, the DataMiner root page *C:\\Skyline DataMiner\\Webpages\\default.asp* would incorrectly still use deprecated XBAP URLs to open DataMiner Cube. It will now open DataMiner Cube using *cube://* URLs instead.
+
+For example, when *defaultApp* is set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, using the URL ``https://mydma/?element=12/76`` will open DataMiner Cube, which will then immediately open an element card containing the specified element.
+
+> [!NOTE]
+> When *defaultApp* was set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g. Linux, macOS, etc.), will it still be opened in the Monitoring app.
+
 #### Cassandra Cluster Migrator: Problem when retrying an alarm migration [ID_40434]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->

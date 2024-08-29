@@ -20,7 +20,7 @@ uid: Cube_Feature_Release_10.4.10
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When, in the *Failover Config* window, you have configured Failover with virtual IP addresses, the *Status* window will now also show information regarding the Pcap libraries that are installed on the two DataMiner Agents in the Failover setup.
+When, in the *Failover Config* window, you are configuring Failover with virtual IP addresses, the *Status* window will now also show information regarding the Pcap libraries that are installed on the two DataMiner Agents in the Failover setup.
 
 For each of the two DataMiner Agents, one of the following messages will be displayed:
 
