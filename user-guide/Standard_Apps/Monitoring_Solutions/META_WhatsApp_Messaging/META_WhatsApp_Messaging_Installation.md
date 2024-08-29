@@ -2,7 +2,7 @@
 uid: META_WhatsApp_Messaging_Installation
 ---
 
-# Installing the 'META WhatsApp Messaging' solution
+# Installing the META WhatsApp Messaging solution
 
 ## Prerequisites
 
