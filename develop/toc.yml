@@ -5632,7 +5632,7 @@ items:
       - name: Wireshark
         topicUid: Wireshark
         items:
-        - name: Wireshark package decryption
+        - name: Wireshark stream decryption
           topicUid: WiresharkDecrypt
 - name: DataMiner device-specific integrations
   topicUid: DSI
