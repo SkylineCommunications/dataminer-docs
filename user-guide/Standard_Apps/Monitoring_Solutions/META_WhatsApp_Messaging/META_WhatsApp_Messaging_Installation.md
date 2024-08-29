@@ -2,19 +2,21 @@
 uid: META_WhatsApp_Messaging_Installation
 ---
 
-# Installing the META WhatsApp Messaging solution
+# Installing the 'META WhatsApp Messaging' solution
 
 ## Prerequisites
 
-Before installing the *META WhatsApp Messaging* connector, ensure you meet all the prerequisites:
+Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta-whatsapp-messaging-connector), ensure you meet all the prerequisites:
 
-1. Make sure you are [registered as a Meta Developer](https://developers.facebook.com/docs/development/register).
+- Make sure you are [registered as a Meta Developer](https://developers.facebook.com/docs/development/register).
 
-1. [Create the *DataMiner Alarm Notification* app](#create-the-dataminer-alarm-notification-app).
+- [Create the *DataMiner Alarm Notification* app](#create-the-dataminer-alarm-notification-app).
 
-1. [Create a Business Manager account](#create-a-business-manager-account).
+- [Create a Business Manager account](#create-a-business-manager-account).
 
-1. [Add WhatsApp to your app and send a test message](#add-whatsapp-to-your-app-and-send-a-test-message).
+- [Add WhatsApp to your app and send a test message](#add-whatsapp-to-your-app-and-send-a-test-message).
+
+- [Create a system user](#create-a-system-user).
 
 ### Create the 'DataMiner Alarm Notification' app
 
@@ -87,9 +89,9 @@ Before installing the *META WhatsApp Messaging* connector, ensure you meet all t
 
 ![META App](~/user-guide/images/META_WhatsApp_Messaging_MetaApp.png)
 
-### Create a System User
+### Create a system user
 
-1. Go to [*Meta Business Suite*](https://business.facebook.com/).
+1. Go to the [*Meta Business Suite*](https://business.facebook.com/).
 
 1. Navigate to *Users > System Users* and click the *+ Add* button in the top-right corner.
 
@@ -97,7 +99,7 @@ Before installing the *META WhatsApp Messaging* connector, ensure you meet all t
 
 1. Select the user you created, click the ellipsis button ("..."), and select *Assign assets*.
 
-1. Select the app you want to assign to this system user (i.e. DataMiner Alarm Notification app), and grant them the appropriate permissions.
+1. Select the app you want to assign to this system user (i.e. the *DataMiner Alarm Notification* app), and grant them the appropriate permissions.
 
 1. Select *Generate token*.
 
