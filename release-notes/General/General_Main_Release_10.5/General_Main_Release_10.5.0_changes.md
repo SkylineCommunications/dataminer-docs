@@ -40,13 +40,12 @@ If you want to have persistent parameter latch states, do the following:
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38951] [ID_39387] [ID_40229]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38951] [ID_39387]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38951: MR 10.5.0 - FR 10.4.4 -->
 <!-- 39387: MR 10.5.0 - FR 10.4.7 -->
-<!-- 40229: MR 10.5.0 - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 
@@ -672,6 +671,12 @@ BPA tests can now be marked "upgrade only". That way, tests marked as such can b
 
 Because of a number of enhancements, from now on, less storage space will be needed when storing DOM instances in the database, especially in cases where multiple sections link to the same section definition.
 
+#### Alarms: Enhanced performance when calculating baselines [ID_40298]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Because of a number of enhancements, overall performance has increased when calculating baselines.
+
 #### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated and now requires .NET 8 [ID_40303]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
@@ -686,6 +691,17 @@ From now on, you can check whether the DataMiner System is connected to datamine
 
 - The *IsCloudConnected* message does not require any special user permissions.
 - The *GetCCAGatewayGlobalStateRequest* message requires the *Modules > System configuration > Cloud sharing/gateway > Connect to cloud/DCP* user permission.
+
+#### SNMP traps can now be received from SNMP connections other than the main connection [ID_40511]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+When SLSNMPManager received a trap, up to now, it would check whether the IP address of the trap matched the IP address of the main connection.
+
+From now on, SLSNMPManager will check whether the IP address of the trap matches the IP address of any of the SNMP connections of the protocol that is being used by the element.
+
+> [!NOTE]
+> The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
 
 ### Fixes
 
@@ -814,11 +830,3 @@ In some rare cases, while starting up, SLAnalytics appeared to leak memory and c
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
 When an element name contained a curly bracket ("{" or "}"), exporting the element to a .dmimport package or importing it from such a package failed.
-
-#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
-
-<!-- MR 10.5.0 - FR 10.4.10 -->
-
-Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
-
-From now on, it will be possible to create multiple DOM module subscriptions on one connection.

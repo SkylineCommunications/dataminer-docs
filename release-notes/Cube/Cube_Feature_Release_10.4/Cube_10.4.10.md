@@ -38,6 +38,12 @@ During that requirements check, up to now, it would use the *GetCCAGatewayGlobal
 
 ### Fixes
 
+#### Interactive Automation script could become unresponsive while it was waiting for user input [ID_40358]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+While an interactive Automation script was waiting for user input, in some cases, it could become responsive, especially when Cube was connected to a heavily loaded DaaS system.
+
 #### False-positive warning log entry when Services or Profiles module was opened [ID_40385]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
@@ -65,3 +71,17 @@ Shapes with *ButtonState* data would fail to hide as expected.
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When, while editing a service, you added an element or another service to that service and applied the changes, it would no longer be possible to edit the service again. When you tried to do so, the service card would be empty.
+
+#### Alarm Console: Problem with the counter showing the number of unread alarms in a tab page [ID_40522]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, the counter showing the number of unread alarms in an alarm tab page could get out of sync.
+
+When you disabled history tracking and marked an alarm as read, the counter would get out of sync as soon as the alarm you marked as read received an update. In some cases, the counter could even show a negative number of alarms.
+
+#### Trending: Protocol selection box in Create Pattern window would be empty [ID_40539]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, in a trend graph, you created a pattern, in some cases, the protocol selection box would incorrectly be empty.

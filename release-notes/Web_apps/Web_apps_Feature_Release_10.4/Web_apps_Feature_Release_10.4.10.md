@@ -76,6 +76,22 @@ Both the *Table* and the *Grid* component now support lazy loading.
 > [!NOTE]
 > When items selected in the URL are not included in the data that was loaded, they will also be loaded.
 
+#### Dashboards/Low-Code Apps: Optimized feed value resolution [ID_40513]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when you used to *Link to feed* option to e.g. link feed values to GQI query nodes, data would sometimes be retrieved unnecessarily.
+
+A number of enhancements have now been made to optimize feed value resolution.
+
+#### Dashboards app: Users who duplicate a dashboard they are not allowed to edit will now be allowed to edit the newly created duplicate [ID_40556]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you duplicated a dashboard you were not allowed to edit, up to now, you would also not be allowed to edit the newly created duplicate.
+
+From now on, when you duplicate a dashboard you are not allowed to edit, you will be allowed to edit the newly created duplicate.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Intellisense no longer working when feed is configured with special character [ID_40340] [ID_40446]
@@ -148,3 +164,37 @@ In some cases, the following error could appear in the *State*, *Dropdown*, and 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When you removed a component from a dashboard, and then added another component by first dropping data onto the dashboard and then picking the visualization afterwards, in some cases, run-time errors could be thrown that would make the dashboard unusable until you refreshed the app.
+
+#### Dashboards app: Incorrect warning message would appear when stripping a dashboard (folder) creator of the edit permission [ID_40540]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When the person who created a dashboard or a dashboard folder was stripped of the permission to edit that dashboard or that dashboard folder, a warning message would appear, even if that person still had edit permission via "All members" of via a user group.
+
+From now on, that warning message will no longer appear if the person in question still has edit permission via "All members" or via a user group.
+
+#### Low-Code Apps: DOM instance updates could incorrectly get lost when a DOM instance subscription was stopped [ID_40551]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When a DOM instance subscription was stopped (e.g. by closing a browser tab) while another DOM instance was being updated, up to now, that DOM instance update could incorrectly get lost.
+
+#### Dashboards app: Problem when trying to rename a dashboard folder [ID_40585]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some rare cases, an error could be thrown when you tried to rename a dashboard folder.
+
+#### Dashboards app: Problem when trying to delete a dashboard folder [ID_40586]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+In some cases, an error could be thrown when you tried to delete a dashboard folder.
+
+#### Dashboards/Low-Code Apps - Form component: Problem in case of multiple open connections [ID_40599]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, only one connection could subscribe to *DOMInstanceChangeEvents* per DOM module. This meant that only the first connection would receive events to update the Form component in the client, and that every subsequent connection would not receive any updates as long as the first connection stayed open.
+
+From now on, every *DOMInstanceChangeEvents* subscription will get a unique connection ID.

@@ -12,7 +12,6 @@ uid: Known_issues
 | [Unable to perform a DataMiner upgrade via Update Center](xref:KI_Unable_to_perform_a_DataMiner_upgrade_via_Update_Center) | From DataMiner 10.4.0 onwards | | August 6, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
-| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | | May 26, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
@@ -31,6 +30,7 @@ uid: Known_issues
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Downgrade fails because of VerifyNatsIsRunning.dll prerequisite](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | From DataMiner 10.4.0/10.4.3 onwards | [Requires configuration](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | January 23, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | DataMiner 10.3.12 and 10.4.1<br>DataMiner 10.3.0 [CU9] and [CU10] | DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
+| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | [Requires configuration](xref:KI_missing_NATS_services) | January 10, 2024 |
 | [Elements not loading after upgrade of DMS with multiple Elasticsearch clusters](xref:KI_elements_not_loading_in_DMS_with_multiple_ES) | DataMiner 10.3.10 up to 10.4.1 | DataMiner 10.4.2 | October 3, 2023 |
 
 ## 10.3.x
@@ -40,7 +40,6 @@ uid: Known_issues
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | | August 13, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
-| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | | May 26, 2023 |
 | [Local user unable to access DMA after first reboot after installation](xref:KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation) | DataMiner 10.3.3 | | February 24, 2023 |
@@ -52,6 +51,7 @@ uid: Known_issues
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | DataMiner 10.3.5 up to 10.4.2<br>10.2.0 Main Release from DataMiner 10.2.0 [CU13] onwards<br>DataMiner 10.3.0 [CU2] up to [CU11] | DataMiner 10.3.0 [CU12]/10.4.3 | January 29, 2024. |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | DataMiner 10.3.12 and 10.4.1<br>DataMiner 10.3.0 [CU9] and [CU10] | DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
+| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | [Requires configuration](xref:KI_missing_NATS_services) | January 10, 2024 |
 | [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | DataMiner 10.3.9 and 10.3.10 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates | DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.11<br>Cube 10.3.11 | October 16, 2023 |
 | [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| 10.3.0 Main Release from 10.3.0 [CU5] onwards <br>DataMiner 10.3.8 up to 10.3.11 | DataMiner 10.4.0/10.4.1 | October 11, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | [Requires configuration](xref:KI_offload_database_incorrect_integer_value) | October 4, 2023 |
@@ -94,7 +94,6 @@ uid: Known_issues
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | | August 13, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
-| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | | May 26, 2023 |
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | | April 20, 2023 |
@@ -103,6 +102,7 @@ uid: Known_issues
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | DataMiner 10.4.6/10.5.0 | February 2, 2024 |
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | DataMiner 10.3.5 up to 10.4.2<br>10.2.0 Main Release from DataMiner 10.2.0 [CU13] onwards<br>DataMiner 10.3.0 [CU2] up to [CU11] | DataMiner 10.3.0 [CU12]/10.4.3 | January 29, 2024. |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
+| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | [Requires configuration](xref:KI_missing_NATS_services) | January 10, 2024 |
 | [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | Any versions from DataMiner 10.2.0 onwards using automatic client updates | DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.11<br>Cube 10.3.11 | October 16, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | [Requires configuration](xref:KI_offload_database_incorrect_integer_value) | October 4, 2023 |
 | [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | [Requires configuration](xref:KI_NATS_port_9090) | August 3, 2023 |
@@ -151,7 +151,6 @@ uid: Known_issues
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | | August 13, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | | February 29, 2024 |
-| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | | March 20, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
@@ -160,6 +159,7 @@ uid: Known_issues
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | DataMiner 10.4.6/10.5.0 | February 2, 2024 |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
+| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | [Requires configuration](xref:KI_missing_NATS_services) | January 10, 2024 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | [Requires configuration](xref:KI_offload_database_incorrect_integer_value) | October 4, 2023 |
 | [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | [Requires configuration](xref:KI_NATS_port_9090) | August 3, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters_resolved_issues) | Cassandra Cluster setups | DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9<br>DataMiner 10.3.0 [CU7]/10.3.10<br>DataMiner 10.3.0 [CU8]/10.3.11| June 1, 2023 |

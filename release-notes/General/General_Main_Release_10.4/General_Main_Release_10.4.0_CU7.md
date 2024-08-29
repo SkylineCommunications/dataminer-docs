@@ -12,6 +12,14 @@ uid: General_Main_Release_10.4.0_CU7
 
 ### Enhancements
 
+#### BPA test 'Check Antivirus DLLs' will now also check known antivirus file paths [ID_32567]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+The *Check Antivirus DLLs* test will now also check the path of the loaded antivirus DLL files to check whether they were loaded from a known antivirus path.
+
+This means that the test will now be able to report a fail when a new antivirus DLL file is added or when an existing antivirus DLL file is renamed, even when the file location remains the same.
+
 #### MessageBroker: Clients will now throw a DataMinerMessageBrokerException when a single NATS node is stopped while they are busy writing data [ID_38523]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.3 -->
@@ -38,9 +46,10 @@ From now on, when NATS reconnects, it will no longer perform the default reconne
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-#### Security enhancements [ID_38869]
+#### Security enhancements [ID_38869] [ID_40229]
 
-<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
+<!-- 38869: MR 10.4.0 [CU7] - FR 10.4.6 -->
+<!-- 40229: MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.9 -->
 
 A number of security enhancements have been made.
 
@@ -115,6 +124,32 @@ A number of enhancements have been made with regard to the synchronization of re
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
+
+#### SLAnalytics: Reduced memory usage [ID_40450]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
+
+#### Storage as a Service: Maximum page size can now be specified in queries sent to dataminer.services [ID_40477]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 [CU1] -->
+
+When a query was sent to dataminer.services, up to now, the maximum page size would always be set to 1000 (i.e. the default setting).
+
+From now on, the maximum page size can be specified in the query. This will considerable enhance overall query performance.
+
+> [!TIP]
+> See also:
+>
+> - [Class CrudHelperComponent\<T\>](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1)
+> - [Method PreparePaging](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1.PreparePaging*)
+
+#### SLNet: DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders [ID_40550]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements made to SLNet, DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders.
 
 ### Fixes
 
@@ -231,6 +266,26 @@ When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retrie
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
+
+#### Cassandra Cluster Migrator: Problem when initializing a migration [ID_40476]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
+
+#### Problem with SNMPv3 communication when the same device was polled with different credentials [ID_40502]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When two SNMPv3 interfaces pointing to the same device, either on the same element or on two different elements, were using different credentials, SNMP communication using one set of credentials would break as soon as an SNMP operation was executed using the other set of credentials. An element restart was required to get communication working again.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 

@@ -12,6 +12,14 @@ uid: General_Main_Release_10.3.0_CU19
 
 ### Enhancements
 
+#### BPA test 'Check Antivirus DLLs' will now also check known antivirus file paths [ID_32567]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+The *Check Antivirus DLLs* test will now also check the path of the loaded antivirus DLL files to check whether they were loaded from a known antivirus path.
+
+This means that the test will now be able to report a fail when a new antivirus DLL file is added or when an existing antivirus DLL file is renamed, even when the file location remains the same.
+
 #### Caching of protocol signature information will enhance overall performance during a DataMiner startup [ID_39468]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.7 -->
@@ -31,6 +39,24 @@ Up to now, using the *Engine.Sleep* method in an Automation script could cause i
 Up to now, all BPA tests would be executed immediately after DataMiner had been started.
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
+
+#### Security enhancements [ID_40229]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.9 -->
+
+A number of security enhancements have been made.
+
+#### SLAnalytics: Reduced memory usage [ID_40450]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
+
+#### SLNet: DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders [ID_40550]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements made to SLNet, DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders.
 
 ### Fixes
 
@@ -90,6 +116,26 @@ Up to now, when a response contained a parameter with a LengthType equal to "nex
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retried an alarm migration, the migration would immediately fail and go into a *Cancelled* state.
+
+#### Cassandra Cluster Migrator: Problem when initializing a migration [ID_40476]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
+
+#### Problem with SNMPv3 communication when the same device was polled with different credentials [ID_40502]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When two SNMPv3 interfaces pointing to the same device, either on the same element or on two different elements, were using different credentials, SNMP communication using one set of credentials would break as soon as an SNMP operation was executed using the other set of credentials. An element restart was required to get communication working again.
+
+#### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
+
+From now on, it will be possible to create multiple DOM module subscriptions on one connection.
 
 #### SLAnalytics - Alarm focus: Problem with time of arrival when clearing a focus event [ID_40509]
 

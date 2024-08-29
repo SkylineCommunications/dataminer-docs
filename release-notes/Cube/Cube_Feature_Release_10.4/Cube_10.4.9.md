@@ -88,6 +88,12 @@ Up to now, Cube would send an SPI event log entry "Cube Connection" to the DataM
 
 From now on, it will send this SPI event log entry, which indicated how long it took for Cube to connect to the DataMiner Agent, before it fetches the initial data.
 
+#### Cube home page: 'Did you know?' list will now show the 5 latest Dojo blog posts
+
+When you open DataMiner Cube, from now on, the *Did you know?* list will show the 5 latest [DataMiner Dojo blog posts](https://community.dataminer.services/blog/).
+
+Clicking the title of one of those posts, will open the post in a new browser window.
+
 ### Fixes
 
 #### Visual Overview: 'Get Protocol' requests would be sent in an incorrect thread [ID_39543]

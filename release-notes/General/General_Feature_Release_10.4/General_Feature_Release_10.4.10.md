@@ -22,6 +22,24 @@ uid: General_Feature_Release_10.4.10
 
 ## New features
 
+#### Failover: New SLNettypes message to check whether Pcap is installed on a DataMiner Agent [ID_40257]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, the new SLNettypes message *PcapInfoRequestMessage* can be used to check whether Pcap is installed on a DataMiner Agent.
+
+The response message *PcapInfoResponseMessage* contains a property called *Info* of type *PcapInfo*.
+
+The *Info* object has the following properties:
+
+| Property | Type | Possible values |
+|----------|------|-------------|
+| WinPcapDetection | PcapDetectionType | - PcapDetected: WinPcap is installed.<br>- NoPcapDetected: WinPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector".  |
+| NpcapDetection   | PcapDetectionType | - PcapDetected: NPcap is installed.<br>- NoPcapDetected: NPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
+
+> [!NOTE]
+> The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user is configuring Failover. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message.
+
 #### Protocols: Newly installed connector will automatically be promoted to production version [ID_40291]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
@@ -44,6 +62,14 @@ A connector will only be promoted to "production version" if its first version i
 ## Changes
 
 ### Enhancements
+
+#### BPA test 'Check Antivirus DLLs' will now also check known antivirus file paths [ID_32567]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+The *Check Antivirus DLLs* test will now also check the path of the loaded antivirus DLL files to check whether they were loaded from a known antivirus path.
+
+This means that the test will now be able to report a fail when a new antivirus DLL file is added or when an existing antivirus DLL file is renamed, even when the file location remains the same.
 
 #### Improved performance when alarm filters containing operators are used [ID_39732]
 
@@ -75,6 +101,12 @@ Up to now, all BPA tests would be executed immediately after DataMiner had been 
 
 From now on, the *Report Active RTE* test will be executed for the first time exactly 8 minutes after DataMiner has been started, and all other BPA tests will be executed between 10 and 60 minutes after DataMiner has been started.
 
+#### Alarms: Enhanced performance when calculating baselines [ID_40298]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Because of a number of enhancements, overall performance has increased when calculating baselines.
+
 #### Service & Resource Management: Enhanced synchronization of resources and resource pools between the SRM master agent and the other agents in a DataMiner System [ID_40389]
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
@@ -95,6 +127,43 @@ From now on, you can check whether the DataMiner System is connected to datamine
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
 All DxMs included in the DataMiner upgrade package have now been upgraded to versions requiring .NET 8.
+
+#### SLAnalytics: Reduced memory usage [ID_40450]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
+
+#### Storage as a Service: Maximum page size can now be specified in queries sent to dataminer.services [ID_40477]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.9 [CU1] -->
+
+When a query was sent to dataminer.services, up to now, the maximum page size would always be set to 1000 (i.e. the default setting).
+
+From now on, the maximum page size can be specified in the query. This will considerable enhance overall query performance.
+
+> [!TIP]
+> See also:
+>
+> - [Class CrudHelperComponent\<T\>](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1)
+> - [Method PreparePaging](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1.PreparePaging*)
+
+#### SNMP traps can now be received from SNMP connections other than the main connection [ID_40511]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+When SLSNMPManager received a trap, up to now, it would check whether the IP address of the trap matched the IP address of the main connection.
+
+From now on, SLSNMPManager will check whether the IP address of the trap matches the IP address of any of the SNMP connections of the protocol that is being used by the element.
+
+> [!NOTE]
+> The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
+
+#### SLNet: DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders [ID_40550]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements made to SLNet, DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders.
 
 ### Fixes
 
@@ -173,9 +242,21 @@ When, using the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*), you retrie
 
 In some rare cases, SLAnalytics could stop working when a pattern was deleted on one DMA while it was being edited on another DMA.
 
+#### Cassandra Cluster Migrator: Problem when initializing a migration [ID_40476]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
+
+#### Problem with SNMPv3 communication when the same device was polled with different credentials [ID_40502]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+When two SNMPv3 interfaces pointing to the same device, either on the same element or on two different elements, were using different credentials, SNMP communication using one set of credentials would break as soon as an SNMP operation was executed using the other set of credentials. An element restart was required to get communication working again.
+
 #### DataMiner Object Models: Not possible to create multiple DOM module subscriptions [ID_40508]
 
-<!-- MR 10.5.0 - FR 10.4.10 -->
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
 Up to now, when an attempt was made to create multiple DOM module subscriptions at a time, only the first subscription would be created.
 

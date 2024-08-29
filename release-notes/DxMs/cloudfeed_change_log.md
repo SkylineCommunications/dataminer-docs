@@ -4,6 +4,13 @@ uid: cloudfeed_change_log
 
 # Cloud Feed change log
 
+#### 28 August 2024 - Enhancement - CloudFeed 1.4.0 - More data will now be offloaded [ID_40413]
+
+DataMiner CloudFeed has been upgraded. It now offloads alarm events, change point events, SRM events, element configuration events, and feedback events.
+
+> [!IMPORTANT]
+> From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is DataMiner 10.4.10.
+
 #### 2 May 2024 - Enhancement - CloudFeed 1.3.1 - Upgrade to .NET 8 [ID_39033]
 
 DataMiner CloudFeed has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
