@@ -198,3 +198,9 @@ In some cases, an error could be thrown when you tried to delete a dashboard fol
 Up to now, only one connection could subscribe to *DOMInstanceChangeEvents* per DOM module. This meant that only the first connection would receive events to update the Form component in the client, and that every subsequent connection would not receive any updates as long as the first connection stayed open.
 
 From now on, every *DOMInstanceChangeEvents* subscription will get a unique connection ID.
+
+#### Dashboards/Low-Code Apps - Time range component: Problem when picking a custom time range [ID_40608]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, in the *Time range* component, you picked a custom time range, the picker would become transparent, making it difficult to read its contents, especially when a dark dashboard theme was being used. From now on, the picker will no longer be transparent and will adapt its color scheme to the dashboard theme that is being used.
