@@ -145,6 +145,12 @@ From now on, the maximum page size can be specified in the query. This will cons
 > - [Class CrudHelperComponent\<T\>](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1)
 > - [Method PreparePaging](xref:Skyline.DataMiner.Net.ManagerStore.CrudHelperComponent`1.PreparePaging*)
 
+#### SLNet: DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders [ID_40550]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements made to SLNet, DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders.
+
 ### Fixes
 
 #### MessageBroker: Problem when trying to read a file that was being updated by another process [ID_39408]

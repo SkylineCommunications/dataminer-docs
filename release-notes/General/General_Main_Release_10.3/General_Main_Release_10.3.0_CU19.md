@@ -52,6 +52,12 @@ A number of security enhancements have been made.
 
 Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced.
 
+#### SLNet: DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders [ID_40550]
+
+<!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
+
+Because of a number of enhancements made to SLNet, DataMiner Cube's Scheduler app will now support user access permissions to specific dashboard folders.
+
 ### Fixes
 
 #### Problem in SLDataMiner when redundancy groups were configured to switch based on connectivity [ID_40118]
