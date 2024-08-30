@@ -13,4 +13,4 @@ DataMiner Analytics, also known as [DataMiner Augmented Operations](xref:Stack_A
 |--|--|
 | [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial) | Get to know DataMiner's anomaly detection features and leverage them for alarm monitoring. |
 | [Gaining insights using time-scoped relation learning](xref:Time_Scoped_Relation_Learning_Tutorial) | Use DataMiner's time-scoped relation learning features to find the root cause of several behavioral anomalies. |
-| [Trend patterns in Cube](xref:Pattern_Matching_Trend_Tutorial) | Use DataMiner's pattern matching feature to add context to your trend graph. |
+| [Working with trend patterns in DataMiner Cube](xref:Pattern_Matching_Trend_Tutorial) | Use DataMiner's pattern matching feature to add context information to trend graphs. |

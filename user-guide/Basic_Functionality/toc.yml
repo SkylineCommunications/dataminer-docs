@@ -309,7 +309,7 @@ items:
             items:
               - name: Gaining insights using time-scoped relation learning
                 topicUid: Time_Scoped_Relation_Learning_Tutorial
-              - name: Trend patterns in Cube
+              - name: Working with trend patterns in DataMiner Cube
                 topicUid: Pattern_Matching_Trend_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram

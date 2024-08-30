@@ -2,13 +2,13 @@
 uid: Pattern_Matching_Trend_Tutorial
 ---
 
-# Trend patterns in Cube
+# Working with trend patterns in DataMiner Cube
 
-This tutorial showcases DataMiner's [pattern matching](xref:Working_with_pattern_matching) feature. You will learn how to select a time range where multiple parameters exhibit a recurring pattern and create a trend pattern.
+This tutorial showcases DataMiner's [pattern matching](xref:Working_with_pattern_matching) feature. You will first learn how to select a time range where multiple parameters exhibit a recurring pattern and create a trend pattern, which will help provide context information in your trend graphs. Then you will find out how you can avoid having to create the same pattern several times for different elements using the same protocol or for different rows in a table. Finally, you will learn how to work with pattern events in the Alarm Console, as well as how you can clean up the patterns that have been created in the system.
 
 This tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to establish the parameters' normal behavior, enabling DataMiner to detect unexpected behavior. Trending is enabled on all parameters used in this tutorial.
 
-The content and screenshots for this tutorial have been created in DataMiner 10.4.8.0.
+The content and screenshots for this tutorial have been created in DataMiner 10.4.8.
 
 Estimated duration: 20 minutes.
 
@@ -16,7 +16,7 @@ Estimated duration: 20 minutes.
 
 - DataMiner 10.3.8 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
-- Pattern Matching is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
+- Pattern matching is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
 ## Overview
 
@@ -24,15 +24,15 @@ The tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 
-- [Step 2: Adding context to your trend graph](#step-2-adding-context-to-your-trend-graph)
+- [Step 2: Add context to a trend graph](#step-2-add-context-to-a-trend-graph)
 
-- [Step 3: Avoid duplicating the pattern multiple times for elements with the same protocol](#step-3-avoid-duplicating-the-pattern-multiple-times-for-elements-with-the-same-protocol)
+- [Step 3: Configure a pattern for all elements with the same protocol](#step-3-configure-a-pattern-for-all-elements-with-the-same-protocol)
 
-- [Step 4: Avoid duplicating the pattern multiple times for rows in the same table](#step-4-avoid-duplicating-the-pattern-multiple-times-for-rows-in-the-same-table)
+- [Step 4: Configure a multivariate pattern for all rows in a table](#step-4-configure-a-multivariate-pattern-for-all-rows-in-a-table)
 
-- [Step 5: Creating pattern events](#step-5-creating-pattern-events)
+- [Step 5: Create pattern events](#step-5-create-pattern-events)
 
-- [Step 6: Clean-up patterns](#step-6-clean-up-patterns)
+- [Step 6: Clean up patterns](#step-6-clean-up-patterns)
 
 ## Step 1: Install the example package from the Catalog
 
@@ -40,187 +40,216 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create four DataMiner elements named "PM Video Server 1", "PM Video Server 2", "PM Tables", "PM Event Creator" in your system, which will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *KATA Working with Pattern Matching in Trend Graphs*.
+   This will create four DataMiner elements, named "PM Video Server 1", "PM Video Server 2", "PM Tables", and "PM Event Creator" in your system, which will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *KATA Working with Pattern Matching in Trend Graphs*.
 
-## Step 2: Adding context to your trend graph
+## Step 2: Add context to a trend graph
 
-1. In DataMiner Cube, select the element *PM Video Server 1* in the Surveyor.
+1. In the DataMiner Cube Surveyor, select the element *PM Video Server 1*.
 
-   This element gives insights into the available physical memory, cpu load, free disk space and video feed of a fictional server.
+   This element provides information about the available physical memory, CPU load, free disk space, and video feed of a fictional server.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Load* parameter.
+1. On the *General* data page of the element, next to the *CPU Load* parameter, click the trend icon.
 
-1. Select *Week to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past week.
+   Depending on the detected trend behavior, this icon can be an arrow icon, or it can look like this: ![the trend icon](~/user-guide/images/trend_icon_unknown.png).
 
-   We see some cpu spikes that look similar but they don't have the same cause. To investigate further, let's add some extra parameters to the trend graph.
+1. In the top-right corner of the trending page, select *Week to date* to inspect the trend data for the past week.
 
-1. Add the following parameters *Free Disk Space*, *Available Physical Memory* and *Video Feed* to the trend graph by:
+   You will see some CPU spikes that look similar. However, these may not have the same cause. To investigate further, some extra parameters need to be added to the trend graph.
 
-   1. Expanding the parameter pane by clicking the ![expand icon](~/user-guide/images/ExpandUp.png) on the right under the main graph area.
+1. Add the parameters *Free Disk Space*, *Available Physical Memory*, and *Video Feed* to the trend graph:
+
+   1. In the lower right corner, click the expand icon ![expand icon](~/user-guide/images/ExpandUp.png) to expand the parameter pane.
 
    1. Click *Add parameter*.
 
    1. Specify the parameter.
 
-   1. Repeat from step b until all necessary parameters have been added.
+   1. Repeat the previous two steps until all the necessary parameters have been added.
 
-   1. Click *Show trend*
+   1. Click *Show trend*.
 
    > [!TIP]
    > See also: [Working with the parameter pane](xref:Working_with_the_parameter_pane)
 
-![Add all parameter to trend graph](~/user-guide/images/tutorial_pattern_matching_parameters.gif)
+   ![Adding parameters to the trend graph](~/user-guide/images/tutorial_pattern_matching_parameters.gif)
 
-1. We see two different *CPU Load* spikes appearing, the first one is where the *Free Disk Space* has a significant drop at the same time. We will create a multivariate pattern for this *Backup* behavior. First select the section of the graph where we see this recurring behavior. The way you can do so depends on the configuration of the trending user settings. See [Trending settings](xref:User_settings#trending-settings).
+   The graph will now show two different *CPU Load* spikes:
 
-1. Click the tag icon and then click the cogwheel icon.
+   - The first one coincides with a significant drop in the *Free Disk Space*, which happens during a backup.
+   - The second is a downward spike in the *Available Physical Memory* coinciding with an upward spike in the *Video Feed*.
 
-1. Enter the name *Backup*.
+1. Create a multivariate pattern for the backup behavior:
 
-1. Unselect the subpatterns belonging to *Available Physical Memory* and *Video Feed*. You can scroll in the subpatterns area to see all the subpatterns.
+   1. Select the section of the graph where you see this recurring behavior.
 
-1. Press OK.
+      The way you can do so depends on the configuration of the trending user settings. See [Trending settings](xref:User_settings#trending-settings).
+
+   1. Click the tag icon and then click the cogwheel icon.
+
+   1. Enter the name *Backup*.
+
+   1. Clear the checkboxes for the *Available Physical Memory* and *Video Feed* subpatterns.
+
+      You can scroll in the *Patterns* area to see all the subpatterns.
+
+   1. Click *OK*.
 
    > [!TIP]
    > See also: [Defining a pattern](xref:Defining_a_pattern)
 
-![Backup pattern for video server](~/user-guide/images/tutorial_pattern_matching_multivariate_backup.gif)
+   ![Backup pattern for video server](~/user-guide/images/tutorial_pattern_matching_multivariate_backup.gif)
 
-1. We can also see a second multivariate pattern appearing. When there is a downward spike in the *Available Physical Memory* and a upward spike in the *Video Feed*. Again select the section of the graph where we see this recurring behavior.
+1. Create a multivariate pattern for the recurring behavior where a downward spike in the *Available Physical Memory* coincides with an upward spike in the *Video Feed*:
 
-1. Click the tag icon and then click the cogwheel icon.
+   1. Select the section of the graph where you see this recurring behavior, in the same way as before.
 
-1. Enter the name *Video Feed*.
+   1. Click the tag icon and then click the cogwheel icon.
 
-1. Unselect the subpatterns belonging to *Free Disk Space*.
+   1. Enter the name *Video Feed*.
 
-1. Press OK.
+   1. Clear the checkbox for the *Free Disk Space* subpattern.
 
-![Video Feed pattern for video server](~/user-guide/images/tutorial_pattern_matching_multivariate_video_feed.gif)
+   1. Click *OK*.
 
-1. Click *Up to Data Display* in the top left corner.
+   ![Video Feed pattern for video server](~/user-guide/images/tutorial_pattern_matching_multivariate_video_feed.gif)
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Load* parameter.
+1. In the top-left corner, click *Up to Data Display*.
 
-1. Select *Week to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past week. Now some interesting context is added to the different cpu spikes. The ![multivariate](~/user-guide/images/multivariate_icon.png) icon indicates that the pattern combines trend information from different parameters. By clicking this icon, you can load all trend graphs of the parameters that are part of the pattern. Hoovering over the tag will highlight all trend graphs that are part of the pattern.
+1. Click the trend icon next to the *CPU Load* parameter again.
+
+1. In the top-right corner of the trending page, select *Week to date*.
+
+You will now see that context information is available for the different CPU spikes. The multivariate icon ![multivariate](~/user-guide/images/multivariate_icon.png) indicates that the pattern combines trend information from different parameters. Clicking this icon will load all trend graphs of the parameters that are part of the pattern. Hovering the mouse pointer over the tag will highlight all trend lines that are part of the pattern.
 
 ![Context in your trend graph](~/user-guide/images/tutorial_pattern_matching_context.gif)
 
-## Step 3: Avoid duplicating the pattern multiple times for elements with the same protocol
+## Step 3: Configure a pattern for all elements with the same protocol
 
-1. Select the element *PM Video Server 1* in the Surveyor.
+1. In the Surveyor, select the element *PM Video Server 1*.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Load* parameter.
+1. Click the trend icon next to the *CPU Load* parameter.
 
-1. Select *Week to date* from the options available in the top-right corner of the trending page.
+1. In the top-right corner of the trending page, select *Week to date*.
 
 1. Click the tag button above the pattern *Video Feed*.
 
 1. Click the pencil icon and then click the cogwheel icon.
 
-1. For all subpatterns, change *Apply to* from element to protocol by clicking on the element name.
-
-1. Press OK.
+1. For all subpatterns, click the element name next to *Apply to* and select *protocol* instead.
 
    > [!TIP]
    > See also: [Editing a pattern](xref:Editing_a_pattern_definition)
 
-1. Select the element *PM Video Server 2* in the Surveyor.
+1. Click OK.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Load* parameter. See the *Video Feed* pattern appearing but not the *Backup* pattern.
+1. In the Surveyor, select the element *PM Video Server 2*.
+
+1. Click the trend icon next to the *CPU Load* parameter, and click *Week to date*.
+
+You will see that the *Video Feed* pattern is indicated, but the *Backup* pattern is not.
 
 ![Pattern for all elements with the same protocol](~/user-guide/images/tutorial_pattern_matching_protocol.gif)
 
-## Step 4: Avoid duplicating the pattern multiple times for rows in the same table
+## Step 4: Configure a multivariate pattern for all rows in a table
 
-1. Select the element *PM in Tables* in the Surveyor.
+1. In the Surveyor, select the element *PM in Tables*.
 
-   This element gives insights into the cpu usage and free disk space of multiple fictional servers in a table.
+   This element provides information about the CPU usage and free disk space of multiple fictional servers in a table.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Usage* parameter for index *Server 1*.
+1. In the *Server overview* table, click the trend icon in the *CPU Usage* column and the *Server 1* row.
 
-1. Select *Month to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past month.
+1. In the top-right corner of the trending page, select *Month to date*.
 
-1. Add the following parameter *Free Disk Space* to the trend by:
+1. Add the *Free Disk Space* parameter to the trend graph:
 
-    1. Expanding the parameter pane by clicking the ![expand icon](~/user-guide/images/ExpandUp.png) on the right under the main graph area.
+   1. In the lower right corner, click the expand icon ![expand icon](~/user-guide/images/ExpandUp.png) to expand the parameter pane.
 
-    1. Click *Add parameter*.
+   1. Click *Add parameter*.
 
-    1. Select *Free Disk Space* parameter.
+   1. Select the parameter *Server overview: Free Disk Space*.
 
-    1. Click *Show trend*
+   1. Click *Show trend*.
 
-1. Create a multivariate pattern for the *Backup* behavior. First select the section of the graph where we see this recurring behavior.
+1. Create a multivariate pattern for the *Backup* behavior:
 
-1. Click the tag icon and then click the cogwheel icon.
+   1. Select the section of the graph where you can see this recurring behavior.
 
-1. Enter the name *Backup*. Note, the pattern name might not be unique.
+   1. Click the tag icon and then click the cogwheel icon.
 
-1. For all subpatterns, next to *Apply to* select *all rows* by clicking on the index.
+   1. Enter the name *Backup*. The pattern name does not have to be unique.
 
-1. Press OK.
+   1. For all subpatterns, next to *Apply to*, click *single row '...'* and select *all rows* instead.
 
-1. Click *Up to Data Display* in the top left corner.
+   1. Click *OK*.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Usage* parameter for index *Server 4*.
+1. Click *Up to Data Display* in the top-left corner.
 
-1. Select *Month to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past month. And see the *Backup* pattern appearing.
+1. In the *Server overview* table, click the trend icon in the *CPU Usage* column and the *Server 4* row.
+
+1. In the top-right corner of the trending page, select *Month to date*.
+
+You will see that the *Backup* pattern is marked where relevant.
 
 ![Pattern for all rows in the same table](~/user-guide/images/tutorial_pattern_matching_rows.gif)
 
-## Step 5: Creating pattern events
+## Step 5: Create pattern events
 
 1. Select the element *PM Event Creator* in the Surveyor.
 
-   This element gives insights into the Power Consumption of a fictional server.
+   This element provides information about the power consumption of a fictional server.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *Power Consumption* parameter.
+1. On the *General* data page, click the trend icon next to the *Power Consumption* parameter.
 
-1. Zoom in on the spike in the beginning of the trend data.
+1. Zoom in on the spike at the beginning of the trend data.
 
    > [!TIP]
    > See also: [Zooming in/out on a trend graph](xref:Zooming_in_out_on_a_trend_graph)
 
-1. Create a univariate pattern for the power spike behavior. First select the section of the graph where we see this recurring behavior.
+1. Create a univariate pattern for the power spike behavior:
 
-1. Click the tag icon.
+   1. Select the section of the graph where you see the power spike.
 
-1. Enter the name *Power spike*.
+   1. Click the tag icon.
 
-1. Click the check mark icon.
+   1. Enter the name *Power spike*.
 
-1. Click *Up to Data Display* in the top left corner.
+   1. Click the check mark icon.
+
+1. Click *Up to Data Display* in the top-left corner.
 
 1. Click the *Generate Pattern* button to generate a new power spike.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *Power Consumption* parameter.
+1. Click the trend icon next to the *Power Consumption* parameter.
 
-1. Wait until the new tag appears for the new power spike. If wanted you can also zoom in a bit.
+1. Wait until the new tag appears for the new power spike. Zoom in if necessary to better see the spike.
 
-1. Click the light bulb icon in the top-right corner of the Alarm Console.
+1. If the Alarm Console is not yet expanded, in the lower right corner of the Cube window, click the expand icon ![expand icon](~/user-guide/images/ExpandUp.png) to expand it.
 
-   This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
+1. In the top-right corner of the Alarm Console, click the light bulb icon.
+
+   This icon lights up in blue to indicate that DataMiner Analytics has found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
 1. Click the menu item *1 recent pattern occurrence detected*.
 
    ![Suggestion event triggered](~/user-guide/images/tutorial_pattern_matching_recent.png)
 
-    A new *Patterns* tab will now be shown in the Alarm Console, listing the pattern that were triggered.
+A new *Patterns* tab will now be shown in the Alarm Console, listing the pattern that were detected.
 
 ![Pattern event](~/user-guide/images/tutorial_pattern_matching_event.gif)
 
-## Step 6: Clean-up patterns
+## Step 6: Clean up patterns
 
 1. Select the element *PM Video Server 1* in the Surveyor.
 
-1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *CPU Load* parameter.
+1. On the *General* data page, click the trend icon next to the *CPU Load* parameter.
 
-1. Right Click on the trend graph and select *Trend Patterns...*. Now you have an overview of all pattern available for the parameter.
+1. Right-click the trend graph and select *Trend Patterns*.
 
-1. Select the checkbox *Show all patterns* to have an overview for all patterns in your system.
+   This will open an overview of all the patterns available for the parameter.
 
-1. Delete all patterns by trashcan icon next to the pattern.
+1. Select the checkbox *Show all patterns* to have an overview of all patterns in the system.
+
+1. Click the garbage can icon next to each pattern to delete the patterns.
 
 ![Cleaning up patterns in your system](~/user-guide/images/tutorial_pattern_matching_cleanup.gif)
 
@@ -234,6 +263,6 @@ The tutorial consists of the following steps:
 > - Body:
 >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
 >   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why relation learning was useful or not.
-> - Attachment: a screenshot relevant to your use case
+> - Attachment: A screenshot relevant to your use case
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded DevOps Points.
