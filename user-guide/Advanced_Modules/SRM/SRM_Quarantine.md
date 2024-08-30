@@ -6,7 +6,7 @@ uid: SRM_Quarantine
 
 ## About the quarantine state
 
-The quarantine state is a special state of a booking, which indicates that the booking cannot start because one or more resources that were assigned to it are no longer available. Bookings are automatically moved to this state when the Resource Manager detects such a situation.
+The quarantine state is a special state of a booking, which indicates that the booking cannot start because one or more resources that were assigned to it are no longer available. Bookings are automatically moved to this state when Resource Manager detects such a situation.
 
 Usually, this happens when a booking is added or edited so that overlapping bookings use the same resource, and the resource does not have enough capacity or concurrency to support all bookings.
 
@@ -20,7 +20,7 @@ Consider a system that has a booking with two resources *Resource A* and *Resour
 
 ![Quarantine concurrency example before](~/user-guide/images/quarantine_example_concurrencies_existing.png)
 
-If a second booking is added to the system that overlaps with the first booking and that also wants to use *Resource A*, there will be a scheduling conflict. *Resource A* does not have enough concurrency to support the second booking. If the addition of the second booking is forced anyway, the Resource Manager will resolve the conflict as follows:
+If a second booking is added to the system that overlaps with the first booking and that also wants to use *Resource A*, there will be a scheduling conflict. *Resource A* does not have enough concurrency to support the second booking. If the addition of the second booking is forced anyway, Resource Manager will resolve the conflict as follows:
 
 ![Quarantine concurrency example result](~/user-guide/images/quarantine_example_concurrencies_result.png)
 
@@ -32,7 +32,7 @@ Consider a system that has two existing bookings in the confirmed state, each us
 
 ![Quarantine example before](~/user-guide/images/quarantine_example_existing.png)
 
-If a third booking is added as configured below, there is not enough capacity on *Resource A* to support this booking. If the addition of *Booking three* is forced anyway, the Resource Manager will resolve the conflict as follows:
+If a third booking is added as configured below, there is not enough capacity on *Resource A* to support this booking. If the addition of *Booking three* is forced anyway, Resource Manager will resolve the conflict as follows:
 
 ![Quarantine example result](~/user-guide/images/quarantine_example_result.png)
 
@@ -40,7 +40,7 @@ In the diagram above, *Booking two* has been moved to quarantine, because it has
 
 ## Quarantine priority
 
-When the Resource Manager detects that some usage will need to be quarantined in order to resolve a conflict, it will remove usage from bookings according to a set priority. The priority of a booking is determined as follows:
+When Resource Manager detects that some usage will need to be quarantined in order to resolve a conflict, it will remove usage from bookings according to a set priority. The priority of a booking is determined as follows:
 
 1. **Quarantined bookings**
 
@@ -168,11 +168,11 @@ Quarantine on resource updates works almost the same as quarantine on booking up
 
 The following updates to resources can trigger quarantine:
 
-1. Decreasing the *MaxConcurrency* of a resource.
-2. Changing the mode of a resource to *Maintenance*. This will move all bookings using that resource to quarantine.
-3. Deleting a capacity or capability. All bookings using the deleted capacity/capability of this resource will be moved to quarantine.
-4. Decreasing a maximum capacity in such a way that existing bookings are no longer supported.
-5. Changing or removing a capability in such a way that currently booked values are no longer supported.
+- Decreasing the *MaxConcurrency* of a resource.
+- Changing the mode of a resource to *Maintenance*. This will move all bookings using that resource to quarantine.
+- Deleting a capacity or capability. All bookings using the deleted capacity/capability of this resource will be moved to quarantine.
+- Decreasing a maximum capacity in such a way that existing bookings are no longer supported.
+- Changing or removing a capability in such a way that currently booked values are no longer supported.
 
 > [!NOTE]
 > Deletion of a resource will not trigger quarantine, but this will always be blocked if the resource is in use in a future or ongoing booking.
@@ -228,7 +228,7 @@ Saving a resource with the *forceQuarantine* flag set to true will return a warn
 
 ### Quarantine on interrupted contributing bookings
 
-When the Resource Manager starts up, the bookings in the database will be checked to see if they should have started or stopped or had an event run while the Resource Manager was not running. If any such bookings are found, they will be put in the *Interrupted* state. If a contributing booking is moved to the *Interrupted* state, the bookings making use of the corresponding contributing resource will be moved to the quarantine state. The *QuarantineTrigger* will have the value *ContributingResourceNotAvailable* for the *QuarantineReason* field in that case.
+When Resource Manager starts up, the bookings in the database will be checked to see if they should have started or stopped or had an event run while Resource Manager was not running. If any such bookings are found, they will be put in the *Interrupted* state. If a contributing booking is moved to the *Interrupted* state, the bookings making use of the corresponding contributing resource will be moved to the quarantine state. The *QuarantineTrigger* will have the value *ContributingResourceNotAvailable* for the *QuarantineReason* field in that case.
 
 ### Overview of possible *QuarantineReason* values
 
