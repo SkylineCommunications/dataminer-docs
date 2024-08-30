@@ -423,6 +423,10 @@ items:
             topicUid: srm_instantiations
           - name: SRM scripting
             topicUid: srm_scripting
+          - name: Advanced SRM concepts
+            items:
+              - name: Quarantine
+                topicUid: SRM_Quarantine
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:
