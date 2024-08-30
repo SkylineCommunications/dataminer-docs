@@ -244,7 +244,7 @@ These are the possible values for the *QuarantineReason* field:
 | CapabilityDowngraded  | A capability was downgraded on a resource. This could be a range point capability where the min-max range was narrowed, or a discrete capability where a discrete value was removed. |
 | ConcurrencyDowngraded  | The maximum concurrency of a resource was lowered. |
 | MovedToMaintenance  | The resource was moved to the *Maintenance* state. |
-| ReservationInstanceUpdated  | A *ReservationInstance* was added or updated and caused a scheduling conflict. |
+| ReservationInstanceUpdated  | A booking was added or updated and caused a scheduling conflict. |
 | ContributingResourceNotAvailable  | A contributing resource is not available. This can happen when contributing bookings are interrupted, or when trying to assign an unavailable contributing resource to a booking. |
 
 ## Moving bookings out of the quarantine state
