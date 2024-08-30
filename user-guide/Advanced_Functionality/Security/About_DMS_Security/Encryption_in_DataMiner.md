@@ -5,7 +5,7 @@ uid: Encryption_in_DataMiner
 # Encryption in DataMiner
 
 > [!NOTE]
-> DataMiner does not support having the [Use FIPS compliant cryptographic algorithms](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) Windows setting enabled. Having this option enabled will prevent DataMiner from starting up properly.
+> DataMiner does not support having the [*Use FIPS compliant cryptographic algorithms*](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) Windows setting enabled. Having this option enabled will prevent DataMiner from starting up properly.
 
 ## Passwords
 
