@@ -23,7 +23,7 @@ When you searched for a Catalog item while on a Catalog detail page, it could oc
 
 #### 30 August 2024 - Enhancement - Admin - Improved restrictions for user role changes [ID_40526]
 
-The user role is now disabled for user that are not allowed to change roles.
+In the Admin app, users who do not have the rights to change roles will now no longer be able to select other user roles.
 
 In addition, if you change your own role to a role with fewer rights, a warning will now be shown.
 
