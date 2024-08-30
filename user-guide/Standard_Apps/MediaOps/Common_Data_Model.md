@@ -760,6 +760,23 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration Info</td>
+		</tr>
+		<tr>
+			<td>Profile Definition ID</td>
+			<td>String</td>
+			<td></td>
+			<td>Read</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Profile Definition Name</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -952,27 +969,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource cost</td>
 		</tr>
 		<tr>
-			<td>Cost</td>
-			<td>Double</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Cost unit</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Currency</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td>Cost ratecard</td>
 			<td>Guid</td>
 			<td>Used to calculate cost of resource usage. If not defined, the ratecard assigned on pool level will be used.</td>
@@ -1010,7 +1006,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Icon image</td>
 			<td>String</td>
 			<td></td>
-			<td>Read/Write</td>
+			<td>Read</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
@@ -1089,6 +1085,23 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Booking Extension Script</td>
 			<td>String</td>
 			<td>Script that will be triggered when the current resource is being booked. This allows related resources to be included in the same booking based on predefined relations or custom logic.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration Info</td>
+		</tr>
+		<tr>
+			<td>Profile Definition ID</td>
+			<td>String</td>
+			<td></td>
+			<td>Read</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Profile Definition Name</td>
+			<td>String</td>
+			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1976,6 +1989,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
+			<td>Workflow Configuration</td>
+			<td>Guid</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring settings</td>
 		</tr>
 		<tr>
@@ -2159,6 +2179,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Billable?</td>
 			<td>Boolean</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node Configuration</td>
+			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -2543,6 +2570,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
+			<td>Locked by</td>
+			<td>String</td>
+			<td>Indicates who locked this job.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring settings</td>
 		</tr>
 		<tr>
@@ -2577,9 +2611,16 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job execution </td>
 		</tr>
 		<tr>
-			<td>Job execution</td>
+			<td>Job execution script</td>
 			<td>String</td>
 			<td>A script that will run when the job starts.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Job Configuration</td>
+			<td>Guid</td>
+			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2736,6 +2777,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Billable?</td>
 			<td>Boolean</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node Configuration</td>
+			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -2915,20 +2963,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Total cost net amount</td>
-			<td>Double</td>
-			<td>The result of the total cost calculation.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Total cost net override amount</td>
-			<td>Double</td>
-			<td>An override value for the total cost net amount.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td>Bill currency</td>
 			<td>Guid</td>
 			<td>The currency used for rate calculations. By default, the job's currency is set by the selected contract. READ ONLY.</td>
@@ -3062,6 +3096,77 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Error Message</td>
 			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+	</tbody>
+</table>
+
+### Configuration
+
+<table>
+	<thead>
+		<tr>
+			<th>Field Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Access</th>
+			<th>Constraints</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration Info</td>
+		</tr>
+		<tr>
+			<td>Profile Definition ID</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Preset ID</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Profile Parameter Values</td>
+		</tr>
+		<tr>
+			<td>Profile Parameter ID</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>String Value</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Double Value</td>
+			<td>Double</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Is Required Capability</td>
+			<td>Boolean</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Is Required Capacity</td>
+			<td>Boolean</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
