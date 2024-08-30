@@ -9,30 +9,31 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 30 August 2024 - Fix - Catalog - Register catalog selected organization [ID_40472]
-
-​Before when a user switched organizations prior to registering an item, the organization field would not be filled in. A fix has been applied that now always fills in the organization field based on the selected organization.
-
-#### 30 August 2024 - Fix - Admin - DxM .NET 8 warning [ID_40478]
-
-A warning will now be shown that .NET 8 is required when installing the DataAggregator DxM version 3.0.6
-
-#### 30 August 2024 - Fix - Catalog - Catalog details page side panel [ID_40584]
-
-On the details page of a catalog item, the sidepanel will no longer show the owners and source section if either the owners or source are not defined.
-
-#### 30 August 2024 - Enhancement - Admin - User roles [ID_40526]
-
-The user role is now disabled for user that are not allowed to change roles.
-You will now get a wanring when downgrading your own role.
-
 #### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID_40601]
 
-When searching for a catalog, a documentation link is now shown next to the type filter, containing a link towards the dataminer docs, catalog types section.
+When you search for an item in the Catalog, a documentation link will now be shown next to the type filter. This link will navigate to the Catalog types information on DataMiner Docs.
 
-#### 30 August 2024 - Fix - Catalog - Catalog details page seach [ID_40533]
+#### 30 August 2024 - Enhancement - Catalog - Owners or source no longer shown in details page side panel when not defined [ID_40584]
 
-When seaching on the catalog detail page, the content would load but the overlay would not close. Now the overlay will now be closed as intended.
+On the details page of a Catalog item, the side panel will no longer show the owners and source section if the owners or source are not defined.
+
+#### 30 August 2024 - Fix - Catalog - Search overlay on Catalog details not closing [ID_40533]
+
+When you searched for a Catalog item while on a Catalog detail page, it could occur that the search overlay did not close when the search results were loaded.
+
+#### 30 August 2024 - Enhancement - Admin - Improved restrictions for user role changes [ID_40526]
+
+The user role is now disabled for user that are not allowed to change roles.
+
+In addition, if you change your own role to a role with fewer rights, a warning will now be shown.
+
+#### 30 August 2024 - Fix - Admin - DxM .NET 8 warning when installing DataAggregator 3.0.6 [ID_40478]
+
+When you install the DataAggregator DxM version 3.0.6, a warning will now be shown that .NET 8 is required.
+
+#### 30 August 2024 - Fix - Catalog - Organization field not filled in when registering item [ID_40472]
+
+Up to now, when a user switched organizations prior to registering an item, the organization field would not be filled in. This has now been fixed, so that the organization field is now always filled in based on the selected organization.
 
 #### 16 August 2024 - Fix - Admin - Not possible to remove users from organization [ID_40506]
 
