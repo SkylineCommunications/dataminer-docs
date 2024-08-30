@@ -311,6 +311,10 @@ Permission to edit audio files that can be used for audible alerts.
 
 Permission to delete audio files that can be used for audible alerts.
 
+#### General \> Alarms \> Allow to add or update hyperlinks
+
+Available from DataMiner 10.2.6/10.3.0 onwards. Permission to ad or update custom commands in the Alarm Console context menu.
+
 ### General \> Workspaces
 
 #### General \> Workspaces \> Add
