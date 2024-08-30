@@ -761,7 +761,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration info</td>
 		</tr>
 		<tr>
 			<td>Profile Definition ID</td>
@@ -1089,7 +1089,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration info</td>
 		</tr>
 		<tr>
 			<td>Profile Definition ID</td>
@@ -1989,7 +1989,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Workflow Configuration</td>
+			<td>Workflow configuration</td>
 			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
@@ -2184,7 +2184,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Node Configuration</td>
+			<td>Node configuration</td>
 			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
@@ -2618,7 +2618,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Job Configuration</td>
+			<td>Job configuration</td>
 			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
@@ -2782,7 +2782,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Node Configuration</td>
+			<td>Node configuration</td>
 			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
@@ -3117,10 +3117,10 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration Info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration info</td>
 		</tr>
 		<tr>
-			<td>Profile Definition ID</td>
+			<td>Profile definition ID</td>
 			<td>String</td>
 			<td></td>
 			<td>Read/Write</td>
@@ -3134,38 +3134,38 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Profile Parameter Values</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Profile parameter values</td>
 		</tr>
 		<tr>
-			<td>Profile Parameter ID</td>
+			<td>Profile parameter ID</td>
 			<td>String</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>String Value</td>
+			<td>String value</td>
 			<td>String</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Double Value</td>
+			<td>Double value</td>
 			<td>Double</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Is Required Capability</td>
+			<td>Is required capability</td>
 			<td>Boolean</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Is Required Capacity</td>
+			<td>Is required capacity</td>
 			<td>Boolean</td>
 			<td></td>
 			<td>Read/Write</td>
