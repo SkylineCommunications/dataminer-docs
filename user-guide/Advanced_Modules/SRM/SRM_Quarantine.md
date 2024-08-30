@@ -71,7 +71,7 @@ When the Resource Manager detects that some usage will need to be quarantined in
 
 ### Quarantine on booking updates
 
-When the adding or updating of a booking causes bookings to go to quarantine, errors in the *TraceData* will indicate that quarantine is needed to solve conflicts. The bookings will only be saved if the *forceQuarantine* parameter is set to true.
+When the adding or updating of a booking causes bookings to go to quarantine, errors in the *TraceData* will indicate that quarantine is needed to solve conflicts. The added or updated bookings will only be saved if the *forceQuarantine* parameter is set to true.
 
 The error in the *TraceData* will be of type *ReservationUpdateCausedReservationsToGoToQuarantine*, and the property *MustBeMovedToQuarantine* will contain all the bookings and their usage that must be moved to quarantine in order to solve the scheduling conflict. The bookings that will be moved to quarantine will be selected according to their priority (see [Quarantine priority](#quarantine-priority)).
 
