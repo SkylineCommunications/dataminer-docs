@@ -83,16 +83,16 @@ This file will contain all necessary information to register a Catalog item or v
 type: 'automationscript'
 
 # [Required] 
-# The id of the catalog item.
-# All versions for the same id are shown together in the catalog.
-# This id can not be changed. 
-# If the id is not filled in, the API will return one and consider this as the registration of a new item.
-# If the id is filled in, a new version will be added to the catalog item with the given version number.
+# The ID of the Catalog item.
+# All versions for the same ID are shown together in the Catalog.
+# This ID cannot be changed. 
+# If the ID is not filled in, the API will return one and consider this as the registration of a new item.
+# If the ID is filled in, a new version will be added to the Catalog item with the given version number.
 #   Must be a valid GUID.
 id: '<fill in guid here or leave empty>'
 
 # [Required] 
-# The human-friendly name of the catalog item. 
+# The human-friendly name of the Catalog item. 
 # Can be changed at any time.
 #   Max length: 100 characters.
 #   Can not contain newlines.
@@ -105,20 +105,20 @@ title: 'add-new-switch'
 # Once a version has been published it can no longer be changed.
 # The version should be incremented to do any changes.
 # If you want to create a package that is not final, you can provide a label at the end: X.X.X-label
-# If a catalog item has a label in the version, then the version is considered to be a pre-release version, and not an official one.
+# If a Catalog item has a label in the version, then the version is considered to be a pre-release version, and not an official one.
 #   Valid versions range from 0.0.0 to 2147483647.2147483647.2147483647
 #   The label can contain characters a-z0-9 with a max length of 30 characters.
 version: '1.0.0'
 
 # [Optional]
-# General information about the catalog item.
-#   Max length: 100.000 characters
+# General information about the Catalog item.
+#   Max length: 100,000 characters
 description: |
   This script allows you to easily add a new leaf switch element.
 
 # [Optional]
 # A short description for this specific version.
-# This message is shown along side each version in the version overviews in the catalog. 
+# This message is shown alongside each version in the version overviews in the Catalog. 
 #   Max length: 500 characters.
 version-message: 'Initial version. Does not contain anything useful yet.'
 
@@ -130,9 +130,9 @@ version-message: 'Initial version. Does not contain anything useful yet.'
 homepage: 'https://github.com/randomrepo'
 
 # [Optional]
-# People that are responsible for this catalog item. Might be developers but is not required.
+# People who are responsible for this Catalog item. Might be developers, but this is not required.
 # Format: 'name <email> (url)'
-#   The name is required, max 256 characters.
+#   The name is required; max 256 characters.
 #   The email and url are optional, and should be in valid email/URL formats.
 owners:
   - name: 'David Smith'
@@ -144,9 +144,10 @@ owners:
 
 # [Optional]
 # Tags that allow you to categorize your catalog items.
+#   Max number of tags: 5
 #   Max length: 50 characters.
-#   Can not contain newlines.
-#   Can not contain leading or trailing whitespace characters.
+#   Cannot contain newlines.
+#   Cannot contain leading or trailing whitespace characters.
 tags:
   - 'Information Platform'
   - 'Azure'
