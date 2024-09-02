@@ -6,7 +6,7 @@ uid: Adding_a_DMA_to_a_DMS_running_STaaS
 
 To add a DataMiner Agent to a DMS running STaaS:
 
-1. Make sure that the DMA you are adding is a clean DMA.
+1. Make sure that the DMA you are adding is a clean DMA, meaning that it is a newly installed DMA or a DMA that has been [fully reset](xref:Factory_reset_tool).
 
    > [!IMPORTANT]
    > If the CloudGateway DxM is installed on the DMA you are adding, the data folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data` must be empty.
