@@ -125,32 +125,41 @@ In the Surveyor right-click menu, the following options are available, depending
 | Open | Any | Opens the item in a card. |
 | Open in new card | Any | Opens the item in a new card. |
 | Open in new undocked card | Any | Opens the item in a new, undocked card. |
-| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. See [Ticketing](xref:ticketing). |
-| State | Element only | Opens a shortcut that allows you to change the element state. See [Changing the state of an element](xref:Changing_the_state_of_an_element). |
-| Mask | Element only | Masks the element. See [Masking or unmasking an element](xref:Masking_or_unmasking_an_element) |
-| Unmask | Element only | Unmasks the element. This option is only available for masked elements. |
-| Multiple set | Element only | Opens the *Multiple set* dialog box. See [Setting a parameter value in multiple elements](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements). |
-| Protocols & Templates | Element, enhanced service | Opens a submenu where you can:<br> -  View the used protocol or service protocol, alarm template, and trend template.<br> -  Assign alternative templates.<br> -  View all available templates. |
-| View | Element | Opens a shortcut menu that allows quick access to DataMiner logging or Stream Viewer. |
-| Edit | Element, service | Opens a card where you can change the settings of the element or service. |
+| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. However, note that this functionality is being retired. See [Ticketing](xref:ticketing). |
+| State | Element only | Opens a shortcut that allows you to [change the element state](xref:Changing_the_state_of_an_element). |
+| Mask | Element only | [Masks the element](xref:Masking_or_unmasking_an_element). |
+| Unmask | Element only | [Unmasks the element](xref:Masking_or_unmasking_an_element#unmasking-an-element). This option is only available for masked elements. |
+| Multiple set | Element only | Allows you to [set a parameter value in multiple elements](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements). |
+| Protocols & Templates | Element, enhanced service | Opens a submenu where you can:<br> - View the used [protocol](xref:Protocols1) or [service protocol](xref:About_services#enhanced-services), [alarm template](xref:About_alarm_templates), and [trend template](xref:About_trend_templates).<br> - Assign alternative templates.<br> - View all available templates. |
+| View | Element | Opens a shortcut menu that allows quick access to [DataMiner logging](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube) or [Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer). |
+| Edit | Element, service | Opens a card where you can change the configuration of the element or service. |
 | Remove from parent | Any view child item, except a child view | Moves the item from the parent view to the root view. |
 | Delete | Any except root view | Removes the item. |
 | Duplicate | Element, service | Duplicates the item. |
-| Rename | Element, service, view, redundancy group | Allows the user to rename the item |
-| New | Any | Opens a submenu where you can select to create a new element, service, service template or SLA. If you right-clicked a view, you can also select to create a new view. |
-| Actions | Element, service, view | Opens a shortcut menu with options to configure personal alerts, start Correlation analyzers, open a filtered alarm tab, and other options depending on the right-clicked item. |
+| Rename | Element, service, view, redundancy group | Allows you to rename the item. |
+| New | Any | Opens a submenu where you can select to create a new [element](xref:About_elements), [service](xref:About_services), [service template](xref:Service_templates), [redundancy group](xref:About_redundancy_groups),[redundancy group template](xref:About_redundancy_groups#redundancy-group-templates), or [SLA](xref:sla). If you right-clicked a view, you can also select to create a new view. |
+| Actions > Alert me | Element, service, view | Allows you to [configure a personal alert](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor) for alarms related to the right-clicked item. |
+| Actions > Export | Element, service, view | Allows you to export the selected item [to a DataMiner package](xref:Exporting_elements_services_etc_to_a_dmimport_file) or [to a CSV file](xref:Importing_and_exporting_elements#exporting-elements-to-a-csv-file). |
+| Actions > Import | View | Allows you to [import a DataMiner package](xref:Importing_elements_services_etc_from_a_dmimport_file) or [a CSV file](xref:Importing_and_exporting_elements) in the right-clicked view. |
+| Actions > Create simulation | Element | Allows you to [create a simulation file](xref:Creating_a_simulated_element#creating-a-simulation-file) based on the right-clicked element, which can be used to create a [simulated element](xref:Simulated_elements). |
+| Actions > Enable simulation | Element | Allows you to [create a simulated element](xref:Creating_a_simulated_element). |
+| Actions > Add tab to global Alarm Console | Element, service, view | Creates a filtered tab in the Alarm Console to show alarms for the right-clicked item only. |
+| Actions > Apply service template | View | Allows you to [apply a service template](xref:Applying_service_templates) to the right-clicked view. |
+| Actions > Upgrade to service | View without child views | Allows you to transform the right-clicked view into a service. The child elements in the view will become child elements of the new service. |
+| Actions > Analyze | Element, service, view | Allows you to [analyze the alarms](xref:Using_Correlation_analyzers) for the right-clicked item in order to create a Correlation rule based on that analysis. |
+| Actions > Add element/service to dashboard | Element, service | Allows you to add the right-clicked item to a legacy dashboard. However, note that the [legacy dashboards module](xref:dashboards) is being retired, and it is by default disabled from DataMiner 10.4.0/10.4.1 onwards. |
 | Properties | Element, service, view | Opens the item’s *Properties* window. |
-| Drag and drop editing | Any | Enables drag-and-drop view editing mode. See [Editing a view](xref:Managing_views#editing-a-view). |
+| Drag and drop editing | Any | Enables the [drag-and-drop view editing mode](xref:Managing_views#editing-a-view). |
 
 > [!NOTE]
 >
 > - For some special items, such as redundancy group templates or service templates, additional options are available.
-> - The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
+> - The *View* option is also available for [enhanced services](xref:About_services#enhanced-services), with the options to view the protocol, alarm template, or trend template of such a service.
 > - When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
 
 ## Activity pane
 
-The activity button displays a pane listing recently opened items, such as elements, services, views and apps.
+The activity button displays a pane listing recently opened items, such as elements, services, views, and apps.
 
 The following actions are possible with this list:
 
