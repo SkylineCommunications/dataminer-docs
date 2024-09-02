@@ -9,6 +9,32 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID_40601]
+
+When you search for an item in the Catalog, a documentation link will now be shown next to the type filter. This link will navigate to the Catalog types information on DataMiner Docs.
+
+#### 30 August 2024 - Enhancement - Catalog - Owners or source no longer shown in details page side panel when not defined [ID_40584]
+
+On the details page of a Catalog item, the side panel will no longer show the owners and source section if the owners or source are not defined.
+
+#### 30 August 2024 - Fix - Catalog - Search overlay on Catalog details not closing [ID_40533]
+
+When you searched for a Catalog item while on a Catalog details page, it could occur that the search overlay did not close when the search results were loaded.
+
+#### 30 August 2024 - Enhancement - Admin - Improved restrictions for user role changes [ID_40526]
+
+In the Admin app, users who do not have the rights to change roles will now no longer be able to select other user roles.
+
+In addition, if you change your own role to a role with fewer rights, a warning will now be shown.
+
+#### 30 August 2024 - Fix - Admin - DxM .NET 8 warning when installing DataAggregator 3.0.6 [ID_40478]
+
+When you install the DataAggregator DxM version 3.0.6, a warning will now be shown that .NET 8 is required.
+
+#### 30 August 2024 - Fix - Catalog - Organization field not filled in when registering item [ID_40472]
+
+Up to now, when a user switched organizations prior to registering an item, the organization field would not be filled in. This has now been fixed, so that the organization field is now always filled in based on the selected organization.
+
 #### 16 August 2024 - Fix - Admin - Not possible to remove users from organization [ID_40506]
 
 It could occur that it was not possible to remove users from their organization in the Admin app even though you had the necessary rights to do so.
