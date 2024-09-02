@@ -19,7 +19,7 @@ On the details page of a Catalog item, the side panel will no longer show the ow
 
 #### 30 August 2024 - Fix - Catalog - Search overlay on Catalog details not closing [ID_40533]
 
-When you searched for a Catalog item while on a Catalog detail page, it could occur that the search overlay did not close when the search results were loaded.
+When you searched for a Catalog item while on a Catalog details page, it could occur that the search overlay did not close when the search results were loaded.
 
 #### 30 August 2024 - Enhancement - Admin - Improved restrictions for user role changes [ID_40526]
 
