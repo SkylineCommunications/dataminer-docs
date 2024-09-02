@@ -6,7 +6,7 @@ uid: ConnectionsSmartSerialLogging
 
 When a smart-serial client connection receives incoming data, it will forward that data to SLProtocol and display it in Stream Viewer. However, when the incoming data does not match the configured response, the connection will forward TIMEOUT to SLProtocol, making it hard to find out what data was received by SLPort.
 
-From DataMiner 9.6.0 [CU24], 10.0.0 [CU16], 10.1.0 [CU5] and 10.1.8 onwards, If you enable a specific connection in PortLog.txt (see [PortLog.txt](xref:PortLog_txt)]) and set SLPort debug logging to level 4 or higher, log entries like the one below will be added to SLPort.txt. These entries contain the IP address and port of the server, the size of the incoming data and the data itself.
+From DataMiner 9.6.0 [CU24], 10.0.0 [CU16], 10.1.0 [CU5] and 10.1.8 onwards, If you enable a specific connection in PortLog.txt (see [PortLog.txt](xref:PortLog_txt)) and set SLPort debug logging to level 4 or higher, log entries like the one below will be added to SLPort.txt. These entries contain the IP address and port of the server, the size of the incoming data and the data itself.
 
 ```
 2021/05/14 15:30:57.452|SLPort.exe 8.5.1519.6|39680|39544|
