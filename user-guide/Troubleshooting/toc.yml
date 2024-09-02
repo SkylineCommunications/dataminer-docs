@@ -224,28 +224,20 @@ items:
     items:
       - name: Current issues
         items:
-          - name: ButtonState shapes in Visual Overview fail to hide as expected
-            topicUid: KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected
           - name: Inconsistent service impact of alarms after element is stopped and restarted
             topicUid: KI_Inconsistent_service_impact
           - name: Unable to perform a DataMiner upgrade via Update Center
             topicUid: KI_Unable_to_perform_a_DataMiner_upgrade_via_Update_Center
           - name: Unable to override information events TTL of 5 years
             topicUid: KI_Information_events_TTL_five_years
-          - name: Timetrace data is no longer written during Cassandra Cluster migration
-            topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: Problem after removing DMA from cluster
             topicUid: KI_Problem_after_removing_DMA_from_cluster
-          - name: Corrupted low-code app after concurrent editing actions
-            topicUid: KI_app_corruption_after_editing
           - name: Elasticsearch not initialized when DataMiner starts up
             topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
           - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
             topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
           - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
             topicUid: KI_Win2012R2_ignores_IP_in_SAN_field
-          - name: Local user unable to access DMA after first reboot after installation
-            topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
           - name: Various SLElement issues
             topicUid: KI_SLElement_various_issues
           - name: NATS not starting if DMS name contains special characters
@@ -260,6 +252,14 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: ButtonState shapes in Visual Overview fail to hide as expected
+            topicUid: KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected
+          - name: Timetrace data is no longer written during Cassandra Cluster migration
+            topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
+          - name: Corrupted low-code app after concurrent editing actions
+            topicUid: KI_app_corruption_after_editing
+          - name: Local user unable to access DMA after first reboot after installation
+            topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
           - name: NATS services missing after reboot
             topicUid: KI_missing_NATS_services
           - name: Process crashes when trying to connect to MySQL database

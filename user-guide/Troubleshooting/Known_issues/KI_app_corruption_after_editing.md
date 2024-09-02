@@ -18,7 +18,7 @@ Avoid concurrent editing actions. If these have occurred and the App.info.json f
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU18], 10.4.0 [CU6], or 10.4.9<!--RN 40075-->.
 
 ## Description
 
