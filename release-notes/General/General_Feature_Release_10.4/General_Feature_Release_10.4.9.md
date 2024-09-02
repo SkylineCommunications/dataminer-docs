@@ -95,11 +95,11 @@ Table sizes will now be limited to protect DataMiner against ever-growing tables
 
 ##### Row count limit for non-partial tables
 
-If a table reaches 85000 rows:
+If a table reaches 85&thinsp;000 rows:
 
 - A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
 
-If a table reaches 105000 rows:
+If a table reaches 105&thinsp;000 rows:
 
 - The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
 - An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
@@ -109,16 +109,16 @@ If a table reaches 105000 rows:
 
 If the row count of a table drops:
 
-- If the row count of a table drops below 100000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
-- If the row count of a table drops below 80000, both the notice alarm and the notice alarm banner will be removed.
+- If the row count of a table drops below 100&thinsp;000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
+- If the row count of a table drops below 80&thinsp;000, both the notice alarm and the notice alarm banner will be removed.
 
 ##### Alarms for volatile tables with RTDisplay set to false
 
-If a table reaches 805000 rows:
+If a table reaches 805&thinsp;000 rows:
 
 - A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
 
-if a table reaches 1005000 rows:
+if a table reaches 1&thinsp;005&thinsp;000 rows:
 
 - The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
 - An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
@@ -128,8 +128,8 @@ if a table reaches 1005000 rows:
 
 If the row count of a table drops:
 
-- If the row count of a table drops below 1000000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
-- If the row count of a table drops below 800000, both the notice alarm and the notice alarm banner will be removed.
+- If the row count of a table drops below 1&thinsp;000&thinsp;000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
+- If the row count of a table drops below 800&thinsp;000, both the notice alarm and the notice alarm banner will be removed.
 
 ##### Format of alarms and banner messages
 
