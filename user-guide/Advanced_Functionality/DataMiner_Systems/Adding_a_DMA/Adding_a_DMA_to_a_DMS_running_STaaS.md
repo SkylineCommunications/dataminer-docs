@@ -31,6 +31,9 @@ To add a DataMiner Agent to a DMS running STaaS:
       <NATSForceManualConfig>true</NATSForceManualConfig>
       ```
 
+      > [!NOTE]
+      > This will temporarily disable automatic NATS configuration. Make sure to follow all steps in the procedure below so that automatic NATS configuration is enabled again later.
+
    1. Configure *DB.xml* with STaaS:
 
       1. In the `C:\Skyline DataMiner` folder, open *DB.xml*.
