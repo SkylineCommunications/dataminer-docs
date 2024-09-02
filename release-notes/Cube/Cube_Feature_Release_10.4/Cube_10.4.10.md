@@ -34,7 +34,7 @@ To detect the presence of Pcap libraries on a DataMiner Agent, Cube will send a 
 
 > [!NOTE]
 >
-> - These changes will only work in conjunction with DataMiner server version 10.4.9 or newer.
+> - These changes will only work in conjunction with DataMiner server version 10.4.10 or newer.
 > - While it is not mandatory to install Pcap libraries on DataMiner Agents, we highly recommend installing them on DataMiner Agents that will be used in Failover setups with virtual IP addresses.
 > - As WinPcap is considered deprecated, we recommend using Npcap instead.
 > - Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send a *PcapInfoRequestMessage*. When you do not have this permission, an error message will appear.
