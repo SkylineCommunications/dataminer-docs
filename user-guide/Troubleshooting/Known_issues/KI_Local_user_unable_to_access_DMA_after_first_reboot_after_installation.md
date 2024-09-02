@@ -14,7 +14,7 @@ When you install and configure DataMiner using a local user, this user is added 
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.4.0 [CU4]/10.4.7<!--RN 39234-->.
 
 ## Issue description
 
