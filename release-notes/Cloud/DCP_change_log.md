@@ -27,7 +27,7 @@ In the Admin app, users who do not have the rights to change roles will now no l
 
 In addition, if you change your own role to a role with fewer rights, a warning will now be shown.
 
-#### 30 August 2024 - Fix - Admin - DxM .NET 8 warning when installing DataAggregator 3.0.6 [ID_40478]
+#### 30 August 2024 - Enhancement - Admin - DxM .NET 8 warning when installing DataAggregator 3.0.6 [ID_40478]
 
 When you install the DataAggregator DxM version 3.0.6, a warning will now be shown that .NET 8 is required.
 

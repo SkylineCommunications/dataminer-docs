@@ -4,6 +4,14 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - MessageBroker dependency updated [ID_40491]
+
+The DataMiner MessageBroker dependency in the DataAggregator DxM has been updated to version 3.0.1.
+
+#### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - Update to .NET 8 [ID_40478]
+
+Data Aggregator has been updated to use .NET 8.
+
 #### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI also shows jobs when DataAPI soft-launch option is not enabled [ID_39159]
 
 The debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) now also shows the jobs even when the *DataAPI* soft-launch option is not enabled.
