@@ -2,13 +2,24 @@
 uid: Register_Catalog_Item
 ---
 
-# Registering a Catalog item
+# Catalog Registration
 
-Below you can find detailed information on how you can register a private Catalog item, either [using the Catalog UI](#using-the-catalog-ui), or [using the Catalog API](#using-the-catalog-api).
+ In order to make a catalog item (version) available on the [Catalog](https://catalog.dataminer.services/), you need to register it.
+ Registration can be done using the Catalog UI or using the Catalog API.
+
+ Using the [Catalog UI](#using-the-catalog-ui), it is possible to register a catalog item with limited properties and without a version.  
+
+ Using the [Catalog API](#using-the-catalog-api), it is possible to 
+  - register a catalog item with a version.
+  - register a new catalog item version of an existing catalog item.
+  - register a new description of a catalog item.
+
+
+Below you can find detailed steps on how you can register a private Catalog item (version), using either the [Catalog UI](#using-the-catalog-ui), or the [Catalog API](#using-the-catalog-api).
 
 ## Using the Catalog UI
 
-If you use the UI, you can only register a new Catalog item, but not a new version. To register a new version for an existing item, [use the API](#using-the-catalog-api).
+If you use the UI, you can only register a new Catalog item, but not a new version. To register a new version for an existing item, use the [Register new catalog item version](#register-a-new-catalog-item-version) API call.
 
 To register a new Catalog item:
 
@@ -16,7 +27,7 @@ To register a new Catalog item:
 
 1. Open the user menu by clicking the user icon in the top-right corner.
 
-1. Click the *Register item* button.
+1. Click the *Register new catalog item* menu item.
 
 1. Select the organization for which you want to register the Catalog item.
 
@@ -34,62 +45,76 @@ To register a new Catalog item:
 
    This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item using the [API](#using-the-catalog-api).
 
-> [!NOTE]
-> If the archive containing the new Catalog item version contains a readme.md file, the content of this file will be shown in the description tab for the Catalog item. Note that images are currently not yet supported in this readme file.<!-- RN 40190+40241 -->
-
 ## Using the Catalog API
 
 ### Authentication
 
-The API call is authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
-### API call signature
+### Register a catalog item with a version
 
-The call to register a Catalog item can be found at the following URL: <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>. To call the API you will need to use the **POST** HTTP method.
+#### URL
+<https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
 
-The body of the request should be of type "multipart/form-data". A key of type **File** needs to be added called "file". The value of this key should be a zip file containing a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) and the item you want to upload.
+#### HTTP method
 
-### Manifest file
+PUT
 
-This file will contain all necessary information to register a Catalog item or version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
+#### Body
 
-> [!IMPORTANT]
-> If the *id* field is not filled in, a new Catalog item registration will be created. If you want to register a new version for an existing Catalog item, make sure to fill in the ID of that item.
+The body of the request should be of type **multipart/form-data** and must contain:  
+
+A key of type **File** and name **file**.  
+The value of this key should be a **zip** file containing 
+
+- [required] a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) file.
+- [required] the catalog item installation file you want to upload. Supported types are DataMiner Protocol packages (.dmprotocol) and DataMiner Application packages (.dmapplication).
+- [optional] a readme.md file that contains the description of the catalog item.
+- [optional] an "images" folder containing any image being referenced by the readme file.  
+Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
+
+##### Manifest file
+
+This file will contain all necessary information to register a catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
+
 
 ```yml
 # [Required]
-# A short description of the types can be found here: https://aka.dataminer.services/catalogitemtypes.
-# Possible values: 
-# - connector
-# - automationscript
-# - solution
-# - testingsolution
-# - samplesolution
-# - standardsolution
-# - dashboard
-# - lowcodeapp
-# - chatopsextension
-# - userdefinedapi
-# - datatransformer
-# - lifecycleserviceorchestration
-# - profileloadscript
-# - processactivity
-# - functiondefinition
-# - slamodel
-# - enhancedservicemodel
-# - scriptedconnector
-# - adhocdatasource
-# - bestpracticesanalyzer
+# Possible values for the catalog item that can be deployed on a DataMiner System:
+#   - automationscript: If the catalog item is a general-purpose DataMiner Automation script.
+#   - lifecycleserviceorchestration: If the catalog item is a DataMiner Automation script designed to manage the life cycle of a service.
+#   - profileloadscript: If the catalog item is a DataMiner Automation script designed to load a standard DataMiner profile.
+#   - userdefinedapi: If the catalog item is a DataMiner Automation script designed as a user-defined API.
+#   - adhocdatasource: If the catalog item is a DataMiner Automation script designed for a ad hoc data source integration.
+#   - chatopsextension: If the catalog item is a DataMiner Automation script designed as ChatOps Extension.
+#   - connector: If the catalog item is a DataMiner XML connector.
+#   - slamodel: If the catalog item is a DataMiner XML connector designed as DataMiner Service Level Agreement model.
+#   - enhancedservicemodel: If the catalog item is a DataMiner XML connector designed as DataMiner enhanced service model.
+#   - visio: If the catalog item is a Microsoft Visio design.
+#   - solution: If the catalog item is a DataMiner Solution.
+#   - testingsolution: If the catalog item is a DataMiner Solution designed for automated testing and validation.
+#   - samplesolution: If the catalog item is a DataMiner Solution used for training and education.
+#   - standardsolution: If the catalog item is a DataMiner Solution which is a out-of-the-box solution for specific use case or application.
+#   - dashboard: If the catalog item is a DataMiner Dashboard.
+#   - lowcodeapp: If the catalog item is a DataMiner low-code app.
+#   - datatransformer: If the catalog item is a Data Transformer.
+#   - dataquery: If the catalog item is a GQI data query.
+#   - functiondefinition: If the catalog item is a DataMiner function definition.
+#   - scriptedconnector: If the catalog item is a DataMiner scripted connector.
+#   - bestpracticesanalyzer: If the catalog item is a DataMiner Best practices Analysis file.
+
 type: 'automationscript'
 
 # [Required] 
 # The id of the catalog item.
-# All versions for the same id are shown together in the catalog.
+# All registered versions for the same id are shown together in the catalog.
 # This id can not be changed. 
-# If the id is not filled in, the API will return one and consider this as the registration of a new item.
-# If the id is filled in, a new version will be added to the catalog item with the given version number.
+# If the id is not filled in, the registration will fail with http status code 500. 
+# If the id is filled in but does not exist yet, a new catalog item will be registered with this id.
+# If the id is filled in but does exist, properties of the item will be overwritten, the version will be created or overwritten if it already existed.
+# (!!!!!!!!!!!!!todo bug fix?? check PR)
 #   Must be a valid GUID.
-id: '<fill in guid here or leave empty>'
+id: '<fill in guid here>'
 
 # [Required] 
 # The human-friendly name of the catalog item. 
@@ -151,3 +176,46 @@ tags:
   - 'Information Platform'
   - 'Azure'
 ```
+
+### Register a new catalog item version
+
+#### URL
+<https://api.dataminer.services/api/key-catalog/v1-0/catalog/register{catalogId:guid}/version>
+
+Route parameter "catalogId" is the id of the catalog item of which a new version is registered. Must be a valid Guid
+
+#### HTTP method
+
+POST
+
+#### Body
+
+
+The body of the request should be of type **multipart/form-data** and must contain  
+
+- a key of type **File** with name **file**.  
+The value is the catalog item installation file, supported types are a DataMiner Protocol package (.dmprotocol) or a DataMiner Application package (.dmapplication)
+
+- a key of type **Text** with name **versionNumber**.  
+The value is the version number you want to register.
+- a key of type **Text** with name **description**.  
+The value is the description of the version you want to register.
+
+### Register a catalog description
+
+#### URL
+<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:guid}/description>
+#### HTTP method
+
+POST
+
+#### Body
+
+The body of the request should be of type **multipart/form-data** and must contain  
+
+- a key of type **File** with name **file**.  
+The value is a zip file containing the readme.md file and optionally a folder with name "images" containing all referenced images.  
+Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
+
+
+
