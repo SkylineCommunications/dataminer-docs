@@ -210,3 +210,9 @@ From now on, every *DOMInstanceChangeEvents* subscription will get a unique conn
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When, in the *Time range* component, you picked a custom time range, the picker would become transparent, making it difficult to read its contents, especially when a dark dashboard theme was being used. From now on, the picker will no longer be transparent and will adapt its color scheme to the dashboard theme that is being used.
+
+#### Dashboards/Low-Code Apps: Line & area chart component would not update correctly when the feed input changed [ID_40620]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+In some cases, a *Line & area chart* component would not update correctly whenever the feed input changed.
