@@ -4,4 +4,4 @@ uid: TroubleshootingSLScriptingIssues
 
 # Troubleshooting - SLScripting
 
-- [Investigate StackOverflowException occurrence](TroubleshootingSLScriptingStackOverflowException)
+- [Investigate StackOverflowException occurrence](xref:TroubleshootingSLScriptingStackOverflowException)

@@ -2,7 +2,7 @@
 uid: TroubleshootingSLScriptingStackOverflowException
 ---
 
-# StackOverflow exception
+# Investigate StackOverflowException occurrence
 
 To illustrate how to investigate a [StackOverflowException](https://learn.microsoft.com/en-us/dotnet/api/system.stackoverflowexception?view=netframework-4.8.1) that occurs in SLScripting, an example connector has been created with a QAction that has a method that results in infinite recursion (i.e. a recursive method that does not have stop condition). DataMiner automatically created a dump and we will investigate the dump.
 

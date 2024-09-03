@@ -669,6 +669,8 @@ items:
           topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
           topicUid: System_Collections_Generic_KeyNotFoundException
+        - name: System.StackOverflowException
+          topicUid: System_StackOverflowException
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
