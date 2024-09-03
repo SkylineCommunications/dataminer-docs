@@ -205,6 +205,11 @@ items:
         items:
           - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
             topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Troubleshooting - SLScripting
+        topicUid: TroubleshootingSLScriptingIssues
+        items:
+          - name: Investigate StackOverflowException occurrence
+            topicUid: TroubleshootingSLScriptingStackOverflowException
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues
       - name: Troubleshooting – web
