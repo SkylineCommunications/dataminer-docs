@@ -2,26 +2,20 @@
 uid: Register_Catalog_Item
 ---
 
-# Catalog Registration
+# Catalog item registration
 
- In order to make a catalog item (version) available on the [Catalog](https://catalog.dataminer.services/), you need to register it.
- Registration can be done using the Catalog UI or using the Catalog API.
+ In order to make a catalog item (version) available on [Catalog](https://catalog.dataminer.services/), you need to register it with an organization.  
+ The catalog item will be available for the registered organization only and will be marked *private* in the UI to indicate it as such.   
 
- Using the [Catalog UI](#using-the-catalog-ui), it is possible to register a catalog item with limited properties and without a version.  
-
- Using the [Catalog API](#using-the-catalog-api), it is possible to 
-  - register a catalog item with a version.
-  - register a new catalog item version of an existing catalog item.
-  - register a new description of a catalog item.
+ Registration can be done using the [Catalog UI](#using-the-catalog-ui) and the [Catalog API](#using-the-catalog-api). 
+ Below you can find detailed steps on how to use them.
 
 
-Below you can find detailed steps on how you can register a private Catalog item (version), using either the [Catalog UI](#using-the-catalog-ui), or the [Catalog API](#using-the-catalog-api).
+## Catalog UI
 
-## Using the Catalog UI
+Using the Catalog UI, it is possible to register a catalog item by its *name* and *type* but no version can be registered. Registration returns a unique identifier for the catalog item, which can be used by the [Catalog API](#using-the-catalog-api) to update additional properties or register new versions. 
 
-If you use the UI, you can only register a new Catalog item, but not a new version. To register a new version for an existing item, use the [Register new catalog item version](#register-a-new-catalog-item-version) API call.
-
-To register a new Catalog item:
+To register a new catalog item:
 
 1. Go to the [Catalog](https://catalog.dataminer.services).
 
@@ -43,15 +37,23 @@ To register a new Catalog item:
 
 1. Once all information has been filled in, click *Register*.
 
-   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item using the [API](#using-the-catalog-api).
+   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item or update additional properties using the [Catalog API](#using-the-catalog-api).
 
-## Using the Catalog API
+## Catalog API
 
-### Authentication
+Using the Catalog API, it is possible to  
+
+- [register a catalog item with a version](#register-a-catalog-item-with-a-version).
+- [register a new catalog item version of an existing catalog item](#register-a-new-catalog-item-version).
+- [register a new description of a catalog item](#register-a-catalog-description).
 
 The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
+A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#using-the-catalog-ui) or created by yourself.
+
 ### Register a catalog item with a version
+
+The register API call allows you to create or update a Catalog item (version).
 
 #### URL
 <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
@@ -69,13 +71,13 @@ The value of this key should be a **zip** file containing
 
 - [required] a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) file.
 - [required] the catalog item installation file you want to upload. Supported types are DataMiner Protocol packages (.dmprotocol) and DataMiner Application packages (.dmapplication).
-- [optional] a readme.md file that contains the description of the catalog item.
+- [optional] a readme.md file that contains the description of the Catalog item.
 - [optional] an "images" folder containing any image being referenced by the readme file.  
 Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
 
 ##### Manifest file
 
-This file will contain all necessary information to register a catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
+This file will contain all necessary information to register a Catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
 
 
 ```yml
@@ -112,7 +114,6 @@ type: 'automationscript'
 # If the id is not filled in, the registration will fail with http status code 500. 
 # If the id is filled in but does not exist yet, a new catalog item will be registered with this id.
 # If the id is filled in but does exist, properties of the item will be overwritten, the version will be created or overwritten if it already existed.
-# (!!!!!!!!!!!!!todo bug fix?? check PR)
 #   Must be a valid GUID.
 id: '<fill in guid here>'
 
@@ -179,6 +180,8 @@ tags:
 
 ### Register a new catalog item version
 
+The register version API call allows you to create a new version for a Catalog item
+
 #### URL
 <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register{catalogId:guid}/version>
 
@@ -203,11 +206,13 @@ The value is the description of the version you want to register.
 
 ### Register a catalog description
 
+The register description API call allows you to create or update a description of a catalog item.
+
 #### URL
 <https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:guid}/description>
 #### HTTP method
 
-POST
+PUT
 
 #### Body
 
