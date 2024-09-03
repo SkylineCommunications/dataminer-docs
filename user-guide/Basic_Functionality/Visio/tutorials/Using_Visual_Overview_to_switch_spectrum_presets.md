@@ -8,9 +8,6 @@ This tutorial explains how to start from a blank Visio file and add a spectrum c
 
 Expected duration: 25 minutes
 
-> [!TIP]
-> See also: [Kata #Uknown: Visual Overview with Spectrum Presets](https://community.dataminer.services/courses/kata-unknown/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
@@ -27,7 +24,7 @@ Expected duration: 25 minutes
 - [Step 6: Use the preset on the spectrum component](#step-6-use-the-preset-on-the-spectrum-component)
 - [Step 7: Create presets for the measurements](#step-7-create-presets-for-the-measurements)
 - [Step 8: Use session variables to link the presets to buttons](#step-8-use-session-variables-to-link-the-presets-to-buttons)
-- [Step 9: Display the current selection - optional](#step-9-display-the-current-selection---optional)
+- [Step 9: Display the current selection](#step-9-display-the-current-selection)
 
 ## Step 1: Create a view
 
@@ -160,9 +157,7 @@ In this step, we will use session variables and placeholders to link buttons to 
 
 1. Click the buttons and verify that the presets are correctly changed.
 
-## Step 9: Display the current selection - optional
-
-This part is shown in the initial demo in the video, but is not included in the video instructions.
+## Step 9: Display the current selection
 
 1. Add a number of images in the visio file that represent the setup in your system. You can for example use the [Skylicons](https://skyline.be/skylicons)
 
