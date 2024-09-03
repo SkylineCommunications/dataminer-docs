@@ -89,6 +89,7 @@ At this point, the basic installation is complete. However, to be able to make f
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
 > - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+> - After the installation, if you have [configured security](xref:Managing_users) so that there is at least one other user with full administrator rights, you can safely remove the account you used for the installation if necessary.
 
 ### Custom DataMiner installation
 
@@ -155,4 +156,6 @@ At this point, the basic installation is complete. However, to be able to make f
 > During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
 
 > [!NOTE]
-> To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+>
+> - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+> - After the installation, if you have [configured security](xref:Managing_users) so that there is at least one other user with full administrator rights, you can safely remove the account you used for the installation if necessary.
