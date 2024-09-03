@@ -4,9 +4,12 @@ uid: TroubleshootingSLScriptingIssues
 
 # Troubleshooting - SLScripting
 
+> [!IMPORTANT]
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 ## Memory dump investigation
 
-In case you experience an SLScripting crash because the process ran out of memory or you observe a memory leak to be present in SLScripting, analyzing a memory dump of the SLScripting process can provide more info on what is causing the leak.
+In case you experience an SLScripting crash because the process ran out of memory or you observe a memory leak to be present in the SLScripting process, analyzing a memory dump of the SLScripting process can provide more info on what is causing the leak.
 
 Note that by default a single instance of the SLScripting process is spun up by DataMiner. This process is responsible for executing the QActions of protocols. QActions execute C# code which is executed by the CLR of the .NET Framework. Therefore, if you observe a memory leak in SLScripting, a good stating point is to analyze the managed memory of the SLScripting process. Note however that in some situations a leak could be present in unmanaged memory, for example when unmanaged resources are not cleaned up correctly.
 
@@ -48,4 +51,4 @@ Press the *Managed Memory Tool* link. This will now process the dump to process 
 ![Managed Memory results](~/user-guide/images/SLScriptingManagedMemoryTool.png)
 
 > [!NOTE]
-> In some cases, it could be that the Analysis result does not show this potential fix and therefore does not provide a link to open the Managed Memory Tool. In that case, use another tool to inspect the managed memory, such as [WinDbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/).
+> In some cases, it could be that the Analysis result does not show this potential fix and therefore does not provide a link to open the Managed Memory Tool. In that case, use another tool to inspect the managed memory, such as the [Dump Analyzer Server](https://internaldocs.skyline.be/DevDocs/Dump_Analyzer_Server/Intro.html), [Memory Dump Analyzer SLScripting](https://internaldocs.skyline.be/DevDocs/Analyzing_SLScripting_Memory_Dumps/Memory_Dump_Analyzer_SLScripting.html), [WinDbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/).
