@@ -207,6 +207,9 @@ items:
             topicUid: Elastic_not_starting_after_upgrade_cleanup
       - name: Troubleshooting - SLScripting
         topicUid: TroubleshootingSLScriptingIssues
+        items:
+        - name: Investigating OutOfMemoryException occurrence
+          topicUid: TroubleshootingSLScriptingOutOfMemoryException
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues
       - name: Troubleshooting – web

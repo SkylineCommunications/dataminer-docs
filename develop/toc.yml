@@ -651,7 +651,7 @@ items:
       - name: How to use the element log in connector integrations
         topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      items:
+      items: 
       - name: Investigating a protocol thread RTE
         topicUid: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
@@ -667,6 +667,8 @@ items:
           topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
           topicUid: System_Collections_Generic_KeyNotFoundException
+        - name: System.OutOfMemoryException
+          topicUid: System_OutOfMemoryException
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases

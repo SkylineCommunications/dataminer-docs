@@ -1,0 +1,52 @@
+---
+uid: TroubleshootingSLScriptingOutOfMemoryException
+---
+
+# Investigating OutOfMemoryException occurrence
+
+> [!IMPORTANT]
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
+In case you experience an SLScripting crash because the process ran out of memory or you observe a memory leak to be present in the SLScripting process, analyzing a memory dump of the SLScripting process can provide more info on what is causing the leak.
+
+Note that by default a single instance of the SLScripting process is spun up by DataMiner. This process is responsible for executing the QActions of protocols. QActions execute C# code which is executed by the CLR of the .NET Framework. Therefore, if you observe a memory leak in SLScripting, a good stating point is to analyze the managed memory of the SLScripting process. Note however that in some situations a leak could be present in unmanaged memory, for example when unmanaged resources are not cleaned up correctly.
+
+In case of a crash due to the SLScripting process running out of memory, the log files in the generated log collector package should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
+
+For example:
+
+```txt
+System.AggregateException: One or more errors occurred. ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at ...
+```
+
+You can take a dump of the SLScripting process at any time using tools such as [ProcDump](xref:Collecting_DataMiner_Cube_memory_dumps#procdump) or via the [SLNetClientTest tool](xref:SLNetClientTest_creating_dump_for_process).
+
+### Visual Studio
+
+Once you have a .dmp file (either extracted from the Log Collector package or created by another tool), you can open it in Visual Studio via *File* > *Open* > *File...* (or by pressing `Ctrl + O`).
+Select the .dmp file and press the *Open* button. This will give an overview of the Minidump File Summary:
+
+![SLScripting Minidump File Summary](~/user-guide/images/SLScriptingMinidumpFileSummary.png)
+
+In the *Actions* overview, click the *Run Diagnostic Analysis* link. This opens the *Diagnostic Analysis* window. Make sure all memory related checkboxes are checked and press the *Analyze* button.
+
+![Diagnostic Analysis window](~/user-guide/images/SLScriptingDiagnosticAnalysis.png)
+
+Once the analysis completes the analysis result is shown in the window:
+
+![Diagnostic Analysis window results](~/user-guide/images/SLScriptingDiagnosticAnalysisResult.png)
+
+In case the analysis result contains an entry *Managed Heap Summary*, click the entry to see more information.
+In case the summary mentions the following Potential Fix:
+
+```txt
+High memory pressure may be a symptom of a memory leak or inefficient memory usage and can lead to slow performance or crashes. See if your application has memory leaks by using the *Managed Memory Tool* or profilers to monitor its runtime. Ensure your application is cleaning up unused objects in a timely manner.
+```
+
+Press the *Managed Memory Tool* link. This will now process the dump to process the managed memory and give you an overview of the types of objects present in managed memory together with their size:
+
+![Managed Memory results](~/user-guide/images/SLScriptingManagedMemoryTool.png)
+
+> [!NOTE]
+> In some cases, it could be that the Analysis result does not show this potential fix and therefore does not provide a link to open the Managed Memory Tool. In that case, use another tool to inspect the managed memory, such as the [Dump Analyzer Server](https://internaldocs.skyline.be/DevDocs/Dump_Analyzer_Server/Intro.html), [Memory Dump Analyzer SLScripting](https://internaldocs.skyline.be/DevDocs/Analyzing_SLScripting_Memory_Dumps/Memory_Dump_Analyzer_SLScripting.html), [WinDbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/).
