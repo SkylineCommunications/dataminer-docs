@@ -261,6 +261,12 @@ In some rare cases, SLAnalytics could stop working when a pattern was deleted on
 
 When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) initialized a migration, SLDataGateway would stop writing alarms to the TimeTrace table. When the migration was subsequently aborted, data would be lost.
 
+#### Service & Resource Management: Problem when a reservation instance property had been updated while the agents in the DMS were disconnected [ID_40484]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
+
+When a property of a reservation instance had been updated while the agents in the DMS were disconnected, in some cases, when the agents were connected again, an error could occur when another reservation instance property was updated.
+
 #### Problem with SNMPv3 communication when the same device was polled with different credentials [ID_40502]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
