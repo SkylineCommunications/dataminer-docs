@@ -94,7 +94,7 @@ To search for an **element**, enter (part of):
 
 - an element description
 
-- a pollingIP
+- a polling IP
 
 - an alarm severity (e.g. critical, etc.)
 
