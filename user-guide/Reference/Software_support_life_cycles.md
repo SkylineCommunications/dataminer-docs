@@ -39,12 +39,15 @@ Important announcements about the latest changes to DataMiner core functionality
 | Item | <div style="width: 150px;">Current status</div> | Detail | Future status |
 |---------|---------|---------|---------|
 | Asset Manager | End of Engineering | Module is being retired. | End of Life to be confirmed |
+| Pivot table and Group components | End of Engineering | These components are being retired in the Dashboards app and Low-Code Apps. | End of Life to be confirmed |
+| Ticketing app | End of Engineering | Skyline is researching a replacement for this module. | End of Life to be confirmed |
 | Legacy Correlation Engine | End of Engineering | Module is being retired. Note that this only applies to the legacy System Display Correlation engine | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Jobs app | End of Engineering | Module is being retired. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
-| Ticketing app | End of Engineering | Skyline is researching a replacement for this module. | End of Life to be confirmed |
-| Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life |
+| Child bookings | End of Engineering | Child bookings are being retired, as the same functionality is supported with contributing bookings | End of Life as of DataMiner version 10.5.x (Q4 2024) |
+| Recurring bookings | End of Engineering | Recurring bookings are being retired. Instead, this handled as a recurring job that is scheduled. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
-|  Web Services API v0 | End of Life | From DataMiner version 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. | End of Life |
+| Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life |
+| Web Services API v0 | End of Life | From DataMiner version 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. | End of Life |
 | XML storage of SRM resources and profiles | End of Life | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. | End of Life |
 
 Status overview:

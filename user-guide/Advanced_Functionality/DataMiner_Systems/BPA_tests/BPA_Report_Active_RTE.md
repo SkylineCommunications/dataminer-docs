@@ -15,6 +15,9 @@ This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards
 - Author: Skyline Communications
 - Default schedule: Every 8 minutes
 
+  > [!NOTE]
+  > From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40201-->, this BPA test is executed automatically 8 minutes after DataMiner has been started. Prior to DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10, this BPA test is executed immediately after a DataMiner restart.
+
 ## Results
 
 ### Success

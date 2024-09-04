@@ -81,6 +81,14 @@ Profile and Services - The visio file name was empty or null. Check the response
 
 When you tried to log on via DataMiner Cube to a DataMiner System that required an additional logon through a portal, up to now, the logon would fail because an incorrect response would be passed on to the server. From now on, the correct response will be passed on.
 
+#### Alarm Console: 'Count alarm' would incorrectly take the incident alarms into account [ID_40405]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When, in the Alarm Console, you create a new active alarms tab with a filter, you can click the *Count alarms* button to count how many alarms match the filter you have configured. Up to now, when you clicked the *Count alarms* button, the incident alarms would incorrectly also be taken into account.
+
+From now on, the incident alarms will only be taken into account when automatic incident tracking is enabled.
+
 #### Visual Overview: Shapes with ButtonState data would fail to hide as expected [ID_40454]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->

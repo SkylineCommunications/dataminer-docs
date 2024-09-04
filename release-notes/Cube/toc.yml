@@ -30,6 +30,8 @@ items:
             topicUid: Cube_Main_Release_10.4.0_CU6
           - name: DataMiner Cube Main Release 10.4.0 CU7 - Preview
             topicUid: Cube_Main_Release_10.4.0_CU7
+          - name: DataMiner Cube Main Release 10.4.0 CU8 - Preview
+            topicUid: Cube_Main_Release_10.4.0_CU8
       - name: Feature Release
         items:
           - name: DataMiner Cube Feature Release 10.4.1
@@ -52,6 +54,8 @@ items:
             topicUid: Cube_Feature_Release_10.4.9
           - name: DataMiner Cube Feature Release 10.4.10 - Preview
             topicUid: Cube_Feature_Release_10.4.10
+          - name: DataMiner Cube Feature Release 10.4.11 - Preview
+            topicUid: Cube_Feature_Release_10.4.11
   - name: v10.3
     items:
       - name: Main Release
@@ -101,6 +105,8 @@ items:
             topicUid: Cube_Main_Release_10.3.0_CU18
           - name: DataMiner Cube Main Release 10.3.0 CU19 - Preview
             topicUid: Cube_Main_Release_10.3.0_CU19
+          - name: DataMiner Cube Main Release 10.3.0 CU20 - Preview
+            topicUid: Cube_Main_Release_10.3.0_CU20
       - name: Feature Release
         items:
           - name: DataMiner Cube Feature Release 10.3.12
