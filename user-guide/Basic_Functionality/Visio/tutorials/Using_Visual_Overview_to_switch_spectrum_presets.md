@@ -2,16 +2,15 @@
 uid: Using_Visual_Overview_to_switch_spectrum_presets
 ---
 
-# Using Visio Overvie to switch spectrum presets
+# Using Visual Overview to switch spectrum presets
 
-This tutorial explains how to start from a blank Visio file and add a spectrum control and several buttons to switch between presets
+This tutorial explains how to start from a blank Visio file and add a spectrum control and several buttons to switch between presets.
 
 Expected duration: 25 minutes
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- Connector: [Skyline Spectrum Simulator](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7)
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and where the connector  [Skyline Spectrum Simulator](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7) has been deployed.
 - [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
 
 ## Overview
@@ -31,23 +30,31 @@ Expected duration: 25 minutes
 1. Open DataMiner Cube and connect to your system.
 
    > [!TIP]
-   > If you created a new DaaS system for this tutorial, refer to [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS) for more information.
+   > If have you created a new DaaS system for this tutorial, refer to [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS) for more information.
 
-1. Right-click the root view and select *New* > *View*
+1. Right-click the root view and select *New* > *View*.
 
-1. Give the view a name of your choice, e.g. `Visio spectrum presets`
+1. Give the view a name of your choice, e.g. `Visio spectrum presets`.
 
 ## Step 2: Create a spectrum simulation element
 
-1. Right-click the view you just created and select *New* > *Element*
+1. Right-click the view you have just created and select *New* > *Element*.
 
-1. Create an element using the Skyline Spectrum Simulator connector. Give the element a name of your choice, e.g. "Spectrum Simulation". Refer to [Adding elements](xref:Adding_elements) for more information.
+1. Configure the new element as follows:
+
+   - *Name*: Enter a name of your choice e.g. "Spectrum Simulation".
+   - *Protocol*: *Skyline Spectrum Simulator*.
+
+1. Click *Create*.
+
+> [!TIP]
+> See also: [Adding elements](xref:Adding_elements)
 
 ## Step 3: Add a blank Visio file to the view
 
-1. Open your view on the Visual page.
+1. Open the new view on the Visual page.
 
-1. Right-click the Visual page and select *Set as active \<view name> view Visio file* > *New blank*.
+1. Right-click the Visual page, and select *Set as active Visio file* > *New blank*.
 
 1. In the *New Visio file* pop-up window, click *Yes*.
 
@@ -57,21 +64,21 @@ At this point, your Microsoft Visio application should start up automatically, a
 
 1. Select the grey rectangle and press the delete button to remove the shape from your Visio page. The title shape can stay in place.
 
-1. Navigate to the *Home* tab of the ribbon click the rectangle in the *Tools* section.
+1. In the *Home* tab of the ribbon, click the rectangle in the *Tools* section.
 
-1. draw a large rectangle on your page by clicking and dragging the mouse on it.
+1. Draw a large rectangle on your page by clicking and dragging the mouse on it.
 
-1. Right-click the rectangle shape and select *Data* > *Shape Data*. By default, this will open the shape data window as a popup, but you can dock it to one of the sides in Visio as we will need it regularly when editing Visio files for use in DataMiner
+1. Right-click the rectangle shape and select *Data* > *Shape Data*. By default, this will open the shape data window as a popup, but you can dock it to one of the sides in Visio as we will need it regularly when editing Visio files for use in DataMiner.
 
-1. Right click the shape data pane and select *Define Shape Data*
+1. Right-click the shape data pane and select *Define Shape Data*.
 
 1. Replace the default "Property1" label with shape data label `Element` and change the value to <element name>. This is the name you used in step 2 when creating the spectrum simulation element.
 
-1. Click the *New* button to add another shape data with label `Component` and value `Spectrum`
+1. Click the *New* button to add another shape data with label `Component` and value `Spectrum`.
 
-1. Click the OK button in the `Define Shape Data` window. This will close the window
+1. Click the OK button in the `Define Shape Data` window. This will close the window.
 
-1. Make sure you have no shapes selected
+1. Make sure you have no shapes selected.
 
 1. Save your Visio file.
 
@@ -99,7 +106,7 @@ In DataMiner Cube, you will now get a basic spectrum control, with all the featu
 
 1. In DataMiner Cube, Navigate back to the `Visio spectrum presets` view and bring Visio to the front from your taskbar. If you have closed Visio previously, you can re-open it by right-clicking in the view card and choosing `Edit in Visio`from the menu.
 
-1. Select the rectangular shape that is linked to the spectrum componen, and in the shape data pane right-click and select `Define Shape Data`
+1. Select the rectangular shape that is linked to the spectrum component, and in the shape data pane right-click and select `Define Shape Data`
 
 1. Click the "New" button to add an additional shape data field
 
@@ -119,7 +126,7 @@ We will now create additional presets for each of the center frequencies where w
 
 1. Open the spectrum simulation element and navigate to the `Spectrum Analyzer` page if needed
 
-1. In the `Manual` tab of the spectrum sidebar, change the settings to the desired values. e.g. for a satellite signal this could be around 12GHz center frequency and 200MHz Bandwith
+1. In the `Manual` tab of the spectrum sidebar, change the settings to the desired values. e.g. for a satellite signal this could be around 12GHz center frequency and 200MHz Bandwidth
 
 1. In the spectrum sidebar, click the `Presets` tab and click the `Manage` button at the bottom.
 
@@ -133,13 +140,13 @@ We will now create additional presets for each of the center frequencies where w
 
 1. Click the `OK` button once more to close the Manage presets window
 
-1. Repeat the above steps for a second signal. E.g. For a cable signal, we could use a center frequency of 260 MHz and a Bandwith of 8 MHz. Give it the name `Cable`
+1. Repeat the above steps for a second signal. E.g. For a cable signal, we could use a center frequency of 260 MHz and a Bandwidth of 8 MHz. Give it the name `Cable`
 
 ## Step 8: Use session variables to link the presets to buttons
 
 In this step, we will use session variables and placeholders to link buttons to the presets.
 
-1. In DataMiner Cube, Navigate back to the `Visio spectrum presets` view and bring Visio to the front from your taskbar. If you have closed Visio previously, you can re-open it by right-clicking in the view card and choosing `Edit in Visio`from the menu.
+1. In DataMiner Cube, navigate back to the `Visio spectrum presets` view and bring Visio to the front from your taskbar. If you have closed Visio previously, you can re-open it by right-clicking in the view card and choosing `Edit in Visio`from the menu.
 
 1. Resize the shape linked to the spectrum analyzer control, to make some space for buttons
 
