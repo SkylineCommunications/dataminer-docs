@@ -26,6 +26,7 @@ To configure this component:
 >
 > - Spectrum components are currently not yet supported in visual overviews within dashboards or low-code apps.
 > - Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
+> - In versions prior to DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
 
 ## Zooming
 
