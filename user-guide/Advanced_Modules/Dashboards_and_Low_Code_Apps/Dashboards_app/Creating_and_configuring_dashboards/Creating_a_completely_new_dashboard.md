@@ -26,7 +26,7 @@ uid: Creating_a_completely_new_dashboard
 
 1. Click *Create* or *OK*, depending on your DataMiner version<!--RN 38278-->.
 
-1. Optionally, fine-tune the dashboard settings. See [Configuring security for a dashboard](xref:Configuring_dashboard_security).
+1. Optionally, fine-tune the dashboard settings. See [Changing dashboard settings](xref:Changing_dashboard_settings).
 
 1. Optionally, fine-tune the dashboard layout. See [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 
