@@ -12,25 +12,28 @@ To configure which users can access and/or edit a low-code application:
 
 1. Click the ellipsis button ("...")<!--RN 40077--> in the top-right corner and select *Settings*.
 
-1. Under *Access*, determine which users and groups are allowed to view and/or edit the app:
+1. Under *Access*, determine which users and groups are allowed to view and/or edit the app. You can configure access for specific users, groups, and everyone.
 
    - *Everyone*: Specify the access level for all users who have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.
 
-   - *Add user/group*: Enter the names of specific users and/or groups that should be allowed to view or edit the app, and specify their access level.
+   - *Add user/group*: Enter the names of specific users and/or groups that should be allowed to view or edit the app. Then, assign them an appropriate access level.
 
    The available access levels are:
 
-   - *No access*: Users cannot view or edit the app. This option is only available in the dropdown menu next to *Everyone*.
+   - *No access*: Users cannot view or edit the low-code app. The app will be hidden from the DataMiner landing page and will be inaccessible even with a direct link. This option is only available in the dropdown menu next to *Everyone*.
 
      > [!NOTE]
-     > If you select *No access*, you must assign at least one user or group as an editor to keep the app functional.
+     > If you select *No access* for *Everyone*, you must assign at least one user or group as an editor to keep the app functional.
 
-   - *Viewer*: Users can view the app.
+   - *Viewer*: Users can view the low-code app. They can interact with the app components, but they cannot make any modifications.
 
-   - *Editor*: Users can view and edit the app.
+   - *Editor*: Users can view and edit the low-code app. They can modify the app, including renaming and deleting it.
 
    > [!NOTE]
-   > If you set *Everyone* to *No access* and do not manually add your user account as an editor, you will lose the ability to make further changes to the application.
+   >
+   > - If a user has been given an access level both as an individual and as part of a group, the level with the most privileges is the one that counts.
+   > - If you set *Everyone* to *No access* and do not manually add your user account as an editor, you will lose the ability to make further changes to the application.
+   > The built-in Administrator account always has full access to all apps.
 
 1. Click *Apply* in the lower right corner.
 

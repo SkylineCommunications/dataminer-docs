@@ -7,7 +7,7 @@ uid: Configuring_dashboard_security
 > [!NOTE]
 > Prior to DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10<!--RN 40501-->, these security settings can be found in the *Settings* pane of the dashboard. See [Changing dashboard settings](xref:Changing_dashboard_settings).
 
-User permissions can be customized for both dashboard folders and individual dashboards, allowing you to restrict access or prevent unauthorized modifications.
+User permissions can be customized for both dashboard folders and individual dashboards, allowing you to restrict access and prevent unauthorized modifications.
 
 > [!IMPORTANT]
 > Restricting access to dashboards does not imply any restrictions on the underlying data. For this, the access rights on the corresponding data sources should be configured.
@@ -27,7 +27,7 @@ To configure which users can access and/or edit a folder or dashboard:
    - *No access*: Users cannot view or edit the dashboard folder or dashboard. The folder/dashboard will be hidden from the [Dashboards app sidebar](xref:Overview_of_the_Dashboards_app_UI#the-dashboards-app-sidebar) and will be inaccessible even with a direct link. This option is only available in the dropdown menu next to *Everyone*.
 
      > [!NOTE]
-     > If you select *No access* for *Everyone*, you must assign at least one user or group as an editor to keep the app functional.
+     > If you select *No access* for *Everyone*, you must assign at least one user or group as an editor to keep the folder/dashboard functional.
 
    - *Viewer*: Users can view the folder or dashboard. They can interact with dashboard components, but they cannot make any modifications. They are also unable to add new dashboards to the folder or change folder/dashboard settings.
 
@@ -43,7 +43,7 @@ To configure which users can access and/or edit a folder or dashboard:
 
 1. Click *Apply* in the lower right corner.
 
-   ![Application settings](~/user-guide/images/Application_Settings.png)<br>*Low-Code Apps settings in DataMiner 10.4.10*
+   ![Dashboard settings](~/user-guide/images/Dashboard_Settings.png)<br>*Dashboard settings in DataMiner 10.4.10*
 
 ## Special combinations of privileges
 
