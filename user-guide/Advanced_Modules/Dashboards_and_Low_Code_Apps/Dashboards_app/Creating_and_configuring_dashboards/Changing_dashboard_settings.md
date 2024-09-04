@@ -34,7 +34,7 @@ uid: Changing_dashboard_settings
    - **User access/Dashboard security**
 
      > [!IMPORTANT]
-     > From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40501-->, these security settings have moved. See [Configuring security for a dashboard](xref:Configuring_dashboard_security).
+     > From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40501-->, these security settings have been moved. See [Configuring security for a dashboard](xref:Configuring_dashboard_security).
 
      - *Allowed to view the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to restrict access to the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
 
