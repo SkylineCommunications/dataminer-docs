@@ -277,6 +277,8 @@ items:
                 topicUid: Editing_a_dashboard
               - name: Changing dashboard settings
                 topicUid: Changing_dashboard_settings
+              - name: Configuring security for a dashboard
+                topicUid: Configuring_dashboard_security
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing

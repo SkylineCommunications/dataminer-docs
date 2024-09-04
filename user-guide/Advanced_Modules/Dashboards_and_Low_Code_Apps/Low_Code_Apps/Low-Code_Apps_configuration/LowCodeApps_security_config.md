@@ -6,17 +6,50 @@ uid: LowCodeApps_security_config
 
 To configure which users can access and/or edit a low-code application:
 
-1. Access the application settings:
+## [From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards](#tab/tabid-1)
 
-   - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->, click the ellipsis button ("...") in the top-right corner and select *Settings*.
+<!--RN 40501-->
 
-   - Prior to From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click the user icon in the top-right corner and select *Settings*.
+1. Click the ellipsis button ("...")<!--RN 40077--> in the top-right corner and select *Settings*.
+
+1. Under *Access*, determine which users and groups are allowed to view and/or edit the app. You can configure access for specific users, groups, and everyone.
+
+   - *Everyone*: Specify the access level for all users who have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission, as well as any other user permissions required to access specific apps.
+
+   - *Add user/group*: Enter the names of specific users and/or groups that should be allowed to view or edit the app. Then, assign them an appropriate access level.
+
+   The available access levels are:
+
+   - *No access*: Users cannot view or edit the low-code app. The app will be hidden from the DataMiner landing page and will be inaccessible even with a direct link. This option is only available in the dropdown menu next to *Everyone*.
+
+     > [!NOTE]
+     > If you select *No access* for *Everyone*, you must assign at least one user or group as an editor to keep the app functional.
+
+   - *Viewer*: Users can view the low-code app. They can interact with the app components, but they cannot make any modifications.
+
+   - *Editor*: Users can view and edit the low-code app. They can modify the app, including renaming and deleting it.
+
+   > [!NOTE]
+   >
+   > - If a user has been given an access level both as an individual and as part of a group, the level with the most privileges is the one that counts.
+   > - If you set *Everyone* to *No access* and do not manually add your user account as an editor, you will lose the ability to make further changes to the application.
+   > The built-in Administrator account always has full access to all apps.
+
+1. Click *Apply* in the lower right corner.
+
+   ![Application settings](~/user-guide/images/Application_Settings.png)<br>*Low-Code Apps settings in DataMiner 10.4.10*
+
+## [Prior to DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10](#tab/tabid-2)
+
+1. Click the user icon in the top-right corner and select *Settings*.
 
 1. In the *Allowed to view the application* box, specify the names of the users and/or groups that should be allowed to view the app.
 
 1. In the *Allowed to edit the application* box, specify the names of the users and/or groups that should be allowed to edit the app.
 
 1. Close the *Settings* window with the X in the top-right corner.
+
+***
 
 Keep this in mind when you configure security for the Low-Code Apps module:
 
