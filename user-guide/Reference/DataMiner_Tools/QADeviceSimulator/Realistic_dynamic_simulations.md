@@ -13,7 +13,7 @@ The way this works is by polling a real device but putting the simulator between
 To configure this, you will need to create a simulation file that looks similar to a regular simulation file:
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Simulation>
 	<ProxyAgents>
 		<ProxyAgent ip="10.2.1.22" MacAddress="" SNMPVersion="2" Name="" Port="7001" AutoBuildVersion="1.2" deviceIP="10.3.9.1" maxDuration="0.16666666"/>
