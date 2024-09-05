@@ -211,6 +211,8 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 > The script will initiate the migration process, but the migration itself will not be completed immediately. To monitor the migration progress, run the CloudStorageMigrationProgress script. This will log the progress of the migration for each storage type as information events.
 > Keep an eye on the progress until the status for all storage types that were triggered shows **State=Completed**. This indicates that the migration has successfully finished.
 
+> [!IMPORTANT]
+> In case of issues during or after the migration, revert the `DB.xml` file to its previous state and re-trigger the migration process. If you want to be certain no data inconsistencies are possible, contact [STaaS support](mailto:staas@dataminer.services).
 
 ## Limitations
 
