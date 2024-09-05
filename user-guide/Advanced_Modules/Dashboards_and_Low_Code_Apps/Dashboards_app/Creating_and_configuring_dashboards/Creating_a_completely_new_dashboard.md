@@ -21,7 +21,7 @@ uid: Creating_a_completely_new_dashboard
    ![Security level](~/user-guide/images/Security_Level.png)<br>*Setting dashboard security level in DataMiner 10.4.5*
 
    > [!NOTE]
-   > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](xref:Changing_dashboard_settings).
+   > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](xref:Configuring_dashboard_security).
    > - The built-in Administrator account always has full access to all dashboards.
 
 1. Click *Create* or *OK*, depending on your DataMiner version<!--RN 38278-->.
