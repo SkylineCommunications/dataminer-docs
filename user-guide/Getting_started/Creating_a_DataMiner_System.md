@@ -14,7 +14,7 @@ To create a DataMiner System (DMS), there are different possibilities:
 
   - You can host the storage nodes yourself. This means you will need to take care of [configuring and maintaining the databases](xref:Configuring_dedicated_clustered_storage).
 
-  - (only on the VHDX) You can locally host Cassandra and OpenSearch, running on Windows Subsystem for Linux (WSL). This comes pre-installed and you won't have to configure anything.
+  - You can host Cassandra and OpenSearch locally on [Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL). This comes pre-installed and doesn't require any configuration. This option is only available when using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_VHDX).
 
 > [!TIP]
 > The [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_VHDX) comes out-of-the box with [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL), allowing you to immediately get started.
