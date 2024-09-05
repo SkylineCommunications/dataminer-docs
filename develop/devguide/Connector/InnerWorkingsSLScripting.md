@@ -6,7 +6,7 @@ uid: InnerWorkingsSLScripting
 
 The SLScripting process is responsible for executing QActions. It is important to understand how the QAction execution proceeds in relation to other protocol building blocks such as triggers and actions.
 
-Consider for example a protocol with two parameters A (ID 10) and B (ID 12). Parameter B is set to a default value of 10. When a button is pressed (parameter with ID 50), a QAction is executed which sets parameter A to value 5 and multiplies the values of parameter A and B.
+Consider for example a protocol with two parameters A (ID 10) and B (ID 20). Parameter B is set to a default value of 10. When a button is pressed (parameter with ID 50), a QAction is executed which sets parameter A to value 5 and multiplies the values of parameter A and B.
 
 In addition, a trigger is defined that triggers on a change of parameter A. This trigger executes an action that increments the value of parameter B.
 

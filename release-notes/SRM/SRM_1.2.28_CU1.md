@@ -5,7 +5,7 @@ uid: SRM_1.2.28_CU1
 # SRM 1.2.28 CU1
 
 > [!NOTE]
-> This version requires that **DataMiner 10.2.7.0-11922 or higher** is installed. It is not compatible with the DataMiner Main Release track.
+> This version requires that **DataMiner 10.2.7.0-11922 or higher** is installed. The DataMiner Main Release track is not supported.
 
 ## Enhancements
 

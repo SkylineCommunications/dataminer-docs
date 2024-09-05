@@ -256,7 +256,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 
       ![DOM LCA DON Form Upon Completion](~/user-guide/images/DOM_Getting_Started_with_DOM_FormUponCompletion.png)
 
-   1. select *Execute component action* in the first box, *Fetch the data* in the second box, and *Table 2* in the third box.
+   1. Select *Execute component action* in the first box, *Fetch the data* in the second box, and *Table 2* in the third box.
 
       ![DOM LCA Save On Click Event](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_TableFetchTheData.png)
 

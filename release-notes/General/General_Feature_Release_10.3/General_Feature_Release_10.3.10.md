@@ -144,7 +144,7 @@ After each DataMiner upgrade, up to now, the DataMiner upgrade package would be 
 From now on, after each DataMiner upgrade or DataMiner start-up, this folder will be cleaned up.
 
 - When a DataMiner upgrade was successful, only the `progress.log` file for that particular upgrade will be kept.
-- When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisites](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisites) will also be kept for debugging purposes.
+- When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisite checks](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisite-checks) will also be kept for debugging purposes.
 
 #### Security enhancements [ID_37064] [ID_37094]
 
@@ -175,7 +175,7 @@ This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
 
 > [!IMPORTANT]
-> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Advanced configuration](xref:Automatic_incident_tracking#advanced-configuration).
 
 ### Fixes
 

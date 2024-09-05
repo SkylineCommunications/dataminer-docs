@@ -313,9 +313,22 @@ General Parameters (DataMiner Element Control Protocol):
 |65157|[Interface delete/add]||
 |65158|[DVE index to delete]||
 |65159|[Interface Index to Delete]||
+|66147|DVE State|Write DVE State column Generic DVE table|
+|66148|[DVE function GUID]|Write DVE function GUID column Generic DVE table|
+|66149|DVE Link to Resource Manager|Write DVE Link to Resource Manager column Generic DVE table|
+|66150|Interface Name|Interface Name (write parameter)|
+|66151|Interface Type|Interface Type (write parameter)|
+|66152|Interface FK|Interface FK (write parameter)|
+|66153|Interface Link to Resource Manager|Interface Link to Resource Manager (write parameter)|
 |66154|[DVE index to delete]||
 |66155|[DVE delete/add]||
 |66156|[Interface Index to Delete]||
+|66157|[Interface delete/add]|Add delete interface button|
+|66158|[DVE index to delete]|DVE index to delete|
+|66159|[Interface Index to Delete]|interface index to delete|
+|66160|DVE Name|Write DVE Name column Generic DVE table|
+|66161|[FK Table]|FK table (write parameter)|
+|66162|[FK Data]|FK data (write parameter)|
 |66163|[New Generic DVE Link]||
 |66164|[New Generic DVE Link]||
 |66165|[Generic DVE Link delete/add]||
@@ -332,16 +345,3 @@ General Parameters (DataMiner Element Control Protocol):
 >- DVEs will not follow the values of the main element. Alarms on values that are exported to a DVE will only use that DVE's general parameter values. This is both for alarm templates set on the DVE and the main element.
 >- Setting these general parameters will not overwrite the values defined by the topology cell definition.
 >- Creating alarms when using virtual functions causes the alarms to be linked to the main element rather than the virtual function (virtual element). This means that the [Alarm System Type] and [Alarm System Name] parameters of the main element will be applicable for all the alarms. These parameters on the virtual functions do not have any function at the moment. However, if in the future these alarms are linked to the virtual functions instead, these parameter values will be applied.
-
-## Other
-
-For the other protocol constructs such as triggers, commands, responses, pairs, groups, timers, actions, QActions, parameter groups, etc. the following applies:
-
-|Range|Owner|Minimum DMA version|Allowed|
-|--- |--- |--- |--- |
-|[1, 63 999]|Protocol|1.0.0|Yes|
-|[64 000, 999 999]|DataMiner|1.0.0|No|
-|[1 000 000, 9 999 999]|Protocol|9.0.4|Yes|
-|10 000 000 or above|-|-|No|
-
-For parameter groups, IDs larger than or equal to 10 000 should be avoided for existing drivers, as well as for drivers intended to be used with DataMiner versions before 9.0.4 (ID range 10 000+ was used for dynamic parameter groups prior to version 9.0.4. Previously assigned IDs remain reserved for existing elements).

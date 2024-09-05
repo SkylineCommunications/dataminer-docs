@@ -134,13 +134,12 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637] [ID_38514]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37540] [ID_37637] [ID_38514]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
-<!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 <!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
 <!-- 38514: MR 10.4.0 - FR 10.4.3 -->
@@ -488,7 +487,7 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
 
 > [!IMPORTANT]
-> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Advanced Configuration](xref:Automatic_incident_tracking#advanced-configuration).
 
 #### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
 
@@ -787,7 +786,7 @@ When two DataMiner Agents try to connect via SLNet, from now on, this will no lo
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
 
-- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
 Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
 
@@ -827,7 +826,7 @@ Ad hoc data sources and custom operators now support row metadata.
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
 
-See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 
@@ -896,6 +895,15 @@ From now on, a behavioral change will only be taken into account when the change
 
 As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
+#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
+
+On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
+
+
 #### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -938,6 +946,12 @@ Because of a number of enhancements, overall performance has increased when addi
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Change point detection accuracy has been improved for change points of type flatline.
+
+#### DataMinerSolutions.dll now included in core DataMiner software [ID_38530]
+
+<!-- MR 10.4.0 - FR 10.4.3 / originally included in IDP 1.5.0 -->
+
+To make sure that installing IDP will no longer require a DataMiner restart, *DataMinerSolutions.dll* will now be included in the core DataMiner software.
 
 ### Fixes
 
@@ -1061,6 +1075,12 @@ In some rare cases, an error could be thrown when an element was renamed.
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
+#### Problem when the NATS library called the error handling event [ID_37028]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When the NATS library called the error handling event, in some cases, it would pass a `nullptr` for the subscription parameter. As a result, an exception would be thrown, potentially causing the hosting process to stop working.
+
 #### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -1090,6 +1110,14 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Max Payload exceptions when using MessageBroker with chunking [ID_37245]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When MessageBroker used chunking, the generated chunks would not be trimmed to the correct size before transmission, resulting in *Max Payload* exceptions.
+
+For more detailed information, refer to [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload).
 
 #### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
 
@@ -1229,14 +1257,6 @@ When, while automatic incident tracking was running, you manually created an inc
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
 
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
-
-<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
-
-Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
-
-From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
-
 #### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
 
 <!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
@@ -1264,6 +1284,12 @@ In some cases, DataMiner Cube would not be able to reconnect to the server after
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 
 #### Problem when adding a DMA to a DMS [ID_38620]
 

@@ -70,7 +70,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
 
-1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to “protocol”.
+1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to "protocol".
 
    ```xml
    <DataMiner>
@@ -92,7 +92,7 @@ To have separate SLScripting processes created for every protocol being used, do
 
 1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
 
-1. In the *\<ProcessOptions>* tag, set both the *protocolProcesses* attribute and the *scriptingProcesses* attribute to “protocol”.
+1. In the *\<ProcessOptions>* tag, set both the *protocolProcesses* attribute and the *scriptingProcesses* attribute to "protocol".
 
    ```xml
    <DataMiner>
@@ -118,7 +118,7 @@ In a system where the load for one particular protocol has to be spread over sev
 
 1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
 
-1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to a fixed number and the *scriptingProcesses* attribute to “protocol”.
+1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to a fixed number and the *scriptingProcesses* attribute to "protocol".
 
    ```xml
    <DataMiner>
@@ -187,7 +187,7 @@ To do so:
 
 1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
 
-1. Set the *protocolProcesses* attribute of the *\<ProcessOptions>* tag to “replicationIP”:
+1. Set the *protocolProcesses* attribute of the *\<ProcessOptions>* tag to "replicationIP":
 
 ```xml
 <DataMiner>
@@ -256,7 +256,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
 
-1. If *DataMiner.xml* contains a *\<ProcessOptions>* tag with a *scriptingProcesses=”\[Service\]”* attribute, remove that attribute:
+1. If *DataMiner.xml* contains a *\<ProcessOptions>* tag with a *scriptingProcesses="\[Service\]"* attribute, remove that attribute:
 
    ```xml
    <ProcessOptions ... scriptingProcesses="[Service]" .../>
@@ -279,7 +279,7 @@ On a DataMiner Agent, the SLWatchdog process continuously monitors all other Dat
 
 ### When will SLWatchdog take action?
 
-In Windows Task Manager, the DataMiner processes all have names starting with “SL”. SLWatchdog will take action in either of the following cases:
+In Windows Task Manager, the DataMiner processes all have names starting with "SL". SLWatchdog will take action in either of the following cases:
 
 - When a DataMiner process has disappeared from the list of running processes.
 
@@ -307,7 +307,7 @@ In this case, SLWatchdog will do the following:
 
 1. Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
 
-1. Create an alarm with severity “Error”, which will be displayed in the DataMiner Alarm Console. This alarm will contain detailed information about the anomaly.
+1. Create an alarm with severity "Error", which will be displayed in the DataMiner Alarm Console. This alarm will contain detailed information about the anomaly.
 
 1. Optionally restart the DataMiner Agent. By default, this will not be done.
 
@@ -362,16 +362,16 @@ The following table contains all information about the different SLWatchdog sett
 |--|--|--|
 | TimeoutTime | - | The interval (in minutes) between two consecutive process thread checks. Default value: 5 |
 | Errors | - | The number of process thread checks that are allowed to return an error before SLWatchdog will consider the situation to be an anomaly. Default value: 2 |
-| Actions | - | List of actions (separated by semicolons) to be performed upon detection of an anomaly. Possible values are “Alarm” and “Restart”. Default value: “Alarm” |
+| Actions | - | List of actions (separated by semicolons) to be performed upon detection of an anomaly. Possible values are "Alarm" and "Restart". Default value: "Alarm" |
 | Email | active | If true, SLWatchdog will send email messages upon detection of an anomaly. Default value: true |
-| Email.Destination | - | The “To” recipients, separated by semicolons. Default value: [dataminer.minidump@skyline.be](mailto:dataminer.minidump%40skyline.be) |
-| Email.CCDestination | - | The “CC” recipients, separated by semicolons. By default, this tag is empty. |
-| Email.BCCDestination | - | The “BCC” recipients, separated by semicolons. By default, this tag is empty. |
+| Email.Destination | - | The "To" recipients, separated by semicolons. Default value: [dataminer.minidump@skyline.be](mailto:dataminer.minidump%40skyline.be) |
+| Email.CCDestination | - | The "CC" recipients, separated by semicolons. By default, this tag is empty. |
+| Email.BCCDestination | - | The "BCC" recipients, separated by semicolons. By default, this tag is empty. |
 | ProcessMonitor | maxInHour | SLWatchdog will perform the specified actions if the situation does not occur more than X times in one hour. Default value: 3 |
 | ProcessMonitor | maxProcess | SLWatchdog will perform the specified actions if a maximum of X processes have disappeared within the time span defined in *maxTimeout*. Default value: 2 |
 | ProcessMonitor | maxTimeout | SLWatchdog will perform the specified actions if more processes than defined in *maxProcess* have disappeared within a time span of X minutes. Default value: 2 |
 | ProcessMonitor | maxAttachmentSize | The maximum size (in MByte) of the dump file that will be attached to the email messages. If exceeded, a so-called mini dump file will be attached. Default value: 5 |
-| ProcessMonitor | passwordOnAttachment | If true, users will have to enter the password “Skyline” in order to access the dump files attached to the email messages. Default value: false |
+| ProcessMonitor | passwordOnAttachment | If true, users will have to enter the password "Skyline" in order to access the dump files attached to the email messages. Default value: false |
 
 ## Configuring SLNet settings in MaintenanceSettings.xml
 
@@ -429,8 +429,6 @@ Example:
 ```
 
 Default from DataMiner 10.1.7 onwards: TRUE
-
-Default prior to DataMiner 10.0.13: FALSE
 
 ### Configuring the number of messages to be returned (polling/eventing)
 
@@ -523,7 +521,7 @@ Example:
 
 #### ConnectivityLogVerbose
 
-Set this setting to “true” to add extra information in the logs with regard to connectivity chain resolution.
+Set this setting to "true" to add extra information in the logs with regard to connectivity chain resolution.
 
 Example:
 
@@ -555,11 +553,11 @@ Example:
 
 ### Activating the NonElementProtocol option system-wide
 
-In a Visual Overview, a “NonElementProtocol” option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the Visual Overview.
+In a Visual Overview, a "NonElementProtocol" option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the Visual Overview.
 
 It is also possible to apply this option system-wide, instead of limiting it to one Visual Overview shape or page.
 
-To do so, add a *\<NonElementProtocol>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “true”.
+To do so, add a *\<NonElementProtocol>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "true".
 
 Example:
 
@@ -582,7 +580,7 @@ Example:
 
 It is possible to have an information event generated whenever a connection fails to be authenticated. From DataMiner 10.1.8/10.2.0 onwards, this is enabled by default.
 
-To enable this option in older systems, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “true”.
+To enable this option in older systems, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "true".
 
 Example:
 
@@ -599,7 +597,7 @@ Example:
 
 ### Configuring a cluster transition state timeout
 
-From DataMiner 10.0.3 onwards, in the *\<ClusterTransitionStateTimeout>* tag, you can specify a cluster transition state timeout (in seconds).
+In the *\<ClusterTransitionStateTimeout>* tag, you can specify a cluster transition state timeout (in seconds).
 
 DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 
@@ -703,7 +701,7 @@ Example:
 
 By default, .NET Remoting is used for communication between DMAs. From DataMiner 10.3.2/10.3.0 onwards, a gRPC connection can be used instead. To make gRPC the default for communication between DMAs, you can either [add Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag), or disable .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.
 
-To do the latter, add an *\<EnableDotNetRemoting>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “false”.<!-- RN 31498+36023 -->
+To do the latter, add an *\<EnableDotNetRemoting>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "false".<!-- RN 31498+36023 -->
 
 Example:
 
@@ -722,24 +720,15 @@ Example:
 > [!IMPORTANT]
 > Make sure this is configured the same way for all Agents in a DMS.
 
-## Configuring the ports for .NET Remoting and/or XML Web Services
+## Configuring the port for .NET Remoting
 
-On a DMA, you can specify the ports to be used for both .NET Remoting and (for legacy DMAs) XML Web Services.
+On a DMA, you can specify the port to be used for .NET Remoting.
 
-1. On the DataMiner Agent on which you want to configure these settings, go to the *C:\\Skyline DataMiner\\Files* directory.
+1. Go to the *C:\\Skyline DataMiner\\Files* directory of the DMA.
 
 1. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
 
-1. Optionally, and prior to DataMiner 10.0.11 only, in the *appSettings* section, go to the *TcpWebServicePort* key, and set its “value” attribute to the port number to be used for XML Web Services. By default, this will be port 9004:
-
-   ```xml
-   <add key="TcpWebServicePort" value="9004" />
-   ```
-
-   > [!NOTE]
-   > The default port 9004 for XML Web Services is deprecated from DataMiner 9.6 onwards. Using Web Services for DMA communication is no longer supported from DataMiner 10.0.11 onwards.
-
-1. In the Channels section, go to the channel tag named SLNetRemoting, and set its “port” attribute to the port number to be used for .NET Remoting. By default, this will be port 8004:
+1. In the Channels section, go to the channel tag named *SLNetRemoting*, and set its "port" attribute to the port number to be used for .NET Remoting. By default, this will be port 8004:
 
     ```xml
     <channel
@@ -749,6 +738,9 @@ On a DMA, you can specify the ports to be used for both .NET Remoting and (for l
       timeout="300000"
       clientConnectionLimit="200">
     ```
+
+   > [!TIP]
+   > See also: [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms)
 
 1. Save and close the file.
 

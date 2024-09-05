@@ -90,7 +90,7 @@ A number of security enhancements have been made.
 
 #### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
 
@@ -160,14 +160,6 @@ When a web app user without full administrative rights viewed a visual overview 
 
 In some cases, DataMiner clients using a gRPC connection would not detect a disconnect.
 
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
-
-<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
-
-Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
-
-From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
-
 #### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
 
 <!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
@@ -220,7 +212,7 @@ Up to now, when writing to the database or reading from the database failed, a r
 
 #### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 

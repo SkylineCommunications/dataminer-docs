@@ -9,10 +9,14 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 1. Make sure the following requirements are met:
 
    - Your DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
    - Your organization has been verified. This is necessary for dataminer.services to be able to check for which connectors your organization has acquired a license. See [Getting your organization verified](xref:CloudConnectionVerification).
+
    - Your dataminer.services account is linked to a DataMiner user account. See [Linking your DataMiner account to your dataminer.services account](xref:Linking_your_DataMiner_and_DCP_account).
 
 1. Look up the item in the Catalog. See [Looking up an item in the Catalog](xref:Looking_up_an_item_in_the_catalog).
+
+   ![Microsoft Platform](~/user-guide/images/Catalog_Microsoft.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
 
 1. If you cannot see the *Deploy* button yet, go to the *Versions* tab and expand the version you want to deploy.
 
@@ -20,12 +24,15 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
    > [!NOTE]
    >
-   > - The *Deploy* button is only available if your organization has a license for the displayed item. If it is unavailable, to be able to deploy the item, contact <licensing@skyline.be>.
+   > - If your organization does not have a license for the displayed item, the *Deploy trial* button will be displayed instead, which you can use to test the item in a staging environment. To get a license to deploy the item in a Production system, contact <licensing@skyline.be>.<!-- RN 39205 -->
    > - To be able to deploy an item to your DataMiner System, the DataMiner user profile linked to your dataminer.services user profile has to have the following permissions:
    >   - [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages).
    >   - [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute).
+   > - For Skyline employees only, a *Download* button can be available instead. To get access to this button as a Skyline employee, click the user icon and select *Toggle privileged options*.
 
 1. Click the *Deploy* button.
+
+   ![Deploy connector](~/user-guide/images/Deploy_Connector.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
 
 1. Select the target DataMiner System and click *Deploy*.
 

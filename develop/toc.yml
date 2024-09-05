@@ -4,6 +4,8 @@ items:
   items:
   - name: Connectors
     items:
+    - name: Getting started with data source integrations
+      topicUid: Getting_started_with_data_source_integrations
     - name: Introduction
       topicUid: Introduction
     - name: Connector fundamentals
@@ -36,6 +38,8 @@ items:
               topicUid: ChangeMinimumRequiredDMAVersion
             - name: Change protocol name
               topicUid: ChangeProtocolName
+            - name: Change InterApp range
+              topicUid: ChangeInterAppRange
           - name: Parameter changes
             topicUid: ChangeParameterDescription
             items:
@@ -234,6 +238,8 @@ items:
         items:
         - name: Reserved parameter IDs
           topicUid: ReservedIDsParameters
+        - name: Other reserved IDs
+          topicUid: ReservedIDsOther
         - name: DataMiner element control protocol
           topicUid: ReservedIDsElementControlProtocol
         - name: Aggregator
@@ -359,6 +365,10 @@ items:
         items:
         - name: Introduction
           topicUid: ConnectionsSnmpIntroduction
+        - name: SNMPv3
+          topicUid: ConnectionsSnmpSnmpv3
+        - name: OIDs
+          topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
           topicUid: ConnectionsSnmpRetrievingAVariable
         - name: Retrieving multiple variables
@@ -607,11 +617,6 @@ items:
           topicUid: AdvancedDataMinerMediationLayerLinkingTableParameters
         - name: Data pages
           topicUid: AdvancedDataMinerMediationLayerDataPages
-      - name: EPM integration in Cube
-        topicUid: AdvancedEpm
-        items:
-        - name: Launching EPM objects by clicking buttons in Data Display table cells
-          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
@@ -685,6 +690,8 @@ items:
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
+    - name: Getting started with Automation script development
+      topicUid: GettingStartedWithAutomationScriptDevelopment
     - name: Actions
       topicUid:  AutomationActions
       items:
@@ -754,8 +761,6 @@ items:
       topicUid: ClassLibraryLazyLoading
     - name: Element creation
       topicUid: ClassLibraryElementCreation
-    - name: InterApp classes
-      topicUid: ClassLibraryInterAppClasses
     - name: Monitors
       topicUid: ClassLibraryMonitors
       items:
@@ -771,8 +776,31 @@ items:
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
+    - name: Obsolete namespaces
+      topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
+  - name: InterApp framework
+    items:
+      - name: About the InterApp framework
+        topicUid: InterAppCalls_Introduction
+      - name: Getting started with the InterApp framework
+        topicUid: InterAppCalls_GettingStarted
+        items:
+          - name: Creating an API
+            topicUid: InterAppCalls_GettingStarted_CreatingApi
+          - name: Creating an executor
+            topicUid: InterAppCalls_GettingStarted_CreatingExecutor
+          - name: Receiving a call
+            topicUid: InterAppCalls_GettingStarted_ReceivingCall
+          - name: Sending a call
+            topicUid: InterAppCalls_GettingStarted_SendingCall
+      - name: Known types
+        topicUid: InterAppCalls_KnownTypes
+      - name: Customizations
+        topicUid: InterAppCalls_Customizations
+      - name: Examples
+        topicUid: InterAppCalls_Examples
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
@@ -859,6 +887,8 @@ items:
         topicUid: NT_GET_AVAILABLE_FILES
       - name: NT_ADD_FILE
         topicUid: NT_ADD_FILE
+      - name: NT_REMOVE_DOCUMENT
+        topicUid: NT_REMOVE_DOCUMENT
       - name: NT_MAKE_ALARM
         topicUid: NT_MAKE_ALARM
       - name: NT_DATAMINER_INFO
@@ -1431,6 +1461,8 @@ items:
             topicUid: Protocol.Groups.Group-id
           - name: '@ping'
             topicUid: Protocol.Groups.Group-ping
+          - name: '@threadId'
+            topicUid: Protocol.Groups.Group-threadId
           - name: Condition
             topicUid: Protocol.Groups.Group.Condition
           - name: Content
@@ -2723,6 +2755,10 @@ items:
           items: 
           - name: '@connection'
             topicUid: Protocol.Threads.Thread-connection
+          - name: '@id'
+            topicUid: Protocol.Threads.Thread-id
+          - name: '@name'
+            topicUid: Protocol.Threads.Thread-name
       - name: Timers
         topicUid: Protocol.Timers
         items: 
@@ -3470,6 +3506,8 @@ items:
                     topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
                 - name: Specific
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
+              - name: SetAsActive
+                topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
       - name: DeploymentOptions
@@ -5178,6 +5216,10 @@ items:
   items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
+  - name: Tutorials
+    items:
+     - name: Setting up a GitHub workflow for connectors
+       topicUid: CICD_Tutorial_Connector
   - name: CI/CD using command line
     items:
     - name: Command line examples
@@ -5223,6 +5265,10 @@ items:
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
+    - name: Quality gate
+      items:
+      - name: GitHub quality gate
+        topicUid: CICD_Quality_Gate_Github
     - name: Publishing artifacts to the DataMiner Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
@@ -5300,14 +5346,21 @@ items:
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
+    - name: CI/CD Troubleshooting
+      items:
+        - name: GitHub failures
+          topicUid: CICD_Troubleshooting_GitHubFailures
+        - name: Jenkins failures
+          topicUid: CICD_Troubleshooting_JenkinsFailures
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
     - name: DataMiner Integration Studio (DIS)
-      topicUid: DIS
       items:
-        - name: Introduction
+        - name: About DIS
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
+        - name: Features
+          topicUid: DataMiner_Integration_Studio_Features
         - name: Installation and configuration
           topicUid: Installing_and_configuring_the_software
           items:
@@ -5391,14 +5444,18 @@ items:
           - name: Contributing to Validator code
             topicUid: DisTutorials_ValidatorContributions
         - name: Troubleshooting
-          topicUid: Troubleshooting
+          topicUid: DIS_Troubleshooting
           items:
-            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
-              topicUid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
-            - name: Could not find SLScripting process, is DataMiner running?
-              topicUid: Could_not_find_SLScripting_process_is_DataMiner_running
-            - name: Clicking the Publish button causes an error
-              topicUid: Clicking_the_Publish_button_causes_an_error
+            - name: Retrieving information in case a problem occurs
+              topicUid: DIS_Troubleshooting_RetrieveInformation
+            - name: Licensing problem
+              topicUid: DIS_Troubleshooting_LicenseIssue
+            - name: DIS Inject problems
+              topicUid: DIS_Troubleshooting_DisInject
+            - name: Package creation problems
+              topicUid: DIS_Troubleshooting_CompilationFailure
+            - name: Publishing problems
+              topicUid: DIS_Troubleshooting_UploadFailure
         - name: DIS reference
           topicUid: DIS_reference
           items:
@@ -5574,6 +5631,9 @@ items:
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
+        items:
+        - name: Wireshark stream decryption
+          topicUid: WiresharkDecrypt
 - name: DataMiner device-specific integrations
   topicUid: DSI
   items:
@@ -5613,11 +5673,61 @@ items:
 - name: DataMiner module integrations
   topicUid: DataMinerModuleIntegrations
   items:
-    - name: User-definable APIs
-      topicUid: DMI_UserDefinableAPIs
+    - name: User-Defined APIs
+      topicUid: DMI_User-DefinedAPIs
       items:
         - name: Bad and best practices
           topicUid: UD_APIs_Bad_and_Best_Practices
+    - name: EPM integration
+      items:
+        - name: EPM Integration Training
+          topicUid: EpmIntegrationTrainingAbout
+        - name: Connectors configuration
+          items:
+          - name: General configuration EPM Manager connector
+            topicUid: EPMManagerGeneralConfiguration
+          - name: Topology configuration
+            topicUid: EPMManagerTopology
+          - name: Chains and fields configuration
+            topicUid: EPMManagerChainsAndFields
+          - name: Linking collector data to an EPM object
+            topicUid: EpmIntegrationLinkingCollectorData
+          - name: View impact configuration
+            topicUid: EpmIntegrationViewImpact
+          - name: Configuring buttons in table cells to open EPM objects
+            topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+          - name: Aggregation and merge actions
+            topicUid: EpmIntegrationTrainingAggregations
+          - name: Alarm settings
+            topicUid: EPMManagerAlarms
+          - name: View tables
+            topicUid: EpmIntegrationTrainingViewTables
+        - name: Visual Overview configuration
+          items:
+            - name: Linking a shape to an EPM object
+              topicUid: LinkingShapeEpmObjectSystemNameType
+            - name: Filtering alarms based on system name and type
+              topicUid: FilteringAlarmsUsingSystemNameType
+            - name: Linking a shape to a filtered alarm tab
+              topicUid: AlarmConsoleNavigation
+            - name: Linking a shape to a dashboard or app
+              topicUid: DashboardAndAppsNavigation
+            - name: Best practices for retrieving remote parameters
+              topicUid: BestPracticesRemoteKpis
+            - name: Performing ping and tracert operations using DITT
+              topicUid: DITTIntegration
+        - name: Web apps configuration
+          items:
+            - name: EPM and Dashboards
+              topicUid: EpmIntegrationTrainingDashboards
+            - name: EPM and the Monitoring app
+              topicUid: EpmIntegrationTrainingMonitoring
+            - name: EPM and Low-Code Apps
+              topicUid: EpmIntegrationTrainingLowCodeApp
+        - name: Topology app configuration
+          topicUid: Topology_app_configuration
+        - name: DataMiner processes configuration
+          topicUid: EPM_DataMiner_processes_config
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:
@@ -5625,3 +5735,36 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+    - name: mbgNMS
+      topicUid: mbgNMS
+      items:
+      - name: Releases
+        topicUid: mbgNMS_Releases
+      - name: Security
+        topicUid: mbgNMS_Security
+      - name: Meinberg NMS or DataMiner
+        topicUid: mbgNMS_MeinbergOrDataMiner
+      - name: Additional Information
+        topicUid: mbgNMS_Additional_Information
+- name: Best practices
+  topicUid: Best_practices
+  items:
+    - name: Unit testing
+      topicUid: Unit_testing
+      items:
+      - name: Creating unit tests using the MSTestv2 framework in Visual Studio
+        topicUid: Unit_tests_MSTestv2_framework
+      - name: Using isolation frameworks
+        topicUid: Using_isolation_frameworks
+      - name: Writing testable code
+        topicUid: Writing_testable_code
+      - name: FluentAssertions
+        topicUid: FluentAssertions
+      - name: Data-driven tests
+        topicUid: Data_driven_tests
+      - name: Test life cycle attributes
+        topicUid: Test_life_cycle_attributes
+      - name: Using files in unit tests
+        topicUid: Using_files_in_unit_tests
+    - name: XML documentation comments
+      topicUid: Xml_Documentation_Comments

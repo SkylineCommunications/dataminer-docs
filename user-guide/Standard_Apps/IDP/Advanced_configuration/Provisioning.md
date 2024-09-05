@@ -10,7 +10,7 @@ The IP ranges are displayed in the table *Configured IP Ranges*. This table disp
 
 The following actions are available on this page:
 
-- To enable or disable automatic provisioning, use the toggle button next to *Automatically Create Elements After Discovery*. However, note that automatic provisioning will only be possible if both this option and the *Provisioning* option on the *Workflow* > *Automation* page are enabled.
+- To enable or disable automatic provisioning, use the toggle button next to *Automatically Create Elements After Discovery*. However, note that automatic provisioning will only be possible if both this option and the *Provisioning* option on the *Admin* > *Activities* page (or the *Processes* > *Automation* page in older IDP versions) are enabled.
 
 - To add an IP range, click the *Create* button above the *Configured IP Ranges* table. To the right above the table, you will then need to specify the start IP address, end IP address, and DataMiner Agent for the IP range. When you have done so, click the *Add* button to create the IP range.
 

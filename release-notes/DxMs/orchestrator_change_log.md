@@ -4,6 +4,41 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 8 August 2024 - Enhancement - Orchestrator 1.7.0 - Upgrade to .NET 8 [ID_40438]
+
+DataMiner Orchestrator has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
+#### 25 July 2024 - Enhancement - Orchestrator 1.6.1 - Dependencies updated & event handling improved [ID_40309]
+
+Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
+
+#### 30 April 2024 - Enhancement - Orchestrator 1.6.0 - Retries after failed DxM installation [ID_39519]
+
+The Orchestrator will now retry the installation of a DxM when the installation was interrupted.  
+
+#### 26 April 2024 - Fix - Orchestrator 1.5.9 - Inconsistent cloud endpoint detection failures [ID_39512]
+
+An issue has been resolved that could make features like DxM and Catalog deployments, Remote Log Collection, and data offloads for proactive support inconsistently fail.
+
+#### 13 March 2024 - Enhancement - Orchestrator 1.5.8 - Dependencies updated [ID_39047]
+
+Several dependencies have been updated.
+
+#### 4 March 2024 - Enhancement - Orchestrator 1.5.7 - Improved installer robustness [ID_38938]
+
+The Orchestrator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
+#### 26 February 2024 - Fix - Orchestrator 1.5.6 - Orchestrator installer runs indefinitely [ID_38895]
+
+The installation of the Orchestrator on servers with the system language set to a language other than English, such as German, would result in the installer running indefinitely. This issue has been resolved.
+
+#### 22 February 2024 - Enhancement - Orchestrator 1.5.5 - Improved DxM deployment robustness [ID_38853] [ID_38862] [ID_38875]
+
+Robustness for DxM deployments has been improved by adding and improving retry mechanisms, improving the management of processes, and giving the service more time to shut down gracefully.
+
+> [!TIP]
+> To make use of all the enhancements, also install ArtifactDeployer 1.6.6.
+
 #### 30 January 2024 - Enhancement - Orchestrator 1.5.4 - Improved DxM status reporting [ID_38553]
 
 The Orchestrator DxM will now offload more information about the cloud endpoint.

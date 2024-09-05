@@ -4,12 +4,28 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-At present, you can configure actions for two types of events in the DataMiner Low-Code Apps:
+You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
-- *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
+- *On open*: This event takes place when a page or panel is opened and all components are done loading. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
+
+  > [!NOTE]
+  > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
+
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
 
-For each of these events, you can configure actions as detailed below.
+- *On close*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682 + 39668-->. This event takes place when a page or panel is closed.
+
+  - A page can be closed either by manually navigating away using the sidebar or via an action.
+
+  - A panel can be closed by clicking outside of it (if it was opened as an overlay), or when a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is executed.
+
+  > [!NOTE]
+  >
+  > - Navigating to the next page is blocked until all configured actions are executed.
+  > - A panel will close only after all configured actions are executed.
+  > - Actions linked to an *On close* page or panel event will not be executed when you close the app.
+
+Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
 
 > [!TIP]
 > Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
@@ -27,6 +43,12 @@ To configure an event to launch a script:
    When applicable, you can link a parameter to an existing feed. To do so, you can use the link icon (from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->), or the *Use feed* checkbox (in earlier DataMiner versions).
 
 1. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
+
+> [!NOTE]
+> Feeds can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
+
+> [!IMPORTANT]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to an empty feed will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ## Navigating to a URL
 
@@ -57,9 +79,17 @@ To configure an event to open a panel of the app:
 
 1. In the *Width* box, specify the width of the panel (in %) compared to the rest of the app.
 
-1. If the panel should be opened as an overlay, toggle the *As overlay* button.
+1. Specify how the panel should be opened:
 
-   If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside it.
+   - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39649-->, you can select one of the following options:
+
+     - *Basic*: The panel opens on top of the page.
+
+     - *As overlay*: If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside of it. This is the default setting.
+
+     - *Draggable*: This option is only available when *Where* is set to open the panel in a pop-up window. When the panel is draggable, you can move the panel by left-clicking and dragging the header of the panel to its destination.
+
+   - Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, to set the panel to open as an overlay, toggle the *As overlay* button.
 
 ## Closing a panel of the app
 
@@ -68,6 +98,17 @@ To configure an event to close a panel of the app:
 1. Select *Close a panel* and select the panel.
 
 1. In the *Where* box, select where the panel that should be closed is located: in a pop-up window, on the left, or on the right. This is necessary in case the same panel is opened multiple times in different places.
+
+## Closing all panels of the app
+
+Available from DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-->.
+
+To configure an event to close all panels of the app:
+
+- Select *Close all panels*.
+
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7, navigating to a different low-code app page would close any open panels. From DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards, panels remain open when you navigate to a different page. To ensure older apps function correctly after upgrading to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 or higher, an *On close* page event with a *Close all panels* action is automatically configured for each page of apps created before the upgrade<!--RN 39632-->. New pages and new apps added after the upgrade will not have these events configured.
 
 ## Opening an app
 
@@ -111,7 +152,13 @@ Examples:
 
 - If you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*. Or from DataMiner 10.2.10/10.3.0 onwards, you can select *Fetch the data* for any component that uses query data as input, so that users can manually refresh the displayed data.
 
-- From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35933 -->, if you add a line chart component and a button component, you can configure this action on the button and select the option *Set timespan*, so that users can use the button to set the timespan for the line chart. The action has two arguments, To and From, which can be either set to a static value or linked to a numeric value feed.
+- If you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*<!-- RN 39254 -->, so that users can use the button to set the viewport for the line chart. The action has two arguments, *To* and *From*, which can be either set to a static value or linked to a numeric value feed. Available from DataMiner 10.3.5/10.4.0 onwards. Prior to DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5, this option is named *Set timespan*<!-- RN 35933 -->.
+
+- From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, if you configure this action for a [Node edge graph](xref:DashboardNodeEdgeGraph) component, you can select the option *Clear selection*.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInputFeed), [text input](xref:DashboardTextInputFeed), or [search input](xref:DashboardSearchInputFeed) component, you can configure this action on, for example, the button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to a feed.
+
+  ![Set value](~/user-guide/images/Set_Value.gif)<br>*Grid, text input, and table components in DataMiner 10.4.9*
 
 ## Showing a context menu
 

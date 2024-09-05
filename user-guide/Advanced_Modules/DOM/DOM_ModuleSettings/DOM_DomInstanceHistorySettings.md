@@ -4,6 +4,9 @@ uid: DOM_DomInstanceHistorySettings
 
 # DomInstanceHistorySettings
 
+>[!NOTE]
+> From 10.4.4/10.5.0 onwards<!-- RN38294 -->, it is possible to override this setting on `DomDefinition` level with the [ModuleSettingsOverrides](xref:DomDefinition#modulesettingsoverrides) property.
+
 The `DomInstanceHistorySettings` object is introduced in DataMiner version 10.3.9/10.4.0<!-- RN 36785 --> and contains the settings related to the DOM instance history. It currently includes the option to alter the history saving behavior.
 
 ## StorageBehavior

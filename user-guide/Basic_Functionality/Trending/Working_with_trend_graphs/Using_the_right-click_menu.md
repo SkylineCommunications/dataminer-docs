@@ -4,7 +4,11 @@ uid: Using_the_right-click_menu
 
 # Using the trending right-click menu
 
-When you right-click anywhere in the trend graph window, a shortcut menu appears, containing the following commands:
+When you right-click anywhere in the trend graph window, a shortcut menu appears.
+
+![Trending right-click menu](~/user-guide/images/Trending_Right-Click_Menu.png)<br>*Trending right-click menu in DataMiner 10.4.5*
+
+The trending right-click menu contains the following commands:
 
 - **Last hour/Last 24 hours/Week to date/Month to date/Previous month/Year to date**: Allows you to zoom in on a particular time frame.
 

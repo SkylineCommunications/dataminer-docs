@@ -51,7 +51,7 @@ This section consists of the following topics:
 
    1. Optionally, select *Override matrix labels with custom descriptions on I/O buttons*. If you do so, any custom descriptions that have been put on I/O buttons will be shown instead of the labels of the matrix inputs/outputs
 
-   1. Optionally, select *Confirm crosspoints sets*, to enable confirmation messages when a crosspoint is set (available from DataMiner 9.5.13 onwards).
+   1. Optionally, select *Confirm crosspoints sets*, to enable confirmation messages when a crosspoint is set.
 
    1. Optionally, select *Direct take mode* (available from DataMiner 10.1.11/10.2.0 onwards). If this option is select, users will not need to click the *Connect* button to create or delete a crosspoint between an input and an output. When an input and an output are selected, these will automatically be connected or disconnected.
 
@@ -85,7 +85,7 @@ In order to add such a matrix, do the following:
    34/505527;inputs=1000,1001,1002,1003,1004,1005;outputs=2000,2001,2002, 2003,2004,2005,2006
    ```
 
-1. Optionally (from DataMiner 9.6.4 onwards), in the *Input filter* and *Output filter* boxes, specify a subscription filter as follows:
+1. Optionally, in the *Input filter* and *Output filter* boxes, specify a subscription filter as follows:
 
    - All column parameters except the table index column must be part of the relevant subscription filter. Column parameters from the input table must be part of the input filter, column parameters from the output table must be part of the output filter.
 
@@ -108,7 +108,7 @@ Note that the input and output tables must have at least the following read and 
 
 ## Creating a dynamic tab control
 
-From DataMiner 9.0.5 onwards, when you have added a tab page representing a particular matrix, you can configure it so that a tab page will automatically be created for every input page or for every output page in the matrix.
+When you have added a tab page representing a particular matrix, you can configure it so that a tab page will automatically be created for every input page or for every output page in the matrix.
 
 To do so:
 

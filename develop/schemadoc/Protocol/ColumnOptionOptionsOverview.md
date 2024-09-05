@@ -220,6 +220,9 @@ If you specify this option, the DataMiner ID and Element ID of the Dynamic Virtu
 
 A special kind of indexColumn, i.e. the parameter ID of the table containing the primary keys referred to in this column.
 
+> [!NOTE]
+> The foreign key is automatically saved in the database. For more info about persistent data in tables, see [Persisting tables](xref:AdvancedDataMinerDataPersistencePersistingTables).
+
 ## groupby
 
 The index of the column by which will be grouped (only valid if type is "autoincrement").
@@ -348,7 +351,7 @@ If you use this option, the value of this column will be used as a link to an el
 
 If you specify this option, you indicate that the value in this column will control the row color.
 
-See also the rowTextColor option of the Discreet tag: `rowTextColor=#RRGGBB`.
+See also the [rowTextColor](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#rowtextcolorrrggbb) option of the Discreet tag: `rowTextColor=#RRGGBB`.
 
 ## save
 
@@ -582,9 +585,9 @@ This option can be configured in three different ways, as shown in the table bel
 
 |Type of filtering|Example|Description|
 |--- |--- |--- |
-|Local filtering|view=:1004:1000:1|The elementkeycolumnpid refers to another column of the same table. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1004.|
-|Foreign key filtering|view=1003:1105:1000:2|The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003.|
-|No filtering|view=:1401:1000:1|The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided). Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401. Note: If the remote elements contain duplicate keys, this can cause data to be overwritten.|
+|Local filtering|view=:1004:1000:1|The elementkeycolumnpid refers to another column of the same table. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1004.|
+|Foreign key filtering|view=1003:1105:1000:2|The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003.|
+|No filtering|view=:1401:1000:1|The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided). Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401. Note: If the remote elements contain duplicate keys, this can cause data to be overwritten.|
 
 See also: [View tables](xref:AdvancedViewTables)
 
@@ -606,3 +609,15 @@ From DataMiner 9.6.5 (RN 21401) onwards, this option is also supported for EPM (
 
 - The highest alarm among all rows that affect a particular view will be copied to the DirectViewImpactsLevel property of the ViewStateEventMessage class.
 - The bubble-up level will be copied to the DirectViewImpactsBubbleupLevel property of the ViewStateEventMessage class.
+
+## xpos
+
+This option indicates that this column contains the coordinate along the X-axis for dynamic positioning of shapes in Visual Overview.
+
+For more information about this option to positioning shapes dynamically, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
+
+## ypos
+
+This option indicates that this column contains the coordinate along the Y-axis for dynamic positioning of shapes in Visual Overview.
+
+For more information about this option to positioning shapes dynamically, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).

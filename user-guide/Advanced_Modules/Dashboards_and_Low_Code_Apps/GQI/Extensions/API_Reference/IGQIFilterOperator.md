@@ -2,7 +2,7 @@
 uid: GQI_IGQIFilterOperator
 ---
 
-# IGQIQueryNode Interface
+# IGQIFilterOperator interface
 
 ## Definition
 

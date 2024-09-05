@@ -4,13 +4,11 @@ uid: The_Bookings_module
 
 # The Bookings module
 
-This module is available from DataMiner 9.6.4 onwards under the name *Reservations*, and from DataMiner 9.6.7 onwards under *Bookings*. You can find it in the apps list in Cube.
+This module consists of two main areas:
 
-The module consists of two main areas:
+- A [list of bookings](#bookings-list) at the top.
 
-- A list of bookings at the top. See [Bookings list](#bookings-list).
-
-- A timeline showing the bookings below this. See [Bookings timeline](#bookings-timeline).
+- A [timeline showing the bookings](#bookings-timeline) below this.
 
 ## Bookings list
 

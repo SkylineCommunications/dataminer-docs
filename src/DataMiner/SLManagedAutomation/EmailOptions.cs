@@ -45,10 +45,15 @@
 		public string CC { get; set; }
 
 		/// <summary>
-		/// Gets or sets the sender.
+		/// Gets or sets the sender. Not used. The sender is always the default "From" email address <see href="xref:Configuring_outgoing_email">configured by the administrator</see>).
 		/// </summary>
 		/// <value>The sender.</value>
-		/// <remarks>Feature introduced in DataMiner 9.6.13 (RN 23563).</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>The sender is always the default "From" email address configured by the administrator. See <see href="xref:Configuring_outgoing_email">Configuring outgoing email</see>.</description></item>
+		/// <item><description>Feature introduced in DataMiner 9.6.13 (RN 23563).</description></item>
+		/// </list>
+		/// </remarks>
 		public string FROM { get; set; }
 
 		/// <summary>

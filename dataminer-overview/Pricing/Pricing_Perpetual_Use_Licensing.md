@@ -69,7 +69,7 @@ The license cost is a **fixed fee, independent of the number of Managed Objects*
 There are two main categories of connector licenses, i.e. Product and System Connectors:
 
 - **Product Connectors** are typically used to interface directly with devices and other equipment.
-- **System Connectors** are used to interface with other platforms (e.g. business applications, billing or asset management platforms, Element and Network Management Systems, Operations Support Systems, etc).
+- **System Connectors** are used to interface with other platforms (e.g. business applications, billing or asset management platforms, Element and Network Management Systems, Operations Support Systems, etc.).
 
 ## Special-purpose licenses
 

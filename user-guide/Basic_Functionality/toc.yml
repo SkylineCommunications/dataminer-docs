@@ -74,7 +74,7 @@ items:
         items:
           - name: Read parameters versus write parameters
             topicUid: Read_parameters_versus_write_parameters
-          - name: Discrete, analog and hybrid parameters
+          - name: Discrete, analog, and hybrid parameters
             topicUid: Discrete_analog_and_hybrid_parameters
           - name: Monitored parameters versus non-monitored parameters
             topicUid: Monitored_parameters_versus_non-monitored_parameters
@@ -283,6 +283,8 @@ items:
         items:
           - name: Working with trend predictions
             topicUid: Working_with_trend_predictions
+          - name: Working with trend icons
+            topicUid: Working_with_trend_icons
           - name: Working with behavioral anomaly detection
             topicUid: Working_with_behavioral_anomaly_detection
           - name: Working with pattern matching
@@ -303,6 +305,12 @@ items:
                 topicUid: Adding_related_parameters_to_a_trend_graph
               - name: Adding time-scoped related parameters to a trend graph
                 topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+          - name: Tutorials
+            items:
+              - name: Gaining insights using time-scoped relation learning
+                topicUid: Time_Scoped_Relation_Learning_Tutorial
+              - name: Working with trend patterns in DataMiner Cube
+                topicUid: Pattern_Matching_Trend_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:
@@ -356,6 +364,10 @@ items:
             topicUid: Deleting_an_information_template
           - name: Editing the information template for one parameter
             topicUid: Editing_the_information_template_for_one_parameter
+          - name: Tutorials
+            items:
+              - name: Using information templates for enhanced parameter presentation and monitoring
+                topicUid: Information_Templates_Tutorial
       - name: Alarm templates
         items:
           - name: About alarm templates
@@ -398,6 +410,10 @@ items:
             topicUid: Alarm_template_groups
           - name: Exporting alarm template parameter data
             topicUid: Exporting_alarm_template_parameter_data
+          - name: Tutorials
+            items:
+            - name: Getting started with alarm templates
+              topicUid: Getting_started_with_alarm_templates
       - name: Trend templates
         items:
           - name: About trend templates
@@ -412,17 +428,18 @@ items:
     topicUid: visio
     items:
       - name: Getting started
+        topicUid: Getting_started_with_visual_overview
         items:
           - name: Working with shape data in Microsoft Visio
             topicUid: Working_with_shape_data_in_Microsoft_Visio
           - name: Editing a visual overview in DataMiner Cube
             topicUid: Editing_a_visual_overview_in_DataMiner_Cube
-          - name: Cleaning up unused Visio files
-            topicUid: Cleaning_up_unused_Visio_files
           - name: DataMiner Visio templates
             topicUid: DataMiner_Visio_templates
           - name: Visual overview page priority
             topicUid: Visual_overview_page_priority
+          - name: Cleaning up unused Visio files
+            topicUid: Cleaning_up_unused_Visio_files
       - name: Linking shapes to DataMiner items
         topicUid: Linking_shapes_to_DataMiner_items
         items:
@@ -640,6 +657,14 @@ items:
             topicUid: Linking_a_shape_to_a_booking
           - name: Linking a shape to a resource
             topicUid: Linking_a_shape_to_a_resource
+      - name: Tutorials
+        items:
+          - name: Getting started with basic shapes
+            topicUid: Getting_started_with_basic_shapes
+          - name: Embedding a connector dashboard in Visual Overview
+            topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+          - name: Using Visual Overview to control dashboard feed components
+            topicUid: Using_visio_to_control_dashboard_feed_components
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:

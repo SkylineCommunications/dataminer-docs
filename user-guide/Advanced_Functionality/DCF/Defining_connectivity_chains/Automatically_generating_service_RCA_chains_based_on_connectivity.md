@@ -4,7 +4,7 @@ uid: Automatically_generating_service_RCA_chains_based_on_connectivity
 
 # Automatically generating service RCA chains based on connectivity
 
-From DataMiner 9.5.2 onwards, it is possible to have RCA chains generated automatically for elements in a service, based on connectivity.
+It is possible to have RCA chains generated automatically for elements in a service, based on connectivity.
 
 For this, a specific *Connectivity.xml* file must be created, which is very similar to a regular connectivity file, with two notable differences:
 
@@ -69,12 +69,19 @@ This information is added in the *\<RCA>* tag. For example:
 
 Attributes of the \<DCF> tag:
 
-| Attribute | Description |
-|--|--|
-| entryPoint | The DmaId/ElementId of the element that serves as entry point to calculate the DCF chain. |
-| isRootLevel | \-  True: The entry point is the root RCA level, and the chain will be resolved from input to output.<br> -  False: The entry point is the maximum RCA level, and the chain will be resolved from output to input. |
-| interfaceID | The interface from which to start. |
-| addExternals | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False |
+- **entryPoint**: The DMA ID/element ID of the element that serves as entry point to calculate the DCF chain.
+
+- **isRootLevel**:
+
+  - *True*: The entry point is the root RCA level, and the chain will be resolved from input to output.
+  - *False*: The entry point is the maximum RCA level, and the chain will be resolved from output to input.
+
+- **interfaceID**: The interface from which to start.
+
+- **addExternals**:
+
+  - *True*: External connections will be added.
+  - *False*: Default. No external connections will be added.
 
 Example of a Service.xml file:
 
@@ -95,7 +102,7 @@ Example of a Service.xml file:
 
 ## Service.xml configuration for automatic RCA chain generation for service templates
 
-From DataMiner 9.5.3 onwards, automatic RCA chain generation based on connectivity is also supported for service templates. In that case, in the *Service.xml* file of the service template, information must be added about the element and interface that serve as the entry point to calculate the DCF chain.
+Automatic RCA chain generation based on connectivity is also supported for service templates. In that case, in the *Service.xml* file of the service template, information must be added about the element and interface that serve as the entry point to calculate the DCF chain.
 
 This information is added in the *\<RCA>* tag. For example:
 
@@ -110,15 +117,25 @@ This information is added in the *\<RCA>* tag. For example:
 
 Attributes of the \<DCF> tag:
 
-| Attribute | Description |
-|--|--|
-| entryPoint | Not used for service templates. |
-| isRootLevel | \-  True: The entry point is the root RCA level, and the chain will be resolved from input to output.<br> -  False: The entry point is the maximum RCA level, and the chain will be resolved from output to input. |
-| interfaceID | Not used for service templates |
-| addExternals | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False |
-| templateEntryPoint | The element that serves as the entry point to calculate the DCF chain, defined either using the element name or the ID (in the format DMA ID/element ID). |
-| templateInterface | The interface from which to start calculating the DCF chain. |
-| templateOptions | Reserved for future use. |
+- **entryPoint**: Not used for service templates.
+
+- **isRootLevel**:
+
+  - *True*: The entry point is the root RCA level, and the chain will be resolved from input to output.
+  - *False*: The entry point is the maximum RCA level, and the chain will be resolved from output to input.
+
+- **interfaceID**: Not used for service templates.
+
+- **addExternals**:
+
+  - *True*: External connections will be added.
+  - *False*: Default. No external connections will be added.
+
+- **templateEntryPoint**: The element that serves as the entry point to calculate the DCF chain, defined either using the element name or the ID (in the format DMA ID/element ID).
+
+- **templateInterface**: The interface from which to start calculating the DCF chain.
+
+- **templateOptions**: Reserved for future use.
 
 > [!NOTE]
 > Though it is not possible to use wildcards for the *templateEntryPoint* or *templateInterface*, it is possible to use placeholders from the service template.

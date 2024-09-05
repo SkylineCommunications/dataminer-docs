@@ -2,7 +2,7 @@
 uid: Investigating_Web_Issues
 ---
 
-# Investigating web issues
+# Troubleshooting – web
 
 ## Client web app
 
@@ -40,6 +40,8 @@ Is something not working as expected? Then do the following:
 - The web API process runs inside IIS w3wp. Does this w3wp process crash, request a timeout or return an error page?
 
   Investigate the events in Windows Event Viewer (included in a [Log Collector](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages) package).
+
+- The web API has [separate logging](xref:Dashboards_and_Low_Code_Apps_Logging#web-api-logging) that can give more information about certain errors that occur.
 
 ## IIS web server (w3wp)
 

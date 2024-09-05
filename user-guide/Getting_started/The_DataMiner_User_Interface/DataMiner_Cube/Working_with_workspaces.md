@@ -15,6 +15,7 @@ To manage workspaces, click the Workspace button at the bottom of the Cube sideb
 > - The saved layout can include apps, like for instance Automation, and undocked alarm tabs, but not the position of the complete Alarm Console.
 > - For each card, the page selected on the card, the position of the navigation pane, and the size of the card are also stored.
 > - The icon indicating the workspace in the list shows the number of cards and their layout.
+> - From DataMiner 10.2.3 onwards, [EPM cards](xref:EPM) can be saved in workspaces; however, this is only supported when the card layout is set to *Tab layout*.
 
 The following actions are possible in the *Workspaces* pane:
 

@@ -92,10 +92,12 @@ The `GetDifferences` method returns an object `DomInstanceDifferences`. This con
 Examples:
 
 ```csharp
-var allDifferences = crudMeta.FieldValues; // All value differences (created, updated & deleted values)
-var createdDifferences = crudMeta.FieldValues.Created; // Only created values
-var updatedDifferences = crudMeta.FieldValues.Updated; // Only updated values
-var deletedDifferences = crudMeta.FieldValues.Deleted; // Only deleted values
+var differences = crudMeta.GetDifferences(); // Generate the differences
+
+var allDifferences = differences.FieldValues; // All value differences (created, updated & deleted values)
+var createdDifferences = differences.FieldValues.Created; // Only created values
+var updatedDifferences = differences.FieldValues.Updated; // Only updated values
+var deletedDifferences = differences.FieldValues.Deleted; // Only deleted values
 ```
 
 These all return a `FieldValueDifferences` object.

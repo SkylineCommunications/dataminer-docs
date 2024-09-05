@@ -4,7 +4,9 @@ uid: Creating_a_repository
 
 # Creating a repository
 
-In order to create a new repository, click the *Create repository* button. This will open the *Create New Repository* pop-up window, where you can provide the name of the vendor and data source.
+## Connector repository
+
+In order to create a new repository for a connector, click the *Create repository* button in the *Protocols* tab. This will open the *Create New Repository* pop-up window, where you can provide the name of the vendor and data source.
 
 > [!NOTE]
 > The name of the data source should start with the name of the vendor. If it does not, the following error will be shown in the status bar: (ERROR) Data Source does not start with: \<VendorName>.
@@ -54,3 +56,19 @@ In order to create a new repository, click the *Create repository* button. This
 
 > [!IMPORTANT]
 > Once a Git repository has been created for a protocol, this repository should be used for creating new versions. This means new versions must no longer be manually added on SVN. On SVN, you can verify whether this protocol has been migrated to Git already by checking for the presence of a "ConvertedToGit.txt" text file in a version folder.
+
+## Other repository types
+
+The SLC SE Repo Manager has different tabs for other repository types: *Visios*, *Custom Solutions*, *Functions*, *Automation Scripts*, *Dashboards*, *Examples*, *Packages*, and *Files*.
+
+![](~/develop/images/SLCSERepoManager_Create_Files.png)<br>
+*SLC SE Repository Manager: Creating a Files repository with Constraint, Category, and Name*
+
+To create a new repository, click the *Create repository* button in the corresponding tab. This will open the *Create New Repository* pop-up window, where you can provide the following information:
+
+- **Constraint**: Defines the visibility of the Catalog item. Select one of the following options:
+  - **Customers**: The repository is created specifically for one specific customer. The Catalog item will be private.
+  - **Generic**: The repository can be reused. The Catalog item will be public. This does not apply to dashboards; those are currently private Catalog items.
+  - **Internal**: The repository is not meant to be published on its own. It is part of an install package or is exclusively for internal use by Skyline. The Catalog item will be private.
+- **Category**: The category beneath the constraint.
+- **Name**: The user-friendly name of the repository.

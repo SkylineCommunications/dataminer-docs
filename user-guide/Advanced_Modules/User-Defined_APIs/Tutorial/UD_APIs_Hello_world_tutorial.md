@@ -19,7 +19,7 @@ This tutorial shows you how to create your first user-defined API. You will crea
 
 ## Step 1: Create an Automation script solution
 
-While you could develop the Automation script in Cube, creating an Automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:DIS). If you also use a version control system like Git, this will also enable versioning and make collaboration possible.
+While you could develop the Automation script in Cube, creating an Automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you also use a version control system like Git, this will also enable versioning and make collaboration possible.
 
 ## [Visual Studio 2022](#tab/tabid-1)
 

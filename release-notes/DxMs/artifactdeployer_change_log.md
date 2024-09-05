@@ -4,6 +4,55 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 8 August 2024 - Enhancement - ArtifactDeployer 1.8.0 - Upgrade to .NET 8 [ID_40441]
+
+DataMiner ArtifactDeployer has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
+#### 25 July 2024 - Enhancement - ArtifactDeployer 1.7.2 - Dependencies updated & event handling improved [ID_40308]
+
+Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
+
+#### 30 May 2024 - Fix - ArtifactDeployer 1.7.1 - Missing Azure.Core.dll after upgrading to ArtifactDeployer 1.7.0 [ID_39783]
+
+An issue has been resolved where a required `Azure.Core.dll` went missing after an upgrade to ArtifactDeployer 1.7.0. This did not happen with a clean installation of ArtifactDeployer 1.7.0.
+
+#### 23 May 2024 - Enhancement - ArtifactDeployer 1.7.0 - Deployment event improvements [ID_39717]
+
+An improvement has been implemented to the way Catalog and DxM deployment events are forwarded to dataminer.services. This will reduce the number of deployments that are incorrectly shown as failures on dataminer.services even though they actually succeeded.
+
+#### 26 April 2024 - Fix - ArtifactDeployer 1.6.10 - Inconsistent cloud endpoint detection failures [ID_39513]
+
+An issue has been resolved that could make features like DxM and Catalog deployments inconsistently fail.
+
+#### 29 March 2024 - Enhancement - ArtifactDeployer 1.6.9 - Added the possibility to locally disable artifact deployments through the app settings [ID_39113]
+
+It is now possible to locally disable artifact deployments through the *App settings* file of the ArtifactDeployer DxM.
+
+To do so, set *DeployArtifactOptions:IsDisabled* to *true* in the app settings. On each server where DataMiner ArtifactDeployer is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner ArtifactDeployer` and either create or modify *appsettings.custom.json* with the following configuration:
+
+```json
+{
+   "DeployArtifactOptions": {
+      "IsDisabled": true
+   }
+}
+```
+
+#### 13 March 2024 - Enhancement - ArtifactDeployer 1.6.8 - Dependencies updated [ID_39046]
+
+Several dependencies have been updated.
+
+#### 4 March 2024 - Enhancement - ArtifactDeployer 1.6.7 - Improved installer robustness [ID_38940]
+
+The ArtifactDeployer installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
+#### 22 February 2024 - Enhancement - ArtifactDeployer 1.6.6 - Improved deployment robustness [ID_38852]
+
+Robustness for Catalog and DxM deployments has been improved by adding and improving retry mechanisms.
+
+> [!TIP]
+> To make use of all the enhancements, also install Orchestrator 1.5.5.
+
 #### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
 
 In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.

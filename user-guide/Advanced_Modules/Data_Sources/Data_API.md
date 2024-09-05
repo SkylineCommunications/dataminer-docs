@@ -13,7 +13,7 @@ The HTTP request should include the following HTTP header fields:
 
 - The **identifier**, stored as the General Parameter "Data API Identifier", must be unique within the DMS cluster. The identifier serves as the initial name of the element, which can be renamed later at any time as the Data API uses the *Data API Identifier*.
 
-- The **type** denotes the name of the auto-generated connector.
+- The **type** denotes the name of the auto-generated connector.<!-- RN 37898 -->
 
 The HTTP body comprises a JSON-formatted structure with key-value pairs, triggering the creation of a corresponding element in DataMiner. This process captures the specified values for *Server Name* and *CPU Utilization*, stored in parameters with the same names.
 

@@ -83,6 +83,8 @@ To create the repositories:
    <!-- ... -->
    ```
 
+   In the example above, you are adding the *Ziine SatUplink* Companion Files repository for the *Ziine* customer.
+
 1. In the "Install" Automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
 
    1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org> ) to the "Install" project.
@@ -99,6 +101,12 @@ To create the repositories:
 ## Installing the package
 
 1. Make sure the [SRM framework package is deployed](xref:deploying_srm) on the target cluster.
+
+   > [!IMPORTANT]
+   > We highly recommended installing the same SRM framework version as in the setup where the configuration was exported.
+
+   > [!NOTE]
+   > Double-check whether the DataMiner version is compliant with the SRM framework version you are about to install.
 
 1. Open the [SLNetCLientTest tool](xref:Opening_the_SLNetClientTest_tool).
 

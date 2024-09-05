@@ -17,7 +17,7 @@ The DataMiner credit balance of an organization is displayed in the [Admin app](
 
 ### How can I acquire more DataMiner credits?
 
-You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner Credits](xref:Order_DataMiner_credits).
+You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
 
 For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
@@ -30,7 +30,7 @@ A DataMiner Community Edition DaaS system will be scheduled to expire as soon as
 
 ### What happens when my DaaS system expires or is deleted?
 
-Your DaaS system along with all its associated resources and data will be irreversibly deleted.
+Your DaaS system along with all its associated resources and data will be decommissioned. The DataMiner System will still be recoverable for a further 7 days after the expiration or deletion. To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
@@ -53,23 +53,23 @@ For more information, please contact <sales@skyline.be>.
 
 By default, a DaaS system has zone-redundant storage (ZRS). Geo-redundant storage (GRS) is optional at an additional subscription cost.
 
-See also [Data location and redundancy](xref:STaaS#data-location-and-redundancy)
+See also: [Data location and redundancy](xref:STaaS#data-location-and-redundancy).
 
 ### What system redundancy policy does a DaaS system have?
 
 As of Q4 of 2024, a DaaS system will be able to use Swarming.
 
-See also [Swarming](xref:Swarming)
+See also: [Swarming](xref:Swarming).
 
 ### What backup policy does a DaaS system have?
 
-For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups)
+For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups).
 
 ### Is it possible to make a local backup of all data?
 
 You can set up your own offload or "central" database in your DaaS system at no additional subscription cost. That database will contain an offline copy of all (or some of) the data in the general DMA databases.
 
-See also [Offload database](xref:Offload_database)
+See also: [Offload database](xref:Offload_database).
 
 ### Is it possible to copy data from Azure and store it locally?
 
@@ -89,4 +89,10 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 
 User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
-See also [User management](xref:User_management)
+See also: [User management](xref:User_management).
+
+## Are there specific limitations that apply for DaaS?
+
+As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
+
+In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).

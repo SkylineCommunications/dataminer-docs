@@ -474,7 +474,7 @@ namespace Skyline.DataMiner.Automation
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
 		/// <item><description>If the user clicks Ignore, the message box will be closed.</description></item>
 		/// </list>
-		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see Find interactive client.</note>
+		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see <see href="xref:AutomationActionFindInteractiveClient">Find interactive client</see>.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -965,6 +965,30 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public IConnection GetUserConnection() { return null; }
 
+		/// <summary>
+		/// Hides a custom-made dialog box of an interactive Automation script.
+		/// </summary>
+		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
+		/// <exception cref="DataMinerException">Hide UI failed.</exception>
+		/// <para>Feature introduced in DataMiner 10.4.7 (RN 39451/RN 39638).</para>
+		/// <para>This feature is only available for interactive Automation scripts executed in a web environment.</para>
+		/// <example>
+		/// <code>
+		/// // Build and display a form
+		/// var formUi = BuildFormUi();
+		/// var results = engine.ShowUI(formUi);
+		/// 
+		/// // Process UI results
+		/// 
+		/// // Hide the UI before starting a lengthy operation
+		/// engine.HideUI();
+		/// 
+		/// // Build and display issue information
+		/// var issueUi = BuildIssueUi();
+		/// var issueResults = engine.ShowUI(issueUi);
+		/// </code>
+		/// </example>
+		public void HideUI() { }
 
 		/// <summary>
 		/// Resets the timeout timer, extending the time the Automation script is allowed to execute.
@@ -1513,6 +1537,11 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Sleep(100);
 		/// </code>
 		/// </example>
+                /// <remarks>
+		/// <note type="note">
+		/// <description>In DataMiner versions prior to 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, this method will throw a DataMinerException when a negative time is specified.</description>
+		/// </note>
+		/// </remarks>
 		public void Sleep(int timeInMilliseconds) { }
 
 		/// <summary>

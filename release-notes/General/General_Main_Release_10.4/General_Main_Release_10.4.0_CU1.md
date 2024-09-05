@@ -2,7 +2,7 @@
 uid: General_Main_Release_10.4.0_CU1
 ---
 
-# General Main Release 10.4.0 CU1 - Preview
+# General Main Release 10.4.0 CU1
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
@@ -11,6 +11,15 @@ uid: General_Main_Release_10.4.0_CU1
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
+
+#### Circular correlation rules will now be blocked [ID_38301]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A correlation rule will now be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
 
 #### Automation: Late script control requests will now be ignored [ID_38409]
 
@@ -27,11 +36,37 @@ Examples of new log entries:
 
 In the latter case, no error would be returned up to now.
 
+#### GQI: All GQI queries opened by the same user will now share one and the same connection [ID_38452]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, each GQI query would open a dedicated SLNet connection. From now on, all GQI queries launched by the same user will share one and the same connection.
+
+#### Enhanced performance when applying a table filter subscription containing wildcards and when applying a partial table cell subscription [ID_38555]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance has increased
+
+- when applying an initial table filter subscription containing wildcards that needs to be handled by the SLElement process, and
+- when applying a subscription of a partial table cell.
+
 #### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
+
+#### DataMiner Object Models: GenericEnum values will now be converted to the display value prior to being used in a DOM instance name concatenation [ID_38586]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+The `DomInstanceNameDefinition` class contains a simple list of `IDomInstanceConcatenationItems`. With this, you can add concatenation items of two types in a specific order to define your name: `StaticValueConcatenationItem` or `FieldValueConcatenationItem`.
+
+In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFieldDescriptor` (which can be either string values or integer values), these values will now be converted to the display value.
+
+> [!NOTE]
+> Currently, using `GenericEnum` fields containing multiple values are not supported for name concatenation.
 
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
@@ -62,13 +97,93 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
-#### Security enhancements [ID_38756]
+#### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Trend predictions: Enhanced accuracy of the trend prediction mechanism [ID_38767]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall accuracy of the trend prediction mechanism has been improved.
+
+#### SLProtocol will no longer forward all changes to standalone parameters to SLElement [ID_38785]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, SLProtocol would forward all changes to standalone parameters to SLElement, even when this was not strictly necessary. From now on, SLProtocol will only forward changes to standalone parameters to SLElement when the latter requires them.
+
+Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would forward the value of that wildcard to SLElement, which would then pass it on to the SLSNMPManager process. From now on, SLProtocol will forward those wildcard values directly to SLSNMPManager.
+
+#### Service & Resource Management: Past bookings will no longer be queried when creating a new booking or calculating available resources [ID_38798]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When creating or updating a booking, up to now, overlapping past bookings would be queried. This was necessary to validate the usage of contributing bookings that had already ended. In order to avoid the retrieval of those past bookings, the behavior of contributing bookings has now been altered.
+
+From now on, it will no longer be possible to reuse a contributing booking that has already ended in a new booking. However, updating an existing main booking that uses a contributing booking will still be possible.
+
+#### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the StorageModule service will now be configured to restart itself after each failure.
+
+#### At installation the APIGateway service will now be configured to restart itself after each failure [ID_38855]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the APIGateway service will now be configured to restart itself after each failure.
+
+#### GQI: Full logging [ID_38870]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Full GQI logging will now be available in the `C:\Skyline DataMiner\Logging\GQI` folder.
+
+The log level can be configured in the `<appSettings>` element of the `C:\Skyline DataMiner\Files\SLHelper.exe.config` file.
+
+By default, this file will contain the following GQI log settings:
+
+```xml
+<add key="serilog:minimum-level" value="Information" />
+```
+
+In case of issues that need investigating, you can temporarily lower the minimum log level to "Debug".
+
+> [!NOTE]
+>
+> - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
+> - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced generation of suggestion events when detecting variance changes [ID_38941]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
+
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
+
 ### Fixes
+
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
+
+#### Problem when a redundancy group was set to an undefined state [ID_38401]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a redundancy group was set to an undefined state, a large number of empty connectivity contexts would be inserted into the *Connectivity* section of the *redundancy.xml* file. As a result, the correct connectivity contexts would be overwritten, causing the redundancy group to be stuck in the undefined state.
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
 
@@ -104,11 +219,27 @@ In some cases, SLProtocol could stop working due to an `Access violation reading
 
 When DOM instances were sorted, in some cases, an error could be thrown when the column by which you sorted contained null values.
 
+#### Problem when a DataMiner Cube client tried to connect using gRPC [ID_38606]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a DataMiner Cube client tried to connect to a DataMiner Agent using gRPC, in some rare cases, a disconnect could occur with the following error:
+
+`Some messages have probably gone lost. Waiting for X while X+20 already entered.`
+
 #### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Each time the focus score of an alarm is updated, incident tracking has to update its alarm groups. In some cases, incident tracking would incorrectly update its groups twice, causing the groups to be set to an undefined state.
+
+#### DaaS: The StorageModule service would incorrectly start up before the NATS service had started up [ID_38644]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When starting a DaaS system (DataMiner as a Service), in some cases, the StorageModule service would start up before the NATS service had started up. As a result, StorageModule would fail to connect to NATS and would shut down.
+
+The DaaS startup routine has now been improved to prevent issues like the one described above.
 
 #### Service & Resource Management: Booking corrupted after SRM_QuarantineHandling retrieved incorrect version of the booking [ID_38646]
 
@@ -121,6 +252,12 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 When you had updated the anomaly configuration for a DVE element, SLAnalytics would not process the changes correctly, causing incorrect behavioral anomaly alarms to be generated.
+
+#### Redundancy groups: Problem when loading derived elements [ID_38670]
+
+<!-- MR 10.4.0 [CU1] - FR TBD -->
+
+In some rare cases, errors could occur in SLDataMiner and SLDMS when loading derived elements for a redundancy group.
 
 #### DataMiner upgrade: Some folders would not get cleaned up when performing an upgrade [ID_38672]
 
@@ -143,6 +280,12 @@ At DataMiner startup, in some cases, errors could incorrectly be thrown when at 
 
 In some cases, SLAnalytics could stop working while processing an element with an invalid alarm template.
 
+#### Paused element set back to the active state would no longer receive any alarm updates [ID_38744]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a paused element was set back to the "started" state, it would no longer receive any alarm updates until it was restarted.
+
 #### DataMiner Maps: KML layers would incorrectly always be displayed first in the legend [ID_38746]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
@@ -150,3 +293,104 @@ In some cases, SLAnalytics could stop working while processing an element with a
 When using either Google Maps or OpenStreetMap, KML layers would incorrectly always be displayed first in the layer legend, regardless of the order in which they were specified in the map configuration file.
 
 From now on, the legend will always show the layers in the order in which they were specified in the map configuration file.
+
+#### Failover: Memory leak when invoking PowerShell scripts [ID_38763]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
+
+#### BPA test 'Check agent presence in NATS' could throw an incorrect error when the local NATS process had been running for a long time [ID_38776]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When the local NATS process had been running for a long time, in some cases, the *Check agent presence in NATS* BPA test could incorrectly throw the following error:
+
+`Failed to execute NATS server test, the local NATS server might be offline.`
+
+#### Problem with SLProtocol when it was not able to reach the StorageModule service during startup [ID_38824]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, during startup, SLProtocol would stop working when it was not able to reach the StorageModule service.
+
+#### Automation: Problem when sending an email to a user or group [ID_38844]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID_38858]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol run-time error alarm would be generated and subsequently cleared when the poll group finished.
+
+In order to avoid such run-time error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
+
+#### STaaS: Failing request would not be retried [ID_38874]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
+
+`System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
+
+#### Mediation protocols: Problem when the value of the 'baseFor' attribute is identical to that of the '\<ElementType\>' tag [ID_38878]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mediation protocol had a `baseFor` attribute with a value identical to that of its `<ElementType>` tag, this could lead to issues in SLNet.
+
+From now on, it will no longer be possible to upload a protocol of which the value of the `baseFor` attribute is identical to that of the `<ElementType>` tag.
+
+#### STaaS: Problem when generating a DataMiner backup with the database backup option enabled [ID_38896]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, on STaaS systems, a notice would be generated when a DataMiner backup was executed with the database backup option enabled.
+
+From now on, when a DataMiner backup is executed with the database backup option enabled, on a STaaS system, no database backup will be performed.
+
+> [!NOTE]
+> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
+
+#### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.
+
+#### Problem with SLDataMiner when retrieving users from a user group due to LDAP setting ReferralConfigured='false' [ID_39058]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
+
+#### Problem with SLProtocol due to incorrect redundant connection [ID_39114]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+The redundant polling feature allows SLProtocol to select another connection when the main connection goes into a timeout.
+
+In some cases, when SLProtocol selected a connection with a type different from that of the main connection, an error could occur. From now on, when SLProtocol has to select another connection when the main connection goes into a timeout, it will only take into account connections with a type equal to that of the main connection.
+
+#### SLDataMiner could stop working when a MIB file was being generated for a protocol that contained parameters with discrete values [ID_39120]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+When a MIB file was being generated for a protocol that contained parameters with discrete values, in some cases, SLDataMiner could stop working.

@@ -1,12 +1,13 @@
 ---
 uid: I-DOCSIS_parameters_cm_us_qam_ch
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – CM US QAM CH
+# Integrated DOCSIS parameters – CM US QAM CH
 
-This page contains an overview of the CM US QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the CM US QAM CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
-These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboards.
+These parameters are displayed for the Cable Modem level in the Integrated DOCSIS dashboards.
 
 - **Name \[IDX]**: Direct value. The display name of the CM-channel relation.
 
@@ -26,7 +27,7 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **Node Segment Name**: Direct value. The display name of the node segment.
 
-  Concatenation of the CMTS Name and the unique combination of a DS (downstream) port and US (upstream) port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique combination of US/DS port serving at least one cable modem.
+  Concatenation of the CMTS Name and the unique combination of a DS (downstream) port and US (upstream) port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the Integrated DOCSIS service. There will be a node segment every time the connector detects a unique combination of US/DS port serving at least one cable modem.
 
 - **US QAM Ch Frequency**: Direct value.
 
@@ -108,7 +109,7 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
   - OID: D3.0: 1.3.6.1.4.1.4491.2.1.20.1.4.1.9
   - OID: D2.0: 1.3.6.1.2.1.10.127.1.3.3.1.17
 
-- **US QAM Ch Utilization**
+- **US QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.
 
 - **US QAM Ch NMTER**: Calculated. The NMTER value of the channel. Only available for DOCSIS 3.x.
 
@@ -130,17 +131,17 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **US QAM Ch Reflection Distance**: Calculated. Only available for DOCSIS 3.x. The reflection distance of the associated US channel.
 
-- **US QAM Ch NMTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The NMTER alarm status. Possible values: *OOS* and *OK*.
+- **US QAM Ch NMTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The NMTER alarm status. Possible values: *Out of Spec (OOS)* and *OK*.
 
-  This alarm is based on the NMTER value being above or below the NMTER threshold. If the value is above the threshold, the alarm value is *OOS*, otherwise it is *OK*.
+  This alarm is based on the NMTER value being above or below the NMTER threshold. If the value is above the threshold, the alarm value is *Out of Spec (OOS)*, otherwise it is *OK*.
 
-- **US QAM Ch PreMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PreMTTER alarm status. Possible values: *OOS* and *OK*.
+- **US QAM Ch PreMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PreMTTER alarm status. Possible values: *Out of Spec (OOS)* and *OK*.
 
-  This alarm is based on the PreMTTER value being above or below the PreMTTER threshold. If the value is above the threshold, the alarm value is *OOS*, otherwise it is *OK*.
+  This alarm is based on the PreMTTER value being above or below the PreMTTER threshold. If the value is above the threshold, the alarm value is *Out of Spec (OOS)*, otherwise it is *OK*.
 
-- **US QAM Ch PostMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PostMTTER alarm status. Possible values: *OOS* and *OK*.
+- **US QAM Ch PostMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PostMTTER alarm status. Possible values: *Out of Spec (OOS)* and *OK*.
 
-  This alarm is based on the PostMTTER value being above or below the PostMTTER threshold. If the value is above the threshold, the alarm value is *OOS*, otherwise it is *OK*.
+  This alarm is based on the PostMTTER value being above or below the PostMTTER threshold. If the value is above the threshold, the alarm value is *Out of Spec (OOS)*, otherwise it is *OK*.
 
 - **Reflection Power Ratio**: Direct value.
 

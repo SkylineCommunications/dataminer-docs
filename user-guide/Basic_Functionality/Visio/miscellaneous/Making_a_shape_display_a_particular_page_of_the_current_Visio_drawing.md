@@ -16,6 +16,7 @@ That page can be displayed:
 > [!NOTE]
 >
 > - You can only make a shape display pages other than the page actually containing the shape. This restriction is necessary to avoid loops of inline pages.
+> - If a shape displays content from another Visio page, this means multiple pages will need to be loaded at the same time in Visual Overview. This could potentially affect the loading times and overall user experience. When you create such a drawing, make sure to assess performance to ensure a seamless user experience.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[inline visio > BUTTONS]* page.
 
 ## Basic shape data field configuration
@@ -56,7 +57,7 @@ If **VdxPage** is set to "PageName\|Popup", you can make the pop-up window close
 | VdxPage          | MyPage\|Popup  |
 | Options          | AutoClosePopup |
 
-Alternatively, from DataMiner 9.6.1 onwards, you can configure a specific shape within the pop-up window to close the window after the shape's main action is executed. To do so, add the "ClosePage" option to the shape data of the shape:
+Alternatively, you can configure a specific shape within the pop-up window to close the window after the shape's main action is executed. To do so, add the "ClosePage" option to the shape data of the shape:
 
 | Shape data field | Value     |
 | ---------------- | --------- |
@@ -64,7 +65,7 @@ Alternatively, from DataMiner 9.6.1 onwards, you can configure a specific shape 
 
 ### Configuring what should happen when a window is closed
 
-From DataMiner 10.0.13 onwards, the **OnClosing** page-level shape data field allows you to configure what should happen when a Visual Overview window is closed. Depending on how this shape data is configured, a message box will be displayed asking for confirmation, possibly with a custom message.
+The **OnClosing** page-level shape data field allows you to configure what should happen when a Visual Overview window is closed. Depending on how this shape data is configured, a message box will be displayed asking for confirmation, possibly with a custom message.
 
 In this shape data field, specify a script (example: *Script:MyScript*), and make sure the script contains an instruction like the following one:
 
@@ -112,7 +113,7 @@ By default, when you right-click a Visio drawing displayed in a shape, the short
 
 ### Setting the border style of the window
 
-From DataMiner 9.6.13 onwards, if you added a "\|Window" option to have the Visio page appear in a separate window, to set the border style of the window, you can use a shape data field of type **LinkOptions** and set it to one of the following values:
+If you have added a "\|Window" option to have the Visio page appear in a separate window, to set the border style of the window, you can use a shape data field of type **LinkOptions** and set it to one of the following values:
 
 | Value                          | Description                                                                                 |
 | ------------------------------ | ------------------------------------------------------------------------------------------- |
@@ -122,7 +123,7 @@ From DataMiner 9.6.13 onwards, if you added a "\|Window" option to have the Visi
 
 ### Setting the pop-up window to be displayed in front of other windows
 
-From DataMiner 9.6.13 onwards, if you added a "\|Popup" or a "\|Window" option to have the Visio page appear in a separate window, to make sure the window is always displayed in front of the window it was launched from, you can use a shape data field of type **LinkOptions** and set it to "KeepOnTop=true".
+If you have added a "\|Popup" or a "\|Window" option to have the Visio page appear in a separate window, to make sure the window is always displayed in front of the window it was launched from, you can use a shape data field of type **LinkOptions** and set it to "KeepOnTop=true".
 
 | Shape data field | Value          |
 | ---------------- | -------------- |

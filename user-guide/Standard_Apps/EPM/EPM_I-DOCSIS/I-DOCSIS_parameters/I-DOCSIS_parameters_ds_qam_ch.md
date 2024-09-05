@@ -1,12 +1,13 @@
 ---
 uid: I-DOCSIS_parameters_ds_qam_ch
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – DS QAM CH
+# Integrated DOCSIS parameters – DS QAM CH
 
-This page contains an overview of the DS QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the DS QAM CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
-These parameters are displayed for the Node Segment and Service Group levels in the I-DOCSIS dashboards.
+These parameters are displayed for the Node Segment and Service Group levels in the Integrated DOCSIS dashboards.
 
 - **Name \[IDX]**: Direct value. The display name of the downstream channel.
 
@@ -26,7 +27,7 @@ These parameters are displayed for the Node Segment and Service Group levels in 
 
 - **Node Segment Name**: Direct value. The display name of the node segment.
 
-  Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
+  Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the Integrated DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
 
 - **DS QAM Ch Frequency**: Direct value. The DS QAM Ch Frequency from any of the CM-channel relations.
 
@@ -72,13 +73,7 @@ These parameters are displayed for the Node Segment and Service Group levels in 
 
   - Uncorrected: OID 1.3.6.1.2.1.10.127.1.1.4.1.11
 
-- **DS QAM Ch Utilization**: Calculated. The average value of the DS QAM Ch Utilization related to the cable modems served by the given channel.
-
-  Calculated as follows: DS QAM Ch Utilization = (Current Nº octets transmitted - Nº octets transmitted previously) \* 8 \* 100 / (Delta \* Interface's current bandwidth).
-
-  - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.16
-
-  - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
+- **DS QAM Ch Utilization**: Direct value. Retrieved from the *docsIfCmtsChannelUtilizationTable* (OID 1.3.6.1.2.1.10.127.1.3.9) polled from the CCAP.
 
 - **DS QAM Ch Output Bitrate**: Calculated. The average value of the DS QAM Ch Output Bitrate related to the cable modems served by the given channel.
 

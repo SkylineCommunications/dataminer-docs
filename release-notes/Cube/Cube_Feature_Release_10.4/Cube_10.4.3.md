@@ -193,3 +193,14 @@ When editing a correlation rule in which a *Set Parameter* action had previously
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 In some rare cases, the DataMiner Cube sidebar would not contain any buttons.
+
+#### Visual Overview: Problem with placeholders referring to datetime and timespan values [ID_38750]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+On SRM systems, the following placeholders would not resolve correctly when a format was specified:
+
+- [Start time:format=...]
+- [End time:format=...]
+- [Elapsed time:format=...]
+- [Remaining time:format=...]

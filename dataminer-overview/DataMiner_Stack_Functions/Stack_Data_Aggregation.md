@@ -13,8 +13,7 @@ uid: Stack_Data_Aggregation
 Summarize data from multiple sources.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [Working with aggregation rules](xref:Working_with_aggregation_rules).
 
 ## Data Collector
 
@@ -29,13 +28,11 @@ Gathering, recording, and analyzing data.
 Collect data from various sources and convert them into a uniform format.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [DataMiner Mediation Layer](xref:AdvancedDataMinerMediationLayerIntroduction)
 
 ## Indexing Engine
 
 Collecting, parsing, and storing of data to facilitate fast and accurate information retrieval.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).

@@ -4,7 +4,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 
 # DataMiner UserDefinableApiEndpoint DxM
 
-*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 6 web API (from DataMiner 10.3.7 onwards) or ASP.NET Core 5 web API (prior to DataMiner 10.3.7). It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
+*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
 > There is currently no rate limiting or protection in place to prevent malicious users from spamming the endpoint. We recommend only exposing the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
@@ -18,6 +18,33 @@ If for some reason this extension module is uninstalled, the User-Defined APIs f
 > [!IMPORTANT]
 > Downgrading DataMiner will not automatically downgrade the *UserDefinableApiEndpoint* DxM. This means that a **downgrade could result in incompatibility** between DataMiner and the extension module. To downgrade the *UserDefinableApiEndpoint* DxM, first uninstall the installed version, and then install the lower version. Do not just run the installer of the lower version without uninstalling first, as this may corrupt your installation.
 
+### Versions
+
+Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and their requirements.
+
+- **Required .NET version**: The .NET version that is required to run the DxM.
+
+- **Compatible with DataMiner version**: The DataMiner version range that this DxM version is compatible with. Note that an older DxM version may not have the new features that were added in later versions, but it will include the core API functionality.
+
+- **Installed with DataMiner version**: The DataMiner version where the installer for this DxM version was first available. You can use this to know what the best matching DxM version is for a DataMiner Agent.
+
+| DxM version | Required .NET version | Compatible with DataMiner versions | Installed with DataMiner version |
+|-------------|-----------------------|------------------------------------|----------------------------------|
+| 1.0.2       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.5 (preview)                 |
+| 1.1.0       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.6                           |
+| 1.1.1       | .NET 6                | 10.3.6 to 10.3.7                   | 10.3.7                           |
+| 2.0.0       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.8                           |
+| 2.0.2       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.9                           |
+| 3.1.0       | .NET 6                | 10.4.0+                            | 10.4.1                           |
+| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.3/10.4.0                    |
+| 3.2.3       | .NET 8<!--RN 40303--> | 10.4.0+                            | 10.4.9                           |
+| 3.2.4       | .NET 8                | 10.4.0+                            | 10.4.10/10.5.0                   |
+
+> [!NOTE]
+>
+> - Versions not listed above were not released in official DataMiner upgrade packages.
+> - As of .NET 8, DataMiner no longer installs .NET automatically. Manually install the [ASP.NET Core Runtime Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet) available for the .NET version that matches your DxM version.
+
 ## Consulting logging for the DxM
 
 For logging of **core functionality errors** of the extension module, consult the logging in the following location:
@@ -28,7 +55,7 @@ User errors, such as an empty route, are not included in this, as the exception 
 
 Logging related to the **installation** is placed in that same folder in the file `UserDefinableApiEndpointInstaller.txt`.  Only the logging of the last installation is kept.
 
-The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. If there are issues and the logging contains errors related to NATS, refer to [Investigating NATS issues](xref:Investigating_NATS_Issues).
+The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. If there are issues and the logging contains errors related to NATS, refer to [Troubleshooting – NATS](xref:Investigating_NATS_Issues).
 
 ## Configuring HTTPS
 

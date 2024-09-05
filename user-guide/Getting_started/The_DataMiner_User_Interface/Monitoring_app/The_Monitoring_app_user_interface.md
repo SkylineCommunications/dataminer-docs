@@ -8,7 +8,7 @@ The Monitoring app is a web application featuring a user interface similar to th
 
 The user interface consists of four main components:
 
-![Monitoring app UI](~/user-guide/images/Monitoring_app_UI.png)
+![Monitoring app UI](~/user-guide/images/Monitoring_app_UI.png)<br>*Monitoring app in DataMiner 10.4.4*
 
 - [Header bar](xref:Monitoring_app_header_bar) (1)
 

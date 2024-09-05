@@ -8,9 +8,7 @@ To manage memory files containing an array of values:
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 
-1. Up to DataMiner 9.5.10: In the lower left corner of the Automation card, click the *Memory files* button.
-
-   From DataMiner 9.5.11 onwards: In the navigation pane of the Automation card, go to the *memory files* tab.
+1. In the navigation pane of the Automation module, go to the *memory files* tab.
 
 1. In the column on the left:
 

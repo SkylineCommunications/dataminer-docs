@@ -4,7 +4,9 @@ uid: DashboardTable
 
 # Table
 
-This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Creating a GQI query](xref:Creating_GQI_query). Available from DataMiner 10.0.13 onwards.
+This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Creating a GQI query](xref:Creating_GQI_query).
+
+![Table component](~/user-guide/images/Table_Component.png)<br>*Table component in DataMiner 10.4.1*
 
 It displays the different possible data sources of queries as follows:
 
@@ -20,6 +22,9 @@ It displays the different possible data sources of queries as follows:
 >
 > - From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
 > - Prior to DataMiner 10.3.7/10.4.0, if the data in the table is fetched again by means of a [trigger component](xref:DashboardTriggerFeed) or a [component action](xref:LowCodeApps_event_config) while data is selected in the table, this selection is lost. From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the selection. This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row is missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its feeds to reflect the new selection. <!-- RN 36372 -->
+
+> [!TIP]
+> See also: [Tutorial: Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed)
 
 ## Configuring the layout
 

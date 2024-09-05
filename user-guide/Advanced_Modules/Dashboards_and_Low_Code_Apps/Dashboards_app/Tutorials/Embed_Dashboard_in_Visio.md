@@ -12,6 +12,7 @@ Expected duration: 20 minutes
 >
 > - An application package is available in the [Catalog](https://catalog.dataminer.services/details/package/5182) that demonstrates the outcome of this tutorial.
 > - When you design a dynamic dashboard (e.g. with a configurable element), you need to use a [feed](xref:Feeds), which can be a [Dropdown](xref:DashboardDropdown) component, so that a value can be dynamically assigned when the dashboard is embedded.
+> - See also: [Kata #20: Integrating dashboards in DataMiner Cube](https://community.dataminer.services/courses/kata-20/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created in DataMiner 10.3.7.

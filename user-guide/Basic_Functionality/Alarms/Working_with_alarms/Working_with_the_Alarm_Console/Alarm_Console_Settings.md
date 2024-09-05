@@ -84,6 +84,8 @@ Select this option to give all alarm records a background color indicating the c
 
 Select this option to display a banner at the top of the Cube window when new alarms enter the tab. The banner shows the number of new alarms, the color of the most severe among them, and service impact information. When you click the banner, the Alarm Console tab will open and the new alarm(s) will be selected.
 
+![Banner](~/user-guide/images/Banner.png)<br>*Banner in header bar displaying incoming alarms in DataMiner 10.4.5*
+
 > [!NOTE]
 > It is possible to set a delay timer on when the alarm banner hides. For more information, see [User settings](xref:User_settings).
 
@@ -126,6 +128,8 @@ E.g. if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console wi
 This setting is only available if [History tracking](#history-tracking) is enabled and [Automatically remove cleared alarms](#automatically-remove-cleared-alarms) and [Freeze](#freeze) are disabled in the alarm tab.
 
 When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab.
+
+![Merge alarm trees](~/user-guide/images/Merge_Alarm_Trees.png)<br>*Merged alarm trees in DataMiner 10.4.5*
 
 When you activate this option, you can also select an additional option to only merge alarm trees in case the time between the alarm trees is less than a particular time span (between 1 second and 1 day).
 

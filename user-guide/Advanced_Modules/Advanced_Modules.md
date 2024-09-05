@@ -12,7 +12,7 @@ uid: Part4AdvancedModules
     <a href="/user-guide/Advanced_Modules/Business_Intelligence/Business_Intelligence.html" title="Business Intelligence" target="_self"><img src="~/user-guide/images/Business_Intelligence.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Correlation/Correlation.html" title="Correlation" target="_self"><img src="~/user-guide/images/Correlation.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Correlation/About_DMS_Correlation.html" title="Correlation" target="_self"><img src="~/user-guide/images/Correlation.svg" style="width:100%"></a>
   </div>  
 </div>
 
@@ -54,7 +54,7 @@ uid: Part4AdvancedModules
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Maps/DMS_Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/Maps.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Maps/About_DMS_Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/Maps.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Mobile_Gateway/Mobile_Gateway.html" title="Mobile Gateway" target="_self"><img src="~/user-guide/images/Mobile_Gateway.svg" style="width:100%"></a>

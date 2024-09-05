@@ -4,12 +4,28 @@ uid: Installing_the_DataMiner_PTP_app
 
 # Installing the DataMiner PTP app
 
-To install and set up the DataMiner PTP app:
+## Deploying the package
 
-1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+To deploy or upgrade the DataMiner PTP app:
 
-   > [!NOTE]
-   > DataMiner PTP should be installed on all DataMiner Agents in the DataMiner System.
+### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
+
+Contact your Skyline representative to receive the PTP package. Skyline employees can get the [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the DataMiner Catalog.
+
+When you have received the package, deploy it as described under [Installing an app package](xref:Installing_an_app_package).
+
+### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
+
+In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+
+> [!NOTE]
+> DataMiner PTP should be installed on all DataMiner Agents in the DataMiner System.
+
+***
+
+## Setup and configuration
+
+To set up and configure the DataMiner PTP app:
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 

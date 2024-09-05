@@ -16,4 +16,7 @@ In a setup with **storage per DMA**, setting up an indexing database is not mand
 > - For information on how to query an Elasticsearch database, see [Querying an Elasticsearch database](xref:Querying_an_Elasticsearch_database).
 
 > [!TIP]
-> See also: [Securing the Elasticsearch database](xref:Security_Elasticsearch)
+> See also:
+>
+> - [Migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch)
+> - [Securing the Elasticsearch database](xref:Security_Elasticsearch)

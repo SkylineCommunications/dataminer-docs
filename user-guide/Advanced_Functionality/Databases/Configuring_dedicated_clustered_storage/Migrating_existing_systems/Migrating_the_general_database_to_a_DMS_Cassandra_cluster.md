@@ -4,18 +4,18 @@ uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
 
 # Migrating the general database to a DMS Cassandra cluster
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead have a self-hosted storage setup with **SQL databases or Cassandra databases per DMA** and want to switch to a Cassandra cluster setup, you can use the **Cassandra Cluster Migrator** for this. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 [CU8]/10.2.11 or higher and use the Cassandra Cluster Migrator instead.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead have a self-hosted storage setup with **SQL databases or Cassandra databases per DMA** and want to switch to a Cassandra cluster setup, you can use the **Cassandra Cluster Migrator** for this. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher and use the Cassandra Cluster Migrator instead.
 
 The migration can be done while the DMAs are active; however, a **DataMiner restart** will be required after all data has been migrated.
 
-The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 [CU8]/10.2.11 or higher to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
+The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
 > [!NOTE]
 > From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
 
 ## Prerequisites
 
-- All DMAs must run DataMiner 10.2.0/10.2.2 or higher.
+- All DMAs must run DataMiner 10.3.0 [CU11]/10.4.2 or higher.
 
 - A Cassandra cluster must be available using version 4.0 or higher. For information on how to install Cassandra, see [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
 
@@ -54,6 +54,11 @@ During the migration, each DMA will go through the following stages:
 ### [Running a regular migration](#tab/tabid-1)
 
 If your system does not use an indexing database yet or if it already uses a OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
+
+1. If there are Failover pairs in the DataMiner System, make sure the currently active Agent in each pair is the top Agent in the Failover configuration screen.
+
+   > [!TIP]
+   > See also: [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
@@ -110,6 +115,11 @@ If your system does not use an indexing database yet or if it already uses a Ope
 > To migrate to a DMS with Cassandra cluster and OpenSearch cluster, it is not possible to use this procedure. An alternative procedure will become available for this in the future.
 
 In case your DataMiner System contains bespoke Elasticsearch data or SRM data, use the procedure below.
+
+1. If there are Failover pairs in the DataMiner System, make sure the currently active Agent in each pair is the top Agent in the Failover configuration screen.
+
+   > [!TIP]
+   > See also: [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 
 1. Follow the step-by-step guide on [taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
 

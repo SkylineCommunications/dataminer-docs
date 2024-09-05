@@ -43,7 +43,10 @@ This section provides information on the following tools:
 - [Sync Check](xref:Sync_Check)
 - [Verify Cluster Events tool](xref:Verify_Cluster_Events_Tool)
 - [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
+- [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type)
 - [Verify NATS is Running](xref:VerifyNatsIsRunning)
+- [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
 > [!NOTE]
 > For more information on other DataMiner tools or third-party tools, see:

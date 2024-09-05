@@ -1,18 +1,18 @@
 ---
-uid: GPON_architecture
+uid: xPON_architecture
 ---
 
-# EPM GPON architecture
+# EPM xPON architecture
 
-The EPM GPON Solution uses components that extract information directly from the involved devices and from third-party systems (databases, data streams) to calculate and aggregate the overall network status based on the different topology levels:
+The EPM xPON Solution uses components that extract information directly from the involved devices and from third-party systems (databases, data streams) to calculate and aggregate the overall network status based on the different topology levels:
 
 - [Front-end connector](#front-end-connector): KPI aggregator for the network.
 - [Back-end connectors](#back-end-connectors): KPI aggregators in the topology's lower levels.
 - [OLT connectors](#olt-connectors): These connectors take care of technology-specific data collection and initial inventory from the OLT perspective.
 - [ONT data connector](#ont-data-connector): This connector is responsible for the ONT data reception and analysis. A generic Kafka stream is used to implement these capabilities.
-- [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution. For GPON, most of the system connectors are used to include the physical network devices (if available) in the EPM aggregations and logical associations.
+- [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution. For xPON, most of the system connectors are used to include the physical network devices (if available) in the EPM aggregations and logical associations.
 
-![EPM GPON architecture](~/user-guide/images/EPM_GPON_architecture.png)
+![EPM xPON architecture](~/user-guide/images/EPM_GPON_architecture.png)
 
 ## Front-end connector
 
@@ -34,7 +34,7 @@ These connectors also register the ONT operative data provided by the third-part
 
 ## ONT data connector
 
-All operative data received for a GPON ONT is provided by a third party in a Kafka stream. To process it, the solution uses the [Generic Kafka Consumer](https://catalog.dataminer.services/result/driver/7373) connector. The received data is then parsed by a different set of [system connectors](#system-connectors) and finally aggregated according to the topology conditions.
+All operative data received for a xPON ONT is provided by a third party in a Kafka stream. To process it, the solution uses the [Generic Kafka Consumer](https://catalog.dataminer.services/result/driver/7373) connector. The received data is then parsed by a different set of [system connectors](#system-connectors) and finally aggregated according to the topology conditions.
 
 ## System connectors
 

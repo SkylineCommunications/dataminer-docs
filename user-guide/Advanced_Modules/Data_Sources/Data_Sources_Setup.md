@@ -6,6 +6,8 @@ uid: Data_Sources_Setup
 
 ## Prerequisites
 
+- A DataMiner Agent that has been [configured to use HTTPS connections](xref:Setting_up_HTTPS_on_a_DMA).
+
 - DataMiner version 10.4.0/10.4.2 or higher.
 
 - Depending on your DataMiner version, you may need to enable the [*DataAPI* soft-launch option](xref:Overview_of_Soft_Launch_Options#dataapi).
@@ -29,7 +31,7 @@ To do so:
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
-1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
+1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *DxMs* page.
 
 1. Locate the node (i.e. the DMA) you want to install the DxMs on.
 
@@ -42,7 +44,7 @@ To do so:
 
 ## Installing extra Python packages
 
-When you install the *DataAggregator* module, Python 3.12.0 is automatically installed as well. You can find the dedicated *Python* folder at `C:\Program Files\Skyline Communications\DataMiner DataAggregator\python`.
+When you install the *DataAggregator* module, Python 3.12.0 is automatically installed as well. You can find the dedicated *Python* folder at `C:\Program Files\Skyline Communications\DataMiner DataAggregator\python`.<!-- RN 38064 -->
 
 The `Scripts` folder contains `pip.exe`, which can be used to install Python packages. Installed packages are added to the `Lib\site-packages` folder.
 

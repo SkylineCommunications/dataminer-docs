@@ -8,6 +8,8 @@ Available from DataMiner 10.3.10/10.4.0 onwards<!-- RN 37200 -->.
 
 This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
 
+![Stepper](~/user-guide/images/StepperComponent.png)<br>*Stepper component in DataMiner 10.3.10*
+
 To configure the component:
 
 1. Apply a DOM definition or DOM instance data feed. See [Applying a data feed](xref:Apply_Data_Feed).

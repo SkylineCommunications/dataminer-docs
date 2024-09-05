@@ -26,47 +26,7 @@ To be able to upgrade to DataMiner 10.4.3, you will first need to install the [M
 
 If this requirement is not met, a new prerequisite check during the upgrade will notify you that you will first need to take care of this before you can install the upgrade.
 
-## New features
-
-#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you can now find the following new commands:
-
-| Command | Function |
-|---------|----------|
-| Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
-| Health Stats (SLProtocol) > Details... | Show all details of a specific element.          |
-
-#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
-
-<!-- MR 10.4.0 - FR 10.4.3 -->
-
-In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
-
-```xml
-<ForeignKeyRelationsSourceInfo elementVar="myElement">
-...
-</ForeignKeyRelationsSourceInfo>
-```
-
-This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
-
-```txt
-maps.aspx?config=MyConfigFile&dmyElement=7/46840
-maps.aspx?config=MyConfigFile&dmyElement=VesselData
-```
-
-#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
-
-<!-- MR 10.5.0 - FR 10.4.2 -->
-
-The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
-
-## Changes
-
-### Breaking changes
+## Breaking changes
 
 #### Microsoft Entra ID: Enhanced user and group import [ID_38154]
 
@@ -123,6 +83,46 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 > [!IMPORTANT]
 > This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
 
+## New features
+
+#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you can now find the following new commands:
+
+| Command | Function |
+|---------|----------|
+| Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
+| Health Stats (SLProtocol) > Details... | Show all details of a specific element.          |
+
+#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
+
+```xml
+<ForeignKeyRelationsSourceInfo elementVar="myElement">
+...
+</ForeignKeyRelationsSourceInfo>
+```
+
+This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
+
+```txt
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
+maps.aspx?config=MyConfigFile&dmyElement=VesselData
+```
+
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
+## Changes
+
 ### Enhancements
 
 #### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
@@ -161,7 +161,7 @@ From now on, for every batch of DomInstances that are processed in bulk, the his
 
 #### Security enhancements [ID_38263] [ID_38386] [ID_38514]
 
-<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+<!-- 38263: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.3 -->
 <!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
 <!-- 38514: MR 10.4.0 - FR 10.4.3 -->
 
@@ -191,7 +191,7 @@ As a result, anomalies that report a trend change "from 0%/day to 0%/day", a lev
 
 #### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
 
@@ -293,11 +293,23 @@ The accuracy of proactive cap detection events (i.e. forecasted alarms) reportin
 
 Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
 
+#### MessageBroker: Clients will now throw a DataMinerMessageBrokerException when a single NATS node is stopped while they are busy writing data [ID_38523]
+
+<!-- MR 10.4.0 [CU7] - FR 10.4.3 -->
+
+When a single NATS node was stopped because it needed to be reconfigured, up to now, clients that were busy writing data would throw a *NotSupportedException*. From now on, they will throw a *DataMinerMessageBrokerException* instead.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Change point detection accuracy has been improved for change points of type flatline.
+
+#### DataMinerSolutions.dll now included in core DataMiner software [ID_38530]
+
+<!-- MR 10.4.0 - FR 10.4.3 / originally included in IDP 1.5.0 -->
+
+To make sure that installing IDP will no longer require a DataMiner restart, *DataMinerSolutions.dll* will now be included in the core DataMiner software.
 
 #### SLAnalytics: Notification alarm 'Failed to start Analytics feature(s)...' will now be cleared automatically [ID_38621]
 
@@ -334,14 +346,6 @@ In some cases, DataMiner clients using a gRPC connection would not detect a disc
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
-
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
-
-<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
-
-Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
-
-From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
 #### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
 
@@ -417,7 +421,7 @@ Up to now, when writing to the database or reading from the database failed, a r
 
 #### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 

@@ -6,6 +6,9 @@ uid: Protocol.Chains.Chain-options
 
 Specifies a number of options separated by semicolons.
 
+> [!TIP]
+> See also: [EPM chains and fields configuration](xref:EPMManagerChainsAndFields)
+
 ## Content Type
 
 string
@@ -16,7 +19,7 @@ string
 
 ## Remarks
 
-The following sections provide more information on the options for this tag:
+The following sections provide more information on the options for this tag.
 
 ### GroupingColumnPids
 

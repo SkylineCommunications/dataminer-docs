@@ -17,6 +17,9 @@ The following settings are available:
 
 - *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the indexing database. Only displayed in case booking data have not been migrated yet.
 
+  > [!NOTE]
+  > If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), Indexing Engine settings cannot be customized. As such, from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the Indexing Engine settings are no longer available for DaaS.
+
   Please note the following regarding the migration of booking data:
 
   - Property names must not start with an underscore (“\_”) or contain any of the following characters: . # \* , " '<br>As such, the wizard will ask you to rename certain booking properties before starting the migration. To ensure the correct functionality of the Service & Resource Management module, some properties will be renamed automatically. For example, the *Visual.Background* and *Visual.Foreground* properties will automatically be renamed as *VisualBackground* and *VisualForeground*.

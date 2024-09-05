@@ -9,6 +9,8 @@ uid: DashboardMaps
 
 This component is used to display markers and/or lines on a map. It uses one or more GQI queries as data input.
 
+![Maps](~/user-guide/images/Maps_Component.png)<br>*Maps component in DataMiner 10.4.4*
+
 > [!NOTE]
 >
 > - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file *C:\Skyline DataMiner\Maps\ServerConfig.xml*. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
@@ -113,3 +115,19 @@ The following actions are available:
 
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
+
+## Zooming
+
+Zooming functionalities are available for the maps component.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40017-->:
+
+  - To zoom in, press CTRL while scrolling up.
+
+  - To zoom out, press CTRL while scrolling down.
+
+- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+
+  - To zoom in, scroll up.
+
+  - To zoom out, scroll down.

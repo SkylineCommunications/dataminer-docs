@@ -4,6 +4,42 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 8 August 2024 - Enhancement - SupportAssistant 1.7.0 - Upgrade to .NET 8 [ID_40440]
+
+DataMiner SupportAssistant has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
+#### 25 July 2024 - Enhancement - SupportAssistant 1.6.10 - Dependencies updated & event handling improved [ID_40307]
+
+Several dependencies have been updated. In combination with CloudGateway 2.13.15, events rejected by dataminer.services will no longer be retried and will be discarded.
+
+#### 11 July 2024 - Enhancement - SupportAssistant 1.6.10 - Offloading of GQI and web logs/metrics [ID_39426]
+
+The files from the following folders will now be added to the offloads zip package:
+
+- `C:\Skyline DataMiner\Logging\GQI`
+- `C:\Skyline DataMiner\Logging\GQI\Metrics`
+- `C:\Skyline DataMiner\Logging\Web`
+- `C:\Skyline DataMiner\Logging\Web\Client`
+
+Files from these folders will end up in the zip file with the following file names:
+
+- GQI_log\<TimeStamp>.txt
+- GQI_metrics\<TimeStamp>.txt
+- Web_web\<TimeStamp>.log
+- Web_web.clientmetric\<TimeStamp>.log
+
+#### 26 April 2024 - Fix - SupportAssistant 1.6.9 - Inconsistent cloud endpoint detection failures [ID_39514]
+
+An issue has been resolved that could make features like Remote Log Collection and data offloads for proactive support inconsistently fail.
+
+#### 13 March 2024 - Enhancement - SupportAssistant 1.6.8 - Dependencies updated [ID_39050]
+
+Several dependencies have been updated.
+
+#### 4 March 2024 - Enhancement - SupportAssistant 1.6.7 - Improved installer robustness [ID_38945]
+
+The SupportAssistant installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
 #### 16 February 2024 - Enhancement - SupportAssistant 1.6.6 - Additional data offload for proactive monitoring [ID_38797]
 
 From now on, the SLClient log file will be offloaded for proactive monitoring via CDMR.

@@ -12,7 +12,7 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
 
   - Lack support for arguments.
 
-  - Are locally stored on the server.
+  - Are stored locally on the server.
 
   - Lack synchronization in a DMS cluster.
 
@@ -20,17 +20,21 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
 
 - Data API:
 
-  - Rejects requests with payloads exceeding 1 MB.
+  - Rejects requests with payloads exceeding 1 MB.<!-- RN 37817 -->
 
   - Rejects requests from external systems.
 
   - Requires a field "Id" in JSON arrays, serving as the primary key in the element's table.
 
+  - Supports a nested table structure with multiple child tables pointing to a single parent table, does not currently support a child table with foreign key relations to multiple parent tables.
+
 - Parameters in auto-generated connectors:
 
-  - Lack units, with no adjustable configuration.
+  - Only prior to [DataAPI 1.1.3](xref:DataAPI_change_log#1-april-2024---new-feature---dataapi-113---new-configuration-endpoint-for-units-and-decimals-id_39016), lack units, with no adjustable configuration.
 
   - Are automatically assigned to pages in the element layout, and this allocation cannot be modified.
+
+  - Cannot use any of the names in the [Prohibited names](xref:Parameter_names) list.
 
 > [!NOTE]
 > Certain limitations are expected to be addressed in future DataMiner versions.

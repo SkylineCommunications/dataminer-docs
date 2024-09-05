@@ -159,6 +159,10 @@ In a `DomBehaviorDefinition`, you have very fine control over what fields should
 
 To reduce the size of the `DomBehaviorDefinition`, you should limit the number of fields used in a status system. It could be beneficial to split off data not tied to a specific state into a separate `DomDefinition`.
 
+### Avoid using the AutoIncrementFieldDescriptor when high-performance create actions are required
+
+The [`AutoIncrementFieldDescriptor`](xref:DOM_AutoIncrementFieldDescriptor) generates a unique number for each create operation across the DMS. This may cause additional delays and hinder performance when creating `DomInstances`. It is advisable to avoid using this `FieldDescriptor` type when aiming for high-performance create actions.
+
 ## DOM CRUD and scripting
 
 ### Try to limit the number of CRUD calls
@@ -209,7 +213,7 @@ You can also keep your CRUD scripts fast by using the ['FullCrudMeta' variant](x
 
 ### Avoid using DOM data on the right side of a join in GQI
 
-With the current behavior of joining data using a [GQI query](xref:Generic_Query_Interface), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, this will lead to performance and scaling issues.
+With the current behavior of joining data using a [GQI query](xref:About_GQI), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, this will lead to performance and scaling issues.
 
 We recommend implementing an [ad hoc data source](xref:Configuring_an_ad_hoc_data_source_in_a_query) instead. This allows you to more efficiently retrieve the DOM data by only retrieving the `DomInstances` that are needed. Within this ad-hoc data source, a potential caching layer can also be implemented.
 
@@ -218,6 +222,10 @@ Note that this recommendation is only important when the DOM data could contain 
 ### Limit the use of field descriptors with external references that will be shown in a DOM form
 
 There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `ReservationFieldDescriptor` that refer to existing DataMiner objects. When a field like this is shown in a form in a low-code app, a list of possible values will be retrieved to populate a dropdown. When there are many of these types of fields, many calls are executed, impacting the user experience for the low-code app. If these fields are hidden in a form (e.g. because they are only used by scripts), there should be no overhead.
+
+### Limit the use of GQI aggregation operations
+
+While GQI offers versatile [aggregation capabilities](xref:GQI_Aggregate) for DOM data, it is crucial to consider their impact on performance. These operations execute in memory and involve fetching all data from the DOM manager based on configured filters. When you are working with a large data source, certain aggregation operations could significantly slow down, putting strain on the DMA. To ensure efficiency, we recommend only using the *Aggregate* query operator together with the *Count* method, when the ID field of DOM data is selected as the aggregation column. This approach is optimized for database execution, ensuring exceptional performance. For smaller datasets with fewer than 500 records, more intricate aggregations like grouping may be feasible.
 
 ## General
 

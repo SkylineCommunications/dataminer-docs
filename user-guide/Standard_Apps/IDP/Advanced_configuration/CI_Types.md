@@ -93,7 +93,7 @@ This page contains an overview of connectivity details for CI Types, with the fo
 
 - **Connectivity Discovery**: Determines whether the Connectivity Discovery activity is enabled or not.
 
-- **Completeness Connectivity Discovery**: Indicates how complete the connectivity discovery configuration is for the CI Type. Enabling connectivity discovery on the *Processes* > *Automation* page is only possible if this indicates 100%.
+- **Completeness Connectivity Discovery**: Indicates how complete the connectivity discovery configuration is for the CI Type. Enabling connectivity discovery on the *Admin* > *Activities* page (or the *Processes* > *Automation* page in older IDP versions) is only possible if this indicates 100%.
 
 - **Connectivity Discovery Script**: Allows you to select the script that will be used to discover connectivity for this CI Type. You can select any of the scripts from the folder configured with the *Connectivity Discovery Script* *Folder* setting on the *Admin* > *Settings* page.
 
@@ -111,7 +111,7 @@ This page contains an overview of configuration management details for CI Types,
 
 - **Checksum Parameter**: Used in order to enable the triggering of alarms in case of configuration changes. Contains the current checksum value that the alarm baseline is compared with. A difference between this parameter and the baseline value will cause an alarm to be generated with the severity configured in the element alarm template.
 
-- **Set Checksum in Alarm Template**: Used in order to enable the triggering of alarms in case of configuration changes. If this parameter is enabled and a configuration change is detected, *Checksum Parameter* is updated with the current checksum value, and the previous value is set as the alarm baseline value. If this parameter or *Take Backup* (via *Processes* > *Automation*) are disabled, the value 0 will be set to both *Checksum Parameter* and the alarm baseline.
+- **Set Checksum in Alarm Template**: Used in order to enable the triggering of alarms in case of configuration changes. If this parameter is enabled and a configuration change is detected, *Checksum Parameter* is updated with the current checksum value, and the previous value is set as the alarm baseline value. If this parameter or *Take Backup* (via *Admin* > *Activities*, or *Processes* > *Automation* in older IDP versions) are disabled, the value 0 will be set to both *Checksum Parameter* and the alarm baseline.
 
 - **Completeness Update**: Indicates the percentage of mandatory fields that are filled in with regard to the configuration update.
 
@@ -133,7 +133,7 @@ This page contains an overview of software management details for CI Types, with
 
 - **Update**: Determines whether the Software Update activity is enabled or not.
 
-- **Completeness Update**: Indicates the percentage of mandatory fields that are filled in for the software update configuration. Enabling software updates on the *Processes* > *Automation* page is only possible if this field indicates 100%.
+- **Completeness Update**: Indicates the percentage of mandatory fields that are filled in for the software update configuration. Enabling software updates on the *Admin* > *Activities* page (or the *Processes* > *Automation* page in older IDP versions) is only possible if this field indicates 100%.
 
 - **Update Script Name**: Allows you to select the script that will be used to set a software configuration on the CI Type. You can select any of the scripts from the folder configured with the *Update Script* *Folder* setting on the *Admin* > *Settings* page.
 
@@ -141,7 +141,7 @@ This page contains an overview of software management details for CI Types, with
 
 - **Compliance Check**: Determines whether the Software Compliancy activity is enabled or not.
 
-- **Completeness Compliance**: Indicates the percentage of mandatory fields that are filled in for the software compliance configuration. Enabling software compliancy on the *Processes* > *Automation* page is only possible if this field indicates 100%.
+- **Completeness Compliance**: Indicates the percentage of mandatory fields that are filled in for the software compliance configuration. Enabling software compliancy on the *Admin* > *Activities* page (or the *Processes* > *Automation* page in older IDP versions) is only possible if this field indicates 100%.
 
 - **Version Baseline**: Allows you to specify the software version that is considered compliant.
 
@@ -159,7 +159,7 @@ This page contains an overview of facilities configuration details for CI Types,
 
 - **Rack Assignment**: Determines whether the Rack Assignment activity is enabled or not.
 
-- **Completeness Rack Assignment**: Indicates how complete the rack assignment configuration is for the CI Type. Enabling automatic rack assignment on the *Processes* > *Automation* page is only possible if this indicates 100%.
+- **Completeness Rack Assignment**: Indicates how complete the rack assignment configuration is for the CI Type. Enabling automatic rack assignment on the *Admin* > *Activities* page is only possible if this indicates 100%.
 
 - **Rack Assignment Script**: Allows you to select the script that should be used for automatic rack assignment. You can select any of the scripts from the folder configured with the *Rack Assignment Script* *Folder* setting on the *Admin* > *Settings* page.
 
@@ -238,7 +238,7 @@ The configuration management configuration window of the CI Type Management wiza
 
 - **Checksum parameter**: Used in order to enable the triggering of alarms in case of configuration changes. Contains the current checksum value that the alarm baseline is compared with. A difference between this parameter and the baseline value will cause an alarm to be generated with the severity configured in the element alarm template.
 
-- **Set Checksum in Alarm Template**: Used to enable the triggering of alarms in case of configuration changes. If this parameter is enabled and a configuration change is detected, *Checksum Parameter* is updated with the current checksum value, and the previous value is set as the alarm baseline value. If this parameter or *Take Backup* (via *Processes* > *Automation*) are disabled, the value 0 will be set to both *Checksum Parameter* and the alarm baseline.
+- **Set Checksum in Alarm Template**: Used to enable the triggering of alarms in case of configuration changes. If this parameter is enabled and a configuration change is detected, *Checksum Parameter* is updated with the current checksum value, and the previous value is set as the alarm baseline value. If this parameter or *Take Backup* (via *Admin* > *Activities*, or *Processes* > *Automation* in older IDP versions) are disabled, the value 0 will be set to both *Checksum Parameter* and the alarm baseline.
 
 In the **Update** section, the following settings are available:
 

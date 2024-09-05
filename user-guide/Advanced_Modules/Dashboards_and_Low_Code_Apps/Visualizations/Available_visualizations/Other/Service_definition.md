@@ -6,8 +6,6 @@ uid: DashboardServiceDefinition
 
 This component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
-Available from DataMiner 10.0.5 onwards.
-
 To configure the component:
 
 1. Add an input for the data:
@@ -48,11 +46,11 @@ To configure the component:
 
    - *Show interfaces*: Determines whether the interfaces of the nodes are displayed.
 
-   - *Show nodes without a resource assigned*: Available from DataMiner 10.0.7 onwards. Determines whether nodes that have no resource assigned are displayed. By default, this option is not selected, so these nodes are not displayed.
+   - *Show nodes without a resource assigned*: Determines whether nodes that have no resource assigned are displayed. By default, this option is not selected, so these nodes are not displayed.
 
-   - *Visible nodes*: Available from DataMiner 10.0.7 onwards. Allows you to select which nodes should be displayed. Below this option, a tree view is displayed, showing the nodes in the service definition. Only the selected nodes will be displayed in the component.
+   - *Visible nodes*: Allows you to select which nodes should be displayed. Below this option, a tree view is displayed, showing the nodes in the service definition. Only the selected nodes will be displayed in the component.
 
-   - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph.
+   - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph. From DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40017-->, you can zoom in or out by pressing CTRL while using the scroll wheel of your mouse. Prior to DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9, you can zoom in or out using the scroll wheel alone.
 
    - *Edge style*: Determines whether curly or straight edges are used in the graph.
 

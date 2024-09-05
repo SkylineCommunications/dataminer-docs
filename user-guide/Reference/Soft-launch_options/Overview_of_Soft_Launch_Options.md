@@ -43,11 +43,18 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 - **Minimum version**: 9.5.12
 - **Release version**: 10.0.0/10.0.2 ([RN 24095](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-behavioral-anomaly-detection-and-suggestion-events-id_15723id_15914id_15916id_15951id_15952id_15976id_16001id_16050id_16163id_17279id_17462id_19224id_24095id_24126id_24147))
 
+### AnomalyFeedback
+
+Allows you to provide positive or negative feedback on anomaly suggestion events and alarms. This feedback is stored in the *ai_anomalyfeedback* table in the indexing database and is used to enhance anomaly event generation.
+
+- **Minimum version**: 10.4.4<!--RN 38980-->
+- **Release version**: To be determined
+
 ### APIDeployment
 
 > [!NOTE]
 > Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37765 -->
-> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite).
+> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed).
 
 > [!CAUTION]
 > APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
@@ -111,7 +118,7 @@ Allows you to [create a ticket](xref:Creating_a_ticket) as a Correlation action.
 
 ### CPEIntegration
 
-This is a Cube-only feature that can only be activated with the argument `ENABLEFEATURE=CPEINTEGRATION`. Note that you also need specific protocol changes in order to benefit from this.
+Enables the Topology app in DataMiner Cube. Note that you also need specific protocol changes in order to benefit from this. See [Topology app configuration](xref:Topology_app_configuration).
 
 - **Minimum version**: 9.6.7
 - **Estimated Release version**: To be determined
@@ -120,7 +127,7 @@ This is a Cube-only feature that can only be activated with the argument `ENABLE
 
 Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
 
-- **Minimum version**: 10.4.2/10.4.0
+- **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated Release version**: To be determined
 
 > [!NOTE]
@@ -204,10 +211,13 @@ Enables the ownership framework.
 
 ### Indexing
 
-Enables the use of Elasticsearch for alarm indexing and other applications. To preview the indexing configuration in DataMiner Cube, use the argument `ENABLEFEATURE=Indexing`.
+Enables the use of Elasticsearch for alarm indexing and other applications.
 
 - **Minimum version**: 9.5.0
-- **Release version**: 10.0.0/1.0.0.2 ([RN 24054](xref:General_Feature_Release_10.0.2_new_features#dataminer-indexing-id_13370id_13406id_13504id_13571id_13623-id_13622id_13629id_13695id_13769id_13912id_14001id_14038-id_16287id_16896id_16915id_16935id_16959id_17081id_17166-id_17328id_17851id_18562id_18714id_19337id_19437id_19443-id_19691id_20373id_20845id_20998id_21205id_21257id_21634-id_22378id_22927id_23049id_23998id_24054id_24158))
+- **Release version**: 10.0.0/10.0.2 ([RN 24054](xref:General_Feature_Release_10.0.2_new_features#dataminer-indexing-id_13370id_13406id_13504id_13571id_13623-id_13622id_13629id_13695id_13769id_13912id_14001id_14038-id_16287id_16896id_16915id_16935id_16959id_17081id_17166-id_17328id_17851id_18562id_18714id_19337id_19437id_19443-id_19691id_20373id_20845id_20998id_21205id_21257id_21634-id_22378id_22927id_23049id_23998id_24054id_24158))
+
+> [!NOTE]
+> It is also possible to use the argument `ENABLEFEATURE=Indexing` in DataMiner Cube to view the *Indexing* app. However, this soft-launch feature has been abandoned and is no longer available in some setups.
 
 ### JobManager
 
@@ -223,7 +233,7 @@ Enables or disables the legacy Annotations module.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using this legacy module, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using this legacy module, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### LegacyReportsAndDashboards
 
@@ -232,7 +242,7 @@ Enables or disables the legacy Reports and Dashboards modules.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)) before upgrading or uploading a 10.4.x upgrade package.
 
 ### MonitoringAndControl
 
@@ -325,14 +335,14 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.4
+- **Estimated release version**: 10.4.10
 
 ### ReportsAndDashboardsGuides
 
 Enables the guides in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: To be determined
+- **Estimated release version**:  Will not be released (deprecated)
 
 ### ReportsAndDashboardsPTP
 
@@ -389,7 +399,9 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 - **Release version**: To be determined.
 
 > [!IMPORTANT]
-> This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
+>
+> - This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
+> - [NT_SNMP_RAW_GET](xref:NT_SNMP_RAW_GET), [NT_SNMP_GET](xref:NT_SNMP_GET), [NT_SNMP_RAW_SET](xref:NT_SNMP_RAW_SET) and [NT_SNMP_SET](xref:NT_SNMP_SET) calls take this soft-launch option into account as from DataMiner versions 10.5.0/10.4.9.<!-- RN 40019 --> Prior to DataMiner versions 10.5.0/10.4.9, SNMPv1 and SNMPv2 `RawGet` and `RawSet` calls are always executed using WinSNMP.
 
 ### SrmOwnServices
 

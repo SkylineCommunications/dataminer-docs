@@ -7,7 +7,7 @@ uid: SRM_migrating_profile_instances
 To export and import profile instances, you can use the *PFM_ProfileInstancesImportExport* Automation script.
 
 > [!IMPORTANT]
-> The *PFM_ProfileInstancesImportExport* script needs to be able to generate an .xlsx file. For this reason, before you use the script, you need to make sure *AccessDatabaseEngine.exe* is installed in the DMS. You can download this from [microsoft.com](https://www.microsoft.com/en-in/download/details.aspx?id=54920).
+> The *PFM_ProfileInstancesImportExport* script needs to be able to generate an .xlsx file. For this reason, before you use the script, you need to make sure the 32-bit (x86) version of *AccessDatabaseEngine.exe* is installed in the DMS. You can download this from [microsoft.com](https://www.microsoft.com/en-in/download/details.aspx?id=54920).
 
 ## Exporting profile instances
 
@@ -40,7 +40,7 @@ To export and import profile instances, you can use the *PFM_ProfileInstancesImp
 
    - *WorkingFolder*: Defines the source folder for the files to import. Special characters must be escaped according to the JSON syntax. If you do not specify this folder, the working directory will be a subfolder of the Documents module: `C:\Skyline DataMiner\Documents\DMA_COMMON_DOCUMENTS\Automation Scripts\Profile Manager\Instances`.
 
-1. Select the import file you want and click *Load Excel*.
+1. Select the import file you want and click *Load Excel*.<!-- RN 22431 -->
 
    The script will display high-level information about the content of the selected file.
 

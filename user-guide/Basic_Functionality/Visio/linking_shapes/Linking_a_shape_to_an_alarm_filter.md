@@ -31,7 +31,7 @@ Configure the shape data fields as follows:
 
    - **FilterContext=X**: Allows you to specify a filter context.
 
-     - From DataMiner 10.0.3 onwards, this can be an **element, service or view filter**. In this case, "X" is the name or ID of the element, service or view.
+     - This can be an **element, service or view filter**. In this case, "X" is the name or ID of the element, service or view.
      - From DataMiner 10.3.0/10.2.3 onwards, you can add an **EPM system name filter**. In that case, "X" should be "SystemName=" followed by the EPM system name.
      - From DataMiner 10.3.0/10.2.3 onwards, you can add an **EPM system type filter**. In that case, "X" should be "SystemType="followed by the EPM system type.
      - The SystemName and SystemType context can be combined using the syntax `FilterContext=SystemName=X;SystemType=Y`.
@@ -46,13 +46,13 @@ Configure the shape data fields as follows:
    | ---------------- | ------------------------------------------------------------------------------ |
    | AlarmSummary     | active\|MySharedFilter\|false\|Alarm\|FilterContext=SystemName=MyEPMSystemName |
 
-1. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to "DefaultAlarmLevel=*AlarmLevel*". For example:
+1. Optionally, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to "DefaultAlarmLevel=*AlarmLevel*". For example:
 
    | Shape data field | Value                    |
    | ---------------- | ------------------------ |
    | Options          | DefaultAlarmLevel=Normal |
 
-1. Optionally, from DataMiner 10.0.2 onwards, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console, containing the alarms matching the alarm filter. To do so, add a shape data field of type **AlarmTab**, and set it to "Name=\*\*AlarmTabName".
+1. Optionally, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console, containing the alarms matching the alarm filter. To do so, add a shape data field of type **AlarmTab**, and set it to "Name=\*\*AlarmTabName".
 
    For example:
 

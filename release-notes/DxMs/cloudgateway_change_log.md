@@ -4,6 +4,76 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 27 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID_40527]
+
+CloudGateway will no longer sync its cloud endpoint with other DxMs if it does not have internet access. 
+
+In addition, CloudGateway will now also sync the Web API/DMA state with dataminer.services at a regular interval of approximately one minute, even if it had already been synced after a detected change. This will ensure that the connection state remains in sync and is automatically healed, even for Failover systems, where a restart of CloudGateway used to sometimes be needed to get the connection synced and working again.
+
+#### 8 August 2024 - Enhancement - CloudGateway 2.14.0 - Upgrade to .NET 8 [ID_40431]
+
+DataMiner CloudGateway has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.
+
+#### 25 July 2024 - Enhancement - CloudGateway 2.13.15 - Dependencies updated & event handling improved [ID_40279]
+
+Several dependencies have been updated. Events sent by DxMs via the CloudGateway DxM that are rejected by dataminer.services will now be indicated so the senders know not to retry but to discard those events.
+
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Requests could get no response in an edge case leading to timeouts [ID_40208]
+
+If an issue occurred while handling a remote access web API call, it could happen that no response was returned, which would lead to the call going into timeout. Now the CloudGateway DxM will try to return an internal server response immediately.
+
+If a remote access web API call takes longer than 25 seconds, this will now also be mentioned in a warning log.
+
+#### 16 July 2024 - Fix - CloudGateway 2.13.14 - Replaced installer for CloudGateway 2.13.13
+
+Because the certificate used to sign CloudGateway 2.13.13 has been revoked, a new installer has been generated. To avoid issues during the digital signature validation while running the installer, CloudGateway 2.13.13 is now unlisted.
+
+#### 10 July 2024 - Enhancement - CloudGateway 2.13.13 - Improvement for cloud token refresh [ID_40032]
+
+The credentials used by CloudGateway are now refreshed daily, so that even when a system is temporarily disconnected from the internet or shut down, the token will remain valid, provided that this does not last longer than 6 days.
+
+#### 4 July 2024 - Enhancement - CloudGateway 2.13.12 - Connection testing improvements [ID_40108]
+
+The ConnectionTester tool included with CloudGateway and the at-runtime connection testing by CloudGateway have been improved.
+
+#### 20 June 2024 - Enhancement - CloudGateway 2.13.11 - Remove log spam when the DMS identity token cannot be automatically refreshed [ID_39261]
+
+From now on, if the refresh token for a dataminer.services DMS identity is expired or invalid, this will only be logged once instead of every 10 seconds.
+
+#### 14 May 2024 - Fix - CloudGateway 2.13.10 - Excessive dataminer.services endpoints connection tester logging [ID_39631]
+
+Up to now, the CloudGateway DxM added logging every minute when a dataminer.services endpoint could not be reached. This excessive logging will no longer occur.
+
+#### 19 April 2024 - Enhancement - CloudGateway 2.13.9 - Offload data when installed on DMZ/proxy server [ID_39444]
+
+The CloudGateway DxM has been extended with the capability to offload data when installed on a DMZ or proxy server.
+
+#### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID_39113]
+
+It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM.
+
+To do so, set *RemoteAccessAndSharing:IsDisabled* to *true* in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify *appsettings.custom.json* with the following configuration:
+
+```json
+{
+   "RemoteAccessAndSharing": {
+      "IsDisabled": true
+   }
+}
+```
+
+#### 13 March 2024 - Fix - CloudGateway 2.13.7 - Issues with dataminer.services features when DMA alias contained spaces [ID_39106]
+
+Since CloudGateway 2.11.0 (and CoreGateway 2.13.0), dataminer.services features like Remote Access and Catalog deployments did not work correctly if the [DMA alias defined in DataMiner.xml](xref:Changing_the_name_of_a_DMA#configuring-an-alias-in-dataminerxml) contained one or more spaces. This issue has been resolved.
+
+#### 13 March 2024 - Enhancement - CloudGateway 2.13.7 - Dependencies updated [ID_39045]
+
+Several dependencies have been updated.
+
+#### 4 March 2024 - Enhancement - CloudGateway 2.13.6 - Improved installer robustness [ID_38907] [ID_38936]
+
+The CloudGateway installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
 #### 12 February 2024 - Fix - CloudGateway 2.13.5 - Stability degradation since CloudGateway 2.13.4 [ID_38730]
 
 Since CloudGateway 2.13.4, a problem could occur in the CloudGateway service that temporarily made it stop responding. The service was able to recover from this problem automatically. This issue has been resolved.
@@ -117,9 +187,7 @@ A new DataMiner Cloud Pack 2.8.2 has been released, which enables the [Remote Lo
 With remote log collection, the packages generated by the [Log Collector tool](xref:SLLogCollector) are automatically transferred to secure storage in the cloud. This gives the experts at Skyline Communications immediate access to these packages, so that they can collect DataMiner log and memory dump files independently, increasing efficiency of investigations.
 
 > [!NOTE]
-> To be able to make use of this new feature, you must make sure the internal network allows [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms). This port is required fo
-r the DataMiner CloudGateway extension from version 2.10.0 onwards (included in the Cloud Pack 2.8.2). It is used as a dataminer.services endpoint for other [DataMiner Extension Modules](xref:DataMinerExtensionModules#dataminer-
-extension-modules-dxms). For more information about disabling this port or configuring another port for the dataminer.services endpoint, refer to [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+> To be able to make use of this new feature, you must make sure the internal network allows [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms). This port is required for the DataMiner CloudGateway extension from version 2.10.0 onwards (included in the Cloud Pack 2.8.2). It is used as a dataminer.services endpoint for other [DataMiner Extension Modules](xref:DataMinerExtensionModules#dataminer-extension-modules-dxms). For more information about disabling this port or configuring another port for the dataminer.services endpoint, refer to [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 
 #### 16 November 2022 - Enhancement - CloudGateway 2.9.6 - Proxy support for WebSocket connection testing [ID_34569]
 

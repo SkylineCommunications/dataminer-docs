@@ -4,7 +4,7 @@ uid: Dashboard_Gateway_installation
 
 # Dashboard Gateway installation
 
-From DataMiner 10.1.0/10.0.12 onwards, a new Dashboard Gateway can be used to give users access both to the Dashboards app and to other DataMiner web applications (Monitoring, Ticketing, Jobs, etc.) even if those users do not have access to DataMiner.
+From DataMiner 10.1.0/10.0.12 onwards, a Dashboard Gateway can be used to give users access both to the Dashboards app and to other DataMiner web applications (Monitoring, Ticketing, Jobs, etc.) even if those users do not have access to DataMiner.
 
 There are two main reasons to consider a Dashboard Gateway setup:
 
@@ -15,6 +15,9 @@ There are two main reasons to consider a Dashboard Gateway setup:
 - Performance
 
   Allowing multiple users to connect to the web applications increases the overall load on the DataMiner Agents. When a Dashboard Gateway is used, the direct load of the web applications and the HTTP requests shifts to a separate web server, leaving more resources available on the DataMiner Agents. Also, if more performance is needed, multiple Dashboard Gateway web servers can be used in combination with a load balancer.
+
+> [!IMPORTANT]
+> If a load balancer or (reverse) proxy is used, it is crucial that the WebSocket timeout is set to a value above 60 seconds. The DataMiner web apps will keep the WebSocket connection open by sending a heartbeat message at least every 60 seconds.
 
 ## Requirements
 

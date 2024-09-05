@@ -26,7 +26,7 @@ Default tooltip: *Link to 'http://URL'*
 > - Both HTTP and HTTPS are supported.
 > - If you put a "#" sign in front of the URL, the webpage will be displayed inside the shape.
 > - Links starting with "mailto:" are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
-> - It is also possible to link to a DataMiner dashboard this way.
+> - It is also possible to link to a dashboard or low-code app this way. See [Linking to a dashboard or low-code app](#linking-to-a-dashboard-or-low-code-app)
 
 ## Options for shapes linked to a webpage
 
@@ -44,7 +44,7 @@ To override this default behavior, add a shape data field of type **Options** to
 
 ### EnableZoom
 
-From DataMiner version 9.0 onwards, by default, if a Visual Overview page contains an embedded webpage, zooming in and out on the page is not possible.
+By default, if a Visual Overview page contains an embedded webpage, zooming in and out on the page is not possible.
 
 To override this default behavior, add a shape data field of type **Options** to the page and set its value to "EnableZoom".
 
@@ -61,17 +61,17 @@ By default, webpages displayed inside a shape do not display a refresh button. I
 
 ### SingleSignOn
 
-To always pass an authentication ticket to the embedded webpage, regardless of the content of the URL, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "SingleSignOn". (Available from DataMiner 9.5.6 onwards.)
+To always pass an authentication ticket to the embedded webpage, regardless of the content of the URL, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "SingleSignOn".
 
-Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the new Dashboards app), and the embedded [DataMiner Comparison tool](xref:DataMinerComparisonTool).
+Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the [Dashboards app](xref:newR_D)), and the embedded [DataMiner Comparison tool](xref:DataMinerComparisonTool).
 
 ### UseChrome
 
-From DataMiner 9.6.3 onwards, if you want to make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
+If you want to make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
 
 ### UseIE
 
-From DataMiner 10.0.10 onwards, by default Chromium is used to display webpages embedded in DataMiner Cube. To use the deprecated Internet Explorer browser instead, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseIE". Note that this is **not recommended**.
+By default, Chromium is used to display webpages embedded in DataMiner Cube. To use the deprecated Internet Explorer browser instead, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseIE". Note that this is **not recommended**.
 
 ### UseEdge
 
@@ -163,6 +163,18 @@ To do so, use the following configuration in the webpage:
   ```xml
   <a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
   ```
+
+## Linking to a dashboard or low-code app
+
+You can link to a dashboard or low-code app in the same way as you would link to another webpage.
+
+In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify a feed for the dashboard or low-code app.
+
+> [!TIP]
+> For more information about the URL syntax, refer to [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+
+> [!NOTE]
+> It is also possible to [link a shape to a component of a dashboard](xref:Linking_a_shape_to_a_dashboard_component) instead of the entire dashboard.
 
 ## Examples
 
