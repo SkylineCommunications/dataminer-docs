@@ -207,7 +207,7 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
      > For systems with a lot of real-time trending, we urge you to consider if you really need this data to be migrated. This data is typically only stored for 1 day, so when there is a lot of data, this gives an overhead on the rest of the types that need to be migrated, and this can cause the migration to take longer.
    * Click 'Start migration' to start the migration.
 
-> [!NOTE]
+> [!TIP]
 > The script will initiate the migration process, but the migration itself will not be completed immediately. To monitor the migration progress, run the CloudStorageMigrationProgress script. This will log the progress of the migration for each storage type as information events.
 > Keep an eye on the progress until the status for all storage types that were triggered shows **State=Completed**. This indicates that the migration has successfully finished.
 
