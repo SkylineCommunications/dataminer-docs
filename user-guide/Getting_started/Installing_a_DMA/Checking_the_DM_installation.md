@@ -14,7 +14,7 @@ After installation, we recommend that you do the following checks in order to be
   - Microsoft Visual C++ 2005 Redistributable (x64) (if working on a x64 system)
   - Microsoft Visual C++ 2010 x86 Redistributable
   - Microsoft Visual C++ 2010 x64 Redistributable (if working on a x64 system)
-  - In case the DMA will be used in a [Failover setup based on virtual IP](xref:About_DMA_Failover): [NPCap](https://nmap.org/npcap/) or WinPcap (deprecated)
+  - In case the DMA will be used in a [Failover setup based on virtual IP](xref:About_DMA_Failover): [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated)
   - MySQL Server (optional)
   - MySQL Workbench (optional)
 
