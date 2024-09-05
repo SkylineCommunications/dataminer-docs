@@ -11,6 +11,9 @@ Expected duration: 30 minutes
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.5.
 
+> [!TIP]
+> See also: [Kata #38: Getting started with DataMiner EPM](https://community.dataminer.services/courses/kata-38/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and where the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch option is enabled.
