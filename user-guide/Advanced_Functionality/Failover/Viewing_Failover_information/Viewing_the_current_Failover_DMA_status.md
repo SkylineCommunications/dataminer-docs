@@ -65,5 +65,13 @@ This will open the *Status* dialog box, which displays a number of status parame
 
     “Failing” means that the database server is probably not running or that there is a configuration issue.
 
+- **Pcap libraries**: "Pcap not installed" or "Could not be detected"
+
+  - "Pcap not installed" means that neither Npcap nor WinPcap is installed on the DMA. In this case, we do not recommend using this Agent in a Failover setup with virtual IP addresses.
+
+  - "Could not be detected" means there is a problem with the detecting the presence of the Npcap and WinPcap libraries.
+
+  - If no message is displayed, it indicates that either Npcap (recommended) or WinPcap (deprecated) is installed on the DMA. In this case, the Agent is suitable in a Failover setup with virtual IP addresses.
+
 > [!TIP]
 > See also: [Viewing DMA synchronization information](xref:Synchronizing_the_DMA_databases#viewing-dma-synchronization-information)
