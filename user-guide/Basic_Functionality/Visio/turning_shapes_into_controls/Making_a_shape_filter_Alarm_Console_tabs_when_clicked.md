@@ -41,7 +41,13 @@ From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40228-->, dynami
   "Service Impact"<2
   ```
 
-- Example dynamic value
+- To filter out alarms based on a dynamic value stored in the session variable `myAlarmFilterVariable`:
+
+  ```txt
+  [var:myAlarmFilterVariable]
+  ```
+
+  This example dynamically applies the filter based on the current value stored in the `myAlarmFilterVariable`. This dynamic value allows you to change the filter without needing to edit it directly. Dynamic values are supported from DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40228-->.
 
 > [!TIP]
 > See also: [Using quick filters](xref:Using_quick_filters)
