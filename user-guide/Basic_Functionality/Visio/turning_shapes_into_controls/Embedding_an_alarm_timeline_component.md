@@ -101,11 +101,12 @@ To configure a shape as an alarm timeline component:
    - For an element property: *Element:PropertyName:PropertyValue* (e.g. Element.Latitude:90)
    - For a service property: *Service:PropertyName:PropertyValue* (e.g. Service.Status:Running)
    - For a view property: *View:PropertyName:PropertyValue* (e.g. View.Location:Izegem)
-   - For a predefined alarm filter, simply specify the filter name. However, note that this is only supported for public alarm filters.
+   - For a predefined alarm filter, specify the filter name. However, note that this is only supported for public alarm filters.
 
    > [!NOTE]
    >
    > - You can define a custom name for the alarm tab page by adding "TabName=", followed by the custom name to the value of the **AlarmFilter** data field, separated from the actual alarm filter with a pipe character ("\|").
+   > - From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40228-->, [dynamic values](xref:Placeholders_for_variables_in_shape_data_values) are supported in the syntax of the **AlarmFilter** shape data value.
    > - In certain EPM environments, filters can be specified to the left of the timeline in Visual Overview. You can insert these filters in the alarm filter by using the following placeholders:
    >   - *\[ServiceFilterName\]* refers to the left column.
    >   - *\[ServiceFilterName2\]* refers to the right column.

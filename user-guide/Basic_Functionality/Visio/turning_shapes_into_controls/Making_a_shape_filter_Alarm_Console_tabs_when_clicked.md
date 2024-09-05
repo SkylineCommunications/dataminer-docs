@@ -13,7 +13,8 @@ If you add a shape data field of type **AlarmFilter** to a shape, clicking the s
 
 Add a shape data field of type AlarmFilter to the shape, and enter an alarm filter as the value, using the same syntax as in the Alarm Console quick filter.
 
-From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40228-->, dynamic values are also supported.
+> [!NOTE]
+> Using [dynamic values](xref:Placeholders_for_variables_in_shape_data_values) in the AlarmFilter shape data value is supported from DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40228-->.
 
 ### Examples of alarm filters
 
