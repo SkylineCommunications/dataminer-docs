@@ -65,7 +65,7 @@ This will open the *Status* dialog box, which displays a number of status parame
 
     “Failing” means that the database server is probably not running or that there is a configuration issue.
 
-- **Pcap libraries**: "Pcap not installed" or "Could not be detected"
+- **Packet capture libraries**: "Pcap not installed" or "Could not be detected"
 
   - "Pcap not installed" means that neither Npcap nor WinPcap is installed on the DMA. In this case, we do not recommend using this Agent in a Failover setup with virtual IP addresses.
 
