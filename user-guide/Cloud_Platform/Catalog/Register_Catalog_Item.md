@@ -10,10 +10,10 @@ uid: Register_Catalog_Item
  Registration can be done using the [Catalog UI](#using-the-catalog-ui) and the [Catalog API](#using-the-catalog-api). 
  Below you can find detailed steps on how to use them.
 
-
 ## Catalog UI
 
-Using the Catalog UI, it is possible to register a catalog item by its *name* and *type* but no version can be registered. Registration returns a unique identifier for the catalog item, which can be used by the [Catalog API](#using-the-catalog-api) to update additional properties or register new versions. 
+Using the Catalog UI, it is possible to register a catalog item by its *name* and *type* but no version can be registered.  
+Registration returns a unique identifier for the catalog item, which can be used by the [Catalog API](#using-the-catalog-api) to update additional properties or register new versions. 
 
 To register a new catalog item:
 
@@ -43,17 +43,16 @@ To register a new catalog item:
 
 Using the Catalog API, it is possible to  
 
-- [register a catalog item with a version](#register-a-catalog-item-with-a-version).
-- [register a new catalog item version of an existing catalog item](#register-a-new-catalog-item-version).
-- [register a new description of a catalog item](#register-a-catalog-description).
+- [register a catalog item](#register-a-catalog-item).
+- [register a new catalog version](#register-a-new-catalog-version).
 
 The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
 A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#using-the-catalog-ui) or created by yourself.
 
-### Register a catalog item with a version
+### Register a catalog item
 
-The register API call allows you to create or update a Catalog item (version).
+The register API call allows you to create or update a Catalog item, see [register a new catalog version](#register-a-new-catalog-version) on how to add a version after succesfuly registering an item.
 
 #### URL
 <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
@@ -70,7 +69,7 @@ A key of type **File** and name **file**.
 The value of this key should be a **zip** file containing 
 
 - [required] a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) file.
-- [required] the catalog item installation file you want to upload. Supported types are DataMiner Protocol packages (.dmprotocol) and DataMiner Application packages (.dmapplication).
+
 - [optional] a readme.md file that contains the description of the Catalog item.
 - [optional] an "images" folder containing any image being referenced by the readme file.  
 Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
@@ -113,7 +112,7 @@ type: 'automationscript'
 # This id can not be changed. 
 # If the id is not filled in, the registration will fail with http status code 500. 
 # If the id is filled in but does not exist yet, a new catalog item will be registered with this id.
-# If the id is filled in but does exist, properties of the item will be overwritten, the version will be created or overwritten if it already existed.
+# If the id is filled in but does exist, properties of the item will be overwritten
 #   Must be a valid GUID.
 id: '<fill in guid here>'
 
@@ -125,35 +124,25 @@ id: '<fill in guid here>'
 #   Can not contain leading or trailing whitespace characters.
 title: 'add-new-switch'
 
-# [Required] 
-# The version in format X.X.X (see https://semver.org/)
-# Items of type "Connector" should use the X.X.X.X format
-# Once a version has been published it can no longer be changed.
-# The version should be incremented to do any changes.
-# If you want to create a package that is not final, you can provide a label at the end: X.X.X-label
-# If a catalog item has a label in the version, then the version is considered to be a pre-release version, and not an official one.
-#   Valid versions range from 0.0.0 to 2147483647.2147483647.2147483647
-#   The label can contain characters a-z0-9 with a max length of 30 characters.
-version: '1.0.0'
-
 # [Optional]
 # General information about the catalog item.
 #   Max length: 100.000 characters
-description: |
+# Currently not shown in the Catalog UI but will be added in near future.
+short_description: |
   This script allows you to easily add a new leaf switch element.
 
 # [Optional]
-# A short description for this specific version.
-# This message is shown along side each version in the version overviews in the catalog. 
-#   Max length: 500 characters.
-version-message: 'Initial version. Does not contain anything useful yet.'
-
-# [Optional]
-# A valid URL that points to the home page.
-# Usually, this home page is also the location of the source code.
+# A valid URL that points to the source code.
 #   A valid URL
 #   Max length: 2048 characters
-homepage: 'https://github.com/randomrepo'
+source_code_url: 'https://github.com/randomrepo'
+
+# [Optional]
+# A valid URL that points to documentation.
+#   A valid URL
+#   Max length: 2048 characters
+# Currently not shown in the Catalog UI but will be added in near future.
+documentation_url: 'https://github.com/random'
 
 # [Optional]
 # People that are responsible for this catalog item. Might be developers but is not required.
@@ -178,7 +167,7 @@ tags:
   - 'Azure'
 ```
 
-### Register a new catalog item version
+### Register a new catalog version
 
 The register version API call allows you to create a new version for a Catalog item
 
@@ -201,26 +190,5 @@ The value is the catalog item installation file, supported types are a DataMiner
 
 - a key of type **Text** with name **versionNumber**.  
 The value is the version number you want to register.
-- a key of type **Text** with name **description**.  
+- a key of type **Text** with name **versionDescription**.  
 The value is the description of the version you want to register.
-
-### Register a catalog description
-
-The register description API call allows you to create or update a description of a catalog item.
-
-#### URL
-<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:guid}/description>
-#### HTTP method
-
-PUT
-
-#### Body
-
-The body of the request should be of type **multipart/form-data** and must contain  
-
-- a key of type **File** with name **file**.  
-The value is a zip file containing the readme.md file and optionally a folder with name "images" containing all referenced images.  
-Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
-
-
-
