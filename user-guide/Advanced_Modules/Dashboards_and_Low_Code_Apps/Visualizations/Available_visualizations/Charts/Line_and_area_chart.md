@@ -90,6 +90,8 @@ To configure the component:
 
        - *Create additional charts*: Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit.
 
+   - *Styling and Information* > *Show title*: Available from DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40504-->. Determines whether the name of the data feed is displayed as a title above the graph. This setting does not override any title that may be configured via the *General* > *Title* setting. Instead, if both settings are enabled, two titles will be shown above the graph. By default, this setting is enabled.
+
    - *Styling and Information* > *Show range selector*: Determines whether a preview graph is displayed below the main graph, allowing you to easily select a different range.
 
    - *Styling and Information* > *Line thickness*: Allows you to specify the thickness of the data line in the chart (in pixels).
