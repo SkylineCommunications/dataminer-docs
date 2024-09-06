@@ -4,17 +4,20 @@ uid: Using_Visual_Overview_to_switch_spectrum_presets
 
 # Using Visual Overview to switch spectrum presets
 
-This tutorial explains how to start from a blank Visio file and add a spectrum control and several buttons to switch between presets. As an example we will use a configuration representing a cable operator headend, where a channel is received from satellite, is processed, and is then transmitted over the cable network. In practice, this can be used for any processing chain of HF signals or to do measurements on different locations in the network. For this tutorial DataMiner Version 10.4.10 was used. There may be minor differences if you are using a different version.
+This tutorial explains how to start from a blank Visio file and add a spectrum control and several buttons to switch between presets. As an example, a configuration will be used that represents a cable operator headend, where a channel is received from satellite, processed, and then transmitted over the cable network. In practice, this can be used for any processing chain of HF signals or to do measurements on different locations in the network.
 
 Expected duration: 25 minutes
 
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and where the connector  [Skyline Spectrum Simulator](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7) has been deployed.
-- [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software) Microsoft Visio Standard 2016 was used when creating this tutorial. There might be minor differences if you are using a different Visio version.
+- [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
 
-   > [!TIP]
-   > For more information on the capabilities of the Skyline Spectrum Simulator connector, you can check the connector documentation [Skyline Spectrum Simulation](xref:Connector_help_Skyline_Spectrum_Simulation) and the KATA video [Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/)
+> [!NOTE]
+> The content and screenshots for this tutorial were created using DataMiner version 10.4.10 and Microsoft Visio Standard 2016. If you use different software versions, you may encounter some differences.
+
+> [!TIP]
+> For more information about the capabilities of the Skyline Spectrum Simulator connector, refer to the connector documentation [Skyline Spectrum Simulation](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html) and the KATA video [Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/).
 
 ## Overview
 
@@ -138,7 +141,7 @@ The page should now contain a basic spectrum control, with all the features of t
 
 1. Configure the new shape data field with the label `ComponentOptions` and the value `preset=NoInfoPane (public)`, and click *OK*.
 
-   The ` (public)` suffix is needed to indicate that this is a shared preset.
+   The `(public)` suffix is needed to indicate that this is a shared preset.
 
 1. Make sure no more shapes are selected.
 
@@ -207,16 +210,17 @@ Session variables are small pieces of data that are kept in DataMiner Cube memor
 
    ![Create the switch to satellite button](~/user-guide/images/Tutorial_VO_spectrum_satellite_button.png)
 
-1. Duplicate this shape by using copy paste and change the text and shape data of the copy so it refers to the `Cable` preset.
+1. Duplicate this shape by using copy/paste and change the text and shape data of the copy so it refers to the `Cable` preset.
 
    ![Create the switch to cable button](~/user-guide/images/Tutorial_VO_spectrum_cable_button.png)
 
-1. In the spectrum component shape, replace the fixed preset reference by a session variable placeholder. The new value becomes `preset=[var:varPreset]`.
+1. In the spectrum component shape, replace the fixed preset reference by a session variable placeholder:
 
-   - Select the spectrum component shape.
-   - In the (docked) shape data window replace the value for the *ComponentOptions* label. Previously we used `preset=NoInfoPane (public)` to link to a fixed preset, this will be replaced with `preset=[var:varPreset]`.
-   - The value between spare brackets is called a placeholder, and will be replaced by the value it is referring to.
-   - `var:`indicates that that placeholder will be replaced with the value of a session variable, the second part is the name of the session variable.
+   1. Select the spectrum component shape.
+
+   1. In the (docked) shape data window, replace the value for the *ComponentOptions* label. Instead of `preset=NoInfoPane (public)` to link to a fixed preset, specify `preset=[var:varPreset]`.
+
+      The value between square brackets is a placeholder and will be replaced by the value it refers to. `var:`indicates that the placeholder should be replaced with the value of a session variable; `varPreset` indicates the name of the session variable.
 
    > [!TIP]
    > For more information on the use of placeholders in shape data, see [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values)
