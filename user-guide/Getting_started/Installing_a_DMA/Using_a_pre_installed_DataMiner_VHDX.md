@@ -18,7 +18,7 @@ When you have dowloaded the VHDX, you can start to create a VM in your chosen vi
     1. Connect the Virtual Hard Disk that you just downloaded
 
 > [!IMPORTANT]
-> If you intend to use the [WSL database](xref:Local_database_on_WSL), make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) on your host PC for the VM you created before starting the VM.
+> If you intend to use the [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL), make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) on your host PC for the VM you created before starting the VM.
 >
 > To enable [nested virtualization](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization), run the following command on your host PC in an elevated Powershell prompt:
 >
@@ -42,6 +42,8 @@ You will see the VM will boot in the OOBE setup screen. Choose region and keyboa
 
 After logging in, a window will be shown to configure your DataMiner system.
 
+![Configuring DataMiner Agent Screen](~/user-guide/images/install-first-startup-choice-script.png)
+
 > [!IMPORTANT]
 > If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration and follow the steps to [obtain a DataMiner license](xref:DataminerLicenses).
 
@@ -51,7 +53,7 @@ After logging in, a window will be shown to configure your DataMiner system.
 Follow the below steps to configure your DataMiner Agent:
 
 - Click *Start* to get started
-- Select the desired database type, either [STaaS](xref:STaaS), [Self-hosted](xref:Configuring_dedicated_clustered_storage) or [WSL](xref:Local_database_on_WSL) and click *Next*
+- Select the desired database type, either [STaaS](xref:STaaS), [Self-hosted](xref:Configuring_dedicated_clustered_storage) or [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL), and click *Next*
 - When selecting [Self-hosted](xref:Configuring_dedicated_clustered_storage) database, fill in connection details for both Cassandra and OpenSearch and click *Next*
 - Fill in required details to cloud connect your agent and click *Next*
     - Organization API Key: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. See [Managing dataminer.services keys](xref:Managing_DCP_keys) to add a new organization key to your dataminer.services organization.
