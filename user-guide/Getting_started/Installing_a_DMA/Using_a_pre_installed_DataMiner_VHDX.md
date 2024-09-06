@@ -38,48 +38,56 @@ You will see the VM will boot in the OOBE setup screen, choose region and keyboa
 
 ## Log in to the VM and start using DataMiner
 
-After logging in, a configuration script will start to configure your DataMiner system.
+After logging in, a window will be shown to configure your DataMiner system.
 
 > [!IMPORTANT]
-> Do not close the configuration window! If you accidentally did, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`.
+> If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration and follow the steps to [obtain a DataMiner license](xref:DataminerLicenses).
 
+> [!TIP]
+> If you accidentally closed the configuration screen, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`.
 
+Follow the below steps to configure your DataMiner Agent:
 
-After you filled in everything and click the 'configure' button. This will configure dataminer according to your chosen storage option.
-DataMiner will start automatically and do the cloud registration, get an ID and license.
+- Click *Start* to get started
+- Select the desired database type, either [STaaS](xref:STaaS), [Self-hosted](xref:Configuring_dedicated_clustered_storage) or [WSL](xref:Local_database_on_WSL) and click *Next*
+- When selecting [Self-hosted](xref:Configuring_dedicated_clustered_storage) database, fill in connection details for both Cassandra and OpenSearch and click *Next*
+- Fill in required details to cloud connect your agent and click *Next*
+    - Organization API Key:
+    - System name: This name will be used to identify the DataMiner System in various DataMiner Cloud Platform applications
+    - System URL: This URL will grant you remote access to your DataMiner System web applications. You can choose to either disable or enable this remote access feature at any time.
+    - Admin Email: This email is associated with the DataMiner Services account which is an administrator in the organization
+    - STaaS Region: If you selected to use [STaaS](xref:STaaS) as your database, select the region in which to host your data
+- Verify the selected configuration and click *Configure*
+- Once configuration completes, click *Finish*
+
+After configuration finished, DataMiner will automatically startup, get licensed and perform cloud registration.
 
 Furthermore it will install DataMiner Cube to locally connect to DataMiner.
 
 > [!IMPORTANT]
 > For security reasons, it is strongly advised to create a second user and disable the built-in administrator account once setup completed.
 
-<!-- ### Request and set the DataMiner ID
-
-The DataMiner ID uniquely identifies your DataMiner Agent.
-To get a DataMiner ID, contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be).
-Once you received your unique ID, do the following:
-
-1. Open the *C:\Skyline DataMiner\\* folder.
-1. Open the *DataMiner.xml* file.
-1. Find the *&lt;DataMiner&gt;* tag and locate the *id* attribute.
-1. In the *id* attribute, fill in the DataMiner ID you received.
-1. Save and close the file.
-
-### Request and configure a DataMiner license
-
-To start DataMiner, a license is required.
-To request a license:
-
-1. Open the *C:\Skyline DataMiner\\* folder.
-1. Remove all *\*.lic* files, if any.
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-1. After a short while, a *Request.lic* file should appear in the *C:\Skyline DataMiner\* folder.
-1. [Obtain your DataMiner license](xref:DataminerLicenses).
-1. Once you received the *dataminer.lic* and *clientapps.lic* files from Skyline, copy them to the *C:\Skyline DataMiner\\* folder.
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility). -->
-
 ### Login to your DataMiner agent
 
 At this point you should be able to login with the Administrator account.
 
 For more information, see: [Logging on to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube).
+
+## Converting Subscription to Perpetual License
+
+When deploying your agent using the pre-installed DataMiner Virtual Hard Disk, your system runs in subscription mode and gets licensed automatically.
+Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
+
+If you purchased a [permanent license](xref:Permanent_license) follow the below steps to convert your subscription installation to a perpetual one:
+
+1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+1. Open the *C:\Skyline DataMiner\\* folder.
+1. Remove all *\*.lic* files, if any.
+1. Open the *DataMiner.xml* file.
+1. Find the *&lt;DataMiner&gt;* tag and locate the *id* attribute.
+1. Note down the value in the *id* attribute.
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+1. After a short while, a *Request.lic* file should appear in the *C:\Skyline DataMiner\* folder.
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the id and *Request.lic* file. Clearly state it concerns a conversion from a subscription to a perpetual license.
+1. You will receive a *dataminer.lic* file from Skyline, which you need to copy to the *C:\Skyline DataMiner\\* folder.
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
