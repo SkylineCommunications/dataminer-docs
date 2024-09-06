@@ -22,11 +22,11 @@ Follow the below steps to decommission WSL:
 > If, for some reason, you want to keep a backup of the WSL distribution, you can export it by running the following command:
 >
 > ```powershell
-> wsl --export
+> wsl --export <name of WSL distro> "<filepath>.tar"
 > ```
 >
 > This backup can later be re-imported with the command:
 >
 > ```powershell
-> wsl --import
+> wsl --import <name of WSL distro> $WslDistroInstallPath $WslDistroBackupFilePath
 > ```
