@@ -15,7 +15,7 @@ Before you start the actual configuration, make sure you have the following:
   > [!NOTE]
   > If you use IP addresses instead of a hostname:
   >
-  > - Make sure [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
+  > - Make sure [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed on both DMAs (see [Before you run the installer](xref: Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
   > - To avoid possible conflicts, make sure the IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
@@ -65,6 +65,10 @@ Make sure that packets to and from these ports coming from the virtual IP addres
 ## Preparing the database
 
 Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a Failover system. Below you can find the measures that need to be taken for each of the supported architectures.
+
+> [!IMPORTANT]
+>
+> If your system has been configured to use STaaS, make sure you follow the steps described in [Adding a DMA to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
 ### Dedicated clustered storage
 
