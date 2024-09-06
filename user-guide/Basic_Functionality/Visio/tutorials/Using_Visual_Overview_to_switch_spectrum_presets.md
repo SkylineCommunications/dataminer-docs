@@ -4,14 +4,17 @@ uid: Using_Visual_Overview_to_switch_spectrum_presets
 
 # Using Visual Overview to switch spectrum presets
 
-This tutorial explains how to start from a blank Visio file and add a spectrum control and several buttons to switch between presets.
+This tutorial explains how to start from a blank Visio file and add a spectrum control and several buttons to switch between presets. As an example we will use a configuration representing a cable operator headend, where a channel is received from satellite, is processed, and is then transmitted over the cable network. In practice, this can be used for any processing chain of HF signals or to do measurements on different locations in the network. For this tutorial DataMiner Version 10.4.10 was used. There may be minor differences if you are using a different version.
 
 Expected duration: 25 minutes
 
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and where the connector  [Skyline Spectrum Simulator](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7) has been deployed.
-- [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
+- [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software) Microsoft Visio Standard 2016 was used when creating this tutorial. There might be minor differences if you are using a different Visio version.
+
+   > [!TIP]
+   > For more information on the capabilities of the Skyline Spectrum Simulator connector, you can check the connector documentation [Skyline Spectrum Simulation](xref:Connector_help_Skyline_Spectrum_Simulation) and the KATA video [Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/)
 
 ## Overview
 
@@ -23,7 +26,8 @@ Expected duration: 25 minutes
 - [Step 6: Use the preset on the spectrum component](#step-6-use-the-preset-on-the-spectrum-component)
 - [Step 7: Create presets for the measurements](#step-7-create-presets-for-the-measurements)
 - [Step 8: Use session variables to link the presets to buttons](#step-8-use-session-variables-to-link-the-presets-to-buttons)
-- [Step 9: Display the current selection](#step-9-display-the-current-selection)
+- [Step 9: Draw a graphic representation of the setup](#step-9-draw-a-graphic-representation-of-the-setup)
+- [Step 10: Show only the current selection](#step-10-show-only-the-current-selection)
 
 ## Step 1: Create a view
 
@@ -78,13 +82,13 @@ At this point, your Microsoft Visio application should start up automatically, a
 
 1. Right-click the shape data pane and select *Define Shape Data*.
 
-1. In the pop-up window, replace the default "Property1" label with the shape data label `Element` and change the value to the name of the spectrum simulation element you created earlier.
+1. In the pop-up window, set the *Label* field to `Element` and the *Value* field to the name of the spectrum simulation element you created earlier, e.g. `Spectrum Simulation`.
 
-   <!-- Add screenshot of window -->
+   ![Add element shape data](~/user-guide/images/Tutorial_VO_spectrum_element_shape_data.png)
 
 1. Click the *New* button to add another shape data field with label `Component` and value `Spectrum`.
 
-   <!-- Add screenshot of window -->
+   ![Add component shape data](~/user-guide/images/Tutorial_VO_spectrum_component_shape_data.png)
 
 1. Click *OK* to close the *Define Shape Data* window.
 
@@ -114,7 +118,7 @@ The page should now contain a basic spectrum control, with all the features of t
 
    - Click *OK*.
 
-   <!-- Add screenshot of preset configuration before you click OK -->
+   ![Create the NoInfoPane preset](~/user-guide/images/Tutorial_VO_spectrum_no_info_pane_preset.png)
 
 1. Click *OK* again to close the *Manage presets* pane.
 
@@ -132,7 +136,9 @@ The page should now contain a basic spectrum control, with all the features of t
 
 1. Click *New* to add another shape data field.
 
-1. Configure the new shape data field with the label `ComponentOptions` and the value `preset=NoInfoPane`, and click *OK*.
+1. Configure the new shape data field with the label `ComponentOptions` and the value `preset=NoInfoPane (public)`, and click *OK*.
+
+   The ` (public)` suffix is needed to indicate that this is a shared preset.
 
 1. Make sure no more shapes are selected.
 
@@ -148,9 +154,12 @@ In this step, you will create additional presets for each of the center frequenc
 
 1. In DataMiner Cube, navigate to the *Spectrum Analyzer* data page of your spectrum simulation element.
 
-1. In the *Manual* tab of the spectrum sidebar, change the settings to the desired values. e.g. for a satellite signal this could be around 12GHz center frequency and 200MHz bandwidth.
+1. In the *Manual* tab of the spectrum sidebar, change the settings to the desired values. e.g. for a satellite signal this could be a 12GHz center frequency and a 800MHz frequency span. For this tutorial, you can leave the other settings as they are.
 
-   <!-- Add screenshot of configuration -->
+   - *Center frequency* `12` `GHz`.
+   - *Frequency Span* `800` `MHz`.
+
+   ![Settings for the Satellite preset](~/user-guide/images/Tutorial_VO_spectrum_satellite_preset.png)
 
 1. In the spectrum sidebar, select the *Presets* tab and click the *Manage* button at the bottom.
 
@@ -164,17 +173,21 @@ In this step, you will create additional presets for each of the center frequenc
 
    - Click *OK*.
 
-   <!-- Add screenshot of preset configuration before you click OK -->
+   ![Saving the Satellite preset](~/user-guide/images/Tutorial_VO_spectrum_save_satellite_preset.png)
 
 1. Click *OK* again to close the *Manage presets* pane.
 
-1. Repeat the steps above for a second signal. E.g. For a cable signal, we could use a center frequency of 260 MHz and a Bandwidth of 8 MHz. Give it the name `Cable`.
+1. Repeat the steps above for a second signal. E.g. For a cable signal, we could use a center frequency of 260 MHz and a frequency span of 12 MHz. Give it the name `Cable`.
 
-   <!-- Add screenshot of configuration -->
+   - *Center frequency* `260` `MHz`.
+   - *Frequency Span* `12` `MHz`.
+
+   ![Settings for the Cable preset](~/user-guide/images/Tutorial_VO_spectrum_cable_preset.png)
 
 ## Step 8: Use session variables to link the presets to buttons
 
 In this step, you will use session variables and placeholders to link buttons to the presets.
+Session variables are small pieces of data that are kept in DataMiner Cube memory for as long as the Cube session is active.
 
 1. In DataMiner Cube, navigate back to the *Visio spectrum presets* view.
 
@@ -184,50 +197,77 @@ In this step, you will use session variables and placeholders to link buttons to
 
 1. Resize the shape linked to the spectrum analyzer control to make room for buttons.
 
-   <!-- Add screenshot of Visio page with resized control -->
+   ![Resize the spectrum component](~/user-guide/images/Tutorial_VO_spectrum_resized_component.png)
 
 1. Create a small rectangular shape, and add the text `Switch to Satellite` in the shape.
 
 1. Add a shape data field to this shape, with label `SetVar` and value `varPreset:Satellite (public)`.
 
-   In this value, `varPreset` is the name of the session variable, and `Satellite (public)` refers to the name of the spectrum preset. The (public) suffix is needed to indicate that this is a shared preset.
+   In this value, `varPreset` is the name of the session variable, and `Satellite (public)` refers to the name of the spectrum preset. The ` (public)` suffix is needed to indicate that this is a shared preset.
 
-   <!-- Add screenshot with the new shape selected so that the configured shape data are visible -->
+   ![Create the switch to satellite button](~/user-guide/images/Tutorial_VO_spectrum_satellite_button.png)
 
-1. Duplicate this shape and change the text and shape data so it refers to the `Cable` preset.
+1. Duplicate this shape by using copy paste and change the text and shape data of the copy so it refers to the `Cable` preset.
 
-   <!-- Add screenshot with the new shape selected so that the configured shape data are visible -->
+   ![Create the switch to cable button](~/user-guide/images/Tutorial_VO_spectrum_cable_button.png)
 
-1. In the spectrum component shape, replace the fixed preset reference by a session variable placeholder. The new value becomes `preset=[var:varPreset]`
+1. In the spectrum component shape, replace the fixed preset reference by a session variable placeholder. The new value becomes `preset=[var:varPreset]`.
+
+   - Select the spectrum component shape.
+   - In the (docked) shape data window replace the value for the *ComponentOptions* label. Previously we used `preset=NoInfoPane (public)` to link to a fixed preset, this will be replaced with `preset=[var:varPreset]`.
+   - The value between spare brackets is called a placeholder, and will be replaced by the value it is referring to.
+   - `var:`indicates that that placeholder will be replaced with the value of a session variable, the second part is the name of the session variable.
+
+   > [!TIP]
+   > For more information on the use of placeholders in shape data, see [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values)
 
 1. Make sure no more shapes are selected.
 
 1. Save the Visio file.
 
-1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the presets are correctly changed.
+1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the presets are correctly changed. It may take a few seconds before the presets are fully switched.
 
-## Step 9: Display the current selection
+## Step 9: Draw a graphic representation of the setup
 
-1. Add a number of images in the Visio file that represent the setup in your system. You can for example use the [Skylicons](https://skyline.be/skylicons)
+1. Add a number of images in the Visio file that represent the setup in your system. You can for example use the [Skylicons](https://skyline.be/skylicons). In the example the dual color versions of the cable, dish, monitor, spectrum and stacked devices skylicons were used.
 
-   <!-- Add screenshot of example Visio drawing with added images -->
+   - To add images, you can drag them from a location on your computer where you stored the images and drop them on the visio drawing.
+   - Images can also be added by clicking the insert tab on top of the Visio window, and then clicking *Pictures* dropdown and selecting *Pictures...*. This will bring up the *Insert Picture* popup where you can navigate to the images you want to add.
 
-1. Draw lines that represent the connections between the components. To enhance the visualization, you can use a different line color for the connections to the image that represents the spectrum analyzer.
+   ![Add images and connectors to visualize the switching](~/user-guide/images/Tutorial_VO_spectrum_images_added.png)
 
-1. On the lines connected to the spectrum analyzer, add a shape data with label `Show` and value `<A>-A|Value|[var:varPreset]|=Satellite (public)` for the connection to the satellite dish.
+1. Draw lines that represent the connections between the components.
+
+   - In the *Home* tab of the ribbon, click the downward arrow next to the rectangle in the *Tools* section.
+   - In the dropdown menu, select "Line"
+   - Drag lines between the shapes to make it look as if they are connected.
+
+1. To enhance the visualization, you can use a different line color for the connections to the image that represents the spectrum analyzer.
+
+   - In the *Home* tab of the ribbon, select the *Pointer Tool* in the *Tools* section.
+   - Select the line for which you want to change the color or thickness.
+   - In the *Home* tab of the ribbon, click the *Line* dropdown in the *Shape Styles* section.
+   - In this dropdown, you can click one of the colors to change the color of the line
+   - If you want to also change the thickness of the line, open the *Line* dropdown again, point your cursor to the *Weight* section and click on the desired weight.
+
+## Step 10: Show only the current selection
+
+To indicate which point of the setup is currently measured, we will hide one of the lines depending on the button that was last clicked.
+
+1. Select the line between the satellite dish image and the spectrum analyzer image and add a shape data with label `Show` and value `<A>-A|Value|[var:varPreset]|=Satellite (public)`.
 
    > [!TIP]
    > For more information on the *Show* condition format, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 
-1. Add a shape data field with label `Show` and value `<A>-A|Value|[var:varPreset]|=Cable (public)` for the connection to the cable.
+1. Add a shape data field with label `Show` and value `<A>-A|Value|[var:varPreset]|=Cable (public)` for the connection line between the spectrum analyzer and the cable image.
 
-   <!-- Add screenshot of the selected connection and the configured shape data -->
+   ![Add Show shape data with condition](~/user-guide/images/Tutorial_VO_spectrum_show_cable_connector.png)
 
 1. Make sure no more shapes are selected.
 
 1. Save the Visio file.
 
-1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the lines are correctly shown or hidden.
+1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the lines are correctly shown or hidden and the presets are still switched.
 
 ## Related documentation
 
