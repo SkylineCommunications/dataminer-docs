@@ -22,7 +22,13 @@ uid: Web_apps_Feature_Release_10.4.11
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons [ID_40622]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, when you set a custom time range in the *Time range* component, the feed of the component would immediately be updated. From now on, the feed will only be updated when you click the *Apply* button.
+
+Clicking the *Cancel* button will close the time range picker without updating the feed.
 
 ### Fixes
 
