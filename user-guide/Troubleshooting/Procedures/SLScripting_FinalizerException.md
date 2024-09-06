@@ -195,3 +195,64 @@ MethodDesc Table
 ```
 
 The see the IL code of the Finalize method, use the `!u 0ce02f08` command (where 0ce02f08 is the address denoted for the Finalize method in the output of the `!dumpmt` command).
+
+### Using the eestack command
+
+Another route to find the type and file that defines the method where the exception occurred is to use the `!eestack` command. The following illustrates another example where an exception occurs in the finalizer thread.
+
+Just like in the previous section, use the `!threads` command to list the threads. If you see an exception occurred on the finalizer thread, you can use the `!eestack` command to list the call stacks.
+The output for the finalizer thread might show an exception and just below the exception you might find more info on what Finalize method was being executed (in the output look at the output for Thread X where X denotes the number for the finalizer thread as seen in the output of the `!threads` command which is 3 in this case.):
+
+```txt
+...
+---------------------------------------------
+Thread  3
+....
+00000000 00004015 00004015 ====> Exception cxr@0a05f680
+0a05fb18 0fbdc482 (MethodDesc 0b51b8bc +0x12 Skyline.DataMiner.Scripting.ConcreteSLProtocol.Log(System.String, Skyline.DataMiner.Scripting.LogType, Skyline.DataMiner.Scripting.LogLevel))
+0a05fb28 0f25ea3e (MethodDesc 15633010 +0x4e QAction.Dispose()), calling 0ae63e7e
+0a05fb30 0f25ea55 (MethodDesc 15633010 +0x65 QAction.Dispose()), calling clr!JIT_WriteBarrierESI
+0a05fb44 0f25f3b1 (MethodDesc 15632fbc +0x19 QAction.Finalize()), calling (MethodDesc 15633010 +0 QAction.Dispose())
+...
+```
+
+Then you can use the method descriptor address that is denoted for the `QAction.Finalize`: `!dumpmd 15632fbc`
+
+```txt
+0:003> !dumpmd 15632fbc
+Method Name:  QAction.Finalize()
+Class:        0da35d64
+MethodTable:  15633044
+mdToken:      06000001
+Module:       15632a40
+IsJitted:     yes
+CodeAddr:     0f25f398
+Transparency: Safe critical
+```
+
+Now use the `!dumpclass` command with the address provided on the `Class:` line: `!dumpclass 0da35d64`:
+
+```txt
+0:003> !dumpclass 156196fc
+Class Name:      QAction
+mdToken:         02000003
+File:            Example Protocol.1.0.0.1.QAction.1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Parent Class:    6bbf15c8
+Module:          15632a40
+Method Table:    15633044
+Vtable Slots:    6
+Total Method Slots:  6
+Class Attributes:    100001  
+Transparency:        Critical
+NumInstanceFields:   6
+NumStaticFields:     0
+      MT    Field   Offset                 Type VT     Attr    Value Name
+1563334c  400000a        4 ...ConnectionFactory  0 instance           connectionFactory
+115707e0  400000c        c ...ing.SLProtocolExt  0 instance           protocolExt
+6bc08788  400000d       18       System.Boolean  1 instance           _disposed
+6bc08788  400000e       19       System.Boolean  1 instance           _startDispose
+0505a66c  400000f       10 ...er.Net.Connection  0 instance           _slnetConnection
+6bc024d4  4000010       14        System.String  0 instance           _subscriptionSetName
+```
+
+Now the line that starts with `File:` shows the assembly where this method is defined in, which includes the protocol name and QAction ID.
