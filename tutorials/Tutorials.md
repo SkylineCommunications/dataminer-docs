@@ -69,3 +69,9 @@ uid: Tutorials
     <a href="/tutorials/Visio_Tutorials.html" title="Visual Overview tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Visual_Overview.svg" style="width:100%"></a>
   </div>  
 </div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/tutorials/Catalog_Tutorials.html" title="Catalog tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Catalog.svg" style="width:100%"></a>
+  </div>  
+</div>

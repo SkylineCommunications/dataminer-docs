@@ -1,24 +1,38 @@
 ---
-uid: Register_Catalog_Item
+uid: Tutorial_Register_Catalog_Item
 ---
 
 # Registering a new catalog item
 
 This tutorial demonstrates how to add a new catalog item using the [Catalog API](xref:Catalog_Registration).  
-We will be registering our own version of the following example [connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom)  
-For ease of use we will be using [Postman](https://www.postman.com/) to execute the register API calls but note under normal circumstances you would be integrating these http calls in your workflow, e.g by using them in a github action.
+We will be registering our own version of the following example [connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom).  
 
-* Add a new request with http method **PUT** and following url <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
+For ease of use we will be using [Postman](https://www.postman.com/) to execute the register API calls. Feel free to integrate them afterwards in your workflow, e.g by using them in a github action.
+
+## Prerequisites
+
+- Organization key with permission "Register catalog items".
+
+## Overview
+
+- [Step1: Register catalog item URL](#step1-register-catalog-item-url)
+- [Step2: Authentication header](#step2-authentication-header)
+- [Step3: Register catalog item body](#step3-register-catalog-item-body)
+- [Step4: Register](#step-4-register)
+
+## Step1: Register catalog item URL
+Add a new request with http method **PUT** and following url <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
 
 ![Register item http url](~/user-guide/images/tutorial_catatalog_registration_item_url.png)
 
-* The catalog item register api call uses Organization key authentication, we can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
+## Step2: Authentication header
+The catalog item register api call uses Organization key authentication, we can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
 This key identifies your organization and will make sure the registration will register your catalog item under the organization of the key you use.
 
-> [!Note]
+> [!Important]  
 You need to have the "Owner" role in order to access/create Organization keys. 
 
-  Go ahead and create a new key with permission "Register catalog items".
+Go ahead and create a new key with permission "Register catalog items".
 
 ![Organization Key](~/user-guide/images/tutorial_catatalog_registration_create_org_key.png)
 
@@ -26,9 +40,11 @@ After creation of the key, you can copy the key and use it as value in the **Ocp
 
 ![Register item http header](~/user-guide/images/tutorial_catalog_registration_catalog_urlandheader.png)
 
-The body of the request expects a zip containing
+## Step3: Register catalog item body
 
-* a readme.md file with any required images in a images folder which will be shown in the description tab in the Catalog.
+The body of the request expects form-data with key of type *File* and name *file*, the value is a zip containing
+
+* a readme.md file with any required image in an images folder which will be shown in the description tab in the Catalog.  
 Copy the below snippet and change the content as you see fit using your favorite editor.
 
 ```md
@@ -46,11 +62,12 @@ This is a connector that serves as example on how to integrate bit rates.
 This catalog item has been made available as part of the Catalog Registration [Tutorial](https://docs.dataminer.services/tutorials/Tutorials.html)
 ```
 
-* a manifest.yml file describing the properties of the catalog item. Copy the below snippet and change the fields as you see fit using your favorite editor.
+* a manifest.yml file describing the properties of the catalog item.  
+Copy the below snippet and change the fields as you see fit using your favorite editor.
 
-> [!Note] 
-Make sure to obtain a new Guid to uniqily store and identify the catalog item.  
-Navigate to [guidgenerator](https://guidgenerator.com/) and create a new one using format *hyphens* or use your favorite tool.
+> [!Note]  
+Make sure to obtain a new Guid to uniquely store and identify the catalog item.  
+Navigate to [guidgenerator](https://guidgenerator.com/) and create a new one using format *hyphens* or use your prefered method.
 
 ```yml
 # [Required]
@@ -138,7 +155,8 @@ create a zip file containing the manifest and the readme and add it to the body 
 
 ![Register item http body](~/user-guide/images/tutorial_catatalog_registration_item_body.png)
 
-Send the call, upon correct registration you will receive HTTP Status 200 OK and the catalog id in the response.
+## Step 4: Register
+Send the call and upon correct registration you will receive HTTP Status 200 OK and the catalog id in the body of the response.
 
 You can now search for you catalog item in the [Catalog](https://catalog.dataminer.services) or navigate immediately to https://catalog.dataminer.services/details/{YourCatalogId}
 
@@ -146,42 +164,3 @@ You can now search for you catalog item in the [Catalog](https://catalog.datamin
 
 >[!note]  
 After the first registration, you are able to make changes to the manifest or readme.md and execute the PUT request again, it will update the registered data as long as you use the same catalog id.
-
---> image here of catalog item
-
-In order to register our first version, we will use the catalog API Register version call.
-Create a new Http request using the POST http method and url  <https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogid}/version/register>
-
-![Register version http url](~/user-guide/images/tutorial_catatalog_registration_version_url.png)
-
->[!note]
-Make sure you use the same id as you used for the catalog item registration.
-
-Add the previously obtained organization key in the header again.
-
-![Register version http header](~/user-guide/images/tutorial_catatalog_registration_version_headers.png)
-
-The body of the version registration request requires a file containing our connector, for this we will be using the 
-[Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a .dmprotocol package from our solution.
-
-Navigate to [Example Rates connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom) and download the solution.
-
-Open a terminal window and run below command to install the packager.
-
-```powershell
-dotnet tool install --global Skyline.DataMiner.CICD.Tools.Packager --version 2.0.3
-```
-
-Run the following command to create a .dmprotocol package, adapt the directory paths as needed.
-
-```powershell
-dataminer-package-create dmprotocol "C:\Tutorials\Catalog Registration\SLC-C-Example_Rates-Custom-1.0.1.X" --name catalog_registration_tutorial --output "C:\Tutorials\Catalog Registration\Packages"
-```
-
-Add the file to the body as seen below and define versionNumber and versionDescription as well in the form-data
-
-![Register version http body](~/user-guide/images/tutorial_catatalog_registration_version_body.png)
-
-Upon succesful registration, you will be able to see the registered version on the catalog in the versions tab.
-
-![Registered version](~/user-guide/images/tutorial_catatalog_registered_version.png)

@@ -1,19 +1,19 @@
 ---
-uid: Catalog_Registration
+uid: Register_Catalog_Item
 ---
 
 # Catalog registration
 
  In order to make a catalog item (version) available on [Catalog](https://catalog.dataminer.services/), you need to register it with an organization.  
- The catalog item will be available for the registered organization only and will be marked *private* in the UI to indicate it as such.   
+ The catalog item will only be available for the registered organization and will be marked *private* in the UI to indicate it as such.   
 
- Registration can be done using the [Catalog UI](#using-the-catalog-ui) and the [Catalog API](#using-the-catalog-api). 
+ Registration can be done using the [Catalog UI](#catalog-ui) and the [Catalog API](#catalog-api). 
  Below you can find detailed steps on how to use them.
 
 ## Catalog UI
 
 Using the Catalog UI, it is possible to register a catalog item by its *name* and *type* but no version can be registered.  
-Registration returns a unique identifier for the catalog item, which can be used by the [Catalog API](#using-the-catalog-api) to update additional properties or register new versions. 
+Registration returns a unique identifier for the catalog item, which can be used by the [Catalog API](#catalog-api) to update additional properties or register new versions. 
 
 To register a new catalog item:
 
@@ -37,7 +37,7 @@ To register a new catalog item:
 
 1. Once all information has been filled in, click *Register*.
 
-   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item or update additional properties using the [Catalog API](#using-the-catalog-api).
+   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item or update additional properties using the [Catalog API](#catalog-api).
 
 ## Catalog API
 
@@ -46,9 +46,11 @@ Using the Catalog API, it is possible to
 - [register a catalog item](#register-a-catalog-item).
 - [register a new catalog version](#register-a-new-catalog-version).
 
-The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+>[!important]  
+The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
+You need to have the "Owner" role in order to access/create Organization keys.
 
-A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#using-the-catalog-ui) or created by yourself.
+A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#catalog-ui) or created by yourself.
 
 ### Register a catalog item
 
@@ -159,7 +161,7 @@ owners:
 #   Can not contain newlines.
 #   Can not contain leading or trailing whitespace characters.
 tags:
-  - '<fill in tag value here>'
+  - '<fill in tag here>'
 ```
 
 ### Register a new catalog version
