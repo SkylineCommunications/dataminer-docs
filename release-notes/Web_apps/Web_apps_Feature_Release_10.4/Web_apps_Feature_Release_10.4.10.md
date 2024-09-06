@@ -216,3 +216,9 @@ When, in the *Time range* component, you picked a custom time range, the picker 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
 In some cases, a *Line & area chart* component would not update correctly whenever the feed input changed.
+
+#### Dashboards/Low-Code Apps - Grid component: Problem when refetching data while data was being loaded [ID_40633]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+When the data displayed in a Grid component was refetched (by means of e.g. a refetch action or a Trigger component) while the component was busy loading data, the newly fetched data would not get loaded correctly.
