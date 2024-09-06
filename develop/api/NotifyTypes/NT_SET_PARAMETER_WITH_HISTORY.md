@@ -35,4 +35,4 @@ protocol.NotifyDataMiner(256/*NT_SET_PARAMETER_WITH_HISTORY*/ , ids, valueDetail
 
 ## See also
 
-- SLProtocol.SetParameter method
+- [SetParameter (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn(System.Int32,System.Int32,System.Object[],System.Object[],System.Nullable{System.DateTime})) method
