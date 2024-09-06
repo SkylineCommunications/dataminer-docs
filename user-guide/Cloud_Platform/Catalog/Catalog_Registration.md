@@ -1,8 +1,8 @@
 ---
-uid: Register_Catalog_Item
+uid: Catalog_Registration
 ---
 
-# Catalog item registration
+# Catalog registration
 
  In order to make a catalog item (version) available on [Catalog](https://catalog.dataminer.services/), you need to register it with an organization.  
  The catalog item will be available for the registered organization only and will be marked *private* in the UI to indicate it as such.   
@@ -104,7 +104,7 @@ This file will contain all necessary information to register a Catalog item with
 #   - scriptedconnector: If the catalog item is a DataMiner scripted connector.
 #   - bestpracticesanalyzer: If the catalog item is a DataMiner Best practices Analysis file.
 
-type: 'automationscript'
+type: '<fill in type here>'
 
 # [Required] 
 # The id of the catalog item.
@@ -122,27 +122,26 @@ id: '<fill in guid here>'
 #   Max length: 100 characters.
 #   Can not contain newlines.
 #   Can not contain leading or trailing whitespace characters.
-title: 'add-new-switch'
+title: '<fill in title here>'
 
 # [Optional]
 # General information about the catalog item.
 #   Max length: 100.000 characters
-# Currently not shown in the Catalog UI but will be added in near future.
-short_description: |
-  This script allows you to easily add a new leaf switch element.
+# Currently not shown in the Catalog UI but will be supported in the near future.
+short_description: '<fill in description here>'
 
 # [Optional]
 # A valid URL that points to the source code.
 #   A valid URL
 #   Max length: 2048 characters
-source_code_url: 'https://github.com/randomrepo'
+source_code_url: '<fill in source code url here>'
 
 # [Optional]
 # A valid URL that points to documentation.
 #   A valid URL
 #   Max length: 2048 characters
-# Currently not shown in the Catalog UI but will be added in near future.
-documentation_url: 'https://github.com/random'
+# Currently not shown in the Catalog UI but will be supported in the near future.
+documentation_url: '<fill in documentation url here>'
 
 # [Optional]
 # People that are responsible for this catalog item. Might be developers but is not required.
@@ -150,12 +149,9 @@ documentation_url: 'https://github.com/random'
 #   The name is required, max 256 characters.
 #   The email and url are optional, and should be in valid email/URL formats.
 owners:
-  - name: 'David Smith'
-  - name: 'Someone'
-    email: 'someone@skyline.be'
-  - name: 'John Smith'
-    email: 'john@skyline.be'
-    url: 'https://github.com/JohnSmith'
+  - name: '<fill in name here>'
+    email: '<fill in email here>'
+    url: '<fill in url here>'
 
 # [Optional]
 # Tags that allow you to categorize your catalog items.
@@ -163,8 +159,7 @@ owners:
 #   Can not contain newlines.
 #   Can not contain leading or trailing whitespace characters.
 tags:
-  - 'Information Platform'
-  - 'Azure'
+  - '<fill in tag value here>'
 ```
 
 ### Register a new catalog version
