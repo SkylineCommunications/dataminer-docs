@@ -227,10 +227,18 @@ When the data displayed in a Grid component was refetched (by means of e.g. a re
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-Due to a time zone conversion issue, groups configured in a Timeline component would reserve more screen real estate than necessary.
+Due to a time zone conversion issue, groups configured in a *Timeline* component would reserve more screen real estate than necessary.
 
 #### Low-Code Apps - Table component: Problem with 'Select an item' action [ID_40643]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-When, in a low-code app, you had configured a "Select an item" action in a Table component, up to now, that action would not work when the Table component displayed less than fifty DOM instances.
+When, in a low-code app, you had configured a "Select an item" action in a *Table* component, up to now, that action would not work when the *Table* component displayed less than fifty DOM instances.
+
+#### Low-Code Apps - Interactive Automation script component: Problem with scrollbars appearing unnecessarily [ID_40645]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+Up to now, when an interactive Automation script was run inside an *Interactive Automation script* component, the dimensions configured in the script would be ignored. Instead, the script would fill the entire component. Also, since the introduction of the *Interactive Automation script* component, when an interactive Automation script was run independently, scrollbars could appear unnecessarily in the script's pop-up windows.
+
+From now on, the configured dimensions will never be ignored. Whether an interactive Automation script is run inside an *Interactive Automation script* component or whether it is run independently, its windows will now always behave in the same way.
