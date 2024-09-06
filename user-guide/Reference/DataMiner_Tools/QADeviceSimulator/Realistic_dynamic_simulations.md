@@ -139,8 +139,7 @@ Finally, configure the simulation file to poll the database:
 		  <DatabaseAgents>
 			<DatabaseAgent ip="10.2.1.22" MacAddress="" SNMPVersion="2" Name="Cisco Switch" Port="7001" AutoBuildVersion="1.2" databaseType="MySQL" databaseServer="localhost" databaseName="demo" databaseTable="cisco" user="root" password="" />
 		  </DatabaseAgents>
-		  <Definitions/>
-	  </Simulation>
+                  <Definitions>
    ```
 
 1. Place the simulation file in the folder *C:\\QASNMPSimulations*. The tool will now be able to run it.
