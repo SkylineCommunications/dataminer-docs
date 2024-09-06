@@ -222,3 +222,15 @@ In some cases, a *Line & area chart* component would not update correctly whenev
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
 When the data displayed in a Grid component was refetched (by means of e.g. a refetch action or a Trigger component) while the component was busy loading data, the newly fetched data would not get loaded correctly.
+
+#### Low-Code Apps - Timeline component: Groups would reserve more screen real estate than necessary due to a time zone conversion issue [ID_40639]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+Due to a time zone conversion issue, groups configured in a Timeline component would reserve more screen real estate than necessary.
+
+#### Low-Code Apps - Table component: Problem with 'Select an item' action [ID_40643]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+When, in a low-code app, you had configured a "Select an item" action in a Table component, up to now, that action would not work when the Table component displayed less than fifty DOM instances.
