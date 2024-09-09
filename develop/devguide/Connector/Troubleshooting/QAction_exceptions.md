@@ -10,4 +10,5 @@ Below, you can find information on the most common exceptions that can be encoun
 - [System.IndexOutOfRangeException](xref:System_IndexOutOfRangeException)
 - [System.FormatException](xref:System_FormatException)
 - [System.Collections.Generic.KeyNotFoundException](xref:System_Collections_Generic_KeyNotFoundException)
+- [Exception in Finalizer](xref:Finalizer_Exception)
 - [Identifying the source of an exception](xref:Identifying_the_source_of_an_exception)

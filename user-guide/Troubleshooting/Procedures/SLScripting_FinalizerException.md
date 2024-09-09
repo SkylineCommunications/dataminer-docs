@@ -42,7 +42,7 @@ In this case it mentions that a [NullReferenceException](https://learn.microsoft
 
 Now open the Parallel Stacks window (*Debug* > *Windows* > *Parallel Stacks*):
 
-![WinDbg](~/user-guide/images/VisualStudioParallelStacksWindowFinalizerCrash.png)<br>*Visual Studio Parallel Stacks window*
+![Visual Studio Parallel Stacks window](~/user-guide/images/VisualStudioParallelStacksWindowFinalizerCrash.png)<br>*Visual Studio Parallel Stacks window*
 
 The parallel stacks shows that an unhandled exception occurred on the Finalizer thread (`OnUnhandledException`) while executing the Finalizer of MyClass (`~MyClass`).
 
