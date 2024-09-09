@@ -16,7 +16,7 @@ We will be registering our own version of the following example [connector](http
 
 - [Step 1: Register catalog version URL](#step1-register-catalog-version-url)
 - [Step 2: Authentication header](#step2-authentication-header)
-- [Step 3: Register catalog item body](#step-3-register-catalog-version-body)
+- [Step 3: Register catalog version body](#step-3-register-catalog-version-body)
 - [Step 4: Register](#step-4-register)
 
 ## Step 1: Register Catalog version URL
