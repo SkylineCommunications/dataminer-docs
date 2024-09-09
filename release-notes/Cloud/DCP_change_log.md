@@ -15,16 +15,16 @@ When a Catalog item version is not available to deploy because its installation 
 
 #### 09 September 2024 - New Feature - Catalog API - Catalog Registration supports images in description readme file [ID_40219]
 
-Catalog item registration now supports images to be included in the provided reamde.md file that will be used as the description of a catalog item. Any used images need to be included in a "Images" directory.
-supported image formats are jpg, jpeg, png, gif, bmp, tif, tiff and webp.
+Catalog item registration now supports images to be included in the provided description of a catalog item. Any used images need to be included in a "Images" directory.
+Supported image formats are jpg, jpeg, png, gif, bmp, tif, tiff and webp.
 
 #### 09 September 2024 - Enhancement - Catalog API - Catalog Registration API has been improved [ID_40670]
 
-The previously available catalog API call to register a new catalog item (version) using a manifest yaml file has been split up into having a PUT call available to register an item (including its description) and a POST call to register a version.
+The previously available catalog API call to register a new catalog item (version) using the manifest file has been split up into 2 different calls. There is now a PUT call available to register/update an item (including its description) and a POST call to register a new version.
 
 #### 09 September 2024 - New Feature - Catalog - Unauthenticated access [ID_40686] [ID_40573] [ID_40572] [ID_40571] [ID_40570]
 
-As an unauthenticated user, it is now possible to search public available catalog items, view their description and their available versions.
+As an unauthenticated user, it is now possible to search publicly available catalog items, view their description and their available versions.
 
 #### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID_40601]
 
