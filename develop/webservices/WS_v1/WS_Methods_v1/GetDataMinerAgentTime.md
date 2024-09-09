@@ -14,6 +14,6 @@ Use this method to retrieve the current time of the DataMiner Agent.
 
 ## Output
 
-| Item                         | Format | Description                  |
-|------------------------------|--------|------------------------------|
+| Item                        | Format | Description                  |
+|-----------------------------|--------|------------------------------|
 | GetDataMinerAgentTimeResult | String | The current time of the DMA. |

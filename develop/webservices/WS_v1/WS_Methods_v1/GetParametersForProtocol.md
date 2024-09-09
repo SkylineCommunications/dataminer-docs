@@ -8,12 +8,12 @@ Use this method to retrieve the data of all the parameters of a particular proto
 
 ## Input
 
-| Item                   | Format  | Description                                                                      |
-|------------------------|---------|----------------------------------------------------------------------------------|
-| connection             | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| protocolName           | String  | The name of the protocol                                                         |
-| protocolVersion        | String  | The protocol version                                                             |
-| includeWriteParameters | Boolean | Indicates whether write parameters should be included.                           |
+| Item                   | Format  | Description                                            |
+|------------------------|---------|--------------------------------------------------------|
+| connection             | String  | The connection ID. See [ConnectApp](xref:ConnectApp).  |
+| protocolName           | String  | The name of the protocol                               |
+| protocolVersion        | String  | The protocol version                                   |
+| includeWriteParameters | Boolean | Indicates whether write parameters should be included. |
 
 ## Output
 

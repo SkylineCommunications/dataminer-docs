@@ -8,12 +8,12 @@ Use this method to request a logon ticket that can then be added to e.g. a DataM
 
 ## Input
 
-| Item       | Format | Description                                                                      |
-|------------|--------|----------------------------------------------------------------------------------|
+| Item       | Format | Description                                           |
+|------------|--------|-------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                        | Format | Description       |
-|-----------------------------|--------|-------------------|
+| Item                       | Format | Description       |
+|----------------------------|--------|-------------------|
 | RequestLoginAsTicketResult | String | The logon ticket. |

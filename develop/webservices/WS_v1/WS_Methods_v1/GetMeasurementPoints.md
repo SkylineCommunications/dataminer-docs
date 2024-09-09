@@ -10,10 +10,12 @@ Use this method to retrieve information about measurement points (available from
 
 | Item       | Format           | Description                                                                                            |
 |------------|------------------|--------------------------------------------------------------------------------------------------------|
-| connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp).                       |
+| connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp).                                                  |
 | dmaID      | Integer          | The DataMiner Agent ID.                                                                                |
 | elementID  | Integer          | The element ID.                                                                                        |
-| sessionID  | Unsigned integer | The client subscription ID from the WebSocket subscription with which the spectrum session was started |
+
+> [!NOTE]
+> Up to DataMiner version 10.1.0/10.0.11, apart from the above-mentioned fields, also a session ID had to be passed to the method: the client subscription ID (unsigned integer) from the WebSocket subscription with which the spectrum session was started.<!-- RN 26970 -->
 
 ## Output
 

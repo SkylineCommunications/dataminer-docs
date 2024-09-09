@@ -14,6 +14,6 @@ None
 
 ## Output
 
-| Item                        | Format                       | Description                                                       |
-|-----------------------------|------------------------------|-------------------------------------------------------------------|
-| GetThirdPartyNoticesResult | Array of DMAThirdPartyNotice | The third-party notices (consisting of a title and license info). |
+| Item                       | Format | Description |
+|----------------------------|--------|-------------|
+| GetThirdPartyNoticesResult | Array of [DMAThirdPartyNotice](xref:DMAThirdPartyNotice) | The third-party notices. |

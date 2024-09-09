@@ -18,10 +18,10 @@ This method can also be used to see which third-party fields are available, and 
 
 ## Input
 
-| Item         | Format | Description                                                                      |
-|--------------|--------|----------------------------------------------------------------------------------|
+| Item         | Format | Description                                           |
+|--------------|--------|-------------------------------------------------------|
 | connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ticketTypeID | GUID   | The GUID of the ticket type.                                                     |
+| ticketTypeID | GUID   | The GUID of the ticket type.                          |
 
 ## Output
 

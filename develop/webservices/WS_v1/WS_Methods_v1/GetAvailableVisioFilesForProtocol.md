@@ -15,6 +15,6 @@ Use this method to retrieve all available Visio files assigned to a protocol.
 
 ## Output
 
-| Item                                     | Format          | Description                                                        |
-|------------------------------------------|-----------------|--------------------------------------------------------------------|
+| Item                                    | Format          | Description                                                        |
+|-----------------------------------------|-----------------|--------------------------------------------------------------------|
 | GetAvailableVisioFilesForProtocolResult | Array of string | The names of the available Visio files for the specified protocol. |

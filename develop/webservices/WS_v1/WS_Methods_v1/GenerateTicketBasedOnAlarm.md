@@ -25,6 +25,6 @@ Use this method to generate a ticket based on the properties of a particular ala
 
 ## Output
 
-| Item                             | Format                                             | Description           |
-|----------------------------------|----------------------------------------------------|-----------------------|
+| Item         | Format  | Description |
+|--------------|---------|-------------|
 | GenerateTicketBasedOnAlarmResult | [DMATicket](xref:DMATicket) | The generated ticket. |

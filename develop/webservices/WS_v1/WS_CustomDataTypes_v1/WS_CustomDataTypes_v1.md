@@ -48,6 +48,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter)
 
+- [DMAAutomationVariableInfo](xref:DMAAutomationVariableInfo)
+
 - [DMABaseline](xref:DMABaseline)
 
 - [DMABooking](xref:DMABooking)
@@ -232,11 +234,15 @@ uid: WS_CustomDataTypes_v1
 
 - [DMASpectrumMeasptModel](xref:DMASpectrumMeasptModel)
 
+- [DMASpectrumMonitor](xref:DMASpectrumMonitor)
+
 - [DMASpectrumPreset](xref:DMASpectrumPreset)
 
 - [DMAStatistics](xref:DMAStatistics)
 
 - [DMASTString](xref:DMASTString)
+
+- [DMAThirdPartyNotice](xref:DMAThirdPartyNotice)
 
 - [DMATicket](xref:DMATicket)
 
@@ -265,6 +271,8 @@ uid: WS_CustomDataTypes_v1
 - [DMATopologyFieldValues](xref:DMATopologyFieldValues)
 
 - [DMATrendData](xref:DMATrendData)
+
+- [DMATrendDataStatisticsService](xref:DMATrendDataStatisticsService)
 
 - [DMAUser](xref:DMAUser)
 

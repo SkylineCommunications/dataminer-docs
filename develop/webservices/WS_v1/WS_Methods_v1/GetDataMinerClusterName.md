@@ -12,6 +12,6 @@ None.
 
 ## Output
 
-| Item                           | Format | Description                       |
-|--------------------------------|--------|-----------------------------------|
+| Item                          | Format | Description                       |
+|-------------------------------|--------|-----------------------------------|
 | GetDataMinerClusterNameResult | String | The name of the DataMiner System. |

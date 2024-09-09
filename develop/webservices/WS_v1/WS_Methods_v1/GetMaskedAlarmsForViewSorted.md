@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of masked view alarms.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                               |
 | viewID     | Integer | The view ID.                                                                        |
 | index      | Integer | The point from which to start returning alarms.                                     |
 | count      | Integer | The number of alarms to be returned.                                                |
