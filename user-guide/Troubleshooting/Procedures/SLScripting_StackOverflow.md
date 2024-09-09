@@ -17,7 +17,7 @@ Unhandled exception at 0x080BFA90 in CRASH_HIGH.DMP: 0xC00000FD: Stack overflow 
 
 Now open the Parallel Stacks window (*Debug* > *Windows* > *Parallel Stacks*):
 
-![WinDbg](~/develop/images/VisualStudioParallelStacksWindow.png)<br>Visual Studio Parallel Stacks window*
+![Visual Studio Parallel Stacks window](~/develop/images/VisualStudioParallelStacksWindow.png)<br>Visual Studio Parallel Stacks window*
 
 In this case, the parallel stacks window does not show a stack with huge number of calls that are typically of an overflow.
 Using WinDbg could possibly provide more insights.
