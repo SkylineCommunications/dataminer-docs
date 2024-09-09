@@ -44,7 +44,7 @@ To register a new catalog item:
 Using the Catalog API, it is possible to  
 
 - [Register a catalog item](#register-a-catalog-item).
-- [register a new catalog version](#register-a-new-catalog-version).
+- [Register a new catalog version](#register-a-new-catalog-version).
 
 >[!important]  
 The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
