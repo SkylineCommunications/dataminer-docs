@@ -4,6 +4,10 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID_40623]
+
+If Data Aggregator was configured to export data to CSV for multiple jobs, storing the CSV export files in separate folders according to the configured paths, it could occur that the old CSV files did not get removed after the number of days configured with the *DeleteAfterXDays* setting, which could eventually cause the system to run out of disk space. This has now been fixed: the old CSV files of every job will be deleted as configured.
+
 #### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - MessageBroker dependency updated [ID_40491]
 
 The DataMiner MessageBroker dependency in the DataAggregator DxM has been updated to version 3.0.1.
