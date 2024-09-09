@@ -18,7 +18,7 @@ When a Catalog item version is not available to deploy because its installation 
 Catalog item registration now supports images to be included in the provided reamde.md file that will be used as the description of a catalog item. Any used images need to be included in a "Images" directory.
 supported image formats are jpg, jpeg, png, gif, bmp, tif, tiff and webp.
 
-### 09 September 2024 - Enhancement - Catalog API - Catalog Registration API has been improved [ID_40670]
+#### 09 September 2024 - Enhancement - Catalog API - Catalog Registration API has been improved [ID_40670]
 
 The previously available catalog API call to register a new catalog item (version) using a manifest yaml file has been split up into having a PUT call available to register an item (including its description) and a POST call to register a version.
 
