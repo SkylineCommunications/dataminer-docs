@@ -28,7 +28,7 @@ uid: FAQs_Support_Services
 
   In case the support plan has not been deactivated, and you fail to pay your invoice(s) or issue a PO (if required) in time, on the day after the end date of the plan, the service may be stopped along with all related services linked to it. However, you can still continue to consult content and resources on the Dojo Community portal.
 
-- **What happens if I do not have active support on a perpetual support plan?**
+- **What happens if I do not have active support on a perpetual-licensed system?**
 
   - You do not have access to the Skyline IOC technical support team.
   - Your platform is exposed to technical & security vulnerabilities.

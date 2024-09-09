@@ -665,6 +665,8 @@ items:
             topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
           - name: Using Visual Overview to control dashboard feed components
             topicUid: Using_visio_to_control_dashboard_feed_components
+          - name: Using Visual Overview to switch spectrum presets
+            topicUid: Using_Visual_Overview_to_switch_spectrum_presets
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:

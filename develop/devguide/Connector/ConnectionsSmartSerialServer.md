@@ -15,15 +15,15 @@ When a regular IP address is specified, the connection will act as a client and 
 
 ## Obtaining information about the connected clients
 
-See notifyConnectionPIDs:x,y.
+See [notifyConnectionPIDs:x,y](xref:Protocol.Type-communicationOptions#notifyconnectionpidsxy).
 
 ## Specifying the maximum number of clients that can be connected simultaneously
 
-See maxConcurrentConnections.
+See [maxConcurrentConnections](xref:Protocol.Type-communicationOptions#maxconcurrentconnections).
 
 ## Prefix packet data with originating IP and port
 
-See smartIpHeader.
+See [smartIpHeader](xref:Protocol.Type-communicationOptions#smartipheader).
 
 ## Specifying the allowed IP addresses
 

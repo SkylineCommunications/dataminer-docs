@@ -110,17 +110,17 @@ This file will contain all necessary information to register a Catalog item with
 type: '<fill in type here>'
 
 # [Required] 
-# The id of the catalog item.
-# All registered versions for the same id are shown together in the catalog.
-# This id can not be changed. 
-# If the id is not filled in, the registration will fail with http status code 500. 
-# If the id is filled in but does not exist yet, a new catalog item will be registered with this id.
-# If the id is filled in but does exist, properties of the item will be overwritten
+# The ID of the catalog item.
+# All registered versions for the same ID are shown together in the catalog.
+# This ID can not be changed. 
+# If the ID is not filled in, the registration will fail with http status code 500. 
+# If the ID is filled in but does not exist yet, a new catalog item will be registered with this id.
+# If the ID is filled in but does exist, properties of the item will be overwritten
 #   Must be a valid GUID.
 id: '<fill in guid here>'
 
 # [Required] 
-# The human-friendly name of the catalog item. 
+# The human-friendly name of the Catalog item. 
 # Can be changed at any time.
 #   Max length: 100 characters.
 #   Can not contain newlines.
@@ -147,9 +147,9 @@ source_code_url: '<fill in source code url here>'
 documentation_url: '<fill in documentation url here>'
 
 # [Optional]
-# People that are responsible for this catalog item. Might be developers but is not required.
+# People who are responsible for this Catalog item. Might be developers, but this is not required.
 # Format: 'name <email> (url)'
-#   The name is required, max 256 characters.
+#   The name is required; max 256 characters.
 #   The email and url are optional, and should be in valid email/URL formats.
 owners:
   - name: '<fill in name here>'
@@ -158,9 +158,10 @@ owners:
 
 # [Optional]
 # Tags that allow you to categorize your catalog items.
+#   Max number of tags: 5
 #   Max length: 50 characters.
-#   Can not contain newlines.
-#   Can not contain leading or trailing whitespace characters.
+#   Cannot contain newlines.
+#   Cannot contain leading or trailing whitespace characters.
 tags:
   - '<fill in tag here>'
 ```

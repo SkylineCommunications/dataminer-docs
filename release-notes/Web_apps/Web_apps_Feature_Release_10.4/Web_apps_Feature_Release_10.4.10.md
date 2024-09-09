@@ -92,6 +92,12 @@ When you duplicated a dashboard you were not allowed to edit, up to now, you wou
 
 From now on, when you duplicate a dashboard you are not allowed to edit, you will be allowed to edit the newly created duplicate.
 
+#### Dashboards/Low-Code Apps - Security: Clearer visual difference between users and user groups [ID_40575]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
+
+When you are configuring who will have access to a dashboard, dashboard folder or low-code app, users and user groups will now be marked by a special icon, making it easier to see the difference between a user and a user group.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Intellisense no longer working when feed is configured with special character [ID_40340] [ID_40446]
@@ -204,3 +210,35 @@ From now on, every *DOMInstanceChangeEvents* subscription will get a unique conn
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
 When, in the *Time range* component, you picked a custom time range, the picker would become transparent, making it difficult to read its contents, especially when a dark dashboard theme was being used. From now on, the picker will no longer be transparent and will adapt its color scheme to the dashboard theme that is being used.
+
+#### Dashboards/Low-Code Apps: Line & area chart component would not update correctly when the feed input changed [ID_40620]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+In some cases, a *Line & area chart* component would not update correctly whenever the feed input changed.
+
+#### Dashboards/Low-Code Apps - Grid component: Problem when refetching data while data was being loaded [ID_40633]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+When the data displayed in a Grid component was refetched (by means of e.g. a refetch action or a Trigger component) while the component was busy loading data, the newly fetched data would not get loaded correctly.
+
+#### Low-Code Apps - Timeline component: Groups would reserve more screen real estate than necessary due to a time zone conversion issue [ID_40639]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+Due to a time zone conversion issue, groups configured in a *Timeline* component would reserve more screen real estate than necessary.
+
+#### Low-Code Apps - Table component: Problem with 'Select an item' action [ID_40643]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+When, in a low-code app, you had configured a "Select an item" action in a *Table* component, up to now, that action would not work when the *Table* component displayed less than fifty DOM instances.
+
+#### Low-Code Apps - Interactive Automation script component: Problem with scrollbars appearing unnecessarily [ID_40645]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+Up to now, when an interactive Automation script was run inside an *Interactive Automation script* component, the dimensions configured in the script would be ignored. Instead, the script would fill the entire component. Also, since the introduction of the *Interactive Automation script* component, when an interactive Automation script was run independently, scrollbars could appear unnecessarily in the script's pop-up windows.
+
+From now on, the configured dimensions will never be ignored. Whether an interactive Automation script is run inside an *Interactive Automation script* component or whether it is run independently, its windows will now always behave in the same way.

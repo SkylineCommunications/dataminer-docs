@@ -22,4 +22,4 @@ int numberOfRows = (int) protocol.NotifyProtocol(195/*NT_ARRAY_ROW_COUNT*/ , tab
 
 ## See also
 
-- SLProtocol.RowCount method
+- [RowCount (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.RowCount(System.Object)) method
