@@ -150,15 +150,16 @@ To request a cost estimation, follow the procedure below:
 
 1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
 
-   The Catalog page for this package also contains more information about this script. However, you will only need to run the script to get an estimation, not to do the full migration, so you can ignore the information on the Catalog page and follow the procedure below instead.
-
 1. In the Automation module in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
+
+   > [!NOTE]
+   > When you run the Automation script on a Failover pair, make sure the currently active Agent is the main Failover Agent (i.e. the first Agent in the Failover configuration). Otherwise, the Automation script will not function correctly.
 
 1. Initialize the migration:
 
-   1. Optionally, configure a proxy. This is supported from DataMiner 10.4.6 onwards.
+   1. Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.
 
-   1. Click *Init migration*.
+   1. Click *Init migration* to initialize the migration.
 
 1. Start the migration:
 
@@ -194,11 +195,14 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
 1. In the Automation module in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
 
+   > [!NOTE]
+   > When you run the Automation script on a Failover pair, make sure the currently active Agent is the main Failover Agent (i.e. the first Agent in the Failover configuration). Otherwise, the Automation script will not function correctly.
+
 1. Initialize the migration:
 
-   - Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.
+   1. Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.
 
-   - Click *Init migration* to initialize the migration.
+   1. Click *Init migration* to initialize the migration.
 
 1. Start the migration:
 
