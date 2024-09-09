@@ -68,83 +68,19 @@ The body of the request expects form-data with key of type *File* and name *file
   > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. Navigate to [GUID generator](https://guidgenerator.com/) and create a new one using the format *hyphens* or use your own preferred method.
 
   ```yml
-  # [Required]
-  # Possible values for the Catalog item that can be deployed on a DataMiner System:
-  #   - automationscript: If the catalog item is a general-purpose DataMiner Automation script.
-  #   - lifecycleserviceorchestration: If the catalog item is a DataMiner Automation script designed to manage the life cycle of a service.
-  #   - profileloadscript: If the catalog item is a DataMiner Automation script designed to load a standard DataMiner profile.
-  #   - userdefinedapi: If the catalog item is a DataMiner Automation script designed as a user-defined API.
-  #   - adhocdatasource: If the catalog item is a DataMiner Automation script designed for a ad hoc data source integration.
-  #   - chatopsextension: If the catalog item is a DataMiner Automation script designed as ChatOps Extension.
-  #   - connector: If the catalog item is a DataMiner XML connector.
-  #   - slamodel: If the catalog item is a DataMiner XML connector designed as DataMiner Service Level Agreement model.
-  #   - enhancedservicemodel: If the catalog item is a DataMiner XML connector designed as DataMiner enhanced service model.
-  #   - visio: If the catalog item is a Microsoft Visio design.
-  #   - solution: If the catalog item is a DataMiner Solution.
-  #   - testingsolution: If the catalog item is a DataMiner Solution designed for automated testing and validation.
-  #   - samplesolution: If the catalog item is a DataMiner Solution used for training and education.
-  #   - standardsolution: If the catalog item is a DataMiner Solution which is a out-of-the-box solution for specific use case or application.
-  #   - dashboard: If the catalog item is a DataMiner Dashboard.
-  #   - lowcodeapp: If the catalog item is a DataMiner low-code app.
-  #   - datatransformer: If the catalog item is a Data Transformer.
-  #   - dataquery: If the catalog item is a GQI data query.
-  #   - functiondefinition: If the catalog item is a DataMiner function definition.
-  #   - scriptedconnector: If the catalog item is a DataMiner scripted connector.
-  #   - bestpracticesanalyzer: If the catalog item is a DataMiner Best practices Analysis file.
-
   type: 'connector'
 
-  # [Required] 
-  # The id of the catalog item.
-  # All registered versions for the same id are shown together in the catalog.
-  # This id can not be changed. 
-  # If the id is not filled in, the registration will fail with http status code 500. 
-  # If the id is filled in but does not exist yet, a new catalog item will be registered with this id.
-  # If the id is filled in but does exist, properties of the item will be overwritten
-  #   Must be a valid GUID.
   id: '1742495c-9231-4eeb-a56e-1fec8189246e'
 
-  # [Required] 
-  # The human-friendly name of the catalog item. 
-  # Can be changed at any time.
-  #   Max length: 100 characters.
-  #   Can not contain newlines.
-  #   Can not contain leading or trailing whitespace characters.
   title: 'My Catalog Registration Example'
 
-  # [Optional]
-  # General information about the catalog item.
-  #   Max length: 100.000 characters
-  # Currently not shown in the Catalog UI but will be supported in the near future.
   short_description: 'Example connector showing how to calculate bitrates and other rates on any changing numeric data.'
 
-  # [Optional]
-  # A valid URL that points to the source code.
-  #   A valid URL
-  #   Max length: 2048 characters
   source_code_url: 'https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom'
 
-  # [Optional]
-  # A valid URL that points to documentation.
-  #   A valid URL
-  #   Max length: 2048 characters
-  # Currently not shown in the Catalog UI but will be supported in the near future.
-  # documentation_url: ''
-
-  # [Optional]
-  # People that are responsible for this catalog item. Might be developers but is not required.
-  # Format: 'name <email> (url)'
-  #   The name is required, max 256 characters.
-  #   The email and url are optional, and should be in valid email/URL formats.
   owners:
     - name: 'john doe'
       email: 'john.doe@skyline.be'
-
-  # [Optional]
-  # Tags that allow you to categorize your catalog items.
-  #   Max length: 50 characters.
-  #   Can not contain newlines.
-  #   Can not contain leading or trailing whitespace characters.
   tags:
     - 'example'
   ```
