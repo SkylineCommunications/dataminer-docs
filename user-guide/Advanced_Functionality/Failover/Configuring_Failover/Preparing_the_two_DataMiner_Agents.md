@@ -15,7 +15,7 @@ Before you start the actual configuration, make sure you have the following:
   > [!NOTE]
   > If you use IP addresses instead of a hostname:
   >
-  > - Make sure [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
+  > - Make sure [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed on both DMAs. From DataMiner 10.4.10/10.5.0 onwards<!--RN 40257 + RN 40267-->, you can check whether this is installed via *System Center* > *Agents* > *Failover*. This will open the *Failover Config* window, where an information icon will be displayed next to *Failover (Virtual IP)* in case neither of these is installed or no valid installation could be detected on the DMA you are currently connected to. Hover the mouse pointer over this icon for more detailed information.
   > - To avoid possible conflicts, make sure the IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).

@@ -157,7 +157,7 @@ The *Info* object has the following properties:
 | Property | Type | Possible values |
 |----------|------|-------------|
 | WinPcapDetection | PcapDetectionType | - PcapDetected: WinPcap is installed.<br>- NoPcapDetected: WinPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector".  |
-| NpcapDetection   | PcapDetectionType | - PcapDetected: NPcap is installed.<br>- NoPcapDetected: NPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
+| NpcapDetection   | PcapDetectionType | - PcapDetected:Npcap is installed.<br>- NoPcapDetected:Npcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
 
 > [!NOTE]
 >
