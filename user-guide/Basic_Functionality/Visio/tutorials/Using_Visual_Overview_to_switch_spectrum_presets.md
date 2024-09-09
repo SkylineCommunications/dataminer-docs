@@ -229,36 +229,44 @@ Session variables are small pieces of data that are kept in DataMiner Cube memor
 
 1. Save the Visio file.
 
-1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the presets are correctly changed. It may take a few seconds before the presets are fully switched.
+1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the presets are correctly changed.
+
+   It may take a few seconds before the presets are fully switched.
 
 ## Step 9: Draw a graphic representation of the setup
 
-1. Add a number of images in the Visio file that represent the setup in your system. You can for example use the [Skylicons](https://skyline.be/skylicons). In the example the dual color versions of the cable, dish, monitor, spectrum and stacked devices skylicons were used.
+1. Add a number of images in the Visio file that represent the setup in your system.
 
-   - To add images, you can drag them from a location on your computer where you stored the images and drop them on the visio drawing.
-   - Images can also be added by clicking the insert tab on top of the Visio window, and then clicking *Pictures* dropdown and selecting *Pictures...*. This will bring up the *Insert Picture* popup where you can navigate to the images you want to add.
+   > [!TIP]
+   > To quickly get suitable images, you can use the [Skylicons](https://skyline.be/skylicons). In the example below, the dual-color versions of the cable, dish, monitor, spectrum, and stacked devices skylicons were used.
 
-   ![Add images and connectors to visualize the switching](~/user-guide/images/Tutorial_VO_spectrum_images_added.png)
+   - To add images, you can drag them from a location on your computer where you stored the images and drop them onto the Visio drawing.
 
-1. Draw lines that represent the connections between the components.
+   - You can also add images by selecting the *Insert* tab in the Visio ribbon, and then selecting *Pictures*. You can then navigate to the images you want to add and select them.
 
-   - In the *Home* tab of the ribbon, click the downward arrow next to the rectangle in the *Tools* section.
-   - In the dropdown menu, select "Line"
-   - Drag lines between the shapes to make it look as if they are connected.
+1. Draw lines that represent the connections between the components:
 
-1. To enhance the visualization, you can use a different line color for the connections to the image that represents the spectrum analyzer.
+   1. In the *Home* tab of the ribbon, click the downward arrow next to the rectangle in the *Tools* section, and select *Line* instead.
 
-   - In the *Home* tab of the ribbon, select the *Pointer Tool* in the *Tools* section.
-   - Select the line for which you want to change the color or thickness.
-   - In the *Home* tab of the ribbon, click the *Line* dropdown in the *Shape Styles* section.
-   - In this dropdown, you can click one of the colors to change the color of the line
-   - If you want to also change the thickness of the line, open the *Line* dropdown again, point your cursor to the *Weight* section and click on the desired weight.
+   1. Drag lines between the shapes to make it look as if they are connected.
+
+1. To enhance the visualization, change the line color for the connections to the image that represents the spectrum analyzer:
+
+   1. In the *Home* tab of the ribbon, select the *Pointer Tool* in the *Tools* section.
+
+   1. Select the line for which you want to change the color or thickness.
+
+   1. In the *Shape Styles* section of the *Home* tab, click the *Line* dropdown, and select the color you want to use.
+
+   1. If you want to also change the thickness of the line, open the *Line* dropdown again, go to *Weight*, and select the thickness you want to apply.
+
+![Add images and connectors to visualize the switching](~/user-guide/images/Tutorial_VO_spectrum_images_added.png)
 
 ## Step 10: Show only the current selection
 
-To indicate which point of the setup is currently measured, we will hide one of the lines depending on the button that was last clicked.
+To indicate which point of the setup is currently measured, you will now configure one of the lines to be hidden depending on the button that was last clicked.
 
-1. Select the line between the satellite dish image and the spectrum analyzer image and add a shape data with label `Show` and value `<A>-A|Value|[var:varPreset]|=Satellite (public)`.
+1. Select the line between the satellite dish image and the spectrum analyzer image and define a shape data field with label `Show` and value `<A>-A|Value|[var:varPreset]|=Satellite (public)`.
 
    > [!TIP]
    > For more information on the *Show* condition format, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
@@ -271,7 +279,7 @@ To indicate which point of the setup is currently measured, we will hide one of 
 
 1. Save the Visio file.
 
-1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the lines are correctly shown or hidden and the presets are still switched.
+1. On the *Visual* page in DataMiner Cube, click the buttons and verify whether the lines are correctly shown or hidden when the presets are switched.
 
 ## Related documentation
 
