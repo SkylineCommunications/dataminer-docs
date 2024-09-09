@@ -66,6 +66,10 @@ Make sure that packets to and from these ports coming from the virtual IP addres
 
 Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a Failover system. Below you can find the measures that need to be taken for each of the supported architectures.
 
+### Storage as a Service
+
+If you want to add the Failover pair to a DataMiner System that uses STaaS, first make sure the primary DMA has been added as detailed under [Adding a DMA to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS). Then follow the same steps for the backup DMA, but skip the step where you actually join the DMA to the cluster.
+
 ### Dedicated clustered storage
 
 1. Make sure that the Agents to be added can reach the Cassandra cluster through ports 9042 or 9142 when using TLS.
