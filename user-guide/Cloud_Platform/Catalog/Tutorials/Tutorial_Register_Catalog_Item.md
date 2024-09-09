@@ -147,7 +147,7 @@ tags:
   - 'example'
 ```
 
-create a zip file containing the manifest and the readme and add it to the body of the request as shown below
+Create a zip file containing the manifest and the readme and add it to the body of the request as shown below
 
 ![Register item http body](~/user-guide/images/tutorial_catatalog_registration_item_body.png)
 
