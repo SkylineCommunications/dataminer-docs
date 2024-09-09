@@ -11,5 +11,5 @@ Using [Catalog Registration API](xref:Register_Catalog_Item), new catalog items 
 
 | Name | Description |
 |---|---|
-| [Register Catalog Item](xref:Tutorial_Register_Catalog_Item) | Register a catalog item using the Catalog API. |
-| [Register Catalog Version](xref:Tutorial_Register_Catalog_Version) | Register a catalog version using the Catalog API |
+| [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item) | Find out how to register a Catalog item using the Catalog API, using the example of registering a connector. |
+| [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version) | Find out how to register a new version of a Catalog item using the Catalog IP, using the example of registering a connector version. |

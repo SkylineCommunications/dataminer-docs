@@ -63,15 +63,15 @@ items:
     topicUid: About_the_Catalog_module
   - name: Looking up an item in the Catalog
     topicUid: Looking_up_an_item_in_the_catalog
-  - name: Catalog Registration
+  - name: Registering a Catalog item
     topicUid: Register_Catalog_Item
   - name: Deploying a Catalog item
     topicUid: Deploying_a_catalog_item
   - name: Tutorials
     items:
-    - name: Register a Catalog item
+    - name: Registering a new connector in the Catalog
       topicUid: Tutorial_Register_Catalog_Item
-    - name: Register a Catalog version
+    - name: Registering a new version of a connector in the Catalog
       topicUid: Tutorial_Register_Catalog_Version
 - name: DataMiner Sharing
   topicUid: Sharing

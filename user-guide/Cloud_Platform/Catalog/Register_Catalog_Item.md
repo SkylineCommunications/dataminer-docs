@@ -2,20 +2,24 @@
 uid: Register_Catalog_Item
 ---
 
-# Catalog registration
+# Registering a Catalog item
 
- In order to make a catalog item (version) available on [Catalog](https://catalog.dataminer.services/), you need to register it with an organization.  
- The catalog item will only be available for the registered organization and will be marked *private* in the UI to indicate it as such.   
+In order to make a new Catalog item or a new version of a Catalog item available in the [DataMiner Catalog](https://catalog.dataminer.services/), you need to register it with an organization.
 
- Registration can be done using the [Catalog UI](#catalog-ui) and the [Catalog API](#catalog-api). 
- Below you can find detailed steps on how to use them.
+When you register a new Catalog item, it will only become available for the registered organization, and it will be marked as *private* in the UI to indicate this.
 
-## Catalog UI
+Registration can be done using the [Catalog UI](#using-the-catalog-ui) or the [Catalog API](#using-the-catalog-api).
 
-Using the Catalog UI, it is possible to register a catalog item by its *name* and *type* but no version can be registered.  
-Registration returns a unique identifier for the catalog item, which can be used by the [Catalog API](#catalog-api) to update additional properties or register new versions. 
+> [!TIP]
+> For a practical example, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item) and [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version).
 
-To register a new catalog item:
+## Using the Catalog UI
+
+Using the Catalog UI, it is possible to register a new Catalog item by its *name* and *type*, but it is not possible to register a new version for an item.
+
+Registration returns a unique identifier for the Catalog item, which can be used by the [Catalog API](#using-the-catalog-api) to update additional properties or register new versions.
+
+To register a new Catalog item:
 
 1. Go to the [Catalog](https://catalog.dataminer.services).
 
@@ -37,26 +41,24 @@ To register a new catalog item:
 
 1. Once all information has been filled in, click *Register*.
 
-   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item or update additional properties using the [Catalog API](#catalog-api).
+   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item or update additional properties using the [Catalog API](#using-the-catalog-api).
 
-## Catalog API
+## Using the Catalog API
 
-Using the Catalog API, it is possible to  
-
-- [Register a catalog item](#register-a-catalog-item).
-- [Register a new catalog version](#register-a-new-catalog-version).
+With the Catalog API, you can both [register a Catalog item](#registering-a-catalog-item-with-the-api) and [register a new version of a Catalog item](#registering-a-new-version-with-the-api).
 
 >[!important]  
 The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
 You need to have the "Owner" role in order to access/create Organization keys.
 
-A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#catalog-ui) or created by yourself.
+A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#using-the-catalog-ui) or created by yourself.
 
-### Register a catalog item
+### Registering a Catalog item with the API
 
-The register API call allows you to create or update a Catalog item, see [register a new catalog version](#register-a-new-catalog-version) on how to add a version after succesfuly registering an item.
+The register API call allows you to create or update a Catalog item, see [Registering a new version with the API](#registering-a-new-version-with-the-api) on how to add a version after successfully registering an item.
 
 #### URL
+
 <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
 
 #### HTTP method
@@ -79,7 +81,6 @@ Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, 
 ##### Manifest file
 
 This file will contain all necessary information to register a Catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
-
 
 ```yml
 # [Required]
@@ -164,7 +165,7 @@ tags:
   - '<fill in tag here>'
 ```
 
-### Register a new catalog version
+### Registering a new version with the API
 
 The register version API call allows you to create a new version for a Catalog item
 
