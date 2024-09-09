@@ -19,7 +19,7 @@ Now open the Parallel Stacks window (*Debug* > *Windows* > *Parallel Stacks*):
 
 ![WinDbg](~/develop/images/VisualStudioParallelStacksWindow.png)<br>Visual Studio Parallel Stacks window*
 
-In this case, the parallel stacks window does not show a stack with huge number of calls making it overflow.
+In this case, the parallel stacks window does not show a stack with huge number of calls that are typically of an overflow.
 Using WinDbg could possibly provide more insights.
 
 ## WinDbg
