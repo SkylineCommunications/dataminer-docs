@@ -43,7 +43,7 @@ To register a new catalog item:
 
 Using the Catalog API, it is possible to  
 
-- [register a catalog item](#register-a-catalog-item).
+- [Register a catalog item](#register-a-catalog-item).
 - [register a new catalog version](#register-a-new-catalog-version).
 
 >[!important]  
