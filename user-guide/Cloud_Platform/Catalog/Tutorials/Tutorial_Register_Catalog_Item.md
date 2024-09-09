@@ -48,10 +48,6 @@ The body of the request expects form-data with key of type *File* and name *file
 Copy the below snippet and change the content as you see fit using your favorite editor.
 
 ```md
----
-uid: Connector_Example_Rates_Custom
----
-
 # Example_Rates_Custom
 
 This is a connector that serves as example on how to integrate bit rates.
