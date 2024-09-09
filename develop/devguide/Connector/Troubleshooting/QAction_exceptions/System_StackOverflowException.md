@@ -2,6 +2,6 @@
 uid: System_StackOverflowException
 ---
 
-# System.OutOfMemoryException
+# System.StackOverflowException
 
 Refer to <xref:TroubleshootingSLScriptingStackOverflowException>.
