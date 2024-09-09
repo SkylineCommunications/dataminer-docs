@@ -24,7 +24,7 @@ Using WinDbg could possibly provide more insights.
 
 ## WinDbg
 
-Open the dump file with WinDbg.
+Open the dump file with [WinDbg](xref:WinDbg).
 Execute the `.lastevent` command. This shows the following message:
 
 ```txt
