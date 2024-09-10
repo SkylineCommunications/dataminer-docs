@@ -11,6 +11,7 @@ We will be registering our own version of the following example [connector](http
 
 - Organization key with permission "Register catalog items".
 - A registered Catalog item, see [register a catalog item tutorial](xref:Tutorial_Register_Catalog_Item)
+- [Skyline.DataMiner.CICD.Tools.Packager Nuget](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab).
 
 ## Overview
 
@@ -26,8 +27,8 @@ Create a new Http request using the POST http method and url  <https://api.datam
 
 ![Register version http url](~/user-guide/images/tutorial_catalog_registration_version_url.png)
 
->[!note]
-Make sure you use the same id as you used for the [Catalog item registration](xref:Tutorial_Register_Catalog_Item).
+> [!NOTE]  
+> Make sure you use the same id as you used for the [Catalog item registration](xref:Tutorial_Register_Catalog_Item).
 
 ## Step 2: Authentication Header
 
@@ -54,12 +55,17 @@ Run the following command to create a .dmprotocol package, adapt the directory p
 dataminer-package-create dmprotocol "C:\Tutorials\Catalog Registration\SLC-C-Example_Rates-Custom-1.0.1.X" --name catalog_registration_tutorial --output "C:\Tutorials\Catalog Registration\Packages"
 ```
 
-Add the file to the body as seen below and define versionNumber and versionDescription as well in the form-data
+Add the following to the **multipart/form-data** body of the request
+
+- The earlier created *dmprotocol* file in key of type **File** with name **file**.
+- The **version number** in key of type **Text** with name **versionNumber**.
+- The **version description** in key of type **Text** with name **versionDescription**.
 
 ![Register version http body](~/user-guide/images/tutorial_catalog_registration_version_body.png)
 
 ## Step 4: Register
 
-Upon successful registration, you will be able to see the registered version on the Catalog in the versions tab.
+Execute the call and upon correct registration you will receive HTTP Status 200 OK and the Catalog ID, artifact ID in the body of the response.
+You will be able to see the registered version on the Catalog in the **versions** tab.
 
 ![Registered version](~/user-guide/images/tutorial_catalog_registration_registered_version.png)

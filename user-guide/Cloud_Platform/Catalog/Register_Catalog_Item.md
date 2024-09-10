@@ -42,10 +42,10 @@ The body of the request should be of type **multipart/form-data** and must conta
 A key of type **File** and name **file**.  
 The value of this key should be a **zip** file containing 
 
-- [required] a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) file.
+- [Required] a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) file.
 
-- [optional] a readme.md file that contains the description of the Catalog item.
-- [optional] an "images" folder containing any image being referenced by the readme file.  
+- [Optional] a 'README.md' file that contains the description of the Catalog item.
+- [Optional] an 'images' folder containing any image being referenced by the readme file.  
 Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
 
 ##### Manifest file
@@ -141,7 +141,7 @@ tags:
 The register version API call allows you to create a new version for a Catalog item
 
 #### URL
-<https://api.dataminer.services/api/key-catalog/v1-0/catalog/register{catalogId:guid}/version>
+<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:guid}/register/version>
 
 Route parameter "catalogId" is the id of the Catalog item of which a new version is registered. Must be a valid Guid
 
