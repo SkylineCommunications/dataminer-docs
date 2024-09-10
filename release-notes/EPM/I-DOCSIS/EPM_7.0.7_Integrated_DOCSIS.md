@@ -15,21 +15,21 @@ uid: EPM_7.0.7_Integrated_DOCSIS
 
 ### Enhancements
 
-#### Casa Systems CCAP Platform: Improved Interfaces and Interface X polling [ID_40529]
+#### Casa Systems CCAP Platform: Improved Interfaces and Interface X polling [ID 40529]
 
 The SNMP information retrieval process has been improved, so that users will now have access to faster and more reliable bit rate information for interfaces.
 
 ### Fixes
 
-#### Incorrect bit rate calculation for slow interfaces [ID_40530]
+#### Incorrect bit rate calculation for slow interfaces [ID 40530]
 
 In the Interface table, it could occur that incorrect error rates and bit rates were shown for slow interfaces.
 
-#### Channels information polling issue [ID_40553]
+#### Channels information polling issue [ID 40553]
 
 During network congestion, it could occur that information about channels was only partially retrieved and service group mappings were lost. To resolve this, the partialSNMP option will no longer be used to poll the channels information.
 
-#### Cisco CBR-8 CCAP Platform: Incorrect Memory Utilization values for CCAP [ID_40667]
+#### Cisco CBR-8 CCAP Platform: Incorrect Memory Utilization values for CCAP [ID 40667]
 
 Up to now, it could occur that the Memory Utilization values that were calculated for the CCAP by the Cisco CBR-8 CCAP Platform connector did not line up with the values that are retrieved from CLI for the CCAP. To correct this, the memory pool OIDs that are used for this calculation have been updated, so that the correct value will be shown.
 
