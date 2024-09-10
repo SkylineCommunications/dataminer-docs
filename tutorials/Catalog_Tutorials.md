@@ -4,7 +4,7 @@ uid: Catalog_Tutorials
 
 # Catalog tutorials
 
-As part of dataminer.services, the Catalog module allows Skyline customers and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
+As part of dataminer.services, the Catalog module allows DataMiner users and Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
 Using [Catalog Registration API](xref:Register_Catalog_Item), new catalog items can be made available on the Catalog.
 
 ## Tutorials
