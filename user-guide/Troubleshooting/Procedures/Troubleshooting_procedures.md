@@ -20,7 +20,7 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
 
-- [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingIssues)
+- [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
 
 - [Troubleshooting – STaaS](xref:Troubleshooting_STaaS_Issues)
 
