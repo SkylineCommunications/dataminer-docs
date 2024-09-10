@@ -15,7 +15,7 @@ uid: General_Main_Release_10.5.0_new_features
 
 ### Core functionality
 
-#### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID_37714]
+#### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID 37714]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
@@ -23,7 +23,7 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
-#### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID_37950]
+#### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID 37950]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -31,7 +31,7 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
-#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID 39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -55,13 +55,13 @@ Restrictions:
 - The file name passed in the requests must be the name of an existing file.
 - The file path passed in the requests must be a valid, existing path.
 
-#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID 39043]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
 
-#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]
+#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID 39136]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -81,7 +81,7 @@ New features added to allow this include:
   - a new `IGQISortField`
   - a new `IGQISortOperator`
 
-#### Storage as a Service: Proxy support [ID_39221] [ID_39313]
+#### Storage as a Service: Proxy support [ID 39221] [ID 39313]
 
 <!-- RN 39221: MR 10.5.0 - FR 10.4.5 -->
 <!-- RN 39313: MR 10.5.0 - FR 10.4.6 -->
@@ -111,7 +111,7 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
-#### Correlation log file will now include correlation rule statistics [ID_39301]
+#### Correlation log file will now include correlation rule statistics [ID 39301]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
@@ -123,13 +123,13 @@ Example of a log entry containing correlation rule statistics:
 2024/05/28 00:00:00.011|SLNet.exe|Log|INF|0|32|CorrelationRuleActionStatistics => [Rule => My_Correlation_Rule; NumberOfTimesExecuted => 6; TotalExecutionDuration => 00:31:41.5222024; MinimumExecutionDuration => 00:01:40.0854200; MaximumExecutionDuration => 00:10:00.4677544; FirstExecutionDuration => 00:10:00.4677544; LastExecutionDuration => 00:05:00.0185738; FirstExecutionTime => 05/27/2024 20:15:03; LastExecutionTime => 05/27/2024 20:48:02;]
 ```
 
-#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID 39381]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
 
-#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
+#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID 39489]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -144,7 +144,7 @@ This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection)
 > [!NOTE]
 > The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
 
-#### Failover: New SLNettypes message to check whether Pcap is installed on a DataMiner Agent [ID_40257]
+#### Failover: New SLNettypes message to check whether Pcap is installed on a DataMiner Agent [ID 40257]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
@@ -162,11 +162,11 @@ The *Info* object has the following properties:
 > [!NOTE]
 >
 > - The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user opens the *Failover Config* window. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message. When you do not have this permission, an error message will appear.
-> - See also [RN 40267](xref:Cube_Feature_Release_10.4.10#failover-config-window-will-now-show-information-regarding-the-pcap-libraries-that-are-installed-on-the-dmas-id_40267)
+> - See also [RN 40267](xref:Cube_Feature_Release_10.4.10#failover-config-window-will-now-show-information-regarding-the-pcap-libraries-that-are-installed-on-the-dmas-id-40267)
 
 ### Protocols
 
-#### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
+#### FillArray now supports protocol.Leave and protocol.Clear [ID 38153]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -237,7 +237,7 @@ The `QActionHelper` class has also been adapted.
   > [!NOTE]
   > The `AddRow` and `SetRow` methods can now also perform history sets.
 
-#### Configuration of multiple threads for the same connection [ID_38887]
+#### Configuration of multiple threads for the same connection [ID 38887]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
@@ -274,7 +274,7 @@ In the element logging, the log entry for starting a thread will include the thr
 
 For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why. If you try to execute a group on a thread that has not been created for this reason, the group will be executed on the main protocol thread.
 
-#### Protocols: Newly installed connector will automatically be promoted to production version [ID_40291]
+#### Protocols: Newly installed connector will automatically be promoted to production version [ID 40291]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
@@ -295,7 +295,7 @@ A connector will only be promoted to "production version" if its first version i
 
 ### DataMiner modules
 
-#### User-defined APIs: Query string support [ID_37733]
+#### User-defined APIs: Query string support [ID 37733]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
@@ -320,7 +320,7 @@ bool ContainsKey(string key);
 > - Multiple values can be added for one key.
 > - Query parameter keys are case-sensitive.
 
-#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885] [ID_38096]
+#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID 37885] [ID 38096]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -346,7 +346,7 @@ var count = resourceManagerHelper.CountResources(ResourceExposers.Name.Contains(
 > [!NOTE]
 > When a *Get Bookings* GQI query performs a count aggregate on ID, it will now use the new *ResourceManageHelper.CountReservationInstances* method. This will considerably enhance overall performance.
 
-#### DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID_37891]
+#### DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID 37891]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -426,7 +426,7 @@ If multiple instances share the same ID, only the last of those instances will b
 > [!NOTE]
 > This also applies when PaTokens are created, updated or deleted in bulk. If multiple instances share the same ID, only the last of those instances will be taken into account.
 
-#### DataMiner Object Models: Defining CRUD actions for DomInstances on DomDefinition level [ID_37963]
+#### DataMiner Object Models: Defining CRUD actions for DomInstances on DomDefinition level [ID 37963]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -440,7 +440,7 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
-#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
+#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID 38294]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
@@ -454,13 +454,13 @@ The behavior is similar to that of the options in the `ModuleSettingsOverrides` 
 > [!IMPORTANT]
 > In order for the `HistorySettings` of the `ModuleSettings` to be used, the `HistorySettings` object in the DomDefinition has to be *null*. Just making the values empty is not sufficient.
 
-#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID 38364]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
 
-#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
+#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID 39117]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -494,7 +494,7 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
-#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID 39362]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -502,7 +502,7 @@ Up to now, it was only possible to retrieve a single function definition by ID u
 
 From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
-#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID_39446]
+#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID 39446]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
@@ -523,7 +523,7 @@ Example of a function manager *config.xml* file containing this new setting:
 
 For more information, see [Function resource settings](xref:Function_resource_settings)
 
-#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
+#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID 39510]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
@@ -535,7 +535,7 @@ Also, from now on, it will no longer be possible to create multiple enum values 
 
 ### Tools
 
-#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
+#### SLNetClientTest tool: New SLProtocol health statistics [ID 37617]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
@@ -546,7 +546,7 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
 | Health Stats (SLProtocol) > Details... | Show all details of a specific element. |
 
-#### Factory reset tool: Additional actions [ID_39524] [ID_39530]
+#### Factory reset tool: Additional actions [ID 39524] [ID 39530]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 

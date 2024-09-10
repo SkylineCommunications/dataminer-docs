@@ -9,7 +9,7 @@ uid: SRM_1.2.28_CU1
 
 ## Enhancements
 
-#### New RenameElement method [ID_34991]
+#### New RenameElement method [ID 34991]
 
 A new method, *RenameElement*, had been added to the *IActionableElement* in the SLSRMLibrary. It will allow you to change the name of a DataMiner element.
 

@@ -1,5 +1,6 @@
 ---
 uid: Software_support_life_cycles
+keywords: support lifecycle, product lifecycle
 ---
 
 # Software support life cycles

@@ -12,7 +12,7 @@ uid: General_Main_Release_10.0.0_new_features_4
 
 ### DMS Reports & Dashboards
 
-#### Reporter: New method that allows sending an email from inside a custom report \[ID_20031\]
+#### Reporter: New method that allows sending an email from inside a custom report \[ID 20031\]
 
 Reporter now has a method that allows sending an email from inside a custom report:
 
@@ -22,11 +22,11 @@ template.sendEmail(string toAddress, string toFriendly, string fromAddress, stri
 
 If *fromAddress* is empty, then the email address specified in System Center \> Agents \> System \> System Info will be used.
 
-#### Reporter: Update 'Reservation' to 'Booking' and new booking list template component \[ID_21998\]
+#### Reporter: Update 'Reservation' to 'Booking' and new booking list template component \[ID 21998\]
 
 In the Reporter app, the term “Reservation” has been replaced by “Booking” to be in line with the rest of the Cube UI. In addition, in the template builder, the “Bookings” component can now be configured to show a list of bookings.
 
-#### New Dashboards app \[ID_19638\]\[ID_20719\]\[ID_20739\]\[ID_21182\]\[ID_21199\]\[ID_21213\]\[ID_21220\] \[ID_21223\]\[ID_21234\]\[ID_21263\]\[ID_21340\]\[ID_21437\]\[ID_21706\]\[ID_21848\]\[ID_21932\]\[ID_21957\] \[ID_22072\]\[ID_22117\]\[ID_22273\]\[ID_22325\]\[ID_22517\]\[ID_22672\]\[ID_22761\]\[ID_22855\]\[ID_22874\] \[ID_23080\] \[ID_23097\]\[ID_23131\]\[ID_23161\]\[ID_23173\]\[ID_23176\]\[ID_23245\]\[ID_23249\]\[ID_23293\] \[ID_23401\]\[ID_23481\]\[ID_23546\]\[ID_23563\]\[ID_23671\] \[ID_23692\]\[ID_23747\]\[ID_23754\]\[ID_23839\] \[ID_24171\]
+#### New Dashboards app \[ID 19638\]\[ID 20719\]\[ID 20739\]\[ID 21182\]\[ID 21199\]\[ID 21213\]\[ID 21220\] \[ID 21223\]\[ID 21234\]\[ID 21263\]\[ID 21340\]\[ID 21437\]\[ID 21706\]\[ID 21848\]\[ID 21932\]\[ID 21957\] \[ID 22072\]\[ID 22117\]\[ID 22273\]\[ID 22325\]\[ID 22517\]\[ID 22672\]\[ID 22761\]\[ID 22855\]\[ID 22874\] \[ID 23080\] \[ID 23097\]\[ID 23131\]\[ID 23161\]\[ID 23173\]\[ID 23176\]\[ID 23245\]\[ID 23249\]\[ID 23293\] \[ID 23401\]\[ID 23481\]\[ID 23546\]\[ID 23563\]\[ID 23671\] \[ID 23692\]\[ID 23747\]\[ID 23754\]\[ID 23839\] \[ID 24171\]
 
 A completely redesigned Dashboards app is now available. This new app features HTML5 responsive design, with the ability to run across desktops, tablets and mobile platforms. It allows you to create and use interactive dashboards more easily and intuitively.
 
@@ -248,7 +248,7 @@ To set maxJSONLength to a specific value, do the following:
 > [!NOTE]
 > If no maxJSONLength value is specified in the Web.config file, this setting will be set to 20 MiB by default.
 
-#### Reporter: Accessing parameter values of paused elements \[ID_23829\]
+#### Reporter: Accessing parameter values of paused elements \[ID 23829\]
 
 In Reporter, status queries and parameter pages of elements are now able to access the parameter data of elements that are paused.
 
@@ -259,23 +259,23 @@ var iOptions = O_SQ_INC_ELEMENTS_PAUSED;
 template.insertStatusQueryBlock(null, null, iOptions);
 ```
 
-#### Dashboards app: Separator used in CSV exports based on CSV separator setting in Cube \[ID_24161\]
+#### Dashboards app: Separator used in CSV exports based on CSV separator setting in Cube \[ID 24161\]
 
 The separator used in CSV exports from the Dashboards app is based on the “CSV separator” setting in Cube. If this setting cannot be retrieved, in Internet Explorer the system will fall back to the Windows regional settings, while other browsers will fall back to the local browser settings.
 
 ### DMS Automation
 
-#### .NET Compiler Platform now used for C# Automation scripts \[ID_20746\]
+#### .NET Compiler Platform now used for C# Automation scripts \[ID 20746\]
 
 All C# Automation scripts will now be validated and compiled using the .NET Compiler Platform (also known as "Roslyn"), which will enable the use of syntax of C# version 6.0 and higher.
 
-#### New IDPResource and IDPManagerHelper class \[ID_20892\]
+#### New IDPResource and IDPManagerHelper class \[ID 20892\]
 
 A new *IDPResource* and *IDPManagerHelper* class are now available in DMS Automation. The *IDPResource* class defines resources that can be used with an IDP license, and the *IDPManagerHelper* class allows you to manage these resources.
 
 IDP resources can only be created if an IDP license is present. Such a license allows you to add up to 10 IDP resources, as well as to create booking instances and resource pools using IDP resources. The booking instances using IDP resources are not taken into account for the SRM volume license.
 
-#### Radio button lists can now be added to interactive Automation script dialog boxes \[ID_21475\]
+#### Radio button lists can now be added to interactive Automation script dialog boxes \[ID 21475\]
 
 It is now possible to add radio button lists to an interactive Automation script dialog box.
 
@@ -298,7 +298,7 @@ foreach (string sOption in dropDownOptions)
 > [!NOTE]
 > When no initial value is passed to this list, no radio button will be selected by default.
 
-#### Password boxes can now be added to interactive Automation script dialog boxes \[ID_21518\]
+#### Password boxes can now be added to interactive Automation script dialog boxes \[ID 21518\]
 
 It is now possible to add password boxes to an interactive Automation script dialog box.
 
@@ -313,7 +313,7 @@ Optionally, you can set the HasPeekIcon property to display an icon that, when c
 blockPasswordBox.HasPeekIcon = allowPeek;
 ```
 
-#### Dialog box of an interactive Automation script can now have a custom title \[ID_21552\]
+#### Dialog box of an interactive Automation script can now have a custom title \[ID 21552\]
 
 When defining a dialog box of an interactive Automation script, you can now specify a custom title.
 
@@ -324,7 +324,7 @@ UIBuilder uibDialogBox = new UIBuilder();
 uibDialogBox.Title = “My dialog box title”;
 ```
 
-#### AlarmTemplateHelper \[ID_21878\]
+#### AlarmTemplateHelper \[ID 21878\]
 
 The AlarmTemplateHelper will allow Automation scripts to manipulate alarm templates.
 
@@ -386,7 +386,7 @@ The AlarmTemplateHelper can throw the following exceptions:
 > [!IMPORTANT]
 > When creating or updating an alarm template row for a table column parameter, also specify the filter (default: “\*”). Setting the filter value to “” or null will prevent alarms from being triggered.
 
-#### Passing information from a subscript to the parent script \[ID_21952\]
+#### Passing information from a subscript to the parent script \[ID 21952\]
 
 In an Automation script, it is now possible to pass information from a subscript to the parent script.
 
@@ -406,7 +406,7 @@ In a subscript, use the following line to add a key/value pair to the dictionary
 engine.AddScriptOutput("key", "value");
 ```
 
-#### Service & Resource Management: Adding custom text to a booking block on the timeline \[ID_22068\]
+#### Service & Resource Management: Adding custom text to a booking block on the timeline \[ID 22068\]
 
 By default, on the booking timeline, booking blocks display the name of the booking. Now, it is also possible to override this default name with custom text using the *Visual.BlockContent* property. See the following example.
 
@@ -430,7 +430,7 @@ public void Run(Engine engine)
 > [!NOTE]
 > The value of the Visual.BlockContent property can be a multiline, but take into account that half of the block height is reserved for displaying subbookings or event markers.
 
-#### Finding an interactive client by user cookie \[ID_22227\]
+#### Finding an interactive client by user cookie \[ID 22227\]
 
 In Automation scripts and QActions, it is now possible to find an interactive client by user cookie instead of by user name.
 
@@ -446,7 +446,7 @@ Example of how to find a client by user cookie:
 bool ok =_engine.FindInteractiveClient("Some text", 100, "userCookie:" + connection.ConnectionID, AutomationScriptAttachOptions.None);
 ```
 
-#### Engine.FindElements can now also be used to find enhanced service elements \[ID_22631\]
+#### Engine.FindElements can now also be used to find enhanced service elements \[ID 22631\]
 
 It is now possible to use the Engine.FindElements method to find enhanced service elements.
 
@@ -455,7 +455,7 @@ To do so, set the *IncludeServiceElements* option to true and add it to the Elem
 > [!NOTE]
 > By default, the *IncludeServiceElements* option is set to false.
 
-#### Element.SetParameter and Element.SetParameterByPrimaryKey methods now allow control of information event generation \[ID_22783\]
+#### Element.SetParameter and Element.SetParameterByPrimaryKey methods now allow control of information event generation \[ID 22783\]
 
 Both the *Element.SetParameter* and *Element.SetParameterByPrimaryKey* methods now allow you to add an optional boolean indicating whether an information event should be generated when the parameter is set.
 
@@ -471,7 +471,7 @@ void SetParameterByPrimaryKey(int pid, string index, object value, bool? generat
 > [!NOTE]
 > This works as an override for the option *RunTimeFlags.NoInformationEvents* which can be set with the *Engine.SetFlag* method.
 
-#### C# code blocks can now be compiled as separate libraries \[ID_23504\]\[ID_23699\]
+#### C# code blocks can now be compiled as separate libraries \[ID 23504\]\[ID 23699\]
 
 When you add an action of type “C# code” to an Automation script, you can now indicate that you want to have this code block compiled as a separate library.
 
@@ -504,7 +504,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 > - When you delete a library C# block from an Automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
 > - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in *C:\\Skyline DataMiner\\Scripts\\Libraries*. When the first Automation-related action (i.e. creating, editing or deleting an Automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID_23950\]\[ID_24144\]\[ID_24164\]
+#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
 In an interactive Automation script, it is now possible to upload files from a client computer.
 
@@ -527,7 +527,7 @@ When you have selected a file, the actual upload will only start after you click
 
 All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnSetFlag method to clear run-time flags \[ID_23961\]
+#### New engine.UnSetFlag method to clear run-time flags \[ID 23961\]
 
 In an Automation script, you can now use the engine.UnSetFlag method to clear the following run-time flags:
 
@@ -550,13 +550,13 @@ public void SetParameterSilent(int pid, object value) {
 
 ### DMS Correlation
 
-#### Support for 'elementdesc' placeholder in notifications sent as a result of some triggered correlation rule \[ID_22105\]
+#### Support for 'elementdesc' placeholder in notifications sent as a result of some triggered correlation rule \[ID 22105\]
 
 When defining a notification message template in the *NotifyTemplates.xml* file, you can use a number of placeholders.
 
 From now on, the “elementdesc” placeholder (i.e. element description) can also be used in templates for notification messages sent as a result of some triggered Correlation rule. Up to now, it could only be used in templates for notification messages that are sent independently (not as a result of some triggered correlation rule).
 
-#### New event to trigger Correlation rules at DataMiner startup \[ID_22622\]
+#### New event to trigger Correlation rules at DataMiner startup \[ID 22622\]
 
 At DataMiner startup, a new event will now signal when the Correlation engine is up and running. This event will make it possible to trigger correlation rules at DataMiner startup.
 
@@ -568,7 +568,7 @@ Event properties:
 
 ### DMS Maps
 
-#### Service & Resource Management: Markers for multiple individual elements and elements in services \[ID_21800\]
+#### Service & Resource Management: Markers for multiple individual elements and elements in services \[ID 21800\]
 
 A map layer that has its sourceType set to “objects”, can display markers for any type of DataMiner object and can retrieve marker data from parameters and/or properties.
 
@@ -608,7 +608,7 @@ Any of the above-mentioned subtags can contain raw text, a name of a property or
 - \<Longitude>\<Property>MyLongitudeProperty\</Property>\</Longitude>
 - \<Title>\<Parameter>\<ID>123\</ID>\<Index>MyTableIndex\</Index>\</Parameter>\</Title>
 
-#### Visualizing DCF connections as lines between markers \[ID_21923\]
+#### Visualizing DCF connections as lines between markers \[ID 21923\]
 
 Map layers can now visualize DCF connections as lines between markers.
 
@@ -627,7 +627,7 @@ To have DCF connections displayed as lines between markers, do the following:
 > [!NOTE]
 > In order to be displayed consistently, DCF connections and DCF properties need to be defined on both source and destination elements.
 
-#### Enhanced service parameters can now be specified in \<Detail> tags \[ID_22009\]
+#### Enhanced service parameters can now be specified in \<Detail> tags \[ID 22009\]
 
 In a service context, it is now possible to specify parameters of enhanced services in \<Detail> tags inside \<PopupDetails> or \<MarkerDetails> tags.
 
@@ -649,16 +649,16 @@ Examples:
 
 ### DMS CPE Management
 
-#### Enhanced views \[ID_19316\]\[ID_21944\]
+#### Enhanced views \[ID 19316\]\[ID 21944\]
 
 The new “enhanced view” feature allows an element to become part of a view. This means that the alarm state of an element included in a view will now influence the alarm state of that view.
 
-See also: [New properties added to the ViewStateEventMessage \[ID_21375\]\[ID_21547\]](#new-properties-added-to-the-viewstateeventmessage-id_21375id_21547)
+See also: [New properties added to the ViewStateEventMessage \[ID 21375\]\[ID 21547\]](#new-properties-added-to-the-viewstateeventmessage-id-21375id-21547)
 
 > [!NOTE]
 > When a view was enhanced with an element, the alarms associated with that element will have the view specified in their “View impact” column.
 
-#### CPE Manager: Dummy items in CPE diagram and filters can now be hidden \[ID_19658\]
+#### CPE Manager: Dummy items in CPE diagram and filters can now be hidden \[ID 19658\]
 
 CPE tables often contain dummy items, i.e. virtual items that merely act as a link between two actual items. From now on, it is possible to hide these dummy items in CPE diagrams and CPE filters.
 
@@ -680,20 +680,20 @@ When, in DataMiner Cube, you now want to mark an item as a dummy item in that ta
 > - Parents of a dummy item will be linked to its children, and children of a dummy item will be linked to its parents.
 > - There can only be one dummy item per topology level. For example, a street cannot have two parents “Dummy1” and “Dummy2”. These two dummy items must be combined into one.
 
-#### CPE Manager: Right-click menu now allows you to copy values from a diagram node and a KPI list \[ID_20541\]
+#### CPE Manager: Right-click menu now allows you to copy values from a diagram node and a KPI list \[ID 20541\]
 
 In a CPE environment, right-click menus now allow you to copy certain values:
 
 - When you right-click a diagram node, you can copy the title of the node as well as the values displayed on the node.
 - When you right-click a value in a KPI list, you can copy that specific value.
 
-#### CPE Manager: Masking nodes in CPE diagrams \[ID_20653\]\[ID_24010\]
+#### CPE Manager: Masking nodes in CPE diagrams \[ID 20653\]\[ID 24010\]
 
 It is now possible to mask nodes in CPE diagrams. To mask a node, right-click it, and select “Mask”.
 
 However, note that it is only possible to mask a node for a limited period of time or until unmasked. The option to mask until the alarm is cleared, which is available for other DataMiner objects, is not available for CPE objects.
 
-#### CPE Manager: New 'skipInDiagram' option to skip level in CPE diagram \[ID_20893\]
+#### CPE Manager: New 'skipInDiagram' option to skip level in CPE diagram \[ID 20893\]
 
 It is now possible to configure a chain in a CPE protocol so that a level is skipped in the CPE diagram. To do so, add the option "skipInDiagram" in the relevant "Field" tag in the chain.
 
@@ -724,7 +724,7 @@ Example:
 > [!NOTE]
 > If you configure the filter of a field to not be displayed (i.e. you leave out the "displayInFilter" option), the "showTree" option is required, as otherwise the diagram would immediately stop at the level corresponding to this field. In that case, depending on whether the "skipInDiagram" option is specified, the diagram will either be shown as if the filter was displayed, or shown without this particular level.
 
-#### New CPECollectorHelper function to retrieve table rows that are linked via topology \[ID_21101\]\[ID_21122\]\[ID_21206\]\[ID_21465\]\[ID_21746\]
+#### New CPECollectorHelper function to retrieve table rows that are linked via topology \[ID 21101\]\[ID 21122\]\[ID 21206\]\[ID 21465\]\[ID 21746\]
 
 The following CPECollectorHelper function allows client apps to retrieve table rows that are linked via topology:
 
@@ -765,7 +765,7 @@ To force the CPE crawler to only poll the front-end manager element, indicate wh
 > - If the topology contains view tables instead of physical tables, then the above-mentioned alarm properties will also be filled in. However, note that, if view tables are used, secondary tables are currently not able to retrieve display keys of primary tables.
 > - This feature will only work with Protocol.Topologies.Topology elements, not with legacy Protocol.Topology elements.
 
-#### New properties added to the ViewStateEventMessage \[ID_21375\]\[ID_21547\]
+#### New properties added to the ViewStateEventMessage \[ID 21375\]\[ID 21547\]
 
 The following new alarm level properties have been added to the view state:
 
@@ -789,18 +789,18 @@ The following new alarm level properties have been added to the view state:
 > [!NOTE]
 > The EnhancedExtraLevel property has been removed.
 
-#### CPE tables can now have a ViewImpact column \[ID_21401\]
+#### CPE tables can now have a ViewImpact column \[ID 21401\]
 
 It is now possible to add a “view impact” column to a CPE table (by specifying the “ViewImpact” option in its column definition). In each of the table rows, the “view impact” column can then contain the IDs of the views that are impacted by that particular row.
 
 - The highest alarm among all rows that impact a particular view will be copied to the DirectViewImpactsLevel property of the ViewStateEventMessage class.
 - The bubble-up level will be copied to the DirectViewImpactsBubbleupLevel property of the ViewStateEventMessage class.
 
-#### DataMiner Cube: A chain can now have several list tabs displaying the same data but with a different filter \[ID_21704\]
+#### DataMiner Cube: A chain can now have several list tabs displaying the same data but with a different filter \[ID 21704\]
 
 A chain can now have several list tabs displaying the same data but with a different filter.
 
-#### CPECollector API: New methods \[ID_21755\]
+#### CPECollector API: New methods \[ID 21755\]
 
 The following methods have been added to the CPECollector API:
 
@@ -818,7 +818,7 @@ var managedFilter = new ManagedFilter<DMAObjectRefTree,IDMAObjectRef> (DMAObject
 
 This method returns mask operations stored in the transaction store (i.e. masking of topology data or views).
 
-#### Topology cells configured on a direct view table will now provision 'System Type' and 'System Name' properties on alarms originating from the source table \[ID_22238\]
+#### Topology cells configured on a direct view table will now provision 'System Type' and 'System Name' properties on alarms originating from the source table \[ID 22238\]
 
 If a topology cell is configured as in the example below, and the specified table is a direct view showing data from a source table that has monitoring enabled, then the alarms originating from that source table will now have their “System Type” and “System Name” properties provisioned with the cell name (in the example below: “Amplifier”) and the row key of the source table.
 
@@ -830,7 +830,7 @@ If a topology cell is configured as in the example below, and the specified tabl
 </Topologies>
 ```
 
-#### New general parameters: \[Alarm System Type\] and \[Alarm System Name\] \[ID_22632\]
+#### New general parameters: \[Alarm System Type\] and \[Alarm System Name\] \[ID 22632\]
 
 Two new general parameters have been added:
 
