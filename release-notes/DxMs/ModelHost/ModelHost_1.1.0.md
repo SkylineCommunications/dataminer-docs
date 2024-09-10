@@ -9,7 +9,7 @@ uid: ModelHost_1.1.0
 
 ## New features
 
-### Host service for relation learning added [ID_35703]
+### Host service for relation learning added [ID 35703]
 
 Model Host now includes a host service for alarm relation learning models.
 
@@ -17,12 +17,12 @@ Model Host now includes a host service for alarm relation learning models.
 
 ### Enhancements
 
-#### Relation model combinations normalized [ID_36086] [ID_36733]
+#### Relation model combinations normalized [ID 36086] [ID 36733]
 
 When a request asks for multiple kinds of relations, Model Host will now combine these relations in a better way, which can result in better suggestions (for example for related parameters in a trend graph in Cube).
 
 ### Fixes
 
-#### Model Host installation triggered server restart [ID_36172]
+#### Model Host installation triggered server restart [ID 36172]
 
 When the Model Host module was installed, this could trigger a restart of the server. This will no longer occur. In addition, the installation UI has been improved, and the license agreement has been updated.

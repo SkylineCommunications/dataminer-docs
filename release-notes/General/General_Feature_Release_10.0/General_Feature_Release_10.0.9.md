@@ -26,7 +26,7 @@ uid: General_Feature_Release_10.0.9
 
 ### DMS core functionality
 
-#### DataMiner Application packages \[ID_25911\]\[ID_26027\]\[ID_26169\]\[ID_26243\]\[ID_26271\]\[ID_26338\]\[ID_26351\]\[ID_26371\]
+#### DataMiner Application packages \[ID 25911\]\[ID 26027\]\[ID 26169\]\[ID 26243\]\[ID 26271\]\[ID 26338\]\[ID 26351\]\[ID 26371\]
 
 From now on, it is possible to install a DataMiner application or solution on an existing DataMiner system by uploading and installing a so-called “application package”.
 
@@ -160,7 +160,7 @@ An AppPackageHelper class has been made available, containing a series of method
 - ConfigureInstalledApp
 - GetCurrentAppConfiguration
 
-#### LoggerUtil: RepositoryLoggerProvider & LogEntry API \[ID_26289\]\[ID_26291\]
+#### LoggerUtil: RepositoryLoggerProvider & LogEntry API \[ID 26289\]\[ID 26291\]
 
 The LoggerUtil tool now provides
 
@@ -183,7 +183,7 @@ A LogEntry object contains the following fields:
 
 ### DMS Security
 
-#### DataMiner Cube - System Center: New user permissions \[ID_26437\]
+#### DataMiner Cube - System Center: New user permissions \[ID 26437\]
 
 In the Users/Groups section of Cube’s System Center, the following user permissions have been added:
 
@@ -192,7 +192,7 @@ In the Users/Groups section of Cube’s System Center, the following user permis
 
 ### DMS Cube
 
-#### Visual Overview: Number groups in numeric parameter values displayed on element shapes will now be separated by a thin space / New DynamicUnits option \[ID_18321\]\[ID_26318\]\[ID_26330\]
+#### Visual Overview: Number groups in numeric parameter values displayed on element shapes will now be separated by a thin space / New DynamicUnits option \[ID 18321\]\[ID 26318\]\[ID 26330\]
 
 In Visual Overview, three-digit number groups in numeric parameter values displayed on shapes with an *Element* and/or *Parameter* data field and a “\*” in the shape text will now by default be separated by a thin space. This will make large numbers more legible.
 
@@ -240,11 +240,11 @@ Then, in the protocol, add the following configuration:
 </Display>
 ```
 
-#### Services app: Profile can now be referred to by value or by reference when configuring a service definition node \[ID_26118\]
+#### Services app: Profile can now be referred to by value or by reference when configuring a service definition node \[ID 26118\]
 
 When you configure a node in a service definition, a toggle button now allows you to specify whether the selected profile will be assigned by value or by reference.
 
-#### Service & Resource Management - Visual Overview: Dynamically generating booking shapes \[ID_26154\]
+#### Service & Resource Management - Visual Overview: Dynamically generating booking shapes \[ID 26154\]
 
 It is now possible to automatically generate booking shapes. To implement this feature, do the following:
 
@@ -266,7 +266,7 @@ By default, all bookings in the Cube cache will be shown. If that cache does not
     > [!NOTE]
     > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
 
-#### Visual Overview: New icons added to DataMiner stencils \[ID_26168\]
+#### Visual Overview: New icons added to DataMiner stencils \[ID 26168\]
 
 The following additional icons are now available in the DataMiner stencils:
 
@@ -284,7 +284,7 @@ The following additional icons are now available in the DataMiner stencils:
 - SLA DMX
 - View DMX
 
-#### Visual Overview: New parameter control option 'ClientSidePollingInterval' \[ID_26223\]
+#### Visual Overview: New parameter control option 'ClientSidePollingInterval' \[ID 26223\]
 
 When you have turned a shape into a table control that displays a direct view table, you can now use the *ClientSidePollingInterval* option to specify that this table should be refreshed at regular intervals.
 
@@ -294,7 +294,7 @@ When you have turned a shape into a table control that displays a direct view ta
 
 Minimum interval: 1 second
 
-#### Visual Overview: HTML5 table controls can now have a filter box \[ID_26228\]\[ID_26235\]
+#### Visual Overview: HTML5 table controls can now have a filter box \[ID 26228\]\[ID 26235\]
 
 Similar to Cube, visual overviews in HTML5 apps now also support table controls that include a filter box. In other words, when a parameter control shape with a table and a filter box defined in child shapes is passed to an HTML5 app, that shape will be rendered in the same way as it is rendered in Cube.
 
@@ -306,14 +306,14 @@ The child shapes (filter box and table) will have their coordinates defined rela
 
 If a table has been defined without a filter box, the parameter control will be passed to the HTML app without child regions.
 
-#### Data Display: Number groups in numeric values will now be separated by a thin space \[ID_26251\]
+#### Data Display: Number groups in numeric values will now be separated by a thin space \[ID 26251\]
 
 In Data Display, three-digit number groups in numeric values will now by default be separated by a thin space. This will make large numbers more legible.
 
 > [!NOTE]
 > This so-called thousands separator will only be used to display numbers. Numbers that are copied, edited or exported will not contain any number group separators.
 
-#### Cube Launcher: New tool to install a DataMiner Cube desktop application \[ID_26282\]\[ID_26381\]
+#### Cube Launcher: New tool to install a DataMiner Cube desktop application \[ID 26282\]\[ID 26381\]
 
 From now on, you can use the Cube Launcher to install DataMiner Cube as a desktop applica-tion.
 
@@ -328,21 +328,21 @@ This new tool offers a number of advantages. It allows you to deploy multiple Cu
    > [!NOTE]
    > Although it is still possible to install a DataMiner Cube desktop applica-tion using an MSI installation package, it is strongly advised to use the new Cube Launcher instead.
 
-#### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID_26339\]
+#### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID 26339\]
 
 When configuring an SNMP manager, you can now add the polling IP address as a custom trap binding.
 
-#### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID_26379\]
+#### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID 26379\]
 
 Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
 
 Capability profile parameters of type discrete that were configured before this change will have no discrete type selected. For these parameters, the display value will remain equal to the raw value, unless they are reconfigured.
 
-#### System Center: New 'Analytics config' system settings section \[ID_25124\]\[ID_26388\]
+#### System Center: New 'Analytics config' system settings section \[ID 25124\]\[ID 26388\]
 
 In *System Center*, the *System settings* section now contains a new *Analytics config* page, which allows you to configure a number of SLAnalytics settings.
 
-#### Export: Selecting multiple items to be exported / New option to export data as displayed in view card \[ID_26450\]
+#### Export: Selecting multiple items to be exported / New option to export data as displayed in view card \[ID 26450\]
 
 From now on, it is possible to select multiple objects in a list and export them together in one file.
 
@@ -350,11 +350,11 @@ Also, when indicating which data to export, it is now possible to select the *Da
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: Minimum and maximum values shown on line chart component \[ID_26063\]
+#### Dashboards app: Minimum and maximum values shown on line chart component \[ID 26063\]
 
 When you hover the mouse pointer over a line chart component in the new Dashboards app, now the minimum and maximum values will be shown in addition to the average value that was already shown previously.
 
-#### Dashboards app - Parameter feed: New option to automatically select a specified number of indices \[ID_26080\]
+#### Dashboards app - Parameter feed: New option to automatically select a specified number of indices \[ID 26080\]
 
 In the *Settings* tab of the parameter feed component, next to the *Auto-select all indices* option, there is now a new *Auto-select number of indices* option.
 
@@ -362,7 +362,7 @@ This new option will allow you to specify the number of indices that should be s
 
 If the number of indices specified is greater than the number of indices that are being displayed, they will not be shown but selected in memory.
 
-#### Dashboards app - Line chart component: New 'Hide parameters without trend data in the legend' option \[ID_26133\]
+#### Dashboards app - Line chart component: New 'Hide parameters without trend data in the legend' option \[ID 26133\]
 
 The line chart component has a new setting: Layout \> Styling and information \> Hide parameters without trend data in the legend.
 
@@ -370,7 +370,7 @@ When you enable this setting, the legend of the line chart component will no lon
 
 Default: enabled
 
-#### Dashboards app - Parameter feed: Index filter separator \[ID_26136\]
+#### Dashboards app - Parameter feed: Index filter separator \[ID 26136\]
 
 The parameter feed component has a new (optional) setting: Index filter separator.
 
@@ -378,7 +378,7 @@ This setting allows you to specify the separator to be used when retrieving a fi
 
 For example, if only the indices with a primary key equal to “X” have to be retrieved, and the index filter separator is set to “Y”, then the indices will be retrieved using the following filter: PK == X OR PK == \*YXY\*.
 
-#### Dashboards app - Parameter page: New data/filter feed combinations \[ID_26143\]
+#### Dashboards app - Parameter page: New data/filter feed combinations \[ID 26143\]
 
 The parameter page component can now be configured to use the following data feeds and filters:
 
@@ -388,7 +388,7 @@ The parameter page component can now be configured to use the following data fee
 | Data page based on element  | \<No additional data filter feeds required>                                                                                                                                                                                                                      |
 | Data page based on protocol | Element feed                                                                                                                                                                                                                                                     |
 
-#### Dashboards app - Pivot table component: Enhancements \[ID_26316\]
+#### Dashboards app - Pivot table component: Enhancements \[ID 26316\]
 
 A number of enhancements have been made to the pivot table component, including the following:
 
@@ -396,11 +396,11 @@ A number of enhancements have been made to the pivot table component, including 
 - When using mediation protocol parameters, the data will now be shown per mediation parameter.
 - Server-side exceptions will now be handled more gracefully.
 
-#### Dashboards app: Enhanced border configuration \[ID_26346\]
+#### Dashboards app: Enhanced border configuration \[ID 26346\]
 
 When configuring a dashboard theme or a component layout, up to now, it was only possible to specify whether borders had to be displayed or hidden. From now on, it is possible to specify on which of the four sides a border has to be displayed or hidden: top, right, bottom and/or left.
 
-#### Dashboards app: New style layout options for State components displaying parameters \[ID_26454\]
+#### Dashboards app: New style layout options for State components displaying parameters \[ID 26454\]
 
 In the Dashboards app, the layout options for the State component have been adjusted. If the component displays a parameter, the options that were previously available in the *Style* section are replaced with the following options:
 
@@ -422,7 +422,7 @@ If the component displays a different DataMiner object, such as an element or se
 
 ### DMS EPM
 
-#### CPECollectorHelper API: Timeout parameters can now be configured in the SLNetClientTest tool \[ID_26247\]
+#### CPECollectorHelper API: Timeout parameters can now be configured in the SLNetClientTest tool \[ID 26247\]
 
 When a call is performed via the CPECollectorHelper API, a timeout is calculated based on the amount of requested items using the following formula:
 
@@ -440,7 +440,7 @@ In the SLNetClientTest tool, it is now possible to configure the following param
 
 ### DMS Web Services
 
-#### BREAKING CHANGE - Web Services API v1: New and updated methods to manage job data \[ID_26006\]
+#### BREAKING CHANGE - Web Services API v1: New and updated methods to manage job data \[ID 26006\]
 
 In the Web Services API v1, the job management methods have all been modified to support job domains.
 
@@ -566,7 +566,7 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
 ### DMS Mobile apps
 
-#### Jobs app: Job domains \[ID_25889\]\[ID_26428\]
+#### Jobs app: Job domains \[ID 25889\]\[ID 26428\]
 
 In the Jobs app, it is now possible to have different job domains, each with their own set of job section descriptions.
 
@@ -579,17 +579,17 @@ In the Jobs app, it is now possible to have different job domains, each with the
     >
     > Note that, if necessary, it is possible to rename this default job domain.
 
-#### Jobs app: Managing job attachments no longer requires explicit Delete permission \[ID_25961\]
+#### Jobs app: Managing job attachments no longer requires explicit Delete permission \[ID 25961\]
 
 From now on, managing job attachments only requires the *Jobs \> UI available* and *Jobs \> Add/Edit* user permissions. The *Jobs \> Delete* user permission is no longer required.
 
-#### Jobs app: Enhanced job section configuration \[ID_25977\]
+#### Jobs app: Enhanced job section configuration \[ID 25977\]
 
 In the Jobs app, job section configuration has been enhanced.
 
 When you add a new job section (by clicking a black or purple dot) or edit an existing job section (by clicking the edit button in the section’s header), a popup window will now appear, allowing you to enter or modify the properties of that section.
 
-#### Jobs app: Tracking the history of job field values \[ID_26016\]
+#### Jobs app: Tracking the history of job field values \[ID 26016\]
 
 All changes made to job field values will now be logged by means of HistoryChange records, stored in Indexing Engine (index “chistory-job”).
 
@@ -616,21 +616,21 @@ A FieldValueChange object has the following properties:
 > - If, for some reason, tracking changes to jobs would fail, an error will be logged in SLHistoryManager.txt each time a HistoryChange record could not be saved. To prevent users from receiving too many notices, a notice will only be generated every hour.
 > - When a job is deleted, all HistoryChange records associated with this job will also be deleted, and a new HistoryChange record will be added to indicate when the job was deleted and by whom.
 
-#### Enhanced visualization of disabled text boxes \[ID_26193\]
+#### Enhanced visualization of disabled text boxes \[ID 26193\]
 
 Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
-#### User menu now has a 'Sign out' command \[ID_26254\]
+#### User menu now has a 'Sign out' command \[ID 26254\]
 
 In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a “Sign out” command.
 
-#### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID_26394\]
+#### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID 26394\]
 
 In the Monitoring app and the Dashboards app, three-digit number groups in numeric parameter values will now by default be separated by a thin space. This will make large numbers more legible.
 
 ### DMS tools
 
-#### SLNetClientTest tool: Generating SMIv2 MIB files \[ID_26320\]
+#### SLNetClientTest tool: Generating SMIv2 MIB files \[ID 26320\]
 
 In the SLNetClientTest tool, you can now generate SMIv2 MIB files for SNMP managers of type SNMPv2 and SNMPv3.
 
@@ -643,143 +643,143 @@ To do so, go to *Advanced \> Tests \> Generate MIB for SNMP Manager*, select an 
 
 ### Enhancements
 
-#### DataMiner Maps: Enhanced retrieval of marker alarm severities \[ID_24363\]
+#### DataMiner Maps: Enhanced retrieval of marker alarm severities \[ID 24363\]
 
 Due to a number of enhancements, overall performance has increased when retrieving marker alarm severities.
 
-#### SLAnalytics: Alarm focus enhancements \[ID_25591\]
+#### SLAnalytics: Alarm focus enhancements \[ID 25591\]
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or “alarm focus score” to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time.
 
 Due to a number of enhancements, overall performance of this alarm focus feature has now increased.
 
-#### Protocols - Serial clients: Enhanced locking behavior \[ID_25647\]
+#### Protocols - Serial clients: Enhanced locking behavior \[ID 25647\]
 
 A number of enhancements have been made to the locking behavior of serial client elements.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when displaying icons on trend graphs \[ID_25798\]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when displaying icons on trend graphs \[ID 25798\]
 
 Due to a number of enhancements, overall performance has increased when displaying icons on trend graphs to indicate behavioral anomalies.
 
-#### DataMiner Cube - Automation: Dummies, parameters and memory files now sorted in the order in which they were added to the script \[ID_25897\]
+#### DataMiner Cube - Automation: Dummies, parameters and memory files now sorted in the order in which they were added to the script \[ID 25897\]
 
 Up to now, the dummies, parameters and memory files added to an Automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
 
-#### SLAnalytics: Sending messages asynchronously has been optimized \[ID_25942\]
+#### SLAnalytics: Sending messages asynchronously has been optimized \[ID 25942\]
 
 Due to a number of enhancements, sending messages asynchronously has been optimized.
 
-#### DataMiner Cube - Visual Overview: Colors linked to the Cube theme will now be changed immediately when you change the Cube theme \[ID_26045\]
+#### DataMiner Cube - Visual Overview: Colors linked to the Cube theme will now be changed immediately when you change the Cube theme \[ID 26045\]
 
 When, in a Visio drawing, you linked some colors to the colors used in the DataMiner Cube theme, then those colors will now immediately be changed when you change the DataMiner Cube theme. You will no longer have to close and re-open the Visio drawing to have the changes take effect.
 
-#### Service & Resource Management: Optimized functions.xml generation \[ID_26060\]
+#### Service & Resource Management: Optimized functions.xml generation \[ID 26060\]
 
 The generation of functions.xml files has been optimized. Function names no longer have an “SRMFunction\_” prefix and the \<Graphical> tag of the parent function will now automatically be added to the generated functions.xml file.
 
-#### Dashboards app: Enhanced performance of CPE feed component \[ID_26082\]
+#### Dashboards app: Enhanced performance of CPE feed component \[ID 26082\]
 
 Due to a number of enhancements, overall performance of the CPE feed component has increased.
 
-#### Jobs app: Time range validation when creating jobs \[ID_26166\]
+#### Jobs app: Time range validation when creating jobs \[ID 26166\]
 
 From now on, due to a number of enhancements as to data validation, it will no longer be possible to create a job with an invalid time range.
 
-#### DataMiner Cube: Embedded Chromium web browser engine updated from v63 to v81 \[ID_26171\]
+#### DataMiner Cube: Embedded Chromium web browser engine updated from v63 to v81 \[ID 26171\]
 
 The embedded Chromium web browser engine has been updated from v63 to v81.
 
-#### Automation: UnSetFlag method added to Intellisense \[ID_26176\]
+#### Automation: UnSetFlag method added to Intellisense \[ID 26176\]
 
 In the Automation module, the *UnSetFlag* method has now been added to Intellisense.
 
-#### Text will now be written to the log files using UTF-8 encoding \[ID_26194\]
+#### Text will now be written to the log files using UTF-8 encoding \[ID 26194\]
 
 From now on, text will be written to the log files using UTF-8 encoding.
 
-#### Profiles app: Enhanced performance when loading \[ID_26197\]
+#### Profiles app: Enhanced performance when loading \[ID 26197\]
 
 Due to a number of enhancements, overall performance of the Profiles app has increased when loading, especially on systems with a large amount of profiles.
 
-#### DataMiner Maps: Enhanced performance when retrieving EPM-related data \[ID_26216\]\[ID_26233\]
+#### DataMiner Maps: Enhanced performance when retrieving EPM-related data \[ID 26216\]\[ID 26233\]
 
 Due to a number of enhancements, overall performance has increased when retrieving EPM-related data.
 
-#### Trending of column parameters with measurement type 'string' is now also supported \[ID_26230\]
+#### Trending of column parameters with measurement type 'string' is now also supported \[ID 26230\]
 
 From now on, trending of column parameters with measurement type set to “string” is also supported.
 
-#### Dashboards: Column parameters with advanced naming supported for trend statistics visualization \[ID_26240\]
+#### Dashboards: Column parameters with advanced naming supported for trend statistics visualization \[ID 26240\]
 
 The *Trend statistics* visualization in the new Dashboards app now supports column parameters from tables that use advanced naming.
 
-#### DataMiner Cube - Alarm Console: Reduced memory usage \[ID_26285\]
+#### DataMiner Cube - Alarm Console: Reduced memory usage \[ID 26285\]
 
 Due to a number of enhancements, overall memory usage of the Alarm Console has been reduced.
 
-#### Dashboards app: Embedded Chromium web browser engine updated to v81 \[ID_26296\]
+#### Dashboards app: Embedded Chromium web browser engine updated to v81 \[ID 26296\]
 
 The embedded Chromium web browser engine has been updated to v81.
 
-#### Enhanced performance when displaying and updating parameter values \[ID_26382\]
+#### Enhanced performance when displaying and updating parameter values \[ID 26382\]
 
 Due to a number of enhancements, overall performance has increased when displaying and updating parameter values, both in Data Display and Visual Overview.
 
-#### DataMiner Cube: Enhanced way of saving information about the last user who logged in \[ID_26483\]
+#### DataMiner Cube: Enhanced way of saving information about the last user who logged in \[ID 26483\]
 
 When DataMiner Cube is shut down, it saves information about the last user who logged in. The formatting of that user data has now been enhanced.
 
 ### Fixes
 
-#### SLAnalytics: Memory usage would increase due to a buffering issue \[ID_25844\]
+#### SLAnalytics: Memory usage would increase due to a buffering issue \[ID 25844\]
 
 In some cases, the overall memory usage of the SLAnalytics process would increase due to a buffering issue.
 
-#### SLAnalytics: Parameter information of inactive elements would incorrectly not get removed from the cache \[ID_25851\]
+#### SLAnalytics: Parameter information of inactive elements would incorrectly not get removed from the cache \[ID 25851\]
 
 Up to now, parameter information of inactive elements would incorrectly not get removed from the cache.
 
-#### Problem with SLDMS due to memory issues \[ID_25890\]
+#### Problem with SLDMS due to memory issues \[ID 25890\]
 
 In some cases, an error could occur in SLDMS due to memory issues.
 
-#### DataMiner Cube: When, in the Generic DVE Linker Table, a link associated with a virtual function was changed while its element card was open, its parameters would not get updated \[ID_25913\]
+#### DataMiner Cube: When, in the Generic DVE Linker Table, a link associated with a virtual function was changed while its element card was open, its parameters would not get updated \[ID 25913\]
 
 When, in the Generic DVE Linker Table, a link related to a virtual function was added, updated or removed while its element card was open in DataMiner Cube, the parameters of that function would incorrectly not get updated.
 
-#### SLAnalytics: Element state changes and element deletions would not be processed correctly when behavioral anomaly detection was disabled \[ID_25929\]
+#### SLAnalytics: Element state changes and element deletions would not be processed correctly when behavioral anomaly detection was disabled \[ID 25929\]
 
 Up to now, when behavioral anomaly detection was disabled, in some cases, element state changes and element deletions would not be processed correctly.
 
-#### Service & Resource Management: State of ReservationInstance would incorrectly be set to Interrupted when it was updated after a DMA restart \[ID_25938\]
+#### Service & Resource Management: State of ReservationInstance would incorrectly be set to Interrupted when it was updated after a DMA restart \[ID 25938\]
 
 When you restarted a DataMiner Agent with an ongoing ReservationInstance and then updated the end time of that ongoing ReservationInstance after the restart, in some rare cases, the state of the ReservationInstance would incorrectly be changed from “Ongoing” to “Interrupted”.
 
-#### Web Services API v1: GetElementConfiguration method returned incorrect SNMP version \[ID_25964\]
+#### Web Services API v1: GetElementConfiguration method returned incorrect SNMP version \[ID 25964\]
 
 In some cases, the *GetElementConfiguration* web method returned the *SNMPVersion* in a *DMAElementSNMPPortInfo* instance as 0 when it should have been 1 or 2.
 
-#### Duplicate table change notifications would be sent from SLElement to SLDataGateway when using history sets in combination with table updates \[ID_25987\]
+#### Duplicate table change notifications would be sent from SLElement to SLDataGateway when using history sets in combination with table updates \[ID 25987\]
 
 When history sets were used in combination with table updates, in some cases, duplicate table change notifications would incorrect be sent from SLElement to SLDataGateway when the values remained stable.
 
-#### Hotfixes not properly validated during installation \[ID_25991\]
+#### Hotfixes not properly validated during installation \[ID 25991\]
 
 In some cases, it could occur that hotfixes were not properly validated during installation, so that a hotfix could be installed on an incompatible version of DataMiner.
 
-#### When adding or editing an element, some fields would not correctly be saved into the element.xml file \[ID_25994\]
+#### When adding or editing an element, some fields would not correctly be saved into the element.xml file \[ID 25994\]
 
 When adding or editing an element, in some cases, the contents of a number of fields (e.g. GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
 
-#### Failover: Backup agent would lose its connection to the virtual agent \[ID_26025\]
+#### Failover: Backup agent would lose its connection to the virtual agent \[ID 26025\]
 
 When, in a Failover setup with a Cassandra database, the backup agent was online, in some cases, it would lose its connection to the virtual agent.
 
-#### DataMiner was not able to correctly parse the Cassandra.yaml file at startup \[ID_26041\]
+#### DataMiner was not able to correctly parse the Cassandra.yaml file at startup \[ID 26041\]
 
 At startup, in some cases, DataMiner was not able to correctly parse the IP addresses of the seed nodes when reading the Cassandra.yaml file.
 
-#### DataMiner Cube - Alarm Console: Alarm duration indicator was missing \[ID_26044\]
+#### DataMiner Cube - Alarm Console: Alarm duration indicator was missing \[ID 26044\]
 
 In the Alarm Console, in some cases, the alarm duration indicator would not be shown in the Time column of a certain alarm, even though the Show alarm duration indicator option was enabled in the hamburger menu of the Alarm Console.
 
@@ -788,151 +788,151 @@ The problem would occur in the following situations:
 - When you expanded a correlation alarm, the alarm duration indicator of the source alarms would disappear.
 - When, for a particular alarm, an update was received while its history was expanded, the alarm duration indicator of the alarms in the history list would disappear.
 
-#### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID_26046\]
+#### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID 26046\]
 
 When, in an Automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 
-#### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID_26068\]
+#### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
 When you opened a trend graph, e.g. by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
 
-#### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID_26074\]
+#### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID 26074\]
 
 Due to a flushing issue in SLNet, in some cases, a deadlock could occur between SLNet and SLDataGateway during a DataMiner startup or a Failover switch.
 
-#### DataMiner Cube - Visual Overview: Problem when initializing a Visio page with service shapes \[ID_26079\]
+#### DataMiner Cube - Visual Overview: Problem when initializing a Visio page with service shapes \[ID 26079\]
 
 In some cases, an exception could be thrown while initializing a Visio page containing service shapes.
 
-#### MySQL: Problem with delete queries trying to delete trend records for elements that were not being trended \[ID_26085\]
+#### MySQL: Problem with delete queries trying to delete trend records for elements that were not being trended \[ID 26085\]
 
 On systems with a MySQL database, in some cases, a delete query would incorrectly try to delete trend records for an element that was not being trended.
 
-#### DataMiner Cube - Visual Overview: No tool tip shown when SetVar shape was configured using legacy syntax \[ID_26087\]
+#### DataMiner Cube - Visual Overview: No tool tip shown when SetVar shape was configured using legacy syntax \[ID 26087\]
 
 In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g. SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
 
-#### DataMiner Cube - Element Connections: Problem when swapping connections \[ID_26098\]
+#### DataMiner Cube - Element Connections: Problem when swapping connections \[ID 26098\]
 
 When, in the Element Connections app, you swapped two connections, in some cases, the connection configuration would be incorrect or a connection would incorrectly be duplicated.
 
-#### Service & Resource Management: It was incorrectly possible to create or update profile parameters that linked to non-existing mediation snippets \[ID_26110\]
+#### Service & Resource Management: It was incorrectly possible to create or update profile parameters that linked to non-existing mediation snippets \[ID 26110\]
 
 Up to now, it would incorrectly be possible to create or update profile parameters that linked to non-existing mediation snippets.
 
-#### Incorrect message shown after a successful DataMiner upgrade operation \[ID_26114\]
+#### Incorrect message shown after a successful DataMiner upgrade operation \[ID 26114\]
 
 After a DataMiner upgrade operation, in some cases, a “DataMiner is currently upgrading” error would be shown indefinitely, despite the fact that all agents had been upgraded successfully.
 
-#### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID_26116\]
+#### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
 When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
 
-#### ResourceManager module would no longer initialize after a DataMiner restart \[ID_26117\]\[ID_26309\]
+#### ResourceManager module would no longer initialize after a DataMiner restart \[ID 26117\]\[ID 26309\]
 
 In some cases, the ResourceManager module would no longer initialize after a DataMiner restart.
 
-#### Problem with SLManagedScripting due to a locking issue \[ID_26139\]
+#### Problem with SLManagedScripting due to a locking issue \[ID 26139\]
 
 In some rare cases, threads could get stuck in SLScripting due to a locking issue.
 
-#### DataMiner Cube: Incorrect error would be logged when opening a view card without linked EPM object in an EPM environment \[ID_26141\]
+#### DataMiner Cube: Incorrect error would be logged when opening a view card without linked EPM object in an EPM environment \[ID 26141\]
 
 When, in an EPM environment, you opened a view card without linked EPM object, in some cases, an incorrect error would be logged.
 
-#### Dashboards app - Service definition component: When a node action was executed, all action buttons of other nodes with the same action configured would be set to 'loading' \[ID_26145\]
+#### Dashboards app - Service definition component: When a node action was executed, all action buttons of other nodes with the same action configured would be set to 'loading' \[ID 26145\]
 
 In a service definition component, in some cases, all nodes with the same action configured would set the state of their action button to “loading” when the action was executed on one of those nodes.
 
-#### Sidebar docking position user setting not working in non-English Cube \[ID_26165\]
+#### Sidebar docking position user setting not working in non-English Cube \[ID 26165\]
 
 If Cube was set to a different language than English, it could occur that it was not possible to change the position of the Cube sidebar via the user settings.
 
-#### DataMiner Cube would become unresponsive when no domain user pictures could be retrieved \[ID_26182\]
+#### DataMiner Cube would become unresponsive when no domain user pictures could be retrieved \[ID 26182\]
 
 In some cases, DataMiner Cube could become unresponsive when no domain user pictures could be retrieved.
 
-#### SLAnalytics: New alarms generated while SLAnalytics was stopped would incorrectly not be assigned an alarm focus score when SLAnalytics was restarted \[ID_26186\]
+#### SLAnalytics: New alarms generated while SLAnalytics was stopped would incorrectly not be assigned an alarm focus score when SLAnalytics was restarted \[ID 26186\]
 
 When a new alarm was generated while SLAnalytics was stopped, in some cases, that alarm would incorrectly not get assigned an alarm focus score when SLAnalytics was restarted.
 
-#### View synchronization could cause SLDataMiner to leak memory \[ID_26190\]
+#### View synchronization could cause SLDataMiner to leak memory \[ID 26190\]
 
 On large DataMiner systems, in some cases, a view synchronization could cause SLDataMiner to leak memory.
 
-#### Dashboards: Clicking the icon of a parameter component would incorrectly not open the associated trend card in the Monitoring app \[ID_26213\]
+#### Dashboards: Clicking the icon of a parameter component would incorrectly not open the associated trend card in the Monitoring app \[ID 26213\]
 
 When, in the Dashboards app, you click the icon of a parameter component, the trend card of the parameter in question should open in the Monitoring app. However, in some cases, this did not happen due to an incorrect key being passed from the Dashboards app to the Monitoring app.
 
-#### Problem with user permissions caused certain parameters of an enhanced service not to be displayed \[ID_26222\]
+#### Problem with user permissions caused certain parameters of an enhanced service not to be displayed \[ID 26222\]
 
 In some cases, the user permissions configured for the hidden element of an enhanced service would differ from those configured for the enhanced service itself. This would cause certain parameters of the enhanced service not to be displayed.
 
-#### Problem with protocol buffer serialization when server and client were running different DataMiner versions \[ID_26227\]
+#### Problem with protocol buffer serialization when server and client were running different DataMiner versions \[ID 26227\]
 
 When protocol buffer serialization was being used, a “Failed to set up ProtoBuf” error could be thrown when a DMA and a client were running different DataMiner versions.
 
-#### Jobs app: Problem when creating custom data tables \[ID_26237\]
+#### Jobs app: Problem when creating custom data tables \[ID 26237\]
 
 In the Jobs app, in some rare cases, an exception could be thrown when two custom data tables were created simultaneously.
 
-#### Service & Resource Management: System functions were not synchronized when a new agent was added to an existing DataMiner System \[ID_26238\]
+#### Service & Resource Management: System functions were not synchronized when a new agent was added to an existing DataMiner System \[ID 26238\]
 
 When a new agent was added to an existing DataMiner System, in some cases, the system functions would not be synchronized.
 
-#### Problem when a table cell value was masked while being retrieved \[ID_26250\]
+#### Problem when a table cell value was masked while being retrieved \[ID 26250\]
 
 In some cases, an error could occur when a table cell value was masked while it was being retrieved.
 
-#### Memory leak when adding or deleting rows in the DCF interface table \[ID_26256\]
+#### Memory leak when adding or deleting rows in the DCF interface table \[ID 26256\]
 
 When, in an element with DCF interfaces, rows were added or deleted in the DCF interface table, in some cases, a memory leak could occur.
 
-#### Automation: Date and time not adapted to local time zone in calendar component \[ID_26258\]
+#### Automation: Date and time not adapted to local time zone in calendar component \[ID 26258\]
 
 If an interactive Automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
 
-#### DataMiner Cube - Data Display: Time control values would incorrectly change when you edited them \[ID_26278\]
+#### DataMiner Cube - Data Display: Time control values would incorrectly change when you edited them \[ID 26278\]
 
 Due to a rounding issue, in some cases, values displayed in a time control would change when you edited them.
 
-#### DataMiner Cube - Services: Exclude setting specified when creating a service would incorrectly change to an include setting when editing that service afterwards \[ID_26281\]
+#### DataMiner Cube - Services: Exclude setting specified when creating a service would incorrectly change to an include setting when editing that service afterwards \[ID 26281\]
 
 When you created a service with exclude conditions in combination with conditional alarm severity influence settings, in some cases, the exclude setting would incorrectly change to an include setting when editing that service afterwards.
 
-#### Problem when multiple FillArray calls simultaneously tried to update the same table \[ID_26287\]
+#### Problem when multiple FillArray calls simultaneously tried to update the same table \[ID 26287\]
 
 When multiple FillArray calls simultaneously tried to update the same table, in some cases, an error could occur due to a locking issue.
 
-#### Dashboards app - Service definition component: Hidden nodes would incorrectly re-appear when the service definition was changed \[ID_26294\]
+#### Dashboards app - Service definition component: Hidden nodes would incorrectly re-appear when the service definition was changed \[ID 26294\]
 
 When nodes were hidden based on node ID or function definition, in some cases, nodes would incorrectly re-appear when the service definition was changed.
 
 Also, a number of other, minor fixes have been made to the component in question.
 
-#### DataMiner Cube - Elements: Actions listed in the warning message that appears when changing the protocol version of an element would not be formatted correctly \[ID_26297\]
+#### DataMiner Cube - Elements: Actions listed in the warning message that appears when changing the protocol version of an element would not be formatted correctly \[ID 26297\]
 
 When you are about to change the protocol version of an element, a popup message will appear. Apart from warning you about the consequences, that message also lists the (manual) actions that are required afterwards. Up to now, in some cases, that list of actions would not be formatted correctly.
 
-#### An SNMP table configured to retrieve data via a bulk operation would not get filled in when one of the responses contained an error \[ID_26333\]
+#### An SNMP table configured to retrieve data via a bulk operation would not get filled in when one of the responses contained an error \[ID 26333\]
 
 When an SNMP table was configured to retrieve data via a bulk operation (e.g. multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
 
 From now on, each time a correct response is received, the data in that response will be returned to SLProtocol for processing.
 
-#### Ticketing/Cassandra: Problem when retrieving a ticket that had just been added or updated \[ID_26348\]
+#### Ticketing/Cassandra: Problem when retrieving a ticket that had just been added or updated \[ID 26348\]
 
 On systems where the ticketing data is stored in a Cassandra database, in some cases, it would not be possible to retrieve a ticket immediately after it was created. Also, when a ticket was retrieved immediately after it had been updated, in some cases, the ticket data from before the update would incorrectly be retrieved.
 
-#### Memory leak in SLDataGateway \[ID_26361\]
+#### Memory leak in SLDataGateway \[ID 26361\]
 
 In some cases, the SLDataGateway process would leak memory.
 
-#### Monitoring app: Client timezone setting was disregarded when displaying timestamps in trend graphs \[ID_26368\]
+#### Monitoring app: Client timezone setting was disregarded when displaying timestamps in trend graphs \[ID 26368\]
 
 In some cases, the Monitoring app would incorrectly disregard the client timezone setting when displaying timestamps in trend graphs.
 
-#### DataMiner Cube - Alarm Console: Miscellaneous issues \[ID_26396\]
+#### DataMiner Cube - Alarm Console: Miscellaneous issues \[ID 26396\]
 
 A number of minor issues have been fixes in the Alarm Console:
 
@@ -944,37 +944,37 @@ A number of minor issues have been fixes in the Alarm Console:
 
 - In some cases, similar alarms would have different parameter descriptions. One alarm would e.g. show “Temperature” while another alarm would show “Temperature A”.
 
-#### DataMiner Cube: Module names in side bar not translated when UI language was set to a language other than English \[ID_26402\]
+#### DataMiner Cube: Module names in side bar not translated when UI language was set to a language other than English \[ID 26402\]
 
 When, in DataMiner Cube, the UI language was set to a language other than English, in some cases, the names of the modules in the side bar would not be translated.
 
-#### Active alarms would not be retrieved correctly from the database \[ID_26420\]
+#### Active alarms would not be retrieved correctly from the database \[ID 26420\]
 
 In some cases, an internal exception could be thrown, causing the active alarms not to be retrieved correctly from the database.
 
-#### Jobs app: Problem with 'New' and 'Save' buttons \[ID_26474\]
+#### Jobs app: Problem with 'New' and 'Save' buttons \[ID 26474\]
 
 In the Jobs app, in some cases, the *New* button would not be shown in the subheader.
 
 Also, in some cases, clicking the *Save* button would not cause a job to be saved.
 
-#### Jobs app: Problem when exporting a job to PDF \[ID_26484\]
+#### Jobs app: Problem when exporting a job to PDF \[ID 26484\]
 
 In some cases, it would not be possible to export a job to a PDF file.
 
-#### Jobs app: Problem when updating a job with bookings \[ID_26486\]
+#### Jobs app: Problem when updating a job with bookings \[ID 26486\]
 
 In some cases, an error could occur when you updated a job with bookings.
 
-#### Jobs app: Bookings list would not be updated correctly after adding, editing or deleting a booking \[ID_26487\]
+#### Jobs app: Bookings list would not be updated correctly after adding, editing or deleting a booking \[ID 26487\]
 
 In the Jobs app, in some cases, the bookings list would not be updated correctly after adding, editing or deleting a booking.
 
-#### DataMiner Cube - Alarm Console: Problem when a sliding window alarm tab was present when clearing alarms correlated by the alarm storm prevention mechanism \[ID_26494\]
+#### DataMiner Cube - Alarm Console: Problem when a sliding window alarm tab was present when clearing alarms correlated by the alarm storm prevention mechanism \[ID 26494\]
 
 When too many alarms are generated for the same parameter, an alarm storm prevention mechanism is triggered, which groups all those alarms into one correlated alarm. When those alarms got cleared, in some cases, an error could occur when an alarm tab of type “sliding window” was present in the Alarm Console.
 
-#### Problem when opening a Visio file in an HTML5 app \[ID_26610\]
+#### Problem when opening a Visio file in an HTML5 app \[ID 26610\]
 
 In some cases, an exception could be thrown when opening a Visio file in an HTML5 app (e.g. Monitoring).
 
@@ -982,20 +982,20 @@ In some cases, an exception could be thrown when opening a Visio file in an HTML
 
 ### CU1 enhancements
 
-#### Cassandra: Enhanced performance when deleting element data \[ID_26639\]
+#### Cassandra: Enhanced performance when deleting element data \[ID 26639\]
 
 Due to a number of enhancements, overall performance has increased when deleting element data from a Cassandra database.
 
 ### CU1 fixes
 
-#### Cassandra: Alarm information would incorrectly be saved in the timetrace table when multiple alarms were generated simultaneously \[ID_26768\]
+#### Cassandra: Alarm information would incorrectly be saved in the timetrace table when multiple alarms were generated simultaneously \[ID 26768\]
 
 When multiple alarms were generated at the same time, in some rare cases, alarm information would not correctly be saved in the timetrace table.
 
-#### DataMiner Cube: Legacy resources and legacy bookings could no longer be managed on systems with a MySQL database \[ID_26774\]
+#### DataMiner Cube: Legacy resources and legacy bookings could no longer be managed on systems with a MySQL database \[ID 26774\]
 
 On systems with a MySQL database, in some cases, it would no longer be possible to use the Resources and Bookings apps to manage legacy resources and legacy bookings.
 
-#### Cube Launcher: Problem when system locale was set to a language other than English \[ID_26815\]
+#### Cube Launcher: Problem when system locale was set to a language other than English \[ID 26815\]
 
 When Cube Launcher was used on a client computer that had its system locale set to a language other than English, in some cases, an exception could be thrown.

@@ -15,7 +15,7 @@ Before you start the actual configuration, make sure you have the following:
   > [!NOTE]
   > If you use IP addresses instead of a hostname:
   >
-  > - Make sure [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
+  > - Make sure [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed on both DMAs. From DataMiner 10.4.10/10.5.0 onwards<!--RN 40257 + RN 40267-->, you can check whether this is installed via *System Center* > *Agents* > *Failover*. This will open the *Failover Config* window, where an information icon will be displayed next to *Failover (Virtual IP)* in case neither of these is installed or no valid installation could be detected on the DMA you are currently connected to. Hover the mouse pointer over this icon for more detailed information.
   > - To avoid possible conflicts, make sure the IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
@@ -65,6 +65,10 @@ Make sure that packets to and from these ports coming from the virtual IP addres
 ## Preparing the database
 
 Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a Failover system. Below you can find the measures that need to be taken for each of the supported architectures.
+
+### Storage as a Service
+
+If you want to add the Failover pair to a DataMiner System that uses STaaS, first make sure the primary DMA has been added as detailed under [Adding a DMA to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS). Then follow the same steps for the backup DMA, but skip the step where you actually join the DMA to the cluster.
 
 ### Dedicated clustered storage
 

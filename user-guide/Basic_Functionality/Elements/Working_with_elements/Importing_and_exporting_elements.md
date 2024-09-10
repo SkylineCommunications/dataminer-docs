@@ -68,7 +68,7 @@ Name checks are case-insensitive. This means that for instance "element1" is con
 
 1. In the *WHAT* section of the *Export* window, select what is to be included in the export:
 
-   - All data (i.e. the full list, with all columns included),
+   - All data (suitable for CSV import),
 
    - The data displayed in the element list of a view card,
 

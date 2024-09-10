@@ -16,7 +16,7 @@ The method of displaying images in Visual Overview was modified to prevent freez
 
 ## Fix
 
-- For Cube clients without internet access: No fix is available yet.
+- For Cube clients without internet access: Install DataMiner 10.3.0 [CU19], 10.4.0 [CU7], or 10.4.10<!--RN 40454-->.
 
 - For clients enforced to use a version older than 10.4.2425.2536: Make sure the client uses version 10.4.2425.2536 or higher. See [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
 

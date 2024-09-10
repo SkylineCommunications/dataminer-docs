@@ -65,6 +65,16 @@ The following DLLs are currently checked (case insensitive):
 - `^(?:CrowdStrike\.Sensor\.)?ScriptControl(?:32_|64_|86_)?\d+\.dll$` (CrowdStrike)
 - `^ScriptSn\.\d+\.dll$` (McAfee)
 
+### File path checks
+
+From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 32567-->, the BPA test also checks the paths of loaded antivirus DLL files.
+
+This means:
+
+- The test can detect antivirus DLLs even if they are renamed or newly added, as long as they are loaded from a known antivirus file path.
+
+- The test takes into consideration both the file name and the source path, which increases the chances of detection.
+
 ## Limitations
 
 - The BPA can only check for native DLLs. Managed DLLs cannot be detected.

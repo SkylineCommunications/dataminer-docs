@@ -12,7 +12,7 @@ uid: Cube_Feature_Release_10.3.2_CU1
 
 ### Fixes
 
-#### Service & Resource Management: Problem with un-initialized Capacity property on DMAs running version 10.3.1 or 10.2.12 or earlier [ID_35854]
+#### Service & Resource Management: Problem with un-initialized Capacity property on DMAs running version 10.3.1 or 10.2.12 or earlier [ID 35854]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.2 [CU1] -->
 

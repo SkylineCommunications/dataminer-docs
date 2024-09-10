@@ -8,7 +8,7 @@ uid: DIS_2.39
 
 ### IDE
 
-#### Enhanced NuGet support [ID_33544] [ID_34113] [ID_34115] [ID_34117]
+#### Enhanced NuGet support [ID 33544] [ID 34113] [ID 34115] [ID 34117]
 
 Up to now, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to a DataMiner DevPack, i.e. a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
 
@@ -46,7 +46,7 @@ From now on, a protocol can be saved either as an XML file or as a *.dmprotocol*
 
 If you choose to save a protocol or an Automation script as a package, the package will contain the protocol or Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
 
-#### Display editor: Enhanced DVE support [ID_33545]
+#### Display editor: Enhanced DVE support [ID 33545]
 
 Up to now, when you opened a protocol in which DVE elements were defined and clicked *Display Editor* in the file tab header, the pages of the main protocol and the pages of the DVE protocols would be displayed in the same list.
 
@@ -54,7 +54,7 @@ From now on, when DVE elements are defined in the protocol, a drop-down box in t
 
 Also, export rules will now be created automatically.
 
-#### DIS menu: Additional checks when importing protocols and Automation scripts [ID_33902]
+#### DIS menu: Additional checks when importing protocols and Automation scripts [ID 33902]
 
 When you try to import a protocol or an Automation script, additional checks will now be performed.
 
@@ -64,13 +64,13 @@ When you try to import a protocol or an Automation script, additional checks wil
 
 - When, in the DIS menu, you select *DMA > Import Automation Script* while an Automation script solution is open, a pop-up window will now appear, asking you whether you want the script to be imported into the open Automation script solution.
 
-#### DIS now by default contains most common IANA and IETF MIB files [ID_34304]
+#### DIS now by default contains most common IANA and IETF MIB files [ID 34304]
 
 DIS now by default contains most common IANA and IETF MIB files. These MIB files contain common definitions that are often used in MIB files supplied by equipment vendor.
 
 ### Validator
 
-#### New checks and error messages [ID_33808] [ID_33840] [ID_34262] [ID_34283] [ID_34286] [ID_34288] [ID_34292] [ID_34312]
+#### New checks and error messages [ID 33808] [ID 33840] [ID 34262] [ID 34283] [ID 34286] [ID 34288] [ID 34292] [ID 34312]
 
 The following checks and error messages have been added.
 
@@ -118,13 +118,13 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Content model of <Units> element is now less strict [ID_33975]
+#### Content model of <Units> element is now less strict [ID 33975]
 
 The content model of the <Units> element has been made less strict. It is now a union of the non-empty string type and the UOM enum type.
 
 This will allow to use units that have not yet been added to the UOM Schema without causing an XML issue detected by said Schema.
 
-#### Protocol Schema: New elements [ID_34333]
+#### Protocol Schema: New elements [ID 34333]
 
 The following element has been added to the protocol schema:
 

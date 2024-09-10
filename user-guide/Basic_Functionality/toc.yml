@@ -309,6 +309,8 @@ items:
             items:
               - name: Gaining insights using time-scoped relation learning
                 topicUid: Time_Scoped_Relation_Learning_Tutorial
+              - name: Working with trend patterns in DataMiner Cube
+                topicUid: Pattern_Matching_Trend_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:
@@ -663,6 +665,8 @@ items:
             topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
           - name: Using Visual Overview to control dashboard feed components
             topicUid: Using_visio_to_control_dashboard_feed_components
+          - name: Using Visual Overview to switch spectrum presets
+            topicUid: Using_Visual_Overview_to_switch_spectrum_presets
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:

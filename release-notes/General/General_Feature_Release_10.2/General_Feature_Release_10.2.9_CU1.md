@@ -14,20 +14,20 @@ uid: General_Feature_Release_10.2.9_CU1
 
 ### Fixes
 
-#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
+#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID 34343]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 [CU1] -->
 
 In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred when a parameter with a wildcard OID referred to another parameter that was not displayed.
 
-#### ElementStateEventMessage would incorrectly be sent every time a command timed out on an element that was already in a timeout state [ID_34345]
+#### ElementStateEventMessage would incorrectly be sent every time a command timed out on an element that was already in a timeout state [ID 34345]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 [CU1] -->
 <!-- Not added to 10.3.0 -->
 
 In some cases, it could occur that an ElementStateEventMessage was sent every time a command timed out on an element that was already in a timeout state, while this message should only be sent once when the element is put in a timeout state.
 
-#### Smart-serial connection would no longer send commands [ID_34355]
+#### Smart-serial connection would no longer send commands [ID 34355]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 [CU1] -->
 <!-- Not added to 10.3.0 -->
