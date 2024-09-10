@@ -11,7 +11,7 @@ In case you experience an SLScripting crash because the process ran out of memor
 
 Note that by default a single instance of the SLScripting process is spun up by DataMiner. This process is responsible for executing the QActions of protocols. QActions execute C# code which is executed by the CLR of the .NET Framework. Therefore, if you observe a memory leak in SLScripting, a good stating point is to analyze the managed memory of the SLScripting process. Note however that in some situations a leak could be present in unmanaged memory, for example when unmanaged resources are not cleaned up correctly.
 
-In case of a crash due to the SLScripting process running out of memory, the log files in the generated log collector package should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
+In case of a crash due to the SLScripting process running out of memory, the log files in the generated log collector package, e.g. the element log files and the SLErrorsInProtocol log file, should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
 
 For example:
 
@@ -20,9 +20,9 @@ System.AggregateException: One or more errors occurred. ---> System.OutOfMemoryE
    at ...
 ```
 
-You can take a dump of the SLScripting process at any time using tools such as [ProcDump](xref:Collecting_DataMiner_Cube_memory_dumps#procdump) or via the [SLNetClientTest tool](xref:SLNetClientTest_creating_dump_for_process).
+You can take a dump of the SLScripting process at any time via the [SLNetClientTest tool](xref:SLNetClientTest_creating_dump_for_process) (make sure to select the *WithFullMemory* checkbox) or by using tools such as [ProcDump](https://learn.microsoft.com/en-us/sysinternals/downloads/procdump): `procdump -ma "SLScripting.exe"`. Refer to <xref:Collecting_DataMiner_Cube_memory_dumps#outofmemoryexception-or-high-memory-usage> for more examples on how to use ProcDump. Even though these examples are about DataMiner Cube, ProcDump can be used to collect a dump of any process.
 
-### Visual Studio
+## Visual Studio
 
 Once you have a .dmp file (either extracted from the Log Collector package or created by another tool), you can open it in Visual Studio via *File* > *Open* > *File...* (or by pressing `Ctrl + O`).
 Select the .dmp file and press the *Open* button. This will give an overview of the Minidump File Summary:
@@ -47,6 +47,8 @@ High memory pressure may be a symptom of a memory leak or inefficient memory usa
 Press the *Managed Memory Tool* link. This will now process the dump to process the managed memory and give you an overview of the types of objects present in managed memory together with their size:
 
 ![Managed Memory results](~/user-guide/images/SLScriptingManagedMemoryTool.png)
+
+Based on this overview, you can investigate the objects consuming the most memory to get a better understanding of what is consuming the memory.
 
 > [!NOTE]
 > In some cases, it could be that the Analysis result does not show this potential fix and therefore does not provide a link to open the Managed Memory Tool. In that case, use another tool to inspect the managed memory, such as the [Dump Analyzer Server](https://internaldocs.skyline.be/DevDocs/Dump_Analyzer_Server/Intro.html), [Memory Dump Analyzer SLScripting](https://internaldocs.skyline.be/DevDocs/Analyzing_SLScripting_Memory_Dumps/Memory_Dump_Analyzer_SLScripting.html), [WinDbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/).
