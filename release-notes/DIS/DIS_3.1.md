@@ -52,4 +52,4 @@ From now on, in all code and files it generates, DIS will use tab indentation, w
 
 ### Evertz plugin now supports additional types [ID_40689]
 
-To Evertz plugin has now been extended to also support the "JSONTree", "JSONTest", and "ExpandedHiTable" Widgets.
+To Evertz plugin has now been extended to also support the *JSONTree*, *JSONTest*, and *ExpandedHiTable* widgets.
