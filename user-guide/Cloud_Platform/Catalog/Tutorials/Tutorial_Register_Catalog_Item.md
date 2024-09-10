@@ -87,6 +87,8 @@ The body of the request needs to be in the "form-data" format with key of type *
 
 Create a zip file containing the manifest and the readme and add it to the body of the request as shown below
 
+![zip content structure](~/user-guide/images/tutorial_catalog_registration_item_zip_structure.png)
+
 ![Register item http body](~/user-guide/images/tutorial_catalog_registration_item_body.png)
 
 ## Step 4: Register
