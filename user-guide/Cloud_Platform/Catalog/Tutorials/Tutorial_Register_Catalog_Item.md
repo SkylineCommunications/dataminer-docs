@@ -44,7 +44,7 @@ After creation of the key, you can copy the key and use it as value in the **Ocp
 
 ## Step 3: Register catalog item body
 
-The body of the request expects form-data with key of type *File* and name *file*, the value is a zip containing the following items:
+The body of the request needs to be in the "form-data" format with key of type *File* and name *file*, the value is a zip containing the following items:
 
 - A readme.md file with any required image in an images folder. This readme will be shown in the description tab in the Catalog.
 
