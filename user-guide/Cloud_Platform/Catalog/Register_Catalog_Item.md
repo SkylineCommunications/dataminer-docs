@@ -46,7 +46,7 @@ The value of this key should be a **zip** file containing
 
 - [Optional] a 'README.md' file that contains the description of the Catalog item.
 - [Optional] an 'images' folder containing any image being referenced by the readme file.  
-Supported image extensions are *.jpg*, *.jpeg*, *.png*, *.gif*, *.bmp*, *.tif*, *.tiff* and *.webp*
+Supported image extensions are `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tif`, `.tiff` and `.webp`
 
 ##### Manifest file
 
