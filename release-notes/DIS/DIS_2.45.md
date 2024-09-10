@@ -8,7 +8,7 @@ uid: DIS_2.45
 
 ### IDE
 
-#### XML editor: New Automation script tag options [ID_37423]
+#### XML editor: New Automation script tag options [ID 37423]
 
 In the XML editor, you can click a small down arrow in front of certain XML tags to open a shortcut menu. Two new commands have been added.
 
@@ -19,7 +19,7 @@ In the XML editor, you can click a small down arrow in front of certain XML tags
 
 ### Validator
 
-#### New checks and error messages [ID_37259] [ID_37265]
+#### New checks and error messages [ID 37259] [ID 37265]
 
 The following checks and error messages have been added.
 
@@ -36,7 +36,7 @@ Former validator error 2603 (RawType double has no length definition) has been r
 
 ### XML Schema
 
-#### PackageManifest Schema: DestinationPath for Dashboard is optional [ID_37586]
+#### PackageManifest Schema: DestinationPath for Dashboard is optional [ID 37586]
 
 In the *PackageManifest* schema, the *DestinationPath* tag for Dashboards has now been marked optional.
 
@@ -44,11 +44,11 @@ In the *PackageManifest* schema, the *DestinationPath* tag for Dashboards has no
 
 ### Enhancements
 
-#### 'Generate driver help' command will now create a Markdown file [ID_37313]
+#### 'Generate driver help' command will now create a Markdown file [ID 37313]
 
 When you click the *Generate driver help* menu command, a Markdown file with extension .md will now be created in the GitHub repository named *dataminer-docs-connectors*.
 
-#### SLDisCSharpAnalysis and SLDisCompiler projects have been replaced by NuGet packages [ID_37536] [ID_37359]
+#### SLDisCSharpAnalysis and SLDisCompiler projects have been replaced by NuGet packages [ID 37536] [ID 37359]
 
 The *SLDisCsharpAnalysis* project has been removed from DIS and NuGet packages have been created and/or extended to replace its functionality:
 
@@ -68,13 +68,13 @@ DIS has also been reworked so that it will now make use of these new/updated NuG
 
 ### Fixes
 
-#### XML editor: Problem when opening a QAction that did not contain the default QAction_{id}.cs file [ID_37358]
+#### XML editor: Problem when opening a QAction that did not contain the default QAction_{id}.cs file [ID 37358]
 
 An *InvalidOperationException* would be thrown when you tried to open a QAction that did not contain the default *QAction_{id}.cs* file.
 
 From now on, when you open a QAction that does not contain the default *QAction_{id}.cs* file, it will take the next available C# file instead.
 
-#### Validator will no longer generate a minor issue when Param.ArrayOptions@options includes customDatabaseName, databaseName, databaseNameProtocol or sizehint [ID_37276]
+#### Validator will no longer generate a minor issue when Param.ArrayOptions@options includes customDatabaseName, databaseName, databaseNameProtocol or sizehint [ID 37276]
 
 From now on, the Validator will no longer generate a minor issue when one of the following options is used in the *options* attribute of the *ArrayOptions* element:
 
@@ -83,6 +83,6 @@ From now on, the Validator will no longer generate a minor issue when one of the
 - databaseNameProtocol
 - sizeHint
 
-#### Validator will now check for duplicate values case-insensitively [ID_37287]
+#### Validator will now check for duplicate values case-insensitively [ID 37287]
 
 The Validator will now check for duplicate values (e.g. duplicate parameter names) case-insensitively.

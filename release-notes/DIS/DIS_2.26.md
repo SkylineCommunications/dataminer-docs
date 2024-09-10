@@ -8,7 +8,7 @@ uid: DIS_2.26
 
 ### IDE
 
-#### Solution-based protocol development \[ID_25536\]
+#### Solution-based protocol development \[ID 25536\]
 
 It is now possible to develop DataMiner protocols as Visual Studio solutions.
 
@@ -50,7 +50,7 @@ To save a compiled protocol to a file, select *File \> Save Compiled Protocol As
 
 ### Validator
 
-#### New checks and error messages \[ID_24636\]
+#### New checks and error messages \[ID 24636\]
 
 The following checks and error messages have been added.
 
@@ -61,13 +61,13 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol XML Schema now accepts 'certificate' for Session@loginMethod attribute \[ID_25384\]
+#### Protocol XML Schema now accepts 'certificate' for Session@loginMethod attribute \[ID 25384\]
 
 The Protocol XML Schema now accepts the value “certificate” for the Session@loginMethod attribute.
 
 ### Class Library
 
-#### Retrieving data from partial tables \[ID_24951\]
+#### Retrieving data from partial tables \[ID 24951\]
 
 The Class Library is now able to retrieve data from partial tables.
 
@@ -98,13 +98,13 @@ ITableFilterItem filter = new TableFilterItem
 > - Using QueryData without a filter will retrieve the entire table in multiple requests (one request per page).
 > - Using QueryData with a filter will retrieve the table rows matching the filter in one request.
 
-#### Matrix Helper: Serialized matrix status information \[ID_25127\]
+#### Matrix Helper: Serialized matrix status information \[ID 25127\]
 
 The Matrix Helper classes now have an extra constructor that allows passing the ID of the serialized parameter, a single displayed read parameter of which the measurement type is set to string. The Matrix Helper object will then fill this parameter with the entire matrix status (labels, locks, crosspoints, etc.) in JSON format.
 
 This matrix status information can then be read by, for example, the Generic Matrix Virtualization protocol or any other external element that is able to deserialize the JSON content to an object of the MatrixStatus class, which can be found in the same namespace as the Matrix Helper.
 
-#### Retrieving SNMP connection information & creating elements with SNMP connections \[ID_25585\]
+#### Retrieving SNMP connection information & creating elements with SNMP connections \[ID 25585\]
 
 The Class Library now supports the retrieval of information from the following SNMP connections as well as the creation of elements with these types of connections:
 
@@ -113,7 +113,7 @@ The Class Library now supports the retrieval of information from the following S
 - SNMPv3 connections
 - Virtual connections
 
-#### IEngine interface now supports the extension of the GetDms method \[ID_25632\]
+#### IEngine interface now supports the extension of the GetDms method \[ID 25632\]
 
 The IEngine interface now supports the extension of the GetDms method.
 
@@ -121,7 +121,7 @@ The IEngine interface now supports the extension of the GetDms method.
 
 ### Enhancements
 
-#### Miscellaneous Validator enhancements \[ID_25094\]
+#### Miscellaneous Validator enhancements \[ID 25094\]
 
 - If the MinimumRequiredVersion tag of a protocol indicates that C# 7.3 syntax is supported, then C# code analysis will only be performed if the Visual Studio instance that runs the Validator also supports C# 7.3 syntax. Otherwise, the following warning will appear during validation:
 
@@ -132,13 +132,13 @@ The IEngine interface now supports the extension of the GetDms method.
 - The Validator will no longer throw an exception if the placeholders used in the dllImport attribute are spelled incorrectly. Instead, it will show a message indicating that the specified DLL file could not be found.
 - The Validator will now ignore empty dllImport values (e.g. when the dllImport attribute value ends with “;”).
 
-#### IDE - Table Editor: Scrolling inside selection boxes has been disabled \[ID_25310\]
+#### IDE - Table Editor: Scrolling inside selection boxes has been disabled \[ID 25310\]
 
 In order to prevent unwanted selection box updates in the Table Editor, it will no longer be possible to scroll through the values of a closed selection box.
 
 ### Fixes
 
-#### IDE: Problem when determining EXE block IDs in Automation scripts \[ID_25402\]
+#### IDE: Problem when determining EXE block IDs in Automation scripts \[ID 25402\]
 
 When DIS had to add a new EXE block with generated Class Library code to an Automation script, it would determine its ID by only checking the existing EXE tags in the XML code of the script. As EXE block IDs should be unique across the entire XML code of an Automation script, DIS will now also check the following IDs before assigning an ID to a new EXE block:
 
@@ -147,10 +147,10 @@ When DIS had to add a new EXE block with generated Class Library code to an Auto
 - DMSScript.Protocols.Protocol@id
 - DMSScript.Script.Exe@id
 
-#### Class Library - InterApp calls: Problem when checking the mapping dictionary \[ID_25442\]
+#### Class Library - InterApp calls: Problem when checking the mapping dictionary \[ID 25442\]
 
 The InterApp calls allow to provide a dictionary that is a mapping between the Message class and the Executor class. When the Class Library was used as a DLL file, in some cases, the dictionary check would fail.
 
-#### IDE: No QActions listed in DIS Inject window when protocol contained the UTF-8 BOM \[ID_25530\]
+#### IDE: No QActions listed in DIS Inject window when protocol contained the UTF-8 BOM \[ID 25530\]
 
 When DIS retrieved a protocol containing the UTF-8 byte order mark from a DataMiner Agent, in some cases, it would not process that file correctly. As a result, no QActions would appear in the DIS Inject window, making it impossible to debug them.

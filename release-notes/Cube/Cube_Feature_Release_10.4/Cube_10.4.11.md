@@ -26,7 +26,7 @@ uid: Cube_Feature_Release_10.4.11
 
 ### Fixes
 
-#### Services: Alarm color of a service card page would be incorrect when the service contained a partially included table of an element [ID_40597]
+#### Services: Alarm color of a service card page would be incorrect when the service contained a partially included table of an element [ID 40597]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
