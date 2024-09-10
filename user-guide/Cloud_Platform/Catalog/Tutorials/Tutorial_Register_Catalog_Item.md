@@ -22,7 +22,7 @@ For ease of use we will be using [Postman](https://www.postman.com/) to execute 
 
 ## Step 1: Register Catalog item URL
 
-Add a new request with http method **PUT** and following url <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
+Add a new request with HTTP method of type **PUT** and the following URL: <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
 
 ![Register item http url](~/user-guide/images/tutorial_catalog_registration_item_url.png)
 
