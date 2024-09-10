@@ -32,7 +32,7 @@ The Catalog item register api call uses Organization key authentication, we can 
 This key identifies your organization and will make sure the registration will register your Catalog item under the organization of the key you use.
 
 > [!IMPORTANT]
-> You need to have the "Owner" role in order to access/create Organization keys.
+> You need to have the "Owner" role in order to access/create organization keys.
 
 Go ahead and create a new key with permission "Register catalog items".
 
