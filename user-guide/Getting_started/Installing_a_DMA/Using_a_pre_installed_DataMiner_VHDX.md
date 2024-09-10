@@ -55,6 +55,10 @@ Follow the below steps to configure your DataMiner Agent:
 - Click *Start* to get started
 - Select the desired database type, either [STaaS](xref:STaaS), [Self-hosted](xref:Configuring_dedicated_clustered_storage) or [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL), and click *Next*
 - When selecting [Self-hosted](xref:Configuring_dedicated_clustered_storage) database, fill in connection details for both Cassandra and OpenSearch and click *Next*
+
+> [!NOTE]
+> Please ensure these clusters are active and reachable from the vM you are setting up. Management of external DB clusters is the responsibility of the user.
+
 - Fill in required details to cloud connect your agent and click *Next*
     - Organization API Key: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. See [Managing dataminer.services keys](xref:Managing_DCP_keys) to add a new organization key to your dataminer.services organization.
     - System name: This name will be used to identify the DataMiner System in various DataMiner Cloud Platform applications.
