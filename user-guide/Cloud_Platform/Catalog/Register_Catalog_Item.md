@@ -8,40 +8,10 @@ In order to make a new Catalog item or a new version of a Catalog item available
 
 When you register a new Catalog item, it will only become available for the registered organization, and it will be marked as *private* in the UI to indicate this.
 
-Registration can be done using the [Catalog UI](#using-the-catalog-ui) or the [Catalog API](#using-the-catalog-api).
+Registration can be done using the [Catalog API](#using-the-catalog-api).
 
 > [!TIP]
 > For a practical example, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item) and [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version).
-
-## Using the Catalog UI
-
-Using the Catalog UI, it is possible to register a new Catalog item by its *name* and *type*, but it is not possible to register a new version for an item.
-
-Registration returns a unique identifier for the Catalog item, which can be used by the [Catalog API](#using-the-catalog-api) to update additional properties or register new versions.
-
-To register a new Catalog item:
-
-1. Go to the [Catalog](https://catalog.dataminer.services).
-
-1. Open the user menu by clicking the user icon in the top-right corner.
-
-1. Click the *Register new catalog item* menu item.
-
-1. Select the organization for which you want to register the Catalog item.
-
-   The selection box is automatically populated with all the organizations you have access to on the dataminer.services platform.
-
-1. Select the type of the Catalog item.
-
-   The selected [Catalog item type](xref:About_the_Catalog_module#supported-catalog-item-types) defines how the Catalog item will be shown to the users. Users can also filter on type to quickly find what they are looking for when browsing the Catalog.
-
-1. Enter the name of the item.
-
-   This name will be used to display the item in the Catalog. Make sure you pick a human-readable name that makes sense.
-
-1. Once all information has been filled in, click *Register*.
-
-   This will conclude the registration process for the Catalog item and return the unique identifier for the item in question. This identifier will allow you to register versions for the Catalog item or update additional properties using the [Catalog API](#using-the-catalog-api).
 
 ## Using the Catalog API
 
@@ -51,7 +21,7 @@ With the Catalog API, you can both [register a Catalog item](#registering-a-cata
 The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
 You need to have the "Owner" role in order to access/create Organization keys.
 
-A Catalog item is identified by a unique id (Guid) which can be obtained by the [Catalog UI](#using-the-catalog-ui) or created by yourself.
+A Catalog item is identified by a unique id (Guid) which you should provide yourself.
 
 ### Registering a Catalog item with the API
 
