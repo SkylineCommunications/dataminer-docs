@@ -23,7 +23,7 @@ We will be registering our own version of the following example [connector](http
 ## Step 1: Register Catalog version URL
 
 In order to register our first version, we will use the Catalog API Register version call.
-Create a new Http request using the POST http method and url  <https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogid}/version/register>
+Create a new HTTP request using the POST HTTP method and URL <https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register>
 
 ![Register version http url](~/user-guide/images/tutorial_catalog_registration_version_url.png)
 
