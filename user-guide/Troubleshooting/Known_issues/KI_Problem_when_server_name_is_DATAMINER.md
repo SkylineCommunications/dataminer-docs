@@ -11,7 +11,7 @@ uid: KI_Problem_when_server_name_is_DATAMINER
 
 ## Cause
 
-From DataMiner 10.4.0 [CU2]/10.4.5 onwards<!-- RN 38182 -->, DataMiner removes the domain name from the user if it is the same as the computer DataMiner is running on. However, the built-in DataMiner user uses the "DATAMINER" domain, so if the computer name is "DATAMINER", the built-in user can no longer get the necessary rights, which causes various errors.
+From DataMiner 10.4.0 [CU2]/10.4.5 onwards<!-- RN 38182 -->, a change to the user validation causes the built-in user account to no longer have the necessary rights if the computer name is "DATAMINER", resulting in various errors.
 
 ## Workaround
 
