@@ -6,7 +6,7 @@ uid: Register_Catalog_Item
 
 In order to make a new Catalog item or a new version of a Catalog item available in the [DataMiner Catalog](https://catalog.dataminer.services/), you need to register it with an organization.
 
-When you register a new Catalog item, it will only become available for the registered organization, and it will be marked as *private* in the UI to indicate this.
+When you register a new Catalog item, it will only become available for the registered organization, and it will be marked as *private* on the Catalog to indicate this.
 
 Registration can be done using the [Catalog API](#using-the-catalog-api).
 
