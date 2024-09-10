@@ -21,7 +21,7 @@ With the Catalog API, you can both [register a Catalog item](#registering-a-cata
 > The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
 You need to have the "Owner" role in order to access/create organization keys.
 
-A Catalog item is identified by a unique id (Guid) which you should provide yourself.
+A Catalog item is identified by a unique id (GUID) which you should provide yourself.
 
 ### Registering a Catalog item with the API
 
