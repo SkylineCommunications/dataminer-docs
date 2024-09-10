@@ -93,7 +93,7 @@ Create a zip file containing the manifest and the README and add it to the body 
 
 ## Step 4: Register
 
-Execute the call and upon correct registration you will receive HTTP Status 200 OK and the catalog id in the body of the response.
+Execute the call and upon correct registration you will receive HTTP Status 200 OK and the Catalog ID in the body of the response.
 
 You can now search for you Catalog item in the [Catalog](https://catalog.dataminer.services/browse) or navigate immediately to https://catalog.dataminer.services/details/{YourCatalogId}
 
