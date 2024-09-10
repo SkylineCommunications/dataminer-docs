@@ -62,7 +62,7 @@ The body of the request needs to be in the **multipart/form-data** format with k
 
 - A manifest.yml file describing the properties of the Catalog item.
 
-  Copy the snippet below and change the fields as you see fit using your favorite editor.
+  Copy the snippet below, changing the fields as you see fit using your favorite editor and save the file as `manifest.yaml`.
 
   > [!NOTE]
   > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. Navigate to [GUID generator](https://guidgenerator.com/) and create a new one using the format *hyphens* or use your own preferred method.
