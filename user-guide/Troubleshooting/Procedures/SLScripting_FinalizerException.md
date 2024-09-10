@@ -6,51 +6,50 @@ uid: TroubleshootingSLScriptingFinalizerException
 
 This section illustrates how to investigate a crash of the SLScripting process in case an exception occurred on the Finalizer thread.
 
-## Introduction
-
-A [finalizer](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/finalizers) can be used to perform cleanup when the class instance is being collected by the garbage collector. Instances of a class that contain a Finalizer get added to the Finalize queue which then get processed by the finalizer thread.
-It's important to make sure the Finalizer does not throw an exception as this results in a process crash when the Finalizer thread is executing the Finalizer method of the type that is being freed.
+A [finalizer](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/finalizers) can be used to perform cleanup when the class instance is being collected by the garbage collector. Instances of a class that contain a Finalizer get added to the Finalize queue, which then get processed by the Finalizer thread. It is important to make sure that the Finalizer does not throw an exception, as this results in a process crash when the Finalizer thread is executing the Finalizer method of the type that is being freed.
 
 > [!NOTE]
 >
 > - Typically, you can avoid having to provide a finalizer by using the [SafeHandle](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.safehandle) or derived classes to wrap any unmanaged handle.
-> - Ift is recommended to provide a way to explicitly release resource before the garbage collector frees the object by implementing the [IDisposable](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable?view=netframework-4.8.1) interface to perform the necessary cleanup for the object. This can considerably improve the performance of the application. Note however that even if you implement IDisposable, the finalizer acts as a safeguard to clean up the resources if the call to the Dispose method fails.
+> - We recommend providing a way to explicitly release resources before the garbage collector frees the object by implementing the [IDisposable](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable?view=netframework-4.8.1) interface to perform the necessary cleanup for the object. This can considerably improve the performance of the application. Note, however, that even if you implement IDisposable, the finalizer acts as a safeguard to clean up the resources if the call to the Dispose method fails.
 
-For more information about cleaning up resources, refer to:
+> [!TIP]
+> For more information about cleaning up resources, refer to:
+>
+> - [Cleaning Up Unmanaged Resources](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged)
+> - [Implementing a Dispose Method](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose)
+> - [Implementing a DisposeAsync Method](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-disposeasync)
+> - [using statement](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using)
 
-- [Cleaning Up Unmanaged Resources](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged)
-- [Implementing a Dispose Method](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose)
-- [Implementing a DisposeAsync Method](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-disposeasync)
-- [using statement](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using)
+## Investigating the crash dump in Visual Studio
 
-## Visual Studio
-
-In case a crash occurred due to an exception in the Finalize method of a class instance, a dump of SLManagedScripting should have been created.
-The ERRORLOG.TXT file should contain an indication of this exception. For example:
+In case a crash occurs because of an exception in the Finalize method of a class instance, a dump of SLManagedScripting should be created. The *ERRORLOG.TXT* file should contain an indication of this exception. For example:
 
 ```txt
 System.NullReferenceException: Object reference not set to an instance of an object.
    at Skyline.Protocol.MyExtension.MyClass.Finalize()
 ```
 
-Open the dump file in Visual Studio, an press the *Run Diagnostic Analysis* link in the Actions list.
-The Analysis results pane should show that an exception was found on the heap:
+1. Open the SLManagedScripting dump file in Visual Studio, and click the *Run Diagnostic Analysis* link in the Actions list.
 
-![Analysis results](~/user-guide/images/VisualStudioDiagnosticAnalysFinalizerCrash.png)<br>*Visual Studio Analysis results*
+   The *Analysis results* pane should show that an exception was found on the heap:
 
-In this case it mentions that a [NullReferenceException](https://learn.microsoft.com/en-us/dotnet/api/system.nullreferenceexception?view=netframework-4.8.1) was found.
+   ![Analysis results](~/user-guide/images/VisualStudioDiagnosticAnalysFinalizerCrash.png)<br>*Visual Studio Analysis results*
 
-Now open the Parallel Stacks window (*Debug* > *Windows* > *Parallel Stacks*):
+   In this case, it mentions that a [NullReferenceException](https://learn.microsoft.com/en-us/dotnet/api/system.nullreferenceexception?view=netframework-4.8.1) was found.
 
-![Visual Studio Parallel Stacks window](~/user-guide/images/VisualStudioParallelStacksWindowFinalizerCrash.png)<br>*Visual Studio Parallel Stacks window*
+1. Open the *Parallel Stacks* window (*Debug* > *Windows* > *Parallel Stacks*):
 
-The parallel stacks shows that an unhandled exception occurred on the Finalizer thread (`OnUnhandledException`) while executing the Finalizer of MyClass (`~MyClass`).
+   ![Visual Studio Parallel Stacks window](~/user-guide/images/VisualStudioParallelStacksWindowFinalizerCrash.png)<br>*Visual Studio Parallel Stacks window*
 
-At this point, the source of the class should be inspected to find out why the exception was thrown.
+   This shows that an unhandled exception occurred on the Finalizer thread (`OnUnhandledException`) while executing the Finalizer of MyClass (`~MyClass`).
 
-## WinDbg
+1. Inspect the source of the class to find out why the exception was thrown.
+
+## Investigating the crash dump with WinDbg
 
 Open the dump file with WinDbg.
+
 In this case, executing the `.lastevent` and `!analyze` commands do not reveal any useful info.
 
 List all the managed threads by using the `!threads` command:
@@ -106,6 +105,7 @@ XXXX   46    0 15550c78     39820 Preemptive  00000000:00000000 053a1b50 0     U
 Here, the first line indicates that a System.NullReferenceException occurred on the Finalizer thread.
 
 Switch to this thread by using the `~3s` command (3 is the value for the thread in the first column of the `!threads` command output).
+
 Then execute the `!clrstack` command:
 
 ```txt
@@ -198,10 +198,11 @@ The see the IL code of the Finalize method, use the `!u 0ce02f08` command (where
 
 ### Using the eestack command
 
-Another route to find the type and file that defines the method where the exception occurred is to use the `!eestack` command. The following illustrates another example where an exception occurs in the finalizer thread.
+Another route to find the type and file that defines the method where the exception occurred is to use the `!eestack` command. The following illustrates another example where an exception occurs in the Finalizer thread.
 
-Just like in the previous section, use the `!threads` command to list the threads. If you see an exception occurred on the finalizer thread, you can use the `!eestack` command to list the call stacks.
-The output for the finalizer thread might show an exception and just below the exception you might find more info on what Finalize method was being executed (in the output look at the output for Thread X where X denotes the number for the finalizer thread as seen in the output of the `!threads` command which is 3 in this case.):
+Just like in the previous section, use the `!threads` command to list the threads. If you see that an exception occurred on the Finalizer thread, you can use the `!eestack` command to list the call stacks.
+
+The output for the Finalizer thread might show an exception and just below the exception you might find more info on what Finalize method was being executed (in the output, look at the output for Thread X, where X denotes the number for the Finalizer thread as seen in the output of the `!threads` command, which is 3 in this case.):
 
 ```txt
 ...
