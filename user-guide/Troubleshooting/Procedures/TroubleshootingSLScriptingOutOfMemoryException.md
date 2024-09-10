@@ -9,7 +9,13 @@ uid: TroubleshootingSLScriptingOutOfMemoryException
 
 In case you experience an SLScripting crash because the process ran out of memory or you observe a memory leak to be present in the SLScripting process, analyzing a memory dump of the SLScripting process can provide more info on what is causing the leak.
 
-Note that by default a single instance of the SLScripting process is spun up by DataMiner. This process is responsible for executing the QActions of protocols. QActions execute C# code which is executed by the CLR of the .NET Framework. Therefore, if you observe a memory leak in SLScripting, a good stating point is to analyze the managed memory of the SLScripting process. Note however that in some situations a leak could be present in unmanaged memory, for example when unmanaged resources are not cleaned up correctly.
+By default, a single instance of the SLScripting process is spun up by DataMiner. This process is responsible for executing the QActions of protocols. QActions execute C# code which is executed by the CLR of the .NET Framework. Therefore, if you observe a memory leak in SLScripting, a good stating point is to analyze the managed memory of the SLScripting process.
+
+> [!TIP]
+> For investigation purposes you could also consider to configure DataMiner so that it creates a separate SLScripting process for each SLProtocol process. Refer to [Configuring a separate SLScripting process for every protocol used](xref:Configuration_of_DataMiner_processes#configuring-a-separate-slscripting-process-for-every-protocol-used) and [Element in Protocol logging](xref:Element_in_Protocol_logging) for more information.
+
+> [!IMPORTANT]
+> If you cannot identify any objects that are responsible for consuming the memory in managed memory, it is possible that the leak is present in unmanaged memory. In this case, review whether objects are used that implement [IDisposable](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects) which were not properly disposed of and verify whether you use code or class libraries that allocate unmanaged memory which was not properly released.
 
 In case of a crash due to the SLScripting process running out of memory, the log files in the generated log collector package, e.g. the element log files and the SLErrorsInProtocol log file, should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
 
