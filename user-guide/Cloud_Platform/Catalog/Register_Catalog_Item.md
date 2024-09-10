@@ -17,9 +17,9 @@ Registration can be done using the [Catalog API](#using-the-catalog-api).
 
 With the Catalog API, you can both [register a Catalog item](#registering-a-catalog-item-with-the-api) and [register a new version of a Catalog item](#registering-a-new-version-with-the-api).
 
->[!important]  
-The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
-You need to have the "Owner" role in order to access/create Organization keys.
+> [!IMPORTANT]  
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). The key must have the *Register catalog items permission* and needs to be added to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
+You need to have the "Owner" role in order to access/create organization keys.
 
 A Catalog item is identified by a unique id (Guid) which you should provide yourself.
 
@@ -54,37 +54,37 @@ This file will contain all necessary information to register a Catalog item with
 
 ```yml
 # [Required]
-# Possible values for the catalog item that can be deployed on a DataMiner System:
-#   - automationscript: If the catalog item is a general-purpose DataMiner Automation script.
-#   - lifecycleserviceorchestration: If the catalog item is a DataMiner Automation script designed to manage the life cycle of a service.
-#   - profileloadscript: If the catalog item is a DataMiner Automation script designed to load a standard DataMiner profile.
-#   - userdefinedapi: If the catalog item is a DataMiner Automation script designed as a user-defined API.
-#   - adhocdatasource: If the catalog item is a DataMiner Automation script designed for a ad hoc data source integration.
-#   - chatopsextension: If the catalog item is a DataMiner Automation script designed as ChatOps Extension.
-#   - connector: If the catalog item is a DataMiner XML connector.
-#   - slamodel: If the catalog item is a DataMiner XML connector designed as DataMiner Service Level Agreement model.
-#   - enhancedservicemodel: If the catalog item is a DataMiner XML connector designed as DataMiner enhanced service model.
-#   - visio: If the catalog item is a Microsoft Visio design.
-#   - solution: If the catalog item is a DataMiner Solution.
-#   - testingsolution: If the catalog item is a DataMiner Solution designed for automated testing and validation.
-#   - samplesolution: If the catalog item is a DataMiner Solution used for training and education.
-#   - standardsolution: If the catalog item is a DataMiner Solution which is a out-of-the-box solution for specific use case or application.
-#   - dashboard: If the catalog item is a DataMiner Dashboard.
-#   - lowcodeapp: If the catalog item is a DataMiner low-code app.
-#   - datatransformer: If the catalog item is a Data Transformer.
-#   - dataquery: If the catalog item is a GQI data query.
-#   - functiondefinition: If the catalog item is a DataMiner function definition.
-#   - scriptedconnector: If the catalog item is a DataMiner scripted connector.
-#   - bestpracticesanalyzer: If the catalog item is a DataMiner Best practices Analysis file.
+# Possible values for the Catalog item that can be deployed on a DataMiner System:
+#   - automationscript: If the Catalog item is a general-purpose DataMiner Automation script.
+#   - lifecycleserviceorchestration: If the Catalog item is a DataMiner Automation script designed to manage the life cycle of a service.
+#   - profileloadscript: If the Catalog item is a DataMiner Automation script designed to load a standard DataMiner profile.
+#   - userdefinedapi: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
+#   - adhocdatasource: If the Catalog item is a DataMiner Automation script designed for a ad hoc data source integration.
+#   - chatopsextension: If the Catalog item is a DataMiner Automation script designed as ChatOps Extension.
+#   - connector: If the Catalog item is a DataMiner XML connector.
+#   - slamodel: If the Catalog item is a DataMiner XML connector designed as DataMiner Service Level Agreement model.
+#   - enhancedservicemodel: If the Catalog item is a DataMiner XML connector designed as DataMiner enhanced service model.
+#   - visio: If the Catalog item is a Microsoft Visio design.
+#   - solution: If the Catalog item is a DataMiner Solution.
+#   - testingsolution: If the Catalog item is a DataMiner Solution designed for automated testing and validation.
+#   - samplesolution: If the Catalog item is a DataMiner Solution used for training and education.
+#   - standardsolution: If the Catalog item is a DataMiner Solution which is a out-of-the-box solution for specific use case or application.
+#   - dashboard: If the Catalog item is a DataMiner Dashboard.
+#   - lowcodeapp: If the Catalog item is a DataMiner low-code app.
+#   - datatransformer: If the Catalog item is a Data Transformer.
+#   - dataquery: If the Catalog item is a GQI data query.
+#   - functiondefinition: If the Catalog item is a DataMiner function definition.
+#   - scriptedconnector: If the Catalog item is a DataMiner scripted connector.
+#   - bestpracticesanalyzer: If the Catalog item is a DataMiner Best practices Analysis file.
 
 type: '<fill in type here>'
 
 # [Required] 
-# The ID of the catalog item.
-# All registered versions for the same ID are shown together in the catalog.
+# The ID of the Catalog item.
+# All registered versions for the same ID are shown together in the Catalog.
 # This ID can not be changed. 
 # If the ID is not filled in, the registration will fail with http status code 500. 
-# If the ID is filled in but does not exist yet, a new catalog item will be registered with this id.
+# If the ID is filled in but does not exist yet, a new Catalog item will be registered with this id.
 # If the ID is filled in but does exist, properties of the item will be overwritten
 #   Must be a valid GUID.
 id: '<fill in guid here>'
@@ -98,7 +98,7 @@ id: '<fill in guid here>'
 title: '<fill in title here>'
 
 # [Optional]
-# General information about the catalog item.
+# General information about the Catalog item.
 #   Max length: 100.000 characters
 # Currently not shown in the Catalog UI but will be supported in the near future.
 short_description: '<fill in description here>'
@@ -127,7 +127,7 @@ owners:
     url: '<fill in url here>'
 
 # [Optional]
-# Tags that allow you to categorize your catalog items.
+# Tags that allow you to categorize your Catalog items.
 #   Max number of tags: 5
 #   Max length: 50 characters.
 #   Cannot contain newlines.
@@ -143,7 +143,7 @@ The register version API call allows you to create a new version for a Catalog i
 #### URL
 <https://api.dataminer.services/api/key-catalog/v1-0/catalog/register{catalogId:guid}/version>
 
-Route parameter "catalogId" is the id of the catalog item of which a new version is registered. Must be a valid Guid
+Route parameter "catalogId" is the id of the Catalog item of which a new version is registered. Must be a valid Guid
 
 #### HTTP method
 
@@ -155,7 +155,7 @@ POST
 The body of the request should be of type **multipart/form-data** and must contain  
 
 - a key of type **File** with name **file**.  
-The value is the catalog item installation file, supported types are a DataMiner Protocol package (.dmprotocol) or a DataMiner Application package (.dmapplication)
+The value is the Catalog item installation file, supported types are a DataMiner Protocol package (.dmprotocol) or a DataMiner Application package (.dmapplication)
 
 - a key of type **Text** with name **versionNumber**.  
 The value is the version number you want to register.
