@@ -73,6 +73,8 @@ items:
       topicUid: Tutorial_Register_Catalog_Item
     - name: Registering a new version of a connector in the Catalog
       topicUid: Tutorial_Register_Catalog_Version
+    - name: Registering a new version of a connector in the Catalog using a GitHub Action
+      topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
 - name: DataMiner Sharing
   topicUid: Sharing
   items:

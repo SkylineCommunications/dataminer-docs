@@ -13,3 +13,4 @@ Using the [Catalog Registration API](xref:Register_Catalog_Item), new Catalog it
 |---|---|
 | [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item) | Find out how to register a Catalog item using the Catalog API, following the example of registering a connector. |
 | [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version) | Find out how to register a new version of a Catalog item using the Catalog API, following the example of registering a connector version. |
+| [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions) | Find out how to register a new version of a Catalog item using the Catalog API and a GitHub Action, following the example of registering a connector version. |
