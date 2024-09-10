@@ -48,7 +48,7 @@ The body of the request needs to be in the **multipart/form-data** format with k
 
 - A `README.md` file with any required image in an images folder. This `README.md` will be shown in the description tab in the Catalog.
 
-  Copy the snippet below and change the content as you see fit using your favorite editor.
+  Copy the snippet below, changing the content as you see fit using your favorite editor and save the file as `README.md`.
 
   ```md
   # Example_Rates_Custom
