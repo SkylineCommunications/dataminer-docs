@@ -32,6 +32,10 @@ uid: Creating_a_DMS_on_dataminer_services
    > [!NOTE]
    > Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
+1. Optionally, in the *Time zone* box, select the time zone for your DataMiner System.
+
+   By default, the time zone is set to the time zone of your current location.
+
 1. Enter a username and password for your DataMiner account.
 
 1. Select the box next to *I agree to the terms of service*.
@@ -40,5 +44,5 @@ uid: Creating_a_DMS_on_dataminer_services
 
 > [!NOTE]
 >
-> - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Community Edition](xref:Pricing_Commercial_Models##dataminer-community-edition).
+> - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition).
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.

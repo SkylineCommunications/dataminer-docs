@@ -8,11 +8,11 @@ uid: DIS_2.20
 
 ### IDE
 
-#### MIB Browser now also supports adding parameters of type Gauge32, Integer32, TimeTicks and Unsigned32 \[ID_22474\]
+#### MIB Browser now also supports adding parameters of type Gauge32, Integer32, TimeTicks and Unsigned32 \[ID 22474\]
 
 Up to now, the MIB Browser only supported adding parameters of type Integer. From now on, it will also support adding parameters of type Gauge32, Integer32, TimeTicks and Unsigned32.
 
-#### Class library enhancements \[ID_22481\]
+#### Class library enhancements \[ID 22481\]
 
 Instead of loading individual C# files, DIS will now load packages containing a number of C# files and a manifest.xml file. The latter will contain the name and the version of the package as well as any dependencies to other packages.
 
@@ -22,11 +22,11 @@ When a QAction is generated, all information about the packages that were used t
 
 DIS will automatically reload the class library packages when packages have been modified on disk or when the class library settings have been changed in *DIS Settings \> Class Library*.
 
-#### New module to manage the connections between DIS and DataMiner \[ID_22532\]
+#### New module to manage the connections between DIS and DataMiner \[ID 22532\]
 
 An entirely new module will now be managing the connections between DIS and DataMiner.
 
-#### DIS is now fully compatible with Microsoft Visual Studio 2019 \[ID_22579\]
+#### DIS is now fully compatible with Microsoft Visual Studio 2019 \[ID 22579\]
 
 DIS is now fully compatible with Microsoft Visual Studio version 2019.
 
@@ -35,7 +35,7 @@ DIS is now fully compatible with Microsoft Visual Studio version 2019.
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_22108\]\[ID_22313\]\[ID_22569\]
+#### New and updated checks and error messages \[ID 22108\]\[ID 22313\]\[ID 22569\]
 
 The following checks and error messages have been added or updated.
 

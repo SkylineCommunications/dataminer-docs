@@ -331,4 +331,4 @@ You have now finished configuring an OpenSearch backup.
 
 ## Troubleshooting
 
-For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+For troubleshooting information, see [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)

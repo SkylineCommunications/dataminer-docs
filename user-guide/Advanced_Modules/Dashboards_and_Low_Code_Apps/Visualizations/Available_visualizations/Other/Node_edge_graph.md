@@ -178,7 +178,9 @@ You can fine-tune the layout of the component with the following settings in the
 
   - *Upwards*: Nodes are displayed from bottom to top in order of importance
 
-- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can use the scroll wheel of the mouse to zoom in or out. Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
+- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can zoom in or out by pressing CTRL while using the scroll wheel. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->, you can use the scroll wheel of the mouse to zoom in or out.
+
+  Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
 
 - *Edge style*: Select whether the connections should be displayed as curly or straight lines.
 

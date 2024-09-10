@@ -1,8 +1,9 @@
 ---
 uid: I-DOCSIS_architecture
+keywords: I-DOCSIS architecture
 ---
 
-# EPM I-DOCSIS architecture
+# EPM Integrated DOCSIS architecture
 
 The EPM Solution makes use of the following components:
 
@@ -16,7 +17,7 @@ The EPM Solution makes use of the following components:
 ```mermaid
 %%{init: {'flowchart':{'curve':'monotoneY'}}}%%
 flowchart TB
-  subgraph I-DOCSIS architecture
+  subgraph Integrated DOCSIS architecture
     direction TB
     style Front-End fill:#00aff0
     style Back-End fill:#00517d
@@ -32,9 +33,9 @@ flowchart TB
 
 At the core of the solution are collector connectors capable of interfacing with any physical or virtual data source (devices, APIs, etc.).
 
-In a typical I-DOCSIS deployment, there are various types of service-delivery entities such as CMTSs, Fiber and Optical Nodes, and cable modems (CMs).
+In a typical Integrated DOCSIS deployment, there are various types of service-delivery entities such as CMTSs, Fiber and Optical Nodes, and cable modems (CMs).
 
-![I-DOCSIS collectors](~/user-guide/images/EPM_I-docsis_collectors.png)
+![Integrated DOCSIS collectors](~/user-guide/images/EPM_I-docsis_collectors.png)
 
 The EPM Solution integrates with these entity types, regardless of technology or vendor, via specific or generic connectors. These "collector" connectors operate at the lowest level of the EPM Solution. The connectors are optimized for data gathering and initial processing. Parameters stored at this level typically correspond to direct readings from data sources.
 

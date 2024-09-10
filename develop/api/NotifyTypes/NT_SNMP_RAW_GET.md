@@ -70,6 +70,10 @@ else
         - 1: None
         - 2: HMAC-MD5
         - 3: HMAC-SHA
+        - 4: HMAC128-SHA-224
+        - 5: HMAC192-SHA-256
+        - 6: HMAC256-SHA-384
+        - 7: HMAC384-SHA-512
 
         Default: 1 (None)
       - [3] (string): Authentication password. Default: empty string ("").
@@ -78,6 +82,8 @@ else
         - 2: DES
         - 3: N/A, deprecated
         - 4: AES128
+        - 20: AES192
+        - 21: AES256
 
         Default: 1 (None)
       - [5] (string): Encryption passphrase. Default: empty string ("")
@@ -129,3 +135,4 @@ else
 
 - Feature introduced in DataMiner 9.5.12 (RN 18369).
 - From DataMiner 9.6.3 (RN 20727) onwards, if the “multiple get” Boolean (settings[5]) is false, separate SNMP messages will be used to poll each OID, and if the “multiple get” Boolean (settings[5]) is true, a single SNMP message will be used to poll the OIDs.
+- Retrieving SNMP data using this method does not affect the timeout state of the element.

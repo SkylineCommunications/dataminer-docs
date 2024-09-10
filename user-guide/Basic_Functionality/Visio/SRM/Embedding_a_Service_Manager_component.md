@@ -4,7 +4,7 @@ uid: Embedding_a_Service_Manager_component
 
 # Embedding a Service Manager component
 
-From DataMiner 9.5.4 onwards, for systems with the appropriate licenses, it is possible to embed a Service Manager component in Visio. With this component, you can essentially embed the *Services* app in Visio.
+It is possible to embed a Service Manager component in Visio. With this component, you can essentially embed the *Services* app in Visio.
 
 > [!TIP]
 > See also: [Service and Resource Management](xref:SRM#service-and-resource-management)
@@ -21,9 +21,11 @@ Configure the following shape data fields on the shape that is to contain the Se
 
 1. To further configure the component, add the shape data field **ComponentOptions**, and specify the necessary options as its value. Separate the options by semicolons (";"). The following options are supported:
 
-   - **AutoLoadExternalChanges=** : When set to *true*, external changes are automatically loaded, if there have been no local changes. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
-   - **AutoIgnoreExternalChanges=** : Available from DataMiner 10.0.13 onwards. When set to *true*, external changes are automatically discarded. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
-   - **FunctionTypes=** : Available from DataMiner 10.2.7/10.3.0 onwards. Can be used as a filter to only include specific types of functions.
+   - **AutoLoadExternalChanges=**: When set to *true*, external changes are automatically loaded, if there have been no local changes. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
+
+   - **AutoIgnoreExternalChanges=**: When set to *true*, external changes are automatically discarded. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
+
+   - **FunctionTypes=**: Available from DataMiner 10.2.7/10.3.0 onwards. Can be used as a filter to only include specific types of functions.
 
      Should be set to a comma-separated list of values. Possible values:
 
@@ -40,22 +42,31 @@ Configure the following shape data fields on the shape that is to contain the Se
 
      The filter will be cleared when no FunctionTypes option is specified or when the FunctionTypes option is set to an empty list of values. Parent functions that do not match the filter but have child functions that match the filter will be displayed in the function tree so that it is possible to navigate to one of the child functions.
 
-   - **HideAddButton** : Available from DataMiner 10.2.6/10.3.0 onwards. When set to *true*, no options to add a service definition will be displayed.
-   - **HideChildFunctions=*X*** : Available from DataMiner 9.5.5 onwards. Allows you to filter on particular functions that should not be displayed in the component. “X” should be a collection of GUIDs, separated by a comma. Alternatively, you can also specify *\** or *ALL*, to filter all child functions. Note that if you specify the parent GUID of a particular function, this will also block all child functions of that function. The GUIDs can be found in the function XMLs.
-   - **HideDeleteButton** : Available from DataMiner 10.2.6/10.3.0 onwards. When set to *true*, no options to delete a service definition will be displayed.
-   - **HideHeader=** : When set to *true*, hides the service definition header (which includes the service definition name and description).
-   - **HideTabs=** : When set to *true*, hides the tab selection, so that only the diagram tab is displayed.
-   - **HideNodeConfiguration=** : When set to *true*, hides the lower part of the diagram, where the selected node can be configured.
-   - **HideFunctionsTree=** : When set to *true*, hides the tree view on the left-hand side with functions to drag and drop. This will typically be used together with the “ReadOnly=” option.
+   - **HideAddButton**: Available from DataMiner 10.2.6/10.3.0 onwards. When set to *true*, no options to add a service definition will be displayed.
+
+   - **HideChildFunctions=*X***: Allows you to filter on particular functions that should not be displayed in the component. "X" should be a collection of GUIDs, separated by a comma. Alternatively, you can also specify *\** or *ALL*, to filter all child functions. Note that if you specify the parent GUID of a particular function, this will also block all child functions of that function. The GUIDs can be found in the function XMLs.
+
+   - **HideDeleteButton**: Available from DataMiner 10.2.6/10.3.0 onwards. When set to *true*, no options to delete a service definition will be displayed.
+
+   - **HideHeader=**: When set to *true*, hides the service definition header (which includes the service definition name and description).
+
+   - **HideTabs=**: When set to *true*, hides the tab selection, so that only the diagram tab is displayed.
+
+   - **HideNodeConfiguration=**: When set to *true*, hides the lower part of the diagram, where the selected node can be configured.
+
+   - **HideFunctionsTree=** : When set to *true*, hides the tree view on the left-hand side with functions to drag and drop. This will typically be used together with the "ReadOnly=" option.
+
    - **Interface=**: Determines which part of the Service Manager user interface is displayed. Can be set to the following values:
 
      - **overview**: Makes the shape show the entire Services module.
      - **definition**: Links the shape to a single service definition. (The service definition is determined by the *SelectedServiceDefinition* variable, mentioned below.)
      - **definitions**: Makes the shape show the *Definitions* > *Recent* tab of the Services module. Supported from DataMiner 10.2.6/10.3.0 onwards.
 
-   - **ReadOnly=** : When set to *true*, prevents the user from making any changes to the service definition.
-   - **SessionVariablePrefix=*X*** : Defines an optional prefix (in this case “X”) for all session variable names linked with this component.
-   - **ShowNodeIDs=** : Available from DataMiner 10.0.0/10.0.2 onwards. When set to *true*, displays the node IDs of the service definition.
+   - **ReadOnly=**: When set to *true*, prevents the user from making any changes to the service definition.
+
+   - **SessionVariablePrefix=*X***: Defines an optional prefix (in this case "X") for all session variable names linked with this component.
+
+   - **ShowNodeIDs=**: When set to *true*, displays the node IDs of the service definition.
 
    > [!NOTE]
    >
@@ -80,7 +91,7 @@ The following session variables can be used in a Visual Overview containing a Se
 
   Recommended when *SaveAll*/*DiscardAll* commands are used. See [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component).
 
-- **CurrentHasPendingChanges**: Available from DataMiner 9.5.9 onwards. Depending on whether any unsaved changes have been made to the (selected) service definition, this variable will be set to true or false.
+- **CurrentHasPendingChanges**: Depending on whether any unsaved changes have been made to the (selected) service definition, this variable will be set to true or false.
 
   Recommended when *SaveAll*/*DiscardAll* commands are used. See [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component).
 
@@ -94,7 +105,7 @@ The following session variables can be used in a Visual Overview containing a Se
   > The direction is determined by the interface types (in, out, inout), not by the arrow in this string. |
 
 - **SelectedInterfaceID**: The numeric ID of the currently selected interface of the currently selected node.
-- **SelectedNodeID**: The numeric ID of the currently selected node on the diagram. From DataMiner 9.5.13 onwards, if multiple nodes are selected, the variable will contain a semicolon-separated list of IDs.
+- **SelectedNodeID**: The numeric ID of the currently selected node on the diagram. If multiple nodes are selected, the variable will contain a semicolon-separated list of IDs.
 - **SelectedServiceDefinition**: The GUID of the currently selected service definition.
 
 Examples:
@@ -115,13 +126,13 @@ Examples:
 
 ## Configuring command controls for a Service Manager component
 
-From DataMiner 9.5.6 onwards, you can turn a shape into a command control that can be used to manipulate a Service Manager component. Depending on the configuration, the command control can be used to manipulate one particular component or several components, which can be on the same page, on the same card or anywhere in Cube.
+A shape can be turned into a command control to manipulate a Service Manager component. Depending on the configuration, the command control can be used to manipulate one particular component or several components, which can be on the same page, on the same card, or anywhere in Cube.
 
 1. Add the following shape data fields to the component shape:
 
    - **Component**: Set the value to the name of the component, i.e. *ServiceManager*.
-   - **CommandPrefix**: Optional. Set the value to the prefix that should be added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. “*One\_*”).
-   - **ComponentOptions**: To hide the default “Save” and “Discard” buttons of the Service Manager component, specify the value *HideSaveDiscardButtons=true*.
+   - **CommandPrefix**: Optional. Set the value to the prefix that should be added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. "*One\_*").
+   - **ComponentOptions**: To hide the default "Save" and "Discard" buttons of the Service Manager component, specify the value *HideSaveDiscardButtons=true*.
 
    > [!TIP]
    > See also: [Embedding a Service Manager component](#embedding-a-service-manager-component)
@@ -135,7 +146,7 @@ From DataMiner 9.5.6 onwards, you can turn a shape into a command control that c
      - *SaveCurrent*: Saves pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=definition*.
      - *DiscardCurrent*: Discards pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=definition*.
 
-     Optionally, you can include the command prefix specified in the shape of the Service Manager component, e.g. “*One_SaveAll*”.
+     Optionally, you can include the command prefix specified in the shape of the Service Manager component, e.g. "*One_SaveAll*".
 
    - **Scope**: Set the value to the scope of the command:
 

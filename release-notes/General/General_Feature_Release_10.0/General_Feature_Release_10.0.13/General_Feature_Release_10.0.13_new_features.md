@@ -12,7 +12,7 @@ uid: General_Feature_Release_10.0.13_new_features
 
 ### DMS core functionality
 
-#### SLSNMPAgent will now also use the SNMP++ library to forward SNMPv2 traps and inform messages \[ID_27590\]
+#### SLSNMPAgent will now also use the SNMP++ library to forward SNMPv2 traps and inform messages \[ID 27590\]
 
 From now on, SLSNMPAgent will also use the SNMP++ library to forward SNMPv2 traps and inform messages. This means that it will now use the same library to send SNMPv1 traps, SNMPv2 traps and inform messages and SNMPv3 traps and inform messages.
 
@@ -21,23 +21,23 @@ From now on, SLSNMPAgent will also use the SNMP++ library to forward SNMPv2 trap
 > - Because of limitations of the SNMP++ library, the inform message resend time cannot be set to a value less than 10ms. If you set it to a value less than 10ms, the default setting will be used instead (i.e. 30 ms).
 > - From now on, all SNMPv2 traps and inform messages will by default include the “1.3.6.1.2.1.1.3.0” (sysUpTime) and “1.3.6.1.6.3.1.1.4.1.0” (snmpTrapOID) bindings.
 
-#### All client-server communication will now be encrypted by default \[ID_27747\]
+#### All client-server communication will now be encrypted by default \[ID 27747\]
 
 From now on, all client-server communication will be encrypted by default.
 
 ### DMS Protocols
 
-#### Values displayed using scientific notation will now use a dot as separator \[ID_27690\]
+#### Values displayed using scientific notation will now use a dot as separator \[ID 27690\]
 
 Values set to be displayed using scientific notation will now use a dot instead of a comma as separator.
 
 ### DMS Cube
 
-#### DataMiner Cube - Alarm Console - Automatic incident tracking: Timeout and non-timeout alarms will now be grouped \[ID_27299\]\[ID_27877\]
+#### DataMiner Cube - Alarm Console - Automatic incident tracking: Timeout and non-timeout alarms will now be grouped \[ID 27299\]\[ID 27877\]
 
 Up to now, when *Automatic incident tracking* was activated, timeout and non-timeout alarms would not be grouped. From now on, those alarms will be grouped with each other.
 
-#### DataMiner Cube will now display more detailed information when you try to connect to a DataMiner Agent that is starting up \[ID_27308\]\[ID_27770\]
+#### DataMiner Cube will now display more detailed information when you try to connect to a DataMiner Agent that is starting up \[ID 27308\]\[ID 27770\]
 
 When you try to connect to a DataMiner Agent that is starting up or that is being restarted, DataMiner Cube will now display more detailed information regarding the startup process.
 
@@ -46,7 +46,7 @@ Examples of messages that will be displayed:
 - Offloaded files are currently being restored to Cassandra
 - Starting element X
 
-#### Correlation/Automation/Scheduler: Email report configuration \[ID_27521\]\[ID_27812\]\[ID_27878\] \[ID_28032\] \[ID_28038\]\[ID_28081\]
+#### Correlation/Automation/Scheduler: Email report configuration \[ID 27521\]\[ID 27812\]\[ID 27878\] \[ID 28032\] \[ID 28038\]\[ID 28081\]
 
 In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
 
@@ -56,7 +56,7 @@ In an *Email* action of a Correlation rule, an Automation script or a scheduled 
 - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
 - *Dashboard width*: Allows you to select a custom width for the report.
 
-#### Visual Overview: Conditional shape manipulation actions no longer require the shape to be linked to an element, service or view \[ID_27569\]
+#### Visual Overview: Conditional shape manipulation actions no longer require the shape to be linked to an element, service or view \[ID 27569\]
 
 Up to now, the following conditional shape manipulation actions could only be configured on shapes linked to an element, service or view. From now on, these actions will no longer require the shape to be linked to an element, service or view.
 
@@ -69,11 +69,11 @@ Up to now, the following conditional shape manipulation actions could only be co
 > [!NOTE]
 > In case of “Enabled”, the shape in question needs to be clickable.
 
-#### Services and redundancy groups hosted by a disconnected DMA will now also be indicated as being disconnected \[ID_27611\]\[ID_27760\]
+#### Services and redundancy groups hosted by a disconnected DMA will now also be indicated as being disconnected \[ID 27611\]\[ID 27760\]
 
 Up to now, when a DataMiner Agent disconnected from the DataMiner System, the elements hosted by it were indicated as being disconnected by means of a special icon. From now on, also the services and redundancy groups hosted by it will be indicated as being disconnected by means of a special icon.
 
-#### Visual Overview: Linking the view range of a trend graph component to session variables & specifying a custom view range \[ID_27779\]
+#### Visual Overview: Linking the view range of a trend graph component to session variables & specifying a custom view range \[ID 27779\]
 
 A Visio shape showing a trend graph component can now be made to update session variables with its view range (i.e. start time and end time). To do so, add a shape data field of type SetVar, and set its value to “RangeStart:\<VariableA>\|RangeEnd:\<VariableB>”
 
@@ -99,7 +99,7 @@ Example:
 > - You do not have to specify two time values. You can specify a start time, an end time or both (separated by a comma).
 > - The datetime text strings need to be formatted according to the current or invariant culture.
 
-#### Cube launcher tool: Silent installation, modification and uninstallation of Cube \[ID_27795\]
+#### Cube launcher tool: Silent installation, modification and uninstallation of Cube \[ID 27795\]
 
 Using the following command-line arguments, it is now possible to use the Cube launcher tool to silently install, modify and uninstall DataMiner Cube without any user interface.
 
@@ -147,22 +147,22 @@ PathToCubeExe.exe /Modify /Silent /ModifyOptions:ClearProtocolCache,ClearVisioCa
 | /Uninstall        | Open the uninstall window.         |
 | /Uninstall/Silent | Silently uninstall DataMiner Cube. |
 
-#### Protocols & Templates: Information template editor now also allows you to configure parameters of type Button and ToggleButton \[ID_27823\]
+#### Protocols & Templates: Information template editor now also allows you to configure parameters of type Button and ToggleButton \[ID 27823\]
 
 As to button parameters, up to now, the information template editor only allowed you to configure parameters of type PageButton. From now, it will also be possible to configure parameters of type Button and ToggleButton.
 
-#### DataMiner Cube: Buttons to join and leave cluster renamed \[ID_27863\]
+#### DataMiner Cube: Buttons to join and leave cluster renamed \[ID 27863\]
 
 On the *Agents* > *Manage* page in System Center, the *Add cluster* and *Delete cluster* buttons have been renamed to *Join cluster* and *Leave cluster*, respectively.
 
-#### New EPM card settings \[ID_27874\]
+#### New EPM card settings \[ID 27874\]
 
 In the DataMiner Cube user settings, you can now configure the following EPM card settings:
 
 - Default EPM card page
 - How to show EPM card Visual pages
 
-#### Visual Overview: Info keywords can now be used as dynamic placeholders in other shape data fields \[ID_27880\]
+#### Visual Overview: Info keywords can now be used as dynamic placeholders in other shape data fields \[ID 27880\]
 
 All keywords that can be specified in shape data fields of type “Info” can now also be used as dynamic placeholders in shape data fields of other types.
 
@@ -170,7 +170,7 @@ When using one of those keywords in a shape data field of type other that “Inf
 
 Example: \[var:\[NAME\]\]
 
-#### Visual Overview: Automation script session variables & OnClosing shape data field \[ID_27895\]
+#### Visual Overview: Automation script session variables & OnClosing shape data field \[ID 27895\]
 
 In Visual Overview, it is now possible to pass Automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
@@ -212,7 +212,7 @@ Note that, in the session variable named ClosingWindow_Message, you can specify 
 > - The OnClosing and OnClose shape data fields do not influence each other. Both function independently from each other.
 > - If you want to combine OnClosing and OnClose, then in Visual Overview, you can pass session variable X to the OnClosing script and make it return session variable Y. That variable can then be passed to the OnClose script, which can optionally be made to return session variable Z.
 
-#### Visual Overview: New AutoIgnoreExternalChanges option when embedding a Service Manager component \[ID_27899\]
+#### Visual Overview: New AutoIgnoreExternalChanges option when embedding a Service Manager component \[ID 27899\]
 
 Up to now, when embedding a Service Manager component in Visual Overview, you could specify the AutoLoadExternalChanges option if you wanted external changes to be loaded automatically when there were no local changes. From now on, you can also specify the AutoIgnoreExternalChanges option if you want external changes to be discarded automatically.
 
@@ -224,7 +224,7 @@ Both options will keep the information bar from being displayed at the bottom of
 > - As long as there are no (unsaved) client-side changes, external changes will be loaded automatically.
 > - As soon as there are (unsaved) client-side changes, external changes will be discarded.
 
-#### Trending - Pattern matching: New options when adding or editing a tag \[ID_27954\]
+#### Trending - Pattern matching: New options when adding or editing a tag \[ID 27954\]
 
 When adding or editing a tag, you can now select the following additional options:
 
@@ -236,13 +236,13 @@ When adding or editing a tag, you can now select the following additional option
 > [!NOTE]
 > When you save a tag after selecting the *Generate alarm when detected* option, a message box may appear, saying that suggestion events cannot be generated for that tag. This is due to the range of the tag being too large. The tag itself will be saved and detected.
 
-#### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID_27965\]
+#### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID 27965\]
 
 Up to now, the trend percentile was calculated using the most detailed data set that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
 
 From now on, from the moment the trend window contains average data points in its most detailed set, only average data will be used for the calculation. This is also be reflected in the percentile menu, where a warning icon will be shown. A tool tip on the warning icon will indicate when only average data will be used.
 
-#### Cube launcher tool: Aliases \[ID_27975\]\[ID_27999\]
+#### Cube launcher tool: Aliases \[ID 27975\]\[ID 27999\]
 
 When defining a DataMiner Agent in the Cube launcher tool, apart from the host name or IP address, you can now also specify an alias.
 
@@ -255,7 +255,7 @@ Command-line arguments: /Alias=Xyz /Host=hostname
 >
 > The alias will be used as long as the client is connected to the host specified in the Host argument.
 
-#### System Center: Enhanced Database section \[ID_27976\]
+#### System Center: Enhanced Database section \[ID 27976\]
 
 The *Database* section of *System Center* now has three main tab pages.
 
@@ -267,7 +267,7 @@ The *Database* section of *System Center* now has three main tab pages.
 - In the *Offload* tab page, you can configure the data offloads to a central database.
 - In the *Other* tab page, you can configure an additional database.
 
-#### Trending: Real-time pattern matching \[ID_28054\]
+#### Trending: Real-time pattern matching \[ID 28054\]
 
 Up to now, pattern matching happened on the fly when a trend graph was opened. Now, apart from this so-called static pattern matching, DataMiner is also able to perform real-time pattern matching and generate an alarm as soon as a pattern is detected.
 
@@ -314,7 +314,7 @@ In case of real-time pattern matching, pattern occurrences are communicated to t
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: Generic Query Interface \[ID_24048\]\[ID_24548\]\[ID_25898\]\[ID_25921\]\[ID_26050\] \[ID_26153\]\[ID_26448\]\[ID_26477\]\[ID_26793\]\[ID_27616\]\[ID_27678\]\[ID_27949\]\[ID_27987\]\[ID_28010\] \[ID_28071\]
+#### Dashboards app: Generic Query Interface \[ID 24048\]\[ID 24548\]\[ID 25898\]\[ID 25921\]\[ID 26050\] \[ID 26153\]\[ID 26448\]\[ID 26477\]\[ID 26793\]\[ID 27616\]\[ID 27678\]\[ID 27949\]\[ID 27987\]\[ID 28010\] \[ID 28071\]
 
 The Generic Query Interface allows you to efficiently tap into the wealth of data available in your DataMiner System. In this release, the interface is available via the *Queries* data input for Bar chart and State visualizations, as well as in the new Table and Pie Chart visualizations, which were especially created for this feature. In future releases, additional functionality using the Generic Query Interface will become available. Note that this feature is only available if DataMiner uses a Cassandra database. For some queries, an Elasticsearch database is also required.
 
@@ -415,7 +415,7 @@ In addition, the following layout options can now be configured for this visuali
 - *Legend*: The legend can be hidden. If it is set to be displayed, you can select whether it should be displayed on the left, on the right, at the top or at the bottom of the visualization.
 - *Tooltips*: Tooltips can be hidden. If they are set to be displayed, you can select whether these should include the label, dimension and/or value.
 
-#### Dashboards app: Selecting an empty folder will now cause a 'Create dashboard' button and a 'Import dashboard' button to appear \[ID_27579\]\[ID_27844\]
+#### Dashboards app: Selecting an empty folder will now cause a 'Create dashboard' button and a 'Import dashboard' button to appear \[ID 27579\]\[ID 27844\]
 
 When, in the sidebar of the Dashboards app, you select an empty folder, two large buttons will now appear in the large pane on the right.
 
@@ -427,17 +427,17 @@ When, in the sidebar of the Dashboards app, you select an empty folder, two larg
 > [!NOTE]
 > The two above-mentioned options will also be available in the context menu when you right-click a folder in the navigation pane.
 
-#### Dashboards app: Default themes updated \[ID_27636\]
+#### Dashboards app: Default themes updated \[ID 27636\]
 
 In the Dashboards app, the default themes have all been updated.
 
-#### Dashboards app - Line chart component: Value range \[ID_27774\]
+#### Dashboards app - Line chart component: Value range \[ID 27774\]
 
 When configuring a line chart component, you can now specify a value range for the trend graph by entering a minimum limit and/or a maximum limit.
 
 The value range you specify will apply to all trend lines displayed on the graph.
 
-#### Dashboards app - Line chart component: Show minimum, maximum and/or average trend lines \[ID_27815\]
+#### Dashboards app - Line chart component: Show minimum, maximum and/or average trend lines \[ID 27815\]
 
 When configuring a line chart component that does not show real-time trend data, you can now make the trend graph show a minimum, a maximum and/or an average trend line by switching on the following options:
 
@@ -445,7 +445,7 @@ When configuring a line chart component that does not show real-time trend data,
 - Show minimum (default setting: switched off)
 - Show maximum (default setting: switched off)
 
-#### Dashboards app - Parameter feed: 'Auto-select all' option \[ID_27816\]\[ID_28033\]
+#### Dashboards app - Parameter feed: 'Auto-select all' option \[ID 27816\]\[ID 28033\]
 
 When configuring the Parameter feed, up to now, it was possible to either have a specific number of indices selected automatically or have all indices selected automatically.
 
@@ -457,7 +457,7 @@ Now, the above-mentioned options have been replaced by the “Auto-select all”
 - If you select the “Select all items” option, "Select all" will select all items. For a partial table, only the items from the first page will be selected.
 - If you select the “Select specific number of items” option, a box is displayed below it. In this box, you should specify how many items "Select all" should select. For a partial table, these items will be selected across different pages.
 
-#### Dashboards app - Line chart component: New 'Chart limit behavior' setting \[ID_27841\]
+#### Dashboards app - Line chart component: New 'Chart limit behavior' setting \[ID 27841\]
 
 When configuring a line chart component, you can now use the *Chart limit behavior* setting to indicate what needs to happen when the number of parameters in the chart exceeds the defined chart limit:
 
@@ -466,7 +466,7 @@ When configuring a line chart component, you can now use the *Chart limit behavi
 | Disable parameters in legend | The excess parameters are disabled in the chart but remain available in the chart legend, so that they can be enabled again manually. This option is selected by default. |
 | Create additional charts | Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit. |
 
-#### Dashboards app - Pivot table component: Sort ascending/descending \[ID_27862\]
+#### Dashboards app - Pivot table component: Sort ascending/descending \[ID 27862\]
 
 When configuring a pivot table component, you can now find the following settings in the Sort section of the Settings tab:
 
@@ -480,7 +480,7 @@ When configuring a pivot table component, you can now find the following setting
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Tree view items now have an IsCollapsed property \[ID_27756\]
+#### Interactive Automation scripts: Tree view items now have an IsCollapsed property \[ID 27756\]
 
 When, in an interactive Automation script, you define a tree view control (i.e. a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
 
@@ -489,13 +489,13 @@ When, in an interactive Automation script, you define a tree view control (i.e. 
 
 ### DMS Web Services
 
-#### Web Service API v1: New GetDataMinerClusterName method \[ID_27951\]
+#### Web Service API v1: New GetDataMinerClusterName method \[ID 27951\]
 
 The GetDataMinerClusterName method can now be used to retrieve the name of the DataMiner System a DMA is part of.
 
 ### DMS Mobile apps
 
-#### Ticketing app: Move to Elasticsearch database and other improvements \[ID_24667\]\[ID_25539\] \[ID_25713\]\[ID_26644\]\[ID_26676\]\[ID_26677\]\[ID_26911\]\[ID_26982\]\[ID_27974\]\[ID_28016\]\[ID_28043\] \[ID_28079\]\[ID_28153\]
+#### Ticketing app: Move to Elasticsearch database and other improvements \[ID 24667\]\[ID 25539\] \[ID 25713\]\[ID 26644\]\[ID 26676\]\[ID 26677\]\[ID 26911\]\[ID 26982\]\[ID 27974\]\[ID 28016\]\[ID 28043\] \[ID 28079\]\[ID 28153\]
 
 Multiple changes and improvements have been implemented to the Ticketing app. The most important change is that the app will now use the Elasticsearch database instead of the Cassandra database.
 
@@ -615,13 +615,13 @@ Finally, the following changes have also been implemented:
 > [!NOTE]
 > The Ticketing Gateway entry in the Cube Logging app now refers to the new file.
 
-#### HTML5 apps: Loading indicator of selection boxes will now be displayed on the right \[ID_27871\]
+#### HTML5 apps: Loading indicator of selection boxes will now be displayed on the right \[ID 27871\]
 
 When values are being loaded into a selection box, from now on, the loading indicator will be displayed on the right instead of on the left.
 
 ### DMS Service & Resource Management
 
-#### Binding between a VirtualFunctionResource and a physical device element will now automatically be updated when the protocol of the device element changes \[ID_27466\]
+#### Binding between a VirtualFunctionResource and a physical device element will now automatically be updated when the protocol of the device element changes \[ID 27466\]
 
 When a virtual function resource is bound to a physical device element, that binding will now automatically be updated when the protocol of the physical device element changes.
 
@@ -635,7 +635,7 @@ When a virtual function resource is bound to a physical device element, that bin
 
 ### DMS tools
 
-#### StandaloneElasticBackup tool \[ID_27683\]
+#### StandaloneElasticBackup tool \[ID 27683\]
 
 The StandaloneElasticBackup.exe tool allows you to back up and restore Elasticsearch database clusters.
 

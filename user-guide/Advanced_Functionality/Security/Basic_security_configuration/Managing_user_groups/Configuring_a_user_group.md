@@ -8,8 +8,6 @@ To configure a user group:
 
 1. In the *Users / Groups* section in System Center, go to the *Groups* tab and select the group in question.
 
-1. If you are using a version of DataMiner prior to 9.5.4, click the *Edit* button in the lower right corner.
-
 1. To change the group name, fill in the new name in the *Name* field of the *Details* tab.
 
 1. To change the group’s security level, enter a new level in the *Group level* field on the *Details* tab.

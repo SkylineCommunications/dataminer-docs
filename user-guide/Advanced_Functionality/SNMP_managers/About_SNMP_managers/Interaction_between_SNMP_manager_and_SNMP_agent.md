@@ -14,7 +14,7 @@ The SLSNMPManager and SLSNMPAgent processes allow a DataMiner Agent to exchange 
 
 ## Graphical representation
 
-![](~/user-guide/images/SNMPafter903.jpg)
+![Interaction between SNMP manager and agent](~/user-guide/images/SNMPafter903.jpg)
 
 ## SLSNMPManager
 
@@ -24,13 +24,15 @@ The SLSNMPManager process communicates with devices acting as SNMP agents.
 
 - It sets parameter values on devices by sending SNMP Set messages.
 
-- It uses SNMP++ to receive notifications from devices.
+- By default, it uses SNMP++ to receive notifications from devices.
+
+- For each SNMP version (SNMPv1, SNMPv2, and SNMPv3), there is a separate SLSNMPManager process.
 
 The UDP ports to be used are set as follows:
 
-- The port on which the device will listen for Get and Set messages (i.e. the “polling port”) has to be specified during the creation of the element associated with that device. Default: 161
+- The port on which the device will listen for Get and Set messages (i.e. the "polling port") has to be specified during the creation of the element associated with that device. Default: 161
 
-- By default, only the SNMPv3 process will receive notifications, on port 162. It will then forward them to the SNMPv1 and SNMPv2 processes when necessary:
+- By default, only the SLSNMPManager process for SNMPv3 will receive notifications, on port 162. It will then forward them to the SNMPv1 and SNMPv2 processes when necessary:
 
   - The SNMPv1 process will receive all notifications (SNMPv1, SNMPv2 and SNMPv3).
 
@@ -46,7 +48,7 @@ The SLSNMPAgent process communicates with third-party applications acting as SNM
 
 - It sends out SNMP notifications to all external SNMP managers defined in the DataMiner System.
 
-- It uses SNMP++ for SNMPv1 traps and SNMPv3 traps and inform messages, and the WinSNMP API for SNMPv2 traps and inform messages. From DataMiner 10.0.13 onwards, it also uses SNMP++ for SNMPv2 traps and inform messages.
+- It uses SNMP++ for all traps and inform messages.
 
 The UDP ports to be used are set as follows:
 
@@ -70,5 +72,5 @@ The UDP ports to be used are set as follows:
 
 > [!NOTE]
 >
-> - From DataMiner 9.6.11 onwards, the DataMiner SNMP agent function is disabled by default. It can be enabled in the file *DataMiner.xml* (see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)). Note that this only affects DataMiner itself, not the virtual SNMP agents that can be enabled for elements, so that only active alarms and general DataMiner information cannot by polled by default.
+> - The DataMiner SNMP agent function is disabled by default. It can be enabled in the file *DataMiner.xml* (see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)). Note that this only affects DataMiner itself, not the virtual SNMP agents that can be enabled for elements, which means that only active alarms and general DataMiner information cannot be polled by default.
 > - By default, the SLSNMPAgent process listens for Get and Set messages using the same port as the Windows SNMP service. As such, if the latter has to run alongside SLSNMPAgent, either change the port used by the Windows SNMP service or change the port used by SLSNMPAgent. For more information, see [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports).

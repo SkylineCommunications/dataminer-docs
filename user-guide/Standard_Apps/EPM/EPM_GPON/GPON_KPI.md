@@ -1,10 +1,10 @@
 ---
-uid: GPON_KPI
+uid: xPON_KPI
 ---
 
-# Available parameters in EPM GPON
+# Available parameters in EPM xPON
 
-This page lists the parameters available per topology level defined in the GPON EPM solution, except the parameters acquired for the ONT. Those are listed under [EPM GPON ONT parameters](xref:GPON_ONT)
+This page lists the parameters available per topology level defined in the xPON EPM solution, except the parameters acquired for the ONT. Those are listed under [EPM xPON ONT parameters](xref:xPON_ONT)
 
 ## KPIs & KQIs per aggregation level
 
@@ -74,7 +74,7 @@ For each KPI, a value is calculated that can be used to generate alarms and make
 - **Percentage No Data State**: The calculated percentage of ONTs for which no data has been received since the last restart.
 
 > [!NOTE]
-> For a detailed explanation of the OOS (Out of Spec) calculation and the different states that can be assigned to an ONT, see [EPM GPON parameter thresholds](xref:GPON_parameters_thresholds).
+> For a detailed explanation of the OOS (Out of Spec) calculation and the different states that can be assigned to an ONT, see [EPM xPON parameter thresholds](xref:xPON_parameters_thresholds).
 
 ## System parameters
 

@@ -2,6 +2,8 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
+      - name: Getting started tutorials
+        topicUid: Getting_Started_Tutorials
       - name: DataMiner Analytics tutorials
         topicUid: Analytics_Tutorials
       - name: Business Intelligence tutorials
@@ -16,6 +18,8 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
+      - name: DataMiner EPM tutorials
+        topicUid: EPM_tutorials
       - name: DataMiner IDP tutorials
         topicUid: IDP_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials

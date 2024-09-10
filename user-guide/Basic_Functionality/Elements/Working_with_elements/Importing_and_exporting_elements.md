@@ -29,14 +29,13 @@ uid: Importing_and_exporting_elements
 > - Only import CSV files that have been created by DataMiner during a previous export. See [Exporting elements to a CSV file](#exporting-elements-to-a-csv-file).
 > - For more information on how you can modify an exported CSV file for later import, see [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
 > - For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
-> - As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
 > - For elements communicating via SNMPv3, some fields in the CSV file have a different meaning. See [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
 
 ### Duplicate name check
 
 When you import elements via a CSV file, DataMiner checks for duplicate names.
 
-Name checks are case-insensitive. This means that for instance “element1” is considered identical to “ELEMENT1”.
+Name checks are case-insensitive. This means that for instance "element1" is considered identical to "ELEMENT1".
 
 - **Check for duplicate element names in the CSV file**: If several lines in the CSV file contain the same element name, none of the lines sharing that same name will be imported. For each of those lines, an error message like the following one will be generated:
 
@@ -60,18 +59,16 @@ Name checks are case-insensitive. This means that for instance “element1” is
    > [!NOTE]
    >
    > - To export all elements in a DMS, use the root view.
+   > - To export several elements at the same time, select them in the list on a view card (using Shift or Ctrl) and then right-click them.
    > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
-   > - From DataMiner 10.0.9 onwards, you can select multiple elements in the list on a view card (using Shift or Ctrl) and right-click them to export those elements only.
 
 1. In the menu, select *Actions \> Export*.
 
 1. In the lower left corner of the *Export* window, select *Export to comma-separated file (\*.csv), clipboard or print*.
 
-   Prior to DataMiner 9.6.3, select the option *Export all elements to CSV*.
-
 1. In the *WHAT* section of the *Export* window, select what is to be included in the export:
 
-   - All data (i.e. the full list, with all columns included),
+   - All data (suitable for CSV import),
 
    - The data displayed in the element list of a view card,
 
@@ -88,7 +85,7 @@ Name checks are case-insensitive. This means that for instance “element1” is
    - *print*: exports the element information to a printer.
 
    > [!NOTE]
-   > Private information, such as SNMPv3 authentication and encryption passwords, will not be exported for security reasons. 
+   > Private information, such as SNMPv3 authentication and encryption passwords, will not be exported for security reasons.
 
 1. Click *Export*.
 

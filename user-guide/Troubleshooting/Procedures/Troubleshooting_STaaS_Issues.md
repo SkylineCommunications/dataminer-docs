@@ -2,7 +2,7 @@
 uid: Troubleshooting_STaaS_Issues
 ---
 
-# Troubleshooting STaaS issues
+# Troubleshooting – STaaS
 
 This page provides solutions to common issues that you may encounter while using STaaS. It covers problems related to dataminer.services connectivity, registration, token expiration, and service reachability.
 
@@ -44,7 +44,7 @@ To resolve this issue, go to Task Manager and restart the *DataMiner CloudGatewa
 
 ## The session token has expired
 
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
+Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than six days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
 
 When you encounter this issue, you will find entries similar to the examples below in the *SLCloudStorage.txt* log file:
 

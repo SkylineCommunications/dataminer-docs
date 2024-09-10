@@ -172,6 +172,6 @@ The packager tool also allows the creation of a protocol package (.dmprotocol) f
 
 ## Low-Code-App-Extensions
 
-The *Low Code App Extensions* script is an Interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
+The *Low Code App Extensions* script (or "Low-Code App Editor") is an Interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
 
 For more information on how to install and use this script, refer to [Low Code App Extensions](https://github.com/SkylineCommunications/Low-Code-App-Extensions).

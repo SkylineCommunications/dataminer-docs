@@ -2,7 +2,7 @@
 uid: Investigating_OpenSearch_Issues
 ---
 
-# Investigating OpenSearch issues
+# Troubleshooting – OpenSearch
 
 Search the OpenSearch logging for exceptions: `/var/log/opensearch/[cluster.name].log`
 
@@ -169,3 +169,17 @@ To resolve this, you may need to increase the start timeout for systemd (see [sy
    ```bash
    sudo systemctl status opensearch
    ```
+
+## Error when executing securitadmin.sh
+
+```text
+ERR: An unexpected SSLHandshakeException occurred: Received fatal alert: certificate_unknown
+```
+
+When OpenSearch shows this generic error, check the OpenSearch logging (refer to the top of this page for details) to see if you can find a root cause.
+
+If you used your own certificates, make sure that your admin certificate is signed by the same rootCA as your node certificates. You can validate this with following command:
+
+```bash
+openssl verify -verbose -CAfile [Path To Your RootCA] [Path To Your Admin Certificate]
+```

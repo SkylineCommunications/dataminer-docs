@@ -1,10 +1,11 @@
 ---
 uid: I-DOCSIS_parameters_cm_ds_qam_ch
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – CM DS QAM CH
+# Integrated DOCSIS parameters – CM DS QAM CH
 
-This page contains an overview of the CM DS QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the CM DS QAM CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
 - **Name \[IDX]**: Direct value. The display name of the CM-channel relation.
 
@@ -24,7 +25,7 @@ This page contains an overview of the CM DS QAM CH parameters available in the I
 
 - **Node Segment Name**: Direct value. The display name of the node segment.
 
-  Concatenation of the CMTS Name and the unique combination of a DS (downstream) port and US (upstream) port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique combination of US/DS port serving at least one cable modem.
+  Concatenation of the CMTS Name and the unique combination of a DS (downstream) port and US (upstream) port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the Integrated DOCSIS service. There will be a node segment every time the connector detects a unique combination of US/DS port serving at least one cable modem.
 
 - **DS QAM Ch Frequency**: Direct value.
 

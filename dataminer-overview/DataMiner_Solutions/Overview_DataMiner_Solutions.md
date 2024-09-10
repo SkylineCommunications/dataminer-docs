@@ -35,7 +35,7 @@ These are the main solutions that are currently available:
 - [dataminer.MediaOps](xref:Overview_dataminer_MediaOps)
 - [DOM Viewer](xref:domviewer_about)
 
-## Common data model
+## Common Data Model
 
 ***The backbone model for your business and operation.***
 
@@ -56,6 +56,9 @@ Key features:
 - **Backwards compatibility**: Data sets (instances) within the Common Data Model are designed to be backwards compatible, ensuring smooth transitions and minimal disruptions during updates or migrations.
 
 - **Extendable and customizable**: Users can extend the Common Data Model by linking custom DataMiner Object Models into the CDM, tailoring the framework to their specific organizational needs and requirements
+
+> [!TIP]
+> For an overview of the complete CDM, see [Common Data Model](xref:CDM).
 
 ### High-level overview
 

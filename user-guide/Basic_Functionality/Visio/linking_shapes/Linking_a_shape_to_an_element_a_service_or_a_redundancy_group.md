@@ -21,15 +21,6 @@ When a user clicks such a shape, by default, the Visio drawing linked to the ele
 > - Depending on the configuration of a redundancy group, the right-click menu of a shape that is linked to it may contain switching options.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > OBJECTS]* page.
 
-In this section:
-
-- [Basic shape data field configuration](#basic-shape-data-field-configuration)
-- [Linking a shape to an element that is part of a service](#linking-a-shape-to-an-element-that-is-part-of-a-service)
-- [Having a subshape of an Element shape display the alarm color of the element](#having-a-subshape-of-an-element-shape-display-the-alarm-color-of-the-element)
-- [Having the Visio drawing opened in a new card](#having-the-visio-drawing-opened-in-a-new-card)
-- [Making the shape navigate to a specific page](#making-the-shape-navigate-to-a-specific-page)
-- [Service navigation](#service-navigation)
-
 ## Basic shape data field configuration
 
 Add a shape data field of type **Element** to the shape. Set its value to the item reference, optionally followed by a pipe character ("\|") and the Visio page number (starting from 1) of the page that should be displayed.
@@ -84,7 +75,7 @@ You can refer to an element, service or redundancy group in the following ways:
 
 As service aliases are only unique within a particular service, using service aliases will only work in Visio files that are linked to a service and for items (elements or services) belonging to that service.
 
-However, from DataMiner 9.6.12 onwards, it is possible to specify the following shape data in order to give a shape linked to a service child element or service a service context, even if the Visio file is not linked to the service:
+However, you can use the following shape data in order to give a shape linked to a service child element or service a service context, even if the Visio file is not linked to the service:
 
 | Shape data field | Value                              |
 | ---------------- | ---------------------------------- |
@@ -120,7 +111,7 @@ In order to make sure that the Visio drawing of the element, service or redundan
 
 ## Making the shape navigate to a specific page
 
-By default, a shape linked to an element or service navigates to a Visual page when clicked. However, from DataMiner 9.6.12 onwards, you can make the shape navigate to a specific (visual, data or other) page instead.
+By default, a shape linked to an element or service navigates to a Visual page when clicked. However, you can make the shape navigate to a specific (visual, data or other) page instead.
 
 To do so, add the following shape data to the shape:
 

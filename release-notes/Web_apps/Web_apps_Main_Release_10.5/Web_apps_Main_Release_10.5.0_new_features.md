@@ -11,7 +11,7 @@ uid: Web_apps_Main_Release_10.5.0_new_features
 
 ## New features
 
-#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID_37659]
+#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID 37659]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 

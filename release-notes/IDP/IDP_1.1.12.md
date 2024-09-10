@@ -6,7 +6,7 @@ uid: IDP_1.1.12
 
 ## New features
 
-#### Process Automation: Discover Data Sources activity \[ID_24019\]\[ID_27581\]
+#### Process Automation: Discover Data Sources activity \[ID 24019\]\[ID 27581\]
 
 To allow users to discover elements with IDP using Process Automation, IDP now supports the *SLC IDP Discover Data Sources* activity. To support this, a number of changes have been implemented in the *Skyline IDP Discovery* driver and a new “Profile Load” script *IDP_Discovery_Actions_Start* is available.
 
@@ -14,7 +14,7 @@ The script accepts the parameters *Info*, *ProfileInstance* and *ProcessInfo*. W
 
 On the *Settings* data page of the *DataMiner IDP Discovery* element, the *Max Devices per Token* setting allows you to customize how many devices can be included in a response.
 
-#### Process Automation: Provision Element activity \[ID_26019\]
+#### Process Automation: Provision Element activity \[ID 26019\]
 
 To allow users to provision elements with IDP using Process Automation, IDP now supports the *SLC IDP Provision Element* activity. A number of changes have also been implemented in the *Skyline Generic Provisioning* driver and a new “Profile Load” script *IDP_Provisioning_CreateElement* is available.
 
@@ -28,7 +28,7 @@ The script accepts the parameters *Info*, *ProfileInstance* and *ProcessInfo*. I
 
 The *SLC_ProvisionElement_Result* gateway key contains the status of the provisioning operation: *Success* if the element was successfully provisioned, and *Fail* if it was not provisioned.
 
-#### Token metadata can replace CI type field values in Provision Element activity \[ID_26799\]
+#### Token metadata can replace CI type field values in Provision Element activity \[ID 26799\]
 
 When provisioning is done via Process Automation, the token can contain metadata that can replace the CI type fields. For this to work, the name of the metadata must consist of the *IDP\_* prefix followed by the relevant JSON object from the CI type. For example, to overwrite the element description from the CI type, use the metadata name *IDP\_$.Provisioning.Configuration.Description* and place the new element description in the metadata value. If the metadata value contains special characters, e.g. double quotation marks, place a backslash in front of these to make sure they are not misinterpreted (e.g. \[*\\"Test\\", \\"Test 123\\"\]*).
 
@@ -69,7 +69,7 @@ Other examples:
   - Metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].DMAElementSnmpPortInfo\[0\].GetCommunity*
   - Metadata value: "customGetCommunity"
 
-#### Process Automation: Reapply CI Type activity \[ID_26950\]
+#### Process Automation: Reapply CI Type activity \[ID 26950\]
 
 To allow users to reapply a CI type to an element using Process Automation, IDP now supports the *SLC IDP Reapply CI Type* activity. The “Profile Load” script *IDP_Provisioning_ReapplyCIType* will receive a request from Process Automation, process it and send a request to the provisioning element to reapply the CI type. When the CI type has been reapplied to the selected elements, a token will be generated with the received response.
 
@@ -87,7 +87,7 @@ In addition, the element for which the CI type is reapplied will be removed from
 
 The *SLC_ReapplyCIType_Result* gateway contains the status of the reapply operation: *Success* if the CI type was successfully reapplied for all elements, and *Fail* if it was not reapplied.
 
-#### Process Automation: Reassign CI Type activity \[ID_26951\]
+#### Process Automation: Reassign CI Type activity \[ID 26951\]
 
 To allow users to reassign a CI type for an element using Process Automation, IDP now supports the *SLC IDP Reassign CI Type* activity. The script *IDP_Provisioning_ReassignCIType* will receive a request from Process Automation, process it and send a request to the provisioning element to reassign the CI type. When the CI type has been reassigned to the selected elements, a token will be generated with the received response.
 
@@ -105,17 +105,17 @@ In addition, the element for which the CI type is reassigned will be removed fro
 
 The *SLC_ReassignCIType_Result* gateway key contains the current status of the reassign operation: *Success* if the CI type was successfully reassigned for all elements, *Fail* if it was not reassigned, and *PartialSuccess* if it was only reassigned for some of the elements.
 
-#### Process Automation: Delete Element activity \[ID_27525\]
+#### Process Automation: Delete Element activity \[ID 27525\]
 
 To allow users to delete a managed element using Process Automation, IDP now supports the *SLC IDP Delete Element* activity.
 
 The *SLC_DeleteElement_Result* gateway key contains the current status of the activity: *Success* if all elements were deleted, *Fail* if none of the elements were deleted, and *PartialSuccess* if only some of the elements were deleted.
 
-#### Process Automation configuration in setup wizard \[ID_27664\]
+#### Process Automation configuration in setup wizard \[ID 27664\]
 
 The IDP setup wizard now allows you to configure and set up the Skyline Booking Manager for use with IDP in the context of Process Automation, so that SRM objects can be created for IDP activities.
 
-#### Process Automation Activity wizard \[ID_26308\]\[ID_27967\]\[ID_28623\]\[ID_28776\]\[ID_28896\]
+#### Process Automation Activity wizard \[ID 26308\]\[ID 27967\]\[ID 28623\]\[ID 28776\]\[ID 28896\]
 
 When you want to create or schedule new processes, you can now click *New* on the *Processes* > *Schedules* tab of the IDP app. This will launch the Process Automation wizard. This is a custom script that allows users to configure a process in a streamlined way. However, note that this is only available if DataMiner Process Automation has been installed in your DataMiner System.
 
@@ -148,13 +148,13 @@ When you select a custom option in the wizard and you start from a blank profile
 
 The Process Automation wizard can work both with profile instances configured in the Profiles and with volatile profile instances, which will not be visible to the user when the process runs.
 
-#### Process Automation: Update Software Image activity \[ID_28064\]
+#### Process Automation: Update Software Image activity \[ID 28064\]
 
 To allow users to schedule software updates using Process Automation, IDP now supports the *SLC IDP Update Software Image* activity. No parameters need to be specified for the node profile definition of this activity, but an input interface is required that specifies the elements for which a software update should occur (possible values: Element ID, Element Name, Element Property, IP Address, IP Address List, IP Address Range, and View).
 
 When the activity starts, it runs the "Software update script" configured in the CI type for each element in the input interface. If the activity is successful, a success response with *SLC_UpdateSoftwareImage_Result* gateway key is sent with the value *Success*. If the activity fails, the same gateway key is sent with the value *Fail*.
 
-#### Process Automation: Activities loaded based on virtual platform \[ID_28204\]
+#### Process Automation: Activities loaded based on virtual platform \[ID 28204\]
 
 In the Process Automation wizard, the list of allowed activities can be dynamically loaded based on the virtual platform configured in the Booking Manager. For this purpose, the list of activities must be provided in a JSON file with the same name as the virtual platform. This file must be located in the *DMA_COMMON_DOCUMENTS\\SRM* subfolder of the DataMiner Documents folder. Such a file will be included with IDP out of the box.
 
@@ -176,13 +176,13 @@ You can find an example of this JSON configuration below.
 }
 ```
 
-#### Process Automation: Auto Rack Assign Position activity \[ID_28308\]
+#### Process Automation: Auto Rack Assign Position activity \[ID 28308\]
 
 To allow users to schedule an automatic rack assignment using Process Automation, IDP now supports the *SLC IDP Auto Rack Assign Position* activity. This activity requires an input interface that specifies the elements for which the automatic rack assignment should occur (possible values: Element ID, Element Name, Element Property, IP Address, IP Address List, IP Address Range, and View).
 
 When the activity starts, it runs the "Rack assignment script" configured in the CI type for each element in the input interface. If the activity is successful, a success response with *SLC_AutoAssignRackPosition* gateway key is sent with the value *Success*. If the activity fails, the same gateway key is sent with the value *Fail*.
 
-#### Configuration Management: Configuration update on multiple elements with any configuration backup from the DataMiner Configuration Archive \[ID_28419\]
+#### Configuration Management: Configuration update on multiple elements with any configuration backup from the DataMiner Configuration Archive \[ID 28419\]
 
 The IDP app now has a new *Configuration* > *Update* tab, where you can select a configuration backup file and apply it to multiple selected elements. The backup file is then copied from the DataMiner Configuration Archive to the working directory on the DMAs hosting the selected elements. IDP will then execute the "Configuration Update Script" configured in the CI type on the hosting DMAs and inform them of the local path to the file. The script will access the file and execute the necessary actions to update the configuration of the elements.
 
@@ -193,7 +193,7 @@ The following other changes have also been implemented:
 - On the *Processes* > *Automation* page, *Restore Default* has been renamed to *Configuration Update*.
 - On the *Admin* > *CI Types* > *Configuration* page, *Completeness Default* has been renamed to *Completeness Update*, *Default script* has been renamed to *Update script*, and *Default Directory* has been renamed to *Default Update File*.
 
-#### IDP setup wizard now allows configuration with predefined values and unattended running \[ID_28645\]
+#### IDP setup wizard now allows configuration with predefined values and unattended running \[ID 28645\]
 
 The IDP setup wizard can now be configured with predefined values or even executed without any user interaction. This is possible using the new *SetupWizardInputData* object in the namespace *Skyline.DataMiner.DataMinerSolutions.IDP.SetupWizard.Silent*.
 
@@ -220,7 +220,7 @@ The following things can be configured with this object:
 
 If invalid or incompatible data are configured for a screen that is set to be executed without user interaction, the setup wizard will fail. If the wizard is run with user interaction and an error is detected in a configuration group of the *Extra Configuration* step, that group will automatically be expanded.
 
-#### Admin \> Configuration \> Network Shares page renamed and adapted \[ID_28865\]
+#### Admin \> Configuration \> Network Shares page renamed and adapted \[ID 28865\]
 
 The *Admin* > *Configuration* > *Network Share* page of the IDP app has been renamed to *Network Shares* and now contains a list of the working directories on the network shares.
 
@@ -228,11 +228,11 @@ This list allows users to specify a working directory to transfer the configurat
 
 In addition, the *Archive Settings* title at the top of the page has been changed to *DataMiner Configuration Archive*.
 
-#### Refresh Agents button on Admin \> Provisioning page \[ID_28871\]
+#### Refresh Agents button on Admin \> Provisioning page \[ID 28871\]
 
 On the *Admin* > *Provisioning* page of the IDP app, a *Refresh Agents* option is available, which allows you to manually refresh the list of DMAs for which you can configure IP ranges and from which you can select a DMA to be the Fallback Agent.
 
-#### Selection of provisioning DMA \[ID_28997\]
+#### Selection of provisioning DMA \[ID 28997\]
 
 It is now possible to select on which DMA an element will be provisioned. After you run a discovery, on the *Inventory* > *Discovered* tab, you can now select the DMA name.
 
@@ -242,18 +242,18 @@ IDP will also automatically suggest a DMA name. To do so, it will check for a co
 
 ### Fixes
 
-#### Exception when long file paths were used in IDP configuration \[ID_28674\]
+#### Exception when long file paths were used in IDP configuration \[ID 28674\]
 
 When a file path length was longer than 260 characters, or longer than 240 characters in case of a directory path, it could occur that the IDP configuration throw an exception.
 
-#### Overlapping text in CI type management UI \[ID_28728\]
+#### Overlapping text in CI type management UI \[ID 28728\]
 
 When you deleted or duplicated a CI type, it could occur that some text overlapped in the UI.
 
-#### Problem accessing temporary configuration backup files \[ID_28803\]
+#### Problem accessing temporary configuration backup files \[ID 28803\]
 
 Previously, when a configuration backup was executed, IDP temporarily stored the files in the *Windows\\TEMP* folder and then moved them to a share location. However, in some cases this could cause issues when users were unable to connect to the *Windows\\TEMP* folder, so files will now be immediately transferred to the share location instead.
 
-#### Incompatibility with DataMiner 10.1.1 or higher \[ID_28826\]
+#### Incompatibility with DataMiner 10.1.1 or higher \[ID 28826\]
 
 If the IDP app was used with DataMiner version 10.1.1 or higher, run-time errors could occur. IDP has now been optimized to be fully compatible with the changes introduced in DataMiner 10.1.1.

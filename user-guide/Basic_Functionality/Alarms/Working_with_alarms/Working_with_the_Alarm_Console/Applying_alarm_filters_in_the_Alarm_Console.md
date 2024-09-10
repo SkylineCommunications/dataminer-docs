@@ -24,9 +24,6 @@ This filter box can be used in different ways:
 
   - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA with [indexing database](xref:Indexing_Database).
 
-    > [!NOTE]
-    > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
-
   - *Copy \[highlighted text\]*
 
   - *Clear filter*: Only available if you have already added items to the filter.
@@ -86,7 +83,7 @@ To add such a filtered tab page:
    >
    > - For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
    > - For more information on using regular expressions in filters, see [Alarm filters using regular expressions](#alarm-filters-using-regular-expressions).
-   > - From DataMiner 9.0.5 onwards, it is possible to filter the Alarm Console based on a Visual Overview session variable. To do so, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](xref:Placeholders_for_variables_in_shape_data_values#varvariablename).
+   > - To filter the Alarm Console based on a Visual Overview session variable, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](xref:Placeholders_for_variables_in_shape_data_values#varvariablename).
    > - If you create a *Services* filter in a history tab, and you want to include services that have been deleted, at the bottom of the box where you can select services to filter on, select the *Load deleted services* checkbox (available from DataMiner 10.2.0/10.1.4 onwards).
 
 1. If you want, you can also combine several filters, using logical operators (AND, OR).
@@ -98,7 +95,7 @@ To add such a filtered tab page:
    > [!NOTE]
    >
    > - If you chose to display history alarms, the *Count alarms* option will only work with certain filter combinations. If you configure a filter combination for which the option is not available, a notification message will appear.
-   > - From DataMiner 9.6.0 \[CU25\], 10.0.0 \[CU19\], 10.1.0 \[CU8\] and 10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
+   > - From DataMiner 10.1.0 [CU8]/10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
 
 1. To see the filtered alarms in the Alarm Console tab, click *Show alarms*.
 
@@ -106,12 +103,7 @@ To add such a filtered tab page:
 
 ## Creating a search tab in the Alarm Console
 
-When you are connected to a DMA with [indexing database](xref:Indexing_Database), the Alarm Console provides an additional option to create a dynamic search tab.
-
-> [!NOTE]
-> Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
-
-To create such a tab:
+When you are connected to a DMA with [indexing database](xref:Indexing_Database), the Alarm Console provides an additional option to create a dynamic search tab:
 
 1. Click the *+* symbol in the header of the Alarm Console to open a new tab.
 
@@ -133,7 +125,7 @@ Once the first 50 alarms have been retrieved, a graphical representation of the 
 
 ### Special keywords in the search tab
 
-In the search box, you can use the following special keywords, followed by a colon (“:”) and a search phrase:
+In the search box, you can use the following special keywords, followed by a colon (":") and a search phrase:
 
 - Severity
 
@@ -163,11 +155,11 @@ In the search box, you can use the following special keywords, followed by a col
 
 - ServiceProperty\_\<PropertyName>
 
-For example, if you want to search alarms associated with elements of which the name resembles “probe”, then you can enter “Elementname:probe”.
+For example, if you want to search alarms associated with elements of which the name resembles "probe", then you can enter "Elementname:probe".
 
 ## Filtering alarms on alarm focus
 
-From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or “alarm focus score” to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time. The alarm focus score is based on a combination of likelihood, frequency and severity.
+The DataMiner Analytics software assigns an estimated likelihood or "alarm focus score" to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time. The alarm focus score is based on a combination of likelihood, frequency, and severity.
 
 - Likelihood scores are used to spot daily patterns. If an alarm occurs at the same time every day, it will be assigned a high likelihood value at that time.
 
@@ -314,9 +306,6 @@ MAC-^([0-9A-F]{2}[-]){5}([0-9A-F]{2})
 ## Working with saved alarm filters
 
 When you create a filter in the Alarm Console, you can save it in order to use it again later or in other DataMiner applications.
-
-> [!NOTE]
-> Up to DataMiner 9.0.4, if an alarm filter containing a service is saved, this service is stored by name. This means that if the service name changes, you will need to manually update the filter accordingly. From DataMiner 9.0.5 onwards, services in an alarm filter are stored by ID when possible. This means that a manual update is then only necessary if a filter contains wildcard expressions or regular expressions.
 
 ### Saving an alarm filter
 

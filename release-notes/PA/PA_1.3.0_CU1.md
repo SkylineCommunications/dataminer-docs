@@ -9,6 +9,6 @@ uid: PA_1.3.0_CU1
 
 ## Fixes
 
-#### SRM_Setup script created queue element while one existed already [ID_34777]
+#### SRM_Setup script created queue element while one existed already [ID 34777]
 
 When the *SRM_Setup* script was executed in order to configure Process Automation, it could occur that a new queue element was created for a resource pool while there already was a queue element for that resource pool.

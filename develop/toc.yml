@@ -365,6 +365,8 @@ items:
         items:
         - name: Introduction
           topicUid: ConnectionsSnmpIntroduction
+        - name: OIDs
+          topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
           topicUid: ConnectionsSnmpRetrievingAVariable
         - name: Retrieving multiple variables
@@ -383,6 +385,8 @@ items:
           topicUid: ConnectionsSnmpTraps
         - name: Bitrate calculations
           topicUid: ConnectionsSnmpBitRateCalculations
+        - name: SNMPv3
+          topicUid: ConnectionsSnmpSnmpv3
         - name: Protocol inner workings
           topicUid: ConnectionsSnmpProtocolInnterWorkings
         - name: Exercise
@@ -757,8 +761,6 @@ items:
       topicUid: ClassLibraryLazyLoading
     - name: Element creation
       topicUid: ClassLibraryElementCreation
-    - name: InterApp classes
-      topicUid: ClassLibraryInterAppClasses
     - name: Monitors
       topicUid: ClassLibraryMonitors
       items:
@@ -778,6 +780,27 @@ items:
       topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
+  - name: InterApp framework
+    items:
+      - name: About the InterApp framework
+        topicUid: InterAppCalls_Introduction
+      - name: Getting started with the InterApp framework
+        topicUid: InterAppCalls_GettingStarted
+        items:
+          - name: Creating an API
+            topicUid: InterAppCalls_GettingStarted_CreatingApi
+          - name: Creating an executor
+            topicUid: InterAppCalls_GettingStarted_CreatingExecutor
+          - name: Receiving a call
+            topicUid: InterAppCalls_GettingStarted_ReceivingCall
+          - name: Sending a call
+            topicUid: InterAppCalls_GettingStarted_SendingCall
+      - name: Known types
+        topicUid: InterAppCalls_KnownTypes
+      - name: Customizations
+        topicUid: InterAppCalls_Customizations
+      - name: Examples
+        topicUid: InterAppCalls_Examples
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
@@ -1438,6 +1461,8 @@ items:
             topicUid: Protocol.Groups.Group-id
           - name: '@ping'
             topicUid: Protocol.Groups.Group-ping
+          - name: '@threadId'
+            topicUid: Protocol.Groups.Group-threadId
           - name: Condition
             topicUid: Protocol.Groups.Group.Condition
           - name: Content
@@ -2730,6 +2755,10 @@ items:
           items: 
           - name: '@connection'
             topicUid: Protocol.Threads.Thread-connection
+          - name: '@id'
+            topicUid: Protocol.Threads.Thread-id
+          - name: '@name'
+            topicUid: Protocol.Threads.Thread-name
       - name: Timers
         topicUid: Protocol.Timers
         items: 
@@ -5236,6 +5265,10 @@ items:
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
+    - name: Quality gate
+      items:
+      - name: GitHub quality gate
+        topicUid: CICD_Quality_Gate_Github
     - name: Publishing artifacts to the DataMiner Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
@@ -5324,7 +5357,7 @@ items:
   items:
     - name: DataMiner Integration Studio (DIS)
       items:
-        - name: Introduction
+        - name: About DIS
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
         - name: Features
           topicUid: DataMiner_Integration_Studio_Features
@@ -5598,6 +5631,9 @@ items:
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
+        items:
+        - name: Wireshark stream decryption
+          topicUid: WiresharkDecrypt
 - name: DataMiner device-specific integrations
   topicUid: DSI
   items:
@@ -5699,6 +5735,17 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+    - name: mbgNMS
+      topicUid: mbgNMS
+      items:
+      - name: Releases
+        topicUid: mbgNMS_Releases
+      - name: Security
+        topicUid: mbgNMS_Security
+      - name: Meinberg NMS or DataMiner
+        topicUid: mbgNMS_MeinbergOrDataMiner
+      - name: Additional Information
+        topicUid: mbgNMS_Additional_Information
 - name: Best practices
   topicUid: Best_practices
   items:

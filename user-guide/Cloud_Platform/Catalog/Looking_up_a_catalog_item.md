@@ -6,7 +6,11 @@ uid: Looking_up_an_item_in_the_catalog
 
 When you open up the Catalog, a search box is displayed.
 
-1. In the search box, enter (part of) the name of the item you are looking for (e.g. a connector, a package, etc.).
+1. In the search box, you can enter:
+
+   - (Part of) the name of the item you are looking for (e.g. a connector, a package, etc.).
+
+   - (Part of) a tag given to the item you are looking for (e.g. Master Clock System, Element Manager, etc.)<!--RN 40259-->.
 
    As you type, a list with the top 5 results will be displayed under the search box.
 

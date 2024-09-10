@@ -1,15 +1,15 @@
 ---
 uid: DOM_Altering_values_of_a_DomInstance
 ---
-# Altering values of a DomInstance - examples
+# Altering and getting values of a DomInstance - examples
 
-This page contains simple examples of how you can add or update values of a `DomInstance` linked to `SectionDefinitions` and their `FieldDescriptors`.
+This page contains simple examples of how you can get, add, or update values of a `DomInstance`, which are linked to `SectionDefinitions` and their `FieldDescriptors`.
 
-There are two main ways to alter values:
+There are two main ways to get, add, or update values:
 
 - Use the [extension methods](xref:DOM_Altering_values_of_a_DomInstance#simple-extension-methods).
 
-- Manually create your own `Sections` and `FieldValues`.
+- Manually iterate over and/or create your own `Sections` and `FieldValues`.
 
   ```csharp
   using System;
@@ -36,11 +36,11 @@ There are two main ways to alter values:
   ```
 
 > [!NOTE]
-> This code example behaves as if wrapped in an Automation script that contains the required using statements and a `DomHelper`.
+> These code examples behave as if wrapped in an Automation script that contains the required using statements and a `DomHelper`.
 
 ## Simple extension methods
 
-The simplest method to alter values of a `DomInstance` is by using the extension methods provided by the `SectionUtils` and `SectionListUtils` classes. There is a method to:
+The simplest method to get or alter values of a `DomInstance` is by using the extension methods provided by the `SectionUtils` and `SectionListUtils` classes. There is a method to:
 
 - [Add or update a value](#add-or-update-a-dominstance-value) to/of a `DomInstance`.
 
@@ -88,7 +88,7 @@ There is currently no extension method to remove `FieldValues` or `Sections` fro
 - *ListValueWrapper&lt;T&gt;* **GetListFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID)
 
 > [!IMPORTANT]
-> When you call these methods, you will retrieve the field values from the local copy of the `DomInstance` that was retrieved during the read operation using the `DomHelper`. No additional calls are done to retrieve the current values in the database. If you require the latest version, you will first need to read the instance again using the `DomHelper`.
+> When you call these methods, you will retrieve the field values from the local copy of the `DomInstance` that was retrieved during the read operation using the `DomHelper`. No additional calls are done to retrieve the current values in the database. If you require the latest version, you will first need to read the instance again using the [`DomHelper`](xref:DomHelper_class#reading-dom-data).
 
 #### Examples
 

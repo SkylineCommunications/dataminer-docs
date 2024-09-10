@@ -19,7 +19,6 @@ The following connectors are currently already integrated to set up and monitor 
 |--|--|--|--|
 | [AMWA NMOS IS-05](https://catalog.dataminer.services/details/connector/7691) | Yes | Yes | Yes |
 | [Arista MCS](https://catalog.dataminer.services/details/connector/7867) | Yes | Yes | - |
-| [EVS Cerebrum](https://catalog.dataminer.services/details/connector/7482) | Yes | Yes | - |
 | [NetInsight Nimbra Edge](https://catalog.dataminer.services/details/connector/7656) | Yes | Yes | - |
 | [AppearTV X20 Platform](https://catalog.dataminer.services/details/connector/5412) | Yes | Yes | - |
 

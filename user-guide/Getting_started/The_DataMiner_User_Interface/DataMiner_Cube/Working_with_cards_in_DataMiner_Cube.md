@@ -6,7 +6,7 @@ uid: Working_with_cards_in_DataMiner_Cube
 
 ## DataMiner Pulse
 
-When no docked cards are open, the card pane in DataMiner Cube displays the “DataMiner Pulse” home page.
+When no docked cards are open, the card pane in DataMiner Cube displays the "DataMiner Pulse" home page.
 
 On this page, you can find:
 
@@ -65,7 +65,7 @@ The pane consists of a tree view with several fixed nodes:
 
   > [!NOTE]
   >
-  > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
+  > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
   > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](xref:User_settings#visual-overview-settings).
   > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
   > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).
@@ -77,9 +77,9 @@ The pane consists of a tree view with several fixed nodes:
   > [!NOTE]
   >
   > - Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](xref:User_settings#card-settings).
-  > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button “Up to \[parent page name\]” is displayed, which allows you to quickly go to the parent page.
+  > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button "Up to \[parent page name\]" is displayed, which allows you to quickly go to the parent page.
   > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
-  > - Instead of a DATA node, a view has a “BELOW THIS VIEW” node with pages listing the items within the view.
+  > - Instead of a DATA node, a view has a "BELOW THIS VIEW" node with pages listing the items within the view.
 
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
@@ -115,15 +115,14 @@ Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* 
 > - When you select a page in the card navigation pane while holding down the SHIFT key, that page will be selected in every open card.
 > - While the navigation pane is collapsed, if you click the VISUAL or the DATA node, the last open Visual Overview or Data Display page will be displayed. To expand the navigation pane and select a different page, simply click the node again.
 > - For custom element applications, by default no card navigation pane is displayed. However, it is possible to open this pane by selecting the option *Show card side panel* in the card header menu.
-> - The card navigation pane is only available from DataMiner version 9.0 onwards. In earlier versions of DataMiner, there is instead a rotate button that allows the user to change between a “Visual Overview” side of the card and a “Data Display” side.
 
 ## Card header bar menu
 
 When you click the hamburger button in the top-left corner of a card, a shortcut menu with several commands is opened.
 
-- **Back**: Goes to the previous open card. From DataMiner 10.0.10 onwards, this option goes to the previous open page, which can be on the same card.
+- **Back**: Goes to the previous open page.
 
-- **Forward**: Goes to the next open card. From DataMiner 10.0.10 onwards, this option goes to the next open page, which can be on the same card.
+- **Forward**: Goes to the next open page.
 
 - **Undock**: Opens the card in a separate, undocked window.
 
