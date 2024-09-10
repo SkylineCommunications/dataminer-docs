@@ -11,20 +11,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 09 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available in the cloud will contain a message [ID_40616]
 
-When a Catalog item version is not available to deploy because its installation file is not registered, a message will be shown to the user as not being available and a request to contact support.cloud.ecosystem@skyline.be
+When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact support.cloud.ecosystem@skyline.be to make it available.
 
-#### 09 September 2024 - New Feature - Catalog API - Catalog Registration supports images in description readme file [ID_40219]
+#### 09 September 2024 - New feature - Catalog API - Catalog registration supports images in description readme file [ID_40219]
 
-Catalog item registration now supports images to be included in the provided description of a catalog item. Any used images need to be included in a "Images" directory.
-Supported image formats are jpg, jpeg, png, gif, bmp, tif, tiff and webp.
+Catalog item registration now supports images in the provided description of the Catalog item. Any used images need to be included in a *Images* directory. Supported image formats are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
-#### 09 September 2024 - Enhancement - Catalog API - Catalog Registration API has been improved [ID_40670]
+#### 09 September 2024 - Enhancement - Catalog API - Catalog registration API has been improved [ID_40670]
 
-The previously available catalog API call to register a new catalog item (version) using the manifest file has been split up into 2 different calls. There is now a PUT call available to register/update an item (including its description) and a POST call to register a new version.
+The previously available Catalog API call to register a new Catalog item or version using the manifest file has now been split up into two different calls. There is now a PUT call available to register/update an item (including its description) and a POST call to register a new version.
 
-#### 09 September 2024 - New Feature - Catalog - Unauthenticated access [ID_40686] [ID_40573] [ID_40572] [ID_40571] [ID_40570]
+#### 09 September 2024 - New feature - Catalog - Unauthenticated access [ID_40686] [ID_40573] [ID_40572] [ID_40571] [ID_40570]
 
-As an unauthenticated user, it is now possible to search publicly available catalog items, view their description and their available versions.
+As an unauthenticated user, you can now search through the publicly available Catalog items, and view their description and their available versions.
 
 #### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID_40601]
 
