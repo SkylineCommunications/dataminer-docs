@@ -100,4 +100,4 @@ You can now search for you Catalog item in the [Catalog](https://catalog.datamin
 ![Registered Catalog item](~/user-guide/images/tutorial_catalog_registration_registered_item.png)
 
 > [!NOTE]
-> After the first registration, you are able to make changes to the manifest or readme.md and execute the PUT request again, it will update the registered data as long as you use the same Catalog ID.
+> After the first registration, you are able to make changes to the manifest or `README.md` and execute the PUT request again, it will update the registered data as long as you use the same Catalog ID.
