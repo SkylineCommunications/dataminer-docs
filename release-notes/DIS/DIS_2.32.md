@@ -8,7 +8,7 @@ uid: DIS_2.32
 
 ### IDE
 
-#### Version Editor: Adding references to minor versions \[ID_28829\]
+#### Version Editor: Adding references to minor versions \[ID 28829\]
 
 In the *Current version* tab and after selecting a minor version in the *All versions* tab, it is now possible to add a list of references.
 
@@ -46,13 +46,13 @@ To remove a reference, do the following:
 >
 > In both values, you can use the “{ref}” placeholder. When, in the version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
 
-#### 'Copy File Content to Clipboard' renamed to 'Copy Code to Clipboard' \[ID_28860\]
+#### 'Copy File Content to Clipboard' renamed to 'Copy Code to Clipboard' \[ID 28860\]
 
 The right-click menu option *Copy File Content to Clipboard* has been renamed to *Copy Code to Clipboard*.
 
 Also, from now on, when you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows Clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
 
-#### Microsoft Azure B2C authentication \[ID_28959\]
+#### Microsoft Azure B2C authentication \[ID 28959\]
 
 DIS now uses Azure B2C authentication. This means, that users will now have to provide their dataminer.services account to sign in to DIS or to have DIS check for updates.
 
@@ -72,11 +72,11 @@ In the *DIS Settings* window, the *DCP* tab has been replaced by the following t
 > [!NOTE]
 > Users who upgrade to DIS version 2.32 will be asked to log in with their dataminer.services account.
 
-#### Debugging of precompiled Automation script EXE blocks \[ID_29030\]
+#### Debugging of precompiled Automation script EXE blocks \[ID 29030\]
 
 When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled Automation script EXE blocks.
 
-#### Automation script solutions: DataMiner DLL Path property \[ID_29031\]
+#### Automation script solutions: DataMiner DLL Path property \[ID 29031\]
 
 DLL files in an Automation script solution now have a “DataMiner DLL Path” property. This property can be used to override/specify the location (i.e. full path) of the DLL file on the DataMiner Agent.
 
@@ -85,7 +85,7 @@ DLL files in an Automation script solution now have a “DataMiner DLL Path” p
 
 ### Validator
 
-#### New checks and error messages \[ID_28593\]
+#### New checks and error messages \[ID 28593\]
 
 The following checks and error messages have been added.
 
@@ -95,7 +95,7 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### UOM Schema: New units added \[ID_28592\]\[ID_28926\]
+#### UOM Schema: New units added \[ID 28592\]\[ID 28926\]
 
 The following units have been added to the UOM Schema:
 
@@ -103,14 +103,14 @@ The following units have been added to the UOM Schema:
 - Hz/s
 - Services
 
-#### Protocol Schema: Miscellaneous updates \[ID_28602\]\[ID_28606\]
+#### Protocol Schema: Miscellaneous updates \[ID 28602\]\[ID 28606\]
 
 The Protocol XML schema has been updated.
 
 - Up to now, the Protocol Schema dictated that the Value and Display subelements of a Discreet element should both have a unique value. However, when using the dependency-Values attribute, it is possible that, in a protocol XML file, duplicate values are defined in Value and Display subelements. Therefore, the unique constraint definitions for the Discreet.Display and Discreet.Value elements have now been updated in order to prevent Schema violations in these kind of situations.
 - The type of the MinimumRequiredVersion and MaximumSupportedVersion elements has been updated to a union of a string and a enum listing all the released DataMiner versions. Also, the Protocol Schema will now expect the build number to be mandatory.
 
-#### Protocol Schema: Icons added to EnumIcons \[ID_28845\]
+#### Protocol Schema: Icons added to EnumIcons \[ID 28845\]
 
 The following icons have been added to the EnumIcons enum:
 
@@ -125,19 +125,19 @@ The following icons have been added to the EnumIcons enum:
 
 ### Class Library
 
-#### Creating, updating and retrieving HTTP connections of elements \[ID_29070\]
+#### Creating, updating and retrieving HTTP connections of elements \[ID 29070\]
 
 IDms classes now support creating, updating and retrieving HTTP connections of elements.
 
-#### Retrieving CI type information from connections \[ID_29071\]
+#### Retrieving CI type information from connections \[ID 29071\]
 
 In IDP environments, extension methods now allow you to retrieve CI type information from connections.
 
-#### Creating and deleting properties in a DataMiner System \[ID_29072\]
+#### Creating and deleting properties in a DataMiner System \[ID 29072\]
 
 IDms classes now support creating and deleting properties in a DataMiner System.
 
-#### New SLNet wrapper methods to communicate with SLScheduler and SLSpectrum \[ID_29074\]
+#### New SLNet wrapper methods to communicate with SLScheduler and SLSpectrum \[ID 29074\]
 
 SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules. Up to now, Scheduler and Spectrum Interop classes had to be used to communicate with those modules.
 
@@ -145,7 +145,7 @@ SLNet wrapper methods now allow you to safely communicate with the SLScheduler a
 
 ### Enhancements
 
-#### Version Editor: Various enhancements \[ID_28604\]
+#### Version Editor: Various enhancements \[ID 28604\]
 
 A number of enhancements have been made to the version editor.
 
@@ -172,7 +172,7 @@ A number of enhancements have been made to the version editor.
 - When, in the protocol XML, you had changed the system version or major version number of the version specified in the Protocol.Version element to a system or major version that did not exist in the Protocol.VersionHistory element tree, in some cases, an exception could be thrown when you opened the version editor. From now on, the version you specified in the protocol XML file will be added to the Protocol.VersionHistory element tree and set as the new current version. Also, the entire tree will be adapted where needed.
 - In all text boxes of the version editor, it is now possible to copy/paste text.
 
-#### Enhanced validation of IDs and references \[ID_28655\]
+#### Enhanced validation of IDs and references \[ID 28655\]
 
 The Validator now fully validates the id attribute of the following items:
 
@@ -215,27 +215,27 @@ In case of problems regarding those referring IDs, the following error messages 
 
 ### Fixes
 
-#### Validator: False positive MissingPage error while validating a Protocol.Display@pageOrder attribute in a protocol that generates DVE elements \[ID_28593\]
+#### Validator: False positive MissingPage error while validating a Protocol.Display@pageOrder attribute in a protocol that generates DVE elements \[ID 28593\]
 
 While validating a Protocol.Display@pageOrder attribute in a protocol that generates DVE elements, in some cases, a false positive MissingPage (1.22.5) error could be thrown.
 
 > [!NOTE]
 > When a MissingPage (1.22.5) error is thrown, from now on, an additional MissingPage_Sub (1.22.10) error will list the parameter(s) responsible.
 >
-> See also [New checks and error messages \[ID_28593\]](#new-checks-and-error-messages-id_28593).
+> See also [New checks and error messages \[ID 28593\]](#new-checks-and-error-messages-id-28593).
 
-#### IDE: Problem caused by removing header options of view table columns \[ID_28724\]
+#### IDE: Problem caused by removing header options of view table columns \[ID 28724\]
 
 When a table column is not monitored, by default, DIS automatically removes all header options specified for that column (e.g. histogram, heatmap, average, sum, etc.). However, in some cases, this could cause problems, especially in case of view table columns.
 
 From now on, DIS will no longer automatically remove header options specified for view table columns.
 
-#### IDE - Table Editor: A Measurement element with an incorrectly set 'lines' option would be added to a table without a Measurement element \[ID_28844\]
+#### IDE - Table Editor: A Measurement element with an incorrectly set 'lines' option would be added to a table without a Measurement element \[ID 28844\]
 
 When, in the table editor, you opened a table that did not have a Measurement element, DIS would add a Measurement element with the “lines” option incorrectly set to 0 instead of 20.
 
 When, afterwards, you opened that table in DataMiner Cube, an error could occur.
 
-#### IDE: Problem when debugging referenced precompiled QActions \[ID_28849\]
+#### IDE: Problem when debugging referenced precompiled QActions \[ID 28849\]
 
 In some cases, it would no longer be possible to debug referenced precompiled QActions.

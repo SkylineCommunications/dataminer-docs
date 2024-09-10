@@ -22,7 +22,7 @@ uid: Web_apps_Feature_Release_10.4.11
 
 ### Enhancements
 
-#### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons [ID_40622]
+#### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons [ID 40622]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
@@ -32,7 +32,7 @@ Clicking the *Cancel* button will close the time range picker without updating t
 
 ### Fixes
 
-#### Dashboards app: Folders of which the name contained a slash ('/') or a backslash ('\\') character would stay hidden [ID_40532]
+#### Dashboards app: Folders of which the name contained a slash ('/') or a backslash ('\\') character would stay hidden [ID 40532]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 

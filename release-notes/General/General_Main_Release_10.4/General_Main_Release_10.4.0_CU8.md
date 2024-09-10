@@ -12,7 +12,7 @@ uid: General_Main_Release_10.4.0_CU8
 
 ### Enhancements
 
-#### Failover: Virtual IP address check will now use both a ping and an arp command to check whether an IP address is free [ID_40516]
+#### Failover: Virtual IP address check will now use both a ping and an arp command to check whether an IP address is free [ID 40516]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 

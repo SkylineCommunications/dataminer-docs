@@ -12,7 +12,7 @@ uid: Cube_Feature_Release_10.3.12_CU1
 
 ### Fixes
 
-#### Memory leak when closing card showing inline visual overviews [ID_37996]
+#### Memory leak when closing card showing inline visual overviews [ID 37996]
 
 <!-- MR 10.2.0 [CU21] (not included - SRA)/10.3.0 [CU10] - FR 10.3.12 [CU1] -->
 

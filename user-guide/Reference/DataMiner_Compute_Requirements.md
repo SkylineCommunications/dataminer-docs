@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Compute_Requirements
-keywords: system requirements
+keywords: system requirements, .NET requirements, dotnet requirements
 ---
 
 # DataMiner Compute Requirements
