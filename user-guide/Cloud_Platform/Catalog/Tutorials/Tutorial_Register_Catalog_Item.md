@@ -46,7 +46,7 @@ After creation of the key, you can copy the key and use it as value in the **Ocp
 
 The body of the request needs to be in the **multipart/form-data** format with key of type **File** and name **file**, the value should be a `.zip` file containing the following items:
 
-- A readme.md file with any required image in an images folder. This readme will be shown in the description tab in the Catalog.
+- A `README.md` file with any required image in an images folder. This `README.md` will be shown in the description tab in the Catalog.
 
   Copy the snippet below and change the content as you see fit using your favorite editor.
 
