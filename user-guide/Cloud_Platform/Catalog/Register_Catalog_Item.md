@@ -39,8 +39,8 @@ PUT
 
 The body of the request should be of type **multipart/form-data** and must contain:  
 
-A key of type **File** and name **file**.  
-The value of this key should be a **zip** file containing 
+A key of type **File** and name **file**.
+The value of this key should be a  `.zip` file containing 
 
 - [Required] a ["manifest.yml"](xref:Register_Catalog_Item#manifest-file) file.
 
@@ -50,7 +50,7 @@ Supported image extensions are `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tif`, 
 
 ##### Manifest file
 
-This file will contain all necessary information to register a Catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
+This file will contain all necessary information to register a Catalog item with a version. This manifest file should be a valid `.yml` file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
 
 ```yml
 # [Required]
@@ -87,7 +87,7 @@ type: '<fill in type here>'
 # If the ID is filled in but does not exist yet, a new Catalog item will be registered with this id.
 # If the ID is filled in but does exist, properties of the item will be overwritten
 #   Must be a valid GUID.
-id: '<fill in guid here>'
+id: '<fill in GUID here>'
 
 # [Required] 
 # The human-friendly name of the Catalog item. 
@@ -141,9 +141,13 @@ tags:
 The register version API call allows you to create a new version for a Catalog item
 
 #### URL
-<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:guid}/register/version>
+<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:GUID}/register/version>
 
-Route parameter "catalogId" is the id of the Catalog item of which a new version is registered. Must be a valid Guid
+Route parameter "catalogId" is the ID of the Catalog item of which a new version is registered. Must be a valid GUID.
+This is the ID you used to register the [catalog item](#registering-a-catalog-item-with-the-api).  
+You can always obtain it from an existing Catalog item by navigating to the details page of it in the [Catalog](https://catalog.dataminer.services/), the ID is the last part of the URL.  
+
+`https://catalog.dataminer.services/details/{Catalog ID}`
 
 #### HTTP method
 
@@ -151,13 +155,12 @@ POST
 
 #### Body
 
-
 The body of the request should be of type **multipart/form-data** and must contain  
 
-- a key of type **File** with name **file**.  
-The value is the Catalog item installation file, supported types are a DataMiner Protocol package (.dmprotocol) or a DataMiner Application package (.dmapplication)
-
-- a key of type **Text** with name **versionNumber**.  
-The value is the version number you want to register.
-- a key of type **Text** with name **versionDescription**.  
-The value is the description of the version you want to register.
+```json
+file: <the Catalog item installation file>
+versionNumber: <the version number you want to register>
+versionDescription: <the description of the version you want to register>
+```
+> [!NOTE]  
+> Supported types are a DataMiner Protocol package (`.dmprotocol`) or a DataMiner Application package (`.dmapplication`)

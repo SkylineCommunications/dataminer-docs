@@ -9,8 +9,7 @@ We will be registering our own version of the following example [connector](http
 
 ## Prerequisites
 
-- Organization key with permission "Register catalog items".
-- A registered Catalog item, see [register a catalog item tutorial](xref:Tutorial_Register_Catalog_Item)
+- A registered Catalog item, see [register a catalog item tutorial](xref:Tutorial_Register_Catalog_Item) for an example on how to register an item.
 - [Skyline.DataMiner.CICD.Tools.Packager Nuget](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab).
 
 ## Overview
@@ -22,17 +21,28 @@ We will be registering our own version of the following example [connector](http
 
 ## Step 1: Register Catalog version URL
 
-In order to register our first version, we will use the Catalog API Register version call.
-Create a new HTTP request using the POST HTTP method and URL <https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register>
+In order to register our first version, we will use the register version call from the Catalog API.
+Create a new HTTP request using the POST http method and URL
+`<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogid}/version/register>`
 
 ![Register version http url](~/user-guide/images/tutorial_catalog_registration_version_url.png)
 
 > [!NOTE]  
-> Make sure you use the same id as you used for the [Catalog item registration](xref:Tutorial_Register_Catalog_Item).
+> Make sure you use the same ID as you used during the [Catalog item registration](xref:Tutorial_Register_Catalog_Item) tutorial.
 
 ## Step 2: Authentication Header
 
-Add the previously obtained organization key in the **Ocp-Apim-Subscription-Key** header.
+The Catalog version register api call uses [organization key](xref:Managing_DCP_keys#organization-keys) authentication, we can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
+This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
+
+> [!IMPORTANT]
+> You need to have the "Owner" role in order to access/create organization keys.
+
+Go ahead and create a new key with permission "Register catalog items".
+
+![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+
+After creation of the key, you can copy the key and use it as value in the **Ocp-Apim-Subscription-Key** header.
 
 ![Register version http header](~/user-guide/images/tutorial_catalog_registration_version_headers.png)
 

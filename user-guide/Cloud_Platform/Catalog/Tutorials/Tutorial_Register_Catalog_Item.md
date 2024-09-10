@@ -7,11 +7,7 @@ uid: Tutorial_Register_Catalog_Item
 This tutorial demonstrates how to add a new Catalog item using the [Catalog API](xref:Register_Catalog_Item).  
 We will be registering our own version of the following example [connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom).  
 
-For ease of use we will be using [Postman](https://www.postman.com/) to execute the register API calls. Feel free to integrate them afterwards in your workflow, e.g by using them in a github action.
-
-## Prerequisites
-
-- Organization key with permission "Register catalog items".
+For ease of use we will be using [Postman](https://www.postman.com/) to execute the register API calls. Feel free to integrate them afterwards in your workflow, e.g by using them in a GitHub action.
 
 ## Overview
 
@@ -28,8 +24,8 @@ Add a new request with HTTP method of type **PUT** and the following URL: <https
 
 ## Step 2: Authentication header
 
-The Catalog item register api call uses Organization key authentication, we can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
-This key identifies your organization and will make sure the registration will register your Catalog item under the organization of the key you use.
+The Catalog item register api call uses [organization key](xref:Managing_DCP_keys#organization-keys) authentication, we can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
+This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
 
 > [!IMPORTANT]
 > You need to have the "Owner" role in order to access/create organization keys.
@@ -38,7 +34,7 @@ Go ahead and create a new key with permission "Register catalog items".
 
 ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
 
-After creation of the key, you can copy the key and use it as value in the **Ocp-Apim-Subscription-Key** header  
+After creation of the key, you can copy the key and use it as value in the **Ocp-Apim-Subscription-Key** header.  
 
 ![Register item http header](~/user-guide/images/tutorial_catalog_registration_urlandheaders.png)
 
@@ -95,7 +91,7 @@ Create a zip file containing the manifest and the README and add it to the body 
 
 Execute the call and upon correct registration you will receive HTTP Status 200 OK and the Catalog ID in the body of the response.
 
-You can now search for you Catalog item in the [Catalog](https://catalog.dataminer.services/browse) or navigate immediately to https://catalog.dataminer.services/details/{YourCatalogId}
+You can now search for the Catalog item in the [Catalog](https://catalog.dataminer.services/browse) or navigate immediately to https://catalog.dataminer.services/details/{YourCatalogId}
 
 ![Registered Catalog item](~/user-guide/images/tutorial_catalog_registration_registered_item.png)
 
