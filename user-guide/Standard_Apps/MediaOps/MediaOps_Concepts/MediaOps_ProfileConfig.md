@@ -4,14 +4,14 @@ uid: MediaOps_ProfileConfig
 
 # MediaOps Profile Configuration
 
-For operators (or automatic orchestration scripts) to configure resources correctly, it is possible to save configuration parameters values on jobs and/or nodes. Depending on the type of resource (or resource pool) added it is possible to define what type of parameters are expected. This can also be defined on workflow level. Once a job is created, it will be needed to provide a value for every parameter (unless it is defined as optional) on job and/or node level. When you have configuration parameters on different nodes that have to match the same value, it is possible to use placeholders on those to point to a parameter value on job level.
+For operators (or automatic orchestration scripts) to configure resources correctly, it is possible to save configuration parameters values on jobs and/or nodes. Depending on the type of resource (or resource pool) added it is possible to define what type of parameters are expected. This can be defined on workflow and job level. Once a job is created, it will be needed to provide a value for every parameter (unless it is defined as optional). When you have configuration parameters on different nodes that have to match the same value, it is possible to use placeholders on those to point to a parameter value on job level.
 
 ## Profile parameters and definitions
 
-The first step will be to create [Profile parameters](https://docs.dataminer.services/user-guide/Standard_Apps/SRM/srm_concepts/srm_definitions.html#profile-parameter) and [Profile definitions](https://docs.dataminer.services/user-guide/Standard_Apps/SRM/srm_concepts/srm_definitions.html#profile-definition).
+The first step will be to create [Profile parameters](https://docs.dataminer.services/user-guide/Standard_Apps/SRM/srm_concepts/srm_definitions.html#profile-parameter) and [Profile definitions](https://docs.dataminer.services/user-guide/Standard_Apps/SRM/srm_concepts/srm_definitions.html#profile-definition). The profile definition is a logical group of parameters that we will link later to our jobs or nodes within the job.
 
 > [!TIP]
-> Only define the parameters that can differentiate between jobs to keep the configuration work minimal for operators. Make sure your profile parameters are easy to understand for operators. For example, video formats (e.g. 1080p, 1080i, 720p, ...) are more intuitive compared to defining BW that is needed on network level and the BW could be calculated based on the video format used. However, when capacity management is needed on a resource, then you need to define the capacity parameter on the corresponding node.
+> Define only parameters that can differentiate between jobs to keep the configuration work minimal for operators. Make sure your profile parameters are easy to understand for operators. For example, video formats (e.g. 1080p, 1080i, 720p, ...) are more intuitive compared to defining BW that is needed on network level and the BW could be calculated based on the video format used. However, when capacity management is needed on a resource, then you need to define the capacity parameter on the corresponding node.
 
 ## Profile instances or presets
 
@@ -23,7 +23,7 @@ The next step, is to define what configuration parameters are expected for a res
 
 ## Adding nodes to jobs/workflows with configuration
 
-Now that is defined what parameters are needed, we can start adding nodes that require configuration to jobs/workflows. When the configuration is not optional, it will be required to provide a value in order to be able to confirm the job.
+Now that is defined what parameters are needed, we can start adding nodes to jobs or workflows. When configuration is not optional, it will be required to provide a value before the job can be confirmed.
 
 ## FAQ
 

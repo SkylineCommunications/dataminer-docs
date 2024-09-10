@@ -14,23 +14,32 @@ When a resource is added to a job it will be reserved for the time span of the j
 
 A job can have one of the following states:
 
-<div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align: center">Draft</div>
+<div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Draft</div>
+Draft allows you to build a potential job without booking any of the resources or triggering financial calculations. When a new job is created it will start from the Draft state.
 
-<div style="background-color:#F7EC15;color:#000000;width:150px;text-align: center">Tentative</div>
+<div style="background-color:#F7EC15;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Tentative</div>
+When a job moves into a tentative state, the resources assigned in the job will be reserved to prevent other jobs to select the same resources.
 
-<div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align: center">Confirmed</div>
+<div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div>
+Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for Cost & Billing. TODO LINK TO C&B
 
-<div style="background-color:#4CEF8E;color:#000000;width:150px;text-align: center">Running</div>
+<div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div>
+When a confirmed job starts it will go to the running state. This indicates the job is live.
 
-<div style="background-color:#4A41E6;color:#FFFFFF;width:150px;text-align: center">Completed</div>
+<div style="background-color:#4A41E6;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Completed</div>
+When a running job stops it will go to the Completed state. This indicates that the job has ended. In this stage it is still possible to make adjustments to the C&B information.
 
-<div style="background-color:#36F0F3;color:#000000;width:150px;text-align: center">Ready for invoice</div>
+<div style="background-color:#36F0F3;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Ready for invoice</div>
+Ready for invoice means that all changes are final and therefor it is no longer allowed to make any changes to the job.
 
-<div style="background-color:#529495;color:#FFFFFF;width:150px;text-align: center">Invoiced</div>
+<div style="background-color:#529495;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Invoiced</div>
+Invoiced is the final state of a job, but it does not mean that all jobs will reach this state.
 
-<div style="background-color:#FC7D76;color:#000000;width:150px;text-align: center">Canceled</div>
+<div style="background-color:#FC7D76;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Canceled</div>
+When a job is no longer needed it can be moved to a canceled state.
 
-<div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align: center">Error</div>
+<div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Error</div>
+The error state indicates that something went wrong. A job can end up in this state from any state. TODO CHECK HOW IT WILL RETURN TO ANOTHER STATE?
 
 ```mermaid
 graph LR
@@ -44,12 +53,12 @@ graph LR
     B --> H[Canceled]
     H --> F[Ready for Invoice]
 
-    style A fill:#a349a4,stroke:#000,stroke-width:2px,color:#ffffff
-    style B fill:#ffff00,stroke:#000,stroke-width:2px,color:#000000
-    style C fill:#00ff00,stroke:#000,stroke-width:2px,color:#000000
-    style D fill:#00b050,stroke:#000,stroke-width:2px,color:#ffffff
-    style E fill:#00b0f0,stroke:#000,stroke-width:2px,color:#ffffff
-    style F fill:#00ffff,stroke:#000,stroke-width:2px,color:#000000
-    style G fill:#92d050,stroke:#000,stroke-width:2px,color:#000000
-    style H fill:#ff5050,stroke:#000,stroke-width:2px,color:#ffffff
+    style A fill:#9140D9,stroke:#000,stroke-width:2px,color:#ffffff
+    style B fill:#F7EC15,stroke:#000,stroke-width:2px,color:#000000
+    style C fill:#348D42,stroke:#000,stroke-width:2px,color:#ffffff
+    style D fill:#4CEF8E,stroke:#000,stroke-width:2px,color:#000000
+    style E fill:#4A41E6,stroke:#000,stroke-width:2px,color:#ffffff
+    style F fill:#36F0F3,stroke:#000,stroke-width:2px,color:#000000
+    style G fill:#529495,stroke:#000,stroke-width:2px,color:#ffffff
+    style H fill:#FC7D76,stroke:#000,stroke-width:2px,color:#000000
 ```
