@@ -24,7 +24,7 @@ Add a new request with HTTP method of type **PUT** and the following URL: `https
 
 ## Step 2: Authentication header
 
-The Catalog item register api call uses [organization key](xref:Managing_DCP_keys#organization-keys) authentication, we can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
+The Catalog item register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), we can obtain one in the [Admin App](https://admin.dataminer.services/) on the `Keys` page. 
 This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
 
 > [!IMPORTANT]
