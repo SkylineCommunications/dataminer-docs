@@ -36,7 +36,7 @@ The Catalog version register api call uses [organization key](xref:Managing_DCP_
 This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
 
 > [!IMPORTANT]
-> You need to have the "Owner" role in order to access/create organization keys.
+> You need to have the "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
 
 Go ahead and create a new key with permission "Register catalog items".
 

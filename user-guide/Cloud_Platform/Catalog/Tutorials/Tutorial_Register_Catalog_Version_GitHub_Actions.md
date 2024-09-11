@@ -35,7 +35,7 @@ Paste below pipeline template into this file.
 
 > [!IMPORTANT]  
 > Make sure to change the CATALOG_ID environment variable to the Catalog ID you want to register the version to.
-> This is the ID you used to register the [catalog item](#registering-a-catalog-item-with-the-api).  
+> This is the ID you used to register the [catalog item](xref:Register_Catalog_Item#registering-a-catalog-item-with-the-api).  
 > You can always obtain it from an existing Catalog item by navigating to the details page of it in the [Catalog](https://catalog.dataminer.services/), the ID is the last part of the URL.  
 
 ```yaml
@@ -104,6 +104,9 @@ To securely store sensitive information like the catalog ID, API token, and vers
 
   We can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
   This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.  
+
+> [!IMPORTANT]
+> You need to have the "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
 
 ## Step 3: Push the workflow file
 
