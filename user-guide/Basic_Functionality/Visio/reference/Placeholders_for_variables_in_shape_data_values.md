@@ -473,6 +473,7 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]`, the defau
 >
 > - If the regular expression or the input are empty, the placeholder will return an empty string.
 > - The "]" character cannot be used as a separator.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[placeholders > REGEX]* page.
 
 ### \[RegexReplace:x,y,z\]
 
@@ -494,6 +495,7 @@ In this placeholder, specify three items, separated by commas:
 >   ```txt
 >   [RegexReplace:[Sep:,#]x#y#z]
 >   ```
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[placeholders > REGEX]* page.
 
 Examples:
 
