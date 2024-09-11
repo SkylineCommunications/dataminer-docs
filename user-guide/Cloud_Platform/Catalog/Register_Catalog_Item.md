@@ -11,7 +11,7 @@ When you register a new Catalog item, it will only become available for the regi
 Registration can be done using the [Catalog API](#using-the-catalog-api).
 
 > [!TIP]
-> For a practical example, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item) and [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version).
+> For a practical example, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version) and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
 
 ## Using the Catalog API
 
@@ -29,7 +29,7 @@ The register API call allows you to create or update a Catalog item, see [Regist
 
 #### URL
 
-<https://api.dataminer.services/api/key-catalog/v1-0/catalog/register>
+`https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
 
 #### HTTP method
 
@@ -47,6 +47,10 @@ The value of this key should be a  `.zip` file containing
 - [Optional] a 'README.md' file that contains the description of the Catalog item.
 - [Optional] an 'images' folder containing any image being referenced by the readme file.  
 Supported image extensions are `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tif`, `.tiff` and `.webp`
+
+```json
+file: <the zip file containing manifest, README and optional images>
+```
 
 ##### Manifest file
 
@@ -141,13 +145,13 @@ tags:
 The register version API call allows you to create a new version for a Catalog item
 
 #### URL
-<https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:GUID}/register/version>
+`https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:GUID}/register/version`
 
 Route parameter "catalogId" is the ID of the Catalog item of which a new version is registered. Must be a valid GUID.
 This is the ID you used to register the [catalog item](#registering-a-catalog-item-with-the-api).  
 You can always obtain it from an existing Catalog item by navigating to the details page of it in the [Catalog](https://catalog.dataminer.services/), the ID is the last part of the URL.  
 
-`https://catalog.dataminer.services/details/{Catalog ID}`
+`https://catalog.dataminer.services/details/{CatalogId}`
 
 #### HTTP method
 
@@ -155,7 +159,7 @@ POST
 
 #### Body
 
-The body of the request should be of type **multipart/form-data** and must contain  
+The body of the request should be of type **multipart/form-data** and must contain the below fields.  
 
 ```json
 file: <the Catalog item installation file>

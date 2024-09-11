@@ -2,7 +2,7 @@
 uid: Tutorial_Register_Catalog_Version_GitHub_Actions
 ---
 
-# Registering a new version of a connector in the Catalog
+# Registering a new version of a connector in the Catalog using a GitHub Action
 
 This tutorial demonstrates how to add a new version to a Catalog item using the [Catalog API](xref:Register_Catalog_Item) and [GitHub Actions](https://docs.github.com/en/actions).  
 We will be registering our own version of the following example [connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom), so go ahead and download the solution.
@@ -49,6 +49,7 @@ jobs:
       # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Use GitHub run number for versioning
         run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
 
