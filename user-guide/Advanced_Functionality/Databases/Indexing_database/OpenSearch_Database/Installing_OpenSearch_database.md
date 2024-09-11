@@ -295,7 +295,7 @@ The default password of the *admin* user should be changed and all the users exc
    sudo systemctl restart opensearch
    ```
 
-1. The settings in files */etc/opensearch/opensearch-security/\*.yml* are not applied to the cluster configuration immediately. The configuration is applied by running the script *securityadmin.sh*, which uses the super admin certificates generated earlier
+1. To apply the settings in the files */etc/opensearch/opensearch-security/\*.yml* to the cluster configuration, run the script *securityadmin.sh*, which uses the super admin certificates generated earlier:
 
    ```bash
    cd /usr/share/opensearch/plugins/opensearch-security/tools
