@@ -97,14 +97,6 @@ To securely store sensitive information like the catalog ID, API token, and vers
   We can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
   This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.  
 
-  `VERSION_NUMBER`: This is the version number for the new catalog entry.
-
-    For each secret:
-
-    Add a name (e.g., `CATALOG_ID`, `API_TOKEN`, `VERSION_NUMBER`).  
-    Paste the corresponding value.  
-    Click `Add secret`.
-
 ## Step 3: Push the workflow file
 
 Once you’ve added the dataminer-catalog-pipeline.yml file to the .github/workflows folder, commit and push it to your repository.
