@@ -16,7 +16,13 @@ uid: Web_apps_Feature_Release_10.4.11
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps - Time range component: New 'Set value' action [ID 40569]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+It is now possible to configure a *Set value* action for a *Time range* component.
+
+This action will allow users to set the current value of the component in question to either a preset range (today, yesterday, next year, ...) or a custom range (which can be either a static value or a feed).
 
 ## Changes
 
