@@ -49,7 +49,7 @@ After creation of the key, you can copy the key and use it as value in the **Ocp
 ## Step 3: Register Catalog version Body
 
 The body of the version registration request requires a file containing our connector, for this we will be using the 
-[Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a .dmprotocol package from our solution.
+[Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a `.dmprotocol` package from our solution.
 
 Navigate to [Example Rates connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom) and download the solution.
 
