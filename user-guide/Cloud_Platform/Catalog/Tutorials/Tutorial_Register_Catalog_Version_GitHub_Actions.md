@@ -99,7 +99,6 @@ To securely store sensitive information like the catalog ID, API token, and vers
 
 
 - Add the Required Secrets.  
-`CATALOG_ID`: This is the catalog ID. Make sure this is the correct id of the [Catalog item](xref:Tutorial_Register_Catalog_Item) you registered earlier.   
 
   `API_TOKEN`: This is the [organization key](xref:Managing_DCP_keys#organization-keys) token to authenticate the register version call from the Catalog API.  
 
