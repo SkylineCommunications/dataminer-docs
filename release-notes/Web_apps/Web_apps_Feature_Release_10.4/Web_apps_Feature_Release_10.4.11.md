@@ -44,7 +44,7 @@ This behavior has now changed:
 
 - If a dropdown field is defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor`, it will now initially show only 100 items. When there are more than 100 items, a message will appear, indicating that there are more items.
 
-Also, dropdown fields defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor` will now use a paging mechanism if the DataMiner server version is 10.4.9 or newer.
+Also, dropdown fields defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor` will now use a paging mechanism (in case of the former, only if the DataMiner server version is 10.4.9 or newer).
 
 > [!NOTE]
 >
