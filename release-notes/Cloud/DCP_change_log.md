@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
-#### 09 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a catalog item
+#### 09 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a catalog item [ID 40710]
 
 Users were unable to change the publishing state for a specific version of a catalog item through the API.
 #### 09 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
