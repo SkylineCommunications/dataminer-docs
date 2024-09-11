@@ -9,6 +9,7 @@ We will be registering our own version of the following example [connector](http
 
 ## Prerequisites
 
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
 - A registered Catalog item, see [register a catalog item tutorial](xref:Tutorial_Register_Catalog_Item) for an example on how to register an item.
 - [Skyline.DataMiner.CICD.Tools.Packager Nuget](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab).
 

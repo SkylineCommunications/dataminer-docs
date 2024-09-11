@@ -9,6 +9,11 @@ We will be registering our own version of the following example [connector](http
 
 For ease of use we will be using [Postman](https://www.postman.com/) to execute the register API calls. Feel free to integrate them afterwards in your workflow, e.g by using them in a GitHub action.
 
+## Prerequisites
+
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
+
+
 ## Overview
 
 - [Step 1: Register Catalog item URL](#step-1-register-catalog-item-url)
