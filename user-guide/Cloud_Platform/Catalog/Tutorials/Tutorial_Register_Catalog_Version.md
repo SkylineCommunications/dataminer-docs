@@ -27,8 +27,10 @@ Create a new HTTP request using the POST http method and URL
 
 ![Register version http url](~/user-guide/images/tutorial_catalog_registration_version_url.png)
 
-> [!NOTE]  
-> Make sure you use the same ID as you used during the [Catalog item registration](xref:Tutorial_Register_Catalog_Item) tutorial.
+> [!IMPORTANT]  
+> Make sure to change the catalogId route parameter to the Catalog ID you want to register the version to.
+> This is the ID you used to register the [catalog item](xref:Register_Catalog_Item#registering-a-catalog-item-with-the-api).  
+> You can always obtain it from an existing Catalog item by navigating to the details page of it in the [Catalog](https://catalog.dataminer.services/), the ID is the last part of the URL.
 
 ## Step 2: Authentication Header
 
