@@ -92,6 +92,7 @@ If you want to add the Failover pair to a DataMiner System that uses STaaS, firs
       > [!NOTE]
       > If multiple [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) are used, you may wish to configure the *priorityOrder* attribute differently on the main or backup DMA. You can do this if you want to change which indexing cluster is read from when there is a Failover switch. For more info on the *priorityOrder* attribute, see [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
+   1. In the tags `PWD` replace the GUID reference with the password in plaintext
    1. Restart the backup DMA.
 
 1. If TLS is used, make sure that the required certificates are imported, and this is correctly configured on the backup DMA as well.
