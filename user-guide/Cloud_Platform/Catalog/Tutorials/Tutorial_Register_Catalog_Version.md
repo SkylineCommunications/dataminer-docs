@@ -62,7 +62,7 @@ Open a terminal window and run below command to install the packager.
 dotnet tool install --global Skyline.DataMiner.CICD.Tools.Packager --version 2.0.3
 ```
 
-Run the following command to create a `.dmprotocol` package, adapt the directory paths as needed.
+Run the following command to create a `.dmprotocol` package, adapting the directory paths as needed.
 
 ```powershell
 dataminer-package-create dmprotocol "C:\Tutorials\Catalog Registration\SLC-C-Example_Rates-Custom-1.0.1.X" --name catalog_registration_tutorial --output "C:\Tutorials\Catalog Registration\Packages"
