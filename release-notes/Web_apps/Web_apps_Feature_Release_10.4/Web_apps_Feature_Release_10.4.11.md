@@ -32,6 +32,25 @@ Clicking the *Cancel* button will close the time range picker without updating t
 
 ### Fixes
 
+#### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, dropdown fields defined as `ElementFieldDescriptor`, `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor` would display all items. However, when there were more than 100 items, an incorrect message would appear, stating that not all values were being displayed.
+
+This behavior has now changed:
+
+- If a dropdown field is defined as `ElementFieldDescriptor`, the above-mentioned message will no longer appear. The field will always show all elements.
+
+- If a dropdown field is defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor`, it will now initially show only 100 items. When there are more than 100 items, a message will appear, indicating that there are more items.
+
+Also, dropdown fields defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor` will now use a paging mechanism if the DataMiner server version is 10.4.9 or newer.
+
+> [!NOTE]
+>
+> - If a resource is found in multiple resource pools, it will appear in a dropdown field multiple times (i.e. once for every pool it is found in).
+> - If a dropdown field defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor` contains more than 100 items, it is advised to adapt the filter in order to reduce the number of items in the dropdown field.
+
 #### Dashboards app: Folders of which the name contained a slash ('/') or a backslash ('\\') character would stay hidden [ID 40532]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
