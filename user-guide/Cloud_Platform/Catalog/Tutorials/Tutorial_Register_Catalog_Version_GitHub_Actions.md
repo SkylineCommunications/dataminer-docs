@@ -58,20 +58,17 @@ jobs:
       - name: Create DataMiner Protocol Package
         run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name catalog_registration_tutorial --output "${{ github.workspace }}/Packages"
 
-      # Get the catalog ID (must be set in the repository secrets)
-      - name: Get Catalog ID
-        run: echo "Catalog ID: ${{ secrets.CATALOG_ID }}"
-      
       # Prepare the package file and version details
       - name: Register on Catalog
+        shell: pwsh
         run: |
           $file = Get-Item "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol"
           $uri = "https://api.dataminer.services/api/key-catalog/v1-0/catalog/${{ secrets.CATALOG_ID }}/register/version"
           
           # Define the form data (package file, version, and description)
           $formData = @{
-            file              = Get-Item $file.FullName
-            versionNumber     = "${{ secrets.VERSION_NUMBER }}"
+            file = Get-Item $file.FullName
+            versionNumber = "${{ secrets.VERSION_NUMBER }}"
             versionDescription = "New version registered by GitHub Actions pipeline"
           }
 
@@ -98,7 +95,7 @@ To securely store sensitive information like the catalog ID, API token, and vers
   We can obtain one in the [Admin App](https://admin.dataminer.services/) on the Keys page. 
   This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.  
 
-  `VERSION_NUMBER`: This is the version number for the new catalog entry. You can also set this up in the pipeline file directly if it's static.  
+  `VERSION_NUMBER`: This is the version number for the new catalog entry.
 
     For each secret:
 
@@ -111,7 +108,7 @@ To securely store sensitive information like the catalog ID, API token, and vers
 Once you’ve added the dataminer-catalog-pipeline.yml file to the .github/workflows folder, commit and push it to your repository.
 
 ```bash
-git add .github/workflows/dataminer-pipeline.yml
+git add .github/workflows/dataminer-catalog-pipeline.yml
 git commit -m "Add GitHub Actions pipeline for catalog version registration"
 git push origin main
 ```
