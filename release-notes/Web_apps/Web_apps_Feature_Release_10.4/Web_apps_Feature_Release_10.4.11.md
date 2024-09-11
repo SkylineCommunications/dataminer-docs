@@ -70,3 +70,15 @@ From now on, when you enter a folder name containing a slash ("/") or a backslas
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When a dashboard folder contained child folders, up to now, the main folder would open when you clicked it once, while the child folders would only open when you clicked them twice. From now on, all dashboard folders will open when you click their chevron once.
+
+#### Dashboards/Low-Code Apps - Security: Users would incorrectly not have a profile picture [ID 40617]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you were configuring user access to a dashboard, a dashboard folder or a low-code app, up to now, users would incorrectly not have a profile picture. From now on, every user will have a profile picture.
+
+#### Dashboards app: Problem when trying to delete a dashboard subfolder [ID 40634]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you tried to delete a subfolder of a dashboard folder, in some cases, an error could be thrown. That error would incorrectly state that the folder name cannot be empty.
