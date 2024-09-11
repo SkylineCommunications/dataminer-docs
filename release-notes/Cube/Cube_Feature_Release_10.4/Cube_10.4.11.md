@@ -22,7 +22,11 @@ uid: Cube_Feature_Release_10.4.11
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced performance when starting up DataMiner Cube [ID 40373]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, all DCF interface data would be retrieved by default each time you started DataMiner Cube. From now on, this data will only be retrieved when needed. As a result, overall performance has increased when starting up DataMiner Cube.
 
 ### Fixes
 
