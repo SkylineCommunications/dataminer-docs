@@ -33,6 +33,11 @@ We will be registering our own version of the following example [connector](http
 Inside the `workflows` directory, create a new file named `dataminer-catalog-pipeline.yml`.
 Paste below pipeline template into this file.
 
+> [!IMPORTANT]  
+> Make sure to change the CATALOG_ID environment variable to the Catalog ID you want to register the version to.
+> This is the ID you used to register the [catalog item](#registering-a-catalog-item-with-the-api).  
+> You can always obtain it from an existing Catalog item by navigating to the details page of it in the [Catalog](https://catalog.dataminer.services/), the ID is the last part of the URL.  
+
 ```yaml
 name: Build and Register a Catalog version
 
@@ -53,6 +58,9 @@ jobs:
       - name: Use GitHub run number for versioning
         run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
 
+      - name: Use GitHub environment variable to store Catalog ID
+        run: echo "CATALOG_ID=1742495c-9231-4eeb-a56e-1fec8189246e" >> $GITHUB_ENV
+
       # Install the Skyline DataMiner CICD Packager Tool
       - name: Install Skyline DataMiner CICD Packager Tool
         run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager
@@ -66,7 +74,7 @@ jobs:
         shell: pwsh
         run: |
           $file = Get-Item "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol"
-          $uri = "https://api.dataminer.services/api/key-catalog/v1-0/catalog/${{ secrets.CATALOG_ID }}/register/version"
+          $uri = "https://api.dataminer.services/api/key-catalog/v1-0/catalog/${{ env.CATALOG_ID }}/register/version"
           
           # Define the form data (package file, version, and description)
           $formData = @{
