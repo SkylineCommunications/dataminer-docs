@@ -35,3 +35,11 @@ When the *ReIndexElasticSearchIndexes* tool was run, the existing mappings (whic
 If an element had logger tables that were stored in a database of type *CassandraCluster*, up to now, those logger tables would not be deleted from the database when the element was deleted.
 
 Similarly, when an SLA element was deleted, the data in the slatable associated with that element would not be deleted.
+
+#### SLAnalytics would get blocked for too long when it failed to perform a database operation [ID 40603]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When SLAnalytics fails to perform a database operation, it will retry the same operation several times before eventually giving up. While SLAnalytics is performing those retries, the cache will get blocked, causing all SLAnalytics functionality that relies on that cache to also get blocked.
+
+In order to prevent SLAnalytics from getting blocked for too long and from taking up too much memory, from now on, SLAnalytics will perform less retries if the previous database operation it performed in the last hour also failed.
