@@ -232,7 +232,7 @@ plugins.security.nodes_dn:
   - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
-# it is also possible to use wildcards in the CN field, as long as plugins.security.authcz.admin_dn doesn't match the wildcard expression:
+# it is also possible to use wildcards in the CN field, as long as plugins.security.authcz.admin_dn does not match the wildcard expression:
 #  - 'CN=*OpenSearchNode*,OU=NameOfYourCluster,O=OpenSearch,C=BE'
 
 plugins.security.authcz.admin_dn:
@@ -289,12 +289,12 @@ The default password of the *admin* user should be changed and all the users exc
 
 ##### Restart OpenSearch and apply the configuration
 
-1. Restart OpenSearch: 
+1. Restart OpenSearch:
 
    ```bash
    sudo systemctl restart opensearch
    ```
-   
+
 1. The settings in files */etc/opensearch/opensearch-security/\*.yml* are not applied to the cluster configuration immediately. The configuration is applied by running the script *securityadmin.sh*, which uses the super admin certificates generated earlier
 
    ```bash
