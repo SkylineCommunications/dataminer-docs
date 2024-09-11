@@ -11,6 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 #### 09 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a catalog item [ID 40710]
 
 Users were unable to change the publishing state for a specific version of a catalog item through the API.
+
 #### 09 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
 
 When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <support.cloud.ecosystem@skyline.be> to make it available.
