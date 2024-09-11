@@ -23,12 +23,14 @@ A [finalizer](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/
 
 ## Investigating the crash dump in Visual Studio
 
-In case a crash occurs because of an exception in the Finalize method of a class instance, a dump of SLManagedScripting should be created. The *ERRORLOG.TXT* file should contain an indication of this exception. For example:
+In case a crash occurs because of an exception in the Finalize method of a class instance, a dump of SLManagedScripting is created. The *ERRORLOG.TXT* file should contain an indication of this exception. For example:
 
 ```txt
 System.NullReferenceException: Object reference not set to an instance of an object.
    at Skyline.Protocol.MyExtension.MyClass.Finalize()
 ```
+
+To investigate the crash dump:
 
 1. Open the SLManagedScripting dump file in Visual Studio, and click the *Run Diagnostic Analysis* link in the Actions list.
 
@@ -53,9 +55,9 @@ Open the dump file with WinDbg (*File* > *Open Dump File*).
 > [!TIP]
 > Once the dump file is opened, you can try executing the `.lastevent` and `!analyze` commands to see if these show some relevant information. Note that these commands might not always provide additional info.
 
-### Approach 1: Finding the assembly via `!name2ee` command
+### Approach 1: Finding the assembly via the `!name2ee` command
 
-1. List all the managed threads by using the `!threads` command
+1. List all the managed threads by using the `!threads` command:
 
    ```txt
    !threads
@@ -107,11 +109,11 @@ Open the dump file with WinDbg (*File* > *Open Dump File*).
 
    Here, the first line indicates that a System.NullReferenceException occurred on the Finalizer thread.
 
-1. Switch to the Finalizer thread
+1. Switch to the Finalizer thread.
 
    Switch to this thread by using the `~3s` command (3 is the value for the thread in the first column of the `!threads` command output).
 
-1. Execute the `!clrstack` command
+1. Execute the `!clrstack` command.
 
    ```txt
    0:003> !clrstack
@@ -135,9 +137,7 @@ Open the dump file with WinDbg (*File* > *Open Dump File*).
 
    The stack shows that an unhandled exception occurred while executing the Finalizer of the `Skyline.Protocol.MyExtension.MyClass` type.
 
-1. Determine the assembly this type belongs to
-
-   To determine the assembly this type belongs to (and therefore the connector), execute the following command: `!name2ee * Skyline.Protocol.MyExtension.MyClass`:
+1. Determine the assembly this type belongs to (and therefore the connector), by executing the following command: `!name2ee * Skyline.Protocol.MyExtension.MyClass`.
 
    ```txt
    --------------------------------------
@@ -159,11 +159,11 @@ Open the dump file with WinDbg (*File* > *Open Dump File*).
    --------------------------------------
    ```
 
-   The output lists all the assemblies and for each assembly that defines this type the type is mentioned. In this case, we see that the assembly `ExampleProtocol.1.0.0.1.QAction.1` defines a type `Skyline.Protocol.MyExtension.MyClass` so we should inspect the Finalizer of the `MyClass` type defined in QAction 1 of the `ExampleProtocol` connector version `1.0.0.1`.
+   The output lists all the assemblies, and for each assembly that defines this type, the type is mentioned. In this case, you can see that the assembly `ExampleProtocol.1.0.0.1.QAction.1` defines a type `Skyline.Protocol.MyExtension.MyClass`, so you should inspect the Finalizer of the `MyClass` type defined in QAction 1 of the `ExampleProtocol` connector version `1.0.0.1`.
 
-   At this point, the source of the class should be inspected to find out why the exception was thrown.
+1. Inspect the source of the class to find out why the exception was thrown:
 
-   In WinDbg, you can use the `!dumpclass` command to retrieve more information about the type using its EEClass value as argument: `!dumpclass 0da35d64`:
+   In WinDbg, you can use the `!dumpclass` command to retrieve more information about the type using its EEClass value as argument: `!dumpclass 0da35d64`.
 
    ```txt
    0:003> !dumpclass 0da35d64
@@ -181,7 +181,7 @@ Open the dump file with WinDbg (*File* > *Open Dump File*).
    NumStaticFields:     0
    ```
 
-   Use the `!dumpmt -md 0ce02f2c` (where 0ce02f2c is the Method Table address of the type as seen from the output of the `!dumpclass` command) to see the methods this type defines:
+1. Use the `!dumpmt -md 0ce02f2c` command (where 0ce02f2c is the Method Table address of the type as seen from the output of the `!dumpclass` command) to see the methods this type defines:
 
    ```txt
    0:003> !dumpmt -md 0ce02f2c
@@ -204,22 +204,20 @@ Open the dump file with WinDbg (*File* > *Open Dump File*).
    0d37de08 0ce02f18   NONE Skyline.Protocol.MyExtension.MyClass..ctor()
    0ce20820 0ce02efc    JIT Skyline.Protocol.MyExtension.MyClass.PerformAction()
    ```
-  
-   The see the IL code of the Finalize method, use the `!u 0ce02f08` command (where `0ce02f08` is the address denoted for the `Finalize` method in the output of the `!dumpmt` command).
 
-### Approach 2: Find assembly via the `!eestack` command
+1. To see the IL code of the Finalize method, use the `!u 0ce02f08` command (where `0ce02f08` is the address denoted for the `Finalize` method in the output of the `!dumpmt` command).
 
-Another route to find the type and file that defines the method where the exception occurred is to use the `!eestack` command. The following illustrates another example where an exception occurs in the Finalizer thread.
+### Approach 2: Finding the assembly via the `!eestack` command
 
-1. List all the managed threads by using the `!threads` command
+Another approach to find the type and file that defines the method where the exception occurred is to use the `!eestack` command. The following steps illustrate how to do this with another example where an exception occurs in the Finalizer thread.
 
-   Just like in the previous section, use the `!threads` command to list the threads.
+1. Like in the previous section, use the `!threads` command to list all the managed threads.
 
-1. Show stacks using the `!eestack` command
+1. Show stacks using the `!eestack` command.
 
    If you see that an exception occurred on the Finalizer thread, you can use the `!eestack` command to list the call stacks.
 
-   The output for the Finalizer thread might show an exception and just below the exception you might find more info on what Finalize method was being executed (in the output, look at the output for Thread X, where X denotes the number for the Finalizer thread as seen in the output of the `!threads` command, which is 3 in this case.):
+   The output for the Finalizer thread might show an exception, and just below the exception you might find more info on what Finalize method was being executed (in the output, look at the output for Thread X, where X denotes the number for the Finalizer thread as seen in the output of the `!threads` command, which is 3 in this case.):
 
    ```txt
    ...
@@ -234,9 +232,9 @@ Another route to find the type and file that defines the method where the except
    ...
    ```
 
-1. Use the `!dumpmd` command to obtain more information about the Finalize method
+1. Use the `!dumpmd` command to obtain more information about the Finalize method.
 
-   You can use the method descriptor address that is denoted for the `QAction.Finalize`: `!dumpmd 15632fbc`
+   You can use the method descriptor address that is denoted for the `QAction.Finalize`: `!dumpmd 15632fbc`.
 
    ```txt
    0:003> !dumpmd 15632fbc
@@ -250,9 +248,7 @@ Another route to find the type and file that defines the method where the except
    Transparency: Safe critical
    ```
 
-1. Use the `!dumpclass` command to obtain more information about the class
-
-   Now use the `!dumpclass` command with the address provided on the `Class:` line: `!dumpclass 0da35d64`:
+1. Use the `!dumpclass` command with the address provided on the `Class:` line to obtain more information about the class: `!dumpclass 0da35d64`.
 
    ```txt
    0:003> !dumpclass 156196fc
@@ -277,4 +273,4 @@ Another route to find the type and file that defines the method where the except
    6bc024d4  4000010       14        System.String  0 instance           _subscriptionSetName
    ```
 
-   Now the line that starts with `File:` shows the assembly where this method is defined in, which includes the protocol name and QAction ID.
+   Now the line that starts with `File:` shows the assembly where this method is defined, which includes the protocol name and QAction ID.
