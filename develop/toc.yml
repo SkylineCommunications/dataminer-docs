@@ -659,7 +659,6 @@ items:
       - name: Why is serial data not visible in DataMiner?
         topicUid: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
-        topicUid: QAction_exceptions
         items:
         - name: System.NullReferenceException
           topicUid: System_NullReferenceException
@@ -669,6 +668,8 @@ items:
           topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
           topicUid: System_Collections_Generic_KeyNotFoundException
+        - name: Exception in Finalizer
+          topicUid: Finalizer_Exception
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
