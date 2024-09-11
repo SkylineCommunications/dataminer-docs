@@ -232,9 +232,11 @@ plugins.security.nodes_dn:
   - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+# it is also possible to use wildcards in the CN field, as long as plugins.security.authcz.admin_dn does not match the wildcard expression:
+#  - 'CN=*OpenSearchNode*,OU=NameOfYourCluster,O=OpenSearch,C=BE'
 
 plugins.security.authcz.admin_dn:
-  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+  - CN=Admin,OU=NameOfYourCluster,O=OpenSearch,C=BE
 
 plugins.security.audit.type: internal_opensearch
 plugins.security.enable_snapshot_restore_privilege: true
@@ -282,21 +284,28 @@ The default password of the *admin* user should be changed and all the users exc
      reserved: true
      backend_roles:
      - "admin"
-     description: "Demo admin user"
+     description: "admin user"
    ```
 
 ##### Restart OpenSearch and apply the configuration
 
-1. When you have completed the steps above, restart OpenSearch and apply the user settings using the following commands, making sure to replace the placeholders `<IPOfYourNode1>`, `<FQDNOfYourNode-node-keystore.p12>`, and `<GeneratedPasswordByGithubScript>` with the appropriate data:
+1. Restart OpenSearch:
 
    ```bash
    sudo systemctl restart opensearch
    ```
 
+1. To apply the settings in the files */etc/opensearch/opensearch-security/\*.yml* to the cluster configuration, run the script *securityadmin.sh*, which uses the super admin certificates generated earlier:
+
    ```bash
    cd /usr/share/opensearch/plugins/opensearch-security/tools
 
-   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -cacert < GeneratedRootCA.pem > -cert < GeneratedAdminCert.pem > -key < GeneratedAdminKey.pem > 
+   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security \
+      -icl \
+      -nhnv \
+      -cacert /path/to/rootCA.crt \
+      -cert /path/to/admin.pem \
+      -key /path/to/admin-key.pem
    ```
 
    If the private key has a password, you can specify this with the -keypass option in the request above.
