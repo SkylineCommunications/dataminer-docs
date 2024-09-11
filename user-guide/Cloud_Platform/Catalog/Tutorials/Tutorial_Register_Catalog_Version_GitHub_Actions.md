@@ -49,6 +49,8 @@ jobs:
       # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Use GitHub run number for versioning
+        run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
 
       # Install the Skyline DataMiner CICD Packager Tool
       - name: Install Skyline DataMiner CICD Packager Tool
@@ -68,7 +70,7 @@ jobs:
           # Define the form data (package file, version, and description)
           $formData = @{
             file = Get-Item $file.FullName
-            versionNumber = "${{ secrets.VERSION_NUMBER }}"
+            versionNumber = "${{ env.VERSION }}"
             versionDescription = "New version registered by GitHub Actions pipeline"
           }
 
