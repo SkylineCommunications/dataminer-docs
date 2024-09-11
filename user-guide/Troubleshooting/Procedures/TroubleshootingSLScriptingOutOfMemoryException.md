@@ -14,9 +14,6 @@ By default, a single instance of the SLScripting process is spun up by DataMiner
 > [!TIP]
 > For investigation purposes you could also consider to configure DataMiner so that it creates a separate SLScripting process for each SLProtocol process. Refer to [Configuring a separate SLScripting process for every protocol used](xref:Configuration_of_DataMiner_processes#configuring-a-separate-slscripting-process-for-every-protocol-used) and [Element in Protocol logging](xref:Element_in_Protocol_logging) for more information.
 
-> [!IMPORTANT]
-> If you cannot identify any objects that are responsible for consuming the memory in managed memory, it is possible that the leak is present in unmanaged memory. In this case, review whether objects are used that implement [IDisposable](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects) which were not properly disposed of and verify whether you use code or class libraries that allocate unmanaged memory which was not properly released.
-
 In case of a crash due to the SLScripting process running out of memory, the log files in the generated log collector package, e.g. the element log files and the SLErrorsInProtocol log file, should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
 
 For example:
@@ -58,3 +55,6 @@ Based on this overview, you can investigate the objects consuming the most memor
 
 > [!NOTE]
 > In some cases, it could be that the Analysis result does not show this potential fix and therefore does not provide a link to open the Managed Memory Tool. In that case, use another tool to inspect the managed memory, such as the [Dump Analyzer Server](https://internaldocs.skyline.be/DevDocs/Dump_Analyzer_Server/Intro.html), [Memory Dump Analyzer SLScripting](https://internaldocs.skyline.be/DevDocs/Analyzing_SLScripting_Memory_Dumps/Memory_Dump_Analyzer_SLScripting.html), [WinDbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/).
+
+> [!IMPORTANT]
+> If you cannot identify any objects that are responsible for consuming the memory in managed memory, keep in mind that it is also possible that the leak is present in unmanaged memory. In this case, review whether objects are used that implement [IDisposable](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects) which were not properly disposed of and verify whether you use code or class libraries that allocate unmanaged memory which was not properly released.
