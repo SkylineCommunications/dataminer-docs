@@ -27,3 +27,5 @@ In this section:
 - [Validation](xref:CODValidation#validation)
 
 - [Points of attention](xref:CODAttention#points-of-attention)
+
+- [Common Remarks](xref:CODCommonRemarks#CommonRemarks)

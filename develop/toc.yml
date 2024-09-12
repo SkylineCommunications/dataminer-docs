@@ -5177,6 +5177,13 @@ items:
           topicUid: Skyline_Driver_Passport_Platform
         - name: Minimum DMA version
           topicUid: Minimum_DMA_version
+    - name: Common Remarks
+      topicUid: CODCommonRemarks
+      items:
+        - name: Cassandra Compliancy
+          topicUid: Cassandra_Compliancy
+        - name: Device Firmware On Connector Help
+          topicUid: Device_Firmware_On_Connector_Help
 - name: CI/CD
   topicUid: CICD
   items:
