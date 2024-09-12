@@ -133,14 +133,13 @@ function initSearch() {
   }
 
   function showSearch(showSearch) {
-    var mainElement = document.getElementsByTagName("main");
-    var serachResults = document.getElementById('search-results-new');
+    var searchResults = document.getElementById('search-results-new');
     if (showSearch) {
       document.getElementById("main").style.display = "none";
-      serachResults.style.display = "block";
+      searchResults.style.display = "block";
     } else {
       document.getElementById("main").style = null;
-      serachResults.style.display = "none";
+      searchResults.style.display = "none";
     }
   }
 }
