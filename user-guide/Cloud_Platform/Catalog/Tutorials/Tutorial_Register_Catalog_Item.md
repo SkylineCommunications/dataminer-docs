@@ -4,15 +4,16 @@ uid: Tutorial_Register_Catalog_Item
 
 # Registering a new connector in the Catalog
 
-This tutorial demonstrates how to add a new Catalog item using the [Catalog API](xref:Register_Catalog_Item).  
-We will be registering our own version of the following example [connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom).  
+This tutorial demonstrates how to add a new Catalog item using the [Catalog API](xref:Register_Catalog_Item), using an [example connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom).
 
-For ease of use we will be using [Postman](https://www.postman.com/) to execute the register API calls. Feel free to integrate them afterwards in your workflow, e.g by using them in a GitHub action.
+For ease of use, [Postman](https://www.postman.com/) will be used to execute the register API calls. You can also integrate these into your own workflow afterwards, e.g by using them in a GitHub action.
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
 
+  > [!TIP]
+  > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
 
 ## Overview
 

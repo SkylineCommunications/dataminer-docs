@@ -23,8 +23,7 @@ We will be registering our own version of the following example [connector](http
 ## Step 1: Register Catalog version URL
 
 In order to register our first version, we will use the register version call from the Catalog API.
-Create a new HTTP request using the POST http method and URL
-`https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register`
+Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register`.
 
 ![Register version http url](~/user-guide/images/tutorial_catalog_registration_version_url.png)
 
@@ -35,7 +34,7 @@ Create a new HTTP request using the POST http method and URL
 
 ## Step 2: Authentication Header
 
-The Catalog Version register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), we can obtain one in the [Admin App](https://admin.dataminer.services/) on the `Keys` page.
+The Catalog Version register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), we can obtain one in the [Admin App](https://admin.dataminer.services/) on the *Keys* page.
 This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
 
 > [!IMPORTANT]
@@ -51,8 +50,7 @@ After creation of the key, you can copy the key and use it as value in the **Ocp
 
 ## Step 3: Register Catalog version Body
 
-The body of the version registration request requires a file containing our connector, for this we will be using the 
-[Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a `.dmprotocol` package from our solution.
+The body of the version registration request requires a file containing our connector, for this we will be using the [Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a .dmprotocol package from our solution.
 
 Navigate to [Example Rates connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom) and download the solution.
 
@@ -62,7 +60,7 @@ Open a terminal window and run below command to install the packager.
 dotnet tool install --global Skyline.DataMiner.CICD.Tools.Packager --version 2.0.3
 ```
 
-Run the following command to create a `.dmprotocol` package, adapting the directory paths as needed.
+Run the following command to create a .dmprotocol package, adapting the directory paths as needed.
 
 ```powershell
 dataminer-package-create dmprotocol "C:\Tutorials\Catalog Registration\SLC-C-Example_Rates-Custom-1.0.1.X" --name catalog_registration_tutorial --output "C:\Tutorials\Catalog Registration\Packages"
