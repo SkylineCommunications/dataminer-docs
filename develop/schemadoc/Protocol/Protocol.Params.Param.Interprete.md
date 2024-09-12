@@ -26,7 +26,6 @@ By default, try to follow the following guidelines for specifying values for the
 
 - **For tables**:
 
-  - Interprete.Rawtype = other
 
 
   - Measurement.Type = number 
