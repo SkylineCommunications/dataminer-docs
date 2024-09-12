@@ -14,7 +14,7 @@ For a permanent license for a DataMiner Agent, the following procedure applies:
 
    At this point, startup will fail.
 
-1. Provide Skyline with a copy of the file *request.lic*, located in the folder *C:\\Skyline DataMiner\\*.
+1. Provide Dataminer Licensing Group (dataminer.licensing@skyline.be) with a copy of the file *request.lic*, located in the folder *C:\\Skyline DataMiner\\*.
 
 1. Wait until you receive the following two files from Skyline:
 
