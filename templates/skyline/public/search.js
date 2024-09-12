@@ -4,25 +4,24 @@ function initSearch() {
 
   function debounce(func, wait, immediate) {
     var timeout;
-    return function() {
-        var context = this, args = arguments;
-        var later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context.target.value, args);
+    return function () {
+      var context = this, args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context.target.value, args);
     };
-};
+  };
 
-  function createSearchResultsNewHtml()
-  {
-	var searchBox = document.getElementById("search-input")
-	searchBox.addEventListener("keyup", debounce(search, 250));
+  function createSearchResultsNewHtml() {
+    var searchBox = document.getElementById("search-input")
+    searchBox.addEventListener("keyup", debounce(search, 250));
   }
-  
+
   function getTitle(str) {
     const endsWith = "| DataMiner Docs"
 
@@ -48,16 +47,16 @@ function initSearch() {
 
   function initEventHandlersCloseOpenSearch() {
 
-	var newSearchBox = document.getElementById("new-search-btn");
+    var newSearchBox = document.getElementById("new-search-btn");
 
-	newSearchBox.addEventListener("click", (event) => {
+    newSearchBox.addEventListener("click", (event) => {
       showSearch(true);
       document.getElementById('search-input').focus();
     });
 
     //attach a click handler to the close icon
-	var searchCloseButton = document.getElementById("search-close-btn");
-	searchCloseButton.addEventListener("click", (event) => {
+    var searchCloseButton = document.getElementById("search-close-btn");
+    searchCloseButton.addEventListener("click", (event) => {
       showSearch(false);
       clearResults();
       clearSearchInput();
@@ -65,7 +64,7 @@ function initSearch() {
   }
 
   function search(e) {
-	  var searchTerm = e.target.value;
+    var searchTerm = e.target.value;
     if (searchTerm.length) {
       doGetHttpRequest(searchTerm);
     } else {
@@ -80,21 +79,21 @@ function initSearch() {
     if (pattern.test(searchTermEnhanced)) {
       searchTermEnhanced += "*";
     }
-    var body= '{"search": \'' + searchTermEnhanced + '\',"searchMode": "all","queryType": "full","top": 200}';
-	
-	let xhr = new XMLHttpRequest()
-xhr.onload = function () {
-    if(xhr.status === 200) {
+    var body = '{"search": \'' + searchTermEnhanced + '\',"searchMode": "all","queryType": "full","top": 200}';
+
+    let xhr = new XMLHttpRequest()
+    xhr.onload = function () {
+      if (xhr.status === 200) {
         processSearchResults(JSON.parse(xhr.responseText), searchTerm);
+      }
     }
-}
-xhr.onerror = () => {
-  clearResults();
-  addHtmlToResultElement('<p>Unsupported search query.</p>');
-};
-xhr.open('POST', url, true)
-xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
-xhr.send(body);	
+    xhr.onerror = () => {
+      clearResults();
+      addHtmlToResultElement('<p>Unsupported search query.</p>');
+    };
+    xhr.open('POST', url, true)
+    xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+    xhr.send(body);
   }
 
   function clearResults() {
@@ -102,13 +101,13 @@ xhr.send(body);
   }
 
   function clearSearchInput() {
-	document.getElementById('search-input').value = '';
+    document.getElementById('search-input').value = '';
   }
 
   function addHtmlToResultElement(html) {
     const resultElement = document.getElementById("search-result-items");
     //resultElement.append(html);
-	resultElement.innerHTML += html;
+    resultElement.innerHTML += html;
   }
 
   function processSearchResults(data, searchTerm) {
@@ -134,14 +133,13 @@ xhr.send(body);
   }
 
   function showSearch(showSearch) {
-	var mainElement = document.getElementsByTagName("main");
-	var serachResults = document.getElementById('search-results-new');
-    if (showSearch)
-	{
-	  document.getElementById("main").style.display = "none";
-	  serachResults.style.display = "block";
+    var mainElement = document.getElementsByTagName("main");
+    var serachResults = document.getElementById('search-results-new');
+    if (showSearch) {
+      document.getElementById("main").style.display = "none";
+      serachResults.style.display = "block";
     } else {
-	  document.getElementById("main").style = null;
+      document.getElementById("main").style = null;
       serachResults.style.display = "none";
     }
   }
