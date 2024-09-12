@@ -94,3 +94,9 @@ When a user duplicated a dashboard that everyone was allowed to edit, up to now,
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you tried to delete a subfolder of a dashboard folder, in some cases, an error could be thrown. That error would incorrectly state that the folder name cannot be empty.
+
+#### Dashboards app: Not possible to update the access permissions of the root folder [ID 40644]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, it would not be possible to update the access permissions of the root folder.
