@@ -9,6 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 12 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a Catalog item [ID 40710]
+
+Users were unable to change the publishing state for a specific version of a Catalog item through the API.
+
+#### 12 September 2024 - Enhancement - Catalog API - Catalog registration API has been improved [ID 40670]
+
+The previously available Catalog API call to register a new Catalog item or version using the manifest file has now been split up into two different calls. There is now a PUT call available to register/update an item (including its description) and a POST call to register a new version.
+
+#### 12 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
+
+When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <support.cloud.ecosystem@skyline.be> to make it available.
+
+#### 12 September 2024 - New feature - Catalog - Unauthenticated access [ID 40570] [ID 40571] [ID 40572] [ID 40573] [ID 40686]
+
+As an unauthenticated user, you can now search through the publicly available Catalog items, and view their description and their available versions.
+
+#### 12 September 2024 - New feature - Catalog API - Catalog registration supports images in description readme file [ID 40219]
+
+Catalog item registration now supports images in the provided description of the Catalog item. Any used images need to be included in a *Images* directory. Supported image formats are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
+
 #### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID 40601]
 
 When you search for an item in the Catalog, a documentation link will now be shown next to the type filter. This link will navigate to the Catalog types information on DataMiner Docs.
