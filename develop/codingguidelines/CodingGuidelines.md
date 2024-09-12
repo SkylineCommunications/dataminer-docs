@@ -28,4 +28,4 @@ In this section:
 
 - [Points of attention](xref:CODAttention#points-of-attention)
 
-- [Common Remarks](xref:CODCommonRemarks#CommonRemarks)
+- [Common Remarks](xref:CODCommonRemarks)
