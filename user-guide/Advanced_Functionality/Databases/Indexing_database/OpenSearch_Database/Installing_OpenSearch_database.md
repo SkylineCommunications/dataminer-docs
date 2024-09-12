@@ -319,7 +319,7 @@ The default password of the *admin* user should be changed and all the users exc
 1. Check via the command line if data is returned (make sure to replace the placeholder data with the correct data):
 
    ```curl
-   curl https://<IPOfYourNode>:9200 -u admin:yournewpassword --ssl-no-revoke
+   curl --insecure -u admin https://[node_hostname_or_ip]:9200
    ```
 
    This should return something similar to this:
