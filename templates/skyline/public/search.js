@@ -1,4 +1,11 @@
 function initSearch() {
+  const BASE_DOCS_URL = "https://docs.dataminer.services";
+  const BASE_STORAGE_ACCOUNT_URL = "https://docshelp.blob.core.windows.net";
+  const BLOB_CONTAINER_NAMES = [
+    "docs-connectors", // https://docs.dataminer.services/connector (connectors)
+    "docs", // https://docs.dataminer.services/* (main)
+  ];
+
   createSearchResultsNewHtml();
   initEventHandlersCloseOpenSearch();
 
@@ -35,14 +42,27 @@ function initSearch() {
     return str;
   }
 
-  function getDocsUrlFromBlobStoragePathUri(blobUri) {
-    // example url: "https://docshelp.blob.core.windows.net/docs/user-guide/Advanced_Functionality/DataMiner_Systems/DataminerSystems.html"
-    const startsWith = "https://docshelp.blob.core.windows.net/docs/"
+  function getUrlBlobStorageContainer(storageAccountUrl, blobContainerName) {
+    return `${storageAccountUrl}/${blobContainerName}/`;
+  }
 
-    if (blobUri.startsWith(startsWith)) {
-      return `https://docs.dataminer.services/${blobUri.substring(startsWith.length)}`;
+  function composeDocsUrlWithoutBeginPart(blobUri, beginPartUrl) {
+    return `${BASE_DOCS_URL}/${blobUri.substring(beginPartUrl.length)}`;
+  }
+
+  function getDocsUrlFromBlobStoragePathUri(blobUri) {
+    // example url docs main: https://docshelp.blob.core.windows.net/docs/user-guide/Getting_started/Creating_a_DataMiner_System.html
+    // example url docs connectors: https://docshelp.blob.core.windows.net/docs-connectors/connector/doc/Skyline_Regression_Test_Result_Collector.html
+
+    for (const blobContainerName of BLOB_CONTAINER_NAMES) {
+      const beginPartUrl = getUrlBlobStorageContainer(BASE_STORAGE_ACCOUNT_URL, blobContainerName);
+
+      if (blobUri.startsWith(beginPartUrl)) {
+        return composeDocsUrlWithoutBeginPart(blobUri, beginPartUrl);
+      }
     }
-    return blobUri;
+
+    return '';
   }
 
   function initEventHandlersCloseOpenSearch() {
