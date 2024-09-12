@@ -32,7 +32,7 @@ By default, try to follow the following guidelines for specifying values for the
 
 - **For discreets**:
 
-  If all the values in a discreet are numbers, it is better to use interpretes for numbers.
+  If all the values in a discreet are numbers, it is better to use Interprete.Type and Interprete.RawType as specified above in "For numbers".
 
 ## Parent
 
