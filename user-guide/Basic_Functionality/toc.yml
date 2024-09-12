@@ -238,6 +238,8 @@ items:
             items:
             - name: Detecting anomalies with DataMiner
               topicUid: Anomaly_Tutorial
+            - name: Creating an anomaly overview dashboard
+              topicUid: Creating_Anomaly_Overview_Dashboard
       - name: Advanced alarm functionality
         topicUid: Advanced_alarm_functionality
         items:
@@ -298,6 +300,10 @@ items:
                 topicUid: Deleting_a_pattern_definition
               - name: Managing pattern definitions
                 topicUid: Managing_pattern_definitions
+              - name: Tutorials
+                items:
+                  - name: Using trend patterns to detect backup failures
+                    topicUid: trend_patterns_backup_failures
           - name: Working with relation learning
             topicUid: Working_with_relation_learning
             items:
