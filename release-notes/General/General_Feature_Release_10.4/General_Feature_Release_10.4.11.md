@@ -65,3 +65,6 @@ In order to prevent SLAnalytics from getting blocked for too long and from takin
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 When resource pools were retrieved with a property filter, and one of the resource pools had "null" properties, a `NullReferenceException` would be thrown and no resource pools would be returned.
+
+> [!NOTE]
+> The above-mentioned exception would only be thrown when, instead of `FilterElements`, (deprecated) object filters were being used.

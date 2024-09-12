@@ -22,7 +22,18 @@ uid: Cube_Feature_Release_10.4.11
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center - Logging: Additional log files available in DataMiner tab [ID 40676]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Logging* section of *System Center*, a number of additional log files can now be consulted in the *DataMiner* tab:
+
+- App Package Installer
+- Cluster Transition Manager
+- Database Migration
+- SAML
+- Spectrum Manager
+- UI Provider
 
 ### Fixes
 
