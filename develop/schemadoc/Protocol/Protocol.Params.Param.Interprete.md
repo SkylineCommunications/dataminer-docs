@@ -28,7 +28,7 @@ By default, try to follow the following guidelines for specifying values for the
 
 
 
-  - Measurement.Type = number 
+  - Measurement.Type = table
 
 - **For discreets**:
 
