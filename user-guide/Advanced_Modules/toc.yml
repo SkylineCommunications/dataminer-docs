@@ -277,6 +277,8 @@ items:
                 topicUid: Editing_a_dashboard
               - name: Changing dashboard settings
                 topicUid: Changing_dashboard_settings
+              - name: Configuring security for a dashboard
+                topicUid: Configuring_dashboard_security
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing
@@ -737,7 +739,6 @@ items:
       - name: Customizing the legacy Dashboards app
         topicUid: Customizing_the_legacy_Dashboards_app
       - name: Legacy Dashboard Gateway installation
-        topicUid: Legacy_Dashboard_Gateway_installation
         items:
           - name: Installing a DMS Dashboard Gateway
             topicUid: Installing_a_DMS_Dashboard_Gateway
@@ -857,7 +858,7 @@ items:
             topicUid: DOM_Invoice_app_example
           - name: Status system example
             topicUid: DOM_status_system_example
-          - name: Altering values of a DomInstance - examples
+          - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
             topicUid: DOM_BulkProcessing_Example
@@ -926,6 +927,10 @@ items:
             topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
       - name: EPM integration training
         topicUid: EPM_Integration_Training
+      - name: Tutorials
+        items:
+          - name: Getting started with EPM
+            topicUid: EPM_Introduction_Tutorial
   - name: Inventory & Asset Management
     topicUid: AssetManagement
     items:

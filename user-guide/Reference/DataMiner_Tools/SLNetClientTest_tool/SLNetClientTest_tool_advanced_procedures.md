@@ -26,7 +26,6 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Fine-tuning NATS settings](xref:SLNetClientTest_finetuning_nats_settings)
 - [Fine-tuning the CPECollectorHelper API timeout](xref:SLNetClientTest_finetuning_CPECollectorHelper)
 - [Forcing file synchronization between DMAs](xref:SLNetClientTest_forcing_file_sync)
-- [Generating SMIv2 MIB files](xref:SLNetClientTest_generating_mib_files)
 - [Having RCA chains updated by the DCF engine](xref:SLNetClientTest_having_rca_chains_updated)
 - [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload)
 - [Inspecting the active replication buffers](xref:SLNetClientTest_inspecting_active_replication_buffers)

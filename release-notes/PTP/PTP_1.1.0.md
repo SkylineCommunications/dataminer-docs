@@ -6,7 +6,7 @@ uid: PTP_1.1.0
 
 ## New features
 
-#### Redesign of PTP app visual overview \[ID_26179\]\[ID_27433\]\[ID_27560\]\[ID_27607\]
+#### Redesign of PTP app visual overview \[ID 26179\]\[ID 27433\]\[ID 27560\]\[ID 27607\]
 
 The visual overview of the PTP app has been redesigned to be more user-friendly while continuing to visualize everything that is needed to effectively manage the PTP system.
 
@@ -21,11 +21,11 @@ In several locations, tooltips have been added or improved.
 
 The setup wizard has also been updated so that you can hide the new tab pages in the PTP app if you want to.
 
-#### Support for setups without slave devices \[ID_26191\]
+#### Support for setups without slave devices \[ID 26191\]
 
 The DataMiner PTP app now supports setups without slave devices.
 
-#### Unicode support \[ID_27514\]
+#### Unicode support \[ID 27514\]
 
 The DataMiner PTP app now has Unicode support.
 
@@ -57,16 +57,16 @@ This is a breaking change. Existing deployments can be migrated to this version 
 
 ### Enhancements
 
-#### PTP setup wizard updated to match new PTP app design \[ID_27753\]
+#### PTP setup wizard updated to match new PTP app design \[ID 27753\]
 
 The PTP setup wizard has been updated to reflect the new design of the PTP app.
 
-#### Cisco Nexus and Arista Manager visual overviews updated \[ID_27748\]
+#### Cisco Nexus and Arista Manager visual overviews updated \[ID 27748\]
 
 The visual overviews for the Cisco Nexus and Arista Manager drivers were updated to be in line with the new style of the DataMiner PTP app.
 
 ### Fixes
 
-#### Incorrect parameters displayed for Profile and PTP Time \[ID_27340\]
+#### Incorrect parameters displayed for Profile and PTP Time \[ID 27340\]
 
 On the *Analyzer* tab page of the PTP app, incorrect parameters were displayed for the *Profile* and *PTP Time*.

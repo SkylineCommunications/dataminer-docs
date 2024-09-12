@@ -6,7 +6,7 @@ uid: BPA_View_Recursion
 
 This BPA will check the *Views.xml* file to see if any loops are present.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.7, 10.1.0 CU4, 10.0.0 CU15 and 9.6.0 CU24 onwards, this BPA test is available by default.
+This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
 
 ## Metadata
 

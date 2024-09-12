@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.1.2
 
 ### DMS core functionality
 
-#### New Cassandra cluster feature \[ID_23210\]\[ID_23975\]\[ID_25945\]\[ID_26144\]\[ID_26475\]\[ID_27080\] \[ID_27520\]\[ID_27615\]\[ID_27648\]\[ID_27694\]\[ID_28406\]
+#### New Cassandra cluster feature \[ID 23210\]\[ID 23975\]\[ID 25945\]\[ID 26144\]\[ID 26475\]\[ID 27080\] \[ID 27520\]\[ID 27615\]\[ID 27648\]\[ID 27694\]\[ID 28406\]
 
 A Cassandra cluster is now supported as the general database for a DataMiner System. While previously it was already possible to use a separate Cassandra cluster for each DataMiner node, this new feature allows all DataMiner nodes in a cluster to connect to the same Cassandra cluster.
 
@@ -49,7 +49,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 > [!NOTE]
 > If a database of type Cassandra cluster is used, the soft-launch feature [NewAverageTrending](xref:Overview_of_Soft_Launch_Options#newaveragetrending) is automatically enabled.
 
-#### DataMiner Object Model \[ID_28096\]\[ID_28392\]\[ID_28460\]
+#### DataMiner Object Model \[ID 28096\]\[ID 28392\]\[ID 28460\]
 
 The DataMiner Object Model (DOM) is a collection of generic objects and a generic DomManager that can be used to perform a series of operations.
 
@@ -90,7 +90,7 @@ Create, read, update and delete calls on a DomManager can be initiated using a D
 
 ### DMS Security
 
-#### DataMiner Cube - System Center: New Planned Maintenance app permissions \[ID_28164\] \[ID_28541\]
+#### DataMiner Cube - System Center: New Planned Maintenance app permissions \[ID 28164\] \[ID 28541\]
 
 In the *Users/Groups* section of *System Center*, it is now possible to configure the following new user permissions.
 
@@ -101,7 +101,7 @@ In the *Users/Groups* section of *System Center*, it is now possible to configur
 | Delete          | Permission to delete items in the PLM app.                    |
 | Configure       | Permission to configure the PLM app.                          |
 
-#### DataMiner Cube - System Center: Renamed user permissions \[ID_28439\]
+#### DataMiner Cube - System Center: Renamed user permissions \[ID 28439\]
 
 In the *Users/Groups* section of *System Center*, the following has been changed:
 
@@ -110,7 +110,7 @@ In the *Users/Groups* section of *System Center*, the following has been changed
 
 ### DMS Protocols
 
-#### Enhanced (direct) view column option 'view' \[ID_28448\]
+#### Enhanced (direct) view column option 'view' \[ID 28448\]
 
 The following (direct) view column option has been enhanced.
 
@@ -128,7 +128,7 @@ This option can be configured in three different ways. See the table below. In t
 
 ### DMS Cube
 
-#### Visual Overview: New icons added to DataMiner stencils \[ID_27571\]
+#### Visual Overview: New icons added to DataMiner stencils \[ID 27571\]
 
 ##### New icons
 
@@ -202,7 +202,7 @@ In the DataMiner stencils, the following existing icons have been renamed:
 
 All icon names are now in capital case.
 
-#### Visual Overview: Support for saving page and card variables \[ID_28434\]
+#### Visual Overview: Support for saving page and card variables \[ID 28434\]
 
 It is now possible to have page variables and card variables saved across sessions.
 
@@ -210,7 +210,7 @@ To do so, place the following prefix before the variable name: *\_\_saved\_*
 
 The variable is then saved in a separate .dat file located in the following folder on the client machine: C:\\Users\\{Username}\\AppData\\Roaming\\Skyline\\DataMiner. When a variable is saved, if a user reopens a card with that variable, the variable will be set to the last saved value.
 
-#### Visual Overview - ChildrenFilter: Using a regular expression to filter by name \[ID_28445\]
+#### Visual Overview - ChildrenFilter: Using a regular expression to filter by name \[ID 28445\]
 
 In a shape data field of type ChildrenFilter, it is now possible to filter by service name, view name or child element name.
 
@@ -222,13 +222,13 @@ To do so, in the ChildrenFilter data field of the child shape, add “Name=” f
 
 If you add this type of filter to a template shape, only objects of which the name matches the regular expression will use that particular template shape.
 
-#### Service & Resource Management - Services app: Visualization and configuration of the node interfaces of service profile definitions and service profile instances \[ID_28508\]
+#### Service & Resource Management - Services app: Visualization and configuration of the node interfaces of service profile definitions and service profile instances \[ID 28508\]
 
 In the *Profiles* tab of the *Services* app, it is now also possible to visualize and fully configure the node interfaces of service profile definitions and service profile instances.
 
 Also, it is now possible to select a profile instance for every node interface of a service profile instance node.
 
-#### System Center - Agents: BPA test management \[ID_28516\]
+#### System Center - Agents: BPA test management \[ID 28516\]
 
 In the *Agents* section of *System Center*, the new *BPA* tab now allows you to view and run the Best Practices Analyzer (BPA) tests available on your DataMiner System.
 
@@ -236,7 +236,7 @@ This growing list of tests will allow you to check hardware and software require
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - Bar chart component: Enhancements \[ID_28461\]
+#### Dashboards app - Bar chart component: Enhancements \[ID 28461\]
 
 A number of enhancements have been made to the bar chart component.
 
@@ -264,11 +264,11 @@ Apart from highlighting all bars belonging to a specific variable, you can now a
 
 ### DMS Automation
 
-#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID_28405\]
+#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
 
 From now on, interactive Automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID_28528\]
+#### Interactive Automation scripts: Lazy loading of tree view items \[ID 28528\]
 
 It is now possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
@@ -279,13 +279,13 @@ To activate this so-called lazy loading for a particular tree view item, set its
 
 ### DMS Mobile apps
 
-#### Jobs app: Jobs will now be retrieved via web sockets \[ID_28285\]
+#### Jobs app: Jobs will now be retrieved via web sockets \[ID 28285\]
 
 In the Jobs app, jobs will now be retrieved via web sockets.
 
 As a result, all updates and deletions will now be received automatically.
 
-#### Throttling will now be enabled on all SLNet connections \[ID_28442\]
+#### Throttling will now be enabled on all SLNet connections \[ID 28442\]
 
 All web applications\* will now connect to SLNet with the “AllowMessageThrottling” attribute.
 
@@ -293,7 +293,7 @@ All web applications\* will now connect to SLNet with the “AllowMessageThrottl
 
 ### DMS Service & Resource Management
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID_28186\]
+#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
 
 It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
@@ -377,7 +377,7 @@ var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
 
 ### DMS tools
 
-#### SLNetClientTest: Viewing and deleting trend data patterns \[ID_28098\]
+#### SLNetClientTest: Viewing and deleting trend data patterns \[ID 28098\]
 
 In the SLNetClientTest program, it is now possible to view and delete trend data patterns.
 
@@ -388,7 +388,7 @@ In the SLNetClientTest program, it is now possible to view and delete trend data
 
 ### Enhancements
 
-#### DataMiner Cube - Alarm templates: Hysteresis values can now be lower than the polling interval \[ID_28207\]
+#### DataMiner Cube - Alarm templates: Hysteresis values can now be lower than the polling interval \[ID 28207\]
 
 In the Alarm template editor, it is possible to configure hysteresis values for a monitored parameter. From now on, you will be able to enter hysteresis values that are lower than the polling interval of the parameter or the protocol. This will allow hysteresis to also work correctly for protocols in which SNMP traps are defined.
 
@@ -397,25 +397,25 @@ In the Alarm template editor, it is possible to configure hysteresis values for 
 > - In general, it remains recommended to specify hysteresis values that are greater than the polling interval of the parameter. Only for parameters updated via SNMP traps or smart-serial parameters should you consider specifying hysteresis intervals that are lower than the polling interval.
 > - Up to now, when you entered a hysteresis value that was lower than the polling interval, an error message would be displayed. From now on, a warning message will be displayed instead.
 
-#### DataMiner Cube - Data Display: Enhanced performance when loading the default page after opening a card \[ID_28255\]
+#### DataMiner Cube - Data Display: Enhanced performance when loading the default page after opening a card \[ID 28255\]
 
 Due to a number of enhancements, overall performance has increased when loading the default page after opening a card.
 
-#### DataMiner Maps: Style attribute of TableSourceInfo tags will now by default be set 'markers' \[ID_28313\]
+#### DataMiner Maps: Style attribute of TableSourceInfo tags will now by default be set 'markers' \[ID 28313\]
 
 In a map configuration file, the style attribute of a TableSourceInfo tag can be set to either “markers” or “lines”.
 
 From now on, if this attribute is not specified, it will by default be set to “markers”.
 
-#### DataMiner Cube - Protocols & Templates: Signed enhanced service protocols \[ID_28338\]
+#### DataMiner Cube - Protocols & Templates: Signed enhanced service protocols \[ID 28338\]
 
 In the Protocol & Templates app, it is now also possible to have signed enhanced service protocols.
 
-#### DataMiner Cube - Services app & Visual Overview: Enhanced performance when refreshing service definition diagrams \[ID_28340\]
+#### DataMiner Cube - Services app & Visual Overview: Enhanced performance when refreshing service definition diagrams \[ID 28340\]
 
 Due to a number of enhancements, overall performance has increased when refreshing service definition diagrams, both in the Services app and in Service Manager components embedded in visual overviews.
 
-#### Dashboards app - Pivot table component: Indices from different tables in different elements with identical names will be displayed on the same row \[ID_28344\]
+#### Dashboards app - Pivot table component: Indices from different tables in different elements with identical names will be displayed on the same row \[ID 28344\]
 
 Up to now, when a pivot table component displayed indices on the same row, they were mapped in memory based on primary key. So, when you had indices from different tables in different elements with identical names, those indices would be displayed on different rows because, in memory, they had different primary keys.
 
@@ -424,23 +424,23 @@ From now on, the display keys will also be taken into account. As a result, indi
 > [!NOTE]
 > For this to work, the pivot table should show the indices as rows and all other types as columns. Otherwise, the indices will be split up in separate levels.
 
-#### DataMiner Cube - Service & Resource Management: Enhanced error messages \[ID_28351\]
+#### DataMiner Cube - Service & Resource Management: Enhanced error messages \[ID 28351\]
 
 Up to now, when you left a name empty, one of two different error messages could appear. These messages have now been consolidated into one single error message.
 
-#### Log level of '!! No link found for ...' errors has been lowered from 0 to 5 \[ID_28353\]
+#### Log level of '!! No link found for ...' errors has been lowered from 0 to 5 \[ID 28353\]
 
 Up to now, when SLElement tried to resolve a relation path in an element, it would throw a “!! No link found for ...” error with log level 0 and log type “Error”. As this error occurs very frequently in case of virtual functions, its log level has now been lowered from 0 to 5.
 
-#### SLAnalytics: All log entries will now by default have log level 0 \[ID_28361\]
+#### SLAnalytics: All log entries will now by default have log level 0 \[ID 28361\]
 
 All log entries generated by SLAnalytics will now by default have log level 0.
 
-#### Jobs app: No longer possible to start a job data migration when no Elasticsearch database is available \[ID_28385\]
+#### Jobs app: No longer possible to start a job data migration when no Elasticsearch database is available \[ID 28385\]
 
 From now on, it will no longer be possible to start a job data migration when no Elasticsearch database is available.
 
-#### FileInfoManager: Enhancements & debug UI in SLNetClientTest tool \[ID_28409\]
+#### FileInfoManager: Enhancements & debug UI in SLNetClientTest tool \[ID 28409\]
 
 A number of enhancements have been made to FileInfoManager.
 
@@ -449,33 +449,33 @@ Also, under *Advanced \> Apps \> FileInfo*, the DataMiner SLNetClientTest tool n
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
 
-#### SLReset will now reset the backup agent to its factory settings when it is taken out of a  Failover configuration \[ID_28456\]
+#### SLReset will now reset the backup agent to its factory settings when it is taken out of a  Failover configuration \[ID 28456\]
 
 When the two DMAs in a Failover configuration were taken out of that configuration, up to now, the backup agent had to be cleaned manually. From now on, SLReset will automatically reset the backup agent to its factory settings.
 
-#### Dashboards app: Service definition component has a new icon \[ID_28501\]
+#### Dashboards app: Service definition component has a new icon \[ID 28501\]
 
 The service definition component has a new icon.
 
-#### Enhanced performance when updating parameters \[ID_28515\]
+#### Enhanced performance when updating parameters \[ID 28515\]
 
 Due to a number of enhancements, overall performance has increased when updating parameters.
 
-#### Restricting the size of the C:\\Skyline DataMiner\\Logging\\WatchDog\\Notifications folder \[ID_28548\]
+#### Restricting the size of the C:\\Skyline DataMiner\\Logging\\WatchDog\\Notifications folder \[ID 28548\]
 
 When a run-time error occurs, SLWatchdog stores a number of files in the C:\\Skyline DataMiner\\Logging\\WatchDog\\Notifications folder of the DataMiner Agent.
 
 From now on, additional measures will be taken to prevent this folder from taking too much disk space. For example, files compressed into an errors.zip file will now be removed after the zip file has been created. Also, the oldest files will now be deleted each time the total size of the folder exceeds 1 GB.
 
-#### Enhancements made to BPA test infrastructure and the StandaloneBpaExecutor tool \[ID_28556\]
+#### Enhancements made to BPA test infrastructure and the StandaloneBpaExecutor tool \[ID 28556\]
 
 A number of enhancements have been made to the BPA test infrastructure and the StandaloneBpaExecutor tool.
 
-#### New icons added to Icons.xml file \[ID_28566\]
+#### New icons added to Icons.xml file \[ID 28566\]
 
 A set of 6 new colored LED icons has been added to the file Icons.xml, located in the folder C:\\Skyline DataMiner\\Protocols.
 
-#### TypeForwarding added to make sure libraries compiled against DataMiner versions prior to 10.1.1 will continue working \[ID_28675\]
+#### TypeForwarding added to make sure libraries compiled against DataMiner versions prior to 10.1.1 will continue working \[ID 28675\]
 
 In DMS version 10.1.1, a number of extension methods were moved from the QActionHelperBaseClasses library to the SLManagedScripting library.
 
@@ -483,97 +483,97 @@ Typeforwarding has now been added to make sure that libraries that still expect 
 
 ### Fixes
 
-#### Failover: An agent taken out of a Failover setup would incorrectly keep on trying to connect to the database of the other agent \[ID_27803\]
+#### Failover: An agent taken out of a Failover setup would incorrectly keep on trying to connect to the database of the other agent \[ID 27803\]
 
 When a DataMiner Agent was taken out of a Failover setup, in some cases, it would incorrectly keep on trying to connect to the database of the other agent.
 
-#### Problem with SLASPConnection when a timeout occurred while retrieving an alarm history \[ID_28163\]
+#### Problem with SLASPConnection when a timeout occurred while retrieving an alarm history \[ID 28163\]
 
 When a timeout occurred while retrieving an alarm history, in some cases, an error could occur in the SLASPConnection process.
 
-#### SLAnalytics: Problem at startup \[ID_28258\]
+#### SLAnalytics: Problem at startup \[ID 28258\]
 
 In some cases, an error could occur in SLAnalytics at startup.
 
-#### Secondary element ports would handle headers and trailers incorrectly \[ID_28271\]
+#### Secondary element ports would handle headers and trailers incorrectly \[ID 28271\]
 
 When more than one connection were defined, in some cases, the secondary connections would not be able to handle headers and trailers correctly. This was due to the fact that the port cookie of the main port was incorrectly being used for all header and trailer information.
 
-#### Problem when trying to activate data offload to a database \[ID_28276\]
+#### Problem when trying to activate data offload to a database \[ID 28276\]
 
 When, in the *Database* section of *System Center*, you clicked the *Offload* tab, selected the *Activate this database* option, and then clicked *Save*, in some cases, this change would not be saved.
 
-#### Dashboards app: Trend statistics components would not show any content when part of a PDF report \[ID_28286\]
+#### Dashboards app: Trend statistics components would not show any content when part of a PDF report \[ID 28286\]
 
 In a PDF report, in some cases, trend statistics components would not show any content.
 
-#### DataMiner Cube - Automation app: A change to a dashboard configuration in an Automation script would not cause the Save button to be activated \[ID_28287\]
+#### DataMiner Cube - Automation app: A change to a dashboard configuration in an Automation script would not cause the Save button to be activated \[ID 28287\]
 
 When a dashboard configuration in an email action of an Automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
 
-#### Service & Resource Management: Exported protocol would show incorrect parameters after a new function file had been activated \[ID_28290\]
+#### Service & Resource Management: Exported protocol would show incorrect parameters after a new function file had been activated \[ID 28290\]
 
 When a new function file was activated, which updated parameters for a particular function, in some cases, the exported protocol would incorrectly show the old parameters.
 
-#### Problem when offloading data to SLDataGateway \[ID_28318\]
+#### Problem when offloading data to SLDataGateway \[ID 28318\]
 
 When offloading data to SLDataGateway, in some cases, a CPU leak could occur.
 
-#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID_28324\]
+#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
 In some cases, equals signs (“=”) could not be used in UI block values.
 
-#### SLWatchDog was not able to detect problems occurring in SLSNMPAgent \[ID_28330\]
+#### SLWatchDog was not able to detect problems occurring in SLSNMPAgent \[ID 28330\]
 
 In some cases, the SLWatchdog process would not be able to detect problems occurring in the SLSNMPAgent process. From now on, SLSNMPAgent will register with SLWatchdog as soon as it is set to running.
 
-#### DataMiner Maps: Problem when the autofit attribute of an OpenStreetMap layer was set to true \[ID_28336\]
+#### DataMiner Maps: Problem when the autofit attribute of an OpenStreetMap layer was set to true \[ID 28336\]
 
 When the autofit attribute of an OpenStreetMap layer was set to true, in some cases, automatic marker fitting could fail when the markers were loaded before the map view was fully visible.
 
-#### DataMiner Cube: Clicking the alarm banner did not have any effect \[ID_28339\]
+#### DataMiner Cube: Clicking the alarm banner did not have any effect \[ID 28339\]
 
 When, in DataMiner Cube, you logged out and then in again, clicking the alarm banner in the header would not have any effect.
 
 The banner shows the number of new alarms, the color of the most severe among them, and service impact information. When you click the banner, the Alarm Console tab should open and the new alarm(s) should be selected.
 
-#### DataMiner Cube: Problem when logging on to an SRM system \[ID_28342\]
+#### DataMiner Cube: Problem when logging on to an SRM system \[ID 28342\]
 
 When you logged on to a system running Service & Resource Management (SRM), in some cases, an error could occur in DataMiner Cube.
 
-#### Problem when performing a DataMiner upgrade \[ID_28350\]
+#### Problem when performing a DataMiner upgrade \[ID 28350\]
 
 In some cases, an error could occur during a DataMiner upgrade.
 
-#### Dashboards app: Problem with Stack components option when generating a PDF report \[ID_28362\]
+#### Dashboards app: Problem with Stack components option when generating a PDF report \[ID 28362\]
 
 In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. Up to now, in some cases, it would not be possible to generate such a report when the *Stack components* option had not been selected.
 
-#### Offload database configuration: Problem with OldStyle=true option \[ID_28366\]
+#### Offload database configuration: Problem with OldStyle=true option \[ID 28366\]
 
 In the Db.xml file, you can add the OldStyle=true option to the offload database configuration to revert to the behavior of older DataMiner versions, so that average trend information is offloaded regardless of whether parameter values have changed.
 
 However, in some cases, when this option was specified, unchanged values of type string or discreet would incorrectly not be written to the offload database.
 
-#### Dashboards app: Problem with line chart components when the theme did not contain any theme colors \[ID_28372\]
+#### Dashboards app: Problem with line chart components when the theme did not contain any theme colors \[ID 28372\]
 
 In some cases, an error could occur in the line chart component when the theme of that component did not contain any theme colors.
 
-#### Child shapes automatically generated for elements in a service would be sorted incorrectly \[ID_28386\]
+#### Child shapes automatically generated for elements in a service would be sorted incorrectly \[ID 28386\]
 
 When child shapes automatically generated for elements in a service were sorted by name using a ChildrenSort data field, in some cases, the shapes would be sorted incorrectly.
 
 From now on, child shapes sorted by name will be sorted by alias or, if no alias is found, by element name.
 
-#### Dashboards app - GQI: Problem with the query builder \[ID_28415\]
+#### Dashboards app - GQI: Problem with the query builder \[ID 28415\]
 
 In the Dashboards app, in some cases, errors could occur when building a query.
 
-#### Router Control app: Problem with user permissions \[ID_28422\]
+#### Router Control app: Problem with user permissions \[ID 28422\]
 
 In some cases, users who had only been granted the *Modules \> Router Control \> UI Available* permission would incorrectly not be able to access the Router Control app.
 
-#### Dashboards app: Error when deleting components \[ID_28426\]
+#### Dashboards app: Error when deleting components \[ID 28426\]
 
 When a dashboard component was deleted, in some cases, the following error could occur:
 
@@ -581,74 +581,74 @@ When a dashboard component was deleted, in some cases, the following error could
 Cannot read property 'Data' of undefined'.
 ```
 
-#### SLWatchDog would not log error messages when it failed to generate or clear alarm events \[ID_28435\]
+#### SLWatchDog would not log error messages when it failed to generate or clear alarm events \[ID 28435\]
 
 When SLWatchDog was creating or clearing alarm events (e.g. alarm events reporting run-time errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
 
-#### Problem during DataMiner startup when all nodes of an Elasticsearch database were down \[ID_28443\]
+#### Problem during DataMiner startup when all nodes of an Elasticsearch database were down \[ID 28443\]
 
 When an Elasticsearch database was configured in the Db.xml file, in some cases, an error could occur during DataMiner startup when all node of that database were down.
 
-#### Dashboards app: Problem with charts in PDF reports \[ID_28449\]
+#### Dashboards app: Problem with charts in PDF reports \[ID 28449\]
 
 In PDF reports, the alarm top component would not show the grid lines and the generic bar charts would not position properly due to a CSS issue.
 
-#### DataMiner Cube - Profiles app: Pending change notification would not be removed after modifying a converter for a profile parameter link \[ID_28451\]
+#### DataMiner Cube - Profiles app: Pending change notification would not be removed after modifying a converter for a profile parameter link \[ID 28451\]
 
 When, in the Profiles app, you modified a converter for a profile parameter link, in some cases, the “pending change” notification at the bottom of the app would not be removed.
 
-#### DataMiner Cube - Visual Overview: Booking shape timers would not get updated every second when the shape was being displayed \[ID_28453\]
+#### DataMiner Cube - Visual Overview: Booking shape timers would not get updated every second when the shape was being displayed \[ID 28453\]
 
 In a booking shape, timers can show remaining time, elapsed time, etc. However, in some cases, those timers would not get updated every second when the shape was being displayed.
 
-#### DataMiner Cube - Failover: Default SLAnalytics settings would incorrectly always be used \[ID_28471\]
+#### DataMiner Cube - Failover: Default SLAnalytics settings would incorrectly always be used \[ID 28471\]
 
 On a Failover system, SLAnalytics would incorrectly always use the default DataMiner Cube SLAnalytics settings. Any updates to those settings would be disregarded.
 
-#### SLWatchDog would incorrectly try to restart NATS before it was started \[ID_28474\]
+#### SLWatchDog would incorrectly try to restart NATS before it was started \[ID 28474\]
 
 In some rare cases, SLWatchdog would incorrectly try to restart the NATS service before it was started.
 
-#### Deserialization exceptions during file offload \[ID_28481\]
+#### Deserialization exceptions during file offload \[ID 28481\]
 
 During a file offload, in some cases, a large number of deserialization exceptions could be written to the SLDBConnection.txt log file.
 
-#### Dashboards app - Line chart component: Parameter header not displayed when only one parameter was selected \[ID_28486\]
+#### Dashboards app - Line chart component: Parameter header not displayed when only one parameter was selected \[ID 28486\]
 
 When, in a line chart component, only one parameter was selected, in some cases, the parameter header would not be displayed.
 
-#### Dashboards app - Line chart component: Problem with 'Expand legend initially' option \[ID_28487\]
+#### Dashboards app - Line chart component: Problem with 'Expand legend initially' option \[ID 28487\]
 
 When you refreshed a line chart component that had the “Expand legend initially” option selected, in some cases, the legend would incorrectly not be expanded.
 
-#### DataMiner Cube - Service templates: Templated service incorrectly placed in the root view instead of the view containing the original view \[ID_28491\]
+#### DataMiner Cube - Service templates: Templated service incorrectly placed in the root view instead of the view containing the original view \[ID 28491\]
 
 When you duplicated a service as a templated service, in some cases, the newly created templated service would incorrectly be placed in the root view instead of the view containing the original service.
 
-#### Dashboards app: Some components would not be displayed when embedded \[ID_28492\]
+#### Dashboards app: Some components would not be displayed when embedded \[ID 28492\]
 
 In some cases, dashboards components would not be displayed when embedded in e.g. Visual Overview.
 
-#### DataMiner Cube - Query Executor: Problem when a Cassandra database returned a collection object \[ID_28499\]
+#### DataMiner Cube - Query Executor: Problem when a Cassandra database returned a collection object \[ID 28499\]
 
 When, in DataMiner Cube’s Query Executor, you launched a query that retrieved data from a Cassandra database, in some cases, an incorrect result would be displayed when the query returned a collection object.
 
-#### Dashboards app: Problem when trying to select a folder after manually removing it from the Location box of the Create dashboard window \[ID_28533\]
+#### Dashboards app: Problem when trying to select a folder after manually removing it from the Location box of the Create dashboard window \[ID 28533\]
 
 When, in the *Create dashboard* window, you selected a folder and then removed it manually from the *Location* box, in some cases, it would no longer be possible to select the same folder in the folder tree.
 
-#### Dashboards app: Error messages would incorrectly be displayed multiple times \[ID_28544\]
+#### Dashboards app: Error messages would incorrectly be displayed multiple times \[ID 28544\]
 
 When an error had been thrown in the Dashboards app, in some cases, multiple instances of the same error message would be displayed. From now on, each error message will only be displayed once.
 
-#### DataMiner Cube - System Center: No offload files generated when offloading to a file instead of to a database \[ID_28568\]
+#### DataMiner Cube - System Center: No offload files generated when offloading to a file instead of to a database \[ID 28568\]
 
 When, in the *Database* section of *System Center*, you opted to offload database data to a file instead of a database, in some cases, no offload files would be generated.
 
-#### Dashboards app: Problem when sharing a dashboard located in a folder \[ID_28610\]
+#### Dashboards app: Problem when sharing a dashboard located in a folder \[ID 28610\]
 
 When you wanted to share a dashboard using the Live Sharing Service, in some cases, a parsing error could occur when that dashboard was located in a dashboard folder.
 
-#### DataMiner Cube - Profiles app: Production versions not listed in protocol list when adding a profile parameter \[ID_28687\]
+#### DataMiner Cube - Profiles app: Production versions not listed in protocol list when adding a profile parameter \[ID 28687\]
 
 When, in the Profiles app, you added a profile parameter, in some cases, the list of available protocols would incorrectly not list production versions.

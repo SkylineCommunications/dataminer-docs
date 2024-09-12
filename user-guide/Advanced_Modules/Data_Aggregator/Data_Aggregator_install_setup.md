@@ -10,6 +10,8 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 - [DataMiner Cloud Pack](xref:CloudPackages) 2.8.4 or higher must be installed on the server where you want to install Data Aggregator.
 
+- The [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) hosting bundle must be installed on the server where you want to install Data Aggregator.
+
 - DataMiner 10.2.12 or higher must be installed on the DataMiner Agents you want to use Data Aggregator with.
 
   > [!NOTE]

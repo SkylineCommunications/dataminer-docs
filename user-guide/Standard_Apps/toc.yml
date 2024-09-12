@@ -1,4 +1,6 @@
 items:
+  - name: Common Data Model (CDM)
+    topicUid: CDM
   - name: DataMiner EPM Solution
     topicUid: SolEPM
     items:
@@ -235,6 +237,13 @@ items:
             topicUid: Installing_Asset_Management
           - name: Working with the Asset Management app
             topicUid: Working_with_Asset_Management
+      - name: EVS Cerebrum application
+        topicUid: EVS_Cerebrum
+        items:
+          - name: Installing the EVS Cerebrum app
+            topicUid: Installing_EVS_Cerebrum
+          - name: Working with the EVS Cerebrum app
+            topicUid: Using_EVS_Cerebrum
       - name: DataMiner Huawei Manager dashboard
         topicUid: Huawei_Manager_Dashboard
         items:
@@ -253,6 +262,13 @@ items:
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview
             topicUid: Implementing_DITT_in_Visio
+      - name: META Whatsapp Messaging solution
+        topicUid: META_WhatsApp_Messaging
+        items:
+          - name: Installing the META WhatsApp Messaging solution
+            topicUid: META_WhatsApp_Messaging_Installation
+          - name: Using the META WhatsApp Messaging solution
+            topicUid: Using_META_WhatsApp_Messaging
       - name: DataMiner Objects Tool
         topicUid: DataMiner_Objects_Tool
         items:
@@ -407,6 +423,10 @@ items:
             topicUid: srm_instantiations
           - name: SRM scripting
             topicUid: srm_scripting
+          - name: Advanced SRM concepts
+            items:
+              - name: Quarantine
+                topicUid: SRM_Quarantine
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:

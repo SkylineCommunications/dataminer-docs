@@ -80,3 +80,9 @@ uid: Managing_dashboard_folders
 
 > [!NOTE]
 > It is not possible to move a dashboard that is currently being shared. To move such a dashboard, you will need to temporarily stop sharing it and then share it again once it has been moved.
+
+## Configuring security for a folder
+
+From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40501-->, user permissions can be customized for dashboard folders, allowing you to restrict access and prevent unauthorized modifications.
+
+For more information, see [Configuring security for a dashboard](xref:Configuring_dashboard_security).

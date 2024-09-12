@@ -59,7 +59,7 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. Wait until you receive confirmation that the **registration is completed**.
 
-1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
+1. **Optionally**, [migrate your existing data to STaaS](#migrating-existing-data-to-staas).
 
    If you do so, wait until the migration has been completed and verified before continuing with this procedure.
 
@@ -146,21 +146,87 @@ To request a cost estimation, follow the procedure below:
 
 1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you need to wait to receive confirmation of your registration.
 
-   At this point, an Automation script will be provided to you along with instructions on how to run it.
+1. Wait until you have received confirmation of your registration by email.
+
+1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
+
+1. In the Automation module in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
+
+   > [!NOTE]
+   > When you run the Automation script on a Failover pair, make sure the currently active Agent is the main Failover Agent (i.e. the first Agent in the Failover configuration). Otherwise, the Automation script will not function correctly.
+
+1. Initialize the migration:
+
+   1. Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.
+
+   1. Click *Init migration* to initialize the migration.
+
+1. Start the migration:
+
+   1. Make sure *Replication only* is selected.
+
+   1. Select **all** data types.
+
+      This way you will have the most accurate estimation of your system when running the script.
+
+   1. Click *Start migration*.
 
 1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
-1. Notify your Skyline representative or email <staas@dataminer.services> to complete the process.
+1. After this, at approximately 2 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
 
-   You will then receive a detailed cost estimation.
+   > [!NOTE]
+   > You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
 
-> [!NOTE]
-> If your DataMiner System uses a proxy setup, make sure you have installed DataMiner Feature Release 10.4.7 or higher.
+If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!IMPORTANT]
 > Cost estimations can currently only be performed for the West Europe and UK South regions.
+
+## Migrating existing data to STaaS
+
+Before migrating your data over to STaaS, make sure you are aware of the [limitations](#limitations) for migration. Then follow the procedure below:
+
+1. Follow the [setup procedure](#setting-up-staas) until you come to the step where you have received confirmation that the **registration is completed**.
+
+1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
+
+1. In the Automation module in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
+
+   > [!NOTE]
+   > When you run the Automation script on a Failover pair, make sure the currently active Agent is the main Failover Agent (i.e. the first Agent in the Failover configuration). Otherwise, the Automation script will not function correctly.
+
+1. Initialize the migration:
+
+   1. Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.
+
+   1. Click *Init migration* to initialize the migration.
+
+1. Start the migration:
+
+   - Make sure *Replication only* is **not** selected.
+
+   - Select the desired storage types for migration.
+
+     > [!NOTE]
+     > For systems with a lot of real-time trending, we urge you to consider if you really need this data to be migrated. This data is typically only stored for 1 day, so when there is a lot of data, this gives an overhead on the rest of the types that need to be migrated, and this can cause the migration to take longer.
+
+   - Click *Start migration* to start the migration.
+
+   The script will initiate the migration process, but the migration itself will not be completed immediately.
+
+1. To monitor the migration progress, run the *CloudStorageMigrationProgress* script.
+
+   This will log the progress of the migration for each storage type as information events.
+
+1. Keep an eye on the progress until the status for all storage types that were triggered shows **State=Completed**.
+
+   This indicates that the migration has successfully finished.
+
+> [!NOTE]
+> In case of issues during or after the migration, revert the `DB.xml` file to its previous state and re-trigger the migration process. If you want to be certain no data inconsistencies are possible, contact [STaaS support](mailto:staas@dataminer.services).
 
 ## Limitations
 

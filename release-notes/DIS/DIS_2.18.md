@@ -8,7 +8,7 @@ uid: DIS_2.18
 
 ### IDE
 
-#### DIS Validator pane: Information icon now indicates that more information is available for a particular error \[ID_22151\]
+#### DIS Validator pane: Information icon now indicates that more information is available for a particular error \[ID 22151\]
 
 When, for an error listed in the DIS Validator pane, there is more information available than is being displayed, an information icon will now appear next to the description.
 
@@ -26,7 +26,7 @@ If you click such an information icon, the following information will appear in 
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_21784\]\[ID_21791\]\[ID_21793\]\[ID_21796\] \[ID_21839\]\[ID_21863\]\[ID_21934\]\[ID_21977\]\[ID_22002\]\[ID_22026\]\[ID_22133\]
+#### New and updated checks and error messages \[ID 21784\]\[ID 21791\]\[ID 21793\]\[ID 21796\] \[ID 21839\]\[ID 21863\]\[ID 21934\]\[ID 21977\]\[ID 22002\]\[ID 22026\]\[ID 22133\]
 
 The following checks and error messages have been added or updated.
 
@@ -86,7 +86,7 @@ The following checks and error messages have been added or updated.
 
 ### XML Schema
 
-#### UOM Schema: New units added \[ID_21569\]\[ID_21950\]
+#### UOM Schema: New units added \[ID 21569\]\[ID 21950\]
 
 The following units have been added to the UOM Schema:
 
@@ -133,7 +133,7 @@ The following units have been added to the UOM Schema:
 - V_DC (volt direct current)
 - V_RMS (volt root mean square)
 
-#### Protocol Schema: New elements and attributes \[ID_21930\]
+#### Protocol Schema: New elements and attributes \[ID 21930\]
 
 The Protocol XML schema now supports the following elements and/or element attributes:
 
@@ -149,39 +149,39 @@ The Protocol XML schema now supports the following elements and/or element attri
 
 ### Enhancements
 
-#### Class Library: SetParameterMessage messages will no longer generate information events \[ID_22296\]
+#### Class Library: SetParameterMessage messages will no longer generate information events \[ID 22296\]
 
 From now on, SetParameterMessage messages will no longer generate information events.
 
-#### Class Library: Property type is now passed along when updating element properties \[ID_22299\]
+#### Class Library: Property type is now passed along when updating element properties \[ID 22299\]
 
 When an SLNet message is sent to update the value of a writable element property, from now on, the property type will be passed along.
 
-#### Class Library: ‘Name’ and ‘HostName’ properties added to IDma interface \[ID_22301\]
+#### Class Library: ‘Name’ and ‘HostName’ properties added to IDma interface \[ID 22301\]
 
 Two new properties have been added to the IDma interface:
 
 - Name
 - HostName
 
-#### Class Library: New classes to easily parse trap information \[ID_22302\]
+#### Class Library: New classes to easily parse trap information \[ID 22302\]
 
 The class library now includes classes to easily parse the trap information when using the allbindinginfo option.
 
 ### Fixes
 
-#### Errors thrown by validator and protocol comparison checks \[ID_21983\]
+#### Errors thrown by validator and protocol comparison checks \[ID 21983\]
 
 In some cases, the CheckOptionsAttribute and CheckDisplayTag checks would throw an exception.
 
-#### IDE - Table editor: Extra options ';xpos' and ';ypos' would incorrectly be considered as unknown options \[ID_22131\]
+#### IDE - Table editor: Extra options ';xpos' and ';ypos' would incorrectly be considered as unknown options \[ID 22131\]
 
 In some cases, the “;xpos” and “;ypos” column options would incorrectly be considered as unknown options.
 
-#### IDE - Table editor: Warning messages would incorrectly appear for hidden columns \[ID_22146\]
+#### IDE - Table editor: Warning messages would incorrectly appear for hidden columns \[ID 22146\]
 
 In the table editor, warning messages would appear, mentioning errors found in hidden columns. From now on, errors in hidden columns will be disregarded.
 
-#### Class Library: GetAgents (IDms) would fail if the response contained a DataMiner Agent ID equal to 0 \[ID_22297\]
+#### Class Library: GetAgents (IDms) would fail if the response contained a DataMiner Agent ID equal to 0 \[ID 22297\]
 
 In some cases, the GetAgents (IDms) method would fail if the response contained a DataMiner Agent ID equal to 0.

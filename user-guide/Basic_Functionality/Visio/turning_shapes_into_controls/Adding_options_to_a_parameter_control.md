@@ -21,36 +21,6 @@ Option|Option|...
 
 ## Options
 
-Possible options:
-
-- [Checkbox](#checkbox)
-- [ClientSidePollingInterval](#clientsidepollinginterval)
-- [ClientSideRowFilter](#clientsiderowfilter)
-- [ColumnWidths](#columnwidths)
-- [CustomColors](#customcolors)
-- [CustomTextBoxInfo:\[Text\]](#customtextboxinfotext)
-- [CustomTitle:\[Text\]](#customtitletext)
-- [DisableSetVarOnParameterUpdate](#disablesetvaronparameterupdate)
-- [DisableWritePids](#disablewritepids)
-- [DoubleClickAction](#doubleclickaction)
-- [Filter](#filter)
-- [HideSlider](#hideslider)
-- [HideTableIndex](#hidetableindex)
-- [IncludeWrite](#includewrite)
-- [IncludedPids and TableRowFilter](#includedpids-and-tablerowfilter)
-- [LedBar](#ledbar)
-- [Lite](#lite)
-- [MultipleValueSep](#multiplevaluesep)
-- [Oscilloscope](#oscilloscope)
-- [Refresh](#refresh)
-- [ShowTableName=true](#showtablenametrue)
-- [SingleSelection](#singleselection)
-- [Sort](#sort)
-- [Table](#table)
-- [TitleFont](#titlefont)
-- [UpdateSelectionOnLinkedVariables](#updateselectiononlinkedvariables)
-- [ValueFont](#valuefont)
-
 ### Checkbox
 
 If certain types of parameters are displayed as a "Lite" parameter, you can use this option to display a checkbox. This is the case for toggle button parameters that represent a boolean value (i.e. 0 and 1) and for hybrid parameters:
@@ -153,7 +123,7 @@ When you turn a shape into a parameter control of type "Lite", you can use the "
 
 ### DisableSetVarOnParameterUpdate
 
-When the cells of one or more selected rows are changed in a table update, by default, the values of selection session variables are set again. From DataMiner 9.6.1 onwards, this behavior can be disabled with the "DisableSetVarOnParameterUpdate" option. If this option is specified, table updates will no longer set any session variables.
+When the cells of one or more selected rows are changed in a table update, by default, the values of selection session variables are set again. This behavior can be disabled with the "DisableSetVarOnParameterUpdate" option. If this option is specified, table updates will no longer set any session variables.
 
 For example:
 
@@ -169,7 +139,7 @@ When displaying a dynamic table on a Visio page using a shape data field of type
 
 Add a shape data field of type **ParameterControlOptions** to the shape, and set its value to "DisableWritePids:", followed by a comma-separated list of parameters to be disabled.
 
-In the following example, the write parameters 1005, 1007 and 1009 have been disabled:
+In the following example, the write parameters 1005, 1007, and 1009 have been disabled:
 
 ```txt
 DisableWritePids:1005,1007,1009
