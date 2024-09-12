@@ -28,6 +28,12 @@ This action will allow users to set the current value of the component in questi
 
 ### Enhancements
 
+#### Web API - DataMiner Object Models: Client applications will now be notified when a DOM instance no longer matches the subscription filter [ID 40621]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+From now on, when a DOM instance no longer matches the subscription filter, the client application will be notified.
+
 #### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons [ID 40622]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
