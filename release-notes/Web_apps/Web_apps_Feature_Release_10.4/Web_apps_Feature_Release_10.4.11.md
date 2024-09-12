@@ -100,3 +100,9 @@ When you tried to delete a subfolder of a dashboard folder, in some cases, an er
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some cases, it would not be possible to update the access permissions of the root folder.
+
+#### Dashboards app: Newly added folder would incorrectly be shown twice in the UI [ID 40649]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you added a new dashboard folder, up to now, that folder would incorrectly be shown twice in the UI.
