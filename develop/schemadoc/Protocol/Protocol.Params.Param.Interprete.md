@@ -6,7 +6,7 @@ uid: Protocol.Params.Param.Interprete
 
 Specifies how a parameter value is processed.
 
-By default, try to follow the following guidelines for Interpretes and Measurements:
+By default, try to follow the following guidelines for specifying values for the Interprete and Measurement subtags:
 
 - **For strings**:
 
