@@ -17,89 +17,98 @@ For ease of use, [Postman](https://www.postman.com/) will be used to execute the
 
 ## Overview
 
-- [Step 1: Register Catalog item URL](#step-1-register-catalog-item-url)
-- [Step 2: Authentication header](#step-2-authentication-header)
-- [Step 3: Register Catalog item body](#step-3-register-catalog-item-body)
-- [Step 4: Register](#step-4-register)
+- [Step 1: Register the Catalog item URL](#step-1-register-the-catalog-item-url)
+- [Step 2: Configure the authentication header](#step-2-configure-the-authentication-header)
+- [Step 3: Register the Catalog item body](#step-3-register-the-catalog-item-body)
+- [Step 4: Register the Catalog item](#step-4-register-the-catalog-item)
 
-## Step 1: Register Catalog item URL
+## Step 1: Register the Catalog item URL
 
-Add a new request with HTTP method of type **PUT** and the following URL: `https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
+Add a new request using an HTTP method of type **PUT** and the following URL: `https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
 
-![Register item http url](~/user-guide/images/tutorial_catalog_registration_item_url.png)
+![Register item HTTP URL](~/user-guide/images/tutorial_catalog_registration_item_url.png)
 
-## Step 2: Authentication header
+## Step 2: Configure the authentication header
 
-The Catalog item register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), we can obtain one in the [Admin App](https://admin.dataminer.services/) on the `Keys` page. 
-This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
+The Catalog item register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), which you can obtain in the [Admin App](https://admin.dataminer.services/). This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
 
 > [!IMPORTANT]
 > You need to have the "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
 
-Go ahead and create a new key with permission "Register catalog items".
+1. In the Admin app, under *Organization* in the sidebar on the left, select the *Keys* page.
 
-![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+1. At the top of the page, click *New Key*.
 
-After creation of the key, you can copy the key and use it as value in the **Ocp-Apim-Subscription-Key** header.  
+1. Configure the key with a label of your choice and the permission *Register catalog items*.
 
-![Register item http header](~/user-guide/images/tutorial_catalog_registration_urlandheaders.png)
+   ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
 
-## Step 3: Register Catalog item body
+1. Copy the key and use it as the value in the **Ocp-Apim-Subscription-Key** header.
 
-The body of the request needs to be in the **multipart/form-data** format with key of type **File** and name **file**, the value should be a `.zip` file containing the following items:
+   ![Register item HTTP header](~/user-guide/images/tutorial_catalog_registration_urlandheaders.png)
 
-- A `README.md` file with any required image in an images folder. This `README.md` will be shown in the description tab in the Catalog.
+## Step 3: Register the Catalog item body
 
-  Copy the snippet below, changing the content as you see fit using your favorite editor and save the file as `README.md`.
+1. Create a .zip file containing the following items:
 
-  ```md
-  # Example_Rates_Custom
+   ![zip content structure](~/user-guide/images/tutorial_catalog_registration_item_zip_structure.png)
 
-  This is a connector that serves as example on how to integrate bit rates.
+   - A *README.md* file. This *README.md* will be shown in the description tab in the Catalog.
 
-  ## About
+     Copy the snippet below, changing the content as you see fit using your favorite editor, and save the file as `README.md`.
 
-  This Catalog item has been made available as part of the [Catalog registration tutorial](https://docs.dataminer.services/tutorials/Tutorials.html)
-  ```
+     ```md
+     # Example_Rates_Custom
 
-- A manifest.yml file describing the properties of the Catalog item.
+     This is a connector that serves as an example for how to integrate bit rates.
 
-  Copy the snippet below, changing the fields as you see fit using your favorite editor and save the file as `manifest.yaml`.
+     ## About
 
-  > [!NOTE]
-  > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. Navigate to [GUID generator](https://guidgenerator.com/) and create a new one using the format *hyphens* or use your own preferred method.
+     This Catalog item has been made available as part of the [Catalog registration tutorial](https://docs.dataminer.services/tutorials/Tutorials.html)
+     ```
 
-  ```yml
-  type: 'connector'
+   - Optionally, if you want to use images in the readme, an images folder containing those images.
 
-  id: '1742495c-9231-4eeb-a56e-1fec8189246e'
+   - A *manifest.yml* file describing the properties of the Catalog item.
 
-  title: 'My Catalog Registration Example'
+     Copy the snippet below, changing the fields as you see fit using your favorite editor, and save the file as `manifest.yaml`.
 
-  short_description: 'Example connector showing how to calculate bitrates and other rates on any changing numeric data.'
+     > [!NOTE]
+     > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. To do so, you can for instance navigate to [GUID generator](https://guidgenerator.com/) and create a new GUID using the format *hyphens*, or you can use your own preferred method. 
 
-  source_code_url: 'https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom'
+     ```yml
+     type: 'connector'
 
-  owners:
-    - name: 'john doe'
-      email: 'john.doe@skyline.be'
-  tags:
-    - 'example'
-  ```
+     id: '1742495c-9231-4eeb-a56e-1fec8189246e'
 
-Create a zip file containing the manifest and the README and add it to the body of the request as shown below
+     title: 'My Catalog Registration Example'
 
-![zip content structure](~/user-guide/images/tutorial_catalog_registration_item_zip_structure.png)
+     short_description: 'Example connector showing how to calculate bitrates and other rates on any changing numeric data.'
 
-![Register item http body](~/user-guide/images/tutorial_catalog_registration_item_body.png)
+     source_code_url: 'https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom'
 
-## Step 4: Register
+     owners:
+       - name: 'john doe'
+         email: 'john.doe@skyline.be'
+     tags:
+       - 'example'
+     ```
 
-Execute the call and upon correct registration you will receive HTTP Status 200 OK and the Catalog ID in the body of the response.
+1. Add the zip file as the value of the body of the request as shown below.
 
-You can now search for the Catalog item in the [Catalog](https://catalog.dataminer.services/browse) or navigate immediately to https://catalog.dataminer.services/details/{YourCatalogId}
+   The body of the request needs to be in the **multipart/form-data** format with a key of type **File** with the name **file**.
+
+   ![Register item http body](~/user-guide/images/tutorial_catalog_registration_item_body.png)
+
+## Step 4: Register the Catalog item
+
+Execute the call.
+
+When the item has been registered correctly, you will receive an *HTTP Status 200 OK* response, with the Catalog ID in the body of the response.
+
+You can now search for the Catalog item in the [Catalog](https://catalog.dataminer.services/browse) or navigate immediately to `https://catalog.dataminer.services/details/{YourCatalogId}`.
 
 ![Registered Catalog item](~/user-guide/images/tutorial_catalog_registration_registered_item.png)
 
 > [!NOTE]
-> After the first registration, you are able to make changes to the manifest or `README.md` and execute the PUT request again, it will update the registered data as long as you use the same Catalog ID.
+> After the first registration, you can make changes to the manifest or README.md and execute the PUT request again. This will update the registered data as long as you use the same Catalog ID.
