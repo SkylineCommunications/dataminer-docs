@@ -19,7 +19,7 @@ Change the computer name. However, note that a new DataMiner license file will n
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet.<!-- RN 40743 -->
 
 ## Description
 
