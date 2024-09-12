@@ -8,23 +8,23 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
-#### 09 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a catalog item [ID 40710]
+#### 12 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a catalog item [ID 40710]
 
 Users were unable to change the publishing state for a specific version of a catalog item through the API.
 
-#### 09 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
+#### 12 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
 
 When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <support.cloud.ecosystem@skyline.be> to make it available.
 
-#### 09 September 2024 - New feature - Catalog API - Catalog registration supports images in description readme file [ID 40219]
+#### 12 September 2024 - New feature - Catalog API - Catalog registration supports images in description readme file [ID 40219]
 
 Catalog item registration now supports images in the provided description of the Catalog item. Any used images need to be included in a *Images* directory. Supported image formats are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
-#### 09 September 2024 - Enhancement - Catalog API - Catalog registration API has been improved [ID 40670]
+#### 12 September 2024 - Enhancement - Catalog API - Catalog registration API has been improved [ID 40670]
 
 The previously available Catalog API call to register a new Catalog item or version using the manifest file has now been split up into two different calls. There is now a PUT call available to register/update an item (including its description) and a POST call to register a new version.
 
-#### 09 September 2024 - New feature - Catalog - Unauthenticated access [ID 40686] [ID 40573] [ID 40572] [ID 40571] [ID 40570]
+#### 12 September 2024 - New feature - Catalog - Unauthenticated access [ID 40686] [ID 40573] [ID 40572] [ID 40571] [ID 40570]
 
 As an unauthenticated user, you can now search through the publicly available Catalog items, and view their description and their available versions.
 
