@@ -83,6 +83,12 @@ When a dashboard folder contained child folders, up to now, the main folder woul
 
 When you were configuring user access to a dashboard, a dashboard folder or a low-code app, up to now, users would incorrectly not have a profile picture. From now on, every user will have a profile picture.
 
+#### Dashboards/Low-Code Apps - Security: Access permissions of a duplicated dashboard would not be identical to those of the original dashboard [ID 40627]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a user duplicated a dashboard that everyone was allowed to edit, up to now, the newly created duplicate could incorrectly only be edited by the user who duplicated the dashboard. From now on, when you duplicate a dashboard, the access permissions of the newly created duplicate will be identical to those of the original dashboard.
+
 #### Dashboards app: Problem when trying to delete a dashboard subfolder [ID 40634]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
