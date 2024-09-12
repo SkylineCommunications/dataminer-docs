@@ -35,14 +35,14 @@ function initSearch() {
     return str;
   }
 
-  function getUrl(str) {
+  function getDocsUrlFromBlobStoragePathUri(blobUri) {
     // example url: "https://docshelp.blob.core.windows.net/docs/user-guide/Advanced_Functionality/DataMiner_Systems/DataminerSystems.html"
     const startsWith = "https://docshelp.blob.core.windows.net/docs/"
 
-    if (str.startsWith(startsWith)) {
-      return `https://docs.dataminer.services/${str.substring(startsWith.length)}`;
+    if (blobUri.startsWith(startsWith)) {
+      return `https://docs.dataminer.services/${blobUri.substring(startsWith.length)}`;
     }
-    return str;
+    return blobUri;
   }
 
   function initEventHandlersCloseOpenSearch() {
@@ -122,7 +122,7 @@ function initSearch() {
         if (result.metadata_storage_name !== "toc.html" && result.metadata_title !== null) {
           // results with toc.html files (table of contents) + without title are skipped
           const title = getTitle(result.metadata_title);
-          const url = getUrl(result.storage_path);
+          const url = getDocsUrlFromBlobStoragePathUri(result.storage_path);
           const htmlString = `<div class="result"><a href="${url}?q=${encodeURIComponent(searchTerm)}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
           html.push(htmlString)
         }
