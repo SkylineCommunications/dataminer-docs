@@ -46,7 +46,8 @@ on:
   push:
     branches:
       - main
-
+  workflow_dispatch:  # Add this line to enable manual triggering
+  
 jobs:
   build_and_upload:
     runs-on: ubuntu-latest
