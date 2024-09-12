@@ -26,8 +26,6 @@ By default, try to follow the following guidelines for specifying values for the
 
 - **For tables**:
 
-
-
   - Measurement.Type = table
 
 - **For discreets**:
