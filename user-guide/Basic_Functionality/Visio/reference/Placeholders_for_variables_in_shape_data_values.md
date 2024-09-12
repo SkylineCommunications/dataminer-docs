@@ -495,6 +495,7 @@ In this placeholder, specify three items, separated by commas:
 >   ```txt
 >   [RegexReplace:[Sep:,#]x#y#z]
 >   ```
+>   
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[placeholders > REGEX]* page.
 
 Examples:
