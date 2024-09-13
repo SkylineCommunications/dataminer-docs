@@ -42,6 +42,14 @@ Up to now, when you set a custom time range in the *Time range* component, the f
 
 Clicking the *Cancel* button will close the time range picker without updating the feed.
 
+#### Dashboards/Low-Code Apps - Query filter component: Dates used in filters will now be in UTC format [ID 40653]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in a *Query filter* component, you filtered by date, up to now, the date used in the filter would be in local format.
+
+From now on, the displayed date will still be in local format, but the date that will actually be used in the filter will be in UTC format.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
