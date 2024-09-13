@@ -25,7 +25,7 @@ While this tutorial uses the example of a connector, registering a new version f
 ## Overview
 
 - [Step 1: Create the GitHub Actions Workflow file](#step-1-create-the-github-actions-workflow-file)
-- [Step 2: Add GitHub secret](#step-2-add-github-secret)
+- [Step 2: Add a GitHub secret](#step-2-add-a-github-secret)
 - [Step 3: Push the workflow file](#step-3-push-the-workflow-file)
 - [Step 4: Trigger the workflow](#step-4-trigger-the-workflow)
 - [Step 5: Monitor workflow execution](#step-5-monitor-workflow-execution)
@@ -95,7 +95,7 @@ While this tutorial uses the example of a connector, registering a new version f
              Invoke-RestMethod -Uri $uri -Method Post -Headers @{ 'Ocp-Apim-Subscription-Key' = "${{ secrets.API_TOKEN }}" } -Form $formData
    ```
 
-## Step 2: Add GitHub secret
+## Step 2: Add a GitHub secret
 
 To securely store sensitive information like the API token, you will need to add a GitHub secret:
 
