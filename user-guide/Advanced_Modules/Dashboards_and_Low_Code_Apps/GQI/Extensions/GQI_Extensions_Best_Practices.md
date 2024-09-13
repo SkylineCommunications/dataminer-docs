@@ -42,3 +42,9 @@ Types and methods in this namespace have no use in a GQI extension and, more imp
 ## Only use 64-bit assembly references
 
 GQI runs in a 64-bit process and cannot load any extensions that require 32-bit assemblies. You should therefore only use 64-bit assembly references.
+
+## Make your ad hoc data source scalable
+
+Each time a query is executed, a new instance of the data source is created. This makes scalability crucial, especially when building the underlying data source is time-consuming or resource-intensive. Keep in mind that the code you're writing could be executed concurrently by many users.
+
+An example of how to build a highly scalable data source capable of serving many concurrent users: [Scaling an ad hoc data source](xref:Ad_hoc_Tutorials_Scalable).

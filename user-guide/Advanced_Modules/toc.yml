@@ -585,6 +585,8 @@ items:
                         topicUid: Ad_hoc_Tutorials_Satellites
                       - name: Building a GQI data source that retrieves data from a DMS
                         topicUid: Ad_hoc_Tutorials_GQIDMS
+                      - name: Scaling an ad hoc data source
+                        topicUid: Ad_hoc_Tutorials_Scalable
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
