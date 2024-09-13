@@ -116,3 +116,15 @@ In some cases, it would not be possible to update the access permissions of the 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you added a new dashboard folder, up to now, that folder would incorrectly be shown twice in the UI.
+
+#### Low-Code Apps: Output feed of a script would not be updated when a 'Launch a script' action was followed by post actions [ID 40664]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a *Launch a script* action was executed, followed by one or more post actions, the script's output feed would incorrectly not be updated.
+
+#### Low-Code Apps: Components using feeds would not be rendered correctly [ID 40665]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, components using feeds would not be rendered correctly.
