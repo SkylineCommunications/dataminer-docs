@@ -205,6 +205,10 @@ items:
         items:
           - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
             topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Troubleshooting - SLScripting
+        items:
+          - name: Investigate exception occurrence on Finalizer thread
+            topicUid: TroubleshootingSLScriptingFinalizerException
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues
       - name: Troubleshooting – web
@@ -224,6 +228,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Problem when DMA server is named DATAMINER
+            topicUid: KI_Problem_when_server_name_is_DATAMINER
           - name: Inconsistent service impact of alarms after element is stopped and restarted
             topicUid: KI_Inconsistent_service_impact
           - name: Unable to perform a DataMiner upgrade via Update Center

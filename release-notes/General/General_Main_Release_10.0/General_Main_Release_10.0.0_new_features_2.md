@@ -12,7 +12,7 @@ uid: General_Main_Release_10.0.0_new_features_2
 
 ### DMS Cube
 
-#### DataMiner Analytics: Behavioral anomaly detection and suggestion events \[ID_15723\]\[ID_15914\] \[ID_15916\]\[ID_15951\]\[ID_15952\]\[ID_15976\]\[ID_16001\]\[ID_16050\]\[ID_16163\]\[ID_17279\]\[ID_17462\] \[ID_19224\]\[ID_24095\]\[ID_24126\]\[ID_24147\]
+#### DataMiner Analytics: Behavioral anomaly detection and suggestion events \[ID 15723\]\[ID 15914\] \[ID 15916\]\[ID 15951\]\[ID 15952\]\[ID 15976\]\[ID 16001\]\[ID 16050\]\[ID 16163\]\[ID 17279\]\[ID 17462\] \[ID 19224\]\[ID 24095\]\[ID 24126\]\[ID 24147\]
 
 The DataMiner Analytics software now allows you to configure behavioral anomaly detection and to display suggestion events in the Alarm Console.
 
@@ -122,7 +122,7 @@ To view these suggestion events, you can create a new tab in the Alarm Console a
 > - Suggestion events have severity “Information” and source “Suggestion Engine”.
 > - Suggestion events generated to indicate a behavioral anomaly are automatically cleared 2 hours after their creation time or their last update time.
 
-#### SNMP forwarding: Enhanced authentication and encryption algorithm support \[ID_19471\]\[ID_19693\]\[ID_23031\]\[ID_23322\]\[ID_23586\]
+#### SNMP forwarding: Enhanced authentication and encryption algorithm support \[ID 19471\]\[ID 19693\]\[ID 23031\]\[ID 23322\]\[ID 23586\]
 
 When configuring SNMPv3 trap forwarding in System Center, it is now possible to make DataMiner use the following authentication and encryption algorithms:
 
@@ -147,18 +147,18 @@ Encryption algorithms:
 > - Default setting (when no default algorithms are specified in the protocol): SHA512 authentication in combination with AES256 encryption.
 > - Some of the above-mentioned authentication and encryption algorithms cannot be combined.
 
-#### Improved import/export UI \[ID_19999\]
+#### Improved import/export UI \[ID 19999\]
 
 The import/export UI in Cube has been improved as follows:
 
 - When you select to do an import, you will now first have to select whether you want to import a .dmimport package or a CSV file.
 - Similarly, for an export, you will first need to select either an export to a .dmimport package or to a CSV file, to the clipboard or to a printer. This will improve performance of export operations where a .dmimport package is not involved.
 
-#### DataMiner Cube: New user setting to keep track of the history of a correlated alarm \[ID_19718\]
+#### DataMiner Cube: New user setting to keep track of the history of a correlated alarm \[ID 19718\]
 
 A new setting is available in the Cube user settings app: *Keep track of the full history of a correlated alarm*. If this option is selected, the entire alarm tree will be shown for a correlated alarm in the Alarm Console. Otherwise, only the most recent alarm will be displayed, and its sources will be displayed underneath. By default, the option is selected. If you change this setting, you will need to reconnect Cube to make the change take effect.
 
-#### URL parameters / Alarm hyperlinks: Opening a card on a specific data page \[ID_19898\]
+#### URL parameters / Alarm hyperlinks: Opening a card on a specific data page \[ID 19898\]
 
 Up to now, it was possible to configure a DataMiner Cube URL or an Alarm Console hyperlink to open an element, service or view card either in Visual Overview mode or in Data Display mode. From now on, it is also possible to specify the exact page that has to be opened.
 
@@ -182,7 +182,7 @@ All pages shown in a card’s side panel can be selected. If you want to select 
 > [!NOTE]
 > Names of pages and subpages do not need to be capitalized. All character casing will be ignored.
 
-#### Forced view table refresh & configurable view table polling interval \[ID_20300\]\[ID_20394\]\[ID_20577\]
+#### Forced view table refresh & configurable view table polling interval \[ID 20300\]\[ID 20394\]\[ID 20577\]
 
 ##### Forcing a (direct) view table refresh from within a protocol
 
@@ -216,7 +216,7 @@ If, for example, you set this setting to “900”, all (direct) view tables ope
 > - If, in DataMiner Cube, you hover over the “last updated on” box in the top-right corner of a (direct) view table, the polling interval will be shown in a tooltip.
 > - A number of enhancements have been made to the automatic (direct) view table polling mechanism. It will now, for example, also apply to direct view tables and view tables displayed in CPE KPI windows and in Visual Overview.
 
-#### DataMiner Cube - Data display: Table columns can now be shown or hidden using the table header’s right-click menu \[ID_20466\]
+#### DataMiner Cube - Data display: Table columns can now be shown or hidden using the table header’s right-click menu \[ID 20466\]
 
 In Data Display, table columns can now be shown or hidden by selecting or deselecting them in the table header’s shortcut menu.
 
@@ -225,7 +225,7 @@ In Data Display, table columns can now be shown or hidden by selecting or desele
 > - These settings are not saved. When you close a card and then open it again, all column selections you made from a table header’s shortcut menu will be reset.
 > - Table columns that have their width set to 0 will be hidden by default. If you want a zero-width column to be shown, then right-click the table header, open the *Columns* submenu, and select it in the list.
 
-#### DataMiner Cube: Enhanced logging & freeze detection \[ID_20600\]\[ID_21259\] \[ID_23363\]\[ID_23719\]
+#### DataMiner Cube: Enhanced logging & freeze detection \[ID 20600\]\[ID 21259\] \[ID 23363\]\[ID 23719\]
 
 In DataMiner Cube, a number of enhancements have been made to the internal error logging mechanism as well as to the *Logging* section of System Center. Also, an automatic freeze detection has been added.
 
@@ -318,11 +318,11 @@ You can configure this detection mechanism by means of the following system sett
 | commonServer.client.ui.logging.FreezeLogTime   | Minimum number of seconds Cube must be unresponsive before a log entry is created. Default: 10 seconds      |
 | commonServer.client.ui.logging.FreezePopupTime | Minimum number of seconds Cube must be unresponsive before a pop-up window will appear. Default: 30 seconds |
 
-#### Alarm Console: Icons of alarms associated with an element in timeout state will now have an orange X \[ID_20725\]
+#### Alarm Console: Icons of alarms associated with an element in timeout state will now have an orange X \[ID 20725\]
 
 From now on, icons of alarms associated with an element in timeout state will have an orange X.
 
-#### Protocols & Templates: Viewing protocol version differences when changing the protocol version of an existing element \[ID_20742\]
+#### Protocols & Templates: Viewing protocol version differences when changing the protocol version of an existing element \[ID 20742\]
 
 When you change the protocol version of an existing element, and the protocol XML files of both the old and the new protocol version contain version history information (i.e. inside a \<VersionHistory> element), an icon will now appear next to the *Version* box. When you click that icon, a pop-up window will show an overview of the differences between the two versions.
 
@@ -340,11 +340,11 @@ The level of information shown in the pop-up window will depend on the version n
 
 - If *Branch* and *MajorVersion* did not change, then an info icon will appear.
 
-#### New annotations editor \[ID_20838\]
+#### New annotations editor \[ID 20838\]
 
 DataMiner Cube now features an entirely new annotations editor.
 
-#### Ticketing: Ticket fields can now automatically be populated with alarm information \[ID_20961\] \[ID_21136\]
+#### Ticketing: Ticket fields can now automatically be populated with alarm information \[ID 20961\] \[ID 21136\]
 
 When creating a ticketing domain, it is now possible to link ticket fields to alarm fields.
 
@@ -357,11 +357,11 @@ This will allow ticket fields to automatically inherit alarm field contents when
 
 When you now right-click an alarm in the Alarm Console and select *Ticket \> New ticket*, you will notice that the ticket field that you linked to an alarm field will have inherited the contents of that alarm field.
 
-#### Service & Resource Management: Profiles app now supports profile parameters of type Capacity and Capability \[ID_21296\]
+#### Service & Resource Management: Profiles app now supports profile parameters of type Capacity and Capability \[ID 21296\]
 
 The Profiles app now supports profile parameters of type Capacity and Capability.
 
-#### Contacts window: More user-friendly application name displayed when hovering over a user in the list \[ID_21561\]
+#### Contacts window: More user-friendly application name displayed when hovering over a user in the list \[ID 21561\]
 
 When, in the Contacts window, you hover over a user, the tooltip will now display a user-friendly description of the application that person is using to connect to the DMS. If such a name is not available, the name as used up to now will be displayed instead.
 
@@ -371,7 +371,7 @@ Format of the text in the tooltip:
 [ClientAppDisplayName or ClientAppName] Online since [ConnectTime]
 ```
 
-#### Documents: Uploading a document linked to an element and only storing it on the DMA hosting the element \[ID_21690\]\[ID_21993\]\[ID_21997\]
+#### Documents: Uploading a document linked to an element and only storing it on the DMA hosting the element \[ID 21690\]\[ID 21993\]\[ID 21997\]
 
 It is now possible to upload a document, link it to a specific element, and have it stored only on the DataMiner Agent hosting the element in question.
 
@@ -392,7 +392,7 @@ When you upload a document and link it to an element:
 > [!NOTE]
 > From now on, in the *Documents* app, a progress bar will be displayed when you are uploading or downloading a document.
 
-#### All Cube clients will now display 'broadcast popups' sent from QActions, Automation scripts, etc. \[ID_21733\]\[ID_21928\]\[ID_22089\]
+#### All Cube clients will now display 'broadcast popups' sent from QActions, Automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
 
 When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called “broadcast popup” to appear.
 
@@ -420,7 +420,7 @@ When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage 
 
 - In the Message argument (i.e. the contents of a message), you can include some of the placeholders that can be included in Visio shape data values. As this kind of broadcast messages do not have any context, placeholders like e.g. \[this element\] or \[cardvar:abc\] will not work. For a list of Visio placeholders, see [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
-#### New ClientSettings.json setting to determine CPE card behavior \[ID_21822\]
+#### New ClientSettings.json setting to determine CPE card behavior \[ID 21822\]
 
 A new setting is available in the file ClientSettings.json, *Surveyor.CPE.LaunchCPECardOnSelect*, which determines what happens when a CPE card is opened based on the Surveyor topology. If this setting is set to true, a CPE card will be opened as soon as an item is selected in the Surveyor topology. If this setting is set to false (which is the default configuration), the CPE card will only be opened if the launch button is clicked in the Surveyor topology.
 
@@ -436,7 +436,7 @@ For example:
 }
 ```
 
-#### Alarm Console - Custom hyperlinks: filterElement attribute supports alarm property names that contain spaces \[ID_22178\]
+#### Alarm Console - Custom hyperlinks: filterElement attribute supports alarm property names that contain spaces \[ID 22178\]
 
 In a \<Hyperlink> tag, from now on, the filterElement attribute supports alarm property names that contain spaces.
 
@@ -446,7 +446,7 @@ If, in a filterElement attribute, you specify a property name that contains spac
 filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'"
 ```
 
-#### DataMiner Cube - Data Display: Tooltips can now be displayed for icons in table cells containing discrete values \[ID_22884\]\[ID_23003\]
+#### DataMiner Cube - Data Display: Tooltips can now be displayed for icons in table cells containing discrete values \[ID 22884\]\[ID 23003\]
 
 In a protocol, it is now possible to define a tooltip for every discrete parameter value. That tooltip will then be displayed when the mouse pointer hovers over the icon displayed in a table cell containing the discrete parameter value to which it is linked.
 
@@ -472,18 +472,18 @@ In the following example, a tooltip was defined that displays data found in othe
 > - If you defined a tooltip for a particular discrete value, you cannot set the displayIconAndLabel attribute to “true”.
 > - For the list of placeholders that can be used inside the text of a tooltip, refer to the “Protocol.Params.Param.Measurement.Discreets.Discreet” section in the Protocol Development Library.
 
-#### Alarm Console: New 'Keep active alarms' option to prevent active alarms from disappearing from a sliding window alarm tab \[ID_23056\]
+#### Alarm Console: New 'Keep active alarms' option to prevent active alarms from disappearing from a sliding window alarm tab \[ID 23056\]
 
 Up to now, when you created an alarm tab of type “sliding window”, it would only display active alarms as long as they occurred within the sliding window. From now on, when you create an alarm tab of type “sliding window”, you can enable the *Keep active alarms* option to prevent the active alarms from disappearing from the alarm tab the moment they are no longer within the sliding window.
 
-#### Data Display: Full-screen button on Data pages \[ID_23187\]
+#### Data Display: Full-screen button on Data pages \[ID 23187\]
 
 Similar to the one on Visual Overview pages, from now on, there is also a full-screen button on Data pages.
 
 > [!NOTE]
 > When, on a Data page in full-screen mode, you maximize a table and then exit the full-screen mode, the normal Data page viewing mode will be restored.
 
-#### Alarm Console: 'Merge alarm trees...' option \[ID_23200\]
+#### Alarm Console: 'Merge alarm trees...' option \[ID 23200\]
 
 In the list of Alarm Console settings, which you can access by clicking the hamburger button in the top-left corner of the console, you can now find the new *Merge alarm trees...* option.
 
@@ -492,13 +492,13 @@ If you click this option, you can choose to merge all alarm trees for the same e
 > [!NOTE]
 > This new option will only be available when *History tracking* is enabled, *Freeze* is disabled and automatic alarm clearing is disabled.
 
-#### More detailed error message will now appear when an interactive Automation script fails \[ID_23251\]\[ID_23561\]
+#### More detailed error message will now appear when an interactive Automation script fails \[ID 23251\]\[ID 23561\]
 
 Up to now, when an interactive Automation script failed, a generic popup message was displayed, stating that something went wrong.
 
 From now on, when an interactive Automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g. the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
 
-#### Redesigned DataMiner Cube layout \[ID_23427\]\[ID_23486\]\[ID_23540\]\[ID_23628\]\[ID_23646\] \[ID_23813\]\[ID_23822\]\[ID_23904\]\[ID_23982\]\[ID_24036\]\[ID_24044\]\[ID_24079\]\[ID_24086\]\[ID_24129\] \[ID_24143\]\[ID_24160\]\[ID_24165\]\[ID_24189\]\[ID_24218\]\[ID_24518\]
+#### Redesigned DataMiner Cube layout \[ID 23427\]\[ID 23486\]\[ID 23540\]\[ID 23628\]\[ID 23646\] \[ID 23813\]\[ID 23822\]\[ID 23904\]\[ID 23982\]\[ID 24036\]\[ID 24044\]\[ID 24079\]\[ID 24086\]\[ID 24129\] \[ID 24143\]\[ID 24160\]\[ID 24165\]\[ID 24189\]\[ID 24218\]\[ID 24518\]
 
 The design of DataMiner Cube has been updated to be more user-friendly and more in line with other DataMiner apps. Aside from numerous small layout changes, there have been a number of large changes, as detailed below.
 
@@ -543,7 +543,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 - A number of buttons are now available, based on the status of the logon and the DMA. While you are logging onto a DMA, you can click *Back* to return to the logon screen. If a DMA is upgrading or migrating when you log on, you can click the *Monitor* button to monitor the progress. If a DMA is stopped, you can click *Start*, and if a DMA is offline, you can click *Set online*.
 
-#### Smart-serial server elements can now have a list of allowed IP addresses configured \[ID_23592\]\[ID_23673\]\[ID_23694\]\[ID_23739\]
+#### Smart-serial server elements can now have a list of allowed IP addresses configured \[ID 23592\]\[ID 23673\]\[ID 23694\]\[ID 23739\]
 
 When, while editing an element in DataMiner Cube, you configure a smart-serial server port of type TCP, it is now possible to specify a number of allowed IP addresses for that particular port.
 
@@ -587,7 +587,7 @@ In the Protocol.xml file of a smart-serial element, you can enable or disable th
 </Connections>
 ```
 
-#### DataMiner Analytics: Alarm focus \[23911\]\[ID_24083\]\[ID_24102\]\[ID_24128\]
+#### DataMiner Analytics: Alarm focus \[23911\]\[ID 24083\]\[ID 24102\]\[ID 24128\]
 
 The DataMiner Analytics software will now by default assign an estimated likelihood, called a focus score, to each active alarm after analyzing the short-term history and current behavior of incoming alarms in real time.
 
@@ -630,13 +630,13 @@ Alarm focus values will be calculated for the first time after an upgrade to Dat
 
 When calculating alarm focus values for the first time, or when recalculating them from scratch, SLAnalytics will take into account the alarm history of the last week. The time taken by such a recalculation, will depend on the amount of alarms to be updated.
 
-#### New system-wide ClientSettings.json setting to configure whether Data Display pages should be unloaded from memory when you navigate away from them \[ID_23913\]
+#### New system-wide ClientSettings.json setting to configure whether Data Display pages should be unloaded from memory when you navigate away from them \[ID 23913\]
 
 In the *ClientSettings.json* file, the new system-wide *commonServer.ui.datadisplay.PageUnloadOnNavigatingAway* setting allows you to configure whether Data Display pages should be unloaded from memory when you navigate away from them.
 
 Default value: False
 
-#### Settings: ‘Table export column separator’ setting replaced by ‘CSV separator’ setting \[ID_23986\]
+#### Settings: ‘Table export column separator’ setting replaced by ‘CSV separator’ setting \[ID 23986\]
 
 The *Table export column separator* setting (on the *User \> Data Display* page of the *Settings* window) has now been replaced by the *CSV separator* setting (on the *User \> Regional* page of the *Settings* window).
 
@@ -648,13 +648,13 @@ The separator you select in this new setting will be used in all CSV files expor
 > - Before you import a CSV file that was exported using a previous version of Cube, make sure to check the separator used in that file.
 > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of the delimiter specified in the CSV separator setting.
 
-#### Automation/Correlation/Scheduler - Email action: List of reports to be included now indicates whether a report is a legacy report or a Dashboards app report \[ID_24015\]
+#### Automation/Correlation/Scheduler - Email action: List of reports to be included now indicates whether a report is a legacy report or a Dashboards app report \[ID 24015\]
 
 When, in Automation, Correlation or Scheduler, you configure an email action, you can specify whether the email message has to include a report. To do so, you select the *Include report or dashboard* checkbox and select a report from the list.
 
 From now on, each report listed in the report selection box will have an icon that indicates whether it is a legacy report or a Dashboards app report.
 
-#### DataMiner Cube will now be built as an AnyCPU application \[ID_24168\]
+#### DataMiner Cube will now be built as an AnyCPU application \[ID 24168\]
 
 As from DataMiner X, DataMiner Cube will be built as an AnyCPU application.
 
@@ -664,13 +664,13 @@ ClickOnce StandAlone and MSI versions will run as 64-bit processes on 64-bit sys
 >
 > - Microsoft Internet Explorer always launches PresentationHost.exe as a 32-bit process. As a result, ClickOnce XBAP versions of Cube will always run as 32-bit processes.
 
-#### New sidebar docking position setting \[ID_24178\]
+#### New sidebar docking position setting \[ID 24178\]
 
 In the restyled Cube X, the docking position of the sidebar can now be controlled by means of the *User \> Surveyor \> Sidebar docking position* setting.
 
 Default: left
 
-#### System Center: Agent state displayed on Agents page and total number of agents displayed on Agents, Database and Backup pages \[ID_24230\]
+#### System Center: Agent state displayed on Agents page and total number of agents displayed on Agents, Database and Backup pages \[ID 24230\]
 
 In *System Center*,
 

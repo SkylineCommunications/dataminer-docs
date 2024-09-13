@@ -8,7 +8,7 @@ uid: DIS_2.25
 
 ### Validator
 
-#### New checks and error messages \[ID_24721\]
+#### New checks and error messages \[ID 24721\]
 
 The following checks and error messages have been added.
 
@@ -20,7 +20,7 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol Schema: Updated/removed attributes \[ID_24481\]\[ID_24506\]\[ID_24761\]
+#### Protocol Schema: Updated/removed attributes \[ID 24481\]\[ID 24506\]\[ID 24761\]
 
 The following changes have been made to the Protocol XML Schema:
 
@@ -41,7 +41,7 @@ Removed:
 
 ### Class Library
 
-#### Enhanced handling of errors occurring while parsing element information returned by a GetElements method \[ID_24934\]
+#### Enhanced handling of errors occurring while parsing element information returned by a GetElements method \[ID 24934\]
 
 From now on, the Class Library will no longer throw an exception when an error occurs while parsing element information returned by a GetElements method.
 
@@ -53,7 +53,7 @@ From now on, the Class Library will no longer throw an exception when an error o
 
 ### Enhancements
 
-#### IDE: DMA connection enhancements \[ID_24452\]
+#### IDE: DMA connection enhancements \[ID 24452\]
 
 Up to now, when you clicked *Publish* (in a file tab header) or *Connect* (in the *DIS Inject* tool window), DIS would always publish or connect to the DMA that was set as default in the *DIS* tab of the *DIS Settings* window. However, it would also do so when you clicked either one of those buttons after having been disconnected from a DMA other than the default DMA.
 
@@ -64,11 +64,11 @@ From now on, DIS will remember the DMA to which you were last connected. Wheneve
 > - When you click *Publish* or *Connect* either for the first time after starting Visual Studio or after a manual disconnect, DIS will always connect to the default DMA.
 > - Up to now, the settings for remote debugging were only configurable on a global level. In other words, the same settings were applicable to all DMAs defined in the *DIS* tab of the *DIS Settings* window. Now, you can configure those settings per DMA.
 
-#### Automation Schema updated and reorganized \[ID_24520\]
+#### Automation Schema updated and reorganized \[ID 24520\]
 
 The Automation Schema has been updated and reorganized.
 
-#### IDE: Enhanced virtual comments \[ID_24571\]
+#### IDE: Enhanced virtual comments \[ID 24571\]
 
 The following protocol XML tags now have new or updated virtual comments:
 
@@ -77,7 +77,7 @@ The following protocol XML tags now have new or updated virtual comments:
 | Protocol.Params.Param.Interprete.Value | The length of the tag content. If the value is a correctly formatted hexadecimal string, it will be converted to a more readable format. |
 | Protocol.Commands.Command.Content.Id<br>Protocol.Responses.Response.Content.Id | The virtual comments next to these tags now also contain a summary of the parameter content (length and fixed value when available). |
 
-#### Validator: Error message enhancements \[ID_24635\]
+#### Validator: Error message enhancements \[ID 24635\]
 
 A number of enhancements have been made with regard to the following error messages.
 
@@ -92,17 +92,17 @@ A number of enhancements have been made with regard to the following error messa
 
 ### Fixes
 
-#### Class Library: Problem recreating the monitor after an element restart \[ID_24756\]
+#### Class Library: Problem recreating the monitor after an element restart \[ID 24756\]
 
 When an element was restart, in some rare cases, an error could occur when recreating the Class Library monitor.
 
-#### IDE - Function editor: Problem when moving parameters \[ID_24768\]
+#### IDE - Function editor: Problem when moving parameters \[ID 24768\]
 
 When you moved multiple parameters to another location on the page, in some cases, the parameters that were already situated on that location would be shifted incorrectly. As a result, multiple parameters would end up sharing the same location.
 
 Also, in some cases, a Read parameter would get separated from its Write parameter after applying the export rules configured for the function in question.
 
-#### IDE: Various minor fixes \[ID_24879\]
+#### IDE: Various minor fixes \[ID 24879\]
 
 A number of minor issues have been fixed:
 

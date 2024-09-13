@@ -20,7 +20,7 @@ uid: General_Main_Release_10.2.0_new_features_6
 
 ### DMS Service & Resource Management
 
-#### ReservationInstances now have an 'AbsoluteQuarantinePriority' property \[ID_28080\]
+#### ReservationInstances now have an 'AbsoluteQuarantinePriority' property \[ID 28080\]
 
 ReservationInstances now have an “AbsoluteQuarantinePriority” property.
 
@@ -48,7 +48,7 @@ When a ReservationInstance is added with absolute quarantine priority, an error 
 > - When a booking with AbsoluteQuarantinePriority is removed, the other bookings using the resources will not automatically be taken out of quarantine.
 > - Resources that are in quarantine because they overlap with a booking that reserves them with AbsoluteQuarantinePriority will have a QuarantineTrigger with reason “AbsoluteQuarantinePriorityReservationInstance”.
 
-#### Calls requesting eligible resources will now also return information about the available capacity of the resources \[ID_28125\]
+#### Calls requesting eligible resources will now also return information about the available capacity of the resources \[ID 28125\]
 
 The EligibleResourceResult returned by the various GetEligibleResources calls will now contain information about the available capacity of the resources. The ResourceUsageDetails object now includes a CapacityUsageDetails list that contains the maximum available capacities for the requested time frame.
 
@@ -57,7 +57,7 @@ The EligibleResourceResult returned by the various GetEligibleResources calls wi
 > - The available capacity does not take into account the requested capacity.
 > - The available capacity for capacities that were not requested in the GetEligible call, but which are present on the resource, will not be calculated, and will therefore not be present in the CapacityUsageDetails list.
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID_28186\]
+#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
 
 It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
@@ -138,11 +138,11 @@ var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
   - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
   - No additional error or warning will be returned in the calls.
 
-#### ResourceManagerHelper.SetReservationDefinitionsAndOverrides method has been rendered obsolete \[ID_28261\]
+#### ResourceManagerHelper.SetReservationDefinitionsAndOverrides method has been rendered obsolete \[ID 28261\]
 
 The ResourceManagerHelper.SetReservationDefinitionsAndOverrides method has been rendered obsolete.
 
-#### ServiceNameInUse check when a ServiceReservationInstance is started \[ID_28327\]
+#### ServiceNameInUse check when a ServiceReservationInstance is started \[ID 28327\]
 
 From now on, when a ServiceReservationInstance is started, a check will be performed to see whether a service with the same name is already active. If so, a StartActionsFailureErrorData object will be returned with error reason “ServiceNameInUse”, the error will be logged and the OnStartActionsFailureEvent will be triggered.
 
@@ -151,7 +151,7 @@ The StartActionsFailureErrorData object will also contains the following:
 - ReservationInstanceId: The ID of the ServiceReservationInstance that could not be started.
 - ServiceId: The ID of the service that has the same name.
 
-#### DVE element will only be updated when certain properties of the FunctionResource are updated \[ID_28450\]
+#### DVE element will only be updated when certain properties of the FunctionResource are updated \[ID 28450\]
 
 Up to now, each time you updated a FunctionResource, the DVE element would also be updated. From now on, the DVE element will only be updated when one of the following properties of the FunctionResource is updated:
 
@@ -164,7 +164,7 @@ Up to now, each time you updated a FunctionResource, the DVE element would also 
 - PK
 - LinkerTableEntries
 
-#### MinReservationStart and MaxReservationCeiling checks have been removed \[ID_28575\]
+#### MinReservationStart and MaxReservationCeiling checks have been removed \[ID 28575\]
 
 The MinimumReservationStart and MaximumReservationCeiling checks have been removed.
 
@@ -178,7 +178,7 @@ Also, the following ResourceManagerErrorData reasons have now all been marked as
 - ReservationDefinitionMinimumReservationStart
 - ReservationDefinitionMaximumReservationCeiling
 
-#### ProfileDefinitions & ProfileInstances: Hiding parameters \[ID_28792\]
+#### ProfileDefinitions & ProfileInstances: Hiding parameters \[ID 28792\]
 
 A ParameterSettings property has been added to the ProfileDefinition and ProfileInstance classes. Currently, this property can be used to configure whether a parameter should be displayed or not by setting the IsHidden property (which, by default, is false).
 
@@ -222,7 +222,7 @@ var profileInstance = new ProfileInstance
 };
 ```
 
-#### ServiceDefinitions of type 'ProcessAutomation' \[ID_28799\]
+#### ServiceDefinitions of type 'ProcessAutomation' \[ID 28799\]
 
 The ServiceDefinition object now has a ServiceDefinitionType property, which can be used to distinguish ProcessAutomation ServiceDefinitions from default ServiceDefinitions.
 
@@ -242,7 +242,7 @@ var filter = ServiceDefinitionExposers.ServiceDefinitionType.Equal((int) Service
 serviceManagerHelper.GetServiceDefinitions(filter);
 ```
 
-#### Option to remember which view a function DVE was in when it got deactivated \[ID_28884\]
+#### Option to remember which view a function DVE was in when it got deactivated \[ID 28884\]
 
 It is now possible for a function DVE that gets deactivated to remember the view it was in. That way, when it gets reactivated again afterwards, it can be placed in the same view as before.
 
@@ -259,7 +259,7 @@ Since this feature will prevent views of inactive function DVEs from being remov
 > [!NOTE]
 > When a resource is removed, all associated entries will be removed from the *Views.xml* file.
 
-#### ServiceResourceUsageDefinition now has an IsContributing flag \[ID_28904\]
+#### ServiceResourceUsageDefinition now has an IsContributing flag \[ID 28904\]
 
 The ServiceResourceUsageDefinition object now has an IsContributing flag, which can be used to indicate that the resource is being used is a contributing resource.
 
@@ -274,7 +274,7 @@ reservationInstance.ResourcesInReservationInstance.Add(new ServiceResourceUsageD
 });
 ```
 
-#### EligibleResourceContext can now contain a flag to indicate whether LinkerTableEntries should be filled in or not \[ID_28933\]
+#### EligibleResourceContext can now contain a flag to indicate whether LinkerTableEntries should be filled in or not \[ID 28933\]
 
 When requesting EligibleResources, it is now possible for the EligibleResourceContext to indicate whether the LinkerTableEntries property of the Resources should be filled in or not.
 
@@ -296,7 +296,7 @@ resourceManagerHelper.GetEligibleResources(context);
 > [!NOTE]
 > As filling in the LinkerTableEntries can have a negative impact on the overall performance, the LinkerTableEntries flag will by default be set to false.
 
-#### New option to retrieve ProfileInstance parameters from the cache \[ID_29160\]
+#### New option to retrieve ProfileInstance parameters from the cache \[ID 29160\]
 
 When the GenerateRequiredCapas method is called on a ProfileInstance, the response will contain all parameters of that instance and its parents. If these parameters are not yet cached on the instances, they will automatically be retrieved from the server. However, in some cases, retrieving them from the server will not be necessary because the script or application in question already cached them.
 
@@ -326,7 +326,7 @@ private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
 }
 ```
 
-#### New log file: SLResourceManagerAutomation.txt \[ID_29233\]\[ID_29281\]
+#### New log file: SLResourceManagerAutomation.txt \[ID 29233\]\[ID 29281\]
 
 The following actions will now be logged in the SLResourceManagerAutomation.txt file instead of the SLResourceManager.txt file:
 
@@ -339,7 +339,7 @@ All these log entries will have log level 5.
 > [!NOTE]
 > In DataMiner Cube, you can access this new log file by going to *System Center \> Logging \> DataMiner \> Resource Manager Automation*.
 
-#### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID_29289\]
+#### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID 29289\]
 
 A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
 
@@ -405,7 +405,7 @@ The SLNetClientTest tool now allows you to retrieve the IDs of the currently cac
 
 If loglevel 6 is enabled, the caches will log any added, updated or removed items in the SLResourceManagerStorage.txt file.
 
-#### Enhanced performance by implementing ISerializable on the ReservationInstance class using protocol buffer serialization \[ID_29306\]
+#### Enhanced performance by implementing ISerializable on the ReservationInstance class using protocol buffer serialization \[ID 29306\]
 
 Overall performance has increased by implementing ISerializable on the ReservationInstance class using protocol buffer serialization.
 
@@ -415,7 +415,7 @@ Overall performance has increased by implementing ISerializable on the Reservati
 > - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
 > - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
 
-#### ResourceUsageDetails object now has a ConcurrencyLeft property \[ID_29592\]
+#### ResourceUsageDetails object now has a ConcurrencyLeft property \[ID 29592\]
 
 The ResourceUsageDetails object now has a ConcurrencyLeft property.
 
@@ -423,14 +423,14 @@ When, in the ResourceManagerHelper class, you use the GetEligibleResources metho
 
 When ResourceUsageDetails is equal to null, ConcurrencyLeft will be equal to 0.
 
-#### Binding a VirtualFunctionResource using the primary key \[ID_29648\]
+#### Binding a VirtualFunctionResource using the primary key \[ID 29648\]
 
 It is now also possible to bind a VirtualFunctionResource using the primary key of an EntryPointTable.
 
 > [!NOTE]
 > Binding two resources to the same row, one using the display key and one using the primary key, is not supported and will return a TargetAlreadyBound error.
 
-#### Export and importing ServiceProfileDefinitions and ServiceProfileInstances \[ID_29673\]
+#### Export and importing ServiceProfileDefinitions and ServiceProfileInstances \[ID 29673\]
 
 Using the ProfileHelper, it is now possible to export and import ServiceProfileInstances and ServiceProfileDefinitions.
 
@@ -531,7 +531,7 @@ When an object cannot be saved to the database during an import operation, a Ser
 | ServiceProfileInstanceRefersToNonExistingParameters | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains parameter overrides that refer to parameters that do not exist in the system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
 | ServiceProfileInstanceRefersToNonExistingProfileInstances | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains references to ProfileInstances that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing ProfileInstances. |
 
-#### Generating contributing functions for service definitions that use mediated virtual functions on one of more nodes \[ID_29752\]
+#### Generating contributing functions for service definitions that use mediated virtual functions on one of more nodes \[ID 29752\]
 
 It is now possible to generate contributing functions for service definitions that use a mediated virtual function on one or more nodes.
 
@@ -541,7 +541,7 @@ It is now possible to generate contributing functions for service definitions th
 > - If a service definition node has both the VirtualFunctionID property (to use a mediated virtual function) and the FunctionID property (to use a protocol function) filled in, the VirtualFunctionID will be used during generation.
 > - Only the profile definition of the VirtualFunctionDefinition’s VirtualNode will be taken into account when creating parameters.
 
-#### SRM events can now be forwarded as ProtoBuf events on the NATS bus \[ID_29821\]
+#### SRM events can now be forwarded as ProtoBuf events on the NATS bus \[ID 29821\]
 
 When an SRM object is created, updated or deleted, an event message is sent via the SLNet subscription system to notify everyone. The NATS forwarding logic also receives these event messages and will now publish a ProtoBuf event on the NATS bus each time it receives such a message.
 
@@ -600,11 +600,11 @@ Note that no retries will occur and that no messages will be queued.
 |--------------------|------------------------|---------------------------------------------------------------|
 | ResourceEvent      | resource_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.Resource.Api.v1.ResourceEvent |
 
-#### Profile manager errors with ErrorReason 'ReservationsMustBeReconfigured' now include a ReservationInstanceDetails list \[ID_29914\]
+#### Profile manager errors with ErrorReason 'ReservationsMustBeReconfigured' now include a ReservationInstanceDetails list \[ID 29914\]
 
 From now on, an error with ErrorReason “ReservationsMustBeReconfigured” will include a ReservationInstanceDetails list containing the ID, the name and the start time of every affected ReservationInstance.
 
-#### Returning all available capacities when requesting the eligible resources \[ID_29939\]
+#### Returning all available capacities when requesting the eligible resources \[ID 29939\]
 
 When you request the eligible resources, it is now possible to calculate all remaining capacities on the resources instead of only the requested ones.
 
@@ -635,7 +635,7 @@ public class Script
 }
 ```
 
-#### Availability checks for contributing resources \[ID_30017\] \[ID_30498\]
+#### Availability checks for contributing resources \[ID 30017\] \[ID 30498\]
 
 From now on, the GetEligibleResources and AddOrUpdateReservationInstances calls will determine the availability of a contributing resource during a certain time range based on the following criteria:
 
@@ -653,7 +653,7 @@ Adding or updating bookings with resources that are unavailable based on the abo
 
 If the contributing booking has Status set to “Interrupted”, then the bookings using its linked contributing resources will also have their usages quarantined.
 
-#### More detailed parameter check error messages when generating protocols for virtual functions \[ID_30093\]
+#### More detailed parameter check error messages when generating protocols for virtual functions \[ID 30093\]
 
 When an error occurs during a parameter check while generating a protocol for a virtual function, the error message will now contain more detailed information.
 
@@ -665,32 +665,32 @@ The VirtualFunctionDefinitionError will have the following properties filled in:
 - VirtualFunctionDefinitionID: The ID of the VirtualFunctionDefinition.
 - ParameterID: The ID of the parameter that cannot be resolved.
 
-#### Profile Manager: Enhanced performance when executing bulk create/update operations against an Elasticsearch database \[ID_30152\]
+#### Profile Manager: Enhanced performance when executing bulk create/update operations against an Elasticsearch database \[ID 30152\]
 
 Because of a number of enhancements to the AddOrUpdateBulk calls of the ProfilesHelper and ProfileManagerHelper, overall performance has increased when creating or updating ProfileParameters, ProfileInstances and ProfileDefinitions in bulk in an Elasticsearch database.
 
-#### Automation - Service & Resource Management: New ServiceResourceUsageDefinition.Role property \[ID_30214\]
+#### Automation - Service & Resource Management: New ServiceResourceUsageDefinition.Role property \[ID 30214\]
 
 A *ServiceResourceUsageDefinition* object now has an extra *Role* property, with the following possible values: *Mapped* (default value), *Unmapped* and *Inheritance*. This property is intended to be used by the Booking Manager app, where it will determine whether a resource is mapped to a node of a service definition.
 
-#### ReservationInstance behavior enhancements \[ID_30295\]
+#### ReservationInstance behavior enhancements \[ID 30295\]
 
 ReservationInstance behavior has been changed in the following ways:
 
 - ReservationInstances that have a start time before the time the ResourceManager was initialized will no longer automatically have their status set to “Interrupted”. Only instances that were unable to start because the ResourceManager was not yet initialized will have their status set to “Interrupted”.
 - All ReservationEvents that have not yet run will be scheduled if the ReservationInstance does not have its status set to “Interrupted”. In other words, all missed events will be run immediately when you add a ReservationInstance with a start time.
 
-#### ResourceManagerEventMessage will now be sent when a ReservationInstance property was updated \[ID_30352\] \[ID_30668\]
+#### ResourceManagerEventMessage will now be sent when a ReservationInstance property was updated \[ID 30352\] \[ID 30668\]
 
 From now on, a ResourceManagerEventMessage will be sent next to the existing ReservationInstanceChangePropertiesEventMessage when a ReservationInstance property was updated using either ResourceManagerHelper#UpdateProperties or ResourceManagerHelper#SafelyUpdateProperties.
 
 DataMiner Cube has been adapted accordingly.
 
-#### Automation - Service & Resource Management: Option to return time-dependent capabilities when requesting eligible resources \[ID_30576\]
+#### Automation - Service & Resource Management: Option to return time-dependent capabilities when requesting eligible resources \[ID 30576\]
 
 When the eligible resources for a booking are requested, it is now possible to calculate all booked time-dependent capabilities for the eligible resources. For this purpose, the *CalculateAllCapabilities* flag should be set to true on *EligibleResourceContext*. This feature is intended to be used in the DataMiner Booking Manager app.
 
-#### Profile Manager: Server-side user permissions \[ID_30748\]
+#### Profile Manager: Server-side user permissions \[ID 30748\]
 
 The public API of the Profile Manager now has the following server-side user permissions.
 
@@ -732,7 +732,7 @@ The following new permissions will automatically be assigned to existing user gr
 > - Import/export of ProfileParameters and mediation messages will throw a DataMinerException.
 > - Import/export of the ServiceProfiles will return TraceData. This helper does not have an option to throw exceptions on error data.
 
-#### Resource Manager: Permission checks \[ID_30895\]
+#### Resource Manager: Permission checks \[ID 30895\]
 
 The following messages now have server-side permission checks:
 
@@ -750,7 +750,7 @@ The following messages now have server-side permission checks:
 
 All operations will now return a ResourceManagerErrorData with reason NotAllowed if the user does not have the correct permissions.
 
-#### RemoveResources: New ignoreCanceledReservations flag \[ID_30936\]
+#### RemoveResources: New ignoreCanceledReservations flag \[ID 30936\]
 
 When resources are deleted by means of a RemoveResources call, it is now possible to indicate whether errors should be generated when a resource is being used in canceled reservations.
 
@@ -762,7 +762,7 @@ Resource[] RemoveResources(Resource[] resources, bool ignorePassedReservations, 
 
 ### DMS Mobile Gateway
 
-#### Getting and setting the value of a table column parameter \[ID_30399\]
+#### Getting and setting the value of a table column parameter \[ID 30399\]
 
 It is now possible to get and set values of table column parameters using text messages.
 
@@ -786,13 +786,13 @@ Using special characters:
 
 ### DMS tools
 
-#### Standalone Elasticsearch Cluster Installer will no longer automatically configure TLS and security \[ID_29113\]
+#### Standalone Elasticsearch Cluster Installer will no longer automatically configure TLS and security \[ID 29113\]
 
 From now on, the Standalone Elasticsearch Cluster Installer tool will no longer automatically configure TLS and security.
 
 For instructions on how to install this manually, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
 
-#### Standalone Cassandra Backup Tool \[ID_29005\] \[ID_30234\]
+#### Standalone Cassandra Backup Tool \[ID 29005\] \[ID 30234\]
 
 The StandaloneCassandraBackup.exe tool can be used by an administrator to take a backup of a Cassandra database (either a single node or a cluster).
 
@@ -800,13 +800,13 @@ From DataMiner 10.1.8 onwards, this tool will be available on each DMA server in
 
 For more information on this tool, see [Standalone Cassandra Backup Tool](xref:Standalone_Cassandra_Backup_Tool).
 
-#### New tool to transform a DMS with separate databases into a DMS with a shared Cassandra/Elasticsearch cluster \[ID_31005\] \[ID_31280\] \[ID_31421\] \[ID_31423\] \[ID_31424\] \[ID_31505\] \[ID_31788\]
+#### New tool to transform a DMS with separate databases into a DMS with a shared Cassandra/Elasticsearch cluster \[ID 31005\] \[ID 31280\] \[ID 31421\] \[ID 31423\] \[ID 31424\] \[ID 31505\] \[ID 31788\]
 
 Using *SLCCMigrator.exe*, you can now transform a DataMiner System consisting of Agents with separate databases into a DataMiner System consisting of Agents that are all connected to a shared Cassandra/Elasticsearch cluster.
 
 For more information on this tool, see [Cassandra Cluster Migrator](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
-#### SLReset: Hostname can now be passed as an argument \[ID_32002\]
+#### SLReset: Hostname can now be passed as an argument \[ID 32002\]
 
 When running SLReset.exe, which can be used to fully reset a DataMiner Agent to its state immediately after installation, it is now possible to pass the hostname in a -ho argument, especially when resetting a DataMiner Agent that only allows you to connect via HTTPS.
 

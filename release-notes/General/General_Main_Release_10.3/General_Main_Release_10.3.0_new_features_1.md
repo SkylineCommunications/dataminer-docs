@@ -12,7 +12,7 @@ uid: General_Main_Release_10.3.0_new_features_1
 
 ### DMS core functionality
 
-#### New read-only service properties [ID_29978] [ID_33196] [ID_33363]
+#### New read-only service properties [ID 29978] [ID 33196] [ID 33363]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -31,7 +31,7 @@ When a service is created or updated, the following read-only properties will no
 > - These properties will only be added to existing services the first time those services are updated.
 > - These properties will not be available in alarms that are included in a service.
 
-#### DataMiner Object Model: FieldDescriptors can now be configured to allow multiple values [ID_31905] [ID_32904]
+#### DataMiner Object Model: FieldDescriptors can now be configured to allow multiple values [ID 31905] [ID 32904]
 
 <!-- RN 31905: MR 10.3.0 - FR 10.2.3
 RN 32904: MR 10.3.0 - FR 10.2.5 -->
@@ -58,7 +58,7 @@ To make a FieldDescriptor allow multiple values, set its FieldType to “List\<t
 > [!NOTE]
 > The Jobs app currently does not support using FieldDescriptors of which FieldType is set to “List\<type>”.
 
-#### EPM: Aliases for topology cells, chains and search chains can now be specified on element level [ID_32028]
+#### EPM: Aliases for topology cells, chains and search chains can now be specified on element level [ID 32028]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
@@ -69,7 +69,7 @@ If you want certain aliases for topology cells, chains and search chains to only
 > [!NOTE]
 > Aliases specified in an element-level EPMConfig.xml file will override aliases specified in the system-level EPMConfig.xml file.
 
-#### DataMiner Object Model: DomInstanceValueFieldDescriptor [ID_32326]
+#### DataMiner Object Model: DomInstanceValueFieldDescriptor [ID 32326]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -79,7 +79,7 @@ This field descriptor can be used to define a field that will contain the ID of 
 
 The configuration of this new descriptor is identical to that of the DomInstanceFieldDescriptor, apart from a FieldDescriptorId property, which references a specific FieldValue.
 
-#### New messages that support uploading larger files [ID_32398]
+#### New messages that support uploading larger files [ID 32398]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -111,7 +111,7 @@ This message continues an already initiated upload and returns an empty *Continu
 > - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2 GB. The default chunk size is 100 KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
 > - As the AppPackageHelper uses the FileUploader helper class to upload DataMiner packages, it will now also support uploading larger packages.
 
-#### DataMiner Object Model: New event message for DomInstance status transitions [ID_32418]
+#### DataMiner Object Model: New event message for DomInstance status transitions [ID 32418]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -119,7 +119,7 @@ With the introduction of the DomInstanceStatusChangedEventMessage, it is now pos
 
 IModuleEvents are now filtered by IModuleEventSubscriptionFilter first, before any other filter is applied.
 
-#### Service templates: Referencing table parameter cells by means of the primary key [ID_32549]
+#### Service templates: Referencing table parameter cells by means of the primary key [ID 32549]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -129,7 +129,7 @@ When configuring a service template, you can use placeholders to reference a par
 [element:1:param:1002:^pk^myPrimaryKey]
 ```
 
-#### New property added to PaToken class: Dictionary\<string,DomInstanceId> UserDomInstances [ID_32599]
+#### New property added to PaToken class: Dictionary\<string,DomInstanceId> UserDomInstances [ID 32599]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -137,7 +137,7 @@ The PaToken class has a new property: Dictionary\<string,DomInstanceId> UserDomI
 
 This is intended to be used in the Process Automation framework.
 
-#### Process Automation: New ProcessAutomationResourcePool object [ID_32657]
+#### Process Automation: New ProcessAutomationResourcePool object [ID 32657]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -145,13 +145,13 @@ A new Process Automation object class has been created (which inherits the regul
 
 This new object has a property that will be used to store the queue element associated with a resource pool: *public ElementId QueueElement*
 
-#### Service & Resource Management: Service templates now also accept ServiceID and ReservationID as input data [ID_32668]
+#### Service & Resource Management: Service templates now also accept ServiceID and ReservationID as input data [ID 32668]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
 In Service & Resource Management environments, a service template used to generate a service associated with a booking will now also accept a ServiceID and a ReservationID as input data.
 
-#### Running memory-intensive elements in separate SLProtocol and SLScripting instances [ID_32742] [ID_32917]
+#### Running memory-intensive elements in separate SLProtocol and SLScripting instances [ID 32742] [ID 32917]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -179,7 +179,7 @@ Example:
 </DataMiner>
 ```
 
-See also [Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]](#making-all-elements-using-a-particular-protocolxml-run-in-separate-slscripting-and-slprotocol-instances-id_33358).
+See also [Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID 33358\]](#making-all-elements-using-a-particular-protocolxml-run-in-separate-slscripting-and-slprotocol-instances-id-33358).
 
 > [!NOTE]
 >
@@ -191,13 +191,13 @@ See also [Making all elements using a particular protocol.xml run in separate SL
 >
 > - *DataMiner.xml* files are not synchronized among the different Agents in a DataMiner System. If your DMS includes different Agents, then you will need to edit the *DataMiner.xml* file on each of the Agents.
 
-#### SetAlarmStateMessage can no longer be used to change the alarm state of an incident [ID_33273]
+#### SetAlarmStateMessage can no longer be used to change the alarm state of an incident [ID 33273]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 From now on, it will no longer be possible to change the alarm state of an incident by means of a SetAlarmStateMessage. If you attempt to do so, an exception will be thrown.
 
-#### DataMiner Object Model: Defining a script execution action that will execute an interactive Automation script [ID_33513]
+#### DataMiner Object Model: Defining a script execution action that will execute an interactive Automation script [ID 33513]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -220,13 +220,13 @@ Process:
 > [!NOTE]
 > The connection used by the DomHelper sending the DOM action execution request should also be used to interact with the script.
 
-#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+#### Clearing an incident now clears any clearable base alarms it contains [ID 34112]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
-#### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
+#### Client-server communication: gRPC instead of .NET Remoting [ID 34797] [ID 34983]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
@@ -279,7 +279,7 @@ For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.
 > [!NOTE]
 > The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
 
-#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
+#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID 35172]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -328,7 +328,7 @@ Rules that apply with regard to multiple sections:
 
 Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
 
-#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID 35194]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
@@ -338,7 +338,7 @@ From now on, if a DVE child element has an alarm template assigned to it, that a
 
 ### DMS Security
 
-#### Azure Active Directory: Secret expiry notices/errors [ID_33916]
+#### Azure Active Directory: Secret expiry notices/errors [ID 33916]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -357,7 +357,7 @@ Also, more detailed entries will now be added to the logs when setup errors have
 
 ### DMS Protocols
 
-#### Elasticsearch: Defining a logger table of type DirectConnection with a primary key [ID_32375]
+#### Elasticsearch: Defining a logger table of type DirectConnection with a primary key [ID 32375]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -407,13 +407,13 @@ See the following example:
 
   - Index defined: Fallback to connection type “SLProtocol” with index defined.
 
-#### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units [ID_32891]
+#### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units [ID 32891]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 Using NT_UPDATE_DESCRIPTION_XML (127), it is now possible to override parameter units.
 
-#### New \<ProcessAutomation> element to pass parameter values to the Service Definition component of the Dashboards app [ID_32910]
+#### New \<ProcessAutomation> element to pass parameter values to the Service Definition component of the Dashboards app [ID 32910]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -439,7 +439,7 @@ Example:
 </Protocol>
 ```
 
-#### Direct view tables using columns from different protocols [ID_33253]
+#### Direct view tables using columns from different protocols [ID 33253]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -474,7 +474,7 @@ For example:
 </Protocol>
 ```
 
-#### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances [ID_33358]
+#### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances [ID 33358]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -493,7 +493,7 @@ To do so, use the following syntax:
 > [!NOTE]
 > If SLScripting is registered as a service, this functionality is not available. Elements running a protocol.xml file in which RunInSeparateInstance is set to true will then create a notification alarm to indicate a potential memory problem.
 
-See also [Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]](#running-memory-intensive-elements-in-separate-slprotocol-and-slscripting-instances-id_32742-id_32917).
+See also [Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID 32742\] \[ID 32917\]](#running-memory-intensive-elements-in-separate-slprotocol-and-slscripting-instances-id-32742-id-32917).
 
 ##### DataMiner.xml: scriptingProcesses option now accepts integer values
 
@@ -510,7 +510,7 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 > - Assigning more SLScripting processes than SLProtocol processes will simply give every SLProtocol its own instance without launching additional SLScripting processes.
 > - Up to now, the allowed values for scriptingProcesses were “\[service\]” and “protocol”. If scriptingProcesses is set to “protocol”, an SLScripting process is initialized for every SLProtocol process. This should not be confused with setting protocolProcesses to “protocol”. In that case, an SLProtocol process is launched for every protocol name.
 
-#### QActions are now IDisposable and the SLProtocol object remains available outside of the run scope [ID_33965]
+#### QActions are now IDisposable and the SLProtocol object remains available outside of the run scope [ID 33965]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -524,7 +524,7 @@ In addition, up to now only one instance was retained per QAction, so when entry
 
 ### DMS Automation
 
-#### Engine object: TriggeredByName property added [ID_33122]
+#### Engine object: TriggeredByName property added [ID 33122]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -536,7 +536,7 @@ When an Automation script is triggered by the scheduler, a correlation rule or a
 - “Correlation-rule \<name rule>”
 - “Redundancy”
 
-#### New subscript option 'ExtendedErrorInfo' [ID_33306]
+#### New subscript option 'ExtendedErrorInfo' [ID 33306]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -569,7 +569,7 @@ if (script.HadError)
 >
 > *Element {elementName} is {elementState}*
 
-#### Added the option to skip the 'script started' information event [ID_33666]
+#### Added the option to skip the 'script started' information event [ID 33666]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -605,7 +605,7 @@ options.StartScript();
 
 ### DMS EPM
 
-#### EPM: Relation contextuality taken into account for user selections [ID_34083]
+#### EPM: Relation contextuality taken into account for user selections [ID 34083]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
