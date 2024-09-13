@@ -33,7 +33,7 @@ While the tutorial uses the example of a connector, registering a new version fo
 
 To register a new version of a connector, you will need to use the register version call from the Catalog API:
 
-1. Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register`.
+1. Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/register/version`.
 
 1. As the *catalogId* route parameter, fill in the Catalog ID of the connector.
 
