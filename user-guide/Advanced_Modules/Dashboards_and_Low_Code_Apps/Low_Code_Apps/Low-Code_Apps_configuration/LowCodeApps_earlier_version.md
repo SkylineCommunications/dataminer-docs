@@ -29,4 +29,6 @@ To go back to a previous version of a low-code app:
 1. Click the version you want to go back to. You can also click the pencil icon next to that version in the list to immediately start editing it.
 
 > [!NOTE]
-> There can only be one published version of a specific application at the same time. If you publish a different version, the previous version will no longer be published.
+>
+> - There can only be one published version of a specific application at the same time. If you publish a different version, the previous version will no longer be published.
+> - When you roll back to a previous version of the app, everything will revert to its state at the time of that version. This includes GQI queries, which are stored within the app version. Therefore, any changes you made to a GQI query or any new GQI queries created after that version will be lost if you revert.
