@@ -68,3 +68,11 @@ When resource pools were retrieved with a property filter, and one of the resour
 
 > [!NOTE]
 > The above-mentioned exception would only be thrown when, instead of `FilterElements`, (deprecated) object filters were being used.
+
+#### Maps: Filter would incorrectly be altered when the filter pane was collapsed [ID 40660]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When you collapsed the filter pane, in that filter pane, the text box would be cleared and all alarm severity checkboxes would automatically be selected. From now on, when you expand or collapse the filter pane, the text box will no longer be cleared and the checkboxes will no longer be automatically selected.
+
+Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
