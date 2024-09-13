@@ -136,6 +136,9 @@ tags:
 
 The register version API call allows you to create a new version for a Catalog item.
 
+> [!NOTE]
+> A version can only be registered once. Registration will fail if you try to register an existing version number of a Catalog item.
+
 ### URL
 
 `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:GUID}/register/version`

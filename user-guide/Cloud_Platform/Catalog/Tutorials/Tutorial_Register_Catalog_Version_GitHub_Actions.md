@@ -25,7 +25,7 @@ While this tutorial uses the example of a connector, registering a new version f
 ## Overview
 
 - [Step 1: Create the GitHub Actions Workflow file](#step-1-create-the-github-actions-workflow-file)
-- [Step 2: Add GitHub secrets](#step-2-add-github-secrets)
+- [Step 2: Add GitHub secret](#step-2-add-github-secret)
 - [Step 3: Push the workflow file](#step-3-push-the-workflow-file)
 - [Step 4: Trigger the workflow](#step-4-trigger-the-workflow)
 - [Step 5: Monitor workflow execution](#step-5-monitor-workflow-execution)
@@ -95,9 +95,9 @@ While this tutorial uses the example of a connector, registering a new version f
              Invoke-RestMethod -Uri $uri -Method Post -Headers @{ 'Ocp-Apim-Subscription-Key' = "${{ secrets.API_TOKEN }}" } -Form $formData
    ```
 
-## Step 2: Add GitHub secrets
+## Step 2: Add GitHub secret
 
-To securely store sensitive information like the Catalog ID, API token, and version number, you will need to add GitHub secrets:
+To securely store sensitive information like the API token, you will need to add a GitHub secret:
 
 1. Create an [organization key](xref:Managing_DCP_keys#organization-keys) token to authenticate the register version call from the Catalog API:
 
@@ -137,9 +137,6 @@ git push origin main
 To create a new version, push a change to the *main* branch of the repository (or the branch you have defined in the workflow under the *on* section). The GitHub Actions pipeline will automatically be triggered.
 
 You can also manually trigger the workflow by navigating to the *Actions* tab in your repository, selecting the pipeline, and then clicking *Run workflow*.
-
-> [!NOTE]
-> A version can only be registered once. Registration will fail if you try to register an existing version number of a Catalog item.
 
 ## Step 5: Monitor workflow execution
 
