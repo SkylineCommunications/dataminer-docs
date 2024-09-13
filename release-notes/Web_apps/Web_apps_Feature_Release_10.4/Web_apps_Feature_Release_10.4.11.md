@@ -50,6 +50,12 @@ When, in a *Query filter* component, you filtered by date, up to now, the date u
 
 From now on, the displayed date will still be in local format, but the date that will actually be used in the filter will be in UTC format.
 
+#### Dashboards/Low-Code Apps - Security: Enhanced loading of user access data [ID 40671]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+A number of enhancements have been made with regard to the loading of user access data when configuring user access restrictions for dashboards or low-code apps.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
@@ -105,7 +111,7 @@ From now on, when a user duplicates a dashboard with access restrictions, that u
 
 When you tried to delete a subfolder of a dashboard folder, in some cases, an error could be thrown. That error would incorrectly state that the folder name cannot be empty.
 
-#### Dashboards app: Not possible to update the access permissions of the root folder [ID 40644]
+#### Dashboards app - Security: Not possible to update the access permissions of the root folder [ID 40644]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
@@ -128,3 +134,9 @@ When a *Launch a script* action was executed, followed by one or more post actio
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some cases, components using feeds would not be rendered correctly.
+
+#### Dashboards app: Parameter states would be empty if their index was not visible [ID 40672]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a parameter state had an index, but that index was not visible (e.g. a dropped process in Task Manager), up to now, the state itself would not be displayed. From now on, if a state is empty, the text "Not initialized" will be shown instead.
