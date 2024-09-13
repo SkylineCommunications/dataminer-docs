@@ -1,0 +1,64 @@
+---
+uid: MediaOps_Jobs
+---
+
+# MediaOps Jobs
+
+Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options. At start and at end of the job a job/workflow execution script can be triggered to allow you to do orchestration.
+
+## Resources in Jobs
+
+When a resource is added to a job it will be reserved for the time span of the job.
+
+## Job States
+
+A job can have one of the following states:
+
+<div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Draft</div>
+Draft allows you to build a potential job without booking any of the resources or triggering financial calculations. When a new job is created it will start from the Draft state.
+
+<div style="background-color:#F7EC15;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Tentative</div>
+When a job moves into a tentative state, the resources assigned in the job will be reserved to prevent other jobs to select the same resources.
+
+<div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div>
+Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for Cost & Billing. TODO LINK TO C&B
+
+<div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div>
+When a confirmed job starts it will go to the running state. This indicates the job is live.
+
+<div style="background-color:#4A41E6;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Completed</div>
+When a running job stops it will go to the Completed state. This indicates that the job has ended. In this stage it is still possible to make adjustments to the C&B information.
+
+<div style="background-color:#36F0F3;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Ready for invoice</div>
+Ready for invoice means that all changes are final and therefor it is no longer allowed to make any changes to the job.
+
+<div style="background-color:#529495;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Invoiced</div>
+Invoiced is the final state of a job, but it does not mean that all jobs will reach this state.
+
+<div style="background-color:#FC7D76;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Canceled</div>
+When a job is no longer needed it can be moved to a canceled state.
+
+<div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Error</div>
+The error state indicates that something went wrong. A job can end up in this state from any state. TODO CHECK HOW IT WILL RETURN TO ANOTHER STATE?
+
+```mermaid
+graph LR
+    A[🖉 Draft] --> B[🖉 Tentative]
+    B --> C[🖉 Confirmed]
+    C --> D[🖉 Running]
+    D --> E[🖉 Completed]
+    E --> F[Ready for Invoice]
+    F --> G[Invoiced]
+    C --> H[Canceled]
+    B --> H[Canceled]
+    H --> F[Ready for Invoice]
+
+    style A fill:#9140D9,stroke:#000,stroke-width:2px,color:#ffffff
+    style B fill:#F7EC15,stroke:#000,stroke-width:2px,color:#000000
+    style C fill:#348D42,stroke:#000,stroke-width:2px,color:#ffffff
+    style D fill:#4CEF8E,stroke:#000,stroke-width:2px,color:#000000
+    style E fill:#4A41E6,stroke:#000,stroke-width:2px,color:#ffffff
+    style F fill:#36F0F3,stroke:#000,stroke-width:2px,color:#000000
+    style G fill:#529495,stroke:#000,stroke-width:2px,color:#ffffff
+    style H fill:#FC7D76,stroke:#000,stroke-width:2px,color:#000000
+```
