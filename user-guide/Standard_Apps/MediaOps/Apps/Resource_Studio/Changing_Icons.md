@@ -1,4 +1,3 @@
-
 ---
 uid: RS_Changing_Icons
 ---
@@ -15,13 +14,13 @@ To use the Changing Icons feature, simply follow these steps:
 
 1. Open the edit option for *Resource* or *Resource Pool* that you want to change the icon for.
 
-2. Click on the "Change icon" button.
+1. Click on the "Change icon" button.
 
-3. Select the icon that you want to use from the list of available icons.
+1. Select the icon that you want to use from the list of available icons.
     > [!NOTE]
     > To see the list of all available icons check [*Node Icons table*](#node-icons-table).
 
-4. Click on *Confirm* button at the bottom of the panel.
+1. Click on *Confirm* button at the bottom of the panel.
 
    - The new icon is now applied and name of the icon will be visible on Icon image field.
 

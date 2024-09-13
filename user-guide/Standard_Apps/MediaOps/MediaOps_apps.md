@@ -13,10 +13,18 @@ The MediaOps low-code apps are categorized into two main groups:
 
 - MediaOps Live: These apps enable you to manage and optimize live media operations. They offer tools for real-time control, monitoring, and visualization of workflows.
 
-## MediaOps Planning
+## Business Administration
 
 <div class="row"> 
   <div class="column">
     <a href="/user-guide/Standard_Apps/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/user-guide/images/People_Organizations.svg" style="width:100%"></a>
+  </div>
+</div>
+
+## MediaOps Planning
+
+<div class="row">
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/MediaOps/Apps/Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/user-guide/images/mo_rs_app_icon.png" style="width:100%"></a>
   </div>
 </div>

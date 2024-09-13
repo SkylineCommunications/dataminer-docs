@@ -231,6 +231,11 @@ items:
                 topicUid: PO_Managing_Teams
               - name: Managing organizations
                 topicUid: PO_Managing_Organizations
+          - name: Resource Studio
+            topicUid: MediaOps_Resource_Studio
+            items:
+              - name: Changing icons
+                topicUid: MediaOps_RS_Changing_Icons
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
