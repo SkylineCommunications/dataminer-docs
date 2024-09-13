@@ -8,6 +8,8 @@ This tutorial demonstrates how to add a new Catalog item using the [Catalog API]
 
 For ease of use, [Postman](https://www.postman.com/) will be used to execute the register API calls. You can also integrate these into your own workflow afterwards, e.g by using them in a GitHub action.
 
+While the tutorial uses the example of a connector, registering a different type of Catalog item is very similar.
+
 ## Prerequisites
 
 - An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
@@ -30,12 +32,12 @@ Add a new request using an HTTP method of type **PUT** and the following URL: `h
 
 ## Step 2: Configure the authentication header
 
-The Catalog item register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), which you can obtain in the [Admin App](https://admin.dataminer.services/). This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
+The Catalog item register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), which you can obtain in the [Admin App](https://admin.dataminer.services/). This key identifies your organization and will make sure your Catalog item is registered under the correct organization.
 
 > [!IMPORTANT]
-> You need to have the "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
+> You need to have the *Owner* role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
 
-1. In the Admin app, under *Organization* in the sidebar on the left, select the *Keys* page.
+1. In the [Admin app](https://admin.dataminer.services/), under *Organization* in the sidebar on the left, select the *Keys* page.
 
 1. At the top of the page, click *New Key*.
 
@@ -74,7 +76,7 @@ The Catalog item register API call is authenticated using an [organization key](
      Copy the snippet below, changing the fields as you see fit using your favorite editor, and save the file as `manifest.yaml`.
 
      > [!NOTE]
-     > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. To do so, you can for instance navigate to [GUID generator](https://guidgenerator.com/) and create a new GUID using the format *hyphens*, or you can use your own preferred method. 
+     > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. To do so, you can for instance navigate to [GUID generator](https://guidgenerator.com/) and create a new GUID using the format *hyphens*, or you can use your own preferred method.
 
      ```yml
      type: 'connector'

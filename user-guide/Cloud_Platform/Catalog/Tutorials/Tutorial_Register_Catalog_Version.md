@@ -4,79 +4,99 @@ uid: Tutorial_Register_Catalog_Version
 
 # Registering a new version of a connector in the Catalog
 
-This tutorial demonstrates how to add a new version to a Catalog item using the [Catalog API](xref:Register_Catalog_Item).  
-We will be registering our own version of the following example [connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom), so go ahead and download the solution.
+This tutorial demonstrates how to add a new version to a Catalog item using the [Catalog API](xref:Register_Catalog_Item). It builds on the example from the tutorial [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), so unless you already know how to register a new Catalog item and have done so already, we recommend that you follow that tutorial first.
+
+While the tutorial uses the example of a connector, registering a new version for a different type of Catalog item is very similar.
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
-- A registered Catalog item, see [register a catalog item tutorial](xref:Tutorial_Register_Catalog_Item) for an example on how to register an item.
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
+
+  > [!TIP]
+  > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
+
+- A registered Catalog item.
+
+  > [!TIP]
+  > For an example of how to register an item, see [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item).
+
 - [Skyline.DataMiner.CICD.Tools.Packager Nuget](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab).
 
 ## Overview
 
-- [Step 1: Register Catalog version URL](#step-1-register-catalog-version-url)
-- [Step 2: Authentication header](#step-2-authentication-header)
-- [Step 3: Register Catalog version body](#step-3-register-catalog-version-body)
-- [Step 4: Register](#step-4-register)
+- [Step 1: Register the Catalog version URL](#step-1-register-the-catalog-version-url)
+- [Step 2: Configure the authentication header](#step-2-configure-the-authentication-header)
+- [Step 3: Register the Catalog version body](#step-3-register-the-catalog-version-body)
+- [Step 4: Register the version](#step-4-register-the-version)
 
-## Step 1: Register Catalog version URL
+## Step 1: Register the Catalog version URL
 
-In order to register our first version, we will use the register version call from the Catalog API.
-Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register`.
+To register a new version of a connector, you will need to use the register version call from the Catalog API:
 
-![Register version http url](~/user-guide/images/tutorial_catalog_registration_version_url.png)
+1. Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/version/register`.
 
-> [!IMPORTANT]  
-> Make sure to change the catalogId route parameter to the Catalog ID you want to register the version to.
-> This is the ID you used to register the [catalog item](xref:Register_Catalog_Item#registering-a-catalog-item-with-the-api).  
-> You can always obtain it from an existing Catalog item by navigating to the details page of it in the [Catalog](https://catalog.dataminer.services/), the ID is the last part of the URL.
+1. As the *catalogId* route parameter, fill in the Catalog ID of the connector.
 
-## Step 2: Authentication Header
+   > [!NOTE]
+   > If you followed the [previous tutorial](xref:Tutorial_Register_Catalog_Item), this is the ID that was returned in the last step. If you are registering a new version for a different Catalog item, you can find it by navigating to its details page in the [Catalog](https://catalog.dataminer.services/) and checking the last part of the URL.
 
-The Catalog Version register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), we can obtain one in the [Admin App](https://admin.dataminer.services/) on the *Keys* page.
-This key identifies your organization and will make sure the registration will register your Catalog item under the correct organization.
+For example:
+
+![Register version HTTP URL](~/user-guide/images/tutorial_catalog_registration_version_url.png)
+
+## Step 2: Configure the authentication header
+
+The Catalog version register API call is authenticated using an [organization key](xref:Managing_DCP_keys#organization-keys), which you can obtain in the [Admin App](https://admin.dataminer.services/). This key identifies your organization and will make sure your Catalog item is registered under the correct organization.
 
 > [!IMPORTANT]
-> You need to have the "Owner" role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
+> You need to have the *Owner* role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
 
-Go ahead and create a new key with permission "Register catalog items".
+1. In the [Admin app](https://admin.dataminer.services/), under *Organization* in the sidebar on the left, select the *Keys* page.
 
-![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+1. At the top of the page, click *New Key*.
 
-After creation of the key, you can copy the key and use it as value in the **Ocp-Apim-Subscription-Key** header.
+1. Configure the key with a label of your choice and the permission *Register catalog items*.
 
-![Register version http header](~/user-guide/images/tutorial_catalog_registration_version_headers.png)
+   ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
 
-## Step 3: Register Catalog version Body
+1. Copy the key and use it as the value in the **Ocp-Apim-Subscription-Key** header.
 
-The body of the version registration request requires a file containing our connector, for this we will be using the [Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a .dmprotocol package from our solution.
+   ![Register version HTTP header](~/user-guide/images/tutorial_catalog_registration_version_headers.png)
 
-Navigate to [Example Rates connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom) and download the solution.
+## Step 3: Register the Catalog version body
 
-Open a terminal window and run below command to install the packager.
+The body of the version registration request requires a file containing the connector. For this, you will be using the [Skyline.DataMiner.CICD.Tools.Packager NuGet](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) to create a .dmprotocol package.
 
-```powershell
-dotnet tool install --global Skyline.DataMiner.CICD.Tools.Packager --version 2.0.3
-```
+1. Navigate to [Example Rates connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom) and download the connector.
 
-Run the following command to create a .dmprotocol package, adapting the directory paths as needed.
+1. Open a terminal window and run the command below to install the packager.
 
-```powershell
-dataminer-package-create dmprotocol "C:\Tutorials\Catalog Registration\SLC-C-Example_Rates-Custom-1.0.1.X" --name catalog_registration_tutorial --output "C:\Tutorials\Catalog Registration\Packages"
-```
+   ```powershell
+   dotnet tool install --global Skyline.DataMiner.CICD.Tools.Packager --version 2.0.3
+   ```
 
-Add the following to the **multipart/form-data** body of the request
+1. Run the following command to create a .dmprotocol package, adapting the directory paths as needed.
 
-- The earlier created *dmprotocol* file in key of type **File** with name **file**.
-- The **version number** in key of type **Text** with name **versionNumber**.
-- The **version description** in key of type **Text** with name **versionDescription**.
+   ```powershell
+   dataminer-package-create dmprotocol "C:\Tutorials\Catalog Registration\SLC-C-Example_Rates-Custom-1.0.1.X" --name catalog_registration_tutorial --output "C:\Tutorials\Catalog Registration\Packages"
+   ```
+
+   In this example command, the first version of the [Example Rates connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom) is registered.
+
+1. Add the following to the **multipart/form-data** body of the request:
+
+   - The *dmprotocol* file you created earlier in a key of type **File** with name **file**.
+   - The **version number** in a key of type **Text** with name **versionNumber**.
+   - The **version description** in a key of type **Text** with name **versionDescription**.
 
 ![Register version http body](~/user-guide/images/tutorial_catalog_registration_version_body.png)
 
-## Step 4: Register
+## Step 4: Register the version
 
-Execute the call and upon correct registration you will receive HTTP Status 200 OK and the Catalog ID, artifact ID in the body of the response.
-You will be able to see the registered version on the Catalog in the **versions** tab.
+Execute the call.
+
+When the item has been registered correctly, you will receive an *HTTP Status 200 OK* response, with the Catalog ID and artifact ID in the body of the response.
+
+In the Catalog, you will now be able to see the version you registered in the **versions** tab for the item.
 
 ![Registered version](~/user-guide/images/tutorial_catalog_registration_registered_version.png)
