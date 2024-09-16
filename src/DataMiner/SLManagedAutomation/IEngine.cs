@@ -13,34 +13,49 @@ namespace Skyline.DataMiner.Automation
 	/// </summary>
 	public interface IEngine
 	{
-		/// <summary>
-		/// Acknowledges the specified alarm tree using the provided comment message.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="comment">A comment.</param>
-		/// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
-		/// <example>
-		/// <code>
-		/// engine.AcknowledgeAlarm(7, 304022, "Alarm acknowledged.");
-		/// </code>
-		/// </example>
+        /// <summary>
+        /// Acknowledges the specified alarm tree using the provided comment message.
+        /// </summary>
+        /// <param name="alarmTreeID">The alarm tree to update</param>
+        /// <param name="comment">A comment.</param>
+        /// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
+        /// <example>
+        /// <code>
+        /// engine.AcknowledgeAlarm(new AlarmTreeID(7, 400, 304022), "Alarm acknowledged.");
+        /// </code>
+        /// </example>
+        void AcknowledgeAlarm(AlarmTreeID alarmTreeID, string comment);
+
+        /// <summary>
+        /// Acknowledges the specified alarm tree using the provided comment message.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="comment">A comment.</param>
+        /// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
+        /// <example>
+        /// <code>
+        /// engine.AcknowledgeAlarm(7, 304022, "Alarm acknowledged.");
+        /// </code>
+        /// </example>
+        [Obsolete("Please use the overload that takes an AlarmTreeID")]
 		void AcknowledgeAlarm(int dataMinerID, int alarmID, string comment);
 
-		/// <summary>
-		/// Acknowledges the specified alarm tree using the provided comment message.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="comment">A comment.</param>
-		/// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
-		/// <example>
-		/// <code>
-		/// engine.AcknowledgeAlarm(7, 400, 304022, "Alarm acknowledged.");
-		/// </code>
-		/// </example>
-		void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment);
+        /// <summary>
+        /// Acknowledges the specified alarm tree using the provided comment message.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="comment">A comment.</param>
+        /// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
+        /// <example>
+        /// <code>
+        /// engine.AcknowledgeAlarm(7, 400, 304022, "Alarm acknowledged.");
+        /// </code>
+        /// </example>
+        [Obsolete("Please use the overload that takes an AlarmTreeID")]
+        void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment);
 
 		/// <summary>
 		/// Adds an error message to the Automation script, which will eventually cause the script to fail.
