@@ -292,7 +292,7 @@ working and summarize the implementation method.*
 
 1. *Which Microsoft .NET framework is supported for scripting in protocols?*
 
-    .NET version 2.0 and .NET 4.0 (since DataMiner version 7.0.2)
+    See [Microsoft .NET requirements](xref:DataMiner_Compute_Requirements#microsoft-net).
 
 1. *If you execute a SetParameter method call with a fixed value, will the change go off the second time as well?*
 

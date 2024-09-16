@@ -670,7 +670,7 @@ Permission to delete DataMiner protocols.
 
 #### Modules \> Protocols & Templates \> Protocols \> Download protocols from DCP
 
-Permission to download protocols from the DataMiner Collaboration Platform.
+Permission to download protocols via the Update Center in Cube. This permission is not required to [deploy protocols from the Catalog](xref:Deploying_a_catalog_item).
 
 #### Modules \> Protocols & Templates \> Protocols \> Generate MIB
 

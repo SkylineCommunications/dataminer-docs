@@ -365,8 +365,6 @@ items:
         items:
         - name: Introduction
           topicUid: ConnectionsSnmpIntroduction
-        - name: SNMPv3
-          topicUid: ConnectionsSnmpSnmpv3
         - name: OIDs
           topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
@@ -387,6 +385,8 @@ items:
           topicUid: ConnectionsSnmpTraps
         - name: Bitrate calculations
           topicUid: ConnectionsSnmpBitRateCalculations
+        - name: SNMPv3
+          topicUid: ConnectionsSnmpSnmpv3
         - name: Protocol inner workings
           topicUid: ConnectionsSnmpProtocolInnterWorkings
         - name: Exercise
@@ -653,13 +653,12 @@ items:
       - name: How to use the element log in connector integrations
         topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      items:
+      items: 
       - name: Investigating a protocol thread RTE
         topicUid: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
         topicUid: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
-        topicUid: QAction_exceptions
         items:
         - name: System.NullReferenceException
           topicUid: System_NullReferenceException
@@ -669,8 +668,12 @@ items:
           topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
           topicUid: System_Collections_Generic_KeyNotFoundException
+        - name: System.OutOfMemoryException
+          topicUid: System_OutOfMemoryException
         - name: System.StackOverflowException
           topicUid: System_StackOverflowException
+        - name: Exception in Finalizer
+          topicUid: Finalizer_Exception
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases

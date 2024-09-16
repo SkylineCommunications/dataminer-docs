@@ -12,7 +12,7 @@ uid: General_Main_Release_10.1.0_CU22
 
 ### Enhancements
 
-#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
+#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID 34774]
 
 <!-- MR 10.1.0 [CU22]/10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -20,7 +20,7 @@ When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an i
 
 From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
 
-#### DataMiner upgrade: Enhanced method to delete locked files [ID_34779]
+#### DataMiner upgrade: Enhanced method to delete locked files [ID 34779]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -28,7 +28,7 @@ When, during a DataMiner upgrade, an attempt was made to delete files that were 
 
 From now on, when an attempt to delete a file during a DataMiner upgrade fails, the extension of that file will be replaced by `.SLReplace` and, later on in the upgrade process, the file will then be deleted by SLHelper.
 
-#### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
+#### DataMiner Cube: Stream Viewer enhancements [ID 34837] [ID 34838]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -38,19 +38,19 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID_34874]
+#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID 34874]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 Because of a number of enhancements, overall performance has increased when loading a visual overview that contains a large number of shapes linked to EPM objects.
 
-#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
+#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID 34877]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
 
-#### Element errors and notices will now be closed as soon as the element in question is stopped [ID_34927]
+#### Element errors and notices will now be closed as soon as the element in question is stopped [ID 34927]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -77,7 +77,7 @@ Starting the element <x> failed. No element object.
 Creating element-object for <x> failed with <y>.
 ```
 
-#### DataMiner Cube - Trending: Trend points with value "0" will now also be exported to CSV [ID_35124]
+#### DataMiner Cube - Trending: Trend points with value "0" will now also be exported to CSV [ID 35124]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
@@ -85,7 +85,7 @@ Up to now, when you exported real-time trend data to a CSV file, trend points wi
 
 ### Fixes
 
-#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
+#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID 34407]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.2.11 -->
 
@@ -93,19 +93,19 @@ When a required software license cannot be found, a `One or more of the followin
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
 
-#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
+#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID 34759]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
-#### Standalone parameters belonging to another child of the same DVE parent element could be set to 'Not Initialized' when a row linked to a DVE child element was deleted [ID_34785]
+#### Standalone parameters belonging to another child of the same DVE parent element could be set to 'Not Initialized' when a row linked to a DVE child element was deleted [ID 34785]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 When a row linked to a DVE child element was deleted, in some cases, standalone parameters belonging to another child of the same DVE parent element could be set to "Not Initialized".
 
-#### DataMiner Cube - Alarm Console: Alarm tab of type 'Active alarms linked to cards' would incorrectly not show any alarms when you opened a function card [ID_34799]
+#### DataMiner Cube - Alarm Console: Alarm tab of type 'Active alarms linked to cards' would incorrectly not show any alarms when you opened a function card [ID 34799]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -113,25 +113,25 @@ When the Alarm Console had an alarm tab of type *Active alarms linked to cards*,
 
 Also, when you added a new alarm tab, clicked *Apply filters*, and added an element filter, then you would incorrectly also be able to select virtual functions from the list of elements. From now on, only when you add a function filter will you be able to select virtual functions from the list of functions.
 
-#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
+#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID 34829]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
 
-#### DataMiner Cube - Visual Overview: Preset specified in a Spectrum Analysis component would incorrectly not be loaded [ID_34833]
+#### DataMiner Cube - Visual Overview: Preset specified in a Spectrum Analysis component would incorrectly not be loaded [ID 34833]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
-#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID 34860]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
 
-#### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
+#### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID 34888]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
@@ -139,7 +139,7 @@ When an HTTP request is sent, in some cases, WinHTTP can incorrectly throw a `SE
 
 From now on, when this error is thrown, DataMiner will retry the HTTP request the number of times specified for the HTTP connection in question.
 
-#### SLLogCollector would become unresponsive after executing a nodetool command [ID_34909]
+#### SLLogCollector would become unresponsive after executing a nodetool command [ID 34909]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
@@ -147,43 +147,43 @@ When the JAVA_HOME variable was not set, SLLogCollector would become unresponsiv
 
 From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
 
-#### SLDataGateway was not always able to parse the result of a 'nodetool status' command [ID_34929]
+#### SLDataGateway was not always able to parse the result of a 'nodetool status' command [ID 34929]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 The SLDataGateway process periodically checks the status of the local Cassandra node by executing a `nodetool status` command and parsing the result. When Cassandra was still starting up, some values in the output could not always be parsed, leading to SLDataGateway incorrectly marking the database as unavailable.
 
-#### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
+#### DataMiner Cube - EPM: Problem with topology filter [ID 34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
 
-#### Problem with SLProtocol when trying to update a parameter of type 'read bit' [ID_34935]
+#### Problem with SLProtocol when trying to update a parameter of type 'read bit' [ID 34935]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
 
-#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID_34955]
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID 34955]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When a visual overview on an EPM card contained a trend graph, in some cases, that graph would incorrectly show *No data* while its legend would show the correct data.
 
-#### Elements would not show up in client applications due to an incorrect credential library GUID stored in their Element.xml file [ID_34956]
+#### Elements would not show up in client applications due to an incorrect credential library GUID stored in their Element.xml file [ID 34956]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an incorrect credential library GUID could get stored in the *Element.xml* file of certain elements. As a result, although they were active and working as expected, those elements would not get loaded into SLNet and would not show up in client applications such as DataMiner Cube.
 
-#### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
+#### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID 34959]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
 
-#### Dashboards app & Low-Code Apps: Problem with 'Number of columns' input box [ID_34966]
+#### Dashboards app & Low-Code Apps: Problem with 'Number of columns' input box [ID 34966]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
@@ -191,7 +191,7 @@ When you were editing a dashboard or a low-code app, and the edit side panel was
 
 Also, in some cases, the value in the *Number of columns* input box could incorrectly not be reset to the factory default.
 
-#### DataMiner Cube: Problem when opening scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports [ID_34997]
+#### DataMiner Cube: Problem when opening scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports [ID 34997]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -200,25 +200,25 @@ When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks,
 > [!NOTE]
 > From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.
 
-#### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID_35001]
+#### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID 35001]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you selected a measurement point of a spectrum trace, and then played a spectrum recording in which other measurement points were used, the measurement point you selected would incorrectly no longer be selected when the spectrum recording stopped playing.
 
-#### DataMiner Cube - Alarm Console: Cube freezes when loading a large sliding window [ID_35032]
+#### DataMiner Cube - Alarm Console: Cube freezes when loading a large sliding window [ID 35032]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you opened an alarm tab of type "sliding window" with a large number of alarm trees, in some cases, the UI could become unresponsive.
 
-#### DataMiner Cube: Y-axis values could be missing when opening a trend graph [ID_35060]
+#### DataMiner Cube: Y-axis values could be missing when opening a trend graph [ID 35060]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you opened the trend graph of a parameter that contained discrete values or exceptions, in some cases, Y-axis values could be missing.
 
-#### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID_35181]
+#### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID 35181]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 

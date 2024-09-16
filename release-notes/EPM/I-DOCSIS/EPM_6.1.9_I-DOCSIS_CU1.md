@@ -6,15 +6,15 @@ uid: EPM_6.1.9_I-DOCSIS_CU1
 
 ## Enhancements
 
-#### Network layer KPIs adjusted and CH Utilization updated to show filtered dashboard [ID_36751]
+#### Network layer KPIs adjusted and CH Utilization updated to show filtered dashboard [ID 36751]
 
 ​On the network layer, the *#CM Ping OK* KPI is now no longer displayed, as it does not provide meaningful information. Instead, the KPI *#CM Ping Unreachable* is now displayed. On the service group layer, the CH Utilization has been updated so it shows the dashboard with preselected filters for the respective service group.
 
-#### Generic DOCSIS CM Collector: Interval adjusted for KPI calculation [ID_37356]
+#### Generic DOCSIS CM Collector: Interval adjusted for KPI calculation [ID 37356]
 
 To make sure the same data are shown at the same time, the logic that updates KPIs in the CM QAM Channels, Cable Modem Overview, and QAM Channels tables now uses the same interval parameter, i.e. the Threshold Execution Interval.
 
-#### DOCSIS version information streamlined [ID_38078]
+#### DOCSIS version information streamlined [ID 38078]
 
 To streamline the way DOCSIS version information is displayed, a number of changes have been implemented:
 
@@ -24,11 +24,11 @@ To streamline the way DOCSIS version information is displayed, a number of chang
 - The font size in the visual overview for the CM has been adjusted so that it is the same for every KPI.
 - In DataMiner Cube, KPIs can now be displayed over several lines, so that all the data of each KPI is fully visible.
 
-#### Start and Stop Frequency parameters added to CM OFDM Channels dashboard [ID_38287]
+#### Start and Stop Frequency parameters added to CM OFDM Channels dashboard [ID 38287]
 
 In the dashboard *05. CM OFDM Channels*, the Start and Stop Frequency parameters are now displayed in the table *OFDM Channels*. These are retrieved from the CCAP. Previously, these parameters were not available in this dashboard.
 
-#### EPM_I_DOCSIS_AddNewCcapCmPair script updated [ID_38326]
+#### EPM_I_DOCSIS_AddNewCcapCmPair script updated [ID 38326]
 
 The script *EPM_I_DOCSIS_AddNewCcapCmPair*, which is used to create a new CCAP/CM pair, has been updated as follows:
 
@@ -39,14 +39,14 @@ The script *EPM_I_DOCSIS_AddNewCcapCmPair*, which is used to create a new CCAP/C
 
 ## Fixes
 
-#### Generic CM Collector: Empty rows in QAM Channels and Cable Modem Overview tables [ID_36626]
+#### Generic CM Collector: Empty rows in QAM Channels and Cable Modem Overview tables [ID 36626]
 
 Up to now, it could occur that the QAM Channels and Cable Modem Overview tables contained rows that were almost completely empty. To prevent this, the methods to calculate and obtain the status for the QAM channel KPIs have been modified to only consider active QAM channels.
 
-#### CM count on CCAP Core level not matching cumulative count across associated linecards [ID_37399]
+#### CM count on CCAP Core level not matching cumulative count across associated linecards [ID 37399]
 
 It could occur that the total count of CMs at the CCAP Core level did not match the cumulative count of CMs across the linecards associated with that CCAP. This was caused by the CMs being associated with linecards using a logical value (Service Group ID) instead of a physical one (MAC Domain). This has now been changed so that CMs are linked to a linecard using the MAC Domain of each CM.
 
-#### CISCO CBR-8 CCAP Platform: DS port not found for some QAM Channels [ID_38044]
+#### CISCO CBR-8 CCAP Platform: DS port not found for some QAM Channels [ID 38044]
 
 Because of a problem in the port mapping, it could occur that the DS port was not found for some QAM channels. This problem has been resolved so that the information in the US and DS QAM channels will now be more accurate.

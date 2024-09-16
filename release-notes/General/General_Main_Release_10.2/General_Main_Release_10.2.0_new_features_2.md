@@ -20,7 +20,7 @@ uid: General_Main_Release_10.2.0_new_features_2
 
 ### DMS core functionality
 
-#### SLSpectrum: Refactoring of code used to play back spectrum recordings \[ID_29785\]
+#### SLSpectrum: Refactoring of code used to play back spectrum recordings \[ID 29785\]
 
 In SLSpectrum, the code used to play back spectrum recordings has been refactored.
 
@@ -33,7 +33,7 @@ Also, the SpectrumManagerHelper now allows you to play, pause, slow-forward and 
 | Slow-forward | Helper.SetSpectrumRecordingSpeed(0.5)<br> (any number between 0 and 1) |
 | Fast-forward | Helper.SetSpectrumRecordingSpeed(2.0)<br> (any number greater than 1)  |
 
-#### Improved SLLog stack cleaning behavior \[ID_29989\]
+#### Improved SLLog stack cleaning behavior \[ID 29989\]
 
 The way the SLLog process cleans the log file stack has been improved. SLLog now has a thread that iterates over the different log file buffers and that logs a number of lines from the buffers to the log files. The maximum number of lines depends on the *LinesPerIteration* setting in *LogSettings.xml* (default: 100).
 
@@ -53,7 +53,7 @@ In addition, SLLog now monitors its own memory usage, and whenever the memory us
 </Log>
 ```
 
-#### DataMiner Object Model: DomInstanceNameDefinition \[ID_30226\]
+#### DataMiner Object Model: DomInstanceNameDefinition \[ID 30226\]
 
 A ModuleSettings object now has a DomInstanceNameDefinition property, which allows you to define how the name property of a DomInstance should be filled in automatically each time the instance is saved.
 
@@ -122,7 +122,7 @@ var settings = new ModuleSettings()
 > - When multiple values are defined for the same FieldDescriptor (i.e. when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
 > - The DomInstanceNameDefinition can be overridden by a DomDefinition on the ModuleSettingsOverrides property.
 
-#### DataMiner Object Model: DomBehaviorDefinition object & status system \[ID_30443\]
+#### DataMiner Object Model: DomBehaviorDefinition object & status system \[ID 30443\]
 
 The DataMiner Object Model can now also contain objects of type DomBehaviorDefinition.
 
@@ -303,7 +303,7 @@ When something goes wrong while performing a status transition, a DomStatusTrans
 
 It is possible to mark one DomBehaviorDefinition as the main “Module” definition. This will force all other DomBehaviorDefinitions to inherit from it, forcing them all to use the same status system. The inheriting definitions can only add extra DomStatusSectionDefinitionLinks.
 
-#### Connecting a DataMiner System to the cloud \[ID_30513\]
+#### Connecting a DataMiner System to the cloud \[ID 30513\]
 
 It is now possible to connect a DataMiner System to the cloud. To do so:
 
@@ -339,11 +339,11 @@ If your DMS was already connected to the cloud using the earlier soft-launch ver
 > [!NOTE]
 > Make sure that all users that should be able to share data with the cloud have the necessary user permissions under *System configuration* > *Cloud sharing*. Refer to the DataMiner Help for more details.
 
-#### New DataMiner process: SLSpiHost \[ID_30869\]
+#### New DataMiner process: SLSpiHost \[ID 30869\]
 
 From now on, all processing with regard to system performance indicators (SPIs) will be performed by the new SLSpiHost process instead of the SLNet process.
 
-#### DataMiner Object Model: Actions & buttons \[ID_30923\]
+#### DataMiner Object Model: Actions & buttons \[ID 30923\]
 
 It is now possible to define actions on a DomBehaviorDefinition, which can be triggered via the DomHelper, and buttons that will execute one or more actions when clicked.
 
@@ -478,14 +478,14 @@ The DomButtonDefinitionLayout class has the following properties:
 | ToolTip  | string | The (optional) tooltip with more information about the button.                          |
 | Order    | int    | The number assigned to the button that determines its place within a series of buttons. |
 
-#### Virtual functions can now be included in element connectivity chains \[ID_30944\]
+#### Virtual functions can now be included in element connectivity chains \[ID 30944\]
 
 When creating a connectivity chain between parameters in an element, it is now possible to also select virtual functions to be included in that chain.
 
 > [!NOTE]
 > Virtual function alarms reside on the main element. When multiple virtual functions are defined in different element connectivity chains, the most severe RCA will be shown in the element RCA of the alarm.
 
-#### Video thumbnails: Support for HLS streams \[ID_30953\]
+#### Video thumbnails: Support for HLS streams \[ID 30953\]
 
 Video thumbnails now also support HTTP Live Streaming (HLS). No plugins need to be installed.
 
@@ -502,11 +502,11 @@ Syntax:
 > - If you access a video thumbnail player that is using HTTPS, then the media must also be served over HTTPS.
 > - When the video starts automatically, in order to comply with the browser's autoplay policy, it will be muted until the user turns on the sound.
 
-#### Logging: SLCloudEndpointManager.txt renamed to SLUMSEndpointManager.txt \[ID_30974\]
+#### Logging: SLCloudEndpointManager.txt renamed to SLUMSEndpointManager.txt \[ID 30974\]
 
 The *SLCloudEndpointManager.txt* log file has been renamed to *SLUMSEndpointManager.txt*.
 
-#### SLWatchdog will now by default send an email message when an anomaly was detected \[ID_30982\]
+#### SLWatchdog will now by default send an email message when an anomaly was detected \[ID 30982\]
 
 In the *MaintenanceSettings.xml* file of a newly installed DataMiner Agent, the Watchdog.Email@active setting will now by default be set to true. In other words, on a newly installed DataMiner Agent, the SLWatchdog process will now by default send an email to the configured destination(s) whenever it detects an anomaly.
 
@@ -524,7 +524,7 @@ In the *MaintenanceSettings.xml* file of a newly installed DataMiner Agent, the 
 </MaintenanceSettings>
 ```
 
-#### Redundancy groups: Additional information in information events and Automation scripts \[ID_31358\]
+#### Redundancy groups: Additional information in information events and Automation scripts \[ID 31358\]
 
 When elements within a redundancy group are switched, from now on, additional information will be added both to the information events and to the Automation scripts that are executed.
 
@@ -559,7 +559,7 @@ When an Automation script is triggered as part of an redundancy group action, th
 | 65010 | \<Redundancy Primary> | This parameter will contain the ID of the primary element involved in the switch. ID format: `<DataMinerID>/<ElementID>` |
 | 65011 | \<Redundancy Backup> | This parameter will contain the ID of the backup element involved in the switch. ID format: `<DataMinerID>/<ElementID>` |
 
-#### Automatic Incident Tracking enabled by default on new systems \[ID_31617\]
+#### Automatic Incident Tracking enabled by default on new systems \[ID 31617\]
 
 From now on, Automatic Incident Tracking will be enabled by default
 
@@ -569,7 +569,7 @@ From now on, Automatic Incident Tracking will be enabled by default
 > [!NOTE]
 > In systems where Automatic Incident Tracking has explicitly been disabled, the feature will remain disabled.
 
-#### Table filters of type 'fullfilter' now support filtering by means of regular expressions \[ID_31893\]
+#### Table filters of type 'fullfilter' now support filtering by means of regular expressions \[ID 31893\]
 
 Inside a table filter of type “fullfilter”, it is now possible to filter by means of regular expressions.
 

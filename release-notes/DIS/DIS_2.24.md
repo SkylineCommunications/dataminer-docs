@@ -8,7 +8,7 @@ uid: DIS_2.24
 
 ### IDE
 
-#### C# editor: Class Library can now also be used in Automation scripts \[ID_23925\]
+#### C# editor: Class Library can now also be used in Automation scripts \[ID 23925\]
 
 From now on, it is also possible to use code from Class Library packages in Automation scripts.
 
@@ -20,7 +20,7 @@ When DIS detects that code from a loaded Class Library package is used in EXE bl
 > [!NOTE]
 > Using Class Library packages in Automation scripts will only work in conjunction with DataMiner version 9.6.13 or higher.
 
-#### C# editor: New snippets \[ID_24066\]\[ID_24222\]
+#### C# editor: New snippets \[ID 24066\]\[ID 24222\]
 
 In the C# editor, you can now use the following additional snippets:
 
@@ -41,7 +41,7 @@ In the C# editor, you can now use the following additional snippets:
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_22757\]\[ID_23419\]\[ID_23793\]\[ID_23935\]\[ID_24132\]
+#### New and updated checks and error messages \[ID 22757\]\[ID 23419\]\[ID 23793\]\[ID 23935\]\[ID 24132\]
 
 The following checks and error messages have been added, updated or removed.
 
@@ -195,14 +195,14 @@ The following legacy Validator return codes have been removed:
 
 ### XML Schema
 
-#### UOM Schema: New units added \[ID_23740\]
+#### UOM Schema: New units added \[ID 23740\]
 
 The following units have been added to the UOM Schema:
 
 - kvar (kilovolt ampere reactive)
 - NanoCPUs (nano CPUs)
 
-#### Automation Schema: Additional values for DMSScript.Exe.Param@type attribute \[ID_23952\]
+#### Automation Schema: Additional values for DMSScript.Exe.Param@type attribute \[ID 23952\]
 
 The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following additional values:
 
@@ -212,7 +212,7 @@ The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following 
 | precompile  | Whether this C# action must be compiled as a library. Default: “false”. |
 | scriptRef   | A reference to another library.<br> Format: The name of the Automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current Automation script, you can replace the name of the Automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
 
-#### Automation Schema: List of possible bit flags added to documentation tag of the DMSScript.Exe.Param@options attribute \[ID_23953\]
+#### Automation Schema: List of possible bit flags added to documentation tag of the DMSScript.Exe.Param@options attribute \[ID 23953\]
 
 In the Automation Schema, the documentation tag of the *DMSScript.Exe.Param@options* attribute now contains a list of all hexadecimal bit flags that can be represented by the decimal value specified in that attribute:
 
@@ -226,19 +226,19 @@ In the Automation Schema, the documentation tag of the *DMSScript.Exe.Param@opti
 - 0x200: SkipInfoEventsSet
 - 0x400: HasFindInteractiveClient
 
-#### Protocol Schema: Key reference constraint added to overridePID attribute of Protocol.Display.Pages.Page.Visibility element \[ID_23959\]
+#### Protocol Schema: Key reference constraint added to overridePID attribute of Protocol.Display.Pages.Page.Visibility element \[ID 23959\]
 
 In the Protocol Schema, a key reference constraint has been added to the *overridePID* attribute of the *Protocol.Display.Pages.Page.Visibility* element.
 
 The Schema will now verify whether the value specified in that *overridePID* attribute refers to a parameter ID defined in the protocol.
 
-#### Protocol Schema: Protocol.Topologies.Topology.Cell.Exposer@enabled is now a mandatory attribute \[ID_24377\]
+#### Protocol Schema: Protocol.Topologies.Topology.Cell.Exposer@enabled is now a mandatory attribute \[ID 24377\]
 
 In the Protocol Schema, the *enabled* attribute of the *Protocol.Topologies.Topology.Cell.Exposer* element is now a mandatory attribute.
 
 ### Class Library
 
-#### DMS Monitors \[ID_24066\]
+#### DMS Monitors \[ID 24066\]
 
 The new Monitor Extension methods provide stable logic to handle eventing. They encapsulate DataMiner subscriptions and handle all correct cleanup and stability guidelines, leaving a developer free to focus on what must happen when an event is triggered.
 
@@ -256,7 +256,7 @@ Currently, the supported methods provide the ability to monitor changes in the f
 > [!NOTE]
 > Class Library Monitors will only work in conjunction with DataMiner version 9.6.3 or higher.
 
-#### New Rates namespace \[ID_24283\]
+#### New Rates namespace \[ID 24283\]
 
 A new *Rates* namespace has been added. This namespace contains classes and methods that can be used to calculate all kind of rates, including bit rates for SNMP interface tables.
 
@@ -264,7 +264,7 @@ A new *Rates* namespace has been added. This namespace contains classes and meth
 
 ### Enhancements
 
-#### IDE - Function editor: Enhancements \[ID_23978\]
+#### IDE - Function editor: Enhancements \[ID 23978\]
 
 A number of enhancements have been made to the function editor:
 
@@ -275,31 +275,31 @@ A number of enhancements have been made to the function editor:
 > [!NOTE]
 > The XML editor now also features on-the-fly XML Schema validation when editing function XML files.
 
-#### Class Library: Table cell subscriptions will now be established using the primary key \[ID_24456\]
+#### Class Library: Table cell subscriptions will now be established using the primary key \[ID 24456\]
 
 Up to now, table cell subscriptions were established using the display key. From now on, they will be established using the primary key.
 
 ### Fixes
 
-#### IDE: Problem when parsing MIB files \[ID_24266\]
+#### IDE: Problem when parsing MIB files \[ID 24266\]
 
 In some cases, an error could occur when parsing a MIB file.
 
-#### Class Library: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped \[ID_24290\]
+#### Class Library: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped \[ID 24290\]
 
 In some cases, the IDmsElement IsStartupComplete method would throw an exception when it was executed on an element that had been stopped.
 
-#### Class Library: Problem when updating properties \[ID_24291\]
+#### Class Library: Problem when updating properties \[ID 24291\]
 
 In some cases, it would not be possible to update properties that had a value equal to NULL.
 
-#### Class Library: Problem when requesting an element with duplicate properties \[ID_24293\]
+#### Class Library: Problem when requesting an element with duplicate properties \[ID 24293\]
 
 When an element was requested via IDms, in some cases, an exception could be thrown when the element had duplicate properties.
 
 From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the *C:\\Skyline DataMiner\\Logging\\ClassLibrary.txt* log file.
 
-#### Class Library: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol \[ID_24357\]
+#### Class Library: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol \[ID 24357\]
 
 In some cases, it would not be possible to retrieve the alarm template or the trend template of a protocol via IDms when that protocol was a production protocol.
 
