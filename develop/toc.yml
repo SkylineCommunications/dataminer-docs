@@ -670,6 +670,8 @@ items:
           topicUid: System_Collections_Generic_KeyNotFoundException
         - name: System.OutOfMemoryException
           topicUid: System_OutOfMemoryException
+        - name: System.StackOverflowException
+          topicUid: System_StackOverflowException
         - name: Exception in Finalizer
           topicUid: Finalizer_Exception
         - name: Identifying the source of an exception
@@ -5632,6 +5634,8 @@ items:
                 topicUid: StyleCopAnalyzers
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
+      - name: WinDbg
+        topicUid: WinDbg
       - name: Wireshark
         topicUid: Wireshark
         items:
