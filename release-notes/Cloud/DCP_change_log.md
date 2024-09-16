@@ -9,15 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 16 September 2024 - Fix - Catalog - Incorrect description could be shown for a Catalog Item [ID 40771]
+#### 16 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item [ID 40771]
 
-A description of another Catalog item could be shown in case another connector Catalog item exists with the same name and had a description available.
+In case a connector Catalog item existed in the Catalog with the same name as another connector Catalog item, and that other item had a description available, it could occur that the description for the other item was shown for the first item.
 
 #### 16 September 2024 - Fix - Catalog - Unauthenticated access not showing Catalog description [ID 40770]
 
-The description of a public Catalog item that was registered using the Catalog API was not viewable when not authenticated.
+When a user was not logged in, it could occur that they could not view the description for a public Catalog item that was registered using the Catalog API.
 
-#### 16 September 2024 - Fix - Catalog - Unauthenticated access not showing recommended versions [ID 40770]
+#### 16 September 2024 - Fix - Catalog - Unauthenticated access not showing recommended versions [ID 40764]
 
 Users were unable to view recommended versions when not logged into the Catalog.
 
