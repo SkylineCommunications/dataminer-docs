@@ -7,6 +7,14 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 12 September - Fix - DataAPI 1.2.3 - Prevent the auto-increment column from being duplicated if the ID column is specified in a new request [ID_40187]
+
+Fixed the following issue: When DataAPI generates a table, it uses the "ID" column from the request as the index. If the request doesn't include an "ID" column, DataAPI creates an "Idx" column with auto-incremented values. However, if the "ID" column is added in later requests, DataAPI gets confused and creates two "Idx" columns.
+
+### 12 September - Fix - DataAPI 1.2.3 - Prevent the configuration of units or decimals on table parameters [ID_40152]
+
+The config endpoint will return an error if it receives a request to configure the units or decimals of a table parameter.
+
 ### 30 July - Enhancement - DataAPI 1.2.2 - Dual instance for debugging [ID 40192]
 
 The ability to debug two running instances of the DxM to test inter-DxM communication has been added.
