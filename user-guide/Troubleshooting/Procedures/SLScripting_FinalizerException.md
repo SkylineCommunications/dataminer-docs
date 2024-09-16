@@ -50,7 +50,7 @@ To investigate the crash dump:
 
 ## Investigating the crash dump with WinDbg
 
-Open the dump file with WinDbg (*File* > *Open Dump File*).
+Open the dump file with [WinDbg](xref:WinDbg) (*File* > *Open Dump File*).
 
 > [!TIP]
 > Once the dump file is opened, you can try executing the `.lastevent` and `!analyze` commands to see if these show some relevant information. Note that these commands might not always provide additional info.

@@ -211,7 +211,7 @@ items:
             topicUid: TroubleshootingSLScriptingFinalizerException
           - name: Investigating OutOfMemoryException occurrences
             topicUid: TroubleshootingSLScriptingOutOfMemoryException
-          - name: Investigate StackOverflowException occurrence
+          - name: Investigate StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues

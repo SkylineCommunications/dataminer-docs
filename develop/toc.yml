@@ -5634,6 +5634,8 @@ items:
                 topicUid: StyleCopAnalyzers
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
+      - name: WinDbg
+        topicUid: WinDbg
       - name: Wireshark
         topicUid: Wireshark
         items:
