@@ -1365,14 +1365,12 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Sets the specified custom alarm properties to the specified values.
 		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
+		/// <param name="alarmTreeID">The alarm tree to update.</param>
 		/// <param name="propertyNames">The names of the properties.</param>
 		/// <param name="propertyValues">The values of the properties.</param>
 		/// <remarks>
 		/// <note type="note">
 		/// <list type="bullet">
-		/// <item><description>Feature introduced in DataMiner 8.5.2 (RN 8347).</description></item>
 		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
 		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
 		/// </list>
@@ -1380,10 +1378,33 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// engine.SetAlarmProperties(200, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
+		/// engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
 		/// </code>
 		/// </example>
-		public void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues) { }
+		public void SetAlarmProperties(AlarmTreeID alarmTreeID, string[] propertyNames, string[] propertyValues) { }
+
+        /// <summary>
+        /// Sets the specified custom alarm properties to the specified values.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyNames">The names of the properties.</param>
+        /// <param name="propertyValues">The values of the properties.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>Feature introduced in DataMiner 8.5.2 (RN 8347).</description></item>
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.SetAlarmProperties(200, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
+        /// </code>
+        /// </example>
+        public void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues) { }
 
 		/// <summary>
 		/// Sets the specified custom alarm properties to the specified values.
