@@ -8,7 +8,7 @@ The collectors in an EPM environment are the powerhouses in the solution. Becaus
 
 To do so, you can:
 
-- [set the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes.html#setting-the-number-of-simultaneously-running-slprotocol-processes) and [Configuring a separate SLScripting process for each SLProtocol process](xref:Configuration_of_DataMiner_processes.html#configuring-a-separate-slscripting-process-for-each-slprotocol-process).
+- [set the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes.html#setting-the-number-of-simultaneously-running-slprotocol-processes) and [configure separate SLScripting process for each SLProtocol process](xref:Configuration_of_DataMiner_processes.html#configuring-a-separate-slscripting-process-for-each-slprotocol-process).
 - [configure separate SLProtocol and SLScripting instances for specific protocols](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol).
 
 > [!WARNING]
