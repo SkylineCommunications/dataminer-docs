@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 16 September 2024 - Fix - Admin - Organization keys required at least one permission [ID 40596]
+
+It is now required to assign at least one permission to a organization key when creating one.
+
 #### 12 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a Catalog item [ID 40710]
 
 Users were unable to change the publishing state for a specific version of a Catalog item through the API.
