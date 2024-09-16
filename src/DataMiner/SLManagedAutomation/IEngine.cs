@@ -1,6 +1,7 @@
 ﻿using Skyline.DataMiner.Net;
 using Skyline.DataMiner.Net.Exceptions;
 using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.Messages.SLDataGateway;
 using Skyline.DataMiner.Net.Profiles;
 using System;
 using System.Collections.Generic;
@@ -626,21 +627,36 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		ScriptDummy GetDummy(string name);
 
-		/// <summary>
-		/// Retrieves the value of the specified custom alarm property.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyName">The name of the alarm property.</param>
-		/// <exception cref="ArgumentException">Alarm not found.</exception> 
-		/// <returns>The value of the specified alarm property.</returns>
-		/// <example>
-		/// <code>
-		/// string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
-		/// </code>
-		/// </example>
-		string GetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName);
+        /// <summary>
+        /// Retrieves the value of the specified custom alarm property.
+        /// </summary>
+        /// <param name="alarmID">The alarm ID</param>
+        /// <param name="propertyName">The name of the alarm property.</param>
+        /// <exception cref="ArgumentException">Alarm not found.</exception> 
+        /// <returns>The value of the specified alarm property.</returns>
+        /// <example>
+        /// <code>
+        /// string propertyValue = engine.GetAlarmProperty(new AlarmID(new AlarmTreeID(200, 400, 59851), 59853), "SourceDetail");
+        /// </code>
+        /// </example>
+        string GetAlarmProperty(AlarmID alarmID, string propertyName);
+
+        /// <summary>
+        /// Retrieves the value of the specified custom alarm property.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyName">The name of the alarm property.</param>
+        /// <exception cref="ArgumentException">Alarm not found.</exception> 
+        /// <returns>The value of the specified alarm property.</returns>
+        /// <example>
+        /// <code>
+        /// string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
+        /// </code>
+        /// </example>
+		[Obsolete("Please use the overload that takes an AlarmID")]
+        string GetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName);
 
 		/// <summary>
 		/// Retrieves the value of the specified custom alarm property.
@@ -655,20 +671,21 @@ namespace Skyline.DataMiner.Automation
 		/// string propertyValue = engine.GetAlarmProperty(200, 59851, "SourceDetail");
 		/// </code>
 		/// </example>
+		[Obsolete("Please use the overload that takes an AlarmID")]
 		string GetAlarmProperty(int dataMinerID, int alarmID, string propertyName);
 
-		/// <summary>
-		/// Retrieves an object representing one of the script dummies.
-		/// </summary>
-		/// <param name="id">The dummy ID.</param>
-		/// <returns>The object representing the specified script dummy or <see langword="null"/> if the dummy with the specified ID is not found.</returns>
-		/// <remarks><para>Through this object, actions like "set parameter" can be executed.</para></remarks>
-		/// <example>
-		/// <code>
-		/// ScriptDummy dummyTest = engine.GetDummy(5);
-		/// </code>
-		/// </example>
-		ScriptDummy GetDummy(int id);
+        /// <summary>
+        /// Retrieves an object representing one of the script dummies.
+        /// </summary>
+        /// <param name="id">The dummy ID.</param>
+        /// <returns>The object representing the specified script dummy or <see langword="null"/> if the dummy with the specified ID is not found.</returns>
+        /// <remarks><para>Through this object, actions like "set parameter" can be executed.</para></remarks>
+        /// <example>
+        /// <code>
+        /// ScriptDummy dummyTest = engine.GetDummy(5);
+        /// </code>
+        /// </example>
+        ScriptDummy GetDummy(int id);
 
 		/// <summary>
 		/// Retrieves an object representing one of the script’s memory files. Through this object, data can be read from or written into the memory file.
