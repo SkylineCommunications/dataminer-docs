@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### XX September 2024 - Fix - Admin - Remove 'Install latest available upgrades' button [ID 40768]
+
+The button to install all available DxM upgrades at once for a node has been removed due to inconsistencies with the functionality. The feature will be re-introduced in a UI rework for this page.
+
 #### 12 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a Catalog item [ID 40710]
 
 Users were unable to change the publishing state for a specific version of a Catalog item through the API.
