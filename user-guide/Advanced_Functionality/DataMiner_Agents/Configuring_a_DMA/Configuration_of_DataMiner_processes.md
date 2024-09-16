@@ -132,9 +132,6 @@ In a system where the load for one particular protocol has to be spread over sev
 
 1. Restart the DataMiner software.
 
-> [!WARNING]
-> This feature is to be used with care and only as a last resort solution.
-
 ## Configuring separate SLProtocol and SLScripting instances for a specific protocol
 
 As some protocols have QActions that require a large amount of memory, elements using these protocols can cause SLScripting to run out of memory when they run together in the same process instance. From DataMiner 10.2.5/10.3.0 onwards, you can prevent this by making such elements run in their own SLProtocol and SLScripting instances.
