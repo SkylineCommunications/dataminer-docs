@@ -975,23 +975,40 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		void SaveValue(string name, string value);
 
-		/// <summary>
-		/// Updates a custom alarm property.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyName">The name of the property.</param>
-		/// <param name="propertyValue">The value to set.</param>
-		/// <remarks>
-		/// <note type="note">
-		/// <list type="bullet">
-		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-		/// </list>
-		/// </note>
-		/// </remarks>
-		void SetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName, string propertyValue);
+        /// <summary>
+        /// Updates a custom alarm property.
+        /// </summary>
+        /// <param name="alarmTreeID">The alarm tree to update.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <param name="propertyValue">The value to set.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        void SetAlarmProperty(AlarmTreeID alarmTreeID, string propertyName, string propertyValue);
+
+        /// <summary>
+        /// Updates a custom alarm property.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <param name="propertyValue">The value to set.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+		[Obsolete("Please use the overload that takes an AlarmTreeID")]
+        void SetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName, string propertyValue);
 
 		/// <summary>
 		/// Updates a custom alarm property.
@@ -1013,6 +1030,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SetAlarmProperty(200, 521655, "Property A", "Value A");
 		/// </code>
 		/// </example>
+		[Obsolete("Please use the overload that takes an AlarmTreeID")]
 		void SetAlarmProperty(int dataMinerID, int alarmID, string propertyName, string propertyValue);
 
 		/// <summary>
