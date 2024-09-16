@@ -21,6 +21,10 @@ When a user was not logged in, it could occur that they could not view the descr
 
 Users were unable to view recommended versions when not logged into the Catalog.
 
+#### 16 September 2024 - Enhancement - Admin - Organization keys now require at least one permission [ID 40596]
+
+When you create an organization key, you now need to assign at least one permission to it.
+
 #### 12 September 2024 - Fix - Catalog API - Unable to change publishing state for a specific version of a Catalog item [ID 40710]
 
 Users were unable to change the publishing state for a specific version of a Catalog item through the API.
