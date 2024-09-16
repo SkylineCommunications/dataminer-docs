@@ -209,7 +209,7 @@ items:
         items:
           - name: Investigate exception occurrence on Finalizer thread
             topicUid: TroubleshootingSLScriptingFinalizerException
-          - name: Investigating OutOfMemoryException occurrence
+          - name: Investigating OutOfMemoryException occurrences
             topicUid: TroubleshootingSLScriptingOutOfMemoryException
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues
