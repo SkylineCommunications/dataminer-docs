@@ -56,5 +56,5 @@ Remote parameter:
 
 ## Remarks
 
-- To retrieve a parameter using this call, the parameter must have RTDisplay set to "true".
-- The SLProtocol interface defines a wrapper method "GetParameter" for this call. SeeSLProtocol.GetParameter method and SLProtocol.GetParameters method.
+- To retrieve a parameter using this call, the parameter must have [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) set to `true`.
+- The SLProtocol interface defines a wrapper method "GetParameter" for this call. See [GetParameter (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) method and [GetParameters (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameters(System.Object)) methods.

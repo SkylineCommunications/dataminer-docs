@@ -19,8 +19,6 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/) and install it on **one or more DMAs** in the cluster.
 
-   If you are on the Feature Release track, .NET 6 is included in DataMiner from version 10.3.3 onwards, so select the package without .NET 6. If you are on the Main Release track, .NET 6 is included from version 10.3.0 [CU3] onwards, so for earlier versions, you will need to select the package with .NET 6<!--RN 35363/37137-->.
-
    > [!NOTE]
    >
    > - If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards dataminer.services, install the DataMiner Cloud Pack on both Agents in the Failover pair.

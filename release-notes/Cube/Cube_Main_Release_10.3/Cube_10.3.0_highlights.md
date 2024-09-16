@@ -9,7 +9,7 @@ uid: Cube_Main_Release_10.3.0_highlights
 
 ## Highlights
 
-#### Trending: New'Custom' button allows you to specify a custom X-axis range [ID_31705]
+#### Trending: New'Custom' button allows you to specify a custom X-axis range [ID 31705]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
@@ -17,7 +17,7 @@ At the top of a trend graph, a new “Custom” button has been added next to th
 
 When you click this new button, you will be able to specify a custom X-axis range.
 
-#### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells [ID_32368] [ID_33295] [ID_33857]
+#### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells [ID 32368] [ID 33295] [ID 33857]
 
 <!-- RN 32368: MR 10.3.0 - FR 10.2.3
 RN 33295: MR 10.3.0 - FR 10.2.6
@@ -82,7 +82,7 @@ If you want to replace the separator inside the name, you must specify both the 
 >   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 > - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
 
-#### Visual Overview: Text wrapping and trimming [ID_32440]
+#### Visual Overview: Text wrapping and trimming [ID 32440]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -113,7 +113,7 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 > [!NOTE]
 > Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
-#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' [ID_32660]
+#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' [ID 32660]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -130,7 +130,7 @@ When, in DataMiner Cube, you right-click a visual overview and select “Edit in
 > [!NOTE]
 > If no page-level “Options” data field exists, one will be created.
 
-#### Services app: Service definition type [ID_32667]
+#### Services app: Service definition type [ID 32667]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -151,7 +151,7 @@ In Visual Overview, this type can be visualized by means of a \[ServiceDefinitio
 > [!NOTE]
 > It is not allowed to duplicate service definitions of type “Skyline Process Automation”. Therefore, the *Duplicate* option will not be available when you right-click a service definition of that type.
 
-#### Visual Overview: Configuring a shape to set a duration in a session variable \[ID_32716\]
+#### Visual Overview: Configuring a shape to set a duration in a session variable \[ID 32716\]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -201,7 +201,7 @@ When specifying the minimum duration, the maximum duration and the InitVar value
 | mo | months (1 month = 30 days) | 1mo |
 | y | years (1 year = 365 days) | 1y |
 
-#### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]
+#### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID 32729\] \[ID 32819\] \[ID 32875\] \[ID 32914\] \[ID 32940\] \[ID 32957\] \[ID 33027\] \[ID 33036\] \[ID 33130\] \[ID 33212\]
 
 <!-- MR 10.3.0 - FR 10.2.5
 RN 33036/33130/33212: MR 10.3.0 - FR 10.2.6 -->
@@ -225,9 +225,9 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 > - From the moment a user manually adds or removes an alarm to or from an alarm group or renames an alarm group, that group will no longer be updated automatically.
 > - Manually created incidents (alarm groups) will have their alarm focus score set to 0.
 > - When Cube is connected to a DataMiner Agent that does not yet support manually creating, updating and renaming incidents (alarm groups), the menu commands to manipulate alarm groups will not be available.
-> - See also [Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]](#alarm-console-manually-creating-incident-alarms-even-when-automatic-incident-tracking-is-disabled-id_33000)
+> - See also [Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID 33000\]](#alarm-console-manually-creating-incident-alarms-even-when-automatic-incident-tracking-is-disabled-id-33000)
 
-#### Trending - Behavioral anomaly detection: New type of change point 'flatline' [ID_32839] [ID_32856] [ID_32950] [ID_32993] [ID_33559] [ID_33957]
+#### Trending - Behavioral anomaly detection: New type of change point 'flatline' [ID 32839] [ID 32856] [ID 32950] [ID 32993] [ID 33559] [ID 33957]
 
 <!-- MR 10.3.0 - FR 10.2.5
 RN 32993: MR 10.3.0 - FR 10.2.6
@@ -248,7 +248,7 @@ A new flatline trend icon will be used to indicate when a parameter has flatline
 > Flatline change points can also be detected for history set parameters that are set nearly in real time, i.e. parameters of which the incoming changes never have a delay larger than 10 minutes.
 > Flatline events will be cleared as soon as the flatline ends.
 
-#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled [ID_33000]
+#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled [ID 33000]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -264,9 +264,9 @@ These manually created groups will always be visible in active alarm tabs, even 
 
 *\*This window lists all existing incidents. From now on, you will be able to sort this list by clicking a column header. Also, a search box has now been added to allow you to search for a particular incident.*
 
-See also [Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]](#alarm-console---automatic-incident-tracking-manually-addremove-alarms-tofrom-alarm-groups-move-alarms-from-one-alarm-group-to-another-and-rename-alarm-groups-id_32729-id_32819-id_32875-id_32914-id_32940-id_32957-id_33027-id_33036-id_33130-id_33212)
+See also [Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID 32729\] \[ID 32819\] \[ID 32875\] \[ID 32914\] \[ID 32940\] \[ID 32957\] \[ID 33027\] \[ID 33036\] \[ID 33130\] \[ID 33212\]](#alarm-console---automatic-incident-tracking-manually-addremove-alarms-tofrom-alarm-groups-move-alarms-from-one-alarm-group-to-another-and-rename-alarm-groups-id-32729-id-32819-id-32875-id-32914-id-32940-id-32957-id-33027-id-33036-id-33130-id-33212)
 
-#### Visual Overview: ServiceManager component functionality expanded to support Process Automation UI \[ID_33187\]
+#### Visual Overview: ServiceManager component functionality expanded to support Process Automation UI \[ID 33187\]
 
 <!-- MR 10.3.0 - FR 10.2.6
 See also: Enhancements – Fix was moved to 10.2.0 CU3 by RN 33188 -->
@@ -331,7 +331,7 @@ The following options can now also be specified in the *ComponentOptions* shape 
 
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
 
-#### Alarm Console: Assigning a ticket to an incident (alarm group) [ID_33199]
+#### Alarm Console: Assigning a ticket to an incident (alarm group) [ID 33199]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -341,7 +341,7 @@ In the Alarm Console, it is now possible to assign tickets to incidents (alarm g
 
 - To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
-#### Desktop app - Start window: New 'HTTP or HTTPS' setting [ID_33289]
+#### Desktop app - Start window: New 'HTTP or HTTPS' setting [ID 33289]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -352,7 +352,7 @@ When you add a DataMiner Agent to the start window, in the Advanced settings, yo
 > [!NOTE]
 > If a DataMiner Agent is configured to use only HTTPS, Cube will not fall back to HTTP, even when you have chosen the “HTTP or HTTPS” option.
 
-#### Visual Overview: Adding a 'Refresh' and/or a 'Sort' button to a table control [ID_33346]
+#### Visual Overview: Adding a 'Refresh' and/or a 'Sort' button to a table control [ID 33346]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -396,7 +396,7 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 > [!NOTE]
 > The *Refresh* button and the *Sort* button will only be displayed when necessary.
 
-#### Alarm Console: Updating incidents using the side panel \[ID_33436\]\[ID_33450\]
+#### Alarm Console: Updating incidents using the side panel \[ID 33436\]\[ID 33450\]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -413,13 +413,13 @@ When you are finished editing the incident, click *Apply* to apply your changes 
 > [!NOTE]
 > Instead of opening the side panel and clicking the *Drag-and-drop editing* button, you can also right-click an incident and select *Edit incident*. This will open the side panel (if it is not open yet) and enable the “drag and drop” mode.
 
-#### Tab layout: Closing a card tab by clicking it with the middle mouse button \[ID_33883\]
+#### Tab layout: Closing a card tab by clicking it with the middle mouse button \[ID 33883\]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When the card layout is set to “tab layout”, you can now close a card tab by clicking it with the middle mouse button.
 
-#### Password box with strength indicator and peek button \[ID_33937\]
+#### Password box with strength indicator and peek button \[ID 33937\]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -442,7 +442,7 @@ These new password boxes can be found in the following locations:
 > - If a value received from the server has been automatically entered in a password box, the strength indicator and peek button will not be available until you enter a completely new password.
 > - If the value received from the server is a fixed 8-asterisk-long placeholder instead of an actual password, you will not be able to modify it. You will be forced to replace the entire value.
 
-#### New 'Light' theme & new links in the Apps list \[ID_33944\]
+#### New 'Light' theme & new links in the Apps list \[ID 33944\]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -450,7 +450,7 @@ A new theme has been added to DataMiner Cube: “Light”.
 
 Also, the Apps list now contains links to the Catalog, the Admin app, and custom web apps.
 
-#### Trending: Light bulb icon now indicates that related parameters have been found [ID_34432]
+#### Trending: Light bulb icon now indicates that related parameters have been found [ID 34432]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -463,7 +463,7 @@ Relationships between parameters are found by studying the changes in the behavi
 > - This light bulb feature will only work on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
 
-#### System Center - Database: Elasticsearch/OpenSearch configuration for Cassandra Cluster setup in Cube [ID_34651]
+#### System Center - Database: Elasticsearch/OpenSearch configuration for Cassandra Cluster setup in Cube [ID 34651]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 <!-- See General RNs for other change from this RN -->
@@ -476,4 +476,4 @@ If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a set
 - User/Password: The credentials with which the DMA can log on to the database (if applicable).
 
 > [!TIP]
-> See also: [OpenSearch & Amazon OpenSearch Service [ID_34651]](xref:General_Main_Release_10.3.0_highlights#opensearch--amazon-opensearch-service-id_34651)
+> See also: [OpenSearch & Amazon OpenSearch Service [ID 34651]](xref:General_Main_Release_10.3.0_highlights#opensearch--amazon-opensearch-service-id-34651)

@@ -8,6 +8,8 @@ items:
         topicUid: Analytics_Tutorials
       - name: Business Intelligence tutorials
         topicUid: Business_intelligence_tutorials
+      - name: Catalog tutorials
+        topicUid: Catalog_Tutorials
       - name: ChatOps Custom Command tutorials
         topicUid: ChatOps_Tutorials
       - name: CI/CD tutorials
@@ -18,6 +20,8 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
+      - name: DataMiner EPM tutorials
+        topicUid: EPM_tutorials
       - name: DataMiner IDP tutorials
         topicUid: IDP_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials

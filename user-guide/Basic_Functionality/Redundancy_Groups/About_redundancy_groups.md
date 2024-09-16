@@ -16,7 +16,7 @@ Redundancy groups have specific context menu options in the Surveyor. They also 
 > [!IMPORTANT]
 > Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
 
-### Primary elements, backup elements and virtual primary elements
+## Primary elements, backup elements and virtual primary elements
 
 A DataMiner redundancy group consists of a number of primary elements, which are operational in normal conditions, and a number of backup elements, which can take over in case primary elements fail.
 
@@ -35,17 +35,16 @@ In short, when creating a redundancy group, you have to do the following:
 > - Virtual primary elements “inherit” their parameter values from the primary element or backup element to which they are linked. However, they have their own alarm history and trend data.
 > - Virtual primary elements can be included in services. That way, physical devices in a service can be automatically swapped when necessary without affecting the service itself.
 
-### Software redundancy
+## Software redundancy
 
 In DataMiner, you can set up redundancy groups that include devices without native redundancy features.
 
 To do so, you have to use an optional extra layer of redundancy logic called “software redundancy”, which is based on Automation scripts.
 
 > [!TIP]
-> See also:
-> [Creating a redundancy group](xref:Creating_a_redundancy_group)
+> See also: [Creating a redundancy group](xref:Creating_a_redundancy_group)
 
-### Priority in a redundancy group
+## Priority in a redundancy group
 
 - **Priority among primary elements**: When a backup element is configured to take over from a number of primary elements, and more than one primary element is failing, the backup element will take over from the element with the highest priority.
 
@@ -53,3 +52,7 @@ To do so, you have to use an optional extra layer of redundancy logic called “
 
 > [!TIP]
 > See also: [Setting the priority of a primary or backup element](xref:Setting_the_priority_of_a_primary_or_backup_element)
+
+## Redundancy group templates
+
+Instead of creating a fully configured redundancy group, you can also [create a redundancy group template](xref:Creating_a_redundancy_group_template), where you do not assign elements during creation but instead configure a protocol only. You can then later [assign elements](xref:Assigning_elements_to_a_redundancy_group_template) that use that protocol to the template as the primary and backup elements.

@@ -385,6 +385,8 @@ items:
           topicUid: ConnectionsSnmpTraps
         - name: Bitrate calculations
           topicUid: ConnectionsSnmpBitRateCalculations
+        - name: SNMPv3
+          topicUid: ConnectionsSnmpSnmpv3
         - name: Protocol inner workings
           topicUid: ConnectionsSnmpProtocolInnterWorkings
         - name: Exercise
@@ -657,7 +659,6 @@ items:
       - name: Why is serial data not visible in DataMiner?
         topicUid: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
-        topicUid: QAction_exceptions
         items:
         - name: System.NullReferenceException
           topicUid: System_NullReferenceException
@@ -669,6 +670,8 @@ items:
           topicUid: System_Collections_Generic_KeyNotFoundException
         - name: System.OutOfMemoryException
           topicUid: System_OutOfMemoryException
+        - name: Exception in Finalizer
+          topicUid: Finalizer_Exception
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
@@ -5631,6 +5634,9 @@ items:
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
+        items:
+        - name: Wireshark stream decryption
+          topicUid: WiresharkDecrypt
 - name: DataMiner device-specific integrations
   topicUid: DSI
   items:
@@ -5732,6 +5738,17 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+    - name: mbgNMS
+      topicUid: mbgNMS
+      items:
+      - name: Releases
+        topicUid: mbgNMS_Releases
+      - name: Security
+        topicUid: mbgNMS_Security
+      - name: Meinberg NMS or DataMiner
+        topicUid: mbgNMS_MeinbergOrDataMiner
+      - name: Additional Information
+        topicUid: mbgNMS_Additional_Information
 - name: Best practices
   topicUid: Best_practices
   items:

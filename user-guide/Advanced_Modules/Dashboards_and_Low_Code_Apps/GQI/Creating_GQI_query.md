@@ -53,3 +53,5 @@ Please note the following regarding query data input:
 - From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range feed by selecting the *From feed* checkbox.
 
 - From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37505-->, the culture used in your GQI query matches the client culture of the web app. Prior to DataMiner 10.3.0 [CU9]/10.3.12, the invariant culture is used.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40370-->, a maximum of 30 GQI queries can be added to a dashboard, and a maximum of 200 GQI queries can be added to a low-code app. Once this limit has been reached, no additional GQI queries can be added, imported, or duplicated until one or multiple queries have been removed.

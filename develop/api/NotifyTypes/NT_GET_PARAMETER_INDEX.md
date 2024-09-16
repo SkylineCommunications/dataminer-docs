@@ -40,6 +40,6 @@ else
 
 ## Remarks
 
-- This SLProtocol interface defines two wrapper methods for this call: "GetParameterIndex" and "GetParameterIndexByKey". See SLProtocol.GetParameterIndex method and SLProtocol.GetParameterIndexByKey method.
+- This SLProtocol interface defines two wrapper methods for this call: `GetParameterIndex` and `GetParameterIndexByKey`. See [GetParameterIndex (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterIndex(System.Int32,System.Int32,System.Int32)) and [GetParameterIndexByKey (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterIndexByKey(System.Int32,System.String,System.Int32)) methods.
 - When a GetParameterIndex call fails because the retrieved cell falls outside the bounds of the table, a null reference is returned and the following message is logged: "NotifyProtocol with 122 failed. 0x80040244".
 - When a GetParameterIndex call fails because the protocol does not contain a table parameter with the provided table ID, a null reference is returned and the following message is logged: "NotifyProtocol with 122 failed. 0x80040221".

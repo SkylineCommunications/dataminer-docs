@@ -32,4 +32,4 @@ string[] primaryKeys = (string[])protocol.NotifyProtocol(196/*NT_GET_KEYS_FOR_IN
 ## See also
 
 - Requesting index values from index columns
-- GetKeysForIndex
+- [GetKeysForIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeysForIndex(System.Int32,System.String)) method
