@@ -703,6 +703,12 @@ From now on, SLSNMPManager will check whether the IP address of the trap matches
 > [!NOTE]
 > The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced variance increase detection [ID 40580]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Because of a number of enhancements, variance increase detection has been improved.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]

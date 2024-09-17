@@ -56,6 +56,26 @@ From now on, the displayed date will still be in local format, but the date that
 
 A number of enhancements have been made with regard to the loading of user access data when configuring user access restrictions for dashboards or low-code apps.
 
+#### Dashboards app: Enhanced 'Location' box in 'Create dashboard' and 'Dashboard settings' windows [ID 40692]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Create dashboard* and *Dashboard settings* windows, the *Location* box has been reworked. It will now take up less screen real estate.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Enhanced performance when loading history alarms [ID 40696]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance of the *Alarm table* component has increased when loading history alarms.
+
+#### Dashboards app: 'Preserve feed selections' option is now an advanced setting [ID 40709]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, whether you added `showadvancedsettings=true` to the dashboard's URL or not, the *Create folder* window and the *Folder settings* window would always show the *Preserve feed selections* option.
+
+From now on, the *Preserve feed selections* option will only be visible when you add `showadvancedsettings=true` to the dashboard's URL.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
@@ -141,8 +161,44 @@ In some cases, components using feeds would not be rendered correctly.
 
 When a parameter state had an index, but that index was not visible (e.g. a dropped process in Task Manager), up to now, the state itself would not be displayed. From now on, if a state is empty, the text "Not initialized" will be shown instead.
 
-#### Dashboards app: URL would incorrectly not be updated when a selection was made in one of its components [ID_40673]
+#### Dashboards app: URL would incorrectly not be updated when a selection was made in one of its components [ID 40673]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some cases, the URL of a dashboard would incorrectly not be updated when you made a selection in one of its components.
+
+#### Dashboards/Low-Code Apps - Web component: Problem when using a URL pointing to an untrusted source [ID 40685]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, a *Web* component would not render a web page correctly when the URL pointed to an untrusted source.
+
+#### Dashboards app: Problem when renaming a dashboard folder after having renamed its parent folder [ID 40688]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you renamed a dashboard folder immediately after having renamed its parent folder, the folder would be renamed in the system but the UI would incorrectly still show the old name.
+
+#### Dashboards/Low-Code Apps - Maps component: Problem when refreshing a map [ID 40697]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a map was refreshed, in some cases, markers at the edges of the map would incorrectly disappear.
+
+#### Low-Code Apps: New draft would incorrectly be a copy of a draft you discarded earlier [ID 40706]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you discarded a draft of a published low-code app, and then created a new draft of that same app, the new draft would incorrectly not be a copy of the published low-code app. Instead, it would be a copy of the draft you discarded earlier.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem with 'Highlight time range' or 'Set viewport' actions when a default timezone had been set [ID 40722]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a default timezone had been set in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, in some cases, executing *Highlight time range* actions or *Set viewport* actions would have unexpected results.
+
+#### Dashboards app: Problem when changing the name of several dashboard folders in rapid succession [ID 40752]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you changed the name of several dashboard folders in rapid succession, in some cases, the Dashboards app could stop working.

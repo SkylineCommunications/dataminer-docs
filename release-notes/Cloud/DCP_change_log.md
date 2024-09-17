@@ -13,6 +13,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Improved the message when no usage data is available yet for a given organization.
 
+#### 17 September 2024 - Fix - Remote Access (automatic) login not working with special characters in DataMiner account configuration [ID 40788]
+
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access to the web apps (e.g. the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
+
 #### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
 
 It is now possible to register your DataMiner system for STaaS through the Admin app.
