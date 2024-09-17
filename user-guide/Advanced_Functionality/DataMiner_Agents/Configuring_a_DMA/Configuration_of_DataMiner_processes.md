@@ -62,7 +62,7 @@ For testing purposes, you can order a DataMiner Agent to spread its elements acr
 If you do so, DataMiner will start up a separate SLProtocol process for every protocol that is used. That way, each SLProtocol process will only contain elements sharing the same protocol. This will make it much easier to pinpoint any protocol-related issues that might arise.
 
 > [!WARNING]
-> Never use this option in a production environment. Again, this feature is meant for testing/debugging purposes only.
+> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
 
 To have separate SLProtocol processes created for every protocol being used, do the following.
 
@@ -86,6 +86,9 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
 
+> [!WARNING]
+> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
+
 To have separate SLScripting processes created for every protocol being used, do the following.
 
 1. Stop the DataMiner software.
@@ -106,9 +109,6 @@ To have separate SLScripting processes created for every protocol being used, do
 1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
 
 1. Restart the DataMiner software.
-
-> [!WARNING]
-> Never use this option in a production environment. Again, this feature is meant for testing/debugging purposes only..
 
 ## Configuring a separate SLScripting process for each SLProtocol process
 
