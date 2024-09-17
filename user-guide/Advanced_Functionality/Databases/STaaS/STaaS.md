@@ -54,18 +54,18 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. Register your system to use STaaS:
 
-   1. Go to the [Admin app](https://admin.dataminer.services)
+   1. Go to the [Admin app](https://admin.dataminer.services).
 
-   1. In the sidebar on the left, go to Organization > Overview.
+   1. In the sidebar on the left, go to *Organization* > *Overview*.
   
-   1. Click your system name under DataMiner Systems
+   1. In the *DataMiner Systems* section, click the system you want to register.
   
-   1. At the top of the page you will see a 'Storage as a Service' box with a button 'Get Started with STaaS'. Click this button.
+   1. At the top of the page, in the *Storage as a Service* box, click the button *Get Started with STaaS*.
   
-   1. Fill in the form by choosing your preferred region and click 'Initialize'
+   1. Fill in your preferred region and click *Initialize*.
 
    > [!IMPORTANT]
-   > Only owners of the DataMiner system can register their system.
+   > Only owners of a DataMiner System can register their system.
 
 1. Wait until you receive confirmation that the **registration is completed**.
 
