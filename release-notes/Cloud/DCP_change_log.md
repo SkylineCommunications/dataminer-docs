@@ -13,21 +13,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Improved the message when no usage data is available yet for a given organization.
 
-#### 17 September 2024 - Enhancement - Admin - 'Install latest available upgrades' button removed [ID 40768]
+#### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
 
-In the Admin app, the button to install all available DxM updates at once for a node is no longer available. As its functionality could be inconsistent, an improved version of the feature will be introduced in a later UI update for this page.
-
-#### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
-
-It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [docs](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Publish%20to%20Catalog/Publish_To_Catalog.html).
+It is now possible to register your DataMiner system for STaaS through the Admin app.
 
 #### 17 September 2024 - Fix - Admin - Incorrect notation usage number [ID 40781]
 
 The notation of the number 400,000 has been changed from 0,4M to 400K.
 
-#### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
+#### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
 
-It is now possible to register your DataMiner system for STaaS through the Admin app.
+It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [docs](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Publish%20to%20Catalog/Publish_To_Catalog.html).
+
+#### 17 September 2024 - Enhancement - Admin - 'Install latest available upgrades' button removed [ID 40768]
+
+In the Admin app, the button to install all available DxM updates at once for a node is no longer available. As its functionality could be inconsistent, an improved version of the feature will be introduced in a later UI update for this page.
 
 #### 16 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item [ID 40771]
 
