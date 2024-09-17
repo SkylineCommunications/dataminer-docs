@@ -50,3 +50,15 @@ When you opened the card of a service that contained only part of a table of an 
 When you dragged an element onto the Alarm Console and requested the information events of e.g. the last hour, up to now, Cube would send two requests to the server: one to return the alarms and another to return the information events. Unfortunately, the request to return the alarms would always fail, causing the request to return the information events to not get executed. As a result, no information events would appear in the Alarm Console.
 
 From now on, in the above-mentioned situation, only a request to return the information events will be sent to the server.
+
+#### Problem when clearing an alarm after opening a visual overview containing AlarmSummary shapes [ID 40669]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+After you had opened a visual overview containing AlarmSummary shapes while being connected to a DataMiner Agent running version 10.4.9, in some cases, DataMiner Cube could stop working due to an error occurring when an alarm was cleared.
+
+#### Visual Overview: Spectrum measurement point linked to a card variable would incorrectly not be loaded [ID 40681]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in an embedded Spectrum Analysis component, you used an inline preset with a measurement point linked to a card variable, that measurement point would incorrectly not be loaded.
