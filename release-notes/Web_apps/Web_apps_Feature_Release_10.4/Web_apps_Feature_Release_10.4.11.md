@@ -170,3 +170,9 @@ In some cases, a *Web* component would not render a web page correctly when the 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you renamed a dashboard folder immediately after having renamed its parent folder, the folder would be renamed in the system but the UI would incorrectly still show the old name.
+
+#### Dashboards/Low-Code Apps - Maps component: Problem when refreshing a map [ID 40697]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a map was refreshed, in some cases, markers at the edges of the map would incorrectly disappear.
