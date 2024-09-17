@@ -14,4 +14,4 @@ Here are some things you can do to make sure no more data is saved than necessar
 
 - By default, the keys of a table are saved. Avoid fully cleaning and repopulating a table when updating values.
 
-- Consider using a [volatile table](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables). Table which do not contain any monitored parameters could be a good fit for this.
+- Consider using a [volatile table](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables). Table that do not contain any monitored parameters could be a good fit for this.
