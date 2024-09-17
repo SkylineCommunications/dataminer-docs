@@ -56,6 +56,18 @@ From now on, the displayed date will still be in local format, but the date that
 
 A number of enhancements have been made with regard to the loading of user access data when configuring user access restrictions for dashboards or low-code apps.
 
+#### Dashboards app: Enhanced 'Location' box in 'Create dashboard' and 'Dashboard settings' windows [ID 40692]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Create dashboard* and *Dashboard settings* windows, the *Location* box has been reworked. It will now take up less screen real estate.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Enhanced performance when loading history alarms [ID 40696]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance of the *Alarm table* component has increased when loading history alarms.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
