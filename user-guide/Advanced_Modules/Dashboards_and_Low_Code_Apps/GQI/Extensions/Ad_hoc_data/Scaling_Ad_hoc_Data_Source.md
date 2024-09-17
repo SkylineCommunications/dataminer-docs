@@ -1,12 +1,12 @@
 ---
-uid: Ad_hoc_Tutorials_Scalable
+uid: Scaling_Ad_hoc_Data_Source
 ---
 
 # Scaling an ad hoc data source
 
-Each time a query is executed, a new instance of the data source is created. This makes scalability crucial, especially when building the underlying data source is time-consuming or resource-intensive. Keep in mind that the code you're writing could be executed concurrently by many users.
+Each time a query is executed, a new instance of the data source is created. This makes scalability crucial, especially when building the underlying data source is time-consuming or resource-intensive. Keep in mind that the code you are writing could be executed concurrently by many users.
 
-To optimize performance when real-time data isn't required, implement caching where appropriate, using a static cache. When querying data through the DMS interface, ensure that data is stored on a security group basis.
+To optimize performance when real-time data is not required, implement caching where appropriate, using a static cache. When querying data through the DMS interface, ensure that data is stored on a security group basis.
 
 Be aware that multithreading affects both the static cache object and the cache itself. Use consistent locking mechanisms during heavy operations to prevent multiple costly computations from running simultaneously.
 

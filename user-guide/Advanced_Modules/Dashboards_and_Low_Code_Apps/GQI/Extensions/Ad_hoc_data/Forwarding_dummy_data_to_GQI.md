@@ -1,5 +1,5 @@
 ---
-uid: Ad_hoc_Tutorials
+uid: Forwarding_dummy_data_to_GQI
 ---
 
 # Forwarding dummy data to the GQI
