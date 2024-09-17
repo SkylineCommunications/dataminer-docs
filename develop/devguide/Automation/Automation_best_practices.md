@@ -16,7 +16,7 @@ Keep the following best practices in mind:
 
 - Avoid generating information events when your script executes sets.
 
-   By default, DataMiner generates an information event when an Automation script executes a set operation. If at all possible, avoid the generation of these information events by using the [Engine.SetFlag](xref:Skyline.DataMiner.Automation.Engine.SetFlag(System.String)) method to avoid settings [RunTimeFlags](xref:Skyline.DataMiner.Automation.RunTimeFlags).
+   By default, DataMiner generates an information event when an Automation script executes a set operation. If at all possible, avoid the generation of these information events by using the [Engine.SetFlag](xref:Skyline.DataMiner.Automation.Engine.SetFlag(Skyline.DataMiner.Automation.RunTimeFlags)) method to avoid settings [RunTimeFlags](xref:Skyline.DataMiner.Automation.RunTimeFlags).
 
 - Avoid generating information events at the start and end of a subscript.
 
