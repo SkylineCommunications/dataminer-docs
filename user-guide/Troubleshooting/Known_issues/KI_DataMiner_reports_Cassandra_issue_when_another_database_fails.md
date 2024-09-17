@@ -10,7 +10,7 @@ From DataMiner 10.4.0 onwards.
 
 ## Cause
 
-The `NotifyClient()` method in the *DBGateway.cs* file incorrectly identifies the failing database. As a result, it attributes the issue to Cassandra, even if the actual problem lies with another database, such as Elasticsearch or OpenSearch.
+The storage health monitoring logic incorrectly identifies the failing database. As a result, DataMiner attributes the issue to Cassandra, even if the actual problem lies with another database, such as Elasticsearch or OpenSearch.
 
 ## Workaround
 
