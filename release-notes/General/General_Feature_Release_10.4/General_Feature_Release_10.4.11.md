@@ -64,6 +64,12 @@ The following calls have been improved:
 
 When starting up, up to now, SLAnalytics would wait up to 400 seconds for a message from SLNet announcing that it has finished loading the configuration. From now on, it will wait up to 20 minutes.
 
+#### SLAnalytics: Maximum number of parameter changes that can be processed has increased from 5000 per second to 1 million per second [ID 40730]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, the maximum number of parameter changes that can be processed by SLAnalytics has increased from 5000 per second to 1 million per second.
+
 ### Fixes
 
 #### ReIndexElasticSearchIndexes tool would incorrectly overwrite the existing mapping by the default mappings [ID 40073]
