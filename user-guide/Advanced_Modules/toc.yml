@@ -577,10 +577,14 @@ items:
                     topicUid: Ad_hoc_Life_cycle
                   - name: Linking rows to DataMiner objects
                     topicUid: Ad_hoc_Metadata
-                  - name: Tutorials
+                  - name: Examples
                     items:
                       - name: Forwarding dummy data to the GQI
-                        topicUid: Ad_hoc_Tutorials
+                        topicUid: Forwarding_dummy_data_to_GQI
+                      - name: Scaling an ad hoc data source
+                        topicUid: Scaling_Ad_hoc_Data_Source
+                  - name: Tutorials
+                    items:
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
                       - name: Building a GQI data source that retrieves data from a DMS
