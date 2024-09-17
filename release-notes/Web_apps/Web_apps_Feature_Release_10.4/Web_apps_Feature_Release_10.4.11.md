@@ -176,3 +176,9 @@ When you renamed a dashboard folder immediately after having renamed its parent 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When a map was refreshed, in some cases, markers at the edges of the map would incorrectly disappear.
+
+#### Low-Code Apps: New draft would incorrectly be a copy of a draft you discarded earlier [ID 40706]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you discarded a draft of a published low-code app, and then created a new draft of that same app, the new draft would incorrectly not be a copy of the published low-code app. Instead, it would be a copy of the draft you discarded earlier.
