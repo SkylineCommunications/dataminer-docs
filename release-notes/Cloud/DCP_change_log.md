@@ -9,19 +9,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 17 September 2024 - Enhancement - Admin - Usage no data found message [ID 40796]
+#### 17 September 2024 - Enhancement - Admin - Improved message when no usage data is found [ID 40796]
 
-Improved the message when no usage data is available yet for a given organization
+Improved the message when no usage data is available yet for a given organization.
 
-#### 17 September 2024 - Fix - Admin - Remove 'Install latest available upgrades' button [ID 40768]
+#### 17 September 2024 - Enhancement - Admin - 'Install latest available upgrades' button removed [ID 40768]
 
-The button to install all available DxM upgrades at once for a node has been removed due to inconsistencies with the functionality. The feature will be re-introduced in a UI rework for this page.
+In the Admin app, the button to install all available DxM updates at once for a node is no longer available. As its functionality could be inconsistent, an improved version of the feature will be introduced in a later UI update for this page.
 
-#### 17 September 2024 - Enhancement - Catalog - Usage no data found message [ID 40772]
+#### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
 
-Users are no longer able to register Catalog items using the Catalog app. Registration is now done with the Catalog API. [docs](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Publish%20to%20Catalog/Publish_To_Catalog.html).
+It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [docs](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Publish%20to%20Catalog/Publish_To_Catalog.html).
 
-#### 17 September 2024 - Fix - Admin - Usage number notation [ID 40781]
+#### 17 September 2024 - Fix - Admin - Incorrect notation usage number [ID 40781]
 
 The notation of the number 400,000 has been changed from 0,4M to 400K.
 
