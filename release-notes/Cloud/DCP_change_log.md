@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 17 September 2024 - Fix - Remote Access (automatic) login now works with special characters in DataMiner account configuration [ID 40788]
+
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
+
 #### 16 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item [ID 40771]
 
 In case a connector Catalog item existed in the Catalog with the same name as another connector Catalog item, and that other item had a description available, it could occur that the description for the other item was shown for the first item.
