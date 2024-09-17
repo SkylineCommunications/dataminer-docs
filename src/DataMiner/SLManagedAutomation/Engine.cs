@@ -1395,7 +1395,7 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
+		/// engine.SetAlarmProperties(new AlarmTreeID(200, 400, 521655), new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
 		/// </code>
 		/// </example>
 		public void SetAlarmProperties(AlarmTreeID alarmTreeID, string[] propertyNames, string[] propertyValues) { }
