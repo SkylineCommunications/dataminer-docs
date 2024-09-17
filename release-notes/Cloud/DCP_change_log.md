@@ -9,7 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 17 September 2024 - New feature - 	Admin - STaaS region registration and configuration tile [ID 40786]
+#### 17 September 2024 - Fix - Admin - Usage number notation [ID 40781]
+
+The notation of the number 400,000 has been changed from 0,4M to 400K.
+
+#### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
 
 It is now possible to register your DataMiner system for STaaS through the Admin app.
 
