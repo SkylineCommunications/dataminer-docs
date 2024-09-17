@@ -39,7 +39,7 @@ To upload an upgrade package:
 > When you upload a package, several [prerequisite checks](#prerequisite-checks) will be executed, so that you will immediately get informed if certain conditions or requirements for the update are not met yet.
 
 > [!TIP]
-> We recommend to upload the package a few days before executing the upgrade. This will allow you extra time to perform corrective actions if some of the prerequisite checks would fail.
+> We recommend that you upload the package a few days before you execute the upgrade. This will allow you extra time to perform corrective actions in case any of the prerequisite checks fail.
 
 ### Have a backup at the ready
 
