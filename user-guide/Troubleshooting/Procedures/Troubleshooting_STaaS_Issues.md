@@ -109,8 +109,9 @@ This issue is known to occur with the following connector versions:
 
 - [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
 
-## DMA unable to start up after registration
-If you recently registered your DMA and switched your db.xml to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
+## DataMiner is unable to start up after registration
+
+If you recently registered your DMA and switched your *DB.xml* to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
 
 In the *SLError.txt* log file, you will find this error:
 
@@ -120,6 +121,6 @@ SLCloudStorage.txt|SLDataGateway|DataGateway.CloudStorage|ERR|0|114|Failed to re
 
 To resolve this issue:
 
-1. Remove the following file: "C:\ProgramData\Skyline Communications\DxMs Shared\Data\NodeId.txt"
+1. Remove the file `C:\ProgramData\Skyline Communications\DxMs Shared\Data\NodeId.txt`.
 
 1. Restart the DMA.
