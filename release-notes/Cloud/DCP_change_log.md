@@ -23,7 +23,7 @@ The notation of the number 400,000 has been changed from 0,4M to 400K.
 
 #### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
 
-It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [docs](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Publish%20to%20Catalog/Publish_To_Catalog.html).
+It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [Registering a Catalog item](xref:Register_Catalog_Item).
 
 #### 17 September 2024 - Enhancement - Admin - 'Install latest available upgrades' button removed [ID 40768]
 
