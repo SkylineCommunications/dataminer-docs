@@ -28,7 +28,7 @@ The following error message will be present in the *SLCloudStorage.txt* log file
 CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a EndpointInfoAsync. (Failed to EndpointInfoAsync. (404))
 ```
 
-To register your system, contact your Skyline representative or <staas@dataminer.services>.
+To register your system, follow the procedure to [setup STaaS](xref:STaaS#setting_up_staas).
 
 ## CloudGateway is not running correctly
 
@@ -111,7 +111,7 @@ This issue is known to occur with the following connector versions:
 
 ## DataMiner is unable to start up after registration
 
-If you recently registered your DMA and switched your *DB.xml* to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
+If you followed the procedure to [setup STaaS](xref:STaaS#setting_up_staas) and switched your *DB.xml* to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
 
 In the *SLError.txt* log file, you will find this error:
 
