@@ -1,6 +1,5 @@
-
 ---
-uid: SC_Locking_Job_Editing
+uid: MO_S_Job_Locking
 ---
 
 # Locking job editing
@@ -25,7 +24,8 @@ To better understand the *Locking job editing* feature, check these steps:
    - If a user selects "View only" mode, he will have an access to edit job panel, but only with read-only privilege. In that case, user can read every information about job, but the original user can still edit and save his changes to the job.
 
 ## Key features
-   - Automatic Locking: Jobs are automatically locked when a user starts editing them.
-   - Lock Notifications: Users receive notifications when a job they were editing is locked by another user.
-   - Taking Lock from another user: Users can forcibly take control of a locked job under certain circumstances.
-   - Conflict Prevention: The feature helps prevent conflicts and ensures data consistency.
+
+- Automatic Locking: Jobs are automatically locked when a user starts editing them.
+- Lock Notifications: Users receive notifications when a job they were editing is locked by another user.
+- Taking Lock from another user: Users can forcibly take control of a locked job under certain circumstances.
+- Conflict Prevention: The feature helps prevent conflicts and ensures data consistency.
