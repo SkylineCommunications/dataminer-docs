@@ -188,7 +188,7 @@ namespace Skyline.DataMiner.Automation
         /// engine.AcknowledgeAlarm(7, 304022, "Alarm acknowledged.");
         /// </code>
         /// </example>
-        [Obsolete("Please use the overload that takes an AlarmTreeID")]
+        [Obsolete("Please use the overload that takes an AlarmTreeID (still supported in <= 10.6 on non-swarming systems)")]
         public void AcknowledgeAlarm(int dataMinerID, int alarmID, string comment) { }
 
 		/// <summary>
@@ -204,7 +204,6 @@ namespace Skyline.DataMiner.Automation
 		/// engine.AcknowledgeAlarm(7, 400, 304022, "Alarm acknowledged.");
 		/// </code>
 		/// </example>
-        [Obsolete("Please use the overload that takes an AlarmTreeID")]
 		public void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment) { }
 
 		/// <summary>
@@ -840,7 +839,7 @@ namespace Skyline.DataMiner.Automation
         /// string propertyValue = engine.GetAlarmProperty(200, 59851, "SourceDetail");
         /// </code>
         /// </example>
-        [Obsolete("Please use the overload that takes an AlarmID")]
+        [Obsolete("Please use the overload that takes an AlarmID object (still supported in <= 10.6 on non-swarming systems)")]
         public string GetAlarmProperty(int dataMinerID, int alarmID, string propertyName) { return null; }
 
 		/// <summary>
@@ -857,7 +856,6 @@ namespace Skyline.DataMiner.Automation
 		/// string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
 		/// </code>
 		/// </example>
-        [Obsolete("Please use the overload that takes an AlarmID")]
 		public string GetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName) { return null; }
 
 		/// <summary>
@@ -1421,6 +1419,7 @@ namespace Skyline.DataMiner.Automation
         /// engine.SetAlarmProperties(200, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
         /// </code>
         /// </example>
+        [Obsolete("Please use the overload that takes an AlarmTreeID (still supported in <= 10.6 on non-swarming systems)")]
         public void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues) { }
 
 		/// <summary>
@@ -1486,7 +1485,7 @@ namespace Skyline.DataMiner.Automation
         /// engine.SetAlarmProperty(200, 521655, "Property A", "Value A");
         /// </code>
         /// </example>
-		[Obsolete("Please use the overload that takes an AlarmTreeID")]
+		[Obsolete("Please use the overload that takes an AlarmTreeID (still supported in <= 10.6 on non-swarming systems)")]
         public void SetAlarmProperty(int dataMinerID, int alarmID, string propertyName, string propertyValue) { }
 
 		/// <summary>
@@ -1505,7 +1504,6 @@ namespace Skyline.DataMiner.Automation
 		/// </list>
 		/// </note>
 		/// </remarks>
-		[Obsolete("Please use the overload that takes an AlarmTreeID")]
         public void SetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName, string propertyValue) { }
 
 		/// <summary>
