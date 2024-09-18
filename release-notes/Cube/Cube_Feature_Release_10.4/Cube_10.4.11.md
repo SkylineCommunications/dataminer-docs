@@ -69,8 +69,20 @@ After you had opened a visual overview containing AlarmSummary shapes while bein
 
 When, in an embedded Spectrum Analysis component, you used an inline preset with a measurement point linked to a card variable, that measurement point would incorrectly not be loaded.
 
+#### Router Control app: XML files sent to the DMA were encoded incorrectly [ID 40715]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you make changes to Router Control configurations, those changes are sent to the DataMiner Agent in the form of an XML file. Up to now, that XML file was encoded incorrectly. From now on, Router Control XML files sent from Cube to the DMA will be encoded in UTF-8.
+
 #### Cube could leak memory each time you opened the 'Reports' page of a card [ID 40744]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 DataMiner Cube could leak memory each time you opened the *Reports* page of a card.
+
+#### Cards: Problem when opening a page containing a visual overview [ID 40756]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you opened a card page that contained a visual overview, in some rare cases, the page could remain empty, showing a "Loading" message.
