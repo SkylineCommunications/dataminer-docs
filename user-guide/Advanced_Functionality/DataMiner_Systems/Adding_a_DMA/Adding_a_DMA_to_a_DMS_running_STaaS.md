@@ -15,6 +15,8 @@ To add a DataMiner Agent to a DMS running STaaS:
 
 1. On the DMA that will be added, stop CloudGateway if it is installed.
 
+1. On the DMA that will be added, stop both the NAS and NATS services.
+
 1. Go to the `C:\Skyline DataMiner\` folder of an existing DMA in the cluster, and follow the steps below:
 
    1. Copy the `C:\Skyline DataMiner\NATS\nsc` folder and place it in the same location on the new DMA.
