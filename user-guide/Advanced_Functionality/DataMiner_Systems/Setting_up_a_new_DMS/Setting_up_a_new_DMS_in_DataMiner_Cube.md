@@ -19,19 +19,14 @@ uid: Setting_up_a_new_DMS_in_DataMiner_Cube
 
 1. For each DMA you want to add to the DMS, do the following:
 
-   1. Open DataMiner Cube on the DMA you want to add.
-
-   1. Go to *Apps* > *System Center* > *Agents.*
-
-   1. In the *Manage* tab, select the DataMiner Agent to which you are connected (it is marked by an icon with a small “1”).
-
-   1. In the pane on the right, next to *Cluster*, enter the same DMS name as you specified for the master DMA, and then click *Add Cluster* (prior to DataMiner 10.0.13) or *Join cluster* (from DataMiner 10.0.13 onwards).
-
    1. Open DataMiner Cube on the primary DMA, and navigate to the *Agents* > *Manage* tab as before.
 
    1. In the lower left corner, click *Add*.
 
    1. Enter the IP of the DMA you want to add and click *Add*.
+
+> [!NOTE]
+> It is not necessary to set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
 
 Now all DataMiner Agents that have been added to the DMS will start the initial data synchronization. Each DMA will sync with the first other DMA it comes across in DMS.xml.
 
