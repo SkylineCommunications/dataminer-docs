@@ -217,8 +217,6 @@ items:
         topicUid: Installing_MediaOps
       - name: Profile Config
         topicUid: MediaOps_ProfileConfig
-      - name: Jobs
-        topicUid: MediaOps_Jobs
       - name: MediaOps applications
         topicUid: MediaOps_apps
         items:
@@ -239,7 +237,14 @@ items:
               - name: Changing icons
                 topicUid: MediaOps_RS_Changing_Icons
           - name: Scheduling
-            topicUid: MediaOps_Scheduling
+            topicUid: MO_Scheduling
+            items:
+              - name: Job states
+                topicUid: MO_S_Job_States
+              - name: Job Validation
+                topicUid: MO_S_Job_Validation
+              - name: Locking of Jobs
+                topicUid: MO_S_Job_Locking
           - name: Workflow Designer
             topicUid: MediaOps_Workflow_Designer
   - name: Monitoring & Management Solutions
