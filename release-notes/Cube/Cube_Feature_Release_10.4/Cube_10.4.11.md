@@ -73,7 +73,9 @@ When, in an embedded Spectrum Analysis component, you used an inline preset with
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When you make changes to Router Control configurations, those changes are sent to the DataMiner Agent in the form of an XML file. Up to now, that XML file was encoded incorrectly. From now on, Router Control XML files sent from Cube to the DMA will be encoded in UTF-8.
+When you make changes to Router Control configurations, those changes are sent to the DataMiner Agent in the form of an XML file.
+
+Up to now, the XML declaration in that file did incorrectly not correspond to the encoding that was used (i.e. UTF-8). From now on, Router Control XML files sent from Cube to the DMA will be encoded in UTF-8 and will also have an XML declaration in which the encoding attribute is set to UTF-8.
 
 #### Cube could leak memory each time you opened the 'Reports' page of a card [ID 40744]
 

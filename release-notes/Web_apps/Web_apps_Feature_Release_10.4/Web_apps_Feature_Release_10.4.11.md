@@ -143,6 +143,12 @@ In some cases, it would not be possible to update the access permissions of the 
 
 When you added a new dashboard folder, up to now, that folder would incorrectly be shown twice in the UI.
 
+#### Dashboards app: Renaming a folder while a dashboard in that folder was open would incorrectly change the focus to the folder [ID 40656]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you opened a dashboard in a dashboard folder, and then renamed the folder, up to now, the folder would incorrectly get the focus. From now on, the focus will stay on the dashboard you opened.
+
 #### Low-Code Apps: Output feed of a script would not be updated when a 'Launch a script' action was followed by post actions [ID 40664]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
