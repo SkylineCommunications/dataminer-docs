@@ -52,10 +52,20 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
-1. Contact your Skyline representative or <staas@dataminer.services> to register your system to use STaaS.
+1. Register your system to use STaaS:
 
-   > [!NOTE]
-   > If you have a specific preference with respect to the [data location and redundancy setup](#data-location-and-redundancy), let us know when you register your system.
+   1. Go to the [Admin app](https://admin.dataminer.services).
+
+   1. In the sidebar on the left, go to *Organization* > *Overview*.
+  
+   1. In the *DataMiner Systems* section, click the system you want to register.
+  
+   1. At the top of the page, in the *Storage as a Service* box, click the button *Get Started with STaaS*.
+  
+   1. Fill in your preferred region and click *Initialize*.
+
+   > [!IMPORTANT]
+   > Only owners of a DataMiner System can register their system.
 
 1. Wait until you receive confirmation that the **registration is completed**.
 

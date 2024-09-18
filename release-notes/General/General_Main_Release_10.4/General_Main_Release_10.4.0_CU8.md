@@ -42,6 +42,18 @@ The following calls have been improved:
   - `GetParameterDisplayByPrimaryKey`
   - `IsMatrixCrosspointConnected`
 
+#### SLAnalytics will now wait longer for a message from SLNet announcing that it has finished loading the configuration [ID 40729]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When starting up, up to now, SLAnalytics would wait up to 400 seconds for a message from SLNet announcing that it has finished loading the configuration. From now on, it will wait up to 20 minutes.
+
+#### SLAnalytics: Maximum number of parameter changes processed by SLAnalytics will no longer be limited to 5000 per second [ID 40730]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+From now on, the maximum number of parameter changes processed by SLAnalytics will no longer be limited to 5000 per second.
+
 ### Fixes
 
 #### ReIndexElasticSearchIndexes tool would incorrectly overwrite the existing mapping by the default mappings [ID 40073]

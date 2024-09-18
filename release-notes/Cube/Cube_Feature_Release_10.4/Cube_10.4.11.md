@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.4.11
 
 ### Enhancements
 
+#### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+All dynamic text in the KPI stencil will now automatically be truncated with "..." to prevent it from exceeded the dimensions of a shape.
+
 #### System Center - Logging: Additional log files available in DataMiner tab [ID 40676]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
@@ -62,3 +68,9 @@ After you had opened a visual overview containing AlarmSummary shapes while bein
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When, in an embedded Spectrum Analysis component, you used an inline preset with a measurement point linked to a card variable, that measurement point would incorrectly not be loaded.
+
+#### Cube could leak memory each time you opened the 'Reports' page of a card [ID 40744]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+DataMiner Cube could leak memory each time you opened the *Reports* page of a card.
