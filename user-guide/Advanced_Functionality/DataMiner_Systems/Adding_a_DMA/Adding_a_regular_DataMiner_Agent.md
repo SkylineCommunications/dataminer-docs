@@ -22,7 +22,7 @@ uid: Adding_a_regular_DataMiner_Agent
 
 > [!NOTE]
 >
-> - You should not set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
+> - Do not use the *Join cluster* button to add a DMA to an existing DMS. This button should only be used during the [initial setup of a DMS](xref:Setting_up_a_new_DMS_in_DataMiner_Cube).
 > - To add a Failover pair to a DataMiner System, first add the primary DMA as a regular DataMiner Agent, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
 > [!TIP]
