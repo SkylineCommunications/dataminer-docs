@@ -67,8 +67,6 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
    > [!IMPORTANT]
    > Only owners of a DataMiner System can register their system.
 
-1. Wait until you receive confirmation that the **registration is completed**.
-
 1. **Optionally**, [migrate your existing data to STaaS](#migrating-existing-data-to-staas).
 
    If you do so, wait until the migration has been completed and verified before continuing with this procedure.
