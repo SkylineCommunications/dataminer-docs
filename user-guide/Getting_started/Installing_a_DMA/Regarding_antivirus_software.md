@@ -1,5 +1,6 @@
 ---
 uid: Regarding_antivirus_software
+description: While installing antivirus software on a DMA is possible, this will consume server resources and is not recommended in a well-protected environment.
 ---
 
 # Regarding antivirus software

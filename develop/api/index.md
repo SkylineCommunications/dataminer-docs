@@ -1,5 +1,6 @@
 ---
 uid: ApiDocumentation
+description: DataMiner namespaces for scripting, Automation, core functionality, DOM, interactive Automation scripts, etc. as well as Notify types and error codes.
 ---
 
 # API Documentation

@@ -1,6 +1,7 @@
 ---
 uid: DataMiner_Compute_Requirements
 keywords: system requirements, .NET requirements, dotnet requirements
+description: For optimal performance, make sure DataMiner has sufficient RAM, vCPUs, etc. Unless STaaS is used, minimum requirements for data storage also apply.
 ---
 
 # DataMiner Compute Requirements

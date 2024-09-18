@@ -1,5 +1,6 @@
 ---
 uid: Creating_a_DataMiner_System
+description: You can either create a DaaS system in the cloud, or install and set up a self-hosted DMS, using either STaaS or self-hosted storage nodes.
 ---
 
 # Creating a DataMiner System

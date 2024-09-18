@@ -1,5 +1,6 @@
 ---
 uid: Tutorials
+description: DataMiner tutorials are step-by-step guides that teach you how to use specific DataMiner functions, often based on an example.
 ---
 
 # DataMiner Tutorials

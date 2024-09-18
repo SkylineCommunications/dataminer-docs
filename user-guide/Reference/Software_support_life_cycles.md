@@ -1,6 +1,7 @@
 ---
 uid: Software_support_life_cycles
 keywords: support lifecycle, product lifecycle
+description: Keep track of the current support life cycle for DataMiner versions, DataMiner functionality, and third-party software.
 ---
 
 # Software support life cycles

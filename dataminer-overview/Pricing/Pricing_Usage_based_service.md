@@ -1,5 +1,6 @@
 ---
 uid: Pricing_Usage_based_service
+description: The DataMiner Usage-based Services model offers the option to leverage the DataMiner technology on a flexible basis with two deploy models.
 ---
 
 # Usage-based services
