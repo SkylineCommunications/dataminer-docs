@@ -24,6 +24,18 @@ It is now possible to configure a *Set value* action for a *Time range* componen
 
 This action will allow users to set the current value of the component in question to either a preset range (today, yesterday, next year, ...) or a custom range (which can be either a static value or a feed).
 
+#### Dashboards app: 'Security' selection box added to 'Create folder' window [ID 40600]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you create a dashboard folder, you will now also have to select a security setting similar to that on dashboard level.
+
+The *Security* selection box offers the following preset options:
+
+- Public, anyone can edit (default option)
+- Protected, only you can edit
+- Private, only you have access
+
 ## Changes
 
 ### Enhancements
