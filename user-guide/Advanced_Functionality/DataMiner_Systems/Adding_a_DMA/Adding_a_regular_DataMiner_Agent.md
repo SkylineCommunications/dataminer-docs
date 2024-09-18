@@ -21,7 +21,7 @@ uid: Adding_a_regular_DataMiner_Agent
 1. Enter the IP address of the DMA you want to add and click *Add*.
 
 > [!NOTE]
-> It is not necessary to set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
+> You should not set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
 
 > [!NOTE]
 > To add a Failover pair to a DataMiner System, first add the primary DMA as a regular DataMiner Agent, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
