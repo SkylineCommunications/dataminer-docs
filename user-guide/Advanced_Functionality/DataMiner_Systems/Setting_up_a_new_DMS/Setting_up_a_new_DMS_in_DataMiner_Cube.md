@@ -31,5 +31,5 @@ When the DMS has been synchronized, you will be able to consult information abou
 
 > [!NOTE]
 >
-> - You should not set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
+> - Only use the *Join cluster* button when you set up the master DMA. When you add other DMAs, the cluster name will be set automatically.
 > - It is also possible to migrate elements from one DMA to another within a DMS. For more information, see [Migrating elements in a DataMiner System](xref:Migrating_elements_in_a_DataMiner_System).
