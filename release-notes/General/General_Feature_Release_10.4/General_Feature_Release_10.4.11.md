@@ -92,6 +92,12 @@ When SLAnalytics fails to perform a database operation, it will retry the same o
 
 In order to prevent SLAnalytics from getting blocked for too long and from taking up too much memory, from now on, SLAnalytics will perform less retries if the previous database operation it performed in the last hour also failed.
 
+#### Storage as a Service: Problem when attempting to upgrade alarm masking data [ID 40625]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a DataMiner Agent using STaaS started up, up to now, an error would be thrown when the DataMiner Agent attempted to upgrade alarm masking data to the new masking data format used since DataMiner version 10.0.0. As STaaS has only been supported since DataMiner version 10.4.0, upgrading alarm masking data is not necessary. Therefore, from now on, a DataMiner Agent using STaaS will no longer attempt to do so.
+
 #### Service & Resource Management: Problem when retrieving resource pools with a property filter [ID 40642]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
