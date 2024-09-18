@@ -25,12 +25,11 @@ uid: Setting_up_a_new_DMS_in_DataMiner_Cube
 
    1. Enter the IP of the DMA you want to add and click *Add*.
 
-> [!NOTE]
-> You should not set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
-
 Now all DataMiner Agents that have been added to the DMS will start the initial data synchronization. Each DMA will sync with the first other DMA it comes across in DMS.xml.
 
 When the DMS has been synchronized, you will be able to consult information about each of the Agents in the *Status* tab of the *Agents* page in *System Center*.
 
 > [!NOTE]
-> It is also possible to migrate elements from one DMA to another within a DMS. For more information, see [Migrating elements in a DataMiner System](xref:Migrating_elements_in_a_DataMiner_System).
+>
+> - You should not set the cluster name for each DMA. This will be done automatically upon adding the DMA to the DMS.
+> - It is also possible to migrate elements from one DMA to another within a DMS. For more information, see [Migrating elements in a DataMiner System](xref:Migrating_elements_in_a_DataMiner_System).
