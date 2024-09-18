@@ -1,5 +1,6 @@
 ---
 uid: DataMinerExtensionModules
+description: DxMs are modules that expand the core DataMiner software with additional capabilities. They do not require a DMA reboot for (un)installation/upgrades.
 ---
 
 # DataMiner Extension Modules (DxMs)

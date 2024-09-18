@@ -1,5 +1,6 @@
 ---
 uid: DevelopIndex
+description: Discover all the information you need as a DataMiner Developer, from the very basics to advanced details, including guidelines & best practices.
 ---
 
 # Developer documentation

@@ -1,5 +1,6 @@
 ---
 uid: Preparing_to_upgrade_a_DataMiner_Agent
+description: To ensure a successful DataMiner upgrade, first check for known issues and breaking changes, upload the package, and create a backup.
 ---
 
 # Preparing to upgrade a DataMiner Agent

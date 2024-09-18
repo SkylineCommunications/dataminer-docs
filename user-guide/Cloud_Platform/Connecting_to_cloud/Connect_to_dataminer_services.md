@@ -1,5 +1,6 @@
 ---
 uid: Connect_to_dataminer_services
+description: With an account with sufficient permissions, in Cube, go to System Center > Cloud, and click Connect. Then enter your organization, DMS name, and URL.
 ---
 
 # Connecting to dataminer.services

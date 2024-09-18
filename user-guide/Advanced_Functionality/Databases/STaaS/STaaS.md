@@ -1,5 +1,6 @@
 ---
 uid: STaaS
+description: With DataMiner Storage as a Service, you can connect your DataMiner System to a scalable, easy-to-use cloud-native storage platform.
 ---
 
 # Storage as a Service (STaaS)
