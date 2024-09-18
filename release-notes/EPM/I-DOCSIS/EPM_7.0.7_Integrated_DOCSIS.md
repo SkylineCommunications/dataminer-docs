@@ -19,6 +19,10 @@ uid: EPM_7.0.7_Integrated_DOCSIS
 
 The SNMP information retrieval process has been improved, so that users will now have access to faster and more reliable bit rate information for interfaces.
 
+#### OFDMA IUC MER values added in OFDMA Channels dashboard [ID 40800]
+
+In the OFDMA Channels dashboard, the MER values for each IUC code for all OFDMA channels are now displayed.
+
 ### Fixes
 
 #### Incorrect bit rate calculation for slow interfaces [ID 40530]
