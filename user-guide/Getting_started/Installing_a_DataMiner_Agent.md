@@ -1,5 +1,6 @@
 ---
 uid: Installing_a_DataMiner_Agent
+description: Use the DataMiner Installer and then upgrade to the latest feature or main release, connect to dataminer.services, and set up data storage.
 ---
 
 # Installing a self-hosted DataMiner Agent

@@ -20,6 +20,34 @@ Up to now, on systems that do not allow ping commands to be executed, in some ca
 
 From now on, when the virtual IP address check has concluded that the IP address is free after having executed the required number of ping commands, it will double-check by executing an arp command.
 
+#### Automation: Enhanced locking when calling 'SetParameter' and 'GetParameter' on an element [ID 40682]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+A number of enhancements have been made to the locking behavior in the SLAutomation process in order to prevent unnecessary holdups when interacting with the `Engine` and related `Element` objects in Automation scripts.
+
+The following calls have been improved:
+
+- `element.SetParameter` and associated methods:
+
+  - `ConnectMatrixCrosspoint`
+  - `DisconnectMatrixCrosspoint`
+  - `SetParameterByPrimaryKey`
+
+- `element.GetParameter` and associated methods:
+
+  - `GetMatrixInputForOutput`
+  - `GetParameterByPrimaryKey`
+  - `GetParameterDisplay`
+  - `GetParameterDisplayByPrimaryKey`
+  - `IsMatrixCrosspointConnected`
+
+#### SLAnalytics will now wait longer for a message from SLNet announcing that it has finished loading the configuration [ID 40729]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When starting up, up to now, SLAnalytics would wait up to 400 seconds for a message from SLNet announcing that it has finished loading the configuration. From now on, it will wait up to 20 minutes.
+
 ### Fixes
 
 #### ReIndexElasticSearchIndexes tool would incorrectly overwrite the existing mapping by the default mappings [ID 40073]
@@ -52,3 +80,11 @@ When resource pools were retrieved with a property filter, and one of the resour
 
 > [!NOTE]
 > The above-mentioned exception would only be thrown when, instead of `FilterElements`, (deprecated) object filters were being used.
+
+#### Maps: Filter would incorrectly be altered when the filter pane was collapsed [ID 40660]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When you collapsed the filter pane, in that filter pane, the text box would be cleared and all alarm severity checkboxes would automatically be selected. From now on, when you expand or collapse the filter pane, the text box will no longer be cleared and the checkboxes will no longer be automatically selected.
+
+Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.

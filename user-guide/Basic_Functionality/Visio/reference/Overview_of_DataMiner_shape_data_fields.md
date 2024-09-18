@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_DataMiner_shape_data_fields
+description: To use Visio drawings in your DataMiner Solution, you need to enrich them by adding various shape data, such as Alarm, Element, Component, etc.
 ---
 
 # Overview of DataMiner shape data fields

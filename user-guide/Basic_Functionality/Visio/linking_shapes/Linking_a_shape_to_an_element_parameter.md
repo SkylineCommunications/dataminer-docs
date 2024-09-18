@@ -1,5 +1,6 @@
 ---
 uid: Linking_a_shape_to_an_element_parameter
+description: To a shape linked to an element, add a shape data field of type 'Parameter' with the parameter ID as its value, optionally with a table row key.
 ---
 
 # Linking a shape to an element parameter

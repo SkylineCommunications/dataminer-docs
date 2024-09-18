@@ -24,6 +24,18 @@ It is now possible to configure a *Set value* action for a *Time range* componen
 
 This action will allow users to set the current value of the component in question to either a preset range (today, yesterday, next year, ...) or a custom range (which can be either a static value or a feed).
 
+#### Dashboards app: 'Security' selection box added to 'Create folder' window [ID 40600]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you create a dashboard folder, you will now also have to select a security setting similar to that on dashboard level.
+
+The *Security* selection box offers the following preset options:
+
+- Public, anyone can edit (default option)
+- Protected, only you can edit
+- Private, only you have access
+
 ## Changes
 
 ### Enhancements
@@ -41,6 +53,46 @@ From now on, when a DOM instance no longer matches the subscription filter, the 
 Up to now, when you set a custom time range in the *Time range* component, the feed of the component would immediately be updated. From now on, the feed will only be updated when you click the *Apply* button.
 
 Clicking the *Cancel* button will close the time range picker without updating the feed.
+
+#### Dashboards/Low-Code Apps - Query filter component: Dates used in filters will now be in UTC format [ID 40653]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in a *Query filter* component, you filtered by date, up to now, the date used in the filter would be in local format.
+
+From now on, the displayed date will still be in local format, but the date that will actually be used in the filter will be in UTC format.
+
+#### Dashboards/Low-Code Apps - Security: Enhanced loading of user access data [ID 40671]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+A number of enhancements have been made with regard to the loading of user access data when configuring user access restrictions for dashboards or low-code apps.
+
+#### Dashboards app: Enhanced 'Location' box in 'Create dashboard' and 'Dashboard settings' windows [ID 40692]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Create dashboard* and *Dashboard settings* windows, the *Location* box has been reworked. It will now take up less screen real estate.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Enhanced performance when loading history alarms [ID 40696]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance of the *Alarm table* component has increased when loading history alarms.
+
+#### Dashboards app: 'Preserve feed selections' option is now an advanced setting [ID 40709]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, whether you added `showadvancedsettings=true` to the dashboard's URL or not, the *Create folder* window and the *Folder settings* window would always show the *Preserve feed selections* option.
+
+From now on, the *Preserve feed selections* option will only be visible when you add `showadvancedsettings=true` to the dashboard's URL.
+
+#### Dashboards/Low-Code Apps - Timeline component: Number of timeline items is now limited to 100,000 [ID 40761]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
 ### Fixes
 
@@ -83,11 +135,13 @@ When a dashboard folder contained child folders, up to now, the main folder woul
 
 When you were configuring user access to a dashboard, a dashboard folder or a low-code app, up to now, users would incorrectly not have a profile picture. From now on, every user will have a profile picture.
 
-#### Dashboards/Low-Code Apps - Security: Access permissions of a duplicated dashboard would not be identical to those of the original dashboard [ID 40627]
+#### Dashboards/Low-Code Apps - Security: User who duplicated a dashboard would incorrectly not be allowed to edit the newly created duplicate [ID 40627]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a user duplicated a dashboard that everyone was allowed to edit, up to now, the newly created duplicate could incorrectly only be edited by the user who duplicated the dashboard. From now on, when you duplicate a dashboard, the access permissions of the newly created duplicate will be identical to those of the original dashboard.
+Up to now, when a user duplicated a dashboard with access restrictions, in some cases, that user would incorrectly not be added as editor to the user access settings of the newly created duplicate.
+
+From now on, when a user duplicates a dashboard with access restrictions, that user will always be added as editor to the user access settings of the newly created duplicate.
 
 #### Dashboards app: Problem when trying to delete a dashboard subfolder [ID 40634]
 
@@ -95,7 +149,7 @@ When a user duplicated a dashboard that everyone was allowed to edit, up to now,
 
 When you tried to delete a subfolder of a dashboard folder, in some cases, an error could be thrown. That error would incorrectly state that the folder name cannot be empty.
 
-#### Dashboards app: Not possible to update the access permissions of the root folder [ID 40644]
+#### Dashboards app - Security: Not possible to update the access permissions of the root folder [ID 40644]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
@@ -106,3 +160,69 @@ In some cases, it would not be possible to update the access permissions of the 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you added a new dashboard folder, up to now, that folder would incorrectly be shown twice in the UI.
+
+#### Dashboards app: Renaming a folder while a dashboard in that folder was open would incorrectly change the focus to the folder [ID 40656]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you opened a dashboard in a dashboard folder, and then renamed the folder, up to now, the folder would incorrectly get the focus. From now on, the focus will stay on the dashboard you opened.
+
+#### Low-Code Apps: Output feed of a script would not be updated when a 'Launch a script' action was followed by post actions [ID 40664]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a *Launch a script* action was executed, followed by one or more post actions, the script's output feed would incorrectly not be updated.
+
+#### Low-Code Apps: Components using feeds would not be rendered correctly [ID 40665]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, components using feeds would not be rendered correctly.
+
+#### Dashboards app: Parameter states would be empty if their index was not visible [ID 40672]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a parameter state had an index, but that index was not visible (e.g. a dropped process in Task Manager), up to now, the state itself would not be displayed. From now on, if a state is empty, the text "Not initialized" will be shown instead.
+
+#### Dashboards app: URL would incorrectly not be updated when a selection was made in one of its components [ID 40673]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, the URL of a dashboard would incorrectly not be updated when you made a selection in one of its components.
+
+#### Dashboards/Low-Code Apps - Web component: Problem when using a URL pointing to an untrusted source [ID 40685]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, a *Web* component would not render a web page correctly when the URL pointed to an untrusted source.
+
+#### Dashboards app: Problem when renaming a dashboard folder after having renamed its parent folder [ID 40688]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you renamed a dashboard folder immediately after having renamed its parent folder, the folder would be renamed in the system but the UI would incorrectly still show the old name.
+
+#### Dashboards/Low-Code Apps - Maps component: Problem when refreshing a map [ID 40697]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a map was refreshed, in some cases, markers at the edges of the map would incorrectly disappear.
+
+#### Low-Code Apps: New draft would incorrectly be a copy of a draft you discarded earlier [ID 40706]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you discarded a draft of a published low-code app, and then created a new draft of that same app, the new draft would incorrectly not be a copy of the published low-code app. Instead, it would be a copy of the draft you discarded earlier.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem with 'Highlight time range' or 'Set viewport' actions when a default timezone had been set [ID 40722]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a default timezone had been set in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, in some cases, executing *Highlight time range* actions or *Set viewport* actions would have unexpected results.
+
+#### Dashboards app: Problem when changing the name of several dashboard folders in rapid succession [ID 40752]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you changed the name of several dashboard folders in rapid succession, in some cases, the Dashboards app could stop working.

@@ -1,5 +1,6 @@
 ---
 uid: Installing_DM_using_the_DM_installer
+description: When all prerequisites are met, download the installer from DataMiner Dojo. Then log in with an admin user account and run the installer.
 ---
 
 # Installing DataMiner using the DataMiner Installer

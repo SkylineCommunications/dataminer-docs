@@ -653,7 +653,7 @@ items:
       - name: How to use the element log in connector integrations
         topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      items:
+      items: 
       - name: Investigating a protocol thread RTE
         topicUid: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
@@ -668,6 +668,10 @@ items:
           topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
           topicUid: System_Collections_Generic_KeyNotFoundException
+        - name: System.OutOfMemoryException
+          topicUid: System_OutOfMemoryException
+        - name: System.StackOverflowException
+          topicUid: System_StackOverflowException
         - name: Exception in Finalizer
           topicUid: Finalizer_Exception
         - name: Identifying the source of an exception
@@ -5630,6 +5634,8 @@ items:
                 topicUid: StyleCopAnalyzers
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
+      - name: WinDbg
+        topicUid: WinDbg
       - name: Wireshark
         topicUid: Wireshark
         items:

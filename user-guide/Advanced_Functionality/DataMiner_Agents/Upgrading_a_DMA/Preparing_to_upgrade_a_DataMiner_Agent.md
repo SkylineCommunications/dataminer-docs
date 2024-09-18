@@ -1,5 +1,6 @@
 ---
 uid: Preparing_to_upgrade_a_DataMiner_Agent
+description: To ensure a successful DataMiner upgrade, first check for known issues and breaking changes, upload the package, and create a backup.
 ---
 
 # Preparing to upgrade a DataMiner Agent
@@ -39,7 +40,7 @@ To upload an upgrade package:
 > When you upload a package, several [prerequisite checks](#prerequisite-checks) will be executed, so that you will immediately get informed if certain conditions or requirements for the update are not met yet.
 
 > [!TIP]
-> To be safe, upload the package at least a week before executing the upgrade.
+> We recommend that you upload the package a few days before you execute the upgrade. This will allow you extra time to perform corrective actions in case any of the prerequisite checks fail.
 
 ### Have a backup at the ready
 
