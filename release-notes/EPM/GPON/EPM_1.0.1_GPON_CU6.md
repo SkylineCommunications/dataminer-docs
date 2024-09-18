@@ -6,6 +6,6 @@ uid: EPM_1.0.1_xPON_CU6
 
 ## Changes
 
-### Interapp Upgrade [ID 40564]
+### InterApp upgrade [ID 40564]
 
-Interapp libraries have been updated for solution compatibility. This applies to connectors and automation scripts.
+InterApp libraries have been updated for solution compatibility. This applies to connectors and Automation scripts.
