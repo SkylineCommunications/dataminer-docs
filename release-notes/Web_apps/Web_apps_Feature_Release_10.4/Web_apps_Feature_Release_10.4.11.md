@@ -88,6 +88,12 @@ Up to now, whether you added `showadvancedsettings=true` to the dashboard's URL 
 
 From now on, the *Preserve feed selections* option will only be visible when you add `showadvancedsettings=true` to the dashboard's URL.
 
+#### Dashboards/Low-Code Apps - Timeline component: Number of timeline items is now limited to 100,000 [ID 40761]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
