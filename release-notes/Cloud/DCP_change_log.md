@@ -19,7 +19,7 @@ If your DataMiner account contained one or more special characters, for example 
 
 #### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
 
-It is now possible to register your DataMiner system for STaaS through the Admin app.
+It is now possible to register your DataMiner System for STaaS through the Admin app.
 
 #### 17 September 2024 - Fix - Admin - Incorrect notation usage number [ID 40781]
 
