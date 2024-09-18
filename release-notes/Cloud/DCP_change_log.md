@@ -9,9 +9,29 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 17 September 2024 - Enhancement - Admin - Improved message when no usage data is found [ID 40796]
+
+Improved the message when no usage data is available yet for a given organization.
+
 #### 17 September 2024 - Fix - Remote Access (automatic) login not working with special characters in DataMiner account configuration [ID 40788]
 
 If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access to the web apps (e.g. the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
+
+#### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
+
+It is now possible to register your DataMiner system for STaaS through the Admin app.
+
+#### 17 September 2024 - Fix - Admin - Incorrect notation usage number [ID 40781]
+
+The notation of the number 400,000 has been changed from 0,4M to 400K.
+
+#### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
+
+It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [Registering a Catalog item](xref:Register_Catalog_Item).
+
+#### 17 September 2024 - Enhancement - Admin - 'Install latest available upgrades' button removed [ID 40768]
+
+In the Admin app, the button to install all available DxM updates at once for a node is no longer available. As its functionality could be inconsistent, an improved version of the feature will be introduced in a later UI update for this page.
 
 #### 16 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item [ID 40771]
 
