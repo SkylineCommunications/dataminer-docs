@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 17 September 2024 - Fix - Caching issues on the index file of Cloud web apps [ID 40777]
 
-Adjusted the caching headers for Cloud web apps to improve caching.
+Users would see an old version of the site when a newer version is available. Caching headers for Cloud web apps have been adjusted to prevent caching when a new version is available.
 
 #### 17 September 2024 - Fix - Remote Access (automatic) login not working with special characters in DataMiner account configuration [ID 40788]
 
