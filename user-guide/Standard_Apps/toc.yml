@@ -240,7 +240,7 @@ items:
             topicUid: MediaOps_Resource_Studio
             items:
               - name: Changing icons
-                topicUid: MediaOps_RS_Changing_Icons
+                topicUid: MO_RS_Changing_Icons
           - name: Scheduling
             topicUid: MO_Scheduling
             items:
