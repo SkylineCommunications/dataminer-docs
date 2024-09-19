@@ -25,6 +25,10 @@ It is now possible to register your DataMiner System for STaaS through the Admin
 
 The notation of the number 400,000 has been changed from 0,4M to 400K.
 
+#### 17 September 2024 - Fix - Caching issues index file dataminer.services web apps [ID 40777]
+
+It could occur that an old version of the site was shown when a newer version was available. To prevent this, caching headers for dataminer.services web apps have been adjusted to avoid caching when a new version is available.
+
 #### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
 
 It is now no longer possible to register Catalog items using the Catalog app. Registration should be done using the Catalog API instead. For detailed information, see [Registering a Catalog item](xref:Register_Catalog_Item).
