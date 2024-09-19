@@ -22,16 +22,7 @@ uid: General_Feature_Release_10.4.11
 
 ## New features
 
-#### GetElementID method added to TargetedClientRequestMessage class [ID 40725]
-
-<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
-
-A `GetElementID` method has been added to the `TargetedClientRequestMessage` class, which is mainly used by SLAnalytics.
-
-Using this new method will make sure that the message is sent to the DataMiner Agent that is currently hosting the element, even if the `HostingAgentID` field is not filled in.
-
-> [!NOTE]
-> For this method to work correctly, the `DataMinerID` field should contain the DataMiner ID of the element in question.
+*No new features have been added yet.*
 
 ## Changes
 
