@@ -14,13 +14,13 @@ uid: Cube_Feature_Release_10.4.7
 
 ### Enhancements
 
-#### Update Center: DCP user authentication replaced by Azure B2C authentication [ID_39466]
+#### Update Center: DCP user authentication replaced by Azure B2C authentication [ID 39466]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 When, in the *Update Center* window, you clicked *Check for updates*, up to now, Cube would use DCP user authentication to authenticate you. From now on, Cube will use Azure B2C authentication instead.
 
-#### Visual Overview: Enhanced performance when loading shapes containing ParametersSummary data fields [ID_39477]
+#### Visual Overview: Enhanced performance when loading shapes containing ParametersSummary data fields [ID 39477]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -28,19 +28,19 @@ Because of a number of enhancements, overall performance has increased when load
 
 ### Fixes
 
-#### Alarm Console: Undocked alarm card would not indicate which view was selected [ID_39494]
+#### Alarm Console: Undocked alarm card would not indicate which view was selected [ID 39494]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 When you undocked an alarm tab or you opened the *Alarms* tab of a card, it would not be possible to see whether the list view, the statistical view or the reports view was selected. From now on, the selected view will be indicated clearly.
 
-#### Visual Overview: Load time metric could be incorrect when a visual overview page was opened while Cube was still loading [ID_39588]
+#### Visual Overview: Load time metric could be incorrect when a visual overview page was opened while Cube was still loading [ID 39588]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
 When Cube was still loading when a visual overview page was opened, in some cases, the visual overview load time metric would be incorrect. From now on, when Cube is still loading when a visual overview page is opened, the load time metric will be disregarded.
 
-#### Login screen would remain stuck at 'Logging on...' when remote access to DataMiner Cube was disabled in admin.dataminer.services [ID_39590]
+#### Login screen would remain stuck at 'Logging on...' when remote access to DataMiner Cube was disabled in admin.dataminer.services [ID 39590]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 

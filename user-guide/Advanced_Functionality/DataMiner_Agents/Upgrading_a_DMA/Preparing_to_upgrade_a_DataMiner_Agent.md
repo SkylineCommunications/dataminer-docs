@@ -1,5 +1,6 @@
 ---
 uid: Preparing_to_upgrade_a_DataMiner_Agent
+description: To ensure a successful DataMiner upgrade, first check for known issues and breaking changes, upload the package, and create a backup.
 ---
 
 # Preparing to upgrade a DataMiner Agent
@@ -39,7 +40,7 @@ To upload an upgrade package:
 > When you upload a package, several [prerequisite checks](#prerequisite-checks) will be executed, so that you will immediately get informed if certain conditions or requirements for the update are not met yet.
 
 > [!TIP]
-> To be safe, upload the package at least a week before executing the upgrade.
+> We recommend that you upload the package a few days before you execute the upgrade. This will allow you extra time to perform corrective actions in case any of the prerequisite checks fail.
 
 ### Have a backup at the ready
 
@@ -86,10 +87,10 @@ If you are about to upgrade across major versions, before proceeding with the up
 
   | DataMiner version | Microsoft .NET | ASP.NET Core |
   |--|--|--|
-  | DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 and higher | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) |
-  | DataMiner 10.3.9/10.4.1/10.4.2 | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
-  | DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards<br/>DataMiner 10.3.3 to 10.3.8 | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe)<br/>[ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
-  | DataMiner 10.3.0 [CU0] up to [CU2]<br/>DataMiner 10.2.0/10.2.x | [Microsoft .NET 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe) |
+  | DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 and higher | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) |
+  | DataMiner 10.3.9/10.4.1/10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
+  | DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards<br/>DataMiner 10.3.3 to 10.3.8 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe)<br/>[ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
+  | DataMiner 10.3.0 [CU0] up to [CU2]<br/>DataMiner 10.2.0/10.2.x | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe) |
 
 - Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only) are opened, as explained in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 

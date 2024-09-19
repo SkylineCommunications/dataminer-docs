@@ -1,5 +1,6 @@
 ---
 uid: Setting_up_HTTPS_on_a_DMA
+description: First install an SSL/TLS certificate and set up an HTTPS binding, preferably using certificates issued by a trusted Certificate Authority.
 ---
 
 # Setting up HTTPS on a DMA

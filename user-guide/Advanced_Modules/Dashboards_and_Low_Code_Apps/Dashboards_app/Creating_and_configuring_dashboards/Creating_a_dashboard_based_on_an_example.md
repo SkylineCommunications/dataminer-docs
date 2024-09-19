@@ -24,7 +24,7 @@ Instead of creating a dashboard from scratch, you can instead first import an ex
 1. In the *Security* box, select whether other users should be able to view and edit the dashboard.
 
    > [!NOTE]
-   > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](xref:Changing_dashboard_settings).
+   > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Configuring security for a dashboard](xref:Configuring_dashboard_security).
    > - The built-in Administrator account always has full access to all dashboards.
 
 1. Click *OK*.

@@ -20,7 +20,7 @@ uid: General_Feature_Release_10.4.6_CU1
 
 ### Enhancements
 
-#### DxMs upgraded [ID_39803]
+#### DxMs upgraded [ID 39803]
 
 <!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
 
@@ -32,7 +32,7 @@ For detailed information about the changes included in those versions, refer to 
 
 ### Fixes
 
-#### Service & Resource Management: Deadlock when forcing quarantine during a booking update [ID_39755]
+#### Service & Resource Management: Deadlock when forcing quarantine during a booking update [ID 39755]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
 
@@ -40,7 +40,7 @@ After a quarantine had been forced during a booking update, in some cases, the S
 
 See also: [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine)
 
-#### Problem with SLProtocol after it had tried to read beyond the size of a table [ID_39829]
+#### Problem with SLProtocol after it had tried to read beyond the size of a table [ID 39829]
 
 <!-- MR 10.5.0 - FR 10.4.6 [CU1] -->
 

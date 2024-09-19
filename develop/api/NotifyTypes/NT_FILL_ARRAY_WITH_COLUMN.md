@@ -116,4 +116,4 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 
 ## See also
 
-- FillArrayWithColumn
+- [FillArrayWithColumn (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn(System.Int32,System.Int32,System.Object[],System.Object[])) method

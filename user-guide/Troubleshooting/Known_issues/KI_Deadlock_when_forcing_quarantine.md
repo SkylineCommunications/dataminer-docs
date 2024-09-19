@@ -10,7 +10,7 @@ DataMiner 10.4.6
 
 ## Cause
 
-In specific circumstances, a new feature introduced in DataMiner 10.4.6 ([ID 39264](xref:General_Feature_Release_10.4.6#service--resource-management-queue-will-now-be-skipped-when-processing-setsrmjsonserializableproperties-requests-id_39264)) could cause a deadlock if a quarantine was forced during a booking update.
+In specific circumstances, a new feature introduced in DataMiner 10.4.6 ([ID 39264](xref:General_Feature_Release_10.4.6#service--resource-management-queue-will-now-be-skipped-when-processing-setsrmjsonserializableproperties-requests-id-39264)) could cause a deadlock if a quarantine was forced during a booking update.
 
 ## Fix
 

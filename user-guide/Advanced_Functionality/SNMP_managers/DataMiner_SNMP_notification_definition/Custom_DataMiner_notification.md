@@ -48,7 +48,7 @@ Syntax:
 | User status ID | 1.3.6.1.4.1.8813.1.1.2.4.1.10| Possible values:<br> - Not assigned (18)<br> - Acknowledged (19)<br> - Resolved (20)<br> - Unresolved (21) |
 | Alarm root ID | 1.3.6.1.4.1.8813.1.1.2.4.1.11| |
 | Source ID | 1.3.6.1.4.1.8813.1.1.2.4.1.12| Possible values:<br> - DataMiner (16)<br> - Correlation engine (23)<br> - Automation engine (26) |
-| Table display index| 1.3.6.1.4.1.8813.1.1.2.4.1.13| |
+| Table display index| 1.3.6.1.4.1.8813.1.1.2.4.1.13| What is returned depends on how the table is indexed:<br>- Primary key only: Returns primary key value.<br>- Table with naming option, but no display key column: Returns what has been defined with the naming option.<br>- Table with naming option and column of type DisplayKey: Returns the value in the display key column.|
 | Full RCA level | 1.3.6.1.4.1.8813.1.1.2.4.1.14| A 32-bit integer<br> Up to DMS version 6.0.2:<br> - Parameter RCA: Bytes 4 and 3<br> - Element RCA: Bytes 2 and 1<br> As from DMS version 6.0.3:<br> - Service RCA: Byte 4<br> - Parameter RCA: Byte 3<br> - Element RCA: Bytes 2 and 1<br> Examples:<br> - Element RCA = 1, Parameter RCA = 2, Service RCA = 3 \>\>\> Full RCA: 0x03020001<br> - Element RCA = none, Parameter RCA = 1, Service RCA = 2 \>\>\> Full RCA: 0x0201FFFF<br> - Element RCA = none, Parameter RCA = none, Service RCA = none \>\>\> Full RCA: 0xFFFFFFFF |
 | Element type | 1.3.6.1.4.1.8813.1.1.2.4.1.15| |
 | Root time | 1.3.6.1.4.1.8813.1.1.2.4.1.16| A fixed time format is used: <br>"yyyy-mm-dd HH:MM:SS". |
