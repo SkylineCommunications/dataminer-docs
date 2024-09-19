@@ -231,6 +231,11 @@ items:
                 topicUid: PO_Managing_Organizations
           - name: Cost & Billing
             topicUid: MediaOps_Cost_Billing
+            items:
+              - name: Contracts
+                topicUid: MO_CB_Contracts
+              - name: Ratecards
+                topicUid: MO_CB_Ratecards
           - name: Resource Studio
             topicUid: MediaOps_Resource_Studio
             items:
