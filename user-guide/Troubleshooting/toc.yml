@@ -207,11 +207,11 @@ items:
             topicUid: Elastic_not_starting_after_upgrade_cleanup
       - name: Troubleshooting - SLScripting
         items:
-          - name: Investigate exception occurrence on Finalizer thread
+          - name: Investigating exception occurrence on Finalizer thread
             topicUid: TroubleshootingSLScriptingFinalizerException
           - name: Investigating OutOfMemoryException occurrences
             topicUid: TroubleshootingSLScriptingOutOfMemoryException
-          - name: Investigate StackOverflowException occurrences
+          - name: Investigating StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS_Issues
