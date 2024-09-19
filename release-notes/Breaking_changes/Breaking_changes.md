@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| [40372](xref:General_Feature_Release_10.4.11#gqi---get-alarms-data-source-updated-alarm-id-and-root-alarm-id-columns-id-40372) | DataMiner 10.5.0/10.4.11 | The *Alarm ID* and *Root Alarm ID* columns of the GQI data source *Get alarms* have been updated. |
 | [39495](xref:General_Feature_Release_10.4.9#parameter-latch-states-will-now-be-reset-after-every-dataminer-restart-id-39495) | DataMiner 10.5.0/10.4.9 | In order to increase overall performance when starting up elements, parameter latch states will no longer be persistent by default. They will be reset after every DataMiner restart. |
 | [39739](xref:Web_apps_Feature_Release_10.4.7#dashboards-app--low-code-apps-more-consistent-use-of-colors-in-graphs-id-39739) | DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 | From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards, components displaying the same data use the same data color by default. Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, each component independently takes the next color from the theme's assigned color palette. |
 | [38950](xref:General_Feature_Release_10.4.5#dom-string-fields-will-now-be-filtered-case-insensitively-id-38950) | DataMiner 10.4.0 [CU2]/10.4.5 | DOM string fields will now by default be filtered case-insensitively. |

@@ -38,6 +38,20 @@ If you want to have persistent parameter latch states, do the following:
 > - From now on, by default (or when the `PersistParameterLatchState` option is set to false in *MaintenanceSettings.xml*), parameter latch states will no longer be written to or fetched from the database. This means that, after every DataMiner restart, all parameter latch states will be reset.
 > - Element, service and view latch states will remain persistent as before.
 
+#### GQI - 'Get alarms' data source: Updated 'Alarm ID' and 'Root Alarm ID' columns [ID 40372]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+In the *Get alarms* data source, the following columns have been updated:
+
+| Column | Former contents | New contents |
+|--------|-----------------|--------------|
+| Alarm ID      | HostingDMAID/AlarmID     | DMAID/EID/RootAlarmID/AlarmID |
+| Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
+
+> [!NOTE]
+> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+
 ### Enhancements
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]

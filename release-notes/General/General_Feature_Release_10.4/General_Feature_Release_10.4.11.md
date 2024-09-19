@@ -26,6 +26,22 @@ uid: General_Feature_Release_10.4.11
 
 ## Changes
 
+### Breaking changes
+
+#### GQI - 'Get alarms' data source: Updated 'Alarm ID' and 'Root Alarm ID' columns [ID 40372]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+In the *Get alarms* data source, the following columns have been updated:
+
+| Column | Former contents | New contents |
+|--------|-----------------|--------------|
+| Alarm ID      | HostingDMAID/AlarmID     | DMAID/EID/RootAlarmID/AlarmID |
+| Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
+
+> [!NOTE]
+> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+
 ### Enhancements
 
 #### Failover: Virtual IP address check will now use both a ping and an arp command to check whether an IP address is free [ID 40516]
