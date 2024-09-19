@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 17 September 2024 - Fix - Caching issues on the index file of Cloud web apps [ID 40777]
+#### 17 September 2024 - Fix - Caching issues index file dataminer.services web apps [ID 40777]
 
-Users would see an old version of the site when a newer version is available. Caching headers for Cloud web apps have been adjusted to prevent caching when a new version is available.
+It could occur that an old version of the site was shown when a newer version was available. To prevent this, caching headers for dataminer.services web apps have been adjusted to avoid caching when a new version is available.
 
 #### 17 September 2024 - Fix - Remote Access (automatic) login not working with special characters in DataMiner account configuration [ID 40788]
 
