@@ -1,5 +1,5 @@
 ---
-uid: cost_billing_contracts
+uid: MO_CB_Contracts
 ---
 
 # Contracts

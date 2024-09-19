@@ -27,7 +27,7 @@ The following items can be configures on resource pools:
 - **Domain**: Pools can be grouped into domains for filtering purposes.
 - **Resource pool cost**: TODO CHECK WITH REINOUT WHY WE HAVE COST CARDS ON POOLS
 - **Resource pool links**: When a linked resource pool is configured, a resource from the linked resource pool must also be booked (automatically or manually).
-- **Icon image**: To make it easier to differentiate resource pools from each other in workflows/jobs you can [change the icon](xref:RS_Changing_Icons).
+- **Icon image**: To make it easier to differentiate resource pools from each other in workflows/jobs you can [change the icon](xref:MO_RS_Changing_Icons).
 - **URL**: Link that can be used to get more information on the resource pool.
 - **Profile Definition Name**: The profile definition linked to the pool. The linked profile definition contains configuration parameters that can be used to define the capabilities and capacities needed.
 

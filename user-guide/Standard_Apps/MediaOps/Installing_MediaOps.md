@@ -16,6 +16,10 @@ uid: Installing_MediaOps
 
 - The latest version of the [SRM framework](xref:deploying_srm).
 
+- The following Soft-launch options:
+
+  - TODO
+
 - The following user permissions:
 
   - [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps)

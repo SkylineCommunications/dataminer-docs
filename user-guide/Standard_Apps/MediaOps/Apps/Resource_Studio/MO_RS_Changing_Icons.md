@@ -1,5 +1,5 @@
 ---
-uid: MediaOps_RS_Changing_Icons
+uid: MO_RS_Changing_Icons
 ---
 
 # Changing icons
