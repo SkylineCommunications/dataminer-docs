@@ -25,6 +25,6 @@ In this section:
 
 Coding guidelines:
 
-- [Element Wizard](xref:Element_wizard)
+- [Element Wizard](xref:Default_settings)
 - [Communication](xref:Communication1)
-- [Points of Attention](xref:CODAttention)
+- [Points of Attention](xref:Skyline_Driver_Passport_Platform)

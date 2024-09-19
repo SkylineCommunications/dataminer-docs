@@ -20,6 +20,12 @@ Up to now, on systems that do not allow ping commands to be executed, in some ca
 
 From now on, when the virtual IP address check has concluded that the IP address is free after having executed the required number of ping commands, it will double-check by executing an arp command.
 
+#### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+All dynamic text in the KPI stencil will now automatically be truncated with "..." to prevent it from exceeded the dimensions of a shape.
+
 #### Automation: Enhanced locking when calling 'SetParameter' and 'GetParameter' on an element [ID 40682]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
@@ -78,6 +84,12 @@ When SLAnalytics fails to perform a database operation, it will retry the same o
 
 In order to prevent SLAnalytics from getting blocked for too long and from taking up too much memory, from now on, SLAnalytics will perform less retries if the previous database operation it performed in the last hour also failed.
 
+#### Storage as a Service: Problem when attempting to upgrade alarm masking data [ID 40625]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a DataMiner Agent using STaaS started up, up to now, an error would be thrown when the DataMiner Agent attempted to upgrade alarm masking data to the new masking data format used since DataMiner version 10.0.0. As STaaS has only been supported since DataMiner version 10.4.0, upgrading alarm masking data is not necessary. Therefore, from now on, a DataMiner Agent using STaaS will no longer attempt to do so.
+
 #### Service & Resource Management: Problem when retrieving resource pools with a property filter [ID 40642]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
@@ -94,3 +106,9 @@ When resource pools were retrieved with a property filter, and one of the resour
 When you collapsed the filter pane, in that filter pane, the text box would be cleared and all alarm severity checkboxes would automatically be selected. From now on, when you expand or collapse the filter pane, the text box will no longer be cleared and the checkboxes will no longer be automatically selected.
 
 Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
+
+#### SLAnalytics: Problem when fetching data at startup on STaaS/DaaS systems hosting more than 1500 elements [ID 40790]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more than 1500 elements, in some cases, SLAnalytics could throw errors when fetching data from the database at startup.

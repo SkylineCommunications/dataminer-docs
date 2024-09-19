@@ -10,12 +10,16 @@ As part of dataminer.services, the Catalog module allows Skyline customers and D
 
 ## Accessing the Catalog module
 
-1. Go to <https://dataminer.services>, and [sign in](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+There are several ways to access the Catalog module:
 
-1. On the dataminer.services landing page, click *Catalog*.
+- Go directly to <https://catalog.dataminer.services/>.
 
-> [!TIP]
-> From DataMiner 10.2.9/10.3.0 onwards, you can navigate directly to the catalog from DataMiner Cube by selecting *Catalog* in the *Apps* pane.
+- Go to <https://dataminer.services>, [sign in](xref:Logging_on_to_the_DataMiner_Cloud_Platform), and click *Catalog* on the landing page.
+
+- In DataMiner Cube, go to *Apps* > *Catalog* (from DataMiner 10.2.9/10.3.0 onwards).
+
+> [!NOTE]
+> While you do not have to sign in to view Catalog items, not all functionality will be available if you are not signed in. To sign in, click the button in the top-right corner of the Catalog UI.
 
 ## About Catalog items
 

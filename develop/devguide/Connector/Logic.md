@@ -33,6 +33,6 @@ DataMiner Protocol Markup Language:
 
 Coding guidelines:
 
-- [Logic](xref:Logic1)
-- [Timers](xref:Timers1)
-- [QActions](xref:QActions)
+- [Logic](xref:Operation_duration)
+- [Timers](xref:Number_of_timers)
+- [QActions](xref:Functionality)

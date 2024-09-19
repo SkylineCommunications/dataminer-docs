@@ -24,6 +24,18 @@ It is now possible to configure a *Set value* action for a *Time range* componen
 
 This action will allow users to set the current value of the component in question to either a preset range (today, yesterday, next year, ...) or a custom range (which can be either a static value or a feed).
 
+#### Dashboards app: 'Security' selection box added to 'Create folder' window [ID 40600]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you create a dashboard folder, you will now also have to select a security setting similar to that on dashboard level.
+
+The *Security* selection box offers the following preset options:
+
+- Public, anyone can edit (default option)
+- Protected, only you can edit
+- Private, only you have access
+
 ## Changes
 
 ### Enhancements
@@ -75,6 +87,12 @@ Because of a number of enhancements, overall performance of the *Alarm table* co
 Up to now, whether you added `showadvancedsettings=true` to the dashboard's URL or not, the *Create folder* window and the *Folder settings* window would always show the *Preserve feed selections* option.
 
 From now on, the *Preserve feed selections* option will only be visible when you add `showadvancedsettings=true` to the dashboard's URL.
+
+#### Dashboards/Low-Code Apps - Timeline component: Number of timeline items is now limited to 100,000 [ID 40761]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
 ### Fixes
 
@@ -142,6 +160,12 @@ In some cases, it would not be possible to update the access permissions of the 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you added a new dashboard folder, up to now, that folder would incorrectly be shown twice in the UI.
+
+#### Dashboards app: Renaming a folder while a dashboard in that folder was open would incorrectly change the focus to the folder [ID 40656]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you opened a dashboard in a dashboard folder, and then renamed the folder, up to now, the folder would incorrectly get the focus. From now on, the focus will stay on the dashboard you opened.
 
 #### Low-Code Apps: Output feed of a script would not be updated when a 'Launch a script' action was followed by post actions [ID 40664]
 

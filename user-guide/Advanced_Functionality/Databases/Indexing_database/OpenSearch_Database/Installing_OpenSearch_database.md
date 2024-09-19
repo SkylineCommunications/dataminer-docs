@@ -1,5 +1,6 @@
 ---
 uid: Installing_OpenSearch_database
+description: Install and test OpenSearch as described in the OpenSearch documentation, then configure your setup, change the JVM Heap Space, and set up a cluster.
 ---
 
 # Installing an OpenSearch database

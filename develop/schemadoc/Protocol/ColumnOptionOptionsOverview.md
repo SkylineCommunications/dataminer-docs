@@ -358,7 +358,7 @@ See also the [rowTextColor](xref:Protocol.Params.Param.Measurement.Discreets.Dis
 Specify this option if you want the column to be saved.
 
 > [!NOTE]
-> From DataMiner 9.5.5 (RN 16743) onwards, all parameters used to create the display key are saved by default (except for volatile tables).
+> From DataMiner 9.5.5 (RN 16743) onwards, all parameters used to create the display key are saved by default (except for [volatile tables](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables)). For guidelines on how to avoid storing unnecessary data, see [Saving parameters](xref:Saving_parameters).
 
 ## separator
 
