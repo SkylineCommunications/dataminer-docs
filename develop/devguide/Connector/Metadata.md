@@ -24,4 +24,4 @@ Every connector contains the following metadata:
 
 Coding guidelines:
 
-- [Administrative Metadata](xref:CODAdminMetadata)
+- [Administrative Metadata](xref:Comment_metadata)

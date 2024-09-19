@@ -40,4 +40,4 @@ DataMiner Class Library:
 
 Coding guidelines:
 
-- [DVE](xref:DVE)
+- [DVE](xref:DVE_names)

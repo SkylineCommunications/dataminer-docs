@@ -194,6 +194,9 @@ If you have any questions regarding this cost estimation, please contact <staas@
 > [!IMPORTANT]
 > Cost estimations can currently only be performed for the West Europe and UK South regions.
 
+> [!TIP]
+> To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with Automation scripts](xref:Automation_best_practices) or [with connectors](xref:Saving_parameters).
+
 ## Migrating existing data to STaaS
 
 Before migrating your data over to STaaS, make sure you are aware of the [limitations](#limitations) for migration. Then follow the procedure below:
