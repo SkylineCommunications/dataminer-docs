@@ -82,3 +82,9 @@ DataMiner Cube could leak memory each time you opened the *Reports* page of a ca
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you opened a card page that contained a visual overview, in some rare cases, the page could remain empty, showing a "Loading" message.
+
+#### Information templates: A number of properties would not be copied when duplicating an information template parameter [ID 40799]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When an information template parameter was duplicated, a number of properties (e.g. *Hide parameter*, *Part of snapshot*) would incorrectly not be copied to the newly created duplicate.
