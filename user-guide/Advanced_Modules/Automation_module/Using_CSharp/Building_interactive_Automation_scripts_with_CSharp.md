@@ -130,3 +130,6 @@ uib2.AppendBlock(blockButtonClose);
 // Display the dialog box
 engine.ShowUI(uib2);
 ```
+
+> [!NOTE]
+> Make sure that no multiple blocks are assigned to the same row and column. This could lead to unexpected results in the UI.
