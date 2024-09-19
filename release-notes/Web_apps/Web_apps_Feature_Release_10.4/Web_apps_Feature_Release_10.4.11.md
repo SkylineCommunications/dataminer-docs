@@ -226,9 +226,3 @@ When a default timezone had been set in the *C:\\Skyline DataMiner\\Users\\Clien
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you changed the name of several dashboard folders in rapid succession, in some cases, the Dashboards app could stop working.
-
-#### Dashboards app - Table component: Conditional highlighting/coloring would incorrectly only be applied to the first page [ID 40823]
-
-<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
-
-When using conditional highlighting/coloring in a Table component (via the component settings or via a query filter), up to now, this conditional highlighting/coloring would incorrectly only be applied to the first page.
