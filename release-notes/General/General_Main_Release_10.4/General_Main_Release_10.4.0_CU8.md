@@ -106,3 +106,9 @@ When resource pools were retrieved with a property filter, and one of the resour
 When you collapsed the filter pane, in that filter pane, the text box would be cleared and all alarm severity checkboxes would automatically be selected. From now on, when you expand or collapse the filter pane, the text box will no longer be cleared and the checkboxes will no longer be automatically selected.
 
 Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
+
+#### SLAnalytics: Problem when fetching data at startup on STaaS/DaaS systems hosting more than 1500 elements [ID 40790]
+
+<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more than 1500 elements, in some cases, SLAnalytics could throw errors when fetching data from the database at startup.
