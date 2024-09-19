@@ -739,6 +739,20 @@ Up to now, when the DOM GQI adapter retrieved DOM instances in the background, i
 
 The page size must be set to a value between 10 and 500. When a page size value below 10 or above 500 is passed, the DomHelper will retrieve DOM instances using a page size of 10 or 500, respectively.
 
+#### Trending - Relation learning: Light bulb will now also propose time-scoped related parameters from other elements within the same service [ID 40658]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+In e.g. DataMiner Cube, a light bulb icon will be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
+
+Up to now, this feature only proposed parameters from the same DataMiner element. From now on, it will also propose parameters from other elements within the same service.
+
+#### Correlation: Only the most recent information about correlation alarm tree entries will now be cached [ID 40661]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Up to now, SLNet would cache all information about all entries in a correlation alarm (group) tree. In order to reduce the amount of data in this cache, from now on, only the most recent information about these entries will be kept in memory.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
