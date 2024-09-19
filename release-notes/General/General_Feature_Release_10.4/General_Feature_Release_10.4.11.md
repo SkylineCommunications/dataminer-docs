@@ -116,6 +116,14 @@ The following calls have been improved:
   - `GetParameterDisplayByPrimaryKey`
   - `IsMatrixCrosspointConnected`
 
+#### Failover: Both agents will now keep a copy of the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file [ID 40702]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
+
+From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+
 #### SLAnalytics will now wait longer for a message from SLNet announcing that it has finished loading the configuration [ID 40729]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
