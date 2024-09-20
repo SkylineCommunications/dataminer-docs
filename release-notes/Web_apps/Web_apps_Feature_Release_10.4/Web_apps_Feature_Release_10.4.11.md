@@ -226,3 +226,11 @@ When a default timezone had been set in the *C:\\Skyline DataMiner\\Users\\Clien
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you changed the name of several dashboard folders in rapid succession, in some cases, the Dashboards app could stop working.
+
+#### Dashboards app: Users without permission to edit dashboard folders would incorrectly be able to create or import a dashboard [ID 40778]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you did not have permission to edit the dashboards root folder or any other dashboard folder, up to now, you would incorrectly have permission to create or import a dashboard. However, you would get an error and the web API would deny your request.
+
+From now on, when you do not have permission to edit the dashboards root folder or any other dashboard folder, you will no longer be able to create or import a dashboard.
