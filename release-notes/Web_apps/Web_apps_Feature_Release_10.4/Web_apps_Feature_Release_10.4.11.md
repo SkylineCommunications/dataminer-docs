@@ -240,3 +240,13 @@ When you changed the name of several dashboard folders in rapid succession, in s
 When you did not have permission to edit the dashboards root folder or any other dashboard folder, up to now, you would incorrectly have permission to create or import a dashboard. However, you would get an error and the web API would deny your request.
 
 From now on, when you do not have permission to edit the dashboards root folder or any other dashboard folder, you will no longer be able to create or import a dashboard.
+
+#### Dashboards app: Problems when attaching CSV files to email reports [ID 40813]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+A number of problems could occur when attaching CSV files to email reports:
+
+- When a CSV file was larger than 10 Mb, the generation of that file could get stuck. As this would cause the file to remain locked, it was not possible to attach it to the email message.
+- When you toggled the *Include CSV* option in the report preview, the data would incorrectly already be fetched. From now on, the data will only be fetched when you click *Send*.
+- When multiple components were spread over different pages of the PDF file, only the components on the last page of the PDF file would have their CSV file attached. From now on, all CSV files will get attached correctly.
