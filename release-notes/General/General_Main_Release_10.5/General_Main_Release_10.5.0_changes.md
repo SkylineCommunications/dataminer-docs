@@ -904,4 +904,4 @@ For example, when *defaultApp* is set to "Cube" in *C:\\Skyline DataMiner\\Webpa
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When DELT elements were masked or unmasked, in some cases, a `DataMinerCommunicationException` could be thrown.
+When a DELT element was masked or unmasked, when no hosting agent ID was passed along in the SetAlarmStateMessage, the message would be sent to the DataMiner Agent referred to by the DataMiner ID of the element. In some rare cases, this DataMiner ID could refer to a non-existing DataMiner Agent, causing an exception to be thrown.
