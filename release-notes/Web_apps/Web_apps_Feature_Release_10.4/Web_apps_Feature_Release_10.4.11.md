@@ -94,6 +94,12 @@ From now on, the *Preserve feed selections* option will only be visible when you
 
 From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
+#### Dashboards/Low-Code Apps - Table component: New setting to show or hide the table filter [ID 40818]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Layout* tab of a *Table* component, it is now possible to indicate whether the table filter should be visible or not.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
