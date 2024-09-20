@@ -191,6 +191,14 @@ When you collapsed the filter pane, in that filter pane, the text box would be c
 
 Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
 
+#### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID_40705]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+When, in e.g. Cube's Scheduler app, an action would send an email with in attachment a dashboard that no longer existed, the email would not be sent, but no error would be shown.
+
+From now on, when an action tries to send an email with a non-existing dashboard in attachment, the task will fail and an exception will be thrown.
+
 #### Problem when masking or unmasking DELT elements [ID 40723]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->

@@ -900,6 +900,14 @@ For example, when *defaultApp* is set to "Cube" in *C:\\Skyline DataMiner\\Webpa
 > [!NOTE]
 > When *defaultApp* was set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g. Linux, macOS, etc.), will it still be opened in the Monitoring app.
 
+#### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID_40705]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+When, in e.g. Cube's Scheduler app, an action would send an email with in attachment a dashboard that no longer existed, the email would not be sent, but no error would be shown.
+
+From now on, when an action tries to send an email with a non-existing dashboard in attachment, the task will fail and an exception will be thrown.
+
 #### Problem when masking or unmasking DELT elements [ID 40723]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
