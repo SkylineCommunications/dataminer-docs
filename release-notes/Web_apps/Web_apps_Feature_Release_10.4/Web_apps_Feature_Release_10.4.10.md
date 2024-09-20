@@ -247,10 +247,10 @@ In feature release 10.4.9, all interactive Automation script components were rev
 
 From now on, when the above-mentioned components are used in places other than interactive Automation scripts, applying the theme and accent color to those components will be optional. In interactive Automation scripts, the theme and accent color will always be applied to the script's components.
 
-#### Web API: Problem when sending heartbeats to GQI [ID 40826]
+#### Web API: Problem when sending heartbeats to GQI when an inactive connection had not yet been removed [ID 40826]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-When the web API was sending heartbeats to GQI to make sure its connections and sessions would stay open, the following exception could be thrown:
+When the web API was sending heartbeats to GQI, the following exception could be thrown when an inactive connection had not yet been removed:
 
 `Collection was modified; enumeration operation may not execute.`
