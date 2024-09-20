@@ -1,5 +1,5 @@
 ---
-uid: MediaOps_Resource_Studio
+uid: MO_Resource_Studio
 ---
 
 # Resource Studio
@@ -25,7 +25,7 @@ The following items can be configures on resource pools:
 
 - **Name**: The logical name of the resource pool.
 - **Domain**: Pools can be grouped into domains for filtering purposes.
-- **Resource pool cost**: TODO CHECK WITH REINOUT WHY WE HAVE COST CARDS ON POOLS
+- **Resource pool cost**: TODO CHECK WITH REINOUT WHY WE HAVE COST CARDS ON POOLS => CAN BE DELETED
 - **Resource pool links**: When a linked resource pool is configured, a resource from the linked resource pool must also be booked (automatically or manually).
 - **Icon image**: To make it easier to differentiate resource pools from each other in workflows/jobs you can [change the icon](xref:MO_RS_Changing_Icons).
 - **URL**: Link that can be used to get more information on the resource pool.
@@ -35,7 +35,7 @@ A resource pool can be in one of the following states:
 
 - **Draft**: In this stage the resource pool is not (yet) available to be scheduled in workflows and jobs. In this stage the pool can still be removed directly.
 - **Complete**: In this stage the resource pool is considered complete and can be used to create workflows and jobs.
-- **Deprecated**: TBC WITH THE TEAM WHAT THIS MEANS
+- **Deprecated**: TBC WITH THE TEAM WHAT THIS MEANS => KEEP CURRENT BEHAVIOR
 - **Error**: TBC WITH THE TEAM IF IT CAN BE REMOVED
 
 ## Resources
@@ -69,6 +69,6 @@ The optimize page is designed to get the most value out of your resources. It gi
 
 ## Sync
 
-TBC WITH THE TEAM IF THIS PAGE IS STILL NEEDED
+TBC WITH THE TEAM IF THIS PAGE IS STILL NEEDED => WILL BE KEPT
 
 ## About

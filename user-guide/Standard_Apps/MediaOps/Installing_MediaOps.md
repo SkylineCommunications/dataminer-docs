@@ -14,7 +14,7 @@ uid: Installing_MediaOps
   > [!NOTE]
   > If you do not have a DaaS system available yet, [spin up a new DaaS system](xref:Creating_a_DMS_on_dataminer_services).
 
-- The latest version of the [SRM framework](xref:deploying_srm).
+- The latest version of the [SRM framework](xref:deploying_srm). TODO THIS WILL NO LONGER BE NEEDED
 
 - The following Soft-launch options:
 

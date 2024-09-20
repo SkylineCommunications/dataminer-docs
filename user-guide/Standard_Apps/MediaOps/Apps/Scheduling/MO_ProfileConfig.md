@@ -1,5 +1,5 @@
 ---
-uid: MediaOps_ProfileConfig
+uid: MO_ProfileConfig
 ---
 
 # MediaOps Profile Configuration
@@ -33,4 +33,4 @@ Configuration parameters are inherited from the resource or resource pool at the
 
 **What will happen when my resource is available in multiple resource pools?**
 
-When a resource is added as node to a job/workflow and the resource is included in multiple resource pools at that time, then the profile definition on the first resource pool found will be used (unless profile definitions are defined on resource level).
+When a resource is added as node to a job/workflow you always have to select a resource pool as well. The profile definition of the resource pool selected when adding the node will be used (unless profile definitions are defined on resource level).

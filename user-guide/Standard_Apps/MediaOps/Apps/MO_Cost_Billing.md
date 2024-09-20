@@ -1,5 +1,5 @@
 ---
-uid: MediaOps_Cost_Billing
+uid: MO_Cost_Billing
 ---
 
 # Cost & Billing
