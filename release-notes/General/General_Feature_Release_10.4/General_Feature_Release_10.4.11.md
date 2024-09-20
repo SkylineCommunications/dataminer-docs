@@ -191,6 +191,12 @@ When you collapsed the filter pane, in that filter pane, the text box would be c
 
 Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
 
+#### Problem when masking or unmasking DELT elements [ID 40723]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+When DELT elements were masked or unmasked, in some cases, a `DataMinerCommunicationException` could be thrown.
+
 #### SLAnalytics: Problem when fetching data at startup on STaaS/DaaS systems hosting more than 950 elements [ID 40790]
 
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
