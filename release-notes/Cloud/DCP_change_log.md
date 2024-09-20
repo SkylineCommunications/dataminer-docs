@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 20 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item for an authenticated user [ID 40825]
+
+When a Catalog item uses the same name as another connector Catalog item that was not registered via the Catalog API, the wrong description could be shown when viewing the item as an authenticated user.
+
+#### 20 September 2024 - Fix - Catalog - Duplicate Catalog items [ID 40839]
+
+A duplicate Catalog item could be introduced in the Catalog after using the register item call from the Catalog API on an existing item that was not originally registered via the Catalog API. 
+
 #### 17 September 2024 - Enhancement - Admin - Improved message when no usage data is found [ID 40796]
 
 Improved the message when no usage data is available yet for a given organization.
