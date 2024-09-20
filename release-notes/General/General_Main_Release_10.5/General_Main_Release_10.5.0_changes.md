@@ -761,6 +761,12 @@ When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\S
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
 
+#### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]

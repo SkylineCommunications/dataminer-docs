@@ -144,6 +144,12 @@ Up to now, smart-serial connections would support IPv6 loopback addresses only i
 
 From now on, smart-serial connections will also support non-abbreviated IPv6 loopback addresses (e.g. `0:0:0:0:0:0:0:1` or similar).
 
+#### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
+
 ### Fixes
 
 #### ReIndexElasticSearchIndexes tool would incorrectly overwrite the existing mapping by the default mappings [ID 40073]
@@ -204,6 +210,13 @@ From now on, when an action tries to send an email with a non-existing dashboard
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 When a DELT element was masked or unmasked, when no hosting agent ID was passed along in the SetAlarmStateMessage, the message would be sent to the DataMiner Agent referred to by the DataMiner ID of the element. In some rare cases, this DataMiner ID could refer to a non-existing DataMiner Agent, causing an exception to be thrown.
+
+#### Decreased performance when either deleting rows from large tables or clearing large tables [ID 40748]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 37617 -->
+
+As from feature release 10.4.3, overall performance had decreased when either deleting rows from large tables or clearing large tables.
 
 #### SLAnalytics: Problem when fetching data at startup on STaaS/DaaS systems hosting more than 950 elements [ID 40790]
 
