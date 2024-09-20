@@ -58,6 +58,18 @@ From now on, when the virtual IP address check has concluded that the IP address
 
 All dynamic text in the KPI stencil will now automatically be truncated with "..." to prevent it from exceeded the dimensions of a shape.
 
+#### Cassandra Cluster Migrator tool: Enhanced migration of Failover systems [ID 40576]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Up to now, when the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was used to migrate a DataMiner System that included at least one Failover system, the following actions still had to be performed manually:
+
+- Checking whether all agents are stopped.
+- Updating the *DB.xml* file on all agents to make sure the database type is set to "CassandraCluster".
+- Starting all agents.
+
+Because of a number of enhancements, from now on, no manual intervention whatsoever will be needed when the Cassandra Cluster Migrator tool is used to migrate a DataMiner System that includes at least one Failover system.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced variance increase detection [ID 40580]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
