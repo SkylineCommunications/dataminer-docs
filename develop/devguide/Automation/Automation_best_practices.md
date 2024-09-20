@@ -12,7 +12,7 @@ Keep the following best practices in mind:
 
 - Avoid *Engine.GenerateInformation* for tracing. While it is very informative to see the progress of a script that is running, if you have a script that runs a lot, this quickly becomes overhead.
 
-  Instead, use *engine.Log* for tracing. This way, instead of generating information events, you will add lines in the Automation log file. If for some reason, you want convert these log lines to information events for a short amount of time, consider using preprocessor directives, or make a wrapper that allows you to quickly switch between information events and log lines.
+  Instead, use *engine.Log* for tracing. This way, instead of generating information events, you will add lines in the Automation log file. If for some reason, you want convert these log lines to information events for a short amount of time, consider using preprocessor directives, or make a wrapper that allows you to quickly switch between information events and log lines. We would also recommend keeping the trace logging to a minimum to prevent the Automation log file from being spammed. Using those same preprocessor directives, the trace logging could be quickly enabled an disabled for specific scripts when investigating problems.
 
 - Avoid generating information events when your script executes sets.
 
