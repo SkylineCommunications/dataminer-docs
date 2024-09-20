@@ -136,6 +136,14 @@ When starting up, up to now, SLAnalytics would wait up to 400 seconds for a mess
 
 From now on, the maximum number of parameter changes processed by SLAnalytics will no longer be limited to 5000 per second.
 
+#### Protocols: Smart-serial connections now also support non-abbreviated IPv6 loopback addresses [ID 40758]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, smart-serial connections would support IPv6 loopback addresses only if they were abbreviated (e.g. `::1`).
+
+From now on, smart-serial connections will also support non-abbreviated IPv6 loopback addresses (e.g. `0:0:0:0:0:0:0:1` or similar).
+
 ### Fixes
 
 #### ReIndexElasticSearchIndexes tool would incorrectly overwrite the existing mapping by the default mappings [ID 40073]
