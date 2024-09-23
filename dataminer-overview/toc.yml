@@ -279,6 +279,8 @@ items:
               topicUid: Terms_of_Sale
             - name: Terms for online deployments
               topicUid: Terms_Online_Deployments
+            - name: Terms for partners
+              topicUid: Terms_partners
         - name: Support terms
           items:
             - name: On premises
