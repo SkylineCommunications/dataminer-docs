@@ -3,15 +3,25 @@ uid: srm_using_resourcemanagerhelper
 keywords: ResourceManagerHelper
 ---
 
-# Using the ResourceManagerHelper
+# Interacting with Resource Manager
 
 The ``ResourceManagerHelper`` class can be used in code to interact with ``Resource`` and ``ReservationInstance`` objects. To instantiate a ``ResourceManagerHelper``, a callback to SLNet needs to be provided:
 
 ```csharp
+// In an automation script
 var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+// In an ad hoc data source
+var helper = new ResourceManagerHelper(gqiDms.SendMessages);
+
+// In a connector QAction
+var helper = new ResourceManagerHelper(protocol.SLNet.SendSingleResponseMessage);
 ```
 
-The SRM framework also provides a way to access the same helper:
+> [!NOTE]
+> Be careful when updating bookings in connectors. Depending on the scale of the SRM system, adding or updating bookings can take a while. 
+
+The SRM framework also provides a way to access the same helper in an automation script:
 
 ```csharp
 var helper = SrmManagers.ResourceManager;
@@ -21,17 +31,22 @@ var helper = SrmManagers.ResourceManager;
 
 The ``ResourceManagerHelper`` provides methods to retrieve ``Resources`` and ``ReservationInstances`` in a filtered, sorted and paged way. Filters are constructed by concatenating together ``Exposers`` that specify the field you want to filter on. Some examples:
 
+> [!NOTE]
+> You will need to include the ``Skyline.DataMiner.Net.Messages`` namespace to use the ``ResourceManagerHelper`` and ``ResourceExposers`` classes. 
+> The ``ReservationInstanceExposers``, ``ServiceReservationInstanceExposers`` and ``FunctionResourceExposers`` classes can be found in the ``Skyline.DataMiner.Net.ResourceManager.Objects`` namespace.
+> The namespace ``Skyline.DataMiner.Net.Messages.SLDataGateway`` contains the comparison methods (``Contains``, ``Equal``, ``LessThan`` etc.).  
+
 ```csharp
 // Filter that matches all ReservationInstances that have a name that contains 'satellite' and are using a specific ServiceDefinition
 var reservationInstanceFilter = ReservationInstanceExposers.Name.Contains("satellite").AND(ServiceReservationInstanceExposers.ServiceDefinitionID.Equal(Guid.Parse("...")));
-
-// Filter that matches all Resources that have a name that contains 'Encoder' and are linked to a specific function
-var resourceFilter = ResourceExposers.Name.Contains("Encoder").AND(FunctionResourceExposers.FunctionGUID.Equal(Guid.Parse("...")));
 
 // Filter that matches all ReservationInstances overlapping with the time range between now and 3 hours from now.
 var start = DateTime.UtcNow;
 var end = start.AddHours(3);
 var timeRangeFilter = ReservationInstanceExposers.Start.LessThan(end).AND(ReservationInstanceExposers.End.GreaterThan(start));
+
+// Filter that matches all Resources that have a name that contains 'Encoder' and are linked to a specific function
+var resourceFilter = ResourceExposers.Name.Contains("Encoder").AND(FunctionResourceExposers.FunctionGUID.Equal(Guid.Parse("...")));
 ```
 
 > [!IMPORTANT]
@@ -47,9 +62,28 @@ The filter can be passed to the relevant helper method to retrieve the objects i
 
 **Read without paging**
 
+> [!NOTE]
+> Reading in a non-paged way will return ``TraceData`` if the user does not have the necessary permissions or if there an unforeseen error occurs (for example when the database is not reachable).
+> See [Handling errors](#handling-errors) for more information on handling ``TraceData``. 
+
 ```csharp
 var resourceFilter = ResourceExposers.ID.Equal(Guid.Parse("39CA130D-082D-49F3-AB49-89A23ACA9270"));
 var resources = helper.GetResources(resourceFilter);
+
+// Get a ResourcePool by name, Exposers are not supported for ResourcePools
+var pool = new ResourcePool
+{
+    Name = "Encoders"
+};
+var foundPool = helper.GetResourcePools(pool).FirstOrDefault();
+if (foundPool == null)
+{
+    // No pool found, handle appropriately
+}
+
+// Get all resources in that pool
+var resourcesInPoolFilter = ResourceExposers.PoolGUIDs.Contains(foundPool.GUID);
+resources = helper.GetResources(resourcesInPoolFilter);
 
 var reservationInstanceFilter = ReservationInstanceExposers.ID.Equal(Guid.Parse("47BB3B98-6F94-49EE-B034-283A22AB634A"));
 var reservationInstances = helper.GetReservationInstances(reservationInstanceFilter);
@@ -58,10 +92,14 @@ var reservationInstances = helper.GetReservationInstances(reservationInstanceFil
 **Read with paging**
 
 > [!NOTE]
+> Reading in a paged way will throw a ``CrudFailedException`` if the user does not have the necessary permissions or if there an unforeseen error occurs (for example when the database is not reachable).
+> The ``CrudFailedException`` contains a ``TraceData`` property with more information about the error. See [Handling errors](#handling-errors) for more information on handling ``TraceData``. 
+
+> [!NOTE]
 > Retrieving ``Resources`` using paging is only available from DataMiner version 10.4.9 onwards.
 
 ```csharp
-var resourceFilter = ResourceExposers.Name.Contains("encoder");
+var resourceFilter = ResourceExposers.Name.Contains("encoder", caseSensitive: false);
 var resourcePager = helper.PrepareResourcePaging(resourceFilter.ToQuery(), preferredPagingSize: 200);
 
 while (resourcePager.MoveToNextPage())
@@ -70,7 +108,7 @@ while (resourcePager.MoveToNextPage())
     // Do something with the resources in this page.
 }
 
-var reservationInstanceFilter = ReservationInstanceExposers.Name.Contains("Satellite");
+var reservationInstanceFilter = ReservationInstanceExposers.Name.Contains("Satellite", caseSensitive: false);
 var reservationInstancePager = helper.PrepareReservationInstancePaging(reservationInstanceFilter.ToQuery(), preferredPagingSize: 200);
 
 while (reservationInstancePager.MoveToNextPage())
@@ -83,7 +121,8 @@ while (reservationInstancePager.MoveToNextPage())
 **Read with paging and sorting**
 
 ```csharp
-var resourceFilter = ResourceExposers.Name.Contains("encoder");
+// Retrieve all resources with custom property 'Location' equal to 'London' and sort them by name.
+var resourceFilter = ResourceExposers.Properties.DictStringField("Location").Equal("London");
 var resourcePager = helper.PrepareResourcePaging(resourceFilter.OrderBy(ResourceExposers.Name), preferredPageSize: 200);
 
 while (resourcePager.MoveToNextPage())
@@ -109,7 +148,8 @@ The ``ResourceManagerHelper`` provides a ``GetEligibleResources`` method to retr
 The most basic filter is to specify the time range in which the ``Resources`` need to be available:
 
 ```csharp
-// The timings in the context should be in UTC
+// The timings in the context should be in UTC.
+// The namespace 'Skyline.DataMiner.Net.Time' needs to be included to use 'TimeRangeUtc' 
 var now = DateTime.UtcNow;
 var context = new EligibleResourceContext()
 {
@@ -129,6 +169,7 @@ A list of capacities can be passed to only return ``Resources`` that have the sp
 Multiple capacities can be added to the list, only ``Resources`` that have all capacities in the list available will be returned.
 
 ```csharp
+// The namespace 'Skyline.DataMiner.Net.SRM.Capacities' needs to be included to use 'MultiResourceCapacityUsage'
 var bitrateProfileId = Guid.Parse("...");
 var requestedCapacity = new MultiResourceCapacityUsage(bitrateProfileId, quantity: 100);
 context.RequiredCapacities.Add(requestedCapacity); 
@@ -138,6 +179,7 @@ A list of capabilities can be passed to only return ``Resources`` that have the 
 Multiple capabilities can be added to the list, only ``Resources`` that have all capabilities in the list available will be returned.
 
 ```csharp
+// The namespace 'Skyline.DataMiner.Net.SRM.Capabilities' needs to be included to use 'ResourceCapabilityUsage'
 var inputInterfaceProfileId = Guid.Parse("...");
 var requestedCapability = new ResourceCapabilityUsage()
 {
@@ -221,31 +263,23 @@ foreach (var resource in resources)
     {
         // 'HasExistingBookings' will be 'null' if the capability is not time-dynamic.
         //  Capabilities that are not time-dynamic capabilities are available regardless of the fact if there are bookings or not. 
-        logString.Append($"\tCapability '{capabilityUsage.CapabilityParameterId}': Is time-dynamic: ");
-        if (capabilityUsage.HasExistingBookings.HasValue)
-        {
-            logString.AppendLine("true. ");
-        }
-        else
-        {
-            logString.AppendLine("false. ");
-        }
+        logString.Append($"\tCapability '{capabilityUsage.CapabilityParameterId}': Is time-dynamic: {capabilityUsage.HasExistingBookings.HasValue}");
 
         foreach (var oneBookedCapability in capabilityUsage.BookedCapabilities)
         {
             // We log the 'RequiredString' in this case, the filled in property will depend on the type of capability (string, discreet or rangepoint)
-            logString.Append($"\t\tBooked {oneBookedCapability.BookedTimeRange} with value '{oneBookedCapability.Value.RequiredString}'");
+            logString.AppendLine($"\t\tBooked {oneBookedCapability.BookedTimeRange} with value '{oneBookedCapability.Value.RequiredString}'");
         }
     }
-
-    // Example value for 'logString.ToString()':
-    // Usage details for resource 'Encoder A' (c89d58c6-7173-4f08-b067-f27aa486e2ef):
-    //      Concurrency left: 9
-    //      Capacity left for capacity with ID '0ec82fec-2c43-46af-ab73-fb4d478e95ea': 50,0
-    //      Capability 'e97b58ce-90b8-459c-8894-d39b8ccd8a4e': Is time-dynamic: true. 
-    //          Booked From 2024-09-17T14:25:33.879 UTC to 2024-09-17T17:25:33.879 UTC spans 3h with value 'Example value'
-    logString.Clear();
 }
+
+ // Example value for 'logString.ToString()':
+// Usage details for resource 'Encoder A' (c89d58c6-7173-4f08-b067-f27aa486e2ef):
+//      Concurrency left: 9
+//      Capacity left for capacity with ID '0ec82fec-2c43-46af-ab73-fb4d478e95ea': 50,0
+//      Capability 'e97b58ce-90b8-459c-8894-d39b8ccd8a4e': Is time-dynamic: true. 
+//          Booked From 2024-09-17T14:25:33.879 UTC to 2024-09-17T17:25:33.879 UTC spans 3h with value 'Example value'
+logString.Clear();
 ```
 
 It is possible to pass multiple ``EligibleResourceContext``s in one call, which is more performant than doing these calls separately. The helper will return a list of results, which can be matched by ``ContextId``.  
@@ -272,40 +306,12 @@ if (resultForContextTwo == null)
 }
 ```
 
-## Updating ReservationInstance properties
-
-Next to methods to perform the regular add, update and delete operations on ``Resources`` and ``ReservationInstances``, the helper also provides a method to only update the properties of a ``ReservationInstance``. This method will validate if no properties would unintentionally be overwritten, by comparing the old properties passed to the method with the existing properties on the booking. The ResourceManager will also perform less validation compared to a regular booking update, making this call more performant.
-
-```csharp
-var bookingId = Guid.Parse("...");
-var oldProperties = reservationInstance.Properties; // The current properties on the booking we intend to overwrite
-var newProperties = new JSONSerializableDictionary();
-newProperties.AddOrUpdate("key", "value");
-
-// 'oldProperties' will completely be overwritten by 'newProperties'
-var result = helper.SafelyUpdateReservationInstanceProperties(bookingId, oldProperties, newProperties);
-
-if (result != UpdatePropertiesResult.Success)
-{
-    // The call failed, handle the error appropriately
-}
-
-```
-
-The result of the call will be one of the following:
-
-| Result | Description |
-|---|---|
-| Success | The call succeeded. |
-| ObjectNotFound | The ``ReservationInstance`` with the given ID was not found |
-| InvalidCharactersInPropertyKeys | The custom properties contains some characters that are invalid (see [Restrictions on property names](#restrictions-on-property-names)) |
-| PropertiesWereAlreadyModified | The *oldProperties* passed to the call are not the same as the properties on the existing booking. The call failed because it's possible the update would unintentionally overwrite a property value. |
-
 ## Handling errors
 
 If a call fails, the helper will not throw an exception. ``TraceData`` will be available on the helper instead. The ``TraceData`` can be retrieved with the ``GetTraceDataLastCall`` method:
 
 ```csharp
+helper.AddOrUpdateResources(resource);
 var traceData = helper.GetTraceDataLastCall();
 if (!traceData.HasSucceeded())
 {
@@ -317,34 +323,29 @@ if (!traceData.HasSucceeded())
 }
 ```
 
+When updating bookings via the framework, a ``ResourceManagerTraceDataException`` will be thrown if ``TraceData`` is returned when the ``ReservationInstance`` is updated. This exception has a property to access the full ``TraceData``, as well as a method to format some known errors. When using the framework it is highly recommended to use the framework methods to update ``ReservationInstances``.
+
+```csharp
+try 
+{
+    bookingManager.CreateNewBooking(...);
+}
+catch (ResourceManagerTraceDataException traceDataException)
+{
+    var traceData = traceDataException.TraceData;
+    var errors = traceDataException.BuildErrors();
+    var errorString = string.Join(Environment.NewLine, errors);
+}
+```
+
 The ``ResourceManagerErrorData`` has a ``Reason`` field, which gives more information about the reason for the failure. Below is a table of different reasons that can be returned, together with the other properties that will be available on the error.
-
-### Errors when adding or updating ReservationInstances
-
-| Error reason   | Description  | Available properties |
-|---|---|---|
-|  NotLicensed | The necessary license(s) are missing. To add or update a ``ReservationInstance`` the *ResourceManager* and *ServiceManager* licenses are required. | None  |
-|  ResourceDoesNotExist | The ``ReservationInstance`` uses a ``Resource`` that does not exist on the system. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*ResourceId* contains the ID of the missing ``Resource``. |
-| ConcurrentLicense | Adding or updating the ``ReservationInstance`` is not possible because this would exceed the maximum amount of concurrent bookings defined in the license. | *UsingIdsWithNames* contains the IDs of the ``ReservationInstances`` not able to be added.<br>*Message* contains more information. |
-| ReservationInstanceInvalidFunctionResources | The ``ReservationInstance`` cannot be set to mode ``Confirmed`` because one or more ``Resources`` are used where the linked function is not active or does not exist. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*UsingIds* contains the IDs of the ``FunctionDefinition`` or ``SystemFunctionDefinition`` that are not active or do not exist. |
-| ResourceNotAvailable | A ``Resource`` assigned to the ``ReservationInstance`` is not available, its mode is set to either ``Maintenance``, ``Undefined`` or ``Unavailable``. | *SubjectId* contains the ID of the ``ReservationInstance``.<br> *ResourceId* contains the ID of the unavailable ``Resource``. |
-| ReservationInstanceNotValid | One or more fields of the ``ReservationInstance`` are not valid. The ``ReservationInstance`` is in status ``Undefined`` or there are custom properties with invalid characters (see [Restrictions on property names](#restrictions-on-property-names)). |*SubjectId* contains the ID of the ``ReservationInstance``.|
-|HostingAgentNotRunning|The hosting agent of the ``ReservationInstance`` is not running, which is needed to add, edit or delete a booking hosted on that agent. | *SubjectId* contains the ID of the ``ReservationInstance``. |
-|ServiceWithSameNameAlreadyPlanned|The ``ServiceReservationInstance`` cannot be saved because a ``ServiceReservationInstance`` with the same name that overlaps is already planned. |*SubjectId* contains the ID of the ``ServiceReservationInstance`` with the conflict.<br>*UsingIdsWithNames* contains the ID and name of the ``ServiceReservationInstances`` overlapping and using the same name.|
-|ServiceWithSameServiceIdAlreadyPlanned|The ``ServiceReservationInstance`` cannot be saved because a ``ServiceReservationInstance`` with the same service ID that overlaps is already planned. |*SubjectId* contains the ID of the ``ServiceReservationInstance`` with the conflict.<br>*UsingIdsWithNames* contains the ID and name of the ``ServiceReservationInstances`` overlapping and using the same service ID.| 
-|ResourceCapabilityInvalid| The ``ReservationInstance`` tries to book a capability that does not exist on the ``Resource``. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*ResourceId* contains the ID of the ``Resource`` being used<br>*ResourceCapabilityUsage* contains the invalid capability usage.|
-|ReservationUpdateCausedReservationsToGoToQuarantine| The ``ReservationInstance`` cannot be created or updated because some bookings would go into quarantine. | *MustBeMovedToQuarantine* contains the bookings and their usages that must be moved. |
-|ModuleNotInitialized| The ResourceManager is not initialized yet, the request cannot be handled. | None |
-|UnknownError| An unexpected error happened. | *Message* could contain more information. |
-|NotAllowed| The user does not have the necessary permissions to create, read, update or delete the ``ReservationInstance``. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*Message* will contain more details about the missing permission. |
-|ServiceDefinitionTypeDoesNotMatch|The ``ServiceDefinitionType`` of the ``ReservationInstance`` does not match with the type defined on the service definition. |*ReservationInstanceType* contains the type on the ``ReservationInstance``. |
 
 ### Errors when adding or updating Resources
 
 | Error reason   | Description  | Available properties |
 |---|---|---|
 |  NotLicensed | The necessary license(s) are missing. To create a ``Resource`` the *ResourceManager* license is required, to create a ``FunctionResource`` the *ServiceManager* license is required as well. | None |
-| InitializeFunctionResourceFailed | Occurs when a FunctionResource could not be initialized. | *SubjectId* contains the ID of the ``Resource`` that failed to initialize.<br>*InitializeFunctionResourceResult* contains a more detailed reason, see the [table with possible values](#possible-values-for-the-initializefunctionresourceresult-property). |
+| InitializeFunctionResourceFailed | Occurs when a ``FunctionResource`` could not be initialized. | *SubjectId* contains the ID of the ``Resource`` that failed to initialize.<br>*InitializeFunctionResourceResult* contains a more detailed reason, see the [table with possible values](#possible-values-for-the-initializefunctionresourceresult-property). |
 | ResourceDeleteFailed | Deleting the ``Resources`` failed. | *UsingIds* contains the IDs of the ``Resources`` that could not be deleted. |
 | ResourceInvalidPropertyName | The ``Resource`` has two or more properties with the same name, which is not valid. | *SubjectId* contains the ID of the ``Resource``. |
 | ResourcePoolNotExists | The ``Resource`` refers to a ``ResourcePool`` that does not exist. | *SubjectId* contains the ID of the pool that does not exist. |
@@ -372,6 +373,26 @@ The following table contains possible values for the *InitializeFunctionResource
 | ElementHasDifferentParentThanFunctionResource | The parent element configured on the ``Resource`` and the dve parent configured on the element are different. |
 | InvalidDveState | The parent element configured on the ``Resource`` is not in a valid state (hidden, active, masked or paused). |
 | DuplicateFunctionName | The function name of the ``Resource`` is already in use by a different ``Resource`` on the same parent element. |
+
+### Errors when adding or updating ReservationInstances
+
+| Error reason   | Description  | Available properties |
+|---|---|---|
+|  NotLicensed | The necessary license(s) are missing. To add or update a ``ReservationInstance`` the *ResourceManager* and *ServiceManager* licenses are required. | None  |
+|  ResourceDoesNotExist | The ``ReservationInstance`` uses a ``Resource`` that does not exist on the system. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*ResourceId* contains the ID of the missing ``Resource``. |
+| ConcurrentLicense | Adding or updating the ``ReservationInstance`` is not possible because this would exceed the maximum amount of concurrent bookings defined in the license. | *UsingIdsWithNames* contains the IDs of the ``ReservationInstances`` not able to be added.<br>*Message* contains more information. |
+| ReservationInstanceInvalidFunctionResources | The ``ReservationInstance`` cannot be set to mode ``Confirmed`` because one or more ``Resources`` are used where the linked function is not active or does not exist. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*UsingIds* contains the IDs of the ``FunctionDefinition`` or ``SystemFunctionDefinition`` that are not active or do not exist. |
+| ResourceNotAvailable | A ``Resource`` assigned to the ``ReservationInstance`` is not available, its mode is set to either ``Maintenance``, ``Undefined`` or ``Unavailable``. | *SubjectId* contains the ID of the ``ReservationInstance``.<br> *ResourceId* contains the ID of the unavailable ``Resource``. |
+| ReservationInstanceNotValid | One or more fields of the ``ReservationInstance`` are not valid. The ``ReservationInstance`` is in status ``Undefined`` or there are custom properties with invalid characters (see [Restrictions on property names](#restrictions-on-property-names)). |*SubjectId* contains the ID of the ``ReservationInstance``.|
+|HostingAgentNotRunning|The hosting agent of the ``ReservationInstance`` is not running, which is needed to add, edit or delete a booking hosted on that agent. | *SubjectId* contains the ID of the ``ReservationInstance``. |
+|ServiceWithSameNameAlreadyPlanned|The ``ServiceReservationInstance`` cannot be saved because a ``ServiceReservationInstance`` with the same name that overlaps is already planned. |*SubjectId* contains the ID of the ``ServiceReservationInstance`` with the conflict.<br>*UsingIdsWithNames* contains the ID and name of the ``ServiceReservationInstances`` overlapping and using the same name.|
+|ServiceWithSameServiceIdAlreadyPlanned|The ``ServiceReservationInstance`` cannot be saved because a ``ServiceReservationInstance`` with the same service ID that overlaps is already planned. |*SubjectId* contains the ID of the ``ServiceReservationInstance`` with the conflict.<br>*UsingIdsWithNames* contains the ID and name of the ``ServiceReservationInstances`` overlapping and using the same service ID.| 
+|ResourceCapabilityInvalid| The ``ReservationInstance`` tries to book a capability that does not exist on the ``Resource``. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*ResourceId* contains the ID of the ``Resource`` being used<br>*ResourceCapabilityUsage* contains the invalid capability usage.|
+|ReservationUpdateCausedReservationsToGoToQuarantine| The ``ReservationInstance`` cannot be created or updated because some bookings would go into quarantine. | *MustBeMovedToQuarantine* contains the bookings and their usages that must be moved. |
+|ModuleNotInitialized| The ResourceManager is not initialized yet, the request cannot be handled. | None |
+|UnknownError| An unexpected error happened. | *Message* could contain more information. |
+|NotAllowed| The user does not have the necessary permissions to create, read, update or delete the ``ReservationInstance``. | *SubjectId* contains the ID of the ``ReservationInstance``.<br>*Message* will contain more details about the missing permission. |
+|ServiceDefinitionTypeDoesNotMatch|The ``ServiceDefinitionType`` of the ``ReservationInstance`` does not match with the type defined on the service definition. |*ReservationInstanceType* contains the type on the ``ReservationInstance``. |
 
 #### Restrictions on property names
 
