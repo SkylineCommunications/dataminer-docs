@@ -123,7 +123,7 @@ while (reservationInstancePager.MoveToNextPage())
 ```csharp
 // Retrieve all resources with custom property 'Location' equal to 'London' and sort them by name.
 var resourceFilter = ResourceExposers.Properties.DictStringField("Location").Equal("London");
-var resourcePager = helper.PrepareResourcePaging(resourceFilter.OrderBy(ResourceExposers.Name), preferredPageSize: 200);
+var resourcePager = helper.PrepareResourcePaging(resourceFilter.OrderBy(ResourceExposers.Name), preferredPagingSize: 200);
 
 while (resourcePager.MoveToNextPage())
 {
