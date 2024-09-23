@@ -286,6 +286,15 @@ You can configure where the result should be placed by specifying comma-separate
 
 It is not mandatory to put all returned result columns into parameters; you could choose to only retrieve the calculated value and omit the weight, e.g. "return:1105".
 
+Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
+
+The following code will take all values from the bandwidth column of the PID table (parameter ID 103), group them by the second column in the PID table (containing for example the service ID), count them together (per service), and store them in the total bandwidth column of the Services table (parameter ID 203).
+
+```xml
+<On id="103">parameter</On>
+<Type options="type:sum;groupby:1;return:203">aggregate</Type>
+```
+
 The table must at least have three columns:
 
 - one for the groupby key
@@ -308,15 +317,6 @@ Possible status values:
 - 0: Finished
 - 1: Busy
 - 2: Finished with failure
-
-Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
-
-The following code will take all values from the bandwidth column of the PID table (parameter ID 103), group them by the second column in the PID table (containing for example the service ID), count them together (per service), and store them in the total bandwidth column of the Services table (parameter ID 203).
-
-```xml
-<On id="103">parameter</On>
-<Type options="type:sum;groupby:1;return:203">aggregate</Type>
-```
 
 #### threaded
 
