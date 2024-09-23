@@ -4,11 +4,11 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
-#### 23 September 2024 - Enhancement - CommunicationGateway 3.2.0 - PDB files removed from installer [ID 40557]
+#### 23 September 2024 - Enhancement - CommunicationGateway 3.2.2 - PDB files removed from installer [ID 40557]
 
 To improve security, the CommunicationGateway installer has been updated so that it will no longer install PDB files.
 
-#### 23 September 2024 - Fix - CommunicationGateway 3.2.0 - Incorrect version info in middleware NuGet packages [ID 40541]
+#### 23 September 2024 - Fix - CommunicationGateway 3.2.2 - Incorrect version info in middleware NuGet packages [ID 40541]
 
 Previously, it could occur that the assembly version of the middleware NuGet packages did not correspond with the release version. This has been fixed, and the file and product version info of these assemblies will now specify the release version.
 
