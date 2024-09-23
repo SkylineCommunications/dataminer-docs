@@ -132,4 +132,4 @@ engine.ShowUI(uib2);
 ```
 
 > [!NOTE]
-> Make sure that no multiple blocks are assigned to the same row and column. This could lead to unexpected results in the UI.
+> Avoid assigning multiple blocks to the same row and column. This could lead to unexpected results in the UI.
