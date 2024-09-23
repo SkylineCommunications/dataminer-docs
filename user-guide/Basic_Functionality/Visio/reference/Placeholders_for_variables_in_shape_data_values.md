@@ -1,5 +1,6 @@
 ---
 uid: Placeholders_for_variables_in_shape_data_values
+description: In shape data values in Visio, you can use different placeholders. Among many others, this includes the keywords from Info shape data fields.
 ---
 
 # Placeholders for variables in shape data values

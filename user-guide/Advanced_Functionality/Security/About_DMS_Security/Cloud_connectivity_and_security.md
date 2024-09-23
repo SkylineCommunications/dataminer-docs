@@ -1,5 +1,6 @@
 ---
 uid: Cloud_connectivity_and_security
+description: Security is built into the core design of the DataMiner Cloud Connectivity framework, so you can securely access the wealth of cloud features.
 ---
 
 # Cloud connectivity and security
