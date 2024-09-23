@@ -6,12 +6,6 @@ uid: Terms_partners
 
 When submitting the partnership application on Skyline Communications' website, by selecting the checkbox, you confirm that you have read, have understood, and agree to be bound by the Partner Program Terms below, including any linked policies. This action constitutes a legally binding acceptance of the terms under Belgian law.
 
-Skyline Communications nv\
-Ambachtenstraat 33\
-8870 Izegem\
-Belgium\
-Version 1.0, Tuesday, September 17, 2024
-
 ## 1. Partnership Eligibility
 
 Skyline Communications reserves the right to decline any partnership application without the obligation to provide a reason.
