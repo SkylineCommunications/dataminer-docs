@@ -2,7 +2,7 @@
 uid: ConnectorBestPracticesDVEs
 ---
 
-# Danymic Virtual Elements (DVEs)
+# Dynamic Virtual Elements (DVEs)
 
 ## DVE names
 
