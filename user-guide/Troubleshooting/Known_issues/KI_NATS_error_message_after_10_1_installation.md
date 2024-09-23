@@ -10,7 +10,7 @@ DataMiner 10.1 and higher
 
 ## Cause
 
-Introduction of inter-process communication via NATS [[ID_27496][ID_28082][ID_28131][ID_28660]](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id-27496id-28082id-28131-id-28233id-28660)
+Introduction of inter-process communication via NATS [[ID 27496][ID 28082][ID 28131][ID 28660]](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id-27496id-28082id-28131-id-28233id-28660)
 
 ## Fix
 

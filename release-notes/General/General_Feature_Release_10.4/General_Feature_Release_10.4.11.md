@@ -209,7 +209,7 @@ When you collapsed the filter pane, in that filter pane, the text box would be c
 
 Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
 
-#### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID_40705]
+#### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 

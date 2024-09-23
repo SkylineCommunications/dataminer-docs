@@ -14,7 +14,7 @@ Windows 2019 upgrade/installation
 
 ## Fix
 
-Install DataMiner 10.1.0/10.0.13 ([ID_27891](xref:General_Main_Release_10.1.0_enhancements#slport-now-automatically-resizes-the-socket-buffer-before-receiving-data-from-a-socket-id-27891)).
+Install DataMiner 10.1.0/10.0.13 ([ID 27891](xref:General_Main_Release_10.1.0_enhancements#slport-now-automatically-resizes-the-socket-buffer-before-receiving-data-from-a-socket-id-27891)).
 
 ## Issue description
 
