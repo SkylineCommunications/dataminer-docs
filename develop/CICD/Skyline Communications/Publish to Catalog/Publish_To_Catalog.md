@@ -2,7 +2,7 @@
 uid: publish_to_catalog
 ---
 
-# Publishing items on the DataMiner Catalog
+# Publishing items in the DataMiner Catalog
 
 The [DataMiner Catalog](https://catalog.dataminer.services/) allows users to quickly look up, download, and deploy various DataMiner-related items.
 
