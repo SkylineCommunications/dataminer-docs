@@ -9,11 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 20 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item for an authenticated user [ID 40825]
+#### 23 September 2024 - Enhancement - Catalog API - Enhanced image support path format in Register Catalog item call [ID 40862]
+
+A user can now reference to an image using the home directory path '~'syntax in addition to using a relative path.
+The image directory used in the markdown is now considered case insensitive during image retrieval of the cloud. 
+
+#### 23 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item for an authenticated user [ID 40825]
 
 When a Catalog item uses the same name as another connector Catalog item that was not registered via the Catalog API, the wrong description could be shown when viewing the item as an authenticated user.
 
-#### 20 September 2024 - Fix - Catalog - Duplicate Catalog items [ID 40839]
+#### 23 September 2024 - Fix - Catalog - Duplicate Catalog items [ID 40839]
 
 A duplicate Catalog item could be introduced in the Catalog after using the register item call from the Catalog API on an existing item that was not originally registered via the Catalog API. 
 
