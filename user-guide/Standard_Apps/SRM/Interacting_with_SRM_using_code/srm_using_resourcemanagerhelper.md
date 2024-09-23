@@ -26,9 +26,9 @@ The ``ResourceManagerHelper`` provides methods to retrieve ``Resources`` and ``R
 var reservationInstanceFilter = ReservationInstanceExposers.Name.Contains("satellite").AND(ServiceReservationInstanceExposers.ServiceDefinitionID.Equal(Guid.Parse("...")));
 
 // Filter that matches all Resources that have a name that contains 'Encoder' and are linked to a specific function
-var resourceFilter = ResourceExposers.Name.Contains("Encoder").FunctionResourceExposers.FunctionGUID.Equal(Guid.Parse("..."));
+var resourceFilter = ResourceExposers.Name.Contains("Encoder").AND(FunctionResourceExposers.FunctionGUID.Equal(Guid.Parse("...")));
 
-// Filter that matches all ReservationInstances that have overlap with the timerange from now until 3 hours from now
+// Filter that matches all ReservationInstances overlapping with the time range between now and 3 hours from now.
 var start = DateTime.UtcNow;
 var end = start.AddHours(3);
 var timeRangeFilter = ReservationInstanceExposers.Start.LessThan(end).AND(ReservationInstanceExposers.End.GreaterThan(start));
@@ -62,7 +62,7 @@ var reservationInstances = helper.GetReservationInstances(reservationInstanceFil
 
 ```csharp
 var resourceFilter = ResourceExposers.Name.Contains("encoder");
-var resourcePager = helper.PrepareResourcePaging(resourceFilter.ToQuery(), preferredPageSize: 200);
+var resourcePager = helper.PrepareResourcePaging(resourceFilter.ToQuery(), preferredPagingSize: 200);
 
 while (resourcePager.MoveToNextPage())
 {
@@ -71,7 +71,7 @@ while (resourcePager.MoveToNextPage())
 }
 
 var reservationInstanceFilter = ReservationInstanceExposers.Name.Contains("Satellite");
-var reservationInstancePager = helper.PrepareReservationInstancePaging(reservationInstanceFilter.ToQuery(), preferredPageSize: 200);
+var reservationInstancePager = helper.PrepareReservationInstancePaging(reservationInstanceFilter.ToQuery(), preferredPagingSize: 200);
 
 while (reservationInstancePager.MoveToNextPage())
 {
@@ -93,7 +93,7 @@ while (resourcePager.MoveToNextPage())
 }
 
 var reservationInstanceFilter = ReservationInstanceExposers.Name.Contains("Satellite");
-var reservationInstancePager = helper.PrepareReservationInstancePaging(reservationInstanceFilter.OrderBy(ReservationInstanceExposers.Name), preferredPageSize: 200);
+var reservationInstancePager = helper.PrepareReservationInstancePaging(reservationInstanceFilter.OrderBy(ReservationInstanceExposers.Name), preferredPagingSize: 200);
 
 while (reservationInstancePager.MoveToNextPage())
 {
@@ -278,7 +278,7 @@ Next to methods to perform the regular add, update and delete operations on ``Re
 
 ```csharp
 var bookingId = Guid.Parse("...");
-var oldProperties = reservationInstance.Properties; // The current properties on the booking we intent to overwrite
+var oldProperties = reservationInstance.Properties; // The current properties on the booking we intend to overwrite
 var newProperties = new JSONSerializableDictionary();
 newProperties.AddOrUpdate("key", "value");
 
