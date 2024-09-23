@@ -10,6 +10,8 @@ For ease of use, [Postman](https://www.postman.com/) will be used to execute the
 
 While the tutorial uses the example of a connector, registering a different type of Catalog item is very similar.
 
+Expected duration: 10 minutes
+
 ## Prerequisites
 
 - An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.

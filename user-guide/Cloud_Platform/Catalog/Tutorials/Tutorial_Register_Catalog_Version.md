@@ -8,6 +8,8 @@ This tutorial demonstrates how to add a new version to a Catalog item using the 
 
 While the tutorial uses the example of a connector, registering a new version for a different type of Catalog item is very similar.
 
+Expected duration: 15 minutes
+
 ## Prerequisites
 
 - An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
