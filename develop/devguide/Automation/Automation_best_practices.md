@@ -14,6 +14,8 @@ Keep the following best practices in mind:
 
   Instead, use *engine.Log* for tracing. This way, instead of generating information events, you will add lines in the Automation log file. If for some reason, you want convert these log lines to information events for a short amount of time, consider using preprocessor directives, or make a wrapper that allows you to quickly switch between information events and log lines.
 
+  We also recommend keeping the trace logging to a minimum to prevent the Automation log file from being spammed. Using preprocessor directives, you can quickly enable and disable the trace logging for specific scripts when investigating problems.
+
 - Avoid generating information events when your script executes sets.
 
    By default, DataMiner generates an information event when an Automation script executes a set operation. If at all possible, avoid the generation of these information events by using the [Engine.SetFlag](xref:Skyline.DataMiner.Automation.Engine.SetFlag(Skyline.DataMiner.Automation.RunTimeFlags)) method.
