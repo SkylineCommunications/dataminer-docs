@@ -20,20 +20,20 @@ Specifies the aggregation options.
 
 The following options are available:
 
-- allowValues/ignoreValues
-- avoidZeroInResult
-- defaultIf
-- defaultValue
-- equation
-- equationvalue
-- filter
-- groupby
-- groupbyTable
-- join
-- return
-- status
-- threaded
-- type
+- [allowValues/ignoreValues](#allowvaluesignorevalues)
+- [avoidZeroInResult](#avoidzeroinresult)
+- [defaultIf](#defaultif)
+- [defaultValue](#defaultvalue)
+- [equation](#equation)
+- [equationvalue](#equationvalue)
+- [filter](#filter)
+- [groupby](#groupby)
+- [groupbyTable](#groupbytable)
+- [join](#join)
+- [return](#return)
+- [status](#status)
+- [threaded](#threaded)
+- [type](#type)
 
 #### allowValues/ignoreValues
 
