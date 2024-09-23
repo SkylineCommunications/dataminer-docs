@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_page_and_shape_options
+description: When you configure shape data in Visio to enrich a drawing with DataMiner functionality, you can add many different options to pages or shapes.
 ---
 
 # Overview of page and shape options

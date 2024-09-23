@@ -3921,7 +3921,6 @@ items:
 - name: Web Services
   items:
   - name: Web Services (v1)
-    topicUid: WS_v1
     items:
       - name: Using the Web Services (v1)
         items:
@@ -5118,10 +5117,8 @@ items:
           - name: DMAVisioRegionAction
             topicUid: DMAVisioRegionAction
   - name: Web Services (v0)
-    topicUid: WS_v0
     items:
       - name: About the Web Services (v0)
-        topicUid: WS_About_v0
         items:
           - name: Using the Web Services (v0)
             topicUid: Using_the_Web_Services_v0

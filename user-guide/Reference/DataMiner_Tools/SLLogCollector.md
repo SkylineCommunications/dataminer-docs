@@ -1,5 +1,6 @@
 ---
 uid: SLLogCollector
+description: SLLogCollector is available by default on each DataMiner Agent, allowing easy log and memory dump collection to troubleshoot DataMiner issues.
 ---
 
 # SLLogCollector

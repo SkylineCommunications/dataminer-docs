@@ -1,5 +1,6 @@
 ---
 uid: Upgrading_a_DataMiner_Agent_in_System_Center
+description: Go to 'System Center' > 'Agents' > 'Manage', and click 'Upgrade'. Make sure you upgrade all DataMiner Agents in a DMS to the same version.
 ---
 
 # Upgrading a DataMiner Agent in System Center
