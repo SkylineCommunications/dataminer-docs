@@ -1,18 +1,10 @@
 ---
-uid: Parameter_names
+uid: ConnectorBestPracticesReservedParameterNames
 ---
 
-# Parameter names
+# Reserved parameter names
 
-- Parameter names must be well-chosen, describing the value that the parameter will hold. Note that this is also important to improve the readability of code in Quick Actions:
-
-    - The *Parameter* class (Skyline.DataMiner.Scripting) generates constant fields for parameters defined in a protocol. The name of a field corresponds to the name of the parameter, excluding spaces and symbols.
-
-    - The *SLProtocolExt* interface generates properties for parameters defined in a protocol. The name of a property corresponds to the name of the parameter, excluding spaces and symbols.
-
-- Prohibited names
-
-    The following strings must not be used as parameter names or parameter descriptions. Note that the items in the table should be considered case-insensitive (E.g. \_clients_connected must also not be used).
+The following strings must not be used as parameter names or parameter descriptions. Note that the items in the table should be considered case-insensitive (E.g. \_clients_connected must also not be used).
 
 |                                        |                                            |                                |
 |----------------------------------------|--------------------------------------------|--------------------------------|
