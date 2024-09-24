@@ -11,7 +11,7 @@ Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is 
 
 This component allows you to visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
-![Node edge graph](~/user-guide/images/Node_Edge_Graph.png)<br>*Node edge graph component in DataMiner 10.4.6*
+![Node edge graph](~/user-guide/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
 The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects). Clicking items in the node edge graph also makes these available as a feed for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
 
