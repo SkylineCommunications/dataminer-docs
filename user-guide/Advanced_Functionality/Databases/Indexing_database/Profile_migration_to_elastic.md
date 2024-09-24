@@ -4,7 +4,7 @@ uid: Profile_migration_to_elastic
 
 # Migrating SRM profiles to the indexing database
 
-Starting from DataMiner version 10.1.0/10.0.8<!-- RN 25758 -->, you can migrate the profiles from the *Profiles.xml* file to the indexing database. This improves the scalability and performance on systems that have a large number of profiles.
+Migrating the profiles from the *Profiles.xml* file to the indexing database improves the scalability and performance on systems that have a large number of profiles.<!-- RN 25758 -->
 
 When you [install an indexing database](xref:Installing_Elasticsearch_via_DataMiner) and [migrate booking data](xref:Configuring_DataMiner_Indexing) on an existing DataMiner System prior to DataMiner 10.4.0, profiles are not automatically migrated. Based on your specific setup, and keeping in mind the [limitations and differences with XML storage](#limitations-and-differences-with-xml-storage), you can decide independently whether or not you want to start this migration. However, **from DataMiner 10.4.0 onwards**, the use of an indexing database (or Storage as a Service) to store profiles is **mandatory**. Using XML storage is no longer possible from that DataMiner version onwards.
 
