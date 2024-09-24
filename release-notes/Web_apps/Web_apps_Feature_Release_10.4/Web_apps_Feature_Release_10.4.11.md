@@ -256,3 +256,9 @@ A number of problems could occur when attaching CSV files to email reports:
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 Due to a caching problem, when a report with *Alarm table* components was generated, in some cases, those components could be empty although alarms were present on the system.
+
+#### Dashboards app: Problem when importing a dashboard into a dashboard subfolder [ID 40828]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you imported a dashboard into a dashboard subfolder, the Dashboards app would navigate to an incorrect URL, causing an error to occur.
