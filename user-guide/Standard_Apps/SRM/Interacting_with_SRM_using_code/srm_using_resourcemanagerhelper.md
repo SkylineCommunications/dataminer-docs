@@ -19,13 +19,7 @@ var helper = new ResourceManagerHelper(protocol.SLNet.SendSingleResponseMessage)
 ```
 
 > [!NOTE]
-> Be careful when updating bookings in connectors. Depending on the scale of the SRM system, adding or updating bookings can take a while. 
-
-The SRM framework also provides a way to access the same helper in an automation script:
-
-```csharp
-var helper = SrmManagers.ResourceManager;
-```
+> Be careful when updating bookings in connectors. Depending on the scale of the SRM system, adding or updating bookings can take a while.
 
 ## Reading Resources and ReservationInstances
 
@@ -273,7 +267,7 @@ foreach (var resource in resources)
     }
 }
 
- // Example value for 'logString.ToString()':
+// Example value for 'logString.ToString()':
 // Usage details for resource 'Encoder A' (c89d58c6-7173-4f08-b067-f27aa486e2ef):
 //      Concurrency left: 9
 //      Capacity left for capacity with ID '0ec82fec-2c43-46af-ab73-fb4d478e95ea': 50,0
