@@ -262,3 +262,9 @@ Due to a caching problem, when a report with *Alarm table* components was genera
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you imported a dashboard into a dashboard subfolder, the Dashboards app would navigate to an incorrect URL, causing an error to occur.
+
+#### Dashboards/Low-Code Apps: Problem when a large amount of feed data was requested at the same time [ID 40835]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a large amount of feed data was requested at the same time (e.g. when you clicked CTRL+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
