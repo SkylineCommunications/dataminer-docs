@@ -83,6 +83,12 @@ DataMiner Cube could leak memory each time you opened the *Reports* page of a ca
 
 When you opened a card page that contained a visual overview, in some rare cases, the page could remain empty, showing a "Loading" message.
 
+#### Home page: Multiple unnecessary lines would show up in 'Did you know?' list [ID 40775]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+On Cube's home page, in some cases, multiple unnecessary lines would show up in the *Did you know?* list.
+
 #### Information templates: A number of properties would not be copied when duplicating an information template parameter [ID 40799]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
