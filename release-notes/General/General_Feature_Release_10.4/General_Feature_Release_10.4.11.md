@@ -170,6 +170,14 @@ Because of a number of enhancements, overall performance has increased when load
 
 When the *ReIndexElasticSearchIndexes* tool was run, the existing mappings (which define how types should be handled) would incorrectly be overwritten by the default mappings. From now on, the existing mappings will be correctly passed from source database to destination database.
 
+#### SLDataGateway would not send the correct error to the client application when there was a database problem [ID 40488]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g. DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
+
+Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
+
 #### Logger tables and slatable data would not be deleted from the Cassandra Cluster database when the associated element was deleted [ID 40523]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->

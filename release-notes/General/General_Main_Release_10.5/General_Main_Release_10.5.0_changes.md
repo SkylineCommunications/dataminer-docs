@@ -918,6 +918,14 @@ For example, when *defaultApp* is set to "Cube" in *C:\\Skyline DataMiner\\Webpa
 > [!NOTE]
 > When *defaultApp* was set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g. Linux, macOS, etc.), will it still be opened in the Monitoring app.
 
+#### SLDataGateway would not send the correct error to the client application when there was a database problem [ID 40488]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g. DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
+
+Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
+
 #### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->

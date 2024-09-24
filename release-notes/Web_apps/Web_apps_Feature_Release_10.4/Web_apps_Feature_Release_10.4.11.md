@@ -36,6 +36,12 @@ The *Security* selection box offers the following preset options:
 - Protected, only you can edit
 - Private, only you have access
 
+#### Dashboards/Low-Code Apps - Table component: Applying a filter by feeding a string to the component [ID 40793]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+It is now possible to apply a filter to a Table component by feeding it a string. That string will then automatically be entered into the component's search box.
+
 ## Changes
 
 ### Enhancements
