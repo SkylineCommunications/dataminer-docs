@@ -100,6 +100,12 @@ From now on, the queries configured to fetch items to be displayed on a particul
 
 In the *Layout* tab of a *Table* component, it is now possible to indicate whether the table filter should be visible or not.
 
+#### Low-Code Apps: Enhanced performance when creating a new draft of an existing low-code application [ID_40866]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance has increased when creating a new draft of an existing low-code application.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Dropdown fields containing elements, resources or service definitions would show an incorrect warning message [ID 40399]
