@@ -41,10 +41,10 @@ By default, DataMiner credits are deducted monthly based on the metered usage (p
 | Support services | MUA < 200: Community Plan<br>MUA >= 200: Continuity/Evolve | Community Plan |
 
 ### New connector development and changes to existing connectors
-In general, a system running as usage-based service, can use any of the existing connectors available on the [catalog](https://catalog.dataminer.services/) as-is, regardless if they have active subscriptions or are just on PPU, also including new connector versions as they become available.
 
-Organizations with 200+ MUA can request changes to existing connectors as well as new connectors, with no additional costs, naturally, **subject to a fair use policy**. However, for Organizations under 200 MUA, these services are charged as professional service credits or, optionally, through the purchase of a perpetual license, to lock the price of new connector development.
+In general, a system running as a usage-based service can use any of the existing connectors available in the [DataMiner Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
 
+Organizations with 200+ MUA can request changes to existing connectors as well as new connectors, with no additional costs, **subject to a fair use policy**. However, for organizations under 200 MUA, these services are charged as professional service credits or, optionally, through the purchase of a perpetual license, to lock the price of new connector development.
 
 ## Billing & metering
 
