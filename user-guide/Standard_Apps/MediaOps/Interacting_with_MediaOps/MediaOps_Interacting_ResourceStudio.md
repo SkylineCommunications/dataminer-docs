@@ -4,6 +4,9 @@ uid: MediaOps_Interacting_ResourceStudio
 
 # TBD
 
+Package: Skyline.DataMiner.Utils.MediaOps.Temp.Helpers
+
+
 ```csharp
 public class Script
 {

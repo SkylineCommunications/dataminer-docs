@@ -30,12 +30,15 @@ When the below standard MediaOps apps are insufficient to meet the needs of the 
 
 <div class="row">
   <div class="column">
-    <a href="/user-guide/Standard_Apps/MediaOps/Apps/Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/user-guide/images/mo_ResourceStudio.svg" style="width:100%"></a>
+    <a href="/user-guide/Standard_Apps/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/user-guide/images/mo_ResourceStudio.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Standard_Apps/MediaOps/Apps/Scheduling.html" title="Scheduling" target="_self"><img src="~/user-guide/images/mo_Scheduling.svg" style="width:100%"></a>
+    <a href="/user-guide/Standard_Apps/MediaOps/Apps/MO_Satellite.html" title="Satellite Data & Capacity Planning" target="_self"><img src="~/user-guide/images/mo_SatelliteDataCapacityPlanning.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Standard_Apps/MediaOps/Apps/Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/user-guide/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
+    <a href="/user-guide/Standard_Apps/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/user-guide/images/mo_Scheduling.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/user-guide/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
   </div>
 </div>

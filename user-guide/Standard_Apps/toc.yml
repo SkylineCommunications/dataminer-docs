@@ -215,8 +215,8 @@ items:
     items:
       - name: Installing dataminer.MediaOps
         topicUid: Installing_MediaOps
-      - name: Customizing dataminer.MediaOps
-        topicUid: MediaOps_Customizations
+      - name: MediaOps Integrations
+        topicUid: MediaOps_Integration
       - name: MediaOps applications
         topicUid: MediaOps_apps
         items:
@@ -241,6 +241,11 @@ items:
             items:
               - name: Changing icons
                 topicUid: MO_RS_Changing_Icons
+          - name: Satellite Data & Capacity Planning
+            topicUid: MO_Satellite
+            items:
+              - name: Transponder Plan
+                topicUid: MO_Sat_Transponder_Plan
           - name: Scheduling
             topicUid: MO_Scheduling
             items:
@@ -251,7 +256,7 @@ items:
               - name: Locking of Jobs
                 topicUid: MO_S_Job_Locking
               - name: Profile Config
-                topicUid: MO_ProfileConfig
+                topicUid: MO_S_Configuration
           - name: Workflow Designer
             topicUid: MO_Workflow_Designer
             items:
