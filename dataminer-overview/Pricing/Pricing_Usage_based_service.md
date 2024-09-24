@@ -36,8 +36,6 @@ By default, DataMiner credits are deducted monthly based on the metered usage (p
 | Annual automatic renewal | Yes | N/A |
 | Annual subscription fee | Yes | N/A |
 | Over-utilization | Charged at the standard Pay-per-use fee | N/A |
-| New connector development | MUA < 200: charged as professional services credits or, optionally, you can purchase the perpetual license for cost control. <br>MUA >= 200: included with no additional costs, subject to a fair use policy |
-| Changes to existing connectors | MUA < 200: charged as professional services credits <br> MUA >= 200: included |
 | Support services | MUA < 200: Community Plan<br>MUA >= 200: Continuity/Evolve | Community Plan |
 
 ### New connector development and changes to existing connectors
