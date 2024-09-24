@@ -250,3 +250,9 @@ A number of problems could occur when attaching CSV files to email reports:
 - When a CSV file was larger than 10 Mb, the generation of that file could get stuck. As this would cause the file to remain locked, it was not possible to attach it to the email message.
 - When you toggled the *Include CSV* option in the report preview, the data would incorrectly already be fetched. From now on, the data will only be fetched when you click *Send*.
 - When multiple components were spread over different pages of the PDF file, only the components on the last page of the PDF file would have their CSV file attached. From now on, all CSV files will get attached correctly.
+
+#### Dashboards app: Alarm table components in a report could be empty due to a caching problem [ID 40819]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Due to a caching problem, when a report with *Alarm table* components was generated, in some cases, those components could be empty although alarms were present on the system.
