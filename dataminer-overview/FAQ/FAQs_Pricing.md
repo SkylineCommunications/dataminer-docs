@@ -6,8 +6,7 @@ uid: FAQs_Pricing
 
 - **Can different commercial models exist in the same organization?**
 
-  Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An organization can have perpetual licenses on one DMS while running usage-based services on a different DMS. On the same DMS only one model can exist. 
-
+  Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An organization can have perpetual licenses on one DMS while running usage-based services on a different DMS. On the same DMS, only one model can exist.
 
 - **Can I transition my perpetual licenses into subscription?**
 
