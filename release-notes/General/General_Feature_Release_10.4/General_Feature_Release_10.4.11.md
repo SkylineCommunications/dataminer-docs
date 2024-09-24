@@ -22,7 +22,25 @@ uid: General_Feature_Release_10.4.11
 
 ## New features
 
-*No new features have been added yet.*
+#### Automation: Basic script execution metrics [ID 40687]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+The SLAutomation process will now generate the following script execution metrics:
+
+- Total number of executed scripts (including scripts that could not be started)
+- Total number of failed scripts
+- Duration of each script
+- Time at which each script was started
+- Users who started the scripts
+- Result of each script (success of failure)
+
+To view these metrics, open the *SLNetClientTest* tool, go to *Advanced > Automation...*, and open one of the following tabs:
+
+| Tab | Information |
+|-----|-------------|
+| Scripts Statistics    | Information about each script execution.     |
+| Automation Statistics | General information about script executions. |
 
 ## Changes
 
@@ -75,6 +93,12 @@ Because of a number of enhancements, from now on, no manual intervention whatsoe
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 Because of a number of enhancements, variance increase detection has been improved.
+
+#### SLDataGateway: Enhanced performance when writing data to the database [ID 40609]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance has increased when writing data to the database.
 
 #### Trimmed log entries will now get an '(x bytes omitted)' suffix [ID 40629]
 

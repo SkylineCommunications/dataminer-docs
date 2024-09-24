@@ -164,6 +164,26 @@ The *Info* object has the following properties:
 > - The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user opens the *Failover Config* window. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message. When you do not have this permission, an error message will appear.
 > - See also [RN 40267](xref:Cube_Feature_Release_10.4.10#failover-config-window-will-now-show-information-regarding-the-pcap-libraries-that-are-installed-on-the-dmas-id-40267)
 
+#### Automation: Basic script execution metrics [ID 40687]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+The SLAutomation process will now generate the following script execution metrics:
+
+- Total number of executed scripts (including scripts that could not be started)
+- Total number of failed scripts
+- Duration of each script
+- Time at which each script was started
+- Users who started the scripts
+- Result of each script (success of failure)
+
+To view these metrics, open the *SLNetClientTest* tool, go to *Advanced > Automation...*, and open one of the following tabs:
+
+| Tab | Information |
+|-----|-------------|
+| Scripts Statistics    | Information about each script execution.     |
+| Automation Statistics | General information about script executions. |
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID 38153]
