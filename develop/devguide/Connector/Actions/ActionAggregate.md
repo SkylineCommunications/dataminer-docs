@@ -34,6 +34,7 @@ The following options are available:
 - [status](#status)
 - [threaded](#threaded)
 - [type](#type)
+- [weight](#weight)
 
 #### allowValues/ignoreValues
 
@@ -374,36 +375,37 @@ In the following example, the result values of the avg extended will be placed i
   <Type options="groupby:2;type:avg extended;return:202,203,204,205">aggregate</Type>
 </Action>
 ```
+#### weight
 
-### Type@regex
+The weight option is used when the value column represents an average with an associated weight. This weight adjusts the relative significance of each row in the final result, ensuring accurate aggregation.
 
-(optional): Specifies the regular expression to use. Feature introduced in DataMiner 10.1.8 (RN 30199).
+Alternatively, the weight can represent the frequency of occurrences, acting as a multiplier to indicate that some rows may represent more items than others.
 
-## Examples
-
-### Example 1
-
+Example:
 ```xml
-<Action id="102">
+<Action id="1">
   <On id="102">parameter</On>
   <Type options="groupby:3;weight:103;type:avg;return:202">aggregate</Type>
 </Action>
 ```
+In this case, the weight is defined by column 103, which represents how many times the corresponding value in column 102 occurs.
 
 |PK (101)|Value (102)|Weight (103)|Group (104)|
 |--- |--- |--- |--- |
 |1|10|50|1|
 |2|2|5|1|
 
-This results in:
+Results in:
 
 |PK (201)|Value (202)|
 |--- |--- |
 |1|9|
 
-The weight is specified because one row represents more items than the other, and when aggregating, this must be taken into account.
+### Type@regex
 
-### Example 2
+(optional): Specifies the regular expression to use. Feature introduced in DataMiner 10.1.8 (RN 30199).
+
+## Examples
 
 ```xml
 <Type options="groupby:1:202,2:203;type:count;return:204">aggregate</Type>
