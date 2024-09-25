@@ -10,7 +10,7 @@ If a dashboard has been configured with one or more feed components, it is possi
 
 > [!NOTE]
 >
-> - From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
+> - From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter "d" is used instead of "data".
 > - To refer to a query in the dashboard URL, use the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
 > - To only display a dashboard without the rest of the app, add the argument "*embed=true*". To display the *Clear all* button for an embedded dashboard, add "*subheader=true*" as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
@@ -144,7 +144,7 @@ Prior to DataMiner 10.2.0/10.2.2, you can pass data to a dashboard using the fol
 
 In the syntax above, "datatype" is one of the objects mentioned below (e.g. "elements"), and "datakeys" is its identifier (e.g. the DMA ID and element ID).
 
-Within one object, use a slash (“/”) as the separator between its components. If different objects of the same type are specified, use “%1D” as the separator between the objects.
+Within one object, use a slash ("/") as the separator between its components. If different objects of the same type are specified, use "%1D" as the separator between the objects.
 
 For example:
 
@@ -191,11 +191,11 @@ Within the dashboard or app URL, the following data objects can be specified:
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.1 onwards, for a predefined time span in a time range component, the URL can contain the name of that time span (e.g. today, yesterday, etc.) instead of the start time and end time of the time span.
 
-- *bookings*: Requires the booking ID. Supported from DataMiner 10.0.3 onwards.
+- *bookings*: Requires the booking ID.
 
-- *service definitions*: Requires the service definition ID. Supported from DataMiner 10.0.5 onwards.
+- *service definitions*: Requires the service definition ID.
 
-- *cpes*: Deprecated from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (but still supported for the sake of backwards compatibility). To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value. Prior to DataMiner 10.0.5, the DMA ID, the element ID, the field PID, the table PID, and the value are required.
+- *cpes*: Deprecated from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (but still supported for the sake of backwards compatibility). To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value.
 
 - *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes")<!-- RN 32594 -->. To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
 

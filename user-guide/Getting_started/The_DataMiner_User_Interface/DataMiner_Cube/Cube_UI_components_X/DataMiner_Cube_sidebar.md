@@ -12,7 +12,7 @@ On the left-hand side of the Cube UI, a sidebar is displayed. This sidebar conta
 | ![Activity](~/user-guide/images/Activity.png) | Activity | Opens a pane listing recent items. See [Activity pane](#activity-pane). |
 | ![Apps](~/user-guide/images/Apps.png) | Apps | Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane). |
 | ![Workspace](~/user-guide/images/Workspace.png) | Workspace | Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces). |
-| ![Community](~/user-guide/images/Community.png) | Community | This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features. |
+| ![Community](~/user-guide/images/Community.png) | Community | Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features. |
 
 From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the "..." or "+" button. This button opens a menu where you can select the buttons you want to pin.
 
@@ -58,7 +58,7 @@ The icons that precede an item name in the tree show what kind of item it is and
   | Icon | Item description |
   |------|------------------|
   | ![View icon](~/user-guide/images/CubeXView.png) | View |
-  | ![Element icon](~/user-guide/images/CubeXElement.png) | Element or default function DVE (prior to DataMiner 10.0.5 - requires DataMiner Service & Resource Management) |
+  | ![Element icon](~/user-guide/images/CubeXElement.png) | Element |
   | ![Service icon](~/user-guide/images/CubeXService.png) | Service |
   | ![Service template icon](~/user-guide/images/CubeXServiceTemplate.png) | Service template |
   | ![Redundancy group icon](~/user-guide/images/CubeXRedunGroup.png) | Redundancy group |
@@ -67,7 +67,7 @@ The icons that precede an item name in the tree show what kind of item it is and
   | ![Parameter icon](~/user-guide/images/CubeXParameter.png) | Parameter |
   | ![Script icon](~/user-guide/images/CubeXScript.png) | Script |
   | ![Setting icon](~/user-guide/images/CubeXSetting.png) | Setting |
-  | ![Function icon](~/user-guide/images/CubeXFunction.png) | Default function DVE (from DataMiner 10.0.5 onwards – requires DataMiner Service & Resource Management) |
+  | ![Function icon](~/user-guide/images/CubeXFunction.png) | Default function DVE (requires DataMiner Service & Resource Management) |
 
 - View icons are filled with a different color, depending on their alarm state. On other icons, a colored circle is displayed when they are in a particular alarm state. In addition to the default colors indicating the alarm severity, the circle can also be displayed in purple to indicate that an item is masked.
 
@@ -89,7 +89,7 @@ The icons that precede an item name in the tree show what kind of item it is and
   | Orange X | Indicates that an element in a view or service is in timeout state. |
   | White X on red background | Indicates that an element is in error state. |
   | Upwards arrow | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service. |
-  | Circle containing a horizontal line, for example: ![Unavailable element icon](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
+  | Circle containing a horizontal line, for example: ![Unavailable element icon](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. |
 
 #### Special icon settings
 

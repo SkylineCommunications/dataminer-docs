@@ -402,16 +402,12 @@ items:
             topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
           - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
             topicUid: KI_RTE_with_SLAnalytics_when_upgrading
-          - name: Incorrect RTE counts in SLWatchdog2.txt and Alarm Console
-            topicUid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
           - name: NATS error message after 10.1 installation
             topicUid: KI_NATS_error_message_after_10_1_installation
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup
             topicUid: KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup
-          - name: Smart-serial communication no longer working
-            topicUid: KI_Smart-serial_communication_no_longer_working
           - name: SNMP SET returns a 'NO ACCESS' error
             topicUid: KI_SNMP_SET_returns_a_NO_ACCESS_error
           - name: Unavailable system database after DataMiner server reboot

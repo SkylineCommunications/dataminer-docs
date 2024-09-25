@@ -65,8 +65,6 @@ Remarks on the Elasticsearch installation:
 
 - In a DataMiner System, there must be at least 2 master nodes. By default, the 3 DataMiner Agents with the lowest DataMiner ID will act as master nodes.
 
-- Prior to DataMiner 10.0.1, it is possible to set *Location* to *Remote* in the installation wizard. However, as this is not supported in later versions of DataMiner, we strongly recommend not to use this option.
-
 - Alarms in the Elasticsearch database are kept in two separate tables, one for active alarms and one for closed alarms.
 
 - Unless your DataMiner System uses the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature, to add a remote Elasticsearch node, you need to install Elasticsearch manually on the node, and then connect the DMS to the node using an *InstallElasticAndMigrateRequest* message in a script. For example:
