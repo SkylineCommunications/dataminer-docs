@@ -377,11 +377,9 @@ In the following example, the result values of the avg extended will be placed i
 ```
 #### weight
 
-Specifies the weight for each row in the aggregation, representing the frequency or number of occurrences of a value.
-This option is used to adjust the impact of individual rows during aggregation, especially in calculations such as averages, where some rows may represent more items than others.
+The weight option is used when the value column represents an average with an associated weight. This weight adjusts the relative significance of each row in the final result, ensuring accurate aggregation.
 
-The weight can be set to a column that contains frequency values, allowing for weighted aggregation operations.
-For instance, when calculating the average, rows with higher weight will have a greater influence on the result.
+Alternatively, the weight can represent the frequency of occurrences, acting as a multiplier to indicate that some rows may represent more items than others.
 
 Example:
 ```xml
