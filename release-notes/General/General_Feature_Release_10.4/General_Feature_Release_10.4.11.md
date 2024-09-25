@@ -72,7 +72,7 @@ From now on, when the virtual IP address check has concluded that the IP address
 
 #### Visual Overview: Enhanced image quality when zooming [ID 40537]
 
-<!-- FR 10.4.11 -->
+<!-- MR 10.5.0 - FR 10.4.11 -->
 
 Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
 
@@ -273,3 +273,9 @@ As from feature release 10.4.3, overall performance had decreased when either de
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
 
 When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more than 950 elements, in some cases, SLAnalytics could throw errors when fetching data from the database at startup.
+
+#### Word "asynchronous" would be spelled incorrectly in element log file entries [ID 40856]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.

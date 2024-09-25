@@ -138,3 +138,9 @@ Also, when you collapse the filter pane, the looking glass icon will now blink b
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
 
 When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more than 950 elements, in some cases, SLAnalytics could throw errors when fetching data from the database at startup.
+
+#### Word "asynchronous" would be spelled incorrectly in element log file entries [ID 40856]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.

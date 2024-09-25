@@ -114,3 +114,9 @@ When resource pools were retrieved with a property filter, and one of the resour
 When you collapsed the filter pane, in that filter pane, the text box would be cleared and all alarm severity checkboxes would automatically be selected. From now on, when you expand or collapse the filter pane, the text box will no longer be cleared and the checkboxes will no longer be automatically selected.
 
 Also, when you collapse the filter pane, the looking glass icon will now blink blue if a non-default filter is set.
+
+#### Word "asynchronous" would be spelled incorrectly in element log file entries [ID 40856]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.

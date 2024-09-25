@@ -35,6 +35,25 @@ In the *Logging* section of *System Center*, a number of additional log files ca
 - Spectrum Manager
 - UI Provider
 
+#### Adding or changing arguments in cube:// URLs of running Cube instances [ID_40795]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, whenever you entered a `cube://` URL of a running Cube instance in a browser window, a new instance would be started. From now on, it will be possible to add or update the following arguments in a `cube://` URL of Cube instance that is already running:
+
+- `alarm=`
+- `app=`
+- `element=`
+- `service=`
+- `view=`
+
+For example, if you wanted to open an element named "Parameter Controls" in an open Cube that is connected to "myDMS.myCompany.com", you could enter the following URL: `cube://myDMS.myCompany.com?element=%22Parameter%20Controls%22`
+
+> [!NOTE]
+>
+> - If, instead of updating the arguments of an open Cube, you want to open a new Cube instance, then add the following additional argument to the URL: `forcenewsession=true`
+> - For an overview of all DataMiner Cube arguments, see [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube)
+
 ### Fixes
 
 #### Services: Alarm color of a service card page would be incorrect when the service contained a partially included table of an element [ID 40597]
