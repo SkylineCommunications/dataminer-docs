@@ -78,7 +78,7 @@ All dynamic text in the KPI stencil will now automatically be truncated with "..
 
 #### Cassandra Cluster Migrator tool: Enhanced migration of Failover systems [ID 40576]
 
-<!-- MR 10.5.0 - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 Up to now, when the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was used to migrate a DataMiner System that included at least one Failover system, the following actions still had to be performed manually:
 
@@ -96,7 +96,7 @@ Because of a number of enhancements, variance increase detection has been improv
 
 #### SLDataGateway: Enhanced performance when writing data to the database [ID 40609]
 
-<!-- MR 10.5.0 - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 Because of a number of enhancements, overall performance has increased when writing data to the database.
 

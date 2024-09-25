@@ -717,29 +717,11 @@ From now on, SLSNMPManager will check whether the IP address of the trap matches
 > [!NOTE]
 > The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
 
-#### Cassandra Cluster Migrator tool: Enhanced migration of Failover systems [ID 40576]
-
-<!-- MR 10.5.0 - FR 10.4.11 -->
-
-Up to now, when the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was used to migrate a DataMiner System that included at least one Failover system, the following actions still had to be performed manually:
-
-- Checking whether all agents are stopped.
-- Updating the *DB.xml* file on all agents to make sure the database type is set to "CassandraCluster".
-- Starting all agents.
-
-Because of a number of enhancements, from now on, no manual intervention whatsoever will be needed when the Cassandra Cluster Migrator tool is used to migrate a DataMiner System that includes at least one Failover system.
-
 #### SLAnalytics - Behavioral anomaly detection: Enhanced variance increase detection [ID 40580]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 Because of a number of enhancements, variance increase detection has been improved.
-
-#### SLDataGateway: Enhanced performance when writing data to the database [ID 40609]
-
-<!-- MR 10.5.0 - FR 10.4.11 -->
-
-Because of a number of enhancements, overall performance has increased when writing data to the database.
 
 #### Trimmed log entries will now get an '(x bytes omitted)' suffix [ID 40629]
 
