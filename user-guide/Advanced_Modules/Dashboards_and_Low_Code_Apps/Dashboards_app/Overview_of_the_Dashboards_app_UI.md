@@ -91,7 +91,7 @@ The large pane on the right shows any folder or dashboard selected in the naviga
 
 If no dashboard is selected, buttons are available that allow you to create a new blank dashboard, to create a dashboard based on an example or to navigate to a recently used dashboard.
 
-If an empty folder is selected, from DataMiner 10.0.13 onwards, buttons are available that allow you to create or import a dashboard directly in that folder.
+If an empty folder is selected, buttons are available that allow you to create or import a dashboard directly in that folder.
 
 If a dashboard is selected, the header bar of this pane can display a number of buttons, depending on the dashboard and the settings of the app:
 

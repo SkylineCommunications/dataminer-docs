@@ -298,9 +298,9 @@ During the event, the `[Event:...]` placeholder will be replaced by the value of
 
     - **DCF interface name**: The name of the DCF interface that is linked to the input or output that was clicked.
 
-    - **Type**: Available from DataMiner 10.0.3 onwards. Can be "input" or "output", depending on the type of interface.
+    - **Type**: Can be "input" or "output", depending on the type of interface.
 
-    - **Matrix**: Available from DataMiner 10.0.3 onwards. The name of the matrix that contains the clicked input or output.
+    - **Matrix**: The name of the matrix that contains the clicked input or output.
 
   - Example: `[Event:IOClicked,Label]`
 

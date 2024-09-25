@@ -13,9 +13,7 @@ With the SLNetClientTest tool, you can check which sync rules are in effect on a
 1. Select the new message that appears in the *Properties* tab of the main window, and read the details in the *Text* pane on the right. The sync rules are listed at the bottom of the pane.
 
    > [!NOTE]
-   >
-   > - This info also lists the detected versions per DMA in the cluster. If version info for local IP addresses or Sync IP addresses is known, which is mainly for Failover Agents, there is also a section “Extra known versions.”
-   > - Any DMAs running DataMiner versions prior to 8.5.5 will be considered to be running 8.0.0, as the version cannot be detected in that case.
+   > This info also lists the detected versions per DMA in the cluster. If version info for local IP addresses or Sync IP addresses is known, which is mainly for Failover Agents, there is also a section *Extra known versions*.
 
 > [!TIP]
 > See also: [SyncRules.xml](xref:SyncRules_xml#syncrulesxml)

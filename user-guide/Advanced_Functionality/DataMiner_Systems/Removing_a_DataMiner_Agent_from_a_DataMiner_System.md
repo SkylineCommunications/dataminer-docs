@@ -23,7 +23,7 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. In the *Manage* section, select the DMA in the list.
 
-1. In the pane on the right, click *Delete cluster* (prior to DataMiner 10.0.13) or *Leave cluster* (from DataMiner 10.0.13 onwards).
+1. In the pane on the right, click *Leave cluster*.
 
 1. If you want to keep using the removed DMA as a standalone Agent, restart the DMA.
 

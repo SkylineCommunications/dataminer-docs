@@ -13,4 +13,4 @@ In this section:
 - [Actions that can be performed during an upgrade operation](xref:Actions_that_can_be_performed_during_an_upgrade_operation)
 
 > [!NOTE]
-> The name of each DataMiner upgrade package contains a version and build number for easy identification. E.g. a package named “upgrade8.5.4.3-3321-20150402-release.dmupgrade” contains DataMiner version 8.5.4.3 with build ID 3321.
+> The name of each DataMiner upgrade package contains a version and build number for easy identification. E.g. a package named "DataMiner 10.4.9.0-14794 Full Upgrade.dmupgrade" contains DataMiner version 10.4.9.0 with build ID 14794.
