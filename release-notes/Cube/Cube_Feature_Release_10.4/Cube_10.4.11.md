@@ -113,3 +113,9 @@ On Cube's home page, in some cases, multiple unnecessary lines would show up in 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When an information template parameter was duplicated, a number of properties (e.g. *Hide parameter*, *Part of snapshot*) would incorrectly not be copied to the newly created duplicate.
+
+#### Trending: Problem when exporting trend data to a CSV file [ID 40844]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some rare cases, DataMiner could stop working while exporting trend data to a CSV file.
