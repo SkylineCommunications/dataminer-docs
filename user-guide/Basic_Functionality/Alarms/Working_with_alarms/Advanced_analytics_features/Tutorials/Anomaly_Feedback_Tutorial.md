@@ -13,13 +13,9 @@ By default, behavioral anomaly detection is enabled on trended parameters. As in
 
 Estimated duration: 25 minutes
 
-TODO: let someone else estimate too
-
-TODO: probably also refer to some docs page on feedback?
-
 ## Prerequisites
 
-- DataMiner TODO or higher with [Storage as a Service (STaaS)](xref:STaaS) or an [indexing database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.4.11 or higher with [Storage as a Service (STaaS)](xref:STaaS) or an [indexing database](xref:Supported_system_data_storage_architectures).
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
@@ -39,7 +35,7 @@ This tutorial consists of the following steps:
 
 ## Step 1: Install the example package from the catalog
 
-1. Go to <TODO: correct link>.
+1. Go to <https://catalog.dataminer.services/details/4d0fa49c-6355-42d5-943d-e747b6c62906>.
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
@@ -93,8 +89,6 @@ In this step, we will give negative feedback on unwanted level shift anomalies o
    If we open the trend graph of *Channel 5*, we do see that a level shift is still detected as a change point, but that it is not marked as an anomaly, as shown by the light gray square under the trend graph. This means that the change is still detected, but that it is no longer seen as unexpected by DataMiner. For more information on the difference between change points and anomalies, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
    ![Bit rate of Channel 5 with level shift as a change point, but not as an anomaly](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_no_anomaly.gif)
-
-TODO: in KATA, emphasize that every user (that can see the alarm) can give feedback, but that it is applied system-wide (not per user)
 
 ## Step 3: Fine-tune anomaly detection
 
