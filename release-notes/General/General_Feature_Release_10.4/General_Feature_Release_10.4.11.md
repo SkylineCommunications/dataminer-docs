@@ -70,6 +70,12 @@ Up to now, on systems that do not allow ping commands to be executed, in some ca
 
 From now on, when the virtual IP address check has concluded that the IP address is free after having executed the required number of ping commands, it will double-check by executing an arp command.
 
+#### Visual Overview: Enhanced image quality when zooming [ID 40537]
+
+<!-- FR 10.4.11 -->
+
+Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
+
 #### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
 
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
