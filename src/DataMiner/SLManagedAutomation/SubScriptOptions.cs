@@ -95,6 +95,7 @@ namespace Skyline.DataMiner.Automation
 
 		/// <summary>
 		/// Gets or sets a value indicating whether the script will generate a 'Script started' information event. This is supported from DataMiner 10.3.0/10.2.8 onwards.
+		/// From Dataminer 10.4.12/10.5.0 onwards this is <c>true</c> by default, while previously it was <c>false</c>. <!-- RN 40867 -->
 		/// </summary>
 		/// <value><c>true</c> if the script will not generate a 'Script started' information event; otherwise, <c>false</c>.</value>
 		public bool SkipStartedInfoEvent { get; set; }
