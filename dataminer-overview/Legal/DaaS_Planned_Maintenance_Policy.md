@@ -29,7 +29,7 @@ The monthly maintenance will include the following activities:
 
 We will ensure transparent communication regarding maintenance activities, including any potential system unavailability:
 
-- Notification in advance: Users will receive a maintenance notification at least [X days/weeks] in advance of the scheduled maintenance window. This notification will include details such as:
+- Notification in advance: In case any downtime or disruption is expected outside of the regular monthly update routine, users will receive a maintenance notification at least 1 month in advance of the scheduled maintenance window. This notification will include details such as:
 
   - The date and time of the maintenance window.
   - An outline of the planned updates and changes.
