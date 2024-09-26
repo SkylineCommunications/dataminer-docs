@@ -67,7 +67,7 @@ We understand that certain times may not be ideal for planned maintenance, and w
 
 - User request for rescheduling:
 
-  - If a user anticipates that the scheduled maintenance window conflicts with critical business operations, they may request rescheduling by contacting our support team at least [X days/weeks] in advance of the scheduled maintenance.
+  - If a user anticipates that the scheduled maintenance window conflicts with critical business operations, they may request rescheduling by contacting our support team at least 1 month in advance of the scheduled maintenance.
   - We will make reasonable efforts to accommodate the request, though rescheduling cannot be guaranteed because of operational constraints and the need to maintain service security and performance.
 
 - Service provider-initiated rescheduling:
