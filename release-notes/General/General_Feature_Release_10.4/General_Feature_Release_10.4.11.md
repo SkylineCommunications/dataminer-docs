@@ -192,6 +192,12 @@ From now on, smart-serial connections will also support non-abbreviated IPv6 loo
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
 
+#### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
+
 #### SLLogCollector: Deprecated tool used to archive collected files replaced [ID 40815]
 
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->

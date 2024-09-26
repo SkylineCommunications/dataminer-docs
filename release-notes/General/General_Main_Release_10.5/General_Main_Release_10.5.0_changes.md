@@ -773,6 +773,12 @@ From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline 
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
 
+#### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
