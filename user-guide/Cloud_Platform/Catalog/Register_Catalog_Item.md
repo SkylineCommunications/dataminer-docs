@@ -44,6 +44,9 @@ The value of this key should be a .zip file containing the following items:
 file: <the zip file containing manifest, README and optional images>
 ```
 
+> [!NOTE]
+> To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
+
 #### Manifest file
 
 This file will contain all the necessary information to register a Catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
