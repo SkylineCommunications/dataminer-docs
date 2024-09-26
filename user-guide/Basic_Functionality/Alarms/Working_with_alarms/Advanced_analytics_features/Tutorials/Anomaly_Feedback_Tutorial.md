@@ -4,14 +4,18 @@ uid: Anomaly_Feedback_Tutorial
 
 # Improving anomaly detection using feedback
 
-DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) automatically detects when a parameter in your system is behaving in an unexpected way. It does this by modeling the behavior of the parameter based on its recent history, and generating a suggestion event or alarm when that behavior deviates significantly from that model. However, in some cases, DataMiner may not work optimally out of the box and it may, for example, generate an anomaly too quickly.
-In this tutorial we will learn how to improve the detection of new anomalies by providing feedback on detected anomalies.
+DataMiner's [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) automatically detects when a parameter in your system is behaving in an unexpected way. It does this by modeling the behavior of the parameter based on its recent history, and generating a suggestion event or alarm when that behavior deviates significantly from that model. However, in some cases, DataMiner may not work optimally out of the box and it may, for example, generate an anomaly too quickly.
 
-This tutorial does not require any prior knowledge of anomaly detection in DataMiner. However, if you want to learn more about its basic features and how to configure alarming based on anomalies, we recommend you to complete the tutorial [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial).
+In this tutorial, you will learn how to improve the detection of new anomalies by providing feedback on detected anomalies.
 
-By default, behavioral anomaly detection is enabled on trended parameters. As in the tutorial [Detecting anomalies with DataMiner](xref:Anomaly_Tutorial) we will use [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to simulate parameters with historical trend data. The parameters used in this tutorial have trending enabled by default.
+This tutorial does not require any prior knowledge of anomaly detection in DataMiner. However, if you want to learn more about its basic features and how to configure alarming based on anomalies, we recommend completing the [*Detecting anomalies with DataMiner* tutorial](xref:Anomaly_Tutorial).
 
-Estimated duration: 25 minutes
+By default, behavioral anomaly detection is enabled on trended parameters. Similar to the [*Detecting anomalies with DataMiner* tutorial](xref:Anomaly_Tutorial), [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) are used to simulate parameters with historical trend data. The parameters used in this tutorial have trending enabled by default.
+
+Estimated duration: 25 minutes.
+
+> [!NOTE]
+> The content and screenshots for this tutorial were created in DataMiner 10.4.11.
 
 ## Prerequisites
 
@@ -27,30 +31,36 @@ Estimated duration: 25 minutes
 
 This tutorial consists of the following steps:
 
-- [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
+- [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Getting rid of unwanted anomalies](#step-2-getting-rid-of-unwanted-anomalies)
 - [Step 3: Fine-tune anomaly detection](#step-3-fine-tune-anomaly-detection)
 - [Step 4: Use suggested improvements for alarm templates](#step-4-use-suggested-improvements-for-alarm-templates)
 - [Step 5: Final exercise](#step-5-final-exercise-optional)
 
-## Step 1: Install the example package from the catalog
+## Step 1: Install the example package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/4d0fa49c-6355-42d5-943d-e747b6c62906>.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create several DataMiner elements on your system that will be used throughout the rest of this tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Feedback Tutorial*.
+   This will create several DataMiner elements in your system that will be used throughout the rest of this tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Feedback Tutorial*.
+
+   ![Elements](~/user-guide/images/Anomaly_Feedback_Tutorial_Elements.png)
 
 ## Step 2: Getting rid of unwanted anomalies
 
-In this step, we will give negative feedback on unwanted level shift anomalies on an audio bit rate parameter, and we will see that, over time, DataMiner learns from this feedback and stops marking similar level shifts as anomalies.
+In this step, you will give negative feedback to unwanted level shift anomalies on an audio bit rate parameter, and you will see that, over time, DataMiner learns from this feedback and stops marking similar level shifts as anomalies.
 
 1. In DataMiner Cube, select the element *Anomaly Feedback Tutorial - Audio Bit Rate* in the Surveyor.
 
    This element simulates an encoder with multiple audio channels, and is used to monitor the bit rate of these channels.
 
-1. Click the *Generate Single Channel* button. This will generate bit rate data for a single channel in the table *Audio Channels* above.
-1. Wait until the *Data Generated?* parameter shows *Yes*.
+1. Click the *Generate Single Channel* button.
+
+   This will generate bit rate data for a single channel in the table *Audio Channels* above.
+
+1. Wait until the *Data Generated?* parameter displays *Yes*.
+
 1. Open the trend graph for the bit rate of the newly generated audio channel by clicking ![the trend icon](~/user-guide/images/trend_icon_unknown.png) in the first row of the table *Audio Channels*.
 1. Click on *Week to date* to see the data for the past week.
 
