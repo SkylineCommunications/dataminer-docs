@@ -269,6 +269,12 @@ A number of problems could occur when attaching CSV files to email reports:
 
 Due to a caching problem, when a report with *Alarm table* components was generated, in some cases, those components could be empty although alarms were present on the system.
 
+#### Dashboards/Low-Code Apps - Timeline component: Events of updated items would not be processed correctly when a custom timezone was configured [ID 40827]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a custom timezone was configured, up to now, a *Timeline* component with the *Update data* option enabled would not correctly process the events of items that had been updated.
+
 #### Dashboards app: Problem when importing a dashboard into a dashboard subfolder [ID 40828]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
