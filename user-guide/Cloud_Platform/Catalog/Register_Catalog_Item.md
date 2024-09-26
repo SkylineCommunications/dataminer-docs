@@ -44,8 +44,8 @@ The value of this key should be a .zip file containing the following items:
 file: <the zip file containing manifest, README and optional images>
 ```
 
->[!NOTE]
-> Images can be referenced in the README.md file by using the home directory (~/images) and relative path syntax (./images).
+> [!NOTE]
+> To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
 
 #### Manifest file
 
