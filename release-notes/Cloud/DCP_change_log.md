@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 27 September 2024 - Fix - Home - Disable input fields when submitting deploying a DaaS [ID 40860]
+
+All input fields are now disabled when you are deploying a DaaS.
+
+#### 27 September 2024 - Enhancement - Admin - Open DMS in new tab [ID 40861]
+
+Clicking the DMS url on the DMS overview page on the Admin app will now open in a new tab.
+
+#### 27 September 2024 - Fix- Admin - Showing the node name in the DxM warning popup [ID 40880]
+
+​The node name will now be shown in the upgrade warning to give the user more context on which node the requirements need to be checked (before it mentioned the entire DataMiner System which was not correct)
+
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
 When you register a Catalog item with a readme.md file, in that file you can now reference to an image using the home directory path "~" syntax or using a relative path. In addition, the casing of the image directory mentioned in the markdown file no longer matters, while previously this always had to be lower case.
