@@ -13,13 +13,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 When you register a Catalog item with a readme.md file, in that file you can now reference to an image using the home directory path "~" syntax or using a relative path. In addition, the casing of the image directory mentioned in the markdown file no longer matters, while previously this always had to be lower case.
 
-#### 23 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item for an authenticated user [ID 40825]
-
-When a Catalog item uses the same name as another connector Catalog item that was not registered via the Catalog API, the wrong description could be shown when you viewed the item as an authenticated user.
-
 #### 23 September 2024 - Fix - Catalog - Duplicate Catalog items [ID 40839]
 
 A duplicate Catalog item could be introduced in the Catalog after the register item call from the Catalog API was used on an existing item that was not originally registered via the Catalog API.
+
+#### 23 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item for an authenticated user [ID 40825]
+
+When a Catalog item uses the same name as another connector Catalog item that was not registered via the Catalog API, the wrong description could be shown when you viewed the item as an authenticated user.
 
 #### 17 September 2024 - Enhancement - Admin - Improved message when no usage data is found [ID 40796]
 
