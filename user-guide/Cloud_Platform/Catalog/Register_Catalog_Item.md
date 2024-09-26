@@ -28,6 +28,9 @@ Click on "catalog/register" item to expand it > press "Try it out" button.
 
 The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
+> [!IMPORTANT]
+Be aware the "Try it out" allows you to execute the register call on the production Catalog.
+
 ### HTTP method
 
 PUT
@@ -157,6 +160,9 @@ A complete definition of the API can be found at
 Click on "catalog/{catalogId}/register/version" item to expand it > press "Try it out" button.
 
 The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+
+> [!IMPORTANT]
+Be aware the "Try it out" allows you to execute the register call on the production Catalog.
 
 ### HTTP method
 
