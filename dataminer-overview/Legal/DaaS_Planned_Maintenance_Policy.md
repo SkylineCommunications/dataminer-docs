@@ -95,5 +95,3 @@ Any rescheduled maintenance will be communicated with a new planned maintenance 
 - Loss of support: Users who skip critical updates may not receive full support for issues arising from outdated software versions or unpatched systems.
 
 - Service impact: In some cases, skipping updates may result in unplanned downtime or reduced service functionality.
-
-By adhering to this planned maintenance policy, we aim to provide a secure and reliable DaaS experience with minimal disruption.
