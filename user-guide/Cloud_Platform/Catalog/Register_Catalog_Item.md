@@ -20,7 +20,7 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 
 The register API call allows you to create or update a Catalog item. To add a version after you have successfully registered an item, see [Registering a new version with the API](#registering-a-new-version-with-the-api).
 
-### Swagger
+### API Definition
 
 A complete definition of the API can be found at
 [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0), which also provides an easy way to try out the call.  
@@ -150,7 +150,7 @@ Route parameter "catalogId" is the ID of the Catalog item of which a new version
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
-### Swagger
+### API Definition
 
 A complete definition of the API can be found at
 [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0), which also provides an easy way to try out the call.  
