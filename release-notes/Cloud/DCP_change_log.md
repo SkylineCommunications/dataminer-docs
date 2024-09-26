@@ -9,6 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 26 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
+
+Public items with a public range but private versions will no longer show or recommend the private version of that range.
+
+#### 26 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
+
+Uploading of images used in the README.md file of a Catalog item register call could fail with message "The archive entry was compressed using an unsupported compression method".
+
+This occurred due to a concurrency issue when processing the files in parallel and has been fixed.
+
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
 When you register a Catalog item with a readme.md file, in that file you can now reference to an image using the home directory path "~" syntax or using a relative path. In addition, the casing of the image directory mentioned in the markdown file no longer matters, while previously this always had to be lower case.
