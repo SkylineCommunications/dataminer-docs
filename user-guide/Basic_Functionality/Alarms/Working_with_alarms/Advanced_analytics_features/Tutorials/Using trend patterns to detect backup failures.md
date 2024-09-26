@@ -43,20 +43,20 @@ The tutorial consists of the following steps:
 
 1. Drag and drop *Dropdown* visualization from the pane on the left to the dashboard. Put it somewhere on top of your dashboard.
 
-   ![Drop down visualizations](~/user-guide\images\Tutorial_patterns_in_dashboards_add_dropdown.png)
+   ![Drop down visualizations](~/user-guide/images/Tutorial_patterns_in_dashboards_add_dropdown.png)
 
    This component will allow users to select a specific trend pattern, which will be used in a query to retrieve the occurrences from.
 
 1. Drag and drop the *table* visualization from the pane on the left to the dashboard.
 
-   ![Table visualizations](~/user-guide\images\Tutorial_patterns_in_dashboards_add_table.png)
+   ![Table visualizations](~/user-guide/images/Tutorial_patterns_in_dashboards_add_table.png)
 
    This will add a table component. In this component, you will show the output of a GQI query.
    Put it below your Dropdown and let it take the width of your screen.
 
 1. In the data pane, open the *QUERIES* section and click the "+" icon.
 
-   ![Add Query](~/user-guide\images\Tutorial_patterns_in_dashboards_add_query.png)
+   ![Add Query](~/user-guide/images/Tutorial_patterns_in_dashboards_add_query.png)
 
 1. Name your query "Patterns".
 
@@ -64,7 +64,7 @@ The tutorial consists of the following steps:
 
 1. Add a *Select" operator and make sure to have both *Pattern name* and *Pattern ID* selected.
 
-   ![Select](~/user-guide\images\Tutorial_patterns_in_dashboards_query_patterns.png)
+   ![Select](~/user-guide/images/Tutorial_patterns_in_dashboards_query_patterns.png)
 
 1. Link the Query to the Dropdown on the dashboard and verify that the dropdown lists all the patterns in your system, including the one from the package with name 'Kata backup pattern'. Select that pattern in the dropdown.
 
@@ -77,7 +77,7 @@ The tutorial consists of the following steps:
     - Filter method: *Equals*
     - Value: Click the link icon in the value box, then select your *Drop down* feed and the property *Pattern ID*, and click Apply
 
-        ![Filter Pattern ID](~/user-guide\images\Tutorial_patterns_in_dashboards_filter_pattern.png)
+        ![Filter Pattern ID](~/user-guide/images/Tutorial_patterns_in_dashboards_filter_pattern.png)
 
 1. In our Parameter table that links to the pattern occurrences, the server name is part of the table key, so we'll use *ParameterKeyToSeparateColumns* operator to extract that from the *Parameter ID* Column
 
@@ -103,7 +103,6 @@ The tutorial consists of the following steps:
 1. Add another *Rename column* custom operator to rename the aggregated result column to "Most recent pattern occurrence".
 
     ![Rename](~/user-guide/images/Tutorial_patterns_in_dashboards_customop_renamecolumn2.png)
-
 
 ## Step 3: Interpret the timestamp of every occurrence
 
