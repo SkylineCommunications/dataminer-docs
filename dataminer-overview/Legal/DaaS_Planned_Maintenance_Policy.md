@@ -34,7 +34,8 @@ We will ensure transparent communication regarding maintenance activities, inclu
   - The date and time of the maintenance window.
   - An outline of the planned updates and changes.
   - Any anticipated system downtime or unavailability.
-  - Unexpected delays: If there are any unexpected delays or issues that extend the maintenance window, we will notify users immediately and provide revised estimates for service restoration.
+
+- Unexpected delays: If there are any unexpected delays or issues that extend the maintenance window, we will notify users immediately and provide revised estimates for service restoration.
 
 ## Service availability during maintenance
 
