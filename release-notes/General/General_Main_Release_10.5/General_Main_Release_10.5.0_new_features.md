@@ -44,7 +44,7 @@ Up to now, the labeling of behavioral anomalies was purely based on the change p
 > [!NOTE]
 >
 > - For this user feedback feature to work, the DataMiner System has to include an indexing database.
-> - For more information on how to provide feedback on behavioral anomalies in DataMiner Cube, see [Alarm Console - Behavioral anomaly detection: User feedback [ID 39640] [ID 39729] [ID 39809] [ID 39945]](xref:Cube_Feature_Release_10.4.11#alarm-console---behavioral-anomaly-detection-user-feedback-id-39640-id-39729-id-39809-id-39945)
+> - For more information on how to provide feedback on behavioral anomalies in DataMiner Cube, see [Alarm Console - Behavioral anomaly detection: User feedback [ID 39480] [ID 39640] [ID 39666] [ID 39729] [ID 39809] [ID 39945]](xref:Cube_Feature_Release_10.4.11#alarm-console---behavioral-anomaly-detection-user-feedback-id-39480-id-39640-id-39666-id-39729-id-39809-id-39945)
 
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID 39021]
 

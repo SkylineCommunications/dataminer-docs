@@ -16,8 +16,13 @@ uid: Cube_Feature_Release_10.4.11
 
 ## New features
 
-#### Alarm Console - Behavioral anomaly detection: User feedback [ID 39640] [ID 39729] [ID 39809] [ID 39945]
+#### Alarm Console - Behavioral anomaly detection: User feedback [ID 39480] [ID 39640] [ID 39666] [ID 39729] [ID 39809] [ID 39945]
 
+<!-- RN 39480: MR 10.5.0 - FR 10.4.7 -->
+<!-- RN 39640: MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+<!-- RN 39666: MR 10.5.0 - FR 10.4.9 -->
+<!-- RN 39729: MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- RN 39809: MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 <!-- RN 39945: MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In the *Suggestion events* and *Anomalies* tabs of the Alarm Console, a new column now allows you to give feedback on any of the listed anomalies.
@@ -40,7 +45,7 @@ Feedback given for active alarms will be saved in the user settings and will re-
 
 ##### Taking action
 
-When you click either the "thumbs up" or "thumbs down" button, in some cases, the system will suggest you take one of the following actions:
+When you click either the "thumbs up" or "thumbs down" button, in some cases, a light bulb icon will appear. In the context menu under that icon, you can then find the action you are suggested to take:
 
 | Action | Description |
 |--------|-------------|
@@ -49,6 +54,11 @@ When you click either the "thumbs up" or "thumbs down" button, in some cases, th
 | Create a new alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
 
 When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.
+
+> [!NOTE]
+>
+> - The actions listed above will only appear if you are allowed to perform them. For example, the system will not suggest you update the alarm template if you are not allowed to do so.
+> - The *Update the alarm template* and *Create a new alarm template* actions will not appear if the element in question has an alarm template group assigned.
 
 ##### Adding a feedback column to other alarm tabs
 
