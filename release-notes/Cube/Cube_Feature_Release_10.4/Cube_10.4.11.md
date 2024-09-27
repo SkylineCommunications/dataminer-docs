@@ -110,6 +110,12 @@ For example, if you wanted to open an element named "Parameter Controls" in an o
 
 ### Fixes
 
+#### Visual Overview - DCF: Connection lines would not correctly connect the interfaces of dynamically positioned shapes [ID 40552]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in a visual overview, you used dynamic positioning with DCF in combination with dynamic placeholders, in some cases, the connection lines would not correctly connect the interfaces of the dynamically positioned shapes.
+
 #### Services: Alarm color of a service card page would be incorrect when the service contained a partially included table of an element [ID 40597]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
