@@ -10,7 +10,7 @@ namespace Skyline.DataMiner.Net
     [Serializable]
     public sealed class AlarmTreeID //: DMAObjectRef, IEquatable<AlarmTreeID>
     {
-        // default constructor is required for protobuf
+        // Default constructor is required for protobuf.
         public AlarmTreeID() { }
 
         /// <summary>
