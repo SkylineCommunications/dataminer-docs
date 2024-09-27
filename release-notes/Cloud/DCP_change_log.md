@@ -138,23 +138,23 @@ In the Admin app, it is now possible to restrict remote access to the web apps a
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
-### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
+#### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
 
 Up to now, the vendor and market name of a connector were among the tags of a Catalog item and therefore visible in the search results. This has been changed so that vendor and market name are properties that can be seen on the details page of a Catalog item.
 
-### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
+#### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
 
 Search results on tags are now case insensitive.
 
-### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
+#### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
 
 On the browse page, you can now sort by the name and type of the items in ascending or descending order. By default, items will be sorted by name in ascending order.
 
-### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
+#### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
 
 When you try to register a Catalog item with more than 5 tags, this will now fail, as this is not supported.
 
-### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
+#### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
 
 Recommended versions are now shown for all Catalog item types. Previously, only connector Catalog items had a recommended version available.
 
