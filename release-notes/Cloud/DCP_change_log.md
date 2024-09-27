@@ -11,13 +11,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 26 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
 
-Public items with a public range but private versions will no longer show or recommend the private version of that range.
+Previously, when a Catalog item had a public range but private versions, it could incorrectly show or recommend a private version of that range.
 
 #### 26 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
-Uploading of images used in the README.md file of a Catalog item register call could fail with message "The archive entry was compressed using an unsupported compression method".
+Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
 
-This occurred due to a concurrency issue when processing the files in parallel and has been fixed.
+This was caused by a concurrency issue when processing the files in parallel and has been fixed.
 
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
