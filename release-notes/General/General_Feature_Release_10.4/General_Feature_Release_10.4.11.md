@@ -87,7 +87,7 @@ From now on, when the virtual IP address check has concluded that the IP address
 
 #### Visual Overview: Enhanced image quality when zooming [ID 40537]
 
-<!-- MR 10.5.0 - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
 

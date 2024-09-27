@@ -717,12 +717,6 @@ From now on, SLSNMPManager will check whether the IP address of the trap matches
 > [!NOTE]
 > The IP address of a trap is either the source IP of the trap or the *agentaddress* binding (if the *useAgentBinding* communication option is being used).
 
-#### Visual Overview: Enhanced image quality when zooming [ID 40537]
-
-<!-- MR 10.5.0 - FR 10.4.11 -->
-
-Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
-
 #### SLAnalytics - Behavioral anomaly detection: Enhanced variance increase detection [ID 40580]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
