@@ -154,7 +154,10 @@ The DataMiner Automation process.
 
 ### SLBrain
 
-The DataMiner Correlation process.
+The DataMiner Legacy Correlation process.
+
+> [!NOTE]
+> Only available on DataMiner versions before 10.5.1.
 
 > [!TIP]
 > See also: [DataMiner Correlation](xref:About_DMS_Correlation)
