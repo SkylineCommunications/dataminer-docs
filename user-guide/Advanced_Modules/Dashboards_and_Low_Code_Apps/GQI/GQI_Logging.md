@@ -12,10 +12,26 @@ If this folder does not exist, it will be created automatically with the first l
 
 From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet requests is also logged to the log files in the `C:\Skyline DataMiner\Logging\GQI` folder, if the minimum log level is set to *Debug* or lower.
 
-From DataMiner 10.4.0 [CU3]/10.4.5 onwards, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`.
-
 > [!NOTE]
 > The logs are buffered and written asynchronously, so it may take a few seconds for them to appear in the file.
+
+## Metrics
+
+From DataMiner 10.4.0 [CU3]/10.4.5 onwards, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`. These can be used to investigate potential performance issues.
+
+Currently, 3 kinds of metrics are logged:
+
+1. **RequestDuration**: measures the time between the arrival and resolution of any request that is handled by GQI. These can be helpful to trace issues in a specific time interval.
+1. **FirstPageDuration**: measures the execution time for queries optimized for lazy loading. It measures the duration from the start of fetching the first page until the first page is fully created. No metrics are logged for subsequent pages.
+1. **AllPagesDuration**: measures the execution time for queries optimized to get all results at once. It measures the combined duration from the start of fetching each page until that page if fully created.
+
+> [!TIP]
+> For the *FirstPageDuration* and *AllPagesDuration* metrics, a query identifier is logged that can be used to find the query source.
+>
+> For example `"Query":"db/My Dashboard/f985ce2c-2b1d-4aff-81e7-8f81cfe01d6e"` indicates that the query originated from a dashboard called "My Dashboard" where a query is stored with that GUID.
+
+> [!NOTE]
+> For efficiency, timestamps for metrics are logged in Unix time which is defined as the number of milliseconds since January 1st, 1970, at midnight (UTC). Converters can be found online.
 
 ## Minimum log level
 
