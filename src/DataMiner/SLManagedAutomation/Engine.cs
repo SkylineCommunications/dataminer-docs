@@ -203,7 +203,7 @@ namespace Skyline.DataMiner.Automation
         /// <param name="comment">A comment.</param>
         /// <remarks>
         /// <para>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</para>
-        /// <para>For perfomance reasons, it's recommended to use the overload that takes an AlarmTreeID instead.</para>
+        /// <para>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</para>
         /// </remarks>
         /// <example>
         /// <code>
@@ -858,7 +858,7 @@ namespace Skyline.DataMiner.Automation
         /// <param name="propertyName">The name of the alarm property.</param>
         /// <exception cref="ArgumentException">Alarm not found.</exception> 
         /// <returns>The value of the specified alarm property.</returns>
-        /// <remarks>For perfomance reasons, it's recommended to use the overload that takes an AlarmID instead.</remarks>
+        /// <remarks>For performance reasons, we recommend using the overload that takes an AlarmID instead.</remarks>
         /// <example>
         /// <code>
         /// string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
@@ -1395,7 +1395,7 @@ namespace Skyline.DataMiner.Automation
 		/// <note type="note">
 		/// <list type="bullet">
 		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+		/// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
 		/// </list>
 		/// </note>
 		/// </remarks>
@@ -1418,7 +1418,7 @@ namespace Skyline.DataMiner.Automation
         /// <list type="bullet">
         /// <item><description>Feature introduced in DataMiner 8.5.2 (RN 8347).</description></item>
         /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
         /// </list>
         /// </note>
@@ -1443,8 +1443,8 @@ namespace Skyline.DataMiner.Automation
         /// <note type="note">
         /// <list type="bullet">
         /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-        /// <item><description>For perfomance reasons, it's recommended to use the overload that takes an AlarmTreeID instead.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</description></item>
         /// </list>
         /// </note>
         /// </remarks>
@@ -1464,7 +1464,7 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <note type="note">
         /// <list type="bullet">
-        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// </list>
         /// </note>
         /// </remarks>
@@ -1486,7 +1486,7 @@ namespace Skyline.DataMiner.Automation
         /// <note type="note">
         /// <list type="bullet">
         /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
         /// </list>
         /// </note>
@@ -1511,8 +1511,8 @@ namespace Skyline.DataMiner.Automation
         /// <note type="note">
         /// <list type="bullet">
         /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-        /// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-        /// <item><description>For perfomance reasons, it's recommended to use the overload that takes an AlarmTreeID instead.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</description></item>
         /// </list>
         /// </note>
         /// </remarks>

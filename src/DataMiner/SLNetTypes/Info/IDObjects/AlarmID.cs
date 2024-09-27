@@ -15,7 +15,7 @@ namespace Skyline.DataMiner.Net.Messages.SLDataGateway
         public AlarmTreeID TreeID { get; set; }
 
         /// <summary>
-        /// The alarm id of this event in the tree
+        /// The alarm ID of this event in the tree
         /// </summary>
         public int EventID { get; set; }
 
