@@ -9,17 +9,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 27 September 2024 - Fix - Home - Disable input fields when submitting deploying a DaaS [ID 40860]
+#### 27 September 2024 - Fix - Admin - Node name not shown in DxM upgrade warning message [ID 40880]
 
-All input fields are now disabled when you are deploying a DaaS.
+Up to now, in the warning message that was shown to inform users of the node where requirements for a DxM upgrade had to be checked, the entire DataMiner System was mentioned. Now, only the name of the relevant node will be shown instead.
 
-#### 27 September 2024 - Enhancement - Admin - Open DMS in new tab [ID 40861]
+#### 27 September 2024 - Enhancement - Admin - DMS opened in new tab from overview page [ID 40861]
 
-Clicking the DMS url on the DMS overview page on the Admin app will now open in a new tab.
+In the Admin app, when you click the DMS URL on the DMS overview page, this will now open in a new tab.
 
-#### 27 September 2024 - Fix- Admin - Showing the node name in the DxM warning popup [ID 40880]
+#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860]
 
-​The node name will now be shown in the upgrade warning to give the user more context on which node the requirements need to be checked (before it mentioned the entire DataMiner System which was not correct)
+When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
 
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
