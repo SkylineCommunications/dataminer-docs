@@ -13,6 +13,18 @@ namespace Skyline.DataMiner.Net
         // default ctor is required for protobuf
         public AlarmTreeID() { }
 
+        /// <summary>
+        /// Element on which the alarm tree lives or lived. 
+        /// Guaranteed non-null.
+        /// </summary>
+        public ElementID ElementID { get; }
+
+        /// <summary>
+        /// Identifier for the alarm tree. Guaranteed to be unique within the element context.
+        /// Always positive.
+        /// </summary>
+        public int RootAlarmID { get; }
+
         public AlarmTreeID(ElementID elementId, int rootAlarmId)
         {
 
