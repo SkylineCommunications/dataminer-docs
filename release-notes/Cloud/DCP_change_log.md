@@ -9,11 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 26 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
+#### 27 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
 
 Previously, when a Catalog item had a public range but private versions, it could incorrectly show or recommend a private version of that range.
 
-#### 26 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
+#### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
 Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
 
