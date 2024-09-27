@@ -32,7 +32,7 @@ Estimated duration: 25 minutes.
 This tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
-- [Step 2: Getting rid of unwanted anomalies](#step-2-getting-rid-of-unwanted-anomalies)
+- [Step 2: Remove unwanted anomalies by giving negative feedback](#step-2-remove-unwanted-anomalies-by-giving-negative-feedback)
 - [Step 3: Fine-tune anomaly detection](#step-3-fine-tune-anomaly-detection)
 - [Step 4: Use suggested improvements for alarm templates](#step-4-use-suggested-improvements-for-alarm-templates)
 - [Step 5: Final exercise](#step-5-final-exercise-optional)
@@ -47,9 +47,9 @@ This tutorial consists of the following steps:
 
    ![Elements](~/user-guide/images/Anomaly_Feedback_Tutorial_Elements.png)
 
-## Step 2: Getting rid of unwanted anomalies
+## Step 2: Remove unwanted anomalies by giving negative feedback
 
-In this step, you will give negative feedback to unwanted level shift anomalies on an audio bit rate parameter, and you will see that, over time, DataMiner learns from this feedback and stops marking similar level shifts as anomalies.
+In this step, you will **give negative feedback to unwanted level shift anomalies** on an audio bit rate parameter, and you will see that, over time, DataMiner learns from this feedback and stops marking similar level shifts as anomalies.
 
 1. In DataMiner Cube, select the element *Anomaly Feedback Tutorial - Audio Bit Rate* in the Surveyor.
 
@@ -59,50 +59,73 @@ In this step, you will give negative feedback to unwanted level shift anomalies 
 
    This will generate bit rate data for a single channel in the table *Audio Channels* above.
 
+   ![Generate Single Channel](~/user-guide/images/Generate_Single_Channel.png)
+
 1. Wait until the *Data Generated?* parameter displays *Yes*.
 
-1. Open the trend graph for the bit rate of the newly generated audio channel by clicking ![the trend icon](~/user-guide/images/trend_icon_unknown.png) in the first row of the table *Audio Channels*.
-1. Click on *Week to date* to see the data for the past week.
+1. Open the trend graph for the bit rate of the newly generated audio channel by clicking ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *Channel 1* parameter in the *Audio Channels* table.
 
-   You can see that the bitrate remained very stable just above 96 kBps before suddenly dropping a bit and starting to fluctuate more. This behavior is typical when an audio bit rate parameter switches from Constant Bit Rate (CBR) encoding to either Average Bit Rate (ABR) encoding or Variable Bit Rate (VBR) encoding, as the latter two allow a greater temporary deviation from the target bit rate. A drop or a jump at the moment of the switch, as we see here, is also often present, but not always.
+1. Click *Week to date* to see the data for the past week.
 
-   Below the bit rate drop, there are two black squares indicating that two anomalies were detected at that point. If you hover the mouse over them, you can see that one is a variance change, corresponding to the parameter becoming less stable, and the other is a level shift, corresponding to the drop.
+   You will see that the bit rate remained very stable just above 96 kBps, then suddenly drops slightly and starts to fluctuate more. This behavior is typical when switching an audio bit rate parameter from Constant Bit Rate (CBR) encoding to either Average Bit Rate (ABR) or Variable Bit Rate (VBR) encoding. ABR and VBR allow greater, temporary deviations from the target bit rate. A drop or a jump at the moment of the switch, as we see here, is common but not guaranteed.
+
+   Just below the bit rate drop, two black blocks are displayed, indicating two detected changes in behavior, or change points. This means two anomalies were detected at that moment. If you hover the mouse over them, you will see that one is a variance change, corresponding to the parameter becoming less stable, and the other is a level shift, corresponding to the drop.
+
+   > [!NOTE]
+   > Since the two anomalies occur around the same time, the labels that appear when you hover over the change points might overlap, causing one label to be hidden. To view both labels clearly, zoom in by pressing CTRL while scrolling up. After zooming in, you can revert back by clicking the *Week to date* button again.
 
    ![Bit rate with drop and transition from stable signal to less stable signal](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_double_anomaly.png)
 
-1. Click on the light bulb icon in the top right corner of the Alarm Console and select the menu item *2 anomalies were found in your trend data* (this may be a a higher number if your system has detected anomalies on other elements). This will open the *Anomalies* tab in the Alarm Console, where you will also find the two detected anomalies.
+1. Click the light bulb icon in the top-right corner of the Alarm Console.
+
+   This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
+
+1. Click the menu item *2 anomalies were found in your trend data* (this can also be a a higher number if your system has detected anomalies on other elements).
+
+   A new *Anomalies* tab will now be shown in the Alarm Console, listing the two detected anomalies.
 
    ![Bit rate with drop and transition from stable signal to less stable signal](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_double_anomaly_alarm_console.png)
 
-   Both in the Alarm Console and in the trend graph, you can see that the level shift that was detected is very small: it corresponds to a drop of around 0.003 kBps. The reason such a small drop was detected, is that, even though it is very small, it is still larger than the variability of the parameter before the drop. However, a drop of this size is unlikely to be relevant to an operator. Therefore, we want to get rid of it, while still keeping the variance change to detect other instances of switching between CBR and VBR encoding.
+   In the *Value* column of the Alarm Console, similar to the trend graph, you will see that the detected level shift was very small: `Level decreased by 0.0331 kBps (from 96.0089 kBps to 95.9758 kBps)`. This corresponds to a drop of approximately 0.003 kBps.
 
-1. Give negative feedback to the level shift anomaly by hovering over the suggestion event in the *Anomalies* tab, and pressing the thumbs down icon on the right hand side of the alarm console.
+   The reason such a small drop was detected is that, although minor, it exceeds the variability of the parameter before the drop. However, a drop of this size is unlikely to be relevant to an operator. Therefore, we want to remove this anomaly, while still keeping the variance change to detect other instances of switching between CBR and VBR encoding.
 
-   Anomaly detection will learn from this feedback and will be less likely to trigger similar anomalies in the future, both on the same parameter instance, on other instances of the parameter in the same table, and on other elements using the same protocol.
+1. To give negative feedback to the level shift anomaly, hover the mouse pointer over the suggestion event in the *Anomalies* tab and click ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
+
+   Anomaly detection will learn from this feedback, making it less likely to trigger similar anomalies in the future. This applies to the same parameter instance, other instances of the parameter within the same table, and other elements using the same protocol.
 
    ![Giving negative feedback to the level shift anomaly](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_negative_feedback.gif)
 
-1. Optionally, you can clear the suggestion event by clicking the light bulb next to the thumbs down button, and selecting *Clear event*.
+1. Optionally, you can clear the suggestion event by clicking the light bulb next to the ![thumbs down](~/user-guide/images/Thumbs_Down.png) button and selecting *Clear event*.
 
-   This light bulb shows you suggested follow-up actions based on your feedback. We will see some more actions later. Clearing the alarm does not affect how your feedback is processed by anomaly detection, but it does clean up your alarm console.
+   The light bulb displays suggested follow-up actions based on your feedback. More actions will be explained later. Clearing the alarm does not affect how your feedback is processed by anomaly detection, but it does clean up your Alarm Console.
 
-1. A single instance of negative feedback is a bit too little for anomaly detection to learn effectively. So, we will repeat the process a few times. Press the button *Generate 3 Channels* to generate three more audio channels with data similar to the first one, each one with a variance change and a level shift anomaly.
+1. A single instance of negative feedback is insufficient for anomaly detection to learn effectively. So, you will repeat the feedback process a few times:
 
-1. Give negative feedback to all three level shifts, and optionally clear them through the light bulb icon.
+   1. Go to the *DATA* page of the *Anomaly Feedback Tutorial - Audio Bit Rate* element.
 
-   ![Giving negative feedback to all three level shift anomalies](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_negative_feedback_3.gif)
+   1. Click the *Generate 3 Channels* button to generate three more audio channels with data similar to the first one, each with a variance change and a level shift anomaly.
 
-1. Generate an additional audio channel by pressing *Generate Single Channel*. Note that for this channel, only a variance change anomaly is generated, and no longer a level shift anomaly, because anomaly detection has learned from the provided feedback that level shifts of this size are not interesting.
+   1. In the Alarm Console, give the level shifts detected for *Bit Rate Channel 2*, *Bit Rate Channel 3*, and *Bit Rate Channel 4* negative feedback, and optionally clear them using the light bulb icon.
+
+      ![Giving negative feedback to all three level shift anomalies](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_negative_feedback_3.gif)
+
+1. On the *DATA* page of the *Anomaly Feedback Tutorial - Audio Bit Rate* element, generate an additional audio channel by pressing *Generate Single Channel*. For this channel, only a variance change is generated and no level shift because DataMiner's anomaly detection has learned from the previously submitted feedback that level shifts of this size are not interesting.
 
    ![Alarm Console with a variance change for Channel 5, but no level shift](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_no_level_shift_alarm_console.png)
 
-   If we open the trend graph of *Channel 5*, we do see that a level shift is still detected as a change point, but that it is not marked as an anomaly, as shown by the light gray square under the trend graph. This means that the change is still detected, but that it is no longer seen as unexpected by DataMiner. For more information on the difference between change points and anomalies, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+1. Click ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *Channel 5* parameter in the *Audio Channels* table.
 
    ![Bit rate of Channel 5 with level shift as a change point, but not as an anomaly](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_level_shift_no_anomaly.gif)
 
+   In the trend graph, you can see that a level shift was still detected. However, the change point below the bit rate drop is light gray this time, which indicates a lower level of importance, meaning it is not marked as an anomaly. So, while the change is still detected, it is no longer seen as unexpected by DataMiner.
+
+   > [!TIP]
+   > For more information about the difference between change points and anomalies, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+
 ## Step 3: Fine-tune anomaly detection
 
-In the previous step, we used only negative feedback to get rid of certain anomalies on a bit rate parameter of an audio encoder. In this step, we will use both negative and positive feedback to fine-tune which anomalies DataMiner will detect on a parameter monitoring the download bit rate in a terrestrial network.
+In the previous step, you used only negative feedback to remove certain anomalies detected for a bit rate parameter of an audio encoder. In this step, you will **use both negative and positive feedback to fine-tune which anomalies DataMiner will detect** on a parameter monitoring the download bit rate in a terrestrial network.
 
 1. Select the element *Anomaly Feedback Tutorial - Average Download Bit Rate* in the Surveyor.
 
