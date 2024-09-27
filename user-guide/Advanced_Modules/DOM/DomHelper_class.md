@@ -184,6 +184,37 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 >
 > For STaaS, there is no such hard limit, but we do recommend keeping the queries short.
 
+#### Sorting
+
+It is also possible to sort your results based on a specific field of a DOM instance, both core fields and `FieldValues`. This sorting is done in the database and should be performant. This can be done by calling the `OrderBy` or `OrderByDescending` methods on a filter. This will return a query object that can be passed to the read method of the helper.
+
+**Examples:**
+
+```csharp
+var domHelper = new DomHelper(engine.SendSLNetMessages, "vehicles_app");
+
+// Build a filter
+var filter = DomInstanceExposers.StatusId.Equal("maintenance");
+
+// Sort ascending on name
+var onNameQuery = filter.OrderBy(DomInstanceExposers.Name);
+var orderedOnName = domHelper.DomInstances.Read(onNameQuery);
+
+// Sort descending on last modified
+var onModifiedQuery = filter.OrderByDescending(DomInstanceExposers.LastModified);
+var orderedOnModified = domHelper.DomInstances.Read(onModifiedQuery);
+
+// Sort on certain field (e.g. 'Vehicle mass')
+var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("253700a1-1293-4dfa-997b-86efb601d894")); // Vehicle mass
+var field = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId);
+var onFieldQuery = filter.OrderBy(field);
+var orderedOnField = domHelper.DomInstances.Read(onFieldQuery);
+```
+
+
+> [!NOTE]
+> Natural sorting is not supported. Enabling this option on the sorting API could result in poor performance since this will be executed in memory and requires all data to be loaded from the database.
+
 ### Multiple instances
 
 When multiple `DomInstances` need to get created, updated, or deleted, we recommend calling the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->.
