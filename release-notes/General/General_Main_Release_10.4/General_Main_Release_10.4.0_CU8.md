@@ -88,7 +88,7 @@ From now on, smart-serial connections will also support non-abbreviated IPv6 loo
 
 #### SLLogCollector: Deprecated tool used to archive collected files replaced [ID 40815]
 
-<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 The tool used by SLLogCollector to archive the files it collects is deprecated and has now been replaced.
 
