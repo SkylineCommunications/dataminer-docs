@@ -241,6 +241,9 @@ In the following example, a parent shape subscribes to the table, and three chil
   |------------------|-----------------------------|
   | Template         | \<A>-A\|Parameter:1101\|==3 |
 
+> [!NOTE]
+> When using templates in combination with offsets, the XPosOffset or YPosOffset shape data needs to be put on the template "child" shape and not the parent shape.
+
 ### Dynamically setting the interfaces of each dynamically positioned element
 
 If you use shape positioning based on coordinates stored in dynamic tables, you can also dynamically set the interfaces of each dynamically positioned element.
