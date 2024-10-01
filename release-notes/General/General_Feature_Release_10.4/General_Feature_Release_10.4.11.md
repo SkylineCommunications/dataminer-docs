@@ -115,12 +115,6 @@ Because of a number of enhancements, from now on, no manual intervention whatsoe
 
 Because of a number of enhancements, variance increase detection has been improved.
 
-#### SLDataGateway: Enhanced performance when writing data to the database [ID 40609]
-
-<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
-
-Because of a number of enhancements, overall performance has increased when writing data to the database.
-
 #### Trimmed log entries will now get an '(x bytes omitted)' suffix [ID 40629]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
