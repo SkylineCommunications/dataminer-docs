@@ -753,6 +753,14 @@ Up to now, this feature only proposed parameters from the same DataMiner element
 
 Up to now, SLNet would cache all information about all entries in a correlation alarm (group) tree. In order to reduce the amount of data in this cache, from now on, only the most recent information about these entries will be kept in memory.
 
+#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 40691]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
+
+Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
+
 #### Failover: Both agents will now keep a copy of the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file [ID 40702]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -760,6 +768,19 @@ Up to now, SLNet would cache all information about all entries in a correlation 
 When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+
+#### Service & Resource Management: Switching master agents [ID 40712]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
+
+When the DataMiner Agent that is currently the master agent is marked "not eligible to be promoted to master", the other DataMiner Agents in the DMS will elect a new master from the pool of DataMiner Agents that have been marked "eligible to be promoted to master".
+
+The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
+
+> [!NOTE]
+> If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
 
 #### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
 
