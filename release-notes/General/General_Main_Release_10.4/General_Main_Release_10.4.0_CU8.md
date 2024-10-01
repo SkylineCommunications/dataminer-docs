@@ -168,4 +168,4 @@ In element log file, up to now, the word "asynchronous" would be spelled incorre
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
-When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was called while an element was being stopped or deleted, in some cases, SLProtocol could stop working.
+When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was executed while an element was being stopped or deleted, in some cases, SLProtocol could stop working.
