@@ -22,14 +22,14 @@ The register API call allows you to create or update a Catalog item. To add a ve
 
 ### API Definition
 
-A complete definition of the API can be found at
-[Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0), which also provides an easy way to try out the call.  
-Click on "catalog/register" item to expand it > press "Try it out" button.
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+This page also provides an easy way to try out the call: Expand the "catalog/register" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
-Be aware the "Try it out" allows you to execute the register call on the production Catalog.
+> The *Try it out* button allows you to execute the register call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -155,14 +155,14 @@ To obtain this ID for an existing Catalog item, navigate to its details page in 
 
 ### API Definition
 
-A complete definition of the API can be found at
-[Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0), which also provides an easy way to try out the call.  
-Click on "catalog/{catalogId}/register/version" item to expand it > press "Try it out" button.
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+This page also provides an easy way to try out the call: Expand the "catalog/{catalogId}/register/version" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
-Be aware the "Try it out" allows you to execute the register call on the production Catalog.
+> The *Try it out* button allows you to execute the register call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
