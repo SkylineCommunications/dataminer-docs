@@ -83,7 +83,7 @@ The tool used by SLLogCollector to archive the files it collects is deprecated a
 > [!IMPORTANT]
 > The archives produced by the new tool can no longer be opened by the built-in Windows file archiver. To open these archives, users will now have to use third-party tools like e.g. 7-Zip.
 
-#### Element replication: No longer possible to create a replicated element with an unlimited buffer [ID_40822]
+#### Element replication: Replicated elements will fall back to their default buffer settings when created with an unlimited buffer [ID_40822]
 
 <!-- MR 10.3.0 [CU20] - FR TBD -->
 
