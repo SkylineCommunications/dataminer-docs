@@ -148,6 +148,7 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Average trending (long)  | 10 years     |
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
+| Alarm events             | 1 year       |
 
 ## Cost estimation
 
