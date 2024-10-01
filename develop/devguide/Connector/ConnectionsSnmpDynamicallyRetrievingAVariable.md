@@ -4,6 +4,8 @@ uid: ConnectionsSnmpDynamicallyRetrievingAVariable
 
 # Dynamically retrieving a variable
 
+<!-- To be verified: Obsolete approach should not be mentioned first. -->
+
 Since DataMiner version 7.5, it is possible to dynamically perform a get of an SNMP parameter.
 
 ```xml

@@ -16,9 +16,9 @@ Specifies which type of content is allowed in the parameter.
 
 ## Remarks
 
-If an incoming parameter value does not match the expected rawtype, DataMiner will not process it. The rawtype setting can therefore be considered as a kind of filter.
+Contains one of the predefined values detailed in the sections below.
 
-Contains one of the following predefined values, detailed in the sections below:
+If an incoming parameter value does not match the expected rawtype, DataMiner will not process it. The rawtype setting can therefore be considered as a kind of filter.
 
 ### bcd
 

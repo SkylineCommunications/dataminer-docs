@@ -60,7 +60,7 @@ By default, 6 decimals are stored. In case more decimals are required to avoid r
 > [!NOTE]
 >
 > - A unit can be specified using the Units tag. See Protocol/Params/Param/Display/Units.
-> - Since DataMiner version 9.0.1 (RN 1205), when the value of the parameter is a string starting with a "file", "ftp", "http", "https" or "mailto" URI scheme, the parameter value will be displayed as a clickable link.
+> - When the value of the parameter is a string starting with a "file", "ftp", "http", "https", or "mailto" URI scheme, the parameter value will be displayed as a clickable link.
 
 ## Creating an editable label
 
@@ -164,7 +164,7 @@ It is possible to visualize a check box by providing a discrete entry on the wri
 </Param>
 ```
 
-![alt text](../../images/uieditablelabelwithcheckbox.png "DataMiner Cube editable label with check box")
+![DataMiner Cube editable label with check box](../../images/uieditablelabelwithcheckbox.png)
 
 ## See also
 
