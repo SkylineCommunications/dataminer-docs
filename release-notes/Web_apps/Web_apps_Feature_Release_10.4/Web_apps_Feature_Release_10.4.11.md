@@ -304,3 +304,9 @@ When a client closed a GQI session, in some cases, the associated subscription w
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some cases, components could incorrectly trigger updates in other components, even though they were not linked.
+
+#### Dashboards/Low-Code Apps - Timeline component: Highlighting issue when zooming [ID 40890]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a query filter is applied in a *Timeline* component, by default, all items that are not part of the query result are shown in a lighter color. However, up to now, when zooming in or out, all items would incorrectly have the same color, whether they were part of the query result or not.
