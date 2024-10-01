@@ -32,9 +32,13 @@ Estimated duration: 25 minutes.
 This tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
+
 - [Step 2: Remove unwanted anomalies by giving negative feedback](#step-2-remove-unwanted-anomalies-by-giving-negative-feedback)
+
 - [Step 3: Fine-tune anomaly detection](#step-3-fine-tune-anomaly-detection)
+
 - [Step 4: Use suggested improvements for alarm templates](#step-4-use-suggested-improvements-for-alarm-templates)
+
 - [Step 5: Final exercise](#step-5-final-exercise-optional)
 
 ## Step 1: Install the example package from the Catalog
