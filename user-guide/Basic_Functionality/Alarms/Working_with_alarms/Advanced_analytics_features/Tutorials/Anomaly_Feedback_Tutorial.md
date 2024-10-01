@@ -68,9 +68,9 @@ In this step, you will **give negative feedback to unwanted level shift anomalie
 
 1. Click *Week to date* to see the data for the past week.
 
-   You will see that the bit rate remained very stable just above 96 kBps, then suddenly drops slightly and starts to fluctuate more. This behavior is typical when switching an audio bit rate parameter from Constant Bit Rate (CBR) encoding to either Average Bit Rate (ABR) or Variable Bit Rate (VBR) encoding. ABR and VBR allow greater, temporary deviations from the target bit rate. A drop or a jump at the moment of the switch, as we see here, is common but not guaranteed.
+   You will see that the bit rate remained very stable just above 96 kBps, then suddenly drops slightly and starts to fluctuate more. This behavior is typical when switching an audio bit rate parameter from Constant Bit Rate (CBR) encoding to either Average Bit Rate (ABR) or Variable Bit Rate (VBR) encoding. ABR and VBR allow greater, temporary deviations from the target bit rate. A drop or a jump at the moment of the switch, as you see here, is common but not guaranteed.
 
-   Just below the bit rate drop, two black blocks are displayed, indicating two detected changes in behavior, or change points. This means two anomalies were detected at that moment. If you hover the mouse over them, you will see that one is a variance change, corresponding to the parameter becoming less stable, and the other is a level shift, corresponding to the drop.
+   Just below the bit rate drop, two dark gray blocks are displayed, indicating two detected changes in behavior, or change points. This means two anomalies were detected at that moment. If you hover the mouse over them, you will see that one is a variance change, corresponding to the parameter becoming less stable, and the other is a level shift, corresponding to the drop.
 
    > [!NOTE]
    > Since the two anomalies occur around the same time, the labels that appear when you hover over the change points might overlap, causing one label to be hidden. To view both labels clearly, zoom in by pressing CTRL while scrolling up. After zooming in, you can revert back by clicking the *Week to date* button again.
@@ -89,7 +89,7 @@ In this step, you will **give negative feedback to unwanted level shift anomalie
 
    In the *Value* column of the Alarm Console, similar to the trend graph, you will see that the detected level shift was very small: `Level decreased by 0.0331 kBps (from 96.0089 kBps to 95.9758 kBps)`. This corresponds to a drop of approximately 0.003 kBps.
 
-   The reason such a small drop was detected is that, although minor, it exceeds the variability of the parameter before the drop. However, a drop of this size is unlikely to be relevant to an operator. Therefore, we want to remove this anomaly, while still keeping the variance change to detect other instances of switching between CBR and VBR encoding.
+   The reason such a small drop was detected is that, although minor, it exceeds the variability of the parameter before the drop. However, a drop of this size is unlikely to be relevant to an operator. Therefore, you want to remove this anomaly, while still keeping the variance change to detect other instances of switching between CBR and VBR encoding.
 
 1. To give negative feedback to the level shift anomaly, hover the mouse pointer over the suggestion event in the *Anomalies* tab and click ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
 
@@ -138,7 +138,7 @@ In the previous step, you used negative feedback to remove certain anomalies det
 
    As expected, the download bit rate fluctuates significantly but gradually over the past week. However, in the last hour, the bit rate drops by 15 Mbps. This drop is detected as an anomaly. You can tell DataMiner detects this as anomaly because of:
 
-   - The black block displayed below the drop in the trend graph.
+   - The dark gray block displayed below the drop in the trend graph.
 
      ![Average download bit rate within Sector 1 with a drop at the end](~/user-guide/images/Average_Download_Bit_Rate_Sector_1_trend_graph.png)
 
@@ -146,7 +146,7 @@ In the previous step, you used negative feedback to remove certain anomalies det
 
      ![Anomalies tab in the Alarm Console with anomaly detected for Average Download Bit Rate of Sector 1](~/user-guide/images/Average_Download_Bit_Rate_Sector_1_alarm_console.png)
 
-   While the drop is significant and caught by anomaly detection, 15 Mbps may not be large enough to cause concern in this context. Similar to the previous step, we want to prevent this anomaly from being flagged, but we still want to be notified of larger drops in the future.
+   While the drop is significant and caught by anomaly detection, 15 Mbps may not be large enough to cause concern in this context. Similar to the previous step, you want to prevent this anomaly from being flagged, but you still want to be notified of larger drops in the future.
 
 1. In the *Anomalies* tab of the Alarm Console, hover the mouse pointer over the level shift anomaly detected for the *Average Download Bit Rate Sector 1* parameter and select ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
 
@@ -191,90 +191,104 @@ In the previous step, you used negative feedback to remove certain anomalies det
 
 ## Step 4: Use suggested improvements for alarm templates
 
-As mentioned earlier, a light bulb icon may appear next to the ![thumbs up](~/user-guide/images/Thumbs_Up.png) and ![thumbs down](~/user-guide/images/Thumbs_Up.png) icons after you give feedback. This light bulb proposes certain follow-up actions that might make sense based on your feedback. For example, in [Step 2](#step-2-remove-unwanted-anomalies-by-giving-negative-feedback), you used it to clear a suggestion event.
+As mentioned earlier, a light bulb icon may appear next to the ![thumbs up](~/user-guide/images/Thumbs_Up.png) and ![thumbs down](~/user-guide/images/Thumbs_Down.png) icons after you give feedback. This light bulb proposes certain follow-up actions based on your feedback. For example, in [Step 2](#step-2-remove-unwanted-anomalies-by-giving-negative-feedback), you used it to clear a suggestion event.
 
-In this step, you will use the light bulb feature to configure an alarm template for anomalies. This will allow you to get a similar result as in [Step 3](#step-3-fine-tune-anomaly-detection), while requiring less feedback and providing you with more control over the process.
+In this step, you will use the light bulb feature to configure an alarm template for anomalies. This will help you achieve similar results as in [Step 3](#step-3-fine-tune-anomaly-detection), while requiring less feedback and giving you more control over the process.
 
 1. Select the element *Anomaly Feedback Tutorial - Task Manager* in the Surveyor.
 
-   This element simulates the Windows Task Manager, monitoring the memory usage of several processes. You want to be notified if this memory usage suddenly jumps up a lot.
+   This element simulates the Windows Task Manager, monitoring the memory usage of several processes. You want to be notified if this memory usage suddenly spikes.
 
-   As you can see by right-clicking the element in the Surveyor and selecting *Protocols & Templates* > *View alarm template 'Template'*, the element has an empty template associated to it. This allows DataMiner to suggest improvements to the template after you provide feedback.
+  By right-clicking the element in the Surveyor and selecting *Protocols & Templates* > *View alarm template 'Template'*, you will see that the element has an empty template associated with it. This allows DataMiner to suggest template improvements based on your feedback.
 
 1. Click the *Generate Data* button to generate data for a first process.
 
 1. Open the trend graph for the memory of the newly generated process by clicking ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the *Google Chrome* parameter in the *Task Manager* table.
 
-   You will see that the memory usage has fluctuated a bit over the past week, but has remained fairly stable overall. In the last hour, however, it jumps up significantly. As you can see from the black square displayed below the trend graph and by the entry in the Alarm Console, this jump has been detected as an anomaly.
+   You will see that the memory usage has fluctuated over the past week but remained stable overall. In the last hour, however, there is a significant spike. As indicated by the dark gray square below the trend graph and the entry in the Alarm Console, this jump has been detected as an anomaly.
 
    ![Memory usage of Google Chrome with jump at the end](~/user-guide/images/Memory_Usage_Google_Chrome_Trend_Graph.png)
 
-1. As this is an example of the kind of anomaly you want to be notified of, in the *Anomalies* tab of the Alarm Console, hover the mouse pointer over the level shift anomaly detected for *Memory Usage Google Chrome* and select ![the thumbs up icon](~/user-guide/images/Thumbs_Up.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
+1. Since this is the kind of anomaly you want to be notified of, go to the *Anomalies* tab in the Alarm Console, hover the mouse pointer over the level shift anomaly detected for *Memory Usage Google Chrome*, and select ![the thumbs up icon](~/user-guide/images/Thumbs_Up.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
 
    ![Anomalies tab in the Alarm Console with anomaly detected for Average Download Bit Rate of Sector 1](~/user-guide/images/Memory_Usage_Google_Chrome_Alarm_Console.png)
 
-1. Select the light bulb icon that has appeared next to the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
+1. Click the light bulb icon next to the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
 
 1. Select *Improve alarm template* from the list of follow-up actions.
 
-   This will open a popup with suggested improvements to the [anomaly detection alarms settings](xref:Configuring_anomaly_detection_alarms) in the alarm template. In this case, it will suggest enabling *smart* alarming for level increases, as we have given positive feedback for that type of anomaly. This means that in the future, instead of a suggestion event, an alarm will be generated when an anomaly is detected.
+   This will open a pop-up window with a proposed configuration for your anomaly alarm template, including suggested improvements to the [anomaly alarms settings](xref:Configuring_anomaly_detection_alarms).
+
+   In this case, it suggests enabling smart alarming for level increases, as you just provided positive feedback for this type of anomaly. This means that, in the future, an alarm will be generated when this type of anomaly is detected, rather than just a suggestion event.
 
    ![Popup suggesting to turn on alarming for level increases](~/user-guide/images/Memory_Usage_Task_Manager_Template_Improvement.gif)
 
-1. Accept the suggested improvements by clicking *Update alarm template*. Note that the suggestion event now turns into a real alarm.
+1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
 
-1. Click *Generate Data* again to generate memory usage data for the *Java Runtime* process.
+   The suggestion event now becomes a real alarm.
 
-1. Open the trend graph for the memory usage of *Java Runtime*.
+   ![Suggestion event is now an alarm](~/user-guide/images/Suggestion_Event_Alarm.png)
 
-   Notice that also here, the data ends with a jump up, but a much smaller one. However, DataMiner still detects it as an anomaly. Moreover, since we enabled alarming in the previous step, a critical alarm is generated.
+1. On the *DATA* page of the *Anomaly Feedback Tutorial - Task Manager* element, click the *Generate Data* button to generate data a second process, *Java Runtime*.
+
+1. Open the trend graph for the memory usage of *Java Runtime* by clicking the ![trend](~/user-guide/images/trend_icon_unknown.png) icon.
+
+   The data again ends with an upward spike, but this time it is smaller. However, DataMiner still detects it as an anomaly, and because you enabled smart alarming for level increases, a critical alarm is generated.
 
    ![Memory usage of Java Runtime with relatively small jump at the end](~/user-guide/images/Memory_Usage_Java_Runtime_Trend_Graph.png)
 
-1. Click the thumbs down button for the alarm on *Java Runtime* in the *Anomalies* tab in the Alarm Console.
+1. In the *Anomalies* tab of the Alarm Console, hover the mouse pointer over the level shift anomaly detected for the *Memory Usage Java Runtime* parameter and select ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
 
-1. Again, a light bulb icon appears with the suggestion to improve the alarm template. Click on this light bulb and select *Improve alarm template...*
+1. Click the light bulb icon next to the ![Feedback](~/user-guide/images/Feedback_Column.png) column and select *Improve alarm template*.
 
-   A popup will appear suggesting to set an absolute threshold of 200 MB for level increases. This would mean that level increase anomalies would only be generated if the memory usage jumped up 200 MB or more. This threshold is chosen automatically based on our previous feedback: it makes sure that jumps like the one for *Google Chrome* are still alarmed, but jumps of a smaller size like the one for *Java Runtime* are not.
+   A pop-up window appears with a proposed configuration for your anomaly alarm template, suggesting setting an absolute threshold of 200 MB for level increases. This ensures that level increase anomalies will only be generated if the memory usage spikes by 200 MB or more. The threshold is based on your previous feedback, allowing alarms for large increases like *Google Chrome* while filtering out smaller ones like *Java Runtime*.
 
    ![Popup suggesting to set an absolute threshold for level increases](~/user-guide/images/Memory_Usage_Java_Runtime_Template_Improvement.gif)
 
-1. Accept the suggested improvements by clicking *Update alarm template*. Note that the alarm on *Java Runtime* now disappears, and the alarm on *Google Chrome* changes to a critical alarm.
+1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
 
-1. Click *Generate Data* a third time to generate memory usage data for *Microsoft Visual Studio*.
+   The alarm for the *Java Runtime* process now disappears, while the alarm for the *Google Chrome* process changes to critical.
 
-1. Open the trend graph for the memory usage of *Microsoft Visual Studio*.
+1. On the *DATA* page of the *Anomaly Feedback Tutorial - Task Manager* element, click the *Generate Data* button a third time to generate memory usage data for the *Microsoft Visual Studio* process.
 
-   Note that the jump here is large in absolute terms: the jump size is just over 400 MB. However, it is still relatively small compared to the value it started from: it represents an increase of about 23% compared to the starting value of about 1750 MB.
+1. Click the ![trend](~/user-guide/images/trend_icon_unknown.png) icon next to *Microsoft Visual Studio* to open the trend graph for the memory usage of this process.
+
+   This jump is large in absolute terms (just over 400 MB) but small relative to the initial value of 1750 MB, representing an increase of about 23%.
 
    ![Memory usage of Microsoft Visual Studio a big jump at the end in absolute numbers, but relatively small compared to the baseline](~/user-guide/images/Memory_Usage_Visual_Studio_Trend_Graph.png)
 
-1. Again, click the thumbs down button for the alarm on *Microsoft Visual Studio* in the *Anomalies* tab of the Alarm Console.
+1. In the *Anomalies* tab of the Alarm Console, hover the mouse pointer over the level shift anomaly detected for the *Memory Usage Microsoft Visual Studio* parameter and select ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) in the ![Feedback](~/user-guide/images/Feedback_Column.png) column.
 
-1. A new improvement to the alarm template is suggested. Open the popup by clicking the light bulb and selecting *Improve alarm template...*
+1. Click the light bulb icon next to the ![Feedback](~/user-guide/images/Feedback_Column.png) column and select *Improve alarm template*.
 
-   Note that this time, alarming based on a relative threshold of 40% is proposed. This threshold means that anomaly alarms will be generated whenever the relative size of the jump with respect to the starting value is greater than 40%. A relative threshold is chosen over an absolute threshold here because an absolute threshold cannot satisfy both our negative feedback on this last jump and the negative feedback on the slightly smaller jump for the *Google Chrome* process. However, alarming on a relative threshold can satisfy both, since the jump for *Google Chrome* was large relative to the value at the start of the jump, while the jumps for *Java Runtime* and *Microsoft Visual Studio* were small relative to their start values.
+   This time, a relative threshold of 40% is proposed, meaning that anomaly alarms will be generated whenever the size of the jump is greater than 40% of the starting value. This relative threshold satisfies both your negative feedback on this last jump and on the smaller jump for *Google Chrome*. While the jump for *Google Chrome* was large relative to its initial value, the jumps for *Java Runtime* and *Microsoft Visual Studio* were small.
 
    ![Popup suggesting to set a relative threshold for level increases](~/user-guide/images/Memory_Usage_Visual_Studio_Template_Improvement.gif)
 
    > [!TIP]
-   > Click the clock icon next to the line on *level increases* to compare the proposed configuration with the currently active configuration.
+   > Select the clock icon on the *Level increases* row to compare the proposed configuration to the currently active configuration.
    >
    > ![The current configuration and the previous configuration](~/user-guide/images/Alarm_Template_Anomaly_Configuration_History_Button.gif)
 
-1. Accept the suggested improvements *Update alarm template*. Again, the alarm for *Microsoft Visual Studio* disappears, while the alarm for *Google Chrome* remains.
+1. To accept the suggested improvement, select *Update alarm template* in the lower right corner of the pop-up window.
 
-1. Press the button *Generate Data* twice more to generate data for *Explorer* and *Microsoft Excel*. Note that the first one generates an anomaly alarm for a jump from about 50MB to about 150 MB, representing an increase of about 100MB, or 200%. The latter one jumps from about 150 MB to about 175 MB, only representing an increase of about 25 MB, or about 15%. Therefore, no anomaly is generated for this one.
+   The alarm for the *Microsoft Visual Studio* process disappears, while the alarm for the *Google Chrome* process remains.
+
+1. On the *DATA* page of the *Anomaly Feedback Tutorial - Task Manager* element, click the *Generate Data* button two more times to generate data for the *Explorer* and *Microsoft Excel* processes.
+
+   - An anomaly alarm is generated for the *Explorer* process, as a level increase of approximately 200% occurs (from 50MB to 150 MB).
+
+   - No anomaly is generated for the *Microsoft Excel* process, as a level increase of approximately 15% occurs (from 150 MB to 175 MB).
 
 ## Step 5: Final exercise (optional)
 
-In this final step, you will repeat [Step 3](#step-3-fine-tune-anomaly-detection), but you will give different feedback and thereby get a different result.
+In this final step, you will repeat [Step 3](#step-3-fine-tune-anomaly-detection), but this time, you will provide different feedback, leading to a different result.
 
-For this exercise, use the element *Anomaly Feedback Tutorial - Average Download Bit Rate 2*. It will generate the same data as *Anomaly Feedback Tutorial - Average Download Bit Rate*, but it uses a protocol with another name so that you start again with a clean slate. Moreover, it has an empty alarm template configured so that you can get suggestions to improve the alarm template.
+For this exercise, use the element *Anomaly Feedback Tutorial - Average Download Bit Rate 2*. This element will generate the same data as *Anomaly Feedback Tutorial - Average Download Bit Rate*, but it uses a different protocol name, which allows you to start fresh with a clean slate. Additionally, it has an empty alarm template configured so that you can receive suggestions to improve the alarm template.
 
-The goal of the exercise is to get alarms or suggestion events for jumps down greater than 20 Mbps, but not for jumps down smaller than 20 Mbps. You are free to use only feedback, or combine feedback with the suggested alarm template improvements as in [Step 4](#step-4-use-suggested-improvements-for-alarm-templates).
+The goal of this exercise is to configure the system to trigger alarms or suggestion events for downward jumps greater than 20 Mbps, but not for jumps smaller than 20 Mbps. You can choose to use feedback alone, or combine feedback with the suggested alarm template improvements, as explained in [Step 4](#step-4-use-suggested-improvements-for-alarm-templates).
 
-> If you are a member of the DevOps Program and you have completed the exercise above, send us screenshots of the alarm console with the feedback you gave to earn DevOps Points.
+> If you are a member of the [DevOps Program](https://community.dataminer.services/dataminer-devops-professional-program/) and you have completed the exercise above, send us screenshots of the alarm console with the feedback you gave to earn DevOps Points.
 >
 > Use the following email format:
 >
@@ -282,9 +296,9 @@ The goal of the exercise is to get alarms or suggestion events for jumps down gr
 > - To: [ai@skyline.be](mailto:ai@skyline.be)
 > - Body:
 >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email
->   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
+>   - Feedback (optional): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
 > - Attachment:
->   - A picture of the *Anomalies* tab in the alarm console with the feedback you gave on the anomalies.
+>   - A screenshot of the *Anomalies* tab in the Alarm Console with the feedback you provided for the anomalies.
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
