@@ -238,6 +238,8 @@ items:
             items:
             - name: Detecting anomalies with DataMiner
               topicUid: Anomaly_Tutorial
+            - name: Improving anomaly detection using feedback
+              topicUid: Anomaly_Feedback_Tutorial
             - name: Creating an anomaly overview dashboard
               topicUid: Creating_Anomaly_Overview_Dashboard
       - name: Advanced alarm functionality
