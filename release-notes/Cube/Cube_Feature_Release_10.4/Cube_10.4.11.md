@@ -179,3 +179,9 @@ When an information template parameter was duplicated, a number of properties (e
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some rare cases, DataMiner could stop working while exporting trend data to a CSV file.
+
+#### Visual Overview: Problem when subscribing to properties due to subscriptions incorrectly being case sensitive [ID 40878]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, problems could occur when subscribing to properties due to subscriptions incorrectly being case sensitive. From now on, property subscriptions will be case insensitive.

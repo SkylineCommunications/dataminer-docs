@@ -298,3 +298,9 @@ When a large amount of feed data was requested at the same time (e.g. when you c
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When a client closed a GQI session, in some cases, the associated subscription would not get terminated. This would eventually lead to an excessive amount of obsolete subscriptions being left on the system, causing it to slow down.
+
+#### Low-Code Apps: Components could incorrectly trigger updates in components to which they were not linked [ID 40875]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, components could incorrectly trigger updates in other components, even though they were not linked.
