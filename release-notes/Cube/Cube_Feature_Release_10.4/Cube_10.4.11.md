@@ -34,7 +34,7 @@ In this new column, you can find two buttons to evaluate an anomaly:
 - a "thumbs up" button you can click to indicate that you like the anomaly, and
 - a "thumbs down" button you can click to indicate that you do not like the anomaly.
 
-Any feedback you give will be used by the behavioral anomaly detection feature to tailor the anomaly detection to your specific wishes.
+Any feedback users give will be used by the behavioral anomaly detection feature to tailor the anomaly detection on system level.
 
 When you click one of the two buttons, it will be pinned in the column as a black icon, and if you change your mind, you can click the other one. Buttons that have not been clicked will stay hidden and will only be visible when you hover over the alarm or suggestion event. Also, you will only see the icons you have clicked yourself. You will not be able to see feedback given by other users.
 
