@@ -303,3 +303,9 @@ When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.
+
+#### Problem with SLProtocol when processing actions that occurred when an element was stopped or deleted [ID 40859]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was called while an element was being stopped or deleted, in some cases, SLProtocol could stop working.
