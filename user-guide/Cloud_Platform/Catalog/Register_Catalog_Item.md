@@ -157,10 +157,10 @@ To obtain this ID for an existing Catalog item, navigate to its details page in 
 
 For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
 
-This page also provides an easy way to try out the call: Expand the "catalog/{catalogId}/register/version" item, and click the *Try it out* button.
+This page also provides a quick way to execute the call: Expand the "catalog/{catalogId}/register/version" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
-> The *Try it out* button allows you to execute the register call on the production Catalog.
+> Clicking the *Try it out* button will execute the register call on the production Catalog.
 
 The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
