@@ -29,7 +29,7 @@ To implement a direct view table, create a custom table that contains a column h
 
 1. Create a view using data and keys from the aggregator element and data from the source elements.
 
-   - Example 1: Use all element IDs specified in 2802 (possible since DataMiner version 7.5):
+   - Example 1: Use all element IDs specified in 2802:
 
      ```xml
      <ArrayOptions index="0" options=";volatile;view=1200">
@@ -81,11 +81,11 @@ To implement a direct view table, create a custom table that contains a column h
 >
 > - In case the tables of the source elements can have conflicting primary keys (i.e. it is possible that at least two source elements each have a row with the same primary key), use a column of type "viewTableKey" (see viewTableKey). This will prefix the primary key with [DMA ID]_[Element ID]_.
 > - For direct view tables, it is not possible to include a column without the preceding columns being included.
-> - Prior to DataMiner 9.5.7, direct view tables were not automatically refreshed in Cube. However, in DataMiner 9.5.7 (RN 16999), an update mechanism has been added to refresh these tables. When the update mechanism is used, this will be indicated below the table, together with the time when the table was last updated and a button that allows you to update the table manually.
+> - In recent DataMiner versions, direct view tables are automatically refreshed in Cube.<!-- RN 16999 --> When the update mechanism is used, this will be indicated below the table, together with the time when the table was last updated and a button that allows you to update the table manually.
 
 ## Updating direct views showing data from elements on remote agents
 
-From DataMiner 10.0.12 (RN 27547) onwards, DirectView updates are supported in the following scenarios:
+DirectView updates are supported in the following scenarios:<!-- RN 27547 -->
 
 - DirectView based on a view of the same protocol.
 

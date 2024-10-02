@@ -64,14 +64,14 @@ The QAction DLLs are stored in the directory `C:\Skyline DataMiner\ProtocolScrip
 
 > [!NOTE]
 >
-> - From DataMiner 9.6.11 (RN 23095) onwards, DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.
+> - DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.<!-- RN 23095 -->
 > - DataMiner detects the most recent version of the .NET Framework that is installed and uses this version in the SLScripting process. The compiled QActions will then target this version of the .NET Framework.
 
 ### Preprocessor directives
 
 DataMiner compiles QActions with the following preprocessor directives:
 
-- **DCFv1**: From DataMiner 8.5.8 onwards (RN 10061), this preprocessor directive ("#define DCFv1") is automatically added when a QAction is compiled.
+- **DCFv1**: This preprocessor directive ("#define DCFv1") is automatically added when a QAction is compiled.<!-- RN 10061 -->
 
    In QActions, all DCF-related code can then be enclosed within the following preprocessor directives:
 
@@ -81,7 +81,8 @@ DataMiner compiles QActions with the following preprocessor directives:
    #endif
    ```
 
-- **DBInfo**: From DataMiner 9.0.0 onwards (RN 10395), this preprocessor directive ("#define DBInfo") is automatically added when a QAction is compiled. The presence of this directive indicates that the GetLocalDatabaseType method (SLProtocol), which was introduced in the same DataMiner version, can be used to get the type of the local database.
+- **DBInfo**: This preprocessor directive ("#define DBInfo") is automatically added when a QAction is compiled.<!-- RN 10395 --> The presence of this directive indicates that the GetLocalDatabaseType method (SLProtocol), which was introduced in the same DataMiner version, can be used to get the type of the local database.
+
    Before this method call was used, it was good practice to use "#if DBInfo" in order to check whether the method is supported on the DataMiner Agent. However, since the minimum supported DataMiner version now already supports this method, enclosing the call as illustrated below is no longer required. For example:
 
    ```csharp
@@ -93,7 +94,7 @@ DataMiner compiles QActions with the following preprocessor directives:
    #endif
    ```
 
-- **ALARM_SQUASHING**: From DataMiner 10.1.6 onwards (RN 29549), this preprocessor directive ("#define ALARM_SQUASHING") is automatically added when a QAction is compiled.
+- **ALARM_SQUASHING**: This preprocessor directive ("#define ALARM_SQUASHING") is automatically added when a QAction is compiled.<!-- RN 29549 -->
 
    In QActions, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as illustrated below, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
 
@@ -154,7 +155,7 @@ In case you only want to keep track of the execution count on a per element basi
 
 ### Instance entry methods
 
-From DataMiner 7.5.6.2 (RN 5481) onwards, it is possible to use instance entry methods in QActions. To obtain this behavior, define the entry method as an instance method (by removing the keyword "static" of the Run method and on the QAction class).
+To use instance entry methods in QActions, define the entry method as an instance method (by removing the keyword "static" of the Run method and on the QAction class).<!-- RN 5481 -->
 
 In the QAction class, you can now define instance fields, which are available in the instance entry method.
 
@@ -230,6 +231,7 @@ A change event is initiated when:
 - a value is set to a parameter of type "write", even if the value is the same as the previous value
 - an action of type "run actions" is performed on a parameter
 - a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g. SetParameter
+
    > [!NOTE]
    > This will also trigger the QAction even if the set value is the same as the current value.
 
@@ -247,7 +249,7 @@ In the example above, the triggers attribute is set to the parameter ID of the w
 
 > [!NOTE]
 >
-> - From DataMiner 9.5.1 onwards, you can use a read column parameter as a trigger on a QAction with row=true option. Prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible. (RN 15040 & 15531)
+> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with row=true option. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
 > - For SNMP tables, it is also possible to provide the ID of a table parameter. In this case, the QAction will trigger every time a row has been updated.
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
@@ -470,7 +472,7 @@ This option should only be used if really needed and care must be taken during i
 
 ## Starting an Automation script from a QAction
 
-To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the ExecuteScript method on SLProtocol. This is introduced in DataMiner 10.0.5 (RN 24475).
+To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the ExecuteScript method on SLProtocol.<!-- RN 24475 -->
 
 ```csharp
 public static void Run(SLProtocol protocol)
