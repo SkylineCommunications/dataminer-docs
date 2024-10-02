@@ -24,6 +24,14 @@ uid: Cube_Feature_Release_10.4.12
 
 *No enhancements have been added yet.*
 
+#### Label "Show agent alarms" is now a translatable string [ID 40868]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the Cube UI, the label "Show agent alarms" is now a translatable string.
+
+This label is used in the *Agent alarms* section of the *System Center > Agents > Manage* page.
+
 ### Fixes
 
 *No fixes have been added yet.*
