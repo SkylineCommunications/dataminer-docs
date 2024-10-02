@@ -51,3 +51,9 @@ When an exception was thrown while processing a bulk request, in some cases, the
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 In some cases, a Web component would not be initialized correctly after it had received an update.
+
+#### Dashboards/Low-Code Apps - Table, Maps, Grid & Timeline components: Templates did not allow any interaction when the component was loading [ID 40909]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In case of a Table, Map, Grid or Timeline component, the templates did not allow any interaction when the component was loading. Also, feeds and conditions would not be updated.
