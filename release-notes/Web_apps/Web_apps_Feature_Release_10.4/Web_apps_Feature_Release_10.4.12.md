@@ -22,7 +22,15 @@ uid: Web_apps_Feature_Release_10.4.12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps: GQI sessions will now be executed asynchronously over WebSockets [ID 40416]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, after a GQI session had been opened, all necessary pages would be requested synchronously.
+
+From now on, a GQI query will be opened synchronously, after which a first page will be sent to the client over WebSockets without the client having to request it. Then, the client will request and receive all following pages over WebSockets.
+
+When WebSockets are not available, GQI sessions will be executed synchronously as before.
 
 ### Fixes
 
