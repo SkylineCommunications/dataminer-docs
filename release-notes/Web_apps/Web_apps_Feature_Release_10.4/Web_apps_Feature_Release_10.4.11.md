@@ -100,6 +100,12 @@ From now on, the *Preserve feed selections* option will only be visible when you
 
 From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
+#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID_40814]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or a text feed.
+
 #### Dashboards/Low-Code Apps - Table component: New setting to show or hide the table filter [ID 40818]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
@@ -292,3 +298,15 @@ When a large amount of feed data was requested at the same time (e.g. when you c
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When a client closed a GQI session, in some cases, the associated subscription would not get terminated. This would eventually lead to an excessive amount of obsolete subscriptions being left on the system, causing it to slow down.
+
+#### Low-Code Apps: Components could incorrectly trigger updates in components to which they were not linked [ID 40875]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, components could incorrectly trigger updates in other components, even though they were not linked.
+
+#### Dashboards/Low-Code Apps - Timeline component: Highlighting issue when zooming [ID 40890]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a query filter is applied in a *Timeline* component, by default, all items that are not part of the query result are shown in a lighter color. However, up to now, when zooming in or out, all items would incorrectly have the same color, whether they were part of the query result or not.

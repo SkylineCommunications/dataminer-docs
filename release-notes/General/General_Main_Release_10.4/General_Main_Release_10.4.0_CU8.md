@@ -20,6 +20,12 @@ Up to now, on systems that do not allow ping commands to be executed, in some ca
 
 From now on, when the virtual IP address check has concluded that the IP address is free after having executed the required number of ping commands, it will double-check by executing an arp command.
 
+#### Visual Overview: Enhanced image quality when zooming [ID 40537]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
+
 #### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
 
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
@@ -37,12 +43,6 @@ Up to now, when the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was use
 - Starting all agents.
 
 Because of a number of enhancements, from now on, no manual intervention whatsoever will be needed when the Cassandra Cluster Migrator tool is used to migrate a DataMiner System that includes at least one Failover system.
-
-#### SLDataGateway: Enhanced performance when writing data to the database [ID 40609]
-
-<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
-
-Because of a number of enhancements, overall performance has increased when writing data to the database.
 
 #### Automation: Enhanced locking when calling 'SetParameter' and 'GetParameter' on an element [ID 40682]
 
@@ -88,12 +88,22 @@ From now on, smart-serial connections will also support non-abbreviated IPv6 loo
 
 #### SLLogCollector: Deprecated tool used to archive collected files replaced [ID 40815]
 
-<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 The tool used by SLLogCollector to archive the files it collects is deprecated and has now been replaced.
 
 > [!IMPORTANT]
 > The archives produced by the new tool can no longer be opened by the built-in Windows file archiver. To open these archives, users will now have to use third-party tools like e.g. 7-Zip.
+
+#### SLDataGateway: Enhanced logging [ID 40846]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR TBD -->
+
+A number of enhancements have been made with regard to the logging of the SLDataGateway process.
+
+The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cleaner entries, and entries of type "Error" will also be added to the *SLError.txt* file.
+
+Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
 
 ### Fixes
 
@@ -153,3 +163,9 @@ When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.
+
+#### Problem with SLProtocol when processing actions that occurred when an element was stopped or deleted [ID 40859]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was executed while an element was being stopped or deleted, in some cases, SLProtocol could stop working.

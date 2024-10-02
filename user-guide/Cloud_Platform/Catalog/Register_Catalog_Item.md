@@ -20,9 +20,16 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 
 The register API call allows you to create or update a Catalog item. To add a version after you have successfully registered an item, see [Registering a new version with the API](#registering-a-new-version-with-the-api).
 
-### URL
+### API Definition
 
-`https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
+
+This page also provides a quick way to execute the call: Expand the "catalog/register" item, and click the *Try it out* button.
+
+> [!IMPORTANT]
+> Clicking the *Try it out* button will execute the register call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -142,15 +149,20 @@ The register version API call allows you to create a new version for a Catalog i
 > [!NOTE]
 > A version can only be registered once. Registration will fail if you try to register an existing version number of a Catalog item.
 
-### URL
-
-`https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:GUID}/register/version`
-
 Route parameter "catalogId" is the ID of the Catalog item of which a new version is registered, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
-`https://catalog.dataminer.services/details/{CatalogId}`
+### API Definition
+
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
+
+This page also provides a quick way to execute the call: Expand the "catalog/{catalogId}/register/version" item, and click the *Try it out* button.
+
+> [!IMPORTANT]
+> Clicking the *Try it out* button will execute the register call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 

@@ -31,6 +31,21 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
+#### Alarms - Behavioral anomaly detection: User feedback [ID 38707] [ID 38980] [ID 39944]
+
+<!-- RN 38707: MR TBD - FR TBD -->
+<!-- RN 38980: MR 10.5.0 - FR 10.4.4 -->
+<!-- RN 39944: MR 10.5.0 - FR 10.4.11 -->
+
+From now on, users will be allowed to give feedback (positive or negative) on behavioral anomalies.
+
+Up to now, the labeling of behavioral anomalies was purely based on the change point history of a parameter. From now on, user feedback on previous anomalies of the same type will also be taken into account.
+
+> [!NOTE]
+>
+> - For this user feedback feature to work, the DataMiner System has to include an indexing database.
+> - For more information on how to provide feedback on behavioral anomalies in DataMiner Cube, see [Alarm Console - Behavioral anomaly detection: User feedback [ID 39480] [ID 39640] [ID 39666] [ID 39729] [ID 39809] [ID 39945]](xref:Cube_Feature_Release_10.4.11#alarm-console---behavioral-anomaly-detection-user-feedback-id-39480-id-39640-id-39666-id-39729-id-39809-id-39945)
+
 #### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID 39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

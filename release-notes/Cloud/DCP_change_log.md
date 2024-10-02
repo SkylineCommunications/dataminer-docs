@@ -9,15 +9,27 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 27 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
-
-Previously, when a Catalog item had a public range but private versions, it could incorrectly show or recommend a private version of that range.
-
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
 Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
 
 This was caused by a concurrency issue when processing the files in parallel and has been fixed.
+
+#### 27 September 2024 - Fix - Admin - Node name not shown in DxM upgrade warning message [ID 40880]
+
+Up to now, in the warning message that was shown to inform users of the node where requirements for a DxM upgrade had to be checked, the entire DataMiner System was mentioned. Now, only the name of the relevant node will be shown instead.
+
+#### 27 September 2024 - Enhancement - Admin - DMS opened in new tab from overview page [ID 40861]
+
+In the Admin app, when you click the DMS URL on the DMS overview page, this will now open in a new tab.
+
+#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860]
+
+When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
+
+#### 27 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
+
+Previously, when a Catalog item had a public range but private versions, it could incorrectly show or recommend a private version of that range.
 
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
@@ -148,23 +160,23 @@ In the Admin app, it is now possible to restrict remote access to the web apps a
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
-### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
+#### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
 
 Up to now, the vendor and market name of a connector were among the tags of a Catalog item and therefore visible in the search results. This has been changed so that vendor and market name are properties that can be seen on the details page of a Catalog item.
 
-### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
+#### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
 
 Search results on tags are now case insensitive.
 
-### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
+#### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
 
 On the browse page, you can now sort by the name and type of the items in ascending or descending order. By default, items will be sorted by name in ascending order.
 
-### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
+#### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
 
 When you try to register a Catalog item with more than 5 tags, this will now fail, as this is not supported.
 
-### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
+#### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
 
 Recommended versions are now shown for all Catalog item types. Previously, only connector Catalog items had a recommended version available.
 

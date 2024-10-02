@@ -32,9 +32,11 @@ items:
           - name: New features and changes
             topicUid: EPM_1.0.1_xPON
           - name: Addendum CU6
-            topicUid: EPM_1.0.1_xPON_CU6          
+            topicUid: EPM_1.0.1_xPON_CU6
   - name: Integrated DOCSIS
     items:
+      - name: EPM 7.0.7 Integrated DOCSIS
+        topicUid: EPM_7.0.7_Integrated_DOCSIS
       - name: EPM 7.0.6 Integrated DOCSIS
         topicUid: EPM_7.0.6_Integrated_DOCSIS
       - name: EPM 7.0.5 I-DOCSIS
