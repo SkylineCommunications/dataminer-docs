@@ -32,4 +32,8 @@ uid: General_Feature_Release_10.4.12
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with alarm severity of a service not being updated correctly [ID 40840]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In some cases, the alarm severity of a service would not be updated correctly when, during a row update, both the display key and the monitored value had been changed.
