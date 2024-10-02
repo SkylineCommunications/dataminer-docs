@@ -40,7 +40,7 @@ The group will be added to the end of the group execution queue as it was added 
 > [!NOTE]
 > This should not be used to force a get after a set as the OID needs to be set in the parameter of the dynamic SNMP. The feature was created because a device did not send the updated value(s) via traps, but only the OID(s) of the parameter(s) for which the value had changed. By capturing this OID and using this NF, it is possible to poll the new data without any delay.
 
-Since, when there are different parameters with the same OID, one of them will be used randomly for the get, from DataMiner version 8.0 onwards, it is possible to skip certain parameters to be evaluated if they need to be retrieved via dynamic SNMP get.
+When there are different parameters with the same OID, one of them will be used randomly for the get. However, with the [skipDynamicSNMPGet](xref:Protocol.Params.Param.SNMP.OID-skipDynamicSNMPGet) attribute, you can skip the evaluation for certain parameters if they need to be retrieved via dynamic SNMP get.
 
 ```xml
 <SNMP>
@@ -50,9 +50,7 @@ Since, when there are different parameters with the same OID, one of them will b
 
 The dynamic group will be added to the end of the group execution queue (similar to if it was added by a timer or by an "add to execute" action).
 
-DataMiner version 8.0.7. also introduces a new attribute to improve the Dynamic SNMP Get. Previously this was defined in the options, which still can be used. However, the new improvements are only configurable in this new attribute. (This must be defined on the read parameter.)
-
-You can configure what to get and when to get it:
+To specify what to retrieve and how this request is added to the group execution queue, you can use the [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet) attribute (on the read parameter):
 
 ```xml
 <Param id="100">
@@ -63,7 +61,7 @@ You can configure what to get and when to get it:
 </Param>
 ```
 
-In case of table parameters you do not always want to retrieve the full table, so you will be able to specify what to get and when to get it.
+In case of table parameters you do not always want to retrieve the full table, so you can specify what to get and when to get it.
 
 Default values with attribute value "true", you will get the cell and the get will be added to the group execution queue (execute next).
 
