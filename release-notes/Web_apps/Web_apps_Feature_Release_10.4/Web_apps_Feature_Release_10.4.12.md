@@ -34,4 +34,8 @@ When WebSockets are not available, GQI sessions will be executed synchronously a
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When an exception was thrown while processing a bulk request, in some cases, the web APIs could stop working.
