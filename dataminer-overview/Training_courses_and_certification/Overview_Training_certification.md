@@ -112,5 +112,5 @@ To prepare effectively for the exam:
 - What technology is used to manage and execute backup schedules?
 - Is it possible to test queries within Cube? If so, where can you find this feature?
 - How would you create a sample scheduled task with specific details such as name, schedule, time of execution, and actions?
-- How do you define the relationship between objects in Microsoft Visio with DataMiner shapes for elements, views, etc.?
+- How do you define the relationship between shapes in Microsoft Visio and DataMiner objects such as elements, views, etc.?
 - What is the most important setting the administrator should disable for most other users?
