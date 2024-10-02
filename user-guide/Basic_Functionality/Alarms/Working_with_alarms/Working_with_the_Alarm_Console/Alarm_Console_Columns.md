@@ -154,6 +154,8 @@ For more information on changing the column layout, see [Changing the column lay
 
 - **Actions \> Clear alarm**: Action button that allows the user to clear clearable alarms.
 
+- **Actions** > **Feedback**: Shown by default in the *Anomalies* and *Suggestion events* tabs when behavioral anomaly detection finds an anomalous level shift, trend change, variance change, or flatline for a parameter, and a suggestion event is generated in the Alarm Console. This action button allows the user to provide positive or negative feedback on the suggestion events. See [Providing feedback on suggestion events](xref:Behavioral_anomaly_detection#providing-feedback-on-suggestion-events).
+
 - **Actions \> Copy full alarm**: Action button that allows the user to copy all information regarding an alarm in one click.
 
 - **Actions \> Adding comment**: Action button that allows the user to add a comment.
