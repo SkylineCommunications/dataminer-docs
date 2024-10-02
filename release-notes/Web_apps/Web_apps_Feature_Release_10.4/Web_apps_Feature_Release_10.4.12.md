@@ -45,3 +45,9 @@ From now on, all GQI components will no longer be allowed to fetch more than 100
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When an exception was thrown while processing a bulk request, in some cases, the web APIs could stop working.
+
+#### Low-Code Apps: Web component would not be initialized correctly after it had received an update [ID 40893]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In some cases, a Web component would not be initialized correctly after it had received an update.
