@@ -11,7 +11,7 @@ Make sure the [MinimumRequiredVersion](xref:Protocol.Compliancies.MinimumRequire
 
 | Feature | Minimum DMA Version | Release Note |
 |----------|----------|----------|
-| Protocol clear and leave in FillArray    | 10.4.2.0-13691     | [Releas Note](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=38153)     |
+| Protocol clear and leave in FillArray    | 10.4.2.0-13691     | [Releas Note]([https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=38153](https://docs.dataminer.services/release-notes/General/General_Feature_Release_10.4/General_Feature_Release_10.4.2.html?q=FillArray%20supports%20protocol.Leave%20and%20protocol.Clear#fillarray-now-supports-protocolleave-and-protocolclear-id-38153))     |
 
 > [!WARNING]
 > The table only contains known features that have a minimum DMA version impact. The list only starts from the [minimum supported DMA](https://docs.dataminer.services/user-guide/Reference/Software_support_life_cycles.html) version 10.2.
