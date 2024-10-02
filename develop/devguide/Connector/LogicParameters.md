@@ -119,7 +119,7 @@ When a protocol is developed, a number of building blocks such as parameters, ac
 
 The configuration of these parameters for an element is displayed on the [GENERAL PARAMETERS] page of the element:
 
-![General Parameters Page](../../images/generalParametersPage.png)
+![General Parameters Page](~/develop/images/generalParametersPage.png)
 
 The general parameters are organized into four groups: communication, DCF, replication, and verification.
 

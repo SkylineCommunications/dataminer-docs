@@ -79,9 +79,9 @@ Average: ((102*10)+(124*20))/226=15.4867256637168
 
 Below is a graphical representation of how an average trend graph is constructed. At 10:35, a new window begins, which lasts until 10:40. At 10:37:30, the value of the trended parameter changes from 12 to 14. At 10:40, the window closes automatically, and an average value of 13 is calculated for this window. The minimum and maximum value of the trended parameter in this window is 12 and 14, respectively. This is then shown in the average trend graph.
 
-![alt text](../../images/real-time_trend_graph.svg "Example real-time trend graph")
+![alt text](~/develop/images/real-time_trend_graph.svg "Example real-time trend graph")
 
-![alt text](../../images/Average_trending_graph_basics.svg "Corresponding average trend graph")
+![alt text](~/develop/images/Average_trending_graph_basics.svg "Corresponding average trend graph")
 
 ### History sets
 

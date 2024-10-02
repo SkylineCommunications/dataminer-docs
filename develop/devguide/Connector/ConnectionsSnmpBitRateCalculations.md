@@ -44,7 +44,7 @@ The SLProtocol process does the following:
   
   By default, this counter information can be found on the General Parameters page of the element. See Figure 60.
 
-![alt text](../../images/communication_info_table.png "DataMiner Cube Communication Info table")
+![alt text](~/develop/images/communication_info_table.png "DataMiner Cube Communication Info table")
 
 - It keeps counter information per group.
 

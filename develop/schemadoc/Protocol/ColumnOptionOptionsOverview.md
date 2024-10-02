@@ -541,7 +541,7 @@ This option allows you to add a subtitle to the KPI window (RN 2663). This optio
 
 For example:
 
-![alt text](../../images/columnoptions_SubTitle.png "subTitle")
+![alt text](~/develop/images/columnoptions_SubTitle.png "subTitle")
 
 ## volatile
 

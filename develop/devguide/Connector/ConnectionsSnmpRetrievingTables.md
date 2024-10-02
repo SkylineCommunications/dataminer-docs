@@ -6,7 +6,7 @@ uid: ConnectionsSnmpRetrievingTables
 
 Tables in a MIB are structured as illustrated below. There is always a table folder, followed by an entry folder containing the column parameters.
 
-![alt text](../../images/iftable.png "MIB table structure")
+![alt text](~/develop/images/iftable.png "MIB table structure")
 
 In a protocol, a table is implemented using a parameter representing the table (of type "array") and additional parameters for each column in the table. Depending on the table retrieval method (discussed in Retrieval methods), SNMP tags need to be provided for the table parameter and/or the column parameters.
 
@@ -37,7 +37,7 @@ Multiple methods are available for retrieving tables via SNMP in a protocol. The
 
 Gets the table contents, retrieving one cell at a time.
 
-![alt text](../../images/Interfaces_Table_GetNext.png "GetNext execution")
+![alt text](~/develop/images/Interfaces_Table_GetNext.png "GetNext execution")
 
 Protocol implementation:
 
@@ -71,7 +71,7 @@ Capture observation:
 
 Gets the table contents, retrieving instances one by one, getting multiple values at once.
 
-![alt text](../../images/Interfaces_Table_GetNext_MultipleGet.png "GetNext + MultipleGet execution")
+![alt text](~/develop/images/Interfaces_Table_GetNext_MultipleGet.png "GetNext + MultipleGet execution")
 
 Protocol implementation:
 
@@ -145,7 +145,7 @@ To use this new polling scheme, add "multipleGet" to the SNMP options of the SNM
 
 Gets the table contents, retrieving rows one by one.
 
-![alt text](../../images/Interfaces_Table_MultipleGetNext.png "MultipleGetNext execution")
+![alt text](~/develop/images/Interfaces_Table_MultipleGetNext.png "MultipleGetNext execution")
 
 Protocol implementation:
 
@@ -176,7 +176,7 @@ Capture observation:
 
 Gets the table contents, retrieving multiple rows at once.
 
-![alt text](../../images/Interfaces_Table_multipleGetBulk.png "MultipleGetBulk execution")
+![alt text](~/develop/images/Interfaces_Table_multipleGetBulk.png "MultipleGetBulk execution")
 
 Protocol implementation:
 
@@ -302,7 +302,7 @@ Using the option "instance", the OIDs corresponding with the rows can be retriev
 </SNMP>
 ```
 
-![alt text](../../images/Table_SNMP_instance_option.png "SNMP table using instance option")
+![alt text](~/develop/images/Table_SNMP_instance_option.png "SNMP table using instance option")
 
 > [!NOTE]
 > In case the instance option is used with the GetNext + MultipleGet table retrieval method, the same remark applies in case the optional OID is specified on the table parameter:

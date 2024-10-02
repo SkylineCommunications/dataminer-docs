@@ -52,7 +52,7 @@ The first parameter defines the group box header.
 </Param>
 ```
 
-![alt text](../../images/uigroupbox.png "DataMiner Cube group box")
+![alt text](~/develop/images/uigroupbox.png "DataMiner Cube group box")
 
 ## See also
 

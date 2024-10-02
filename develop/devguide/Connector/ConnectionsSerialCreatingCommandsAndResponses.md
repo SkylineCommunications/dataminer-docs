@@ -10,7 +10,7 @@ The first step is to implement all the needed parameters that will be used in th
 
 For example, consider the following implementation of a GET request as defined in the Hypertext Transfer Protocol (HTTP).
 
-![alt text](../../images/Example_command.jpg "Example command")
+![alt text](~/develop/images/Example_command.jpg "Example command")
 
 > [!NOTE]
 >
@@ -86,15 +86,15 @@ By default, the following behavior is applicable in serial drivers:
 
 For example, consider the following logic being implemented in a protocol. In this case, the command is composed of 2 parameters: one fixed ("Get") and one with dynamic content.
 
-![alt text](../../images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png "Executing a command via a timer")
+![alt text](~/develop/images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png "Executing a command via a timer")
 
 When the timer goes off, group 1 will be added to the group execution queue. Now suppose parameter 2 holds value "A" at this time.
 
-![alt text](../../images/Protocol_Explained_-_Insertion_of_a_timer_group.svg "Insertion of a timer group in the group execution queue")
+![alt text](~/develop/images/Protocol_Explained_-_Insertion_of_a_timer_group.svg "Insertion of a timer group in the group execution queue")
 
 The group travels through the queue until it reaches the front and is processed. At this point, the command that will be sent to the SLPort process is composed based on the current values of the parameters that make up the command. At this point in time, it is possible that the value of parameter 2 has changed already (e.g. the content of parameter 2 is now 'B'). In this case, the command "Get B" will be sent to SLPort instead of "Get A". This could be undesired.
 
-![alt text](../../images/Protocol_Explained_-_Default_command_construction.svg "Default command construction")
+![alt text](~/develop/images/Protocol_Explained_-_Default_command_construction.svg "Default command construction")
 
 By using the "makeCommandByProtocol" communication option (see CommunicationOptions), commands will be composed the moment the corresponding group is added to the group execution queue. In the example, this means the command that will be sent is "Get A".
 
@@ -103,7 +103,7 @@ If this option is enabled, the following behavior is applicable:
 - No automatic "make" commands are executed.
 - "before command" triggers are executed before the group is added to the queue. This means a "before command" trigger is now executed prior to a "before group" trigger, while this was previously the other way around.
 
-![alt text](../../images/Protocol_Explained_-_Default_command_construction_with_makeCommandByProtocol.svg "Command construction when using makeCommandByProtocol")
+![alt text](~/develop/images/Protocol_Explained_-_Default_command_construction_with_makeCommandByProtocol.svg "Command construction when using makeCommandByProtocol")
 
 As in this case no automatic "make" action is performed, the protocol should define a "make command" action which triggers before each command.
 
@@ -362,7 +362,7 @@ From DataMiner 10.0.3 (RN 24442) onwards, it is possible for the field that spec
 - The length parameter should be located before the data parameter. It should be of length type "next param" and raw type "numeric text".
 - The length parameter must be located between two fixed parameters.
 
-![alt text](../../images/RN24442.svg "Responses with dynamically defined length")
+![alt text](~/develop/images/RN24442.svg "Responses with dynamically defined length")
 
 > [!NOTE]
 > An example protocol "Skyline Example Serial Response Matching" is available in the [SkylineCommunications/SLC-C-Example_Serial-Response-Matching](https://github.com/SkylineCommunications/SLC-C-Example_Serial-Response-Matching) GitHub repository.

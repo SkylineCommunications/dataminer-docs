@@ -30,7 +30,7 @@ If the EPM element is passing a key as FK to 2900, then the first relation is al
 
 To summarize: when a table can be skipped in the topology, first specify the shortest relation, and then the longer relation(s).
 
-![Defining relations](../../images/Table_relations_ordering.svg "Defining relations")
+![Defining relations](~/develop/images/Table_relations_ordering.svg "Defining relations")
 
 > [!NOTE]
 >

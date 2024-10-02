@@ -10,7 +10,7 @@ In addition to the parameters defined by a protocol developer, a number of gener
 
 The configuration of these parameters for an element are displayed on the GENERAL PARAMETERS page of the element:
 
-![DataMiner Cube General Parameters page](../../images/generalParametersPage.png)
+![DataMiner Cube General Parameters page](~/develop/images/generalParametersPage.png)
 
 There are four groups of general parameters: communication, DCF, replication and verification.
 
