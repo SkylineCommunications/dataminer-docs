@@ -34,4 +34,10 @@ This label is used in the *Agent alarms* section of the *System Center > Agents 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### License expiration window: Title and text included the incorrectly spelled word "licence" [ID 40894]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a license has expired, a notification window will appear when you open DataMiner Cube.
+
+Up to now, both the title and the text of that notification window would include the incorrectly spelled word "licence". This word has now been changed to "license".
