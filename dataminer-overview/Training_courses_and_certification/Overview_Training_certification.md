@@ -23,13 +23,14 @@ Are you preparing to take the DataMiner Fundamentals exam? Below you can find al
 
 As soon as the ordering process is finalized and your certification process can be started, you will receive an automated email from Skyline Academy with information about the process and the deadline.
 
+After you have received this email, you will have at most **three months** to finalize the certification process, unless otherwise agreed. As long as the process has not been finalized yet, you will receive a reminder email every month, as well as 20, 10, and 5 days before the deadline. If you do not complete the certification process in time, and the deadline expires, you will receive an email to inform you of this.
+
 You will also receive an email with your user ID and password to access the training DMA in order to practice and to take the exam.
 
 To book an appointment, you will need to use the booking link that you will find in the email you received with information about the start of the certification process.
 
 > [!NOTE]
 >
-> - The certification process is valid for 3 months, unless otherwise agreed.
 > - An appointment can be canceled or rescheduled up to 96 hours before it starts. If you cannot update the appointment online, please contact Skyline Academy or your team of examiners.
 > - If you ordered two or more certifications, we will only start the next process once you finished the ongoing process.
 
@@ -72,13 +73,14 @@ Are you preparing to take the DataMiner Configurator exam? Below you can find al
 
 As soon as the ordering process is finalized and your certification process can be started, you will receive an automated email from Skyline Academy with information about the process and the deadline.
 
+After you have received this email, you will have at most **three months** to finalize the certification process, unless otherwise agreed. As long as the process has not been finalized yet, you will receive a reminder email every month, as well as 20, 10, and 5 days before the deadline. If you do not complete the certification process in time, and the deadline expires, you will receive an email to inform you of this.
+
 You will also receive an email with your user ID and password to access the training DMA in order to practice and to take the exam.
 
 To book an appointment, you will need to use the booking link that you will find in the email you received with information about the start of the certification process.
 
 > [!NOTE]
 >
-> - The certification process is valid for 3 months, unless otherwise agreed.
 > - An appointment can be canceled or rescheduled up to 96 hours before it starts. If you cannot update the appointment online, please contact Skyline Academy or your team of examiners.
 > - If you ordered two or more certifications, the Configurator certification process will only start after you have completed the Fundamentals exam.
 
