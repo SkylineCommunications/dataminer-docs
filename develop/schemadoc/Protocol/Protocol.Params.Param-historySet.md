@@ -4,7 +4,7 @@ uid: Protocol.Params.Param-historySet
 
 # historySet attribute
 
-Specifies that this parameter is a history set parameter.
+Specifies that this parameter is a history set parameter.<!-- RN 4383 -->
 
 ## Content Type
 
@@ -17,8 +17,6 @@ Specifies that this parameter is a history set parameter.
 ## Remarks
 
 If you mark a parameter as a history set parameter, its last set value will not be stored in the trending database when the element is restarted.
-
-*Feature introduced in DataMiner 7.5.0 (RN 4383).*
 
 ## Examples
 
