@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
+
+Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
+
+This was caused by a concurrency issue when processing the files in parallel and has been fixed.
+
 #### 27 September 2024 - Fix - Admin - Node name not shown in DxM upgrade warning message [ID 40880]
 
 Up to now, in the warning message that was shown to inform users of the node where requirements for a DxM upgrade had to be checked, the entire DataMiner System was mentioned. Now, only the name of the relevant node will be shown instead.
@@ -20,6 +26,10 @@ In the Admin app, when you click the DMS URL on the DMS overview page, this will
 #### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860]
 
 When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
+
+#### 27 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
+
+Previously, when a Catalog item had a public range but private versions, it could incorrectly show or recommend a private version of that range.
 
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
