@@ -212,7 +212,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if you want the confirmation window to not be shown when aborting a script; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: <c>false</c></para>
-		/// <para>Feature introduced in DataMiner 10.4.11 (RN40700 web) (RN40720 Cube)</para>
+		/// <para>Feature introduced in DataMiner 10.4.12 (RN40700 web) (RN40720 Cube)</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
