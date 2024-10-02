@@ -21,3 +21,9 @@ uid: General_Main_Release_10.4.0_CU9
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 In some cases, the alarm severity of a service would not be updated correctly when, during a row update, both the display key and the monitored value had been changed.
+
+#### Failover: Problem with SLSNMPManager at startup [ID 40883]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DataMiner Agent that was part of a Failover setup started up, in some cases, SLSNMPManager could stop working.
