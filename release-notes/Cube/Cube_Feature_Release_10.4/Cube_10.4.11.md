@@ -89,7 +89,7 @@ In the *Logging* section of *System Center*, a number of additional log files ca
 - Spectrum Manager
 - UI Provider
 
-#### Adding or changing arguments in cube:// URLs of running Cube instances [ID_40795]
+#### Adding or changing arguments in cube:// URLs of running Cube instances [ID 40795]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 

@@ -41,3 +41,14 @@ This label is used in the *Agent alarms* section of the *System Center > Agents 
 When a license has expired, a notification window will appear when you open DataMiner Cube.
 
 Up to now, both the title and the text of that notification window would include the incorrectly spelled word "licence". This word has now been changed to "license".
+
+#### Desktop app start window: Message 'Did you mean ...?' would incorrectly be displayed when you entered the name of a non-existing DMS [ID 40896]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in the start window of the Cube desktop app, you clicked the '+' button and entered the name of a non-existing DataMiner System in the *Host* box, up to now, two messages would appear:
+
+- "Not a DataMiner Agent", and
+- "Did you mean", followed by the exact name you entered.
+
+This last message will no longer be displayed.

@@ -100,7 +100,7 @@ From now on, the *Preserve feed selections* option will only be visible when you
 
 From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
-#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID_40814]
+#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID 40814]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
@@ -112,7 +112,7 @@ Up to now, an *Open monitoring card* event was only able to open the card of an 
 
 In the *Layout* tab of a *Table* component, it is now possible to indicate whether the table filter should be visible or not.
 
-#### Low-Code Apps: Enhanced performance when creating a new draft of an existing low-code application [ID_40866]
+#### Low-Code Apps: Enhanced performance when creating a new draft of an existing low-code application [ID 40866]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
