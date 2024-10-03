@@ -49,16 +49,16 @@ When you click either the "thumbs up" or "thumbs down" button, in some cases, a 
 
 | Action | Description |
 |--------|-------------|
-| Clear the alarm             | When you select this action, the alarm will be cleared immediately. No confirmation box will appear. |
-| Update the alarm template   | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
-| Create a new alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
+| Clear event             | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
+| Improve alarm template   | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
+| Create alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
 
 When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.
 
 > [!NOTE]
 >
 > - The actions listed above will only appear if you are allowed to perform them. For example, the system will not suggest you update the alarm template if you are not allowed to do so.
-> - The *Update the alarm template* and *Create a new alarm template* actions will not appear if the element in question has an alarm template group assigned.
+> - The *Improve alarm template* and *Create alarm template* actions will not appear if the element in question has an alarm template group assigned.
 
 ##### Adding a feedback column to other alarm tabs
 
