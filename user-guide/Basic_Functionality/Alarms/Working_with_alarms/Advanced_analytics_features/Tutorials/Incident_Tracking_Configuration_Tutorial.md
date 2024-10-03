@@ -2,133 +2,148 @@
 uid: Incident_Tracking_Configuration_Tutorial
 ---
 
-# Finetune incident tracking for your system
+# Fine-tuning incident tracking in your system
 
-The incident tracking (aka alarm grouping) functionality automatically groups alarms related to the same root cause. This automatic grouping is governed by a set of *rules* or *grouping strategies*. In this tutorial, we will teach you how to enable/disable certain rules, tweak them or even add your own custom rules to the alarm grouping engine.
+The incident tracking (a.k.a. alarm grouping) functionality automatically groups alarms related to the same root cause. This automatic grouping is governed by a set of **rules** or **grouping strategies**. In this tutorial, you will learn how to enable and disable certain rules, tweak them, and even add your own custom rules to the alarm grouping engine.
 
-The content and screenshots for this tutorial have been created in DataMiner 10.4.10
+The content and screenshots for this tutorial have been created in DataMiner 10.4.10.
 
-Estimated Duration: 30 minutes
+Estimated duration: 30 minutes
 
+<!-- > [!TIP]
+> See also: [Kata #43: [KATA] Grouping alarms like a pro](TODO: link and video reference still to be filled in here) -->
 
-> [!TIP]
->  See also: [Kata #43: [KATA] Grouping alarms like a pro](TODO: link and video reference still to be filled in here)
 ## Prerequisites
 
-- DataMiner 10.2.0/10.1.4 or higher
-- Automatic Incident Tracking is enabled in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic Incident Tracking*.
-- Automatic Incident Tracking is enabled in the alarm console by selecting *Automatic incident tracking* in the Alarm Console hamburger menu.
+- DataMiner 10.2.0/10.1.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
 
- ![Enable Incident Tracking in the alarm console](~/user-guide/images/EnableAlarmGroupingInAlarmConsole.png)
+- Automatic incident tracking is enabled in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic incident tracking*.
+
+- Automatic incident tracking is enabled in the Alarm Console.
+
+  To check if this is enabled, check if *Automatic incident tracking* is selected in the Alarm Console hamburger menu.
+
+  ![Enable Incident Tracking in the Alarm Console](~/user-guide/images/EnableAlarmGroupingInAlarmConsole.png)
 
 ## Overview
+
 The tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Find the advanced configuration file](#step-2-find-the-advanced-configuration-file)
 - [Step 3: Explore the default alarm grouping rules](#step-3-explore-the-default-alarm-grouping-rules)
 - [Step 4: Switch off parameter and view grouping](#step-4-switch-off-parameter-and-view-grouping)
-- [Step 5: Adding your own rules to the incident tracking engine: alarm properties](#step-5-adding-your-own-rules-to-the-incident-tracking-engine-alarm-properties)
-- [Step 6: Final exercise: grouping on a custom element property](#step-6-final-exercise-grouping-on-a-custom-element-property])
-- [Step 7: Clean up your system](#step-7-clean-up-your-system])
+- [Step 5: Add your own rules to the incident tracking engine](#step-5-add-your-own-rules-to-the-incident-tracking-engine)
+- [Step 6: Group on a custom element property](#step-6-group-on-a-custom-element-property)
+- [Step 7: Clean up your system](#step-7-clean-up-your-system)
 
 ## Step 1: Install the example package from the Catalog
 
-1. On the catalog, look for the package *Kata Incident Tracking* or click the direct link: <https://catalog.dataminer.services/details/5b989f43-bdab-4774-ae00-228b097363b1>.
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Go to <https://catalog.dataminer.services/details/5b989f43-bdab-4774-ae00-228b097363b1>.
 
-   This will create 13 elements under the *DataMiner Catalog > Augmented Operations > Incident Tracking Tutorial* view. It will also create four automation scripts. You can easily recognize the elements and scripts because their names begin with *Incident Tracking Tutorial*.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
+
+   This will create 13 elements under the *DataMiner Catalog > Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four Automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
+
+   > [!NOTE]
+   > If the package has been fully deployed, but not everything mentioned above is visible in Cube, close and reopen Cube.
 
 ## Step 2: Find the advanced configuration file
 
-Automatic incident tracking groups alarms according to a set of concrete rules. These rules are listed in a somewhat hidden configuration file. To find the file on your system:
+Automatic incident tracking groups alarms according to a set of rules, which are listed in a configuration file. To locate the file in your system:
 
-1. Use DataMiner Cube to look up the Incident Tracking Leader DataMiner ID. You can find it in the following location: *System Center* > *System settings* > *analytics config* > *Automatic Incident Tracking* > *Leader DataMiner ID*.
+1. Go to *Apps* > *System Center* > *System settings* > *analytics config*.
 
-	The *Leader DataMiner ID* refers to the single agent in your cluster that is in charge of running the incident tracking algorithm for the entire cluster.
-1. On the server running the leader DMA, find the *configuration.xml* file in the "Skyline DataMiner/Analytics" folder.
+1. Under *Automatic Incident Tracking*, check which ID is mentioned in the box *Leader DataMiner ID*.
 
->[!NOTE]
->
->	- If you are on a DAAS system, you will not be able to access this location, but you will still be able to follow this tutorial by making use of the provided automation scripts. To have an idea of what this *configuration.xml* file looks like, we recommend fetching it from an on premise DMA.
->	- Note that every agent in the cluster has its own *configuration.xml* file, but that only the one on the leader is actually ever used. In particular, if you ever change the Leader DataMiner ID, make sure to update the configuration file on the server running the new leader.
+   This is the ID of the DataMiner Agent within your DMS that is in charge of running the incident tracking algorithm for the entire DMS.
+
+1. On the server running the leader DMA, go to the folder `C:\Skyline DataMiner\Analytics`.
+
+   Within this folder, you will find the *configuration.xml* file.
+
+> [!NOTE]
+> If you are using [DaaS](xref:Creating_a_DMS_in_the_cloud), you will not be able to access this location. However, you can use the Automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what this *configuration.xml* file looks like, we recommend taking a look at the file on an on-premises DMA.
 
 ## Step 3: Explore the default alarm grouping rules
-Before exploring the rules, it is important to note that a new alarm can only be added to an existing alarm group if it occurs within 10 minutes of some alarm already in the group. This 10 minute duration is configurable in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic Incident Tracking* > *Maximum time interval*.
 
-Once alarms occur within 10 minutes of each other, the rules mentioned in the *configuration.xml* completely determine whether or not they are grouped. Let us go over them:
+By default, a new alarm can only be added to an existing alarm group if it occurs within 10 minutes of another alarm that is already in the group. You can customize this 10-minute interval in DataMiner Cube via *System Center* > *System settings* > *analytics config* > *Automatic Incident Tracking* > *Maximum time interval*. Once alarms occur within this interval, the rules in the *configuration.xml* will determine whether or not they are grouped.
 
-1. The *ServiceProperty* rule states that we will automatically group alarms on parameters of the same service. The corresponding xml item in the *configuration.xml* looks like this: 
-	
-	![Grouping on service](~/user-guide/images/serviceGrouping.png)
-		To disable grouping based on service:
-	1. Set the *enable* tag to *false* instead of *true*.
-	1. Save the file.
-	1. Restart the *SLAnalytics.exe* process on the leader agent (using the windows task manager for example).
+1. Open the *configuration.xml* file, and take a look at the different rules.
 
-1. The *RelationsProperty* rule refers to the parameter relationship data (from DataMiner 10.3.1/10.4.0 onwards) and alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards) available on DataMiner Agents that are connected to dataminer.services,  have the [DataMiner Extension Module *ModelHost*](xref:DataMinerExtensionModules#modelhost) installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
-   This functionality assigns a *relation score* to any 2 parameters in your system. The score is a number between 0 and 1 where the value 1 refers to a very strong relation and the value 0 to a non-existing relation.
-   The rule states that alarms on parameters with relation score higher than mentioned in the *relationThreshold* tag will be grouped. The default relationThreshold is 0.7.
+   You should be able to spot the following rules:
 
-	![Grouping on relation strength](~/user-guide/images/relationGrouping.png)
+   - The *ServiceProperty* rule, which determines whether alarms will be automatically grouped on parameters from the same service. The corresponding XML item in *configuration.xml* looks like this:
 
-	To tweak this rule:
-	
-	1. Enable or disable the rule by setting the *enable* tag to *true* or *false*.
-	1. Change the relationThreshold tag to a desired value between 0 and 1.
-	1. Save the file.
-	1. Restart the *SLAnalytics.exe* process on the leader agent (using the windows task manager for example).
+     ![Grouping on service](~/user-guide/images/serviceGrouping.png)
 
-1. The *LocationProperty* rule requires usage of the [IDP Solution](xref:IDP_Tutorial_DiscoveryAndProvisioning) to enrich devices with location info.
-	The rule states that alarms on devices in the same location are grouped under the condition that the fraction of devices in alarm at that location exceeds the value set in the *threshold* tag.
+     > [!TIP]
+     > See also: [Enabling or disabling service-based alarm grouping](xref:Customizing_alarm_grouping_rules#enabling-or-disabling-service-based-alarm-grouping)
 
-	![Grouping on location](~/user-guide/images/locationGrouping.png)
+   - The *RelationsProperty* rule, which refers to parameter and alarm relationship data.
 
-	To tweak this rule:
-	
-	1. Enable or disable the rule by setting the *enable* tag to *true* or *false*.
-	1. Change the threshold tag to a desired value between 0 and 1.
-	1. Save the file.
-	1. Restart the *SLAnalytics.exe* process on the leader agent (using the windows task manager for example).
+     ![Grouping on relation strength](~/user-guide/images/relationGrouping.png)
 
-1. The *ParameterProperty* rule states that alarms on the same *(connector,parameter)*-pair are grouped. For example, when multiple devices using the *Microsoft Platform* driver, have an alarm on their *Total Processor Load* parameters, then those alarms are grouped.
+     > [!TIP]
+     > See also: [Fine-tuning alarm grouping based on parameter and alarm relations](xref:Customizing_alarm_grouping_rules#fine-tuning-alarm-grouping-based-on-parameter-and-alarm-relations)
 
-	To see this rule in action, consider the elements *Incident Tracking Tutorial - Amplifier1_Node1* and *Incident Tracking Tutorial - Amplifier2_Node1*, sharing the same protocol. Then:
-	
-	1. Create an alarm on the *Incident Tracking Tutorial Amplifier1_Node1* element as follows:
-	
-		1. Open the element.
-		1. Click the dropdown icon next to the *Forward Path* page of the element.
-		1. Open the *Level Detector* page.
-		1. Click the *Toggle Alarm* button.
-	
-	![Set an amplifier in alarm](~/user-guide/images/setAlarm.png)
-	
-	You should see the alarm appearing in your alarm console.
-		
-	2. Similarly, create an alarm on the *Incident Tracking Tutorial Amplifier2_Node1* element.
-	
-	You should see that the new alarm is automatically grouped with the previously created alarm as in the picture below.
-	
-	![Grouping on parameter](~/user-guide/images/parameterGrouping.png)
+   - The *LocationProperty* rule, which requires DataMiner IDP and determines whether alarms are grouped based on location.
 
-	3. Clear the alarms that you created by pressing the aforementioned *Toggle Alarm* button again on both elements.
+     ![Grouping on location](~/user-guide/images/locationGrouping.png)
 
-1. The *ElementProperty* rule states that alarms on the same element are grouped.
-1. The *PollingProperty* rule states that time-out alarms polling from the same IP are grouped.
-1. The *ViewPropery* states that alarms on devices under the same view are grouped under the condition that the fraction of devices in alarm under that view exceeds the value in the *threshold* tag. The snippet in the *configuration.xml* that corresponds to this rule, looks like this:
+     > [!TIP]
+     > See also: [fine-tuning location-based alarm grouping](xref:Customizing_alarm_grouping_rules#fine-tuning-location-based-alarm-grouping)
 
-	![Grouping on view](~/user-guide/images/viewGrouping.png)
+   - The *ParameterProperty* rule, which determines the grouping of alarms for the same parameter of a specific protocol.
 
-	To see this in action, note that the *threshold* tag is set to 0.25, so let us make sure that the fraction of devices in alarm under the *DataMiner Catalog < Augmented Operations < Incident Tracking Tutorial < Amplifiers* view exceeds 0.25. As this view contains 10 elements, you should trigger alarms on at least 3 amplifiers.
+     For example, when multiple elements using the *Microsoft Platform* protocol have an alarm on their *Total Processor Load* parameter, then those alarms are grouped.
 
-	To avoid interference with the parameter grouping rule, create alarms on amplifiers with different protocols: e.g. *Incident Tracking Tutorial - Amplifier1_Node1*, *Incident Tracking Tutorial - Amplifier1_Node2* and *Incident Tracking Tutorial - Amplifier1_Node3*. The resulting group should look like this:
+   - The *ElementProperty* rule, which determines whether alarms on the same element are grouped.
 
-	![Grouping on view in action](~/user-guide/images/viewGroupingInAction.png)
+   - The *PollingProperty* rule, which determines whether timeout alarms polling from the same IP are grouped.
 
-	Do not forget to clear the alarm using the aforementioned *Toggle Alarm* button.
-	
-1. The *GenericProperties* rule will be discussed later.
+   - The *ViewProperty* rule, which determines whether alarms on elements within the same view are grouped.
+
+     ![Grouping on view](~/user-guide/images/viewGrouping.png)
+
+   - The *GenericProperties* rule, which allows you to define custom properties.
+
+     You will find out more about this rule in [step 5](#step-5-add-your-own-rules-to-the-incident-tracking-engine).
+
+1. Test the *ParameterProperty* rule:
+
+   1. Open the *Incident Tracking Tutorial Amplifier1_Node1* element in DataMiner Cube.
+
+   1. Go to the *Forward Path* > *Level Detector* page of the element.
+
+   1. Click the *Toggle Alarm* button in the top-right corner.
+
+      ![Set an amplifier in alarm](~/user-guide/images/setAlarm.png)
+
+      This will add an alarm for this element in the Alarm Console.
+
+   1. Do the same for the *Incident Tracking Tutorial Amplifier2_Node1* element.
+
+      This way, you will add an alarm for the same parameter of an element using the same protocol. You should see that the new alarm is automatically grouped with the previously created alarm.
+
+      ![Grouping on parameter](~/user-guide/images/parameterGrouping.png)
+
+      > [!NOTE]
+      > If no alarm group is formed, check whether *Automatic incident tracking* is enabled in the Alarm Console and whether you have triggered the alarm for the correct element. Not all of the elements added for this tutorial use the same protocol, so if you used a different element than mentioned above, the rule may not be triggered.
+
+   1. In both elements, click the *Toggle Alarm* button again to clear the alarms again.
+
+1. Test the *ViewProperty* rule:
+
+   1. In the same way as before, trigger an alarm on the elements *Incident Tracking Tutorial - Amplifier1_Node1*, *Incident Tracking Tutorial - Amplifier1_Node2*, and *Incident Tracking Tutorial - Amplifier1_Node3*.
+
+      As the threshold in *configuration.xml* is by default set to 0.25 for this property, and the view containing the amplifier elements contains 10 elements, this will make the fraction of devices in alarm within the view exceed the configured threshold value. The three amplifier elements mentioned above use different protocols, so that the *ParameterProperty* rule does not get triggered here.
+
+      The resulting group should look like this:
+
+      ![Grouping on view in action](~/user-guide/images/viewGroupingInAction.png)
+
+   1. Clear the alarms again using the *Toggle Alarm* button for each element.
 
 ## Step 4: Switch off parameter and view grouping
 
@@ -141,14 +156,13 @@ Alternatively, if you have access to the *configuration.xml* file you can do it 
 1. Save the file.
 1. Restart the *SLAnalytics.exe* process on the leader.
 
-## Step 5: Adding your own rules to the incident tracking engine: alarm properties
+## Step 5: Add your own rules to the incident tracking engine
 
 The setup contained in the catalog package creates a *Nodes* and an *Amplifiers* view. This is inspired by EPM setups where a node  sends out a signal to a group of amplifiers which in turn amplify and forward the signal to households.
 
-The goal of this section is to automatically group alarms on amplifiers under the same node. 
+The goal of this section is to automatically group alarms on amplifiers under the same node.
 
-In the current setup, we have 3 nodes. We assume that *Incident Tracking Tutorial - TELESTE_NODE_x* (x is 1,2 or 3) sends a signal to the amplifiers with name ending on *Nodex*. So, for example,
- *Incident Tracking Tutorial - TELESTE_NODE_1* sends a signal to
+In the current setup, we have 3 nodes. We assume that *Incident Tracking Tutorial - TELESTE_NODE_x* (x is 1,2 or 3) sends a signal to the amplifiers with name ending on *Nodex*. So, for example, *Incident Tracking Tutorial - TELESTE_NODE_1* sends a signal to
 
 *Incident Tracking Tutorial - Amplifier1_Node1*,
 
@@ -164,27 +178,30 @@ We have set everything up in such a way that an alarm on any of the amplifiers c
 1. Right click the alarm and select *Properties*.
 1. Notice mention of the *ParentNode* property at the bottom of the window
 
-	![CustomAlarmProperty](~/user-guide/images/alarmProperty.png)
+   ![CustomAlarmProperty](~/user-guide/images/alarmProperty.png)
 
 To configure *Incident Tracking* to group alarms whose *ParentNode* property have the same value, you should follow the steps below. In case you do not have access to the *configuration.xml* file, you can alternatively run the *Incident Tracking Tutorial Scripts - Script 2 Enable Custom Alarm Property Grouping* automation script that was added to the catalogue package.
 
-
-1. Go to the [Advanced automatic incident tracking configuration](xref:Automatic_incident_tracking#advanced-configuration) page on the DataMiner user guide.
+1. Go to [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules).
 1. Scroll down to the item related to grouping on <strong> alarm property</strong>.
 1. Copy the xml snippet displayed there. For completeness, we repeat it here:
+
 ```xml
   <item type="skyline::dataminer::analytics::workers::configuration::GenericAlarmPropertyVisitorConfiguration">
     <enable>true</enable>
     <name>[PROPERTY_NAME]</name>
   </item>
   ```
-4. Open the *configuration.xml* file.
+
+1. Open the *configuration.xml* file.
 1. Scroll down to the *GenericProperties* item.
-	
-	![Grouping on custom property](~/user-guide/images/customPropertyGrouping.png)
+
+   ![Grouping on custom property](~/user-guide/images/customPropertyGrouping.png)
+
 1. Paste the aforementioned xml snippet in the *value* tag, obtaining:
 
-	![Grouping on custom property with pasted snippet](~/user-guide/images/customPropertyGrouping2.png)
+   ![Grouping on custom property with pasted snippet](~/user-guide/images/customPropertyGrouping2.png)
+
 1. In the *name* tag of the pasted snippet, fill in the property name on which you want to group, ie *ParentNode*.
 1. Save the file.
 1. Restart *SLAnalytics.exe* (e.g. through the task manager).
@@ -194,34 +211,35 @@ The alarm  group should look like this:
 
 ![Grouping on alarm property result](~/user-guide/images/GroupingOnAlarmPropertyResult.png)
 
-8. Clear the created alarms using the aforementioned *Toggle Alarm* button.
+1. Clear the created alarms using the aforementioned *Toggle Alarm* button.
 
-## Step 6: Final exercise: grouping on a custom element property
+## Step 6: Group on a custom element property
 
-In this final exerice, the goal is to group alarms on amplifiers under the same node, <strong>but only</strong> if at least 75% of the amplifiers under the node are in alarm. You should find everything you need to complete this exercise on the [Advanced automatic incident tracking configuration](xref:Automatic_incident_tracking#advanced-configuration) page on the DataMiner user guide.
+In this final exercise, the goal is to group alarms on amplifiers under the same node, **but only** if at least 75% of the amplifiers under the node are in alarm. You should find everything you need to complete this exercise on the [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules) page.
 
-To help you on your way, we recommend creating a custom element property. For each amplifier, the value of this property should refer to its parent node. 
+To help you on your way, we recommend creating a custom element property. For each amplifier, the value of this property should refer to its parent node.
 
 In case you do not have access to the *configuration.xml* file and you would still like to participate:
+
 1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* automation script.
 1. Look for the string variable called *KataExercise*.
 1. Set this string equal to all the xml code that you want to add to the *value* tag of the *GenericProperties* rule in the *configuration.xml*.
 1. Save the file.
 1. Restart *SLAnalytics.exe* through the task manager.
+1. Send us a screenshot of your solution to be awarded DevOps Points.
 
-Finally, 
-
-> [!IMPORTANT]
-> Use the following email format to send us your solution:
->
-> - Subject: Tutorial - Finetune incident tracking for your system
-> - To: [ai@skyline.be](mailto:ai@skyline.be)
-> - Body:
->   - Dojo account: clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
->	- Attachment: add a screenshot of the amplifiers you have set in alarm and of the corresponding alarm group
->
-> Upon successful validation, you will be awarded 75 DevOps Points.
+   > [!IMPORTANT]
+   > Use the following email format to send us your solution:
+   >
+   > - Subject: Tutorial - Finetune incident tracking for your system
+   > - To: [ai@skyline.be](mailto:ai@skyline.be)
+   > - Body:
+   >   - Dojo account: clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
+   >   - Attachment: add a screenshot of the amplifiers you have set in alarm and of the corresponding alarm group
+   >
+   > Upon successful validation, you will be awarded 75 DevOps Points.
 
 ## Step 7: Clean up your system
+
 1. Clear the created alarms using the aforementioned *Toggle Alarm* buttons.
 1. Run the *Incident Tracking Tutorial Scripts - Script 4 Reset Configuration* automation script from the Catalogue item to revert to your original *configuration.xml*.

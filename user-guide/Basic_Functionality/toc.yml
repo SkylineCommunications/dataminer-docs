@@ -232,6 +232,9 @@ items:
             topicUid: Proactive_cap_detection
           - name: Automatic incident tracking
             topicUid: Automatic_incident_tracking
+            items:
+            - name: Customizing alarm grouping rules
+              topicUid: Customizing_alarm_grouping_rules
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
           - name: Tutorials
@@ -242,6 +245,8 @@ items:
               topicUid: Anomaly_Feedback_Tutorial
             - name: Creating an anomaly overview dashboard
               topicUid: Creating_Anomaly_Overview_Dashboard
+            - name: Fine-tuning incident tracking
+              topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality
         topicUid: Advanced_alarm_functionality
         items:
