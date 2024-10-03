@@ -207,12 +207,12 @@ namespace Skyline.DataMiner.Automation
 		public int Width { get; set; }
 
 		/// <summary>
- 		/// Gets or sets a value indicating whether the confirmation popup window when aborting a script should be shown or not.
+ 		/// Gets or sets a value indicating whether the confirmation pop-up window when aborting a script should be shown or not.
 		/// </summary>
 		/// <value><c>true</c> if you want the confirmation window to not be shown when aborting a script; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: <c>false</c></para>
-		/// <para>Feature introduced in DataMiner 10.4.12 (RN40700 web) (RN40720 Cube)</para>
+		/// <para>Feature introduced in DataMiner 10.4.12 (RN 40700 web) (RN 40720 Cube)</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
