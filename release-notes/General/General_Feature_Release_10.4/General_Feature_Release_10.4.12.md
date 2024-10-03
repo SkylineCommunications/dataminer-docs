@@ -59,6 +59,12 @@ From DataMiner 10.4.0 [CU2]/10.4.5 onwards, when the computer name of a DataMine
 > [!TIP]
 > See also: Known issue [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER)
 
+#### SLAnalytics - Behavioral anomaly detection: Updates to alarm templates used in alarm template groups could be disregarded [ID 40783]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when an alarm template used in an alarm template group was updated, and no element was using that template directly, in some cases, SLAnalytics would disregard the update. This could then lead to an incorrect anomaly alarm configuration being applied to elements using the alarm template group and to incorrect focus values being set in the alarms of the elements using the alarm template group.
+
 #### Problem with alarm severity of a service not being updated correctly [ID 40840]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
