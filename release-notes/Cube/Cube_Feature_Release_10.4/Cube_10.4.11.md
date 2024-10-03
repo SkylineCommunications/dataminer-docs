@@ -27,6 +27,9 @@ uid: Cube_Feature_Release_10.4.11
 
 In the *Suggestion events* and *Anomalies* tabs of the Alarm Console, a new column now allows you to give feedback on any of the listed anomalies.
 
+> [!IMPORTANT]
+> This feature will only work when connected to a DataMiner Agent running at least main release 10.5.0 or feature release 10.4.11.
+
 ##### Thumbs up or thumbs down
 
 In this new column, you can find two buttons to evaluate an anomaly:
