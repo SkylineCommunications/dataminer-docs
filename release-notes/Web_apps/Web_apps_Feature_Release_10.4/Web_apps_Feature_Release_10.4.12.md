@@ -63,3 +63,11 @@ In case of a Table, Map, Grid or Timeline component, the templates did not allow
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, on the authentication page, you clicked *Log on* while your user name and password were both filled in, in some cases, the "A username is required." message would incorrectly appear. When you then clicked *Log on* again, the logon request would succeed.
+
+#### Dashboards/Low-Code Apps - GQI: Problem when arguments of ad hoc data sources were set to empty strings [ID 40932]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a required argument of an ad hoc data source was set to an empty string, up to now, the empty string would incorrectly not be seen as a valid value. Hence, queries using that ad hoc data source would not get executed.
+
+From now on, arguments of ad hoc data sources will be allowed to have an empty string as value.
