@@ -42,7 +42,11 @@ uib.SkipAbortConfirmation = true;
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### OpenSearch: Enhanced performance of alarm queries [ID 40674]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Alarm filters containing brackets can now be translated to OpenSearch queries. This will considerably improve overall performance of alarm queries against OpenSearch databases.
 
 ### Fixes
 
