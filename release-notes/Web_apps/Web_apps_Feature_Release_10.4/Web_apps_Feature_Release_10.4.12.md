@@ -71,3 +71,9 @@ When, on the authentication page, you clicked *Log on* while your user name and 
 When a required argument of an ad hoc data source was set to an empty string, up to now, the empty string would incorrectly not be seen as a valid value. Hence, queries using that ad hoc data source would not get executed.
 
 From now on, arguments of ad hoc data sources will be allowed to have an empty string as value.
+
+#### Dashboards app - State component: Problem when loading parameter data [ID 40949]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When parameter data was loaded into a *State* component, the dashboard could get stuck in an infinite loop.
