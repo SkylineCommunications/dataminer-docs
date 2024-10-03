@@ -63,7 +63,7 @@ To specify what to retrieve and how this request is added to the group execution
 
 In case of table parameters you do not always want to retrieve the full table, so you can specify what to get and when to get it.
 
-Default values with attribute value "true", you will get the cell and the get will be added to the group execution queue (execute next).
+Default values with attribute value "true", you will get the cell and the get will be added to the group execution queue (execute next).<!-- To be verified -->
 
 What to get:
 
