@@ -20,6 +20,15 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 
 ### Fixes
 
+#### Problem when DataMiner Agent is named DATAMINER [ID 40743]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+From DataMiner 10.4.0 [CU2]/10.4.5 onwards, when the computer name of a DataMiner server was DATAMINER, the server would no longer function correctly.
+
+> [!TIP]
+> See also: Known issue [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER)
+
 #### Problem with alarm severity of a service not being updated correctly [ID 40840]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
