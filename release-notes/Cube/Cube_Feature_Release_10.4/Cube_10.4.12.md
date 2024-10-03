@@ -16,7 +16,14 @@ uid: Cube_Feature_Release_10.4.12
 
 ## New features
 
-*No new features have been added yet.*
+#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+DataMiner Cube now supports the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+
+> [!TIP]
+> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
 ## Changes
 

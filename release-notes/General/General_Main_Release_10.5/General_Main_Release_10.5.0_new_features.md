@@ -328,6 +328,24 @@ A connector will only be promoted to "production version" if its first version i
 > [!NOTE]
 > When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
 
+### Automation
+
+#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+
+Example:
+
+```csharp
+UIBuilder uib = new UIBuilder();
+uib.SkipAbortConfirmation = true;
+```
+
+> [!TIP]
+> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
+
 ### DataMiner modules
 
 #### User-defined APIs: Query string support [ID 37733]
