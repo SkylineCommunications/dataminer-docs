@@ -41,6 +41,12 @@ This label is used in the *Agent alarms* section of the *System Center > Agents 
 
 ### Fixes
 
+#### Problem when a large number of objects were added to, updated in or removed from a view [ID 40791]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In some cases, the Cube UI could start to behave erratically when a large number of objects were added to, updated in or removed from a view.
+
 #### License expiration window: Title and text included the incorrectly spelled word "licence" [ID 40894]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
