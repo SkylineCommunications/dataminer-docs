@@ -19,7 +19,7 @@ Change the computer name. However, note that a new DataMiner license file will n
 
 ## Fix
 
-No fix is available yet.<!-- RN 40743 -->
+Install DataMiner 10.4.0 [CU9]/10.4.12.<!-- RN 40743 -->
 
 ## Description
 

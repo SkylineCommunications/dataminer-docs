@@ -234,8 +234,6 @@ items:
         items:
           - name: DataMiner incorrectly reports a Cassandra issue when another database fails
             topicUid: KI_DataMiner_reports_Cassandra_issue_when_another_database_fails
-          - name: Problem when DMA server is named DATAMINER
-            topicUid: KI_Problem_when_server_name_is_DATAMINER
           - name: Inconsistent service impact of alarms after element is stopped and restarted
             topicUid: KI_Inconsistent_service_impact
           - name: Unable to perform a DataMiner upgrade via Update Center
@@ -264,6 +262,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Problem when DMA server is named DATAMINER
+            topicUid: KI_Problem_when_server_name_is_DATAMINER
           - name: Web apps experience frequent disconnects
             topicUid: KI_Web_apps_experience_frequent_disconnects
           - name: ButtonState shapes in Visual Overview fail to hide as expected
