@@ -16,7 +16,14 @@ uid: Web_apps_Feature_Release_10.4.12
 
 ## New features
 
-*No new features have been added yet.*
+#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40700]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+DataMiner web applications now support the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+
+> [!TIP]
+> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
 ## Changes
 
