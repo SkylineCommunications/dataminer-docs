@@ -7,18 +7,20 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER) | From DataMiner 10.4.0 [CU2]/10.4.5 onwards | | September 10, 2024 |
+| [DataMiner incorrectly reports a Cassandra issue when another database fails](xref:KI_DataMiner_reports_Cassandra_issue_when_another_database_fails) | From DataMiner 10.4.0 onwards | | September 19, 2024 |
 | [Inconsistent service impact of alarms after element is stopped and restarted](xref:KI_Inconsistent_service_impact) | All currently supported versions | | August 9, 2024 |
 | [Unable to perform a DataMiner upgrade via Update Center](xref:KI_Unable_to_perform_a_DataMiner_upgrade_via_Update_Center) | From DataMiner 10.4.0 onwards | | August 6, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Web apps experience frequent disconnects](xref:KI_Web_apps_experience_frequent_disconnects) | DataMiner 10.4.0 [CU6]<br>DataMiner 10.4.9 | DataMiner 10.4.0 [CU7]<br>DataMiner 10.4.10 | September 23, 2024 |
+| [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER) | From DataMiner 10.4.0 [CU2]/10.4.5 onwards | DataMiner 10.4.0 [CU9]<br>DataMiner 10.4.12 | September 10, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Process crashes when trying to connect to MySQL database](xref:KI_MySQL_Unhandled_Exception) | From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 <br>onwards | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | July 15, 2024 |
-| [Failover switch taking a long time on systems with Cassandra Cluster setup](xref:KI_Failover_switch_Cassandra_Cluster) | Failover systems with Cassandra Cluster setup from DataMiner 10.4.2 onwards | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | June 27, 2024 |
-| [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition) |From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards | DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 | June 6, 2024 |
+| [Failover switch taking a long time on systems with Cassandra setup](xref:KI_Failover_switch_Cassandra) | Failover systems with Cassandra setup from DataMiner 10.4.2 to 10.4.8 | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | June 27, 2024 |
 | [Deadlock in service loading during DataMiner startup](xref:KI_deadlock_service_loading) | From DataMiner 10.3.0 [CU10]/10.4.1 onwards | DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 [CU0] | June 11, 2024 |
+| [SLProtocol RTE caused by SNMP group with condition](xref:KI_SLProtocol_RTE_SNMP_group_condition) |From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards | DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 | June 6, 2024 |
 | [Deadlock when forcing quarantine during booking update](xref:KI_Deadlock_when_forcing_quarantine) | DataMiner 10.4.6 | DataMiner 10.4.6 [CU1] | May 24, 2024 |
 | [Param next attribute not working correctly](xref:KI_Param_next_not_working) | From DataMiner 10.1.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards | DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 | March 20, 2024 |
 | [Error in SLDataMiner when generating MIB file](xref:KI_SLDataMiner_problem_generating_MIB) | DataMiner 10.4.2 and 10.4.3<br>DataMiner 10.4.0 [CU0]<br>DataMiner 10.3.0 [CU11] and [CU12]| DataMiner 10.3.0 [CU13], 10.4.0 [CU1], or 10.4.4| March 15, 2024 |
@@ -187,8 +189,6 @@ uid: Known_issues
 | [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 [CU8] and 10.2.11 | DataMiner 10.2.0 [CU8]/10.2.11 | September 14, 2022 |
 | [Cassandra nodes not configured if current DMA IP is assigned as virtual IP](xref:KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP) | DataMiner 10.1.0 [CU1]/10.1.1 up to 10.1.0 [CU5]/10.1.9 | DataMiner 10.1.0 [CU6]/10.1.9 | - |
 | [NATS error message after 10.1 installation](xref:KI_NATS_error_message_after_10_1_installation) | From DataMiner 10.1 onwards | [Requires configuration](xref:KI_NATS_error_message_after_10_1_installation) | - |
-| [Smart-serial communication no longer working](xref:KI_Smart-serial_communication_no_longer_working) | DataMiner versions prior to 10.1.0/10.0.13 | DataMiner 10.1.0/10.0.13 | - |
-| [Incorrect RTE counts in SLWatchdog2.txt and Alarm Console](xref:KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console) | DataMiner 9.6.0 [CU19]/10.0.0 [CU7]/10.0.12 up to 9.6.0 [CU21]/10.0.0 [CU9]/10.0.13 [CU1] | DataMiner 9.6.0 [CU21]/10.0.0 [CU9]/10.0.13 [CU1] | - |
 | [Shapes in DataMiner stencils not found in Visio search](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | N/A | [Requires configuration](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | - |
 | [SLDataMiner addressChangeThread RTE after DMA startup](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | N/A | [Requires configuration](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | - |
 | [SNMP SET returns a 'NO ACCESS' error](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error) | N/A | [Requires configuration](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error) | - |

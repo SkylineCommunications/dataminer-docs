@@ -1,5 +1,6 @@
 ---
 uid: ClassLibraryIntroduction
+description: The Skyline.DataMiner.Core.DataMinerSystem namespace defines types you can use to implement DataMiner-related logic in protocols and scripts.
 ---
 
 # Class library introduction

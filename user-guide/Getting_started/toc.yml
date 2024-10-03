@@ -24,8 +24,6 @@ items:
           topicUid: Installing_DM_using_the_DM_installer
         - name: Unattended DataMiner installation
           topicUid: Unattended_DM_installation
-        - name: Checking the DataMiner installation
-          topicUid: Checking_the_DM_installation
         - name: Regarding virtual servers
           topicUid: Regarding_virtual_servers
         - name: Regarding antivirus software

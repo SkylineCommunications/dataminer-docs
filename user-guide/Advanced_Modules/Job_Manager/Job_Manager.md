@@ -16,7 +16,6 @@ In order to run this app, your DataMiner System must use a setup with a Cassandr
 >
 > - Along with the other DataMiner web apps, you can [upgrade the Jobs app](xref:Upgrading_Downgrading_Webapps) separately from your main DataMiner installation. This means that you can for example have a DataMiner System using version 10.3.4, while you already use version 10.3.5 for the web apps. You can [download the web apps upgrade package from DataMiner Dojo](https://community.dataminer.services/downloads/).
 > - This app requires a separate Job Manager license.
-> - If you downgrade from DataMiner 10.0.4 to an earlier DataMiner version, job information may be lost.
 
 > [!CAUTION]
 >

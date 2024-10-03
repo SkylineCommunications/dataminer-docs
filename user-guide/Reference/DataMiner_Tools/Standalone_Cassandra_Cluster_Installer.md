@@ -9,7 +9,7 @@ uid: Standalone_Cassandra_Cluster_Installer
 
 ## About this tool
 
-This installer can be used to install Cassandra 3.11.8 on Windows. This version of Cassandra has been tested with the DataMiner Cassandra Cluster feature, which is available from DataMiner 10.0.13 onwards if the *CassandraCluster* [soft-launch option](xref:SoftLaunchOptions) is activated, or from DataMiner 10.1.2 onwards otherwise.
+This installer can be used to install Cassandra 3.11.8 on Windows. This version of Cassandra has been tested with a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup, which is supported from DataMiner 10.1.2 onwards.
 
 The installer includes AdoptOpenJDK 8 as well as DevCenter. It sets up a Cassandra service and creates a firewall rule named CassandraCluster to allow TCP traffic on ports 7000 and 9042.
 
@@ -22,14 +22,14 @@ The installer includes AdoptOpenJDK 8 as well as DevCenter. It sets up a Cassand
 
 - Microsoft Windows
 
-- Server without existing Cassandra installation (i.e. there is no service called “Cassandra”)
+- Server without existing Cassandra installation (i.e. there is no service called "Cassandra")
 
   > [!IMPORTANT]
   > In case the cluster will consist of multiple Cassandra nodes, all nodes must use the same time. Set up NTP on the servers to avoid possible issues caused by a time difference between the nodes.
 
 - [Microsoft Visual C++ 2010 10.0 Service Pack 1](https://support.microsoft.com/en-us/topic/description-of-visual-studio-2010-service-pack-1-1f12811e-3826-6728-9f40-b11ee9ae2a0e)
 
-  The installers for this are also included with the Standalone Cassandra Cluster installer in the folder “Visual Studio 2010 (VC++ 10.0) SP1”.
+  The installers for this are also included with the Standalone Cassandra Cluster installer in the folder "Visual Studio 2010 (VC++ 10.0) SP1".
 
 ## Configuration
 

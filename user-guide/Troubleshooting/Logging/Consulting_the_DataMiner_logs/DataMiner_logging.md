@@ -13,7 +13,7 @@ This page consists of three sections:
 - An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
   > [!NOTE]
-  > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information.
+  > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
 
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
@@ -22,9 +22,7 @@ This page consists of three sections:
 
 ## Changing log levels
 
-### [From DataMiner 10.0.4 onwards](#tab/tabid-1)
-
-From DataMiner 10.0.4 onwards, the log levels for each module are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
+The log levels for each module are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
 
 In the *Log settings* section, you can change the log levels for a specific module or change the default log levels of the DMA.
 
@@ -54,28 +52,6 @@ To change the log levels for a specific module:
 >
 > - Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 > - Not all log files are available in DataMiner Cube. If you want to change the log levels for a log file that is not available in Cube, you can [do so using the SLNetClientTest tool](xref:SLNetClientTest_changing_log_levels).
-
-### [Prior to DataMiner 10.0.4](#tab/tabid-2)
-
-The log levels of a DMA are indicated in the group header of that DMA. Example: 0 0 0, 1 0 0, 1 3 2, etc.
-
-In the *Log settings* section, you can change the log levels for all modules of a DMA. To do so:
-
-1. Select one of the modules of the DMA in the log file list.
-
-- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
-
-  > [!NOTE]
-  > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information.
-
-1. Change the log levels for info, debug and error logging as required.
-
-1. Click *Apply levels* to apply your changes.
-
-> [!NOTE]
-> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
-
-***
 
 ## Sorting the log file list
 

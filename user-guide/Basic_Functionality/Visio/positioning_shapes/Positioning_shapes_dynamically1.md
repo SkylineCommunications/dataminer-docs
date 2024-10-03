@@ -208,7 +208,9 @@ It is possible to specify shape templates for the creation of dynamically positi
 To do so, create template shapes as child shapes for the XPos shape. For each template shape, add a shape data field of type **Template**, and enter a filter as the value, using the same syntax as for extended shape manipulation conditions.
 
 > [!NOTE]
-> The filter allows you to specify a parameter without identifying the element. The value of the parameter will then be retrieved from the table referred to by the parameter placeholder in the XPos shape.
+>
+> - The filter allows you to specify a parameter without identifying the element. The value of the parameter will then be retrieved from the table referred to by the parameter placeholder in the XPos shape.
+> - When templates are used in combination with offsets, the *XPosOffSet* or *YPosOffSet* shape data need to be put on the template "child" shape, not on the parent shape.
 
 > [!TIP]
 > See also: [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions)

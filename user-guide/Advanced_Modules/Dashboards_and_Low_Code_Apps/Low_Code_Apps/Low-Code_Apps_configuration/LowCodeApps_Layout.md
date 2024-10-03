@@ -126,7 +126,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
          - Dots
 
-       - *Sides*: Select which sides of the component border should be shown (from DataMiner 10.0.9 onwards).
+       - *Sides*: Select which sides of the component border should be shown.
 
        - *Thickness*: The thickness (in pixels) of the border that should be displayed around the components.
 

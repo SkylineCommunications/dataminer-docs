@@ -2,17 +2,13 @@
 uid: Web_apps_Feature_Release_10.4.10
 ---
 
-# DataMiner web apps Feature Release 10.4.10 – Preview
+# DataMiner web apps Feature Release 10.4.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.10](xref:General_Feature_Release_10.4.10).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -242,3 +238,19 @@ When, in a low-code app, you had configured a "Select an item" action in a *Tabl
 Up to now, when an interactive Automation script was run inside an *Interactive Automation script* component, the dimensions configured in the script would be ignored. Instead, the script would fill the entire component. Also, since the introduction of the *Interactive Automation script* component, when an interactive Automation script was run independently, scrollbars could appear unnecessarily in the script's pop-up windows.
 
 From now on, the configured dimensions will never be ignored. Whether an interactive Automation script is run inside an *Interactive Automation script* component or whether it is run independently, its windows will now always behave in the same way.
+
+#### Applying the theme and accent color to components used in places other than interactive Automation scripts will now be optional [ID 40802]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+In feature release 10.4.9, all interactive Automation script components were reviewed to make sure they fully inherit the script's theme and accent color. However, in some cases, changing the coloring of those components could cause issues when those components were used in other places (e.g. web apps).
+
+From now on, when the above-mentioned components are used in places other than interactive Automation scripts, applying the theme and accent color to those components will be optional. In interactive Automation scripts, the theme and accent color will always be applied to the script's components.
+
+#### Web API: Problem when sending heartbeats to GQI when an inactive connection had not yet been removed [ID 40826]
+
+<!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
+
+When the web API was sending heartbeats to GQI, the following exception could be thrown when an inactive connection had not yet been removed:
+
+`Collection was modified; enumeration operation may not execute.`

@@ -61,7 +61,7 @@ In DataMiner Cube, you can enable this feature in System Center, via *System set
 
 The following settings are available in System Center:
 
-- *Enabled*: Allows you to activate or deactivate this feature. Note that when you upgrade to DataMiner 10.0.11, the feature is automatically disabled, unless it has previously been activated as a soft-launch feature.
+- *Enabled*: Allows you to activate or deactivate this feature.
 
 - *Leader DataMiner ID*: The DMA performing all incident tracking calculations. By default, this is the DMA with the lowest DataMiner ID at the time when alarm grouping is enabled.
 

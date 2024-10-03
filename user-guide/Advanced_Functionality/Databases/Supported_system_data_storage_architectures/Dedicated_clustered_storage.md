@@ -1,5 +1,7 @@
 ---
 uid: Dedicated_clustered_storage
+keywords: Cassandra Cluster
+description: If you use DataMiner with self-hosted storage, the recommended setup is dedicated clustered storage using Cassandra and OpenSearch.
 ---
 
 # Dedicated clustered storage

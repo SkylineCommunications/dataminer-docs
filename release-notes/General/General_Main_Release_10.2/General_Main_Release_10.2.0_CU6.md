@@ -12,7 +12,7 @@ uid: General_Main_Release_10.2.0_CU6
 
 ### Enhancements
 
-#### SAML authentication: Azure Active Directory B2C now also supported as identity provider ID_32714]
+#### SAML authentication: Azure Active Directory B2C now also supported as identity provider [ID 32714]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.6 -->
 

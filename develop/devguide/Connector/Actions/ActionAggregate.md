@@ -20,20 +20,21 @@ Specifies the aggregation options.
 
 The following options are available:
 
-- allowValues/ignoreValues
-- avoidZeroInResult
-- defaultIf
-- defaultValue
-- equation
-- equationvalue
-- filter
-- groupby
-- groupbyTable
-- join
-- return
-- status
-- threaded
-- type
+- [allowValues/ignoreValues](#allowvaluesignorevalues)
+- [avoidZeroInResult](#avoidzeroinresult)
+- [defaultIf](#defaultif)
+- [defaultValue](#defaultvalue)
+- [equation](#equation)
+- [equationvalue](#equationvalue)
+- [filter](#filter)
+- [groupby](#groupby)
+- [groupbyTable](#groupbytable)
+- [join](#join)
+- [return](#return)
+- [status](#status)
+- [threaded](#threaded)
+- [type](#type)
+- [weight](#weight)
 
 #### allowValues/ignoreValues
 
@@ -286,6 +287,15 @@ You can configure where the result should be placed by specifying comma-separate
 
 It is not mandatory to put all returned result columns into parameters; you could choose to only retrieve the calculated value and omit the weight, e.g. "return:1105".
 
+Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
+
+The following code will take all values from the bandwidth column of the PID table (parameter ID 103), group them by the second column in the PID table (containing for example the service ID), count them together (per service), and store them in the total bandwidth column of the Services table (parameter ID 203).
+
+```xml
+<On id="103">parameter</On>
+<Type options="type:sum;groupby:1;return:203">aggregate</Type>
+```
+
 The table must at least have three columns:
 
 - one for the groupby key
@@ -308,15 +318,6 @@ Possible status values:
 - 0: Finished
 - 1: Busy
 - 2: Finished with failure
-
-Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
-
-The following code will take all values from the bandwidth column of the PID table (parameter ID 103), group them by the second column in the PID table (containing for example the service ID), count them together (per service), and store them in the total bandwidth column of the Services table (parameter ID 203).
-
-```xml
-<On id="103">parameter</On>
-<Type options="type:sum;groupby:1;return:203">aggregate</Type>
-```
 
 #### threaded
 
@@ -374,36 +375,37 @@ In the following example, the result values of the avg extended will be placed i
   <Type options="groupby:2;type:avg extended;return:202,203,204,205">aggregate</Type>
 </Action>
 ```
+#### weight
 
-### Type@regex
+The weight option is used when the value column represents an average with an associated weight. This weight adjusts the relative significance of each row in the final result, ensuring accurate aggregation.
 
-(optional): Specifies the regular expression to use. Feature introduced in DataMiner 10.1.8 (RN 30199).
+Alternatively, the weight can represent the frequency of occurrences, acting as a multiplier to indicate that some rows may represent more items than others.
 
-## Examples
-
-### Example 1
-
+Example:
 ```xml
-<Action id="102">
+<Action id="1">
   <On id="102">parameter</On>
   <Type options="groupby:3;weight:103;type:avg;return:202">aggregate</Type>
 </Action>
 ```
+In this case, the weight is defined by column 103, which represents how many times the corresponding value in column 102 occurs.
 
 |PK (101)|Value (102)|Weight (103)|Group (104)|
 |--- |--- |--- |--- |
 |1|10|50|1|
 |2|2|5|1|
 
-This results in:
+Results in:
 
 |PK (201)|Value (202)|
 |--- |--- |
 |1|9|
 
-The weight is specified because one row represents more items than the other, and when aggregating, this must be taken into account.
+### Type@regex
 
-### Example 2
+(optional): Specifies the regular expression to use. Feature introduced in DataMiner 10.1.8 (RN 30199).
+
+## Examples
 
 ```xml
 <Type options="groupby:1:202,2:203;type:count;return:204">aggregate</Type>
