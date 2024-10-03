@@ -14,6 +14,7 @@ When you have dowloaded the VHDX, you can start to create a VM in your chosen vi
     1. Specify a name for your VM and store the machine in a location of your own choice, make sure your disk has enough space
     1. Choose Virtual Machine Generation 2
     1. Assign (at least) 8192 MB startup memory, you can choose to use dynamic memory
+        - If you choose for local database storage [(WSL)]](xref:Local_database_on_WSL) we recommend to use 12288 MB RAM as the container will take about 4GB to run.
     1. Connect it to a virtual switch that has internet access (either the Default Switch or a custom one)
     1. Connect the Virtual Hard Disk that you just downloaded
 
