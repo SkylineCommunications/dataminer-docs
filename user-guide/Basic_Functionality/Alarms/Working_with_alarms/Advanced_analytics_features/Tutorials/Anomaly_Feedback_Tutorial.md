@@ -18,7 +18,7 @@ Estimated duration: 25 minutes.
 > The content and screenshots for this tutorial were created in DataMiner 10.4.11.
 
 > [!TIP]
-> See also: [Providing feedback on suggestion events](xref:Behavioral_anomaly_detection#providing-feedback-on-suggestion-events)
+> See also: [Providing feedback on behavioral anomalies](xref:Behavioral_anomaly_detection#providing-feedback-on-behavioral-anomalies)
 
 ## Prerequisites
 
