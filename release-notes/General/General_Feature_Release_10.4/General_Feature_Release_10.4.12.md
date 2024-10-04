@@ -48,6 +48,14 @@ uib.SkipAbortConfirmation = true;
 
 Alarm filters containing brackets can now be translated to OpenSearch queries. This will considerably improve overall performance of alarm queries against OpenSearch databases.
 
+#### VerifyDotNetVersion prerequisite check now returns the missing .NET version and a link to the download page [ID 40677]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyDotNetVersion* prerequisite check will verify whether Microsoft ASP.NET 8.0 is installed. When this is not the case, the installation or upgrade will be aborted and a pop-up window will appear, showing the following message:
+
+*Please install the latest \"ASP.NET Core Runtime hosting bundle\" for .NET 8.0 from [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download)*
+
 #### Certain information events will no longer be generated when an element is duplicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->

@@ -753,6 +753,14 @@ Up to now, this feature only proposed parameters from the same DataMiner element
 
 Up to now, SLNet would cache all information about all entries in a correlation alarm (group) tree. In order to reduce the amount of data in this cache, from now on, only the most recent information about these entries will be kept in memory.
 
+#### VerifyDotNetVersion prerequisite check now returns the missing .NET version and a link to the download page [ID 40677]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyDotNetVersion* prerequisite check will verify whether Microsoft ASP.NET 8.0 is installed. When this is not the case, the installation or upgrade will be aborted and a pop-up window will appear, showing the following message:
+
+*Please install the latest \"ASP.NET Core Runtime hosting bundle\" for .NET 8.0 from [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download)*
+
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 40691]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
