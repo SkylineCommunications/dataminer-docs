@@ -66,7 +66,7 @@ To provide feedback:
 
    - Close the *Anomalies* or *Suggestion events* tab and reopen it. However, make sure not to use the *Reopen closed alarm lists* option. See [Adding a tab](xref:ChangingTheAlarmConsoleLayout#adding-a-tab).
 
-    This step might be necessary if you have recently upgraded from a version of DataMiner that did not include the Feedback column to one that does (DataMiner 10.4.11/10.5.0 or higher). Since Cube saves your open tabs along with their column layout, the new column will not automatically appear in tabs that were open before the upgrade.
+     This step might be necessary if you have recently upgraded from a version of DataMiner that did not include the Feedback column to one that does (DataMiner 10.4.11/10.5.0 or higher). Since Cube saves your open tabs along with their column layout, the new column will not automatically appear in tabs that were open before the upgrade.
 
    - Ensure you are using DataMiner version 10.4.11/10.5.0 or higher, or confirm that the *AnomalyFeedback* option is included in the *SoftLaunchOptions.xml* file.
 
