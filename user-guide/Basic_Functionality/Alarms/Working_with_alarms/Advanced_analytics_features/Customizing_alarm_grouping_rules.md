@@ -8,6 +8,8 @@ Automatic incident tracking strives to maximize the amount of information used f
 
 You can do so by modifying the *configuration.xml* file, located in the *C:\\Skyline DataMiner\\analytics\\* folder of the leader Agent. If you are using a DataMiner System that consists of multiple DMAs, it is important that you modify the file on the server hosting that leader Agent. To find out which DMA is the leader Agent, see [Automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
 
+Below you can find information about the [basic syntax](#basic-syntax), as well as detailed procedures for some of the rules. Customizing the other rules can be done in a very similar way to the described procedures.
+
 After you have modified the file, you will also need to restart the *SLAnalytics.exe* process on the leader Agent for the changes to take effect.
 
 > [!IMPORTANT]
