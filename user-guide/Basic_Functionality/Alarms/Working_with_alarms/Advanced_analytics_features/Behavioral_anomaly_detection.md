@@ -39,7 +39,7 @@ The anomaly feedback feature is fully available from DataMiner 10.4.11/10.5.0 on
 
 ![Anomaly feedback feature](~/user-guide/images/Anomaly_Feedback.png)<br>*Alarm Console in DataMiner 10.4.11*
 
-Whenever behavioral anomaly detection triggers a suggestion event, you can provide feedback (positive or negative) on it in the Alarm Console. Regularly providing feedback helps anomaly detection learn from it on a system-wide level, with input from all users. This allows more accurate detection of which change points to mark as anomalies across the system<!--RN 39623-->. Feedback applies to the same parameter instance, other instances of the parameter, and other elements using the same protocol.
+Whenever behavioral anomaly detection triggers a suggestion event or alarm, you can provide feedback (positive or negative) on it in the Alarm Console. Regularly providing feedback helps anomaly detection learn from it on a system-wide level, with input from all users. This allows more accurate detection of which change points to mark as anomalies across the system<!--RN 39623-->. Feedback applies to the same parameter instance, other instances of the parameter, and other elements using the same protocol.
 
 Feedback can be provided via the ![Feedback](~/user-guide/images/Feedback_Column.png) column, which is visible by default in the *Anomalies* and *Suggestion events* tabs of the Alarm Console. To make the column visible in other tabs that list either alarms or suggestion events, right-click the column headers and select *Add or remove columns* > *Actions* > *Feedback*<!--RN 39640-->.
 
