@@ -92,3 +92,9 @@ From now on, arguments of ad hoc data sources will be allowed to have an empty s
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When parameter data was loaded into a *State* component, the dashboard could get stuck in an infinite loop.
+
+#### Legacy Reports & Dashboards app: No longer logged in automatically when being logged in to another web app [ID 40989]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you were logged in to one of the other web apps (e.g. Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
