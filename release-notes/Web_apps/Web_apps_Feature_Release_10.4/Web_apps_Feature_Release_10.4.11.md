@@ -310,3 +310,9 @@ In some cases, components could incorrectly trigger updates in other components,
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When a query filter is applied in a *Timeline* component, by default, all items that are not part of the query result are shown in a lighter color. However, up to now, when zooming in or out, all items would incorrectly have the same color, whether they were part of the query result or not.
+
+#### Low-Code Apps: Grid component that was fed with data would not create any grid items [ID 40957]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 [CU0] -->
+
+When you opened a panel containing a Grid component that was fed with data, in some cases, that component would not create any grid items.

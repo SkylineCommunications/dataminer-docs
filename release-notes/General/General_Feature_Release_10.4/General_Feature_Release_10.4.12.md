@@ -50,6 +50,12 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 
 ### Fixes
 
+#### SLNet: Problem when external authentication and Windows authentication were used within the same DMS [ID 40635]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, in a DataMiner System, some agents used external authentication while other agents used regular Windows authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
+
 #### Problem when DataMiner Agent is named DATAMINER [ID 40743]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
