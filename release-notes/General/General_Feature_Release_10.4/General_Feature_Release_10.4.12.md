@@ -88,3 +88,9 @@ In some cases, the alarm severity of a service would not be updated correctly wh
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DataMiner Agent that was part of a Failover setup started up, in some cases, SLSNMPManager could stop working.
+
+#### Problem when a DVE or virtual function element was deleted while a subscription was updated [ID 40900]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur.
