@@ -29,7 +29,13 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center - Logging: 'Resource Manager Scheduler' log file now available in DataMiner tab [ID 40899]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Logging* section of *System Center*, the following log file can now also be consulted in the *DataMiner* tab:
+
+- Resource Manager Scheduler
 
 #### Label "Show Agent alarms" now translated [ID 40868]
 
