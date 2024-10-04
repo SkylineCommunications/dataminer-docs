@@ -231,15 +231,16 @@ In case you do not have access to the *configuration.xml* file and you would sti
    > [!IMPORTANT]
    > Use the following email format to send us your solution:
    >
-   > - Subject: Tutorial - Finetune incident tracking for your system
+   > - Subject: Tutorial - Fine-tune incident tracking in your system
    > - To: [ai@skyline.be](mailto:ai@skyline.be)
    > - Body:
-   >   - Dojo account: clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
-   >   - Attachment: add a screenshot of the amplifiers you have set in alarm and of the corresponding alarm group
+   >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
+   >   - Attachment: Add a screenshot of the amplifiers you have set in alarm and of the corresponding alarm group.
    >
    > Upon successful validation, you will be awarded 75 DevOps Points.
 
 ## Step 7: Clean up your system
 
-1. Clear the created alarms using the aforementioned *Toggle Alarm* buttons.
-1. Run the *Incident Tracking Tutorial Scripts - Script 4 Reset Configuration* automation script from the Catalogue item to revert to your original *configuration.xml*.
+1. Clear the created alarms using the *Toggle Alarm* buttons of each element.
+
+1. Run the *Incident Tracking Tutorial Scripts - Script 4 Reset Configuration* Automation script to revert to your original *configuration.xml*.
