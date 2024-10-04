@@ -794,6 +794,16 @@ Because of a number of enhancements, overall performance has increased when load
 
 From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
 
+#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When an element is duplicated, the following information events will no longer be generated:
+
+- [Replicated Element]
+- [Remote Element Name]
+- [Remote DMA IP]
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
@@ -946,6 +956,12 @@ Also, on systems using a Cassandra Cluster database, when the indexing engine co
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 When, in a DataMiner System, some agents used external authentication while other agents used regular Windows authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
+
+#### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When DataMiner Cube was connected to a DataMiner Agent via gRPC, due to a deserialization issue on the server, it would not be possible to access trend statistics.
 
 #### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 

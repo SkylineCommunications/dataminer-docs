@@ -48,6 +48,16 @@ uib.SkipAbortConfirmation = true;
 
 Alarm filters containing brackets can now be translated to OpenSearch queries. This will considerably improve overall performance of alarm queries against OpenSearch databases.
 
+#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When an element is duplicated, the following information events will no longer be generated:
+
+- [Replicated Element]
+- [Remote Element Name]
+- [Remote DMA IP]
+
 ### Fixes
 
 #### SLNet: Problem when external authentication and Windows authentication were used within the same DMS [ID 40635]
@@ -55,6 +65,12 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 When, in a DataMiner System, some agents used external authentication while other agents used regular Windows authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
+
+#### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When DataMiner Cube was connected to a DataMiner Agent via gRPC, due to a deserialization issue on the server, it would not be possible to access trend statistics.
 
 #### Problem when DataMiner Agent is named DATAMINER [ID 40743]
 
