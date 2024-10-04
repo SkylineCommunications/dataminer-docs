@@ -14,7 +14,7 @@ Estimated duration: 20 minutes.
 > [!TIP]
 >
 > - For more information, such as technical limitations of pattern matching, see [Working with behavioral pattern matching](xref:Working_with_pattern_matching).
-> - See also: [Kata #41: Trend patterns in Cube - recap Empower](https://community.dataminer.services/courses/kata-41/)<!--  and [Kata #42: Trend patterns in Dashboards & LCA](https://community.dataminer.services/courses/kata-42/) --> on DataMiner Dojo.
+> - See also: [Kata #41: Trend patterns in Cube - recap Empower](https://community.dataminer.services/courses/kata-41/) and [Kata #42: Trend patterns in Dashboards & LCA](https://community.dataminer.services/courses/kata-42/) on DataMiner Dojo.
 
 ## Prerequisites
 
