@@ -228,6 +228,9 @@ items:
         items:
           - name: Behavioral anomaly detection
             topicUid: Behavioral_anomaly_detection
+            items:
+              - name: Providing feedback on behavioral anomalies
+                topicUid: Providing_feedback_on_behavioral_anomalies
           - name: Proactive cap detection
             topicUid: Proactive_cap_detection
           - name: Automatic incident tracking

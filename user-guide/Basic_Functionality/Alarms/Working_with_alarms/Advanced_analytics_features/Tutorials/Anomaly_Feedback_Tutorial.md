@@ -17,6 +17,9 @@ Estimated duration: 25 minutes.
 > [!NOTE]
 > The content and screenshots for this tutorial were created in DataMiner 10.4.11.
 
+> [!TIP]
+> See also: [Providing feedback on behavioral anomalies](xref:Providing_feedback_on_behavioral_anomalies)
+
 ## Prerequisites
 
 - DataMiner 10.4.11 or higher with [Storage as a Service (STaaS)](xref:STaaS) or an [indexing database](xref:Supported_system_data_storage_architectures).
