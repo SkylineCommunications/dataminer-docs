@@ -504,6 +504,13 @@ items:
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+      - name: Flows
+        topicUid: Using_flows
+        items:
+          - name: Configuring a Flow
+            topicUid: Configuring_a_flow
+          - name: Operators
+            topicUid: Flow_operators
       - name: Generic Query Interface (GQI)
         items:
           - name: About the Generic Query Interface
