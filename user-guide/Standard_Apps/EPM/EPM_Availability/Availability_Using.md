@@ -1,34 +1,26 @@
 ---
-uid: Availability_parameters
-keywords: Availability parameters
+uid: Availability_Using
+keywords: Availability Using
 ---
 
 
-# Available parameters in Availability
+# Using the EPM Availability solution
 
-## Aggregated parameters in Availability
+1. Passing in endpoints into the solution is simple. All that is needed is a MASTER_PING.csv file in the Frontend's import directory. This file should have this header
+    >ENDPOINT_ALIAS;IP;CUSTOMER_NAME;VENDOR_NAME;STATION_NAME;HUB_NAME;SUB_REGION_NAME;REGION_NAME;NETWORK_NAME;LATITUDE;LONGITUDE
 
-This section lists the aggregated parameters for each topology level in the Availability branch of the EPM Solution.
+    > [!NOTE]
+    > Semicolon and comma can be used as the delimiter for the CSV file. Not all fields are needed, any fields not used can be left blank.
 
-| KPIs | Network | Region | Sub-Region | Hub | Station | Customer | Vendor |
-| :---: | :-----: | :----: | :---: | :-----: | :---------: | :---------: | :-----: |
-| Number Endpoints |X|X|X|X|X|X|X|
-| Percentage Unreachable Endpoints |X|X|X|X|X|X|X|
-| Average RTT |X|X|X|X|X|X|X|
-| Average Jitter |X|X|X|X|X|X|X|
-| Average Latency |X|X|X|X|X|X|X|
-| Average Packet Loss |X|X|X|X|X|X|X|
+1. Once the file has been updated with all of the Endpoints, simply hit the Import button on the Frontend's Configuration page to provision all of the elements.
 
-## Aggregated parameter descriptions
+    ![alt text](image.png)
 
-- **Number Endpoints**: Calculated. The total number of associated Endpoints.
+    > [!NOTE]
+    > This process can be automated using the Automation and Scheduler module in Dataminer to retrieve Endpoints from any data source and hit the Import button on the Frontend.
 
-- **Percentage Unreachable Endpoints**: Calculated. Percentage of Endpoints with packet loss of 100% out of all associated Endpoints.
+1. Default Alarm and Trend templates are automatically assigned when using the *EPM_SetupWizard* that have a baseline of thresholds as a starting off point. If you would like to make any further adjustments to the thresholds or apply conditional rules, duplicate the default templates as they will be overwritten with any subsequent Availability package update.
 
-- **Average RTT**: Calculated. Average RTT of all associated Endpoints.
+1. Navigate through your Network using the EPM Topology app. Simply search and select an entry in the level it resides, and the dropdowns below will show all associated entities. Clicking on the right arrow will open the EPM card with a visual overview, data section, all associated entities in a table, and the topology diagram. At the top you are able to change the topology chain to see other levels.
 
-- **Average Jitter**: Calculated. Average Jitter of all associated Endpoints.
-
-- **Average Latency**: Calculated. Average Latency of all associated Endpoints.
-
-- **Average Packet Loss**: Calculated. Average Packet Loss of all associated Endpoints.
+![alt text](<Topology Naviagation.gif>)

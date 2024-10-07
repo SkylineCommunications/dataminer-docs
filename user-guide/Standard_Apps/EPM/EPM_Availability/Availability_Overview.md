@@ -1,19 +1,13 @@
 ---
-uid: Smart_Trap_Processor_Overview
+uid: Availability_Overview
 ---
 
-# The Smart Trap Processor Tool
+# Dataminer EPM Availability
 
-> [!TIP]
-> See also: [Smart Trap Processor - Use case](https://community.dataminer.services/use-case/smart-trap-processor/).
+The Dataminer EPM Availability Solution streamlines the management of a large amount of devices and endpoints, ensuring they are network-reachable. It offers an organized topology to identify whether issues are isolated to specific devices or affect larger regions.
 
-The Smart Trap Processor tool facilitates the configuration of rules for collecting, processing, and monitoring SNMP-based events from various sources.
+Using Dataminer’s topology application, you can view aggregated KPIs for all devices at every level, eliminating the need to monitor each endpoint individually. This high-level overview enables quick identification of relationships between low latency discrepencies and hubs.
 
-Through a unified interface, you can [configure processing rules](xref:Processor_configuration) and [monitor processed traps](xref:Monitoring_Processed_Traps) for any of the processor elements available in the DataMiner System.
+Easily integrate your inventory system with the solution to keep the Availability topology current with all endpoints, no matter how many endpoints, ensuring you monitor critical elements and promptly detect outages.
 
-With this tool, you can specify which traps to capture, filter, transform, and display in a user-friendly application interface. This simplifies the monitoring of the most important system events and ensures that appropriate alarm levels are assigned. The flexible nature of the application allows processing to adapt to most systems or devices generating trap events.
-
-> [!NOTE]
-> This tool supports SNMPv1 and SNMPv2, but SNMPv3 is currently not supported.
-
-![Smart Trap Processor home page](~/user-guide/images/TrapProcessor_Overview.png)
+![alt text](<Availability Overview.gif>)
