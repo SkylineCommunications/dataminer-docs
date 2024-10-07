@@ -28,6 +28,9 @@ To configure a trend template:
 
    - From DataMiner 10.4.8/10.5.0 onwards<!-- RN 39691+39692 -->, if you want to override the default configuration for **[behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection), or [trend icons](xref:Working_with_trend_icons)**, click the cogwheel button next to the filter box and select *Allow Augmented Operations configuration*. You can then select whether to use the *System Default* setting or switch these features on or off for each parameter.
 
+     > [!NOTE]
+     > Behavioral anomaly detection is not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
+
    - If you are editing an existing trend template, to view parameters that are not yet trended, you may need to click the button next to the filter box and select *Only protocol parameters*.
 
    - To view general parameters as well, click the button next to the filter box and select *All parameters (protocol + general)*.
@@ -47,9 +50,7 @@ To configure a trend template:
        ![Changing filter order](~/user-guide/images/Change_Order_Filters.png)<br>*Trend template in DataMiner 10.4.5*
 
        > [!NOTE]
-       >
-       > - For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
-       > - Trending of column parameters of type string is only supported from DataMiner 10.0.9 onwards.
+       > For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
 
 1. When ready, click *Apply* to apply the trend template, or *OK* to apply the trend template and exit the editor.
 

@@ -39,7 +39,7 @@ Several special alarm types exist in DataMiner:
 
 - [Timeout alarms](#timeout-alarms) indicate non-responding devices.
 
-- [Suggestion events](xref:Advanced_analytics_features_in_the_Alarm_Console) are messages intended to give users insights into the data behavior of their metrics (available from DataMiner 10.0.0/10.0.2 onwards).
+- [Suggestion events](xref:Advanced_analytics_features_in_the_Alarm_Console) are messages intended to give users insights into the data behavior of their metrics.
 
 - [Masked alarms](xref:Masking_and_unmasking_alarms), indicated in purple, are "hidden" to prevent unnecessary follow-up.
 

@@ -10,8 +10,7 @@ To do so:
 
 1. Click the spreadsheet icon in the lower right corner next to the graph.
 
-2. Browse to the location where you want to save the exported file, optionally specify a custom file name, and click *Save*.
+1. Browse to the location where you want to save the exported file, optionally specify a custom file name, and click *Save*.
 
 > [!NOTE]
-> From DataMiner 10.0.4 onwards, the CSV separator will by default be the separator defined in the Cube user settings. See [Regional settings](xref:User_settings#regional-settings). If this setting cannot be retrieved, the system will fall back to the Windows regional settings on the DataMiner Agent.
->
+> By default, the CSV separator is the separator defined in the Cube user settings. See [Regional settings](xref:User_settings#regional-settings). If this setting cannot be retrieved, the system will fall back to the Windows regional settings on the DataMiner Agent.

@@ -38,7 +38,9 @@ The header bar contains the following items, from left to right:
 
 - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-  - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
+  - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
+
+    ![Dashboard settings](~/user-guide/images/DashboardSettings.png)<br>*Dashboard settings in DataMiner 10.4.10*
 
   - *About*: Displays information about the app.
 
@@ -54,7 +56,7 @@ The sidebar on the left contains icons that can be used to expand different pane
 |------|-------------|
 | ![Navigation pane icon](~/user-guide/images/DashboardsX_navigation.png) | Opens the navigation pane, which allows you to navigate through the different dashboard folders in the app. Click a folder or dashboard to view it in the details pane on the right. |
 | ![Recent items icon](~/user-guide/images/DashboardsX_recent.png) | Displays a list of recent items. |
-| ![Private dashboards icon](~/user-guide/images/DashboardsX_private.png) | Displays a list of private dashboards. These are dashboards that can only be accessed by specific users (configured in the [dashboard settings](xref:Changing_dashboard_settings)). This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are private dashboards available. |
+| ![Private dashboards icon](~/user-guide/images/DashboardsX_private.png) | Displays a list of private dashboards. These are dashboards that can only be accessed by specific users (configured in the [dashboard settings](xref:Configuring_dashboard_security)). This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are private dashboards available. |
 | ![Shared dashboards icon](~/user-guide/images/DashboardsX_shared.png) | Displays a list of dashboards that have been shared via dataminer.services. This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are shared dashboards available. |
 
 Right-click in either of the panes or click the ... button to open a menu with the following options:
@@ -89,7 +91,7 @@ The large pane on the right shows any folder or dashboard selected in the naviga
 
 If no dashboard is selected, buttons are available that allow you to create a new blank dashboard, to create a dashboard based on an example or to navigate to a recently used dashboard.
 
-If an empty folder is selected, from DataMiner 10.0.13 onwards, buttons are available that allow you to create or import a dashboard directly in that folder.
+If an empty folder is selected, buttons are available that allow you to create or import a dashboard directly in that folder.
 
 If a dashboard is selected, the header bar of this pane can display a number of buttons, depending on the dashboard and the settings of the app:
 
@@ -105,7 +107,9 @@ If a dashboard is selected, the header bar of this pane can display a number of 
 
 - **Share** or **Start sharing**: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-In the settings of the Dashboards app, you can configure whether the edit mode, clear feeds, export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear feeds, export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+
+![Pin actions](~/user-guide/images/Pin_Actions.png)<br>*Dashboard settings in DataMiner 10.4.10*
 
 > [!NOTE]
 > If the app is viewed on a small screen, no options to edit dashboards or dashboard settings will be available.

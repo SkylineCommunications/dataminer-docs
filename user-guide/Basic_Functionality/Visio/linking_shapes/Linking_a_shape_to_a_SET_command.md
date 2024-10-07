@@ -50,7 +50,7 @@ In the above-mentioned command, you can use the following options.
 
 - **SetTrigger=ValueChanged**: Use this option to update parameters or session variables when a specific value changes. See [Configuring a page to update parameters on session variable changes](xref:Configuring_a_page_to_update_parameters_on_session_variable_changes) or [Configuring a page to update a session variable when another session variable changes](xref:Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes).
 
-- **SetTrigger=Event**: Available from DataMiner 10.0.3 onwards. Use this option to update parameters or session variables when an event occurs on the open Visual Overview page.
+- **SetTrigger=Event**: Use this option to update parameters or session variables when an event occurs on the open Visual Overview page.
 
     For example, if the configuration below is used with an embedded Router Control component, every time the event is triggered in the component, the set command will be executed with the label of the clicked matrix. Clicking the same input or output multiple times will each time cause the set command to be executed.
 

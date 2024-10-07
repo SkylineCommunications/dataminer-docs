@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_General_RNs_index
+description: The general DataMiner release notes contain all new features, enhancements, and fixes for core DataMiner software main and feature releases.
 ---
 
 # General DataMiner release notes

@@ -4,10 +4,12 @@ uid: Configuring_anomaly_detection_alarms
 
 # Configuring anomaly detection alarms for specific parameters
 
-From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
+When you enable alarm monitoring on specific types of anomalies for parameters in an alarm template, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
 
 > [!NOTE]
-> Suggestion events are cleared two hours after their creation time or their last update time. You can view them by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
+>
+> - Suggestion events are cleared two hours after their creation time or their last update time. You can view them by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
+> - Anomaly detection is not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
 
 ## [From DataMiner 10.3.12/10.4.0 onwards](#tab/tabid-1)
 

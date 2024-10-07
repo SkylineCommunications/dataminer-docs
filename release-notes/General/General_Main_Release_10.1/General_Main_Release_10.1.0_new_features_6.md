@@ -21,14 +21,14 @@ uid: General_Main_Release_10.1.0_new_features_6
 
 ### DMS Mobile apps
 
-#### Jobs app: Filtering on auto-increment fields \[ID_24047\]\[ID_24857\]\[ID_25057\]
+#### Jobs app: Filtering on auto-increment fields \[ID 24047\]\[ID 24857\]\[ID 25057\]
 
 Up to now, a job’s auto-increment field was of type Long and could not be used to filter on. Now, that field will be of type String, containing an ID with a prefix and a suffix. As a result, it will now be possible to filter on it.
 
 > [!NOTE]
 > This change requires all existing job data to be converted. This data will automatically be converted the first time you start a DataMiner Agent after upgrading it. However, note that this means that data may be lost if you downgrade to earlier DataMiner versions.
 
-#### Ticketing app: Move to Elasticsearch database and other improvements \[ID_24667\]\[ID_25539\] \[ID_25713\]\[ID_26644\]\[ID_26676\]\[ID_26677\]\[ID_26911\]\[ID_26982\]\[ID_27974\]\[ID_28016\]\[ID_28043\] \[ID_28079\]\[ID_28153\]
+#### Ticketing app: Move to Elasticsearch database and other improvements \[ID 24667\]\[ID 25539\] \[ID 25713\]\[ID 26644\]\[ID 26676\]\[ID 26677\]\[ID 26911\]\[ID 26982\]\[ID 27974\]\[ID 28016\]\[ID 28043\] \[ID 28079\]\[ID 28153\]
 
 Multiple changes and improvements have been implemented to the Ticketing app. The most important change is that the app will now use the Elasticsearch database instead of the Cassandra database.
 
@@ -142,7 +142,7 @@ Finally, the following changes have also been implemented:
   > [!NOTE]
   > The Ticketing Gateway entry in the Cube Logging app now refers to the new file.
 
-#### Jobs app: New methods to manage job attachments \[ID_24791\]\[ID_25961\]
+#### Jobs app: New methods to manage job attachments \[ID 24791\]\[ID 25961\]
 
 The *JobManagerHelper* has been expanded with new methods that can be used to manage attachments to jobs:
 
@@ -169,11 +169,11 @@ Please note the following regarding job attachments:
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Jobs app: Format of auto-increment fields can now be changed even when those fields are being used in existing jobs \[ID_24917\]\[ID_24973\]
+#### Jobs app: Format of auto-increment fields can now be changed even when those fields are being used in existing jobs \[ID 24917\]\[ID 24973\]
 
 From now on, it is allowed to change the format of auto-increment fields even when those fields are being used in existing jobs. However, you will receive a notice, saying that existing jobs will keep using the old format.
 
-#### Monitoring app: Spectrum Analyzer elements now have a Spectrum Analyzer page \[ID_24925\] \[ID_25028\]\[ID_25059\]
+#### Monitoring app: Spectrum Analyzer elements now have a Spectrum Analyzer page \[ID 24925\] \[ID 25028\]\[ID 25059\]
 
 In the Monitoring app, Spectrum Analyzer elements now have a spectrum page that shows the spectrum trace, using a new monitor with the last preset.
 
@@ -185,11 +185,11 @@ The following tabs are available:
 | Traces | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace. |
 | Presets | Lists the available presets. By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
-#### Monitoring app: Alarm history now also available \[ID_25002\]
+#### Monitoring app: Alarm history now also available \[ID 25002\]
 
 In the Monitoring app, alarm history is now also available.
 
-#### Ticketing app: Selection box values can now be assigned a color \[ID_25175\]
+#### Ticketing app: Selection box values can now be assigned a color \[ID 25175\]
 
 The VisualizationHints on the TicketFieldResolver can now store colors for every value listed in a selection box.
 
@@ -205,23 +205,23 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 | EnumValue | The selection box value (i.e. the discreet value in the enum field). |
 | Color     | The color associated with the selection box value.                   |
 
-#### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID_25225\]
+#### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID 25225\]
 
 When using a mobile app (Monitoring, Dashboards, Jobs, etc.) on a mobile device, the sidebar, which on a desktop device appears by default on the left-hand side of the screen, will now appear at the bottom of the screen.
 
-#### User picture in top-right corner \[ID_25257\]
+#### User picture in top-right corner \[ID 25257\]
 
 The mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a picture of the user in the top-right corner. If no picture is available, then the user’s initials will be shown instead.
 
-#### Monitoring app: On mobile devices, a redesigned footer will now group all card controls \[ID_25267\]
+#### Monitoring app: On mobile devices, a redesigned footer will now group all card controls \[ID 25267\]
 
 When using the Monitoring app on a mobile device, all card controls will now be grouped on a redesigned footer.
 
-#### Web applications updated to Microsoft .NET Framework 4.6.2 \[ID_25422\]
+#### Web applications updated to Microsoft .NET Framework 4.6.2 \[ID 25422\]
 
 Web applications (Web Services API, legacy dashboards, Maps, etc.) have been updated to Microsoft .NET Framework 4.6.2.
 
-#### Jobs app: Job domains \[ID_25889\]\[ID_26428\]\[ID_26813\]\[ID_26814\]\[ID_27025\]\[ID_26844\]
+#### Jobs app: Job domains \[ID 25889\]\[ID 26428\]\[ID 26813\]\[ID 26814\]\[ID 27025\]\[ID 26844\]
 
 In the Jobs app, it is now possible to have different job domains, each with their own set of job section descriptions.
 
@@ -279,17 +279,17 @@ As a result of the above-mentioned changes, adding a new section to a domain has
 > - When you delete a job section definition, a dialog box is displayed allowing you to choose whether to delete it completely, or only sever the link between the section definition and the domain.
 > - When a job domain is deleted, all its section definitions are removed as well, unless these are linked to other domains as well.
 
-#### Interactive Automation scripts: UI components now have a TooltipText property \[ID_25609\] \[ID_25978\]
+#### Interactive Automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
 
 UI components in interactive Automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
 
-#### Jobs app: Enhanced job section configuration \[ID_25977\]
+#### Jobs app: Enhanced job section configuration \[ID 25977\]
 
 In the Jobs app, job section configuration has been enhanced.
 
 When you add a new job section (by clicking a black or purple dot) or edit an existing job section (by clicking the edit button in the section’s header), a pop-up window will now appear, allowing you to enter or modify the properties of that section.
 
-#### Jobs app: Tracking the history of job field values \[ID_26016\]
+#### Jobs app: Tracking the history of job field values \[ID 26016\]
 
 All changes made to job field values will now be logged by means of HistoryChange records, stored in Indexing Engine (index “chistory-job”).
 
@@ -316,11 +316,11 @@ A FieldValueChange object has the following properties:
 > - If, for some reason, tracking changes to jobs would fail, an error will be logged in SLHistoryManager.txt each time a HistoryChange record could not be saved. To prevent users from receiving too many notices, a notice will only be generated every hour.
 > - When a job is deleted, all HistoryChange records associated with this job will also be deleted, and a new HistoryChange record will be added to indicate when the job was deleted and by whom.
 
-#### Enhanced visualization of disabled text boxes \[ID_26193\]
+#### Enhanced visualization of disabled text boxes \[ID 26193\]
 
 Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
-#### Visual Overview: HTML5 table controls can now have a filter box \[ID_26228\]\[ID_26235\]
+#### Visual Overview: HTML5 table controls can now have a filter box \[ID 26228\]\[ID 26235\]
 
 Similar to Cube, visual overviews in HTML5 apps now also support table controls that include a filter box. In other words, when a parameter control shape with a table and a filter box defined in child shapes is passed to an HTML5 app, that shape will be rendered in the same way as it is rendered in Cube.
 
@@ -332,19 +332,19 @@ The child shapes (filter box and table) will have their coordinates defined rela
 
 If a table has been defined without a filter box, the parameter control will be passed to the HTML app without child regions.
 
-#### User menu now has a 'Sign out' command \[ID_26254\]
+#### User menu now has a 'Sign out' command \[ID 26254\]
 
 In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a “Sign out” command.
 
-#### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID_26394\]
+#### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID 26394\]
 
 In the Monitoring app and the Dashboards app, three-digit number groups in numeric parameter values will now by default be separated by a thin space. This will make large numbers more legible.
 
-#### HTML5 apps: Sidebar settings will now be stored per user account in the browser’s local storage \[ID_26719\]
+#### HTML5 apps: Sidebar settings will now be stored per user account in the browser’s local storage \[ID 26719\]
 
 For each of the HTML5 apps (Monitoring, Jobs, etc.), the size and expand/collapse state of the sidebar will now be stored per user account in the browser’s local storage.
 
-#### Jobs app: History pane \[ID_27113\]
+#### Jobs app: History pane \[ID 27113\]
 
 When you are viewing a job, you can now open a *History* pane on the right. That pane will list all changes made to that particular job. At the bottom of the pane, you will also find the time at which the job was created and the time at which it was last edited.
 
@@ -352,7 +352,7 @@ Also, the following web method has been made available to retrieve the change hi
 
 - GetJobsHistory(string connection, string jobID)
 
-#### Monitoring & Dashboards apps: Enhancements made with regard to shared spectrum analysis functionality \[ID_27378\]
+#### Monitoring & Dashboards apps: Enhancements made with regard to shared spectrum analysis functionality \[ID 27378\]
 
 In both the Monitoring app and the Dashboards apps, a number of performance improvements have been made with regard to shared spectrum analysis functionality.
 
@@ -368,23 +368,23 @@ Also, the following spectrum preset display settings will now be applied:
 
 - Show/hide grid
 
-#### Monitoring app: Visualizing view properties in the Surveyor \[ID_27411\]
+#### Monitoring app: Visualizing view properties in the Surveyor \[ID 27411\]
 
 Similar to DataMiner Cube, the Monitoring app now also allows you to visualize view properties in the Surveyor.
 
-#### Loading screen of embedded apps will now show a loading indicator instead of the app icon \[ID_27594\]
+#### Loading screen of embedded apps will now show a loading indicator instead of the app icon \[ID 27594\]
 
 The loading screen of all mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a loading indicator instead of the app icon when opened in embedded mode (i.e. using a URL that contains either the embed=true or embedded=true argument).
 
-#### HTML5 apps: Loading indicator of selection boxes will now be displayed on the right \[ID_27871\]
+#### HTML5 apps: Loading indicator of selection boxes will now be displayed on the right \[ID 27871\]
 
 When values are being loaded into a selection box, from now on, the loading indicator will be displayed on the right instead of on the left.
 
-#### Jobs app & Ticketing app: Column widths can now be saved \[ID_28254\]
+#### Jobs app & Ticketing app: Column widths can now be saved \[ID 28254\]
 
 When, in the Jobs app or the Ticketing app, you change the widths of the columns in the jobs list or the ticket list, those widths will now be saved per domain in the user settings.
 
-#### Jobs app: Jobs will now be retrieved via web sockets \[ID_28285\]
+#### Jobs app: Jobs will now be retrieved via web sockets \[ID 28285\]
 
 In the Jobs app, jobs will now be retrieved via web sockets.
 
@@ -392,7 +392,7 @@ As a result, all updates and deletions will now be received automatically.
 
 ### DMS Service & Resource Management
 
-#### Service profiles \[ID_24552\]
+#### Service profiles \[ID 24552\]
 
 Up to now, when users wanted to configure a service reservation, they each time had to select profiles for every node and interface of the service definition. From now on, when configuring a service reservation, users will in most cases only have to select a single predefined service profile. That profile will then automatically configure most of the nodes and interfaces necessary for the service reservation in question.
 
@@ -402,7 +402,7 @@ Up to now, when users wanted to configure a service reservation, they each time 
 > - Service profile logging is stored in SLProfileManager.txt.
 > - To make sure service profile data is included in DataMiner backup packages, select *Profile Manager objects and configuration* when configuring backups in System Center.
 
-#### Improvements ResourceManagerHelper class for deletion of resources \[ID_24002\]\[ID_24563\]
+#### Improvements ResourceManagerHelper class for deletion of resources \[ID 24002\]\[ID 24563\]
 
 If there is an error deleting resources using the *ResourceManagerHelper* class, additional feedback is now returned:
 
@@ -416,7 +416,7 @@ In addition, the following new method is now available in the *ResourceManagerHe
 
 If *ignorePastReservations* is false, this method works in the same way as existing calls to remove resources. If it is set to true, past bookings will be ignored during the deletion checks. This can be used to delete resources that are only used in past bookings; however, note that these bookings may then contain invalid references to resources.
 
-#### Mediation snippets \[ID_24610\]
+#### Mediation snippets \[ID 24610\]
 
 Mediation snippets are pieces of code that will convert a parameter value from the format defined in a protocol to the format defined in a profile parameter (and vice versa).
 
@@ -450,7 +450,7 @@ Both requests require the profile parameter ID, the element ID and the parameter
 >   - Snippets are compiled per DataMiner Agent. Snippet DLLs are not synchronized among the agents in a DMS.
 > - If you want the mediation snippets to be included in DataMiner backups, make sure to select the “Include the ProfileManager in backup” option.
 
-#### Exporting and importing profile parameters \[ID_24641\]
+#### Exporting and importing profile parameters \[ID 24641\]
 
 It is now possible to export and import profile parameters to and from a file.
 
@@ -484,7 +484,7 @@ The following methods have been added to the ProfileManagerHelper:
 > - If you export a profile parameter, all the mediation snippets linked to that parameter will also be exported.
 > - When you import profile parameters and their mediation snippets, all existing profile parameters and mediation snippets with the same ID will be overwritten.
 
-#### Mediated virtual functions \[ID_24657\]\[ID_25046\]\[ID_25193\]\[ID_25271\]\[ID_25401\]\[ID_25651\]\[ID_26078\]
+#### Mediated virtual functions \[ID 24657\]\[ID 25046\]\[ID 25193\]\[ID 25271\]\[ID 25401\]\[ID 25651\]\[ID 26078\]
 
 Server-side support has been added for mediated virtual functions.
 
@@ -572,7 +572,7 @@ Logging with regard to element binding will be added to the following log files:
 - SLProfileManager.txt can contain information about errors that occurred during the mediation step of the parameter replication.
 - The log file of the virtual function element can contain information about errors that occurred during binding, unbinding or replication operations in general.
 
-#### OnStartActionsFailureEvent will now be executed when the start actions of a ReservationInstance fail \[ID_24790\]
+#### OnStartActionsFailureEvent will now be executed when the start actions of a ReservationInstance fail \[ID 24790\]
 
 From now on, an OnStartActionsFailureEvent will be executed when the start actions of a ReservationInstance fail.
 
@@ -627,7 +627,7 @@ Notes:
     The script Script:THIS_SCRIPT_DOES_NOT_EXIST_d03c6ec0-3274-4d01-8b28-e4d12459520d could not be correctly parsed to an existing automation script. The event OnStartActionsFailureEvent of reservation '4ce12a06-55f4-4c7c-a746-7874b23ecd8d - RT_SRM_OnStartActionsFailureEvent_08_59_00' will not be executed.
     ```
 
-#### Tracking the history of ReservationInstances \[ID_25006\]
+#### Tracking the history of ReservationInstances \[ID 25006\]
 
 All changes made to ReservationInstances will now be logged by means of HistoryChange records, stored in Indexing Engine (index “chistory-reservationinstance”).
 
@@ -649,11 +649,11 @@ A HistoryChange records contains the following fields:
 > - When a ReservationInstance is deleted, all HistoryChange records associated with this ReservationInstance will also be deleted, and a new HistoryChange record will be added to indicate when the ReservationInstance was deleted and by whom.
 > - When a ReservationInstance is deleted, all HistoryChange records associated with this ReservationInstance will also be deleted.
 
-#### Linking an ID of a contributing resource to a ServiceReservationInstance \[ID_25186\]
+#### Linking an ID of a contributing resource to a ServiceReservationInstance \[ID 25186\]
 
 It is now possible to link an ID of a contributing resource to a ServiceReservationInstance.
 
-#### Support for capabilities of type string and for time-dynamic capabilities \[ID_25217\]
+#### Support for capabilities of type string and for time-dynamic capabilities \[ID 25217\]
 
 Service & Resource Management now supports
 
@@ -714,11 +714,11 @@ This usage info currently only contains information about the already booked cap
 > [!NOTE]
 > The GetEligibleResources and GetEligibleResourcesForServiceNode methods will continue to work correctly, but they will only return the eligible Resources without the extra information.
 
-#### Service & Resource Management: New EmptyResourceInReservation property for ReservationInstance/ServiceReservationInstance \[ID_25220\]
+#### Service & Resource Management: New EmptyResourceInReservation property for ReservationInstance/ServiceReservationInstance \[ID 25220\]
 
 In Service & Resource Management scripts, you can now configure nodes on a reservation instance while the resource is not known yet, by using the new *EmptyResourceInReservation* property.
 
-#### Tracking the rebinding history of VirtualFunctionResources \[ID_25307\]
+#### Tracking the rebinding history of VirtualFunctionResources \[ID 25307\]
 
 The rebinding history of VirtualFunctionResources will now be logged by means of HistoryChange records, stored in Indexing Engine (index “chistory-resource”).
 
@@ -746,7 +746,7 @@ var query =HistoryChangeExposers.SubjectID.Equal(someResourceID.ToFileFriendlySt
 > - When a backup is configured to include the Service & Resource Management module, this will also include the chistory-resource table.
 > - When a VirtualFunctionResource is deleted, all HistoryChange records associated with this VirtualFunctionResource will also be deleted.
 
-#### Profile data can now also be stored in Indexing Engine \[ID_25515\]\[ID_25758\]\[ID_26081\]
+#### Profile data can now also be stored in Indexing Engine \[ID 25515\]\[ID 25758\]\[ID 26081\]
 
 From now on, the following profile data can be stored either in XML format on the DataMiner Agents (default) or in Indexing Engine:
 
@@ -756,21 +756,21 @@ From now on, the following profile data can be stored either in XML format on th
 
 - ProfileParameters
 
-#### Missing interfaces on the parent function will now automatically be added when generating a contributing function \[ID_25587\]
+#### Missing interfaces on the parent function will now automatically be added when generating a contributing function \[ID 25587\]
 
 When a contributing function had to be generated, up to now, it was assumed the given collection of interfaces to expose would match the interfaces on the parent system function. In fact, any interfaces on the parent system function that do not have a matching interface on the underlying service definition of the contributing function can simply be omitted from the request.
 
 The software will therefore automatically create the interfaces on the contributing function and link them to a parameter group on the contributing protocol. The parameter group in the protocol will not contain any parameters and the name of the interface will be that of the matching interface in the system function definition (or “DefaultInterfaceName” if the interface in the parent system function does not have a name).
 
-#### A profile assignment mode can now be configured on service definition nodes and on the resource usages of a ServiceReservationInstance \[ID_25616\]
+#### A profile assignment mode can now be configured on service definition nodes and on the resource usages of a ServiceReservationInstance \[ID 25616\]
 
 Up to now, a profile assignment mode could already be configured on the capacity and capability usages of a ServiceReservationInstance. Now, a profile assignment mode can also be configured on service definition nodes and on the resource usages of a ServiceReservationInstance. For that purpose, a “ByProfileInstanceReference” property has now been added to the ObjectConfiguration class.
 
-#### The full capacity will now always be quarantined when a capacity with a reference string must be quarantined \[ID_25637\]
+#### The full capacity will now always be quarantined when a capacity with a reference string must be quarantined \[ID 25637\]
 
 When a capacity with a reference string has to be quarantined, from now on, the full capacity will always be quarantined.
 
-#### New notice will now appear when a DMA that is not using Indexing Engine has an IDP license but no ServiceManager license \[ID_25762\]
+#### New notice will now appear when a DMA that is not using Indexing Engine has an IDP license but no ServiceManager license \[ID 25762\]
 
 The following notice will now appear when a DataMiner Agent that is not using Indexing Engine has an IDP license but no ServiceManager license:
 
@@ -780,7 +780,7 @@ DataMiner IDP is licensed, but no Elasticsearch database is active on the system
 
 This same notice will also be added to the ResourceManager log file.
 
-#### GetEligibleResources: New ResourceFilter and RequiredCapabilitiesOrFiltered arguments \[ID_25786\]
+#### GetEligibleResources: New ResourceFilter and RequiredCapabilitiesOrFiltered arguments \[ID 25786\]
 
 The GetEligibleResources call has been extended with two new arguments:
 
@@ -796,7 +796,7 @@ The GetEligibleResources call has been extended with two new arguments:
 >
 > This new call allows you to combine all existing and new parameters of the GetEligibleResources calls. The legacy GetEligibleResources and GetEligibleResourceForServiceNodeWithUsageInfo calls will now link to this new call.
 
-#### LockLifeCycle property added to ServiceReservationInstance objects \[ID_26635\]
+#### LockLifeCycle property added to ServiceReservationInstance objects \[ID 26635\]
 
 ServiceReservationInstance objects now have a LockLifeCycle property, which can be set to either “Unlocked” (default) or “Locked”.
 
@@ -814,7 +814,7 @@ ServiceReservationInstance objects now have a LockLifeCycle property, which can 
 >
 > A booking that is not taken into account when checking the concurrency limit will not be taken into account for the entire duration of the booking, even if the overlapping booking (see above) has already ended.
 
-#### Possibility to add attachments to booking instances \[ID_26784\]
+#### Possibility to add attachments to booking instances \[ID 26784\]
 
 To support adding attachments to booking instances (i.e. ReservationInstance objects), a new ReservationInstanceAttachments property is now available in the ResourceManagerHelper. This property allows you to manage booking attachments using the following methods:
 
@@ -832,7 +832,7 @@ To support adding attachments to booking instances (i.e. ReservationInstance obj
 > - Manipulating booking attachments requires security permissions on the ReservationInstance. If a SecurityViewId is specified, the view permission on the view is required to retrieve or download attachments, and the write permission on the view is required to add or delete attachments.
 > - All booking attachments are synchronized throughout the DataMiner System. To include them in a backup, select the “All documents located on this DMA” backup option.
 
-#### Element of a virtual function resource will now be updated when the resource changes \[ID_27043\]
+#### Element of a virtual function resource will now be updated when the resource changes \[ID 27043\]
 
 Up to now, when a VirtualFunctionResource object was updated, in some cases, the virtual function element would not be updated corrected. When, for example, the VirtualFunctionDefinitionID of a VirtualFunctionResource was changed, in some cases, the element would not be set to use the protocol of the new virtual function definition, even when the resource update was successful.
 
@@ -847,7 +847,7 @@ From now on, the following resource updates will be taken into account:
 >
 > It is possible to change both the binding and the virtual function definition in a single update by simultaneously updating the VirtualFunctionDefinitionID, the PhysicalDeviceDmaID and the PhysicalDeviceElementID.
 
-#### Binding between a VirtualFunctionResource and a physical device element will now automatically be updated when the protocol of the device element changes \[ID_27466\]
+#### Binding between a VirtualFunctionResource and a physical device element will now automatically be updated when the protocol of the device element changes \[ID 27466\]
 
 When a virtual function resource is bound to a physical device element, that binding will now automatically be updated when the protocol of the physical device element changes.
 
@@ -859,7 +859,7 @@ When a virtual function resource is bound to a physical device element, that bin
 
 - When the protocol of the physical device element is changed to a different protocol, which is also supported by the VirtualFunctionDefinition used by the resource and which uses the same binding method (entry point table or not), the resource binding will automatically be updated.
 
-#### New helper method: GetEligibleResources \[ID_27609\]
+#### New helper method: GetEligibleResources \[ID 27609\]
 
 The ResourceManagerHelper now contains a new method that allows you to simultaneously execute multiple eligible resource queries.
 

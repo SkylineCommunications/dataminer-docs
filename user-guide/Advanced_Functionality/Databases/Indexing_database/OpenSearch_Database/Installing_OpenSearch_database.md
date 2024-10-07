@@ -1,5 +1,6 @@
 ---
 uid: Installing_OpenSearch_database
+description: Install and test OpenSearch as described in the OpenSearch documentation, then configure your setup, change the JVM Heap Space, and set up a cluster.
 ---
 
 # Installing an OpenSearch database
@@ -232,9 +233,11 @@ plugins.security.nodes_dn:
   - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+# it is also possible to use wildcards in the CN field, as long as plugins.security.authcz.admin_dn does not match the wildcard expression:
+#  - 'CN=*OpenSearchNode*,OU=NameOfYourCluster,O=OpenSearch,C=BE'
 
 plugins.security.authcz.admin_dn:
-  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+  - CN=Admin,OU=NameOfYourCluster,O=OpenSearch,C=BE
 
 plugins.security.audit.type: internal_opensearch
 plugins.security.enable_snapshot_restore_privilege: true
@@ -282,21 +285,28 @@ The default password of the *admin* user should be changed and all the users exc
      reserved: true
      backend_roles:
      - "admin"
-     description: "Demo admin user"
+     description: "admin user"
    ```
 
 ##### Restart OpenSearch and apply the configuration
 
-1. When you have completed the steps above, restart OpenSearch and apply the user settings using the following commands, making sure to replace the placeholders `<IPOfYourNode1>`, `<FQDNOfYourNode-node-keystore.p12>`, and `<GeneratedPasswordByGithubScript>` with the appropriate data:
+1. Restart OpenSearch:
 
    ```bash
    sudo systemctl restart opensearch
    ```
 
+1. To apply the settings in the files */etc/opensearch/opensearch-security/\*.yml* to the cluster configuration, run the script *securityadmin.sh*, which uses the super admin certificates generated earlier:
+
    ```bash
    cd /usr/share/opensearch/plugins/opensearch-security/tools
 
-   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -cacert < GeneratedRootCA.pem > -cert < GeneratedAdminCert.pem > -key < GeneratedAdminKey.pem > 
+   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security \
+      -icl \
+      -nhnv \
+      -cacert /path/to/rootCA.crt \
+      -cert /path/to/admin.pem \
+      -key /path/to/admin-key.pem
    ```
 
    If the private key has a password, you can specify this with the -keypass option in the request above.
@@ -310,7 +320,7 @@ The default password of the *admin* user should be changed and all the users exc
 1. Check via the command line if data is returned (make sure to replace the placeholder data with the correct data):
 
    ```curl
-   curl https://<IPOfYourNode>:9200 -u admin:yournewpassword --ssl-no-revoke
+   curl --insecure -u admin https://[node_hostname_or_ip]:9200
    ```
 
    This should return something similar to this:
@@ -361,6 +371,26 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
 
    > [!IMPORTANT]
    > The user and password provided should be defined in the `\etc\opensearch\opensearch-security\internal_users.yml` file.
+
+1. Check the Microsoft Management Console (MMC) to make sure the root certificate has been installed correctly:
+
+   1. Press Win+R to open the *Run* dialog box, and enter `mmc`.
+
+      This will open the Microsoft Management Console. You may need to click *Yes* first to confirm that changes can be made from the console.
+
+   1. If the *Console Root* folder is empty, do the following:
+
+      1. In the *File* menu, select *Add/Remove Snap-in*.
+
+      1. In the *Available snap-ins* list, select *Certificates*, and click *Add*.
+
+      1. In the *Certificates snap-in* pop-up window, select *Computer account*, and click *Next*.
+
+      1. Leave *Local computer* selected, and click *Finish*.
+
+   1. Go to the *Certificates (Local Computer)* > *Trusted Root Certification Authorities* > *Certificates* folder, and make sure it contains the root certificate.
+
+1. Test the connection from the DataMiner server to the new OpenSearch cluster by entering a URL in the following format in a browser: `https://[CLUSTERNODEIP]:9200/_cat/nodes?v`.
 
 1. Restart the DataMiner Agent.
 

@@ -27,4 +27,4 @@ DataMiner Protocol Markup Language:
 
 Coding guidelines
 
-- [User Interface](xref:CODUserInterface)
+- [User Interface](xref:Default_settings)

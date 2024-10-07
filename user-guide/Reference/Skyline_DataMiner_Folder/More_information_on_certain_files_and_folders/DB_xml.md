@@ -332,7 +332,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
   <DataBase>
     <Offloads>
       ...
-      <Offload state="active" local="data" rate="5;FALSE" />
+      <Offload state="active" local="data" rate="1;TRUE" />
       ...
     </Offloads>
   </DataBase>

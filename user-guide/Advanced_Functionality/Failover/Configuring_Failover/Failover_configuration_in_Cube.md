@@ -9,6 +9,9 @@ uid: Failover_configuration_in_Cube
 
 ## [From DataMiner 10.1.8 onwards](#tab/tabid-1)
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. Therefore, a Failover configuration is, by default, not available for DaaS<!--RN 40013-->.
+
 To enable Failover using DataMiner version **10.1.8 or higher**:
 
 1. Make sure both DMAs are prepared, and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).

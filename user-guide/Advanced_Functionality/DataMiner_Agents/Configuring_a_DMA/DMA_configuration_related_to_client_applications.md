@@ -49,14 +49,12 @@ To customize how Cube connects to a DMA for a specific computer:
 
      - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
 
-   - *Web Services*: Legacy option available prior to DataMiner 10.0.0 \[CU6\]/10.0.11. As WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
-
 <!--    > [!NOTE]
    > The selected connection type will be **used to connect to any DMA from the current computer**. Keep this in mind, for example in case you have selected *gRPC* and you want to connect to DataMiner versions prior to 10.3.0/10.3.2, which do not support gRPC yet. -->
 
 1. If necessary, adjust the settings for the selected connection type:
 
-   - **Destination port**: Select this option to specify a custom destination port number. If you specify “-1”, the port will be detected automatically.
+   - **Destination port**: Select this option to specify a custom destination port number. If you specify "-1", the port will be detected automatically.
 
    - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. If you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
 

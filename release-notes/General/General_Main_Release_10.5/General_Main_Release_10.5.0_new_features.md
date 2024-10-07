@@ -15,7 +15,7 @@ uid: General_Main_Release_10.5.0_new_features
 
 ### Core functionality
 
-#### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID_37714]
+#### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID 37714]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
@@ -23,7 +23,7 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
-#### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID_37950]
+#### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID 37950]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -31,16 +31,22 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
-#### MessageBroker: New NATS reconnection algorithm [ID_38809]
+#### Alarms - Behavioral anomaly detection: User feedback [ID 38707] [ID 38980] [ID 39944]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- RN 38707: MR TBD - FR TBD -->
+<!-- RN 38980: MR 10.5.0 - FR 10.4.4 -->
+<!-- RN 39944: MR 10.5.0 - FR 10.4.11 -->
 
-From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
+From now on, users will be allowed to give feedback (positive or negative) on behavioral anomalies.
 
-1. Re-read the MessageBroker configuration file.
-1. Update the endpoints to which MessageBroker will connect.
+Up to now, the labeling of behavioral anomalies was purely based on the change point history of a parameter. From now on, user feedback on previous anomalies of the same type will also be taken into account.
 
-#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
+> [!NOTE]
+>
+> - For this user feedback feature to work, the DataMiner System has to include an indexing database.
+> - For more information on how to provide feedback on behavioral anomalies in DataMiner Cube, see [Alarm Console - Behavioral anomaly detection: User feedback [ID 39480] [ID 39640] [ID 39666] [ID 39729] [ID 39809] [ID 39945]](xref:Cube_Feature_Release_10.4.11#alarm-console---behavioral-anomaly-detection-user-feedback-id-39480-id-39640-id-39666-id-39729-id-39809-id-39945)
+
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID 39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -64,13 +70,13 @@ Restrictions:
 - The file name passed in the requests must be the name of an existing file.
 - The file path passed in the requests must be a valid, existing path.
 
-#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID 39043]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
 
-#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]
+#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID 39136]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -90,7 +96,7 @@ New features added to allow this include:
   - a new `IGQISortField`
   - a new `IGQISortOperator`
 
-#### Storage as a Service: Proxy support [ID_39221] [ID_39313]
+#### Storage as a Service: Proxy support [ID 39221] [ID 39313]
 
 <!-- RN 39221: MR 10.5.0 - FR 10.4.5 -->
 <!-- RN 39313: MR 10.5.0 - FR 10.4.6 -->
@@ -120,7 +126,7 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 > - The proxy server will be used once the `<Address>` field is filled in. If the proxy server does not require any authentication, the `<UserName>` and `<Password>` fields can be left blank or removed altogether.
 > - It is also possible to migrate data towards a STaaS system that is using a proxy server.
 
-#### Correlation log file will now include correlation rule statistics [ID_39301]
+#### Correlation log file will now include correlation rule statistics [ID 39301]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
@@ -132,13 +138,13 @@ Example of a log entry containing correlation rule statistics:
 2024/05/28 00:00:00.011|SLNet.exe|Log|INF|0|32|CorrelationRuleActionStatistics => [Rule => My_Correlation_Rule; NumberOfTimesExecuted => 6; TotalExecutionDuration => 00:31:41.5222024; MinimumExecutionDuration => 00:01:40.0854200; MaximumExecutionDuration => 00:10:00.4677544; FirstExecutionDuration => 00:10:00.4677544; LastExecutionDuration => 00:05:00.0185738; FirstExecutionTime => 05/27/2024 20:15:03; LastExecutionTime => 05/27/2024 20:48:02;]
 ```
 
-#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID_39381]
+#### API Gateway version and status can now be checked on <https://skyline-admin.dataminer.services> [ID 39381]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
 On <https://skyline-admin.dataminer.services>, you can now check the current version and current status of the API Gateway DxM.
 
-#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
+#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID 39489]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -153,9 +159,49 @@ This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection)
 > [!NOTE]
 > The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
 
+#### Failover: New SLNettypes message to check whether Pcap is installed on a DataMiner Agent [ID 40257]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+From now on, the new SLNettypes message *PcapInfoRequestMessage* can be used to check whether Pcap is installed on a DataMiner Agent.
+
+The response message *PcapInfoResponseMessage* contains a property called *Info* of type *PcapInfo*.
+
+The *Info* object has the following properties:
+
+| Property | Type | Possible values |
+|----------|------|-------------|
+| WinPcapDetection | PcapDetectionType | - PcapDetected: WinPcap is installed.<br>- NoPcapDetected: WinPcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector".  |
+| NpcapDetection   | PcapDetectionType | - PcapDetected:Npcap is installed.<br>- NoPcapDetected:Npcap is not installed.<br>- Undefined: A problem might have occurred. For more information, open the *SLNet.txt* log file, and look for entries containing the keyword "PcapDetector". |
+
+> [!NOTE]
+>
+> - The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user opens the *Failover Config* window. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message. When you do not have this permission, an error message will appear.
+> - See also [RN 40267](xref:Cube_Feature_Release_10.4.10#failover-config-window-will-now-show-information-regarding-the-pcap-libraries-that-are-installed-on-the-dmas-id-40267)
+
+#### Automation: Basic script execution metrics [ID 40687]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+The SLAutomation process will now generate the following script execution metrics:
+
+- Total number of executed scripts (including scripts that could not be started)
+- Total number of failed scripts
+- Duration of each script
+- Time at which each script was started
+- Users who started the scripts
+- Result of each script (success of failure)
+
+To view these metrics, open the *SLNetClientTest* tool, go to *Advanced > Automation...*, and open one of the following tabs:
+
+| Tab | Information |
+|-----|-------------|
+| Scripts Statistics    | Information about each script execution.     |
+| Automation Statistics | General information about script executions. |
+
 ### Protocols
 
-#### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
+#### FillArray now supports protocol.Leave and protocol.Clear [ID 38153]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -226,9 +272,83 @@ The `QActionHelper` class has also been adapted.
   > [!NOTE]
   > The `AddRow` and `SetRow` methods can now also perform history sets.
 
+#### Configuration of multiple threads for the same connection [ID 38887]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Control messages can now be sent in a thread of their own, which will prevent them from being blocked by ongoing polling actions on the same connections.
+
+Previously, it was already possible to create multiple group execution queues for different connections. For example:
+
+```xml
+<Threads>
+    <Thread connection="1" />
+    <Thread connection="1002" />
+</Threads>
+```
+
+Now you can also do this for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes. As a specific thread can have multiple connections linked to it, you will also need to specify the connection (by default 0). For example:
+
+```xml
+<Threads>
+    <Thread id="1" name="HTTP Polling Thread" connection="0"/>
+    <Thread id="2" name="HTTP Control Thread" connection="0"/>
+</Threads>
+```
+
+> [!NOTE]
+> If you want to use a thread definition with an ID, all thread definitions will need to have an ID. Combining thread definitions with and without ID is not supported.
+
+You can then execute a group on a thread of your choice by specifying the thread ID on the group:
+
+```xml
+<Group id="1002" threadId="1">
+```
+
+In the element logging, the log entry for starting a thread will include the thread ID and thread name if these are defined.
+
+For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why. If you try to execute a group on a thread that has not been created for this reason, the group will be executed on the main protocol thread.
+
+#### Protocols: Newly installed connector will automatically be promoted to production version [ID 40291]
+
+<!-- MR 10.5.0 - FR 10.4.10 -->
+
+Up to now, after you had installed a connector for the first time, you typically had to promote it to "production version" afterwards. From now on, when you install a connector for the first time, DataMiner will automatically promote it to "production version" and add the following entry to the *SLNet.txt* log file:
+
+``Initial upload of protocol '{protocolName}'. Version '{protocolVersion}' will be automatically set as production.``
+
+For example, when I install *MyConnector 1.0.0.1* for the first time, it will automatically be promoted to "production version", but when I later deploy *MyConnector 1.0.0.2*, version 1.0.0.1 will remain the production version.
+
+A connector will only be promoted to "production version" if its first version is installed/uploaded in one of the following ways:
+
+- When it is published from within DataMiner Integration Studio (DIS).
+- When it is deployed from the [DataMiner Catalog](https://catalog.dataminer.services/).
+- When its *.dmprotocol* file is uploaded from the *Protocols & Templates* app in DataMiner Cube.
+
+> [!NOTE]
+> When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
+
+### Automation
+
+#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+
+Example:
+
+```csharp
+UIBuilder uib = new UIBuilder();
+uib.SkipAbortConfirmation = true;
+```
+
+> [!TIP]
+> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
+
 ### DataMiner modules
 
-#### User-defined APIs: Query string support [ID_37733]
+#### User-defined APIs: Query string support [ID 37733]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
@@ -253,7 +373,7 @@ bool ContainsKey(string key);
 > - Multiple values can be added for one key.
 > - Query parameter keys are case-sensitive.
 
-#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885] [ID_38096]
+#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID 37885] [ID 38096]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -279,7 +399,7 @@ var count = resourceManagerHelper.CountResources(ResourceExposers.Name.Contains(
 > [!NOTE]
 > When a *Get Bookings* GQI query performs a count aggregate on ID, it will now use the new *ResourceManageHelper.CountReservationInstances* method. This will considerably enhance overall performance.
 
-#### DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID_37891]
+#### DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID 37891]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -359,7 +479,7 @@ If multiple instances share the same ID, only the last of those instances will b
 > [!NOTE]
 > This also applies when PaTokens are created, updated or deleted in bulk. If multiple instances share the same ID, only the last of those instances will be taken into account.
 
-#### DataMiner Object Models: Defining CRUD actions for DomInstances on DomDefinition level [ID_37963]
+#### DataMiner Object Models: Defining CRUD actions for DomInstances on DomDefinition level [ID 37963]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -373,7 +493,7 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
-#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
+#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID 38294]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
@@ -387,13 +507,13 @@ The behavior is similar to that of the options in the `ModuleSettingsOverrides` 
 > [!IMPORTANT]
 > In order for the `HistorySettings` of the `ModuleSettings` to be used, the `HistorySettings` object in the DomDefinition has to be *null*. Just making the values empty is not sufficient.
 
-#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID 38364]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
 
-#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
+#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID 39117]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -427,7 +547,7 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
-#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID 39362]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -435,7 +555,7 @@ Up to now, it was only possible to retrieve a single function definition by ID u
 
 From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
-#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID_39446]
+#### Service & Resource Management: New function resource setting 'SkipDcfLinks' [ID 39446]
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
@@ -456,7 +576,7 @@ Example of a function manager *config.xml* file containing this new setting:
 
 For more information, see [Function resource settings](xref:Function_resource_settings)
 
-#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID_39510]
+#### DataMiner Object Models: DomInstance names now support GenericEnum fields that allow multiple values [ID 39510]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 
@@ -468,7 +588,7 @@ Also, from now on, it will no longer be possible to create multiple enum values 
 
 ### Tools
 
-#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
+#### SLNetClientTest tool: New SLProtocol health statistics [ID 37617]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
@@ -479,7 +599,7 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
 | Health Stats (SLProtocol) > Details... | Show all details of a specific element. |
 
-#### Factory reset tool: Additional actions [ID_39524] [ID_39530]
+#### Factory reset tool: Additional actions [ID 39524] [ID 39530]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
 

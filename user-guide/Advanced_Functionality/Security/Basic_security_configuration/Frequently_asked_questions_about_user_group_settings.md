@@ -57,15 +57,14 @@ In the following table, an x in a preset column indicates that the user permissi
 |--|--|--|--|--|--|
 | Surveyor available |  | x | x | x | x |
 | Data overview available |  | x | x | x | x |
-| Data overview view available |  | x | x | x | x |
-| Element list available |  | x | x | x | x |
+| View data overview available |  | x | x | x | x |
 | Elements \> Access |  | x | x | x | x |
 | Elements \> Add |  |  | x | x | x |
 | Elements \> Edit |  |  | x | x | x |
 | Elements \> Delete |  |  | x | x | x |
 | Elements \> Import CSV |  |  | x | x | x |
 | Elements \> Import DELT |  |  | x | x | x |
-| Elements \> Import DELT |  |  | x | x | x |
+| Elements \> Export DELT |  |  | x | x | x |
 | Elements \> Properties \> ... |  |  | x | x | x |
 | Elements \> Lock / unlock |  | x | x | x | x |
 | Elements \> Force unlock |  |  | x | x | x |
@@ -109,6 +108,7 @@ In the following table, an x in a preset column indicates that the user permissi
 | Alarms \> Properties \> Edit |  | x | x | x | x |
 | Alarms \> Properties \> Delete |  |  | x | x | x |
 | Alarms \> Audible alert \> ... |  |  | x | x | x |
+| Alarms \> Allow to add or update hyperlinks |  |  | x | x | x |
 | Workspaces \> ... |  |  | x | x | x |
 | Annotations \> ... |  | x | x | x | x |
 | Visual Overview \> Access Visual Overviews |  | x | x | x | x |
@@ -118,7 +118,7 @@ In the following table, an x in a preset column indicates that the user permissi
 | Collaboration \> UI available |  | x | x | x | x |
 | Collaboration \> Disconnect other users |  |  | x | x | x |
 | Software updates |  |  |  | x | x |
-| Live sharing |  | x | x | x | x |
+| Live sharing |  |  | x | x | x |
 | Email |  | x | x | x | x |
 | Modules \> Asset Manager |  |  | x | x | x |
 | Modules \> Automation \> UI available |  |  | x | x | x |
@@ -138,27 +138,23 @@ In the following table, an x in a preset column indicates that the user permissi
 | Modules \> Jobs \> Add/Edit |  | x | x | x | x |
 | Modules \> Jobs \> Delete |  | x | x | x | x |
 | Modules \> Jobs \> Configure Domains |  |  | x | x | x |
+| Modules \> Monitoring web app |  | x | x | x | x |
 | Modules \> Planned Maintenance \> UI available |  | x | x | x | x |
 | Modules \> Planned Maintenance \> Add/Edit |  | x | x | x | x |
 | Modules \> Planned Maintenance \> Delete |  | x | x | x | x |
 | Modules \> Planned Maintenance \> Configure |  |  | x | x | x |
+| Modules \> Process Automation |  |  | x | x | x |
 | Modules \> Profiles \> ... |  |  | x | x | x |
-| Modules \> Profile Manager \> ... |  |  | x | x | x |
 | Modules \> Protocols & Templates \> ... |  |  | x | x | x |
-| Modules \> Reports & Dashboards \> Reports \> Reports app |  | x | x | x | x |
 | Modules \> Reports & Dashboards \> Reports \> View reports |  | x | x | x | x |
 | Modules \> Reports & Dashboards \> Reports \> Manage mail templates |  |  | x | x | x |
-| Modules \> Reports & Dashboards \> Dashboards \> Dashboards app |  | x | x | x | x |
 | Modules \> Reports & Dashboards \> Dashboards \> View dashboards |  | x | x | x | x |
 | Modules \> Reports & Dashboards \> Dashboards \> Add |  |  | x | x | x |
 | Modules \> Reports & Dashboards \> Dashboards \> Edit |  |  | x | x | x |
 | Modules \> Reports & Dashboards \> Dashboards \> Delete |  |  | x | x | x |
-| Modules \> Resource Manager > ... |  |  | x | x | x |
 | Modules \> Resources > ... |  |  | x | x | x |
 | Modules \> Router Control \> ... |  |  | x | x | x |
 | Modules \> Scheduler \> ... |  |  | x | x | x |
-| Modules \> Service & Resource Management \> ... |  |  | x | x | x |
-| Modules \> Service Manager \> ... |  |  | x | x | x |
 | Modules \> Service templates \> ... |  |  | x | x | x |
 | Modules \> Services \> ... |  |  | x | x | x |
 | Modules \> System configuration \> Agents \> UI available |  |  |  | x | x |
@@ -181,7 +177,7 @@ In the following table, an x in a preset column indicates that the user permissi
 | Modules \> System configuration \> Cloud sharing/gateway |  |  |  | x | x |
 | Modules \> System configuration \> Database \> ... |  |  |  | x | x |
 | Modules \> System configuration \> Object Manager |  |  |  | x | x |
-| Modules \> System configuration \> Indexing \> ... |  |  | x | x | x |
+| Modules \> System configuration \> Indexing Engine \> ... |  |  | x | x | x |
 | Modules \> System configuration \> Logging \> UI available |  |  | x | x | x |
 | Modules \> System configuration \> Logging \> Change settings |  |  |  | x | x |
 | Modules \> System configuration \> Logging \> Clear log files |  |  |  | x | x |
@@ -195,9 +191,7 @@ In the following table, an x in a preset column indicates that the user permissi
 | Modules \> System configuration \> Mobile Gateway \> Remove SMS from stack |  |  |  | x | x |
 | Modules \> System configuration \> Mobile Gateway \> Reset GSM |  |  |  | x | x |
 | Modules \> System configuration \> Mobile Gateway \> Send SMS |  | x | x | x | x |
-| Modules \> System configuration \> Mobile Gateway \> Allow access to Mobile UI |  | x | x | x | x |
 | Modules \> System configuration \> Security \> UI available |  |  |  | x | x |
-| Modules \> System configuration \> Indexing Engine |  |  | x | x | x |
 | Modules \> System configuration \> Security \> Administrator |  |  |  |  | x |
 | Modules \> System configuration \> Security \> Specific \> ... |  |  |  |  | x |
 | Modules \> System configuration \> Security \> View users from other groups | x | x | x | x | x |
@@ -210,16 +204,15 @@ In the following table, an x in a preset column indicates that the user permissi
 | Modules \> System configuration \> System settings \> System settings available |  |  | x | x | x |
 | Modules \> System configuration \> System settings \> Credentials library \> ... |  |  |  | x | x |
 | Modules \> System configuration \> System settings \> Manage client versions |  |  |  | x | x |
-| Modules \> System configuration \> System settings \> Indexing engine \> ... |  | x | x | x | x |
-| Modules \> System configuration \> Tools \> Synchronization / clean up unused |  |  |  | x | x |
+| Modules \> System configuration \> Tools \> Admin tools |  |  |  | x | x |
 | Modules \> System configuration \> Tools \> Control background tasks of all users |  |  | x | x | x |
 | Modules \> System configuration \> Tools \> Allow access to query executor |  |  |  | x | x |
 | Modules \> System configuration \> Tools \> Best practices analyzer \> ... |  |  |  | x | x |
 | Modules \> Ticketing Gateway > ... |  | x | x | x | x |
 | Modules \> Trending \> ... |  | x | x | x | x |
-| Other \> View Element Manager |  |  |  | x | x |
-| Legacy \> View Element Manager |  |  |  | x | x |
-| Legacy \> Dashboard Overview |  | x | x | x | x |
-| Legacy \> Report Overview |  | x | x | x | x |
-| Legacy \> Manage views |  | x | x | x | x |
-| Legacy \> Assign Visio drawings |  |  | x | x | x |
+| Modules \> User-Defined APIs > ... |  | x | x | x | x |
+| Modules \> User-definable apps \> View apps |  | x | x | x | x |
+| Modules \> User-definable apps \> Add |  |  | x | x | x |
+| Modules \> User-definable apps \> Edit |  |  | x | x | x |
+| Modules \> User-definable apps \> Delete |  |  | x | x | x |
+| Modules \> User-definable apps \> Publish |  |  | x | x | x |

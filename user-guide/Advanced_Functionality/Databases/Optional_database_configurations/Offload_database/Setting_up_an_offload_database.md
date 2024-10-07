@@ -170,7 +170,7 @@ The final step is the configuration of the DMS.
 
 1. In Cube, configure the offload or "central" database settings for each DMA in the DMS.
 
-   1. Go to *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards) or *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13).
+   1. Go to *System Center \>* *Database \> Offload*.
 
    1. Prior to DataMiner 10.1.1/10.2.0 only: Select the *Activate this database* checkbox to activate the offload database.
 

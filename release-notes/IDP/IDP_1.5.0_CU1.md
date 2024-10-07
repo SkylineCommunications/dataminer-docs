@@ -9,11 +9,11 @@ uid: IDP_1.5.0_CU1
 
 ## Enhancements
 
-### Rack Usage Per Location dashboard now shows location names [ID_39273]
+### Rack Usage Per Location dashboard now shows location names [ID 39273]
 
 The "Rack Usage Per Location" dashboard will now show the location names in the graph legend, making it easier to quickly identify which locations have the highest rack utilization.
 
-### IDP protocol visual overviews now delivered as protocol default [ID_39429]
+### IDP protocol visual overviews now delivered as protocol default [ID 39429]
 
 The visual overviews used by the IDP protocols will now be delivered as protocol default Visio files instead of custom Visio files. This affects the Visio files for the following protocols:
 
@@ -27,6 +27,6 @@ When you upgrade to this IDP version, the existing custom Visio files will stay 
 
 ## Fixes
 
-#### Rack Layout Visual Overview not updated correctly when navigating to different racks [ID_39347]
+#### Rack Layout Visual Overview not updated correctly when navigating to different racks [ID 39347]
 
 When you navigated from one rack view to another, the details of a device selected in the previous rack could still be displayed. Consequently, it could occur that details were shown of a device that was not present in the currently opened rack.

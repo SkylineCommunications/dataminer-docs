@@ -1,5 +1,6 @@
 ---
 uid: Overall_concept_of_the_DataMiner_Integration_Studio
+description: The free DIS Visual Studio extension allows you to import, create, and deploy connectors to establish connections between DataMiner and data sources.
 ---
 
 # About DataMiner Integration Studio

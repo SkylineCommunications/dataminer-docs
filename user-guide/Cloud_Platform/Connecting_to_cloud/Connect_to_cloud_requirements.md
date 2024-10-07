@@ -1,5 +1,6 @@
 ---
 uid: Connect_to_cloud_requirements
+description: Use at least DataMiner 10.1.12, make sure the necessary endpoints can be reached, and allow HTTPS traffic via port TCP 5100 on the internal network.
 ---
 
 # Requirements for connection to dataminer.services
@@ -25,7 +26,7 @@ Before connecting your DataMiner System to dataminer.services, verify that the f
   > [!TIP]
   > Using SAML? See also: [Additional configuration for systems connected to dataminer.services](xref:SAML_config_to_connect_to_cloud)
   
-- The **internal network must allow [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms)**. For more information about configuring this endpoint, see [Custom dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+- The **internal network must allow [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms)**. For more information on using a different port, refer to [Custom dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 
   > [!NOTE]
   >

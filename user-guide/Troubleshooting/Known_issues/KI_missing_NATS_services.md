@@ -6,19 +6,15 @@ uid: KI_missing_NATS_services
 
 ## Affected versions
 
-Any  version of DataMiner
+Any version of DataMiner
 
 ## Cause
 
-No clear root cause has been established yet.
-
-## Workaround
-
-Manually reinstall NATS on the DMA.
+This is most likely caused by antivirus software quarantining NATS binaries.
 
 ## Fix
 
-No fix is available yet.
+Exclude the DataMiner folders from the antivirus software as detailed under [Regarding antivirus software](xref:Regarding_antivirus_software), and then manually reinstall NATS on the DMA.
 
 ## Description
 

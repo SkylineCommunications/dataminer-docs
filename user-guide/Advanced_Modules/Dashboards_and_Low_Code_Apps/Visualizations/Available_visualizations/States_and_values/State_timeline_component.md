@@ -4,7 +4,7 @@ uid: DashboardStateTimeline
 
 # State timeline
 
-This component visualizes the alarm state changes over time of a parameter, element or service. By default, it shows a timeline for the last 24 hours, but a time range feed can be added to set the component to a different time range. Available from DataMiner 10.1.0/10.0.10 onwards.
+This component visualizes the alarm state changes over time of a parameter, element or service. By default, it shows a timeline for the last 24 hours, but a time range feed can be added to set the component to a different time range.
 
 ![State timeline](~/user-guide/images/State_Timeline.png)<br>*State timeline component in DataMiner 10.4.6*
 

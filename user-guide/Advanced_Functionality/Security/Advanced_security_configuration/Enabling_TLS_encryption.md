@@ -4,11 +4,11 @@ uid: Enabling_TLS_encryption
 
 # Enabling TLS encryption for serial communication
 
-From DataMiner 10.0.2 onwards, it is possible to enable TLS encryption on elements that behave as a server (e.g. Smart-Serial). When this is enabled, TLS encryption can be enabled when a TCP/IP element is created or edited.
+When you enable TLS encryption on elements that behave as a server (e.g. smart-serial), TLS encryption can be enabled when a TCP/IP element is created or edited.
 
 To enable TLS encryption, do the following on every DMA in the DMS that is to contain such elements:
 
-1. In the folder *C:\\Skyline DataMiner\\Certificates*, place a PKCS12 file with (default) name “server.pfx”, containing the certificates and the private key.
+1. In the folder *C:\\Skyline DataMiner\\Certificates*, place a PKCS12 file with (default) name "server.pfx", containing the certificates and the private key.
 
 1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
@@ -20,12 +20,10 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 
 1. Configure the following fields of the message:
 
-   | Field           | Description                                                                                                                 |
-   |-------------------|---------------------------------------------------------------------------------------------------------------------------|
-   | DataMinerID       | ID of the DataMiner Agent ID.                                                                                             |
-   | EncryptedPassword | Encrypted password (encrypted using the public key of the connection) that will be used with the certificate in question. |
-   | Certificate       | Name of the certificate for which the password is set. Default: server.pfx                                                |
-   | ID                | ID of the certificate for which the password is set. Currently, DataMiner will always use the certificate with ID 0.      |
+   - **DataMinerID**: The ID of the DataMiner Agent ID.
+   - **EncryptedPassword**: Password, encrypted using the public key of the connection, that will be used with the specified certificate.
+   - **Certificate**: The name of the certificate for which the password is set. Default: *server.pfx*.
+   - **ID**: The ID of the certificate for which the password is set. Currently, DataMiner will always use the certificate with ID 0.
 
 1. Click *Send message*.
 

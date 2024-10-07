@@ -31,8 +31,8 @@ DataMiner Protocol Markup Language:
 - [Protocol.Actions](xref:Protocol.Actions)
 - [Protocol.QActions](xref:Protocol.QActions)
 
-Coding guidelines:
+Connector best practices:
 
-- [Logic](xref:Logic1)
-- [Timers](xref:Timers1)
-- [QActions](xref:QActions)
+- [Logic](xref:Operation_duration)
+- [Timers](xref:ConnectorBestPracticesTimers)
+- [QActions](xref:Functionality)

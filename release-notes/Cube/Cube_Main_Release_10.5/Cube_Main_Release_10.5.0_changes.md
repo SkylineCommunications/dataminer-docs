@@ -15,7 +15,7 @@ uid: Cube_Main_Release_10.5.0_changes
 
 ### Fixes
 
-#### Alarm Console: Problem with hyperlinks that should be shown or hidden based on the value of a property [ID_37777]
+#### Alarm Console: Problem with hyperlinks that should be shown or hidden based on the value of a property [ID 37777]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 

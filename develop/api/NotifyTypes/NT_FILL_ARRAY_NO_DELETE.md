@@ -73,4 +73,4 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
 
 ## See also
 
-- [SLProtocol.RowCount](xref:Skyline.DataMiner.Scripting.SLProtocol.RowCount(System.Object)) method
+- [RowCount (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.RowCount(System.Object)) method

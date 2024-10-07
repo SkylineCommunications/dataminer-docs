@@ -23,9 +23,6 @@ To export a trend graph:
      >[!NOTE]
      >This option is only available for double, number or analog parameters, and only for average trend data. This means that type *5-minute interval* or *60-minute interval* must be selected under *Data to be exported*.
 
-   - *Exclude gaps*: Available from DataMiner 10.0.12 onwards. Select this option to skip any gaps in the trend data in the export. This option is automatically selected if *Fixed interval* is selected.
+   - *Exclude gaps*: Select this option to skip any gaps in the trend data in the export. This option is automatically selected if *Fixed interval* is selected.
 
 1. Click *Save*.
-
-> [!NOTE]
-> Up to DataMiner 10.0.2, the line graph is a reduced format containing only one value per timestamp. From DataMiner 10.0.3 onwards, the line graph is no longer considered a reduced format and intermediary points are added if no data is available at certain timestamps (which can happen when a value remained constant).

@@ -12,7 +12,7 @@ uid: Web_apps_Feature_Release_10.3.9_CU1
 
 ### Fixes
 
-#### Low-Code Apps: Apps would become unresponsive after having been migrated [ID_37221]
+#### Low-Code Apps: Apps would become unresponsive after having been migrated [ID 37221]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU1] -->
 <!-- Not added to MR 10.4.0 -->

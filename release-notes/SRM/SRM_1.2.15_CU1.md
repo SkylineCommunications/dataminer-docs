@@ -6,7 +6,7 @@ uid: SRM_1.2.15_CU1
 
 ## Enhancements
 
-#### Local orchestration of contributing transport bookings [ID_30381]
+#### Local orchestration of contributing transport bookings [ID 30381]
 
 It is now possible to orchestrate contributing transport bookings locally. For this purpose, define an LSO script per state in the *ContributingConfig.ActionScripts* field of the Path parameter configuration of the transport node.
 
@@ -58,6 +58,6 @@ For example:
 
 ## Fixes
 
-#### Created resources exported twice \[ID_30395\]
+#### Created resources exported twice \[ID 30395\]
 
 An issue in the *SRM_DiscoverResources* script could cause created resources to be exported twice.
