@@ -1,6 +1,6 @@
 ---
 uid: Replicating_elements
-keywords: replication, element replication
+keywords: element replication
 ---
 
 # Replicating elements
