@@ -206,7 +206,7 @@ In this step, you will use the light bulb feature to configure an alarm template
 
    This element simulates the Windows Task Manager, monitoring the memory usage of several processes. You want to be notified if this memory usage suddenly spikes.
 
-  By right-clicking the element in the Surveyor and selecting *Protocols & Templates* > *View alarm template 'Template'*, you will see that the element has an empty template associated with it. This allows DataMiner to suggest template improvements based on your feedback.
+   By right-clicking the element in the Surveyor and selecting *Protocols & Templates* > *View alarm template 'Template'*, you will see that the element has an empty template associated with it. This allows DataMiner to suggest template improvements based on your feedback.
 
 1. Click the *Generate Data* button to generate data for a first process.
 
@@ -236,7 +236,7 @@ In this step, you will use the light bulb feature to configure an alarm template
 
    ![Suggestion event is now an alarm](~/user-guide/images/Suggestion_Event_Alarm.png)
 
-1. On the *DATA* page of the *Anomaly Feedback Tutorial - Task Manager* element, click the *Generate Data* button to generate data a second process, *Java Runtime*.
+1. On the *DATA* page of the *Anomaly Feedback Tutorial - Task Manager* element, click the *Generate Data* button to generate data for a second process, *Java Runtime*.
 
 1. Open the trend graph for the memory usage of *Java Runtime* by clicking the ![trend](~/user-guide/images/trend_icon_unknown.png) icon.
 
