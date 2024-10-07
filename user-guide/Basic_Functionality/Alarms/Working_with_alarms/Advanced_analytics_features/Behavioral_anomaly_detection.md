@@ -87,7 +87,7 @@ To provide feedback:
 
 The feedback you provide will be taken into account in the future.
 
-Feedback on active alarms is saved in the user settings and will re-appear after closing and reopening Cube. Feedback on history alarms will disappear after restarting Cube, but it will still be used by SLAnalytics to improve the detection of future anomalies.
+Feedback on active alarms is saved in the user settings and will re-appear after Cube is closed and reopened. Feedback on history alarms will disappear after Cube is restarted, but it will still be used by SLAnalytics to improve the detection of future anomalies.
 
 ### Follow-up actions after providing feedback
 
