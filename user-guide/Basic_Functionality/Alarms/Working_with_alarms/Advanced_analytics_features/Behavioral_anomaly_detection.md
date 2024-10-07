@@ -105,5 +105,10 @@ If you provide feedback on multiple suggestion events for the same parameter, an
 
 > [!NOTE]
 >
-> - The actions listed above will only appear if you have the required permissions to perform them. For example, the system will not suggest updating the alarm template if you are not allowed to do so<!--RN 39480-->.
+> - The actions listed above will only appear if you have the required permissions to perform them. The system will not suggest updating or creating an alarm template if you do not have the following user permissions<!--RN 39480-->:
+>
+>   - [*Modules > Protocols & Templates > Alarm templates > UI available*](xref:DataMiner_user_permissions#modules--protocols--templates--alarm-templates--ui-available)
+>   - [*Modules > Protocols & Templates > Alarm templates > Add*](xref:DataMiner_user_permissions#modules--protocols--templates--alarm-templates--add)
+>   - [*Modules > Protocols & Templates > Alarm templates > Edit*](xref:DataMiner_user_permissions#modules--protocols--templates--alarm-templates--edit)
+>
 > - The *Improve alarm template* and *Create alarm template* actions will not appear if the element in question has an alarm template group assigned<!--RN 39666-->.
