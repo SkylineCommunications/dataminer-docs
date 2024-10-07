@@ -76,9 +76,9 @@ When, in a DataMiner System, some agents used external authentication while othe
 
 #### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
 
-<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When DataMiner Cube was connected to a DataMiner Agent via gRPC, due to a deserialization issue on the server, it would not be possible to access trend statistics.
+When DataMiner Cube was connected to a DataMiner Agent via gRPC, because of a deserialization issue on the server, it would not be possible to access trend statistics.
 
 #### Problem when DataMiner Agent is named DATAMINER [ID 40743]
 

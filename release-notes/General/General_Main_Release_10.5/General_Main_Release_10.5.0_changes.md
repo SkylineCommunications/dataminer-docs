@@ -965,12 +965,6 @@ Also, on systems using a Cassandra Cluster database, when the indexing engine co
 
 When, in a DataMiner System, some agents used external authentication while other agents used regular Windows authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
 
-#### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-When DataMiner Cube was connected to a DataMiner Agent via gRPC, due to a deserialization issue on the server, it would not be possible to access trend statistics.
-
 #### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->

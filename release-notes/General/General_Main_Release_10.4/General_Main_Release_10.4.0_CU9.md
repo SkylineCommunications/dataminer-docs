@@ -20,6 +20,12 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 
 ### Fixes
 
+#### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When DataMiner Cube was connected to a DataMiner Agent via gRPC, because of a deserialization issue on the server, it would not be possible to access trend statistics.
+
 #### Problem when DataMiner Agent is named DATAMINER [ID 40743]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
