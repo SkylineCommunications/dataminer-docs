@@ -77,6 +77,9 @@ Your text input should look like this:
 
 1. In the *Value* box, click the "Link to data" icon.
 
+  > [!NOTE]
+  > Before dataminer version 10.4.12/10.4[CU9]/10.3[CU21] 'Link to data' was called 'Link to Feed'.
+
    This icon is used everywhere a user can link a value to a feed.
 
    ![Link to data icon](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)

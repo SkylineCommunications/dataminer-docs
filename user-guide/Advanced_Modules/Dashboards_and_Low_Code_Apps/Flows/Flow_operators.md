@@ -10,7 +10,7 @@ An operator is a step within a flow that starts from at least one input and tran
 
 Delays the emission of a value until a specified time has passed without receiving another value.
 
-![Debouncing an input value](~/develop/images/Flow_OperatorDebounce.gif)<br>
+![Debouncing an input value](~/user-guide/images/Flow_OperatorDebounce.gif)<br>
 *Debouncing an input value*
 
 ### Settings
@@ -27,7 +27,7 @@ Delays the emission of a value until a specified time has passed without receivi
 
 Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the *latest* value is emitted by the operator. 
 
-![Merging two input values](~/develop/images/Flow_OperatorMerge.gif)<br>
+![Merging two input values](~/user-guide/images/Flow_OperatorMerge.gif)<br>
 *Merging two input values*
 
    > [!NOTE]
@@ -41,7 +41,7 @@ Merges multiple inputs into one by forwarding *the most recently updated input* 
 
 Combines multiple inputs into one by forwarding *the most recently updated value of each input* as the output. Whenever any input changes, the *combination of all latest values* is emitted by the operator. 
 
-![Combining two input values](~/develop/images/Flow_OperatorCombine.gif)<br>
+![Combining two input values](~/user-guide/images/Flow_OperatorCombine.gif)<br>
 *Combining two input values*
 
    > [!NOTE]

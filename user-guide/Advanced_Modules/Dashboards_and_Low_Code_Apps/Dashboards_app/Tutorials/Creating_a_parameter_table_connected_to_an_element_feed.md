@@ -88,6 +88,9 @@ The dropdown component will now list all available elements that match the proto
 
    1. On the right side of the *Value* box, click the *Link to data* icon to open the *Link to data* dialog.
 
+  > [!NOTE]
+  > Before dataminer version 10.4.12/10.4[CU9]/10.3[CU21] 'Link to data' was called 'Link to Feed'.
+
       1. Open the *Feed* box, and select the dropdown component.
 
       1. Open the *Property* box, and select "Element ID".

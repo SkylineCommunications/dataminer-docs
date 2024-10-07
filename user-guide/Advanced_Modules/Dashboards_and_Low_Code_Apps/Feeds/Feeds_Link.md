@@ -56,6 +56,9 @@ The element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` uses th
 
 ## Flows
 
+  > [!NOTE]
+  > Flows are available from dataminer version 10.4.12/10.4[CU8] and 10.3.9 server version with web only upgrade higher then 10.4.12. 
+
 ### Syntax
 
 To create a flow reference inside textual settings, use the following syntax:
