@@ -91,7 +91,7 @@ Feedback on active alarms is saved in the user settings and will re-appear after
 
 ### Follow-up actions after providing feedback
 
-After providing feedback on a suggestion event or alarm, a light bulb icon may appear next to the ![Feedback](~/user-guide/images/Feedback_Column.png) column. Clicking this icon will reveal a follow-up action based on your feedback<!--RN 39809 + 39640 + 39480-->. Alternatively, you can right-click the suggestion event or alarm and select the follow-up action from the context menu.
+After you have provided feedback on a suggestion event or alarm, a light bulb icon may appear next to the ![Feedback](~/user-guide/images/Feedback_Column.png) column. Clicking this icon will reveal a follow-up action based on your feedback<!--RN 39809 + 39640 + 39480-->. Alternatively, you can right-click the suggestion event or alarm and select the follow-up action from the context menu.
 
 | Action | Description |
 |--|--|
