@@ -74,9 +74,9 @@ To provide feedback:
 
 1. Hover the mouse pointer over a suggestion event or alarm to view the ![Thumbs-up](~/user-guide/images/Thumbs_Up.png) and ![Thumbs-down](~/user-guide/images/Thumbs_Down.png) icons.
 
-   - If you approve of the anomaly and want to receive similar ones in the future, click the thumbs-up icon in the feedback column. Alternatively, you can right-click the suggestion event/alarm and select *Like*.
+   - If you want to be notified of similar anomalies in the future, click the thumbs-up icon in the feedback column. Alternatively, you can right-click the suggestion event/alarm and select *Like*.
 
-   - If you disapprove of the anomaly and do not wish to be notified of similar events in the future, click the thumbs-down icon. Alternatively, you can right-click the suggestion event/alarm and select *Dislike*.
+   - If you do not want to be notified of similar events in the future, click the thumbs-down icon. Alternatively, you can right-click the suggestion event/alarm and select *Dislike*.
 
    Once selected, the chosen icon will be pinned in the column as a black icon. If you change your mind, you can click the other option, and only the final feedback will be registered<!--RN 39082-->.
 
