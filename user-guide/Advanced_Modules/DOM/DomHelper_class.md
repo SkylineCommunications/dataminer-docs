@@ -186,7 +186,7 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 
 #### Sorting
 
-It is also possible to sort your results based on a specific field of a DOM instance, both core fields and `FieldValues`. This sorting is done in the database and should be performant. This can be done by calling the `OrderBy` or `OrderByDescending` methods on a filter. This will return a query object that can be passed to the read method of the helper.
+It is also possible to sort your results based on a specific field of a DOM instance (both core fields and `FieldValues`). This sorting is done in the database, which should result in good performance. To apply this sorting, call the `OrderBy` or `OrderByDescending` methods on a filter. This will return a query object that can be passed to the read method of the helper.
 
 **Examples:**
 
@@ -210,7 +210,6 @@ var field = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId);
 var onFieldQuery = filter.OrderBy(field);
 var orderedOnField = domHelper.DomInstances.Read(onFieldQuery);
 ```
-
 
 > [!NOTE]
 > Natural sorting is not supported. Enabling this option on the sorting API could result in poor performance since this will be executed in memory and requires all data to be loaded from the database.
