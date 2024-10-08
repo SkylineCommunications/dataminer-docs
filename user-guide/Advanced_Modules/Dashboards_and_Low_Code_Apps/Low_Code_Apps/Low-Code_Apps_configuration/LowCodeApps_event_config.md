@@ -131,9 +131,9 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
 
 1. Specify how you want to select the element, service, or view:
 
-   - ID: Allows you to choose from a dropdown list of available elements, services, or views. This is the default option.
+   - *ID*: Allows you to choose from a dropdown list of available elements, services, or views. This is the default option.
 
-   - Name: Allows you to manually enter the name of the element, service, or view.
+   - *Name*: Allows you to manually enter the name of the element, service, or view.
 
 1. Based on the selected type, choose the element, service, or view for which the monitoring card should be opened:
 
