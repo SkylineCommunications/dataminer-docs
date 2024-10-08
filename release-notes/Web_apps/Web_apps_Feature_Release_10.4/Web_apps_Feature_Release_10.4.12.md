@@ -39,6 +39,12 @@ From now on, a GQI query will be opened synchronously, after which a first page 
 
 When WebSockets are not available, GQI sessions will be executed synchronously as before.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Initial viewport in case of custom node positions will now be calculated based on the midpoints of all nodes [ID 40869]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you opened a node edge graph component with custom node positions, up to now, its initial viewport was [50,50]. From now on, its center will be calculated based on the midpoints of all its nodes.
+
 #### Dashboards/Low-Code Apps - GQI components: Query result set is now limited to 100,000 rows [ID 40886]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->

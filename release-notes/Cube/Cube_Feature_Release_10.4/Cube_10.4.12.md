@@ -57,7 +57,7 @@ In some cases, the Cube UI could start to behave erratically when a large number
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When, in a *Resource Manager* component, you selected a booking on a resource band, in some cases, the *SelectedPool* variable could get set incorrectly.
+When, in a *Resource Manager* component, you selected a booking on a resource band of which the resource was filtered by ID, the *SelectedPool* variable could get set incorrectly.
 
 #### License expiration window: Title and text included the incorrectly spelled word "licence" [ID 40894]
 
