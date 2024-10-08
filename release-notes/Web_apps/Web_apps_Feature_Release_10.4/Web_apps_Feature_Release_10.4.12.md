@@ -124,3 +124,11 @@ When parameter data was loaded into a *State* component, the dashboard could get
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g. Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
+
+#### Dashboards/Low-Code Apps - Visual Overview: Problem when switching to edit mode [ID 41000]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in a dashboard or a low-code app, you switched to edit mode, in some cases, the following error message could incorrectly appear:
+
+`Could not retrieve the Visual Overview information`

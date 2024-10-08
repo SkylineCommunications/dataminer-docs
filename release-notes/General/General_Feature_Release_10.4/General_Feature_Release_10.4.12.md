@@ -22,6 +22,28 @@ uid: General_Feature_Release_10.4.12
 
 ## New features
 
+#### New SLProtocol process will be started when an SLProtocol process disappears [ID 40335]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an SLProtocol process disappeared, the DataMiner Agent would restart. From now on, when an SLProtocol process disappears, a new SLProtocol process will be started and all elements that were hosted by the process that disappeared will now be hosted by the newly created process. However, as all parameter data in the SLProtocol process that disappeared is lost, all affected elements will be restarted. Also, a notice alarm will be created with the following value:
+
+`Process disappearance of SLProtocol.exe with PID <processId>; <x> elements hosted by the disappeared process have been restarted.`
+
+> [!IMPORTANT]
+> When an SLProtocol process disappears, typically, a crashdump will also be created. It is highly recommended to ask [Skyline TechSupport](mailto:techsupport@skyline.be) to investigate that crashdump so that future SLProtocol disappearances and subsequent element restarts can be prevented.
+
+In the *SLElementInProtocol.txt* log file, the following fields have been added:
+
+- *NormalStart*/*SLProtocolCrashRestart* will indicate whether the element was started by a start action or due to an SLProtocol process disappearance.
+- The number of times the element was started by a normal start action since the DataMiner Agent was started.
+- The number of times the element was started due to an SLProtocol process disappearance.
+
+> [!NOTE]
+>
+> - The process ID of the new SLProtocol process can be found in the *elementName.txt* log file, while the process ID of the old SLProtocol process can be found in the *elementName_BAK.txt* log file.
+> - There will be a delay of one minute between the disappearance of an SLProtocol process and the creation of a new SLProtocol process.
+
 #### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
