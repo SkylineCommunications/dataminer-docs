@@ -8,7 +8,7 @@ The incident tracking (a.k.a. alarm grouping) functionality automatically groups
 
 The content and screenshots for this tutorial have been created in DataMiner 10.4.10.
 
-Estimated duration: 30 minutes
+Estimated duration: 30 minutes.
 
 <!-- > [!TIP]
 > See also: [Kata #43: [KATA] Grouping alarms like a pro](TODO: link and video reference still to be filled in here) -->
@@ -19,9 +19,7 @@ Estimated duration: 30 minutes
 
 - Automatic incident tracking is enabled in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic incident tracking*.
 
-- Automatic incident tracking is enabled in the Alarm Console.
-
-  To check if this is enabled, check if *Automatic incident tracking* is selected in the Alarm Console hamburger menu.
+- Automatic incident tracking is enabled in the Alarm Console: To check if this is enabled, check if *Automatic incident tracking* is selected in the Alarm Console hamburger menu.
 
   ![Enable Incident Tracking in the Alarm Console](~/user-guide/images/EnableAlarmGroupingInAlarmConsole.png)
 
@@ -61,11 +59,11 @@ Automatic incident tracking groups alarms according to a set of rules, which are
 1. On the server running the leader DMA, go to the folder `C:\Skyline DataMiner\Analytics`.
 
    Within this folder, you will find the *configuration.xml* file.
+
 1. Manually take a copy of your current *configuration.xml* file so that you can put it back when you finish this tutorial.
 
 > [!NOTE]
 > If you are unable to access this file (e.g. because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the Automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
-
 
 ## Step 3: Explore the default alarm grouping rules
 
@@ -168,7 +166,7 @@ When you deployed the Catalog package earlier, elements were added in a *Nodes* 
 
 In the current setup, there are three nodes, named *Incident Tracking Tutorial - TELESTE_NODE_x*, where "x" is 1, 2, or 3. Each node sends a signal to the amplifiers with the name ending in the same number. For example, *Incident Tracking Tutorial - TELESTE_NODE_1* sends a signal to *Incident Tracking Tutorial - Amplifier1_Node1*, *Incident Tracking Tutorial - Amplifier2_Node1*, *Incident Tracking Tutorial - Amplifier3_Node1*, and *Incident Tracking Tutorial - Amplifier4_Node1*.
 
-The package was configured so that an alarm on any of the amplifiers will contain a custom property called *ParentNode*, referring to the parent node. To see this property, you can generate an alarm on one of the amplifiers, and then right-click the alarm in the Alarm Console and select *Properties*.
+The package was configured so that an alarm on any of the amplifiers will have a custom property called *ParentNode*, referring to the parent node. To see this property, you can generate an alarm on one of the amplifiers, and then right-click the alarm in the Alarm Console and select *Properties*.
 
 ![CustomAlarmProperty](~/user-guide/images/alarmProperty.png)
 
@@ -217,16 +215,27 @@ The package was configured so that an alarm on any of the amplifiers will contai
 
 ## Step 6: Group on a custom element property
 
-In this step, you will create a rule to group alarms for amplifiers under the same node, but only if at least **75% of the amplifiers** under that node are in alarm. While it might seem natural to use the ParentNode alarm property from the previous step to achieve this, that approach will not work. For example, imagine DataMiner detects 50 alarms on amplifiers under a single node. To determine if 75% of the amplifiers are in alarm, DataMinder would need to compare this number (50) to the total number of amplifiers under that node. However, since healthy amplifiers don't trigger alarms, this total number is not available when solely looking at alarms and their properties.
+In this step, you will create a rule to group alarms for amplifiers under the same node, but only if at least **75% of the amplifiers** under that node are in alarm.
 
-A way around this, is to use an **element property** that links each amplifier element to its parent node. In case you are not (yet) an expert on DataMiner properties, [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item) can help you to perform the following steps.
+It is not possible to use the *ParentNode* alarm property from the previous step to achieve this. Instead, a custom element property will be needed that links each amplifier element to its parent node. For example, imagine that DataMiner detects 50 alarms on amplifiers under a single node. To determine if 75% of the amplifiers are in alarm, DataMiner would need to compare this number (50) to the total number of amplifiers under that node. However, since healthy amplifiers do not trigger alarms, this total number is not available when solely looking at alarms and their properties.
 
+1. Create an element property called *ElementParentNode*.
 
-1. Create an element property called **ElementParentNode**. Make sure you enable *Update alarms on value changed* for this property as this is required for correctly updating alarm groups based on properties.
-1. Fill in the value of the ElementParentNode property for your amplifiers.
- Make sure that the value is the same for all amplifiers under the same node. For example, for all the amplifiers under TELESTE_NODE_1, you could use the value "Node1".
+   Make sure you enable the option *Update alarms on value changed* for this property, as this is required to correctly update alarm groups based on properties.
 
-If you have access to your *configuration.xml* file, please follow the steps below. If not, you will follow a slightly different approach: skip these steps and continue reading from there.
+   > [!TIP]
+   > For more info on creating element properties, see [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
+
+1. For each of the amplifiers, fill in the value of the *ElementParentNode* property.
+
+   You can do so in the *Properties* window, available via the Surveyor right-click menu for each of the elements.
+
+   Make sure that the value is the same for all amplifiers under the same node. For example, for all the amplifiers under TELESTE_NODE_1, you could use the value `Node1`.
+
+   ![Adding the value for the custom property](~/user-guide/images/Incident_Tracking_Tutorial_Custom_Property.png)
+
+1. If you have access to the *configuration.xml* file, configure the file as follows:
+
    1. Open the *configuration.xml* file.
 
    1. Scroll down to the *GenericProperties* property.
@@ -255,42 +264,45 @@ If you have access to your *configuration.xml* file, please follow the steps bel
 
    1. Restart *SLAnalytics.exe* (e.g. through the task manager).
 
-In case you do not have access to the *configuration.xml* file:
-
-1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* automation script.
-1. Look for the string variable called *KataExercise*.
-1. You should normally add the following code snippet to the *configuration.xml* file, but instead, assign it to the *KataExercise* variable. The automation script will then automatically copy it into your *configuration.xml* file and restart *SLAnalytics*.
-
-      ```xml
-        <item type="skyline::dataminer::analytics::workers::configuration::GenericElementPropertyVisitorConfiguration">
-            <enable>true</enable>
-            <threshold>[THRESHOLD]</threshold>
-            <name>[PROPERTY_NAME]</name>
-        </item>
-      ```
-
-  As the automation script is written in C#, and the first line of the snippet contains quotes, you will need to use escape characters here: 
- ```    <item type=\"skyline::dataminer::analytics::workers::configuration::GenericElementPropertyVisitorConfiguration\">  ``` 
-
-
-1. Save and run the automation script.
-
    > [!TIP]
    > For more detailed information about adding custom rules, see [Defining custom properties for grouping](xref:Customizing_alarm_grouping_rules#defining-custom-properties-for-grouping).
 
-That's it! Time to create some alarms on the amplifiers under Node1 and see that they are only grouped if at least 3 out of the 4 amplifiers are in alarm!
+1. If you do not have access to the *configuration.xml* file, you will need to customize an Automation script instead:
 
-To earn some devops points, take a screenshot of the alarm group that you created (including the alarms it contains) and send it to us as described below!
+   1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* Automation script.
 
+   1. Look for the string variable called *KataExercise*.
+
+   1. Add the code snippet that should be added to the *configuration.xml* file to the *KataExercise* variable, but use escape characters before the quotes.
+
+      For example:
+
+      ```xml
+        <item type=\"skyline::dataminer::analytics::workers::configuration::GenericElementPropertyVisitorConfiguration\">
+            <enable>true</enable>
+            <threshold>0.75</threshold>
+            <name>ElementParentNode</name>
+        </item>
+      ```
+
+   1. Save and run the Automation script.
+
+      The script will copy the code snippet into your *configuration.xml* file and restart *SLAnalytics*.
+
+1. Create some alarms on the amplifiers under node 1.
+
+   You should see that the alarms only get grouped if at least 3 out of the 4 amplifiers are in alarm.
+
+1. To earn some devops points, take a screenshot of the alarm group you have created (including the alarms it contains) and send it to us as described below.
 
    > [!IMPORTANT]
    > Use the following email format to send us your screenshot:
    >
-   > - Subject: Tutorial - Fine-tune incident tracking in your system
+   > - Subject: *Tutorial - Fine-tune incident tracking in your system*
    > - To: [ai@skyline.be](mailto:ai@skyline.be)
    > - Body:
-   >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
-   >   - Attachment: Add a screenshot of the alarm group and the amplifier alarms it contains.
+   >   - *Dojo account*: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
+   > - Attachment: Add a screenshot of the alarm group and the amplifier alarms it contains.
    >
    > Upon successful validation, you will be awarded 75 DevOps Points.
 
