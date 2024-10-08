@@ -123,6 +123,34 @@ To configure an event to open another low-code app that has been published in yo
 
 Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an event to open a monitoring card of a specific element, service, or view:
 
+### [From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards](#tab/tabid-1)
+
+1. Select *Open monitoring card*.
+
+1. In the *Type* box, select a type: element, service, or view.
+
+1. Specify how you want to select the element, service, or view:
+
+   - *ID*: Allows you to choose from a dropdown list of available elements, services, or views. This is the default option.
+
+   - *Name*: Allows you to manually enter the name of the element, service, or view.
+
+1. Based on the selected type, choose the element, service, or view for which the monitoring card should be opened:
+
+   - If you selected the *ID* option, choose the desired element, service, or view from the dropdown list.
+
+   - If you selected the *Name* option, enter the name manually.
+
+   - To link to a feed instead of selecting a fixed element, service, or view, click the link icon next to the selection box, select the feed, and click *Apply*.
+
+     If you selected the *Name* option, you can link to a text input feed, which allows you to dynamically enter the name of the element, service, or view in the published app.
+
+     ![Open monitoring card](~/user-guide/images/Open_Monitoring_Card.gif)<br>*Low-Code Apps module in DataMiner 10.4.11*
+
+1. Select *Add action*.
+
+### [Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11](#tab/tabid-2)
+
 1. Select *Open monitoring card*.
 
 1. In the *Type* box, select a type: element, service, or view.
@@ -133,6 +161,8 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
    > From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35986 -->, instead of linking to a fixed element, service, or view, you can link to a feed. To do so, click the link icon to the right of the selection box, select the feed, and click *Apply*.
 
 1. Select *Add action*.
+
+***
 
 > [!NOTE]
 > When a low-code app is embedded in Cube (e.g. in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
