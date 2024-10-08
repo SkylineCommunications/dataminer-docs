@@ -71,11 +71,11 @@ When you opened a node edge graph component with custom node positions, up to no
 
 From now on, all GQI components will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
-#### Low-Code Apps: Enhanced performance when updating a low-code app [ID 40944]
+#### Low-Code Apps: Enhanced performance when opening or updating low-code apps [ID 40944]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Because of a number of enhancements, overall performance has increased when updating a low-code app after a new version of that app has been published.
+Because of a number of enhancements, overall performance has increased when opening or updating low-code apps.
 
 #### Dashboards app: Enhanced error handling when sharing dashboards [ID 40946]
 
