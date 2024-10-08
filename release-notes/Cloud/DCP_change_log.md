@@ -9,14 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 8 October 2024 - Enhancement - Catalog API - Removal of V1 APIs [ID 41016]
+#### 8 October 2024 - Enhancement - Catalog API - V1 APIs removed [ID 41016]
 
-Two existing APIs have been removed:
+The following APIs are no longer available:
 
-* PublicCatalog V1
-* UserCatalog V1
+- PublicCatalog V1
+- UserCatalog V1
 
-Replacements for these APIs are available as V2 versions.
+Instead, the V2 versions of these APIs should now be used.
 
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
