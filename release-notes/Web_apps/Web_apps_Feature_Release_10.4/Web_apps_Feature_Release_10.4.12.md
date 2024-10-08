@@ -67,9 +67,15 @@ When you opened a node edge graph component with custom node positions, up to no
 
 #### Dashboards/Low-Code Apps - GQI components: Query result set is now limited to 100,000 rows [ID 40886]
 
-<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 From now on, all GQI components will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
+
+#### Low-Code Apps: Enhanced performance when updating a low-code app [ID 40944]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance has increased when updating a low-code app after a new version of that app has been published.
 
 #### Dashboards app: Enhanced error handling when sharing dashboards [ID 40946]
 
