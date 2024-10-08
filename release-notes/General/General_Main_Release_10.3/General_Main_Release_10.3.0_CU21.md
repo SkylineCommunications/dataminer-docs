@@ -12,7 +12,11 @@ uid: General_Main_Release_10.3.0_CU21
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 40684]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 

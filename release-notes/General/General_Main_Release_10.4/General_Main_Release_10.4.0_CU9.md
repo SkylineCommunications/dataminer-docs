@@ -18,6 +18,12 @@ uid: General_Main_Release_10.4.0_CU9
 
 Alarm filters containing brackets can now be translated to OpenSearch queries. This will considerably improve overall performance of alarm queries against OpenSearch databases.
 
+#### Security enhancements [ID 40684]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]

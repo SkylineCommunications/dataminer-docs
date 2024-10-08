@@ -56,6 +56,12 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 
 *Please install the latest \"ASP.NET Core Runtime hosting bundle\" for .NET 8.0 from [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download)*
 
+#### Security enhancements [ID 40684]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of security enhancements have been made.
+
 #### Certain information events will no longer be generated when an element is duplicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
