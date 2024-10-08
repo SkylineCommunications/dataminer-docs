@@ -330,3 +330,10 @@ In element log file, up to now, the word "asynchronous" would be spelled incorre
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was executed while an element was being stopped or deleted, in some cases, SLProtocol could stop working.
+
+#### GetAlarmDetailsMessage: Version compatibility problem [ID 40895]
+
+<!-- MR 10.5.0 - FR 10.4.11 [CU0] -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
+
+Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longer be sent from clients running feature version 10.4.10 to DataMiner Agents running feature version 10.4.1 or older.
