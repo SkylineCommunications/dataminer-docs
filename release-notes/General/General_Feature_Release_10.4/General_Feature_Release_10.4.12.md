@@ -68,11 +68,11 @@ When an element is duplicated, the following information events will no longer b
 
 ### Fixes
 
-#### SLNet: Problem when external authentication and Windows authentication were used within the same DMS [ID 40635]
+#### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When, in a DataMiner System, some agents used external authentication while other agents used regular Windows authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
+When, in a DataMiner System, some agents used external authentication while other agents used internal authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
 
 #### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
 

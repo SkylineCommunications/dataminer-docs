@@ -959,11 +959,11 @@ When SLDataGateway detected a database problem, up to now, it would incorrectly 
 
 Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
 
-#### SLNet: Problem when external authentication and Windows authentication were used within the same DMS [ID 40635]
+#### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When, in a DataMiner System, some agents used external authentication while other agents used regular Windows authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
+When, in a DataMiner System, some agents used external authentication while other agents used internal authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
 
 #### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 
