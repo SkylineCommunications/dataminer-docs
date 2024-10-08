@@ -35,4 +35,4 @@ uid: Overview_of_the_different_subfolders
 > [!NOTE]
 >
 > - Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms)
-> - The *Services* folder contains the services hosted on the DataMiner Agent. For services hosted on other DMAs, the folder `C:\Skyline DataMiner\RemoteServices` contains subfolders with the DMA ID, and this is where they should be synchronized.
+> - The *Services* folder contains the services hosted on the DataMiner Agent. Services hosted on other DMAs are synchronized with subfolders of the folder `C:\Skyline DataMiner\RemoteServices`. Each of these subfolders has the DMA ID of the DMA it is synchronized with.
