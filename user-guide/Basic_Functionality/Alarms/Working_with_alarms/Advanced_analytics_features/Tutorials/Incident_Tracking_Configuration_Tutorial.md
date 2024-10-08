@@ -314,4 +314,4 @@ The Automation scripts in this tutorial take a backup of the old version of *con
 
 1. If you have done manual changes to *configuration.xml* before running any of the above-mentioned scripts, manually replace the modified file with the backup you took in [step 2](#step-2-find-the-advanced-configuration-file).
 
-1. If you have not done any manual changes to *configuration.xml* before running one of the above-mentioned scripts, run the script *Incident Tracking Tutorial Scripts - Script 4 Reset Configuration* to revert to your original *configuration.xml*.
+   Alternatively, if you have not done any manual changes to *configuration.xml* before running one of the above-mentioned scripts, you can run the script *Incident Tracking Tutorial Scripts - Script 4 Reset Configuration* to revert to your original *configuration.xml*.
