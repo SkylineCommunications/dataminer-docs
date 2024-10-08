@@ -9,6 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 8 October 2024 - Enhancement - Catalog API - V1 APIs removed [ID 41016]
+
+The following APIs are no longer available:
+
+- PublicCatalog V1
+- UserCatalog V1
+
+Instead, the V2 versions of these APIs should now be used.
+
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
 Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
