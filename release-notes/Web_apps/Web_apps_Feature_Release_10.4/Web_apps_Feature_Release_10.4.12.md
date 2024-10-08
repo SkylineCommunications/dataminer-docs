@@ -29,22 +29,21 @@ DataMiner web applications now support the new `SkipAbortConfirmation` property 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Flows allow you to modify the behavior of one or more data objects (or variables) by applying a series of operators. Similar to how GQI works, operators are chained together and applied to the data object step by step until a final value is reached, which is then passed to all consumers.
+Flows allow you to modify the behavior of one or more data objects by applying a series of operators. Similar to how GQI works, operators are chained together and applied to the data object step by step until a final value is reached, which is then passed to all consumers.
 
 Examples:
 
 - If a text input provides a text feed, we can use that feed to trigger a query. If the text box is set to update upon every key press, a query is executed with each keystroke. However, by applying a *debounce* in a flow, you can adjust this behavior so that the query runs only after the user has stopped typing for a certain time.
 
-- Instead of fetching all the data for a particular timeline, you only want to fetch the data for the current viewport (plus a margin). Also, the query should only be executed when the new viewport is larger than the previous one. By using a flow, you can start by fetching part of the data (e.g. the data for the current viewport) and then apply functional operators to chain the desired logic.
+- Instead of fetching all the data for a particular timeline, you only want to fetch the data for the current viewport.
 
 Currently, you can use the following operators:
 
-| Operator   | Function |
-|------------|----------|
-| Debounce   | Emits a value only when, after a specified amount of time, no other value was emitted. |
-| Filter     | Emits values that meet a specified condition (optional). |
-| First/Last | Selects the first/last entry when there are multiple values (optional). |
-| Merge      | Combines multiple data objects of the same type into a single object, emitting values as they arrive. |
+| Operator | Function |
+|----------|----------|
+| Combine  | Combines multiple inputs into one by forwarding *the most recently updated value of each input* as the output. Whenever any input changes, the operator will emit the *combination of all latest values*. |
+| Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
+| Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
 ## Changes
 
