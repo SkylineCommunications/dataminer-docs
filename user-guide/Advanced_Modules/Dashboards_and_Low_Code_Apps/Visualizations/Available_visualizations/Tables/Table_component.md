@@ -18,6 +18,8 @@ It displays the different possible data sources of queries as follows:
 
 - If parameters are retrieved by protocol or profile definition, each row will represent a matching element, and for each parameter a column will show the corresponding values.
 
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Strings* section of the data pane.
+
 > [!NOTE]
 >
 > - From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
@@ -35,7 +37,7 @@ You can **resize the columns** of the table by dragging the edges of the column 
 
 ### Filtering & highlighting
 
-In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
+In the *Layout* tab for this component, the *Conditional coloring* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
 
 - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
 
@@ -44,6 +46,8 @@ In the *Layout* tab for this component, the *Column filters* option is available
 - Multiple filters can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
+
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->, the *Show quick filter* setting allows you to determine whether the search box, which lets you [apply a general filter](#filtering-and-sorting-the-table) across the table, appears when you hover over the table component. This setting is enabled by default.
 
 ### Column appearance
 
@@ -145,11 +149,14 @@ From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of 
 
 To apply a **general filter** across the table, a search box is available:
 
-1. Hover over the table component and click the search icon in the lower right corner.
+1. Hover over the table component and click the search icon.
 
 1. Specify the filter text (case-insensitive) in the search box.
 
    This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
+
+> [!IMPORTANT]
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](#filtering--highlighting) is enabled.
 
 To apply a **filter based on a specific column**:
 
