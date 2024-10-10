@@ -14,9 +14,12 @@ When you have dowloaded the VHDX, you can start to create a VM in your chosen vi
     1. Specify a name for your VM and store the machine in a location of your own choice, make sure your disk has enough space
     1. Choose Virtual Machine Generation 2
     1. Assign (at least) 8192 MB startup memory, you can choose to use dynamic memory
-        - If you choose for local database storage [(WSL)]](xref:Local_database_on_WSL) we recommend to use 12288 MB RAM as the container will take about 4GB to run.
+        - If you choose for local database storage [(WSL)]](xref:Local_database_on_WSL) it is recommended to use at least 12288 MB RAM as the [(WSL)]](xref:Local_database_on_WSL) storage container will take about 4GB to run.
     1. Connect it to a virtual switch that has internet access (either the Default Switch or a custom one)
     1. Connect the Virtual Hard Disk that you just downloaded
+
+> [!NOTE]
+> If you choose the Default virtual switch, you will only be able to use [Remote access](xref:Cloud_Remote_Access) through dataminer.services to access the system outside of the Virtual Machine environment.
 
 > [!IMPORTANT]
 > If you intend to use the [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL), make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) on your host PC for the VM you created before starting the VM.
@@ -29,6 +32,9 @@ When you have dowloaded the VHDX, you can start to create a VM in your chosen vi
 
 > [!NOTE]
 > Running DataMiner with a [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL) should only be considered for test and staging environments. Make sure to provide sufficient resources to the Virtual Machine. Consider migrating to [Storage as a Service (STaaS)](xref:STaaS) or [configure dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) if you intend to use it in production.
+
+> [!NOTE]
+> The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out-of-the box for improved security.
 
 ## Connect and start the VM
 
@@ -48,19 +54,22 @@ After logging in, a window will be shown to configure your DataMiner system.
 > [!IMPORTANT]
 > If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration and follow the steps to [obtain a DataMiner license](xref:DataminerLicenses).
 
+> [!IMPORTANT]
+> DataMiner requires a static IP to be configured. Make sure to do this before continuing with the below steps. If you would have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
+
 > [!TIP]
 > If you accidentally closed the configuration screen, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`.
 
 Follow the below steps to configure your DataMiner Agent:
 
 - Click *Start* to get started
-- Select the desired database type, either [STaaS](xref:STaaS), [Self-hosted](xref:Configuring_dedicated_clustered_storage) or [locally hosted Cassandra Cluster and OpenSearch, running on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL), and click *Next*
-- When selecting [Self-hosted](xref:Configuring_dedicated_clustered_storage) database, fill in connection details for both Cassandra and OpenSearch and click *Next*
+- Select the desired database type, either [Storage as a Service (STaaS)](xref:STaaS), [Self-hosted - External Storage](xref:Configuring_dedicated_clustered_storage) or [Self-hosted - Local storage](xref:Local_database_on_WSL), and click *Next*
+- When selecting [Self-hosted - External Storage](xref:Configuring_dedicated_clustered_storage) database, fill in connection details for both Cassandra and OpenSearch and click *Next*
 
 > [!NOTE]
 > Please ensure these clusters are active and reachable from the VM you are setting up. Management of external DB clusters is the responsibility of the user.
 
-- Fill in required details to cloud connect your agent and click *Next*
+- Fill in the required details to cloud connect your agent and click *Next*
     - Organization API Key: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. See [Managing dataminer.services keys](xref:Managing_DCP_keys) to add a new organization key to your dataminer.services organization.
     - System name: This name will be used to identify the DataMiner System in various DataMiner Cloud Platform applications.
     - System URL: This URL will grant you remote access to your DataMiner System web applications. You can choose to either disable or enable this remote access feature at any time.
@@ -78,7 +87,10 @@ Furthermore it will install DataMiner Cube to locally connect to DataMiner.
 
 ### Login to your DataMiner agent
 
-At this point you should be able to login with the Administrator account.
+At this point you can login with the previously configured Administrator account.
+
+> [!NOTE]
+> DataMiner does not allow automatically logging in with the built-in Administrator account. Therefore you will have to explicitly login and provide the password yourself.
 
 For more information, see: [Logging on to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube).
 

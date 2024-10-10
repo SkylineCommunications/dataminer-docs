@@ -4,7 +4,7 @@ uid: Local_database_on_WSL
 
 # Local database on WSL
 
-If you deployed DataMiner by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_VHDX) and you chose to install the databases locally on WSL, both Cassandra Cluster and OpenSearch run locally on the Virtual Machine on Windows Subsystem for Linux (WSL).
+If you deployed DataMiner by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_VHDX) and you chose the *Self-Hosted - Local Storage* database type option, both Cassandra Cluster and OpenSearch run locally on the Virtual Machine on Windows Subsystem for Linux (WSL).
 
 This allows you to easily get started with a database setup that supports all DataMiner functionalities.
 

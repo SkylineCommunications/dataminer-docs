@@ -19,7 +19,7 @@ Follow the below steps to decommission WSL:
 1. Right-click the "Start WSL" task and click *Disable*.
 
 > [!NOTE]
-> If, for some reason, you want to keep a backup of the WSL distribution, you can export it by running the following command:
+> If, for some reason, you want to keep a backup of the WSL distribution, you can export it by running the following command before performing the decommissioning:
 >
 > ```powershell
 > wsl --export <name of WSL distro> "<filepath>.tar"
