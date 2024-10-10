@@ -176,3 +176,9 @@ When a DataMiner Agent reconnected to the DataMiner System of which it was a mem
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
+
+#### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
