@@ -192,7 +192,7 @@ To apply a filter based on a specific column:
 
 From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can filter the table by feeding it a text string.
 
-You can do this in different ways:
+You can do this in several different ways, for example:
 
 - Use a **text input feed** or **search input feed**:
 
