@@ -77,3 +77,9 @@ When, in the start window of the Cube desktop app, you clicked the '+' button an
 - "Did you mean", followed by the exact name you entered.
 
 This last message will no longer be displayed.
+
+#### Trending: Viewport of trend graph would incorrectly jump to the last day [ID 40931]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you opened a trend graph, in some rare cases, its viewport would incorrectly jump to the last day.
