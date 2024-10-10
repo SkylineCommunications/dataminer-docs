@@ -184,7 +184,9 @@ To apply a **filter based on a specific column**:
 > [!NOTE]
 > If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
 
-From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can **filter the table by feeding it a text string**:
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can **filter the table by feeding it a text string**.
+
+For example:
 
 - Use a **text input feed** or **search input feed**:
 
@@ -203,9 +205,11 @@ From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you ca
 
   1. Hover over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Strings* section of the data pane.
 
-  1. Pass a string data object within the URL, as described under [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+  1. Pass a string data object within the URL, as explained in [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
 
-     With this URL, you can immediately display a filtered version of the table when the dashboard or app is opened.
+     This URL will automatically display a filtered version of the table when the dashboard or app is opened.
+
+     In the following example, the string "test" is sent to the component with component ID 1: `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`.
 
 To **sort the table**, you can click a column header.
 
