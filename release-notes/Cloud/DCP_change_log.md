@@ -25,6 +25,15 @@ Registering a version using the Catalog API now accepts a version message of up 
 
 When searching/browsing in the catalog using visibility 'All', DVE connectors were included in the results while this is not intended since these dont have versions that can be deployed.
 
+#### 10 October 2024 - Enhancement - Catalog - Vendor and Market show in the aside panel
+
+On the detail page of a Connector Catalog item, the vendor and market are no longer displayed as tags but are now visible on the sidepanel.
+
+#### 10 October 2024 - Enhancement - Catalog - Non-authenticated users are able to use "Deploy trial" button
+
+Non-authenticated users are now able to click on the deploy trial button in the header of an item or on a version.
+This button will trigger the login and navigate back to the details page in order for them to continue deploying the given item.
+
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
 Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
