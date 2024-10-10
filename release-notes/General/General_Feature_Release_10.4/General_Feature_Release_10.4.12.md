@@ -100,6 +100,12 @@ When an element is duplicated, the following information events will no longer b
 
 Up to now, when SLXML received erroneous XML code, the error message logged in *SLXML.txt* would lose vital information when it was trimmed by SLLog due to the 5120-character error message size limit. The error message in question has now been adapted so that the most important information is found at the beginning.
 
+#### SLLogCollector will no longer be configured by default to collect the log files of the DataAPI DxM [ID 41003]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, SLLogCollector would by default be configured to collect the log files of the DataAPI DxM. From now on, this will no longer be the case. Only when the DataAPI DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
+
 #### SLLogCollector will no longer be configured by default to collect the log files of the CommunicationGateway DxM [ID 41004]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
