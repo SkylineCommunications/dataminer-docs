@@ -164,3 +164,9 @@ When a DVE element or virtual function element was deleted while a subscription 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+
+#### SLAnalytics - Behavioral anomaly detection: Alarm template of DVE parent element would incorrectly be used when monitoring was disabled in the alarm template of the DVE child template [ID 40963]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
