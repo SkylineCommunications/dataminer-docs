@@ -10,16 +10,24 @@ uid: Managing_dashboard_folders
 
 1. Either right-click the dashboards list or click the ... button in the top-right corner of the list and select *New folder*.
 
-1. Specify the name of the folder and click *OK*.
+1. Specify the name of the folder and click *Create* or *OK*, depending on your DataMiner version.
 
-> [!NOTE]
->
-> - A dashboard folder name must not start with a space.
-> - The following characters are not allowed in a dashboard folder name:
->
->   / \\ : ; \* ? \< \> \| °
->
-> - If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+   > [!NOTE]
+   >
+   > - A dashboard folder name must not start with a space.
+   > - The following characters are not allowed in a dashboard folder name:
+   >
+   >   / \\ : ; \* ? \< \> \| °
+   >
+   > - If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+
+1. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards <!--RN 40600-->, you can select whether other users should be able to view and edit the folder in the *Security* box.
+
+   ![Security level](~/user-guide/images/Security_Level_Folder.png)<br>*Setting dashboard folder security level in DataMiner 10.4.11*
+
+   > [!NOTE]
+   > - Once the folder has been created, you can further refine which users have which level of access in the dashboard folder options. See [Changing dashboard settings](xref:Configuring_dashboard_security).
+   > - The built-in Administrator account always has full access to all folders.
 
 ## Deleting a folder
 
