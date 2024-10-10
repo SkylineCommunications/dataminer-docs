@@ -136,3 +136,22 @@ When parameter data was loaded into a *State* component, the dashboard could get
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g. Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
+
+#### Dashboards app - Generic map component: Problem when rendering maps with AppVersion set to 1 [ID 41035]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.4.9, a *Generic map* component would no longer be able to render maps of which the `AppVersion` property was set to 1 in the *C:\\Skyline DataMiner\\Maps\\ServerConfig.xml* file.
+
+Example:
+
+```xml
+<MapsServerConfig>
+    <VirtualHosts>
+        <VirtualHost hostname="*">
+            <AppVersion>1</AppVersion>
+            ...
+        </VirtualHost>
+    </VirtualHosts>
+</MapsServerConfig>
+```
