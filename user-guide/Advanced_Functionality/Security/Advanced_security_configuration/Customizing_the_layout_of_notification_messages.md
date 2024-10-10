@@ -78,6 +78,8 @@ Example: The template called “text-notifications” should contain the templat
 
 The following example shows a *NotifyTemplates.xml* file in which two templates have been defined: one for plain-text notifications and another one for HTML notifications:
 
+### [From DataMiner 10.5.0 [CU0] onwards](#tab/tabid-1)
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <NotifyTemplates>
@@ -154,6 +156,87 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
   </Template>
 </NotifyTemplates>
 ```
+
+### [Prior to DataMiner 10.5.0 [CU0]](#tab/tabid-2)
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<NotifyTemplates>
+  <Template name="text-notifications" options="">
+    <Content>
+        <![CDATA[
+        Filter '[filtername]' has been triggered[if:multiple]
+        ([occurrences] times for similar alarms)[endif] (Alarm Id ='[alarmid]')
+        -Dataminer: [dmaname] (id = [dmaid])
+        -Element: [elementname] (id='[elementkey]')
+        [if:description] -Element Description: [elementdesc][endif]
+        -Parameter: [paramname] (id='[paramid]')
+        -Value: [value]
+        -Owner: [owner]
+        -Severity: [severity] ([severitylevel])
+        -Source: [source]
+        -State: [state]
+        -Time: [time]
+        -Type: [type]
+        -UserStatus: [userstatus]
+        -Comment: [comment]
+        -RootKey: [rootkey]
+        More Info: http://[dmaip]/SystemDisplay.htm[if:element] and
+        http://[dmaip]/ElementDisplay.htm?id=[dmaid]/[elementid][endif]
+      ]]>
+    </Content>
+  </Template>
+  <Template name="html-notifications" options="">
+    <Content>
+      <![CDATA[
+      <p>Filter '[filtername]' has been triggered[if:multiple]
+      ([occurrences] times for similar alarms)[endif],
+      based on Alarm with Id = '[alarmid]' (RootKey: '[rootkey]'):</p>
+      <table class="notification_table">
+      <tr class="header">
+        <th>DataMiner</th>
+        <th>Element</th>
+        [if:description]<th>Element Description</th>[endif]
+        <th>Parameter</th>
+        <th>Value</th>
+        <th>Owner</th>
+        <th>Severity</th>
+        <th>Source</th>
+        <th>State</th>
+        <th>Time</th>
+        <th>Type</th>
+        <th>UserStatus</th>
+        <th>Comment</th>
+      </tr>
+      <tr class="alternate">
+        <td>[dmaname]</td>
+        <td>[elementname]</td>
+        [if:description]<td>[elementdesc]</td>[endif]
+        <td>[paramname]</td>
+        <td>[value]</td>
+        <td>[owner]</td>
+        <td class="severity[severityid]">[severity] [severitylevel]</td>
+        <td>[source]</td>
+        <td>[state]</td>
+        <td>[time]</td>
+        <td>[type]</td>
+        <td>[userstatus]</td>
+        <td>[comment]</td>
+      </tr>
+      </table>
+      <p>More Info: <a href="http://[dmaip]/SystemDisplay.htm">SystemDisplay</a>
+      [if:element]
+      and <a href="http://[dmaip]/ElementDisplay.htm?id=[dmaid]/[elementid]">
+      ElementDisplay</a>
+      [endif]
+      </p>
+      ]]>
+    </Content>
+  </Template>
+</NotifyTemplates>
+```
+
+***
 
 > [!NOTE]
 > In the example above, a number of placeholders are enclosed in square brackets. For more information, see [Notification template placeholders](#notification-template-placeholders).
