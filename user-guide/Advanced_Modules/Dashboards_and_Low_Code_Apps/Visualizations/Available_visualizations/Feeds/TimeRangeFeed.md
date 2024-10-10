@@ -13,6 +13,8 @@ This time range feed can be used as a filter for compatible components, such as 
 
 ![Time range feed](~/user-guide/images/Time_Range.png)<br>*Time range feed component in DataMiner 10.4.11*
 
+## Configuring the component
+
 To configure the component:
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
@@ -33,16 +35,16 @@ To configure the component:
 
    - *Show refresh timer*: Determines whether an indication is displayed that the data will be refreshed.
 
-   - *Presets* (1): Available from DataMiner 10.3.10/10.4.0 onwards<!--RN 37050-->. Allows you to customize the presets displayed when you select the component. The following presets are available: *Still busy*, *In the past*, *Recently*, *Long run*, *Starting from now*, *Near future*, and *Distant future*.
+   - *Presets*: Available from DataMiner 10.3.10/10.4.0 onwards<!--RN 37050-->. Allows you to customize the presets displayed when you select the component (1). The following presets are available: *Still busy*, *In the past*, *Recently*, *Long run*, *Starting from now*, *Near future*, and *Distant future*.
 
      > [!NOTE]
      > Prior to DataMiner 10.3.10/10.4.0, the default presets include *Still busy*, *In the past*, *Recently*, and *Long run*. These presets cannot be edited.
 
-   - *Use quick picks* (2): Determines whether the component includes quick pick buttons that allow users to enter a preset time range by clicking a single button.
+   - *Use quick picks*: Determines whether the component includes quick pick buttons (2) that allow users to enter a preset time range by clicking a single button.
 
-   - *Pinning as quick pick* (3): Available if *Use quick picks* is enabled. Displays a pin icon next to the time summary in the component, which can be used to add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
+   - *Pinning as quick pick*: Available if *Use quick picks* is enabled. Displays a pin icon (3) next to the time summary in the component, which can be used to add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
 
-   - *Show current range* (4): Determines whether the current time range is displayed at the top of the component.
+   - *Show current range*: Determines whether the current time range is displayed at the top of the component (4).
 
    ![Time range feed](~/user-guide/images/Time_Range_Feed.png)<br>*Time range feed component in DataMiner 10.4.11*
 
