@@ -18,8 +18,6 @@ It displays the different possible data sources of queries as follows:
 
 - If parameters are retrieved by protocol or profile definition, each row will represent a matching element, and for each parameter a column will show the corresponding values.
 
-From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Strings* section of the data pane.
-
 > [!NOTE]
 >
 > - From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
@@ -185,6 +183,29 @@ To apply a **filter based on a specific column**:
 
 > [!NOTE]
 > If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
+
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can **filter the table by feeding it a text string**:
+
+- Use a **text input feed** or **search input feed**:
+
+  1. Add a [text input](xref:DashboardTextInputFeed) or [search input](xref:DashboardSearchInputFeed) feed component to your dashboard or app.
+
+  1. Hover over the table component, click the filter icon, and then add a filter feed from the *Feeds > Text input/Search input > Value > Strings* section of the data pane.
+
+  When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
+
+  > [!NOTE]
+  > If you do not want the search box to appear when using a text or search input feed as a filter, disable the [*Show quick filter* setting](#filtering--highlighting) in the *Layout* tab.
+
+  ![Text input feed](~/user-guide/images/Text_input_feed_filter_table.gif)<br>*Text input feed and table components in DataMiner 10.4.11*
+
+- Specify a **text string in the dashboard or app URL**:
+
+  1. Hover over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Strings* section of the data pane.
+
+  1. Pass a string data object within the URL, as described under [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+
+     With this URL, you can immediately display a filtered version of the table when the dashboard or app is opened.
 
 To **sort the table**, you can click a column header.
 
