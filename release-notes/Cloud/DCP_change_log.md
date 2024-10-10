@@ -9,6 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 10 October 2024 - Enhancement - Catalog API - It is now possible to obtain a Catalog item using an organization key [ID 40976]
+
+Using the Catalog API, it is now possible to obtain a Catalog item via its OriginalId or Id using an organization key for authorization. 
+
+#### 10 October 2024 - Enhancement - Catalog API - Search catalog call includes the short description property of a Catalog item [ID 40955]
+
+When performing a search on the Catalog, the search result items will now contain a shortDescription propery containing a small description of the Catalog item. 
+
+#### 10 October 2024 - Enhancement - Catalog API - Registering a catalog version now allows a version message up to 1500 characters [ID 40956]
+
+Registering a version using the Catalog API now accepts a version message of up to 1500 characters.
+
+#### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40498]
+
+When searching/browsing in the catalog using visibility 'All', DVE connectors were included in the results while this is not intended since these dont have versions that can be deployed.
+
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
 Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
