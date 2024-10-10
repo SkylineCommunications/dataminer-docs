@@ -186,9 +186,13 @@ Examples:
 
 - From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, if you configure this action for a [Node edge graph](xref:DashboardNodeEdgeGraph) component, you can select the option *Clear selection*.
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInputFeed), [text input](xref:DashboardTextInputFeed), or [search input](xref:DashboardSearchInputFeed) component, you can configure this action on, for example, the button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to a feed.
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInputFeed), [text input](xref:DashboardTextInputFeed), or [search input](xref:DashboardSearchInputFeed) component, you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to a feed.
 
   ![Set value](~/user-guide/images/Set_Value.gif)<br>*Grid, text input, and table components in DataMiner 10.4.9*
+
+- From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, if you add a [time range feed component](xref:DashboardTimeRangeFeed), you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a preset or custom time range.
+
+  ![Set value - time range](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range feed, button, and line & area chart components in DataMiner 10.4.11*
 
 ## Showing a context menu
 
