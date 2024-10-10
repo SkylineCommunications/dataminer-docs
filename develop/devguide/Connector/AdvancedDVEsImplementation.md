@@ -20,11 +20,11 @@ To implement DVE functionality, the following steps must be performed:
 
 For example, suppose a protocol contains a table (ID: 1000) that will generate DVEs (i.e. the protocol defines that table 1000 generates DVEs). In the DVE table, the columns "X", "Y" and "Z" are exported and the column "DVE ID" has the option "element". In addition, the protocol contains another table (ID: 2000) that is linked to the DVE table. This table is also exported.
 
-![alt text](../../images/Advanced_Topics_-_DVE_concept.svg "A table linked to a DVE table")
+![alt text](~/develop/images/Advanced_Topics_-_DVE_concept.svg "A table linked to a DVE table")
 
 The DVE generated for the first row in the DVE table will look like this:
 
-![alt text](../../images/Advanced_Topics_-_DVE_concept_-_result.svg "Resulting DVE layout")
+![alt text](~/develop/images/Advanced_Topics_-_DVE_concept_-_result.svg "Resulting DVE layout")
 
 When implementing DVE functionality, keep the following in mind:
 

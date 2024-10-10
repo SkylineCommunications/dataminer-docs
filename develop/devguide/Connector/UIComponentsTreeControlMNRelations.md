@@ -178,6 +178,6 @@ Suppose we want to create a tree control that lists all services and the audio a
 
     The resulting tree control looks like this:
 
-    ![Overview of tables with example data](../../images/TreeControlMNTablesOverview.png "Overview of tables with example data")
+    ![Overview of tables with example data](~/develop/images/TreeControlMNTablesOverview.png "Overview of tables with example data")
 
-    ![Overview of resulting tree control](../../images/TreeControlMtoNTree.png "Overview of resulting tree control")
+    ![Overview of resulting tree control](~/develop/images/TreeControlMtoNTree.png "Overview of resulting tree control")

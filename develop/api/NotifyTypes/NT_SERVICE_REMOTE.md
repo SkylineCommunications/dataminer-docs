@@ -30,7 +30,4 @@ if (result != null)
 
 ## Return Value
 
-- (uint[]): The first element of the array contains the ID of the service.
-
-> [!NOTE]
-> From DataMiner 9.0.0 (RN 10304) onwards, this call also returns a service ID. 
+- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 -->

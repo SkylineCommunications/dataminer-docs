@@ -4,7 +4,7 @@ uid: NT_UPDATE_DESCRIPTION_XML
 
 # NT_UPDATE_DESCRIPTION_XML (127)
 
-Adjusts parameter settings at runtime.
+Adjusts parameter settings at runtime.<!-- RN 4938 -->
 
 ```csharp
 uint agentId = 400;
@@ -34,5 +34,4 @@ int result = (int) protocol.NotifyDataMinerQueued(127/*NT_UPDATE_DESCRIPTION_XML
 ## Remarks
 
 - Use NotifyDataMinerQueued in case a parameter of the element executing this call must be performed.
-- Feature introduced in DataMiner version 7.5.3 (RN 4938).
 - Editing the units (Update type 2) is possible from DataMiner 10.2.5/10.3.0 (RN 32891) onwards.

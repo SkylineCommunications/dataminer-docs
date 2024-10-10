@@ -14,7 +14,7 @@ One column of table 2 has to contain references (keys) to information stored in 
 <ColumnOption idx="9" pid="2010" type="custom" value="" options=";foreignKey=1000"/>
 ```
 
-Since DataMiner version 8, it is possible to implement recursive linking. The table will have a column with a foreign key to itself. This can be required for specific aggregate actions in EPM (formerly known as CPE) environments. For example, there is a list of amplifiers in a table but all amplifiers are connected to each other and a count needs to be done for the number of amplifiers connected from a certain starting point.
+It is possible to implement recursive linking, in which case the table will have a column with a foreign key to itself. This can be required for specific aggregate actions in EPM (formerly known as CPE) environments, for example in case there is a list of amplifiers in a table, but all amplifiers are connected to each other, and a count needs to be done for the number of amplifiers connected from a certain starting point.
 
 ```xml
 <Param id="300" trending="false">

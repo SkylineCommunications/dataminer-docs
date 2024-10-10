@@ -160,7 +160,7 @@ public class QAction
                                     string responseData = (string)response[1]; // E.g. "TIMEOUT".
             
                                     // Process feedback...
-                                    if (response.Length > 2)    // Feature introduced in DataMiner 9.5.0
+                                    if (response.Length > 2)
                                     {
                                         byte[] responseBytes = (byte[])response[2]; // The received response.
                                     }
