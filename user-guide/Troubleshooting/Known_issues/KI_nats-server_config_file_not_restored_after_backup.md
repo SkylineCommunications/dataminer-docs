@@ -25,4 +25,4 @@ In versions prior to DataMiner 10.4.11/10.5.0, when a DataMiner backup is restor
 
 ## Workaround
 
-To avoid losing changes, manually back up the *nats-server.config* file from the `C:\Skyline DataMiner\NATS\nats-streaming-server\` folder before performing a DataMiner backup.
+To avoid losing changes, manually back up the *nats-server.config* file from the `C:\Skyline DataMiner\NATS\nats-streaming-server\` folder when performing a DataMiner backup.
