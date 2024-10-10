@@ -83,3 +83,9 @@ This last message will no longer be displayed.
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you opened a trend graph, in some rare cases, its viewport would incorrectly jump to the last day.
+
+#### System Center: Problem when opening the 'Permissions > Views' tab of a user group [ID 40969]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in *System Center*, you opened the *Permissions > Views* tab of a particular user group, in some cases, Cube could become unresponsive when that tab contained a large amount of items.
