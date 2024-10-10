@@ -145,7 +145,9 @@ From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of 
 > [!TIP]
 > If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the top-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
 
-To apply a **general filter** across the table, a search box is available:
+### General filter
+
+To apply a general filter across the table, a search box is available:
 
 1. Hover over the table component and click the search icon.
 
@@ -156,7 +158,9 @@ To apply a **general filter** across the table, a search box is available:
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](#filtering--highlighting) is enabled.
 
-To apply a **filter based on a specific column**:
+### Column-based filter
+
+To apply a filter based on a specific column:
 
 1. Right-click the column header and select *Filter*.
 
@@ -184,9 +188,11 @@ To apply a **filter based on a specific column**:
 > [!NOTE]
 > If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
 
-From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can **filter the table by feeding it a text string**.
+### Filter based on text string
 
-For example:
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can filter the table by feeding it a text string.
+
+You can do this in different ways:
 
 - Use a **text input feed** or **search input feed**:
 
@@ -209,14 +215,16 @@ For example:
 
      This URL will automatically display a filtered version of the table when the dashboard or app is opened.
 
-     In the following example, the string "test" is sent to the component with component ID 1: `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`.
+     In the following example, the string "test" is sent to the component with component ID 1:
 
-To **sort the table**, you can click a column header.
+     `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`.
 
-- To toggle between ascending and descending order, click the column header again.
+### Sorting
 
-- To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+To sort the table, you can **click a column header**. To toggle between ascending and descending order, click the column header again.
 
-- Alternatively, you can also select one of the available sorting options in the column header right-click menu.
+To apply **additional sorting**, press **Ctrl** while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
 
-To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
+Alternatively, you can also select one of the available sorting options in the **column header right-click menu**.
+
+To **group** by a specific table column, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
