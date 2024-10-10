@@ -53,6 +53,12 @@ This label is used in the *Agent alarms* section of the *System Center > Agents 
 
 In some cases, the Cube UI could start to behave erratically when a large number of objects were added to, updated in or removed from a view.
 
+#### Visual Overview - Resource Manager component: SelectedPool variable could get set incorrectly when selecting a booking on a resource band [ID 40845]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in a *Resource Manager* component, you selected a booking on a resource band of which the resource was filtered by ID, the *SelectedPool* variable could get set incorrectly.
+
 #### License expiration window: Title and text included the incorrectly spelled word "licence" [ID 40894]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -71,3 +77,15 @@ When, in the start window of the Cube desktop app, you clicked the '+' button an
 - "Did you mean", followed by the exact name you entered.
 
 This last message will no longer be displayed.
+
+#### Trending: Viewport of trend graph would incorrectly jump to the last day [ID 40931]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you opened a trend graph, in some rare cases, its viewport would incorrectly jump to the last day.
+
+#### System Center: Problem when opening the 'Permissions > Views' tab of a user group [ID 40969]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in *System Center*, you opened the *Permissions > Views* tab of a particular user group, in some cases, Cube could become unresponsive when that tab contained a large amount of items.

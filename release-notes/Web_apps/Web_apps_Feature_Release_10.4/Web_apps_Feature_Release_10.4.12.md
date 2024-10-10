@@ -25,6 +25,26 @@ DataMiner web applications now support the new `SkipAbortConfirmation` property 
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
+#### Dashboards/Low-Code Apps: Flows [ID 40974]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Flows allow you to modify the behavior of one or more data objects by applying a series of operators. Similar to how GQI works, operators are chained together and applied to the data object step by step until a final value is reached, which is then passed to all consumers.
+
+Examples:
+
+- If a text input provides a text feed, we can use that feed to trigger a query. If the text box is set to update upon every key press, a query is executed with each keystroke. However, by applying a *debounce* in a flow, you can adjust this behavior so that the query runs only after the user has stopped typing for a certain time.
+
+- Instead of fetching all the data for a particular timeline, you only want to fetch the data for the current viewport.
+
+Currently, you can use the following operators:
+
+| Operator | Function |
+|----------|----------|
+| Combine  | Combines multiple inputs into one by forwarding *the most recently updated value of each input* as the output. Whenever any input changes, the operator will emit the *combination of all latest values*. |
+| Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
+| Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
+
 ## Changes
 
 ### Enhancements
@@ -39,11 +59,23 @@ From now on, a GQI query will be opened synchronously, after which a first page 
 
 When WebSockets are not available, GQI sessions will be executed synchronously as before.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Initial viewport in case of custom node positions will now be calculated based on the midpoints of all nodes [ID 40869]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you opened a node edge graph component with custom node positions, up to now, its initial viewport was [50,50]. From now on, its center will be calculated based on the midpoints of all its nodes.
+
 #### Dashboards/Low-Code Apps - GQI components: Query result set is now limited to 100,000 rows [ID 40886]
 
-<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 From now on, all GQI components will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
+
+#### Low-Code Apps: Enhanced performance when opening or updating low-code apps [ID 40944]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance has increased when opening or updating low-code apps.
 
 #### Dashboards app: Enhanced error handling when sharing dashboards [ID 40946]
 

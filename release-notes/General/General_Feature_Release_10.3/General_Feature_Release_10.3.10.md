@@ -175,7 +175,7 @@ This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
 
 > [!IMPORTANT]
-> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Advanced configuration](xref:Automatic_incident_tracking#advanced-configuration).
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 ### Fixes
 
