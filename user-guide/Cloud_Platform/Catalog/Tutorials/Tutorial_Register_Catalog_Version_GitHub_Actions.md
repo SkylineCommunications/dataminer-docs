@@ -84,7 +84,7 @@ Expected duration: 15 minutes
            shell: pwsh
            run: |
              $file = Get-Item "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol"
-             $uri = "https://api.dataminer.services/api/key-catalog/v1-0/catalog/${{ env.CATALOG_ID }}/register/version"
+             $uri = "https://api.dataminer.services/api/key-catalog/v2-0/catalogs/${{ env.CATALOG_ID }}/register/version"
 
              # Define the form data (package file, version, and description)
              $formData = @{

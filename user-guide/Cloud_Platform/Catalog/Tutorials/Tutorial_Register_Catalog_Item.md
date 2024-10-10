@@ -28,7 +28,7 @@ Expected duration: 10 minutes
 
 ## Step 1: Register the Catalog item URL
 
-Add a new request using an HTTP method of type **PUT** and the following URL: `https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
+Add a new request using an HTTP method of type **PUT** and the following URL: `https://api.dataminer.services/api/key-catalog/v2-0/catalogs/register`
 
 ![Register item HTTP URL](~/user-guide/images/tutorial_catalog_registration_item_url.png)
 
