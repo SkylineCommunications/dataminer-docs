@@ -75,17 +75,20 @@ Your text input should look like this:
 
 1. Edit the GQI query again and open the filter operator.
 
-1. In the *Value* box, click the "Link to feed" icon.
+1. In the *Value* box, click the "Link to data" icon.
+
+  > [!NOTE]
+  > Before dataminer version 10.4.12/10.4[CU9]/10.3[CU21] 'Link to data' was called 'Link to Feed'.
 
    This icon is used everywhere a user can link a value to a feed.
 
-   ![Link to feed icon](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
+   ![Link to data icon](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
 
-   Clicking the icon opens the *Link to feed* dialog, which will ask for a specific feed, type, and property.
+   Clicking the icon opens the *Link to data* dialog, which will ask for a specific data, type, and property.
 
 1. Specify the necessary info in the dialog:
 
-   1. Select "Text input 1" for the feed.
+   1. Select "Text input 1" for the data.
 
       You will notice that the type and property are automatically filled in if only one possible value is available.
 
@@ -93,7 +96,7 @@ Your text input should look like this:
 
       This determines what will happen when the user does not fill in any value in the text input. Selecting *everything* ensures that all data is retrieved in this case.
 
-      ![Link to feed configuration](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
+      ![Link to data configuration](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
 
       > [!TIP]
       > If you want the text input to behave like a search engine, you can select *nothing* instead. This will not retrieve any data until the user fills in a value in the text input.

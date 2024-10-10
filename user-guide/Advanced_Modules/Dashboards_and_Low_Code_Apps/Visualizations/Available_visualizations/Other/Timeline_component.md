@@ -75,7 +75,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      > [!NOTE]
      > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
 
-     To synchronize the time range of the timeline with that of another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list, such as a time range component. Modifying the default time frame for this component will automatically synchronize the time range for any linked timeline component as well.
+     To synchronize the time range of the timeline with that of another component in the dashboard or low-code app, click the ![Link to data](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list, such as a time range component. Modifying the default time frame for this component will automatically synchronize the time range for any linked timeline component as well.
 
      If the timeline is linked to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
 
@@ -100,7 +100,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
      ![Highlight](~/user-guide/images/Timeline_Highlight.png)<br/>*Timeline component in DataMiner 10.4.1*
 
-     To link the time range of another component in the dashboard or low-code app to the timeline component, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to the *Time range* dropdown box, and select the desired component from the dropdown list. Adjusting the highlight time range of this chosen component will automatically synchronize the time range for the linked timeline component as well.
+     To link the time range of another component in the dashboard or low-code app to the timeline component, click the ![Link to data](~/user-guide/images/Link_to_Feed.png) icon next to the *Time range* dropdown box, and select the desired component from the dropdown list. Adjusting the highlight time range of this chosen component will automatically synchronize the time range for the linked timeline component as well.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
