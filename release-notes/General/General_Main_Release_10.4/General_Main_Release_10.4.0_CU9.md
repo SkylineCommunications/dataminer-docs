@@ -24,6 +24,12 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 
 A number of security enhancements have been made.
 
+#### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when SLXML received erroneous XML code, the error message logged in *SLXML.txt* would lose vital information when it was trimmed by SLLog due to the 5120-character error message size limit. The error message in question has now been adapted so that the most important information is found at the beginning.
+
 ### Fixes
 
 #### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]

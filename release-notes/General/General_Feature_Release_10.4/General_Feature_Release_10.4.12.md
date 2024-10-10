@@ -94,6 +94,12 @@ When an element is duplicated, the following information events will no longer b
 - [Remote Element Name]
 - [Remote DMA IP]
 
+#### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when SLXML received erroneous XML code, the error message logged in *SLXML.txt* would lose vital information when it was trimmed by SLLog due to the 5120-character error message size limit. The error message in question has now been adapted so that the most important information is found at the beginning.
+
 ### Fixes
 
 #### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
