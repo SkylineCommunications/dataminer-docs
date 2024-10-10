@@ -85,7 +85,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
     <Content>
         <![CDATA[
         Filter '[filtername]' has been triggered[if:multiple]
-        ([occurrences] times for similar alarms)[endif] (Alarm Id ='[alarmid]')
+        ([occurrences] times for similar alarms)[endif] (Alarm Id ='[treeid]/[alarmid]')
         -Dataminer: [dmaname] (id = [dmaid])
         -Element: [elementname] (id='[elementkey]')
         [if:description] -Element Description: [elementdesc][endif]
@@ -99,7 +99,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
         -Type: [type]
         -UserStatus: [userstatus]
         -Comment: [comment]
-        -RootKey: [rootkey]
+        -TreeID: [treeid]
         More Info: http://[dmaip]/SystemDisplay.htm[if:element] and
         http://[dmaip]/ElementDisplay.htm?id=[dmaid]/[elementid][endif]
       ]]>
@@ -110,7 +110,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
       <![CDATA[
       <p>Filter '[filtername]' has been triggered[if:multiple]
       ([occurrences] times for similar alarms)[endif],
-      based on Alarm with Id = '[alarmid]' (RootKey: '[rootkey]'):</p>
+      based on Alarm with Id = '[alarmid]' (TreeID: '[treeid]'):</p>
       <table class="notification_table">
       <tr class="header">
         <th>DataMiner</th>
@@ -199,7 +199,7 @@ Some can only be used in templates for notification messages sent as a result of
 | rca:element        | Element RCA level | X | X |
 | rca:parameter      | Parameter RCA level | X | X |
 | rca:service        | Service RCA level | X | X |
-| rootkey            | Root key of the alarm | X | X |
+| rootkey (obsolete as of 10.5.0 [CU0], use TreeID instead) | Root key of the alarm | X | X |
 | rootcreationtime   | Root creation time of the alarm | X |
 | roottime           | Root time of the alarm | | X |
 | ruleState          | Legacy correlation message placeholder \[RuleState\]<br> Possible values: up, down | X | |
@@ -215,6 +215,7 @@ Some can only be used in templates for notification messages sent as a result of
 | stateid            | Alarm state ID | X | X |
 | time               | Timestamp | X | X |
 | time:short         | Shortened timestamp used in cellphone text messages (time only, no date) | X | X |
+| treeid  (10.5.0 [CU0]+)    | TreeID of the alarm | X | X |
 | type               | Alarm type<br> Examples: New Alarm, Escalated From, Dropped From | X | X |
 | typeid             | Alarm type ID | X | X |
 | userstatus         | User status<br> Examples: Not Assigned, Acknowledged, Unresolved | X | X |
