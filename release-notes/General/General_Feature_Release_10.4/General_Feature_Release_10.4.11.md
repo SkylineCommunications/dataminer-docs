@@ -115,12 +115,6 @@ Because of a number of enhancements, from now on, no manual intervention whatsoe
 
 Because of a number of enhancements, variance increase detection has been improved.
 
-#### SLDataGateway: Enhanced performance when writing data to the database [ID 40609]
-
-<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
-
-Because of a number of enhancements, overall performance has increased when writing data to the database.
-
 #### Trimmed log entries will now get an '(x bytes omitted)' suffix [ID 40629]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -173,6 +167,14 @@ The following calls have been improved:
   - `GetParameterDisplayByPrimaryKey`
   - `IsMatrixCrosspointConnected`
 
+#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 40691]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
+
+Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
+
 #### Failover: Both agents will now keep a copy of the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file [ID 40702]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -180,6 +182,19 @@ The following calls have been improved:
 When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+
+#### Service & Resource Management: Switching master agents [ID 40712]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
+
+When the DataMiner Agent that is currently the master agent is marked "not eligible to be promoted to master", the other DataMiner Agents in the DMS will elect a new master from the pool of DataMiner Agents that have been marked "eligible to be promoted to master".
+
+The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
+
+> [!NOTE]
+> If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
 
 #### SLAnalytics will now wait longer for a message from SLNet announcing that it has finished loading the configuration [ID 40729]
 
@@ -309,3 +324,16 @@ When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.
+
+#### Problem with SLProtocol when processing actions that occurred when an element was stopped or deleted [ID 40859]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was executed while an element was being stopped or deleted, in some cases, SLProtocol could stop working.
+
+#### GetAlarmDetailsMessage: Version compatibility problem [ID 40895]
+
+<!-- MR 10.5.0 - FR 10.4.11 [CU0] -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
+
+Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longer be sent from clients running feature version 10.4.10 to DataMiner Agents running feature version 10.4.1 or older.

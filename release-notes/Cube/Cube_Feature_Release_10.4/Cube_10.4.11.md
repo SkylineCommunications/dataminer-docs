@@ -27,6 +27,9 @@ uid: Cube_Feature_Release_10.4.11
 
 In the *Suggestion events* and *Anomalies* tabs of the Alarm Console, a new column now allows you to give feedback on any of the listed anomalies.
 
+> [!IMPORTANT]
+> This feature will only work when connected to a DataMiner Agent running at least main release 10.5.0 or feature release 10.4.11.
+
 ##### Thumbs up or thumbs down
 
 In this new column, you can find two buttons to evaluate an anomaly:
@@ -34,7 +37,7 @@ In this new column, you can find two buttons to evaluate an anomaly:
 - a "thumbs up" button you can click to indicate that you like the anomaly, and
 - a "thumbs down" button you can click to indicate that you do not like the anomaly.
 
-Any feedback you give will be used by the behavioral anomaly detection feature to tailor the anomaly detection to your specific wishes.
+Any feedback users give will be used by the behavioral anomaly detection feature to tailor the anomaly detection on system level.
 
 When you click one of the two buttons, it will be pinned in the column as a black icon, and if you change your mind, you can click the other one. Buttons that have not been clicked will stay hidden and will only be visible when you hover over the alarm or suggestion event. Also, you will only see the icons you have clicked yourself. You will not be able to see feedback given by other users.
 
@@ -49,16 +52,16 @@ When you click either the "thumbs up" or "thumbs down" button, in some cases, a 
 
 | Action | Description |
 |--------|-------------|
-| Clear the alarm             | When you select this action, the alarm will be cleared immediately. No confirmation box will appear. |
-| Update the alarm template   | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
-| Create a new alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
+| Clear event             | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
+| Improve alarm template   | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
+| Create alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
 
 When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.
 
 > [!NOTE]
 >
 > - The actions listed above will only appear if you are allowed to perform them. For example, the system will not suggest you update the alarm template if you are not allowed to do so.
-> - The *Update the alarm template* and *Create a new alarm template* actions will not appear if the element in question has an alarm template group assigned.
+> - The *Improve alarm template* and *Create alarm template* actions will not appear if the element in question has an alarm template group assigned.
 
 ##### Adding a feedback column to other alarm tabs
 
@@ -89,7 +92,7 @@ In the *Logging* section of *System Center*, a number of additional log files ca
 - Spectrum Manager
 - UI Provider
 
-#### Adding or changing arguments in cube:// URLs of running Cube instances [ID_40795]
+#### Adding or changing arguments in cube:// URLs of running Cube instances [ID 40795]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
@@ -179,3 +182,9 @@ When an information template parameter was duplicated, a number of properties (e
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some rare cases, DataMiner could stop working while exporting trend data to a CSV file.
+
+#### Visual Overview: Problem when subscribing to properties due to subscriptions incorrectly being case sensitive [ID 40878]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, problems could occur when subscribing to properties due to subscriptions incorrectly being case sensitive. From now on, property subscriptions will be case insensitive.

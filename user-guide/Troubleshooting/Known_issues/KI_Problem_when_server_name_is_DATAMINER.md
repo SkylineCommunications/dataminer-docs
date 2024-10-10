@@ -6,8 +6,8 @@ uid: KI_Problem_when_server_name_is_DATAMINER
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.4.0 [CU2] onwards.
-- Feature Release versions from DataMiner 10.4.5 onwards.
+- Main Release versions from DataMiner 10.4.0 [CU2] to 10.4.0 [CU8].
+- Feature Release versions from DataMiner 10.4.5 to 10.4.11.
 
 ## Cause
 
@@ -19,7 +19,7 @@ Change the computer name. However, note that a new DataMiner license file will n
 
 ## Fix
 
-No fix is available yet.<!-- RN 40743 -->
+Install DataMiner 10.4.0 [CU9]/10.4.12.<!-- RN 40743 -->
 
 ## Description
 

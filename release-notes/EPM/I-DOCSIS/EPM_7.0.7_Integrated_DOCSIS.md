@@ -2,14 +2,7 @@
 uid: EPM_7.0.7_Integrated_DOCSIS
 ---
 
-# EPM 7.0.7 Integrated DOCSIS - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
-
-## New features
-
-\-
+# EPM 7.0.7 Integrated DOCSIS
 
 ## Changes
 
@@ -51,7 +44,7 @@ These are the updated OIDs:
 
   The number of bytes from the memory pool that are currently in use by applications on the physical entity. 
 
-- cempMemPoolHCFree 
+- cempMemPoolHCFree
 
   .1.3.6.1.4.1.9.9.221.1.1.1.1.20
 

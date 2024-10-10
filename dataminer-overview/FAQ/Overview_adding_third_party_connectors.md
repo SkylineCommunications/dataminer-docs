@@ -2,7 +2,7 @@
 uid: Overview_adding_third_party_connectors
 ---
 
-# Adding third-party connectors
+# How are third-party connectors added?
 
 On request, anyone can add a connector to the [Catalog](xref:Overview_DevOps#catalog). See [Registering a Catalog item](xref:Register_Catalog_Item).
 

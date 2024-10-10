@@ -753,6 +753,22 @@ Up to now, this feature only proposed parameters from the same DataMiner element
 
 Up to now, SLNet would cache all information about all entries in a correlation alarm (group) tree. In order to reduce the amount of data in this cache, from now on, only the most recent information about these entries will be kept in memory.
 
+#### VerifyDotNetVersion prerequisite check now returns the missing .NET version and a link to the download page [ID 40677]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyDotNetVersion* prerequisite check will verify whether Microsoft ASP.NET 8.0 is installed. When this is not the case, the installation or upgrade will be aborted and a pop-up window will appear, showing the following message:
+
+*Please install the latest \"ASP.NET Core Runtime hosting bundle\" for .NET 8.0 from [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download)*
+
+#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 40691]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
+
+Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
+
 #### Failover: Both agents will now keep a copy of the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file [ID 40702]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -760,6 +776,19 @@ Up to now, SLNet would cache all information about all entries in a correlation 
 When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+
+#### Service & Resource Management: Switching master agents [ID 40712]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
+
+When the DataMiner Agent that is currently the master agent is marked "not eligible to be promoted to master", the other DataMiner Agents in the DMS will elect a new master from the pool of DataMiner Agents that have been marked "eligible to be promoted to master".
+
+The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
+
+> [!NOTE]
+> If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
 
 #### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
 
@@ -772,6 +801,16 @@ Because of a number of enhancements, overall performance has increased when load
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
+
+#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When an element is duplicated, the following information events will no longer be generated:
+
+- [Replicated Element]
+- [Remote Element Name]
+- [Remote DMA IP]
 
 ### Fixes
 
@@ -919,6 +958,12 @@ For example, when *defaultApp* is set to "Cube" in *C:\\Skyline DataMiner\\Webpa
 When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g. DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
 
 Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
+
+#### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, in a DataMiner System, some agents used external authentication while other agents used internal authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
 
 #### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 

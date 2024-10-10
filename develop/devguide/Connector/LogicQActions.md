@@ -39,7 +39,7 @@ A descriptive name can be provided using the [name](xref:Protocol.QActions.QActi
 
 The [encoding](xref:Protocol.QActions.QAction-encoding) attribute defines the language in which the QAction is written (this value is set to "csharp" for QActions written in C#).
 
-The triggers attribute indicates the ID(s) of the parameter(s) that trigger the QAction. A QAction is executed on a change event of one of these parameters. (For more information about change events, see [Executing a QAction](xref:LogicQActions#executing-a-qaction).)
+The [triggers](xref:Protocol.QActions.QAction-triggers) attribute indicates the ID(s) of the parameter(s) that trigger the QAction. A QAction is executed on a change event of one of these parameters. (For more information about change events, see [Executing a QAction](xref:LogicQActions#executing-a-qaction).)
 
 The default entry point of the QAction is the static Run method of the QAction class. The entry point method has a parameter of type [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol), which serves as the link with the SLProtocol process (the QAction is executed by the SLScripting process).
 
@@ -185,7 +185,7 @@ The following example will count the number of times the button has been pressed
 
 ### Multiple entry methods
 
-The Run method of the QAction class is the default entry point method of a QAction. Using the entryPoint attribute, a different entry point method can be defined for every parameter that triggers the QAction.
+The Run method of the QAction class is the default entry point method of a QAction. Using the [entryPoint](xref:Protocol.QActions.QAction-entryPoint) attribute, a different entry point method can be defined for every parameter that triggers the QAction.
 
 For example, in the following QAction two parameters can trigger a QAction. However, depending on which parameter triggered the QAction execution, another entry point method is selected.
 
@@ -239,7 +239,7 @@ A change event is initiated when:
 
 Often, when data of a row changes in a table, a QAction must be executed to process the change.
 
-You can trigger on a row change by using the row attribute when defining a QAction, setting it to "true" and specifying a write column parameter:
+You can trigger on a row change by using the [row](xref:Protocol.QActions.QAction-row) attribute when defining a QAction, setting it to `true` and specifying a write column parameter:
 
 ```xml
 <QAction id="..." encoding="..." triggers="1052" row="true">
@@ -269,7 +269,7 @@ In a QAction, the following methods are available to retrieve information about 
 Often, a QAction needs to retrieve parameter values from the SLProtocol process. There are two different ways to retrieve parameter values in a Quick Action:
 
 - By including the parameter IDs in the [inputParameters](xref:Protocol.QActions.QAction-inputParameters) attribute.
-- By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the GetParameter method).
+- By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the [GetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) method).
 
 Which approach should be used to retrieve data from the SLProtocol process depends on the situation:
 
@@ -292,7 +292,7 @@ Also keep in mind that DataMiner needs to convert the parameter to an object tha
 
 A reference to the input parameters can be obtained by providing an additional parameter of type object for each input parameter defined in the inputParameters attribute.
 
-In the example below, the values of parameters with ID 200 and 201 are passed to the Quick Action via the objects errors and timespan respectively.
+In the example below, the values of parameters with ID 200 and 201 are passed to the QAction via the objects errors and timespan respectively.
 
 ```xml
 <QAction id="100" name="Process Errors" encoding="csharp" triggers="100" inputParameters="200;201">
@@ -316,7 +316,7 @@ public static class QAction
 </QAction>
 ```
 
-Alternatively, the GetInputParameter method can be used:
+Alternatively, the [GetInputParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetInputParameter(System.Int32)) method can be used:
 
 ```xml
 <QAction id="100" name="Process Errors" encoding="csharp" triggers="100" inputParameters="200;201">
@@ -393,13 +393,13 @@ string errors = Convert.ToString(protocol.Errors);
 
 ## Using assemblies in QActions
 
-A QAction can make use of the functionality defined in an external DLL. In order to be able to use an external DLL, the DLL must be specified in the dllImport attribute of the QAction (see [dllImport](xref:Protocol.QActions.QAction-dllImport)).
+A QAction can make use of the functionality defined in an external DLL. In order to be able to use an external DLL, the DLL must be specified in the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute of the QAction.
 
 ```xml
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll">
 ```
 
-From DataMiner version 8.0.9 onwards, it is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the dllImport attribute. With these placeholders you can avoid having to update the references every time the protocol name or version is updated.
+It is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the `dllImport` attribute. With these placeholders you can avoid having to update the references every time the protocol name or version is updated.
 
 ```xml
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll;[ProtocolName].[ProtocolVersion].QAction.1.dll">
@@ -412,7 +412,7 @@ Referencing another QAction is mainly done in case the referenced QAction contai
 > [!NOTE]
 > The generic QAction typically will not be triggered by any parameters (i.e. there is no triggers attribute present for the QAction containing the generic code) and the QAction does not have an entry point method.
 
-The QAction that is referred to by another QAction must be compiled before the referring QAction is compiled. Therefore, QActions that are referred to by other QActions must use the "precompile" option (see [precompile](xref:Protocol.QActions.QAction-options)).
+The QAction that is referred to by another QAction must be compiled before the referring QAction is compiled. Therefore, QActions that are referred to by other QActions must use the [precompile](xref:Protocol.QActions.QAction-options#precompile) option.
 
 The following code fragment shows an example of a generic QAction that is used by another QAction. The generic QAction defines a data model class "Probe", which can then be used in the other QAction.
 
@@ -466,13 +466,13 @@ There is an important difference between QAction DLLs and third-party DLLs. When
 
 ## Queued QActions
 
-A QAction can be defined with the option "queued". Using the option "queued", the QAction will be executed asynchronously: the QAction is triggered and set in the background. This means that it will not wait until it is finished before another QAction can run.
+A QAction can be defined with the option [queued](xref:Protocol.QActions.QAction-options#queued). Using the option `queued`, the QAction will be executed asynchronously: the QAction is triggered and set in the background. This means that it will not wait until it is finished before another QAction can run.
 
 This option should only be used if really needed and care must be taken during implementation. For example, make sure to implement locking when needed.
 
 ## Starting an Automation script from a QAction
 
-To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the ExecuteScript method on SLProtocol.<!-- RN 24475 -->
+To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the [ExecuteScript](xref:Skyline.DataMiner.Scripting.SLProtocol.ExecuteScript(System.String)) method on SLProtocol.<!-- RN 24475 -->
 
 ```csharp
 public static void Run(SLProtocol protocol)

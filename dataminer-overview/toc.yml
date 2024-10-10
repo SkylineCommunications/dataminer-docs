@@ -230,8 +230,6 @@ items:
           items:
             - name: Support level roles
               topicUid: Support_Level_Roles
-        - name: Adding third-party connectors
-          topicUid: Overview_adding_third_party_connectors
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
@@ -336,6 +334,8 @@ items:
           topicUid: FAQ_DIS_Training
         - name: Does technical support apply to the actual DataMiner connectors I design
           topicUid: FAQ_Support_for_own_connector
+        - name: How are third-party connectors added
+          topicUid: Overview_adding_third_party_connectors
         - name: Can I copy existing third-party DataMiner connectors or parts of them
           topicUid: FAQ_Copy_existing_connector
         - name: What if a second- or third-party DataMiner connector malfunctions
