@@ -43,7 +43,7 @@ For an overview of more commands, refer to [General Extension Commands](https://
 The following table contains an overview of some useful commands for investigating managed memory of a dump using the SOS debugger extension.
 
 > [!NOTE]
-> When executing commands from this table in WinDbg, the command must be prefixed with `!`.
+> When a command from this table is executed in WinDbg, the command must be prefixed with `!`.
 
 | Command                                                                    | Description                                                               |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -75,36 +75,36 @@ For an overview of all commands, refer to [SOS.dll (SOS debugging extension)](ht
 
 ## SOSEx debugger extension commands
 
-The Son of Strike Extension or SOSEx for short, created by  Steve Johnson, provides additional commands and features, such as deadlock detection and improved diagnostics for .NET applications.
+The Son of Strike Extension (SOSEx), created by Steve Johnson, provides additional commands and features, such as deadlock detection and improved diagnostics for .NET applications.
 
 This extension can be downloaded [here (32 bit)](http://www.stevestechspot.com/downloads/sosex_32.zip) or [here (64 bit)](http://www.stevestechspot.com/downloads/sosex_64.zip).
 
 The following table gives an overview of these additional commands.
 
 > [!NOTE]
-> When executing commands from this table in WinDbg, the command must be prefixed with `!`.
+> When a command from this table is executed in WinDbg, the command must be prefixed with `!`.
 
 |Command  |Description  |
 |---------|---------|
-|`bhi [filename]`     |BuildHeapIndex - Builds an index file for heap objects.         |
-|`chi`              |ClearHeapIndex - Frees all resources used by the heap index and removes it from memory. |
-|`dlk  [-d]`     |Displays deadlocks between SyncBlocks and/or ReaderWriterLocks.        |
-|`dumpfd    <FieldAddr>`     |Dumps the properties of a FieldDef structure.         |
-|`dumpgen   <GenNum> [-free] [-stat] [-type <TYPE_NAME>] [-nostrings] [-live] [-dead] [-short]`    |Dumps the contents of the specified generation.         |
-|`finq      [GenNum] [-stat]`     |Displays objects in the finalization queue.         |
-|`frq       [-stat]`     |Displays objects in the Freachable queue.         |
-|`gcgen     <ObjectAddr>`     | Displays the GC generation of the specified object.        |
-|`gch       [HandleType]... [-stat]`     | Lists all GCHandles, optionally filtered by specified handle types.        |
-|`help      [CommandName]`     |Displays details about the specified command        |
-|`lhi       [filename]`     |LoadHeapIndex - load the heap index into memory.        |
-|`mbc       <SOSEX breakpoint ID \| *>`                     | Clears the specified or all managed breakpoints. |
-|`mbd       <SOSEX breakpoint ID \| *>`                     | Disables the specified or all managed breakpoints. |
-|`mbe       <SOSEX breakpoint ID \| *>`                     | Enables the specified or all managed breakpoints. |
+|`bhi [filename]`                                          | BuildHeapIndex - Builds an index file for heap objects.         |
+|`chi`                                                     | ClearHeapIndex - Frees all resources used by the heap index and removes it from memory. |
+|`dlk  [-d]`                                               | Displays deadlocks between SyncBlocks and/or ReaderWriterLocks.        |
+|`dumpfd    <FieldAddr>`                                   | Dumps the properties of a FieldDef structure.         |
+|`dumpgen   <GenNum> [-free] [-stat] [-type <TYPE_NAME>] [-nostrings] [-live] [-dead] [-short]` | Dumps the contents of the specified generation.         |
+|`finq      [GenNum] [-stat]`                              | Displays objects in the finalization queue.         |
+|`frq       [-stat]`                                       | Displays objects in the Freachable queue.         |
+|`gcgen     <ObjectAddr>`                                  | Displays the GC generation of the specified object.        |
+|`gch       [HandleType]... [-stat]`                       | Lists all GCHandles, optionally filtered by specified handle types.        |
+|`help      [CommandName]`                                 | Displays details about the specified command        |
+|`lhi       [filename]`                                    | LoadHeapIndex - Loads the heap index into memory.        |
+|`mbc       <SOSEX breakpoint ID \| *>`                    | Clears the specified or all managed breakpoints. |
+|`mbd       <SOSEX breakpoint ID \| *>`                    | Disables the specified or all managed breakpoints. |
+|`mbe       <SOSEX breakpoint ID \| *>`                    | Enables the specified or all managed breakpoints. |
 |`mbl       [SOSEX breakpoint ID]`                         | Prints the specified or all managed breakpoints. |
 |`mbm       <Type/MethodFilter> [ILOffset] [Options]`      | Sets a managed breakpoint on methods matching the specified filter. |
 |`mbp       <SourceFile> <nLineNum> [ColNum] [Options]`    | Sets a managed breakpoint at the specified source code location. |
 |`mdso      [Options]`                                     | Dumps object references on the stack and in CPU registers in the current context. |
-|`mdt       [TypeName \| VarName \| MT] [ADDR] [Options]`    | Displays the fields of an object or type, optionally recursively. |
+|`mdt       [TypeName \| VarName \| MT] [ADDR] [Options]`  | Displays the fields of an object or type, optionally recursively. |
 |`mdv       [nFrameNum]`                                   | Displays arguments and locals for a managed frame. |
 |`mfrag     [-stat] [-mt:<MT>]`                            | Reports free blocks, the type of object following the free block, and fragmentation statistics. |
 |`mframe    [nFrameNum]`                                   | Displays or sets the current managed frame for the !mdt and !mdv commands. |
@@ -113,15 +113,15 @@ The following table gives an overview of these additional commands.
 |`mlocks    [-d]`                                          | Lists all managed lock objects and CriticalSections and their owning threads. |
 |`mroot     <ObjectAddr> [-all]`                           | Displays GC roots for the specified object. |
 |`mt`                                                      | Steps into the managed method at the current position. |
-|`mu        [address] [-s] [-il] [-n]`                     | Displays a disassembly around the current instruction with interleaved source, IL and asm code. |
-|`muf       [MD Address \| Code Address] [-s] [-il] [-n]`   | Displays a disassembly with interleaved source, IL and asm code. |
-|`mwaits    [-d \| LockAddr]`                               | Lists all waiting threads and, if known, the locks they are waiting on. |
+|`mu        [address] [-s] [-il] [-n]`                     | Displays a disassembly around the current instruction with interleaved source, IL, and asm code. |
+|`muf       [MD Address \| Code Address] [-s] [-il] [-n]`  | Displays a disassembly with interleaved source, IL, and asm code. |
+|`mwaits    [-d \| LockAddr]`                              | Lists all waiting threads and, if known, the locks they are waiting on. |
 |`mx        <Filter String>`                               | Displays managed type/field/method names matching the specified filter string. |
 |`rcw       [Object or SyncBlock Addr]`                    | Displays Runtime Callable Wrapper (RCW) COM interop data. |
-|`refs      <ObjectAddr> [-target\|-source]`                | Displays all references from and to the specified object. |
-|`rwlock    [ObjectAddr \| -d]`                             | Displays all RWLocks or, if provided a RWLock address, details of the specified lock. |
+|`refs      <ObjectAddr> [-target\|-source]`               | Displays all references from and to the specified object. |
+|`rwlock    [ObjectAddr \| -d]`                            | Displays all RWLocks or, if provided a RWLock address, details of the specified lock. |
 |`sosexhelp [CommandName]`                                 | Display this screen or details about the specified command. |
-|`strings   [ModuleAddress] [Options]`                     | Search the managed heap or a module for strings matching the specified criteria. |
+|`strings   [ModuleAddress] [Options]`                     | Searches the managed heap or a module for strings matching the specified criteria. |
 
 ## See also
 
