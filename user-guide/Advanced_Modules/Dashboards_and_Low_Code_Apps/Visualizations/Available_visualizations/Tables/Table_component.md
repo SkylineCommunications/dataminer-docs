@@ -217,7 +217,7 @@ You can do this in different ways:
 
      In the following example, the string "test" is sent to the component with component ID 1:
 
-     `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`.
+     `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`
 
 ### Sorting
 
