@@ -85,6 +85,12 @@ When an error occurs while you are sharing a dashboard, in some cases, the "Fail
 
 From now on, when that message appears, the cause of the error will be added to the web API logs.
 
+#### Low-Code Apps: Version history pane now also shows the version numbers [ID 41034]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you open the *Version history* pane of a low-code app, it will now also display the version numbers.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
