@@ -28,7 +28,5 @@ To disable automatic NATS configuration:
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-Changes to the *NATSForceManualConfig* option are included in a DataMiner backup to make sure that the automatic NATS configuration status remains consistent after performing a backup. From DataMiner 10.4.11/10.5.0 onwards<!--RN 40812-->, any changes made to the *nats-server.config* file after disabling automatic NATS configuration will also be included in the backup and restored automatically. Prior to this, you need to manually restore the *nats-server.config* file, located in the `C:\Skyline DataMiner\NATS\nats-streaming-server\` folder.
-
-> [!TIP]
-> See also: [nats-server.config file is not automatically restored after DataMiner backup](xref:KI_nats-server_config_file_not_restored_after_backup)
+> [!NOTE]
+> Changes to the *NATSForceManualConfig* option are included in a DataMiner backup to make sure that the automatic NATS configuration status remains consistent after a backup is restored. From DataMiner 10.4.11/10.5.0 onwards<!--RN 40812-->, any changes made to the *nats-server.config* file after disabling automatic NATS configuration will also be included in DataMiner backups. Prior to this, you need to manually back up the *nats-server.config* file, located in the `C:\Skyline DataMiner\NATS\nats-streaming-server\` folder. See [nats-server.config file is not automatically restored after DataMiner backup](xref:KI_nats-server_config_file_not_restored_after_backup).
