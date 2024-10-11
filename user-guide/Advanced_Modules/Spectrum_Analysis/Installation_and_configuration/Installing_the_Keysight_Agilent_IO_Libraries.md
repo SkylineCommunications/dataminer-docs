@@ -7,10 +7,10 @@ uid: Installing_the_Keysight_Agilent_IO_Libraries
 On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Keysight IO Libraries (known as Agilent up till 2014).
 
 > [!NOTE]
-> After installing the IO Libraries or after changing the IO configuration, restart the DMA software.
+> After installing the IO Libraries, restart the machine. After changing the IO configuration, restart the DMA software.
 
 > [!WARNING]
-> Both the Keysight Agilent IO Libraries and the NATS module within DataMiner use IP port 9090. This can result in NATS issues and prevent DataMiner from starting. To fix this, see [Troubleshooting – NATS](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
+> Both the Keysight Distributed Infrastructure Service (kdi-controller.exe) and the NATS module within DataMiner use IP port 9090. This will result in NATS issues and will prevent DataMiner from starting. To fix this, change the port number of the kdi service by editing *C:\\ProgramData\\Keysight\\Distributed Infrastructure\\kdi.yaml* and restart the machine, or change the NATS port, see [Troubleshooting – NATS](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
 
 ## Installing the IO Libraries
 
