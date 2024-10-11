@@ -94,6 +94,20 @@ When an element is duplicated, the following information events will no longer b
 - [Remote Element Name]
 - [Remote DMA IP]
 
+#### SLLogCollector: Miscellaneous enhancements [ID 40935]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to the SLLogCollector tool:
+
+- SLLogCollector packages will now include:
+
+  - SSL certificates
+  - Cube version information
+  - Web API version information
+
+- Hostnames will now be resolved via `System.Net.Dns.GetHostAddresses` instead of *nslookup*.
+
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
