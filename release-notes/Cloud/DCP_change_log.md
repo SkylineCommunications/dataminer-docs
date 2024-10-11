@@ -29,10 +29,9 @@ When you searched or browsed in the Catalog using the visibility setting "All", 
 
 On the details page of a connector Catalog item, the vendor and market are no longer displayed as tags but are instead shown in the side panel.
 
-#### 10 October 2024 - Enhancement - Catalog - Non-authenticated users are able to use "Deploy trial" button
+#### 10 October 2024 - Enhancement - Catalog - 'Deploy trial' button also available for non-authenticated users
 
-Non-authenticated users are now able to click on the deploy trial button in the header of an item or on a version.
-This button will trigger the login and navigate back to the details page in order for them to continue deploying the given item.
+Non-authenticated users can now also click the *Deploy trial* button in the header of an item or for a specific version. They will then need to log in first, after which the details page will be shown again where they can continue to deploy the given item.
 
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
