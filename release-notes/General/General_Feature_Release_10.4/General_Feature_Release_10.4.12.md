@@ -84,6 +84,14 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 
 A number of security enhancements have been made.
 
+#### PortLog.txt file now supports IPv6 addresses [ID 40753]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
+
+In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
+
 #### Certain information events will no longer be generated when an element is duplicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->

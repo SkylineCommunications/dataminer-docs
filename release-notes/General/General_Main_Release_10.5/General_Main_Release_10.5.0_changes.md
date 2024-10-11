@@ -773,6 +773,14 @@ The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceMa
 > [!NOTE]
 > If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
 
+#### PortLog.txt file now supports IPv6 addresses [ID 40753]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
+
+In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
+
 #### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
