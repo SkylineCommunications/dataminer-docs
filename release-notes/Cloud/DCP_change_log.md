@@ -9,25 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 10 October 2024 - Enhancement - Catalog API - It is now possible to obtain a Catalog item using an organization key [ID 40976]
+#### 10 October 2024 - Enhancement - Catalog API - Possibility to obtain Catalog item using organization key [ID 40976]
 
-Using the Catalog API, it is now possible to obtain a Catalog item via its OriginalId or Id using an organization key for authorization. 
+Using the Catalog API, it is now possible to obtain a Catalog item via its ID (GUID) or original ID using an organization key for authorization.
 
-#### 10 October 2024 - Enhancement - Catalog API - Search catalog call includes the short description property of a Catalog item [ID 40955]
+#### 10 October 2024 - Enhancement - Catalog API - Registering Catalog item version now allows version message of up to 1500 characters [ID 40956]
 
-When performing a search on the Catalog, the search result items will now contain a shortDescription propery containing a small description of the Catalog item. 
+When you register a version of a Catalog item using the Catalog API, a version message of up to 1500 characters will now be accepted.
 
-#### 10 October 2024 - Enhancement - Catalog API - Registering a catalog version now allows a version message up to 1500 characters [ID 40956]
+#### 10 October 2024 - Enhancement - Catalog API - Search results now include short description property of Catalog item [ID 40955]
 
-Registering a version using the Catalog API now accepts a version message of up to 1500 characters.
+When a search is performed in the Catalog, the search result items will now contain a *shortDescription* property containing a small description of the Catalog item.
 
 #### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40498]
 
-When searching/browsing in the catalog using visibility 'All', DVE connectors were included in the results while this is not intended since these dont have versions that can be deployed.
+When you searched or browsed in the Catalog using the visibility setting "All", DVE connectors were included in the results, while this should not happen because these do not have versions that can be deployed.
 
-#### 10 October 2024 - Enhancement - Catalog - Vendor and Market show in the aside panel
+#### 10 October 2024 - Enhancement - Catalog - Vendor and market shown in the side panel
 
-On the detail page of a Connector Catalog item, the vendor and market are no longer displayed as tags but are now visible on the sidepanel.
+On the details page of a connector Catalog item, the vendor and market are no longer displayed as tags but are instead shown in the side panel.
 
 #### 10 October 2024 - Enhancement - Catalog - Non-authenticated users are able to use "Deploy trial" button
 
