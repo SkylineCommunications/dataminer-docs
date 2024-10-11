@@ -78,7 +78,7 @@ Example: The template called “text-notifications” should contain the templat
 
 The following example shows a *NotifyTemplates.xml* file in which two templates have been defined: one for plain-text notifications and another one for HTML notifications:
 
-### [From DataMiner 10.5.0 [CU0] onwards](#tab/tabid-1)
+### [From DataMiner 10.4.12/10.5.0 [CU0] onwards](#tab/tabid-1)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -157,7 +157,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
 </NotifyTemplates>
 ```
 
-### [Prior to DataMiner 10.5.0 [CU0]](#tab/tabid-2)
+### [In earlier DataMiner versions](#tab/tabid-2)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -249,59 +249,59 @@ Some can only be used in templates for notification messages sent as a result of
 
 | Name               | Description | Correlation | Notifications |
 |--------------------|-------------|-------------|---------------|
-| alarmid            | The alarm ID (single integer for the event only) | X | X |
-| alarmvalue         | Legacy correlation message placeholder \[AlarmValue\] | X<br>(Most recent base alarm) | X |
-| alternate:xxx      | Every second time this placeholder is used, the string “xxx” will appear in the notification message. | X | X |
-| comment            | Alarm comment | | X |
-| creationtime       | Alarm creation time | | X |
-| dmaid              | DMA ID of the DMA where the element was created | X | X |
-| dmaip              | IP address of DMA where the element was created | | X |
-| dmaname            | Name of DMA where the element was created | | X |
-| element            | Legacy correlation message placeholder \[Element\] | X<br>(Most recent base alarm) | X |
-| elementdesc        | Element description | X | X |
-| elementid          | Element ID | X | X |
-| elementkey         | DmaID/ElementID | X | X |
-| elementname        | Element name | X | X |
-| elementtype        | Element type | | X |
+| alarmid            | The alarm ID (single integer for the event only). | X | X |
+| alarmvalue         | Legacy Correlation message placeholder \[AlarmValue\]. | X<br>(Most recent base alarm) | X |
+| alternate:xxx      | Every second time this placeholder is used, the string "xxx" will appear in the notification message. | X | X |
+| comment            | Alarm comment. | | X |
+| creationtime       | Alarm creation time. | | X |
+| dmaid              | DMA ID of the DMA where the element was created. | X | X |
+| dmaip              | IP address of DMA where the element was created. | | X |
+| dmaname            | Name of DMA where the element was created. | | X |
+| element            | Legacy Correlation message placeholder \[Element\]. | X<br>(Most recent base alarm) | X |
+| elementdesc        | Element description. | X | X |
+| elementid          | Element ID. | X | X |
+| elementkey         | DmaID/ElementID. | X | X |
+| elementname        | Element name. | X | X |
+| elementtype        | Element type. | | X |
 | endif              | Closing tag of an IF clause. | X | X |
 | filtername         | The notification message filter. | | X |
 | if:description     | Opening tag of the IF clause that will check the existence of an element description.<br> The contents of the IF clause will only appear in the notification message when an element description exists. | | X |
 | if:element         | Opening tag of the IF clause that will check the existence of any element-level information.<br> The contents of the IF clause will only appear in the notification message when element-level information exists. | X |
 | if:multiple        | Opening tag of the IF clause that will check the existence of multiple occurrences of the same item.<br> The contents of the IF clause will only appear in the notification message when there are multiple occurrences of the same item. | | X |
-| info               | Legacy correlation message placeholder \[Info\]<br> This placeholder will be replaced by the three “correlation message” templates (Either the default, hard-coded ones or the customized ones defined in the file *NotifyTemplates.xml*. See [Template names](#template-names). | X | |
-| link               | Legacy correlation message placeholder \[Link\]<br> (Deprecated) | X<br>(Most recent base alarm) | |
-| occurrences        | If there are multiple occurrences of the same item, this placeholder will contain the number of occurrences.<br> See also: \[if:multiple\] | | X |
-| owner              | The owner of the alarm | X | X |
-| parameter          | Legacy correlation message placeholder \[Parameter\]<br> The name of the parameter (in case of Correlation: the name of the parameter in the most recent base alarm) | X<br>(Most recent base alarm) | X |
-| paramid            | Parameter ID | X | X |
-| paramidx           | Row index of dynamic table | X | X |
-| paramname          | The parameter name | X | X |
-| pollingip          | Polling IP address of the element | | X |
-| prevkey            | ID of the previous alarm in the alarm tree | X | X |
-| property:xxx       | The value of the property named “xxx”<br> “xxx” must be e.g. Element.MyProperty, Service.MyProperty or Alarm.MyProperty (the property name itself is case insensitive). | X | X |
-| rca:element        | Element RCA level | X | X |
-| rca:parameter      | Parameter RCA level | X | X |
-| rca:service        | Service RCA level | X | X |
-| rootkey (obsolete as of 10.5.0 [CU0], use TreeID instead) | Root key of the alarm | X | X |
-| rootcreationtime   | Root creation time of the alarm | X |
-| roottime           | Root time of the alarm | | X |
-| ruleState          | Legacy correlation message placeholder \[RuleState\]<br> Possible values: up, down | X | |
-| serviceimpact      | Amount of affected services | X | X |
-| serviceimpact:text | Names of the affected services | | X |
-| severity           | Legacy correlation message placeholder \[Severity\]<br> Examples: Critical, Major, Normal, Timeout | X<br>(Most recent base alarm) | X |
-| severityid         | Severity ID | X | X |
-| severitylevel      | Severity level<br> Examples: High, Low, Normal | X | X |
-| severitytext       | Severity + Severity level<br> Examples: Critical High, Major Low.<br> Note: If level is “Normal”, it will be omitted. E.g. “Warning Normal” will be “Warning”. | X | X |
-| source             | Examples: DataMiner System, Correlation Engine, External | X | X |
-| sourceid           | Source ID | X | X |
-| state              | Alarm state<br> Examples: Open, Mask, Cleared, Clearable | X | X |
-| stateid            | Alarm state ID | X | X |
-| time               | Timestamp | X | X |
-| time:short         | Shortened timestamp used in cellphone text messages (time only, no date) | X | X |
-| treeid  (10.5.0 [CU0]+)    | TreeID of the alarm | X | X |
-| type               | Alarm type<br> Examples: New Alarm, Escalated From, Dropped From | X | X |
-| typeid             | Alarm type ID | X | X |
-| userstatus         | User status<br> Examples: Not Assigned, Acknowledged, Unresolved | X | X |
-| userstatusid       | User status ID | X | X |
-| value              | Alarm value | X | X |
+| info               | Legacy Correlation message placeholder \[Info\].<br> This placeholder will be replaced by the three "Correlation message" templates (either the default, hard-coded ones, or the customized ones defined in the file *NotifyTemplates.xml*). See [Template names](#template-names). | X | |
+| link               | Legacy Correlation message placeholder \[Link\].<br> (Deprecated.) | X<br>(Most recent base alarm) | |
+| occurrences        | If there are multiple occurrences of the same item, this placeholder will contain the number of occurrences.<br> See also: \[if:multiple\]. | | X |
+| owner              | The owner of the alarm. | X | X |
+| parameter          | Legacy Correlation message placeholder \[Parameter\].<br> The name of the parameter (in case of Correlation: the name of the parameter in the most recent base alarm). | X<br>(Most recent base alarm) | X |
+| paramid            | Parameter ID. | X | X |
+| paramidx           | Row index of dynamic table. | X | X |
+| paramname          | The parameter name. | X | X |
+| pollingip          | Polling IP address of the element. | | X |
+| prevkey            | ID of the previous alarm in the alarm tree. | X | X |
+| property:xxx       | The value of the property named "xxx".<br> "xxx" must be e.g. Element.MyProperty, Service.MyProperty or Alarm.MyProperty (the property name itself is case insensitive). | X | X |
+| rca:element        | Element RCA level. | X | X |
+| rca:parameter      | Parameter RCA level. | X | X |
+| rca:service        | Service RCA level. | X | X |
+| rootkey            | Root key of the alarm. **Obsolete** from DataMiner 10.4.12/10.5.0 [CU0] onwards. Use *treeid* instead. | X | X |
+| rootcreationtime   | Root creation time of the alarm. | X |
+| roottime           | Root time of the alarm. | | X |
+| ruleState          | Legacy Correlation message placeholder \[RuleState\].<br> Possible values: up, down. | X | |
+| serviceimpact      | Number of affected services. | X | X |
+| serviceimpact:text | Names of the affected services. | | X |
+| severity           | Legacy Correlation message placeholder \[Severity\].<br> Examples: Critical, Major, Normal, Timeout. | X<br>(Most recent base alarm) | X |
+| severityid         | Severity ID. | X | X |
+| severitylevel      | Severity level.<br> Examples: High, Low, Normal. | X | X |
+| severitytext       | Severity + severity level.<br> Examples: Critical High, Major Low.<br> Note: If level is "Normal", it will be omitted. E.g. "Warning Normal" will be "Warning". | X | X |
+| source             | Examples: DataMiner System, Correlation Engine, External. | X | X |
+| sourceid           | Source ID. | X | X |
+| state              | Alarm state.<br> Examples: Open, Mask, Cleared, Clearable. | X | X |
+| stateid            | Alarm state ID. | X | X |
+| time               | Timestamp. | X | X |
+| time:short         | Shortened timestamp used in cellphone text messages (time only, no date). | X | X |
+| treeid             | TreeID of the alarm. Available from DataMiner 10.4.12/10.5.0 [CU0] onwards. | X | X |
+| type               | Alarm type<br> Examples: New Alarm, Escalated From, Dropped From. | X | X |
+| typeid             | Alarm type ID. | X | X |
+| userstatus         | User status<br> Examples: Not Assigned, Acknowledged, Unresolved. | X | X |
+| userstatusid       | User status ID. | X | X |
+| value              | Alarm value. | X | X |
 | value:short        | Shortened alarm value used in cellphone text messages (max 50 characters). | X | X |
