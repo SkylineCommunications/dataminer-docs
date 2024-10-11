@@ -9,7 +9,7 @@ To deploy the Availability branch of the EPM Solution:
 
 1. Deploy the EPM package:
 
-   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog.
+   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog from [here](https://catalog.dataminer.services/details/b661f936-d6e7-447c-baee-f0a5503e75b4).
 
    - Otherwise, place the application package on any DMA available in the cluster. No specific location is required; however, avoid using the Skyline DataMiner folder (C:\Skyline DataMiner). More information about how to install application packages using the Taskbar Utility can be found under [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
 
@@ -40,13 +40,13 @@ To deploy the Availability branch of the EPM Solution:
       > [!NOTE]
       > The collectors can support more endpoints. This setting is used as a baseline. This means that as more endpoints are added, there is nothing else that needs to be done, and the system will work without intervention. You will only need to add more collectors in case there is a large increase of the number of endpoints.
 
-   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname (`/HostName/Availability`) and the username and password of a user that has read/write access to this directory.
+   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname, I.E. \\\HostName\DataMiner EPM\Availability, and the username and password of a user that has read/write access to this directory.
 
 1. Click the *Create* button.
 
    The script will create and configure all the elements needed for the solution. This can take a while depending on how many elements need to be created. You can follow the progress via the information events in the Alarm Console.
 
-1. When the script is finished, place a file named *MASTER_PING.csv* in the directory to be used.
+1. When the script is finished, place a file named *MASTER_PING.csv* in the directory provided to the *EPMSetupWizard*. If none was provided, the default directory will be C:\Availability.
 
    This file must have the following header:
 
