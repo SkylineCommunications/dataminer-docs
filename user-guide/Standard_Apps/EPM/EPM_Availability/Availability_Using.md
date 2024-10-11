@@ -1,26 +1,27 @@
 ---
 uid: Availability_Using
-keywords: Availability Using
 ---
-
 
 # Using the EPM Availability solution
 
-1. Passing in endpoints into the solution is simple. All that is needed is a MASTER_PING.csv file in the Frontend's import directory. This file should have this header
-    >ENDPOINT_ALIAS;IP;CUSTOMER_NAME;VENDOR_NAME;STATION_NAME;HUB_NAME;SUB_REGION_NAME;REGION_NAME;NETWORK_NAME;LATITUDE;LONGITUDE
+1. To pass endpoints to the solution, add a *MASTER_PING.csv* file in the import directory of the front end, containing all the endpoints.
 
-    > [!NOTE]
-    > Semicolon and comma can be used as the delimiter for the CSV file. Not all fields are needed, any fields not used can be left blank.
+   This file must have the following header:
 
-1. Once the file has been updated with all of the Endpoints, simply hit the Import button on the Frontend's Configuration page to provision all of the elements.
+   `ENDPOINT_ALIAS;IP;CUSTOMER_NAME;VENDOR_NAME;STATION_NAME;HUB_NAME;SUB_REGION_NAME;REGION_NAME;NETWORK_NAME;LATITUDE;LONGITUDE`
 
-    ![alt text](image.png)
+   > [!NOTE]
+   > You can use either a semicolon or a comma as the delimiter for the CSV file. Not all fields are needed. Any fields not used can be left blank.
 
-    > [!NOTE]
-    > This process can be automated using the Automation and Scheduler module in Dataminer to retrieve Endpoints from any data source and hit the Import button on the Frontend.
+1. On the *Configuration* page of the front-end element, click the *Set* button next to *Import* to provision the elements.
 
-1. Default Alarm and Trend templates are automatically assigned when using the *EPM_SetupWizard* that have a baseline of thresholds as a starting off point. If you would like to make any further adjustments to the thresholds or apply conditional rules, duplicate the default templates as they will be overwritten with any subsequent Availability package update.
+   ![Import button](~/user-guide/images/Availability_Import_button.png)
 
-1. Navigate through your Network using the EPM Topology app. Simply search and select an entry in the level it resides, and the dropdowns below will show all associated entities. Clicking on the right arrow will open the EPM card with a visual overview, data section, all associated entities in a table, and the topology diagram. At the top you are able to change the topology chain to see other levels.
+   > [!NOTE]
+   > This process can be automated using the Automation and Scheduler module in Dataminer to retrieve Endpoints from any data source and hit the Import button on the Frontend.
 
-![alt text](<Topology Naviagation.gif>)
+1. Default alarm and trend templates are automatically assigned when using the *EPM_SetupWizard* that have a baseline of thresholds as a starting off point. If you would like to make any further adjustments to the thresholds or apply conditional rules, duplicate the default templates as they will be overwritten with any subsequent Availability package update.
+
+1. Navigate through your network using the EPM Topology app. Simply search and select an entry in the level it resides, and the dropdowns below will show all associated entities. Clicking on the right arrow will open the EPM card with a visual overview, data section, all associated entities in a table, and the topology diagram. At the top you are able to change the topology chain to see other levels.
+
+![Navigation with the Topology app](~/user-guide/images/EPM_Availability_Topology_Navigation.gif)

@@ -3,7 +3,7 @@ uid: Availability_deployment
 keywords: Availability deployment
 ---
 
-# Dataminer EPM Availability deployment
+# Deploying the DataMiner EPM Availability solution
 
 To deploy the Availability branch of the EPM Solution:
 
@@ -24,30 +24,44 @@ To deploy the Availability branch of the EPM Solution:
 
    - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
 
-   - If you want to be able to use the Topology app, the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) must be enabled.
+   - Make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled so you can use the Topology app.
 
-1. Execute the *EPMSetupWizard* Automation script found in *Apps* > *Automation* > *EPM TOOLS*.
+1. In DataMiner Cube, go to *Apps* > *Automation* and run the *EPMSetupWizard* Automation script (in the *EPM TOOLS* folder).
+
+   > [!TIP]
+   > See [Manually executing a script](xref:Manually_executing_a_script)
 
 1. Fill in the fields presented by the script:
-   - **Frontend Host** will show all of the available DMA servers in the system. This will be where the Frontend element will reside and all of the other DMA's will have Backend elements created.
 
-   - **Number of expected Endpoints** is used to determine how many Collector elements will be created. The script will create a Collector for every 20k endpoints I.E. 500k expected endpoints will have 25 Collector elements created, evenly distributed to all available DMA's.
+   - *Frontend Host*: Select the DMA within your DataMiner System that should host the front-end element. On the other DMAs, back-end elements will be created.
+
+   - *Number of Expected Endpoints*: Determines how many collector elements will be created. The script will create a collector for every 20K endpoints. For example, for 500K expected endpoints, 25 collector elements will be created, evenly distributed over all available DMAs.
+
       > [!NOTE]
-      > The Collectors can support more endpoints, this is just used as a baseline. So as more endpoints are added, there is nothing else that needs to be done and the system will work without intervention. Addition of additional Collectors is only needed if a large increase of endpoints are added.
+      > The collectors can support more endpoints. This setting is used as a baseline. This means that as more endpoints are added, there is nothing else that needs to be done, and the system will work without intervention. You will only need to add more collectors in case there is a large increase of the number of endpoints.
 
-   - The **File Configuration** section has all the required fields for distributing the endpoints to all of the elements. If a cluster is used, please provide the remote directory with the hostname I.E. //HostName/Availability and the Username and Password of a user that has read/write access to the directory.
+   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname (`/HostName/Availability`) and the username and password of a user that has read/write access to this directory.
 
-1. Hit the create button for the script to create and configure all the elements needed for the solution.
+1. Click the *Create* button.
+
+   The script will create and configure all the elements needed for the solution. This can take a while depending on how many elements need to be created. You can follow the progress via the information events in the Alarm Console.
+
+1. When the script is finished, place a file named *MASTER_PING.csv* in the directory to be used.
+
+   This file must have the following header:
+
+   `ENDPOINT_ALIAS;IP;CUSTOMER_NAME;VENDOR_NAME;STATION_NAME;HUB_NAME;SUB_REGION_NAME;REGION_NAME;NETWORK_NAME;LATITUDE;LONGITUDE`
+
+   > [!NOTE]
+   >
+   > - You can use either a semicolon or a comma as the delimiter for the CSV file. Not all fields are needed. Any fields not used can be left blank.
+   > - For an example of what the file structure should look like, refer to `C:\Skyline DataMiner\Documents\Availability`.
+
+1. Open the *Configuration* topology chain in the Topology app.
+
+1. In the front-end visual overview, click the *Set* button next to *Import* to begin the provisioning.
+
+   ![Configuration page front-end element](~/user-guide/images/Availability_FrontEnd_Configuration.png)
+
 > [!NOTE]
-> The script can take a while depending on how many elements are needed to be created. Progress can be tracked in the Information Events tab in the Alarm Console.
-
-1. Place a file called MASTER_PING.csv in the directory to be used. There is an example of what the file structure should look like in C:Skyline DataMiner\Documents\Availability.
-> [!NOTE]
-> Semicolon or comma delimiters may be used in this file.
-
-1. Open the Configuration topology chain in the Topology app. Once the Frontend's visual overview loads, simply hit the Import button to begin the provisioning.
-
-![alt text](image-1.png)
-
-> [!NOTE]
-> If the Topology app does not appear inbetween the Surveyor and Activity modules in Cube, please ensure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) has been configured. A Cube or DMA restart may be required for it to take effect.
+> If you cannot see the Topology app in between the Surveyor and Activity modules in Cube, close and reopen DataMiner Cube. If this has no effect, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled. If it is, and the app is still not shown, restart DataMiner.

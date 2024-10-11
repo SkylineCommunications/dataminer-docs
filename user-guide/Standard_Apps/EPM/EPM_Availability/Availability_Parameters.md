@@ -3,10 +3,9 @@ uid: Availability_parameters
 keywords: Availability parameters
 ---
 
+# Available parameters in the EPM Availability solution
 
-# Available parameters in Availability
-
-## Aggregated parameters in Availability
+## Aggregated parameters
 
 This section lists the aggregated parameters for each topology level in the Availability branch of the EPM Solution.
 
@@ -21,14 +20,14 @@ This section lists the aggregated parameters for each topology level in the Avai
 
 ## Aggregated parameter descriptions
 
-- **Number Endpoints**: Calculated. The total number of associated Endpoints.
+- **Number Endpoints**: Calculated. The total number of associated endpoints.
 
-- **Percentage Unreachable Endpoints**: Calculated. Percentage of Endpoints with packet loss of 100% out of all associated Endpoints.
+- **Percentage Unreachable Endpoints**: Calculated. Percentage of endpoints with packet loss of 100% out of all associated endpoints.
 
-- **Average RTT**: Calculated. Average RTT of all associated Endpoints.
+- **Average RTT**: Calculated. Average RTT of all associated endpoints.
 
-- **Average Jitter**: Calculated. Average Jitter of all associated Endpoints.
+- **Average Jitter**: Calculated. Average jitter of all associated endpoints.
 
-- **Average Latency**: Calculated. Average Latency of all associated Endpoints.
+- **Average Latency**: Calculated. Average latency of all associated endpoints.
 
-- **Average Packet Loss**: Calculated. Average Packet Loss of all associated Endpoints.
+- **Average Packet Loss**: Calculated. Average packet loss of all associated endpoints.
