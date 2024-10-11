@@ -10,8 +10,8 @@ The content and screenshots for this tutorial have been created in DataMiner 10.
 
 Estimated duration: 30 minutes.
 
->[!TIP]
->See also: [Kata #43: Grouping alarms like a pro](https://community.dataminer.services/courses/kata-43/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> [!TIP]
+> See also: [Kata #43: Grouping alarms like a pro](https://community.dataminer.services/courses/kata-43/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
