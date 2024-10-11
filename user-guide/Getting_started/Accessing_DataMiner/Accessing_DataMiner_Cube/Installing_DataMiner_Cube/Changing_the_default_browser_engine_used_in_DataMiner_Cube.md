@@ -16,6 +16,7 @@ To change the default browser engine used in DataMiner Cube:
 
      > [!NOTE]
      > The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
+     > You can grab the Evergreen Bootstrapper or Standalone installer from here: [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH#download-section)
 
 1. Optionally, if you want a different browser to be used for a specific protocol:
 
