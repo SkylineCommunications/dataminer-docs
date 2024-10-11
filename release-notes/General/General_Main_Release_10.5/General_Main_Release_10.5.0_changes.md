@@ -761,14 +761,6 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 
 *Please install the latest \"ASP.NET Core Runtime hosting bundle\" for .NET 8.0 from [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download)*
 
-#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 40691]
-
-<!-- MR 10.5.0 - FR 10.4.11 -->
-
-Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
-
-Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
-
 #### Failover: Both agents will now keep a copy of the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file [ID 40702]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
