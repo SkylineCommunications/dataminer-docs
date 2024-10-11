@@ -45,6 +45,34 @@ Currently, you can use the following operators:
 | Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
 | Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
+#### Dashboards/Low-Code Apps: Variables [ID 41039]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When editing a dashboard or a low-code app, you can now create data objects called "variables".
+
+A variable has the following properties:
+
+- A name, which must be unique within the dashboard or the low-code app.
+- A type: Element, View, Service, String, Number, Parameter, etc.
+
+  > [!NOTE]
+  > At present, only variables of type *Element* are supported.
+
+- A default value
+
+  > [!NOTE]
+  > In a low-code app, specifying a default value for a variable is optional, except when the variable is marked *Read-only* (see below).
+
+- Read-only. When selected, the variable cannot be modified at run-time.
+
+  > [!NOTE]
+  >
+  > - Dashboard variables are always read-only. Only variables in low-code apps will allow you to change their *Read-only* property.
+  > - If, in a low-code app, you make a variable read-only, specifying a default value for it will no longer be optional.
+
+Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
+
 ## Changes
 
 ### Enhancements

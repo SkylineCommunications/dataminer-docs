@@ -48,8 +48,8 @@ When you click either the "thumbs up" or "thumbs down" button, in some cases, a 
 
 | Action | Description |
 |--------|-------------|
-| Clear event             | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
-| Improve alarm template   | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
+| Clear event            | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
+| Improve alarm template | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
 | Create alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
 
 When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.

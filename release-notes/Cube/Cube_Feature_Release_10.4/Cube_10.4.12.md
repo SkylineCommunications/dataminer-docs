@@ -101,3 +101,9 @@ When, in *System Center*, you opened the *Permissions > Views* tab of a particul
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you locked an element by clicking *Lock element* in the hamburger menu of the element card, in some cases, the *Force unlock element* command would incorrectly appear instead of the *Unlock element* command.
+
+#### Alarm Console - Behavioral anomaly detection: Problem when selecting 'Improve alarm template' after giving a downward trend change a 'thumbs up' [ID 41006]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you gave a downward trend change a "thumbs up" and then selected *Improve alarm template*, the pop-up window that appeared would incorrectly not show the button needed to switch between the proposed configuration and the current configuration for downward trend changes.
