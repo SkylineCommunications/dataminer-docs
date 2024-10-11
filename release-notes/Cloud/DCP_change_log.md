@@ -29,7 +29,7 @@ When you register a version of a Catalog item using the Catalog API, a version m
 
 When a search is performed in the Catalog, the search result items will now contain a *shortDescription* property containing a small description of the Catalog item.
 
-#### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40498]
+#### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40948]
 
 When you searched or browsed in the Catalog using the visibility setting "All", DVE connectors were included in the results, while this should not happen because these do not have versions that can be deployed.
 
