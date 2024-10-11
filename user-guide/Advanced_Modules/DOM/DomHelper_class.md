@@ -59,7 +59,7 @@ if (!traceData.HasSucceeded())
 
 ### Reading DOM data
 
-When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommended. This ensures that a response is not too large, as large responses can have a negative impact on performance. It also gives you the chance to make a decision in the code to abort the action without having to retrieve all records.
+When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommended. This ensures that a response is not too large, as large responses can have a negative impact on performance. It also gives you the chance to make a decision in the code to abort the action without having to retrieve all records. Additionally, from DataMiner 10.4.11/10.5.0 onwards<!--RN 40654-->, when you opt to retrieve the results in pages, you can specify a custom page size, which further optimizes performance. The page size must be set between 10 and 500. If a value outside this range is provided, it will automatically default to 10 or 500, respectively. Prior to DataMiner 10.4.11/10.5.0, the default page size is 500.
 
 **Read all without paging:**
 
@@ -73,14 +73,14 @@ var allInstances = helper.DomInstances.Read(filter);
 **Read all with paging:**
 
 ```csharp
-var pagingHelper = helper.DomInstances.PreparePaging(filter);
+var pagingHelper = helper.DomInstances.PreparePaging(filter); // Specify a custom page size if required, between 10 and 500.
 var allInstances = pagingHelper.GetAll();
 ```
 
 **Read page by page:**
 
 ```csharp
-var pagingHelper = helper.DomInstances.PreparePaging(filter); // Prepare with default page size of 500
+var pagingHelper = helper.DomInstances.PreparePaging(filter); // Prepare with custom page size, between 10 and 500. Prior to DataMiner 10.4.11/10.5.0, prepare with default page size of 500.
 while (pagingHelper.MoveToNextPage())
 {
     var currentPage = pagingHelper.GetCurrentPage();
