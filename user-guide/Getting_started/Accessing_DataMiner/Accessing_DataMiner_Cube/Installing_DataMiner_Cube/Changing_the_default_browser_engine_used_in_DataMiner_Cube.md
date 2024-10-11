@@ -15,8 +15,7 @@ To change the default browser engine used in DataMiner Cube:
    - From DataMiner 10.1.11/10.2.0 onwards, you can select to use *Edge* (WebView2). This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
 
      > [!NOTE]
-     > The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
-     > You can grab the Evergreen Bootstrapper or Standalone installer from here: [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH#download-section)
+     > The WebView2 Runtime is not included in DataMiner upgrade packages. It is automatically installed with Office 365 apps and/or Windows 11. You can also get the Evergreen Bootstrapper or Standalone installer from Microsoft: [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH#download-section).
 
 1. Optionally, if you want a different browser to be used for a specific protocol:
 
