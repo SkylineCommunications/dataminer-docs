@@ -149,6 +149,15 @@ From DataMiner 10.4.0 [CU2]/10.4.5 onwards, when the computer name of a DataMine
 > [!TIP]
 > See also: Known issue [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER)
 
+#### Problem when requesting alarm details for DELT elements via legacy references [ID 40747]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
+
+Since DataMiner feature release 10.4.10, requesting alarm details for DELT elements via legacy [hosting DMA ID]/[root alarm ID] references would not work as expected.
+
+`GetAlarmDetailsMessage` and `GetAlarmTreeMessage` have now been updated.
+
 #### SLAnalytics - Behavioral anomaly detection: Updates to alarm templates used in alarm template groups could be disregarded [ID 40783]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
