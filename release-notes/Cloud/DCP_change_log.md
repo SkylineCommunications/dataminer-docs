@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 10 October 2024 - Enhancement - Catalog API - Possibility to obtain Catalog item using organization key [ID 40976]
 
-Using the Catalog API, it is now possible to obtain a Catalog item via its ID (GUID) or original ID using an organization key for authorization.
+Using the Catalog API, it is now possible to obtain a Catalog item via its ID (GUID) or legacy DPC ID using an organization key for authorization.
 
 #### 10 October 2024 - Enhancement - Catalog API - Registering Catalog item version now allows version message of up to 1500 characters [ID 40956]
 
