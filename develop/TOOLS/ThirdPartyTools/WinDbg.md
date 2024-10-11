@@ -10,7 +10,7 @@ uid: WinDbg
 
 ## Commands
 
-The following table contains an overview of some useful meta-commands.
+The following table contains an overview of some useful commands.
 
 | Command                                                                    | Description                                                               |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------|
