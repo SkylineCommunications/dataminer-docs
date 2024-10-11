@@ -95,3 +95,9 @@ When you opened a trend graph, in some rare cases, its viewport would incorrectl
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, in *System Center*, you opened the *Permissions > Views* tab of a particular user group, in some cases, Cube could become unresponsive when that tab contained a large amount of items.
+
+#### Elements: 'Force unlock element' would incorrectly appear instead of 'Unlock element' after locking an element [ID 40994]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you locked an element by clicking *Lock element* in the hamburger menu of the element card, in some cases, the *Force unlock element* command would incorrectly appear instead of the *Unlock element* command.
