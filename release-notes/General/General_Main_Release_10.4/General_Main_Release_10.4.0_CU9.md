@@ -12,6 +12,15 @@ uid: General_Main_Release_10.4.0_CU9
 
 ### Enhancements
 
+#### SLLogCollector packages will now include nslookup output for hostnames [ID 39526]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
+
+- *MaintenanceSettings.xml* (HTTPS) and/or
+- *DMS.xml* (Failover).
+
 #### OpenSearch: Enhanced performance of alarm queries [ID 40674]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
