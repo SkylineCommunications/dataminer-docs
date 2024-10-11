@@ -249,7 +249,7 @@ Some can only be used in templates for notification messages sent as a result of
 
 | Name               | Description | Correlation | Notifications |
 |--------------------|-------------|-------------|---------------|
-| alarmid            | The alarm ID (without DataMiner ID) | X | X |
+| alarmid            | The alarm ID (single integer for the event only) | X | X |
 | alarmvalue         | Legacy correlation message placeholder \[AlarmValue\] | X<br>(Most recent base alarm) | X |
 | alternate:xxx      | Every second time this placeholder is used, the string “xxx” will appear in the notification message. | X | X |
 | comment            | Alarm comment | | X |
