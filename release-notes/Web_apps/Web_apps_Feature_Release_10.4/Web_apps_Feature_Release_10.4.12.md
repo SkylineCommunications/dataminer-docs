@@ -75,6 +75,16 @@ Variables of a certain type can be used wherever you can use that specific type.
 
 ## Changes
 
+### Breaking changes
+
+#### Monitoring app: Alarm card URLs now also contain the element ID [ID 41059]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+From now on, Monitoring app alarm card URLs will also contain the element ID.
+
+New URL format: `/alarm/DMAID/ELEMENTID/ROOTALARMID/ALARMID`
+
 ### Enhancements
 
 #### Dashboards/Low-Code Apps: GQI sessions will now be executed asynchronously over WebSockets [ID 40416]
