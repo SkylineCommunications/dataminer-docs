@@ -86,10 +86,10 @@ The dropdown component will now list all available elements that match the proto
 
    1. Set *Filter method* to "regex".
 
-   1. On the right side of the *Value* box, click the *Link to data* icon to open the *Link to data* dialog.
+   1. On the right side of the *Value* box, click the *Link to feed* icon to open the *Link to feed* dialog.
 
-  > [!NOTE]
-  > Before dataminer version 10.4.12/10.4[CU9]/10.3[CU21] 'Link to data' was called 'Link to Feed'.
+      > [!NOTE]
+      > Starting from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, the icon and dialog are labeled as *Link to data* instead.
 
       1. Open the *Feed* box, and select the dropdown component.
 
