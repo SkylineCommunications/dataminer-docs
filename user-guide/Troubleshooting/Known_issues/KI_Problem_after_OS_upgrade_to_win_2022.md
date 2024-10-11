@@ -19,7 +19,10 @@ After an upgrade to Windows Server 2022, the following issues can cause problems
 
 - For the Netlogon issue, refer to the Microsoft article [Netlogon service does not keep settings](https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/netlogon-service-not-start-automatically)
 
-- For the IIS issue, on the DMA server, go to `C:\Skyline DataMiner\Tools` and run *ConfigureIIS.bat*.
+- For the IIS issue:
+
+  1. On the DMA server, open Server Manager, and make sure that IIS is enabled and that, in addition to the default selections, the *WebSockets* and *IIS 6 Management Compatibility* features are selected.
+  1. Go to `C:\Skyline DataMiner\Tools` and run *ConfigureIIS.bat*.
 
 ## Description
 
