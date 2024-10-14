@@ -22,7 +22,7 @@ items:
       items:
         - name: Using a pre-installed DataMiner VHDX
           topicUid: Using_a_pre_installed_DataMiner_VHDX
-        - name: Installing DataMiner using the DataMiner Installer
+        - name: Using the DataMiner Installer
           topicUid: Installing_DM_using_the_DM_installer
         - name: Unattended DataMiner installation
           topicUid: Unattended_DM_installation
