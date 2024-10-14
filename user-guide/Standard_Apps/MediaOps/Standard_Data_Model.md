@@ -1,5 +1,6 @@
 ---
 uid: SDM
+keywords: Common Data Model, CDM
 ---
 
 # Standard Data Model (SDM)
