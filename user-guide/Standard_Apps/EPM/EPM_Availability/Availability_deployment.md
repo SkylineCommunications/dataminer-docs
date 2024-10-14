@@ -46,7 +46,7 @@ To deploy the Availability branch of the EPM Solution:
 
    The script will create and configure all the elements needed for the solution. This can take a while depending on how many elements need to be created. You can follow the progress via the information events in the Alarm Console.
 
-1. When the script is finished, place a file named *MASTER_PING.csv* in the directory provided to the *EPMSetupWizard*. If none was provided, the default directory will be C:\Availability.
+1. When the script is finished, place a file named *MASTER_PING.csv* in the directory that was specified during the setup wizard (default: `C:\Availability`).
 
    This file must have the following header:
 
