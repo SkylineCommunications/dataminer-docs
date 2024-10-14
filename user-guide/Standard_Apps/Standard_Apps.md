@@ -32,4 +32,4 @@ uid: Part5StandardApps
 </div>
 
 > [!TIP]
-> The [Common Data Model (CDM)](xref:CDM) serves as a foundational framework used across various solutions, including [MediaOps](xref:MediaOps). It organizes related definitions, such as virtual signal groups, resources, and jobs, into modules to enhance data management, interoperability, and efficiency. The complete CDM is available for reference.
+> The [Standard Data Model (SDM)](xref:SDM) serves as a foundational framework used across various solutions, including [MediaOps](xref:MediaOps). It organizes related definitions, such as virtual signal groups, resources, and jobs, into modules to enhance data management, interoperability, and efficiency. The complete SDM is available for reference.
