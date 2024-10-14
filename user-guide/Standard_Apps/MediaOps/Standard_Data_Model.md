@@ -1,15 +1,17 @@
 ---
-uid: CDM
+uid: SDM
 ---
 
-# Common Data Model (CDM)
+# Standard Data Model (SDM)
 
-Several low-code apps available in the DataMiner Catalog, including all MediaOps applications, are built on the Common Data Model (CDM). In this model, each object is described by a definition.
+Several low-code apps available in the DataMiner Catalog, including all MediaOps applications, are built on the Standard Data Model (SDM). In this model, each object is described by a definition.
 
 Definitions that are functionally related are grouped into modules to enhance data management, interoperability, and efficiency. Below, you can find an overview of the different modules.
 
 > [!TIP]
-> See also: [Common Data Model](xref:Overview_DataMiner_Solutions#common-data-model)
+> See also: [Standard Data Model](xref:Overview_DataMiner_Solutions#standard-data-model)
+
+## (slc)cost_billing
 
 ### Contracts
 
@@ -450,663 +452,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### Capability
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Capability info</td>
-		</tr>
-		<tr>
-			<td>Capability name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Capability type</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### CapabilityEnumValue
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Capability enum value details</td>
-		</tr>
-		<tr>
-			<td>Capability</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Value</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### ResourceProperty
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Property info</td>
-		</tr>
-		<tr>
-			<td>Property name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### Capacity
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Capacity info</td>
-		</tr>
-		<tr>
-			<td>Capacity name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Units</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Min. Range</td>
-			<td>Double</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Step size</td>
-			<td>Double</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Max. Range</td>
-			<td>Double</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Decimals</td>
-			<td>Int64</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### ResourcePool
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool info</td>
-		</tr>
-		<tr>
-			<td>Name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Allow bookings on pool level</td>
-			<td>Boolean</td>
-			<td>Indicates whether the pool is bookable regardless of the specific resource within it.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Error details</td>
-			<td>String</td>
-			<td>Details provided when an error occurs during synchronization with DMA.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Domain</td>
-			<td>Guid</td>
-			<td>Pools can be grouped into domains for filtering purposes in certain apps.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool cost</td>
-		</tr>
-		<tr>
-			<td>Cost ratecard</td>
-			<td>Guid</td>
-			<td>Default ratecard for all resources in the pool to calculate cost of usage.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool internal properties</td>
-		</tr>
-		<tr>
-			<td>resource_ids</td>
-			<td>String</td>
-			<td>Comma-separated list of GUIDs representing the resource DOMs that belong to the resource pool.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>pool_resource_id</td>
-			<td>Guid</td>
-			<td>GUID of the resource in DataMiner representing the pool if the pool is bookable.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>resource_pool_id</td>
-			<td>String</td>
-			<td>GUID of the resource pool in DataMiner.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool capabilities</td>
-		</tr>
-		<tr>
-			<td>capability</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>capability_enum_values</td>
-			<td>List`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>capability_string_value</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool links</td>
-		</tr>
-		<tr>
-			<td>Linked resource pool</td>
-			<td>Guid</td>
-			<td>When booking the current resource pool, a resource from the linked resource pool must also be booked (automatically or manually).</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Resource selection type</td>
-			<td>GenericEnum`1</td>
-			<td>Specifies whether a resource from the linked resource pool should be selected automatically or manually by the user.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">External metadata</td>
-		</tr>
-		<tr>
-			<td>Module ID</td>
-			<td>String</td>
-			<td>The module ID of the DOM definition for which the resource was created.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>DOM instance ID</td>
-			<td>String</td>
-			<td>The DOM instance ID of the instance for which the resource was created.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Error script</td>
-			<td>String</td>
-			<td>Name of the Automation script to execute when an error occurs in managing the resource in Resource Studio.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Externally managed</td>
-			<td>Boolean</td>
-			<td>Indicates whether this resource was created from another app or managed solely by Resource Studio.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Booking Extension Script</td>
-			<td>String</td>
-			<td>Script that will be triggered when the current resource is being booked. This allows related resources to be included in the same booking based on predefined relations or custom logic.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration info</td>
-		</tr>
-		<tr>
-			<td>Profile Definition ID</td>
-			<td>String</td>
-			<td></td>
-			<td>Read</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Profile Definition Name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### Resource
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource info</td>
-		</tr>
-		<tr>
-			<td>Name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Error details</td>
-			<td>String</td>
-			<td>Details provided when an error occurs during synchronization with DMA.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Favorite</td>
-			<td>Boolean</td>
-			<td>Indicates that this resource can be used as a default for resource duplication/bulk creation.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Pending</td>
-			<td>Boolean</td>
-			<td>Indicates if the resource is already in place or not. To be used for resources that will become available in the future, but can already be added to future jobs.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Element</td>
-			<td>String</td>
-			<td>If the resource is of type 'Element', select a specific element to link to the resource.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Service</td>
-			<td>String</td>
-			<td>If the resource is of type 'Service', define a specific service to link to the resource.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Concurrency</td>
-			<td>Int64</td>
-			<td>Indicates the number of times this resource can be booked within the same time interval.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Link details</td>
-			<td>String</td>
-			<td>Summarizes how the resource is linked (e.g. to an element, function).</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource internal properties</td>
-		</tr>
-		<tr>
-			<td>pool_ids</td>
-			<td>String</td>
-			<td>Comma-separated list of GUIDs representing the resource pool DOMs to which the resource belongs.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>resource_id</td>
-			<td>Guid</td>
-			<td>Resource in DataMiner.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Function Name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Function Table Index</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Protocol Name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Resource Metadata</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource connection management</td>
-		</tr>
-		<tr>
-			<td>input vSGs</td>
-			<td>Guid</td>
-			<td>Links the resource to input virtual signal groups that can be used to set up connections to the resource.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>output vSGs</td>
-			<td>Guid</td>
-			<td>Links the resource to output virtual signal groups that can be used to output connections from the resource.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource capacities</td>
-		</tr>
-		<tr>
-			<td>Capacity</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Capacity value</td>
-			<td>Double</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource properties</td>
-		</tr>
-		<tr>
-			<td>Property</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Property value</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource control</td>
-		</tr>
-		<tr>
-			<td>Automation script name</td>
-			<td>String</td>
-			<td>Specifies the script used to configure the resource ad hoc.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource cost</td>
-		</tr>
-		<tr>
-			<td>Cost ratecard</td>
-			<td>Guid</td>
-			<td>Used to calculate cost of resource usage. If not defined, the ratecard assigned on pool level will be used.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource hierachy</td>
-		</tr>
-		<tr>
-			<td>contains</td>
-			<td>List`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>capacity</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>contained capacity value</td>
-			<td>Int64</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource other</td>
-		</tr>
-		<tr>
-			<td>Icon image</td>
-			<td>String</td>
-			<td></td>
-			<td>Read</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>URL</td>
-			<td>String</td>
-			<td>Link to Visio or Monitoring page for resource.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Capability enum value details</td>
-		</tr>
-		<tr>
-			<td>Capability</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Value</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Capability info</td>
-		</tr>
-		<tr>
-			<td>Capability name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Capability type</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">External metadata</td>
-		</tr>
-		<tr>
-			<td>Module ID</td>
-			<td>String</td>
-			<td>The module ID of the DOM definition for which the resource was created.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>DOM instance ID</td>
-			<td>String</td>
-			<td>The DOM instance ID of the instance for which the resource was created.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Error script</td>
-			<td>String</td>
-			<td>Name of the Automation script to execute when an error occurs in managing the resource in Resource Studio.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Externally managed</td>
-			<td>Boolean</td>
-			<td>Indicates whether this resource was created from another app or managed solely by Resource Studio.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Booking Extension Script</td>
-			<td>String</td>
-			<td>Script that will be triggered when the current resource is being booked. This allows related resources to be included in the same booking based on predefined relations or custom logic.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Configuration info</td>
-		</tr>
-		<tr>
-			<td>Profile Definition ID</td>
-			<td>String</td>
-			<td></td>
-			<td>Read</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Profile Definition Name</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
+## (slc)satellite_management
 
 ### Slots
 
@@ -1509,6 +855,8 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
+## (slc)people_organizations
+
 ### Experience
 
 <table>
@@ -1689,16 +1037,16 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>ZIP</td>
-			<td>Int64</td>
-			<td>This contact's current ZIP code.</td>
+			<td>Country</td>
+			<td>GenericEnum`1</td>
+			<td>This contact's current country of residence.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Country</td>
-			<td>GenericEnum`1</td>
-			<td>This contact's current country of residence.</td>
+			<td>ZIP</td>
+			<td>String</td>
+			<td>This contact's current ZIP code.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
@@ -1933,6 +1281,8 @@ Definitions that are functionally related are grouped into modules to enhance da
 		</tr>
 	</tbody>
 </table>
+
+## (slc)workflow
 
 ### Workflows
 
@@ -2186,6 +1536,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Node configuration</td>
 			<td>Guid</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node configuration status</td>
+			<td>GenericEnum`1</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -2625,6 +1982,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
+			<td>Job configuration status</td>
+			<td>GenericEnum`1</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Nodes</td>
 		</tr>
 		<tr>
@@ -2784,6 +2148,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Node configuration</td>
 			<td>Guid</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node configuration status</td>
+			<td>GenericEnum`1</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -3032,13 +2403,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node capacities</td>
 		</tr>
 		<tr>
-			<td>Capacity</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td>Capacity Value</td>
 			<td>Double</td>
 			<td></td>
@@ -3048,6 +2412,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Node Id</td>
 			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Capacity</td>
+			<td>Guid</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -3099,6 +2470,23 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Errors</td>
+		</tr>
+		<tr>
+			<td>Error Code</td>
+			<td>String</td>
+			<td>The code of the error, which has to be unique for the linked object</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Error Message</td>
+			<td>String</td>
+			<td>The message explaining why the error was raised</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
 		</tr>
 	</tbody>
 </table>
@@ -3158,15 +2546,8 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Is required capability</td>
-			<td>Boolean</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Is required capacity</td>
-			<td>Boolean</td>
+			<td>Reference ID</td>
+			<td>String</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -3331,6 +2712,8 @@ Definitions that are functionally related are grouped into modules to enhance da
 		</tr>
 	</tbody>
 </table>
+
+## (slc)virtualsignalgroup
 
 ### Level
 
@@ -3888,6 +3271,8 @@ Definitions that are functionally related are grouped into modules to enhance da
 		</tr>
 	</tbody>
 </table>
+
+## (slc)media_ops
 
 ### Area
 
