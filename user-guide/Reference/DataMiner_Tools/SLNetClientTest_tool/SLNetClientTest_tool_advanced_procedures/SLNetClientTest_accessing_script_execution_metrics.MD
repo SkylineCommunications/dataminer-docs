@@ -28,7 +28,11 @@ To view these metrics:
 
 1. For information about each script execution, go to the *Scripts Statistics* tab and select *Load/Refresh Scripts Statistics* in the lower left corner.
 
+   ![Scripts Statistics](~/user-guide/images/ScriptsStatistics.jpg)
+
 1. For general information about script executions, go to the *Automation Statistics* tab and select *Load/Refresh Automation Statistics* in the lower left corner.
+
+   ![Automation Statistics](~/user-guide/images/AutomationStatistics.jpg)
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
