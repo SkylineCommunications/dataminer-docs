@@ -12,7 +12,6 @@ From DataMiner 10.3.11/10.4.0 onwards<!-- RN 37229 -->, some Dashboards and Low-
 > [!NOTE]
 > To know whether a specific Dashboards or Low-Code Apps feature supports this syntax, refer to the documentation for this feature.
 
-
 ## Feeds
 
 ### Syntax
@@ -56,8 +55,10 @@ The element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` uses th
 
 ## Flows
 
-  > [!NOTE]
-  > Flows are available from dataminer version 10.4.12/10.4[CU8] and 10.3.9 server version with web only upgrade higher then 10.4.12. 
+Flows are available starting from DataMiner web 10.4.12. The minimum required server version is 10.4.0 or 10.3.9.
+
+> [!TIP]
+> See also: [Flows](xref:Using_flows)
 
 ### Syntax
 
@@ -80,7 +81,7 @@ To create a flow reference inside textual settings, use the following syntax:
 
 ### Example
 
-If we want to use the value selected row value for the column id: 
+To use the ID output of the "Selected Items Flow" flow:
 
 ```txt
 The selected item is `{FLOW."Selected Items Flow".ID}`.

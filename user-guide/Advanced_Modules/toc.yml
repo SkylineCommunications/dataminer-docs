@@ -498,7 +498,7 @@ items:
         items:
           - name: Configuring feed components
             topicUid: Configuring_feed_components
-          - name: Dynamically referencing feed values in text
+          - name: Dynamically referencing data in text
             topicUid: Feed_Link
           - name: Specifying data input in a dashboard or app URL
             topicUid: Specifying_data_input_in_a_dashboard_URL
@@ -507,9 +507,9 @@ items:
       - name: Flows
         topicUid: Using_flows
         items:
-          - name: Configuring a Flow
+          - name: Configuring a flow
             topicUid: Configuring_a_flow
-          - name: Operators
+          - name: Flow operators
             topicUid: Flow_operators
       - name: Generic Query Interface (GQI)
         items:
