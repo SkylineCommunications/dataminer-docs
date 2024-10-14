@@ -34,9 +34,17 @@ The rules defined in the Rules Table determine which traps from the source are p
 
 - **Priority**: The priority for the rule. The received trap will be processed according to the first matching rule.
 
+- **Event State Method**: Switch between using the OID to determine if a trap is an Alarm/Clear or using a binding value. Can switch between OID and Binding methods.
+
+- **Event State Binding**: Binding index that contains the value to be used to determine if trap is an Alarm or Clear. For example, for binding 4 input `$4`. Requires Binding Event State Method.
+
+- **Event Value Set**: Value that determines if received trap is an Alarm. Supports wildcard matching. Requires Binding Event State Method.
+
+- **Event Value Clear**: Value that determines if received trap is a Clear. Supports wildcard matching. Requires Binding Event State Method.
+
 - **Raw OID Set**: The OID of a trap representing the raised/alarm state of a trap event.
 
-- **Raw OID Clear**: The OID of a trap representing the cleared state of a trap event.
+- **Raw OID Clear**: The OID of a trap representing the cleared state of a trap event. If the same as Set, requires Event State Method to be set to Binding to specify set and clear values.
 
 - **Unique Entry**: Enter a value to define a unique entry for each row in the *Processed Traps* table, for example `$4/$9/$2`.
 
