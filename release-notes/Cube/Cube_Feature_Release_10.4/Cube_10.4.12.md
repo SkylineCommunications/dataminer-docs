@@ -90,6 +90,12 @@ This last message will no longer be displayed.
 
 When you opened a trend graph, in some rare cases, its viewport would incorrectly jump to the last day.
 
+#### No longer possible to open web apps from within Cube [ID 40951]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you used Cube to connect to the DataMiner Agent running on the same machine with *Connecting type* set to "Auto", due to a hostname resolution issue, it was no longer possible to open web apps like Monitoring or Dashboards from within Cube. Also, the name of the DataMiner System would no longer be displayed in the Cube header.
+
 #### System Center: Problem when opening the 'Permissions > Views' tab of a user group [ID 40969]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
