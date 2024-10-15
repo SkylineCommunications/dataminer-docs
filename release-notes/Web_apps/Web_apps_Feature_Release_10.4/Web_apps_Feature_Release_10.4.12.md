@@ -195,3 +195,9 @@ Example:
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When a dashboard or a page of a low-code app was closed, up to now, when a migration was in progress, it would incorrectly continue. From now on, when a dashboard of page of a low-code app is closed while it is being migrated, the migration will be cancelled.
+
+#### Low-Code Apps: Problem when creating a new draft [ID 41091]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you created a new draft, in some cases, a `Dashboard not found` error could incorrectly appear.
