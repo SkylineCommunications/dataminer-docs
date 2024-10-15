@@ -25,6 +25,12 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
+#### Specifying a different layout for each of the four Cube sides [ID 40887]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+On each of the four Cube sides, it is now possible to specify a different layout.
+
 ## Changes
 
 ### Enhancements
@@ -64,12 +70,6 @@ In some cases, the Cube UI could start to behave erratically when a large number
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, in a *Resource Manager* component, you selected a booking on a resource band of which the resource was filtered by ID, the *SelectedPool* variable could get set incorrectly.
-
-#### No longer possible to specify different layouts on the different Cube sides [ID 40887]
-
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
-
-It was incorrectly no longer possible to specify different layouts on each of the four Cube sides.
 
 #### License expiration window: Title and text included the incorrectly spelled word "licence" [ID 40894]
 

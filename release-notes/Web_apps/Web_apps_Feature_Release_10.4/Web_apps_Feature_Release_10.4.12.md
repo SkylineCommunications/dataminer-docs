@@ -193,3 +193,9 @@ Example:
     </VirtualHosts>
 </MapsServerConfig>
 ```
+
+#### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a dashboard or a page of a low-code app was closed, up to now, when a migration was in progress, it would incorrectly continue. From now on, when a dashboard of page of a low-code app is closed while it is being migrated, the migration will be cancelled.
