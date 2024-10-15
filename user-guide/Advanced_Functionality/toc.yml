@@ -277,6 +277,8 @@ items:
                 topicUid: Configuring_the_database_settings_in_Cube
               - name: Migrating existing systems to dedicated clustered storage
                 topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+              - name: Decommissioning WSL
+                topicUid: Decommissioning_WSL
           - name: Configuring storage per DMA
             topicUid: Configuring_storage_per_DMA
             items:
