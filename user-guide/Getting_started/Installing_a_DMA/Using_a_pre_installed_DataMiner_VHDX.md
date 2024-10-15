@@ -152,4 +152,4 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 1. When you have the *dataminer.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
 
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
