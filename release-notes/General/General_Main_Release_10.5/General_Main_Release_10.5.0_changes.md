@@ -50,7 +50,7 @@ In the *Get alarms* data source, the following columns have been updated:
 | Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
 
 > [!NOTE]
-> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+> "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
 ### Enhancements
 
