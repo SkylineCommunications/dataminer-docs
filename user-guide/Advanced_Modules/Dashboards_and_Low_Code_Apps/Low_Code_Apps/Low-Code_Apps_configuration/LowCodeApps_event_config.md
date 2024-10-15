@@ -123,7 +123,7 @@ To configure an event to open another low-code app that has been published in yo
 
 Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an event to open a monitoring card of a specific element, service, or view:
 
-### [From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards](#tab/tabid-1)
+### [From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40814-->](#tab/tabid-1)
 
 1. Select *Open monitoring card*.
 
