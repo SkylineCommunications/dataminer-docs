@@ -114,7 +114,7 @@ A number of enhancements have been made to the SLLogCollector tool:
   - Cube version information
   - Web API version information
 
-- Hostnames will now be resolved via `System.Net.Dns.GetHostAddresses` instead of *nslookup*.
+- Hostnames will now be resolved via both *nslookup* and `System.Net.Dns.GetHostAddresses`.
 
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 
@@ -213,3 +213,9 @@ When a DVE child element had an alarm template in which you had configured that 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
 Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
+
+#### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.

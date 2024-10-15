@@ -67,3 +67,9 @@ When a DVE element or virtual function element was deleted while a subscription 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+
+#### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
