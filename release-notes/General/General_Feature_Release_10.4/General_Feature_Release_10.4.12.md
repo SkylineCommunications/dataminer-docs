@@ -142,6 +142,12 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 
 Up to now, SLLogCollector would by default be configured to collect the log files of the CommunicationGateway DxM. From now on, this will no longer be the case. Only when the CommunicationGateway DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
 
+#### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
+
 ### Fixes
 
 #### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
