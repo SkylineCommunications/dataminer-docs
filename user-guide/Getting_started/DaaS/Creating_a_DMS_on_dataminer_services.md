@@ -7,14 +7,14 @@ uid: Creating_a_DMS_on_dataminer_services
 > [!IMPORTANT]
 > You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient [DataMiner credits](xref:Order_DataMiner_credits).
 
-1. Log on to [dataminer.services](https://dataminer.services).
+<div style="display: flex; align-items: center; justify-content: flex-end; margin: 0 auto;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; min-width: 88%; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Prefer to watch a video instead of reading? Watch <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px;">
+</div>
 
-   <div style="display: flex; align-items: center; justify-content: flex-end; margin: 0 auto;">
-     <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-       <b>💡 TIPS TO TAKE FLIGHT</b><br>For more detailed information, see <a href="xref:Logging_on_to_the_DataMiner_Cloud_Platform" style="color: #657AB7;">Logging on to dataminer.services</a>. See also: <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
-     </div>
-     <img src="~/images/Skye.svg" alt="Skye" style="width: 100px;">
-   </div>
+1. [Log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
 
