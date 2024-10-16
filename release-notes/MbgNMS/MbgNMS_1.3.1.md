@@ -2,10 +2,8 @@
 uid: MbgNMS_1.3.1
 ---
 
-# MbgNMS 1.3.1 - preview
+# MbgNMS 1.3.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 ## New features
 
@@ -15,7 +13,7 @@ The Meinberg LANTIME IMS-GXL API V17 connector has been integrated into the mbgN
 
 #### Meinberg LANTIME IMS-PSX API V17 integration [ID 40806]
 
-The Meinberg LANTIME IMS-PSX API V17 connector has been integrated into the mbgNMS solution. The IMS-PSX is a powerful IEEE1588 PTP solution designed to integrate seamlessly into 10 Gigabit networks
+The Meinberg LANTIME IMS-PSX API V17 connector has been integrated into the mbgNMS solution. The IMS-PSX is a powerful IEEE1588 PTP solution designed to integrate seamlessly into 10 Gigabit networks.
 
 #### Meinberg microSync backup/restore functionality [ID 40809]
 
