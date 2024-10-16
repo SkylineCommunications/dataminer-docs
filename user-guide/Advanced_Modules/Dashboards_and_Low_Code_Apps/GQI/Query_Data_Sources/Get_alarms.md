@@ -4,7 +4,7 @@ uid: Get_alarms
 
 # Get alarms
 
-The *Get alarms* data source retrieves the alarms in the DataMiner System. Several columns, such as *Element Name*, *Parameter Description*, *Value* and *Time*, are included by default. Other columns, such as *Alarm ID* and *Root Alarm ID* can be added with a [*Select* operation](xref:GQI_Select).
+The *Get alarms* data source retrieves the alarms in the DataMiner System. Several columns, such as *Element Name*, *Parameter Description*, *Value* and *Time*, are included by default. Other columns, such as *Alarm ID* and *Root Alarm ID*, can be added with a [*Select* operation](xref:GQI_Select).
 
 The content of the *Alarm ID* and *Root Alarm ID* columns may differ depending on your DataMiner version:
 
