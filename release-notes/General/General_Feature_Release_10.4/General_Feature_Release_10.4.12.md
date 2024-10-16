@@ -60,6 +60,14 @@ uib.SkipAbortConfirmation = true;
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
+#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a certain alarm threshold [ID 41017]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The proactive cap detection feature is now able to generate an alarm when it expects that a parameter will cross a particular alarm threshold in the near future.
+
+For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a certain alarm threshold [ID 40837]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-certain-alarm-threshold-id-40837)
+
 ## Changes
 
 ### Enhancements
@@ -84,6 +92,14 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 
 A number of security enhancements have been made.
 
+#### PortLog.txt file now supports IPv6 addresses [ID 40753]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
+
+In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
+
 #### Certain information events will no longer be generated when an element is duplicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
@@ -93,6 +109,44 @@ When an element is duplicated, the following information events will no longer b
 - [Replicated Element]
 - [Remote Element Name]
 - [Remote DMA IP]
+
+#### SLLogCollector: Miscellaneous enhancements [ID 40935]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to the SLLogCollector tool:
+
+- SLLogCollector packages will now include:
+
+  - SSL certificates
+  - Cube version information
+  - Web API version information
+
+- Hostnames will now be resolved via both *nslookup* and `System.Net.Dns.GetHostAddresses`.
+
+#### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when SLXML received erroneous XML code, the error message logged in *SLXML.txt* would lose vital information when it was trimmed by SLLog due to the 5120-character error message size limit. The error message in question has now been adapted so that the most important information is found at the beginning.
+
+#### SLLogCollector will no longer be configured by default to collect the log files of the DataAPI DxM [ID 41003]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, SLLogCollector would by default be configured to collect the log files of the DataAPI DxM. From now on, this will no longer be the case. Only when the DataAPI DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
+
+#### SLLogCollector will no longer be configured by default to collect the log files of the CommunicationGateway DxM [ID 41004]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, SLLogCollector would by default be configured to collect the log files of the CommunicationGateway DxM. From now on, this will no longer be the case. Only when the CommunicationGateway DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
+
+#### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
 ### Fixes
 
@@ -116,6 +170,15 @@ From DataMiner 10.4.0 [CU2]/10.4.5 onwards, when the computer name of a DataMine
 
 > [!TIP]
 > See also: Known issue [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER)
+
+#### Problem when requesting alarm details for DELT elements via legacy references [ID 40747]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
+
+Since DataMiner feature release 10.4.10, requesting alarm details for DELT elements via legacy [hosting DMA ID]/[root alarm ID] references would not work as expected.
+
+`GetAlarmDetailsMessage` and `GetAlarmTreeMessage` have now been updated.
 
 #### SLAnalytics - Behavioral anomaly detection: Updates to alarm templates used in alarm template groups could be disregarded [ID 40783]
 
@@ -146,3 +209,27 @@ When a DataMiner Agent that was part of a Failover setup started up, in some cas
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur.
+
+#### Incomplete CorrelationDetailsEvent messages after a DMA had reconnected to the DMS [ID 40934]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+
+#### SLAnalytics - Behavioral anomaly detection: Alarm template of DVE parent element would incorrectly be used when monitoring was disabled in the alarm template of the DVE child template [ID 40963]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
+
+#### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
+
+#### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.

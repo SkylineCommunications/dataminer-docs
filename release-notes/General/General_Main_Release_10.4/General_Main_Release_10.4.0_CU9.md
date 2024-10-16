@@ -12,6 +12,15 @@ uid: General_Main_Release_10.4.0_CU9
 
 ### Enhancements
 
+#### SLLogCollector packages will now include nslookup output for hostnames [ID 39526]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.7 -->
+
+From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
+
+- *MaintenanceSettings.xml* (HTTPS) and/or
+- *DMS.xml* (Failover).
+
 #### OpenSearch: Enhanced performance of alarm queries [ID 40674]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
@@ -23,6 +32,38 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 A number of security enhancements have been made.
+
+#### SLLogCollector: Miscellaneous enhancements [ID 40935]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to the SLLogCollector tool:
+
+- SLLogCollector packages will now include:
+
+  - SSL certificates
+  - Cube version information
+  - Web API version information
+
+- Hostnames will now be resolved via both *nslookup* and `System.Net.Dns.GetHostAddresses`.
+
+#### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when SLXML received erroneous XML code, the error message logged in *SLXML.txt* would lose vital information when it was trimmed by SLLog due to the 5120-character error message size limit. The error message in question has now been adapted so that the most important information is found at the beginning.
+
+#### SLLogCollector will no longer be configured by default to collect the log files of the DataAPI DxM [ID 41003]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, SLLogCollector would by default be configured to collect the log files of the DataAPI DxM. From now on, this will no longer be the case. Only when the DataAPI DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
+
+#### SLLogCollector will no longer be configured by default to collect the log files of the CommunicationGateway DxM [ID 41004]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, SLLogCollector would by default be configured to collect the log files of the CommunicationGateway DxM. From now on, this will no longer be the case. Only when the CommunicationGateway DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
 
 ### Fixes
 
@@ -70,3 +111,27 @@ When a DataMiner Agent that was part of a Failover setup started up, in some cas
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur.
+
+#### Incomplete CorrelationDetailsEvent messages after a DMA had reconnected to the DMS [ID 40934]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+
+#### SLAnalytics - Behavioral anomaly detection: Alarm template of DVE parent element would incorrectly be used when monitoring was disabled in the alarm template of the DVE child template [ID 40963]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
+
+#### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
+
+#### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.

@@ -45,7 +45,41 @@ Currently, you can use the following operators:
 | Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
 | Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
+#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When editing a dashboard or a low-code app, you can now create data objects called "variables".
+
+A variable has the following properties:
+
+- A name, which must be unique within the dashboard or the low-code app.
+- A type: Element, View, Service, String, Number, DOM instance
+- A default value
+
+  > [!NOTE]
+  > In a low-code app, specifying a default value for a variable is optional, except when the variable is marked *Read-only* (see below).
+
+- Read-only. When selected, the variable cannot be modified at run-time.
+
+  > [!NOTE]
+  >
+  > - Dashboard variables are always read-only. Only variables in low-code apps will allow you to change their *Read-only* property.
+  > - If, in a low-code app, you make a variable read-only, specifying a default value for it will no longer be optional.
+
+Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
+
 ## Changes
+
+### Breaking changes
+
+#### Monitoring app: Alarm card URLs now also contain the element ID [ID 41059]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+From now on, Monitoring app alarm card URLs will also contain the element ID.
+
+New URL format: `/alarm/DMAID/ELEMENTID/ROOTALARMID/ALARMID`
 
 ### Enhancements
 
@@ -58,6 +92,12 @@ Up to now, after a GQI session had been opened, all necessary pages would be req
 From now on, a GQI query will be opened synchronously, after which a first page will be sent to the client over WebSockets without the client having to request it. Then, the client will request and receive all following pages over WebSockets.
 
 When WebSockets are not available, GQI sessions will be executed synchronously as before.
+
+#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID 40814]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or a text feed.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Initial viewport in case of custom node positions will now be calculated based on the midpoints of all nodes [ID 40869]
 
@@ -84,6 +124,23 @@ Because of a number of enhancements, overall performance has increased when open
 When an error occurs while you are sharing a dashboard, in some cases, the "Failed saving WAF rules" message will appear.
 
 From now on, when that message appears, the cause of the error will be added to the web API logs.
+
+#### Low-Code Apps: Version history pane now also shows the version numbers [ID 41034]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you open the *Version history* pane of a low-code app, it will now also display the version numbers.
+
+#### Dashboards/Low-Code Apps: Data type 'String' and 'Query row' have been renamed to 'Text' and 'Table' [ID 41075]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The following data types have been renamed:
+
+| Former name | New name |
+|-------------|----------|
+| String      | Text     |
+| Query row   | Table    |
 
 ### Fixes
 
@@ -130,3 +187,34 @@ When parameter data was loaded into a *State* component, the dashboard could get
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g. Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
+
+#### Dashboards app - Generic map component: Problem when rendering maps with AppVersion set to 1 [ID 41035]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.4.9, a *Generic map* component would no longer be able to render maps of which the `AppVersion` property was set to 1 in the *C:\\Skyline DataMiner\\Maps\\ServerConfig.xml* file.
+
+Example:
+
+```xml
+<MapsServerConfig>
+    <VirtualHosts>
+        <VirtualHost hostname="*">
+            <AppVersion>1</AppVersion>
+            ...
+        </VirtualHost>
+    </VirtualHosts>
+</MapsServerConfig>
+```
+
+#### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a dashboard or a page of a low-code app was closed, up to now, when a migration was in progress, it would incorrectly continue. From now on, when a dashboard of page of a low-code app is closed while it is being migrated, the migration will be cancelled.
+
+#### Low-Code Apps: Problem when creating a new draft [ID 41091]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you created a new draft, in some cases, a `Dashboard not found` error could incorrectly appear.

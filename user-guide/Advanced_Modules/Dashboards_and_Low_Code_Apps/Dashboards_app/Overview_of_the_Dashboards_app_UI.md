@@ -75,9 +75,12 @@ Right-click in either of the panes or click the ... button to open a menu with t
 
 - *Rename*: Only available if a non-shared dashboard is selected, or if a folder is selected prior to DataMiner 10.2.0/10.1.12. Allows you to rename the dashboard or folder. Obsolete from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->.
 
-- *Settings*: Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->, if a dashboard or dashboard folder is selected. Opens a pop-up window where you can rename and move a dashboard or folder. See [Managing dashboard folders](xref:Managing_dashboard_folders).
+- *Settings*: Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->, if a dashboard or dashboard folder is selected. Opens a pop-up window where you can rename or move a dashboard or folder, or edit access to the dashboard or folder. See [Managing dashboard folders](xref:Managing_dashboard_folders).
 
-  If a dashboard folder is selected, the pop-up window also contains the option *Preserve feed selections*. When this option is selected, any feed selection you make in a dashboard in the folder is preserved when you navigate to another dashboard in the folder. Note that this only applies to the folder itself, not to any other folders it may contain.
+  When a dashboard folder is selected and the parameter *showAdvancedSettings=true* has been added to the URL, the pop-up window also contains the option *Preserve feed selections*. When this option is selected, any feed selection you make in a dashboard in the folder is preserved when you navigate to another dashboard in the folder. Note that this only applies to the folder itself, not to any other folders it may contain.
+
+  > [!NOTE]
+  > Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40709-->, the *Preserve feed selections* option is available in the settings pop-up window regardless of whether the *showAdvancedSettings=true* parameter is present in the URL.
 
 - *Duplicate* or *Copy*: Only available if a dashboard is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard)
 

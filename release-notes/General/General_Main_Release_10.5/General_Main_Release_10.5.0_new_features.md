@@ -221,6 +221,14 @@ To view these metrics, open the *SLNetClientTest* tool, go to *Advanced > Automa
 | Scripts Statistics    | Information about each script execution.     |
 | Automation Statistics | General information about script executions. |
 
+#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a certain alarm threshold [ID 41017]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The proactive cap detection feature is now able to generate an alarm when it expects that a parameter will cross a particular alarm threshold in the near future.
+
+For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a certain alarm threshold [ID 40837]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-certain-alarm-threshold-id-40837)
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID 38153]

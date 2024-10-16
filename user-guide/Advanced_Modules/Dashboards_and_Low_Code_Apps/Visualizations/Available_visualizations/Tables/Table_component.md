@@ -35,7 +35,7 @@ You can **resize the columns** of the table by dragging the edges of the column 
 
 ### Filtering & highlighting
 
-In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
+In the *Layout* tab for this component, the *Conditional coloring* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
 
 - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
 
@@ -44,6 +44,8 @@ In the *Layout* tab for this component, the *Column filters* option is available
 - Multiple filters can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
+
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->, the *Show quick filter* setting allows you to determine whether the search box, which lets you [apply a general filter](#filtering-and-sorting-the-table) across the table, appears when you hover over the table component. This setting is enabled by default.
 
 ### Column appearance
 
@@ -143,15 +145,22 @@ From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of 
 > [!TIP]
 > If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the top-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
 
-To apply a **general filter** across the table, a search box is available:
+### General filter
 
-1. Hover over the table component and click the search icon in the lower right corner.
+To apply a general filter across the table, a search box is available:
+
+1. Hover over the table component and click the search icon.
 
 1. Specify the filter text (case-insensitive) in the search box.
 
    This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
 
-To apply a **filter based on a specific column**:
+> [!IMPORTANT]
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](#filtering--highlighting) is enabled.
+
+### Column-based filter
+
+To apply a filter based on a specific column:
 
 1. Right-click the column header and select *Filter*.
 
@@ -179,12 +188,43 @@ To apply a **filter based on a specific column**:
 > [!NOTE]
 > If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
 
-To **sort the table**, you can click a column header.
+### Filter based on text string
 
-- To toggle between ascending and descending order, click the column header again.
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can filter the table by feeding it a text string.
 
-- To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+You can do this in several different ways, for example:
 
-- Alternatively, you can also select one of the available sorting options in the column header right-click menu.
+- Use a **text input feed** or **search input feed**:
 
-To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
+  1. Add a [text input](xref:DashboardTextInputFeed) or [search input](xref:DashboardSearchInputFeed) feed component to your dashboard or app.
+
+  1. Hover over the table component, click the filter icon, and then add a filter feed from the *Feeds > Text input/Search input > Value > Strings* section of the data pane.
+
+  When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
+
+  > [!NOTE]
+  > If you do not want the search box to appear when using a text or search input feed as a filter, disable the [*Show quick filter* setting](#filtering--highlighting) in the *Layout* tab.
+
+  ![Text input feed](~/user-guide/images/Text_input_feed_filter_table.gif)<br>*Text input feed and table components in DataMiner 10.4.11*
+
+- Specify a **text string in the dashboard or app URL**:
+
+  1. Hover over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Strings* section of the data pane.
+
+  1. Pass a string data object within the URL, as explained in [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+
+     This URL will automatically display a filtered version of the table when the dashboard or app is opened.
+
+     In the following example, the string "test" is sent to the component with component ID 1:
+
+     `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`
+
+### Sorting
+
+To sort the table, you can **click a column header**. To toggle between ascending and descending order, click the column header again.
+
+To apply **additional sorting**, press **Ctrl** while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+
+Alternatively, you can also select one of the available sorting options in the **column header right-click menu**.
+
+To **group** by a specific table column, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.

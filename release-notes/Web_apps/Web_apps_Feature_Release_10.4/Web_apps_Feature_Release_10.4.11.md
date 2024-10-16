@@ -2,17 +2,13 @@
 uid: Web_apps_Feature_Release_10.4.11
 ---
 
-# DataMiner web apps Feature Release 10.4.11 – Preview
+# DataMiner web apps Feature Release 10.4.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -99,12 +95,6 @@ From now on, the *Preserve feed selections* option will only be visible when you
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
-
-#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID 40814]
-
-<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
-
-Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or a text feed.
 
 #### Dashboards/Low-Code Apps - Table component: New setting to show or hide the table filter [ID 40818]
 

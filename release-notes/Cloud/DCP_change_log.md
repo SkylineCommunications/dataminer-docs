@@ -9,6 +9,34 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
+
+In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Usage* page, allowing users to export usage metrics to a CSV file. Clicking the *Export usage* button will initiate the export process. A pop-up window will appear, where you can choose the separator for the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+
+#### 10 October 2024 - Enhancement - Catalog - 'Deploy trial' button also available for non-authenticated users [ID 41011]
+
+Non-authenticated users can now also click the *Deploy trial* button in the header of an item or for a specific version. They will then need to log in first, after which the details page will be shown again where they can continue to deploy the given item.
+
+#### 10 October 2024 - Enhancement - Catalog API - Possibility to obtain Catalog item using organization key [ID 40976]
+
+Using the Catalog API, it is now possible to obtain a Catalog item via its ID (GUID) or legacy DPC ID using an organization key for authorization.
+
+#### 10 October 2024 - Enhancement - Catalog - Vendor and market shown in the side panel [ID 40966]
+
+On the details page of a connector Catalog item, the vendor and market are no longer displayed as tags but are instead shown in the side panel.
+
+#### 10 October 2024 - Enhancement - Catalog API - Registering Catalog item version now allows version message of up to 1500 characters [ID 40956]
+
+When you register a version of a Catalog item using the Catalog API, a version message of up to 1500 characters will now be accepted.
+
+#### 10 October 2024 - Enhancement - Catalog API - Search results now include short description property of Catalog item [ID 40955]
+
+When a search is performed in the Catalog, the search result items will now contain a *shortDescription* property containing a small description of the Catalog item.
+
+#### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40948]
+
+When you searched or browsed in the Catalog using the visibility setting "All", DVE connectors were included in the results, while this should not happen because these do not have versions that can be deployed.
+
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
 Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
