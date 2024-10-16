@@ -148,6 +148,14 @@ The following data types have been renamed:
 
 Because of a number of enhancements, overall performance has increased when publishing a low-code app.
 
+#### Dashboards app: Minor enhancements regarding user permissions [ID 41079]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of minor enhancements have been made with regard to dashboard user permissions.
+
+For example, in the *Dashboard settings* window, *Access* has now been renamed to *Permissions*. Also, when you strip the person who created a dashboard of their edit rights, a message saying "You have removed the edit rights from the creator" will now appear.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -218,6 +226,12 @@ Example:
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When a dashboard or a page of a low-code app was closed, up to now, when a migration was in progress, it would incorrectly continue. From now on, when a dashboard of page of a low-code app is closed while it is being migrated, the migration will be cancelled.
+
+#### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons were not positioned correctly when no presets had been configured [ID 41085]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when no presets had been configured in a *Time range* component, the *Apply* and *Cancel* buttons would be too close to the date/time pickers. From now on, when a *Time range* component does not have presets configured, both buttons will be positioned correctly below the date/time pickers.
 
 #### Low-Code Apps: Problem when creating a new draft [ID 41091]
 
