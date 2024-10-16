@@ -17,7 +17,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Updated references of "Logout" to "Sign out" in Account-linking & Catalog.
 
-#### 16 October 2024 - Fix - Catalog - Deploy (trial) licensed issues [ID 41024]
+#### 16 October 2024 - Fix - Catalog - Deploy trial licensed issues [ID 41024]
 
 Deploy (trial) button in the header on the catalog details page no longer mentions not licensed issue.
 
