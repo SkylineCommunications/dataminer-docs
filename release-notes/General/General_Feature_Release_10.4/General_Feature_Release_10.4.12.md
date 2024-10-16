@@ -60,13 +60,13 @@ uib.SkipAbortConfirmation = true;
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
-#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a certain alarm threshold [ID 41017]
+#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 41017]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-The proactive cap detection feature is now able to generate an alarm when it expects that a parameter will cross a particular alarm threshold in the near future.
+The proactive cap detection feature is now able to generate an alarm when it expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
 
-For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a certain alarm threshold [ID 40837]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-certain-alarm-threshold-id-40837)
+For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837)
 
 ## Changes
 

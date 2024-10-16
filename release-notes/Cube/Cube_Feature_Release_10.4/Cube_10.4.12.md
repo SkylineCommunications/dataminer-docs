@@ -25,19 +25,20 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
-#### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a certain alarm threshold [ID 40837]
+#### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When, in the alarm template editor, you click the button in the *Augmented Operations* column (formerly called the *Anomalies* column) for a particular parameter, the *Anomaly alarm settings* pop-up window will open. This window will allow you to select one of the preset options or configure the anomaly alarm settings according to your preference.
+When, in the alarm template editor, you click the button in the *Analytics* column (formerly called *Anomalies*) for a particular parameter, the *Augmented Operations alarm settings* pop-up window (formerly called *Anomaly alarm settings*) will open. This window will allow you to select one of the preset options or configure the anomaly alarm settings according to your preference.
 
-Now, at the bottom of this *Anomaly alarm settings* pop-up window, you will also be able to specify that an alarm of a certain severity should be generated when the proactive cap detection feature expects that the parameter will cross a particular alarm threshold in the near future.
+Now, at the bottom of this *Augmented Operations alarm settings* pop-up window, you will also be able to specify that an alarm of a certain severity should be generated when the proactive cap detection feature expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
 
 > [!NOTE]
-> The button in the *Augmented Operations* column can be set to "Enabled" or "Disabled":
+> The above-mentioned button in the *Analytics* column can be labelled *Smart*, *Disabled* or *Customized*:
 >
-> - The button is "Enabled" when anomaly monitoring is set to "Smart" and proactive cap detection has at least one threshold configured.
-> - The button is "Disabled" when anomaly monitoring is set to "All disabled" and no thresholds are configured for proactive cap detection.
+> - The button will be labelled *Smart* when anomaly monitoring is set to "Smart" and proactive cap detection has at least one threshold configured.
+> - The button will be labelled *Disabled* when anomaly monitoring is set to "All disabled" and no threshold are configured for proactive cap detection.
+> - In all other cases, the button will be labelled *Customized*.
 
 > [!IMPORTANT]
 > This feature will only work when connected to a DataMiner Agent running at least main release 10.5.0 or feature release 10.4.12.
