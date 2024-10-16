@@ -142,6 +142,12 @@ The following data types have been renamed:
 | String      | Text     |
 | Query row   | Table    |
 
+#### Low-Code Apps: Enhanced performance when publishing a low-code app [ID 41078]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance has increased when publishing a low-code app.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
