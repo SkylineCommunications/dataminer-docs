@@ -142,3 +142,9 @@ When you locked an element by clicking *Lock element* in the hamburger menu of t
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you gave a downward trend change a "thumbs up" and then selected *Improve alarm template*, the pop-up window that appeared would incorrectly not show the button needed to switch between the proposed configuration and the current configuration for downward trend changes.
+
+#### Alarm Console: Not all base alarms would be moved to the active alarms tab when a correlation alarm was cleared [ID 41071]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a correlated alarm was cleared before all its base alarms were cleared, in some rare cases, those base alarms would incorrectly not be moved to the active alarms tab.

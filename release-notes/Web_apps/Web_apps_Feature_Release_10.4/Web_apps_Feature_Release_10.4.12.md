@@ -125,12 +125,6 @@ When an error occurs while you are sharing a dashboard, in some cases, the "Fail
 
 From now on, when that message appears, the cause of the error will be added to the web API logs.
 
-#### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
-
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
-
-For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
-
 #### Low-Code Apps: Version history pane now also shows the version numbers [ID 41034]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
