@@ -453,7 +453,6 @@ items:
               - name: Customizing the layout of notification messages
                 topicUid: Customizing_the_layout_of_notification_messages
           - name: Managing user groups
-            topicUid: Managing_user_groups
             items:
               - name: Viewing information about user groups
                 topicUid: Viewing_information_about_user_groups
