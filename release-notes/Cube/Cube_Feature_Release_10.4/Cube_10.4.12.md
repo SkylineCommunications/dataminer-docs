@@ -119,9 +119,3 @@ When you locked an element by clicking *Lock element* in the hamburger menu of t
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you gave a downward trend change a "thumbs up" and then selected *Improve alarm template*, the pop-up window that appeared would incorrectly not show the button needed to switch between the proposed configuration and the current configuration for downward trend changes.
-
-#### Alarm Console: 'NotSupportedException' errors would cause alarms to get stuck in alarm tabs [ID 41050]
-
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
-
-In some cases, `NotSupportedException` errors would be added to the Cube logging, causing alarms to get stuck in alarm tabs, especially when a delay or a refresh rate had been specified.
