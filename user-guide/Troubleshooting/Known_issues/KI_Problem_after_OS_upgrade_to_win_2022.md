@@ -21,7 +21,12 @@ After an upgrade to Windows Server 2022, the following issues can cause problems
 
 - For the IIS issue:
 
-  1. On the DMA server, open Server Manager, and make sure that IIS is enabled and that, in addition to the default selections, the *WebSockets* and *IIS 6 Management Compatibility* features are selected.
+  1. On the DMA server, open Server Manager, and make sure that IIS is enabled.
+  1. Use the following PowerShell command to configure the necessary IIS features:
+  
+     ```txt
+     Add-WindowsFeature Web-Server, Web-WebServer, Web-Security, Web-Filtering, Web-ASP, Web-Asp-Net45, Web-Mgmt-Compat, Web-Lgcy-Scripting, Web-ISAPI-Filter, Web-WMI, Web-WebSockets
+     ```
   1. Go to `C:\Skyline DataMiner\Tools` and run *ConfigureIIS.bat*.
 
 ## Description
