@@ -149,3 +149,9 @@ When you gave a downward trend change a "thumbs up" and then selected *Improve a
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When a correlated alarm was cleared before all its base alarms were cleared, in some rare cases, those base alarms would incorrectly not be moved to the active alarms tab.
+
+#### Cards: Problem when opening a view card [ID 41082]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you tried to open a view card, in some rare cases, the card could remain empty, showing a "Loading" message.
