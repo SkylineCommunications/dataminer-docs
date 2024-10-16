@@ -4,11 +4,8 @@ uid: Creating_a_DMS_on_dataminer_services
 
 # Creating a new DMS on dataminer.services
 
-> [!IMPORTANT]
-> You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient [DataMiner credits](xref:Order_DataMiner_credits).
-
-<div style="display: flex; align-items: center; justify-content: flex-end; margin: 0 auto;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; min-width: 88.5%; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin: 0 auto;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; max-width: 88.5%; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>Prefer to watch a video instead of reading? Watch <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px;">
