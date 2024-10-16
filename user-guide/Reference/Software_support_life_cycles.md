@@ -42,7 +42,7 @@ Important announcements about the latest changes to DataMiner core functionality
 |---------|---------|---------|---------|
 | Asset Manager | End of Engineering | Module is being retired. | End of Life to be confirmed |
 | Pivot table and Group components | End of Engineering | These components are being retired in the Dashboards app and Low-Code Apps. | End of Life to be confirmed |
-| Ticketing app | End of Engineering | Skyline is researching a replacement for this module. | End of Life to be confirmed |
+| Ticketing app | End of Engineering | Skyline is researching a replacement for this module. | End of Life as of DataMiner version 10.6.x (Q4 2025) |
 | Legacy Correlation Engine | End of Engineering | Module is being retired. Note that this only applies to the legacy System Display Correlation engine | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Jobs app | End of Engineering | Module is being retired. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Child bookings | End of Engineering | Child bookings are being retired, as the same functionality is supported with contributing bookings | End of Life as of DataMiner version 10.5.x (Q4 2024) |
