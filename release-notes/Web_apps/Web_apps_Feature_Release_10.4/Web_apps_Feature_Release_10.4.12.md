@@ -131,6 +131,17 @@ From now on, when that message appears, the cause of the error will be added to 
 
 When you open the *Version history* pane of a low-code app, it will now also display the version numbers.
 
+#### Dashboards/Low-Code Apps: Data type 'String' and 'Query row' have been renamed to 'Text' and 'Table' [ID 41075]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The following data types have been renamed:
+
+| Former name | New name |
+|-------------|----------|
+| String      | Text     |
+| Query row   | Table    |
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
