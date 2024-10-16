@@ -9,6 +9,34 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 16 October 2024 - Enhancement - Cloud web apps - Colors [ID 41100]
+
+​The cloud web apps have been updated to make use new colors. These will provide a better contrast and read experience.
+
+#### 16 October 2024 - Enhancement - Account-linking & Catalog - "Logout" to "Sign out" [ID 41024]
+
+Updated references of "Logout" to "Sign out" in Account-linking & Catalog.
+
+#### 16 October 2024 - Fix - Catalog - Deploy (trial) licensed issues [ID 41024]
+
+Deploy (trial) button in the header on the catalog details page no longer mentions not licensed issue.
+
+#### 16 October 2024 - Enhancement - Catalog - Description styling [ID 40965]
+
+​Catalog description alerts now matches the styling of [docs.dataminer.services.
+](docs.dataminer.services). The current supported types are caution, important, note, tip and warning.
+
+#### 16 October 2024 - Enhancement - Catalog - Design [ID 40965]
+
+Redesigned the card layout to be more concise.
+Updated the detail page header section to match the new card design.
+Updated the search results to match new card layout
+Updated home page sections to match new card layout
+
+#### 16 October 2024 - Fix - Sharing - Missing emails [ID 41110]
+
+On the sharing edit page. Email addresses of people who have access to the share are now correctly filled in.
+
 #### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
 
 In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Usage* page, allowing users to export usage metrics to a CSV file. Clicking the *Export usage* button will initiate the export process. A pop-up window will appear, where you can choose the separator for the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
@@ -51,7 +79,7 @@ Up to now, in the warning message that was shown to inform users of the node whe
 
 In the Admin app, when you click the DMS URL on the DMS overview page, this will now open in a new tab.
 
-#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860]
+#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860] [ID_41056]
 
 When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
 
