@@ -179,4 +179,6 @@ versionDescription: <The description of the version you want to register>
 ```
 
 > [!NOTE]
-> Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+>
+> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+> - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->

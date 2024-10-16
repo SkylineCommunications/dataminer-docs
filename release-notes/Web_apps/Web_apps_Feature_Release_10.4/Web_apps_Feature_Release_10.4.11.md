@@ -96,12 +96,6 @@ From now on, the *Preserve feed selections* option will only be visible when you
 
 From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
-#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID 40814]
-
-<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
-
-Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or a text feed.
-
 #### Dashboards/Low-Code Apps - Table component: New setting to show or hide the table filter [ID 40818]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->

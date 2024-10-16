@@ -25,6 +25,23 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
+#### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a certain alarm threshold [ID 40837]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in the alarm template editor, you click the button in the *Augmented Operations* column (formerly called the *Anomalies* column) for a particular parameter, the *Anomaly alarm settings* pop-up window will open. This window will allow you to select one of the preset options or configure the anomaly alarm settings according to your preference.
+
+Now, at the bottom of this *Anomaly alarm settings* pop-up window, you will also be able to specify that an alarm of a certain severity should be generated when the proactive cap detection feature expects that the parameter will cross a particular alarm threshold in the near future.
+
+> [!NOTE]
+> The button in the *Augmented Operations* column can be set to "Enabled" or "Disabled":
+>
+> - The button is "Enabled" when anomaly monitoring is set to "Smart" and proactive cap detection has at least one threshold configured.
+> - The button is "Disabled" when anomaly monitoring is set to "All disabled" and no thresholds are configured for proactive cap detection.
+
+> [!IMPORTANT]
+> This feature will only work when connected to a DataMiner Agent running at least main release 10.5.0 or feature release 10.4.12.
+
 #### Specifying a different layout for each of the four Cube sides [ID 40887]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -35,9 +52,15 @@ On each of the four Cube sides, it is now possible to specify a different layout
 
 ### Enhancements
 
+#### Cube will now only retrieve DCF interface data when required [ID 40728]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, DataMiner Cube would by default retrieve all DCF interface data at start-up. From now on, it will only retrieve the DCF interface data when required.
+
 #### System Center - Logging: 'Resource Manager Scheduler' log file now available in DataMiner tab [ID 40899]
 
-<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 In the *Logging* section of *System Center*, the following log file can now also be consulted in the *DataMiner* tab:
 
