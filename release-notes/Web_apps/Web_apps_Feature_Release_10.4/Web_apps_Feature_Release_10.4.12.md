@@ -93,11 +93,11 @@ From now on, a GQI query will be opened synchronously, after which a first page 
 
 When WebSockets are not available, GQI sessions will be executed synchronously as before.
 
-#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID 40814]
+#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string or a feed containing text data [ID 40814] [ID 41067]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or a text feed.
+Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or any feed containing text data.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Initial viewport in case of custom node positions will now be calculated based on the midpoints of all nodes [ID 40869]
 
