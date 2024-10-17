@@ -68,7 +68,7 @@ In case the table does not exist, a null reference is returned.
 
 ## Remarks
 
-- When this call is used, the SLProtocol process retrieves the primary keys and display keys from the SLElement process. Therefore, in case only the primary keys need to be retrieved, use NT_GET_KEYS_SLPROTOCOL (397) instead, as in this call the primary keys are retrieved in the SLProtocol process without interacting with SLElement. See [NT_GET_KEYS_SLPROTOCOL (397)](xref:NT_GET_KEYS_SLPROTOCOL).
+- When this call is used, the SLProtocol process retrieves the primary keys and display keys from the SLElement process. Therefore, in case only the primary keys need to be retrieved, use [NT_GET_KEYS_SLPROTOCOL (397)](xref:NT_GET_KEYS_SLPROTOCOL) instead, as in this call the primary keys are retrieved in the SLProtocol process without interacting with SLElement.
 
 ## See also
 
