@@ -156,6 +156,12 @@ A number of minor enhancements have been made with regard to dashboard user perm
 
 For example, in the *Dashboard settings* window, *Access* has now been renamed to *Permissions*. Also, when you strip the person who created a dashboard of their edit rights, a message saying "You have removed the edit rights from the creator" will now appear.
 
+#### Dashboards/Low-Code Apps - Alarm table component: 'Alarm ID' and 'Root Alarm ID' columns will now also include the element ID [ID 41113]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include the element ID.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -246,3 +252,15 @@ Up to now, when you created a new draft, in some cases, a `Dashboard not found` 
 When you installed a low-code app, in some cases, it would not have the correct icon and color scheme.
 
 Also, it would not be possible to install more than one low-code app per DataMiner Agent.
+
+#### Dashboards/Low-Code Apps - Table component: Deleting data from a table starts infinite loading [ID 41096]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you removed either the only or the last query from a Table component, a "Loading" message would appear and the dashboard or low-code would become unresponsive.
+
+#### Low-Code Apps - Node edge graph component: Problem with 'Open monitoring card' action [ID 41105]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you added an *Open monitoring card* action to a *Node edge graph* component, an error would occur.
