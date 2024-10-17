@@ -79,7 +79,7 @@ The following example defines a command implementing an HTTP GET request:
 
 ### makeCommandByProtocol
 
-By default, the following behavior is applicable in serial drivers:
+By default, the following behavior is applicable in serial connectors:
 
 - For "execute group" actions (i.e., actions of type "execute" on group(s)), a "make" action is automatically performed for the command in the pair(s) referred to by the group(s).
 - "before command" triggers are executed just before the command is sent to SLPort.

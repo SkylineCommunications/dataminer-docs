@@ -26,9 +26,13 @@ In the Microsoft Platform protocol, for instance, this option can prevent hangin
 
 ### chunkedHTML
 
+Obsolete. This option is not needed if connection type "HTTP" is used.
+
 Specify this option if the device uses chunked HTTP encoding. Only applicable for connections of type "serial" or "serial single".
 
 ### closeConnectionOnResponse
+
+Obsolete. This option is not needed if connection type "HTTP" is used.
 
 This option is useful for HTTP 1.0 communication that is implemented using a serial connection. As the HTTP 1.0 specification makes use of short-lived connections, this option makes it possible to automatically close the connection after each response, alleviating the need to implement a "close" action in the protocol.
 

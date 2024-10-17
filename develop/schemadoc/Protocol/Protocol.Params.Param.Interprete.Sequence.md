@@ -57,7 +57,7 @@ string
   If you specify multiple operations, separate them using semicolons (”;”).
   List of possible operations:
 
-  |Operation|Description
+  |Operation|Description |
   |--- |--- |
   |factor (*)|Multiply the parameter with a particular value.|
   |offset (+)|Add a particular value to the parameter.|
@@ -68,7 +68,7 @@ string
   |log10|Perform a 10*log10 operation on the parameter.|
   |log20|Perform a 20*log10 operation on the parameter.|
 
-  *Column parameter option introduced in DataMiner 8.5.0 (RN 7634).*
+  <!-- Column parameter option introduced in DataMiner 8.5.0 (RN 7634). -->
 
 ## Examples
 

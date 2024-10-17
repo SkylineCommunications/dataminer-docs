@@ -28,9 +28,9 @@ In general, the range [1, 63 999] can be used in a protocol for parameters. Howe
 
 |Protocol type|Restricted range|Owner|Description|
 |--- |--- |--- |--- |
-|Aggregation|[1-4 999]|DataMiner|Parameters in this range are used for communication between DataMiner and aggregation drivers.|
+|Aggregation|[1-4 999]|DataMiner|Parameters in this range are used for communication between DataMiner and aggregation connectors.|
 |Enhanced Service|[1, 999]|DataMiner|This range must only be used to communicate with DataMiner via predefined parameters.|
-|SLA|[1, 2 999]|DataMiner|Parameters in this range are used for communication between DataMiner and SLA drivers.|
+|SLA|[1, 2 999]|DataMiner|Parameters in this range are used for communication between DataMiner and SLA connectors.|
 |Spectrum Analyzer|[50 000, 60 000]|DataMiner|This range is used by the SLSpectrum process to create dynamic parameters for spectrum monitoring results.|
 
 ## [64 000, 64 299]

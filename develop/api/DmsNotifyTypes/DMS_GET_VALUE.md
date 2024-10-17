@@ -59,7 +59,7 @@ object[] parameterDetails = (object[])result;
 
 ## Remarks
 
-- This call only works for parameters that have RTDisplay set to true. If you want to be able to use this call but do not want the parameter to be visible in the driver, set RTDisplay to true but do not specify a position.
+- This call only works for parameters that have RTDisplay set to true. If you want to be able to use this call but do not want the parameter to be visible in the connector, set RTDisplay to true but do not specify a position.
 - When you call any of the protocol get methods to retrieve a value of a parameter on the same element, the value will be retrieved from the SLProtocol process. When you call a DMS_GET_VALUE (dms.Notify(87)) to retrieve a value of a parameter on another element of the DMS, the value will be retrieved from the SLElement process.
 
 ## Examples

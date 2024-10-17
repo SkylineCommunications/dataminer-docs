@@ -53,7 +53,7 @@ object[] result = (object[]) protocol.NotifyDataMiner(225 /*NT_SET_ROW*/, rowDet
 ```
 
 - rowDetails (object[]): The details specifying the row.
-  - rowDetails[0]: (int) DataMiner agent ID.
+  - rowDetails[0]: (int) DataMiner Agent ID.
   - rowDetails[1]: (string) element ID.
   - rowDetails[2]: (int) table parameter ID.
   - rowDetails[3]: (string) primary key.

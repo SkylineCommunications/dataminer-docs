@@ -16,7 +16,7 @@ Specifies the names of DLL files used by the QAction.
 
 ## Remarks
 
-Multiple values have to be separated by semicolons (”;”).
+Multiple values have to be separated by semicolons (";").
 
 When a DLL provided by the Microsoft .NET Framework is used (e.g. System.Xml.dll), it is sufficient to just mention it in the *dllImport* attribute. System DLL files must be stored in the system dll directory. All other DLL files must be stored in the C:\Skyline DataMiner\ProtocolScripts directory.
 
@@ -54,9 +54,9 @@ dllImport="[ProtocolName]_[ProtocolVersion].dll"
 
 To refer to DLLs that are stored in a subfolder of the ProtocolScripts folder, you must mention the subfolder when you specify the DLL in the protocol. For example, to use "test.dll" stored in `C:\Skyline DataMiner\ProtocolScripts\SubFolder`, configure the dllImport attribute of the QAction tag as follows: dllImport="SubFolder\test.dll".<!-- RN 23565 -->
 
-If the DLL file is stored in the `C:\Skyline DataMiner\ProtocolScripts\DllImport` folder, there is no need to specify the subfolder in the protocol. From DataMiner 9.6.12 (RN 23565) onwards, DLL files stored in *C:\Skyline DataMiner\ProtocolScripts\DllImport* will take precedence over DLL files stored in *C:\Skyline DataMiner\ProtocolScripts*.
+If the DLL file is stored in the `C:\Skyline DataMiner\ProtocolScripts\DllImport` folder, there is no need to specify the subfolder in the protocol. DLL files stored in *C:\Skyline DataMiner\ProtocolScripts\DllImport* will take precedence over DLL files stored in *C:\Skyline DataMiner\ProtocolScripts*.<!-- RN 23565 -->
 
-From DataMiner 9.6.12 (RN 23565) onwards, it is also possible to reference DLLs with the same name but with different assembly versions within the same driver, though not within the same QAction.
+It is also possible to reference DLLs with the same name but with different assembly versions within the same connector, though not within the same QAction.<!-- RN 23565 -->
 
 For example, the following QAction definitions are possible within a single protocol:
 

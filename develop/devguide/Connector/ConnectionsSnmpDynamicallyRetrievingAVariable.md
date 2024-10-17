@@ -31,7 +31,7 @@ When setting this parameter with an OID value (e.g. "1.3.6.1.4.1.290.9.3.3.21.13
 
 After finding this parameter, DataMiner will create a temporary dynamic group to "get" this parameter, and add it to the group execution queue. If the OID links back to a column of a table, it will refresh the entire table.
 
-The search procedure to find the correct parameter in the protocol will view dynamic OID pieces (using an '*') as a wildcard. For example, if you set the Dynamic SNMP Get with value "1.3.6.1.4.1.290.9.3.3.21.1.1.12.0" and there is a parameter in the driver that has OID "1.3.6.1.4.1.290.9.3.3.21.*", it will regard this parameter as the one that needs refreshing.
+The search procedure to find the correct parameter in the protocol will view dynamic OID pieces (using an "\*") as a wildcard. For example, if you set the Dynamic SNMP Get with value "1.3.6.1.4.1.290.9.3.3.21.1.1.12.0", and there is a parameter in the connector that has OID "1.3.6.1.4.1.290.9.3.3.21.*", it will regard this parameter as the one that needs refreshing.
 
 When you divide a large SNMP table into 2 different SNMP tables (for example, to poll table 1 faster than table 2), it is important you do not specify an OID on the table parameters when trying to use this Dynamic SNMP Get. If you fail to remove these OIDs, the search algorithm will find the first table in the protocol as a match and will stop searching for anything else, even if the requested OID is part of the second table.
 

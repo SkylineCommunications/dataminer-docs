@@ -60,7 +60,7 @@ protocol.SendToDisplay(4000);
 ## Remarks
 
 - When an update is performed, DataMiner creates a file, *labels.xml*, containing the updated matrix configuration (which is stored in the folder of the element `C:\Skyline DataMiner\Elements\[Element Name]`).
-- The size of a matrix can never be larger than the size that is hard-coded in the driver.
+- The size of a matrix can never be larger than the size that is hard-coded in the protocol.
 - When labels are updated on a matrix element with the Notify DataMiner call NT_UPDATE_PORTS_XML (128), at most one information event will be generated with parameter description "Link File" and value "edited by ...".<!-- RN 23052 -->
 - Bulk edit: It is also possible to group multiple updates in one call. To perform a bulk update, the parameters should be formatted as follows:
   - updateConfigs (object[]): Contains the different update configurations, where each entry is a uint[] with the following structure:
