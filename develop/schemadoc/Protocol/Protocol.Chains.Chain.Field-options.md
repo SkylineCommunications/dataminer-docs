@@ -128,7 +128,7 @@ options="detailTabs:1700,1800,1900"
 
 ### DiagramSort
 
-**Obsolete**. Use the dedicated [DiagramSorting](xref:xref:Protocol.Chains.Chain.Field.DiagramSorting) tag instead of this option.<!-- RN 14442, RN 1446 -->
+**Obsolete**. Use the dedicated [DiagramSorting](xref:Protocol.Chains.Chain.Field.DiagramSorting) tag instead of this option.<!-- RN 14442, RN 1446 -->
 
 Sorting per field (horizontal stack of items in the diagram).<!-- RN 6690 -->
 
