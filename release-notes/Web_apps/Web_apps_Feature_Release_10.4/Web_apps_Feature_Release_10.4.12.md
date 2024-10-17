@@ -162,6 +162,12 @@ For example, in the *Dashboard settings* window, *Access* has now been renamed t
 
 The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include the element ID.
 
+#### Web apps: Gray colors updated in themes used by the web apps [ID 41131]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the color themes used by the web apps, the gray colors have been updated.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -253,11 +259,11 @@ When you installed a low-code app, in some cases, it would not have the correct 
 
 Also, it would not be possible to install more than one low-code app per DataMiner Agent.
 
-#### Dashboards/Low-Code Apps - Table component: Deleting data from a table starts infinite loading [ID 41096]
+#### Dashboards/Low-Code Apps - Table component: Problem when removing the only of the last query [ID 41096]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When you removed either the only or the last query from a Table component, a "Loading" message would appear and the dashboard or low-code would become unresponsive.
+When you removed either the only or the last query from a Table component, the loader bar would appear and get stuck.
 
 #### Low-Code Apps - Node edge graph component: Problem with 'Open monitoring card' action [ID 41105]
 

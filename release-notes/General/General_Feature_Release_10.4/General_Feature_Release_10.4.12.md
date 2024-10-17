@@ -110,6 +110,15 @@ When an element is duplicated, the following information events will no longer b
 - [Remote Element Name]
 - [Remote DMA IP]
 
+#### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The following NT Notify types have been deprecated:
+
+- NT_ADD_VIEW_NO_LOCK
+- NT_ADD_VIEWS_NO_LOCK
+
 #### SLLogCollector: Miscellaneous enhancements [ID 40935]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
