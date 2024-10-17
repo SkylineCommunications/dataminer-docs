@@ -18,11 +18,11 @@ uid: General_Feature_Release_10.4.12
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
 
 ## New features
 
-#### New SLProtocol process will be started when an SLProtocol process disappears [ID 40335]
+#### DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
