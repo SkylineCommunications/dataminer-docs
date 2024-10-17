@@ -4,7 +4,7 @@ uid: Protocol.ParameterGroups
 
 # ParameterGroups element
 
-Defines the DataMiner Connectivity Framework (DCF) interfaces.
+Defines the DataMiner Connectivity Framework (DCF) interfaces.<!-- RN 5663 -->
 
 ## Parent
 
@@ -25,5 +25,3 @@ Defines the DataMiner Connectivity Framework (DCF) interfaces.
 ## Remarks
 
 Contains groups with a unique ID and a specific type.
-
-Feature introduced in DataMiner 8.0.0 (RN 5663).

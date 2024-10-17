@@ -60,7 +60,7 @@ One of the following predefined values:
 - Opaque
 
   > [!NOTE]
-  > When used in a trap it is processed the same way as the type octetstring. *Feature introduced in DataMiner 8.0.8.4, RN 7249.*
+  > When used in a trap it is processed the same way as the type octetstring.<!-- RN 7249 -->
 
 - TimeTicks
 - UInteger32

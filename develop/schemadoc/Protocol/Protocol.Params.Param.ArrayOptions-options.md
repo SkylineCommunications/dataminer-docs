@@ -188,7 +188,7 @@ See also: [Column processing order in tables](xref:InnerWorkingsSLElement#column
 
 ### queryTablePID=
 
-Specifies the ID of the table parameter to query for more information in an EPM (formerly known as CPE) environment.<!-- RN 19897 -->
+Specifies the ID of the table parameter to query for more information in an EPM environment.<!-- RN 19897 -->
 
 Example:
 
@@ -221,7 +221,7 @@ Example:
 options=";view=1000"
 ```
 
-Direct view tables can have a different element or protocol as their source.<!-- RN 6914 --> This will for example allow you to show collector info in an EPM (formerly known as CPE) element that is not aware of all possible values (e.g. frequency info in a collector). To configure this:
+Direct view tables can have a different element or protocol as their source.<!-- RN 6914 --> This will for example allow you to show collector info in an EPM element that is not aware of all possible values (e.g. frequency info in a collector). To configure this:
 
 1. Create a directView table. In other words, link to a column (parameter ID) that defines the remote elements.
 

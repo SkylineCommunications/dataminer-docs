@@ -177,9 +177,9 @@ For the regex operator, instead of specifying a parameter ID, the regex can be p
 
 #### equationvalue
 
-Filter on value (param or instances of a table)
+<!-- RN 6557 -->
 
-Feature introduced in DataMiner 8.0.5.4 (RN6557)
+Filter on value (param or instances of a table)
 
 ```xml
 <Type options= "threaded;type:count;equationvalue:a,b,c,d;avoidzeroinresult;">
