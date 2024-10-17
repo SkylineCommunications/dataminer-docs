@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 17 October 2024 - Fix - Catalog - Updated heading styles [ID 41145]
+
+Headings in the Catalog will now be rendered correctly.
+
 #### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
 
 In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Usage* page, allowing users to export usage metrics to a CSV file. Clicking the *Export usage* button will initiate the export process. A pop-up window will appear, where you can choose the separator for the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
