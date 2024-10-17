@@ -27,7 +27,7 @@ string[] primaryKeys = (string[])protocol.NotifyProtocol(196/*NT_GET_KEYS_FOR_IN
 
 - The use of the wrapper method SLProtocol.GetKeysForIndex is preferred over this notify call. See SLProtocol.GetKeysForIndex method.
 - In order for this method to work, the column must either be a foreign key column or it must have the option "indexColumn".
-- This call does not perform a case-sensitive lookup.<!-- RN 15333 --> In case a case-sensitive lookup is required, use the NT_GET_KEYS_FOR_INDEX_CASED notify type. See [NT_GET_KEYS_FOR_INDEX_CASED (411)](xref:NT_GET_KEYS_FOR_INDEX_CASED).
+- This call does not perform a case-sensitive lookup.<!-- RN 15333 --> In case a case-sensitive lookup is required, use the [NT_GET_KEYS_FOR_INDEX_CASED (411)](xref:NT_GET_KEYS_FOR_INDEX_CASED) notify type.
 
 ## See also
 
