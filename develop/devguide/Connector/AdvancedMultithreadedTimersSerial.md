@@ -4,15 +4,13 @@ uid: AdvancedMultiThreadedTimersSerial
 
 # Serial
 
-From DataMiner 8.5.4 (RN 9290) onwards, you can set up multi-threaded serial communication in a QAction.
+To set up multi-threaded serial communication in a QAction, perform the following steps:<!-- RN 9290 -->
 
-To implement this, perform the following steps:
+1. [Build the request](#step-1-build-the-request)
+1. [Process the responses](#step-2-process-the-responses)
+1. [Run the QAction after the response](#step-3-run-the-qaction-after-the-response)
 
-1. Building the request
-1. Processing the responses
-1. Running the QAction after the response
-
-## Step 1: Building the request
+## Step 1: Build the request
 
 Assume the following multi-threaded timer is defined:
 
@@ -86,7 +84,7 @@ In this QAction, typically you will also set the state of the corresponding row 
 > [!NOTE]
 > The Run method of the QAction now has a return type of object[].
 
-## Step 2: Processing the responses
+## Step 2: Process the responses
 
 To process the responses, create a QAction that triggers on the group of the multi-threaded timer.
 
@@ -160,7 +158,7 @@ public class QAction
                                     string responseData = (string)response[1]; // E.g. "TIMEOUT".
             
                                     // Process feedback...
-                                    if (response.Length > 2)    // Feature introduced in DataMiner 9.5.0
+                                    if (response.Length > 2)
                                     {
                                         byte[] responseBytes = (byte[])response[2]; // The received response.
                                     }
@@ -193,7 +191,7 @@ public class QAction
 
 In this QAction, you will typically also update the state column of the corresponding row.
 
-## Step 3: Running the QAction after the response
+## Step 3: Run the QAction after the response
 
 The last step runs the QAction specified in the qactionAfter option of the multi-threaded timer.
 

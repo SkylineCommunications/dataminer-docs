@@ -19,4 +19,4 @@ Specifies connection options.
 
 ## Remarks
 
-Feature introduced in DataMiner 10.2.3 (RN 32368).
+Feature introduced in DataMiner 10.2.3/10.3.0 (RN 32368).

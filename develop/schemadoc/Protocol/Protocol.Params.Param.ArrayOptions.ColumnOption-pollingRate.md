@@ -4,6 +4,8 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
 
 # pollingRate attribute
 
+<!-- RN 16411 -->
+
 Specifies the polling rate of this column (in ms).
 
 ## Content Type
@@ -41,8 +43,6 @@ In order to have the SNMP instance stored in the index column, go to the `<SNMP>
 
 > [!NOTE]
 > When, during a particular poll, a new instance is discovered in the table, the entire row will be polled instead of only the columns that had to be polled at that moment.
-
-*Feature introduced in DataMiner 9.5.6 (RN 16411).*
 
 ## Examples
 

@@ -21,9 +21,9 @@ This parameter can be a single parameter or a column. In case of a column, the c
 > [!NOTE]
 > The column that is referred to by the dependencyId attribute must be displayed in the table.
 
-DependencyId can be used either with Measurement Type “string” or “discreet”.
+DependencyId can be used either with Measurement Type "string" or "discreet".
 
-As from DataMiner 8.0.2, System Display and Cube behave in the same way. If no dependencyValues are defined, an empty list will be shown (RN 5817).
+If no dependencyValues are defined, an empty list will be shown.<!-- RN 5817 -->
 
 ```xml
 <Measurement>

@@ -26,9 +26,13 @@ In the Microsoft Platform protocol, for instance, this option can prevent hangin
 
 ### chunkedHTML
 
+Obsolete. This option is not needed if connection type "HTTP" is used.
+
 Specify this option if the device uses chunked HTTP encoding. Only applicable for connections of type "serial" or "serial single".
 
 ### closeConnectionOnResponse
+
+Obsolete. This option is not needed if connection type "HTTP" is used.
 
 This option is useful for HTTP 1.0 communication that is implemented using a serial connection. As the HTTP 1.0 specification makes use of short-lived connections, this option makes it possible to automatically close the connection after each response, alleviating the need to implement a "close" action in the protocol.
 
@@ -58,16 +62,18 @@ This option is needed when the same group, with variable parameters in the comma
 
 If you specify this option:
 
-- There will not be any automatic “make” actions.
-- The “before command” triggers will be executed before the command is added to the queue.
-- A “before command” will be executed prior to a “before group”
+- There will not be any automatic "make" actions.
+- The "before command" triggers will be executed before the command is added to the queue.
+- A "before command" will be executed prior to a "before group"
 
 This option is only applicable for connections of type "serial (single)" or "smart-serial (single)".
 
 > [!NOTE]
-> As the make action is not executed automatically on execution of the group, the action needs to be executed when adding the group to the queue. This will copy the “current” value of the parameter(s) used in the command and these copied values will be used when the group is being executed.
+> As the make action is not executed automatically on execution of the group, the action needs to be executed when adding the group to the queue. This will copy the "current" value of the parameter(s) used in the command and these copied values will be used when the group is being executed.
 
 ### maxConcurrentConnections
+
+<!-- RN 6342 -->
 
 Use this option to define a limit of clients that can connect when the DataMiner acts as a server.
 
@@ -79,15 +85,14 @@ Example:
 <Type communicationOptions= "maxConcurrentConnections:3">smart-serial</Type>
 ```
 
-*Feature introduced in DataMiner 8.0.5.3 (RN 6342).*
-
-See also [Configuring a smart-serial connection as a server](xref:ConnectionsSmartSerialServer)
+> [!TIP]
+> See also: [Configuring a smart-serial connection as a server](xref:ConnectionsSmartSerialServer)
 
 ### maxReceiveBuffer:X
 
-Up to DataMiner 10.0.2, for connections of type “smart-serial”, data is passed from the SLPort process to the SLProtocol process every 100 ms. From DataMiner 10.0.2 (RN 24282) onwards, data is passed to SLProtocol every 15 ms.
+For connections of type "smart-serial", data is passed from the SLPort process to the SLProtocol process every 15 ms.<!-- RN 24282 -->
 
-If the maxReceiveBuffer option is used, each time the specified number of bytes is received, these are transferred from the SLPort process to the SLProtocol process. This option is only applicable for connections of type "smart-serial".
+If the *maxReceiveBuffer* option is used, each time the specified number of bytes is received, these are transferred from the SLPort process to the SLProtocol process. This option is only applicable for connections of type "smart-serial".
 
 ```xml
 <Type relativeTimers="true" advanced="" communicationOptions="maxReceiveBuffer:8120">smart-serial</Type>
@@ -95,7 +100,7 @@ If the maxReceiveBuffer option is used, each time the specified number of bytes 
 
 ### notifyConnectionPIDs:x,y
 
-Specify this option if you want a protocol of type “smart-serial” acting as server to detect (and log) when a client connects or disconnects on a local smart IP port.
+Specify this option if you want a protocol of type "smart-serial" acting as server to detect (and log) when a client connects or disconnects on a local smart IP port.
 
 Example:
 
@@ -114,6 +119,8 @@ See also [Configuring a smart-serial connection as a server](xref:ConnectionsSma
 
 ### packetInfo
 
+<!-- RN 5659 -->
+
 Use this option to define the packet length identifier of the response in a smart-serial protocol. Applies to all the smart-serial connections defined in the protocol.
 
 Syntax: packetinfo:a,b,c,d
@@ -121,8 +128,8 @@ Syntax: packetinfo:a,b,c,d
 - a: Number of bytes before the length identifier.
 - b: Length of the length identifier. Supported values are: 1, 2, 4.
   Number of bytes the length field. E.g. a value of 2 indicates that the length field is 2 bytes.
-- c: [optional] “true” (default): The value denoted by the length field comprises the preamble field, length field and data field. "false": The length field only specifies the number of bytes that follow the preamble field and length field.
-- d: [optional] “littleEndian”: If the bytes enter in littleEndian format. Default: Big endian.
+- c: [optional] "true" (default): The value denoted by the length field comprises the preamble field, length field and data field. "false": The length field only specifies the number of bytes that follow the preamble field and length field.
+- d: [optional] "littleEndian": If the bytes enter in littleEndian format. Default: Big endian.
 
 In the following example, the length identifier starts at position 4, it is 2 bytes long and the first 6 bytes are not included in the length indicated by the length identifier:
 
@@ -130,12 +137,11 @@ In the following example, the length identifier starts at position 4, it is 2 by
 <Type communicationOptions="packetInfo:4,2">smart-serial</Type>
 ```
 
-*Feature introduced in DataMiner 8.0.0 (RN 5659).*
-
-See also:
-
-- [Smart serial](xref:ConnectionsSmartSerial)
-- [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding)
+> [!TIP]
+> See also:
+>
+> - [Smart serial](xref:ConnectionsSmartSerial)
+> - [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding)
 
 ### postPonePortInitialisation
 

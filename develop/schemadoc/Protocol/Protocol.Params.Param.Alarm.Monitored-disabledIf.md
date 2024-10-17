@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Alarm.Monitored-disabledIf
 
 # disabledIf attribute
 
-Allows you to enable or disable the Protocol.Params.Param.Alarm tag assigned to the parameter.
+Allows you to enable or disable the Protocol.Params.Param.Alarm tag assigned to the parameter.<!-- RN 5327 -->
 
 ## Content Type
 
@@ -23,8 +23,6 @@ With this option, monitoring can be disabled when a parameter contains a particu
 When discrete values are used, it is only possible to set a condition on the discrete value, not on the display value.
 
 When string values are used, commas (,) are currently not supported in the conditional value.
-
-*Feature introduced in DataMiner 8.0.1 (RN 5327).*
 
 ## Examples
 

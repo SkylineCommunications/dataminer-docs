@@ -4,6 +4,8 @@ uid: Protocol.Params.Param-saveInterval
 
 # saveInterval attribute
 
+<!-- RN 16708 -->
+
 Specifies that only one save operation must be executed per interval.
 
 > [!CAUTION]
@@ -32,8 +34,6 @@ The specified value must be a positive duration expressed in the format defined 
 P0Y0M1DT1H20M0S = P1DT1H20M = 1 day, 1 hour and 20 minutes.
 
 For more information about this format, refer to [https://www.w3.org/TR/xmlschema11-2/#duration](https://www.w3.org/TR/xmlschema11-2/#duration).
-
-*Feature introduced in DataMiner 9.5.7 (RN 16708).*
 
 ## Examples
 

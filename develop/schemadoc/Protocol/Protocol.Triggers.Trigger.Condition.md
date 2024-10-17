@@ -18,8 +18,6 @@ string
 
 Refer to <xref:LogicConditions> for more information about conditions.
 
-*Feature introduced in DataMiner 7.5.4.3.*
-
 ## Examples
 
 In the following example, the trigger is activated when the value of the parameter with ID 2001 is equal to 24:

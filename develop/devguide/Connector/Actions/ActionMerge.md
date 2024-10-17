@@ -70,7 +70,7 @@ Parameter ID(s) of the column(s) containing the primary key(s) of the destinatio
 
 Option to filter out certain results.
 
-Example (see DataMiner 8.0.0 – RN 5071):
+Example:<!-- RN 5071 -->
 
 ```xml
 <Type options="limitresult:x">merge</Type>
@@ -98,7 +98,7 @@ ID of the parameter that fires the trigger leading to an aggregate action on a t
 
 The type of merge (average, sum, count, percentage, etc.)
 
-Example (see DataMiner 8.0.0 – RN 5071):
+Example:<!-- RN 5071 -->
 
 ```xml
 <Type options="type:avg extended;destination:a,b,c,d">merge</Type>

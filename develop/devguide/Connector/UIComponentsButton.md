@@ -44,7 +44,7 @@ To define a button:
 > - Typically, the description tag is left empty when a button is defined.
 > - A button is a write parameter with the intent to invoke an action when it is activated. Setting another parameter is not its goal, so it should not have a matching read parameter using the setter attribute.
 
-![alt text](../../images/uibutton.png "DataMiner Cube button")
+![alt text](~/develop/images/uibutton.png "DataMiner Cube button")
 
 ## See also
 

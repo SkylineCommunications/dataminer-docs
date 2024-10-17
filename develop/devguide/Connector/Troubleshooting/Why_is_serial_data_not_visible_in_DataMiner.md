@@ -8,7 +8,7 @@ Below, you can find how you can determine the reason why info retrieved via seri
 
 ## User skills required
 
-- Basic knowledge of drivers.
+- Basic knowledge of connectors.
 - Basic knowledge of how to use DataMiner Cube.
 
 ## Symptoms of this issue
@@ -36,7 +36,7 @@ Stream Viewer remains blank for a long period of time (longer than 1 minute).
 In this case, the DataMiner element is not sending any commands. This could be due to the following common causes:
 
 - Another operation in the element is taking a long time. If this takes 7.5 minutes, the DataMiner Watchdog process will indicate a half-open RTE in the watchdog log.
-- There is an incorrect definition in the driver. Verify if the driver used by the element should send requests and if the flow to send them is correctly defined.
+- There is an incorrect definition in the connector. Verify if the connector used by the element should send requests and if the flow to send them is correctly defined.
 - The process dealing with serial communication is failing: SLPort is no longer operating correctly. In this case, the DataMiner Watchdog process will indicate this in the watchdog log.
 
 #### Stream Viewer shows a timeout on incoming data
@@ -60,7 +60,7 @@ These two steps are explained further below.
 
 ### Validate the format
 
-The easiest way to know if the incoming data matches what the driver expects is by checking the element log. To do so:
+The easiest way to know if the incoming data matches what the connector expects is by checking the element log. To do so:
 
 1. Click the hamburger button in the top-left corner of the element card, and select *View > Log*.
 
@@ -79,13 +79,13 @@ Configuring the log levels like this will make sure that the reason for the mism
 CResponse::ReadParameterPositions|DBG|2|Could not find NEXT PARAM for parameter [Name of parameter] ([Id of parameter])
 ```
 
-Note that these cases are not really issues in the driver. It means that the received (new) format is not (yet) supported in the driver. The most common reason for this is a firmware difference. It is always useful to check the driver help to know which versions are supported. You can find the driver help in several places, including on the Help page of an element card.
+Note that these cases are not really issues in the connector. It means that the received (new) format is not (yet) supported in the connector. The most common reason for this is a firmware difference. It is always useful to check the connector help to know which versions are supported. You can find the connector help in several places, including on the Help page of an element card.
 
 ### Validate data parsing
 
 In many cases, the data that is retrieved will be processed before it gets displayed. It is possible that a problem occurs during this stage. This can be caused by a change in format or an unexpected value.
 
-The logic in a driver should have a safety mechanism to avoid unhandled exceptions abruptly stopping the execution. It should either update the parameter on screen with an exception value, or it should generate a log message in the element log with the required details. When an unhandled exception occurs, an auto-generated error log message will be generated.
+The logic in a connector should have a safety mechanism to avoid unhandled exceptions abruptly stopping the execution. It should either update the parameter on screen with an exception value, or it should generate a log message in the element log with the required details. When an unhandled exception occurs, an auto-generated error log message will be generated.
 
 Example of a handled exception in QAction 25:
 

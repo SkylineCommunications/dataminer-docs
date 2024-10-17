@@ -93,7 +93,7 @@ uid: ReservedIDsSpectrumAnalyzer
 |64213|SPA_SPARAM_WATCH_INFO|Info about which data is currently being displayed (watch mode)|
 |64214|SPA_SPARAM_INVALID_PID|Notifies Cube of a PID for which the current value is invalid|
 |64215|SPA_SPARAM_UNAVAILABLE|Notifies Cube that the device is currently unavailable for measurements (string)|
-|64216|SPA_SPARAM_PRESET_UPDATE|Notifies Cube that a preset got updated. Contains the name of the preset (string). Feature introduced in DataMiner 9.0.5 (RN 13968).|
+|64216|SPA_SPARAM_PRESET_UPDATE|Notifies Cube that a preset got updated. Contains the name of the preset (string).<!-- RN 13968 -->|
 |64217|SPA_SPARAM_WARN_SWEEP|Notifies Cube that it needs to display a warning to allow a sweep time > 20 sec (value = sweep time value)|
 |64218|SPA_SPARAM_GENERIC_MSG|Notifies Cube with a generic message to display in the top-right corner (string "[message type id]:[message]")|
 |64219|SPA_SPARAM_PROGRESS|Notifies Cube of some kind of progress (double; see SPA_PROGRESS_*)|

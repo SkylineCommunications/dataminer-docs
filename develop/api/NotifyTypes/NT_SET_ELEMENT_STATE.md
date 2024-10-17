@@ -22,7 +22,7 @@ protocol.NotifyDataMiner(115 /*NT_SET_ELEMENT_STATE*/ , elementDetails, null);
   - elementDetails[0]: ID of the element.
   - elementDetails[1]: State: 1=Active, 3=Pause, 4=Stop, 6=Delete, 11=Restart.
   - elementDetails[2]: Delete options; always set to 1.
-  - elementDetails[3]: ID of the DataMiner Agent. This field is optional and supported since DataMiner 7.5.0 (RN 4226).
+  - elementDetails[3]: ID of the DataMiner Agent. Optional.<!-- RN 4226 -->
 
 Alternatively, the element name can be used:
 

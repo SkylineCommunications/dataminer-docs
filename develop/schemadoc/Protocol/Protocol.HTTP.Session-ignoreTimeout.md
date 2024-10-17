@@ -4,6 +4,8 @@ uid: Protocol.HTTP.Session-ignoreTimeout
 
 # ignoreTimeout attribute
 
+<!-- RN 12542 -->
+
 If the HTTP connection should ignore timeout for this session, set this attribute to *true*.
 
 ## Content Type
@@ -22,18 +24,16 @@ When this attribute is set to true, a timeout alarm will not be generated for th
 
 This behavior is similar to the serial pair [ignoreTimeout](xref:Protocol.Pairs.Pair-options#ignoretimeout) option.
 
-*Feature introduced in DataMiner 9.0.2 (RN 12542).*
-
 ## Examples
 
 ```xml
 <Session id="6" ignoreTimeout="true">
-	<Connection id="1">
-		<Request verb="GET" url="/403">
-		</Request>
-		<Response statusCode="100">
-			<Content pid="200"></Content>
-		</Response>
-	</Connection>
+   <Connection id="1">
+      <Request verb="GET" url="/403">
+      </Request>
+      <Response statusCode="100">
+         <Content pid="200"></Content>
+      </Response>
+   </Connection>
 </Session>
 ```

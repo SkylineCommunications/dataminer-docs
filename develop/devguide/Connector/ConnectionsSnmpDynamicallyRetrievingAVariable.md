@@ -4,6 +4,8 @@ uid: ConnectionsSnmpDynamicallyRetrievingAVariable
 
 # Dynamically retrieving a variable
 
+<!-- To be verified: Obsolete approach should not be mentioned first. -->
+
 Since DataMiner version 7.5, it is possible to dynamically perform a get of an SNMP parameter.
 
 ```xml
@@ -29,7 +31,7 @@ When setting this parameter with an OID value (e.g. "1.3.6.1.4.1.290.9.3.3.21.13
 
 After finding this parameter, DataMiner will create a temporary dynamic group to "get" this parameter, and add it to the group execution queue. If the OID links back to a column of a table, it will refresh the entire table.
 
-The search procedure to find the correct parameter in the protocol will view dynamic OID pieces (using an '*') as a wildcard. For example, if you set the Dynamic SNMP Get with value "1.3.6.1.4.1.290.9.3.3.21.1.1.12.0" and there is a parameter in the driver that has OID "1.3.6.1.4.1.290.9.3.3.21.*", it will regard this parameter as the one that needs refreshing.
+The search procedure to find the correct parameter in the protocol will view dynamic OID pieces (using an "\*") as a wildcard. For example, if you set the Dynamic SNMP Get with value "1.3.6.1.4.1.290.9.3.3.21.1.1.12.0", and there is a parameter in the connector that has OID "1.3.6.1.4.1.290.9.3.3.21.*", it will regard this parameter as the one that needs refreshing.
 
 When you divide a large SNMP table into 2 different SNMP tables (for example, to poll table 1 faster than table 2), it is important you do not specify an OID on the table parameters when trying to use this Dynamic SNMP Get. If you fail to remove these OIDs, the search algorithm will find the first table in the protocol as a match and will stop searching for anything else, even if the requested OID is part of the second table.
 
@@ -38,7 +40,7 @@ The group will be added to the end of the group execution queue as it was added 
 > [!NOTE]
 > This should not be used to force a get after a set as the OID needs to be set in the parameter of the dynamic SNMP. The feature was created because a device did not send the updated value(s) via traps, but only the OID(s) of the parameter(s) for which the value had changed. By capturing this OID and using this NF, it is possible to poll the new data without any delay.
 
-Since, when there are different parameters with the same OID, one of them will be used randomly for the get, from DataMiner version 8.0 onwards, it is possible to skip certain parameters to be evaluated if they need to be retrieved via dynamic SNMP get.
+When there are different parameters with the same OID, one of them will be used randomly for the get. However, with the [skipDynamicSNMPGet](xref:Protocol.Params.Param.SNMP.OID-skipDynamicSNMPGet) attribute, you can skip the evaluation for certain parameters if they need to be retrieved via dynamic SNMP get.
 
 ```xml
 <SNMP>
@@ -48,9 +50,7 @@ Since, when there are different parameters with the same OID, one of them will b
 
 The dynamic group will be added to the end of the group execution queue (similar to if it was added by a timer or by an "add to execute" action).
 
-DataMiner version 8.0.7. also introduces a new attribute to improve the Dynamic SNMP Get. Previously this was defined in the options, which still can be used. However, the new improvements are only configurable in this new attribute. (This must be defined on the read parameter.)
-
-You can configure what to get and when to get it:
+To specify what to retrieve and how this request is added to the group execution queue, you can use the [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet) attribute (on the read parameter):
 
 ```xml
 <Param id="100">
@@ -61,9 +61,9 @@ You can configure what to get and when to get it:
 </Param>
 ```
 
-In case of table parameters you do not always want to retrieve the full table, so you will be able to specify what to get and when to get it.
+In case of table parameters you do not always want to retrieve the full table, so you can specify what to get and when to get it.
 
-Default values with attribute value "true", you will get the cell and the get will be added to the group execution queue (execute next).
+Default values with attribute value "true", you will get the cell and the get will be added to the group execution queue (execute next).<!-- To be verified -->
 
 What to get:
 

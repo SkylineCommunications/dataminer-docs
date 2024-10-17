@@ -100,7 +100,8 @@ public class QAction
 
 Format of the request: requestInfo (object[]):
 
-- requestInfo[0] (string[]): SSH settings, where.
+- requestInfo[0] (string[]): SSH settings, where:<!-- RN 18538 -->
+
   - sshSettings[0]: Username.
   - sshSettings[1]: Password.
   - sshSettings[2]: SSH options.
@@ -111,17 +112,15 @@ Format of the request: requestInfo (object[]):
 
   If this value is not provided, the connection setup timeout defaults to the general (response) timeout.
 
-  Feature introduced in DataMiner 9.5.13 (RN 18538).
 - requestInfo[1] (string[]): SSH commands.
-- requestInfo[2] (string[]): Key exchange algorithms.
+
+- requestInfo[2] (string[]): Key exchange algorithms.<!-- RN 13897 -->
 
   Refer to Secure Shell (SSH) for an overview of the supported key exchange algorithms.
 
   E.g. requestInfo[2] = new string[2] {"diffie-hellman-group1-sha1","diffie-hellman-group-exchange-sha1" }
 
   In the example above, DataMiner will first try to connect through diffie-hellman-group1-sha1, if that one is not supported by the server we will continue with diffie-hellman-group-exchange-sha1.
-
-  Feature introduced in DataMiner 9.5.1 (RN 13897).
 
 > [!NOTE]
 > Note that the Run method of the QAction now has a return type of object[].

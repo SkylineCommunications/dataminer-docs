@@ -8,12 +8,12 @@ Below, you can learn how to retrieve the pending calls of a running element in D
 
 ## User skills required
 
-- Basic knowledge of drivers.
-- Basic knowledge of the inner workflow of drivers.
+- Basic knowledge of connectors.
+- Basic knowledge of the inner workflow of connectors.
 
 ## Why retrieve pending calls?
 
-Pending calls indicate the currently running logic of the driver linked to the element. Retrieving these calls is useful to detect which logic component is running for a longer time and could affect the responsiveness of the driver.
+Pending calls indicate the currently running logic of the connector linked to the element. Retrieving these calls is useful to detect which logic component is running for a longer time and could affect the responsiveness of the connector.
 
 ## Retrieving pending calls with SLNetClientTest tool
 
