@@ -9,6 +9,9 @@ uid: Configuring_dashboard_security
 
 User permissions can be customized for both dashboard folders and individual dashboards, allowing you to restrict access and prevent unauthorized modifications.
 
+> [!TIP]
+> See also: [Kata #44: Master Dashboard user permissions](https://community.dataminer.services/courses/kata-44/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 > [!IMPORTANT]
 > Restricting access to dashboards does not imply any restrictions on the underlying data. For this, the access rights on the corresponding data sources should be configured in DataMiner Cube. See [User rights](xref:User_rights).
 
