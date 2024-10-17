@@ -159,6 +159,14 @@ For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now,
 
 ### Fixes
 
+#### StorageModule DcM would not be aware of newly generated DataMiner GUID [ID 39121]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, at DataMiner start-up, no GUID is present in the `<DataMinerGuid>` element in *DataMiner.xml*, DataMiner will automatically generate one.However, up to now, when a new GUID was generated, the StorageModule DcM would not be aware of it. As a result, DataMiner would fail to start.
+
+From now on, when a new DataMiner GUID is generated, the StorageModule DcM will be restarted to make sure it uses the new GUID.
+
 #### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
