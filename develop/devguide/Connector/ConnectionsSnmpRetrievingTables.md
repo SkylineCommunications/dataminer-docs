@@ -137,7 +137,7 @@ To use this alternative polling scheme, add "multipleGet" to the SNMP options of
 >
 > - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
 > - The multipleGet keyword can be used together with options like Subtable.
-> - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, can also retrieve the delta times per row when polling an SNMP table.
+> - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, can also retrieve the delta times per row when polling an SNMP table. This functionality also works in conjunction with this multipleGet option.
 
 ### MultipleGetNext
 
