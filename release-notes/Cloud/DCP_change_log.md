@@ -9,13 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 16 October 2024 - Enhancement - Cloud web apps - Colors [ID 41100]
+#### 16 October 2024 - Enhancement - Web apps - Colors web apps adjusted [ID 41100]
 
-​The cloud web apps have been updated to make use new colors. These will provide a better contrast and read experience.
+​The dataminer.services web apps have been updated to make use of new colors, which will provide better contrast and make the UI easier to read.
 
-#### 16 October 2024 - Enhancement - Account-linking & Catalog - "Logout" to "Sign out" [ID 41024]
+#### 16 October 2024 - Enhancement - Account linking & Catalog - 'Logout' changed to 'Sign out' [ID 41024]
 
-Updated references of "Logout" to "Sign out" in Account-linking & Catalog.
+In the account linking and Catalog UI, the term "Logout" has been replaced with "Sign out".
 
 #### 16 October 2024 - Fix - Catalog - Deploy trial licensed issues [ID 41024]
 
@@ -23,14 +23,11 @@ Deploy (trial) button in the header on the catalog details page no longer mentio
 
 #### 16 October 2024 - Enhancement - Catalog - Description styling [ID 40965]
 
-​Catalog description alerts now matches the styling of [docs.dataminer.services](https://docs.dataminer.services). The current supported types are caution, important, note, tip and warning.
+The styling of alerts in ​Catalog descriptions has been adjusted so it matches the styling of [docs.dataminer.services](https://docs.dataminer.services). The currently supported alert types are caution, important, note, tip, and warning.
 
-#### 16 October 2024 - Enhancement - Catalog - Design [ID 40965]
+#### 16 October 2024 - Enhancement - Catalog - Design improvements [ID 40965]
 
-Redesigned the card layout to be more concise.
-Updated the detail page header section to match the new card design.
-Updated the search results to match new card layout
-Updated home page sections to match new card layout
+The card layout in the Catalog has been redesigned to be more concise. The detail page header section, search results, and home page sections have been updated to match the new card design.
 
 #### 16 October 2024 - Fix - Sharing - Missing emails [ID 41110]
 
