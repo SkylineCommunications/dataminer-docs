@@ -817,6 +817,14 @@ When an element is duplicated, the following information events will no longer b
 
 For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
+#### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
+
+Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]

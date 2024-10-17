@@ -175,6 +175,14 @@ Also, when you select the above-mentioned database type, the following warning m
 
 `Warning: Selecting this option requires nested virtualization to be enabled on the host machine. Failure to do so will result in the feature not functioning.`
 
+#### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
+
+Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
 ### Fixes
 
 #### StorageModule DcM would not be aware of newly generated DataMiner GUID [ID 39121]
