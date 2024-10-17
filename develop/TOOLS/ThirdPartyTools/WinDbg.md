@@ -52,7 +52,7 @@ The SOS debugger extension allows to retrieve information about the Common Langu
 The following table contains an overview of some useful commands for investigating managed memory and code of a dump using the SOS debugger extension.
 
 > [!TIP]
-> To obtain more information about how to use a command type `!help <commandName>`, for example `!help ClrStack`.
+> To obtain more information about how to use a command, type `!help <commandName>`. For example: `!help ClrStack`.
 
 > [!NOTE]
 > When a command from this table is executed in WinDbg, the command must be prefixed with `!`.
@@ -96,7 +96,7 @@ The following table gives an overview of these additional commands.
 > [!NOTE]
 >
 > - When a command from this table is executed in WinDbg, the command must be prefixed with `!`.
-> - This extension is not loaded by default in WinDbg. To load it, use the `.load <filePathToSosexAssembly>`. Note that for analyzing a 32-bit process the 32-bit version of the DLL should be loaded.
+> - This extension is not loaded by default in WinDbg. To load it, use `.load <filePathToSosexAssembly>`. Note that for analyzing a 32-bit process, the 32-bit version of the DLL should be loaded.
 
 |Command  |Description  |
 |---------|---------|
