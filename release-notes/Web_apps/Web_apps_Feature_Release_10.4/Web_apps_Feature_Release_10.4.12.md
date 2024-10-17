@@ -238,3 +238,11 @@ Up to now, when no presets had been configured in a *Time range* component, the 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Up to now, when you created a new draft, in some cases, a `Dashboard not found` error could incorrectly appear.
+
+#### Low-Code Apps: Problems when installing a low-code app [ID 41094]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you installed a low-code app, in some cases, it would not have the correct icon and color scheme.
+
+Also, it would not be possible to install more than one low-code app per DataMiner Agent.
