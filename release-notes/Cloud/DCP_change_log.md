@@ -23,7 +23,7 @@ Deploy (trial) button in the header on the catalog details page no longer mentio
 
 #### 16 October 2024 - Enhancement - Catalog - Description styling [ID 40965]
 
-​Catalog description alerts now matches the styling of [docs.dataminer.services](docs.dataminer.services). The current supported types are caution, important, note, tip and warning.
+​Catalog description alerts now matches the styling of [docs.dataminer.services](https://docs.dataminer.services). The current supported types are caution, important, note, tip and warning.
 
 #### 16 October 2024 - Enhancement - Catalog - Design [ID 40965]
 
