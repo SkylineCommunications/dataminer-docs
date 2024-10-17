@@ -157,6 +157,16 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 
 For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
+#### DataMiner installer: A progress bar will now be shown during the installation of WSL [ID 41032]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, while running the DataMiner installer to install a DataMiner Agent, you select the database type "Self-hosted - Local Storage", the installer will automatically install Windows Subsystem for Linux (WSL) as this is needed to run a Cassandra database. A progress bar will now be shown during the installation of WSL.
+
+Also, when you select the above-mentioned database type, the following warning message will now be displayed:
+
+`Warning: Selecting this option requires nested virtualization to be enabled on the host machine. Failure to do so will result in the feature not functioning.`
+
 ### Fixes
 
 #### StorageModule DcM would not be aware of newly generated DataMiner GUID [ID 39121]
