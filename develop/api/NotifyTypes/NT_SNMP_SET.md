@@ -90,7 +90,7 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
         - oidInfoN[1] (string/double): Value that needs to be set.
 
           > [!NOTE]
-          > It is also possible to set integer values for SNMPv3.
+          > It is also possible to set integer values for SNMPv3.<!-- RN 18034 -->
 
         - oidInfoN[2] (int): SNMP type indication.
 
