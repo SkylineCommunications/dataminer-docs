@@ -9,7 +9,7 @@ uid: General_Main_Release_10.5.0_new_features
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
 
@@ -179,7 +179,7 @@ The *Info* object has the following properties:
 > - The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user opens the *Failover Config* window. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message. When you do not have this permission, an error message will appear.
 > - See also [RN 40267](xref:Cube_Feature_Release_10.4.10#failover-config-window-will-now-show-information-regarding-the-pcap-libraries-that-are-installed-on-the-dmas-id-40267)
 
-#### New SLProtocol process will be started when an SLProtocol process disappears [ID 40335]
+#### DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 

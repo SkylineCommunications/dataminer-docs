@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.4.12
 
 ## Highlights
 
-- DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
+- [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
 
