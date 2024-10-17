@@ -18,11 +18,11 @@ uid: General_Feature_Release_10.4.12
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
 
-#### New SLProtocol process will be started when an SLProtocol process disappears [ID 40335]
+#### DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
@@ -60,13 +60,13 @@ uib.SkipAbortConfirmation = true;
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
-#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a certain alarm threshold [ID 41017]
+#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 41017]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-The proactive cap detection feature is now able to generate an alarm when it expects that a parameter will cross a particular alarm threshold in the near future.
+The proactive cap detection feature is now able to generate an alarm when it expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
 
-For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a certain alarm threshold [ID 40837]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-certain-alarm-threshold-id-40837)
+For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837-id-41109)
 
 ## Changes
 
@@ -110,6 +110,15 @@ When an element is duplicated, the following information events will no longer b
 - [Remote Element Name]
 - [Remote DMA IP]
 
+#### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The following NT Notify types have been deprecated:
+
+- NT_ADD_VIEW_NO_LOCK
+- NT_ADD_VIEWS_NO_LOCK
+
 #### SLLogCollector: Miscellaneous enhancements [ID 40935]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
@@ -149,6 +158,14 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
 ### Fixes
+
+#### StorageModule DcM would not be aware of newly generated DataMiner GUID [ID 39121]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, at DataMiner start-up, no GUID is present in the `<DataMinerGuid>` element in *DataMiner.xml*, DataMiner will automatically generate one.However, up to now, when a new GUID was generated, the StorageModule DcM would not be aware of it. As a result, DataMiner would fail to start.
+
+From now on, when a new DataMiner GUID is generated, the StorageModule DcM will be restarted to make sure it uses the new GUID.
 
 #### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
 
