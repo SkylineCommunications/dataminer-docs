@@ -200,7 +200,6 @@ Example:
 >
 > - Protocol.Params.Param.Measurement.Discreets cannot be used in combination with this type.
 > - The measurement type "title" is only used with parameters of type "read".
-> - To include support for the legacy System Display application, add the "connect" option (`options="end;connect"`).
 
 See also:
 

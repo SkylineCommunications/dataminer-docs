@@ -171,10 +171,7 @@ Suppose we want to create a tree control that lists all services and the audio a
     - column 2003 is "audio" ("2003:audio"), and
     - the row has an m:n relationship with the ancestor node from table 1000 ("filter:fk=1001")
 
-    When `"filter:fk=1001"` is specified, only rows that have a foreign key to the parent node from 1000 will be added.
-
-    > [!NOTE]
-    > Feature introduced in DataMiner 8.5.1 (RN 7863).
+    When `"filter:fk=1001"` is specified, only rows that have a foreign key to the parent node from 1000 will be added.<!-- RN 7863 -->
 
     The resulting tree control looks like this:
 

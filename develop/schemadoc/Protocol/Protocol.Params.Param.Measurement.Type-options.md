@@ -289,10 +289,10 @@ See also: [table](xref:Protocol.Params.Param.Measurement.Type#table)
 
 Possible options for measurement type "title":
 
-|Option|Description|
-|--- |--- |
-|begin|A single horizontal line on the user interface. Short lines go down from both ends of the line. The start of a page section.|
-|end|A single horizontal line on the user interface. Short lines go up from both ends of the line. The end of a page section.|
-|connect|Connects a "begin" and an "end" title. **NOTE**: This is only required to support the legacy System Display application.|
+| Option  | Description                                                                                                                  |
+|---------|------------------------------------------------------------------------------------------------------------------------------|
+| begin   | A single horizontal line on the user interface. Short lines go down from both ends of the line. The start of a page section. |
+| end     | A single horizontal line on the user interface. Short lines go up from both ends of the line. The end of a page section.     |
+| connect | **Obsolete**.                                                                                                                |
 
 See also: [title](xref:Protocol.Params.Param.Measurement.Type#title)
