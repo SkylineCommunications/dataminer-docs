@@ -13,13 +13,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Usage* page, allowing users to export usage metrics to a CSV file. Clicking the *Export usage* button will initiate the export process. A pop-up window will appear, where you can choose the separator for the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
 
+#### 16 October 2024 - Fix - Sharing - Missing emails [ID 41110]
+
+When you edited a share, the email addresses of the people with access to the share were not filled in. Now the email addresses will be shown correctly.
+
 #### 16 October 2024 - Enhancement - Web apps - Colors web apps adjusted [ID 41100]
 
 ​The dataminer.services web apps have been updated to make use of new colors, which will provide better contrast and make the UI easier to read.
-
-#### 16 October 2024 - Fix - Sharing - Missing emails [ID 41110]
-
-On the sharing edit page. The email addressses of the poeple who have access to the share were not filled in. This has been changed to make sure that the email addresses are correctly filled in.
 
 #### 16 October 2024 - Enhancement - Account linking & Catalog - 'Logout' changed to 'Sign out' [ID 41024]
 
@@ -27,7 +27,7 @@ In the account linking and Catalog UI, the term "Logout" has been replaced with 
 
 #### 16 October 2024 - Fix - Catalog - Deploy trial licensed issues [ID 41024]
 
-Deploy (trial) button in the header on the catalog details page no longer mentions not licensed issue. This was never intended to show a not licensed issue.
+When you used the *Deploy (trial)* button on the Catalog details page, it could occur that a "not licensed" message was shown, even though this should not happen.
 
 #### 16 October 2024 - Enhancement - Catalog - Description styling [ID 40965]
 
