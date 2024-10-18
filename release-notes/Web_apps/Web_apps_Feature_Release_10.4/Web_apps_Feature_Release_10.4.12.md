@@ -233,6 +233,12 @@ Example:
 </MapsServerConfig>
 ```
 
+#### Web Services API v1: Problem with SOAP methods 'GetVisioFor...' [ID 41036]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed Automation scripts with dummies, parameters or memory files.
+
 #### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
