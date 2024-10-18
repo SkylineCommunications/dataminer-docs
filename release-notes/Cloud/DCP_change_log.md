@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 17 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
 
-The style of the headings in Catalog have been adjusted to match the overall style of the application.
+The style of the headings in the Catalog has been adjusted to match the overall style of the application.
 
 #### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
 
