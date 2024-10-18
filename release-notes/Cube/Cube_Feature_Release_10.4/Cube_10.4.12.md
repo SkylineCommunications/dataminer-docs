@@ -161,3 +161,9 @@ When a correlated alarm was cleared before all its base alarms were cleared, in 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you tried to open a view card, in some rare cases, the card could remain empty, showing a "Loading" message.
+
+#### Alarm Console: Manually created incident would not appear in newly-created active alarms tab [ID 41087]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in the Alarm Console, you created a manual incident, and you then added a new active alarms tab, the incident you created would incorrectly not appear in the newly-created active alarms tab.
