@@ -265,6 +265,12 @@ When a DataMiner Agent reconnected to the DataMiner System of which it was a mem
 
 When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
 
+#### Problem when executing a GQI query after a DMA had been restarted [ID 40975]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a GQI query was executed on a DataMiner System with storage per DMA, and then executed again after a DMA in that DataMiner System had been restarted, it would fail.
+
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
