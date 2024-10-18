@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 18 October 2024 - Enhancement - ChatOps - Enhanced stability and performance of Teams Chat Integration [ID 41149]
+
+Enhancements have been implemented to the Teams Chat Integration feature, ensuring improvements in stability, availability, and performance with immediate effect.
+
 #### 17 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
 
 The style of the headings in the Catalog has been adjusted to match the overall style of the application.
