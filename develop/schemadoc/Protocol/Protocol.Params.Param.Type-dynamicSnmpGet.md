@@ -77,6 +77,6 @@ The above-mentioned options (what and when) can be combined in any order, separa
 > [!NOTE]
 >
 > - The OIDs need to be defined on the columns and table parameters in order for the dynamic get method to find and correctly match them. In order to correctly update the table values, the column type needs to be retrieved (same as set column at once or fill array).
-> - When you retrieve table data using dynamicSnmpGet or snmpSetAndGet, you can specify a multipleGet option to reduce the number of SNMP requests.<!-- RN 12409 --> In the example below, DataMiner will poll the row with a single SNMP Get request containing all OIDs of the entire row instead of retrieving each OID separately. `<Type dynamicSnmpGet="executeNext;row;multipleGet">read</Type>`.
+> - When you retrieve table data using dynamicSnmpGet or snmpSetAndGet, you can specify a multipleGet option to reduce the number of SNMP requests.<!-- RN 12409 --> In the following example, DataMiner will poll the row with a single SNMP Get request containing all OIDs of the entire row instead of retrieving each OID separately: `<Type dynamicSnmpGet="executeNext;row;multipleGet">read</Type>`.
 > - This attribute renders the "dynamic snmp get" option obsolete.
 > - In order to indicate that a protocol parameter should not be considered for dynamic retrieval through a parameter using the dynamicSnmpGet attribute, the [skipDynamicSNMPGet](xref:Protocol.Params.Param.SNMP.OID-skipDynamicSNMPGet) attribute can be used.
