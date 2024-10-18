@@ -36,4 +36,4 @@ You can also add a new rule by duplicating an existing rule and then changing th
   Alternatively, you can also select the rule, click the More... button at the bottom of the pane, and select *Duplicate*.
 
 > [!NOTE]
-> In DataMiner Cube, it is possible to add Correlation rules that use the deprecated System Display Correlation engine. To do so, right-click in the tree view pane (or click the *More...* button at the bottom of the pane) and select *Advanced* > *Old engine* > *Add rule*.
+> In DataMiner Cube, it is possible to add Correlation rules that use the deprecated System Display Correlation engine if the server is running a DataMiner version prior to 10.5.1. To do so, right-click in the tree view pane (or click the *More...* button at the bottom of the pane) and select *Advanced* > *Old engine* > *Add rule*.
