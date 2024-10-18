@@ -94,6 +94,12 @@ When, at DataMiner start-up, no GUID is present in the `<DataMinerGuid>` element
 
 From now on, when a new DataMiner GUID is generated, the StorageModule DcM will be restarted to make sure it uses the new GUID.
 
+#### Memory leaks in SLDMS [ID 40287]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+In some cases, SLDMS could leak memory.
+
 #### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
@@ -174,3 +180,9 @@ In some rare cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) wou
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
+
+#### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog with regard to exception handling.
