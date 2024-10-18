@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 17 October 2024 - Fix - Catalog - Updated heading styles [ID 41145]
+#### 17 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
 
-Headings in the Catalog will now be rendered correctly.
+The style of the headings in Catalog have been adjusted to match the overall style of the application.
 
 #### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
 
