@@ -44,7 +44,7 @@ int result = (int) protocol.NotifyDataMiner(149, ids, rowData);
 
 ## Remarks
 
-- From DataMiner 9.5.0 [CU11]/9.5.14 [CU1] (RN 19707) onwards, NT_ADD_ROW (149) will no longer initialize a cell as 0.0 or an empty string when no value is provided for that cell.
+- When no value is provided for a cell with NT_ADD_ROW (149), the cell will be set to *Not initialized*.<!-- RN 19707 -->
 - To add a row with a specific timestamp:
 
   ```csharp

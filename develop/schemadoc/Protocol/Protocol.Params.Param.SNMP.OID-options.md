@@ -46,9 +46,11 @@ Specifies that the "multipleGetBulk" table retrieval method should be used. Refe
 
 ### partialSNMP
 
-When polling large SNMP tables, you can use the partialSNMP:x option to fetch only “x” rows at a time. This allows you to perform sets in-between and to prevent timeout errors.
+<!-- RN 8162 -->
 
-The get method can be getNext + multipleGet (“bulk”), multipleGetNext or multipleGetBulk. If the protocol type is snmpV1 and you specified multipleGetBulk, then multipleGetNext will be used.
+When polling large SNMP tables, you can use the partialSNMP:x option to fetch only "x" rows at a time. This allows you to perform sets in-between and to prevent timeout errors.
+
+The get method can be getNext + multipleGet ("bulk"), multipleGetNext or multipleGetBulk. If the protocol type is snmpV1 and you specified multipleGetBulk, then multipleGetNext will be used.
 
 Example:
 
@@ -62,8 +64,6 @@ Example:
 > - The partialSNMP:x option cannot be used to fetch data from subtables or filtered rows.
 > - The displayed table will be updated only when the entire table has been fetched.
 > - When the multipleGetBulk retrieval method is used in combination with the partialSNMP option, the value for the partialSNMP option will take precedence over the value for the multipleGetBulk option. For example, the configuration `<OID type="complete" options="instance;partialSNMP:12;multipleGetBulk:24">` will result in the value 12 being used by DataMiner.
-
-*Feature introduced in DataMiner 8.5.1 (RN 8162).*
 
 ### subtable
 

@@ -4,6 +4,8 @@ uid: Protocol.Chains.Chain-groupingName
 
 # groupingName attribute
 
+<!-- RN 28751, RN 28834 -->
+
 In this attribute, you can specify the name of the group to which this chain belongs.
 
 ## Content Type
@@ -18,9 +20,8 @@ In this attribute, you can specify the name of the group to which this chain bel
 
 In DataMiner Cube, EPM chains with the same value specified in this attribute will be grouped under that value in the EPM element card (side panel and tabs) and in the chains selection box located in the topology sidebar.
 
-Feature introduced in DataMiner 10.1.3 (RN 28751, RN 28834).
-
 > [!NOTE]
+>
 > - Each chain can only be part of a single chain group.
 > - Chains that are not part of a group will be displayed as top-level tabs (on the same level as the group tabs).
 

@@ -4,26 +4,26 @@ uid: Default_settings
 
 # Default settings
 
-The port settings must contain as many default settings as possible and must be as strict as possible. This also includes disabling options that are not applicable (e.g. disabling irrelevant options: in case of a HTTP driver, we should not be able to select type of port as "Serial").
+The port settings must contain as many default settings as possible and must be as strict as possible. This also includes disabling options that are not applicable (e.g. disabling irrelevant options: in case of an HTTP connector, users should not be able to select type of port as "Serial").
 
-In drivers of type HTTP, the default bus address "bypassProxy" must be used.
+In connectors of type HTTP, the default bus address "bypassProxy" must be used.
 
 Recommended port support per type:
 
-| Type   | TCP | UDP | Serial |
-|--------|-----|-----|--------|
-| SNMP   |     | X   |        |
-| SNMPv1 |     | X   |        |
-| SNMPv2 |     | X   |        |
-| Serial        | X   | X   | X      |
-| Serial single | X   | X   | X      |
+| Type                | TCP | UDP | Serial |
+|---------------------|-----|-----|--------|
+| SNMP                |     | X   |        |
+| SNMPv1              |     | X   |        |
+| SNMPv2              |     | X   |        |
+| Serial              | X   | X   | X      |
+| Serial single       | X   | X   | X      |
 | Smart-Serial        | X   | X   |        |
 | Smart-Serial single | X   | X   |        |
-| HTTP    | X   |     |        |
-| GPIB    | X   |     |        |
-| Virtual |     |     |        |
-| OPC     | X   |     |        |
-| SLA     |     |     |        |
+| HTTP                | X   |     |        |
+| GPIB                | X   |     |        |
+| Virtual             |     |     |        |
+| OPC                 | X   |     |        |
+| SLA                 |     |     |        |
 
 Make sure to disable any of the ports that are not possible for a specific type of protocol.
 

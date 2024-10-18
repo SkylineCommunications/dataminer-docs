@@ -30,5 +30,3 @@ In the following example, parameter 2 contains the ID of the connection that nee
     </Content>
 </Group>
 ```
-
-*Feature introduced in DataMiner 7.5.3.4.*

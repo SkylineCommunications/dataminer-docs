@@ -34,7 +34,7 @@ Example:
 This type is used for buttons that open a URL, an element card, a view card or a service card.
 
 - The discreet value should contain the link (ViewID, DmaID/ElementID, DmaID/ServiceID, name, URL).
-- When used in tables, buttons of type “Open” can contain references to other columns.
+- When used in tables, buttons of type "Open" can contain references to other columns.
 
 In the following example, when the button is clicked, the value of parameter 112 will be triggered to open. [Value:ColId] will then be replaced at runtime by the value of the given column for the same row:
 
@@ -45,11 +45,11 @@ In the following example, when the button is clicked, the value of parameter 112
   </Discreet>
   ```
 
-- From DataMiner 9.0.5 (RN 13458, RN 13533) onwards, it is possible to bind an action to a button to open a specific spectrum analyzer element. Optionally, you can also define a measurement point and/or preset for the element. Single buttons, buttons inside a table and buttons in an EPM (formerly known as CPE) interface are all supported.
+- It is possible to bind an action to a button to open a specific spectrum analyzer element. Optionally, you can also define a measurement point and/or preset for the element. Single buttons, buttons inside a table and buttons in an EPM interface are all supported.<!-- RN 13458, RN 13533 -->
 
   To create such a button, in the Protocol.Params.Param.Measurement.Discreets.Discreet.Value tag, use the attribute type="Open" and specify a value using the following syntax:
 
-  ```
+  ```xml
   element=[SPECTRUM ELEMENT NAME OR ID]&measpt=[MEASUREMENTPOINTID]&preset=[PRESET NAME]
   ```
 
@@ -77,12 +77,12 @@ In the Value tag, it is also possible to use a placeholder for a table cell that
 > - To add multiple measurement points, use a pipe character as a separator, e.g. 1|4.
 > - Private presets are not supported in spectrum element links from Visio or EPM.
 
-The following example is an excerpt from an EPM (formerly known as CPE) protocol. In the example, parameter 1610 has to contain a string like the following one:
+The following example is an excerpt from an EPM protocol. In the example, parameter 1610 has to contain a string like the following one:
 
-```
+```xml
 element=Spectrum%20Analyzer%20DS&amp;measpt=164&amp;preset=inline:freqCenter:603000000%3bfreqSpan:6000000%3brefLevel:0%3brefScale:10
 ```
- 
+
 ```xml
 <Measurement>
     <Type width="110">button</Type>
@@ -99,7 +99,7 @@ element=Spectrum%20Analyzer%20DS&amp;measpt=164&amp;preset=inline:freqCenter:603
 
 This type is used for buttons that set one or more session variables (which can be used in Visio drawings) to a particular value.
 
-When used in tables, buttons of type “setVar” can contain references to other columns.
+When used in tables, buttons of type "setVar" can contain references to other columns.
 
 The session variable names and values are defined in the discreet value.
 
@@ -114,9 +114,7 @@ In the following example, when the button is clicked, the value of parameter 1 w
 
 ### setCardVar
 
-Sets the Visio session variable, limited to the current card, with the specified name to the specified value.
-
-*Feature introduced in DataMiner 8.5.1 (RN 7912).*
+Sets the Visio session variable, limited to the current card, with the specified name to the specified value.<!-- RN 7912 -->
 
 Example
 
@@ -129,9 +127,7 @@ Example
 
 ### setPageVar
 
-Sets the Visio session variable, limited to the current page, with the specified name to the specified value.
-
-*Feature introduced in DataMiner 8.5.1 (RN 7912).*
+Sets the Visio session variable, limited to the current page, with the specified name to the specified value.<!-- RN 7912 -->
 
 Example
 

@@ -4,6 +4,8 @@ uid: Protocol.ParameterGroups.Group-isInternal
 
 # isInternal attribute
 
+<!-- RN 29326, RN 29438 -->
+
 Specifies whether this an internal interface.
 
 ## Content Type
@@ -24,8 +26,6 @@ Specifies whether the interface is internal. Allows a distinction between:
 - external DCF interfaces (i.e. physical interfaces that will appear in interface lists in the UI).
 
 By default, all DCF interfaces are considered external. Interfaces that should be considered internal have to be explicitly marked as internal.
-
-*Feature introduced in DataMiner 10.1.6 (RN 29326, RN 29438).*
 
 ## Examples
 

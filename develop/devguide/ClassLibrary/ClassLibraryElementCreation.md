@@ -64,7 +64,7 @@ DmsElementId id = agent.CreateElement(configuration);
 
 The following diagram gives an overview of the provided interfaces:
 
-![alt text](../../images/classlibrary1205_1.png "Connections class diagram")
+![Connections class diagram](~/develop/images/classlibrary1205_1.png)
 
 ### Creating an SNMPv1 element
 

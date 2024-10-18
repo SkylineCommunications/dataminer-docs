@@ -36,7 +36,3 @@ foreach (string[] viewProperty in viewProperties)
   - viewProperty[2]: Value of the property.
   - viewProperty[3]: Access type.
   - viewProperty[4]: Owning view ID.
-
-## Remarks
-
-- Supported since DataMiner version 7.5.0.

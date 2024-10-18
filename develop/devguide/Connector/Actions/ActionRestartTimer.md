@@ -4,11 +4,11 @@ uid: LogicActionRestartTimer
 
 # restart timer
 
+<!-- RN 9189 -->
+
 This action can be executed on timers only.
 
 This action will finish the group that is being executed and then remove remaining groups of this timer from the queue. It will NOT stop and start the timer. The groups from the timer will be executed again when the timer time is met.
-
-*Feature introduced in DataMiner 8.5.4 (RN 9189).*
 
 ## Attributes
 

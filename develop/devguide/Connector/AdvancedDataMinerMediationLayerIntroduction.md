@@ -12,7 +12,7 @@ Automation scripts, for example, can then be based on these base protocols inste
 
 The following graph illustrates the concept:
 
-![alt text](../../images/Mediation_concept.svg "DataMiner Mediation Layer concept")
+![DataMiner Mediation Layer concept](~/develop/images/Mediation_concept.svg)
 
 Suppose, for example, that "Device Protocol X" is a protocol for an IRD device X of vendor A, whereas "Device Protocol Y" is a protocol for an IRD device Y of vendor B. Both protocols have a parameter that holds the carrier frequency. However, the ID, description and unit of these parameters differ.
 

@@ -4,11 +4,11 @@ uid: LogicActionReschedule
 
 # reschedule
 
+<!-- RN 9189 -->
+
 This action can be executed on timers only.
 
-If the timer is running, we wait until it finishes and then add the groups to the queue. If the timer is not running, we stop waiting for the remaining time and immediately add the groups to the queue.
-
-*Feature introduced in DataMiner 8.5.4 (RN 9189).*
+If the timer is running, DataMiner will wait until it finishes and then add the groups to the queue. If the timer is not running, DataMiner stops waiting for the remaining time and immediately adds the groups to the queue.
 
 ## Attributes
 

@@ -12,7 +12,7 @@ Thread problem in SLProtocol.exe: [DriverName/DriverVersion] ElementName – Pro
 
 ## User skills required
 
-- Basic knowledge of drivers.
+- Basic knowledge of connectors.
 - Basic knowledge of how to use DataMiner Cube.
 
 ## What does this alarm mean?
@@ -35,7 +35,7 @@ The protocol thread is used by the element in the error and has an impact on the
 1. Request the pending calls for this element via the SLNetClientTest tool (see [How to retrieve protocol pending calls](xref:How_to_retrieve_protocol_pending_calls)).
 
     - This is only useful if the error is still active.
-    - This will indicate the amount of time a specific component in the driver is busy.
+    - This will indicate the amount of time a specific component in the connector is busy.
     - The group component that indicates the largest amount of time, longer than 15 minutes (or 7.5 for a half-open RTE), is the one blocking the activity on the protocol thread.
 
 ## Resolving the issue

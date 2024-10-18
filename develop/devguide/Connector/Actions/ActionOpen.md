@@ -9,7 +9,7 @@ This action must be executed on protocol.
 This action opens the port of which the connection number is specified in the nr attribute of the Type tag.
 
 > [!NOTE]
-> Only applicable to serial drivers.
+> Only applicable to serial connectors.
 
 ## Attributes
 

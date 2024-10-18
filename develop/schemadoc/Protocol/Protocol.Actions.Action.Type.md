@@ -7,7 +7,7 @@ uid: Protocol.Actions.Action.Type
 Defines, together with [On](xref:Protocol.Actions.Action.On), how the action is executed.
 
 > [!NOTE]
-> Not all Protocol.Actions.Action.Type values can be used in combination with the different Protocol.Actions.Action.On types. See [Possible combinations of “On” and “Type”](xref:LogicActionsOverview).
+> Not all Protocol.Actions.Action.Type values can be used in combination with the different Protocol.Actions.Action.On types. See [Possible combinations of "On" and "Type"](xref:LogicActionsOverview).
 
 ## Type
 
@@ -27,7 +27,7 @@ Defines, together with [On](xref:Protocol.Actions.Action.On), how the action is 
 |[id](xref:Protocol.Actions.Action.Type-id)|unsignedInt||If Action/Type is "read file", this attribute specifies the ID of the parameter containing the directory in which the file can be found. If Action/Type is "replace", this attribute specifies the ID of the parameter that contains the ID of the parameter that has to be put in the command/response. If Action/Type is "increment", this attribute specifies the ID of the parameter that holds the increment value.|
 |[nr](xref:Protocol.Actions.Action.Type-nr)|string||If Action/Type is "read file", this attribute specifies the number of bytes to be read. If Action/Type is "replace", this attribute specifies the (0-based) position of the parameter in the command/response. If Action/Type is "set", "set and get with wait", "set with wait", "open", "close", "lock", "unlock", "priority lock" or "priority unlock", this attribute specifies the (0-based) connection ID.|
 |[options](xref:Protocol.Actions.Action.Type-options)|string||This attribute allows defining different options depending on the type of action.|
-|[reschedule](xref:Protocol.Actions.Action.Type-reschedule)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If Action/Type is "restart timer" and this attribute is set to “true”, then the timer will immediately start again. Feature introduced in DataMiner 8.5.4 (RN 9189).|
+|[reschedule](xref:Protocol.Actions.Action.Type-reschedule)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If Action/Type is "restart timer" and this attribute is set to "true", then the timer will immediately start again.<!-- RN 9189 -->|
 |[returnValue](xref:Protocol.Actions.Action.Type-returnValue)|string||If Action/Type is "read file", this attribute specifies the ID of the parameter in which to store the retrieved file content. If Action/Type is "wmi", this attribute specifies the ID of the parameter containing the returned values (if "table" is set to "true", this ID should be the ID of a parameter of type "array").|
 |[regex](xref:Protocol.Actions.Action.Type-regex)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)||If Action/Type is "aggregate", this attribute allows to specify the regular expression to use for filtering.|
 |[scale](xref:Protocol.Actions.Action.Type-scale)|string||If Action/Type is "set info", this attribute specifies the scale to be set on the parameter.|

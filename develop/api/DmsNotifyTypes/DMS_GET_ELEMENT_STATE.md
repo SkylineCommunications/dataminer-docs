@@ -36,7 +36,3 @@ string elementState = (string)result;
   - stop
   - inactive
   - unknown
-
-## Remarks
-
-- Supported since DataMiner version 6.5.4.

@@ -33,8 +33,8 @@ DataMiner Protocol Markup Language:
   - [receiveInterval](xref:Protocol.Pairs.Pair-options#receiveinterval)
 - [Protocol.Type](xref:Protocol.Type): serial and serial single
 - [Protocol.Type@communicationOptions](xref:Protocol.Type-communicationOptions):
-  - [chunkedHTML](xref:Protocol.Type-communicationOptions#chunkedhtml) (obsolete with the new HTTP driver functionality)
-  - [closeConnectionOnResponse](xref:Protocol.Type-communicationOptions#closeconnectiononresponse) (obsolete with the new HTTP driver functionality)
+  - [chunkedHTML](xref:Protocol.Type-communicationOptions#chunkedhtml) (obsolete)
+  - [closeConnectionOnResponse](xref:Protocol.Type-communicationOptions#closeconnectiononresponse) (obsolete)
   - [makeCommandByProtocol](xref:Protocol.Type-communicationOptions#makecommandbyprotocol)
   - [redundantPolling](xref:Protocol.Type-communicationOptions#redundantpolling)
 - [Protocol.Triggers.Trigger.On](xref:Protocol.Triggers.Trigger.On)

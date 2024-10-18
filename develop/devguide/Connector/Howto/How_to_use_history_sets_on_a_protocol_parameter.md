@@ -8,7 +8,7 @@ Below, you can learn how to implement the flow to store value changes in the pas
 
 ## User skills required
 
-- Basic knowledge of drivers.
+- Basic knowledge of connectors.
 - Basic knowledge of how to use DataMiner Cube.
 
 ## What is a history set?

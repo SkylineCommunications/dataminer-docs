@@ -4,7 +4,7 @@ uid: NT_GET_PK_ID_BY_TABLE_ID
 
 # NT_GET_PK_ID_BY_TABLE_ID (394)
 
-Retrieves the column index of the column that contains the primary keys of the table with the specified ID.
+Retrieves the column index of the column that contains the primary keys of the table with the specified ID.<!-- RN 23579 -->
 
 ```csharp
 int tableId = 1000;
@@ -23,4 +23,3 @@ int primaryKeyColumnId = (int) protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, ta
 ## Remarks
 
 - In case the specified tableId does not represent a table parameter, the following error code will be logged: 0x80040221
-- Supported since DataMiner 9.6.13 (RN 23579).
