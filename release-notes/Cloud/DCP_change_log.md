@@ -27,7 +27,7 @@ In the account linking and Catalog UI, the term "Logout" has been replaced with 
 
 #### 16 October 2024 - Fix - Catalog - Deploy trial licensed issues [ID 41024]
 
-Deploy (trial) button in the header on the catalog details page no longer mentions not licensed issue.
+Deploy (trial) button in the header on the catalog details page no longer mentions not licensed issue. This was never intended to show a not licensed issue.
 
 #### 16 October 2024 - Enhancement - Catalog - Description styling [ID 40965]
 
