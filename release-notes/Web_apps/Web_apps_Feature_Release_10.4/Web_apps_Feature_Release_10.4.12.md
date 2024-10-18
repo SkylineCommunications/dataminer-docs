@@ -93,11 +93,11 @@ From now on, a GQI query will be opened synchronously, after which a first page 
 
 When WebSockets are not available, GQI sessions will be executed synchronously as before.
 
-#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string [ID 40814]
+#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string or a feed containing text data [ID 40814] [ID 41067]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or a text feed.
+Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or any feed containing text data.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Initial viewport in case of custom node positions will now be calculated based on the midpoints of all nodes [ID 40869]
 
@@ -147,6 +147,26 @@ The following data types have been renamed:
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Because of a number of enhancements, overall performance has increased when publishing a low-code app.
+
+#### Dashboards app: Minor enhancements regarding user permissions [ID 41079]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of minor enhancements have been made with regard to dashboard user permissions.
+
+For example, in the *Dashboard settings* window, *Access* has now been renamed to *Permissions*. Also, when you strip the person who created a dashboard of their edit rights, a message saying "You have removed the edit rights from the creator" will now appear.
+
+#### Dashboards/Low-Code Apps - Alarm table component: 'Alarm ID' and 'Root Alarm ID' columns will now also include the element ID [ID 41113]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include the element ID.
+
+#### Web apps: Gray colors updated in themes used by the web apps [ID 41131]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the color themes used by the web apps, the gray colors have been updated.
 
 ### Fixes
 
@@ -213,14 +233,58 @@ Example:
 </MapsServerConfig>
 ```
 
+#### Web Services API v1: Problem with SOAP methods 'GetVisioFor...' [ID 41036]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed Automation scripts with dummies, parameters or memory files.
+
 #### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When a dashboard or a page of a low-code app was closed, up to now, when a migration was in progress, it would incorrectly continue. From now on, when a dashboard of page of a low-code app is closed while it is being migrated, the migration will be cancelled.
 
+#### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons were not positioned correctly when no presets had been configured [ID 41085]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when no presets had been configured in a *Time range* component, the *Apply* and *Cancel* buttons would be too close to the date/time pickers. From now on, when a *Time range* component does not have presets configured, both buttons will be positioned correctly below the date/time pickers.
+
 #### Low-Code Apps: Problem when creating a new draft [ID 41091]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Up to now, when you created a new draft, in some cases, a `Dashboard not found` error could incorrectly appear.
+
+#### Low-Code Apps: Problems when installing a low-code app [ID 41094]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you installed a low-code app, in some cases, it would not have the correct icon and color scheme.
+
+Also, it would not be possible to install more than one low-code app per DataMiner Agent.
+
+#### Dashboards/Low-Code Apps - Table component: Problem when removing the only of the last query [ID 41096]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you removed either the only or the last query from a Table component, the loader bar would appear and get stuck.
+
+#### Low-Code Apps - Node edge graph component: Problem with 'Open monitoring card' action [ID 41105]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you added an *Open monitoring card* action to a *Node edge graph* component, an error would occur.
+
+#### Dashboards/Low-Code Apps - Maps component: Markers would be removed when panning or zooming out while map data was being retrieved [ID 41125]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you panned or zoomed out while map data was being retrieved, in some cases, the markers could be removed from the map.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem with items that should only become visible when you hover over them [ID 41127]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, while data was being loaded into a *Timeline* component, your mouse pointer was hovering over an item that should only become visible when you hover over it, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.

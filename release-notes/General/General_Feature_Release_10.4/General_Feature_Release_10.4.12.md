@@ -18,11 +18,11 @@ uid: General_Feature_Release_10.4.12
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
 
-#### New SLProtocol process will be started when an SLProtocol process disappears [ID 40335]
+#### DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
@@ -66,7 +66,7 @@ uib.SkipAbortConfirmation = true;
 
 The proactive cap detection feature is now able to generate an alarm when it expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
 
-For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837)
+For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837-id-41109)
 
 ## Changes
 
@@ -100,6 +100,14 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements fo
 
 In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
 
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
+
 #### Certain information events will no longer be generated when an element is duplicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
@@ -109,6 +117,15 @@ When an element is duplicated, the following information events will no longer b
 - [Replicated Element]
 - [Remote Element Name]
 - [Remote DMA IP]
+
+#### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The following NT Notify types have been deprecated:
+
+- NT_ADD_VIEW_NO_LOCK
+- NT_ADD_VIEWS_NO_LOCK
 
 #### SLLogCollector: Miscellaneous enhancements [ID 40935]
 
@@ -148,7 +165,39 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 
 For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
+#### DataMiner installer: A progress bar will now be shown during the installation of WSL [ID 41032]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, while running the DataMiner installer to install a DataMiner Agent, you select the database type "Self-hosted - Local Storage", the installer will automatically install Windows Subsystem for Linux (WSL) as this is needed to run a Cassandra database. A progress bar will now be shown during the installation of WSL.
+
+Also, when you select the above-mentioned database type, the following warning message will now be displayed:
+
+`Warning: Selecting this option requires nested virtualization to be enabled on the host machine. Failure to do so will result in the feature not functioning.`
+
+#### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
+
+Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
 ### Fixes
+
+#### StorageModule DcM would not be aware of newly generated DataMiner GUID [ID 39121]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, at DataMiner start-up, no GUID is present in the `<DataMinerGuid>` element in *DataMiner.xml*, DataMiner will automatically generate one.However, up to now, when a new GUID was generated, the StorageModule DcM would not be aware of it. As a result, DataMiner would fail to start.
+
+From now on, when a new DataMiner GUID is generated, the StorageModule DcM will be restarted to make sure it uses the new GUID.
+
+#### Memory leaks in SLDMS [ID 40287]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+In some cases, SLDMS could leak memory.
 
 #### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
 
@@ -222,14 +271,32 @@ When a DataMiner Agent reconnected to the DataMiner System of which it was a mem
 
 When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
 
+#### Problem when executing a GQI query after a DMA had been restarted [ID 40975]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a GQI query was executed on a DataMiner System with storage per DMA, and then executed again after a DMA in that DataMiner System had been restarted, it would fail.
+
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
 Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
 
+#### Cassandra Cluster Migrator tool: Problem when encountering invalid or corrupt row while migrating alarm data [ID 41002]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In some rare cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw an error when it encountered an invalid or corrupt row in the source database while migrating alarm data. From now on, all invalid or corrupt rows will be skipped.
+
 #### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
+
+#### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog with regard to exception handling.

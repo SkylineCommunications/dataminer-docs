@@ -33,6 +33,15 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 
 A number of security enhancements have been made.
 
+#### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The following NT Notify types have been deprecated:
+
+- NT_ADD_VIEW_NO_LOCK
+- NT_ADD_VIEWS_NO_LOCK
+
 #### SLLogCollector: Miscellaneous enhancements [ID 40935]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
@@ -65,7 +74,31 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 
 Up to now, SLLogCollector would by default be configured to collect the log files of the CommunicationGateway DxM. From now on, this will no longer be the case. Only when the CommunicationGateway DxM is deployed, will SLLogCollector be configured to collect the log files of said DxM.
 
+#### DataMiner installer: A progress bar will now be shown during the installation of WSL [ID 41032]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, while running the DataMiner installer to install a DataMiner Agent, you select the database type "Self-hosted - Local Storage", the installer will automatically install Windows Subsystem for Linux (WSL) as this is needed to run a Cassandra database. A progress bar will now be shown during the installation of WSL.
+
+Also, when you select the above-mentioned database type, the following warning message will now be displayed:
+
+`Warning: Selecting this option requires nested virtualization to be enabled on the host machine. Failure to do so will result in the feature not functioning.`
+
 ### Fixes
+
+#### StorageModule DcM would not be aware of newly generated DataMiner GUID [ID 39121]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, at DataMiner start-up, no GUID is present in the `<DataMinerGuid>` element in *DataMiner.xml*, DataMiner will automatically generate one.However, up to now, when a new GUID was generated, the StorageModule DcM would not be aware of it. As a result, DataMiner would fail to start.
+
+From now on, when a new DataMiner GUID is generated, the StorageModule DcM will be restarted to make sure it uses the new GUID.
+
+#### Memory leaks in SLDMS [ID 40287]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+In some cases, SLDMS could leak memory.
 
 #### Problem when trying to access trend statistics on a DataMiner Cube connected via gRPC [ID 40668]
 
@@ -124,14 +157,32 @@ When a DataMiner Agent reconnected to the DataMiner System of which it was a mem
 
 When a DVE child element had an alarm template in which you had configured that a particular parameter should not be monitored while, in the alarm template of the DVE parent element, you had configured anomaly monitoring for that same parameter, up to now, the behavioral anomaly detection mechanism would incorrectly use the alarm template configuration of the DVE parent element. From now on, in these situations, it will use the alarm template configuration of the DVE child element instead.
 
+#### Problem when executing a GQI query after a DMA had been restarted [ID 40975]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a GQI query was executed on a DataMiner System with storage per DMA, and then executed again after a DMA in that DataMiner System had been restarted, it would fail.
+
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
 Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
 
+#### Cassandra Cluster Migrator tool: Problem when encountering invalid or corrupt row while migrating alarm data [ID 41002]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In some rare cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw an error when it encountered an invalid or corrupt row in the source database while migrating alarm data. From now on, all invalid or corrupt rows will be skipped.
+
 #### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
+
+#### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog with regard to exception handling.

@@ -25,13 +25,13 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
-#### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837]
+#### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, in the alarm template editor, you click the button in the *Analytics* column (formerly called *Anomalies*) for a particular parameter, the *Augmented Operations alarm settings* pop-up window (formerly called *Anomaly alarm settings*) will open. This window will allow you to select one of the preset options or configure the anomaly alarm settings according to your preference.
 
-Now, at the bottom of this *Augmented Operations alarm settings* pop-up window, you will also be able to specify that an alarm of a certain severity should be generated when the proactive cap detection feature expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
+Now, at the bottom of this *Augmented Operations alarm settings* pop-up window, to which a scrollbar has now been added, you will also be able to specify that an alarm of a certain severity should be generated when the proactive cap detection feature expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
 
 > [!NOTE]
 > The above-mentioned button in the *Analytics* column can be labelled *Smart*, *Disabled* or *Customized*:
@@ -80,6 +80,12 @@ This label is used in the *Agent alarms* section of the *System Center > Agents 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 In the Router Control module, it is possible to add a matrix represented by two table parameters, i.e. an input and an output table, instead of a matrix parameter. To do so, in the *Add matrix* dialog box, a specific filter syntax needs to be used in the *Advanced configuration* section. In that section, you can now find a link to the [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax) page in dataminer.docs.
+
+#### System Center - Users/Groups: Read-only names of domain groups and cloud groups will no longer be validated [ID 40987]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+As names of domain groups and cloud groups are read-only, from now on, these will no longer be validated.
 
 ### Fixes
 
@@ -149,3 +155,15 @@ When you gave a downward trend change a "thumbs up" and then selected *Improve a
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When a correlated alarm was cleared before all its base alarms were cleared, in some rare cases, those base alarms would incorrectly not be moved to the active alarms tab.
+
+#### Cards: Problem when opening a view card [ID 41082]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you tried to open a view card, in some rare cases, the card could remain empty, showing a "Loading" message.
+
+#### Alarm Console: Manually created incident would not appear in newly-created active alarms tab [ID 41087]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, in the Alarm Console, you created a manual incident, and you then added a new active alarms tab, the incident you created would incorrectly not appear in the newly-created active alarms tab.
