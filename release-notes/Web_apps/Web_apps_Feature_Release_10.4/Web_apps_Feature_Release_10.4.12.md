@@ -287,4 +287,4 @@ When you panned or zoomed out while map data was being retrieved, in some cases,
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When, while data was being loaded into a *Timeline* component, your mouse pointer was hovering over an item that should only become visible when you hover over it, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
+When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
