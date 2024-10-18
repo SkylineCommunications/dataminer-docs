@@ -276,3 +276,15 @@ When you removed either the only or the last query from a Table component, the l
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you added an *Open monitoring card* action to a *Node edge graph* component, an error would occur.
+
+#### Dashboards/Low-Code Apps - Maps component: Markers would be removed when panning or zooming out while map data was being retrieved [ID 41125]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you panned or zoomed out while map data was being retrieved, in some cases, the markers could be removed from the map.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem with items that should only become visible when you hover over them [ID 41127]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When, while data was being loaded into a *Timeline* component, your mouse pointer was hovering over an item that should only become visible when you hover over it, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
