@@ -46,15 +46,15 @@ string
 
   Example
 
-  - Read parameter: `<Sequence noset=”true”>div:100;+:5</Sequence>`.
-  - Write parameter: `<Sequence noset=”true”>min:5;factor:100</Sequence> or <Sequence noset=”true”>-:5;*:100</Sequence>`.
+  - Read parameter: `<Sequence noset="true">div:100;+:5</Sequence>`.
+  - Write parameter: `<Sequence noset="true">min:5;factor:100</Sequence> or <Sequence noset="true">-:5;*:100</Sequence>`.
 - Contains at least one of the following mathematical operations, which must be specified using one of the following predefined formats:
 
   - Fixed value: `[operation]:[value]`
   - Value stored in a single parameter: `[operation]:id:[pid]`
   - Value stored in a column parameter of the same row: `[operation]:param:[pid]`
 
-  If you specify multiple operations, separate them using semicolons (”;”).
+  If you specify multiple operations, separate them using semicolons (";").
   List of possible operations:
 
   |Operation|Description |
