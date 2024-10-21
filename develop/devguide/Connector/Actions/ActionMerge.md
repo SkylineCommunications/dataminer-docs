@@ -40,7 +40,7 @@ Option to define a default value if no result was returned for a certain row.
 
 Format: Column Parameter Id , Value
 
-In the following example, the parameter with ID 1006 is set to 6:
+In the following example, the parameter with ID 1002 is set to 6:
 
 ```xml
 options="defaultValue:1002,6"
@@ -52,7 +52,7 @@ Option to define a condition when to fill in the defaultValue.
 
 Format: Column Idx (0-based) , Value
 
-In the following example, the parameter with ID 1006 is set to 6 only if value in column 3 (0-based) equals 1:
+In the following example, the parameter with ID 1002 is set to 6 only if value in column 3 (0-based) equals 1:
 
 ```xml
 options="defaultValue:1002,6;defaultIf:3,1"
