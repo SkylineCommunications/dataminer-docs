@@ -137,7 +137,9 @@ The following sections describe the main tables of the DataMiner Cassandra gener
 - [Analytics data](#analytics-data)
 
 > [!WARNING]
-> The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
+>
+> - These sections describe the database structure for Cassandra when used as storage per DMA. For dedicated clustered storage the database structure is different and some data is only stored in the indexing database.
+> - The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
 
 ### Element data
 
