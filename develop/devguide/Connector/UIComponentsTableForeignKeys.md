@@ -33,4 +33,4 @@ Please keep the following guidelines in mind for foreign keys:
 
 - Do not add multiple foreign keys on one column. A column needs to be created for each link. Also, do not put a foreign key on the index of a table, or use foreign keys in a table that contains a column of type "index", because the foreign key will not work then.
 - A foreign key must not have leading or trailing whitespace.
-- Semicolons (";"), question marks ("?") and asterisks ("*") must be avoided in foreign keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)
+- Semicolons (`;`), question marks (`?`) and asterisks (`*`) must be avoided in foreign keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)

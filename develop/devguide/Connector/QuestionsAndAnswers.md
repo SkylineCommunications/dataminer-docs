@@ -125,7 +125,7 @@ uid: QuestionsAndAnswers
     <ColumnOption idx="1" pid="305" type="retrieved" value="" options="save"/>
     ```
 
-    There should be a semicolon (";") before the save.
+    There should be a semicolon (`;`) before the save.
 
 1. *How can you verify if traps arrive in DataMiner without using a protocol?*
 

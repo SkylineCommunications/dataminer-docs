@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Mediation.LinkTo-ops
 
 # ops attribute
 
-Specifies one or more conversion operations separated by semicolons (";").
+Specifies one or more conversion operations separated by semicolons (`;`).
 
 ## Content Type
 

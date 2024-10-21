@@ -10,7 +10,7 @@ Export rules allow you to change the properties of exported parameters, e.g. the
 <ExportRule table="" tag=" " attribute="" value=""/>
 ```
 
-- **table**: ID of the DVE table or an asterisk ("*") in case the rule should be applied to all dynamic element types.
+- **table**: ID of the DVE table or an asterisk (`*`) in case the rule should be applied to all dynamic element types.
 - **tag**: The tag to overrule. The full path of the tag needs to be specified: starting from the root tag, each child tag in the path must be included and separated with a forward slash ("/").
 - **attribute**: In case an attribute should be modified, specify the name of the attribute here.
 - **value**: New value that will be used in the DVE protocol.

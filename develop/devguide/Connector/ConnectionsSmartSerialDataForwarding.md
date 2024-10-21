@@ -60,7 +60,7 @@ When SLProtocol wants to connect to a smart-serial port in SLPort, it will first
     </Param>
     ```
 
-- Whether the headerTrailerLink option was used (see [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink)).<!-- RN 6115 --> If this is not the case, then SLPort will only use this header/trailer in SLPort. This means that if you want to use multiple headers/trailers in a smart-serial connection, you must use the headerTrailerLink option on each header/trailer parameter for the smart-serial connection.
+- Whether the [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink) option was used.<!-- RN 6115 --> If this is not the case, then SLPort will only use this header/trailer in SLPort. This means that if you want to use multiple headers/trailers in a smart-serial connection, you must use the headerTrailerLink option on each header/trailer parameter for the smart-serial connection.
 
     > [!NOTE]
     >

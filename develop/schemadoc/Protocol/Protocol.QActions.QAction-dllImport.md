@@ -16,7 +16,7 @@ Specifies the names of DLL files used by the QAction.
 
 ## Remarks
 
-Multiple values have to be separated by semicolons (";").
+Multiple values have to be separated by semicolons (`;`).
 
 When a DLL provided by the Microsoft .NET Framework is used (e.g. System.Xml.dll), it is sufficient to just mention it in the *dllImport* attribute. System DLL files must be stored in the system dll directory. All other DLL files must be stored in the C:\Skyline DataMiner\ProtocolScripts directory.
 

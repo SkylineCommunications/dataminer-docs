@@ -54,7 +54,7 @@ string
   - Value stored in a single parameter: `[operation]:id:[pid]`
   - Value stored in a column parameter of the same row: `[operation]:param:[pid]`
 
-  If you specify multiple operations, separate them using semicolons (";").
+  If you specify multiple operations, separate them using semicolons (`;`).
   List of possible operations:
 
   |Operation|Description |

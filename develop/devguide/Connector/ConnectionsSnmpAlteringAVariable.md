@@ -90,7 +90,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 </Action>
 ```
 
-The method using the *snmpSet* option is generally preferred, as it does not require an action and trigger to be defined.
+The method using the `snmpSet` option is generally preferred, as it does not require an action and trigger to be defined.
 
 It is important to note that when an SNMP parameter (i.e. a parameter containing an SNMP tag) of type "write" is set, the corresponding read parameter is immediately set to this new value (even if the actual value set still needs to be sent to the device). As it is possible that an SNMP set fails, it is important to always perform an additional SNMP get operation to retrieve the value. This way, when a set failed, the value of the read parameter will eventually be set back to the correct value upon completion of the SNMP get request.
 
@@ -126,10 +126,10 @@ To perform this get request, a trigger on the write parameter is needed. This tr
 </Group>
 ```
 
-You can use the options "snmpSetWithWait" and "snmpSetAndGetWithWait" as attributes on parameters (see [options attribute](xref:Protocol.Params.Param-options)):
+You can use the options `snmpSetWithWait` and `snmpSetAndGetWithWait` as attributes on parameters (see [options attribute](xref:Protocol.Params.Param-options)):
 
-- The *snmpSetWithWait* option will perform a set and wait until the set has succeeded (i.e. when the SNMP manager has received a "noError" from the device). In this case, a group to perform the set is added to the group execution queue.
-- The *snmpSetAndGetWithWait* option will perform a set, wait until the set has succeeded and then perform a get of the read parameter and wait until the get has succeeded. Note that there is no verification of the get/set value.
+- The `snmpSetWithWait` option will perform a set and wait until the set has succeeded (i.e. when the SNMP manager has received a "noError" from the device). In this case, a group to perform the set is added to the group execution queue.
+- The `snmpSetAndGetWithWait` option will perform a set, wait until the set has succeeded and then perform a get of the read parameter and wait until the get has succeeded. Note that there is no verification of the get/set value.
 
 The same options can be used for write parameters on a column: use a wildcard on the set parameter and the "instance" option on the table.
 

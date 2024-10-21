@@ -530,7 +530,7 @@ The configuration of the field consists of two sections, separated by a dash:
 1. The name of the tab, e.g. "LogicalView" in the example above.
 1. A list of the existing chains that will be combined, separated by commas. For example, "Broadcast branch,Int/tel branch,VoD branch" in the example above.
 
-More tab pages can be specified, separated with colons (":"), for example:
+More tab pages can be specified, separated with colons (`:`), for example:
 
 ```xml
 TopologyChains:LogicalView-Logical:PhysicalView-Physical:CombinedView-Logical,Physical

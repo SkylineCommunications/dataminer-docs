@@ -17,7 +17,7 @@ A parameter requires that RTDisplay is set to true in the following cases:
   > [!NOTE]
   > Parameters with alarm or trending support should be displayed on a page.
 
-- The parameter is a column parameter displayed in a table (i.e. included in the *Measurement* tag of the table).
+- The parameter is a column parameter displayed in a table (i.e. included in the [Measurement](xref:Protocol.Params.Param.Measurement) tag of the table).
 
 - The parameter is a table parameter used in a tree control.
 
@@ -47,14 +47,14 @@ A parameter requires that RTDisplay is set to true in the following cases:
   - NotifyProtocol type 168 method call ([NT_GET_INDEXES](xref:NT_GET_INDEXES))
   - NotifyDataMiner type 73 method call ([NT_GET_PARAMETER](xref:NT_GET_PARAMETER)) when called from SLDataMiner (protocol.NotifyDataMiner).
   - NotifyDataMiner type 106 method call ([NT_MAKE_ALARM](xref:NT_MAKE_ALARM))
-  - GetKeys: In legacy DataMiner versions prior to DataMiner 9.0, retrieving the primary keys (KeyType.Index) used the NT_GET_INDEXES call. In the currently supported DataMiner versions, retrieving the primary keys using this method does not involve the SLElement process, but retrieving the display keys (KeyType.DisplayKey) does still involve the SLElement process.
+  - GetKeys: In legacy DataMiner versions prior to DataMiner 9.0, retrieving the primary keys ([KeyType.Index](xref:Skyline.DataMiner.Scripting.NotifyProtocol.KeyType)) used the [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. In the currently supported DataMiner versions, retrieving the primary keys using this method does not involve the SLElement process, but retrieving the display keys ([KeyType.DisplayKey](xref:Skyline.DataMiner.Scripting.NotifyProtocol.KeyType)) does still involve the SLElement process.
   - ClearAllKeys (SLProtocol) as the implementation of this method contains an NT_GET_INDEXES call.
 
 - A property of the QActionTable class is called expecting the parameter to be present in the SLElement process:
 
   - Keys: The implementation of this property contains a GetKeys method call. Therefore the same remarks apply to this property as to the GetKeys method of the SLProtocol interface for retrieving the primary keys.
   - DisplayKeys: The implementation of this property contains a GetKeys method call.
-  - In legacy DataMiner versions prior to DataMiner 9.0, retrieving the primary keys (KeyType.Index) used the NT_GET_INDEXES call. In the currently supported DataMiner versions, retrieving the primary keys using this method does not involve the SLElement process, but retrieving the display keys (KeyType.DisplayKey) does still involve the SLElement process.
+  - In legacy DataMiner versions prior to DataMiner 9.0, retrieving the primary keys ([KeyType.Index](xref:Skyline.DataMiner.Scripting.NotifyProtocol.KeyType)) used the [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. In the currently supported DataMiner versions, retrieving the primary keys using this method does not involve the SLElement process, but retrieving the display keys ([KeyType.DisplayKey](xref:Skyline.DataMiner.Scripting.NotifyProtocol.KeyType)) does still involve the SLElement process.
 
 - A Notify type 87 (DMS_GET_PARAMETER) call of the DMS class is called retrieving the specified parameter.
 
@@ -82,14 +82,14 @@ Always keep the column processing order in mind when implementing tables. The fo
 
 - SNMP tables with some custom/retrieved columns (where SNMP columns support trending/alarming and custom/retrieved columns are used as part of the display key or hold a FK):
 
-  - If you use a QAction on the table with row="true" to fill in custom/retrieved columns, this is no problem as data is buffered in SLProtocol before anything is sent to SLElement.
-  - If you use a QAction on the table without row="true" to fill in custom/retrieved columns, this is problematic as data is sent to SLElement before that QAction will go off.
+  - If you use a QAction on the table with `row="true"` to fill in custom/retrieved columns, this is no problem as data is buffered in SLProtocol before anything is sent to SLElement.
+  - If you use a QAction on the table without `row="true"` to fill in custom/retrieved columns, this is problematic as data is sent to SLElement before that QAction will go off.
   - If you use concatenation to fill in the columns that are part of the display key, this is no problem as data is buffered before data is sent to SLElement.
 
 > [!NOTE]
 > For a detailed overview of how SNMP tables are processed internally, see [How tables are processed internally](xref:ConnectionsSnmpProtocolInnterWorkings#how-tables-are-processed-internally).
 
-The column processing order can be overruled in the protocol with the *processingOrder* option in the *ArrayOptions* *options* attribute.
+The column processing order can be overruled in the protocol with the [processingOrder](xref:Protocol.Params.Param.ArrayOptions-options#processingorder) option.
 
 > [!NOTE]
 > Customizing the column processing order is not recommended.

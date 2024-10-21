@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.ArrayOptions-options
 
 # options attribute
 
-Specifies a number of options, separated by semicolons (";").
+Specifies a number of options, separated by semicolons (`;`).
 
 ## Content Type
 

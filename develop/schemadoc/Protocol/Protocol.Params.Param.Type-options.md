@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Type-options
 
 # options attribute
 
-Specifies a number of options separated by semicolons (";").
+Specifies a number of options separated by semicolons (`;`).
 
 ## Content Type
 
@@ -16,7 +16,7 @@ string
 
 ## Remarks
 
-In the options attribute, you can specify a combination of the following options, separated by semicolons (";").
+In the options attribute, you can specify a combination of the following options, separated by semicolons (`;`).
 
 ### columnTypes
 
@@ -27,7 +27,7 @@ Each column type has the following format: Parameterid:column indexes
 - First part: ID of the parameter containing the column type
 - Second part: columns identified by their 0-based column index
 
-If you specify multiple column types, separate them by means of pipe characters ("|").
+If you specify multiple column types, separate them by means of pipe characters (`|`).
 
 If you specify multiple column indexes, separate them by commas.
 

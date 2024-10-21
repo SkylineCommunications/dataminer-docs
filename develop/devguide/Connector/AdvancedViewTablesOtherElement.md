@@ -75,7 +75,7 @@ To implement a direct view table, create a custom table that contains a column h
 
      It is not possible to have a column in the table of the child element that refers to a table in the aggregator element without the aggregator element being aware of primary keys and foreign keys.
 
-     In order to be able to perform settings on a direct view table, the "SetOnTable" option is needed in the ColumnOption tag.
+     In order to be able to perform settings on a direct view table, the `SetOnTable` option is needed in the ColumnOption tag.
 
 > [!NOTE]
 >

@@ -113,7 +113,7 @@ Capture observation:
 
 It is also possible to retrieve the values by row instead of by column.<!-- RN 30780 --> This scheme will first poll the instances (if they have not been provided) and will then poll the data row by row.
 
-To use this alternative polling scheme, add "multipleGet" to the SNMP options of the SNMP table to be polled.
+To use this alternative polling scheme, add `multipleGet` to the SNMP options of the SNMP table to be polled.
 
 - If you specify the "multipleGet" keyword without additional arguments, by default 10 rows will be polled in a single run. See the following example:
   
@@ -124,7 +124,7 @@ To use this alternative polling scheme, add "multipleGet" to the SNMP options of
   </SNMP>
   ```
   
-- If you want to have a specific number of rows polled in a single run, you can specify the "multipleGet" keyword followed by a colon (":") and the number of rows to be polled in a single run. In the following example, 5 rows will be polled in a single run:
+- If you want to have a specific number of rows polled in a single run, you can specify the "multipleGet" keyword followed by a colon (`:`) and the number of rows to be polled in a single run. In the following example, 5 rows will be polled in a single run:
   
   ```xml
   <SNMP>
@@ -137,7 +137,7 @@ To use this alternative polling scheme, add "multipleGet" to the SNMP options of
 >
 > - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
 > - The multipleGet keyword can be used together with options like Subtable.
-> - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, can also retrieve the delta times per row when polling an SNMP table. This functionality also works in conjunction with this multipleGet option.
+> - The notify protocol command [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA), which can be launched from within a QAction, can also retrieve the delta times per row when polling an SNMP table. This functionality also works in conjunction with this `multipleGet` option.
 
 ### MultipleGetNext
 

@@ -40,4 +40,4 @@ This can also be made more dynamic in the following way:
 </Replication>
 ```
 
-Instead of literals, the content comes from a parameter.
+The value of the *dynamic* attribute specifies the ID of the parameter that holds the value. See [Protocol.Params.Param.Replication.Element-dynamic](xref:Protocol.Params.Param.Replication.Element-dynamic) and [Protocol.Params.Param.Replication.Parameter-dynamic](xref:Protocol.Params.Param.Replication.Parameter-dynamic).

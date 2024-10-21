@@ -37,7 +37,7 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
   int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, elementName, elementSettings);
   ```
 
-- Before DVE functionality existed, elements were created from within a QAction using different protocols. To create an element, you can pass several element options to the NotifyDataMinerQueued type 160 method call as a pipe-separated ("|") string. The following table contains an overview of the different settings that can be provided along with the position in the string.
+- Before DVE functionality existed, elements were created from within a QAction using different protocols. To create an element, you can pass several element options to the NotifyDataMinerQueued type 160 method call as a pipe-separated (`|`) string. The following table contains an overview of the different settings that can be provided along with the position in the string.
 
     |Position|Description|
     |--- |--- |

@@ -13,7 +13,7 @@ Please keep the following guidelines in mind for display keys:
 - In case the primary key can be used to let users identify a row, there is no need to define a display key (as by default the primary key is used). Only define a display key if there is a need to identify rows in another (more user-friendly) way.
 - Just like the primary key, the display key must be unique for every row in a table.
 - A display key must not have leading or trailing whitespace.
-- Semicolons (";"), question marks ("?") and asterisks ("*") must be avoided in display keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to the [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)
+- Semicolons (`;`), question marks (`?`) and asterisks (`*`) must be avoided in display keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to the [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)
 
 > [!NOTE]
 > All parameters used to create the display key will be saved by default (except for volatile tables).<!-- RN 16743 -->
@@ -82,7 +82,7 @@ Naming can be used to define a display key for a table. The example below define
 </Param>
 ```
 
-The naming option defines the separator ("/"), followed by a comma-separated list of column parameter IDs, which together make up a unique label for a row.
+The naming option defines the separator (`/`), followed by a comma-separated list of column parameter IDs, which together make up a unique label for a row.
 
 > [!NOTE]
 >

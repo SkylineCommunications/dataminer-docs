@@ -566,9 +566,9 @@ The column marked with this option can contain any of the following:
 
 - view ID
 - view name
-- multiple view IDs, separated by semicolon (";")
-- multiple view names, separated by semicolon (";")
-- mixed view ID(s) and view name(s), separated by semicolon (";")
+- multiple view IDs, separated by semicolon (`;`)
+- multiple view names, separated by semicolon (`;`)
+- mixed view ID(s) and view name(s), separated by semicolon (`;`)
 
 See also [Dynamic Virtual Elements](xref:AdvancedDVEs)
 

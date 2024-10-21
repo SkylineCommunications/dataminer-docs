@@ -251,7 +251,7 @@ Possible options for measurement type "string":
 |tab|The tab distance (the starting position of the text in the box).|
 |fixedfont|Sets the font type of the string to a fixed font.|
 |number|If set to true, the string can only contain numbers.|
-|password|Use this option to create a password parameter. Every character entered in this parameter will be displayed as "*" (also works for dynamic table cells). When the password is used, the value is encrypted. Note that only in Cube the password option on a Read parameter will not display the value, but hide it.|
+|password|Use this option to create a password parameter. Every character entered in this parameter will be displayed as `*` (also works for dynamic table cells). When the password is used, the value is encrypted. Note that only in Cube the password option on a Read parameter will not display the value, but hide it.|
 |custom=disableWrite:pid=value|With this option you can make a column read-only based on a value of a different column in the same table. It is not possible to change this value at runtime. Example: `custom=disableWrite:102=Moxa serial port 01`|
 
 See also: [string](xref:Protocol.Params.Param.Measurement.Type#string)

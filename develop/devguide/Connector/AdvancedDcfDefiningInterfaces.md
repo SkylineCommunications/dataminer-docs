@@ -38,7 +38,7 @@ All rows of the specified table that match the filter specified in the dynamicIn
 </ParameterGroups>
 ```
 
-In case you want that interface name to be the concatenation of the Group name and the primary key instead of the display key, use the [*dynamicUsePK* attribute](xref:Protocol.ParameterGroups.Group-dynamicUsePK) and set it to true. For example:
+In case you want that interface name to be the concatenation of the Group name and the primary key instead of the display key, use the [*dynamicUsePK* attribute](xref:Protocol.ParameterGroups.Group-dynamicUsePK) and set it to `true`. For example:
 
 ```xml
 <ParameterGroups>
@@ -86,7 +86,7 @@ In order to refer to a table cell, specify the ID of the column parameter in the
 </Group>
 ```
 
-You can also specify wildcard characters ("?" and "*") in the index. In that case, the highest alarm severity of the matching cells will be selected.
+You can also specify wildcard characters (`?` and `*`) in the index. In that case, the highest alarm severity of the matching cells will be selected.
 
 Finally, it is also possible to combine standalone parameters and cells. In that case, the index attribute must be defined but left empty.
 

@@ -10,13 +10,6 @@ To enable alarms to bubble up in the tree, the "includeInAlarms" option needs to
 <Relation path="100;200;300;400;500" options="includeInAlarms:topology"/>
 ```
 
-<!-- The option "includeInAlarms" will generate an extra alarm property named 'SL_TREE_INFO_topology' on alarms from the tables in the path. The value of this property will contain the primary keys x1, x2, x3, etc. for each node in the relation path, e.g. "SL_Table_100,x1;SL_Table_200,x2;SL_Table_300,x3;etc.". The tree control needs this information to be able to bubble up alarm levels in the tree.
-
-In case alarm bubble-up is not working correctly, you should first verify whether this property exists on the alarms and contains a valid path. Verify that the path does not contain empty primary keys (the tree control could then ignore this property).
-
-> [!NOTE]
-> This property can only be seen in the alarm details of System Display. Cube will hide this property. Note that System Display is no longer available from DataMiner 9.6.0 onwards. -->
-
 Each relation should define a unique property name:
 
 ```xml

@@ -52,4 +52,4 @@ object result = protocol.NotifyDataMiner(216 /* NT_GET_REMOTE_TREND */, elementD
 
 ## Remarks
 
-- The use of this call is **deprecated**. Instead, the GetTrendDataMessage SLNet message should be used.
+- The use of this call is **deprecated**. Instead, the [GetTrendDataMessage](xref:Skyline.DataMiner.Net.Messages.GetTrendDataMessage) SLNet message should be used.

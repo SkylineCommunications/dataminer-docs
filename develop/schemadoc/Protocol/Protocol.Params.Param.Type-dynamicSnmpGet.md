@@ -67,7 +67,7 @@ To specify when it has to be retrieved, add one of the following options to the 
 <Type dynamicSnmpGet="execute">read</Type>
 ```
 
-The above-mentioned options (what and when) can be combined in any order, separated by a semicolon (";"):
+The above-mentioned options (what and when) can be combined in any order, separated by a semicolon (`;`):
 
 ```xml
 <Type dynamicSnmpGet="row;Execute">read</Type>
