@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-cpeAlignment
 
 # cpeAlignment attribute
 
-Sets the alignment of KPI values in an EPM (formerly known as CPE) interface.
+Sets the alignment of KPI values in an EPM interface.<!-- RN 9430 -->
 
 ## Content Type
 
@@ -22,8 +22,6 @@ Default value: right.
 >
 > - The above-mentioned options are case insensitive.
 > - When the table is a view, these options have to be set on the view columns, not on the columns of the base table.
-
-*Feature introduced in DataMiner 8.5.4.3 (RN 9430).*
 
 ## Examples
 

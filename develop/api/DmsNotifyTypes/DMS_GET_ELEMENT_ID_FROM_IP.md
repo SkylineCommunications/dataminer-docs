@@ -38,5 +38,5 @@ string globalElementID = (string)result;
 ## Remarks
 
 - To get all the elements using a specific IP but ignore the bus address, provide a null reference for the bus variable.
-- In case the result contains more than one global element ID, these will be separated by a semicolon (";").
+- In case the result contains more than one global element ID, these will be separated by a semicolon (`;`).
 - In case no element was found on the DMS with the provided settings, an empty string will be returned.

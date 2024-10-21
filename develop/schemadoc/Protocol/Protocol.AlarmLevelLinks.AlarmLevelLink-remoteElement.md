@@ -18,7 +18,7 @@ Use this attribute when you want to retrieve the alarm state of a different elem
 
 In this attribute, specify
 
-- the column parameter ID that contains the DataMiner agent ID and element ID, and
+- the column parameter ID that contains the DataMiner Agent ID and element ID, and
 - the alarm severity that needs to be retrieved
   - column parameter ID that contains the identifier (display/primary key in the table of the remote element that contains the alarm), or
   - -1 (general element alarm state).

@@ -55,7 +55,7 @@ In case of a ContextMenu parameter (of which the name is identical to that of th
     ...
 ```
 
-In the following example, after a right click in the table with parameter ID 1000, the values for column parameter ID 1001, 1002 and 1003 need to be filled in. A QAction can be defined to for example capture these values and add a row. Feature introduced in DMA v8.0.2.3 (RN 5967).
+In the following example, after a right click in the table with parameter ID 1000, the values for column parameter ID 1001, 1002 and 1003 need to be filled in. A QAction can be defined to for example capture these values and add a row.<!-- RN 5967 -->
 
 ```xml
 <Param id="1099">
@@ -83,7 +83,7 @@ In the following example, after a right click in the table with parameter ID 100
 
 In the dependencyValues attribute of a menu item, you can specify the following:
 
-|Option|Description
+|Option|Description |
 |--- |--- |
 |1005|The user MUST enter a value using (write) parameter 1005.|
 |1005?|The user CAN enter a value using (write) parameter 1005.|
