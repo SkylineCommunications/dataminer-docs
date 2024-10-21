@@ -136,10 +136,11 @@ The following sections describe the main tables of the DataMiner Cassandra gener
 - [Ticketing data](#ticketing-data)
 - [Analytics data](#analytics-data)
 
+> [!IMPORTANT]
+> These sections describe the database structure for Cassandra when used for storage per DMA. For [dedicated clustered storage](xref:Dedicated_clustered_storage), the database structure is different and some data is only stored in the indexing database.
+
 > [!WARNING]
->
-> - These sections describe the database structure for Cassandra when used as storage per DMA. For dedicated clustered storage the database structure is different and some data is only stored in the indexing database.
-> - The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
+> The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
 
 ### Element data
 
