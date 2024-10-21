@@ -33,9 +33,9 @@ The DataMiner installer allows you to run a DataMiner installation and to perfor
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
-> The default installation requires that [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. WinPcap can be installed with a custom installation using the DataMiner 10.0 installer; however, note that WinPcap is considered obsolete since 2018. For now, NPCap is not included in the DataMiner Installer.
+> The installation requires that [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. WinPcap can be installed with a custom installation using the DataMiner 10.0 installer; however, note that WinPcap is considered obsolete since 2018. For now, NPCap is not included in the DataMiner Installer.
 
-### Default DataMiner installation
+### DataMiner installation
 
 1. Make sure you are logged into Windows with the server's local Administrator account. Do not use a regular user account with administrative rights.
 
@@ -55,7 +55,9 @@ The DataMiner installer allows you to run a DataMiner installation and to perfor
 
 1. Please enter the DataMiner Info
 
-   - The Organization API Key can be found in [dataminer.services] (https://dataminer.services/) under the Admin app in the Keys page. The selected key needs to have the Add DataMiner nodes permission.
+   - The Organization API Key can be found in [dataminer.services] (https://dataminer.services/) under the Admin app in the Keys page. For more information please check [Managing dataminer.services keys](xref:Managing_DCP_keys).
+> [!IMPORTANT]
+> The selected key needs to have the permission to add DataMiner nodes.
 
 1. Check the selected configuration and click *Configure*
 
