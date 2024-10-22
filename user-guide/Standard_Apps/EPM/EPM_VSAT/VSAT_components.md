@@ -85,10 +85,10 @@ This Automation script is dependent on the following connectors:
 
 - [Collector(s)](#collector-connectors) that triggered the initial *EPM Message Handler* script.
 
-<!-- ### SkylineCommunications_SLC-AS-EPM_VSAT_Subscription_Manager
+### SkylineCommunications_SLC-AS-EPM_VSAT_Subscription_Manager
 
-Automation script in charge of handling ***TBD
+This script is in charge of centralizing the information of the subscription tables of different peripherals across all the DMAs. It receives the request from the elements to update/change a subscription table, it stores the updated information and sends it back to all elements to keep them updated with the latest changes.
 
 This Automation script is dependent on the following protocols:
 
-- ***TBD -->
+- [Skyline EPM Platform VSAT DSM SO](#sun-outage) that triggered the initial script.

@@ -10,7 +10,7 @@ This page outlines the procedure for deploying the DataMiner EPM VSAT package on
 
 Start by deploying the DataMiner EPM VSAT package to the system:
 
-1. Go to the [DataMiner EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the DataMiner Catalog.
+1. Go to the [DataMiner VSAT](https://catalog.dataminer.services/details/b37e7be5-178e-4b34-be9c-2115991d90ea) package in the DataMiner Catalog.
 
 1. Click the *Deploy* button to [deploy the package](xref:Deploying_a_catalog_item) on your DMA.
 
@@ -66,28 +66,37 @@ While the package is being deployed, you can follow the progress of the deployme
 
 Follow the steps below to set up the **front-end and back-end elements**:
 
-1. In DataMiner Cube, create the front-end and back-end elements using the *Skyline EPM Platform VSAT GEO* connector.
+1. In DataMiner Cube, create the front-end and back-end elements using the *Skyline EPM Platform VSAT GEO* connector. Its recommended to plan your elements across the DMS. See [LINK TO Architecture Page Example] and we will configure them in a later step.
 
-1. For each of the collectors, the front end, and the back-end elements, right-click the element, select *Properties*, and note down the element ID (in the format "DMAID/ElementID") displayed in the *Properties* window.
+1. For each of the collectors, the front end, and the back-end elements, right-click the element, select *Properties*, and take note of the element ID (in the format "DMAID/ElementID") displayed in the *Properties* window. You will need these IDs later to aid in configuring the EPM Elements.
 
-   You will need these IDs later to fill them in in configuration tables.
+1. Configure the **front-end element**, using the Visual page of the protocol/element.
 
-1. Configure the front-end element, using either the Visual page, which uses the Visual Overview assigned by the package you installed, or the data pages in the [Monitoring app](xref:Accessing_the_Monitoring_app):
+    1. Navigate to the **configuration** page.
+    1. Navigate to the **settings** tab and set the Role parameter to *Frontend*.
+    1. Navigate to the **collectors** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
+    1. Navigate to the **backends** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
 
-   - **Role**: Set the Role parameter to *Frontend*.
-   - **System Credentials and File Handling**: Configure system credentials and EPM file paths.
-   - **Backup and Tables**: Configure backup settings and populate tables with collector and backend IDs.
+> [!TIP]
+> The Frontend connector should get configured with **all collectors and backends** accordingly.
 
-1. Configure the back-end elements in a similar way:
+1. Configure the **back-end elements** in a similar way:
 
-   - **Role**: Set the Role parameter to *Backend*.
-   - **File Handling**: EPM file paths must point to the FE server.
-   - **Collectors Table**: Include only local collector IDs.
+    1. Navigate to the **configuration** page.
+    1. Navigate to the **settings** tab and set the Role parameter to *Backend*.
+    1. Navigate to the **collectors** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
+    1. Navigate to the **backends** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
 
-Additional recommendations:
+> [!TIP]
+> The Frontend connector should get configured **only with collectors and backends served by the DMA hosting the element** accordingly.
 
-- To assist with troubleshooting, you can enable the Debug parameter. This will activate debugging for all elements (collectors, front end, and back end).
-- The collectors and the EPM elements may need to be restarted after the initial configuration to start working properly.
+1. After all EPM elements are configured, set the provisioning status to "Enabled".
+
+> [!TIP]
+> To assist with troubleshooting, you can enable the Debug parameter. This will activate debugging for all elements (collectors, front end, and back end).
+
+> [!TIP]
+> The collectors and the EPM elements may need to be restarted after the initial configuration to start working properly.
 
 ## Peripherals configuration
 
