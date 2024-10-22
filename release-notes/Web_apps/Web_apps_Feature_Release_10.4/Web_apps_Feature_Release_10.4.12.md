@@ -45,7 +45,7 @@ Currently, you can use the following operators:
 | Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
 | Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
-#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063]
+#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -54,7 +54,7 @@ When editing a dashboard or a low-code app, you can now create data objects call
 A variable has the following properties:
 
 - A name, which must be unique within the dashboard or the low-code app.
-- A type: Element, View, Service, String, Number, DOM instance
+- A type: Element, View, Service, Text, Number, Table, DOM instance
 - A default value
 
   > [!NOTE]
@@ -68,6 +68,8 @@ A variable has the following properties:
   > - If, in a low-code app, you make a variable read-only, specifying a default value for it will no longer be optional.
 
 Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
+
+Variables of type *Table* are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
 
 ## Changes
 
