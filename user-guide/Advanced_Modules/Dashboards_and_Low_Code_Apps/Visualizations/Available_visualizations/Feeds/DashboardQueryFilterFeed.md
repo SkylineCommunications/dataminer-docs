@@ -1,17 +1,17 @@
 ---
-uid: DashboardQueryFilterFeed
+uid: DashboardQueryFilter
 ---
 
-# Query filter feed
+# Query filter
 
 > [!NOTE]
 > This feature is in preview until DataMiner 10.3.9/10.4.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 Available from DataMiner 10.3.9/10.4.0 onwards. Prior to this, the component is available in soft launch if the soft-launch option [ReportsAndDashboardsPTP](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) is enabled.
 
-This feed component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query result.
+This component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query resul t.
 
-![Query filter](~/user-guide/images/Query_Filter.png)<br>*Query filter feed component in DataMiner 10.4.5*
+![Query filter](~/user-guide/images/Query_Filter.png)<br>*Query filter component in DataMiner 10.4.5*
 
 ## Configuring the component
 
@@ -49,11 +49,11 @@ When linked to a component using a feed, the query filter component allows real-
 
 Two methods exist for linking a query filter:
 
-- [Feeding queries as data](#feeding-queries-as-data)
+- [Passing queries as data](#passing-queries-as-data)
 
 - [Feeding query columns as filter](#feeding-query-columns-as-filter)
 
-### Feeding queries as data
+### Passing queries as data
 
 After configuring the query filter component:
 
@@ -66,7 +66,7 @@ After configuring the query filter component:
 
    Each time you change the query filter, a new query is fed to the table, displaying only rows that match the filter settings.
 
-### Feeding query columns as filter
+### Passing query columns as filter
 
 After configuring the query filter component:
 

@@ -17,7 +17,7 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
-   This component requires a parameter feed based on *Protocol* or *Element*, or a group of parameters from a *Parameter* feed component.
+   This component requires a parameter feed based on *Protocol* or *Element*, or a group of parameters from a *Parameter* selector component.
 
    - In case a protocol parameter feed is used, you can add an additional element or view feed as a filter.
 

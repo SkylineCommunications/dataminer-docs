@@ -190,9 +190,9 @@ Examples:
 
   ![Set value](~/user-guide/images/Set_Value.gif)<br>*Grid, text input, and table components in DataMiner 10.4.9*
 
-- From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, if you add a [time range feed component](xref:DashboardTimeRangeFeed), you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a preset or custom time range.
+- From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, if you add a [time range component](xref:DashboardTimeRange), you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a preset or custom time range.
 
-  ![Set value - time range](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range feed, button, and line & area chart components in DataMiner 10.4.11*
+  ![Set value - time range](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range, button, and line & area chart components in DataMiner 10.4.11*
 
 ## Showing a context menu
 

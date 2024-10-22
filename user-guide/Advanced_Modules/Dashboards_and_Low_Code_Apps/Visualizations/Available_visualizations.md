@@ -15,7 +15,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;
@@ -83,7 +83,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;
@@ -118,7 +118,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;
@@ -150,7 +150,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;
@@ -179,7 +179,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;
@@ -229,7 +229,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;
@@ -239,28 +239,28 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TimeRangeFeed.html" title="Time Range Feed" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TimeRange.html" title="Time Range" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/ListFeed.html" title="List Feed" target="_self"><img src="~/user-guide/images/List.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/ListFeed.html" title="List" target="_self"><img src="~/user-guide/images/List.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TreeFeed.html" title="Tree Feed" target="_self"><img src="~/user-guide/images/Tree.svg" style="width:100%"></a>
-  </div> 
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TreeFeed.html" title="Tree" target="_self"><img src="~/user-guide/images/Tree.svg" style="width:100%"></a>
+  </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/ParameterFeed.html" title="Parameter Feed" target="_self"><img src="~/user-guide/images/Parameter_Feed.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/ParameterSelector.html" title="Parameter selector" target="_self"><img src="~/user-guide/images/Parameter_Selector.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/CPEFeed.html" title="EPM Feed" target="_self"><img src="~/user-guide/images/EPM_Feed.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/EPMSelector.html" title="EPM selector" target="_self"><img src="~/user-guide/images/EPM_Selector.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/DashboardQueryFilterFeed.html" title="Query Filter Feed" target="_self"><img src="~/user-guide/images/Query_Filter.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/DashboardQueryFilter.html" title="Query Filter" target="_self"><img src="~/user-guide/images/Query_Filter.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TriggerFeed.html" title="Trigger Feed" target="_self"><img src="~/user-guide/images/Trigger.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/Trigger.html" title="Trigger" target="_self"><img src="~/user-guide/images/Trigger.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -273,7 +273,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
   padding: 0 4px;
 }
  
-/* Create five equal columns that sits next to each other */
+/* Create five equal columns that sit next to each other */
 .column {
   flex: 20%;
   max-width: 20%;

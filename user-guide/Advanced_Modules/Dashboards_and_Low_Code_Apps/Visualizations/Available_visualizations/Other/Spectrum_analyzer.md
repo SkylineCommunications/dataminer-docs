@@ -28,6 +28,6 @@ Please note the following regarding this component.
 
   1. Optionally, add a spectrum preset filter.
 
-  1. Add a list feed component (see [List](xref:DashboardListFeed)) and add the spectrum session feed from your spectrum analyzer as its input.
+  1. Add a list component (see [List](xref:DashboardList)) and add the spectrum session feed from your spectrum analyzer as its input.
 
   A list of all the available measurement points will then be shown, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.

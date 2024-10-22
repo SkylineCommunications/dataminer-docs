@@ -80,7 +80,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      If the timeline is linked to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
 
      > [!NOTE]
-     > To add a [time range component](xref:DashboardTimeRangeFeed) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
+     > To add a [time range component](xref:DashboardTimeRange) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
      >
      > 1. Select *Timeline # > Viewport > Timespans* in the *Feeds* section of the *Data* tab.
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
@@ -106,7 +106,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-   - *Filtering & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [Query filter component](xref:DashboardQueryFilterFeed), available from DataMiner 10.3.9/10.4.0 onwards.
+   - *Filtering & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [Query filter component](xref:DashboardQueryFilter), available from DataMiner 10.3.9/10.4.0 onwards.
 
      - *Highlight*: When this option is enabled, the items that match the filter will be highlighted. Enabled by default.
 

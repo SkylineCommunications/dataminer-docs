@@ -1,17 +1,19 @@
 ---
-uid: DashboardParameterFeed
+uid: DashboardParameterSelector
 ---
 
-# Parameter feed
+# Parameter selector
 
-This feed component allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
+Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this component is called the "parameter feed" component instead.
 
-![Parameter feed](~/user-guide/images/Parameter_Feed.png)<br>*Parameter feed component in DataMiner 10.4.5*
+This selector component allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
+
+![Parameter selector](~/user-guide/images/Parameter_Selector.png)<br>*Parameter selector component in DataMiner 10.4.5*
 
 > [!NOTE]
 >
 > - From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.
-> - From DataMiner 10.3.4/10.4.0 onwards, when an EPM feed is used to feed EPM identifiers to a parameter feed, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM feed (indicated as *EPM identifiers* in the data pane). <!-- RN 35562 -->
+> - From DataMiner 10.3.4/10.4.0 onwards, when an [EPM selector](xref:DashboardEPMSelector) is used to pass EPM identifiers to a parameter selector, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM selector (indicated as *EPM identifiers* in the data pane). <!-- RN 35562 -->
 
 ## Configuring the component
 
@@ -19,7 +21,7 @@ This feed component allows the user to select multiple parameters from a predefi
 
    - The component supports element and parameter data feeds. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, a protocol or view feed can be used as an additional filter.
 
-   - Multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
+   - Multiple view filters can be applied to a parameter selector. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
    - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard or app URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
 
@@ -35,7 +37,7 @@ This feed component allows the user to select multiple parameters from a predefi
      > [!NOTE]
      >
      > - Prior to DataMiner 10.3.6/10.4.0<!--  RN 35984 -->, this setting is called *Feed Defaults* instead.
-     > - From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter feed.
+     > - From DataMiner 10.2.12/10.3.0 onwards, parameter selectors that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter selector.
 
    - *Auto-select all*: When this option is selected, all items will be selected according to the "Select all behavior" settings below.
 
@@ -55,7 +57,7 @@ This feed component allows the user to select multiple parameters from a predefi
    - To group parameters in the selector, under *Parameter groups*, click *Add parameter group*. Then specify a group name and select the parameters that should be in the group. Repeat this for every parameter group you want to configure.
 
      > [!NOTE]
-     > From DataMiner 10.2.12/10.3.0 onwards, it is possible to group parameters in a parameter feed that lists EPM parameters.
+     > From DataMiner 10.2.12/10.3.0 onwards, it is possible to group parameters in a parameter selector that lists EPM parameters.
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
@@ -64,7 +66,7 @@ This feed component allows the user to select multiple parameters from a predefi
    - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed.
 
 > [!NOTE]
-> After selecting column parameter indices in a parameter feed, you can feed those selected indices to other components that support the same data. From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter feeds listing EPM parameters.
+> After selecting column parameter indices in a parameter selector, you can pass those selected indices to other components that support the same data. From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter selectors listing EPM parameters.
 >
 > 1. In the *Parameter Feed* window, select the checkboxes in front of the parameters you wish to include.
 >
@@ -76,7 +78,7 @@ This feed component allows the user to select multiple parameters from a predefi
 
 ## Customizing the default grouping
 
-When other components are linked to the parameter feed, so that their content changes dynamically based on what is selected in the feed, the default way the content of those components is grouped can be configured in the parameter feed.
+When other components are linked to the parameter selector, so that their content changes dynamically based on what is selected in the selector, the default way the content of those components is grouped can be configured in the parameter selector.
 
 To configure the default grouping:
 

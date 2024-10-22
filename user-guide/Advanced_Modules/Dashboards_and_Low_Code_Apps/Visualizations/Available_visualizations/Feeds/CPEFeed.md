@@ -1,13 +1,14 @@
 ---
-uid: DashboardCPEFeed
+uid: DashboardEPMSelector
 ---
 
-# EPM feed
+# EPM selector
 
 > [!NOTE]
+> Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this component is called EPM feed instead.
 > Prior to DataMiner 10.1.7/10.2.0<!--  RN 29770 -->, this component is called CPE feed instead.
 
-This feed component allows the user to make a filter selection for a particular EPM element (formerly known as CPE Manager) and EPM chain. It can be used as a filter feed for the parameter feed, so that this feed can in turn be used to display info on EPM parameters.
+This selector component allows the user to make a filter selection for a particular EPM element (formerly known as CPE Manager) and EPM chain. It can be used as a filter feed for the parameter selector, so that this feed can in turn be used to display info on EPM parameters.
 
 To configure the component:
 

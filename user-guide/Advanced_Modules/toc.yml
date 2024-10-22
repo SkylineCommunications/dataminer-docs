@@ -414,6 +414,12 @@ items:
                 topicUid: DashboardBlock
               - name: Group
                 topicUid: DashboardGroup
+              - name: Time range
+                topicUid: DashboardTimeRange
+              - name: Query filter
+                topicUid: DashboardQueryFilter
+              - name: Trigger
+                topicUid: DashboardTrigger
           - name: States and values
             items:
               - name: State
@@ -464,25 +470,14 @@ items:
                 topicUid: DashboardTimeline
               - name: Trend statistics
                 topicUid: DashboardTrendStatistics
-          - name: Feeds
-            topicUid: Feeds
-            items:
-              - name: Time range feed
-                topicUid: DashboardTimeRangeFeed
-              - name: List feed
-                topicUid: DashboardListFeed
+              - name: List
+                topicUid: DashboardList
               - name: Tree feed
                 topicUid: DashboardTreeFeed
-              - name: Parameter feed
-                topicUid: DashboardParameterFeed
-              - name: EPM feed
-                topicUid: DashboardCPEFeed
-              - name: Query filter feed
-                topicUid: DashboardQueryFilterFeed
-              - name: Trigger feed
-                topicUid: DashboardTriggerFeed
-              - name: Dropdown feed
-                topicUid: DashboardDropdownFeed
+              - name: Parameter selector
+                topicUid: DashboardParameterSelector
+              - name: EPM selector
+                topicUid: DashboardEPMSelector
           - name: Basic controls
             items:
               - name: Dropdown
