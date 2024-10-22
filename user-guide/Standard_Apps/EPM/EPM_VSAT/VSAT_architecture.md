@@ -2,7 +2,7 @@
 uid: VSAT_architecture
 ---
 
-# EPM VSAT Architecture
+# EPM VSAT architecture
 
 The EPM Solution makes use of the following components:
 
@@ -16,7 +16,7 @@ The EPM Solution makes use of the following components:
 
 ![EPM VSAT architecture](~/user-guide/images/EPM_VSAT_architecture.png)
 
-## Collector Connectors
+## Collector connectors
 
 At the core of the solution are collector connectors capable of interfacing with any physical and/or virtual data source (devices, APIs, etc.).
 
@@ -26,19 +26,19 @@ The EPM Solution integrates with these entity types, regardless of technology or
 
 One or more collector elements are placed on a DMA, and they are locally managed by the corresponding back-end elements.
 
-## Back-end Connectors
+## Back-end connectors
 
 Back-end connectors take care of the aggregation of KPIs (Key Performance Indicators) and KQIs (Key Quality Indicators) of all topology levels above CPE (the lowest level) and below Network (the highest level).
 
 One or more back-end elements, per technology, are placed on a DataMiner Agent (DMA). They carry out the aggregation logic in an independent and distributed fashion for all collectors placed on the DMA. In a system with multiple markets and hubs, for example, aggregations for a specific Hub are handled by a specific back-end element.
 
-## Front-end Connectors
+## Front-end connectors
 
 The front-end connector allows the user to access all information from the EPM Solution from a single pane of glass. It is a lightweight connector that only contains the visual structure of the solution. It is optimized for aggregation at the highest level (Network) of the topology.
 
 There is only one front-end element per DataMiner System, and it is aware of the existence of all collectors and back-end elements. To create reports or dashboards, this front-end element should be used.
 
-## System Connectors
+## System connectors
 
 System connectors are designed to operate as peripherals within the EPM Solution. Some system connectors interface with specific data sources and feed information into the logic of the main connectors (i.e. the collector, back-end and front-end connectors). Other system connectors perform logic required for the execution of specific workflows.
 
