@@ -223,3 +223,9 @@ After a DataMiner start-up, in some cases, the NATS cluster would be configured 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog with regard to exception handling.
+
+#### DataMiner as a Service: Incorrect 'This DataMiner Agent is not licensed' message [ID 41130]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.11 [CU0] -->
+
+On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g. DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.

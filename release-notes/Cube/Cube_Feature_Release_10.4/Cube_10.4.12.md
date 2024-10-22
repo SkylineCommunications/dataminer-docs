@@ -49,6 +49,17 @@ Now, at the bottom of this *Augmented Operations alarm settings* pop-up window, 
 
 On each of the four Cube sides, it is now possible to specify a different layout.
 
+#### Settings: New computer setting to clear the Edge WebView2 cache [ID 41026]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the *Computer > Advanced* section of the *Settings* windows, you can now find the following new settings:
+
+| Setting | Description |
+|---------|-------------|
+| Clear browser cache on sign-out | When enabled, the Edge WebView2 browser cache will be cleared on sign-out, ensuring that the SAML authentication window appears the next time you log on. |
+| Clear cache now | When clicked, the Edge WebView2 browser cache will be cleared immediately. |
+
 ## Changes
 
 ### Enhancements
@@ -173,3 +184,9 @@ When, in the Alarm Console, you created a manual incident, and you then added a 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you double-click a parameter in Data Display and go to the *Templates* tab, or when you right-click an alarm and select *Change > Alarm range*, a parameter-specific template editor will open. Up to now, in some cases, that editor would incorrectly overwrite an existing template when a new template had to be created.
+
+#### Visual Overview: Problem when viewing a visual overview with an AlarmSummary shape while correlation updates were being processed [ID 41124]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a large number of correlation updates were being processed while you were viewing a visual overview with an *AlarmSummary* shape, in some cases, an exception could be thrown.
