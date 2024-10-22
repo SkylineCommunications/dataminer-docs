@@ -108,6 +108,12 @@ Also, up to now, when an element connection was saved without the *Include Eleme
 
 Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
 
+#### Protocols: Stuffing attribute of Protocol.Advanced element was not parsed correctly [ID 41092]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The value of the `stuffing` attribute of the *Protocol.Advanced* element was not parsed correctly.
+
 #### Enhanced exception handling in SLASPConnection and SLWatchdog [ID 41121]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->

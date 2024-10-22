@@ -332,6 +332,12 @@ After a DataMiner start-up, in some cases, the NATS cluster would be configured 
 
 `ResetLocalNatsCluster|ERR|0|18|System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.`
 
+#### Protocols: Stuffing attribute of Protocol.Advanced element was not parsed correctly [ID 41092]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The value of the `stuffing` attribute of the *Protocol.Advanced* element was not parsed correctly.
+
 #### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
