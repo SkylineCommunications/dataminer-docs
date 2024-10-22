@@ -167,3 +167,9 @@ When you tried to open a view card, in some rare cases, the card could remain em
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, in the Alarm Console, you created a manual incident, and you then added a new active alarms tab, the incident you created would incorrectly not appear in the newly-created active alarms tab.
+
+#### Parameter-specific alarm template editor would incorrectly overwrite an existing template [ID_41120]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you double-click a parameter in Data Display and go to the *Templates* tab, or when you right-click an alarm and select *Change > Alarm range*, a parameter-specific template editor will open. Up to now, in some cases, that editor would incorrectly overwrite an existing template when a new template had to be created.
