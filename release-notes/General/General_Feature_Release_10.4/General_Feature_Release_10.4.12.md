@@ -19,8 +19,7 @@ uid: General_Feature_Release_10.4.12
 ## Highlights
 
 - [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
-- Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
-
+- [Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]](#default-number-of-simultaneously-running-slprotocol-processes-has-been-increased-from-5-to-10-id-41077)
 
 ## New features
 
