@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Apps_Style_A_Table
+keywords: table templates
 ---
 
 # Styling a table component
