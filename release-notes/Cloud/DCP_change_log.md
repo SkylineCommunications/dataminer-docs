@@ -83,7 +83,7 @@ Up to now, in the warning message that was shown to inform users of the node whe
 
 In the Admin app, when you click the DMS URL on the DMS overview page, this will now open in a new tab.
 
-#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860] [ID_41056]
+#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860] [ID 41056]
 
 When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
 

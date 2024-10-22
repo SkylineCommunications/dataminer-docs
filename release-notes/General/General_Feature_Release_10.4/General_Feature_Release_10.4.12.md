@@ -324,6 +324,14 @@ Also, up to now, when an element connection was saved without the *Include Eleme
 
 Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
 
+#### Problem with the NATS cluster configuration after a DataMiner start-up [ID 41072]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+After a DataMiner start-up, in some cases, the NATS cluster would be configured incorrectly and the following error message would be added to the *SLError.txt* log file:
+
+`ResetLocalNatsCluster|ERR|0|18|System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.`
+
 #### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
