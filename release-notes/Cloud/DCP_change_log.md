@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 22 October 2024 - Enhancement - Admin app - Unrelevant modules not shown on DxMs page [ID 41187]
+#### 22 October 2024 - Enhancement - Admin app - Irrelevant modules no longer shown on DxMs page [ID 41187]
 
-Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) won't be shown anymore.
+Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) will no longer be shown.
 
 #### 18 October 2024 - Enhancement - ChatOps - Enhanced stability and performance of Teams Chat Integration [ID 41149]
 
