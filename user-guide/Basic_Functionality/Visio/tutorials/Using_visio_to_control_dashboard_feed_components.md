@@ -67,7 +67,7 @@ Expected duration: 45 minutes
 
 1. If you are not yet in edit mode, then click *Start editing*.
 
-1. Add a [Parameter feed component](xref:DashboardParameterSelector).
+1. Add a [Parameter picker component](xref:DashboardParameterPicker).
 
 1. From the *Data* pane on the right, drag the *ELEMENTS* header onto the *Parameter feed* component to be used as data.
 

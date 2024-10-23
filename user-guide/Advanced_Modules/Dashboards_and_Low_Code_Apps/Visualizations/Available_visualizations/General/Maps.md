@@ -18,7 +18,7 @@ This component is used to display markers and/or lines on a map. It uses one or 
 
 ## Adding data
 
-Add one or multiple GQI data sources to the component. See [Applying a data feed](xref:Apply_Data_Feed).
+Add one or multiple GQI data sources to the component. See [Applying a data source](xref:Apply_Data_Source).
 
 The data is visualized as a set of markers by default, but it can also be configured as a set of lines. In both cases, the component will try to automatically apply the dimensions needed to show the visualization of the data.
 

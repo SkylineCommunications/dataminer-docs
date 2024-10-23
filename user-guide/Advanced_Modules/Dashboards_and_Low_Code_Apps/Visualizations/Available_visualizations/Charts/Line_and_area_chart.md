@@ -17,12 +17,12 @@ This component can be used to display a trend graph.
 
 To configure the component:
 
-1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply one or more parameter data feeds. See [Applying a data source](xref:Apply_Data_Source).
 
    > [!NOTE]
    >
    > - If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
-   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* feed of the table to the line chart in order to see the data, similar to when you use a [parameter selector component](xref:DashboardParameterSelector).
+   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* feed of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
 
 1. Optionally, apply a filter feed:
 

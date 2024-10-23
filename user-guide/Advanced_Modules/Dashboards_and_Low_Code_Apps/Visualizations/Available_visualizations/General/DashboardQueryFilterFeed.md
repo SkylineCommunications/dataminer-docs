@@ -9,13 +9,13 @@ uid: DashboardQueryFilter
 
 Available from DataMiner 10.3.9/10.4.0 onwards. Prior to this, the component is available in soft launch if the soft-launch option [ReportsAndDashboardsPTP](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) is enabled.
 
-This component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query resul t.
+This component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query result.
 
 ![Query filter](~/user-guide/images/Query_Filter.png)<br>*Query filter component in DataMiner 10.4.5*
 
 ## Configuring the component
 
-1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply the necessary data feeds. See [Applying a data source](xref:Apply_Data_Source).
 
    > [!NOTE]
    > The assigned feed name will be visible in the bottom-right corner of the query filter component (e.g. Query filter 1).
@@ -51,7 +51,7 @@ Two methods exist for linking a query filter:
 
 - [Passing queries as data](#passing-queries-as-data)
 
-- [Feeding query columns as filter](#feeding-query-columns-as-filter)
+- [Passing query columns as filter](#passing-query-columns-as-filter)
 
 ### Passing queries as data
 

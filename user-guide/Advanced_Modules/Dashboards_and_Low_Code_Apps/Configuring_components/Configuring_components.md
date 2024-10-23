@@ -22,7 +22,7 @@ The following actions are then possible to configure the component:
 
 - [Applying a visualization](xref:Apply_Visualization)
 
-- [Applying a data feed](xref:Apply_Data_Feed)
+- [Applying a data source](xref:Apply_Data_Source)
 
 - [Customizing the component layout](xref:Customize_Component_Layout)
 

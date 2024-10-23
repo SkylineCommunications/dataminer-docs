@@ -16,6 +16,6 @@ To configure the component:
 
    If you used a data page feed based on element, no additional filter is needed.
 
-   If you used a data page feed based on protocol, an additional element filter feed is needed. You can either directly add this feed from the *Elements* section in the data pane, or use a feed component. See [Applying a data feed](xref:Apply_Data_Feed).
+   If you used a data page feed based on protocol, an additional element filter feed is needed. You can either directly add this feed from the *Elements* section in the data pane, or use a feed component. See [Applying a data source](xref:Apply_Data_Source).
 
 1. Optionally, to customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.

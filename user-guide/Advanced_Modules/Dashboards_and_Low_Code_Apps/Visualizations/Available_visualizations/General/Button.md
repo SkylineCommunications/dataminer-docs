@@ -29,7 +29,7 @@ To configure the component:
 
 In the Dashboards app, the soft-launch button component can be used to execute the action of a button parameter. As such, it must be configured with a button parameter data feed.
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply a parameter data feed. See [Applying a data source](xref:Apply_Data_Source).
 
    You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
 
