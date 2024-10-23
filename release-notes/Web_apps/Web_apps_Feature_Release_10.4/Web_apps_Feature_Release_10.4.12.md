@@ -71,6 +71,17 @@ Variables of a certain type can be used wherever you can use that specific type.
 
 Variables of type *Table* are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
 
+#### Dashboards/Low-Code Apps: 'Dropdown', 'Tree' and 'List' components are now also able to show table data [ID 41161]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+*Dropdown*, *Tree* and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
+
+- If you add a single table/query, the component will show the individual rows as entries. Selecting an entry will expose the entire row.
+- If you add multiple tables/queries, the component will show the list of tables/queries. Selecting an entry will expose the entire table (in case of table data) or the query (in case of query data).
+
+When you add a table/query to one of the above-mentioned components, you can specify the column that contains the display values in the *Layout > Advanced > Display column* setting.
+
 ## Changes
 
 ### Breaking changes
