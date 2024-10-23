@@ -154,6 +154,12 @@ When you opened a trend graph, in some rare cases, its viewport would incorrectl
 
 In some cases, when you used Cube to connect to the DataMiner Agent running on the same machine with *Connecting type* set to "Auto", due to a hostname resolution issue, it was no longer possible to open web apps like Monitoring or Dashboards from within Cube. Also, the name of the DataMiner System would no longer be displayed in the Cube header.
 
+#### Visual Overview: Problem when loading AlarmSummary shapes [ID 40962]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when a visual overview contained a large number of *AlarmSummary* shapes, in some cases, Cube could become unresponsive due to the shapes being loaded sequentially. From now on, *AlarmSummary* shapes will be loaded asynchronously.
+
 #### System Center: Problem when opening the 'Permissions > Views' tab of a user group [ID 40969]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
