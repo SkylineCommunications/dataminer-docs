@@ -863,11 +863,11 @@ If you have created an Automation script that launches subscripts, you can use t
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
-#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+#### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When an element is duplicated, the following information events will no longer be generated:
+When an element is replicated, the following information events will no longer be generated:
 
 - [Replicated Element]
 - [Remote Element Name]

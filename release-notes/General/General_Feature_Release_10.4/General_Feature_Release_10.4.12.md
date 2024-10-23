@@ -187,11 +187,11 @@ Also, from now on, a new SLNet option *HttpTcpKeepAliveInterval* can be configur
 </MaintenanceSettings>
 ```
 
-#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+#### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When an element is duplicated, the following information events will no longer be generated:
+When an element is replicated, the following information events will no longer be generated:
 
 - [Replicated Element]
 - [Remote Element Name]
