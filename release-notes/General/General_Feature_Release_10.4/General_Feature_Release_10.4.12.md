@@ -163,12 +163,6 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements fo
 
 In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
 
-#### User-Defined APIs: UserDefinableApiEndpoint DxM will now send status updates to dataminer.services [ID 40797]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-The *UserDefinableApiEndpoint* DxM will now send status updates to dataminer.services.
-
 #### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->

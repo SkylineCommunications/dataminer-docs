@@ -849,12 +849,6 @@ In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
 
-#### User-Defined APIs: UserDefinableApiEndpoint DxM will now also send status updates to dataminer.services [ID 40797]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-The *UserDefinableApiEndpoint* DxM will now also send status updates to dataminer.services.
-
 #### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
