@@ -185,7 +185,7 @@ When you tried to open a view card, in some rare cases, the card could remain em
 
 When, in the Alarm Console, you created a manual incident, and you then added a new active alarms tab, the incident you created would incorrectly not appear in the newly-created active alarms tab.
 
-#### Parameter-specific alarm template editor would incorrectly overwrite an existing template [ID_41120]
+#### Parameter-specific alarm template editor would incorrectly overwrite an existing template [ID 41120]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 

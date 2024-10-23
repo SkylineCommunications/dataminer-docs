@@ -73,6 +73,14 @@ For more information on how to use this new feature in DataMiner Cube, see [Alar
 
 ### Enhancements
 
+#### DataMiner Object Models: Length of string fields is now limited in order to prevent database errors [ID 39496]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Values of DOM fields of type `String` are now limited to 32,766 UTF8 bytes.
+
+When a DOM instance contains string fields of which the value exceeds this limit, a `DomInstanceError` will be returned with error reason *ValueTooLarge*. The `AssociatedFields` collection will contain the SectionDefinition, Section and FieldDescriptor IDs referring to the incorrect FieldValue as well as the new `ActualSize` property, which will contain the actual UTF8 size of the string that exceeds the limit.  
+
 #### OpenSearch: Enhanced performance of alarm queries [ID 40674]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
@@ -92,6 +100,60 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 A number of security enhancements have been made.
+
+#### Minor enhancements made to BPAs [ID 40751]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of minor enhancements have been made to the following BPAs:
+
+##### Cassandra DB Size
+
+- Will no longer be considered a standard BPA test.
+- Will no longer fail when the IP address is "localhost".
+- Error `! execution failed | This BPA does apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.
+
+##### Check Agent Presence Test In NATS
+
+- Renamed to *Nats connections between the DataMiner Agents*.
+
+##### Check Antivirus DLLs
+
+- Renamed to *Antivirus on the DataMiner Agents*.
+
+##### Check Cluster SLNet Connections
+
+- Renamed to *SLNet connections between the DataMiner Agents*.
+- Message `No potential issues detected` renamed to `No issues detected`.
+
+##### HTTPS Configuration
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Minimum Requirements Check
+
+- Renamed to *DataMiner Agent Minimum Requirements*.
+- When Cassandra is not installed, this BPA will no longer report Cassandra is a requirement.
+- Memory calculation has been enhanced.
+
+##### Password Strength
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Report active RTE
+
+- Renamed to *Active Runtime errors*.
+
+##### Security Advisory BPA
+
+- Renamed to *Security Advisory*.
+
+##### View Recursion BPA
+
+- Renamed to *View recursive loops*.
+- Will no longer be considered a standard BPA test.
 
 #### PortLog.txt file now supports IPv6 addresses [ID 40753]
 
