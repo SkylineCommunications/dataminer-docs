@@ -488,13 +488,13 @@ items:
                 topicUid: DashboardSearchInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
-      - name: Feeds
-        topicUid: Using_dashboard_feeds
+      - name: Component data sources
+        topicUid: Component_Data_Sources
         items:
-          - name: Configuring feed components
-            topicUid: Configuring_feed_components
+          - name: Configuring components for passing data input
+            topicUid: Configuring_components_for_passing_data_input
           - name: Dynamically referencing data in text
-            topicUid: Feed_Link
+            topicUid: Dynamically_Referencing_Data_in_Text
           - name: Specifying data input in a dashboard or app URL
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use data in a URL without a dedicated component

@@ -12,4 +12,4 @@ Feeds can be added to a dashboard to allow a user to select a DataMiner object f
 > - The [Dropdown](xref:DashboardDropdown) visualization is also a type of feed, but from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->, it is available under *Basic controls* instead.
 
 > [!TIP]
-> See also: [Using dashboard feeds](xref:Using_dashboard_feeds)
+> See also: [Using component data sources](xref:Component_Data_Sources)

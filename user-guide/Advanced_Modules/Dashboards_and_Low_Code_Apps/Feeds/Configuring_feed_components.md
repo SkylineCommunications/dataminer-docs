@@ -1,8 +1,8 @@
 ---
-uid: Configuring_feed_components
+uid: Configuring_components_for_passing_data_input
 ---
 
-# Configuring feed components
+# Configuring components for passing data input
 
 To have a component depend on other components for its data input:
 
