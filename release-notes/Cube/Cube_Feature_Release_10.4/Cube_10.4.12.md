@@ -25,6 +25,17 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
+#### Settings: New settings to open view cards and EPM cards undocked [ID 40782]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the *User > Card* section of the *Settings* windows, you can now find the following new settings:
+
+| Section | Setting | Description |
+|---------|---------|-------------|
+| View card | Open EPM cards undocked  | When selected, all EPM cards will be opened undocked.  |
+| EPM card  | Open view cards undocked | When selected, all view cards will be opened undocked. |
+
 #### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -57,7 +68,7 @@ In the *Computer > Advanced* section of the *Settings* windows, you can now find
 
 | Setting | Description |
 |---------|-------------|
-| Clear browser cache on sign-out | When enabled, the Edge WebView2 browser cache will be cleared on sign-out, ensuring that the SAML authentication window appears the next time you log on. |
+| Clear browser cache on sign-out | When selected, the Edge WebView2 browser cache will be cleared on sign-out, ensuring that the SAML authentication window appears the next time you log on. |
 | Clear cache now | When clicked, the Edge WebView2 browser cache will be cleared immediately. |
 
 ## Changes
