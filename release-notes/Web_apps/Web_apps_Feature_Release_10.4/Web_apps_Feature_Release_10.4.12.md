@@ -291,8 +291,8 @@ When you panned or zoomed out while map data was being retrieved, in some cases,
 
 When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
 
-#### Interactive Automation scripts: Problem when no data was returned when you clicked 'Continue' [ID 41128]
+#### Interactive Automation scripts: Problem when none of the components had an identifier configured [ID 41128]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When no data was returned when you clicked *Continue* in an interactive Automation script, up to now, an exception could be thrown.
+When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
