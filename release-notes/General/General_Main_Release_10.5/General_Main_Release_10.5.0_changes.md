@@ -849,6 +849,12 @@ In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM will now also send status updates to dataminer.services [ID 40797]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The *UserDefinableApiEndpoint* DxM will now also send status updates to dataminer.services.
+
 #### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -862,6 +868,12 @@ From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMine
 If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
+
+#### STaaS: Enhanced performance when writing data to the database [ID 40870]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
 
 #### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
