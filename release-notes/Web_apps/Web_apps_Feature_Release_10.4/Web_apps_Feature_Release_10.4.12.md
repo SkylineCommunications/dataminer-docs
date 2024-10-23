@@ -302,3 +302,9 @@ When your mouse pointer was hovering over a timeline item that should only becom
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
+
+#### Dashboards/Low-Code Apps - Web component: URL changes would no longer be detected [ID 41179]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The *Web* component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
