@@ -308,3 +308,9 @@ When none of the components defined in an interactive Automation script had an i
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 The *Web* component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
+
+#### Dashboards/Low-Code Apps - Table component: Users would incorrectly be able to select rows while the data was being loaded [ID 41186]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
