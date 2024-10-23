@@ -170,6 +170,12 @@ The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include
 
 In the color themes used by the web apps, the gray colors have been updated.
 
+#### Root page: Adding, updating or deleting an application will no longer cause the entire application list to get refreshed [ID 41135]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
