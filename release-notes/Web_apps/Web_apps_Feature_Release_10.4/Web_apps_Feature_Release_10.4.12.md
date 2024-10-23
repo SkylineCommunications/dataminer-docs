@@ -331,3 +331,9 @@ Up to now, users would incorrectly be able to select rows while the data was bei
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you had duplicated a dashboard, the components in the newly created duplicate dashboard incorrectly had the same IDs as the components in the original dashboard. As a result, when you changed a component in one dashboard, those changes would also be applied to that same component in the other dashboard.
+
+#### Dashboards/Low-Code Apps - Image component: Uploaded images would incorrectly not be synchronized within a DMS [ID 41202]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
