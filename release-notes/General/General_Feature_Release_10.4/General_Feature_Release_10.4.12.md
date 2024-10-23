@@ -177,22 +177,6 @@ Up to now, this `SkipStartedInfoEvent` option would by default be set to false. 
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
 
-#### Enhanced gRPC connection quality in case of poor network performance [ID 40903]
-
-<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
-
-Up to now, in some cases, a gRPC call between two SLNet instances could become unresponsive, causing run-time errors to be thrown in other processes. From now on, all gRPC calls will have a deadline of 15 minutes.
-
-Also, from now on, a new SLNet option *HttpTcpKeepAliveInterval* can be configured on DataMiner Agents that are known to have unstable network connectivity. See the example below.
-
-```xml
-<MaintenanceSettings>
-  <SLNet>
-    <HttpTcpKeepAliveInterval>60</HttpTcpKeepAliveInterval>
-  </SLNet>
-</MaintenanceSettings>
-```
-
 #### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
