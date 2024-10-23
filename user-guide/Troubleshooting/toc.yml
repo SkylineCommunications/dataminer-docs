@@ -232,6 +232,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Sticky element alarm state caused by correlation rules
+            topicUid: KI_sticky_element_alarm_state_caused_by_correlation_rules
           - name: DataMiner incorrectly reports a Cassandra issue when another database fails
             topicUid: KI_DataMiner_reports_Cassandra_issue_when_another_database_fails
           - name: Inconsistent service impact of alarms after element is stopped and restarted
