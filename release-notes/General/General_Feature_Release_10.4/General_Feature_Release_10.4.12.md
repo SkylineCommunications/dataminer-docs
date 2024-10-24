@@ -358,6 +358,12 @@ When a DVE child element had an alarm template in which you had configured that 
 
 When a GQI query was executed on a DataMiner System with storage per DMA, and then executed again after a DMA in that DataMiner System had been restarted, it would fail.
 
+#### Service & Resource Management: Caching problem could lead to client applications not getting the updated information [ID 40984]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When an object is updated immediately after being created, in some cases, both the create and the update operation will have the same internal timestamp (i.e. the value stored in the `LastModified` field of the `ITrackLastModified` interface). Due to a caching issue, up to now, this could lead to client applications not getting the updated information.
+
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
