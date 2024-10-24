@@ -347,9 +347,3 @@ When you had duplicated a dashboard, the components in the newly created duplica
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
-
-#### Dashboards/Low-Code Apps - Grid and Node edge graph components: Problem when pressing the DELETE key [ID 41223]
-
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
-
-When you pressed the DELETE key after you had selected an item in a *Grid* component or a node in a *Node edge graph* component, up to now, the item or node would incorrectly disappear from the screen. It would, however, not be removed from the database.
