@@ -216,6 +216,12 @@ The following NT Notify types have been deprecated:
 - NT_ADD_VIEW_NO_LOCK
 - NT_ADD_VIEWS_NO_LOCK
 
+#### Failover: Enhanced updating of values stored in the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file based on current system status [ID 40930]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of enhancements have been made with regard to updating values stored in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file based on current system status.
+
 #### SLLogCollector: Miscellaneous enhancements [ID 40935]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
