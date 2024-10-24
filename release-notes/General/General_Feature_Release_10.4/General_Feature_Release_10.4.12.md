@@ -236,6 +236,12 @@ A number of enhancements have been made to the SLLogCollector tool:
 
 - Hostnames will now be resolved via both *nslookup* and `System.Net.Dns.GetHostAddresses`.
 
+#### GQI: Enhanced performance of 'top X' queries using the 'Get alarms' data source [ID 40937]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance of GQI "top X" queries using the *Get alarms* data source has increased.
+
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->

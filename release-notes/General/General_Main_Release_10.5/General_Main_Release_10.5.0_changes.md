@@ -893,6 +893,12 @@ When an element is replicated, the following information events will no longer b
 
 A number of enhancements have been made with regard to updating values stored in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file based on current system status.
 
+#### GQI: Enhanced performance of 'top X' queries using the 'Get alarms' data source [ID 40937]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance of GQI "top X" queries using the *Get alarms* data source has increased.
+
 #### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
