@@ -133,7 +133,7 @@ Do not skip heading levels. For example, do not use heading level 3 right after 
 
 You can use up to five heading levels on a single page. If you need more levels, you will need to divide your content over several pages.
 
-Heading should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
+Headings should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
 
 ## Tables
 
