@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 24 October 2024 - Ehancement - Catalog - Improved displaying tags of a Catalog item [ID 41182]
+
+Tags of a Catalog item will now be shown based on the available space. If a tag is too big it will be grouped in a '+x' tag where you can hover over to display the values of the grouped ones.
+
 #### 24 October 2024 - Enhancement - Catalog - Improved heading style [ID 41145]
 
 Rendering of the Catalog headerbar has been improved.
