@@ -5,7 +5,7 @@ description: When all prerequisites are met, download the installer from DataMin
 
 # Installing DataMiner using the DataMiner Installer
 
-The DataMiner installer allows you to run a DataMiner installation and to perform initial configuration.
+The DataMiner installer allows you to run a DataMiner installation and perform the initial configuration.
 
 > [!NOTE]
 > The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
@@ -33,9 +33,9 @@ The DataMiner installer allows you to run a DataMiner installation and to perfor
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
-> The installation requires that [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. WinPcap can be installed with a custom installation using the DataMiner 10.0 installer; however, note that WinPcap is considered obsolete since 2018. For now, NPCap is not included in the DataMiner Installer.
+> The installation requires that [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed.
 
-### DataMiner installation
+## DataMiner installation
 
 1. Make sure you are logged into Windows with the server's local Administrator account. Do not use a regular user account with administrative rights.
 
@@ -45,25 +45,26 @@ The DataMiner installer allows you to run a DataMiner installation and to perfor
 
    The progress of the installation will be displayed. A *cancel* button in the lower right corner allows you to cancel the installation process if necessary.
 
-1. Once the installation is complete, the configuration screen will show.
+   Once the installation is complete, the configuration window will be displayed.
 
 1. Click *Start*.
 
-1. Select database type.
+1. Select the database type.
 
    - If you selected Self-hosted - External Storage please check [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
-1. Please enter the DataMiner Info
+1. Enter the DataMiner Info.
 
-   - The Organization API Key can be found in [dataminer.services] (https://dataminer.services/) under the Admin app in the Keys page. For more information please check [Managing dataminer.services keys](xref:Managing_DCP_keys).
-> [!IMPORTANT]
-> The selected key needs to have the permission to add DataMiner nodes.
+   - The Organization API Key can be found in [dataminer.services](https://dataminer.services/) under the Admin app in the Keys page. For more information please check [Managing dataminer.services keys](xref:Managing_DCP_keys).
+
+   > [!IMPORTANT]
+   > The selected key needs to have the permission to add DataMiner nodes.
 
 1. Check the selected configuration and click *Configure*
 
-1. When DataMiner has successfully started you can close the installer.
+1. When DataMiner has successfully started, close the installer.
 
-At this point, the basic installation is complete. 
+At this point, the basic installation is complete.
 
 > [!IMPORTANT]
 > During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights in DataMiner. To grant others access to the newly installed DMA, log in to Cube using the same Windows account as was used to install DataMiner, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
@@ -72,4 +73,3 @@ At this point, the basic installation is complete.
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
 > - After the installation, if you have [configured security](xref:Managing_users) so that there is at least one other user with full administrator rights, you can safely remove the account you used for the installation if necessary.
-
