@@ -2,17 +2,13 @@
 uid: Cube_Feature_Release_10.4.11
 ---
 
-# DataMiner Cube Feature Release 10.4.11 – Preview
+# DataMiner Cube Feature Release 10.4.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -52,8 +48,8 @@ When you click either the "thumbs up" or "thumbs down" button, in some cases, a 
 
 | Action | Description |
 |--------|-------------|
-| Clear event             | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
-| Improve alarm template   | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
+| Clear event            | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
+| Improve alarm template | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
 | Create alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
 
 When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.
@@ -188,3 +184,9 @@ In some rare cases, DataMiner could stop working while exporting trend data to a
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some cases, problems could occur when subscribing to properties due to subscriptions incorrectly being case sensitive. From now on, property subscriptions will be case insensitive.
+
+#### Alarm Console: 'NotSupportedException' errors would cause alarms to get stuck in alarm tabs [ID 41050]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 [CU0] -->
+
+In some cases, `NotSupportedException` errors would be added to the Cube logging, causing alarms to get stuck in alarm tabs, especially when a delay or a refresh rate had been specified.

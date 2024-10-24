@@ -50,13 +50,9 @@ DataMiner will act as a master, and will continuously send commands to the eleme
 > [!NOTE]
 > Serial protocols will combine all connections into one connection towards the device. When the device allows multiple clients to be connected, this can be disabled by changing the protocol type to "Serial single".
 
-*Feature introduced in DataMiner 7.5.5.4.*
-
 ### serial single
 
-Same as "Serial", but results in a dedicated connection to the device instead of a shared connection.
-
-*Feature introduced in DataMiner 7.5.5 (RN 5353).*
+Same as "Serial", but results in a dedicated connection to the device instead of a shared connection.<!-- RN 5353 -->
 
 ### service
 
@@ -75,13 +71,11 @@ Elements can send messages to DataMiner, without DataMiner having to first send 
 > [!NOTE]
 >
 > - When a smart-serial protocol fails to send data, it will retry up to 5 times.
-> - Smart-serial protocols will combine all connections into one connection towards the device. When the device allows multiple clients to be connected, this can be disabled by changing the protocol type to "Smart-serial single". Feature introduced in DataMiner 7.5.5.4.
+> - Smart-serial protocols will combine all connections into one connection towards the device. When the device allows multiple clients to be connected, this can be disabled by changing the protocol type to "Smart-serial single".
 
 ### smart-serial single
 
-Same as "smart-serial", but results in a dedicated connection to the device instead of a shared connection.
-
-Feature introduced in DataMiner 7.5.5 (RN 5353).
+Same as "smart-serial", but results in a dedicated connection to the device instead of a shared connection.<!-- RN 5353 -->
 
 ### snmp
 
@@ -102,7 +96,7 @@ Used for protocols that comply with the SNMPv3 standard.
 DataMiner will interrogate SNMP agents using the SNMPv3 protocol.
 
 > [!NOTE]
-> From DataMiner version 8.5.7.1 (RN 9964) onwards, it is possible to retrieve SNMPv3 traps on port 362. This avoids conflicts with traps of SNMPv2 on port 162. However, note that the firewall needs to be reconfigured in order to enable the reception of these traps.
+> To avoid conflicts with SNMPv2 traps on port 162, you can configure SNMPv3 traps to be received on port 362. However, note that the firewall needs to be configured in order to enable the reception of these traps.<!-- RN 9964 --> See [Customizing the trap reception ports of a DMA](xref:Changing_SNMP_agent_ports#customizing-the-trap-reception-ports-of-a-dma).
 
 ### virtual
 

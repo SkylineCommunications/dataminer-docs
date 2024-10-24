@@ -109,6 +109,9 @@ namespace DOM_FilteredEventExample
 }
 ```
 
+> [!NOTE]
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40621-->, client applications will be notified when a DOM instance no longer matches the subscription filter.
+
 ## Status transition event
 
 From DataMiner 10.2.5/10.3.0 onwards, in addition to the CRUD events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a `DomInstance` (see [status system](xref:DOM_status_system).
@@ -134,6 +137,7 @@ Apart from the [module filter](#filtering-crud-events), which can also be used f
 
 > [!NOTE]
 >
+> - From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40621-->, client applications will be notified when a DOM instance no longer matches the subscription filter.
 > - Only one `ModuleEventSubscriptionFilter` is supported for each subscription set. If you want to subscribe to events of multiple DOM managers, you will have to create another subscription for each one.
 > - The ***ModuleEventSubscriptionFilter* takes precedence over any other filter for a module event** (e.g. DOM CRUD or status events). When such a filter is defined and the module event does not match the specified module ID, it will never be returned for that subscription. If it is a match, it will be returned depending on the remaining filters. If there are no other filters, it is simply returned. This does not influence non-module events.
 

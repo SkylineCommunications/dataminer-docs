@@ -4,7 +4,7 @@ uid: Protocol.Topology.Cell.Link
 
 # Link element
 
-Specifies how a cell in an EPM (formerly known as CPE) topology is linked to another cell in that topology, using foreign key relations (which can also be inside the same table).
+Specifies how a cell in an EPM topology is linked to another cell in that topology, using foreign key relations (which can also be inside the same table).
 
 ## Parent
 

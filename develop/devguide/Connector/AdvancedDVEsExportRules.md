@@ -10,14 +10,14 @@ Export rules allow you to change the properties of exported parameters, e.g. the
 <ExportRule table="" tag=" " attribute="" value=""/>
 ```
 
-- **table**: ID of the DVE table or an asterisk (“*”) in case the rule should be applied to all dynamic element types.
-- **tag**: The tag to overrule. The full path of the tag needs to be specified: starting from the root tag, each child tag in the path must be included and separated with a forward slash (“/”).
+- **table**: ID of the DVE table or an asterisk (`*`) in case the rule should be applied to all dynamic element types.
+- **tag**: The tag to overrule. The full path of the tag needs to be specified: starting from the root tag, each child tag in the path must be included and separated with a forward slash ("/").
 - **attribute**: In case an attribute should be modified, specify the name of the attribute here.
 - **value**: New value that will be used in the DVE protocol.
 
 There is no restriction on the number of export rules that can be defined. Note, however, that the export rules are evaluated sequentially. For example, if there are two export rules that set the default page for a DVE protocol, the default page setting of the last export rule will be applied, as this rule will be processed last.
 
-From DataMiner version 7.5.6.3 onwards, it is possible to use regular expressions in export rules, making it possible to define more complex export rules.
+It is possible to use regular expressions in export rules, making it possible to define more complex export rules:
 
 |Symbol|Meaning|
 |--- |--- |
@@ -28,7 +28,7 @@ From DataMiner version 7.5.6.3 onwards, it is possible to use regular expression
 |^|Match at the beginning of the input string.|
 |$|Match at the end of the input string.|
 
-From DataMiner 8.5.1 onwards (RN 7831), hidden DVE tables (i.e. tables with RTDisplay="false"), can be exported using an export rule. In other words, a table not displayed in the DVE “parent” element can be visible in the DVE “child” element.
+Hidden DVE tables (i.e. tables with RTDisplay="false") can be exported using an export rule.<!-- RN 7831 --> In other words, a table not displayed in the DVE "parent" element can be visible in the DVE "child" element.
 
 ## Examples
 
@@ -94,7 +94,7 @@ From DataMiner 8.5.1 onwards (RN 7831), hidden DVE tables (i.e. tables with RTDi
     <ExportRule table="*" tag="Protocol/Params/Param/Name" value="PBR" regex="MCR$"/>
     ```
 
-    It could also be that the string you want to remove is not consistent. In this case, regular expressions are very useful. For example, if you want to remove the prefix in the protocol names, but the prefix could be trailing by 4, 7 or 8, you can specify the following to remove “MCR” with each digit behind it:
+    It could also be that the string you want to remove is not consistent. In this case, regular expressions are very useful. For example, if you want to remove the prefix in the protocol names, but the prefix could be trailing by 4, 7 or 8, you can specify the following to remove "MCR" with each digit behind it:
 
     ```xml
     <ExportRule table="*" tag="Protocol/Params/Param/Name" value="" regex="MCR\n"/>
@@ -115,7 +115,7 @@ From DataMiner 8.5.1 onwards (RN 7831), hidden DVE tables (i.e. tables with RTDi
     Here we specify: match 3 capital letters at the beginning of the string followed by a space (a space gets interpreted as well), but do not match when these 3 letters are MCR.
 
 > [!NOTE]
-> This could also be combined with the whereTag and whereValue attribute. For example, to change the column to 2 if the parameter name is 'My param' and if the column is not containing more than two digits. (This example is just by way of illustration, as it is very unlikely that this would be used in a production environment).
+> This could also be combined with the whereTag and whereValue attribute. For example, to change the column to 2 if the parameter name is "My param" and if the column does not contain more than two digits. (This example is just by way of illustration, as it is very unlikely that this would be used in a production environment).
 >
 > ```xml
 > <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" regex="\d{2}" whereTag="Protocol/Params/Param/Name" whereValue="My param"/>
