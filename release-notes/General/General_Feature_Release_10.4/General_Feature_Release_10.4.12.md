@@ -189,6 +189,14 @@ In order to enhance secure connector communication, SLPort will now validate SSL
 > - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
 > - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
 
+#### SLAnalytics - Time-scoped relations: Menu will now show all related parameters instead of all related parameters of the same element [ID 40904]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters of the same element that were related to the parameter shown in the graph.
+
+From now on, the menu will no longer only show all related parameters of the same element. It will also show all other related parameters regardless of element.
+
 #### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
