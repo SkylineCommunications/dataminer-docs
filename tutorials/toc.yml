@@ -28,4 +28,6 @@ items:
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
         topicUid: Visio_Tutorials
+      - name: Monitoring & Management tutorials
+        topicUid: Monitoring_Management_Tutorials
 
