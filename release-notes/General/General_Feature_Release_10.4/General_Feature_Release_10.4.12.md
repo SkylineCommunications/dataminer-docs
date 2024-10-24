@@ -179,7 +179,7 @@ Because of a number of enhancements, on STaaS systems, overall performance has i
 
 #### SLPort will now validate SSL/TLS certificates by default [ID 40877]
 
-<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
 

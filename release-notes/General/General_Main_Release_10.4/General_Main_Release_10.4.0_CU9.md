@@ -33,6 +33,18 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 
 A number of security enhancements have been made.
 
+#### SLPort will now validate SSL/TLS certificates by default [ID 40877]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
+
+> [!NOTE]
+>
+> - If you want SLPort to skip the default SSL/TLS certification validation for a particular element, you can set the `InsecureHttps` element to true in the *element.xml* file of that element.
+> - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+
 #### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
