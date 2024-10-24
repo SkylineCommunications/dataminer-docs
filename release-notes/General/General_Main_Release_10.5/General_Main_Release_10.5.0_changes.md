@@ -869,13 +869,16 @@ Up to now, this `SkipStartedInfoEvent` option would by default be set to false. 
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
 
-#### SLAnalytics - Time-scoped relations: Menu will now show all related parameters instead of all related parameters of the same element [ID 40904]
+#### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters of the same element that were related to the parameter shown in the graph.
 
-From now on, the menu will no longer only show all related parameters of the same element. It will also show all other related parameters regardless of element.
+From now on, the menu will no longer only show all parameters of the same element that were related in the selected time range. It will now also show
+
+- all parameters of the other elements in the same service that were related in the selected time range, and
+- the top 10 parameters system-wide that were related in the selected time range.
 
 #### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
