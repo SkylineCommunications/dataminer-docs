@@ -128,6 +128,8 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. Cassandra nodes use this list of hosts to find each other and learn the topology of the ring.
 
+     - **auto_snapshot_ttl**: Set this to the desired time to keep the automatic snapshots. Example to keep them for a day: `auto_snapshot_ttl: 1d`
+
        > [!TIP]
        >
        > - We recommend 3 seed nodes for every data center, preferably in different racks.
