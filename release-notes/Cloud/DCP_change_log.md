@@ -9,6 +9,30 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 24 October 2024 - Enhancement - Catalog - Improved heading style [ID 41145]
+
+Rendering of the Catalog headerbar has been improved.
+
+#### 24 October 2024 - Enhancement - Catalog - Catalog description supports markdown alert stying [ID 41053]
+
+Alert styling in the Catalog description readme.md is now supported. The current supported types are "Caution", "Important", "Note", "Tip" and "Warning".
+
+#### 24 October 2024 - Fix - Catalog API - Missing search results [ID 41226]
+
+​Items that had no reference to a vendor may no longer be included in search results.
+
+#### 24 October 2024 - Enhancement - Catalog - Catalog versioning format has been updated [ID 41225]
+
+​The Catalog API now allows all formats when registering a Catalog version.
+
+Versions following semantic version of A.B.C.D will be displayed in a A.B.C range.
+Versions following semantic version of A.B.C will be displayed in a A range
+All other version formats will be displayed in a "Other" range.
+
+#### 24 October 2024 - Enhancement - Catalog API - Catalog registration using a DMS key [ID 41215]
+
+The Catalog API can be used with a DMS key for authentication providing compatibility with existing pipelines that deployed a Catalog item on a DMS. 
+
 #### 22 October 2024 - Enhancement - Admin app - Irrelevant modules no longer shown on DxMs page [ID 41187]
 
 Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) will no longer be shown.
