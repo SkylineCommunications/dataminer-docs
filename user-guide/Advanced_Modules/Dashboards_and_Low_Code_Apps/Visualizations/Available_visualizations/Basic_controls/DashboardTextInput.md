@@ -1,5 +1,5 @@
 ---
-uid: DashboardTextInputFeed
+uid: DashboardTextInput
 ---
 
 # Text input

@@ -10,7 +10,7 @@ As soon as more than one data item is displayed by the group component, the comp
 
 To configure this component:
 
-1. Add one or more data feeds. See [Applying a data source](xref:Apply_Data_Source).
+1. Add one or more data feeds. See [Adding data to a component](xref:Adding_data_to_component).
 
    The component accepts elements, parameters, redundancy groups, services and views as data feeds.
 

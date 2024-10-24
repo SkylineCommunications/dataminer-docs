@@ -12,7 +12,7 @@ This component is used to guide the user through a workflow by splitting it up i
 
 To configure the component:
 
-1. Apply a DOM definition or DOM instance data feed. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply a DOM definition or DOM instance data feed. See [Adding data to a component](xref:Adding_data_to_component).
 
    You can apply a DOM definition or DOM instance directly, or use e.g. a feed based on a table component, so that the stepper will display the information linked to the item selected in the table component.
 

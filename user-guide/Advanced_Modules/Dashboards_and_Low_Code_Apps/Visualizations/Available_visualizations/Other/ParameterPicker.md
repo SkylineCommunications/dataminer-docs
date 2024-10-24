@@ -17,7 +17,7 @@ This picker component allows the user to select multiple parameters from a prede
 
 ## Configuring the component
 
-1. Apply the necessary data feeds. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply the necessary data feeds. See [Adding data to a component](xref:Adding_data_to_component).
 
    - The component supports element and parameter data feeds. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, a protocol or view feed can be used as an additional filter.
 

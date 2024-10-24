@@ -17,7 +17,7 @@ This component can be used to display a trend graph.
 
 To configure the component:
 
-1. Apply one or more parameter data feeds. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply one or more parameter data feeds. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
    >

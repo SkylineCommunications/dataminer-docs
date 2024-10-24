@@ -13,7 +13,7 @@ This basic control allows the user to select an item in a dropdown list. The sel
 
 To configure the component:
 
-1. Apply the necessary data feeds. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
    > From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data feed, the resulting rows from that query are listed instead of the query itself. Additionally, if you want to use this dropdown feed component as a data feed, the entry will be listed as *Query rows* in the *Data* pane. When you apply multiple query data feeds, the queries themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data feed, the query itself is listed as data. If you use this dropdown feed component as a data feed, the entry will be listed as *Queries* in the *Data* pane.

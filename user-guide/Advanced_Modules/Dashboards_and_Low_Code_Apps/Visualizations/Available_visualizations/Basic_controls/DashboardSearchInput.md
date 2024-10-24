@@ -1,5 +1,5 @@
 ---
-uid: DashboardSearchInputFeed
+uid: DashboardSearchInput
 ---
 
 # Search input

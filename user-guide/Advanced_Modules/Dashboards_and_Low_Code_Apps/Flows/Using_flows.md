@@ -12,7 +12,7 @@ Flows are available starting from DataMiner web 10.4.12. The minimum required se
 
 Flows always start from at least one existing data source. The following data sources can be used to initiate a flow:
 
-- **Feeds**: Live or static data inputs, such as text inputs or other widgets providing data.
+- **Data inputs**: Live or static data inputs, such as text inputs or other widgets providing data.
 - **Other flows**: Flows can be chained, with the output of one flow being used as the input for another.
 <!--(Variables) TODO: add once variables are available-->
 

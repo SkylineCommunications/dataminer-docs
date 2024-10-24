@@ -283,6 +283,10 @@ items:
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
+              - name: Specifying data input in a dashboard or app URL
+                topicUid: Specifying_data_input_in_a_dashboard_URL
+              - name: Configuring a dashboard to use data in a URL without a dedicated component
+                topicUid: Using_data_in_URL_without_dedicated_component
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
@@ -373,10 +377,12 @@ items:
         items:
           - name: Applying a visualization
             topicUid: Apply_Visualization
-          - name: Applying a data source
-            topicUid: Apply_Data_Source
+          - name: Adding data to a component
+            topicUid: Adding_data_to_component
           - name: Customizing the component layout
             topicUid: Customize_Component_Layout
+          - name: Dynamically referencing data in text
+            topicUid: Dynamically_Referencing_Data_in_Text
           - name: Using the Template Editor
             topicUid: Template_Editor
           - name: Deleting a component
@@ -488,17 +494,8 @@ items:
                 topicUid: DashboardSearchInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
-      - name: Component data sources
-        topicUid: Component_Data_Sources
-        items:
-          - name: Configuring components for passing data input
-            topicUid: Configuring_components_for_passing_data_input
-          - name: Dynamically referencing data in text
-            topicUid: Dynamically_Referencing_Data_in_Text
-          - name: Specifying data input in a dashboard or app URL
-            topicUid: Specifying_data_input_in_a_dashboard_URL
-          - name: Configuring a dashboard to use data in a URL without a dedicated component
-            topicUid: Using_data_in_URL_without_dedicated_component
+      - name: Component data
+        topicUid: Component_Data
       - name: Flows
         topicUid: Using_flows
         items:

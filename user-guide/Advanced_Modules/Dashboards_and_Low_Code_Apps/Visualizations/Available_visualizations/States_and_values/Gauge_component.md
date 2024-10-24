@@ -10,7 +10,7 @@ This component displays a numeric parameter value as a gauge.
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply a data feed. See [Adding data to a component](xref:Adding_data_to_component).
 
    - Column parameter feeds are supported.
 

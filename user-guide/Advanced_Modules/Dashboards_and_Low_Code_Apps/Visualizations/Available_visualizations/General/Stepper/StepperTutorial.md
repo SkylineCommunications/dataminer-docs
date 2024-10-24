@@ -44,7 +44,7 @@ The end result of this step should look like this:
 
 ## Step 3: Add the data
 
-Add data to components by [applying a data source](xref:Apply_Data_Source).
+[Add data to the components](xref:Adding_data_to_component).
 
 Each of the components on the page has to receive some data:
 

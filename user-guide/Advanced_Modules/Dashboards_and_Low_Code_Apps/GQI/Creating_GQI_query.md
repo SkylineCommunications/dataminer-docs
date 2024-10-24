@@ -48,7 +48,9 @@ Please note the following regarding query data input:
 
 - From DataMiner 10.1.0/10.1.3 onwards, dynamic units will automatically be used when applicable for the retrieved data if this is enabled in the dashboard settings. This means that parameter units will change dynamically based on their value and protocol definition. You can override the behavior configured for the dashboard in the settings for the component.
 
-- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query feed, any view, service, or element linked to that row is also exposed as a feed. In practice, this means that a feed will be available in the *feeds* section of the data pane that will change based on the selection in the table.
+- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the data pane (depending on your DataMiner version) that will change based on the selection in the table.
+
+  ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data tab in DataMiner 10.4.12*
 
 - From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range feed by selecting the *From feed* checkbox.
 

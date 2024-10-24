@@ -119,4 +119,4 @@ The table component should now display the parameters specified during query cre
 
 ## Related documentation
 
-- [Component data sources](xref:Component_Data_Sources)
+- [Component data](xref:Component_Data)

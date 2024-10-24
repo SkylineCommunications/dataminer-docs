@@ -15,7 +15,7 @@ This component allows the user to filter and refine data based on specific crite
 
 ## Configuring the component
 
-1. Apply the necessary data feeds. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply the necessary data feeds. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
    > The assigned feed name will be visible in the bottom-right corner of the query filter component (e.g. Query filter 1).

@@ -15,7 +15,7 @@ It can also be used to represent any data based on a data query in the form of a
 
 To configure the component:
 
-1. Apply a view data feed. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply a view data feed. See [Adding data to a component](xref:Adding_data_to_component).
 
    This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 

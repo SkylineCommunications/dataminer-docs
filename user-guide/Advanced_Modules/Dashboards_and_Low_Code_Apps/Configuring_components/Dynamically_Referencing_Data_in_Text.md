@@ -54,7 +54,31 @@ The element `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements.Name}` us
 
 #### URLs
 
-<!--To do: syntax here-->
+To create URL references inside textual settings, use the following syntax:
+
+```txt
+{URL."Category name".type.Value}
+```
+
+- **URL**: A fixed keyword to indicate that the variable represents a URL .
+
+- **Category name**: The part of the URL where the data will be embedded, e.g. "Query parameters".
+
+- **Type**: The type of data, e.g. "Numbers".
+
+- **Value**: The property of the data that should be used in the URL.
+
+> [!NOTE]
+>
+> - URL references are only supported in the Dashboards app, not in Low-Code Apps.
+> - Any parts of this syntax that contain spaces should be enclosed in double quotation marks.
+> - All parts of this syntax are case-sensitive.
+
+Example: If you want to pass a number as a query parameter to a URL, you could use the following syntax:
+
+```txt
+{URL."Query parameters".Numbers.Value}
+```
 
 #### Flows
 
@@ -86,7 +110,7 @@ For example, if you want to use the ID output of the "Selected Items Flow" flow:
 The selected item is `{FLOW."Selected Items Flow".ID}`.
 ```
 
-## [Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12](#tab/tabid-2)
+### [Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12](#tab/tabid-2)
 
 To create feed references inside textual settings, use the following syntax:
 

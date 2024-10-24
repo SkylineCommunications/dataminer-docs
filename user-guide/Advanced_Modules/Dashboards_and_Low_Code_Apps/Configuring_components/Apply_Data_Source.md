@@ -1,16 +1,16 @@
 ---
-uid: Apply_Data_Source
+uid: Adding_data_to_component
 ---
 
-# Applying a data source
+# Adding data to a component
 
-To apply a data source or change the data source of a component:
+To add data or change the data of a component:
 
 1. Click on the component or hover the mouse pointer over the component and **click the ![Data icon](~/user-guide/images/dashboards_data.png) icon**.
 
-   In the data pane on the right, any data sources that do not match the visualization of the component will become unavailable. Data sources that are compatible with the component will be marked with the following icon: ![Compatible data source icon](~/user-guide/images/NewRD_datasource.png)
+   In the data pane on the right, any data that does not match the visualization of the component will become unavailable. Data that is compatible with the component will be marked with the following icon: ![Compatible data icon](~/user-guide/images/NewRD_data.png)
 
-1. **Drag the compatible data source** onto the component.
+1. **Drag the compatible data entry** onto the component.
 
    - To find specific data more quickly, you can use the **filter box** at the top of each data section.
 
@@ -32,38 +32,22 @@ To apply a data source or change the data source of a component:
        > [!NOTE]
        > These filters are applied server-side, so if your DMS has many elements, these can help you load the elements you need much faster.
 
-   - For some components, you can add the **complete set** of a certain type of items. In that case, the data source icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
+   - For some components, you can add the **complete set** of a certain type of items. In that case, the ![Data](~/user-guide/images/dashboards_data.png) icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
 
      > [!NOTE]
      >
      > - If you add the entire *Bookings* data set to a dropdown, list, or tree component, you will also need to link this to a time range component.
      > - From DataMiner 10.2.11/10.3.0 onwards, you can filter on all versions of a protocol by adding the protocol itself to the component. In earlier versions, only the first of the available versions will be added in that case.
 
-   - A data source can also be provided by any of the **following components**:
+   - Data input can also be provided by any another component. When a component has been added to the dashboard or low-code app, the *Components* or *Feeds* section (depending on your DataMiner version<!--RN 41141-->) is added to the available data in the *Data* pane. You can then drag an entry from this section to a different component in order to link it to the component. For more information, see [Component data](xref:Component_Data).
 
-     - [Time range](xref:DashboardTimeRange)
-
-     - [List](xref:DashboardList)
-
-     - [Tree](xref:DashboardTree)
-
-     - [Parameter picker](xref:DashboardParameterPicker)
-
-     - [EPM picker](xref:DashboardEPMPicker)
-
-     - [Query filter](xref:DashboardQueryFilter)
-
-     - [Trigger](xref:DashboardTrigger).
-
-     When one of these components has been added to the dashboard or low-code app, the *Components* or *Feeds* section (depending on your DataMiner version<!--RN 41141-->) is added to the available data in the *Data* pane. You can then drag an entry from this section to a different component in order to link it to the component.
-
-   - Some components allow you to specify **multiple data sources**. For example, for a state component and a line chart component, multiple parameters can be dragged onto the component.
+   - Some components allow you to specify **multiple data entries**. For example, for a state component and a line chart component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]
-     > For some visualizations that use multiple data sources (e.g. parameter table, state), you can modify the order in which these data sources are displayed. To do so, in the *Data used in component* section of the *Data* pane, click the arrow icons next to the data sources to place them higher or lower in the order.
+     > For some visualizations that use multiple data entries (e.g. parameter table, state), you can modify the order in which these data entries are displayed. To do so, in the *Data used in component* section of the *Data* pane, click the arrow icons next to the data entries to place them higher or lower in the order.
 
-   - If you try to add a data source that is **not compatible** with the component, a red icon will be displayed on the component when you try to drag the data onto it.
+   - If you try to add data that is **not compatible** with the component, a red icon will be displayed on the component when you try to drag the data onto it.
 
-1. Some visualizations and data sources allow you to specify an **additional filter**. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse pointer over it: ![Filter icon](~/user-guide/images/DashboardsX_filter.png)
+1. Some visualizations and data allow you to specify an **additional filter**. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse pointer over it: ![Filter icon](~/user-guide/images/DashboardsX_filter.png)
 
-   After you click this icon, compatible filters will be marked with this icon in the *Data* pane, and you will be able to drag these onto the component just like a data source.
+   After you click this icon, compatible filters will be marked with this icon in the *Data* pane, and you will be able to drag these onto the component just like data.

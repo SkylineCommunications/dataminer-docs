@@ -2,11 +2,11 @@
 uid: Specifying_data_input_in_a_dashboard_URL
 ---
 
-# Specifying data input in a dashboard or app URL
+# Specifying data input in a dashboard URL
 
-From DataMiner 10.2.11/10.3.0 onwards<!--RN 34261-->, you can specify default data for a low-code app via URL parameters. This way, you can for instance specify the elements, parameters, views, etc. that need to be selected in the app. You can pass the data using a [JSON object](#json-syntax) in the URL.
+From DataMiner 10.2.11/10.3.0 onwards<!--RN 34261-->, you can specify default data for a dashboard via URL parameters. This way, you can for instance specify the elements, parameters, views, etc. that need to be selected in the dashboard. You can pass the data using a [JSON object](#json-syntax) in the URL.
 
-If a dashboard has been configured with one or more feed components, it is possible to specify data input for these feeds in a dashboard URL as well. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a JSON object in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now as well.
+If a dashboard has been configured with one or more components, it is possible to specify data input for this data in a dashboard URL as well. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a JSON object in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now as well.
 
 > [!NOTE]
 >
@@ -58,7 +58,7 @@ This JSON object has to have the following structure:
   > [!NOTE]
   > The (optional) *feed* item is currently only available for passing data input in a dashboard URL.
 
-- When you provide data in the (optional) *select* item, that data will only be used to select items in selection boxes on the dashboard or app page. It will not be used in the URL feed.
+- When you provide data in the (optional) *select* item, that data will only be used to select items in selection boxes on the dashboard page. It will not be used in the URL feed.
 
 - In the *components* item, you can provide data to be selected in specific components referred to by their ID. ``<component-data>`` is an array of objects containing the component ID and the data that should be passed to the component:
 
@@ -89,9 +89,7 @@ To guarantee support across all browsers and prevent possible issues, the URL va
 | & | %26 |
 | Space | %20 |
 
-### Examples: passing the data using a JSON object in the URL
-
-#### Example 1: dashboard
+### Example
 
 With the following JSON object, three different elements ("1/2","1/8", and "212/123") and two parameters ("1/2/3" and "1/4/6") will be selected for the component with ID 123:
 
@@ -123,16 +121,6 @@ To pass this JSON object as part of a URL, it needs to be URL-encoded.
 
 `https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?data=%7B%22version%22%3A1%2C%22components%22%3A%5B%7B%22cid%22%3A123%2C%22select%22%3A%7B%22elements%22%3A%5B%221%2F2%22%2C%221%2F8%22%2C%22212%2F123%22%5D%2C%22parameters%22%3A%5B%221%2F2%2F3%22%2C%221%2F4%2F6%22%5D%7D%7D%5D%7D`
 
-#### Example 2: low-code app
-
-The following example URL selects one default element on the initial page. The component ID is "1", and the element ID is "1/6"
-
-```url
-https://<dma>/<app-id>?data={"version":1,"components":[{"cid":1,"select":{"elements":["1/6"]}]}}
-```
-
-This is the encoded equivalent: `https://<dma>/<app-id>?data=%7B%22version%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D`
-
 ## Legacy syntax
 
 > [!NOTE]
@@ -158,7 +146,7 @@ For example:
 
 ## Supported objects
 
-Within the dashboard or app URL, the following data objects can be specified:
+Within the dashboard URL, the following data objects can be specified:
 
 - *elements*: Requires the DMA ID and element ID.
 

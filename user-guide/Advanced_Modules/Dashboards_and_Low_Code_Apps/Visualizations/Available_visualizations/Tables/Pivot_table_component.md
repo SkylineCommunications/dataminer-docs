@@ -15,7 +15,7 @@ It is possible to export this status report to CSV. To do so, click the ... icon
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply a data feed. See [Adding data to a component](xref:Adding_data_to_component).
 
    This component requires a parameter feed based on *Protocol* or *Element*, or a group of parameters from a *Parameter* selector component.
 

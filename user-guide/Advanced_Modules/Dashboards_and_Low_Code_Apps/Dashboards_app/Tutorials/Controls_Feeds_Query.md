@@ -115,4 +115,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Component data sources](xref:Component_Data_Sources)
+- [Component data](xref:Component_Data)

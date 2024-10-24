@@ -13,7 +13,7 @@ This component displays the state, name and, if applicable, the value of a DataM
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data source](xref:Apply_Data_Source).
+1. Apply a data feed. See [Adding data to a component](xref:Adding_data_to_component).
 
    - Column parameter feeds are supported.
 
@@ -24,7 +24,7 @@ To configure the component:
 
    - This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
+   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
 
    > [!NOTE]
    > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *feeds* section of the data pane so that it can be used as a feed for other components. This way, if the input for this component changes, it will also change for all other components using this component as their feed. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.

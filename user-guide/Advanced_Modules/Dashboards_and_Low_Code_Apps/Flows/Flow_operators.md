@@ -18,7 +18,7 @@ Delays the emission of a value until a specified time has passed without receivi
 ![Debouncing an input value](~/user-guide/images/Flow_OperatorDebounce.gif)<br>
 *Debouncing an input value in DataMiner 10.4.12*
 
-This could for example be used to apply a buffer to a rapidly changing feed (e.g. a [textbox](xref:DashboardTextInputFeed)) that is used in a query (e.g. like in step 4 of the [Leveraging controls and feeds to create a dynamic GQI query tutorial](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)).
+This could for example be used to apply a buffer to a rapidly changing feed (e.g. a [textbox](xref:DashboardTextInput)) that is used in a query (e.g. like in step 4 of the [Leveraging controls and feeds to create a dynamic GQI query tutorial](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)).
 
 ### Settings
 

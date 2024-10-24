@@ -196,7 +196,7 @@ You can do this in several different ways, for example:
 
 - Use a **text input feed** or **search input feed**:
 
-  1. Add a [text input](xref:DashboardTextInputFeed) or [search input](xref:DashboardSearchInputFeed) feed component to your dashboard or app.
+  1. Add a [text input](xref:DashboardTextInput) or [search input](xref:DashboardSearchInput) feed component to your dashboard or app.
 
   1. Hover over the table component, click the filter icon, and then add a filter feed from the *Feeds > Text input/Search input > Value > Strings* section of the data pane.
 

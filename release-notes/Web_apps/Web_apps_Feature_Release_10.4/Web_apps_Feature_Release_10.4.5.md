@@ -55,7 +55,7 @@ In case of a *Web* component:
 In case of a *Text* component, the feed syntax can be inserted in the text.
 
 > [!TIP]
-> For more information on feeds, see [Feeds](xref:Using_dashboard_feeds).
+> For more information on feeds, see [Component data](xref:Component_Data).
 
 > [!NOTE]
 >
