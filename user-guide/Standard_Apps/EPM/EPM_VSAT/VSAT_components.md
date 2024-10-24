@@ -87,8 +87,8 @@ This Automation script is dependent on the following connectors:
 
 ### SkylineCommunications_SLC-AS-EPM_VSAT_Subscription_Manager
 
-This script is in charge of centralizing the information of the subscription tables of different peripherals across all the DMAs. It receives the request from the elements to update/change a subscription table, it stores the updated information and sends it back to all elements to keep them updated with the latest changes.
+This script is in charge of centralizing the information of the subscription tables of different peripherals across all the DMAs. It receives the request from the elements to update/change a subscription table, it stores the updated information, and it sends it back to all elements to keep them updated with the latest changes.
 
-This Automation script is dependent on the following protocols:
+This Automation script is dependent on the following connector:
 
-- [Skyline EPM Platform VSAT DSM SO](#sun-outage) that triggered the initial script.
+- [Skyline EPM Platform VSAT DSM SO](#sun-outage), which triggers the initial script.

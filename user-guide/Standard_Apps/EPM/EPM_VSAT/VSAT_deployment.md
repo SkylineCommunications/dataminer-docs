@@ -66,36 +66,35 @@ While the package is being deployed, you can follow the progress of the deployme
 
 Follow the steps below to set up the **front-end and back-end elements**:
 
-1. In DataMiner Cube, create the front-end and back-end elements using the *Skyline EPM Platform VSAT GEO* connector. Its recommended to plan your elements across the DMS. See [LINK TO Architecture Page Example] and we will configure them in a later step.
+1. In DataMiner Cube, create the front-end and back-end elements using the *Skyline EPM Platform VSAT GEO* connector.
 
-1. For each of the collectors, the front end, and the back-end elements, right-click the element, select *Properties*, and take note of the element ID (in the format "DMAID/ElementID") displayed in the *Properties* window. You will need these IDs later to aid in configuring the EPM Elements.
+   Make sure you carefully plan your elements across the DMS. For more info, see [EPM VSAT architecture](xref:VSAT_architecture). You will configure these elements in a later step.
 
-1. Configure the **front-end element**, using the Visual page of the protocol/element.
+1. For each of the collectors, the front end, and the back-end elements, right-click the element, select *Properties*, and take note of the element ID (in the format "DMAID/ElementID") displayed in the *Properties* window.
 
-    1. Navigate to the **configuration** page.
-    1. Navigate to the **settings** tab and set the Role parameter to *Frontend*.
-    1. Navigate to the **collectors** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
-    1. Navigate to the **backends** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
+   You will need these IDs in the next steps to configure the EPM elements.
 
-> [!TIP]
-> The Frontend connector should get configured with **all collectors and backends** accordingly.
+1. Configure the **front-end element**, using the Visual page of the element:
+
+   1. On the **Configuration** page, go to the *settings* tab, and set the *Role* parameter to *Frontend*.
+   1. Go to the **collectors** tab, and add the element IDs (in DMAID/ElementID format) for all collectors to the table.
+   1. Go to the **backends** tab, and add the element IDs (in DMAID/ElementID format) for all back ends to the table.
 
 1. Configure the **back-end elements** in a similar way:
 
-    1. Navigate to the **configuration** page.
-    1. Navigate to the **settings** tab and set the Role parameter to *Backend*.
-    1. Navigate to the **collectors** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
-    1. Navigate to the **backends** tab and populate the table with DMAID/ELEMENTID captured in the previous step.
+   1. On the **Configuration** page, go to the *settings* tab, and set the *Role* parameter to *Backend*.
+   1. Go to the **collectors** tab, and add the DMAID/ElementID you noted earlier to the table.
+   1. Go to the **backends** tab, and add the DMAID/ElementID you noted earlier to the table.
 
-> [!TIP]
-> The Frontend connector should get configured **only with collectors and backends served by the DMA hosting the element** accordingly.
+   > [!TIP]
+   > The front-end connector should get configured **only with collectors and backends served by the DMA hosting the element** accordingly.
 
 1. After all EPM elements are configured, set the provisioning status to "Enabled".
 
-> [!TIP]
+> [!NOTE]
 > To assist with troubleshooting, you can enable the Debug parameter. This will activate debugging for all elements (collectors, front end, and back end).
 
-> [!TIP]
+> [!IMPORTANT]
 > The collectors and the EPM elements may need to be restarted after the initial configuration to start working properly.
 
 ## Peripherals configuration
