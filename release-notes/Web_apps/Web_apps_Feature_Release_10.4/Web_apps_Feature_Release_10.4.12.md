@@ -284,7 +284,7 @@ When you installed a low-code app, in some cases, it would not have the correct 
 
 Also, it would not be possible to install more than one low-code app per DataMiner Agent.
 
-#### Dashboards/Low-Code Apps - Table component: Problem when removing the only of the last query [ID 41096]
+#### Dashboards/Low-Code Apps - Table component: Problem when removing the only or the last query [ID 41096]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
