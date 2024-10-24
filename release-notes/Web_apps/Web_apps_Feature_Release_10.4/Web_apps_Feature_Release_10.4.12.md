@@ -326,6 +326,16 @@ The *Web* component would no longer detect that the URL had changed. As a result
 
 Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
 
+#### Dashboards/Low-Code Apps: GQI components did not fully support static tables [ID 41197]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+
+In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
+
+From now on, the GQI components will fully support dropping tables onto them as data.
+
 #### Dashboards app: After duplicating a dashboard, the components in both dashboards would incorrectly have the same ID [ID 41199]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -337,3 +347,9 @@ When you had duplicated a dashboard, the components in the newly created duplica
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
+
+#### Dashboards/Low-Code Apps - Grid and Node edge graph components: Problem when pressing the DELETE key [ID 41223]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you pressed the DELETE key after you had selected an item in a *Grid* component or a node in a *Node edge graph* component, up to now, the item or node would incorrectly disappear from the screen. It would, however, not be removed from the database.
