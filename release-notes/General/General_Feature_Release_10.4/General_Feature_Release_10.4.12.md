@@ -19,6 +19,7 @@ uid: General_Feature_Release_10.4.12
 ## Highlights
 
 - [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
+- [Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]](#default-number-of-simultaneously-running-slprotocol-processes-has-been-increased-from-5-to-10-id-41077)
 
 ## New features
 
@@ -72,6 +73,14 @@ For more information on how to use this new feature in DataMiner Cube, see [Alar
 
 ### Enhancements
 
+#### DataMiner Object Models: Length of string fields is now limited in order to prevent database errors [ID 39496]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Values of DOM fields of type `String` are now limited to 32,766 UTF8 bytes.
+
+When a DOM instance contains string fields of which the value exceeds this limit, a `DomInstanceError` will be returned with error reason *ValueTooLarge*. The `AssociatedFields` collection will contain the SectionDefinition, Section and FieldDescriptor IDs referring to the incorrect FieldValue as well as the new `ActualSize` property, which will contain the actual UTF8 size of the string that exceeds the limit.  
+
 #### OpenSearch: Enhanced performance of alarm queries [ID 40674]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
@@ -92,6 +101,60 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 
 A number of security enhancements have been made.
 
+#### Minor enhancements made to BPAs [ID 40751]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of minor enhancements have been made to the following BPAs:
+
+##### Cassandra DB Size
+
+- Will no longer be considered a standard BPA test.
+- Will no longer fail when the IP address is "localhost".
+- Error `! execution failed | This BPA does apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.
+
+##### Check Agent Presence Test In NATS
+
+- Renamed to *Nats connections between the DataMiner Agents*.
+
+##### Check Antivirus DLLs
+
+- Renamed to *Antivirus on the DataMiner Agents*.
+
+##### Check Cluster SLNet Connections
+
+- Renamed to *SLNet connections between the DataMiner Agents*.
+- Message `No potential issues detected` renamed to `No issues detected`.
+
+##### HTTPS Configuration
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Minimum Requirements Check
+
+- Renamed to *DataMiner Agent Minimum Requirements*.
+- When Cassandra is not installed, this BPA will no longer report Cassandra is a requirement.
+- Memory calculation has been enhanced.
+
+##### Password Strength
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Report active RTE
+
+- Renamed to *Active Runtime errors*.
+
+##### Security Advisory BPA
+
+- Renamed to *Security Advisory*.
+
+##### View Recursion BPA
+
+- Renamed to *View recursive loops*.
+- Will no longer be considered a standard BPA test.
+
 #### PortLog.txt file now supports IPv6 addresses [ID 40753]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
@@ -108,11 +171,40 @@ If you have created an Automation script that launches subscripts, you can use t
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
-#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+#### STaaS: Enhanced performance when writing data to the database [ID 40870]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When an element is duplicated, the following information events will no longer be generated:
+Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
+
+#### SLPort will now validate SSL/TLS certificates by default [ID 40877]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
+
+> [!NOTE]
+>
+> - If you want SLPort to skip the default SSL/TLS certification validation for a particular element, you can set the `InsecureHttps` element to true in the *element.xml* file of that element.
+> - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+
+#### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters of the same element that were related to the parameter shown in the graph.
+
+From now on, the menu will no longer only show all parameters of the same element that were related in the selected time range. It will now also show
+
+- all parameters of the other elements in the same service that were related in the selected time range, and
+- the top 10 parameters system-wide that were related in the selected time range.
+
+#### Certain information events will no longer be generated when an element is replicated [ID 40926]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When an element is replicated, the following information events will no longer be generated:
 
 - [Replicated Element]
 - [Remote Element Name]
@@ -127,6 +219,12 @@ The following NT Notify types have been deprecated:
 - NT_ADD_VIEW_NO_LOCK
 - NT_ADD_VIEWS_NO_LOCK
 
+#### Failover: Enhanced updating of values stored in the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file based on current system status [ID 40930]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of enhancements have been made with regard to updating values stored in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file based on current system status.
+
 #### SLLogCollector: Miscellaneous enhancements [ID 40935]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
@@ -140,6 +238,32 @@ A number of enhancements have been made to the SLLogCollector tool:
   - Web API version information
 
 - Hostnames will now be resolved via both *nslookup* and `System.Net.Dns.GetHostAddresses`.
+
+#### GQI: Enhanced performance of 'top X' queries using the 'Get alarms' data source [ID 40937]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance of GQI "top X" queries using the *Get alarms* data source has increased.
+
+#### Service & Resource Management: Controlling the generation of information events when starting booking event scripts [ID 40972]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
+
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+
+Also, the following scripts will now only be executed when the above-mentioned option is set to true:
+
+- the *StateChangeScript*, defined on an `SRMServiceInfo` object, which is executed when the state of the `SRMServiceInfo` object changes.
+- the *SRM_QuarantineHandling* script, which is executed when there is a conflict with a booking causing that booking to be put in quarantine.
+
+Additionally, the following script will also no longer generate an information event when it is executed:
+
+- the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
+
+> [!IMPORTANT]
+> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
 
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 
@@ -174,6 +298,14 @@ When, while running the DataMiner installer to install a DataMiner Agent, you se
 Also, when you select the above-mentioned database type, the following warning message will now be displayed:
 
 `Warning: Selecting this option requires nested virtualization to be enabled on the host machine. Failure to do so will result in the feature not functioning.`
+
+#### SLManagedAutomation and SLManagedScripting will now use at least TLS 1.2 encryption when communicating with BrokerGateway [ID 41048]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When initialized, SLManagedAutomation and SLManagedScripting will now set the allowed security protocol to "Tls1 | Tls11 | Tls12".
+
+This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
 
 #### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
 
@@ -277,11 +409,24 @@ When a DVE child element had an alarm template in which you had configured that 
 
 When a GQI query was executed on a DataMiner System with storage per DMA, and then executed again after a DMA in that DataMiner System had been restarted, it would fail.
 
+#### Service & Resource Management: Caching problem could lead to client applications not getting the updated information [ID 40984]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+When an object is updated immediately after being created, in some cases, both the create and the update operation will have the same internal timestamp (i.e. the value stored in the `LastModified` field of the `ITrackLastModified` interface). Due to a caching issue, up to now, this could lead to client applications not getting the updated information.
+
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
 Up to now, a MySQL database optimization task would incorrectly also be run on systems with a database other than MySQL.
+
+#### Unclear exception returned by paged query after encountering a timeout [ID 40986]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 40614 -->
+
+When a paged query encountered a timeout during execution, in some cases, it would return an unclear exception. The text of the exception has now been made clearer.
 
 #### Cassandra Cluster Migrator tool: Problem when encountering invalid or corrupt row while migrating alarm data [ID 41002]
 
@@ -289,11 +434,46 @@ Up to now, a MySQL database optimization task would incorrectly also be run on s
 
 In some rare cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw an error when it encountered an invalid or corrupt row in the source database while migrating alarm data. From now on, all invalid or corrupt rows will be skipped.
 
+#### Element connections: Value of write parameters would incorrectly be resent [ID 41010]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When an element connection had a write parameter as source, up to now, the value of that parameter would be pushed to the destination when the element connections of the source element were modified or when the destination element was restarted. In some cases, this could result in unexpected behavior. For example, when the write parameter was a button, the destination element would start to execute the actions as if the button would have been pressed. From now on, write parameters used as source will only be forwarded to the destination when their value is actually updated.
+
+The behavior of read parameters used as source will remain unchanged. Their value will still be forwarded to the destination when the destination element is restarted or when the element connections of the source element are modified. Read parameters are typically used to display the same value in both source and destination.
+
+Also, up to now, when an element connection was saved without the *Include Element State* option being selected, the destination parameter (read parameter) would incorrectly be triggered twice with the same value. From now on, the value will only be forwarded once.
+
+> [!NOTE]
+> If you want write parameters used as source to behave as before, you can enable the *LegacyElementConnectionsResendWriteParams* soft-launch option.
+
 #### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
+
+#### Cassandra Cluster Migrator tool: Options for offloading files to a file cache would incorrectly not be preserved [ID 41055]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when finalizing a migration, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would incorrectly not preserve the options that had been specified for offloading files to a file cache. These options will now be preserved.
+
+For more information on the above-mentioned offload options, see [Offloading files to a file cache](xref:DB_xml#offloading-files-to-a-file-cache).
+
+#### Problem with the NATS cluster configuration after a DataMiner start-up [ID 41072]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
+
+After a DataMiner start-up, in some cases, the NATS cluster would be configured incorrectly and the following error message would be added to the *SLError.txt* log file:
+
+`ResetLocalNatsCluster|ERR|0|18|System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.`
+
+#### Protocols: Stuffing attribute of Protocol.Advanced element was not parsed correctly [ID 41092]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The value of the `stuffing` attribute of the *Protocol.Advanced* element was not parsed correctly.
 
 #### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
 

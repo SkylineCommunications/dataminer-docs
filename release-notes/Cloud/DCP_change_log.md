@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 22 October 2024 - Enhancement - Admin app - Irrelevant modules no longer shown on DxMs page [ID 41187]
+
+Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) will no longer be shown.
+
 #### 18 October 2024 - Enhancement - ChatOps - Enhanced stability and performance of Teams Chat Integration [ID 41149]
 
 Enhancements have been implemented to the Teams Chat Integration feature, ensuring improvements in stability, availability, and performance with immediate effect.
@@ -83,7 +87,7 @@ Up to now, in the warning message that was shown to inform users of the node whe
 
 In the Admin app, when you click the DMS URL on the DMS overview page, this will now open in a new tab.
 
-#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860] [ID_41056]
+#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860] [ID 41056]
 
 When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
 

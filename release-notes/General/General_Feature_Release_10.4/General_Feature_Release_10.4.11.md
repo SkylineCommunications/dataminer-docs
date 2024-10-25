@@ -325,3 +325,9 @@ When an unhandled exception was thrown by a QAction after an element had been st
 <!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
 
 Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longer be sent from clients running feature version 10.4.10 to DataMiner Agents running feature version 10.4.1 or older.
+
+#### DataMiner as a Service: Incorrect 'This DataMiner Agent is not licensed' message [ID 41130]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.11 [CU0] -->
+
+On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g. DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.

@@ -45,7 +45,7 @@ Currently, you can use the following operators:
 | Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
 | Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
-#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063]
+#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -54,7 +54,7 @@ When editing a dashboard or a low-code app, you can now create data objects call
 A variable has the following properties:
 
 - A name, which must be unique within the dashboard or the low-code app.
-- A type: Element, View, Service, String, Number, DOM instance
+- A type: Element, View, Service, Text, Number, Table, DOM instance
 - A default value
 
   > [!NOTE]
@@ -68,6 +68,19 @@ A variable has the following properties:
   > - If, in a low-code app, you make a variable read-only, specifying a default value for it will no longer be optional.
 
 Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
+
+Variables of type *Table* are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
+
+#### Dashboards/Low-Code Apps: 'Dropdown', 'Tree' and 'List' components are now also able to show table data [ID 41161]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+*Dropdown*, *Tree* and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
+
+- If you add a single table/query, the component will show the individual rows as entries. Selecting an entry will expose the entire row.
+- If you add multiple tables/queries, the component will show the list of tables/queries. Selecting an entry will expose the entire table (in case of table data) or the query (in case of query data).
+
+When you add a table/query to one of the above-mentioned components, you can specify the column that contains the display values in the *Layout > Advanced > Display column* setting.
 
 ## Changes
 
@@ -168,6 +181,12 @@ The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include
 
 In the color themes used by the web apps, the gray colors have been updated.
 
+#### Root page: Adding, updating or deleting an application will no longer cause the entire application list to get refreshed [ID 41135]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -265,7 +284,7 @@ When you installed a low-code app, in some cases, it would not have the correct 
 
 Also, it would not be possible to install more than one low-code app per DataMiner Agent.
 
-#### Dashboards/Low-Code Apps - Table component: Problem when removing the only of the last query [ID 41096]
+#### Dashboards/Low-Code Apps - Table component: Problem when removing the only or the last query [ID 41096]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -288,3 +307,43 @@ When you panned or zoomed out while map data was being retrieved, in some cases,
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
+
+#### Interactive Automation scripts: Problem when none of the components had an identifier configured [ID 41128]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
+
+#### Dashboards/Low-Code Apps - Web component: URL changes would no longer be detected [ID 41179]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The *Web* component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
+
+#### Dashboards/Low-Code Apps - Table component: Users would incorrectly be able to select rows while the data was being loaded [ID 41186]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
+
+#### Dashboards/Low-Code Apps: GQI components did not fully support static tables [ID 41197]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+
+In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
+
+From now on, the GQI components will fully support dropping tables onto them as data.
+
+#### Dashboards app: After duplicating a dashboard, the components in both dashboards would incorrectly have the same ID [ID 41199]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you had duplicated a dashboard, the components in the newly created duplicate dashboard incorrectly had the same IDs as the components in the original dashboard. As a result, when you changed a component in one dashboard, those changes would also be applied to that same component in the other dashboard.
+
+#### Dashboards/Low-Code Apps - Image component: Uploaded images would incorrectly not be synchronized within a DMS [ID 41202]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
