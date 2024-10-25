@@ -19,7 +19,7 @@ For those interested in reusing Skyline's pre-made pipelines, which include qual
 
 ### GitHub workflow
 
-You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp). You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
+You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp). You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
 
 On a **Ubuntu** runner:
 

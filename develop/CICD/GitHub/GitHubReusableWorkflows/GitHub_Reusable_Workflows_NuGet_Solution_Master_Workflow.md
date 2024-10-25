@@ -59,7 +59,7 @@ For most reusable workflows, several arguments and secrets need to be provided. 
 
 However, we recommend that you instead use one of the available [starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and that are preconfigured with most of the arguments.
 
-You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
+You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
 
 For example:
 
@@ -104,7 +104,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 > [!NOTE]
-> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
 
 ### Quality gate
 
