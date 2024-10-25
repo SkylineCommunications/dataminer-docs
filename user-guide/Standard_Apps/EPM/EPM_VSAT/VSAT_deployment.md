@@ -76,26 +76,48 @@ Follow the steps below to set up the **front-end and back-end elements**:
 
 1. Configure the **front-end element**, using the Visual page of the element:
 
-   1. On the **Configuration** page, go to the *settings* tab, and set the *Role* parameter to *Frontend*.
-   1. Go to the **collectors** tab, and add the element IDs (in DMAID/ElementID format) for all collectors to the table.
-   1. Go to the **backends** tab, and add the element IDs (in DMAID/ElementID format) for all back ends to the table.
+1. On the **Configuration** page, go to the *settings* tab.
+
+   |Parameter|Example Value|
+   | --- | :---: |
+   |Element Manager Type|Frontend|
+   |Entities Config Backup Path|C:\EPM\Documents\GEO\BU|
+   |File Config Export Path|C:\EPM\Documents\GEO|
+   |File Import Path|C:\EPM\Documents\GEO|
+   |File Export Path|C:\EPM\Documents\GEO|
+
+1. Go to the *assignments* tab
+      1. Add the element IDs (in DMAID/ElementID format) to the Backend Assignments table.
+      1. Add the element IDs (in DMAID/ElementID format) to the Collector Assignments table.
+
+   > [!TIP]
+   > On the DMA hosting the Front-end element, now is a good time to share the folder defined above for other DMA's to reference in the DMS. In most cases you can leave the folder type as "Local" and use a remote path if permissions are defined the same across the DMA's in the system. Otherwise you can set the directory type to "Remote" and use the "File Handing Credentials" to define a username/password.
 
 1. Configure the **back-end elements** in a similar way:
 
-   1. On the **Configuration** page, go to the *settings* tab, and set the *Role* parameter to *Backend*.
-   1. Go to the **collectors** tab, and add the DMAID/ElementID you noted earlier to the table.
-   1. Go to the **backends** tab, and add the DMAID/ElementID you noted earlier to the table.
+1. On the **Configuration** page, go to the *settings* tab.
 
-   > [!TIP]
-   > The front-end connector should get configured **only with collectors and backends served by the DMA hosting the element** accordingly.
+   |Parameter|Example Value|
+   | --- | :---: |
+   |Element Manager Type|Backend|
+   |File Config Export Path|**[Frontend Shared Folder]**|
+   |File Import Path|**[Frontend Shared Folder]**|
+   |File Export Path|**[Frontend Shared Folder]**|
 
-1. After all EPM elements are configured, set the provisioning status to "Enabled".
+1. Go to the **assignments** tab
+1. Add the element IDs (in DMAID/ElementID format) to the Frontend Assignments table.
+1. Add the element IDs (in DMAID/ElementID format) to the Collector Assignments table.
+
+> [!TIP]
+> The back-end element should only be configured for **collector elements hosted by the same DMA**.
+
+1. On the **Configuration** page, go to the *settings* tab for each element. Set the provisioning status for all Front-end and Back-end elements to "Enabled".
 
 > [!NOTE]
 > To assist with troubleshooting, you can enable the Debug parameter. This will activate debugging for all elements (collectors, front end, and back end).
 
 > [!IMPORTANT]
-> The collectors and the EPM elements may need to be restarted after the initial configuration to start working properly.
+> The collectors and the EPM elements will need to be restarted after the initial configuration to start working properly.
 
 ## Peripherals configuration
 
