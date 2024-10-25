@@ -1,24 +1,23 @@
 ---
-uid: github_reusable_workflows_automation_master_workflow
+uid: github_reusable_workflows_connector_master_workflow
 ---
 
-# Automation master workflow
+# Connector master workflow
 
-The Automation workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
+The Connector workflow should run on repositories containing a Connector Solution as provided by the DIS extension in Visual Studio.
 
-It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
-
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Connector solution to your private storage in the catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 
 - [Validate solution](#validate-solution)
 - [Building](#building)
 - [Unit tests](#unit-tests)
+- [Connector Validator](#connector-validator)
 - [Analyze](#analyze)
 - [Quality gate](#quality-gate)
 
-Only when the actions above have been successful, will the "Artifact Registration and Upload" job be executed. This job will create an artifact (.dmapp) based on the Automation script solution and upload it, with the following steps:
+Only when the actions above have been successful, will the "Artifact Registration and Upload" job be executed. This job will create an artifact (.dmprotocol) based on the Connector solution and upload it, with the following steps:
 
 - [NuGet restore solution](#nuget-restore-solution)
 - [Upload artifact package](#upload-artifact-package)
@@ -35,7 +34,6 @@ In parallel to these stages it will execute two jobs:
 ## Prerequisites
 
 - Either the repository’s name or a GitHub topic must be used to infer the catalog item type.
-AutomationScript solutions (and therefor this workflow) can be used to create more than an Automation Script. It can contain Add-Hoc Data sources, GQI Queries, chatops extensions, ... This reusable workflow requires that GitHub has information that defines the catalog item type.
 
 - Part of our quality control involves static code analysis through sonarcloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a sonarcloud organization setup, linked to your GitHub Organization as described in [sonarcloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
@@ -57,7 +55,7 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Connector Master Workflow.yml@main
 ```
 
 For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file.
@@ -70,7 +68,7 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Connector Master Workflow.yml@main
     with:
       referenceName: ${{ github.ref_name }}
       runNumber: ${{ github.run_number }}
@@ -98,6 +96,10 @@ Attempts to compile the Visual Studio solution after restoring all NuGet package
 
 Searches for any project ending with Tests or UnitTests and will then attempt to run all unit tests found. This will handle code regression and check that all content behaves as expected by the developer.
 
+### Connector Validator
+
+This step runs the DataMiner Connector Validator, also included with DIS, to verify the XML and DataMiner-specific code for any errors. A quality gate will then determine whether the process passes or is blocked.
+
 ### Analyze
 
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
@@ -113,7 +115,7 @@ Checks the results of all previous steps and combines them into a single result 
 
 ### NuGet restore solution
 
-This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation script solution.
+This step makes sure creation of an application package (.dmprotocol) includes all assemblies used within NuGet packages in your Connector solution.
 
 ### Upload artifact package
 
