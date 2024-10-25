@@ -902,6 +902,26 @@ A number of enhancements have been made with regard to updating values stored in
 
 Because of a number of enhancements, overall performance of GQI "top X" queries using the *Get alarms* data source has increased.
 
+#### Service & Resource Management: Controlling the generation of information events when starting booking event scripts [ID 40972]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
+
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+
+Also, the following scripts will now only be executed when the above-mentioned option is set to true:
+
+- the *StateChangeScript*, defined on an `SRMServiceInfo` object, which is executed when the state of the `SRMServiceInfo` object changes.
+- the *SRM_QuarantineHandling* script, which is executed when there is a conflict with a booking causing that booking to be put in quarantine.
+
+Additionally, the following script will also no longer generate an information event when it is executed:
+
+- the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
+
+> [!IMPORTANT]
+> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+
 #### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
