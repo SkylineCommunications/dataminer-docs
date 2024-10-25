@@ -299,7 +299,7 @@ Also, when you select the above-mentioned database type, the following warning m
 
 `Warning: Selecting this option requires nested virtualization to be enabled on the host machine. Failure to do so will result in the feature not functioning.`
 
-#### SLManagedAutomation and SLManagedScripting will now use TLS encryption when communicating with BrokerGateway [ID 41048]
+#### SLManagedAutomation and SLManagedScripting will now use at least TLS 1.2 encryption when communicating with BrokerGateway [ID 41048]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 

@@ -928,7 +928,7 @@ Additionally, the following script will also no longer generate an information e
 
 For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
-#### SLManagedAutomation and SLManagedScripting will now use TLS encryption when communicating with BrokerGateway [ID 41048]
+#### SLManagedAutomation and SLManagedScripting will now use at least TLS 1.2 encryption when communicating with BrokerGateway [ID 41048]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
