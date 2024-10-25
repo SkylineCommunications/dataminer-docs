@@ -63,9 +63,9 @@ For real-world scenarios, you'll likely require at least a paid SonarCloud licen
 1. If your repository does not follow [Skyline's Naming Conventions](xref:Using_GitHub_for_CICD#repository-naming-convention), you will need to specify the artifact type:
    - Go to the **Code** tab.
    - Click on the **cogwheel** next to *About*.
-   - Under *Topics*, add a topic with the artifact type, as defined in [GitHub Reusable Workflows](xref:github_reusable_workflows#artifact-types).
+   - Under *Topics*, add a topic with the artifact type, as defined in [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
-For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
+For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab).
 
 ## Step 3: Add the Starter Workflow
 
