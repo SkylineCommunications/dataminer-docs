@@ -928,6 +928,14 @@ Additionally, the following script will also no longer generate an information e
 
 For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
+#### SLManagedAutomation and SLManagedScripting will now use TLS encryption when communicating with BrokerGateway [ID 41048]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When initialized, SLManagedAutomation and SLManagedScripting will now set the allowed security protocol to "Tls1 | Tls11 | Tls12".
+
+This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
+
 #### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
