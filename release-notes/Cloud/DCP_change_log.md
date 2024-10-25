@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 25 October 2024 - Enhancement - Admin app - Audit export file download with a trusted dataminer.services URL [ID 41239]
+
+From now on, the Audit export e-mails will contain a trusted dataminer.services URL for the file download.
+
 #### 25 October 2024 - Enhancement - Admin app - Enhanced stability and performance of the Audit page [ID 41238]
 
 Enhancements have been implemented to the Auditing page in the [Admin app](https://admin.dataminer.services), ensuring improvements in stability, availability, and performance with immediate effect.
