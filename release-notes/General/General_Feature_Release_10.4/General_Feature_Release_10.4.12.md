@@ -479,11 +479,25 @@ After a DataMiner start-up, in some cases, the NATS cluster would be configured 
 
 `ResetLocalNatsCluster|ERR|0|18|System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.`
 
+#### No longer possible to send a SetAlarmStateMessage for an alarm if the associated element had been imported via a DELT package [ID 41074]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39193 -->
+
+In some cases, it would incorrectly no longer be possible to send a `SetAlarmStateMessage` for a particular alarm if the associated element had been imported via a DELT package.
+
 #### Protocols: Stuffing attribute of Protocol.Advanced element was not parsed correctly [ID 41092]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 The value of the `stuffing` attribute of the *Protocol.Advanced* element was not parsed correctly.
+
+#### SLElement would leak memory whenever an element was started or restarted [ID 41102]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39718 -->
+
+Since DataMiner feature release 10.4.8, SLElement would leak memory whenever an element was started or restarted.
 
 #### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
 

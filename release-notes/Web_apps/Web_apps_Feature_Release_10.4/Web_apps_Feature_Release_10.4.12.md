@@ -326,6 +326,12 @@ The *Web* component would no longer detect that the URL had changed. As a result
 
 Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
 
+#### Low-Code Apps: Problem when migrating a low-code app created before the introduction of the template editor [ID 41193]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+During the migration of a low-code app that was created before the introduction of the template editor, in some cases, an error could occur.
+
 #### Dashboards/Low-Code Apps: GQI components did not fully support static tables [ID 41197]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
