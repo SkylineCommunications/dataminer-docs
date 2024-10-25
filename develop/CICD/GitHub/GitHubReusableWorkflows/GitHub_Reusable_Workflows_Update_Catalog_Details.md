@@ -1,78 +1,25 @@
 ---
-uid: github_reusable_workflows_automation_master_workflow
+uid: github_reusable_workflows_update_catalog_details
 ---
 
-# Automation master workflow
+# Update Catalog Details
 
-The Automation workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
-
-It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
-
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+The Update Catalog Details workflow can run on any repository. It's intended to update only the catalog meta data and details without uploading new versions of artifacts.
+This is an optional workflow, running the regular AutomationScript or Connector reusable workflows will perform the same as this but with additional quality control and the ability to release new artifacts.
 
 The following actions will be performed:
 
-- [Validate solution](#validate-solution)
-- [Building](#building)
-- [Unit tests](#unit-tests)
-- [Analyze](#analyze)
-- [Quality gate](#quality-gate)
+- [Create or Extend Catalog.yml](#create-or-extend-catalog.yml)
+- [Commit and Push auto-generated-catalog.yml](#commit-and-push-auto-generated-catalog.yml)
+- [Retrieve ReadMe](#retrieve-readme)
+- [Retrieve Images](#retrieve-images)
+- [Upload to Catalog](#upload-to-catalog)
 
-Only when the actions above have been successful, will the "Artifact Registration and Upload" job be executed. This job will create an artifact (.dmapp) based on the Automation script solution and upload it, with the following steps:
+## **GitHub UI to Catalog Details**
 
-- [NuGet restore solution](#nuget-restore-solution)
-- [Upload artifact package](#upload-artifact-package)
-- [Set artifact ID](#set-artifact-id)
+This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
 
-In parallel to these stages it will execute two jobs:
-
-- [Artifact Creation](#artifact-creation)
-- [Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github)
-
-> [!IMPORTANT]
-> This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D` or `A.B.C`. During a development cycle, only the quality control actions are performed and artifact uploading is ignored (this means the secret "DATAMINER_DEPLOY_KEY" is optional). During a release cycle, an actual artifact is created and uploaded to the catalog (this means the secret "DATAMINER_DEPLOY_KEY" is required). A release cycle can also be a pre-release with versions of format `A.B.C.D-text` or `A.B.C-text`.
-
-## Prerequisites
-
-- Either the repository’s name or a GitHub topic must be used to infer the catalog item type.
-AutomationScript solutions (and therefor this workflow) can be used to create more than an Automation Script. It can contain Add-Hoc Data sources, GQI Queries, chatops extensions, ... This reusable workflow requires that GitHub has information that defines the catalog item type.
-
-- Part of our quality control involves static code analysis through sonarcloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a sonarcloud organization setup, linked to your GitHub Organization as described in [sonarcloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
-
-- Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
-
-### **Inferring Catalog Item Type:**
-
-The GitHub action can automatically determine the artifact type in two ways:
-
-1. **Repository Naming Convention:**
-   - If the repository follows the naming conventions outlined in the [GitHub Repository Naming Convention](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Github/Use_Github_Guidelines.html#repository-naming-convention), the tool can infer the type from the repository name itself without needing a GitHub topic.
-
-2. **GitHub Topic:**
-   - If the repository does not follow the naming convention, the tool relies on the presence of a GitHub topic that matches one of the [Artifact Types](#artifact-types) to determine the type.
-
-If neither the repository name follows the convention nor the appropriate GitHub topic is present, the workflow will fail to detect the type and return an error.
-
-### Artifact Types
-
-- **AS**: automationscript
-- **C**: connector
-- **CF**: companionfile
-- **CHATOPS**: chatopsextension
-- **D**: dashboard
-- **DISMACRO**: dismacro
-- **DOC**: documentation
-- **F**: functiondefinition
-- **GQIDS**: gqidatasource
-- **GQIO**: gqioperator
-- **LSO**: lifecycleserviceorchestration
-- **PA**: processautomation
-- **PLS**: profileloadscript
-- **S**: solution
-- **SC**: scriptedconnector
-- **T**: testingsolution
-- **UDAPI**: userdefinedapi
-- **V**: visio
+For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
 ## How to use
 
@@ -84,7 +31,7 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Update Catalog Details Workflow.yml@main
 ```
 
 For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file.
@@ -96,67 +43,30 @@ For example:
 ```yml
 jobs:
 
-  CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
-    with:
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+  Catalog:
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Update Catalog Details Workflow.yml@main
     secrets:
+      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner Organization or Agent.
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
 ```
 
-## Skyline quality gate
+## Create or Extend Catalog.yml
 
-### Validate solution
+- Uses the `github-to-catalog-yaml` tool to either create a new `catalog.yml` file or update an existing one. This file defines catalog metadata based on the repository details.
+For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab).
 
-Checks that the provided Visual Studio solution does not contain NuGets added through packages.config. Our CI/CD pipelines only work correctly using PackageReference.
+## Commit and Push auto-generated-catalog.yml
 
-### Building
+- Checks if there are changes to the `auto-generated-catalog.yml`. If so, it commits the changes and pushes them back to the repository.
 
-Attempts to compile the Visual Studio solution after restoring all NuGet packages. This will check for compilation errors.
+## Retrieve ReadMe
 
-### Unit tests
+- Searches for a `README.md` file within the repository. If found, it retrieves its path for use in catalog updates.
 
-Searches for any project ending with Tests or UnitTests and will then attempt to run all unit tests found. This will handle code regression and check that all content behaves as expected by the developer.
+## Retrieve Images
 
-### Analyze
+- Looks for an `Images` folder, initially near the `README.md` or, if not found, in the workspace. This folder is intended to store image assets for the catalog.
 
-Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
+## Upload to Catalog
 
-> [!NOTE]
-> For public repositories in SkylineCommunications, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
-
-### Quality gate
-
-Checks the results of all previous steps and combines them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
-
-## Artifact Registration and Upload job
-
-### NuGet restore solution
-
-This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation script solution.
-
-### Upload artifact package
-
-This step performs the Skyline Communications [Deploy Action](xref:Marketplace_deployment_action), set to only "Upload", because deployment is handled in other user-configured jobs.
-
-### Set artifact ID
-
-If artifact creation and upload was successful, this step will make sure the ID to the artifact is returned so other jobs may use it to deploy or download the artifact.
-
-## Artifact Creation
-
-This job runs in parallel and will create the .dmapp package. This will be provided as an artifact, downloadable directly from the run and can be used for manual testing.
-
-## Auto-Generating Catalog from GitHub
-
-This job runs in parallel and provides significant quality of life improvements. It will create an auto-generated-catalog.yml file. This automates the workflow so it can use the GitHub Repository info to perform a valid upload to the catalog without requiring the user to manually create a catalog.yml (or manifest.yml). It automates the requirements for catalog registrations as defined here.
-
-> [!NOTE]
-> You can still write and include your own catalog.yml (or manifest.yml) file directly in the root of the solution following the information on the [Registering a Catalog Item](xref:Register_Catalog_Item) page. This will always override anything from the automatic generation. You can check what was automatically generated by looking at the ".githubtocatalog\auto-generated-catalog.yml" file that gets added to the repository.
+- Uploads the collected `catalog.yml`, `README.md`, and images to the DataMiner catalog using the specified API key for authentication.

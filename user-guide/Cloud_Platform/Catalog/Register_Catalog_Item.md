@@ -16,6 +16,30 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 > [!TIP]
 > For practical examples, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
 
+## Registering a Catalog Item with Workflows and Tooling
+
+- Create a `catalog.yml` or `manifest.yml` file as outlined [here](#manifest-file).
+- Generate an [organization key](xref:Managing_DCP_keys#organization-keys) with the *Register Catalog items* permission.
+
+> [!IMPORTANT]
+> Unlike the API, the Platform-Independent Tooling can operate without a predefined unique ID (GUID). If no ID is provided, it will create a new catalog record and return the catalog ID. For subsequent uploads, it’s essential to use this returned catalog ID to avoid creating duplicate catalog records.
+
+### Platform-Independent Tooling
+
+Alternatively, if you’d prefer not to use Postman and https directly, you can try our convenient, [Platform-Independent](xref:Platform_independent_CICD) **Catalog Uploader** tool:
+- [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
+
+To install and use the tool in any commandline or bash:
+
+```bash
+dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
+dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.yml" --path-to-readme "README.md" --path-to-images "resources/images" --dm-catalog-token "abc123"
+```
+
+### pre-made workflows on GitHub
+
+For those interested in reusing Skyline's pre-made GitHub workflows—which include robust functionality, quality-of-life features, and a strong quality gate—please refer to the [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+
 ## Registering a Catalog item with the API
 
 The register API call allows you to create or update a Catalog item. To add a version after you have successfully registered an item, see [Registering a new version with the API](#registering-a-new-version-with-the-api).

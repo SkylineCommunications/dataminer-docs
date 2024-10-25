@@ -67,7 +67,6 @@ For real-world scenarios, you'll likely require at least a paid SonarCloud licen
 
 For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
-This version clarifies each step and maintains a professional tone. Let me know if you need further adjustments!
 ## Step 3: Add the Starter Workflow
 
 1. Find the Starter Workflow  
@@ -76,8 +75,6 @@ This version clarifies each step and maintains a professional tone. Let me know 
       
     - For Private Repositories on a free GitHub subscription:  
         On your GitHub page, go to the *Actions* tab and select **set up workflow yourself**. Then, go to [Skyline-Starter-Workflows](https://github.com/SkylineCommunications/Skyline-Starter-Workflows/tree/main/workflow-templates) and select the DataMiner workflow that matches your solution type. If none of the names match, choose *DataMiner CICD AutomationScript*. Copy the content of that file into your new workflow file.
-
-Let me know if any other adjustments are needed!
 
 1. Open a new browser window or tab, go to 'https://sonarcloud.io/projects/create', and create a project for the correct Organization. Then, enter the ID of the project as shown in the SonarCloud project URL as the `sonarCloudProjectName`.
 

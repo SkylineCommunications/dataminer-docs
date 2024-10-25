@@ -5120,8 +5120,14 @@ items:
     topicUid: Platform_independent_CICD
   - name: Tutorials
     items:
-     - name: Setting up a GitHub workflow for connectors
+     - name: Setting up your organization for GitHub
+       topicUid: CICD_Tutorial_GitHub_Setting_Up_Organization
+     - name: Going from Code to Product in GitHub
+       topicUid: CICD_Tutorial_GitHub_Code_To_Product
+     - name: Setting up a basic CI/CD for connector deployment
        topicUid: CICD_Tutorial_Connector
+     - name: Setting up a basic CI/CD for connector catalog registration
+       topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
   - name: CI/CD using command line
     items:
     - name: Command line examples
@@ -5129,6 +5135,8 @@ items:
   - name: CI/CD using GitHub
     topicUid: CICD_on_GitHub
     items:
+    - name: GitHub Secrets and Tokens
+      topicUid: GitHub_Secrets
     - name: GitHub example workflows
       topicUid: CICD_GitHub_Examples
     - name: GitHub starter workflows

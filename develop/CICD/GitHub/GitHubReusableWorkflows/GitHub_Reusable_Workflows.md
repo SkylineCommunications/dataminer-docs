@@ -25,7 +25,7 @@ For more details about what each workflow does, you can check one of the below l
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [SRM Function Master Workflow](xref:github_reusable_workflows_srm_function_master_workflow)
 
-## **GitHub UI to Catalog Details**
+## GitHub UI to Catalog Details
 
 This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
 

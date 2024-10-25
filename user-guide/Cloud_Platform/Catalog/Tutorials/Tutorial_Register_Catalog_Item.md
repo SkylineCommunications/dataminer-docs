@@ -12,6 +12,22 @@ While the tutorial uses the example of a connector, registering a different type
 
 Expected duration: 10 minutes
 
+## Platform-Independent Tooling
+
+Alternatively, if you’d prefer not to use Postman and https directly, you can try our convenient, [Platform-Independent](xref:Platform_independent_CICD) **Catalog Uploader** tool:
+- [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
+
+To install and use the tool in any commandline or bash:
+
+```bash
+dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
+dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.yml" --path-to-readme "README.md" --path-to-images "resources/images" --dm-catalog-token "abc123"
+```
+
+## pre-made workflows on GitHub
+
+For those interested in reusing Skyline's pre-made GitHub workflows—which include robust functionality, quality-of-life features, and a strong quality gate—please refer to the [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+
 ## Prerequisites
 
 - An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
