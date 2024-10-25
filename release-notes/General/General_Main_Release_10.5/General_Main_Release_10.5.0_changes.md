@@ -936,6 +936,16 @@ When initialized, SLManagedAutomation and SLManagedScripting will now set the al
 
 This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
 
+#### Notification message templates: New [treeid] placeholder [ID 41052]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When defining a notification message template in the *NotifyTemplates.xml* file, you can use the [treeid] placeholder.
+
+This placeholder will be replaced by the tree ID of the alarm.
+
+For more information, see [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
+
 #### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
