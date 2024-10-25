@@ -41,38 +41,11 @@ AutomationScript solutions (and therefor this workflow) can be used to create mo
 
 - Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
 
-### **Inferring Catalog Item Type:**
+## **GitHub UI to Catalog Details**
 
-The GitHub action can automatically determine the artifact type in two ways:
+This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
 
-1. **Repository Naming Convention:**
-   - If the repository follows the naming conventions outlined in the [GitHub Repository Naming Convention](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Github/Use_Github_Guidelines.html#repository-naming-convention), the tool can infer the type from the repository name itself without needing a GitHub topic.
-
-2. **GitHub Topic:**
-   - If the repository does not follow the naming convention, the tool relies on the presence of a GitHub topic that matches one of the [Artifact Types](#artifact-types) to determine the type.
-
-If neither the repository name follows the convention nor the appropriate GitHub topic is present, the workflow will fail to detect the type and return an error.
-
-### Artifact Types
-
-- **AS**: automationscript
-- **C**: connector
-- **CF**: companionfile
-- **CHATOPS**: chatopsextension
-- **D**: dashboard
-- **DISMACRO**: dismacro
-- **DOC**: documentation
-- **F**: functiondefinition
-- **GQIDS**: gqidatasource
-- **GQIO**: gqioperator
-- **LSO**: lifecycleserviceorchestration
-- **PA**: processautomation
-- **PLS**: profileloadscript
-- **S**: solution
-- **SC**: scriptedconnector
-- **T**: testingsolution
-- **UDAPI**: userdefinedapi
-- **V**: visio
+For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
 ## How to use
 

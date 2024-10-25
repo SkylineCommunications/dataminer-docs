@@ -15,6 +15,11 @@ We use a combination of:
 - DIS extension within Visual Studio
 - Visual Studio templates
 
+If you and your organization are ready to dive into GitHub, check out these tutorials:
+
+- [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product)
+- [Setting Up Your Development Environment in GitHub](xref:CICD_Tutorial_GitHub_Setting_Up_Organization)
+
 For more information, refer to:
 
 - [CI/CD starter workflows](xref:github_starter_workflows)

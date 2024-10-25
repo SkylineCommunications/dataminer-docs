@@ -25,6 +25,12 @@ For more details about what each workflow does, you can check one of the below l
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [SRM Function Master Workflow](xref:github_reusable_workflows_srm_function_master_workflow)
 
+## **GitHub UI to Catalog Details**
+
+This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
+
+For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
+
 ## How to use
 
 From within your own workflow .yml files, you can call a reusable workflow by adding a job that references the location on GitHub of the .yml file:
@@ -38,7 +44,7 @@ jobs:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
 ```
 
-For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file.
+For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file. You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
 
 However, we recommend that you instead use one of the available [starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and that are preconfigured with most of the arguments.
 
@@ -63,4 +69,4 @@ jobs:
 ```
 
 > [!NOTE]
-> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:Github_Secrets) page.
