@@ -18,7 +18,7 @@ Delays the emission of a value until a specified time has passed without receivi
 ![Debouncing an input value](~/user-guide/images/Flow_OperatorDebounce.gif)<br>
 *Debouncing an input value in DataMiner 10.4.12*
 
-This could for example be used to apply a buffer to a rapidly changing feed (e.g. a [textbox](xref:DashboardTextInput)) that is used in a query (e.g. like in step 4 of the [Leveraging controls and feeds to create a dynamic GQI query tutorial](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)).
+This could for example be used to apply a buffer to rapidly changing data (e.g. a [textbox](xref:DashboardTextInput)) that is used in a query (e.g. like in step 4 of the [Leveraging controls and feeds to create a dynamic GQI query tutorial](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)).
 
 ### Settings
 
@@ -31,7 +31,7 @@ Merges up to ten inputs into one by forwarding **the most recently updated input
 ![Merging two input values](~/user-guide/images/Flow_OperatorMerge.gif)<br>
 *Merging two input values in DataMiner 10.4.12*
 
-This could for example be used to reuse a page or panel by linking it to a flow that takes the latest value of a list of different feeds.
+This could for example be used to reuse a page or panel by linking it to a flow that takes the latest value of a list of different data.
 
 ## Combine
 
@@ -42,5 +42,5 @@ Combines up to ten inputs into one by forwarding **the most recently updated val
 
 You could for example use this for the following purposes:
 
-- Showing the combination of the selection of multiple feeds in one single component.
-- Passing the selection of multiple feeds to one single action in a low-code app.
+- Showing the combination of the selection of multiple data in one single component.
+- Passing the selection of multiple data to one single action in a low-code app.

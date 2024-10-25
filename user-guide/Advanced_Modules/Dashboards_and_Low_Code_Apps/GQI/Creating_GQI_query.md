@@ -52,7 +52,7 @@ Please note the following regarding query data input:
 
   ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data tab in DataMiner 10.4.12*
 
-- From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range feed by selecting the *From feed* checkbox.
+- From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range component by selecting the *From data* checkbox. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*From feed*".
 
 - From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37505-->, the culture used in your GQI query matches the client culture of the web app. Prior to DataMiner 10.3.0 [CU9]/10.3.12, the invariant culture is used.
 

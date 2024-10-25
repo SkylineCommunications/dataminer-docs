@@ -40,15 +40,15 @@ To configure an event to launch a script:
 
 1. If the script requires input such as dummies and parameters, configure these as well.
 
-   When applicable, you can link a parameter to an existing feed. To do so, you can use the link icon (from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->), or the *Use feed* checkbox (in earlier DataMiner versions).
+   When applicable, you can link a parameter to existing data. To do so, you can use the link icon (from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->), or the *Use feed* checkbox (in earlier DataMiner versions).
 
 1. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
 
 > [!NOTE]
-> Feeds can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
+> Data can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
 
 > [!IMPORTANT]
-> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to an empty feed will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
 ## Navigating to a URL
 
@@ -58,7 +58,7 @@ To configure an event to navigate to a URL:
 
    > [!TIP]
    >
-   > - You can link the URL to a feed using the [feed link syntax](xref:Dynamically_Referencing_Data_in_Text#syntax).
+   > - You can link the URL to data using the [appropriate syntax](xref:Dynamically_Referencing_Data_in_Text#syntax).
    > - In the Template Editor (available from DataMiner 10.4.1/10.5.0 onwards), you can create dynamic links or pass context to a script by incorporating variables within the URL, denoted by enclosing the column name within curly brackets ("`{}`")<!--RN 34761-->. See [Dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text).
 
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
@@ -141,9 +141,9 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
 
    - If you selected the *Name* option, enter the name manually.
 
-   - To link to a feed instead of selecting a fixed element, service, or view, click the link icon next to the selection box, select the feed, and click *Apply*.
+   - To link to data instead of selecting a fixed element, service, or view, click the link icon next to the selection box, select the data, and click *Apply*.
 
-     If you selected the *Name* option, you can link to a text input feed, which allows you to dynamically enter the name of the element, service, or view in the published app.
+     If you selected the *Name* option, you can link to [text input](xref:DashboardTextInput), which allows you to dynamically enter the name of the element, service, or view in the published app.
 
      ![Open monitoring card](~/user-guide/images/Open_Monitoring_Card.gif)<br>*Low-Code Apps module in DataMiner 10.4.11*
 
@@ -182,11 +182,11 @@ Examples:
 
 - If you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*. Or from DataMiner 10.2.10/10.3.0 onwards, you can select *Fetch the data* for any component that uses query data as input, so that users can manually refresh the displayed data.
 
-- If you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*<!-- RN 39254 -->, so that users can use the button to set the viewport for the line chart. The action has two arguments, *To* and *From*, which can be either set to a static value or linked to a numeric value feed. Available from DataMiner 10.3.5/10.4.0 onwards. Prior to DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5, this option is named *Set timespan*<!-- RN 35933 -->.
+- If you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*<!-- RN 39254 -->, so that users can use the button to set the viewport for the line chart. The action has two arguments, *To* and *From*, which can be either set to a static value or linked to numeric value data. Available from DataMiner 10.3.5/10.4.0 onwards. Prior to DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5, this option is named *Set timespan*<!-- RN 35933 -->.
 
 - From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, if you configure this action for a [Node edge graph](xref:DashboardNodeEdgeGraph) component, you can select the option *Clear selection*.
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInputFeed), [text input](xref:DashboardTextInput), or [search input](xref:DashboardSearchInput) component, you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to a feed.
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInput), [text input](xref:DashboardTextInput), or [search input](xref:DashboardSearchInput) component, you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to data.
 
   ![Set value](~/user-guide/images/Set_Value.gif)<br>*Grid, text input, and table components in DataMiner 10.4.9*
 

@@ -1,5 +1,5 @@
 ---
-uid: DashboardNumericInputFeed
+uid: DashboardNumericInput
 ---
 
 # Numeric input
