@@ -12,7 +12,7 @@ You can view the results of a test via the TestLink instance at <https://slc-h57
 
 To view test results, in the top menu bar, click the *Test Reports* icon, and then select the test plan for which you want to view a report.
 
-The options* Test Report* or *Test Report on build* allows you to generate a summary of a test.
+The option *Test Report* or *Test Report on build* allows you to generate a summary of a test.
 
 ### Test case - execution steps
 

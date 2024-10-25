@@ -4,13 +4,12 @@ uid: QuestionsAndAnswers
 
 # Questions & Answers
 
-1. *What are the different methods of retrieving an SNMP table? List the different names, their internal
-working and summarize the implementation method.*
+1. *What are the different methods of retrieving an SNMP table? List the different names, their internal working and summarize the implementation method.*
   
     **GetNext**
   
-    Driver Implementation: Define an SNMP tag on the table parameter but not on the column parameters.
-    The table parameter uses “1.3.6.1.2.1.2.2” as OID.
+    Implementation: Define an SNMP tag on the table parameter but not on the column parameters.
+    The table parameter uses "1.3.6.1.2.1.2.2" as OID.
 
     Capture observation: the initial request is an SNMP getNext request with the OID of the Entry (1.3.6.1.2.1.2.2.1).
   
@@ -18,7 +17,7 @@ working and summarize the implementation method.*
 
     **GetNext + MultipleGet**
 
-    Driver Implementation: Define an SNMP tag on the table parameter and on the column parameters
+    Implementation: Define an SNMP tag on the table parameter and on the column parameters.
 
     Capture observation: getNext requests are performed to obtain the number of rows using the instance, starting with the OID of the Entry (1.3.6.1.2.1.2.2.1). Once this is known, one SNMP Get request is performed to obtain all the rows of the table. By default, 50 cells can be retrieved at a time; it can be overridden with the bulk: option.
 
@@ -26,27 +25,28 @@ working and summarize the implementation method.*
 
     **MultipleGetNext**
 
-    Driver implementation: Define an SNMP tag on the table parameter and on the column parameters. The use of options=”multipleGetNext” is needed on the table parameter.
+    Implementation: Define an SNMP tag on the table parameter and on the column parameters. The use of options="multipleGetNext" is needed on the table parameter.
 
     Capture observation: getNext requests are performed for all columns at the same time until all rows are retrieved.
 
     **MultipleGetBulk**
 
-    Driver implementation: Define an SNMP tag on the table parameter and on the column parameters. The use of options=”multipleGetBulk” is needed on the table parameter.
+    Implementation: Define an SNMP tag on the table parameter and on the column parameters. The use of options="multipleGetBulk" is needed on the table parameter.
 
     Capture observation: getBulk requests are performed until all data is retrieved. The max-repetitions field indicates for how many rows this is done in one request; in DataMiner this field is defined by specifying a number after the multipleGetBulk option. For example: multipleGetBulk:5. The standard value is 10 iterations.
 
 1. *What is the meaning of the instance of an SNMP parameter? What is it used for?*
 
-    To retrieve an SNMP parameter, we need the OID and its instance. For standalone parameters, this is usually “.0”, while for rows in a table, it is something like .1, .2, and 3. The instance uniquely identifies the row.
+    To retrieve an SNMP parameter, we need the OID and its instance. For standalone parameters, this is usually ".0", while for rows in a table, it is something like .1, .2, and 3. The instance uniquely identifies the row.
 
-    When options=”instance” is used, DataMiner will automatically copy the instances to the first specified column. Typically, the first column of a table contains the primary key, which is the same as the instance. In that case, we can just retrieve that column without the use of options=”instance”.
+    When options="instance" is used, DataMiner will automatically copy the instances to the first specified column. Typically, the first column of a table contains the primary key, which is the same as the instance. In that case, we can just retrieve that column without the use of options="instance".
 
 1. *What is the best way to search data spread over multiple tables? From the tables below, I need all elementary streams related to transport stream "TS02".*
 
 
 
 1. *Which steps would you perform to investigate an SNMP communication issue with a device? I.e. the device is not responding to the requests you send.*
+
     1. Perform a ping to the device.
     1. Use another tool (e.g. MibBrowser) to test the connection.
     1. Check the community strings.
@@ -75,7 +75,7 @@ working and summarize the implementation method.*
     <Relation path="200,100"/>
     ```
 
-1. *What is the similarity and difference between the “Others” and “Exceptions” tags?*
+1. *What is the similarity and difference between the "Others" and "Exceptions" tags?*
 
     The Others and Exceptions tags are used to indicate an exceptional state of a parameter. Others is used when the incoming exceptional value is from a different type than described in the Interprete tag of the parameter. The Exceptions tag is used when the type is the same.
 
@@ -99,7 +99,7 @@ working and summarize the implementation method.*
 
     DVE stands for Dynamic Virtual Element. This technology allows DataMiner to create new elements dynamically. This is for example done for a device that contains a controller card and several optical receivers and other cards in its slots. Different elements are used to monitor the different cards.
 
-    In the past, different protocols would be created for each type of card/element. With DVEs, one driver is created that automatically creates new virtual elements/protocols.
+    In the past, different protocols would be created for each type of card/element. With DVEs, one connector is created that automatically creates new virtual elements/protocols.
 
     To implement DVE functionality, the following must be defined in a protocol.
 
@@ -125,13 +125,13 @@ working and summarize the implementation method.*
     <ColumnOption idx="1" pid="305" type="retrieved" value="" options="save"/>
     ```
 
-    There should be a semicolon (“;”) before the save.
+    There should be a semicolon (`;`) before the save.
 
 1. *How can you verify if traps arrive in DataMiner without using a protocol?*
 
-    The SLSNMPManager log file can be verified. The minimum log levels are “Log Everything” in order to see the trap information in the file.
+    The SLSNMPManager log file can be verified. The minimum log levels are "Log Everything" in order to see the trap information in the file.
 
-1. *When do you need the “Read Response” action?*
+1. *When do you need the "Read Response" action?*
 
     When the response contains a parameter with LengthType set to "next param", the action "Read Response" needs to be executed by a "Trigger Before Each Response".
 
@@ -159,35 +159,35 @@ working and summarize the implementation method.*
 
     A serial protocol that uses HTTP commands in SLProtocol requires the definition of `"options:closeConnectionOnResponse"`. If not, the communication will suffer from the described issue.
 
-1. *Can you explain the “Set with wait” action? What is important regarding the implementation of this action? Does this also count for “Set and get with wait”?*
+1. *Can you explain the "Set with wait" action? What is important regarding the implementation of this action? Does this also count for "Set and get with wait"?*
 
-    A “Set with wait” will:
+    A "Set with wait" will:
 
     - Perform a set request
-    - Wait until the set succeeded (when the SNMP Manager receives an “OK” from the device)
+    - Wait until the set succeeded (when the SNMP Manager receives an "OK" from the device)
 
-    A “Set and get with wait” will:
+    A "Set and get with wait" will:
 
     - perform a set request
-    - wait until the set succeeded (when the SNMP Manager receives an “OK” from the device)
+    - wait until the set succeeded (when the SNMP Manager receives an "OK" from the device)
     - perform a get request
     - wait until the get succeeded (when the result of the get is known)
 
     There is no verification of the get/set value. It is important that both the actions are executed from the protocol thread. This can be achieved by putting the action into a group and letting that group execute.
 
-1. *Can you name one or more reasons for the problem “Too many groups on the protocol stacks”? How can this be solved?*
+1. *Can you name one or more reasons for the problem "Too many groups on the protocol stacks"? How can this be solved?*
 
     This occurs when the last group in a timer is of type "Action" or "Trigger" or when a trigger executes a group of those two types. This is because the system does not wait for "Action" or "Trigger" groups to be finished before continuing. It can be solved by using type "poll action" or "poll trigger", or by putting a poll group after the group.
 
 1. *What is the difference between starting a Trigger -> Action with a SetParameter and a CheckTrigger?*
 
-    A protocol.CheckTrigger makes sure that the action is not started from the protocol thread but from a new thread created by the QAction. It is therefore not possible to start e.g. “Set with wait” from a QAction unless you put a group in the queue where the “Set with wait” is.
+    A protocol.CheckTrigger makes sure that the action is not started from the protocol thread but from a new thread created by the QAction. It is therefore not possible to start e.g. "Set with wait" from a QAction unless you put a group in the queue where the "Set with wait" is.
 
 1. *When the protocol has a table on which settings will be done from an Automation script, what do you need to look out for and how can it be solved?*
 
     An Automation script performs settings very fast, which can mean that a parameter that is used in a command or in an SNMP set can already be changed again before it has actually been sent to the device. This can be solved by implementing a buffer for serial sets; for SNMP sets it is now possible to perform SNMP sets/gets from within a QAction.
 
-1. *What is the meaning of “15236” in the following line taken from an element log file?*
+1. *What is the meaning of "15236" in the following line taken from an element log file?*
 
     ```bash
     SLProtocol - 15236 - |7652|CProtocol::InitFunc|CRU|0|ReadSettings
@@ -199,19 +199,19 @@ working and summarize the implementation method.*
 
     It needs to be unique. The index column needs to be unique as well.
 
-1. *Is it correct that the measurement type of a primary key must be “string”?*
+1. *Is it correct that the measurement type of a primary key must be "string"?*
 
-    No, the measurement type can be something else, but the “interprete” type has to be a string.
+    No, the measurement type can be something else, but the "interprete" type has to be a string.
 
 1. *What is the best way to check if a cell from an SNMP table has changed?*
 
-    You should use `row=”true”` in combination with the NewRow method defined in the SLProtocol interface.
+    You should use `row="true"` in combination with the NewRow method defined in the SLProtocol interface.
 
-1. *The Transfer-Encoding header of an HTTP message can sometimes be set to “chunked”. What is the meaning of this type and how do we process this in DataMiner?*
+1. *The Transfer-Encoding header of an HTTP message can sometimes be set to "chunked". What is the meaning of this type and how do we process this in DataMiner?*
 
     The chunked encoding modifies the body of a message in order to transfer it as a series of chunks, each with its own size indicator, followed by an OPTIONAL trailer containing entity-header fields. This allows dynamically produced content to be transferred along with the information necessary for the recipient to verify that it has received the full message. It can be processed in DataMiner using the attribute `communicationOptions="ChunkedHTML"` on the Protocol.Type tag.
 
-    Note that this is no longer needed with the using the connection type "HTTP".
+    Note that this is no longer needed when the connection type "HTTP" is used.
 
 1. *What is the best way to retrieve the time between two executions of the same SNMP poll group?*
 
@@ -224,7 +224,7 @@ working and summarize the implementation method.*
     protocol.Log("QA" + protocol.QActionID + "|" + string.Format("Delta on group 1500:{0}", delta), LogType.Error, LogLevel.NoLogging);
     ```
 
-1. *What is the purpose of “name resolution”? What else can you say about it?*
+1. *What is the purpose of "name resolution"? What else can you say about it?*
 
     Name resolution has the same purpose as a DisplayColumn: to give a more user-friendly description to alarm and trend records. It was originally intended to be used when the desired description consisted of values coming from different tables. It was then not needed to write a QAction and manually compose the description. It can also be used to avoid the problem with SNMP tables and DisplayColumns using row="true".
 
@@ -254,11 +254,11 @@ working and summarize the implementation method.*
 
     First the key is retrieved from a row, then there is a check if the key actually exist in the table before a cell is retrieved. This is unnecessary code.
 
-1. *What is the main difference between a serial and a smart serial driver?*
+1. *What is the main difference between a serial and a smart serial connector?*
 
-    The principle of a serial driver is that a command needs to be sent in order for the device to send some data back (responses), while in a smart-serial driver, the device can send data on its own initiative.
+    The principle of a serial connector is that a command needs to be sent in order for the device to send some data back (responses), while in a smart-serial connector, the device can send data on its own initiative.
 
-1. *A driver contains two different trap receiver parameters. Someone complains that alarms coming from these two parameters are linked to each other while in fact they should not be. The meaning of the traps is different; they also have different OIDs. What do you think is the reason and what can be done to fix it?*
+1. *A connector contains two different trap receiver parameters. Someone complains that alarms coming from these two parameters are linked to each other while in fact they should not be. The meaning of the traps is different; they also have different OIDs. What do you think is the reason and what can be done to fix it?*
 
     By default, trap parameters will be linked together if they have similar linking conditions. In order to overwrite this, you should specify a group ID number before the linking, e.g. |Link:-1,2,5.
 
@@ -329,16 +329,16 @@ working and summarize the implementation method.*
 
     `row=true` will work when the QAction triggers on a table parameter. It is useless on a QAction that does not trigger on a table.
 
-1. *Is it OK to have an “After Startup” trigger to run a “Run Actions” action?*
+1. *Is it OK to have an "After Startup" trigger to run a "Run Actions" action?*
 
     It is not OK. It is very likely to cause issues on the DMA. There are two possible approaches for this and the second one is the best:
 
     - Using a timer and stopping it after its first execution
-    - Using an “After Startup” trigger that will trigger an “execute group” action that will execute a “poll action” group that will execute a “Run Actions” action that will trigger the QAction.
+    - Using an "After Startup" trigger that will trigger an "execute group" action that will execute a "poll action" group that will execute a "Run Actions" action that will trigger the QAction.
 
 1. *Can you describe the buffer technology sometimes used for sets in serial protocols?*
 
-    When a set is done on the write parameter, the crosspoint values that need to be set are stored into a buffer as a “|”-separated string. For example: param 50. Values will be taken from that buffer one by one and a flag is used to indicate if a set is being performed.
+    When a set is done on the write parameter, the crosspoint values that need to be set are stored into a buffer as a "|"-separated string. For example: param 50. Values will be taken from that buffer one by one and a flag is used to indicate if a set is being performed.
 
     So when a set is done by the write parameter and the flag indicates that there is no setting busy, the code used to take one crosspoint from the buffer needs to be triggered by adjusting the flag.
 

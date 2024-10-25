@@ -13,9 +13,9 @@ When activated, a trigger can:
 - Either execute one (or multiple) action(s). This is the most common scenario.
 - Or trigger another (or multiple) trigger(s).
 
-![alt text](../../images/Protocol_Explained_-_Triggers.svg "DPML Triggers")
+![alt text](~/develop/images/Protocol_Explained_-_Triggers.svg "DPML Triggers")
 
-![alt text](../../images/Protocol_Explained_-_Triggers_2.svg "DPML Triggers (continued)")
+![alt text](~/develop/images/Protocol_Explained_-_Triggers_2.svg "DPML Triggers (continued)")
 
 > [!NOTE]
 >

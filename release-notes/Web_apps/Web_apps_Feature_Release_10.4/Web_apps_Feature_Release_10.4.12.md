@@ -45,7 +45,7 @@ Currently, you can use the following operators:
 | Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
 | Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
-#### Dashboards/Low-Code Apps: Variables [ID 41039]
+#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -54,11 +54,7 @@ When editing a dashboard or a low-code app, you can now create data objects call
 A variable has the following properties:
 
 - A name, which must be unique within the dashboard or the low-code app.
-- A type: Element, View, Service, String, Number, Parameter, etc.
-
-  > [!NOTE]
-  > At present, only variables of type *Element* are supported.
-
+- A type: Element, View, Service, Text, Number, Table, DOM instance
 - A default value
 
   > [!NOTE]
@@ -72,6 +68,19 @@ A variable has the following properties:
   > - If, in a low-code app, you make a variable read-only, specifying a default value for it will no longer be optional.
 
 Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
+
+Variables of type *Table* are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
+
+#### Dashboards/Low-Code Apps: 'Dropdown', 'Tree' and 'List' components are now also able to show table data [ID 41161]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+*Dropdown*, *Tree* and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
+
+- If you add a single table/query, the component will show the individual rows as entries. Selecting an entry will expose the entire row.
+- If you add multiple tables/queries, the component will show the list of tables/queries. Selecting an entry will expose the entire table (in case of table data) or the query (in case of query data).
+
+When you add a table/query to one of the above-mentioned components, you can specify the column that contains the display values in the *Layout > Advanced > Display column* setting.
 
 ## Changes
 
@@ -96,6 +105,12 @@ Up to now, after a GQI session had been opened, all necessary pages would be req
 From now on, a GQI query will be opened synchronously, after which a first page will be sent to the client over WebSockets without the client having to request it. Then, the client will request and receive all following pages over WebSockets.
 
 When WebSockets are not available, GQI sessions will be executed synchronously as before.
+
+#### Low-Code Apps: 'Open monitoring card' event can now be passed the name of an element, service or view as a text string or a feed containing text data [ID 40814] [ID 41067]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, an *Open monitoring card* event was only able to open the card of an element, service or view that either had been selected during its configuration or was provided via a feed. From now on, it will also be possible to pass the name of an element, service or view as a text string or any feed containing text data.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Initial viewport in case of custom node positions will now be calculated based on the midpoints of all nodes [ID 40869]
 
@@ -128,6 +143,49 @@ From now on, when that message appears, the cause of the error will be added to 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When you open the *Version history* pane of a low-code app, it will now also display the version numbers.
+
+#### Dashboards/Low-Code Apps: Data type 'String' and 'Query row' have been renamed to 'Text' and 'Table' [ID 41075]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The following data types have been renamed:
+
+| Former name | New name |
+|-------------|----------|
+| String      | Text     |
+| Query row   | Table    |
+
+#### Low-Code Apps: Enhanced performance when publishing a low-code app [ID 41078]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance has increased when publishing a low-code app.
+
+#### Dashboards app: Minor enhancements regarding user permissions [ID 41079]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of minor enhancements have been made with regard to dashboard user permissions.
+
+For example, in the *Dashboard settings* window, *Access* has now been renamed to *Permissions*. Also, when you strip the person who created a dashboard of their edit rights, a message saying "You have removed the edit rights from the creator" will now appear.
+
+#### Dashboards/Low-Code Apps - Alarm table component: 'Alarm ID' and 'Root Alarm ID' columns will now also include the element ID [ID 41113]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include the element ID.
+
+#### Web apps: Gray colors updated in themes used by the web apps [ID 41131]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the color themes used by the web apps, the gray colors have been updated.
+
+#### Root page: Adding, updating or deleting an application will no longer cause the entire application list to get refreshed [ID 41135]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
 
 ### Fixes
 
@@ -193,3 +251,105 @@ Example:
     </VirtualHosts>
 </MapsServerConfig>
 ```
+
+#### Web Services API v1: Problem with SOAP methods 'GetVisioFor...' [ID 41036]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed Automation scripts with dummies, parameters or memory files.
+
+#### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a dashboard or a page of a low-code app was closed, up to now, when a migration was in progress, it would incorrectly continue. From now on, when a dashboard of page of a low-code app is closed while it is being migrated, the migration will be cancelled.
+
+#### Dashboards/Low-Code Apps - Time range component: Apply and Cancel buttons were not positioned correctly when no presets had been configured [ID 41085]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when no presets had been configured in a *Time range* component, the *Apply* and *Cancel* buttons would be too close to the date/time pickers. From now on, when a *Time range* component does not have presets configured, both buttons will be positioned correctly below the date/time pickers.
+
+#### Low-Code Apps: Problem when creating a new draft [ID 41091]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you created a new draft, in some cases, a `Dashboard not found` error could incorrectly appear.
+
+#### Low-Code Apps: Problems when installing a low-code app [ID 41094]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you installed a low-code app, in some cases, it would not have the correct icon and color scheme.
+
+Also, it would not be possible to install more than one low-code app per DataMiner Agent.
+
+#### Dashboards/Low-Code Apps - Table component: Problem when removing the only or the last query [ID 41096]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you removed either the only or the last query from a Table component, the loader bar would appear and get stuck.
+
+#### Low-Code Apps - Node edge graph component: Problem with 'Open monitoring card' action [ID 41105]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you added an *Open monitoring card* action to a *Node edge graph* component, an error would occur.
+
+#### Dashboards/Low-Code Apps - Maps component: Markers would be removed when panning or zooming out while map data was being retrieved [ID 41125]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you panned or zoomed out while map data was being retrieved, in some cases, the markers could be removed from the map.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem with items that should only become visible when you hover over them [ID 41127]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
+
+#### Interactive Automation scripts: Problem when none of the components had an identifier configured [ID 41128]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
+
+#### Dashboards/Low-Code Apps - Web component: URL changes would no longer be detected [ID 41179]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The *Web* component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
+
+#### Dashboards/Low-Code Apps - Table component: Users would incorrectly be able to select rows while the data was being loaded [ID 41186]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
+
+#### Low-Code Apps: Problem when migrating a low-code app created before the introduction of the template editor [ID 41193]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+During the migration of a low-code app that was created before the introduction of the template editor, in some cases, an error could occur.
+
+#### Dashboards/Low-Code Apps: GQI components did not fully support static tables [ID 41197]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+
+In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
+
+From now on, the GQI components will fully support dropping tables onto them as data.
+
+#### Dashboards app: After duplicating a dashboard, the components in both dashboards would incorrectly have the same ID [ID 41199]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you had duplicated a dashboard, the components in the newly created duplicate dashboard incorrectly had the same IDs as the components in the original dashboard. As a result, when you changed a component in one dashboard, those changes would also be applied to that same component in the other dashboard.
+
+#### Dashboards/Low-Code Apps - Image component: Uploaded images would incorrectly not be synchronized within a DMS [ID 41202]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.

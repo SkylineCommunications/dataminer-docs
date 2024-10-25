@@ -4,7 +4,7 @@ uid: UIComponentsTableDefinition
 
 # Defining a table
 
-![DataMiner Cube table](../../images/uiX_-_table.png "DataMiner Cube table")
+![DataMiner Cube table](~/develop/images/uiX_-_table.png "DataMiner Cube table")
 
 To define a table, create a parameter of type "array" that represents the table.
 

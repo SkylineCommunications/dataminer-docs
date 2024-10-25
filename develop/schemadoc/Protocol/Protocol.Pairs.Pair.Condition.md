@@ -18,13 +18,11 @@ string
 
 Note that a condition can be enclosed in a CDATA tag.
 
-*Feature introduced in DataMiner 7.5.4.3.*
-
 Refer to <xref:LogicConditions> for more information about conditions.
 
 ## Examples
 
-In the following example, the pair will be executed when parameter 500 contains “Active”:
+In the following example, the pair will be executed when parameter 500 contains "Active":
 
 ```xml
 <Pair id="200">

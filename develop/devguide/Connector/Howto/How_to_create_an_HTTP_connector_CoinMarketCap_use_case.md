@@ -120,7 +120,7 @@ In your new protocol, add the `Type` element, and set its value to "http". For e
 ```xml
 <Protocol xmlns="http://www.skyline.be/protocol">
     <Name>HTTP Simple Use Case Article</Name>
-    <Description>HTTP Simple Use Case Article DataMiner driver</Description>
+    <Description>HTTP Simple Use Case Article DataMiner connector</Description>
     <Version>1.0.0.1</Version>
     <IntegrationID>DMS-DRV-1234</IntegrationID>
     <Provider>Skyline Communications</Provider>
