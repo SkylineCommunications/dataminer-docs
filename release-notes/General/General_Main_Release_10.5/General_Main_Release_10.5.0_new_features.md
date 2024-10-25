@@ -358,6 +358,22 @@ A connector will only be promoted to "production version" if its first version i
 > [!NOTE]
 > When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
 
+#### SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies [ID 41068]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to improve troubleshooting assembly resolution issues, the SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies.
+
+Also, SLManagedScripting will now add an entry in the *SLManagedScripting.txt* log file each time it has loaded or failed to load an assembly. This log entry will include both the requested version and the actual version of the assembly.
+
+To see the current hint paths per SLScripting process, do the following:
+
+1. Open the SLNetClientTest tool.
+1. Go to *Diagnostics > DMA > SLScripting AssemblyResolve HintPaths*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Automation
 
 #### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]

@@ -52,6 +52,14 @@ In the *Get alarms* data source, the following columns have been updated:
 > [!NOTE]
 > "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
+
 ### Enhancements
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]
@@ -854,14 +862,6 @@ Because of a number of enhancements, overall performance has increased when load
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
-
-#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
-
-Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
 #### STaaS: Enhanced performance when writing data to the database [ID 40870]
 

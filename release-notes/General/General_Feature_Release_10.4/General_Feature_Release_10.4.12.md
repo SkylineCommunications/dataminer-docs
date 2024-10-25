@@ -69,7 +69,33 @@ The proactive cap detection feature is now able to generate an alarm when it exp
 
 For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837-id-41109)
 
+#### SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies [ID 41068]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to improve troubleshooting assembly resolution issues, the SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies.
+
+Also, SLManagedScripting will now add an entry in the *SLManagedScripting.txt* log file each time it has loaded or failed to load an assembly. This log entry will include both the requested version and the actual version of the assembly.
+
+To see the current hint paths per SLScripting process, do the following:
+
+1. Open the SLNetClientTest tool.
+1. Go to *Diagnostics > DMA > SLScripting AssemblyResolve HintPaths*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ## Changes
+
+### Breaking changes
+
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
 ### Enhancements
 
@@ -162,14 +188,6 @@ A number of minor enhancements have been made to the following BPAs:
 In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
 
 In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
-
-#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
-
-Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
 #### STaaS: Enhanced performance when writing data to the database [ID 40870]
 
