@@ -954,6 +954,12 @@ The number of simultaneously running SLProtocol processes can be set in the `<Pr
 
 Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
 
+#### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
