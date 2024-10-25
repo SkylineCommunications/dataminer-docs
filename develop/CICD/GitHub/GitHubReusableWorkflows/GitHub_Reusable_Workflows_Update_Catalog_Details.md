@@ -9,8 +9,8 @@ This is an optional workflow, running the regular AutomationScript or Connector 
 
 The following actions will be performed:
 
-- [Create or Extend Catalog.yml](#create-or-extend-catalog.yml)
-- [Commit and Push auto-generated-catalog.yml](#commit-and-push-auto-generated-catalog.yml)
+- [Create or Extend Catalog.yml](#create-or-extend-catalogyml)
+- [Commit and Push auto-generated-catalog.yml](#commit-and-push-auto-generated-catalogyml)
 - [Retrieve ReadMe](#retrieve-readme)
 - [Retrieve Images](#retrieve-images)
 - [Upload to Catalog](#upload-to-catalog)
