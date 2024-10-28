@@ -69,6 +69,14 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
    - Under the Cassandra configuration, add the authProvider tag to provide credential for Cassandra.
 
    - From Reaper v1.4.0 onwards, make sure the blacklistTwcsTables tag is set to *true*. This will disable repairs on TimeWindowCompactionStrategy (TWCS) tables. For more information, see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster#keeping-your-nodes-repaired). Prior to Reaper v1.4.0, make sure to exclude the keyspaces that contain these tables.
+  
+   - In order to limit the log file size please use: 
+      - `maxFileSize: 1MB`
+      - `archivedLogFilenamePattern: /var/log/cassandra-reaper/reaper-%d{yyyy-MM-dd}_%i.log.gz`
+
+   - For a sidecar based configuration in order to configure the connection with the cassandra cluster please specify: 
+      - `contactPoints: ["<local ip address>"]`
+      - `enableDynamicSeedList: true`
 
    For more information on the different options, refer to the [Reaper documentation](http://cassandra-reaper.io/docs/configuration/).
   
