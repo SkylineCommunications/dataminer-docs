@@ -1,10 +1,14 @@
 ---
-uid: Using_a_pre_installed_DataMiner_VHDX
+uid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
 ---
 
 # Using a pre-installed DataMiner Virtual Hard Disk
 
-You can download a Virtual Hard Disk (VHDX) with DataMiner pre-installed to immediately get started.
+You can download a Virtual Hard Disk with DataMiner pre-installed to immediately get started.
+You can choose between the following file formats:
+- VHD
+- VHDX
+- VMDK
 
 When you configure this setup, you will be able to choose between different data storage setups:
 
@@ -17,7 +21,7 @@ When you configure this setup, you will be able to choose between different data
 > [!NOTE]
 > The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out-of-the box for improved security.
 
-To use the pre-installed VHDX, you will need to follow the steps below:
+To use the pre-installed Virtual Hard Disk, you will need to follow the steps below:
 
 1. [Create the VM](#creating-the-vm).
 1. [Connect and start the VM](#connecting-and-starting-the-vm).
@@ -26,7 +30,7 @@ To use the pre-installed VHDX, you will need to follow the steps below:
 
 ## Creating the VM
 
-When you have downloaded the VHDX, you can start to create a VM in your chosen virtualization environment. Below you can find the steps to follow in Hyper-V:
+When you have downloaded the Virtual Hard Disk, you can start to create a VM in your chosen virtualization environment. Below you can find the steps to follow in Hyper-V:
 
 1. Start creating your VM by following [the official Hyper-V guide](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v).
 
@@ -75,11 +79,11 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 
 > [!IMPORTANT]
 >
-> - If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps to [obtain a DataMiner license](xref:DataminerLicenses).
+> - If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps outlined in [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
 > - DataMiner requires a static IP to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
 
 > [!NOTE]
-> If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`.
+> If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
 
 Follow the below steps to configure your DataMiner Agent:
 
@@ -121,6 +125,30 @@ Follow the below steps to configure your DataMiner Agent:
 
 > [!IMPORTANT]
 > For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
+
+## Restoring a backup onto the Virtual Hard Disk
+
+If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration and follow the steps below:
+
+1. Follow the steps outlined in [Restoring a DataMiner Agent](Restoring_a_DataMiner_Agent).
+
+1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. Open the *C:\Skyline DataMiner\\* folder.
+
+1. Remove all *\*.lic* files, if any.
+
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
+
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID and the *Request.lic* file.
+
+1. Wait until you receive a *dataminer.lic* file from Skyline.
+
+1. When you have the *dataminer.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
+
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
 ## Switching from subscription mode to perpetual license
 

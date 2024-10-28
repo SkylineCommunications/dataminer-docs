@@ -4,7 +4,7 @@ uid: Decommissioning_WSL
 
 # Decommissioning WSL
 
-In case you deployed DataMiner by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_VHDX) and you chose the *Self-Hosted - Local Storage* database type option, both Cassandra Cluster and OpenSearch run locally on the Virtual Machine on Windows Subsystem for Linux (WSL). This allows you to easily get started with a database setup that supports all DataMiner functionalities. However, such a setup should only be used for **test and staging environments**.
+In case you deployed DataMiner by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and you chose the *Self-Hosted - Local Storage* database type option, both Cassandra Cluster and OpenSearch run locally on the Virtual Machine on Windows Subsystem for Linux (WSL). This allows you to easily get started with a database setup that supports all DataMiner functionalities. However, such a setup should only be used for **test and staging environments**.
 
 To switch such a setup to production, you will need to migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers.
 

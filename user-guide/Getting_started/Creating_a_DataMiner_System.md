@@ -8,7 +8,7 @@ To create a DataMiner System (DMS), there are different possibilities:
 
 - You can make use of **DataMiner as a Service (DaaS)**. This means that you [create your DMS in the cloud](xref:Creating_a_DMS_in_the_cloud) in just a few clicks, and it will be fully hosted and maintained by Skyline Communications.
 
-- You can host the DataMiner nodes yourself. For **self-hosted DataMiner nodes**, you can either download a [Virtual Hard Disk (VHDX) with DataMiner pre-installed](xref:Using_a_pre_installed_DataMiner_VHDX) or manually [install the DataMiner Agents](xref:Installing_a_DataMiner_Agent).
+- You can host the DataMiner nodes yourself. For **self-hosted DataMiner nodes**, you can either download a [Virtual Hard Disk with DataMiner pre-installed](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) or manually [install the DataMiner Agents](xref:Installing_a_DataMiner_Agent).
 
   For the data storage for these nodes, different options are available:
 
@@ -16,4 +16,4 @@ To create a DataMiner System (DMS), there are different possibilities:
 
   - You can host the storage nodes yourself. This means you will need to take care of [configuring and maintaining the databases](xref:Configuring_dedicated_clustered_storage).
 
-  - If you install DataMiner by [downloading a pre-installed DataMiner VHDX](xref:Using_a_pre_installed_DataMiner_VHDX), for testing or staging setups, you can host Cassandra and OpenSearch locally on Windows Subsystem for Linux (WSL). While this is very easy to set up and allows you to get started immediately, it should never be used for production systems. However, if you later decide to use such a system in production, you can switch the existing DataMiner System to one of the two setups above instead.
+  - If you install DataMiner by [downloading a pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), for testing or staging setups, you can host Cassandra and OpenSearch locally on Windows Subsystem for Linux (WSL). While this is very easy to set up and allows you to get started immediately, it should never be used for production systems. However, if you later decide to use such a system in production, you can switch the existing DataMiner System to one of the two setups above instead.
