@@ -4,7 +4,7 @@ uid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
 
 # Using a pre-installed DataMiner Virtual Hard Disk
 
-You can download a Virtual Hard Disk with DataMiner pre-installed to immediately get started.
+You can [download a Virtual Hard Disk with DataMiner pre-installed](https://community.dataminer.services/dataminer-virtual-hard-disk/) to immediately get started.
 You can choose between the following file formats:
 - VHD
 - VHDX
