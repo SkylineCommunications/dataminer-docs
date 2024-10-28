@@ -4,14 +4,7 @@ uid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
 
 # Using a pre-installed DataMiner Virtual Hard Disk
 
-> [!NOTE]
-> If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
-
-You can [download a Virtual Hard Disk with DataMiner pre-installed](https://community.dataminer.services/dataminer-virtual-hard-disk/) to immediately get started.
-You can choose between the following file formats:
-- VHD
-- VHDX
-- VMDK
+You can [download a virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) with DataMiner pre-installed to immediately get started. The virtual hard disk is available in **VHD**, **VHDX**, and **VMDK** format. The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out-of-the box for improved security.
 
 When you configure this setup, you will be able to choose between different data storage setups:
 
@@ -21,19 +14,19 @@ When you configure this setup, you will be able to choose between different data
 
 - A **staging setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **testing and staging environments**, and this will also require additional resources on the local machine. To switch such a setup to production, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers, and then [decommission WSL](xref:Decommissioning_WSL).
 
-> [!NOTE]
-> The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out-of-the box for improved security.
-
-To use the pre-installed Virtual Hard Disk, you will need to follow the steps below:
+Once you have downloaded the [pre-installed virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo, you will need to follow the steps below to use it:
 
 1. [Create the VM](#creating-the-vm).
 1. [Connect and start the VM](#connecting-and-starting-the-vm).
 1. [Configure DataMiner](#configuring-dataminer).
 1. Optionally, [switch from subscription mode to a perpetual-license setup](#switching-from-subscription-mode-to-perpetual-license).
 
+> [!NOTE]
+> If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
+
 ## Creating the VM
 
-When you have downloaded the Virtual Hard Disk, you can start to create a VM in your chosen virtualization environment. Below you can find the steps to follow in Hyper-V:
+When you have downloaded the virtual hard disk, you can start to create a VM in your chosen virtualization environment. Below you can find the steps to follow in Hyper-V:
 
 1. Start creating your VM by following [the official Hyper-V guide](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v).
 
@@ -82,7 +75,7 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 
 > [!IMPORTANT]
 >
-> - If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps outlined in [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
+> - If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
 > - DataMiner requires a static IP to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
 
 > [!NOTE]
@@ -101,7 +94,7 @@ Follow the below steps to configure your DataMiner Agent:
    - *Self-hosted - External Storage*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
 
      > [!NOTE]
-     > Make these clusters are active and reachable from the VM you are setting up. You are responsible for the management of these external database clusters.
+     > Make sure these clusters are active and reachable from the VM you are setting up. You are responsible for the management of these external database clusters.
 
    - *Self-hosted - Local storage*: A clustered storage setup where both Cassandra and OpenSearch run locally on WSL.
 
@@ -129,11 +122,11 @@ Follow the below steps to configure your DataMiner Agent:
 > [!IMPORTANT]
 > For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
 
-## Restoring a backup onto the Virtual Hard Disk
+## Restoring a backup onto the virtual hard disk
 
-If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration and follow the steps below:
+If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, after you have created and connected the VM, instead of the configuration steps detailed above, follow the steps below:
 
-1. Follow the steps outlined in [Restoring a DataMiner Agent](Restoring_a_DataMiner_Agent).
+1. Restore the backup in the same way as for a regular DataMiner Agent. See [Restoring a DataMiner Agent](xref:Restoring_a_DataMiner_Agent).
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 

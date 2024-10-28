@@ -12,7 +12,7 @@ To prepare the destination server, there are several possibilities:
 
 - Create a Virtual Machine using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk)
 
-- Clear the configuration of an existing DMA using the [Factory reset tool](xref:Factory_reset_tool). This is highly recommended over manually clearing the configuration; however, it is only possible if the DMA is using DataMiner 10.0.12 or higher.
+- Clear the configuration of an existing DMA using the [Factory reset tool](xref:Factory_reset_tool). This is highly recommended over manually clearing the configuration.
 
 - Manually clear the configuration of an existing DMA:
 
