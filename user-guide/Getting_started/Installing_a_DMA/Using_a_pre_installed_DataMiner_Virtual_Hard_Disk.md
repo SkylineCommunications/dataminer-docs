@@ -104,7 +104,7 @@ Follow the below steps to configure your DataMiner Agent:
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
    - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
-   - *System Name*: This name will be used to identify the DataMiner System in various DataMiner Cloud Platform applications.
+   - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
    - *Admin Email*: This email is associated with the dataminer.services account that has the administrator role for the organization.
    - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
