@@ -49,18 +49,31 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
 
 1. Click *Start*.
 
-1. Select the database type.
+1. Select the desired database type, and click *Next*.
 
-   - If you selected Self-hosted - External Storage please check [configure the databases](xref:Configuring_dedicated_clustered_storage).
+   These are the available database types:
 
-1. Enter the DataMiner Info.
+   - [Storage as a Service (STaaS)](xref:STaaS) (recommended).
 
-   - The Organization API Key can be found in [dataminer.services](https://dataminer.services/) under the Admin app in the Keys page. For more information please check [Managing dataminer.services keys](xref:Managing_DCP_keys).
+   - *Self-hosted - External Storage*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
 
-   > [!IMPORTANT]
-   > The selected key needs to have the permission to add DataMiner nodes.
+     > [!NOTE]
+     > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
 
-1. Check the selected configuration and click *Configure*
+   - *Self-hosted - Local storage*: A clustered storage setup where both Cassandra and OpenSearch run locally on WSL.
+
+     > [!IMPORTANT]
+     > Do not select this option for production systems. This option should only be used for testing and staging environments.
+
+1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
+
+   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
+   - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
+   - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
+   - *Admin Email*: This email is associated with the dataminer.services account that has the administrator role for the organization.
+   - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
+
+1. Verify the selected configuration and click *Configure*
 
 1. When DataMiner has successfully started, close the installer.
 
