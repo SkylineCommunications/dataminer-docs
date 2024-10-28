@@ -142,7 +142,7 @@ If you want to restore a backup coming from another machine because of e.g. a ha
 
 1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
 
-1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID and the *Request.lic* file.
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the *Request.lic* file.
 
 1. Wait until you receive a *dataminer.lic* file from Skyline.
 
