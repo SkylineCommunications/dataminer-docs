@@ -13,7 +13,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 From now on, the audit export emails will contain a trusted dataminer.services URL for the file download.
 
-#### 25 October 2024 - Enhancement - Admin app - Enhanced stability and performance of the Audit page [ID 41238]
+#### 28 October 2024 - Enhancement - Admin app - Enhanced stability and performance of the Audit page [ID 41238]
 
 Enhancements have been implemented to the *Audit* page in the [Admin app](https://admin.dataminer.services), improving the stability, availability, and performance with immediate effect.
 
