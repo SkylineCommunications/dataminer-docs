@@ -58,7 +58,7 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs , propertyValues);
 
 ## Remarks
 
-- From DataMiner 9.6.11 (RN 23067) onwards, it is possible to edit properties of alarms that have already been closed. This will create a new alarm entry with the updated properties in the alarm tree of the closed alarm.
+- When you edit properties of alarms that have already been closed, this will create a new alarm entry with the updated properties in the alarm tree of the closed alarm.<!-- RN 23067 -->
 - The following method can be used to edit custom properties:
 
     ````csharp

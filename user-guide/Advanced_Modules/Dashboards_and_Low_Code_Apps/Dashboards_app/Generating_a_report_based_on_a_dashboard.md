@@ -6,7 +6,7 @@ uid: Generating_a_report_based_on_a_dashboard_Cube
 
 In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard. See [Sending an email](xref:Sending_an_email) (Correlation), [Email](xref:Email), [Upload report to FTP](xref:Upload_report_to_FTP) and [Upload report to shared folder](xref:Upload_report_to_shared_folder) (Automation), and [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task).
 
-When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is available. Clicking this button opens a pop-up window where you can configure the report.
+When you do so, you can click the *Configure* button to open a window where you can configure the report:
 
 - At the top of the window, the link to the dashboard is displayed. Two icons next to this link allow you to copy it or browse to it, respectively.
 

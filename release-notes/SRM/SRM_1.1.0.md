@@ -6,7 +6,7 @@ uid: SRM_1.1.0
 
 ## New features
 
-#### New ConvertToContributing option in Contributing Config service definition property [ID_23538]
+#### New ConvertToContributing option in Contributing Config service definition property [ID 23538]
 
 In the *Contributing Config* property of a service definition, you can now add a *ConvertToContributing* option. If this option is specified and set to true, a checkbox is included in the Booking Wizard that can be selected to automatically convert the booking to a contributing booking.
 
@@ -22,7 +22,7 @@ For example:
 }
 ```
 
-#### SRM_DiscoverResources script updated [ID_23632]
+#### SRM_DiscoverResources script updated [ID 23632]
 
 The *SRM_DiscoverResources* script, which can be used to import and export resources, has been extended to support the quarantine feature and to be used in interactive mode.
 
@@ -49,13 +49,13 @@ When a successful export has been executed, the resulting Excel file will contai
 - Column names must not contain a hyphen ("-") or a period (".") character.
 - The file cannot be imported while it is open.
 
-#### New 'NoConnectivityCheck' interface property [ID_23816]
+#### New 'NoConnectivityCheck' interface property [ID 23816]
 
 A new interface property, *NoConnectivityCheck* is now supported. If this property is not present or if it is set to any other value than "True" (not case-sensitive), disconnected interfaces are not handled.
 
 However, if this property is set to "True", disconnected interfaces will be loaded and displayed to be configured in the Booking Wizard. This configuration will then be stored in the *ResourceUsage* configuration of the *ReservationInstance* object, so that it can be read by the end user and the corresponding values can be set in the device or system.
 
-#### New GetSrmParametersConfiguration method [ID_23844]
+#### New GetSrmParametersConfiguration method [ID 23844]
 
 In the *ProfileParameterEntryHelper* class, a new *GetSrmParametersConfiguration* method is now available. The method returns a collection of *SrmParameterConfiguration* objects, containing all the data required to proceed with the configuration of a parameter:
 
@@ -69,7 +69,7 @@ In the *ProfileParameterEntryHelper* class, a new *GetSrmParametersConfiguration
 
 Based on this information, the user can then easily apply the retrieved configuration, without any need to request or load further data.
 
-#### SRM_ResourceActions script: New FORCESWAP action [ID_23849]
+#### SRM_ResourceActions script: New FORCESWAP action [ID 23849]
 
 The *SRM_ResourceActions* script now allows a new *FORCESWAP* action, which swaps a resource for a particular booking, causing other possible bookings to go into quarantine in case the resource no longer has sufficient capacity. This action can currently only be used in "silent mode", i.e. when the script is called from another script, using one of the following methods:
 
@@ -87,7 +87,7 @@ Example:
 var success = this.bookingManager.TryForceSwapResource(engine, ref reservation, oldResourceGuid, newResourceGuid, nodeId);
 ```
 
-#### SRM_ResourceActions script: New action to add resource to running booking [ID_23908]
+#### SRM_ResourceActions script: New action to add resource to running booking [ID 23908]
 
 A new *Add* action has been added to the *SRM_ResourceActions* script, which can be used to add a resource to a running booking.
 
@@ -99,7 +99,7 @@ To facilitate the use of this new feature, the BookingManager API will now suppo
 TryAddResource(Engine engine, ref ReservationInstance reservation, Guid resourceId, string nodeLabel, bool force = false).
 ```
 
-#### Profile-load framework: New methods to allow easy retrieval of connected resources [ID_23984][ID_24021]
+#### Profile-load framework: New methods to allow easy retrieval of connected resources [ID 23984][ID 24021]
 
 A number of methods have been added on the *SrmResourceConfiguration* class to allow easy retrieval of connected resources.
 
@@ -164,65 +164,65 @@ serviceDefinition, reservation, InterfaceType.In, "ASI").SingleOrDefault();
 
 ### Enhancements
 
-#### Resource configuration methods enhanced to allow execution of profile loading script without profile instance [ID_23852]
+#### Resource configuration methods enhanced to allow execution of profile loading script without profile instance [ID 23852]
 
 When the methods *SrmResourceConfiguration.ApplyProfile(string profileAction)* or *SrmResourceConfiguration.ApplyServiceActionProfile(string serviceAction, string profileAction)* are called but no profile is configured, from now on a *ProfileNotFoundException* will be thrown. In the profile loading script, the class *NodeProfileConfiguration* will be filled in with *Guid.Empty* if no profile instance was selected.
 
-#### SRM_AddDcfInterfacesAsResources script updated [ID_23933]
+#### SRM_AddDcfInterfacesAsResources script updated [ID 23933]
 
 The *SRM_AddDcfInterfacesAsResources* script has been updated to create resources with capacity and capability parameters.
 
-#### Capacities and capabilities now taken into account for contributing bookings [ID_23938]
+#### Capacities and capabilities now taken into account for contributing bookings [ID 23938]
 
 Capacity en capability parameters are now taken into account for the selection of a contributing resource and for the selection of the resources of a contributing resource. This means that a quarantine can now also be triggered for contributing bookings.
 
 As a consequence, in the path configuration, the *Capacity* attribute is now obsolete.
 
-#### Moving a booking from Partial to Confirmed state [ID_23988]
+#### Moving a booking from Partial to Confirmed state [ID 23988]
 
 Previously, it was not possible to move an existing booking from the *Partial* state to the *Confirmed* state using the *SRM_ReservationAction* script. This operation will now be allowed, but will only succeed if the configuration of the booking is correct.
 
-#### Duplicate colors removed on State Colors page [ID_24029]
+#### Duplicate colors removed on State Colors page [ID 24029]
 
 In the drop-down lists on the *Admin > State Colors* data page of the SRM application element, the following duplicate colors have been removed:
 
 - Cyan (now only included as *Aqua*)
 - Fuchsia (now only included as *Magenta*)
 
-#### Skyline Booking Manager: New 'Column Configuration' parameter [ID_24032]
+#### Skyline Booking Manager: New 'Column Configuration' parameter [ID 24032]
 
 A new *Column Configuration* parameter has been added to the Skyline Booking Manager driver. This parameter will be used to define the properties that need to be displayed in a *ListView* component in Cube and the order in which these need to be displayed.
 
-#### SRM_QuarantineHandling script improvements [ID_24033]
+#### SRM_QuarantineHandling script improvements [ID 24033]
 
 To improve performance, the Booking Manager will now execute the script *SRM_QuarantineHandling* in async mode. The script will now only check future reservations.
 
 ### Fixes
 
-#### Not possible to create booking with same name as running booking [ID_23733]
+#### Not possible to create booking with same name as running booking [ID 23733]
 
 In some cases, it could occur that it was not possible to create a booking with the same name as a running booking, even if the new booking did not conflict with the running booking.
 
-#### Exception when retrieving interface profile parameters by name [ID_23821]
+#### Exception when retrieving interface profile parameters by name [ID 23821]
 
 When interface profile parameters were retrieved by name, it could occur that an exception was thrown.
 
-#### Not possible to cancel quarantined booking [ID_23989]
+#### Not possible to cancel quarantined booking [ID 23989]
 
 If a user tried to cancel a quarantined booking, an exception was thrown and the booking was not canceled.
 
-#### Resource pool customization not applied when combined with resource filtering [ID_23999]
+#### Resource pool customization not applied when combined with resource filtering [ID 23999]
 
 When a resource pool was customized for a specific node and that node was configured with the *Resource Assignment* property set to a JSON configuration to filter resources, it could occur that the pool customization was not applied.
 
-#### Exception when changing timing of booking [ID_24024]
+#### Exception when changing timing of booking [ID 24024]
 
 If the timing of a future booking was modified so that the beginning of its pre-roll phase was in the past, or if the start time of a booking was modified while the pre-roll phase had already begun, an exception was thrown and the booking life cycle was not updated.
 
-#### 'Action when Post-Roll Ends' parameter not initialized by default [ID_24031]
+#### 'Action when Post-Roll Ends' parameter not initialized by default [ID 24031]
 
 In some cases, it could occur that the *Action when Post-Roll Ends* parameter was not initialized by default, which caused an exception to be thrown when bookings were executed.
 
-#### UIOrder configuration of profile definition not applied [ID_24052]
+#### UIOrder configuration of profile definition not applied [ID 24052]
 
 In some cases, the *UIOrder* configuration from the *Description* field of a profile definition was not applied in the Booking Wizard.

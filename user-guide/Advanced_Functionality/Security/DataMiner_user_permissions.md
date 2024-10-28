@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_user_permissions
+description: With the user permissions in the Cube System Center, you can fine-tune which users and groups have access to specific DataMiner functionality.
 ---
 
 # DataMiner user permissions

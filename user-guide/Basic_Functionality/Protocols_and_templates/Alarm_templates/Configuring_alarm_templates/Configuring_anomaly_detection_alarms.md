@@ -4,7 +4,7 @@ uid: Configuring_anomaly_detection_alarms
 
 # Configuring anomaly detection alarms for specific parameters
 
-From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
+When you enable alarm monitoring on specific types of anomalies for parameters in an alarm template, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
 
 > [!NOTE]
 >

@@ -193,7 +193,7 @@ The dashboard *Node_Edge* contains the following GQI queries:
 
    1. In the *Shape* box, select *Decagon*.
 
-      The node representing the router will now have a decagon shape. Optionally, you can also change the color of the shape by clicking the colored circle to the right of the *Shape* box.
+      The node representing the switch will now have a decagon shape. Optionally, you can also change the color of the shape by clicking the colored circle to the right of the *Shape* box.
 
    1. In the *Icon* box, select *Switch*.
 

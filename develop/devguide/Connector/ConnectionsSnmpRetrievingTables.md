@@ -6,7 +6,7 @@ uid: ConnectionsSnmpRetrievingTables
 
 Tables in a MIB are structured as illustrated below. There is always a table folder, followed by an entry folder containing the column parameters.
 
-![alt text](../../images/iftable.png "MIB table structure")
+![MIB table structure](~/develop/images/iftable.png)
 
 In a protocol, a table is implemented using a parameter representing the table (of type "array") and additional parameters for each column in the table. Depending on the table retrieval method (discussed in Retrieval methods), SNMP tags need to be provided for the table parameter and/or the column parameters.
 
@@ -37,7 +37,7 @@ Multiple methods are available for retrieving tables via SNMP in a protocol. The
 
 Gets the table contents, retrieving one cell at a time.
 
-![alt text](../../images/Interfaces_Table_GetNext.png "GetNext execution")
+![GetNext execution](~/develop/images/Interfaces_Table_GetNext.png)
 
 Protocol implementation:
 
@@ -71,7 +71,7 @@ Capture observation:
 
 Gets the table contents, retrieving instances one by one, getting multiple values at once.
 
-![alt text](../../images/Interfaces_Table_GetNext_MultipleGet.png "GetNext + MultipleGet execution")
+![GetNext + MultipleGet execution](~/develop/images/Interfaces_Table_GetNext_MultipleGet.png)
 
 Protocol implementation:
 
@@ -111,11 +111,9 @@ Capture observation:
 
 ### GetNext + MultipleGet by Row
 
-From DataMiner 10.1.10 (RN 30780) onwards, it is possible to retrieve the values by row instead of by column.
+It is also possible to retrieve the values by row instead of by column.<!-- RN 30780 --> This scheme will first poll the instances (if they have not been provided) and will then poll the data row by row.
 
-In other words, this scheme will first poll the instances (if they have not been provided) and will then poll the data row by row.
-
-To use this new polling scheme, add "multipleGet" to the SNMP options of the SNMP table to be polled.
+To use this alternative polling scheme, add `multipleGet` to the SNMP options of the SNMP table to be polled.
 
 - If you specify the "multipleGet" keyword without additional arguments, by default 10 rows will be polled in a single run. See the following example:
   
@@ -126,7 +124,7 @@ To use this new polling scheme, add "multipleGet" to the SNMP options of the SNM
   </SNMP>
   ```
   
-- If you want to have a specific number of rows polled in a single run, you can specify the "multipleGet" keyword followed by a colon (":") and the number of rows to be polled in a single run. In the following example, 5 rows will be polled in a single run:
+- If you want to have a specific number of rows polled in a single run, you can specify the "multipleGet" keyword followed by a colon (`:`) and the number of rows to be polled in a single run. In the following example, 5 rows will be polled in a single run:
   
   ```xml
   <SNMP>
@@ -139,13 +137,13 @@ To use this new polling scheme, add "multipleGet" to the SNMP options of the SNM
 >
 > - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
 > - The multipleGet keyword can be used together with options like Subtable.
-> - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, was expanded in DataMiner version 10.1.6 to be able to retrieve the delta times per row when polling an SNMP table. From DataMiner 10.1.10 onwards, this functionality also works in conjunction with this multipleGet option.
+> - The notify protocol command [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA), which can be launched from within a QAction, can also retrieve the delta times per row when polling an SNMP table. This functionality also works in conjunction with this `multipleGet` option.
 
 ### MultipleGetNext
 
 Gets the table contents, retrieving rows one by one.
 
-![alt text](../../images/Interfaces_Table_MultipleGetNext.png "MultipleGetNext execution")
+![MultipleGetNext execution](~/develop/images/Interfaces_Table_MultipleGetNext.png)
 
 Protocol implementation:
 
@@ -176,7 +174,7 @@ Capture observation:
 
 Gets the table contents, retrieving multiple rows at once.
 
-![alt text](../../images/Interfaces_Table_multipleGetBulk.png "MultipleGetBulk execution")
+![MultipleGetBulk execution](~/develop/images/Interfaces_Table_multipleGetBulk.png)
 
 Protocol implementation:
 
@@ -302,7 +300,7 @@ Using the option "instance", the OIDs corresponding with the rows can be retriev
 </SNMP>
 ```
 
-![alt text](../../images/Table_SNMP_instance_option.png "SNMP table using instance option")
+![alt text](~/develop/images/Table_SNMP_instance_option.png "SNMP table using instance option")
 
 > [!NOTE]
 > In case the instance option is used with the GetNext + MultipleGet table retrieval method, the same remark applies in case the optional OID is specified on the table parameter:

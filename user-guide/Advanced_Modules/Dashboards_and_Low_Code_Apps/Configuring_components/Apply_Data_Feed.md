@@ -44,9 +44,7 @@ To apply a data feed or change the data feed of a component:
    - Some components allow you to specify **multiple data feeds**. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]
-     > From DataMiner 10.0.12 onwards, for some visualizations that use multiple data feeds (e.g. Parameter table, State), you can modify the order in which these data feeds are displayed.
-     >
-     > To do so, in the *Data in component* section of the data pane, click the arrow icons next to the data feeds to place them higher or lower in the order.
+     > For some visualizations that use multiple data feeds (e.g. Parameter table, State), you can modify the order in which these data feeds are displayed. To do so, in the *Data in component* section of the data pane, click the arrow icons next to the data feeds to place them higher or lower in the order.
 
    - If you try to add a data feed that is **not compatible** with the component, a red icon will be displayed on the component when you try to drag the data onto it.
 

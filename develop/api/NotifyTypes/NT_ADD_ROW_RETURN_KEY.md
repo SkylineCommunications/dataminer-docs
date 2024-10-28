@@ -25,4 +25,5 @@ string rowPrimaryKey = Convert.ToString(protocol.NotifyProtocol(240 /*NT_ADD_ROW
 
 ## See also
 
-- AddRowReturnKey
+- [AddRowReturnKey (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.AddRowReturnKey(System.Int32))
+- [AddRowReturnKey (QActionTable)](xref:Skyline.DataMiner.Scripting.QActionTable.AddRowReturnKey)

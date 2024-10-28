@@ -8,7 +8,7 @@ uid: DIS_2.21
 
 ### IDE
 
-#### Multiple DMA connections \[ID_22933\]
+#### Multiple DMA connections \[ID 22933\]
 
 In the *DMA* tab of the *DIS Settings* window, it is now possible to configure multiple DMA connections and to organize them in groups. That way, developers will be able to quickly connect to another DMA without having to change any of the settings.
 
@@ -26,7 +26,7 @@ After having configured a number of DMA connections in the *DMA* tab of the *DIS
 
 When configuring a DMA connection, you can now indicate whether this DMA is a production DMA. When you try to publish a protocol or an Automation script to a production DMA, a confirmation box will appear to prevent you from accidentally publishing that file to it.
 
-#### Suppressing results in the DIS Validator window \[ID_23233\]
+#### Suppressing results in the DIS Validator window \[ID 23233\]
 
 In the *DIS Validator* tool window, it is now possible to suppress validation and protocol comparison results.
 
@@ -75,7 +75,7 @@ When, for example, you suppress a validation result that warns you about unknown
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_22334\]
+#### New and updated checks and error messages \[ID 22334\]
 
 The following checks and error messages have been added or updated.
 
@@ -100,13 +100,13 @@ In the Protocol XML Schema, a number of new icons have been added to the Icons e
 
 ### Class Library
 
-#### New matrix classes added to facilitate matrix and router control implementations \[ID_23075\]
+#### New matrix classes added to facilitate matrix and router control implementations \[ID 23075\]
 
 Under Skyline.DataMiner.Library.Protocol.Matrix, the Class Library now contains a collection of classes that will help you develop matrix and router control implementations.
 
 Also, in the *DIS Macros* tool window, a new *CreateMatrix* macro was added. This macro will help you initiate a new matrix and/or router control.
 
-#### New InterApp classes now provide a C# message/response architecture \[ID_23298\]
+#### New InterApp classes now provide a C# message/response architecture \[ID 23298\]
 
 A collection of InterApp classes now provides a C# message/response architecture that will allow for easier communication
 

@@ -118,7 +118,7 @@ In order to define properties for all resources in a pool, and optionally limit 
    - *Capability*: Allows you to select and configure a profile parameter defining the capability of the resource.
 
      > [!NOTE]
-     > To support time-dependent capabilities that are filled in by a script when necessary, from DataMiner 10.0.6 onwards, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
+     > To support time-dependent capabilities that are filled in by a script when necessary, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
 
 1. If any resource property definitions have been defined, fill in the values required for the additional properties.
 

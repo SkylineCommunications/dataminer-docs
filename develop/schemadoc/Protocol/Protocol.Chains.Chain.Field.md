@@ -4,7 +4,7 @@ uid: Protocol.Chains.Chain.Field
 
 # Field element
 
-Each field in a chain is a possible block in the drill-down diagram displayed on the visual pages of an EPM (formerly known as CPE) element.
+Each field in a chain is a possible block in the drill-down diagram displayed on the visual pages of an EPM element.
 
 > [!TIP]
 > See also: [EPM chains and fields configuration](xref:EPMManagerChainsAndFields)

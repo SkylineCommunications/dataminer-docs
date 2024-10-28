@@ -19,11 +19,7 @@ For every DataMiner Cube session, both local and remote logging is created, each
 
 The local logging is the logging saved on the machine where the Cube client is running. This is the version of the Cube logging that contains the most detailed information.
 
-The location where this logging is saved depends on the DataMiner software version.
-
-- Before DataMiner 10.0.9/10.1.0: `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CubeLogging\SLCubeLog_YYYY_MM_DD_HH_MM_SS_PID.txt`
-
-- From DataMiner 10.0.9/10.1.0 onwards: `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CubeLogging\SLCubeLog_YYYY_MM_DD_HH_MM_SS_PID.txt`
+This logging is saved in the following location: `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CubeLogging\SLCubeLog_YYYY_MM_DD_HH_MM_SS_PID.txt`
 
 > [!NOTE]
 > Every time a new DataMiner Cube session starts up, any log files that are more than one week old will be removed.

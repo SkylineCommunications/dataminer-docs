@@ -15,4 +15,4 @@ To open a user card:
 > [!NOTE]
 >
 > - Next to the username at the top of the user card, you can see whether the user is online or offline.
-> - To open your own user card, prior to DataMiner 10.0.0/10.0.2, you can also click your username in the header bar and select *My account*. From DataMiner 10.0.0/10.0.2 onwards, click the user icon in the top-right corner and select *Account details*.
+> - To open your own user card, click the user icon in the top-right corner and select *Account details*.

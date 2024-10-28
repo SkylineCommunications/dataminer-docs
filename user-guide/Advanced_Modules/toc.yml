@@ -498,12 +498,19 @@ items:
         items:
           - name: Configuring feed components
             topicUid: Configuring_feed_components
-          - name: Dynamically referencing feed values in text
+          - name: Dynamically referencing data in text
             topicUid: Feed_Link
           - name: Specifying data input in a dashboard or app URL
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+      - name: Flows
+        topicUid: Using_flows
+        items:
+          - name: Configuring a flow
+            topicUid: Configuring_a_flow
+          - name: Flow operators
+            topicUid: Flow_operators
       - name: Generic Query Interface (GQI)
         items:
           - name: About the Generic Query Interface
@@ -577,10 +584,14 @@ items:
                     topicUid: Ad_hoc_Life_cycle
                   - name: Linking rows to DataMiner objects
                     topicUid: Ad_hoc_Metadata
-                  - name: Tutorials
+                  - name: Examples
                     items:
                       - name: Forwarding dummy data to the GQI
-                        topicUid: Ad_hoc_Tutorials
+                        topicUid: Forwarding_dummy_data_to_GQI
+                      - name: Scaling an ad hoc data source
+                        topicUid: Scaling_Ad_hoc_Data_Source
+                  - name: Tutorials
+                    items:
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
                       - name: Building a GQI data source that retrieves data from a DMS

@@ -29,7 +29,7 @@ Estimated duration: 45 minutes.
 
 The tutorial consists of the following steps:
 
-- [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
+- [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
 - [Step 3: Discover anomaly detection in the Alarm Console](#step-3-discover-anomaly-detection-in-the-alarm-console)
 - [Step 4: Make DataMiner generate alarms for anomalies](#step-4-make-dataminer-generate-alarms-for-anomalies)
@@ -37,11 +37,11 @@ The tutorial consists of the following steps:
 - [Step 6: Set custom alarm thresholds](#step-6-set-custom-alarm-thresholds)
 - [Step 7: Final exercise](#step-7-final-exercise)
 
-## Step 1: Install the example package from the catalog
+## Step 1: Install the example package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/package/5467>.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
    This will create several DataMiner elements in your system that will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Detection Tutorial*.
 

@@ -21,7 +21,7 @@ uid: General_Main_Release_10.1.0_new_features_5
 
 ### DMS Automation
 
-#### Possibility to add, update or clear the script output \[ID_23936\]
+#### Possibility to add, update or clear the script output \[ID 23936\]
 
 Up to now, when a parent script added keys to the script output and then ran a subscript that also added keys to the script output, the keys added by the parent script would be deleted. From now on, the keys added by the parent script will by default no longer be deleted. If you want those keys to be deleted, then have the parent script call the engine.ClearScriptResult() method before starting the subscript.
 
@@ -70,7 +70,7 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### New methods to allows QActions to execute Automation scripts \[ID_24475\]
+#### New methods to allows QActions to execute Automation scripts \[ID 24475\]
 
 Two new SLProtocol methods now allow QActions to execute Automation scripts:
 
@@ -137,7 +137,7 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 string Engine.UserCookie;
 ```
 
-#### Injecting a DLL into an Automation script \[ID_24945\]
+#### Injecting a DLL into an Automation script \[ID 24945\]
 
 It is now possible to inject DLL files into an Automation script.
 
@@ -194,7 +194,7 @@ Send an ExecuteScriptMessage to the server.
 > - DLLs can be injected in scripts that have not yet been run.
 > - When you restart the DataMiner Agent, the injected DLL will no longer be applied.
 
-#### New method to link ReservationInstances to a ticket \[ID_25154\]
+#### New method to link ReservationInstances to a ticket \[ID 25154\]
 
 In a C# block of an Automation script, you can now link ReservationInstances to a ticket.
 
@@ -218,7 +218,7 @@ var ticketLinkFilter = new[] {ticketLink};
 var tickets = ticketingGatewayHelper.GetTickets(ticketLinkFilter);
 ```
 
-#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID_25183\]\[ID_25253\]
+#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
 
 The following properties have been added to the UIBlockDefinition class:
 
@@ -248,7 +248,7 @@ This functionality will allow you to offer clear feedback on user input.
 | Calendar     | X          |             | X              |
 | FileSelector |            |             | X              |
 
-#### Possibility to add Attachments to tickets \[ID_25612\]
+#### Possibility to add Attachments to tickets \[ID 25612\]
 
 In a C# block of an Automation script, you can now add attachments to tickets.
 
@@ -269,19 +269,19 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 > - All ticket attachments are synchronized throughout the DataMiner System. To include them in a backup, select the “All documents located on this DMA” backup option.
 > - The Documents API can also be used to manage ticket attachments. Instead of using the above-mentioned methods, you can also use AddDocumentMessage, DeleteDocumentMessage, GetBinaryFileMessage and GetDocumentMessage. If you do so, specify the directory as “TICKET_ATTACHMENTS\\{DataminerID}\_{TicketId}” and make sure the property ID of type DMAObjectRef contains the ticket ID.
 
-#### Run-time flag 'NoCheckingSets' now allows the 'After executing a SET command' option to be changed while a script is being run \[ID_25847\]
+#### Run-time flag 'NoCheckingSets' now allows the 'After executing a SET command' option to be changed while a script is being run \[ID 25847\]
 
 When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
 From now on, the “NoCheckingSets” run-time flag will allow this option to be changed while a script is being run.
 
-#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID_26569\]
+#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID 26569\]
 
 It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an Automation script by sending an InstallElasticAndMigrateRequest message.
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
-#### Replacing Automation script DLL dependencies \[ID_26605\]
+#### Replacing Automation script DLL dependencies \[ID 26605\]
 
 It is now possible to replace an Automation script DLL dependency from an Automation script by sending an UploadScriptDependencyMessage.
 
@@ -303,7 +303,7 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 > - If an uploaded DLL dependency would break existing scripts and/or libraries, no errors will be returned.
 > - It is advised to strong-name DLL files when referring to multiple versions of the same file in different scripts. Not strong-naming DLL files could lead to unexpected behavior.
 
-#### Uninstalling app packages \[ID_26643\]
+#### Uninstalling app packages \[ID 26643\]
 
 App packages can now be uninstalled using the new AppPackageHelper method UninstallApp.
 
@@ -366,7 +366,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 > [!NOTE]
 > The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
 
-#### Automation: Tree view control for interactive Automation scripts \[ID_26840\]\[ID_27041\]\[ID_27756\]
+#### Automation: Tree view control for interactive Automation scripts \[ID 26840\]\[ID 27041\]\[ID 27756\]
 
 It is now possible to add a tree view control in an interactive Automation script. However, note that Automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
 
@@ -454,13 +454,13 @@ Example:
 ShowResult();
 ```
 
-#### Interactive Automation scripts: Support for datetime values in ISO 8601 format \[ID_27565\]
+#### Interactive Automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
 
 The UIResults.GetDateTime method now also supports datetime values in ISO 8601 format.
 
 Up to now, only datetime values in “dd/MM/yyyy HH:mm:ss” were supported.
 
-#### Interactive Automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID_27567\]
+#### Interactive Automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
 
 Each TreeViewItem in a TreeView component now has an “IsCollapsed” property.
 
@@ -468,7 +468,7 @@ This will allow clients to determine the initial state of each TreeViewItem when
 
 ### DMS Maps
 
-#### Open Street Maps can now be accessed offline \[ID_25928\]
+#### Open Street Maps can now be accessed offline \[ID 25928\]
 
 It is now possible to access Open Street Maps offline when, in the server configuration file, you set AppVersion to “1” and MapsProvider to “OSM”.
 
@@ -505,11 +505,11 @@ Custom base layers can be defined in TilesServer.BaseLayers.BaseLayer tags. Thos
 
 ### DMS EPM
 
-#### DataMiner Cube: Term 'CPE' replaced by 'EPM' \[ID_24568\]
+#### DataMiner Cube: Term 'CPE' replaced by 'EPM' \[ID 24568\]
 
 In DataMiner Cube, the term “CPE” (Customer Premises Equipment) has been replaced by “EPM” (Experience and Performance Management).
 
-#### Discreet parameters now supported in EPM search chains \[ID_25862\]
+#### Discreet parameters now supported in EPM search chains \[ID 25862\]
 
 When a filter in an EPM search chain refers to a column parameter of type discreet, the filter will be displayed as a drop-down box rather than a text box.
 
@@ -520,7 +520,7 @@ When multiple columns have different discreet values, all these values will be d
 > [!NOTE]
 > Dynamic discreet parameters are currently not supported.
 
-#### CPECollectorHelper API: Timeout parameters can now be configured in the SLNetClientTest tool \[ID_26247\]
+#### CPECollectorHelper API: Timeout parameters can now be configured in the SLNetClientTest tool \[ID 26247\]
 
 When a call is performed via the CPECollectorHelper API, a timeout is calculated based on the amount of requested items using the following formula:
 
@@ -536,13 +536,13 @@ In the SLNetClientTest tool, it is now possible to configure the following param
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
 
-#### DataMiner Cube: Long selection box content in EPM filters will automatically wrap to the next line \[ID_27660\]
+#### DataMiner Cube: Long selection box content in EPM filters will automatically wrap to the next line \[ID 27660\]
 
 From now on, long selection box content in EPM filters will automatically wrap to the next line.
 
 ### DMS Web Services
 
-#### BREAKING CHANGE - Web Services API v1: New and updated methods to manage job data \[ID_26006\]
+#### BREAKING CHANGE - Web Services API v1: New and updated methods to manage job data \[ID 26006\]
 
 In the Web Services API v1, the job management methods have all been modified to support job domains.
 
@@ -666,10 +666,10 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
     Retrieves all job templates for the specified domain.
 
-#### Web Services API v1: DMASpectrumBuffer object now contains VariableID property instead of Name property \[ID_27092\]
+#### Web Services API v1: DMASpectrumBuffer object now contains VariableID property instead of Name property \[ID 27092\]
 
 In the web services API, the web method *GetSpectrumBuffersByMonitorId* will now return *DMASpectrumBuffer* results containing a *VariableID* property instead of a *Name* property.
 
-#### Web Services API v1: New GetServicesForFilter method \[ID_27412\]
+#### Web Services API v1: New GetServicesForFilter method \[ID 27412\]
 
 In the web services API v1, the new method *GetServicesForFilter* is now available. It can be used to retrieve a list of services matching a property filter.

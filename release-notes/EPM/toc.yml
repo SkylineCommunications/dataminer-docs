@@ -27,10 +27,16 @@ items:
         topicUid: EPM_5.0.0_D-DOCSIS
   - name: xPON
     items:
-      - name: EPM 1.0.1 xPON - Preview
-        topicUid: EPM_1.0.1_xPON
+      - name: EPM 1.0.1 xPON
+        items:
+          - name: New features and changes
+            topicUid: EPM_1.0.1_xPON
+          - name: Addendum CU6
+            topicUid: EPM_1.0.1_xPON_CU6
   - name: Integrated DOCSIS
     items:
+      - name: EPM 7.0.7 Integrated DOCSIS
+        topicUid: EPM_7.0.7_Integrated_DOCSIS
       - name: EPM 7.0.6 Integrated DOCSIS
         topicUid: EPM_7.0.6_Integrated_DOCSIS
       - name: EPM 7.0.5 I-DOCSIS

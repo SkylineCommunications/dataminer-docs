@@ -6,7 +6,7 @@ uid: Factory_reset_tool
 
 The factory reset tool *SLReset.exe* can be used by an administrator to fully reset a DataMiner Agent to its default state from immediately after installation.
 
-From DataMiner 10.0.12 onwards, this tool is available on each DMA server in the folder `C:\Skyline DataMiner\Files\`. It is not supported for older versions of DataMiner.
+This tool is available on each DMA server in the folder `C:\Skyline DataMiner\Files\`. It is not supported for older versions of DataMiner.
 
 > [!CAUTION]
 > There is no automatic backup of the DMA before the factory reset is performed. Make sure you have taken any backups you need before you run this tool.

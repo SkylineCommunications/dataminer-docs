@@ -6,7 +6,7 @@ uid: Protocol.Chains.Chain.Field-pid
 
 The parameter ID of the parameter to which the block is linked.
 
-From DataMiner 8.0.1 onwards (RN 5828), it is also possible to configure pid="0", in case you wish to display lists when no filter is selected.
+In case you wish to display lists when no filter is selected, you can configure pid="0".<!-- RN 5828 -->
 
 ## Content Type
 

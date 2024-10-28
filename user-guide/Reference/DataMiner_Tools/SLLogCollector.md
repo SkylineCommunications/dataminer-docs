@@ -1,5 +1,6 @@
 ---
 uid: SLLogCollector
+description: SLLogCollector is available by default on each DataMiner Agent, allowing easy log and memory dump collection to troubleshoot DataMiner issues.
 ---
 
 # SLLogCollector
@@ -16,6 +17,7 @@ If SLLogCollector is not installed on your DataMiner Agent, you can download it 
 >
 > - This tool requires .Net Framework 4.8 or higher.<!-- RN 38966 -->
 > - If our tech support team has requested that you run this tool, they will also provide a link to a secure SharePoint site where you can upload the resulting package.
+> - From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40815-->, you can no longer use the built-in Windows file archiver to open and extract the SLLogCollector archives. Use a third-party tool such as [7-Zip](https://www.7-zip.org/) instead.
 
 ## Running the tool
 

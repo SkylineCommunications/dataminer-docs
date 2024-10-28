@@ -8,15 +8,15 @@ uid: DIS_2.5
 
 ### IDE
 
-#### Compilation of C# projects in language version 4 \[ID_16096\]
+#### Compilation of C# projects in language version 4 \[ID 16096\]
 
 Up to now, when DIS opened a QAction and created the necessary C# projects, it used the default C# compiler of the Visual Studio version that was installed. As DataMiner does not yet support all new features of the C# compiler shipped with Visual Studio 2015 and 2017, DIS will now compile all C# projects in language version 4.0.
 
-#### Automatic injection of referenced QActions when debugging \[ID_16097\]
+#### Automatic injection of referenced QActions when debugging \[ID 16097\]
 
 When a QAction refers to another QAction in a DllImport attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
 
-#### Table editor: New 'Header', 'Histogram' and 'Heatmap' options \[ID_16098\]
+#### Table editor: New 'Header', 'Histogram' and 'Heatmap' options \[ID 16098\]
 
 If, in the table editor, you add a monitored parameter of Interprete type “double” and measurement type “number” or “analog”, you can now set three additional options in the *Displayed Columns Layout* section.
 
@@ -28,7 +28,7 @@ Also, from now on, the *Extra Options* column in the *All Columns* section will 
 
 ### Fixes
 
-#### IDE: Could not find DLL Import \[ID_16099\]
+#### IDE: Could not find DLL Import \[ID 16099\]
 
 When you added a new DLL import to a QAction that had already been opened in Visual Studio (i.e. a QAction for which a C# project had already been created), in some cases, the new DLL import was not applied correctly. Also, “\\\\?\\” was added in front of the DLL file path. As a result, the QAction could not be built and an error was added to the error list.
 

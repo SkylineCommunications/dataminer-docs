@@ -11,8 +11,13 @@ This is where you'll find all essential information on how to use DataMiner and 
 
 Can't find what you need here? Go to our [DataMiner Community website](https://community.dataminer.services/) for questions, use cases, additional resources, etc.
 
-> [!TIP]
-> Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
+<div style="display: flex; align-items: center;">
+  <img src="~/images/SkyeHP.svg" alt="Skye" style="width: 100px; margin-right: 8px;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Want to contribute? Go to <a href="xref:contributing" style="color: #657AB7;">Contributing to the DataMiner docs</a> for more info.
+    </div>
+</div>
 
 <div class="row">
   <div class="columnhome">

@@ -1,5 +1,6 @@
 ---
 uid: Working_with_shape_data_in_Microsoft_Visio
+description: In Microsoft Visio, use the Shape Data pane to add data fields to pages, shapes, or groups of shapes to enrich drawings with DataMiner functionality.
 ---
 
 # Working with shape data in Microsoft Visio

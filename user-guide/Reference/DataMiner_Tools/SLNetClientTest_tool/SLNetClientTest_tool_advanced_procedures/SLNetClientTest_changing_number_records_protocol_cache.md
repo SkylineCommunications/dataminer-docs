@@ -4,7 +4,7 @@ uid: SLNetClientTest_changing_number_records_protocol_cache
 
 # Changing the number of records in the protocol cache
 
-From DataMiner 10.0.11 onwards, you can customize how many records can be contained in the protocol cache. This can be useful to tweak the performance of a DMA. However, **always check with Skyline** before you make any changes to this setting, as an **incorrect configuration can cause serious issues**.
+You can customize how many records can be contained in the protocol cache, for instance to tweak the performance of a DMA. However, **always check with Skyline** before you make any changes to this setting, as an **incorrect configuration can cause serious issues**.
 
 To change this setting:
 

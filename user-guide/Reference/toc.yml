@@ -280,6 +280,8 @@ items:
             items:
               - name: Aborting a running Automation script
                 topicUid: SLNetClientTest_aborting_running_script
+              - name: Accessing script execution metrics
+                topicUid: SLNetClientTest_accessing_script_execution_metrics
               - name: Changing the grace period for the SLNetCom Notification thread
                 topicUid: SLNetClientTest_grace_period_SLNetCom_notification
               - name: Changing the number of records in the protocol cache
@@ -443,7 +445,7 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
-  - name: DataMiner Extension Modules
+  - name: DataMiner Extension Modules (DxMs)
     topicUid: DataMinerExtensionModules
   - name: Custom branding
     topicUid: Custom_branding

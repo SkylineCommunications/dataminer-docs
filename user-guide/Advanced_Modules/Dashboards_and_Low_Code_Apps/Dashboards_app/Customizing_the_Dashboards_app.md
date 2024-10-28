@@ -13,7 +13,7 @@ The following advanced customization is possible for the redesigned Dashboards a
 
 ## Configuring the maximum JSON length
 
-From DataMiner 10.0.0/10.0.1 onwards, it is possible to configure the maxJSONLength setting, which is used when WebSocket messages are serialized and deserialized. By default, this is set to 20 MiB.
+The *maxJSONLength* setting is used when WebSocket messages are serialized and deserialized. By default, this is set to 20 MiB.
 
 To customize this setting:
 

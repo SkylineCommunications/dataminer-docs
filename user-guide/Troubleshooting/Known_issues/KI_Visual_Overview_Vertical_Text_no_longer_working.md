@@ -11,7 +11,7 @@ uid: KI_Visual_Overview_Vertical_Text_no_longer_working
 
 ## Cause
 
-A feature introduced in DataMiner 10.2.3 that enables text wrapping and trimming [(RN 32440)](xref:General_Feature_Release_10.2.3#visual-overview-text-wrapping-and-trimming-id_32440) causes vertical text in Visual Overview shapes to be displayed incorrectly. If the latest version of DataMiner Cube is used, this issue can also occur in Main Release versions from DataMiner 10.2.0 [CU3] onwards.
+A feature introduced in DataMiner 10.2.3 that enables text wrapping and trimming [(RN 32440)](xref:General_Feature_Release_10.2.3#visual-overview-text-wrapping-and-trimming-id-32440) causes vertical text in Visual Overview shapes to be displayed incorrectly. If the latest version of DataMiner Cube is used, this issue can also occur in Main Release versions from DataMiner 10.2.0 [CU3] onwards.
 
 ## Fix
 
