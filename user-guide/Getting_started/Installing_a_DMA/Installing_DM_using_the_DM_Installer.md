@@ -60,11 +60,6 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
      > [!NOTE]
      > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
 
-   - *Self-hosted - Local storage*: A clustered storage setup where both Cassandra and OpenSearch run locally on WSL.
-
-     > [!IMPORTANT]
-     > Do not select this option for production systems. This option should only be used for testing and staging environments.
-
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
    - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
@@ -75,9 +70,9 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
 
 1. Verify the selected configuration and click *Configure*
 
-1. When DataMiner has successfully started, close the installer.
+1. When the configuration is complete, click *Finish* to close the installer.
 
-At this point, the basic installation is complete.
+DataMiner will automatically start up, get licensed, and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 
 > [!IMPORTANT]
 > During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights in DataMiner. To grant others access to the newly installed DMA, log in to Cube using the same Windows account as was used to install DataMiner, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
