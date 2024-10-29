@@ -66,4 +66,6 @@ To deploy the Availability branch of the EPM Solution:
    > [!NOTE]
    > If you cannot see the Topology app in between the Surveyor and Activity modules in Cube, close and reopen DataMiner Cube. If this has no effect, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled. If it is, and the app is still not shown, restart DataMiner.
 
-1. Default alarm and trend templates are automatically assigned when using the *EPM_SetupWizard* that have a baseline of thresholds as a starting off point. If you would like to make any further adjustments to the thresholds or apply conditional rules, duplicate the default templates as they will be overwritten with any subsequent Availability package update.
+1. Optionally, duplicate and customize the alarm and trend templates.
+
+   The *EPM_SetupWizard* script automatically assigns default alarm and trend templates that have a baseline of thresholds as a starting point. If you would like to make further adjustments to the thresholds or apply conditional rules, it is important that you duplicate the default templates as they will be overwritten with any subsequent Availability package update.
