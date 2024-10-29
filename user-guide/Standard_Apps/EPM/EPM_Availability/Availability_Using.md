@@ -16,7 +16,7 @@ At the top, you can change the topology chain to see other levels.
 
 ## Visual Overview pages
 
-All topology levels have a visual overview page associated with them, which contains links to a low-code app where the selected level will be preselected.
+All topology levels have a Visual Overview page associated with them, which contains links to a low-code app where the selected level will be preselected.
 
 ![Topology Visual](~/user-guide/images/EPM_Availability_Topology_Visual.gif)
 
