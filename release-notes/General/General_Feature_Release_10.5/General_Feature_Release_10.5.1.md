@@ -32,4 +32,11 @@ uid: General_Feature_Release_10.5.1
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLElement would leak memory when filtering a recursive table or a directview/view table that had to be sorted [ID 41058]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
+
+When SLElement had to process a table filter request, it would leak memory in the following cases:
+
+- When the table had a foreign key to itself.
+- When a directview or view table with a number of non-initialized columns had to be sorted.

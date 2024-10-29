@@ -10,6 +10,8 @@ items:
                 topicUid: General_Main_Release_10.5.0_new_features
               - name: General Main Release 10.5.0 - Changes
                 topicUid: General_Main_Release_10.5.0_changes
+          - name: General Main Release 10.5.0 CU1 - Preview
+            topicUid: General_Main_Release_10.5.0_CU1
       - name: Feature Release
         items:
           - name: General Feature Release 10.5.1 - Preview

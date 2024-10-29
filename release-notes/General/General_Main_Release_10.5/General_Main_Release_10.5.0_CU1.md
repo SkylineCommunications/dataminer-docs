@@ -1,8 +1,8 @@
 ---
-uid: General_Main_Release_10.4.0_CU10
+uid: General_Main_Release_10.5.0_CU1
 ---
 
-# General Main Release 10.4.0 CU10 - Preview
+# General Main Release 10.5.0 CU1 - Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
