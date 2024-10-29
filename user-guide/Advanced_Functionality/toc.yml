@@ -277,6 +277,8 @@ items:
                 topicUid: Configuring_the_database_settings_in_Cube
               - name: Migrating existing systems to dedicated clustered storage
                 topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+              - name: Decommissioning WSL
+                topicUid: Decommissioning_WSL
           - name: Configuring storage per DMA
             topicUid: Configuring_storage_per_DMA
             items:
@@ -453,7 +455,6 @@ items:
               - name: Customizing the layout of notification messages
                 topicUid: Customizing_the_layout_of_notification_messages
           - name: Managing user groups
-            topicUid: Managing_user_groups
             items:
               - name: Viewing information about user groups
                 topicUid: Viewing_information_about_user_groups
@@ -473,6 +474,8 @@ items:
             topicUid: Frequently_asked_questions_about_user_group_settings
       - name: Advanced security configuration
         items:
+#          - name: Lockbox service for DaaS and STaaS systems
+#            topicUid: Lockbox
           - name: Securing self-hosted DataMiner storage
             items:
               - name: Securing the Cassandra general database

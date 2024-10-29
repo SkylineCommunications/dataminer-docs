@@ -21,21 +21,15 @@ After an upgrade to Windows Server 2022, the following issues can cause problems
 
 - For the IIS issue:
 
-  1. Enable IIS. See [How to Enable IIS on Windows Server](https://techcommunity.microsoft.com/t5/iis-support-blog/how-to-enable-iis-and-key-features-on-windows-server-a-step-by/ba-p/4229883).
+  1. On the DMA server, open Server Manager, and make sure that IIS is enabled.
 
-  1. Configure the default website:
+  1. Use the following PowerShell command to configure the necessary IIS features:
+  
+     ```txt
+     Add-WindowsFeature Web-Server, Web-WebServer, Web-Security, Web-Filtering, Web-ASP, Web-Asp-Net45, Web-Mgmt-Compat, Web-Lgcy-Scripting, Web-ISAPI-Filter, Web-WMI, Web-WebSockets
+     ```
 
-     1. Open *IIS Manager*.
-
-     1. In the *Connections* pane on the left, expand the top node and *Sites* node until you see *Default Web Site*.
-
-     1. Under *Actions* on the right, click *Basic Settings*.
-
-     1. Make sure the settings are filled in as follows, and click *OK*.
-
-        ![Default website configuration](~/user-guide/images/KI_IIS_default_website.png)
-
-  1. Restart IIS.
+  1. Go to `C:\Skyline DataMiner\Tools` and run *ConfigureIIS.bat*.
 
 ## Description
 

@@ -4,7 +4,7 @@ uid: AdvancedInterElementCommunicationParameterReplication
 
 # Parameter replication
 
-Up to DataMiner 7.5, when replicating an element, it is only possible to do full replication, resulting in an exact copy of the protocol. From DataMiner version 7.5 onwards, it is also possible to replicate whatever you want from any other element that you choose.
+Instead of doing a full replication, resulting in an exact copy of the protocol, you can also replicate specific parameters from an element.
 
 Say for example that you have a full protocol, but you would also like a subset of that protocol, because not all information may be viewed by everybody. This is possible by specifying the replication tag on the parameter that you would like to replicate to:
 
@@ -29,7 +29,7 @@ Say for example that you have a full protocol, but you would also like a subset 
 </Param>
 ```
 
-Here you would replicate parameter 350 from element 41/428. The parameter ID does not have to match the one that you replicate from.
+Here, you replicate parameter 350 from element 41/428. The parameter ID does not have to match the one that you replicate from.
 
 This can also be made more dynamic in the following way:
 
@@ -40,4 +40,4 @@ This can also be made more dynamic in the following way:
 </Replication>
 ```
 
-Where instead of literals the content comes from a parameter.
+The value of the *dynamic* attribute specifies the ID of the parameter that holds the value. See [Protocol.Params.Param.Replication.Element-dynamic](xref:Protocol.Params.Param.Replication.Element-dynamic) and [Protocol.Params.Param.Replication.Parameter-dynamic](xref:Protocol.Params.Param.Replication.Parameter-dynamic).

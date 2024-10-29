@@ -8,7 +8,7 @@ Enables the user to enter text.
 
 To define a text box, define a parameter of type "write".
 
-![alt text](../../images/uitextbox.png "DataMiner Cube text box")
+![alt text](~/develop/images/uitextbox.png "DataMiner Cube text box")
 
 > [!NOTE]
 >

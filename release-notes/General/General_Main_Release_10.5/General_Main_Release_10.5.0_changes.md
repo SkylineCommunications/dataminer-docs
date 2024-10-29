@@ -50,7 +50,15 @@ In the *Get alarms* data source, the following columns have been updated:
 | Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
 
 > [!NOTE]
-> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+> "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
+
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
 ### Enhancements
 
@@ -457,6 +465,14 @@ In alarm templates, the rounding of anomaly threshold values has been enhanced. 
 
 Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
 
+#### DataMiner Object Models: Length of string fields is now limited in order to prevent database errors [ID 39496]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Values of DOM fields of type `String` are now limited to 32,766 UTF8 bytes.
+
+When a DOM instance contains string fields of which the value exceeds this limit, a `DomInstanceError` will be returned with error reason *ValueTooLarge*. The `AssociatedFields` collection will contain the SectionDefinition, Section and FieldDescriptor IDs referring to the incorrect FieldValue as well as the new `ActualSize` property, which will contain the actual UTF8 size of the string that exceeds the limit.  
+
 #### SLLogCollector packages now include GQI and Web API logging [ID 39557]
 
 <!-- MR 10.5.0 - FR 10.4.7 -->
@@ -773,6 +789,60 @@ The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceMa
 > [!NOTE]
 > If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
 
+#### Minor enhancements made to BPAs [ID 40751]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of minor enhancements have been made to the following BPAs:
+
+##### Cassandra DB Size
+
+- Will no longer be considered a standard BPA test.
+- Will no longer fail when the IP address is "localhost".
+- Error `! execution failed | This BPA does apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.
+
+##### Check Agent Presence Test In NATS
+
+- Renamed to *Nats connections between the DataMiner Agents*.
+
+##### Check Antivirus DLLs
+
+- Renamed to *Antivirus on the DataMiner Agents*.
+
+##### Check Cluster SLNet Connections
+
+- Renamed to *SLNet connections between the DataMiner Agents*.
+- Message `No potential issues detected` renamed to `No issues detected`.
+
+##### HTTPS Configuration
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Minimum Requirements Check
+
+- Renamed to *DataMiner Agent Minimum Requirements*.
+- When Cassandra is not installed, this BPA will no longer report Cassandra is a requirement.
+- Memory calculation has been enhanced.
+
+##### Password Strength
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Report active RTE
+
+- Renamed to *Active Runtime errors*.
+
+##### Security Advisory BPA
+
+- Renamed to *Security Advisory*.
+
+##### View Recursion BPA
+
+- Renamed to *View recursive loops*.
+- Will no longer be considered a standard BPA test.
+
 #### PortLog.txt file now supports IPv6 addresses [ID 40753]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
@@ -793,15 +863,102 @@ Because of a number of enhancements, overall performance has increased when load
 
 From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
 
-#### Certain information events will no longer be generated when an element is duplicated [ID 40926]
+#### STaaS: Enhanced performance when writing data to the database [ID 40870]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When an element is duplicated, the following information events will no longer be generated:
+Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
+
+#### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters of the same element that were related to the parameter shown in the graph.
+
+From now on, the menu will no longer only show all parameters of the same element that were related in the selected time range. It will now also show
+
+- all parameters of the other elements in the same service that were related in the selected time range, and
+- the top 10 parameters system-wide that were related in the selected time range.
+
+#### Certain information events will no longer be generated when an element is replicated [ID 40926]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When an element is replicated, the following information events will no longer be generated:
 
 - [Replicated Element]
 - [Remote Element Name]
 - [Remote DMA IP]
+
+#### Failover: Enhanced updating of values stored in the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file based on current system status [ID 40930]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of enhancements have been made with regard to updating values stored in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file based on current system status.
+
+#### GQI: Enhanced performance of 'top X' queries using the 'Get alarms' data source [ID 40937]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance of GQI "top X" queries using the *Get alarms* data source has increased.
+
+#### Service & Resource Management: Controlling the generation of information events when starting booking event scripts [ID 40972]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
+
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+
+Also, the following scripts will now only be executed when the above-mentioned option is set to true:
+
+- the *StateChangeScript*, defined on an `SRMServiceInfo` object, which is executed when the state of the `SRMServiceInfo` object changes.
+- the *SRM_QuarantineHandling* script, which is executed when there is a conflict with a booking causing that booking to be put in quarantine.
+
+Additionally, the following script will also no longer generate an information event when it is executed:
+
+- the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
+
+> [!IMPORTANT]
+> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+
+#### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
+
+#### SLManagedAutomation and SLManagedScripting will now use at least TLS 1.2 encryption when communicating with BrokerGateway [ID 41048]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When initialized, SLManagedAutomation and SLManagedScripting will now set the allowed security protocol to "Tls1 | Tls11 | Tls12".
+
+This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
+
+#### Notification message templates: New [treeid] placeholder [ID 41052]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When defining a notification message template in the *NotifyTemplates.xml* file, you can use the [treeid] placeholder.
+
+This placeholder will be replaced by the tree ID of the alarm.
+
+For more information, see [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
+
+#### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
+
+Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
+#### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
 ### Fixes
 

@@ -18,6 +18,27 @@ uid: General_Main_Release_10.3.0_CU21
 
 A number of security enhancements have been made.
 
+#### SLPort will now validate SSL/TLS certificates by default [ID 40877]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
+
+> [!NOTE]
+>
+> - If you want SLPort to skip the default SSL/TLS certification validation for a particular element, you can set the `InsecureHttps` element to true in the *element.xml* file of that element.
+> - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+
+#### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The following NT Notify types have been deprecated:
+
+- NT_ADD_VIEW_NO_LOCK
+- NT_ADD_VIEWS_NO_LOCK
+
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
@@ -67,3 +88,54 @@ When a DVE element or virtual function element was deleted while a subscription 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+
+#### Problem when executing a GQI query after a DMA had been restarted [ID 40975]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When a GQI query was executed on a DataMiner System with storage per DMA, and then executed again after a DMA in that DataMiner System had been restarted, it would fail.
+
+#### Cassandra Cluster Migrator tool: Problem when encountering invalid or corrupt row while migrating alarm data [ID 41002]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+In some rare cases, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would throw an error when it encountered an invalid or corrupt row in the source database while migrating alarm data. From now on, all invalid or corrupt rows will be skipped.
+
+#### Element connections: Value of write parameters would incorrectly be resent [ID 41010]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+When an element connection had a write parameter as source, up to now, the value of that parameter would be pushed to the destination when the element connections of the source element were modified or when the destination element was restarted. In some cases, this could result in unexpected behavior. For example, when the write parameter was a button, the destination element would start to execute the actions as if the button would have been pressed. From now on, write parameters used as source will only be forwarded to the destination when their value is actually updated.
+
+The behavior of read parameters used as source will remain unchanged. Their value will still be forwarded to the destination when the destination element is restarted or when the element connections of the source element are modified. Read parameters are typically used to display the same value in both source and destination.
+
+Also, up to now, when an element connection was saved without the *Include Element State* option being selected, the destination parameter (read parameter) would incorrectly be triggered twice with the same value. From now on, the value will only be forwarded once.
+
+> [!NOTE]
+> If you want write parameters used as source to behave as before, you can enable the *LegacyElementConnectionsResendWriteParams* soft-launch option.
+
+#### GQI would no longer be able to send user-friendly error messages to client applications [ID 41019]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Since DataMiner feature version 10.3.9, SLHelper would wrap GQI exceptions incorrectly, causing GQI to no longer be able to send user-friendly error messages to client applications.
+
+#### Cassandra Cluster Migrator tool: Options for offloading files to a file cache would incorrectly not be preserved [ID 41055]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when finalizing a migration, the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) would incorrectly not preserve the options that had been specified for offloading files to a file cache. These options will now be preserved.
+
+For more information on the above-mentioned offload options, see [Offloading files to a file cache](xref:DB_xml#offloading-files-to-a-file-cache).
+
+#### Protocols: Stuffing attribute of Protocol.Advanced element was not parsed correctly [ID 41092]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+The value of the `stuffing` attribute of the *Protocol.Advanced* element was not parsed correctly.
+
+#### Enhanced exception handling in SLASPConnection and SLWatchdog [ID 41121]
+
+<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+
+A number of enhancements have been made to SLASPConnection and SLWatchdog with regard to exception handling.

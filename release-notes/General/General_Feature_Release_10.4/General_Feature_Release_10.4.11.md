@@ -69,7 +69,7 @@ In the *Get alarms* data source, the following columns have been updated:
 | Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
 
 > [!NOTE]
-> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+> "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
 ### Enhancements
 
@@ -325,3 +325,9 @@ When an unhandled exception was thrown by a QAction after an element had been st
 <!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
 
 Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longer be sent from clients running feature version 10.4.10 to DataMiner Agents running feature version 10.4.1 or older.
+
+#### DataMiner as a Service: Incorrect 'This DataMiner Agent is not licensed' message [ID 41130]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.11 [CU0] -->
+
+On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g. DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.

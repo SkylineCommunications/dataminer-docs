@@ -32,7 +32,8 @@ protocol.SendToDisplay(4000);
 ## Parameters
 
 - updateConfig (string): String formatted as follows:
-"ChangeType;elementID;parameterID;agentID".
+
+  "ChangeType;elementID;parameterID;agentID".
   
   ChangeType is an integer that can take one of the following values:
 
@@ -48,7 +49,7 @@ protocol.SendToDisplay(4000);
   |7|Follow info|
   |8|Master info|
   |9|Size|
-  |10|Matrix layout (supported from DataMiner 10.0.8 (RN 25456, RN 25892) onwards)|
+  |10|Matrix layout<!-- RN 25456, RN 25892 -->|
 
 - updateValue (string): Updated value. The format of this string depends on the specified changeType. To set the size of the matrix, the updateValue string needs to be formatted as follows: inputs + ";" + outputs.
 
@@ -59,15 +60,15 @@ protocol.SendToDisplay(4000);
 ## Remarks
 
 - When an update is performed, DataMiner creates a file, *labels.xml*, containing the updated matrix configuration (which is stored in the folder of the element `C:\Skyline DataMiner\Elements\[Element Name]`).
-- The size of a matrix can never be larger than the size that is hard-coded in the driver.
-- From DataMiner 9.6.11 (RN 23052) onwards, when labels are updated on a matrix element with the Notify DataMiner call NT_UPDATE_PORTS_XML (128), at most one information event will be generated with parameter description "Link File" and value "edited by ...".
+- The size of a matrix can never be larger than the size that is hard-coded in the protocol.
+- When labels are updated on a matrix element with the Notify DataMiner call NT_UPDATE_PORTS_XML (128), at most one information event will be generated with parameter description "Link File" and value "edited by ...".<!-- RN 23052 -->
 - Bulk edit: It is also possible to group multiple updates in one call. To perform a bulk update, the parameters should be formatted as follows:
   - updateConfigs (object[]): Contains the different update configurations, where each entry is a uint[] with the following structure:
     - updateConfig[0]: Denotes the type of change. Refer to the table for the single update for more info on the possible values.
     - updateConfig[1]: Element ID
     - updateConfig[2]: Matrix parameter ID
     - updateConfig[3]: Agent ID
-    - updateConfig[4]: Flag indicating whether a parameter of type "discreet info" should not be triggered. 1: no discreet info trigger. Feature introduced in DataMiner 9.6.11 (RN 23052).
+    - updateConfig[4]: Flag indicating whether a parameter of type "discreet info" should not be triggered. 1: no discreet info trigger.<!-- RN 23052 -->
   - updateValues (object[]): Contains the different update values, where each entry is a string[], with the following structure:
     - updateValue[0]: Depends on the type of change. This corresponds with the first part (before the semicolon) of the updateValue string in the single call.
     - updateValue[1]: Depends on the type of change. This corresponds with the second part (after the semicolon) of the updateValue string in the single call.

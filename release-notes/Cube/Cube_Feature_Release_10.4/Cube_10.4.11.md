@@ -184,3 +184,9 @@ In some rare cases, DataMiner could stop working while exporting trend data to a
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 In some cases, problems could occur when subscribing to properties due to subscriptions incorrectly being case sensitive. From now on, property subscriptions will be case insensitive.
+
+#### Alarm Console: 'NotSupportedException' errors would cause alarms to get stuck in alarm tabs [ID 41050]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 [CU0] -->
+
+In some cases, `NotSupportedException` errors would be added to the Cube logging, causing alarms to get stuck in alarm tabs, especially when a delay or a refresh rate had been specified.
