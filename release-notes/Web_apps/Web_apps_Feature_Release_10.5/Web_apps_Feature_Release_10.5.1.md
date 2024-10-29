@@ -31,3 +31,9 @@ uid: Web_apps_Feature_Release_10.5.1
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
 
 The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Time filter would be disregarded when fetching history alarms [ID 41249]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+
+When an *Alarm table* component was configured to retrieve history alarms, it would incorrectly always retrieve all history alarms from the database, regardless of what was specified in the time filter.
