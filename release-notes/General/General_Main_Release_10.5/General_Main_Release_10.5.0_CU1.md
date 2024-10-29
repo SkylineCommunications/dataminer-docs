@@ -24,3 +24,26 @@ When SLElement had to process a table filter request, it would leak memory in th
 
 - When the table had a foreign key to itself.
 - When a directview or view table with a number of non-initialized columns had to be sorted.
+
+#### Failover: Problem when an element.xml file was updated while StorageModule was synchronizing its cache [ID 41133]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.1 -->
+
+When, in a Failover setup, SLDMS was synchronizing an updated *element.xml* file while the StorageModule DcM was synchronizing its cache to an XML file, in some rare cases, an exception could be thrown in the StorageModule DcM, causing the *element.xml* update to fail.
+
+#### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41143]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
+
+Since DataMiner 10.4.0 [CU4]/10.4.7, in some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When such a user tried to log in, the following entry would be added to the SLNet.txt log file:
+
+`Authentication Step Failure: Not a DataMiner user: CONTOSA\user`
+
+This issue would only occur on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configuration,DC=contosa,DC=com` does not have a `nETBIOSName` attribute, for example when accessing the GlobalCatalog of a forest.
+
+After having upgraded to a DataMiner version that contains this fix, you can do the following:
+
+- Wait up to an hour for the next LDAP synchronization to occur, or
+- Manually trigger the "Skyline DataMiner LDAP Resync" task in Windows Task Scheduler.
+
+All users should then be able to log in again.
