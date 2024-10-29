@@ -585,9 +585,9 @@ items:
             topicUid: Connectivity_xml_files_representing_chains
           - name: Automatically generating service RCA chains based on connectivity
             topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
-      - name: DataMiner Connectivity Framework Tutorials
+      - name: Tutorials
         items:
-          - name: Getting Started with DataMiner Connectivity Framework
+          - name: Getting started with DCF
             topicUid: getting_started_dataminer_connectivity_framework
   - name: TCP-IP sockets
     items:
