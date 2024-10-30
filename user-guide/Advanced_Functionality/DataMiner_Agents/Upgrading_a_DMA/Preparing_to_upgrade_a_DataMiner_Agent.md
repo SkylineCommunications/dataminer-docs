@@ -64,11 +64,13 @@ Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMin
 
 ### Best practices when upgrading across major versions
 
-If you are not upgrading to the DataMiner version that immediately follows your current version, always follow this general guideline:
+If you are upgrading to another major version that does not immediately follow your current version, always follow this general guideline:
 
 **Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
 
 ![Upgrading across major versions](~/user-guide/images/Upgrading_across_major_versions.png)
+
+This does not apply for upgrades within the same major version. For example, to upgrade from 10.4.0 CU6 to 10.4.0 CU8, it is not necessary to install CU7 first.
 
 > [!IMPORTANT]
 >
