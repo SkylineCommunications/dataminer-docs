@@ -16,7 +16,16 @@ uid: Web_apps_Feature_Release_10.5.1
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: New 'Set variable' action [ID 41253]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+
+It is now possible to configure *Set variable* actions.
+
+This type of action will allow users to set the current value of any variable that is not read-only to either a static value or a value available elsewhere in the low-code app.
+
+> [!NOTE]
+> Variables of type *Table* can only be set to a static value.
 
 ## Changes
 
@@ -25,12 +34,6 @@ uid: Web_apps_Feature_Release_10.5.1
 *No enhancements have been added yet.*
 
 ### Fixes
-
-#### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
-
-<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
-
-The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
 
 #### Dashboards/Low-Code Apps - Alarm table component: Time filter would be disregarded when fetching history alarms [ID 41249]
 

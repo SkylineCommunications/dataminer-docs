@@ -353,3 +353,9 @@ When you had duplicated a dashboard, the components in the newly created duplica
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
+
+#### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
