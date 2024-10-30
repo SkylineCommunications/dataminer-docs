@@ -4,6 +4,14 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 30 October 2024 - Enhancement - CloudGateway 2.14.5 - Dependencies updated [ID 41294]
+
+Several dependencies have been updated.
+
+#### 30 October 2024 - Enhancement - CloudGateway 2.14.5 - Token refresh logging improved [ID 40693]
+
+The logging about the token refresh has been improved. Before it would log that a token refresh succeeded together with an exceeded expiry date, while it wasn't refreshed at all.
+
 #### 27 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID 40527]
 
 CloudGateway will no longer sync its cloud endpoint with other DxMs if it does not have internet access. 
