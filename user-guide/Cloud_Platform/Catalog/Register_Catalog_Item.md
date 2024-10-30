@@ -51,6 +51,9 @@ The value of this key should be a .zip file containing the following items:
 file: <the zip file containing manifest, README and optional images>
 ```
 
+> [!TIP]
+> In order to write the documentation for your Catalog item (i.e. README file), feel free to check out the [best practices](xref:Best_Practices_When_Documenting_Catalog_Items).
+
 > [!NOTE]
 > To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
 
