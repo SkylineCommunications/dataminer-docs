@@ -20,6 +20,8 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
+      - name: DataMiner Connectivity Framework (DCF) tutorials
+        topicUid: DCF_tutorials
       - name: DataMiner EPM tutorials
         topicUid: EPM_tutorials
       - name: DataMiner IDP tutorials
