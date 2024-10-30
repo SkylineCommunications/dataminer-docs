@@ -10,7 +10,7 @@ From now on, the SLAutomation_BAK.txt file is also included in the file offloads
 
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Temporary file location changed [ID_41281]
 
-From now on the %Temp% folder will be used instead of C:\Skyline_Data for temporary files like remote log collection packages or file offloads for proactive support.
+From now on, the `%Temp%` folder will be used instead of `C:\Skyline_Data` for temporary files like remote log collection packages or file offloads for proactive support.
 
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Dependencies updated [ID_41281]
 
