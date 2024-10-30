@@ -28,7 +28,13 @@ uid: General_Feature_Release_10.5.1
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner installer has been updated [ID 40409]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+The DataMiner installer has been updated.
+
+For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
 ### Fixes
 
