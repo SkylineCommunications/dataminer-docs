@@ -21,13 +21,4 @@ For more information on the installer, see [Installing DataMiner using the DataM
 
 ### Fixes
 
-#### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
-
-<!-- MR 10.6.0 - FR 10.5.1 -->
-
-On STaaS systems, in case of connection problems, a large number of the following errors would be added to the *SLErrors.txt* log file:
-
-- *The remote name could not be resolved.*
-- *Unable to connect to the remote server.*
-
-From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
+*No fixes have been added yet.*

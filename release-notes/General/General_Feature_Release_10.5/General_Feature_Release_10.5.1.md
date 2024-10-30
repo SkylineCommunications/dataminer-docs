@@ -72,7 +72,7 @@ All users should then be able to log in again.
 
 #### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
 
 On STaaS systems, in case of connection problems, a large number of the following errors would be added to the *SLErrors.txt* log file:
 
