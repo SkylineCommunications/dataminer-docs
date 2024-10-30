@@ -20,13 +20,14 @@ Expected duration: 30 minutes.
 ## Overview
 
 This tutorial consists of the following steps:
+
 - [Step 1: Deploy the Smart Trap Processor Training package from the Catalog](#step-1-deploy-the-smart-trap-processor-training-package-from-the-catalog)
 - [Step 2: Configure the Trap IP Sources](#step-2-configure-the-trap-ip-sources)
 - [Step 3: Configure the Rules Table](#step-3-configure-the-rules-table)
 - [Step 4: Configure the Source Name Table](#step-4-configure-the-source-name-table)
 - [Step 5: Configure the Source IP Name Table](#step-5-configure-the-source-ip-name-table)
-- [Step 6: Send traps via the Trap Simulator](#step-4-send-traps-via-the-trap-simulator)
-- [Step 7: Configure a rule in case of a matching set/clear OID](#step-5-configure-a-rule-in-case-of-a-matching-set/clear-oid)
+- [Step 6: Send traps via the Trap Simulator](#step-6-send-traps-via-the-trap-simulator)
+- [Step 7: Configure a rule in case of a matching set/clear OID](#step-7-configure-a-rule-in-case-of-a-matching-setclear-oid)
 
 ## Step 1: Deploy the Smart Trap Processor Training package from the Catalog
 
