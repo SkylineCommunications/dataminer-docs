@@ -41,6 +41,12 @@ This type of action will allow users to set the current value of any variable th
 
 When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
 
+#### Legacy Reporter would leak memory when requesting history alarms [ID 41247]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+
+Up to now, the legacy Reporter (SLASPConnection) would leak memory on every DataMiner Agent in the DMS when requesting history alarms.
+
 #### Dashboards/Low-Code Apps - Alarm table component: Time filter would be disregarded when fetching history alarms [ID 41249]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
