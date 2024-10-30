@@ -6,7 +6,7 @@ uid: supportassistant_change_log
 
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Include SLAutomation_BAK.txt in file offloads [ID_41281]
 
-From now on the SLAutomation_BAK.txt file is included in the file offloads, so DataMiner restarts are covered.
+From now on, the SLAutomation_BAK.txt file is also included in the file offloads.
 
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Temporary file location changed [ID_41281]
 
