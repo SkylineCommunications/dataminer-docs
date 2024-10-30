@@ -1,5 +1,6 @@
 ---
 uid: KI_DataMiner_Cube_freeze_on_startup
+description: On a machine without internet connectivity, Cube can freeze for 20 seconds on startup. To avoid this, ensure Windows can correctly check the CRL.
 ---
 
 # DataMiner Cube freeze on startup

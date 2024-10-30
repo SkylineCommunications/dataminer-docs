@@ -4,7 +4,7 @@ uid: NT_SNMP_RAW_SET
 
 # NT_SNMP_RAW_SET (425)
 
-Performs an SNMP SET request without requiring an SNMP connection to be defined in the protocol.
+Performs an SNMP SET request without requiring an SNMP connection to be defined in the protocol.<!-- RN 18369 -->
 
 ```csharp
 object[] versionSpecificSettings = new object[2];
@@ -64,6 +64,7 @@ else
 ## Parameters
 
 - settings (object[]): Request info. At least the first two entries must be present.
+
   - settings[0] (object[]): (Required.) Version-specific information.
 
     This array (referred to as versionSpecificSettings[] below) contains the SNMP version and information that only applies for specific SNMP versions.
@@ -89,6 +90,10 @@ else
           - 1: None
           - 2: HMAC-MD5
           - 3: HMAC-SHA
+          - 4: HMAC128-SHA-224
+          - 5: HMAC192-SHA-256
+          - 6: HMAC256-SHA-384
+          - 7: HMAC384-SHA-512
 
           Default: 1 (None)
         - [3] (string): Authentication password. Default: empty string ("").
@@ -97,7 +102,9 @@ else
           - 2: DES
           - 3: N/A, deprecated
           - 4: AES128
-          
+          - 20: AES192
+          - 21: AES256
+
           Default: 1 (None)
         - [5] (string): Encryption passphrase. Default: empty string ("")
 
@@ -105,23 +112,29 @@ else
           > Default is used when the object in the array is null or of the wrong type.
 
   - settings[1] (string): (Required.) Specifies the destination address, which can optionally include the port.
+
   - settings[2] (string or int): (Optional.) Specifies the destination port. Default: 161.
 
     > [!NOTE]
     > In case a port is specified in requestSettings[1], that port will be used instead of the one specified here.
+
   - settings[3] (int): (Optional.) Specifies the timeout in ms. Default: 1500 ms.
 
     > [!NOTE]
     > The resolution of the timeout is 10 ms.
+
   - settings[4] (int): (Optional.) Specifies the number of retries. Default: 3.
+
   - settings[5] (bool): (Optional.) Specifies whether multiple variable bindings is used.
 
     Default: false.
+
   - settings[6] (string): (Optional.) Instance. Default: Empty string ("").
 
     > [!NOTE]
     > Values not provisioned or left null will be initialized with their default value.
-  - settings[7] (string): Optional. GUID of entry in credentials library. Supported from DataMiner 10.0.11 (RN 27275) onwards.
+
+  - settings[7] (string): Optional. GUID of entry in credentials library.<!-- RN 27275 -->
 
     If you pass a GUID, you do not need to pass any credentials.
 
@@ -157,7 +170,3 @@ else
 ## Return Value
 
 - (object[]): Array holding strings indicating whether the SNMP set succeeded or not. An empty string means the set succeeded; the string "TIMEOUT" indicates the set went into timeout. The size of the object array equals the number of SNMP sets that were issued (i.e. the size of the oidInfo array).
-
-## Remarks
-
-- Feature introduced in DataMiner 9.5.12 (RN 18369).

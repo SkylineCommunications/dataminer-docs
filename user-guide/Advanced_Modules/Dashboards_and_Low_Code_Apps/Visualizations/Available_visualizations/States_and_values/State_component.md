@@ -15,9 +15,12 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
-
    - Column parameter feeds are supported.
+
+     > [!NOTE]
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+
+   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
    - This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
@@ -44,14 +47,7 @@ To configure the component:
 
    - In case the component displays more than one item, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
-     - *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the items are viewed on a small screen, they will always be displayed below each other.
-
-     - *Maximum rows per page*: Determines how many items can at most be displayed below each other on a single page.
-
-     - *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
-
-     > [!NOTE]
-     > These options are only available for parameters, and only prior to DataMiner 10.0.10. In later DataMiner versions, these are replaced by the *Layout flow* option.
+   - If the component shows a parameter, in the *Labels* section, you can select whether the parameter name, element name, index, and/or value should be displayed in the component.
 
    - In the *Style* section, the following options are available:
 
@@ -78,5 +74,3 @@ To configure the component:
      - *Layout flow*: Allows you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will be displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
      - Alignment: Available from DataMiner 10.1.0/10.1.3 onwards. Only displayed if *Design* is set to *Large* or *Auto Size*. Allows you to align the contents of the components to the left, in the center or to the right.
-
-   - If a parameter was added as a feed, in the *Labels* section, you can select whether the parameter name, element name or index should be displayed in the component.

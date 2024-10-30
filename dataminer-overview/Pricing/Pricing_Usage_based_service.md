@@ -1,12 +1,13 @@
 ---
 uid: Pricing_Usage_based_service
+description: The DataMiner Usage-based Services model offers the option to leverage the DataMiner technology on a flexible basis with two deploy models.
 ---
 
 # Usage-based services
 
 The DataMiner Usage-based Services model offers your organization the option to leverage the DataMiner technology on a flexible basis empowering your digital transformation. It is available in both deploy models:
 
-- private/self-hosted deployments of DataMiner (on the ground, in a private/public cloud, or hybrid), and
+- Self-managed deployments of DataMiner (on the ground, in a private/public cloud, or hybrid), and
 - Skyline-hosted solutions (DataMiner-as-a-Service).
 
 This model provides **maximum operational flexibility** and maximum continuous flexibility in the utilization of DataMiner, at the required scale and leveraging any of the available DataMiner functions as deemed most valuable for the operation at any time, always perfectly aligned with any of the continuously evolving needs of both the operation and the business.
@@ -26,7 +27,7 @@ This includes:
 
 ## Subscriptions
 
-By default, DataMiner Credits are deducted monthly based on the metered usage (pay-per-use), allowing for variable usage patterns. However, you have the option to reserve a fixed number of units per month per service (available for most services). This approach provides a more predictable budget, suitable for steady, predictable usage. In exchange for committing to this usage level (Monthly Utilization Allowances (MUA)), you can enjoy savings of up to 60%, depending on the quantities subscribed.
+By default, DataMiner credits are deducted monthly based on the metered usage (pay-per-use), allowing for variable usage patterns. However, you have the option to reserve a fixed number of units per month per service. This approach provides a more predictable budget, suitable for steady, predictable usage. In exchange for committing to this usage level (Monthly Utilization Allowances (MUA)), you can enjoy savings of **up to 60%**, depending on the quantities subscribed.
 
 |   | Subscription | Pay-per-Use |
 |---|:---:|:---:|
@@ -35,8 +36,16 @@ By default, DataMiner Credits are deducted monthly based on the metered usage (p
 | Annual automatic renewal | Yes | N/A |
 | Annual subscription fee | Yes | N/A |
 | Over-utilization | Charged at the standard Pay-per-use fee | N/A |
-| New connector development | MUA < 200: charged as professional services credits<br>MUA >= 200: included with no additional costs, subject to a fair use policy | N/A |
 | Support services | MUA < 200: Community Plan<br>MUA >= 200: Continuity/Evolve | Community Plan |
+
+### New connector development and changes to existing connectors
+
+In general, a system running as a usage-based service can use any of the existing connectors available in the [DataMiner Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
+
+Organizations with 200+ MUA can request changes to existing connectors as well as new connectors, with no additional costs, **subject to a fair use policy**. However, for organizations under 200 MUA, these services are charged as professional service credit.
+
+> [!TIP]
+> As an alternative to paying professional services for new connector development, organizations under 200 MUA can purchase a connector as a perpetual license. This has the benefit of locking the price of the new development, though regular usage fees still apply whenever the connector is used. Additionally, if the organization has other DataMiner Systems on a perpetual-use license, it also has the right to use this connector on those systems.
 
 ## Billing & metering
 
@@ -62,7 +71,7 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 | *Duration* | An organization can select a 12-month, 24-month, or 36-month subscription. |
 | *Renewal Date* | Subscription date + duration.<br>At the Renewal Date, subscriptions renew automatically for 12 months at the then current credit rates, unless agreed otherwise. |
 | *MUA* | Monthly Utilization Allowance.<br>The fixed number of credits available per month under the subscription for each service.<br>The organization MUA is the sum of credits subscribed per service. |
-| *Credit Rate* | The credit rate depends on (1) the type of plan (subscription plan or pay-per-use plan), (2) the region and (3) the hosting. As to the latter, it depends whether you opt for a Skyline-hosted solution (i.e. DataMiner as a Service) or a self-hosted infrastructure (on-premises or private cloud).<br>The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
+| *Credit Rate* | The credit rate depends on the region and is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
 
 ### Invoicing
 
@@ -82,27 +91,28 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Service | Definition |
 |---|---|
-| *Managed Object* | Endpoints directly or indirectly interfaced by DataMiner.<br>- Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints.<br>- Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems. |
-| *Metrics* | Endpoints with less than 200 metrics are not charged as a *Managed Object*. Instead, they are metered as the sum of their metrics. |
+| *Standard Managed Object* | Endpoints directly or indirectly interfaced by DataMiner with more than 200 metrics, metered as the count of 10K metrics on each endpoint. Example: A Managed Object with 24K metrics is metered as 3. |
+| *Light Managed Object* | Endpoints with less than 200 metrics, metered as the sum of their metrics. |
 | *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
-| *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts).<br>Amongst others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, DOM instance state transitions, and user-defined API calls. |
+| *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts).<br>Amongst others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, and DOM instance state transitions. |
 | *Cloud Data Consumption* | Traffic consumed as part of [dataminer.services](xref:Overview_Collaboration). |
 | *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud). No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at an additional charge. |
+| *DataMiner as a Service (DaaS)* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
+
+> [!NOTE]
+> Only active and paused Managed Objects are counted for Managed Objects, Connector Services, and DaaS. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems.
 
 #### Metering units
 
-| Service | Metering unit | Credits |
+| Service | Metering unit | Credits per month |
 |---|---|---|
-| *Managed Object* | Maximum number of active or paused managed objects in a month. | 0.5 |
-| *Metrics* | Sum of metrics on managed objects with less than 200 metrics | 2.5 for 1000 metrics |
-| *Connector Services* | Sum of used connectors delivered by Skyline. | 8 |
+| *Standard Managed Object* | Count of 10K metrics on Managed Objects with more than 200 metrics | 0.4 |
+| *Light Managed Object* | Sum of metrics on Managed Objects with less than 200 metrics | 2.5 for 1000 metrics |
+| *Connector Services* | Sum of connectors delivered by Skyline, concurrently used | 8 |
 | *Script Runs* | Sum of script runs. | Starting at 5 for 1k script runs.<br>Unit credit rate decreases with increased quantities. |
 | *Cloud Data Consumption* | Sum of total GB of traffic. | 1 |
-| *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M data points stored.<br>.0.3 per 10M element data updates. |
-
-> [!NOTE]
-> For DaaS systems, Managed Objects are limited to 10k metrics. Each additional 10k metric on the same Managed Object is counted as an additional Managed Object.
-> Example: A Managed Object with 24k metrics is metered as 3 Managed Objects.
+| *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M trend data points.<br>0.3 per 10M element data updates. |
+| *DataMiner as a Service (DaaS)* | Sum of metrics of all Managed Objects hosted. | 0.1 for 10000 metrics|
 
 > [!TIP]
 > While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.
@@ -112,14 +122,16 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 ### Metering Period
 
-Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months.
+Metering works in monthly cycles, starting on the first day of each month. The units above reflect the base credit rates per month; metering is pro-rated per day.
 
-**Example of a pro-rated calculation:**
+Example:
 
-MUA: 200 credits<br>Start Date: October 20, 2022<br>Renewal Date: October 19, 2023
+- March 1 through 7, the maximum number of concurrent connectors used each day is 5.
+- For the rest of the month, the maximum number of concurrent connectors used each day is always 4.
 
-- MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 78 credits
-- MUA available for the period October 1, 2023 to October 19, 2023 =  200 credits x 19 days / 31 days = 123 credits
+The number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by 31 days (for March):
+
+- Monthly Service Consumption = 5 connectors x 7 days x 8 credits / 31 + 4 connectors x 24 days x 8 credits / 31 days
 
 ### Cancellation
 

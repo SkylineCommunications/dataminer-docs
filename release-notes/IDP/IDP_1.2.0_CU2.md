@@ -6,7 +6,7 @@ uid: IDP_1.2.0_CU2
 
 ## Enhancements
 
-#### Improved logic to detect unmanaged elements [ID_35078]
+#### Improved logic to detect unmanaged elements [ID 35078]
 
 The logic to detect unmanaged elements has been enhanced, so that IDP will now better be able to detect elements in the system, especially ones that have been duplicated manually by a user.
 
@@ -14,13 +14,13 @@ Duplicated elements retain the element properties used by IDP to determine wheth
 
 ## Fixes
 
-#### Element parameters not configured after exception while verifying whether new element has started [ID_35113]
+#### Element parameters not configured after exception while verifying whether new element has started [ID 35113]
 
 In some cases, when IDP verified whether an element had started completely after it was created, an exception could be thrown, which could cause element parameters to not be configured properly.
 
 To prevent this, a protection mechanism has now been added to capture this exception, and IDP will also retry the verification multiple times if necessary.
 
-#### Problem in IDP when retrieving interfaces for unavailable element [ID_35166]
+#### Problem in IDP when retrieving interfaces for unavailable element [ID 35166]
 
 When IDP tried to retrieve the interfaces for an element that did not exist or was not available in the system, an error could occur that caused IDP to stop functioning properly.
 

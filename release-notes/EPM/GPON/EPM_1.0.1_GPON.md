@@ -1,15 +1,12 @@
 ---
-uid: EPM_1.0.1_GPON
+uid: EPM_1.0.1_xPON
 ---
 
-# EPM 1.0.1 GPON - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# EPM 1.0.1 xPON
 
 ## New features
 
-#### Alarm suppression at lower levels via alarm template conditions for routes, distributions, and FAT levels [ID_36874]
+#### Alarm suppression at lower levels via alarm template conditions for routes, distributions, and FAT levels [ID 36874]
 
 In order to suppress alarms for routes, distributions, and FAT levels, the alarm template has been modified to include conditions for these levels. The alarm will be suppressed if the following conditions are met:
 
@@ -18,11 +15,11 @@ In order to suppress alarms for routes, distributions, and FAT levels, the alarm
 
 Both of these conditions must be met for the alarm to be suppressed.
 
-The Skyline EPM Platform GPON has been modified to calculate the percentage of ONTs that are offline. This information is used to determine if the alarm should be suppressed.
+The Skyline EPM Platform xPON has been modified to calculate the percentage of ONTs that are offline. This information is used to determine if the alarm should be suppressed.
 
-#### GPON maps integration [ID_36995]
+#### xPON maps integration [ID 36995]
 
-The QUICK topology now allows access to GPON system maps, with the following three levels: Route, Distribution, and FATs.
+The QUICK topology now allows access to xPON system maps, with the following three levels: Route, Distribution, and FATs.
 
 - At Route level, the map displays subscribers and the split FATs connected to them. Because no latitude and longitude information is available for distribution, this is not shown on this map.
 - At Distribution level, the map displays subscribers and associated split FATs.
@@ -48,10 +45,10 @@ For a split FAT shape, the pop-up shows the following information:
 
 ### Enhancements
 
-#### Number ONT KPI improved [ID_37024]
+#### Number ONT KPI improved [ID 37024]
 
 The logic that calculates the Number ONT KPI at network level has been adjusted to provide a more accurate count of the ONTs in the system.
 
-#### Improved EPM front-end ID request flow [ID_37036]
+#### Improved EPM front-end ID request flow [ID 37036]
 
-To improve the EPM front-end ID request flow, so that new entities are available to the user more quickly, the EPM front-end element now no longer has to assign IDs to the GPON CPE devices.
+To improve the EPM front-end ID request flow, so that new entities are available to the user more quickly, the EPM front-end element now no longer has to assign IDs to the xPON CPE devices.

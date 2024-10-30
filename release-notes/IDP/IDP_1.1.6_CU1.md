@@ -6,6 +6,6 @@ uid: IDP_1.1.6_CU1
 
 ## Enhancements
 
-#### Skyline IDP Connectivity: Unicode support \[ID_25649\]
+#### Skyline IDP Connectivity: Unicode support \[ID 25649\]
 
 The *Skyline IDP Connectivity* driver now features Unicode support.

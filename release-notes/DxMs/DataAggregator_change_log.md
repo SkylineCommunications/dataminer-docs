@@ -4,29 +4,41 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
-#### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI also shows jobs when DataAPI soft-launch option is not enabled [ID_39159]
+#### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID 40623]
+
+If Data Aggregator was configured to export data to CSV for multiple jobs, storing the CSV export files in separate folders according to the configured paths, it could occur that the old CSV files did not get removed after the number of days configured with the *DeleteAfterXDays* setting, which could eventually cause the system to run out of disk space. This has now been fixed: the old CSV files of every job will be deleted as configured.
+
+#### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - MessageBroker dependency updated [ID 40491]
+
+The DataMiner MessageBroker dependency in the DataAggregator DxM has been updated to version 3.0.1.
+
+#### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - Update to .NET 8 [ID 40478]
+
+Data Aggregator has been updated to use .NET 8.
+
+#### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI also shows jobs when DataAPI soft-launch option is not enabled [ID 39159]
 
 The debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) now also shows the jobs even when the *DataAPI* soft-launch option is not enabled.
 
-#### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39086]
+#### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID 39086]
 
 The Cloud Node ID is now used to uniquely identify each DxM instance in a cluster and report back DxM health stats for remote monitoring of systems connected to dataminer.services.
 
 In addition, the Node ID is now also used as an identifier when registering with APIGateway.
 
-#### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID_38981]
+#### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID 38981]
 
 The DataAggregator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
 
-#### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
+#### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID 38697]
 
 In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
 
-#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID_38654]
+#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID 38654]
 
 Beautiful Soup is a commonly used library that makes it easy to scrape information from web pages and as such it has been made part of the installer. The DataAggregator installer now includes the bs4 pip package and its dependencies.
 
-#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID_38682]
+#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID 38682]
 
 Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrator) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
 
@@ -35,47 +47,47 @@ This includes:
 - Extra information added to the Help command (*-h* or *--help*).
 - Change of how the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users already using it.
 
-#### 31 January 2024 - New feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
+#### 31 January 2024 - New feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID 38234] [ID 38307] [ID 38404] [ID 38496] [ID 38560]
 
 Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors. This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
 
 This feature requires the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) option and will display an alphabetically sorted list of your data sources.
 
-###### Include Python environment with Data Aggregator installer [ID_38064]
+###### Include Python environment with Data Aggregator installer [ID 38064]
 
 The Data Aggregator installer now includes the Python environment, so that this no longer needs to be configured after installation, and the feature can be used out of the box.
 
 In addition, several Python libraries are included in the installation. To install more, see [Installing extra Python packages](xref:Data_Sources_Setup#installing-extra-python-packages).
 
-##### Enforce authentication when accessing Data Aggregator DxM web interface via reverse proxy [ID_38275]
+##### Enforce authentication when accessing Data Aggregator DxM web interface via reverse proxy [ID 38275]
 
 To improve security, users now need to authenticate themselves to have access to Data Aggregator's web interface.
 
-##### API Gateway module registration [ID_38570]
+##### API Gateway module registration [ID 38570]
 
 Data Aggregator will now register itself with API Gateway, allowing for an overview of all node instances.
 
-##### Extend Data Aggregator to have a CRUD API for Data Sources [ID_37309]
+##### Extend Data Aggregator to have a CRUD API for Data Sources [ID 37309]
 
 Up to now, the API exposed by Data Aggregator only allowed the ability to start, stop, and check the status of existing jobs.
 
 An enhancement has been made to give better control over creating, updating, and deleting data sources and jobs. With this change, the available operations now allow users to fully manage their data sources and jobs without having to configure them in the *appsettings.custom.json* file manually.
 
-##### Allow Data Aggregator to run Python and PowerShell scripts [ID_37272]
+##### Allow Data Aggregator to run Python and PowerShell scripts [ID 37272]
 
 Previously Data Aggregator could only run GQI queries, but this has now been extended to support Python and PowerShell as well.
 
-#### 17 January 2024 - Enhancement - Logging now mentions the DMA handling a GQI query [ID_37511]
+#### 17 January 2024 - Enhancement - Logging now mentions the DMA handling a GQI query [ID 37511]
 
 To make it easier to find out which DMA handled a GQI request, the DataAggregator logging will now include the DMA that handled such a request.
 
 The CoreGateway DxM has also been modified to include this information when it creates a new GQI session.
 
-#### 9 June 2023 - Enhancement - DataAggregator 2.0.0 - Upgrade to .NET 6 [ID_36408]
+#### 9 June 2023 - Enhancement - DataAggregator 2.0.0 - Upgrade to .NET 6 [ID 36408]
 
 Data Aggregator has now been upgraded to use .NET 6 instead of .NET 5. This means .NET 6 Runtime now has to be installed in order to run Data Aggregator.
 
-#### 3 February 2023 - New feature - DataAggregator 1.0.0 - New Data Aggregator module [ID_34725] [ID_34825] [ID_34914] [ID_34986] [ID_35047] [ID_35072] [ID_35450] [ID_35495]
+#### 3 February 2023 - New feature - DataAggregator 1.0.0 - New Data Aggregator module [ID 34725] [ID 34825] [ID 34914] [ID 34986] [ID 35047] [ID 35072] [ID 35450] [ID 35495]
 
 A new Data Aggregator module is now available as a DxM (DataMiner Extension Module). It can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
 

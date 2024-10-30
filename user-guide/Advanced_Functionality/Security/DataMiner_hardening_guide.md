@@ -34,6 +34,9 @@ After you have run a BPA test, it will provide an overview of the detected issue
 
 ## DataMiner Agent hardening
 
+> [!NOTE]
+> If you have deployed DataMiner using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), your system will be hardened out of the box, so you do not need to do anything to harden DataMiner. For an overview of the implemented measures, refer to [DataMiner Dojo](https://community.dataminer.services/download/overview-hardening-pre-installed-dataminer-vhdx/). However, note that if you have selected the data storage type *Self-hosted - External Storage*, you are responsible for the management of the external Cassandra and OpenSearch database clusters. See [Secure self-hosted DataMiner storage](#secure-self-hosted-dataminer-storage).
+
 ### Secure Cube-server communication
 
 By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
@@ -58,6 +61,41 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
+### Disable legacy components
+
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component, the legacy *Reports and Dashboards* component, and the v0 api.
+
+#### Annotations and legacy Reports and Dashboards
+
+To disable both the *Annotations* component and the legacy *Reports and Dashboards* component:
+
+1. Add the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
+
+   ```xml
+   <SLNet>
+      <LegacyAnnotations>false</LegacyAnnotations>
+      <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
+   </SLNet>
+   ```
+
+1. To make the changes take effect, run the *ConfigureIIS.bat* script, located in the `C:\Skyline DataMiner\Tools` folder, as Administrator.
+
+> [!NOTE]
+> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+
+#### v0 API
+
+To disable the v0 API:
+
+1. Open the file `C:\Skyline DataMiner\Webpages\API\Web.config`.
+
+1. Add the tag `<add key="enableLegacyV0Interface" value="false"/>` tag under `<appSettings>`, and save the file.
+
+1. Restart IIS.
+
+> [!NOTE]
+> The v0 API is disabled by default as from DataMiner versions 10.2.0/10.1.6. It is not possible to enable the v0 API when your DMS is connected to dataminer.services.
+
 ## DataMiner Webpages hardening
 
 ### HTTPS
@@ -81,22 +119,6 @@ There are some other HTTP headers that can improve security. However, their valu
 - [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
 
 - [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
-
-### Disable legacy components
-
-DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
-
-```xml
-<SLNet>
-   <LegacyAnnotations>false</LegacyAnnotations>
-   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
-</SLNet>
-```
-
-To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
-
-> [!NOTE]
-> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 ## Operating system hardening
 
@@ -159,13 +181,13 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-- TCP port **9004** can always be closed from DataMiner 10.0.11 CU0 and 10.0.0 CU6 onwards.
+- TCP port **9004** can always be closed in the currently supported DataMiner versions.
 
 - TCP port **8222** can always be closed. The port is closed by default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
 
 - The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
 
-- UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is the case by default from DataMiner 9.6.11 onwards. However, if a DMA was installed prior to DataMiner 9.6.11 and is upgraded to DataMiner 9.6.11 or higher, this functionality will remain enabled until it is manually disabled. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
+- UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is by default the case in the currently supported DataMiner versions. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
 
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.

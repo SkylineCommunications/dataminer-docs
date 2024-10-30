@@ -73,7 +73,6 @@ For a view table it is not necessary to define the individual column parameters 
 
 For example, the column parameter with ID 201 of the base table will be included in the view table. Therefore, the definition of column parameter 201 includes the duplicateAs parameter and its value is set to 501 (i.e. the column parameter ID of the view table that will hold the data of this column).
 
-
 ```xml
 <Param id="201" duplicateAs="501">
   <Name>ServiceId</Name>
@@ -177,10 +176,8 @@ To process the parameter value that the operator enters on the table view write 
 
 Depending on the DataMiner version, the following functionality is available:
 
-- From DataMiner 7.5 onwards, it is possible to disable updates in view tables and partial subscriptions using the option disableViewRefresh: `<Type options="disableViewRefresh" />`.
-- From DataMiner 10.1.9 (RN 30237) onwards, view tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc). Note that combining filters with AND or OR is not supported.
-- From DataMiner 10.1.11 (RN 30809) onwards, these filters will also work when filtering on a column of a view
-table that refers to a column of another view table.
+- You can disable updates in view tables and partial subscriptions using the option disableViewRefresh: `<Type options="disableViewRefresh" />`.
+- View tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc). Combining filters with AND or OR is not supported.<!-- RN 30237 --> These filters can also be used to filter on a column of a view table that refers to a column of another view table.<!-- RN 30809 -->
 
   > [!NOTE]
   > When a direct view table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.

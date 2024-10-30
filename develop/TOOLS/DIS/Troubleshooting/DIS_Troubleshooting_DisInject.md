@@ -17,7 +17,7 @@ After clicking *Attach* in the *DIS Inject* window and running the code, the bre
 
   DIS will run the code, so you only need to make sure the configuration is set to *Debug*.
 
-- In case multiple SLScripting processes are used, make sure you use [DIS 2.44](xref:DIS_2.44#dis-inject-attaching-the-visual-studio-debugger-to-multiple-slscripting-processes-id_37042) or higher, as DIS will then attach to all SLScripting processes.
+- In case multiple SLScripting processes are used, make sure you use [DIS 2.44](xref:DIS_2.44#dis-inject-attaching-the-visual-studio-debugger-to-multiple-slscripting-processes-id-37042) or higher, as DIS will then attach to all SLScripting processes.
 
 ## Could not find SLScripting process, is DataMiner running?
 

@@ -40,7 +40,7 @@ To export and import profile instances, you can use the *PFM_ProfileInstancesImp
 
    - *WorkingFolder*: Defines the source folder for the files to import. Special characters must be escaped according to the JSON syntax. If you do not specify this folder, the working directory will be a subfolder of the Documents module: `C:\Skyline DataMiner\Documents\DMA_COMMON_DOCUMENTS\Automation Scripts\Profile Manager\Instances`.
 
-1. Select the import file you want and click *Load Excel*.
+1. Select the import file you want and click *Load Excel*.<!-- RN 22431 -->
 
    The script will display high-level information about the content of the selected file.
 

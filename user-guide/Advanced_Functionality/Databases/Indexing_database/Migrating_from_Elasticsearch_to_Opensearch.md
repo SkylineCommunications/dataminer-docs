@@ -26,6 +26,9 @@ To use this tool, follow the instructions below:
 > [!CAUTION]
 > To prevent data loss, all Agents of the DMS must be stopped during this procedure. They must not be started up again until the migration is completed.
 
+> [!NOTE]
+> As of DataMiner 10.3.0 [CU16], 10.4.0 [CU4], and 10.4.7 [CU0], an improved version of the tool is available, which among others features better logging, as well as the possibility to retry failed indexes (once the cause of the failure has been resolved) using the following command-line option: `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`.<!-- RN 39614 -->
+
 > [!TIP]
 > See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
 
@@ -190,6 +193,10 @@ Using Kibana, you can restore the snapshot in the following way:
    | -Password or -P | The user password |
    | -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
    | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+   | -RetryFile or -R &lt;path to failed indexes file&gt; | File path for a file containing failed indexes, to be provided in case the reindexer should retry reindexing previously failed indexes (supported from 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 [CU0] onwards). |
+
+   > [!NOTE]
+   > In case the re-indexing fails, a file `<runId>_failed.json` will be created in the folder where the tool is located, listing all failed indexes. This file can be used with the `-R <path to failed indexes file>` option to retry the failed indexes. To find out why these indexes failed, check the log file created in the *logging* folder located in the folder where the tool is available. Before retrying the re-indexing, make sure the failures are resolved.
 
 1. Take a snapshot of the re-indexed data by sending the following request:
 

@@ -21,3 +21,12 @@ The following options are available to fine-tune the component layout:
 In the *Settings* tab, you can also configure the following optional settings:
 
 - *Feed value on*: Determines when the value in the box becomes available as a feed. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
+
+## Component actions
+
+From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, when you have added a search input component to a low-code app, you can configure the following [component action](xref:LowCodeApps_event_config#executing-a-component-action) in your low-code app to interact with the component:
+
+- *Set value*: Allows you to set the current value of the component to either a static value or a feed.
+
+  > [!NOTE]
+  > When the component has the *General > Feed value on > Value change* option enabled, the value will immediately be passed as the component's feed. If this option is not enabled, the value will only be passed when Enter is pressed (if the *General > Feed value on > Enter* option is enabled) or when the focus is no longer on the box (if the *General > Feed value on > Focus lost* option is enabled).

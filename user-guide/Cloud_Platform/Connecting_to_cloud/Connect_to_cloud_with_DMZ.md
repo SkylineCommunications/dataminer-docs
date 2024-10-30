@@ -40,16 +40,16 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
      "DmzOptions": {
        "IsHttpsEnabled": <true/false>,
        "Domain": <IIS>,
-       "DataMinerAgentName":  <name of the dataminer agent the DMZ is connected to>
+       "DataMinerAgentName":  <name of the DataMiner Agent the DMZ is connected to>
      }
    }
    ```
 
    - **IsHttpsEnabled**: Indicates whether the communication between the DMZ and the DMA is encrypted. This can only be the case if the IIS is configured to support TLS.
 
-   - **Domain**: The domain name of your DataMiner System, configured through the IIS settings.
+   - **Domain**: The FQDN domain name of your DataMiner System, configured through the IIS settings. Example: `dma1.example.com`.
 
-   - **DataMinerAgentName**: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting.
+   - **DataMinerAgentName**: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting. Example: `dma1`.
 
    > [!NOTE]
    > If you want to point the DMZ to a Failover pair, you will need to set up two DMZ servers, each pointing to one of the two Agents in the pair.

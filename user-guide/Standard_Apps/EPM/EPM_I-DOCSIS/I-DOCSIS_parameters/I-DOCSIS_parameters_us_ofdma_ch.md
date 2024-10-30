@@ -1,12 +1,13 @@
 ---
 uid: I-DOCSIS_parameters_us_ofdma_ch
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – US OFDMA CH
+# Integrated DOCSIS parameters – US OFDMA CH
 
 These parameters are only available in elements running the CISCO CBR-8 CCAP Platform connector.
 
-This page contains an overview of the US OFDMA CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the US OFDMA CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
 ## OFDMA Channels
 
@@ -23,6 +24,16 @@ This page contains an overview of the US OFDMA CH parameters available in the I-
 - **Rx Power**: Direct value. The power of the expected commanded received signal in the channel. Polled from the CCAP.
 
   - OID: 1.3.6.1.4.1.4491.2.1.28.1.23.1.3
+
+## OFDMA IUC Statistics
+
+- **Interface Name**: Name of the channel retrieved from the Interface Table using the instance ID.
+
+- **IUC Code**: Direct value. The Information and Unique Channel code within the OFDMA Channel.
+
+- **MER**: Direct value. The ratio of the power of the ideal modulated signal to the power of the error or distortion in the signal in dB. Polled from the CCAP.
+
+  - OID: 1.3.6.1.4.1.4491.2.1.28.1.24.1.10
 
 ## CM OFDMA Channels
 

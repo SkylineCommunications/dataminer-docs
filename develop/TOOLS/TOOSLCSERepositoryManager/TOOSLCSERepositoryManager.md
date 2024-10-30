@@ -5,7 +5,7 @@ uid: TOOSLCSERepositoryManager
 # SLC SE Repository Manager
 
 > [!IMPORTANT]
-> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+> This tool is only intended to be used by Skyline employees. Consequently, this section includes information that is only applicable to Skyline employees and links that are only accessible to Skyline employees.
 
 The SLC SE Repository Manager is the main tool to interact with the Gerrit server that hosts all Git repositories for System Engineering. This tool can be used to perform the following operations:
 
@@ -25,8 +25,8 @@ The SLC SE Repository Manager installer can be downloaded from [http://tools/Ins
 
 The main window of the SLC SE Repository Manager is shown below.
 
-![](~/develop/images/SLC_SE_Repo_Manager_tool.png)
-<br>SLC SE Repository Manager main window
+![SLC SE Repository Manager main window](~/develop/images/SLC_SE_Repo_Manager_tool.png)
+<br>*SLC SE Repository Manager main window*
 
 On startup, the tool will load all known protocol repositories hosted on Gerrit, grouped by vendor, and display these in a tree control on the left-hand side. On the right-hand side, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
 
@@ -34,9 +34,9 @@ Next to each data source, you can see one of the following icons:
 
 - **Circle**: This means the status of the repository is being loaded.
 
-- **Wrench**: This means someone is working on this driver. Technically, the tool checks if one of the branches does not end with a Tag or if there is a Gerrit branch.
+- **Wrench**: This means someone is working on this connector. Technically, the tool checks if one of the branches does not end with a Tag or if there is a Gerrit branch.
 
-- **Memory**: This means nobody is working on this driver and all versions are fully released. Technically, this means all branches end with a commit that has a version tag.
+- **Memory**: This means nobody is working on this connector and all versions are fully released. Technically, this means all branches end with a commit that has a version tag.
 
 > [!IMPORTANT]
 > If you use Gerrit branches, remember to delete the Gerrit branch after you finish the code review and push submit in Gerrit. It is important to clean up your Gerrit branches.

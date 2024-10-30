@@ -24,9 +24,12 @@ See below for more information on the different components of the Path string.
 - **Fill**: The line color (name of color or "#aarrggbb").
 - **Strokethickness**: The line thickness.
 - **Tooltip**: The tooltip text.
-- **YAxisUp**: 0 or 1.
+- **YAxisUp**: false or true. If false, the 0,0 coordinates will be in the top-left corner, similar to image editing programs such as Inkscape or Illustrator. If true, the 0,0 coordinates will be in the lower left corner, as typically used in data visualization graphics.
 - **bottomLeftX;bottomLeftY;topRightX;topRightY**: The coordinates of the lower left and top-right corner of the shape. To be used when using relative positioning.
 - **link**: The name or the ID of the element or service to jump to when the shape is clicked. When you right-click the shape, you will see the default shortcut menu of that element or service.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40094-->, the WPF Path markup parsing is culture-invariant, accepting both "." and "," as decimal separator, e.g. when providing the coordinates of the lower left and top-right corner of the shape. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, the decimal separator has to match the one that is set on the client computer.
 
 ### Example of a Path string
 
@@ -112,9 +115,7 @@ It is possible to have one or more subshapes display units of measure. To do so:
 
 ## Enabling horizontal zooming
 
-From DataMiner 9.0.5 onwards, it is possible to enable horizontal zooming on a shape configured to display a custom drawing using path markup.
-
-To do so, add the following option to the shape:
+To enable horizontal zooming on a shape configured to display a custom drawing using path markup, add the following option to the shape:
 
 | Shape data field | Value                |
 | ---------------- | -------------------- |

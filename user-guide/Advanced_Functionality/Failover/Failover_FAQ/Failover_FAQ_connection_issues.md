@@ -4,7 +4,11 @@ uid: Failover_FAQ_connection_issues
 
 # What if I have connection issues after a Failover switch?
 
-It is possible that, after a Failover switch, you run into connection issues because the servers' routing tables have been altered. This problem is caused by the way persistent routes have been defined.
+It is possible that, after a Failover switch, you run into connection issues because of incorrect routing mechanisms to the correct Agent.
+
+## [Virtual IP addresses](#tab/tabid-1)
+
+Failover pairs using virtual IP addresses may run into connection issues because the servers' routing tables have been altered. This problem is caused by the way persistent routes have been defined.
 
 To fix the problem, you need to recreate the routes and explicitly specify an interface for them to bind to.
 
@@ -48,3 +52,55 @@ To fix the problem, you need to recreate the routes and explicitly specify an in
    > Make sure that you use the correct interface ID for the route to go through. In the example above, this should be the interface through which the 5.6.7.8 gateway address can be reached. "Ipconfig /all" might help for you to select the correct interface. If an interface exists for which the route gateway address falls within the subnet for that interface, that interface should be used (e.g. a local interface having IP address 5.6.0.1 and mask 255.255.0.0).
 
 Once the routes have been recreated with an interface number assigned, they will no longer disappear from the list of active routes when the virtual IP address is removed because the DMA is stopped or goes offline.
+
+## [Shared hostname](#tab/tabid-2)
+
+Failover pairs using a shared hostname rely on the [*Application Request Routing* IIS extension](https://www.iis.net/downloads/microsoft/application-request-routing), which redirects requests from the offline Agent to the online Agent. Configuration or state issues with these rules may result in connection issues.
+
+1. Open Internet Information Services (IIS) and navigate to *Manager > Sites > Default Web Site > URL Rewrite*.
+
+   ![IIS URL Rewrite](~/user-guide/images/FailoverIISUrlRewrite.png)
+
+1. In the list of rules, look for a rule named `dataminer-failover-reverseproxy-rule`.
+
+   This rule should be enabled on the offline Agent and disabled on the online Agent. During a switch, the state of the rule should reflect this change.
+
+1. If the state of the `dataminer-failover-reverseproxy-rule` rule is incorrect, manually change it by selecting the rule and clicking *Enable Rule* or *Disable Rule* in the right section.
+
+   ![Change Rule State](~/user-guide/images/FailoverIISRewriteRuleChangeState.png)
+
+1. Double-click the rule to view its properties, which should include:
+
+   - Match URL
+
+     ![Failover Rewrite Rule Match URL Property](~/user-guide/images/FailoverRewriteMatchURLProperty.png)
+
+   - Conditions
+
+     ![Failover Rewrite Rule Conditions Property](~/user-guide/images/FailoverRewriteConditionsProperty.png)
+
+   - Action
+
+     ![Failover Rewrite Rule Action Property](~/user-guide/images/FailoverRewriteActionProperty.png)
+
+1. To fix any inconsistencies in the rules, follow these steps:
+
+   1. Open a Powershell console as Administrator.
+
+   1. Navigate to `C:\Skyline Dataminer\Tools`.
+
+   1. Execute the following command:
+
+      ```txt
+      .\Failover-ARR-WriteInboundRule.ps1 <Buddy ip>
+      ```
+
+   1. Execute the following command:
+
+      ```txt
+      .\Failover-ARR-ToggleInboundRule.ps1 <true|false> 
+      ```
+
+      Use `true` if the Agent is the offline Agent in the Failover pair. Otherwise, use `false`.
+
+***

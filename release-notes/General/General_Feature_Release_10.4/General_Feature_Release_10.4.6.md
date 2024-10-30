@@ -18,22 +18,22 @@ uid: General_Feature_Release_10.4.6
 
 ## New features
 
-#### MessageBroker: New NATS reconnection algorithm [ID_38809]
+#### MessageBroker: New NATS reconnection algorithm [ID 38809]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 From now on, when NATS reconnects, it will no longer perform the default reconnection algorithm of the NATS library. Instead, it will perform a custom reconnection algorithm that will do the following:
 
 1. Re-read the MessageBroker configuration file.
 1. Update the endpoints to which MessageBroker will connect.
 
-#### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID_38898]
+#### Simple alarm filters can now be translated to Elasticsearch/OpenSearch queries [ID 38898]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Simple alarm filters (without operators and/or brackets) can now be translated to Elasticsearch/OpenSearch queries. This will increase overall performance of Elasticsearch/OpenSearch queries containing alarm filters as alarm filtering will now be performed by the database itself. Post-filtering query results will no longer be needed.
 
-#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID_39117]
+#### User-defined APIs: An event will now be sent when an ApiToken or ApiDefinition is created, updated or deleted [ID 39117]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -67,7 +67,7 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
-#### Storage as a Service: Support for data migration towards a STaaS system using a proxy server [ID_39313]
+#### Storage as a Service: Support for data migration towards a STaaS system using a proxy server [ID 39313]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -75,7 +75,7 @@ As from DataMiner version 10.4.5, Storage as Service (STaaS) supports the use of
 
 From now on, it is also possible to migrate data towards a STaaS system that is using a proxy server.
 
-#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID_39362]
+#### Service & Resource Management: New GetFunctionDefinitions method added to ProtocolFunctionHelper class [ID 39362]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -83,7 +83,7 @@ Up to now, it was only possible to retrieve a single function definition by ID u
 
 From now on, you can retrieve multiple function definitions in one go using the new *GetFunctionDefinitions* method.
 
-#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID_39489]
+#### GQI: Exposing the underlying GQI SLNet connection to extensions like ad hoc data sources and custom operators [ID 39489]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -102,9 +102,9 @@ This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection)
 
 ### Enhancements
 
-#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID_38633]
+#### MessageBroker: Each individual chunk will now be sent with a dynamic timeout [ID 38633]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 When chunked messages are being sent using MessageBroker, from now on, each individual chunk will be sent with a dynamic timeout instead of a static 5-second timeout.
 
@@ -113,25 +113,25 @@ The dynamic timeout will be calculated as the time it would take to send the chu
 > [!NOTE]
 > The minimum timeout will always be 5 seconds.
 
-#### Security enhancements [ID_38869]
+#### Security enhancements [ID 38869]
 
-<!-- 38869: MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 A number of security enhancements have been made.
 
-#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID_38939]
+#### MessageBroker: 'Subscribe' method of the 'NatsSession' class has now been made completely thread-safe [ID 38939]
 
-<!-- MR 10.5.0 - FR 10.4.6 -->
+<!-- MR 10.4.0 [CU7] - FR 10.4.6 -->
 
 The *Subscribe* method of the `NatsSession` class has now been made completely thread-safe.
 
-#### Service & Resource Management: Enhanced performance when activating function DVEs [ID_38972]
+#### Service & Resource Management: Enhanced performance when activating function DVEs [ID 38972]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when activating function DVEs.
 
-#### GQI: Errors related to real-time GQI data updates will now also be logged [ID_38986]
+#### GQI: Errors related to real-time GQI data updates will now also be logged [ID 38986]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -145,37 +145,37 @@ For example:
 
 Exceptions associated with a custom data source will be logged in the log file of the data source in question.
 
-#### Enhanced performance when processing changes made to service properties [ID_39011]
+#### Enhanced performance when processing changes made to service properties [ID 39011]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when processing changes made to service properties.
 
-#### NATS configuration files will now use plain JSON syntax [ID_39078]
+#### NATS configuration files will now use plain JSON syntax [ID 39078]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 All NATS configuration files will now use plain JSON syntax.
 
-#### Enhanced performance when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client [ID_39211]
+#### Enhanced performance when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client [ID 39211]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 Performance has increased when logging on to cloud-connected DataMiner Agents or DaaS systems with an older version of a DataMiner Cube client.
 
-#### SLAnalytics - Behavioral anomaly detection: A decreasing trend slope will now be labeled as a trend change instead of a variance decrease [ID_39249]
+#### SLAnalytics - Behavioral anomaly detection: A decreasing trend slope will now be labeled as a trend change instead of a variance decrease [ID 39249]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 Up to now, in some cases, a decreasing trend slope would be labeled as a variance decrease. From now on, a decreasing trend slope will be labeled as a trend change instead.
 
-#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID_39260]
+#### Enhanced performance when starting up a DataMiner Agent because of SLDataMiner loading protocols in parallel [ID 39260]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 From now on, at DataMiner startup, SLDataMiner will load protocols in parallel. This will considerably increase overall performance when starting up a DataMiner Agent.
 
-#### Service & Resource Management: Queue will now be skipped when processing SetSrmJsonSerializableProperties requests [ID_39264]
+#### Service & Resource Management: Queue will now be skipped when processing SetSrmJsonSerializableProperties requests [ID 39264]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -183,25 +183,25 @@ When the *ResourceManagerHelper* methods *UpdateReservationInstanceProperties* o
 
 From now on, the *SetSrmJsonSerializableProperties* requests will skip said queue.
 
-#### Enhanced SLDBConnection logging [ID_39267]
+#### Enhanced SLDBConnection logging [ID 39267]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 A number of enhancements have been made with regard to the logging of errors and warnings in the *SLDBConnection.txt* log file.
 
-#### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID_39296]
+#### SLAnalytics - Proactive cap detection: Enhanced clearing of proactive detection suggestion events [ID 39296]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 A proactive detecting suggestion event indicating a forecasted crossing of a critical alarm threshold will now be cleared sooner. As soon as the system detects that the predicted trend has dropped below the threshold in question will the suggestion event be cleared.
 
-#### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID_39308]
+#### DataMiner Cube clients using a gRPC connection are now able to better detect a disconnection [ID 39308]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, Cube clients connected to a DataMiner Agent via a gRPC connection will now be able to better detect when they have been disconnected.
 
-#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID_39309]
+#### GQI: Changing the minimum log level no longer requires an SLHelper restart [ID 39309]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -209,7 +209,7 @@ Up to now, when you changed the *serilog:minimum-level* setting in `C:\Skyline D
 
 From now on, when you change this setting, the change will take effect the moment you save the configuration file. Restarting SLHelper will no longer be necessary.
 
-#### ProtocolCache.txt replaced by ProtocolCacheV2.txt [ID_39316]
+#### ProtocolCache.txt replaced by ProtocolCacheV2.txt [ID 39316]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -220,13 +220,13 @@ While the *ProtocolCache.txt* file only contained information about the protocol
 > [!IMPORTANT]
 > up to now, when no compliance information was specified in a protocol, all QActions would be checked for queries incompatible with Cassandra. From now on, it will be assumed that a protocol version is compatible with Cassandra unless Cassandra compliance is explicitly set to false in the `<Compliancies>` element of the protocol.
 
-#### Enhanced performance when starting up a DataMiner Agent [ID_39331]
+#### Enhanced performance when starting up a DataMiner Agent [ID 39331]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent.
 
-#### SLDataGateway: Enhanced logging [ID_39341]
+#### SLDataGateway: Enhanced logging [ID 39341]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -236,7 +236,7 @@ The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cle
 
 Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
 
-#### GQI now also logs requests to SLNet [ID_39355]
+#### GQI now also logs requests to SLNet [ID 39355]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -265,7 +265,7 @@ Types of log entries related to SLNet requests:
   - *RequestID*: The unique ID of request.
   - *Duration*: The duration of the request, including the time it took for GQI to process it (in milliseconds).
 
-#### Enhanced error message 'Failed to create one or more storages' [ID_39360]
+#### Enhanced error message 'Failed to create one or more storages' [ID 39360]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -275,7 +275,7 @@ From now on, this error message will include a reference to the StorageModule lo
 
 `More info might be available in C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\DataMiner StorageModule.txt.`
 
-#### MySql.Data.dll file is now deprecated [ID_39370]
+#### MySql.Data.dll file is now deprecated [ID 39370]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -308,25 +308,25 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 > The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
 > When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
 
-#### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID_39376]
+#### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID 39376]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance of GQI queries using a *Get parameters for element* data source has been increased, especially when querying sorted tables.
 
-#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID_39385]
+#### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID 39385]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 Because of a number of enhancements to SLNet, overall performance of the *Jobs* and *Ticketing* APIs has increased, especially when retrieving data from the database.
 
-#### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID_39392]
+#### No longer possible to create new elements as long as SLDataMiner has not finished loading all element information [ID 39392]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 From now on, it will no longer be possible to create new elements as long as SLDataMiner has not finished loading all element information. If an attempt is made to create an element while SLDataMiner is still loading element information, an `Agent is starting up` error will now be returned.
 
-#### SLLogCollector: Enhancements to make sure the JAVA_HOME variable is set [ID_39409]
+#### SLLogCollector: Enhancements to make sure the JAVA_HOME variable is set [ID 39409]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -338,13 +338,13 @@ A number of enhancements have been made to prevent SLLogCollector from experienc
 
 - An upgrade action has been created to set the JAVA_HOME variable in case this has not been done by [nodetool](xref:TOONodetool).
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID_39453]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when updating anomalous change point alarms and suggestion events [ID 39453]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 Because of a number of enhancements, overall performance has increased when updating an alarm or suggestion event generated after an anomalous change point has been detected.
 
-#### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID_39457]
+#### GQI - Get parameters for element: Enhanced performance when querying single-value parameters [ID 39457]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
@@ -352,13 +352,13 @@ Because of a number of enhancements, overall performance of GQI queries using a 
 
 ### Fixes
 
-#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
+#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID 38441]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
-#### Protocols: Parsing problem could lead to string values being processed incorrectly [ID_39314]
+#### Protocols: Parsing problem could lead to string values being processed incorrectly [ID 39314]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
@@ -366,13 +366,13 @@ When string parameters are parsed, both an ASCII version and a Unicode version o
 
 From now on, when a table cell is saved, the `Interprete` type of the column will be used to determine whether or not it has to be processed as a string.
 
-#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID_39379]
+#### Skyline Device Simulator: Problem when loading HTTP simulation files that contained additional tags [ID 39379]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
 In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
 
-#### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID_39398]
+#### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID 39398]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
@@ -380,13 +380,13 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 `CParameter::ReadSettings|CRU|-1|!! Unknown <Type> MATRIX for parameter`
 
-#### Redundancy group and derived element no longer visible in UI after deleting a protocol used by elements in that redundancy group [ID_39411]
+#### Redundancy group and derived element no longer visible in UI after deleting a protocol used by elements in that redundancy group [ID 39411]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
 When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
 
-#### STaaS: Problem when using a delete statement with a filter [ID_39416]
+#### STaaS: Problem when using a delete statement with a filter [ID 39416]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
@@ -396,38 +396,38 @@ When, on a STaaS system, an attempt was made to delete data from the database us
 
 This issue has now been fixed.
 
-#### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID_39420]
+#### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID 39420]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g. bookings not being starting.
 
-#### SLAutomation: Problem when clearing the internal parameter cache [ID_39441]
+#### SLAutomation: Problem when clearing the internal parameter cache [ID 39441]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
 
-#### SLDataMiner would not properly clean up in-memory element information [ID_39443]
+#### SLDataMiner would not properly clean up in-memory element information [ID 39443]
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 <!-- Not added to MR 10.5.0: Issue introduced by RN 38988 -->
 
 When an element was stopped or deleted, in some rare cases, SLDataMiner would not properly remove all information about that element from its memory.
 
-#### Security: Problem when granting a user group access to multiple elements in the same view [ID_39449]
+#### Security: Problem when granting a user group access to multiple elements in the same view [ID 39449]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
 When you tried to grant a user group access to multiple elements in the same view, only the first of the elements you selected would be added.
 
-#### Caches would not get disposed correctly when the Resource Manager was reinitialized [ID_39493]
+#### Caches would not get disposed correctly when the Resource Manager was reinitialized [ID 39493]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 [CU0] -->
 
 When the Resource Manager was reinitialized, the caches would not be disposed correctly, causing SLNet to leak memory.
 
-#### 'Security Advisory' BPA test: Issues fixed [ID_39503]
+#### 'Security Advisory' BPA test: Issues fixed [ID 39503]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 <!-- Only added to FR 10.4.6 -->

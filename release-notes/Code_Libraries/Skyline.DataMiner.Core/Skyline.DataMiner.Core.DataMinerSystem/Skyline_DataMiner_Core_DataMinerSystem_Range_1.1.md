@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.12
+
+#### Fix - Breaking change reverted for InterAppCalls
+
+When the Skyline.DataMiner.Core.InterAppCalls.Common NuGet package was used, versions 1.1.1.10/1.1.1.11 of the DataMinerSystem package could cause run-time errors. This breaking change has been reverted.
+
 ### 1.1.1.11
 
 #### New feature - Retrieve alarm level for a view
@@ -174,11 +180,11 @@ This code was extracted from a popular internal community library "Utility Libra
 
 ### 1.1.0.4
 
-#### Fix - RemotingConnection replaced [ID_36324]
+#### Fix - RemotingConnection replaced [ID 36324]
 
 To prepare for the deprecation and removal of RemoteConnection, RemoteConnection has been replaced with a more secure connection type.
 
-#### Fix - Views.Elements now returns stopped and paused elements [ID_36325]
+#### Fix - Views.Elements now returns stopped and paused elements [ID 36325]
 
 Asking for all elements under a view will now return all stopped and paused elements.
 
@@ -199,7 +205,7 @@ The following calls have been added:
 
 #### Fixes to element creation
 
-Element creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID_33515]. This version fixes that issue.
+Element creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID 33515]. This version fixes that issue.
 
 ### 1.1.0.1
 
@@ -207,7 +213,7 @@ Element creation through this library produced corrupt elements since DataMiner 
 
 IDms classes and functionality have been extracted alongside Class Library monitors into a public available NuGet library. This was extracted from Class Library range 1.3.0.X
 
-#### Overloads added for specifying primary/display key [ID_35048]
+#### Overloads added for specifying primary/display key [ID 35048]
 
 A number of IDmsColumn methods have been marked obsolete. They have now been replaced with new methods in which a KeyType will indicate whether a primary key or a display key is being used.
 

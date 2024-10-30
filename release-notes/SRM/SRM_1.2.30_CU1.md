@@ -9,6 +9,6 @@ uid: SRM_1.2.30_CU1
 
 ## Fixes
 
-#### Not possible to create permanent transport bookings [ID_35822]
+#### Not possible to create permanent transport bookings [ID 35822]
 
 In SRM version 1.2.30, it could occur that permanent transport bookings could not be created.

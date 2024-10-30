@@ -20,7 +20,7 @@ To change the settings of a low-code app page/panel:
 
    - **Page/Panel configuration**
 
-     - *Use dynamic units*: Available from DataMiner 10.0.11 onwards. This option determines whether parameter units will change dynamically based on their value and protocol definition, in components where this is supported.
+     - *Use dynamic units*: This option determines whether parameter units will change dynamically based on their value and protocol definition, in components where this is supported.
 
      - *Allow components to shift*: This option determines whether components will move to make room for a component that is dragged across the low-code app page. If the option is not selected, the position of the components becomes fixed.
 
@@ -33,7 +33,7 @@ To change the settings of a low-code app page/panel:
 
      - *Fit to view*: Available from DataMiner 10.2.7/10.3.0 onwards. Select this option to make sure all components are automatically adjusted to always be fully visible, so the user does not need to scroll.
 
-     - *Number of columns*: Available from DataMiner 10.0.10 onwards. Allows you to configure in how many columns components can be displayed in the low-code app (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
+     - *Number of columns*: Allows you to configure in how many columns components can be displayed in the low-code app (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
 
    - **Page/Panel updates**
 

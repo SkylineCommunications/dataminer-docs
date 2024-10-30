@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.1.12
 
 ### DMS core functionality
 
-#### Redundancy groups: Additional information in information events and Automation scripts \[ID_31358\]
+#### Redundancy groups: Additional information in information events and Automation scripts \[ID 31358\]
 
 When switching elements within a redundancy group, from now on, additional information will be added both to the information events and the Automation scripts that are executed.
 
@@ -51,7 +51,7 @@ When an Automation script is triggered as part of an redundancy group action, th
 
 ### DMS Security
 
-#### DataMiner Cube - System Center: New & updated user permissions \[ID_30989\]\[ID_31208\]
+#### DataMiner Cube - System Center: New & updated user permissions \[ID 30989\]\[ID 31208\]
 
 In the *Users/Groups* section of System Center, new user permissions have been added and existing user permissions have been updated.
 
@@ -77,14 +77,14 @@ In the *Users/Groups* section of System Center, new user permissions have been a
 - Users are no longer allowed to add an instance to a newly created service profile definition that has not yet been saved.
 - When a user who has been granted the Modules \> Services \> Profiles \> Definitions \> Delete permission deletes a service profile definition, all instances of that definition must also be deleted. A confirmation box will now appear to make the user aware of this. Also, a confirmation box will now appear when you try to delete definition instances.
 
-#### UDP port 162 opened by default \[ID_31035\]
+#### UDP port 162 opened by default \[ID 31035\]
 
 In the default firewall configuration, from now on, UDP port 162 will again be opened by default.
 
 > [!NOTE]
 > On systems that do not rely on SNMP traps, it is recommended to close this port.
 
-#### Users authenticated by Azure AD using SAML can now automatically be created and assigned to groups \[ID_31057\] \[ID_31184\]
+#### Users authenticated by Azure AD using SAML can now automatically be created and assigned to groups \[ID 31057\] \[ID 31184\]
 
 Users authenticated by Azure AD using SAML can now automatically be created and assigned to groups in DataMiner.
 
@@ -152,7 +152,7 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
 
 9. Restart the DataMiner Agent.
 
-#### Web apps: Using custom HTTP headers will now be allowed \[ID_31090\]
+#### Web apps: Using custom HTTP headers will now be allowed \[ID 31090\]
 
 From now on, the DataMiner web apps will allow the use of custom HTTP headers. Up to now, custom HTTP headers would by default be deleted.
 
@@ -163,7 +163,7 @@ As a result, it will now be possible to configure custom HTTP headers in IIS Man
 
 ### DMS Cube
 
-#### Visual Overview: New \[Element:\] placeholder \[ID_31158\]
+#### Visual Overview: New \[Element:\] placeholder \[ID 31158\]
 
 In Visual Overview, you can now use the new “\[Element:\<input>,\<output>\]” placeholder to convert an element name to an element ID and vice versa.
 
@@ -182,17 +182,17 @@ Examples:
 - \[Element:MyElement,ID\] will be resolved to the ID of the element with the name “MyElement”.
 - \[Element:2/125,Name\] will be resolved to the name of the element with ID 2/125.
 
-#### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID_31196\]
+#### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID 31196\]
 
 In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e. resources for which no enhanced elements have to be created.
 
-#### Sidebar: Click '+' to pin sidebar items \[ID_31207\]
+#### Sidebar: Click '+' to pin sidebar items \[ID 31207\]
 
 Since DataMiner feature release version 10.1.11, it is possible to pin and unpin items in the sidebar.
 
 To pin an item, up to now, you had to click the ellipsis button (“...”), and then click the item you wanted to pin to the sidebar. From now on, you will have to click the Add button (“+”) instead.
 
-#### DataMiner Cube - Visual Overview: Chromium web browser engine now supports find and zoom functionality \[ID_31232\]
+#### DataMiner Cube - Visual Overview: Chromium web browser engine now supports find and zoom functionality \[ID 31232\]
 
 The Chromium web browser engine now support find and zoom functionalities.
 
@@ -208,7 +208,7 @@ Available shortcuts:
 | Ctrl-Minus   | Ctrl-MouseScrollDown | Zoom out      |
 | Ctrl-0       |                      | Reset zoom    |
 
-#### Visual Overview: New icons added to Icons stencils \[ID_31271\]
+#### Visual Overview: New icons added to Icons stencils \[ID 31271\]
 
 The following icons have been added to the Icons stencil:
 
@@ -241,7 +241,7 @@ The following icons have been added to the Icons stencil:
 - Weather Forecast
 - Wind
 
-#### Legacy Reports, Dashboards and Annotations modules will by default be hidden in new installations \[ID_31329\]
+#### Legacy Reports, Dashboards and Annotations modules will by default be hidden in new installations \[ID 31329\]
 
 In new installations, from now on, the legacy Reports, Dashboards and Annotations modules will be hidden by default.
 
@@ -249,7 +249,7 @@ If you do not want these modules to be hidden, you can set the LegacyReportsAndD
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: Sharing dashboards with other users via the DataMiner Cloud \[ID_29047\] \[ID_31476\]
+#### Dashboards app: Sharing dashboards with other users via the DataMiner Cloud \[ID 29047\] \[ID 31476\]
 
 It is now possible to share dashboards with other users via the DataMiner Cloud.
 
@@ -314,7 +314,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 ### DMS Automation
 
-#### Automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID_31212\]
+#### Automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID 31212\]
 
 In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
 
@@ -322,7 +322,7 @@ An error will now be thrown when you try to add a file that is larger than the a
 
 ### DMS web apps
 
-#### DataMiner landing page: Browser title changed to 'DataMiner' \[ID_31373\]
+#### DataMiner landing page: Browser title changed to 'DataMiner' \[ID 31373\]
 
 The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
 
@@ -330,7 +330,7 @@ Also, the error message shown when you try to log in to a web application with a
 
 ### DMS Service & Resource Management
 
-#### Profile Manager: Server-side user permissions \[ID_30748\]
+#### Profile Manager: Server-side user permissions \[ID 30748\]
 
 The public API of the Profile Manager now has the following server-side user permissions.
 
@@ -376,42 +376,42 @@ The following new permissions will automatically be assigned to existing user gr
 
 ### Enhancements
 
-#### Security enhancements \[ID_31122\]
+#### Security enhancements \[ID 31122\]
 
 A number of security enhancements have been made.
 
-#### DataMiner Cube - Alarm Console: Enhanced correlation mechanism \[ID_30481\]
+#### DataMiner Cube - Alarm Console: Enhanced correlation mechanism \[ID 30481\]
 
 Due to a number of enhancements, overall performance of the correlation mechanism has increased, especially when generating correlation alarms with a large number of sources.
 
-#### Communication between SLNet and SLAnalytics will now use NATS \[ID_30761\]
+#### Communication between SLNet and SLAnalytics will now use NATS \[ID 30761\]
 
 Communication between SLNet and SLHelper will now use NATS instead of .NET remoting.
 
-#### Restoring a DataMiner backup package will no longer be possible when the package was created on a system with a different DataMiner version \[ID_30921\]
+#### Restoring a DataMiner backup package will no longer be possible when the package was created on a system with a different DataMiner version \[ID 30921\]
 
 From now on, it will no longer be possible to restore a DataMiner backup package on a system with a DataMiner version that is different from the one on which the backup was taken.
 
-#### DataMiner upgrade: All agents in the DataMiner System must now meet the requirements before an upgrade of the entire DataMiner System can proceed \[ID_31002\]
+#### DataMiner upgrade: All agents in the DataMiner System must now meet the requirements before an upgrade of the entire DataMiner System can proceed \[ID 31002\]
 
 When you start an upgrade of an entire DataMiner System, from now on, all agents in that DataMiner System will be checked to determine if they meet the requirements specified in the upgrade package. If one of the agents does not meet the requirements, the entire upgrade will be aborted.
 
 > [!NOTE]
 > This check is performed when you upload an upgrade package. When, in DataMiner Cube, you select *Upload only*, the uploaded upgrade package will be marked “Failed” when the requirements are not met.
 
-#### DataMiner Cube: Enhanced performance when loading large bookings \[ID_31097\]
+#### DataMiner Cube: Enhanced performance when loading large bookings \[ID 31097\]
 
 Due to a number of enhancements, overall performance has increased when loading large bookings.
 
-#### DataMiner Cube - Data Display: Enhanced performance when opening an element with a tree control parameter \[ID_31099\]
+#### DataMiner Cube - Data Display: Enhanced performance when opening an element with a tree control parameter \[ID 31099\]
 
 Due to a number of enhancements, overall performance of DataMiner Cube has increased when opening an element with a tree control parameter.
 
-#### SLAnalytics - Automatic incident tracking: Enhancements \[ID_31123\]
+#### SLAnalytics - Automatic incident tracking: Enhancements \[ID 31123\]
 
 A number of enhancements have been made to the automatic incident tracking feature, especially with regard to alarm group management.
 
-#### Web Services API v1: Enhanced alarm template management methods \[ID_31149\]
+#### Web Services API v1: Enhanced alarm template management methods \[ID 31149\]
 
 In DataMiner version 10.1.9, the following methods were introduced to create, update, delete and assign alarm templates:
 
@@ -424,30 +424,30 @@ From now on, if no baseline configuration is provided in the request, the alarm 
 
 The “average type” property will now always be set to “median”.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhancements \[ID_31151\]
+#### SLAnalytics - Behavioral anomaly detection: Enhancements \[ID 31151\]
 
 A number of enhancements have been made to the behavioral anomaly detection feature, especially with regard to overall performance during startup or when restarting.
 
-#### DataMiner Cube - Visual Overview: Enhanced updating of resource, booking and service booking information \[ID_31153\]
+#### DataMiner Cube - Visual Overview: Enhanced updating of resource, booking and service booking information \[ID 31153\]
 
 A number of enhancements have been made with regard to updating resource, booking and service booking information in Visual Overview.
 
-#### Minor enhancements to several DataMiner processes \[ID_31155\]
+#### Minor enhancements to several DataMiner processes \[ID 31155\]
 
 A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
-#### Cassandra cluster: Unnecessary scheduled maintenance tasks will automatically be deleted \[ID_31180\]
+#### Cassandra cluster: Unnecessary scheduled maintenance tasks will automatically be deleted \[ID 31180\]
 
 When a Cassandra cluster is starting up, the following scheduled tasks will automatically be deleted in Windows Task Scheduler:
 
 - DBGatewayMaintenance/SLDefaultCassandraCompaction
 - DBGatewayMaintenance/SLCassandraDefaultRepair
 
-#### DataMiner Cube - Update Center: Enhanced error handling \[ID_31191\]
+#### DataMiner Cube - Update Center: Enhanced error handling \[ID 31191\]
 
 A number of enhancements have been made with regard to error handling and the rendering of error messages in Update Center.
 
-#### SLAnalytics: Enhanced creation and clearance of notice events \[ID_31199\]
+#### SLAnalytics: Enhanced creation and clearance of notice events \[ID 31199\]
 
 Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to e.g. a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
 
@@ -456,11 +456,11 @@ Other changes:
 - The pattern matching notice events that inform users when the memory limit has been reached will now be cleared as soon as memory usage drops below the limit.
 - A notice event will now also be generated when the number of trended numeric parameters is too high to be monitored by behavioral anomaly detection and proactive cap detection. The maximum number of parameters that can be monitored by those features is 100,000. When this limit is reached, the rest of the parameters will be ignored.
 
-#### BPA framework: Cluster BPAs can now execute code across the entire cluster \[ID_31266\]
+#### BPA framework: Cluster BPAs can now execute code across the entire cluster \[ID 31266\]
 
 Cluster BPAs can now call an InvokeCluster method to execute code across the entire cluster.
 
-#### Standalone BPA Executor: UI enhancements \[ID_31303\]
+#### Standalone BPA Executor: UI enhancements \[ID 31303\]
 
 In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed from the right-click menu and replaced by the following buttons:
 
@@ -472,21 +472,21 @@ In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed fr
 > [!NOTE]
 > The *Get Last Results* button will now only fetch the most recent results for any selected tests that are run on a schedule.
 
-#### DataMiner Cube - Services app: Enhanced performance when saving all changes made to service definitions \[ID_31355\]
+#### DataMiner Cube - Services app: Enhanced performance when saving all changes made to service definitions \[ID 31355\]
 
 Due to a number of enhancements, overall performance has increased when clicking *Save all changes* to save all changes made to service definitions in the Services app.
 
-#### Cassandra: Enhanced performance when writing data to the database \[ID_31361\]
+#### Cassandra: Enhanced performance when writing data to the database \[ID 31361\]
 
 Due to a number of enhancements, overall performance has increased when writing data to a Cassandra database.
 
 ### Fixes
 
-#### DataMiner Cube - Visual Overview: No longer possible to display aggregated parameter values in shapes \[ID_30864\]
+#### DataMiner Cube - Visual Overview: No longer possible to display aggregated parameter values in shapes \[ID 30864\]
 
 In Visual Overview, it was no longer possible to display aggregated parameter values in shapes by specifying either the DMA and element ID of an aggregation element or an \[AggregationRule:...\] placeholder in a shape data field of type Aggregation.
 
-#### Cassandra: Problem when creating user-defined types \[ID_31001\]
+#### Cassandra: Problem when creating user-defined types \[ID 31001\]
 
 On systems with a Cassandra database, in some rare cases, creating user-defined types could fail and return an exception.
 
@@ -496,43 +496,43 @@ When creating the user-defined types failed during a migration from MySQL to Cas
 The migration has failed.DBGatewayException(SLCassandraClassLibrary.DBGateway.Cassandra.StorageManagers.SingleNode.CassandraConnection,,UNKNOW SLDataGateway.Types.DBGatewayException: CassandraConnection CreateCustomType - no host available All hosts tried for query failed.
 ```
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID_31030\]
+#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
 In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
 
-#### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID_31039\]
+#### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 
 In some cases, the DataMiner startup process could become unresponsive and the CPU usage could rise to 100% when alarms for multiple elements were being retrieved simultaneously from an Elasticsearch database.
 
-#### SLAnalytics: Problem during initialization \[ID_31044\]
+#### SLAnalytics: Problem during initialization \[ID 31044\]
 
 When the SLAnalytics process was starting up, in some cases, an error could occur when one of its dependencies was not available. From now on, if an error were to occur during the initialization of the SLAnalytics process, the process will shut down gracefully.
 
-#### 'Not a matrix update' exceptions would appear in the Alarm Console \[ID_31052\]
+#### 'Not a matrix update' exceptions would appear in the Alarm Console \[ID 31052\]
 
 In some cases, the parameter throttling mechanism would incorrectly try to interpret full table changes as matrix updates, causing “Unexpected Exception \[Not a matrix update.\]: Sending an event to subscribers (see comment)” alarm events to appear in the Alarm Console.
 
-#### DataMiner Cube - Correlation: Problem when discarding or moving a duplicated correlation rule or correlation analyzer \[ID_31058\]
+#### DataMiner Cube - Correlation: Problem when discarding or moving a duplicated correlation rule or correlation analyzer \[ID 31058\]
 
 When you duplicated a correlation rule or a correlation analyzer and then immediately discarded the duplicate or moved it to another folder, in some cases, the original rule or analyzer would incorrectly be deleted or moved.
 
-#### Security: Azure AD access tokens would incorrectly not get refreshed \[ID_31067\]
+#### Security: Azure AD access tokens would incorrectly not get refreshed \[ID 31067\]
 
 In some cases, Azure AD access tokens would incorrectly not get refreshed.
 
-#### Web apps: Selecting the selected value in a selection box would incorrectly clear that value \[ID_31089\]
+#### Web apps: Selecting the selected value in a selection box would incorrectly clear that value \[ID 31089\]
 
 When, in a web app, you opened a selection box and selected the value that was selected, in some cases, that value would incorrectly be cleared.
 
-#### DataMiner Cube - Trending: Alarm colors on the Y axis of a trend graph would be shown incorrectly when exceptions and numeric values were combined in the same severity \[ID_31124\]
+#### DataMiner Cube - Trending: Alarm colors on the Y axis of a trend graph would be shown incorrectly when exceptions and numeric values were combined in the same severity \[ID 31124\]
 
 In case of a numeric parameter with exceptions, an alarm template allows you to combine an exception value and a numeric threshold in one severity. Up to now, when an exception value and a numeric threshold were combined in one severity, in some cases, the alarm colors shown on the Y axis of a trend graph would not be correct.
 
-#### DOM: LastModified property of a ModuleSettings object would incorrectly not get updated \[ID_31125\]
+#### DOM: LastModified property of a ModuleSettings object would incorrectly not get updated \[ID 31125\]
 
 In some cases, the LastModified property of a ModuleSettings object would incorrectly not get updated.
 
-#### SLProtocol would evaluate certain conditions incorrectly \[ID_31129\]
+#### SLProtocol would evaluate certain conditions incorrectly \[ID 31129\]
 
 When a condition defined in a protocol contained an operator like +, -, \*, /, etc. at the right-hand side but no parentheses, the operation would be applied to the left-hand side, causing SLProtocol to evaluate the condition incorrectly.
 
@@ -542,30 +542,30 @@ In the following example, 20 would incorrectly be added to parameter 2002 instea
 <Condition><![CDATA[id:2002 < id:2001 + 20]]></Condition>
 ```
 
-#### Smart-serial & smart-IP protocols: Data could get lost when receiving large data packets \[ID_31132\]
+#### Smart-serial & smart-IP protocols: Data could get lost when receiving large data packets \[ID 31132\]
 
 Up to now, when a smart-serial or smart-IP protocol received large data packets, in some cases, it was possible for data to get lost.
 
-#### Scheduler: Problem when a scheduled task was deleted from Windows Scheduler \[ID_31138\]
+#### Scheduler: Problem when a scheduled task was deleted from Windows Scheduler \[ID 31138\]
 
 When a scheduled task had been deleted from Windows scheduler but was still present on the DataMiner Agent, in some cases, an error could be thrown. From now on, when that type of error is thrown after a manually executed task was deleted, the task in question will be recreated.
 
-#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the 'Below this view' list in a view card \[ID_31141\]
+#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the 'Below this view' list in a view card \[ID 31141\]
 
 In some cases, view updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card.
 
 > [!NOTE]
 > This change will also enhance overall performance when starting Cube on a system with SRM enabled and breadcrumbs disabled.
 
-#### Problem with SLNet after replicating a DELT element \[ID_31154\]
+#### Problem with SLNet after replicating a DELT element \[ID 31154\]
 
 When an element had been migrated within a DataMiner System and then configured to get replicated from its new host agent, in some cases, an incorrect subscription could be created when the replication connection was created and subsequently destroyed during DataMiner startup, prior to the agent being aware of the correct location of the DELT element. As a result, on both the former host agent and the current host agent, the CPU usage of the SLNet process would rise significantly.
 
-#### Service & Resource Management: DateTime values were formatted incorrectly \[ID_31160\]
+#### Service & Resource Management: DateTime values were formatted incorrectly \[ID 31160\]
 
 Due to a deserializing/serializing issue, in some cases, datetime values could be formatted incorrectly.
 
-#### Web Services API v1: GetInformationEvents method would return an empty array \[ID_31162\]
+#### Web Services API v1: GetInformationEvents method would return an empty array \[ID 31162\]
 
 Up to now, in some cases, the following methods would return an empty array, even when a valid timespan had been specified.
 
@@ -574,47 +574,47 @@ Up to now, in some cases, the following methods would return an empty array, eve
 - GetInformationEventsSorted
 - GetInformationEventsSortedV2
 
-#### DataMiner Cube - Profiles: Profile parameter mediation snippet would fail to compile \[ID_31197\]
+#### DataMiner Cube - Profiles: Profile parameter mediation snippet would fail to compile \[ID 31197\]
 
 In some cases, the default profile parameter mediation snippet would fail to compile.
 
-#### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID_31190\]
+#### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
 When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
-#### Dashboards app: Duplicate options in GQI queries \[ID_31206\]
+#### Dashboards app: Duplicate options in GQI queries \[ID 31206\]
 
 In some cases, options added to GQI queries would incorrectly be added twice.
 
-#### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID_31239\]
+#### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID 31239\]
 
 Up to now, the “park source” feature would incorrectly not work on matrices with IO table structures.
 
-#### DataMiner Agent could get stuck in offload mode after the database had been unreachable \[ID_31245\]
+#### DataMiner Agent could get stuck in offload mode after the database had been unreachable \[ID 31245\]
 
 In some cases, a DataMiner Agent could get stuck in offload mode after the database had been unreachable for a period of time.
 
-#### Memory leak in SLElement when stopping or deleting an element with a protocol of type 'virtual' \[ID_31252\]
+#### Memory leak in SLElement when stopping or deleting an element with a protocol of type 'virtual' \[ID 31252\]
 
 In some cases, SLElement could leak memory when stopping or deleting elements with a protocol of type “virtual”.
 
-#### Automation: Problem when calling Engine.CreateExtraDummy or Engine.FindElement from multiple threads or tasks within the same script \[ID_31253\]
+#### Automation: Problem when calling Engine.CreateExtraDummy or Engine.FindElement from multiple threads or tasks within the same script \[ID 31253\]
 
 In some cases, errors could occur in SLAutomation when Engine.CreateExtraDummy or Engine.FindElement were called from multiple threads or tasks within the same script.
 
-#### Users without access to elements were no longer able to retrieve the list of views in which a service is located \[ID_31258\]
+#### Users without access to elements were no longer able to retrieve the list of views in which a service is located \[ID 31258\]
 
 In some cases, it would no longer be possible for users without access to elements to retrieve the list of views in which a service is located using, for example, the Web Services API.
 
-#### DataMiner Cube - Visual Overview: Property values would not get updated correctly \[ID_31293\]
+#### DataMiner Cube - Visual Overview: Property values would not get updated correctly \[ID 31293\]
 
 In Visual Overview, in some cases, property values would not get updated correctly.
 
-#### DataMiner Cube - Spectrum analysis: 'Auto RBW Factor' and 'Auto VBW Factor' values stored incorrectly in spectrum preset \[ID_31299\]
+#### DataMiner Cube - Spectrum analysis: 'Auto RBW Factor' and 'Auto VBW Factor' values stored incorrectly in spectrum preset \[ID 31299\]
 
 In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would be stored in spectrum presets in an incorrect way. This would then lead to an incorrect auto RBW/VBW calculation.
 
-#### Interactive Automation scripts: Initial state of non-recursive tree view incorrect \[ID_31302\]
+#### Interactive Automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
 
 The initial checked/unchecked state of a non-recursive tree item would be incorrect when
 
@@ -623,86 +623,86 @@ The initial checked/unchecked state of a non-recursive tree item would be incorr
 - the item had children, and
 - none of those children were checked.
 
-#### Interactive Automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID_31311\]
+#### Interactive Automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID 31311\]
 
 When an interactive Automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
 
-#### DataMiner Cube - Visual Overview: Table connections would disappear at certain zoom levels \[ID_32336\]
+#### DataMiner Cube - Visual Overview: Table connections would disappear at certain zoom levels \[ID 32336\]
 
 When using dynamic positioning in combination with dynamic zooming, shape grouping and table connections, in some cases, the connection lines could disappear at certain zoom levels.
 
-#### DataMiner Cube - System Center: Server setting updates would not be saved immediately \[ID_31339\]
+#### DataMiner Cube - System Center: Server setting updates would not be saved immediately \[ID 31339\]
 
 When you had updated server settings in System Center (e.g. the default browser plug-in), up to now, it could take up to 10 seconds for the changes to be applied. Also, when Cube was closed in the meantime, those latest changes would be lost. From now on, all changes made to system settings will be applied immediately.
 
-#### DataMiner Cube - Alarm Console: Problem after turning on the alarm focus feature \[ID_31343\]
+#### DataMiner Cube - Alarm Console: Problem after turning on the alarm focus feature \[ID 31343\]
 
 When the alarm focus feature was used for the first time, in some cases, all alarm events would incorrectly be marked with an icon in the *Focus* column.
 
-#### DataMiner Cube - Services app: Contents of 'Configure groups' window would be arranged incorrectly \[ID_31344\]
+#### DataMiner Cube - Services app: Contents of 'Configure groups' window would be arranged incorrectly \[ID 31344\]
 
 When you right-clicked a Service Definition diagram and selected *Configure groups*, the contents of the *Configure groups* window would be arranged incorrectly. For example, the *Add group* button would be positioned at an incorrect location.
 
-#### Jobs app: Date values saved in UTC format would be parsed incorrectly \[ID_31345\]
+#### Jobs app: Date values saved in UTC format would be parsed incorrectly \[ID 31345\]
 
 In the Jobs app, in some cases, date values saved in UTC format would be parsed incorrectly.
 
-#### Dashboards app - GQI: Problem when enabling the 'Use feed' option of a select node \[ID_31349\]
+#### Dashboards app - GQI: Problem when enabling the 'Use feed' option of a select node \[ID 31349\]
 
 When, in a GQI query, the “Use feed” option of a select node had been enabled, in some cases, an error could occur when selecting the default columns.
 
-#### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID_31351\]
+#### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
 In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
-#### ProfileManager module could get stuck during its initialization routine \[ID_31367\]
+#### ProfileManager module could get stuck during its initialization routine \[ID 31367\]
 
 In some rare cases, the ProfileManager module could get stuck during its initialization routine.
 
-#### Problem when writing to the database after restarting an SLAnalytics feature or changing a setting of an SLAnalytics feature \[ID_31371\]
+#### Problem when writing to the database after restarting an SLAnalytics feature or changing a setting of an SLAnalytics feature \[ID 31371\]
 
 When an SLAnalytics feature had been restarted or when a setting of such a feature had been changed, in some cases, an exception could be thrown when data was written to the database.
 
-#### DataMiner Cube - Alarm Console: 'Saved filters' option would incorrectly be missing on systems with a MySQL database \[ID_31375\]
+#### DataMiner Cube - Alarm Console: 'Saved filters' option would incorrectly be missing on systems with a MySQL database \[ID 31375\]
 
 When, on a system with a MySQL database, you selected *Apply filter...* in a newly created alarm tab, in some cases, the *Saved filters* options would incorrectly be missing.
 
-#### DataMiner Cube - Visual Overview: Sorting of automatically generated shapes sorted by alarm severity would not get updated when the alarm level of any of the shapes was updated \[ID_31378\]
+#### DataMiner Cube - Visual Overview: Sorting of automatically generated shapes sorted by alarm severity would not get updated when the alarm level of any of the shapes was updated \[ID 31378\]
 
 When automatically generated shapes configured to be sorted by alarm severity had their sorting enabled e.g. by means of a session variable, the sorting would be correct but would not get updated when the alarm level of any of the shapes was updated.
 
-#### Dashboards app: Problem when generating a PDF report of a dashboard that contained empty components \[ID_31388\]
+#### Dashboards app: Problem when generating a PDF report of a dashboard that contained empty components \[ID 31388\]
 
 When a PDF report was generated for a dashboard that contained empty components, in some rare cases, the PDF generation process could get stuck.
 
-#### Dashboards app: Problem when trying to import a dashboard \[ID_31389\]
+#### Dashboards app: Problem when trying to import a dashboard \[ID 31389\]
 
 When you tried to import a dashboard, in some cases, the system would incorrectly look for the dashboard to be imported in the “Dashboards” folder instead of the “ImportDashboards” folder.
 
 Also, when you tried to import a dashboard on a DataMiner Agent that did not have an “ImportDashboards” folder, the Dashboards app would incorrectly look for the dashboard to be imported in the “Dashboards” folder instead. From now on, when the “ImportDashboards” folder does not exist, a message will appear, saying that no dashboards are available for import.
 
-#### DataMiner Cube - Visual Overview: Session variable 'IDOfSelection' of ListView would be updated incorrectly \[ID_31395\]
+#### DataMiner Cube - Visual Overview: Session variable 'IDOfSelection' of ListView would be updated incorrectly \[ID 31395\]
 
 When you embed a list view component in a visual overview and set the Source field to “Bookings”, then the session variable IDOfSelection will contain the ID of the currently selected booking. In some cases, this session variable would be updated incorrectly, especially when you selected a booking in the future after having selected a booking in the past.
 
-#### Dashboards app - GQI: Column identification would be adapted incorrectly for services and view properties \[ID_31545\]
+#### Dashboards app - GQI: Column identification would be adapted incorrectly for services and view properties \[ID 31545\]
 
 In GQI queries, since DataMiner version 10.1.11, columns are identified by ID instead of display name, and any query using the latter way of column identification is adapted on the fly the first time you open a dashboard containing such a query. However, up to now, column identification would not be adapted correctly for services and view properties.
 
-#### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID_31592\]
+#### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID 31592\]
 
 When generic emails were sent via the SLASPConnection process, some of the SMTP options related to the connection type (STARTTLS/SSL) would not get applied, potentially causing failures when trying to send emails.
 
 > [!NOTE]
 > Since DataMiner version 10.1.10, sending emails via the SLAutomation process would also fail when using STARTTLS or non-default SSL port configurations.
 
-#### Dashboards app - GQI: Problem when migrating 'start from' queries \[ID_31544\]
+#### Dashboards app - GQI: Problem when migrating 'start from' queries \[ID 31544\]
 
 When you opened a query that was created using an older GQI version, and that query was configured to start from another query, in some cases, it would incorrectly be migrated to the current GQI version.
 
 Also, in some cases, a server query would not be translated correctly to a client query.
 
-#### Failover: Status of newly installed Failover system would incorrectly not be set to 'No problems detected' \[ID_31604\]
+#### Failover: Status of newly installed Failover system would incorrectly not be set to 'No problems detected' \[ID 31604\]
 
 In some cases, the status of a newly installed Failover system would incorrectly not be set to “No problems detected” (i.e. green LED).
 
@@ -710,7 +710,7 @@ In some cases, the status of a newly installed Failover system would incorrectly
 
 ### CU1 fixes
 
-#### Problem when using Class Library monitors in DataMiner Integration Studio \[ID_31685\]
+#### Problem when using Class Library monitors in DataMiner Integration Studio \[ID 31685\]
 
 Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, Automation scripts could fail at run-time.
 
@@ -718,7 +718,7 @@ Critical errors could be thrown when using Class Library monitors in DataMiner I
 
 ### CU2 fixes
 
-#### Elements of which the second port was incorrectly configured would no longer start up \[ID_31882\]
+#### Elements of which the second port was incorrectly configured would no longer start up \[ID 31882\]
 
 Elements of which the second port was incorrectly configured would no longer start up. In some cases, a port could get configured incorrectly after the production version of a protocol had been changed to a version with an additional port.
 

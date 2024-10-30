@@ -12,8 +12,6 @@ To configure notifications in System Center:
 
    Alternatively, if you want to configure notifications for an entire group, in the *groups* tab, select a group and go to the *Alerts* subtab.
 
-1. If you are using a version of DataMiner prior to 9.5.4, click the *Edit* button in the lower right corner.
-
 1. Right-click in the *Filters* column to add a filter:
 
    - To add an existing alarm filter, in the right-click menu, select *Add filter*, and then select the filter in question.

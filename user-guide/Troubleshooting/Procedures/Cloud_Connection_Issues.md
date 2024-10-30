@@ -1,5 +1,6 @@
 ---
 uid: Cloud_Connection_Issues
+description: In the specified order, check the connection status on dataminer.services, the status of the DMS, the CloudGateway status, and the cloud session.
 ---
 
 # Investigating dataminer.services connection issues
@@ -14,7 +15,7 @@ If you encounter issues with [dataminer.services](xref:AboutCloudPlatform) featu
 
 ## Check the status on dataminer.services
 
-When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status per DMS in your organization:
+When you navigate to [dataminer.services](https://dataminer.services/), you can check the connection status for each DMS in your organization, if you are a member of this DMS:
 
 - An **orange** status indicates that the Cloud Gateway cannot reach the DataMiner System, but the dataminer.services connection is valid.
 
@@ -27,6 +28,9 @@ When you navigate to [dataminer.services](https://dataminer.services/), you can 
 - A **green** status indicates that the dataminer.services connection is valid.
 
   If the status is green, but you are still encountering issues with [dataminer.services](xref:AboutCloudPlatform) features, refer to [Investigating dataminer.services feature issues](xref:Investigating_Dataminerservices_Feature_Issues).
+
+> [!IMPORTANT]
+> If your system is not listed here, make sure that you are in the correct organization and that you are a member of this DMS. See [Check the status of the DMS](#check-the-status-of-the-dms).
 
 ## Check the status of the DMS
 
@@ -69,7 +73,7 @@ If the results indicate that the network and firewall configuration are OK, [che
 
 ## Check the cloud session
 
-Manually renewing the cloud identity can be necessary if dataminer.services could not renew its tokens automatically for too long. This can for example happen if no internet access was available for an extended period (usually minimum 3 days).
+Manually renewing the cloud identity can be necessary if dataminer.services could not renew its tokens automatically for too long. This can for example happen if no internet access was available for an extended period (more than 6 consecutive days).
 
 1. In DataMiner Cube, go to *System Center* > *Cloud*.
 
@@ -79,6 +83,14 @@ Manually renewing the cloud identity can be necessary if dataminer.services coul
 
    > [!NOTE]
    > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* or *Admin* role](xref:Changing_the_role_of_a_DCP_user) in the DMS.
+
+### Handling 'Renew session' failures
+
+If the *Renew session* action fails with the `The DataMiner System could not be found` error, it indicates that the cloud identity has been removed without unregistering the linked DataMiner System.
+
+To resolve this issue, follow the steps in [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) to remove the link between the DataMiner System and the removed cloud identity.
+
+When this is done, you can reconnect the system to dataminer.services in Cube under a new identity. For more information on registering a system to dataminer.services, refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Contact support
 

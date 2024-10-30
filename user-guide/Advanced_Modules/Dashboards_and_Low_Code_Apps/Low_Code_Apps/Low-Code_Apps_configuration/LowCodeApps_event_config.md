@@ -4,10 +4,26 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-You can configure actions for different types of events in the DataMiner Low-Code Apps. These are the main types:
+You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
-- *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
+- *On open*: This event takes place when a page or panel is opened and all components are done loading. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
+
+  > [!NOTE]
+  > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
+
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
+
+- *On close*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682 + 39668-->. This event takes place when a page or panel is closed.
+
+  - A page can be closed either by manually navigating away using the sidebar or via an action.
+
+  - A panel can be closed by clicking outside of it (if it was opened as an overlay), or when a [*Close a panel*](xref:LowCodeApps_event_config#closing-a-panel-of-the-app) or [*Close all panels*](xref:LowCodeApps_event_config#closing-all-panels-of-the-app) action is executed.
+
+  > [!NOTE]
+  >
+  > - Navigating to the next page is blocked until all configured actions are executed.
+  > - A panel will close only after all configured actions are executed.
+  > - Actions linked to an *On close* page or panel event will not be executed when you close the app.
 
 Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
 
@@ -63,9 +79,17 @@ To configure an event to open a panel of the app:
 
 1. In the *Width* box, specify the width of the panel (in %) compared to the rest of the app.
 
-1. If the panel should be opened as an overlay, toggle the *As overlay* button.
+1. Specify how the panel should be opened:
 
-   If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside it.
+   - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39649-->, you can select one of the following options:
+
+     - *Basic*: The panel opens on top of the page.
+
+     - *As overlay*: If a panel is opened as an overlay, the background for the panel is slightly blurred, and the panel is automatically hidden as soon as the user clicks outside of it. This is the default setting.
+
+     - *Draggable*: This option is only available when *Where* is set to open the panel in a pop-up window. When the panel is draggable, you can move the panel by left-clicking and dragging the header of the panel to its destination.
+
+   - Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, to set the panel to open as an overlay, toggle the *As overlay* button.
 
 ## Closing a panel of the app
 
@@ -74,6 +98,17 @@ To configure an event to close a panel of the app:
 1. Select *Close a panel* and select the panel.
 
 1. In the *Where* box, select where the panel that should be closed is located: in a pop-up window, on the left, or on the right. This is necessary in case the same panel is opened multiple times in different places.
+
+## Closing all panels of the app
+
+Available from DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards<!--RN 39625-->.
+
+To configure an event to close all panels of the app:
+
+- Select *Close all panels*.
+
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7, navigating to a different low-code app page would close any open panels. From DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 onwards, panels remain open when you navigate to a different page. To ensure older apps function correctly after upgrading to DataMiner 10.3.0 [CU16]/ 10.4.0 [CU4]/10.4.7 or higher, an *On close* page event with a *Close all panels* action is automatically configured for each page of apps created before the upgrade<!--RN 39632-->. New pages and new apps added after the upgrade will not have these events configured.
 
 ## Opening an app
 
@@ -88,6 +123,34 @@ To configure an event to open another low-code app that has been published in yo
 
 Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an event to open a monitoring card of a specific element, service, or view:
 
+### [From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 40814-->](#tab/tabid-1)
+
+1. Select *Open monitoring card*.
+
+1. In the *Type* box, select a type: element, service, or view.
+
+1. Specify how you want to select the element, service, or view:
+
+   - *ID*: Allows you to choose from a dropdown list of available elements, services, or views. This is the default option.
+
+   - *Name*: Allows you to manually enter the name of the element, service, or view.
+
+1. Based on the selected type, choose the element, service, or view for which the monitoring card should be opened:
+
+   - If you selected the *ID* option, choose the desired element, service, or view from the dropdown list.
+
+   - If you selected the *Name* option, enter the name manually.
+
+   - To link to a feed instead of selecting a fixed element, service, or view, click the link icon next to the selection box, select the feed, and click *Apply*.
+
+     If you selected the *Name* option, you can link to a text input feed, which allows you to dynamically enter the name of the element, service, or view in the published app.
+
+     ![Open monitoring card](~/user-guide/images/Open_Monitoring_Card.gif)<br>*Low-Code Apps module in DataMiner 10.4.11*
+
+1. Select *Add action*.
+
+### [Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12](#tab/tabid-2)
+
 1. Select *Open monitoring card*.
 
 1. In the *Type* box, select a type: element, service, or view.
@@ -98,6 +161,8 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
    > From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35986 -->, instead of linking to a fixed element, service, or view, you can link to a feed. To do so, click the link icon to the right of the selection box, select the feed, and click *Apply*.
 
 1. Select *Add action*.
+
+***
 
 > [!NOTE]
 > When a low-code app is embedded in Cube (e.g. in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
@@ -120,6 +185,14 @@ Examples:
 - If you add a line chart component and a button component, you can configure this action on the button and select the option *Set viewport*<!-- RN 39254 -->, so that users can use the button to set the viewport for the line chart. The action has two arguments, *To* and *From*, which can be either set to a static value or linked to a numeric value feed. Available from DataMiner 10.3.5/10.4.0 onwards. Prior to DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5, this option is named *Set timespan*<!-- RN 35933 -->.
 
 - From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, if you configure this action for a [Node edge graph](xref:DashboardNodeEdgeGraph) component, you can select the option *Clear selection*.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40252-->, if you add a [numeric input](xref:DashboardNumericInputFeed), [text input](xref:DashboardTextInputFeed), or [search input](xref:DashboardSearchInputFeed) component, you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a static value or linked to a feed.
+
+  ![Set value](~/user-guide/images/Set_Value.gif)<br>*Grid, text input, and table components in DataMiner 10.4.9*
+
+- From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, if you add a [time range feed component](xref:DashboardTimeRangeFeed), you can configure this action on, for example, a button and select the option *Set value*, so that users can use the button to set the current value of the component, which can either be set to a preset or custom time range.
+
+  ![Set value - time range](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range feed, button, and line & area chart components in DataMiner 10.4.11*
 
 ## Showing a context menu
 

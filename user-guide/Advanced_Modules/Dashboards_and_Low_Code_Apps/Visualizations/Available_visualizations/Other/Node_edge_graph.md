@@ -11,7 +11,7 @@ Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is 
 
 This component allows you to visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
-![Node edge graph](~/user-guide/images/Node_Edge_Graph.png)<br>*Node edge graph component in DataMiner 10.4.6*
+![Node edge graph](~/user-guide/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
 The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects). Clicking items in the node edge graph also makes these available as a feed for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
 
@@ -178,7 +178,9 @@ You can fine-tune the layout of the component with the following settings in the
 
   - *Upwards*: Nodes are displayed from bottom to top in order of importance
 
-- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can use the scroll wheel of the mouse to zoom in or out. Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
+- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can zoom in or out by pressing CTRL while using the scroll wheel. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->, you can use the scroll wheel of the mouse to zoom in or out.
+
+  Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
 
 - *Edge style*: Select whether the connections should be displayed as curly or straight lines.
 

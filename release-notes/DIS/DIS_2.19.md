@@ -8,7 +8,7 @@ uid: DIS_2.19
 
 ### IDE
 
-#### DIS MIB Browser - Compare: Copy to Clipboard \[ID_22247\]
+#### DIS MIB Browser - Compare: Copy to Clipboard \[ID 22247\]
 
 The *Compare* tab of the *DIS MIB Browser* window, which shows the differences between the OID data in the MIB tree and the parameter data in the protocol XML file, now contains a *Copy to Clipboard* button. Clicking that button will copy the results of the latest comparison to the Windows Clipboard.
 
@@ -16,7 +16,7 @@ Also, both the *OIDs missing in protocol* and *OIDs missing in MIB* panes can no
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_22214\]\[ID_22221\]\[ID_22263\]
+#### New and updated checks and error messages \[ID 22214\]\[ID 22221\]\[ID 22263\]
 
 The following checks and error messages have been added or updated.
 
@@ -52,11 +52,11 @@ The following checks and error messages have been added or updated.
 
 ### Enhancements
 
-#### IDE - XML editor: Exception tags converted to Discreet tags when generating Write parameters for Read parameters \[ID_22206\]
+#### IDE - XML editor: Exception tags converted to Discreet tags when generating Write parameters for Read parameters \[ID 22206\]
 
 When Write parameters were generated for Read parameters, up to now, Interprete.Exceptions.Exception tags were incorrectly copied to the newly created Write parameters. From now on, those Exception tags will be converted to Measurement.Discreets.Discreet tags instead.
 
-#### IDE - Table editor: Enhanced view option support \[ID_22484\]
+#### IDE - Table editor: Enhanced view option support \[ID 22484\]
 
 The table editor is now able to make the distinction between the view option for a DVE table and the view option for a view table. It now supports both options, and will generate one of the following warnings if a view option is not used correctly:
 
@@ -65,7 +65,7 @@ The table editor is now able to make the distinction between the view option for
 
 Also, the table editor now supports the new “viewImpact” option.
 
-#### IDE: Enhanced DIS menu \[ID_22493\]
+#### IDE: Enhanced DIS menu \[ID 22493\]
 
 The main DIS menu has been restructured.
 
@@ -73,11 +73,11 @@ Also, the *Toggle Outlining at Level \[X\]* commands, which were grouped under t
 
 ### Fixes
 
-#### IDE: Problem when parsing MIB files \[ID_22211\]
+#### IDE: Problem when parsing MIB files \[ID 22211\]
 
 While parsing a MIB file, up to now, an error could occur when the last item in a list of options was followed by a comma.
 
-#### Validator: Incorrect errors returned when checking datetime and time parameters \[ID_22340\]
+#### Validator: Incorrect errors returned when checking datetime and time parameters \[ID 22340\]
 
 In some cases, the Validator would incorrectly return the following errors when checking datetime and time parameters.
 
@@ -86,7 +86,7 @@ In some cases, the Validator would incorrectly return the following errors when 
 | 2.9.7  | Param.CheckUnitsTag | Missing 'Units' tag for '{paramDisplayType}' Param with ID '{paramPid}'. |
 | 2.11.1 | Param.CheckRangeTag | Missing 'Range' tag for '{paramDisplayType}' Param with ID '{paramPid}'. |
 
-#### Validator: Incorrect error returned when checking a dummy parameter \[ID_22341\]
+#### Validator: Incorrect error returned when checking a dummy parameter \[ID 22341\]
 
 In some cases, the Validator would incorrectly return the following error when checking a dummy parameter.
 
@@ -94,7 +94,7 @@ In some cases, the Validator would incorrectly return the following error when c
 |--------|--------------------|--------------------------------------------------------|
 | 2.20.2 | Param.CheckTypeTag | Interprete type on Param '{paramId}' has been removed. |
 
-#### IDE: Macros not working in Visual Studio 2015 \[ID_22595\]
+#### IDE: Macros not working in Visual Studio 2015 \[ID 22595\]
 
 The following macros did not work in Visual Studio 2015 and have now been adapted:
 

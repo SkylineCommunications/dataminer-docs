@@ -101,14 +101,12 @@ items:
     topicUid: sla
     items:
       - name: Creating an SLA
-        topicUid: Creating_an_SLA
         items:
           - name: Creating a new SLA
             topicUid: Creating_a_new_SLA
           - name: Replicating an existing SLA
             topicUid: Replicating_an_existing_SLA
       - name: Configuring an SLA
-        topicUid: Configuring_an_SLA
         items:
           - name: Setting the SLA Window
             topicUid: Setting_the_SLA_Window
@@ -133,7 +131,6 @@ items:
           - name: Changing an SLA into an enhanced service
             topicUid: Changing_an_SLA_into_an_enhanced_service
       - name: Viewing SLA information
-        topicUid: Viewing_SLA_information
         items:
           - name: Consulting general SLA information
             topicUid: Consulting_general_SLA_information
@@ -146,7 +143,6 @@ items:
           - name: Viewing a list of current active service alarms
             topicUid: Viewing_a_list_of_current_active_service_alarms
       - name: Making corrections to existing outages
-        topicUid: Making_corrections_to_existing_outages
         items:
           - name: Correcting an outage in the outage list
             topicUid: Correcting_an_outage_in_the_outage_list
@@ -154,6 +150,10 @@ items:
             topicUid: Excluding_alarms_that_affect_the_SLA
       - name: SLA reporting
         topicUid: SLA_reporting
+      - name: Tutorials
+        items:
+          - name: Using an SLA to monitor a power service
+            topicUid: SLA_tutorial
   - name: Correlation
     items:
       - name: About DataMiner Correlation
@@ -277,6 +277,8 @@ items:
                 topicUid: Editing_a_dashboard
               - name: Changing dashboard settings
                 topicUid: Changing_dashboard_settings
+              - name: Configuring security for a dashboard
+                topicUid: Configuring_dashboard_security
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing
@@ -298,8 +300,8 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Embedding a connector dashboard in Visual Overview
-                topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+              - name: Leveraging feeds in a web component
+                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Leveraging controls and feeds to create a dynamic GQI query
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
@@ -446,6 +448,8 @@ items:
             items:
               - name: Grid
                 topicUid: DashboardGrid
+              - name: Interactive Automation script
+                topicUid: InteractiveAutomationScript
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
               - name: Parameter page
@@ -494,12 +498,19 @@ items:
         items:
           - name: Configuring feed components
             topicUid: Configuring_feed_components
-          - name: Dynamically referencing feed values in text
+          - name: Dynamically referencing data in text
             topicUid: Feed_Link
           - name: Specifying data input in a dashboard or app URL
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+      - name: Flows
+        topicUid: Using_flows
+        items:
+          - name: Configuring a flow
+            topicUid: Configuring_a_flow
+          - name: Flow operators
+            topicUid: Flow_operators
       - name: Generic Query Interface (GQI)
         items:
           - name: About the Generic Query Interface
@@ -573,12 +584,18 @@ items:
                     topicUid: Ad_hoc_Life_cycle
                   - name: Linking rows to DataMiner objects
                     topicUid: Ad_hoc_Metadata
-                  - name: Tutorials
+                  - name: Examples
                     items:
                       - name: Forwarding dummy data to the GQI
-                        topicUid: Ad_hoc_Tutorials
+                        topicUid: Forwarding_dummy_data_to_GQI
+                      - name: Scaling an ad hoc data source
+                        topicUid: Scaling_Ad_hoc_Data_Source
+                  - name: Tutorials
+                    items:
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
+                      - name: Building a GQI data source that retrieves data from a DMS
+                        topicUid: Ad_hoc_Tutorials_GQIDMS
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
@@ -688,6 +705,8 @@ items:
             topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
+      - name: Style Guide
+        topicUid: LCA_Style_guide
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
   - name: DMS Dashboards (legacy)
@@ -731,7 +750,6 @@ items:
       - name: Customizing the legacy Dashboards app
         topicUid: Customizing_the_legacy_Dashboards_app
       - name: Legacy Dashboard Gateway installation
-        topicUid: Legacy_Dashboard_Gateway_installation
         items:
           - name: Installing a DMS Dashboard Gateway
             topicUid: Installing_a_DMS_Dashboard_Gateway
@@ -791,7 +809,7 @@ items:
               - name: ReservationFieldDescriptor
                 topicUid: DOM_ReservationFieldDescriptor
               - name: ResourceFieldDescriptor
-                topicUid: DOM_ResourceFieldDescriptor              
+                topicUid: DOM_ResourceFieldDescriptor
               - name: ServiceDefinitionFieldDescriptor
                 topicUid: DOM_ServiceDefinitionFieldDescriptor
               - name: StaticTextFieldDescriptor
@@ -851,7 +869,7 @@ items:
             topicUid: DOM_Invoice_app_example
           - name: Status system example
             topicUid: DOM_status_system_example
-          - name: Altering values of a DomInstance - examples
+          - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
             topicUid: DOM_BulkProcessing_Example
@@ -920,6 +938,10 @@ items:
             topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
       - name: EPM integration training
         topicUid: EPM_Integration_Training
+      - name: Tutorials
+        items:
+          - name: Getting started with EPM
+            topicUid: EPM_Introduction_Tutorial
   - name: Inventory & Asset Management
     topicUid: AssetManagement
     items:
@@ -993,7 +1015,6 @@ items:
       - name: Working with job templates
         topicUid: Working_with_job_templates
   - name: Maps
-    topicUid: maps
     items:
       - name: About DataMiner Maps
         topicUid: About_DMS_Maps
@@ -1009,7 +1030,6 @@ items:
       - name: Configuring the DataMiner Maps host servers
         topicUid: Configuring_the_DataMiner_Maps_host_servers
       - name: Configuring the DataMiner Maps
-        topicUid: Configuring_the_DataMiner_Maps
         items:
           - name: Top-level structure of a DataMiner Maps configuration file
             topicUid: Top-level_structure_of_a_DataMiner_Maps_configuration_file
@@ -1097,6 +1117,8 @@ items:
             topicUid: Service_reports
           - name: Business reports
             topicUid: Business_reports
+          - name: Booking reports
+            topicUid: Booking_reports
           - name: Using the View filter for built-in reports
             topicUid: Using_the_View_filter_for_built-in_reports
       - name: Creating report templates
@@ -1223,14 +1245,9 @@ items:
       - name: SRM code snippets
         topicUid: SRM_code_snippets
       - name: Advanced SRM settings
-        topicUid: Advanced_SRM_settings
-      - name: SRM reporting
-        topicUid: SRM_reporting
         items:
-          - name: Bookings / Reservations tab
-            topicUid: Bookings_Reservations_tab
-          - name: Bookings / Reservations component of custom templates
-            topicUid: Bookings_Reservations_component_of_custom_templates
+          - name: Function resource settings
+            topicUid: Function_resource_settings
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

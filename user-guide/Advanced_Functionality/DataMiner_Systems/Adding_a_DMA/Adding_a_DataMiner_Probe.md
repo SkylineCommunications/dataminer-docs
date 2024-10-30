@@ -4,7 +4,7 @@ uid: Adding_a_DataMiner_Probe
 
 # Adding a DataMiner Probe
 
-From DataMiner version 8.5.4 onwards, you can add DataMiner Probes to a DMS. To do so, follow the same procedure as when you add a DMA in Cube, with one difference:
+To add a DataMiner Probe to a DMS, follow the same procedure as when you [add a DMA in Cube](xref:Adding_a_regular_DataMiner_Agent), with one difference:
 
 - In the *Add DataMiner Agent* pop-up window, select the checkbox *Add as an external DataMiner Agent*.
 

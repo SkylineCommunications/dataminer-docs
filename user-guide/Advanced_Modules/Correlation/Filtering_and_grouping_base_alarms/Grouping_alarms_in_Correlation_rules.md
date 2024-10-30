@@ -14,13 +14,13 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
    - by component info. See [Creating an information template](xref:Creating_an_information_template).
 
-   - by connectivity: Available from DataMiner 9.0.5 onwards. Groups alarms that are part of the same connectivity chain.
+   - by connectivity: Groups alarms that are part of the same connectivity chain.
 
    - by DataMiner
 
    - by element
 
-   - by function. Available from DataMiner 9.5.4 onwards. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - by function. See [Service and Resource Management](xref:SRM#service-and-resource-management).
 
    - by key point. See [Creating an information template](xref:Creating_an_information_template).
 

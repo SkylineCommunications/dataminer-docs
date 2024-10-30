@@ -2,7 +2,7 @@
 uid: Troubleshooting_STaaS_Issues
 ---
 
-# Troubleshooting STaaS issues
+# Troubleshooting – STaaS
 
 This page provides solutions to common issues that you may encounter while using STaaS. It covers problems related to dataminer.services connectivity, registration, token expiration, and service reachability.
 
@@ -28,7 +28,7 @@ The following error message will be present in the *SLCloudStorage.txt* log file
 CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a EndpointInfoAsync. (Failed to EndpointInfoAsync. (404))
 ```
 
-To register your system, contact your Skyline representative or <staas@dataminer.services>.
+To register your system, follow the procedure to [set up STaaS](xref:STaaS#setting-up-staas).
 
 ## CloudGateway is not running correctly
 
@@ -44,7 +44,7 @@ To resolve this issue, go to Task Manager and restart the *DataMiner CloudGatewa
 
 ## The session token has expired
 
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
+Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than six days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail for systems using STaaS.
 
 When you encounter this issue, you will find entries similar to the examples below in the *SLCloudStorage.txt* log file:
 
@@ -108,3 +108,19 @@ Some connector versions may contain a bug that causes a lot of parameter sets to
 This issue is known to occur with the following connector versions:
 
 - [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
+
+## DataMiner is unable to start up after registration
+
+If you followed the procedure to [set up STaaS](xref:STaaS#setting-up-staas) and switched your *DB.xml* to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
+
+In the *SLError.txt* log file, you will find this error:
+
+```txt
+SLCloudStorage.txt|SLDataGateway|DataGateway.CloudStorage|ERR|0|114|Failed to refresh DmsQueueToken because of exception SLCloudStorageConnection.Repositories.Exceptions.DmsQueueTokenRepositoryException: Failed to get SAS token ---> SLCloudStorageConnection.Repositories.Exceptions.EventHubSasTokenRepositoryException: Failed to get SAS token, response did not indicate success. Got code 500.
+```
+
+To resolve this issue:
+
+1. Remove the file `C:\ProgramData\Skyline Communications\DxMs Shared\Data\NodeId.txt`.
+
+1. Restart the DMA.

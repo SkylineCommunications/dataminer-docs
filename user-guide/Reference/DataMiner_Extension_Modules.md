@@ -1,5 +1,6 @@
 ---
 uid: DataMinerExtensionModules
+description: DxMs are modules that expand the core DataMiner software with additional capabilities. They do not require a DMA reboot for (un)installation/upgrades.
 ---
 
 # DataMiner Extension Modules (DxMs)
@@ -74,7 +75,9 @@ The CloudGateway module is responsible for connecting a DataMiner System to data
 
 ### CloudFeed
 
-The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
+The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are alarm events, change point events, SRM events, element configuration events, and feedback events.
+
+From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is DataMiner 10.4.10.<!-- RN 40413 -->
 
 ### DataAggregator
 
@@ -84,7 +87,7 @@ See [Data Aggregator](xref:Data_Aggregator_DxM).
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
-The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 ### CommunicationGateway
 

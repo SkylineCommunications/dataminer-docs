@@ -8,7 +8,7 @@ When installed on a DataMiner Agent, [antivirus software must be configured to e
 
 The *Check Antivirus DLLs* BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.4 onwards, it is available by default.
+This BPA test is available by default from DataMiner 10.1.4 onwards.
 
 ## Metadata
 
@@ -64,6 +64,16 @@ The following DLLs are currently checked (case insensitive):
 
 - `^(?:CrowdStrike\.Sensor\.)?ScriptControl(?:32_|64_|86_)?\d+\.dll$` (CrowdStrike)
 - `^ScriptSn\.\d+\.dll$` (McAfee)
+
+### File path checks
+
+From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 32567-->, the BPA test also checks the paths of loaded antivirus DLL files.
+
+This means:
+
+- The test can detect antivirus DLLs even if they are renamed or newly added, as long as they are loaded from a known antivirus file path.
+
+- The test takes into consideration both the file name and the source path, which increases the chances of detection.
 
 ## Limitations
 

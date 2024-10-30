@@ -90,6 +90,8 @@ To configure the component:
 
        - *Create additional charts*: Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit.
 
+   - *Styling and Information* > *Show title*: Available from DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40504-->. Determines whether the automatically generated chart title is displayed above the graph. This setting does not override any title that may be configured via the *General* > *Title* setting. Instead, if both settings are enabled, two titles will be shown above the graph. By default, this setting is enabled.
+
    - *Styling and Information* > *Show range selector*: Determines whether a preview graph is displayed below the main graph, allowing you to easily select a different range.
 
    - *Styling and Information* > *Line thickness*: Allows you to specify the thickness of the data line in the chart (in pixels).
@@ -149,14 +151,16 @@ Query results are supported as a data feed for this component from DataMiner 10.
    - *Y-axis*: The Y-axis that is used to plot the line.
 
    > [!NOTE]
-   > Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
+   >
+   > - Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
+   > - From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when a chart has data but does not have lines configured, the component will add one line on the default X-axis and Y-axis. The columns are chosen based on the column type and the column name. For example, a column with the name "X" will be chosen for the X value.
 
 1. Optionally, in the *Lines* section, select *+ Add line* to add additional lines to the chart. A maximum of 20 lines can be added to a chart.
 
    > [!NOTE]
    >
    > - To change the order in which the lines are displayed on the chart and in the tooltip, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the entry up or down in the *Lines* section.
-   > - The lines inherit the colors specified in the color palette of the component or theme. When all colors are used, the first ones will be assigned again.
+   > - The lines inherit the colors specified in the data colors or, in versions prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->, the color palette of the component or theme. When all colors are used, the first ones will be assigned again. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, lines displaying the same data as other components will inherit the same data color by default, instead of using the next color in the theme's data colors.
 
 1. Optionally, configure the following layout settings:
 
@@ -219,6 +223,15 @@ From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zoomin
 
   > [!NOTE]
   > Panning is only possible when the chart is zoomed in, as the default viewport shows all available data.
+
+When visualized on a mobile device<!--RN 39586-->:
+
+- You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+
+- You can move left or right by sliding one finger across the component.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using a query data feed](#configuration-with-query-data-feed), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
 
 ## Examples
 

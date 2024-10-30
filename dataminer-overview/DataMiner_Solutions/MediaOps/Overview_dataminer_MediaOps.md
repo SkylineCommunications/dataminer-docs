@@ -61,26 +61,12 @@ This list will continue to grow over time as new releases become available for d
 
 - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system.
 
-## What do you need to get started with dataminer.MediaOps?
-
-The easiest way to get started is by deploying the MediaOps package to a DaaS system:
-
-1. If you do not have a DaaS system available yet, [spin up a new DaaS system](xref:Creating_a_DMS_on_dataminer_services).
-
-1. [Install the DataMiner SRM framework](xref:deploying_srm) on the system. This must be installed before MediaOps is deployed.
-
-1. Deploy the MediaOps package from the DataMiner Catalog. Note that this is currently not yet available.<!-- TBD: update when package is available -->
-
-If you want to try out the apps using demo data, you can then run the *Generate Demo Data* script in the Automation module in DataMiner Cube. This script is included in the MediaOps package. Keep in mind that this script will generate a significant amount of data and will take some time to complete. It will also generate a number of elements in the system. If you no longer want these later, you will need to remove them manually.
-
-> [!NOTE]
-> It is also possible to install MediaOps on a self-hosted DMS, provided DataMiner 10.4.4 or higher is installed and the DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-
-> [!TIP]
-> If you have any questions or need assistance to get started with dataminer.mediaOps, contact <support.mediaops@skyline.be>.
-
 ## MediaOps apps
 
 dataminer.MediaOps comes with a set of low-code apps that expose the MediaOps functionality to end users. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific projects.
 
 For an overview of the different applications available in the package, see [MediaOps apps](xref:Overview_MediaOps_Apps).
+
+## Getting started with MediaOps
+
+For instructions how to install and get started with MediaOps, refer to our [user guide](xref:Installing_MediaOps).

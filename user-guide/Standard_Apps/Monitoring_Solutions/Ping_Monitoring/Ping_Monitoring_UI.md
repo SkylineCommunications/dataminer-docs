@@ -18,9 +18,33 @@ The Ping Monitoring tool UI consists of the following main components:
 
 You can find the following functionalities in the header bar of the application:
 
-- **Refresh**: Available only on the [*Destinations* page](#the-destinations-page). Allows you to update the destinations available in your DataMiner System.
+- On the [*Destinations* page](#the-destinations-page):
 
-- **Alarm History**: Available only on the [*Alarms* page](#the-alarms-page). Allows you to access all alarms that occurred in the last 15 minutes, hour, 3 hours, or 24 hours.
+  - **Refresh**: Allows you to reload the data on the page.
+
+  - **Add destination**: Allows you to [add a new destination](xref:Ping_Monitoring_managing_groups_destinations#adding-a-new-destination).
+
+  - **Edit**: Allows you to [edit the selected destination](xref:Ping_Monitoring_managing_groups_destinations#editing-a-destination).
+
+  - **Delete**: Allows you to [delete the selected destination](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-destination).
+
+- On the [*Grid View* page](#the-grid-view-page):
+
+  - **Refresh**: Allows you to reload the data on the page.
+
+- On the [*Groups* page](#the-groups-page):
+
+  - **Refresh**: Allows you to reload the data on the page.
+
+  - **Create group**: Allows you to [create a new group](xref:Ping_Monitoring_managing_groups_destinations#creating-a-new-group).
+
+  - **Edit**: Allows you to [edit the selected group](xref:Ping_Monitoring_managing_groups_destinations#editing-a-group).
+
+  - **Delete**: Allows you to [delete the selected group](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-group).
+
+- On the [*Alarms* page](#the-alarms-page):
+
+  - **Alarm History**: Allows you to access all alarms that occurred in the last 15 minutes, hour, 3 hours, 12 hours or 24 hours.
 
 ## The Ping Monitoring sidebar
 
@@ -38,7 +62,7 @@ The sidebar on the left of the Ping Monitoring tool contains buttons that can be
 
 ### The 'Destinations' page
 
-The *Destinations* page offers an overview of all internet destinations in your DataMiner System receiving ping commands on a predefined, customized basis.
+The *Destinations* page offers an overview of all IP addresses in your DataMiner System receiving ping commands on a predefined, customized basis.
 
 The following information is available for each destination:
 
@@ -50,7 +74,7 @@ The following information is available for each destination:
 
 - **Admin status**: The status (enabled or disabled) of the destination.
 
-- **Ping result**: The time required for destinations to receive and respond to a ping command, e.g. *4 ms*.
+- **Ping result**: The time it took each destination to reply to the last ping command, e.g. *4 ms*.
 
 - **Cycle packet loss**: The percentage of lost packets during ping command and response process, e.g. *0.00 %*.
 
@@ -100,4 +124,4 @@ On the *Destinations* and *Grid View* pages, a filter pane on the left enables y
 
 To limit the filter pane to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
 
-In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System.
+In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System. Also, a progress bar above those destinations will count down to the next page refresh.

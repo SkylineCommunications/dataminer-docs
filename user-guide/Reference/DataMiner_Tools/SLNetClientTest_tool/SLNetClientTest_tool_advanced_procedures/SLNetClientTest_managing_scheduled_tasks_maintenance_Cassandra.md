@@ -4,7 +4,7 @@ uid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
 
 # Managing scheduled tasks for maintenance of a Cassandra database
 
-From DataMiner 9.5.10 onwards, a set of messages are available to manage scheduled tasks for the maintenance of Cassandra databases. The messages allow you to create, update, delete and execute tasks in the Windows Task Scheduler.
+A set of messages are available to manage scheduled tasks for the maintenance of Cassandra databases. The messages allow you to create, update, delete and execute tasks in the Windows Task Scheduler.
 
 To send such a message:
 

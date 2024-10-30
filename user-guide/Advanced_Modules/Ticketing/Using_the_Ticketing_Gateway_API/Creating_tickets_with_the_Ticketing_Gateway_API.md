@@ -119,8 +119,9 @@ private TicketFieldResolver CreateCustomResolver()
 ```
 
 > [!NOTE]
-> - If one of the TicketFieldDescriptors in a TicketFieldDescriptor pair mentions "*IsDataMinerMaster = true*" or "*IsThirdPartyMaster = true*", this line must also be mentioned for the other TicketFieldDescriptor.<br>If either of these lines is set to false, this does not imply that the other case is true. As such, it is better to only specify one of these lines in case it is true, and otherwise to specify nothing. If neither of the lines is specified, and there are two conflicting ticket changes, the value of the field will be set to the most recent of the changes.
-> - From DataMiner 9.6.5 onwards, the *TicketFieldDescriptor* class has an *AlarmProperty* property, which can be used to link an alarm property to a ticket field.
+>
+> - If one of the TicketFieldDescriptors in a TicketFieldDescriptor pair mentions "*IsDataMinerMaster = true*" or "*IsThirdPartyMaster = true*", this line must also be mentioned for the other TicketFieldDescriptor. If either of these lines is set to false, this does not imply that the other case is true. As such, it is better to only specify one of these lines in case it is true, and otherwise to specify nothing. If neither of the lines is specified, and there are two conflicting ticket changes, the value of the field will be set to the most recent of the changes.
+> - The *TicketFieldDescriptor* class has an *AlarmProperty* property, which can be used to link an alarm property to a ticket field.
 
 Example of how to create a ticket:
 

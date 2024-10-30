@@ -79,6 +79,11 @@ jobs:
       - name: Unzip artifact for deployment
         run: Expand-Archive -Path _site.zip -DestinationPath ./_site
         shell: pwsh
+      - name: Delete files that should not be indexed by Azure Search Service
+        run: |
+          rm -f ./_site/404.html
+          rm -f ./_site/README.html
+          find ./_site -name 'toc.html' -type f -delete
       - name: Upload the new files
         uses: bacongobbler/azure-blob-storage-upload@main
         with:

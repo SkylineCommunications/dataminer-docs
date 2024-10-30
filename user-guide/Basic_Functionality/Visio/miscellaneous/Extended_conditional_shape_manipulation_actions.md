@@ -1,5 +1,6 @@
 ---
 uid: Extended_conditional_shape_manipulation_actions
+description: To apply conditional shape manipulation actions, configure the correct shape data field (e.g. Blink, Enabled, Hide, etc.) and enter the condition.
 ---
 
 # Extended conditional shape manipulation actions
@@ -8,9 +9,11 @@ To apply conditional shape manipulation actions to any type of linked shape, or 
 
 > [!NOTE]
 >
-> - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
 > - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > MANIPULATION]* page.
+> - The *Collapse*, *Show*, *Hide*, *FlipX*, *FlipY*, and *Enabled* actions are supported on shapes that are not linked to an element, service, or view, though for the *Enabled* action, the shape has to be clickable. Other conditional shape manipulation actions must always be configured on shapes linked to an element, service, or view.
+
+> [!TIP]
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > MANIPULATION]* page.
 
 ## Configuring the shape data fields
 
@@ -56,7 +59,7 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
 - **Logical expression**: The expression that combines the defined aliases using "and", "or", "(", ")" or "not". Example: \<A>or\<B>
 
-- **Alias**: A, B, C, ...
+- **Alias**: A, B, C, etc.
 
 - **Target**: The object to which the action should be applied. Use the following syntax (optionally using wildcards or placeholders):
 
@@ -90,10 +93,10 @@ Alias-"Alias"|"Target"|"What"|"Condition"
     - *[Parameter ID],[Primary key]*
 
   - *PROPERTY:* *\[Property name\]*
-  - *Protocol* (from DataMiner 9.6.4 onwards)
+  - *Protocol*
   
   > [!NOTE]
-  > From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition).
+  > You can also use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition).
 
 - **Condition**: The condition that determines whether the shape manipulation is applied. If you want to check if the specified "What" matches with a regular expression, start the condition with "Regex=", followed by the regular expression.
 
@@ -103,11 +106,9 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
 ### Using an asterisk in a condition
 
-Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to an element, view or service, the asterisk is replaced with the first element ID, view ID or service ID that is found from the parent shape upwards, but the current shape is not checked.
+When an asterisk ("\*") is used in shape data to refer to an element, view, or service, the asterisk is replaced with the first element ID, view ID, or service ID that is found starting from the current shape.
 
-From DataMiner 9.5.4 onwards, however, the current shape is checked as well. This for example allows you to use asterisk characters in a *Show* condition specified in a top-level shape.
-
-For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the "StartResolvingFromParent" option. See [StartResolvingFromParent](xref:Overview_of_page_and_shape_options).
+If you instead want it to be replaced with the first element ID, view ID, or service ID starting from the parent shape, add the [StartResolvingFromParent](xref:Overview_of_page_and_shape_options) option.
 
 ## Changing the separator character in the condition
 
@@ -123,7 +124,7 @@ However, in order to replace the – separators, the separator replacement optio
 [sep:-^]<A>^A|Element:myElement|Name|Regex=.*[var:myVar].*
 ```
 
-In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\] option in the *condition* part of the shape data. Normally, if this part contains a semicolon, it will be interpreted to consist of several conditions. This behavior can only be adapted by specifying the \[sep:XY\] option immediately before the condition. For example:
+In addition, it is possible to use the \[sep:XY\] option in the *condition* part of the shape data. Normally, if this part contains a semicolon, it will be interpreted to consist of several conditions. To change this behavior, specify the \[sep:XY\] option immediately before the condition. For example:
 
 ```txt
 <A>-A|Element:MyElement|Parameter:1|[Sep:;$]=a;b
@@ -134,7 +135,7 @@ In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\]
 
 ## Using statistics in the condition
 
-From DataMiner 9.0.2 onwards, you can use alarm statistics in the "What" part of the condition. The following table lists the available items, and indicates whether they can be used to retrieve data for a view, a service or an element.
+Alarm statistics can be used in the "What" part of the condition. The following table lists the available items and indicates whether they can be used to retrieve data for a view, a service, or an element.
 
 | Statistical data      | View | Service | Element | EPM object |
 | --------------------- | ---- | ------- | ------- |------------|
@@ -170,13 +171,11 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the "What" part of
 > [!NOTE]
 >
 > - #NormalAlarms can only be used if, in the *MaintenanceSettings.xml* file, the *\<AutoClear>* tag is set to "false".
-> - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
+> - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets, optionally followed by the domain name in case you only want tickets from a particular domain to be taken into account. This is possible for views, services, and elements. For example: *#Tickets:Internal*.
 
 ## Specifying a default return value
 
-By default, if the condition cannot be evaluated (e.g. because the element or parameter does not exist), it always returns false. However, from DataMiner 9.5.5 onwards, you can specify that the condition must return "true" when it cannot be evaluated.
-
-To do so, add "DefaultReturnValue=True" to the condition.
+By default, if the condition cannot be evaluated (e.g. because the element or parameter does not exist), it always returns false. If the condition must return "true" when it cannot be evaluated, add "DefaultReturnValue=True" to the condition.
 
 For example, with the configuration below, if the A condition cannot be evaluated because the element does not exist, "true" will be returned, and the shape will be shown.
 
@@ -185,7 +184,7 @@ For example, with the configuration below, if the A condition cannot be evaluate
 | Show             | \<A>-A\|Element:NonExistingElement\|Parameter:1\|\>0\|DefaultReturnValue=True |
 
 > [!NOTE]
-> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat* or *Avg*. To combine these options, use a semicolon (";"). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
+> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat*, or *Avg*. To combine these options, use a semicolon (";"). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
 
 ## Conditional manipulation of connection shapes
 
@@ -225,7 +224,7 @@ The following conditions can be defined:
 
 - *Does a connection property have a specific numeric value?*
 
-  This condition will be true if a connection property is greater or smaller than a specific value. For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat* and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>). Example:
+  This condition will be true if a connection property is greater or smaller than a specific value. For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat*, and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>). Example:
 
   | Shape data field | Value                                    |
   | ---------------- | ---------------------------------------- |

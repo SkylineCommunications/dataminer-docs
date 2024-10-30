@@ -18,13 +18,13 @@ uid: General_Feature_Release_10.3.10
 
 ## Highlights
 
-- [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
-- [Support for real-time GQI row updates](#support-for-real-time-gqi-row-updates-id_37060)
-- [Storage as a Service](#storage-as-a-service-staas-id_34616-id_37256-id_37257-id_37283)
+- [DataMiner Object Models: 'Full CRUD meta' scripts [ID 37004]](#dataminer-object-models-full-crud-meta-scripts-id-37004)
+- [Support for real-time GQI row updates](#support-for-real-time-gqi-row-updates-id-37060)
+- [Storage as a Service](#storage-as-a-service-staas-id-34616-id-37256-id-37257-id-37283)
 
 ## New features
 
-#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID 37004]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -32,7 +32,7 @@ Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point me
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
-#### Support for real-time GQI row updates [ID_37060]
+#### Support for real-time GQI row updates [ID 37060]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -45,7 +45,7 @@ At present, this is supported for the following GQI data sources:
 
 It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
 
-#### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
+#### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID 37121]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 <!-- Additional fix added under WebApps/Fixes -->
@@ -60,7 +60,7 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
-#### Storage as a Service (STaaS) [ID_34616] [ID_37256] [ID_37257] [ID_37283]
+#### Storage as a Service (STaaS) [ID 34616] [ID 37256] [ID 37257] [ID 37283]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -72,7 +72,7 @@ For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
 ### Enhancements
 
-#### Service & Resource Management: ProfileInstances with 'IsValueCopy' set to true will be assigned a TTL of 1 year [ID_31189]
+#### Service & Resource Management: ProfileInstances with 'IsValueCopy' set to true will be assigned a TTL of 1 year [ID 31189]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -88,7 +88,7 @@ Also, in DataMiner Cube, the *By value/By reference* toggle button has now been 
 > [!NOTE]
 > When the `isValueCopy` property of a ProfileInstance is set to true, it will only be assigned a TTL of 1 year when that ProfileInstance is stored in Elasticsearch.
 
-#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID 36732]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -102,7 +102,7 @@ When a functions file is added or uploaded, the following checks will now be per
 
 When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
 
-#### Updated bookings now only set to Confirmed when necessary [ID_36818]
+#### Updated bookings now only set to Confirmed when necessary [ID 36818]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -113,7 +113,7 @@ Up to now, bookings were always set to Confirmed again when they were updated, e
 - When the resources in the booking have changed.
 - when the enhanced service profile ID has changed.
 
-#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+#### Service & Resource Management: Improved ResourceManager logging [ID 36989]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -121,7 +121,7 @@ The ResourceManager logging (*SLResourceManager.txt*) has been improved to make 
 
 Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
 
-#### Improved handling of smart baseline parameter sets [ID_36997]
+#### Improved handling of smart baseline parameter sets [ID 36997]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -129,13 +129,13 @@ The handling of smart baseline parameter sets in SLNet has improved in cases whe
 
 In addition, a write parameter is no longer needed in this scenario. Previously, if there was no write parameter, it was not possible to update the stored baseline value. Now if a write parameter is present, it will be used to set the values in case of single parameter sets.
 
-#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID 37012]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
 
-#### Automatic clean-up of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID_37033]
+#### Automatic clean-up of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID 37033]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -146,19 +146,19 @@ From now on, after each DataMiner upgrade or DataMiner start-up, this folder wil
 - When a DataMiner upgrade was successful, only the `progress.log` file for that particular upgrade will be kept.
 - When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisite checks](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisite-checks) will also be kept for debugging purposes.
 
-#### Security enhancements [ID_37064] [ID_37094]
+#### Security enhancements [ID 37064] [ID 37094]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 A number of security enhancements have been made.
 
-#### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID_37071]
+#### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID 37071]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
 
-#### 'No Notifications might be sent' notice will now be logged in the SLSNMPAgent.txt log file [ID_37188]
+#### 'No Notifications might be sent' notice will now be logged in the SLSNMPAgent.txt log file [ID 37188]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -168,30 +168,30 @@ When you connected to a DataMiner Agent, up to now, the Alarm Console would ofte
 
 This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
-#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID 37198]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
 
 > [!IMPORTANT]
-> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 ### Fixes
 
-#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID_36674]
+#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID 36674]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 When, on a system with a Cassandra Cluster database, an element had more than 10000 alarm events, not all of those events would get retrieved from the Elasticsearch database. This would cause (a) SLElement to generate additional alarm events when the element was restarted and (b) alarm trees to be incorrect.
 
-#### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
+#### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID 36776]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 In some cases, it could occur that the prerequisites check that is performed at the start of a DataMiner upgrade incorrectly marked an Agent as failed, which caused the upgrade to fail.
 
-#### Connection timed out while waiting for upgrade package upload to all DMAs [ID_36866]
+#### Connection timed out while waiting for upgrade package upload to all DMAs [ID 36866]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -199,7 +199,7 @@ At the start of a DataMiner upgrade in a cluster, first the upload of the upgrad
 
 However, when the upload happened too slowly, it could occur that the connection timed out. Now, as long as the upgrade is progressing, the upload will not time out.
 
-#### Issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notifications sent to SLDataMiner [ID_36973]
+#### Issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notifications sent to SLDataMiner [ID 36973]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -209,7 +209,7 @@ A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notif
 - A small memory leak could occur when a NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES notification was sent to SLDataMiner with invalid data.
 - If the user sending such a notification did not have sufficient rights on the element, or if the element was locked by another user, this did not cause this notification to fail. Now it will fail. This same issue has also been resolved for the NT_DELETE_ROW (156), NT_ADD_ROW (149), and NT_ADD_ROW_RETURN_KEY (240) notifications.
 
-#### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
+#### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID 37072]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -217,19 +217,19 @@ When you perform a factory reset by running *SLReset.exe*, NATS will automatical
 
 Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
 
-#### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
+#### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID 37083]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
 
-#### Problem when restarting DataMiner [ID_37112]
+#### Problem when restarting DataMiner [ID 37112]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
-#### Cassandra Cluster: Incorrect calculation of replication factors [ID_37117]
+#### Cassandra Cluster: Incorrect calculation of replication factors [ID 37117]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -237,13 +237,13 @@ In setups including a Cassandra Cluster database, the *NetworkTopologyStrategy* 
 
 As a result, when only one node went down, DataMiner would erroneously go into data offload mode even though enough Cassandra Cluster nodes were online.
 
-#### Problem when running queries against Elasticsearch [ID_37138]
+#### Problem when running queries against Elasticsearch [ID 37138]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 In some rare cases, queries run against an Elasticsearch database would get stuck, causing SLDataGateway to throw exceptions and Elasticsearch to not return any results.
 
-#### Custom timeouts would not be passed to HandleMessage methods on a GRPCConnection/gRPC connection [ID_37166]
+#### Custom timeouts would not be passed to HandleMessage methods on a GRPCConnection/gRPC connection [ID 37166]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -251,13 +251,13 @@ When a custom timeout was passed to a `HandleMessage` method on a GRPCConnection
 
 From now on, when a custom timeout is passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method will correctly use the custom timeout that was passed.
 
-#### Protocols: Length parameter in a response would not be set to the correct value [ID_37172]
+#### Protocols: Length parameter in a response would not be set to the correct value [ID 37172]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 In some cases, the length parameter in a response would not be set to the the correct value.
 
-#### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
+#### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID 37176]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -265,25 +265,25 @@ In some cases, events scheduled to run at the end of a booking would not be run 
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
 
-#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID 37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
 
-#### Problem when importing an existing element [ID_37214]
+#### Problem when importing an existing element [ID 37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
 
-#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID 37225]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
 
-#### Problem when updating the NATS server [ID_37305]
+#### Problem when updating the NATS server [ID 37305]
 
 <!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
 
