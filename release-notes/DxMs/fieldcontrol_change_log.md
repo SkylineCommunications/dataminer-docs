@@ -4,7 +4,7 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
-#### 30 December 2024 - Enhancement - FieldControl 2.11.1 - Dependencies updated [ID 41280]
+#### 30 October 2024 - Enhancement - FieldControl 2.11.1 - Dependencies updated [ID 41280]
 
 Several dependencies have been updated.
 
