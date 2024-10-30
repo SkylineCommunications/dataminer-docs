@@ -16,7 +16,7 @@ Expected duration: 20 minutes
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- To be able to expose DCF interfaces and connections in dashboards/low-code apps, you may need to activate the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option. See [Soft-launch options](xref:SoftLaunchOptions).
+- Make sure the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
 
 > [!TIP]
 > If you use a [DaaS system](xref:Creating_a_DMS_in_the_cloud), these prerequisites are automatically met.
@@ -98,93 +98,105 @@ To deploy the package:
 
    ![Kata DCF Provisioned Elements](~/user-guide/images/kata_dcf_tutorial_1.png)
 
-1. Right-click the view **SLC_KATA_DCF** and *set as active Visio file* the file **kata_dcf_view.vsdx**. This Visio file will be available in the context menu when selecting the option *Existing*.
+1. In the Cube Surveyor, select the view **SLC_KATA_DCF**.
 
-> [!TIP]
-> For more information on how to set a Visio file as active, see [Editing a Visual Overview in DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube).
+1. Right-click the *VISUAL* page, select *Set as active Visio file* > *Existing*, and select the file **kata_dcf_view.vsdx**.
 
-> [!NOTE]
->
-> In case the Visio file is not listed, you could try below options:
->
-> - If there is access to the *C:\Skyline DataMiner* folder, the Visio file can be found in the folder *C:\Skyline DataMiner\Views*.
-> - If there is no access to the *C:\Skyline DataMiner* folder, try restarting the DMA. After restarting the DMA, the Visio file should be listed when assigning an existing Visio file.
+   If you cannot see that Visio file listed in the window, click *Other file* and browse to the folder *C:\Skyline DataMiner\Views*. You will be able to select the file there. If you do not have access to this folder, restarting the DMA will also make the Visio file become available in the window.
+
+   > [!TIP]
+   > See also: [Editing a Visual Overview in DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube).
 
 ## Step 2: Create external DCF connections
 
 1. Define connections between the router and switches:
 
-   1. Right-click the element **RO-01**, select *Properties*, and go to the *connectivity* tab.
+   1. In the *00_ROUTER* view, right-click the element **RO-01**, and select *Properties*.
 
-   1. Go to the *external* tab.
+   1. In the *Properties* window, go to the *connectivity* > *external* tab.
 
-   1. In the *State* column, select *Connected* for the interface **Port Ethernet 1/1**.
+   1. In the *State* column, select *Connected to* for the interface *Port Ethernet 1/1*.
 
    1. In the *External* column, select the element **SW-01**.
 
-   1. In the *Interface* column, select the interface **Port Ethernet 1/1**.
+   1. In the *Interface* column on the right, select the interface *Port Ethernet 1/1*.
 
       ![DCF Connection Visual Overview](~/user-guide/images/kata_dcf_tutorial_2.png)
 
-   1. Click the *Apply* button to apply these changes. Once the connection is created, the Visio file assigned to the view **SLC_KATA_DCF** should display the DCF connection
+   1. Click the *Apply* button in the lower right corner.
+
+      This will apply your changes and create the connection. The *VISUAL* page of the *SLC_KATA_DCF* view will display the DCF connection.
 
       ![DCF Connection Visual Overview](~/user-guide/images/kata_dcf_tutorial_3.png)
 
-   1. In the *State* column, select *Connected* for the interface **Port Ethernet 1/2**.
+   1. Still in the *Properties* window, in the *State* column, select *Connected to* for the interface *Port Ethernet 1/2*.
 
-   1. In the *External* column, select now the element **SW-02**.
+   1. In the *External* column for this interface, select the element *SW-02*.
 
-   1. In the *Interface* column, select the interface **Port Ethernet 1/1**. This new connection should be displayed in the visual overview.
+   1. In the *Interface* column on the right, select the interface *Port Ethernet 1/1*.
+
+   1. Click *Apply*.
+
+      This new connection should now also be displayed in the visual overview.
+
+   1. Click *OK* to close the *Properties* window.
 
 1. Define connections between the switches and PCs:
 
-   1. Right-click the element **SW-01**, select *Properties*, and go to the *connectivity* tab.
+   1. In the *01_SWITCH* view, right-click the element **SW-01**, and select *Properties*.
 
-   1. Go to the *external* tab.
+   1. In the *Properties* window, go to the *connectivity* > *external* tab.
 
-   1. In the *State* column, select *Connected* for the interface **Port Ethernet 1/2**.
+      You will notice that there already is a connection for interface *Port Ethernet 1/1*. This is because DCF creates both connections on both ends.
 
-      > [!NOTE]
-      > You will notice that there is already a connection in interface **Port Ethernet 1/1**. This is because DCF creates both connections on both ends.
+   1. In the *State* column, select *Connected to* for the interface *Port Ethernet 1/2*.
 
-   1. In the *External* column, select the element **PC-01**.
+   1. In the *External* column, select the element *PC-11*.
 
-   1. In the *Interface* column, select the interface **Port Ethernet 1/1**. This new connection should be displayed in the visual overview.
+   1. In the *Interface* column, select the interface *Port Ethernet 1/1*.
 
-Proceed with the remaining connections according to the diagram above.
+   1. Click *Apply*.
+
+      The new connection should be displayed in the visual overview.
+
+1. In the same way as detailed above, create the remaining connections according to the [diagram above](#objective).
 
 > [!NOTE]
-> For the next steps, it is required to create all the DCF connections, according to the diagram above.
+> Before you proceed to the next step, make sure all the DCF connections [shown in the diagram](#objective) have been created.
 
 ## Step 3: Create a node edge graph using DCF connections
 
 1. Go to the [Dashboards app](xref:Accessing_the_Dashboards_app).
 
-1. In the pane on the left, navigate to *KATA_DCF* > *KATA_DCF* to open the *Node_Edge* dashboard.
+1. In the pane on the left, in the *KATA_DCF* folder, select the *KATA_DCF* dashboard.
 
 1. Click the pencil icon in the dashboard header bar to start editing the dashboard.
 
 1. Drag a *Node edge graph* visualization from the pane on the left onto the dashboard.
 
-![Node edge graph visualization](~/user-guide/images/kata_dcf_tutorial_4.png)
+   ![Node edge graph visualization](~/user-guide/images/kata_dcf_tutorial_4.png)
 
-1. In the *Data pane* on the right, expand the *Queries* node, and drag the following queries to the visualization were added:
+1. Drag the edges of the node edge graph component to resize it so that it will be large enough to easily show all nodes in the diagram.
 
-- *DCF_ELEMENTS*: This GQI query contains the nodes
+1. In the *Data pane* on the right, expand the *Queries* node, and drag the following queries to the node edge graph component:
 
-- *DCF_CONNECTIONS*: This GQI query contain the connections between the nodes
+   - *DCF_ELEMENTS*: This GQI query contains the nodes
 
-  ![Add queries to the visualization](~/user-guide/images/kata_dcf_tutorial_5.png)
+   - *DCF_CONNECTIONS*: This GQI query contain the connections between the nodes
 
-> [!NOTE]
->
-> Although the GQI query *DCF_INTERFACES* is not used directly in the node edge graph, it is used by the GQI query *DCF_CONNECTIONS*. The GQI query *DCF_INTERFACES* contains the link between the DCF interfaces and the parameters from the element.
+   ![Add queries to the visualization](~/user-guide/images/kata_dcf_tutorial_5.png)
+
+   > [!NOTE]
+   >
+   > Although the GQI query *DCF_INTERFACES* is not used directly in the node edge graph, it is used by the GQI query *DCF_CONNECTIONS*. The GQI query *DCF_INTERFACES* contains the link between the DCF interfaces and the parameters from the element.
 
 ## Step 4: Configure the nodes
 
-1. Click the node edge graph component you have added to select it.
+1. Select the node edge graph component you have added.
 
-1. Select the *Settings* pane on the right. The queries you added earlier will be listed under *Unassigned queries*
+1. Select the *Settings* pane on the right.
+
+   The queries you added earlier will be listed under *Unassigned queries*.
 
 1. Under the query *DCF_ELEMENTS*, select *Set as node*.
 
@@ -192,11 +204,11 @@ Proceed with the remaining connections according to the diagram above.
 
    The selected query will be moved to the bottom of the pane.
 
-1. For the same query, set *Node ID column* to the column *Element ID*.
+1. For the same query, make sure *Node ID column* is set to the column *Element ID*.
 
-   This way, you indicate that the *Element ID* column contains the ID representing the different entities that should be shown as nodes.
+   This indicates that the *Element ID* column contains the ID representing the different entities that should be shown as nodes.
 
-   Nine nodes will be now displayed in the node edge graph component, representing the router, switches, and PCs. By default, the icon displayed for each node is a circle.
+   Nine nodes should now be displayed in the node edge graph component, representing the router, switches, and PCs. By default, the icon displayed for each node is a circle.
 
    ![Nodes available in the GQI query](~/user-guide/images/kata_dcf_tutorial_7.png)
 
@@ -212,26 +224,32 @@ Proceed with the remaining connections according to the diagram above.
 
       ![Select node as router](~/user-guide/images/kata_dcf_tutorial_9.png)
 
-   1. In the *Weight* box, specify `3`. This will ensure that the node representing the router is positioned at the top of the component. This is because with the default layout settings, the higher the weight of a node, the higher of the node in the graph.
+   1. In the *Weight* box, specify `3`.
 
-   1. In the *Shape* box, select *Hexagon*. The node representing the router will now have a hexagon shape behind. Optionally you can also change the color of the shape by clicking the colored circle to the right of the *Shape* box
+      This will ensure that the node representing the router is positioned at the top of the component. This is because with the default layout settings, the higher the weight of a node, the higher the position of the node in the graph.
 
-   1. In the *Icon* box, change select *NetworkDeviceScanning*.
+   1. In the *Shape* box, select *Hexagon*.
+
+      The node representing the router will now have a hexagon shape. Optionally you can also change the color of the shape by clicking the colored circle to the right of the *Shape* box
+
+   1. In the *Icon* box, select the icon *NetworkDeviceScanning*.
 
       > [!NOTE]
       > To quickly find a specific icon in the list, start typing the name of the icon in the box.
 
-   1. In the *Label* box, select *Name*. The name of the device should now be displayed below the nodes.
+   1. In the *Label* box, make sure *Name* is selected.
+
+      The name of the device should now be displayed below the nodes.
 
       ![Router node fully configured](~/user-guide/images/kata_dcf_tutorial_10.png)
 
-1. Add an override for the **switch** node:
+1. Add an override for the **switch** nodes:
 
    1. Click *Add Override* again.
 
    1. In the *Filter* box, select *Description*, and enter the value `SWITCH` in the box on the right.
 
-   1. Keep the *Weight* set to 2.
+   1. Set the *Weight* to 2.
 
       This will ensure that the nodes representing the switches are positioned below the router node.
 
@@ -241,11 +259,13 @@ Proceed with the remaining connections according to the diagram above.
 
    1. In the *Icon* box, select *Switch*.
 
-   1. In the *Label* box, select *Name*. The nodes should now look like this:
+   1. In the *Label* box, make sure *Name* is selected.
 
-      ![Switch node fully configured](~/user-guide/images/kata_dcf_tutorial_11.png)
+   The nodes should now look like this:
 
-1. Add an override for the **pc** node:
+   ![Switch node fully configured](~/user-guide/images/kata_dcf_tutorial_11.png)
+
+1. Add an override for the **PC** nodes:
 
    1. Click *Add Override* again.
 
@@ -261,7 +281,7 @@ Proceed with the remaining connections according to the diagram above.
 
    1. In the *Icon* box, select *ThisPC*.
 
-   1. In the *Label* box, select *Name*.
+   1. In the *Label* box, make sure *Name* is selected.
 
 The nodes should now look like this:
 
@@ -273,26 +293,34 @@ The nodes should now look like this:
 
    The query will be moved to the bottom of the pane.
 
-1. In the *Source* box, select *Source Device ID*.
+1. In the *Source* box, make sure *Source element ID* is selected.
 
-1. In the *Destination* box, select *Destination Device ID*.
+1. In the *Destination* box, make sure *Destination element ID* is selected.
 
-   The edges connecting the router and switches will now be displayed in the node-edge graph visualization.
+The edges connecting the router and switches will now be displayed in the node-edge graph visualization.
 
-   ![Edges between router and switch nodes](~/user-guide/images/kata_dcf_tutorial_13.png)
+![Edges between router and switch nodes](~/user-guide/images/kata_dcf_tutorial_13.png)
 
 ## Step 6: Display KPIs related to a connection
 
-By default, when clicking in a connection you will be able to see all the information related to the connection:
+By default, when you click a connection in the graph, all the information related to the connection is displayed:
 
 ![Default Connection Details](~/user-guide/images/kata_dcf_tutorial_14.png)
 
-The objective will be to display only the parameters *Operational State* and *Bitrate* in the details related to the connection.
+In this step, you will limit the displayed information so that only the parameters *Operational State* and *Bitrate* will be shown in the connection details.
 
-1. Go to the GQI query "DCF_CONNECTION" and drag and drop the columns *Bit Rate* and *Operational Status*
+1. In the *data* pane, expand *Queries* > *DCF_CONNECTIONS*.
 
-![Filtering columns from the query](~/user-guide/images/kata_dcf_tutorial_15.png)
+   The different columns of the *DCF_CONNECTIONS* query will be shown.
 
-When clicking on a connection, you should be able to see only these two properties:
+1. Drag and drop the columns *Bit Rate* and *Operational State* to the node edge graph component as filters.
 
-![Filtered Connection Details](~/user-guide/images/kata_dcf_tutorial_16.png)
+   ![Filtering columns from the query](~/user-guide/images/kata_dcf_tutorial_15.png)
+
+1. Click the pencil icon in the dashboard header again to stop editing the dashboard.
+
+1. Select a connection on the dashboard.
+
+   Only the following properties should now be shown:
+
+   ![Filtered Connection Details](~/user-guide/images/kata_dcf_tutorial_16.png)
