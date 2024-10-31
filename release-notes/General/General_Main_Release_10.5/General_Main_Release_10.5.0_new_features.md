@@ -9,6 +9,9 @@ uid: General_Main_Release_10.5.0_new_features
 
 ## Highlights
 
+- [DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID 37891]](#dataminer-object-models-creating-updating-and-deleting-multiple-dom-instances-in-one-call-id-37891)
+- [Alarms - Behavioral anomaly detection: User feedback [ID 38707] [ID 38980] [ID 39944]](#alarms---behavioral-anomaly-detection-user-feedback-id-38707-id-38980-id-39944)
+- [Storage as a Service: Proxy support [ID 39221]](#storage-as-a-service-proxy-support-id-39221-id-39313)
 - [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
