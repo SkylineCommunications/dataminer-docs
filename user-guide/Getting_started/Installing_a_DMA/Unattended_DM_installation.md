@@ -5,7 +5,7 @@ uid: Unattended_DM_installation
 # Unattended DataMiner installation
 
 > [!IMPORTANT]
-> This feature is deprecated. It is no longer available starting from version 10.4 of the DataMiner Installer.
+> This feature is currently only available if the deprecated 10.2 or 10.0 DataMiner Installer is used. It is not yet available with more recent installers.
 
 The unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
