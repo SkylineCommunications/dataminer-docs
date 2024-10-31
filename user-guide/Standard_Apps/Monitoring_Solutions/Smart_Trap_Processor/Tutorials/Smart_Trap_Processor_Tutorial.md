@@ -4,9 +4,7 @@ uid: Smart_Trap_Processor_Tutorial
 
 # Getting started with the Smart Trap Processor
 
-The Smart Trap Processor is a powerful tool that allows you to define rules for collecting and processing SNMP traps from various sources. With this tool, you can specify which traps to capture, filter, transform, and display in a user-friendly application interface. The Trap Processor simplifies the monitoring of the most important system events and ensures appropriate alarm levels are assigned. By enabling the team to control message volume, this tool also helps to prevent alert fatigue.
-
-This tutorial will supply you with the tools and skills needed to understand and utilize the Smart Trap Processor by creating and configuring trap rules in different ways to process traps.
+In this tutorial, you will learn how to get started with the Smart Trap Processor tool and define rules for collecting and processing SNMP traps from various sources.
 
 Expected duration: 30 minutes.
 
@@ -31,7 +29,7 @@ This tutorial consists of the following steps:
 
 ## Step 1: Deploy the Smart Trap Processor Training package from the Catalog
 
-1. Go to <https://catalog.dataminer.services/details/24f3c73d-2926-48a4-9486-cc34ddfca901>.
+1. Go to the [Smart Trap Processor Training](https://catalog.dataminer.services/details/24f3c73d-2926-48a4-9486-cc34ddfca901) package in the DataMiner Catalog.
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
@@ -43,15 +41,16 @@ This tutorial consists of the following steps:
    - A **view** named *Smart Trap Processor*.
    - An **element** named *Smart Trap Processor*.
    - An **element** named *Trap Simulator*.
-   - An **app** called *Smart Trap Processor*.
 
-![Surveyor view](~/user-guide/images/TrapProcessor_SurveyorView.png)
+   ![Surveyor view](~/user-guide/images/TrapProcessor_SurveyorView.png)
+
+1. Browse to the [landing page of your DMA](xref:Accessing_custom_apps), and check if the *Smart Trap Processor* app is available.
 
 ## Step 2: Configure the Trap IP Sources
 
 Before the incoming traps can be processed as desired, you will need to configure a few parameters that will define what kind of traps will be filtered.
 
-1. Open the Smart Trap Processor Application.0
+1. Open the *Smart Trap Processor* app.
 
 1. Set the Trap IP Sources parameter to the IP address corresponding with the source of the SNMP traps sent to the DataMiner System. You can specify multiple IP addresses if needed, using a comma as separator. But in this case, you will set it to the local IP address of 127.0.0.1
 
@@ -74,7 +73,7 @@ The rules defined in the Rules Table determine which traps from the source are p
     - Set the **Priority** to *1*.
     - Set the **Event State Method** to *OID*.
     - Leave the **Event State Binding**, **Event Value Set**, and **Event Value Clear** empty for now.
-    - Set the **Raw OID Set** to *1.3.6.1.4.1.9.9.548.1.3.1.1.3*. 
+    - Set the **Raw OID Set** to *1.3.6.1.4.1.9.9.548.1.3.1.1.3*.
     - Set the **Raw OID Clear** to *1.3.6.1.4.1.9.9.548.1.3.1.1.4*.
     - Set the **Unique Entry** to *$1/$2/$8*.
     - Set the **Alarm Set** to *$9*.
@@ -87,7 +86,7 @@ The rules defined in the Rules Table determine which traps from the source are p
 
 ## Step 4: Configure the Source Name Table
 
-You can optionally configure the names that should be used the Source Name parameter in the Processed Traps table. 
+You can optionally configure the names that should be used the Source Name parameter in the Processed Traps table.
 
 ![Trap Processor Source Name Table](~/user-guide/images/TrapProcessor_SourceNameTable.png)
 
@@ -143,8 +142,8 @@ Traps come in different formats, instead of the Trap OID specifying if a trap is
 
 1. Change the **Raw OID Set** and the **Raw OID Clear** to *1.3.6.1.4.1.9.9.548.1.3.1.1.5*.
 
-1. Go back to the *Trap Simulator* element on cube and notice the last two traps. They have the same Trap OID, but the value on Binding 10 corresponds to the set and clear. 
+1. Go back to the *Trap Simulator* element on cube and notice the last two traps. They have the same Trap OID, but the value on Binding 10 corresponds to the set and clear.
 
-1. On the seventh row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm it has been processed. 
+1. On the seventh row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm it has been processed.
 
 1. Go back to the *Trap Simulator* element on cube, on the eighth row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm the same row has been updated to clear.
