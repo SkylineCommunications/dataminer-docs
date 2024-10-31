@@ -25,4 +25,4 @@ DataMiner Experience and Performance Management (EPM) is a software platform spe
 
 | Name | Description |
 |--|--|
-| [Smart Trap Processor Tutorial](xref:Smart_Trap_Processor_Tutorial) | Learn to configure trap rules in different ways to process traps. |
+| [Getting started with the Smart Trap Processor](xref:Smart_Trap_Processor_Tutorial) | Learn to configure trap rules in different ways to process traps. |

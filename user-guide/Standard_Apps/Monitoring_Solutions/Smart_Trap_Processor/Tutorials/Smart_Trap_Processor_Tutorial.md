@@ -2,7 +2,7 @@
 uid: Smart_Trap_Processor_Tutorial
 ---
 
-# Smart Trap Processor Tutorial
+# Getting started with the Smart Trap Processor
 
 The Smart Trap Processor is a powerful tool that allows you to define rules for collecting and processing SNMP traps from various sources. With this tool, you can specify which traps to capture, filter, transform, and display in a user-friendly application interface. The Trap Processor simplifies the monitoring of the most important system events and ensures appropriate alarm levels are assigned. By enabling the team to control message volume, this tool also helps to prevent alert fatigue.
 
@@ -15,7 +15,7 @@ Expected duration: 30 minutes.
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
-> A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box and has most soft-launch options enabled, so it automatically meets this requirement.
+> If you use a [DaaS system](xref:Creating_a_DMS_on_dataminer_services), these prerequisites are automatically met.
 
 ## Overview
 
@@ -33,16 +33,17 @@ This tutorial consists of the following steps:
 
 1. Go to <https://catalog.dataminer.services/details/24f3c73d-2926-48a4-9486-cc34ddfca901>.
 
-2. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-3.	In DataMiner Cube, check whether the following items have been added to your DataMiner Agent:
-    - A **view** named *Smart Trap Processor*.
-    - An **element** named *Smart Trap Processor*.
-    - An **element** named *Trap Simulator*.
-    - An **app** called *Smart Trap Processor*.
+1. In DataMiner Cube, check whether the following items have been added to your DataMiner Agent:
+
+   - A **view** named *Smart Trap Processor*.
+   - An **element** named *Smart Trap Processor*.
+   - An **element** named *Trap Simulator*.
+   - An **app** called *Smart Trap Processor*.
 
 ![Surveyor view](~/user-guide/images/TrapProcessor_SurveyorView.png)
 
@@ -52,7 +53,7 @@ Before the incoming traps can be processed as desired, you will need to configur
 
 1. Open the Smart Trap Processor Application.0
 
-2. Set the Trap IP Sources parameter to the IP address corresponding with the source of the SNMP traps sent to the DataMiner System. You can specify multiple IP addresses if needed, using a comma as separator. But in this case, you will set it to the local IP address of 127.0.0.1
+1. Set the Trap IP Sources parameter to the IP address corresponding with the source of the SNMP traps sent to the DataMiner System. You can specify multiple IP addresses if needed, using a comma as separator. But in this case, you will set it to the local IP address of 127.0.0.1
 
 ![Smart Trap Processor IP Sources](~/user-guide/images/TrapProcessor_IPSources.png)
 
@@ -65,8 +66,8 @@ The rules defined in the Rules Table determine which traps from the source are p
 
 ![Trap Processor Rules Table](~/user-guide/images/TrapProcessor_RulesTable.png)
 
-1.	On the Rules Table, click **Add Rule**, which will add a row to the table:
-    
+1. On the Rules Table, click **Add Rule**, which will add a row to the table:
+
     - Set the **Rule Status** to *Enabled*.
     - Set the **Rule Type** to *Regular*.
     - Leave the **Heartbeat Interval** empty for now.
@@ -82,7 +83,7 @@ The rules defined in the Rules Table determine which traps from the source are p
     - Set the **Severity** to *$7*.
     - Set **Binding 1 Filter** to *Source 1*, and leave the other ones empty.
 
-2. Duplicate the rule and change the **Rule Type** to *Hearbeat*, set the **Heartbeat Interval** to *10 minutes*, and change **Binding 1 Filter** to **Heartbeat*.
+1. Duplicate the rule and change the **Rule Type** to *Hearbeat*, set the **Heartbeat Interval** to *10 minutes*, and change **Binding 1 Filter** to **Heartbeat*.
 
 ## Step 4: Configure the Source Name Table
 
@@ -112,17 +113,17 @@ You can optionally configure the values that should be used for the Source IP Na
 
 ![Trap Processor Simulator](~/user-guide/images/TrapProcessor_Simulator.png)
 
-1.	Go to the *Trap Simulator* element on cube. We see a total of 8 different traps that are pre-configured for the purpose of this tutorial.
+1. Go to the *Trap Simulator* element on cube. We see a total of 8 different traps that are pre-configured for the purpose of this tutorial.
 
-2.	On the first row, click **Send Trap**. This will send a trap with all the matching configurations we created on the *Rules Table*, allowing it to land on the *Processed Messages Table*. It also matches the Trap OID we set for **Raw OID Set**, so it will classify the trap as *Active* on the **Event State**. Go to the app and take a look at the *Processed Messages Table*. Notice the **Alarm**, **Source IP**, **Source IP Name**, **Source Name**, and the **Unique Entry** parameters we configured.
+1. On the first row, click **Send Trap**. This will send a trap with all the matching configurations we created on the *Rules Table*, allowing it to land on the *Processed Messages Table*. It also matches the Trap OID we set for **Raw OID Set**, so it will classify the trap as *Active* on the **Event State**. Go to the app and take a look at the *Processed Messages Table*. Notice the **Alarm**, **Source IP**, **Source IP Name**, **Source Name**, and the **Unique Entry** parameters we configured.
 
-3.	Go back to the *Trap Simulator* element on cube, on the second row, click **Send Trap**. This trap has the Trap OID we set for **RAW OID Clear**, so it will update the same row and classify the trap as *Cleared* on the **Event State**. Go to the app and take a look at the *Processed Messages Table*. Notice the **Trap Count** increase for this specific row.
+1. Go back to the *Trap Simulator* element on cube, on the second row, click **Send Trap**. This trap has the Trap OID we set for **RAW OID Clear**, so it will update the same row and classify the trap as *Cleared* on the **Event State**. Go to the app and take a look at the *Processed Messages Table*. Notice the **Trap Count** increase for this specific row.
 
-4.	Go back to the *Trap Simulator* element on cube, on the third row, click **Send Trap**. Notice the bindings on this trap are different. We configured our heartbeat traps to match Binding 1 with *Heartbeat, so this trap will populate on the *Heartbeat Traps Table*. Go back to the app and take a look at the *Heartbeat Traps Table*. On this table we have **Time Since Last Heartbeat** which displays the time since the last heartbeat trap was received, the **Heartbeat Interval**, which we defined on the heartbeat row on the Rules Table, and the **Heartbeat Status**, which is *OK* if the Time Since Last Heartbeat is less than or equal to the Heartbeat Interval, otherwise it’s *FAIL*.
+1. Go back to the *Trap Simulator* element on cube, on the third row, click **Send Trap**. Notice the bindings on this trap are different. We configured our heartbeat traps to match Binding 1 with *Heartbeat, so this trap will populate on the *Heartbeat Traps Table*. Go back to the app and take a look at the *Heartbeat Traps Table*. On this table we have **Time Since Last Heartbeat** which displays the time since the last heartbeat trap was received, the **Heartbeat Interval**, which we defined on the heartbeat row on the Rules Table, and the **Heartbeat Status**, which is *OK* if the Time Since Last Heartbeat is less than or equal to the Heartbeat Interval, otherwise it’s *FAIL*.
 
-5.	Go back to the *Trap Simulator* element on cube, on the fifth row, click **Send Trap**. Notice that the Binding 1 for this trap is Source 2, and we configured **Binding 1 Filter** on the *Rules Table* to filter only *Source 1*. So this trap will not appear on the Processed Messages Table.
+1. Go back to the *Trap Simulator* element on cube, on the fifth row, click **Send Trap**. Notice that the Binding 1 for this trap is Source 2, and we configured **Binding 1 Filter** on the *Rules Table* to filter only *Source 1*. So this trap will not appear on the Processed Messages Table.
 
-6.	Edit **Binding 1 Filter** on the *Rules Table* to *Source**. And click **Send Trap** on the fifth row again from the *Trap Simulator* element. Notice how it now is able to populate the table with a new row for that trap.
+1. Edit **Binding 1 Filter** on the *Rules Table* to *Source**. And click **Send Trap** on the fifth row again from the *Trap Simulator* element. Notice how it now is able to populate the table with a new row for that trap.
 
 ## Step 7: Configure a rule in case of a matching set/clear OID
 
@@ -130,21 +131,20 @@ Traps come in different formats, instead of the Trap OID specifying if a trap is
 
 ![Trap Processor Processed Messages](~/user-guide/images/TrapProcessor_ProcessMessages.png)
 
-1.	Go to the *Process Messages Table* and click **clear** to clear the table.
+1. Go to the *Process Messages Table* and click **clear** to clear the table.
 
-2.	Go back to the *Rules Table* and modify the **Event State Method** parameter of the Regular rule row to *Binding*.
+1. Go back to the *Rules Table* and modify the **Event State Method** parameter of the Regular rule row to *Binding*.
 
-3.	Initialize the **Event State Binding** to *$10*, corresponding to Binding 10.
+1. Initialize the **Event State Binding** to *$10*, corresponding to Binding 10.
 
-4.	Initialize the **Event Value Set** to *Set*.
+1. Initialize the **Event Value Set** to *Set*.
 
-5.	Initialize the **Event Value Clear** to *Clear*.
+1. Initialize the **Event Value Clear** to *Clear*.
 
-6.	Change the **Raw OID Set** and the **Raw OID Clear** to *1.3.6.1.4.1.9.9.548.1.3.1.1.5*.
+1. Change the **Raw OID Set** and the **Raw OID Clear** to *1.3.6.1.4.1.9.9.548.1.3.1.1.5*.
 
-7.	Go back to the *Trap Simulator* element on cube and notice the last two traps. They have the same Trap OID, but the value on Binding 10 corresponds to the set and clear. 
+1. Go back to the *Trap Simulator* element on cube and notice the last two traps. They have the same Trap OID, but the value on Binding 10 corresponds to the set and clear. 
 
-8.	On the seventh row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm it has been processed. 
+1. On the seventh row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm it has been processed. 
 
-9.	Go back to the *Trap Simulator* element on cube, on the eighth row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm the same row has been updated to clear.
-
+1. Go back to the *Trap Simulator* element on cube, on the eighth row, click **Send Trap**. Go to the app and take a look at the *Processed Messages Table* to confirm the same row has been updated to clear.
