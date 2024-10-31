@@ -14,14 +14,14 @@ items:
         topicUid: ChatOps_Tutorials
       - name: CI/CD tutorials
         topicUid: CICD_Tutorials
+      - name: Connectivity Framework (DCF) tutorials
+        topicUid: DCF_tutorials
       - name: Correlation tutorials
         topicUid: Correlation_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
-      - name: DataMiner Connectivity Framework (DCF) tutorials
-        topicUid: DCF_tutorials
       - name: DataMiner EPM tutorials
         topicUid: EPM_tutorials
       - name: DataMiner IDP tutorials
