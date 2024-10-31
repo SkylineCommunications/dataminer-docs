@@ -618,3 +618,5 @@ items:
     items:
       - name: Switching objects
         topicUid: SwitchingObjects
+      - name: Swarming bookings
+        topicUid: SwarmingBookings
