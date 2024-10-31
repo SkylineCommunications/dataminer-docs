@@ -7,6 +7,98 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.2.1
+
+#### API changes for improved performance
+
+Version 1.1.2.1 introduces some changes (of which some are breaking) to the class library API to reduce the number of SLNet calls that are executed in the background.
+
+**Extended IDms interface**
+
+The IDms interface has been extended with additional methods for retrieving an object that represents an existing DataMiner object (without checking whether it actually exists):
+
+- IDma GetAgentReference(int agentId)
+- IDmsElement GetElementReference(DmsElementId dmsElementId)
+- IDmsView GetViewReference(int viewId)
+
+These methods can be used as an alternative to the IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) methods.
+The IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) methods will in the background perform an SLNet call to request info about the item.
+
+Using the GetAgentReference, GetElementReference or GetViewReference methods, this additional SLNet call will only be called when information is requested.
+Therefore if you perform a set, e.g. a parameter set on an element, the SetParameterMessage SLNet call in the background without having to request additional data from SLNet.
+
+Note, however, if you create you request a reference to an object that does not exist on the System by providing an invalid ID, an exception will only be thrown when a call to the server is performed. Using the IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) method will already throw an exception if the Agent does not exist when the method executes.
+
+In summary, you can use these methods if you are sure the item exists which can result in improved performance because some additional SLNet calls can be avoided.
+If you do not know the item exists, you should use the IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) method.
+
+Behavior prior to this RN:
+
+```csharp
+var dms = protocol.GetDms();
+var element = dms.GetElement(new DmsElementId(346, 100)); // Performs an SLNet call to obtain info about the element.
+var parameter = element.GetStandaloneParameter<double?>(10);
+parameter.SetValue(100); // Throws ElementStoppedException in case the State property of the ElementInfoEvent message obtained in the GetElement call indicates the element is stopped. In this case no server call is executed.
+```
+
+Behavior since this RN:
+
+```csharp
+var dms = protocol.GetDms();
+var element = dms.GetElement(new DmsElementId(346, 100)); // Performs an SLNet call to obtain info about the element.
+var parameter = element.GetStandaloneParameter<double?>(10);
+parameter.SetValue(100); // Does not check State property of the ElementInfoEvent message obtained in the GetElement call indicates the element is stopped. Server call is executed.
+```
+
+Alternative to avoid additional SLNet call:
+
+```csharp
+var dms = protocol.GetDms();
+var element = dms.GetElementReference(new DmsElementId(346, 100)); // No SLNet call executed.
+var parameter = element.GetStandaloneParameter<double?>(10);
+parameter.SetValue(100); // Does not check State property of the ElementInfoEvent message obtained in the GetElement call indicates the element is stopped. Server call is executed.
+```
+
+**Breaking changes**
+
+Note also that the API has some breaking changes with regard to exceptions that are being thrown because the State property for an element is not checked anymore before a set executes.
+This means that some calls no longer throw an ElementStoppedException but instead a ElementNotFoundException (or no exception at all).
+Refer to the XML documentation on the methods to see if/when an exception is now thrown.
+
+- IDmsElement.GetStandaloneParameter\<T\> no longer throws an ElementNotFoundException
+- IDmsElement.GetTable no longer throws an ElementNotFoundException
+- IDmsColumn.GetAlarmLevel no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsColumn.GetDisplayValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsColumn\<T\>.GetValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsColumn.Lookup no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsColumn\<T\>.SetValue no longer throws an exception
+- IDmsStandaloneParameter.GetAlarmLevel no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsStandaloneParameter.GetDisplayValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsStandaloneParameter\<T\>.GetValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsStandaloneParameter\<T\>.SetValue no longer throws an exception
+- IDmsTable.AddRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsTable.DeleteRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsTable.DeleteRows no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsTable.GetDisplayKey no longer throws an ElementStoppedException but instead will return null if the element is stopped
+- IDmsTable.GetDisplayKeys no longer throws an ElementStoppedException but instead will return an empty set if the element is stopped
+- IDmsTable.GetPrimaryKey no longer throws an ElementStoppedException but instead will return null if the element is stopped
+- IDmsTable.GetPrimaryKeys no longer throws an ElementStoppedException but instead will return an empty set if the element is stopped
+- IDmsTable.GetRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsTable.GetRows no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsTable.RowExists no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+- IDmsTable.SetRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+
+**Updated/changed SLNet calls**
+
+Additionally, some changes have been made to the SLNet calls that are executed in the background:
+
+- When info for a single view is requested, the GetInfo message of type ViewInfo will now have the viewId mentioned in the ExtraData property of the SLNet call. If the request is sent to a DataMiner verion that supports this (see RN41169, then DataMiner will only proivde info in the response for that view instead of all.
+- When property configurations are requests, the GetINfo message of type PropertyConfiguration will now include type requested type (e.g. ELEMENT, SERVICE or VIEW) so rthe response only includes the property configurations of the requested type.
+- The ReferencedVersion property of IDmsProtocol will now be obtained via a GetInfo SLNet call of type Protocols instead of the GetProtocolMessage. Perfomrance tests indicate that this is a less impacting call.
+
+Note that only DataMiner versions where RN 41169 is implemented DataMiner will respond with only the requested information. If the request is made to an older DataMiner version,
+all info will be in the response. In that case, class library will just filter out the needed info.
+
 ### 1.1.1.12
 
 #### Fix - Breaking change reverted for InterAppCalls
