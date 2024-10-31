@@ -43,10 +43,10 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
 
 <div class="row"> 
   <div class="column">
-    <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>
+    <a href="/tutorials/Data_sources_tutorials.html" title="Data Sources tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Data_Sources.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/tutorials/Data_sources_tutorials.html" title="Data Sources tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Data_Sources.svg" style="width:100%"></a>
+    <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/tutorials/DOM_tutorials.html" title="DOM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DOM.svg" style="width:100%"></a>
@@ -61,11 +61,14 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
     <a href="/tutorials/Spectrum_Analysis_tutorials.html" title="Spectrum Analysis tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Spectrum_Analysis.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/tutorials/User-defined_APIs_Tutorials.html" title="User-defined APIs tutorials" target="_self"><img src="~/tutorials/images/Tutorials_User-Defined_APIs.svg" style="width:100%"></a>
+    <a href="/tutorials/Standard_Apps_Solutions_Tutorials.html" title="Standard Apps & Solutions tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Standard_Apps_Solutions.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/tutorials/User-defined_APIs_Tutorials.html" title="User-defined APIs tutorials" target="_self"><img src="~/tutorials/images/Tutorials_User-Defined_APIs.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/tutorials/Visio_Tutorials.html" title="Visual Overview tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Visual_Overview.svg" style="width:100%"></a>
   </div>  
