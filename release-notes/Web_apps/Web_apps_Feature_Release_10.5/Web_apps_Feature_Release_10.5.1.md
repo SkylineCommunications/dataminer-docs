@@ -35,12 +35,6 @@ This type of action will allow users to set the current value of any variable th
 
 ### Fixes
 
-#### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
-
-<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
-
-When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
-
 #### Legacy Reporter would leak memory when requesting history alarms [ID 41247]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
