@@ -15,3 +15,85 @@ You will carry out the following tasks:
 7. Delete a destination
 
 Expected duration: 15 minutes
+
+> [!NOTE] 
+> The content and screenshots for this tutorial have been created using DataMiner version 10.4.8 and Ping Monitoring solution version 1.0.1-CU12. <!-- Fill in the correct version. This way, if the tutorial is no longer up to date with the latest version of DataMiner, users will know why their system might show something different. -->
+
+## Prerequisites
+
+ - DataMiner version 10.3.9-CU2 or higher
+ - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and your organization has been verified. See [Getting your organization verified](xref:Cloud_connection_verification).
+
+> [!TIP]
+> See also [Deploying a Catalog item to your system | DataMiner Docs](xref:Deploying_A_DataMiner_Connector_to_your_system)
+
+## Step 1: Deploy Ping Monitoring package from Catalog
+
+1. Locate [Ping Monitoring | Catalog (dataminer.services)](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96)    
+2. Deploy to your system. See [Deploying a Catalog item to your system | DataMiner Docs](xref:Deploying_A_DataMiner_Connector_to_your_system)
+
+## Step 2: Open the application installed in your system
+The newly installed application will be visible when you open your system homepage URL.
+
+![root](~/user-guide/images/DMAroot-PingMonitoring.png)
+
+If you don’t know where to find the homepage URL, open https://dataminer.services/ in a browser, and you can copy the URL or click the Home button.
+
+![dataminer.services](~/user-guide/images/dataminerservices-PingMonitoring.png)
+
+This is what the application will look like when you first open it in a browser:
+
+![new system](~/user-guide/images/brand_new_destinations-PingMonitoring.png)
+
+> [!TIP]
+> See also [Ping Monitoring UI overview | DataMiner Docs](xref:Ping_Monitoring_UI)
+
+## Step 3: Create a new group
+
+Groups are used to organize the destinations configured in the application. Destinations that belong to the same group share the same properties that differentiate them from other destinations.
+For more information on the different options available, see [creating a new group](xref:Ping_Monitoring_managing_groups_destinations.html#creating-a-new-group).
+
+1. Create a group that you will use during the rest of this tutorial when creating new destinations.
+
+![new group](~/user-guide/images/Create_New_Group-PingMonitoring.png)
+
+## Step 4: Create a new destination
+
+A destination is a point in the network you want to test against. The Ping Monitor application allows you to easily manage hundreds and even thousands of destinations to monitor the availability of different devices and services in your network. See [adding a new destination](xref:/Ping_Monitoring_managing_groups_destinations.html#adding-a-new-destination).
+
+1. Create one or more destinations using IP addresses or hostnames accessible on the public internet, such as 8.8.8.8 (Google DNS)
+
+![new destination](~/user-guide/images/Create_New_Destination-PingMonitoring.png)
+
+## Step 5: Analyze the results
+
+After configuring your destination(s), the application will update to display the results of the latest test cycles.
+
+1. Capture a screenshot of the Destinations table (similar to the one below), ensuring all columns are clearly visible.
+
+> [!IMPORTANT]
+> Assignment:
+> Upload the screenshot to earn points for having completed this exercise. Additional points are awarded if participants manage to complete the challenge within the week.
+
+Pay special attention to the value in the following columns:
+
+**Ping Result:** The amount of time passed from the moment DataMiner sent the command to the moment it received the reply from each destination, e.g., 4 ms_.
+**Cycle packet loss**: The percentage of lost packets during the last ping cycle, e.g., 0.00 %. By default, the application sends 4 packets in every cycle, configurable for each destination.
+
+These values can help you monitor network congestion and detect outages. For more ideas, see [Ping Monitoring Use Cases - DataMiner Dojo](https://community.dataminer.services/use-case/ping-monitoring/).
+
+![destinations](~/user-guide/images/destinations-PingMonitoring.png)
+
+## Step 6: Filter and access destination details
+
+1. Open the Grid View, which shows all the active destinations sorted by cycle packet loss.
+2. Use the filter panel to the left of the grid to look for specific destinations.
+3. Click on any destination to open its details, which include Host Information, Results, and Settings.
+
+![filtering and details](~/user-guide/images/Filter_Details-PingMonitoring.png)
+
+## Step 7: Delete a destination
+
+To finalize this tutorial, you will delete one or more of the destinations you created. Please take a look at [deleting a destination](xref:Ping_Monitoring_managing_groups_destinations.html#deleting-a-destination) if you have questions on how to do so.
+
+![delete destination](~/user-guide/images/Delete_Destination-PingMonitoring.png)
