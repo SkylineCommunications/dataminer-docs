@@ -114,6 +114,17 @@ items:
         topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: Dataminer Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool
+        items:
+          - name: Installation
+            topicUid: DataMiner_Health_Check_Tool_Installation
+          - name: Configuration
+            topicUid: DataMiner_Health_Check_Tool_Configuration
+          - name: How to use
+            topicUid: DataMiner_Health_Check_Usage
+          - name: Dashboards
+            topicUid: DataMiner_Health_Dashboards
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
