@@ -115,7 +115,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Purpose:** List essential technical requirements needed for deployment.
 
-**Format:** 1-3 concise bullet points, limited to information that is strictly necessary.
+**Format:** Concise bullet points, limited to information that is strictly necessary.
 
 **applicable requirements**:
 
