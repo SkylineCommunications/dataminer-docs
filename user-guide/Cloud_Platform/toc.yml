@@ -65,10 +65,11 @@ items:
     topicUid: Looking_up_an_item_in_the_catalog
   - name: Registering a Catalog item
     topicUid: Register_Catalog_Item
+    items:
+    - name: Best practices when documenting Catalog items
+      topicUid: Best_Practices_When_Documenting_Catalog_Items
   - name: Deploying a Catalog item
     topicUid: Deploying_a_catalog_item
-  - name: Best practices when documenting Catalog items
-    topicUid: Best_Practices_When_Documenting_Catalog_Items
   - name: Tutorials
     items:
     - name: Registering a new connector in the Catalog
