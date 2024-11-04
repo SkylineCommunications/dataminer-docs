@@ -33,7 +33,7 @@ Yes, but limited. If a DMS has a perpetual license, it can only use "DataMiner.S
 
 ### Can I transition my perpetual licenses into a subscription?
 
-Yes. Get in touch with your Account Manager.
+Yes. Your Account Manager will be able to provide more information and assist you with this.
 
 ### Are there any sign-up fees or one-time fees for usage-based models?
 
