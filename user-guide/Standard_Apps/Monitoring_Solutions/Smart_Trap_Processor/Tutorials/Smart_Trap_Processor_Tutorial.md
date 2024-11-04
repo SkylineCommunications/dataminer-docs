@@ -48,65 +48,81 @@ This tutorial consists of the following steps:
 
 ## Step 2: Configure the Trap IP Sources
 
-Before the incoming traps can be processed as desired, you will need to configure a few parameters that will define what kind of traps will be filtered.
+Before the incoming traps can be processed as desired, you will need to configure a few parameters that will define what kinds of traps will be filtered.
 
 1. Open the *Smart Trap Processor* app.
 
-1. Set the Trap IP Sources parameter to the IP address corresponding with the source of the SNMP traps sent to the DataMiner System. You can specify multiple IP addresses if needed, using a comma as separator. But in this case, you will set it to the local IP address of 127.0.0.1
+1. On the *Processor Configuration* page, set the *Trap IP Sources* parameter to local IP address `127.0.0.1`.
+
+   This parameter needs to be set to the IP address corresponding with the source of the SNMP traps sent to the DataMiner System, which in the case of this demo setup is the system itself. In real setups, you can specify more than one IP address if needed, using a comma as separator.
 
 ![Smart Trap Processor IP Sources](~/user-guide/images/TrapProcessor_IPSources.png)
 
 ## Step 3: Configure the Rules Table
 
-The rules defined in the Rules Table determine which traps from the source are processed to be displayed and monitored in the Processed Traps table and Heartbeat Traps table.
+The rules defined in the *Rules Table* determine which traps from the source are processed to be displayed and monitored in the *Processed Traps* table and *Heartbeat Traps* table.
 
-> [!TIP]
-> For more information on these parameter: [Configuring Processing Rules](xref:Processor_configuration)
+1. Below the *Rules Table*, click the **Add Rule** button.
+
+   This will add a row to the table.
+
+1. Configure the new row as follows:
+
+   - Set the **Rule Status** to *Enabled*.
+   - Set the **Rule Type** to *Regular*.
+   - Leave **Heartbeat Interval** empty for now.
+   - Set the **Priority** to `1`.
+   - Set the **Event State Method** to *OID*.
+   - Leave **Event State Binding**, **Binding Value Set**, and **Binding Value Clear** empty for now.
+   - Set the **Raw OID Set** to `1.3.6.1.4.1.9.9.548.1.3.1.1.3`.
+   - Set the **Raw OID Clear** to `1.3.6.1.4.1.9.9.548.1.3.1.1.4`.
+   - Set the **Unique Entry** to `$1/$2/$8`.
+   - Set the **Alarm Set** to `$9`.
+   - Set the **Alarm Clear** to `$9`.
+   - Leave **Clear After** empty.
+   - Set the **Severity** to `$7`.
+   - Set **Binding 1 Filter** to `Source 1`, and leave the other fields empty.
+
+1. In the *Duplicate* column, click the button to duplicate the row.
+
+1. Change the **Rule Type** of the new row to *Heartbeat*, set the **Heartbeat Interval** to *10 minutes*, and change **Binding 1 Filter** to **Heartbeat*.
 
 ![Trap Processor Rules Table](~/user-guide/images/TrapProcessor_RulesTable.png)
 
-1. On the Rules Table, click **Add Rule**, which will add a row to the table:
-
-    - Set the **Rule Status** to *Enabled*.
-    - Set the **Rule Type** to *Regular*.
-    - Leave the **Heartbeat Interval** empty for now.
-    - Set the **Priority** to *1*.
-    - Set the **Event State Method** to *OID*.
-    - Leave the **Event State Binding**, **Event Value Set**, and **Event Value Clear** empty for now.
-    - Set the **Raw OID Set** to *1.3.6.1.4.1.9.9.548.1.3.1.1.3*.
-    - Set the **Raw OID Clear** to *1.3.6.1.4.1.9.9.548.1.3.1.1.4*.
-    - Set the **Unique Entry** to *$1/$2/$8*.
-    - Set the **Alarm Set** to *$9*.
-    - Set the **Alarm Clear** to *$9*.
-    - Leave the **Clear After** empty.
-    - Set the **Severity** to *$7*.
-    - Set **Binding 1 Filter** to *Source 1*, and leave the other ones empty.
-
-1. Duplicate the rule and change the **Rule Type** to *Hearbeat*, set the **Heartbeat Interval** to *10 minutes*, and change **Binding 1 Filter** to **Heartbeat*.
+> [!TIP]
+> For more information about the parameters in this table, see [Configuring processing rules](xref:Processor_configuration)
 
 ## Step 4: Configure the Source Name Table
 
-You can optionally configure the names that should be used the Source Name parameter in the Processed Traps table.
+In this step, you will configure the names that will be used for the *Source Name* parameter in the *Processed Traps* table. This is optional.
+
+1. Below the *Source Name Table*, click the **Add Source Name** button.
+
+   This will add a row to the table.
+
+1. Configure the new row as follows:
+
+   - Set the **Priority** to `1`.
+   - Set the **IP Address** to `127.0.0.1`.
+   - Set the **Source Name** to `$1`.
+   - Leave the **Binding 1-20 Filters** empty.
 
 ![Trap Processor Source Name Table](~/user-guide/images/TrapProcessor_SourceNameTable.png)
 
-1. On the Source Name Table, click **Add Source Name**, which will add a row to the table:
-
-    - Set the **Priority** to *1*.
-    - Set the **IP Address** to *127.0.0.1*.
-    - Set the **Source Name** to *$1*.
-    - Leave the **Binding 1-20 Filters** empty.
-
 ## Step 5: Configure the Source IP Name Table
 
-You can optionally configure the values that should be used for the Source IP Name parameter in the Processed Traps table.
+In this step, you will configure the values that will be used for the *Source IP Name* parameter in the *Processed Traps* table. This is optional.
+
+1. Below the *Source IP Name Table*, click the **Add Source IP Name** button.
+
+   This will add a row to the table.
+
+1. Configure the new row as follows:
+
+   - Set the **IP Address** to `127.0.0.1`.
+   - Set the **Source IP Name** to `Trap Test`.
 
 ![Trap Processor Source IP Name Table](~/user-guide/images/TrapProcessor_SourceIPNameTable.png)
-
-1. On the Source IP Name Table, click **Add Source IP Name**, which will add a new row to the table:
-
-    - Set the **IP Address** to *127.0.0.1*.
-    - Set the **Source IP Name** to *Trap Test*.
 
 ## Step 6: Send traps via the Trap Simulator
 
