@@ -101,21 +101,5 @@ items:
         topicUid: EPM_5.0.0_I-DOCSIS
   - name: VSAT
     items:
-      - name: EPM 1.0.10 VSAT - preview
-        topicUid: EPM_1.0.10_VSAT
-      - name: EPM 1.0.9 VSAT
-        topicUid: EPM_1.0.9_VSAT
-      - name: EPM 1.0.8 VSAT
-        topicUid: EPM_1.0.8_VSAT
-      - name: EPM 1.0.7 VSAT
-        topicUid: EPM_1.0.7_VSAT
-      - name: EPM 1.0.6 VSAT
-        topicUid: EPM_1.0.6_VSAT
-      - name: EPM 1.0.5 VSAT
-        topicUid: EPM_1.0.5_VSAT
-      - name: EPM 1.0.4 VSAT
-        topicUid: EPM_1.0.4_VSAT
-      - name: EPM 1.0.3 VSAT
-        topicUid: EPM_1.0.3_VSAT
-      - name: EPM 1.0.2 VSAT
-        topicUid: EPM_1.0.2_VSAT
+      - name: EPM 1.0.1 VSAT
+        topicUid: EPM_1.0.1_VSAT
