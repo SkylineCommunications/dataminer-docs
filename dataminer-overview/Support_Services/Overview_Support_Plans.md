@@ -6,33 +6,28 @@ uid: Overview_Support_Plans
 
 ## About
 
-DataMiner support plans are technical support services for the DataMiner core platform, connectors, and cloud services. Three support plans are available, providing different levels of support depending on the user's needs and goals. 
-
-
+DataMiner support plans are technical support services for the DataMiner core platform, connectors, and cloud services. Three support plans are available, providing different levels of support depending on the user's needs and goals.
 
 |                        | [Community](#community)  | [Continuity](#continuity)| [Evolve](#evolve)                                      |
 |------------------------|:----------------------------------------------:|:-------------------------:|:-------------------------------------------:|
 | **Unlimited technical remote support during business hours** | - | ✔ | ✔ |
 | **Software updates & upgrades**<br><sub>(core software & connectors)</sub> |  ✔ <sup>[1]</sup> | ✔ | ✔ |
 | **[Proactive support services](xref:Proactive_Support)**  | ✔ | ✔ | ✔ |
-| **Response times**     | -                                              | level 1: 1h<br>level 2: 8h<br>level 3: 24h | level 1: 1h<br>level 2: 4h<br>level 3: 8h  |
-| **corrective action times** | - | level 1: 12h<br>level 2: 16h<br>level 3: N/A | level 1: 8h<br>level 2: 12h<br>level 3: N/A |
+| **Response times**     | -                                              | level 1: 1 hr<br>level 2: 8 hrs<br>level 3: 24 hrs | level 1: 1 hr<br>level 2: 4 hrs<br>level 3: 8 hrs  |
+| **corrective action times** | - | level 1: 12 hrs<br>level 2: 16 hrs<br>level 3: N/A | level 1: 8 hrs<br>level 2: 12 hrs<br>level 3: N/A |
 | **Dedicated appointed support contact** | - | - | ✔ |
 | **Direct Message channel**<br><sup>Available for Microsoft Teams</sup> | - | - | ✔ |
 | **Dedicated customer success team** | - | - | ✔ |
 | **Quarterly executive reviews** | - | - | ✔ |
-| **Professional service credits [included](#Professional_Service_Credits)** | - | ✔ | ✔ |
+| **Professional service credits [included](#professional-service-credits-included)** | - | ✔ | ✔ |
 | **Technical resources**<br><sub> [docs.dataminer.services](https://docs.dataminer.services/), [dojo forum](https://community.dataminer.services/questions/), [free learning](https://community.dataminer.services/learning/)</sub> | ✔ | ✔ | ✔ |
 
 <sup>[1]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Updates to the DataMiner core software are included.
 
+> [!NOTE]
+> While this section refers to support during business hours, you can also subscribe to the [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) add-on to *Continuity* and *Evolve*.
 
-
-
-> [!Note]
-> While this section refers to Support during business hours, you can subscribe to the [Out-of-Business-Hours support](xref:Overview_Out_Of_Business_Hours_Support) add-on to *Continuity* and *Evolve*.
-
-For additional information consult [FAQ section](xref:FAQs_Support_Services)
+For additional information, consult the [FAQ section](xref:FAQs_Support_Services)
 
 ### Community
 
@@ -40,7 +35,7 @@ The *Community* plan enables access to Skyline's Operations team through the for
 
 While software updates to the DataMiner core software are included, connector updates and access to remote technical support (i.e. Operations team) are charged per hour.
 
-This plan is primarily intended for DataMiner platform users who have a [Community Edition](https://community.dataminer.services/usage-based-pricing/), pay-per-use systems or entry-level subscriptions.
+This plan is primarily intended for DataMiner platform users who have a [Community Edition](https://community.dataminer.services/usage-based-pricing/), pay-per-use systems, or entry-level subscriptions.
 
 ### Continuity
 
@@ -64,22 +59,22 @@ Because its foundation is mutual commitment, the Evolve plan is not sold as a se
 > [!NOTE]
 > The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e. *Continuity* or *Evolve*.
 
-## Minimum requirements for each Level
-The three levels are available for Usage-based services. However, the Community Plan is not available for Perpetual-Use Licenses. The requirements listed below determine your Support level.
+## Minimum requirements for each level
 
-| Plan | Usage-based services | Perpetual-Use Licenses |
+The three levels mentioned above are available for usage-based services. However, the Community plan is not available for perpetual-use licenses. The requirements listed below determine your support level.
+
+| Plan | Usage-based services | Perpetual-use licenses |
 |---|:-:|:-:|
 | Community | Included | - |
 | Continuity | MUA >= 200 DataMiner credits | Active Support Services agreement |
 | Evolve | MUA >= 200 DataMiner credits <br>  **50,000 DevOps Points** | Active Support Services agreement <br> **50,000 DevOps Points**  |
 
 > [!IMPORTANT]
-> All support plans require [dataminer.services](https://docs.dataminer.services/dataminer-overview/DataMiner_Cloud_Platform/Overview_DCP.html) enabled. 
-
+> All support plans require an active connection to [dataminer.services](xref:Overview_DCP).
 
 ## Professional Service Credits included
 
-Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team. 
+Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team.
 
 | Usage-based services | Perpetual-Use Licenses |
 |:-:|:-:|
@@ -87,7 +82,3 @@ Support plans may include free [Professional Service Credits](https://community.
 
 > [!NOTE]
 > These Professional Service Credits must be used within the contracted year. They will not be carried over to the next year.
-
-
-
-
