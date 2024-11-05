@@ -191,7 +191,7 @@ Up to now, when you added, updated or deleted an application on the root page (e
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Up to now, Dashboards and Low-Code Apps had a separate "feed" component category. Now, the term "Feed" has been removed from the UI across all contexts, reflecting that all components in a dashboard or low-code app can now expose data, and not just feed components.
+Up to now, Dashboards and Low-Code Apps had a separate "feed" component category. Now, the term "Feed" has been removed from the UI across all contexts, reflecting that all components in a dashboard or low-code app can expose data, and not just feed components.
 
 The following changes have been made:
 
