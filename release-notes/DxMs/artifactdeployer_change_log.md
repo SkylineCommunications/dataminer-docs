@@ -6,7 +6,7 @@ uid: artifactdeployer_change_log
 
 #### 5 November 2024 - Fix - ArtifactDeployer 1.8.2 - Fix memory leak [ID 41335]
 
-Updated dependencies to resolve potential memory leak.
+A NuGet dependency used by ArtifactDeployer could cause a memory leak. The dependencies have been updated to resolve this.
 
 #### 30 October 2024 - Enhancement - ArtifactDeployer 1.8.1 - Dependencies updated [ID 41283]
 
