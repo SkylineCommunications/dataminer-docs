@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 5 November 2024 - Fix - Orchestrator 1.7.2 - Fix memory leak [ID 41336]
+
+Updated dependencies to resolve potential memory leak.
+
 #### 30 October 2024 - Enhancement - Orchestrator 1.7.1 - Dependencies updated [ID 41284]
 
 Several dependencies have been updated.

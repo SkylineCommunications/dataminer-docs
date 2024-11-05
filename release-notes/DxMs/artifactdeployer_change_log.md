@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 5 November 2024 - Fix - ArtifactDeployer 1.8.2 - Fix memory leak [ID 41335]
+
+Updated dependencies to resolve potential memory leak.
+
 #### 30 October 2024 - Enhancement - ArtifactDeployer 1.8.1 - Dependencies updated [ID 41283]
 
 Several dependencies have been updated.
