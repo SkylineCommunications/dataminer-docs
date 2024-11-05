@@ -2,18 +2,18 @@
 uid: FAQs_Pricing
 ---
 
-# Questions related to Commercial models
+# Questions related to commercial models
 
 ## General
 
-### What Commercial and Deploy models does Skyline offer?
+### What commercial and deploy models does Skyline offer?
 
 Commercial models define how you pay for software and determine ownership and usage rights. We offer two models:
 
 - Usage-based services
 - Perpetual-use licenses
 
-Deploy or Delivery models determine how that same software is deployed. We offer three models:
+Deploy or delivery models determine how that same software is deployed. We offer three models:
 
 - Self-managed on private/public cloud or on-premises
 - Software-as-a-Service (SaaS)
@@ -29,7 +29,7 @@ Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An or
 
 ### Can different commercial models exist in the same DataMiner System?
 
-Yes, but limited. If a DMS has a perpetual license, it can only use "DataMiner.Services" and "STaaS" from the usage services.
+Yes, but limited. If a DMS has a perpetual license, it can only use dataminer.services and STaaS from the usage services.
 
 ### Can I transition my perpetual licenses into a subscription?
 
