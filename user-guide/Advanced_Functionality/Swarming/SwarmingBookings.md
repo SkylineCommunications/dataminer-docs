@@ -7,12 +7,15 @@ uid: SwarmingBookings
 Since 10.4.4, it is possible to swarm bookings. To do so, you need the *Swarming* soft-launch option. 
 From 10.5.1 onwards, the feature is placed behind a different soft-launch option, namely *BookingSwarming*.
 
+When swarming bookings to a new agent, an attempt is made to unregister the booking and we will wait until all ongoing actions have been completed. Only when this is done, we will try to register the booking on the new hosting agent. Also note that, when the booking is swarmed to the new agent, event scripts of that booking will be executed on that new agent.
+
 Swarming bookings can be done by sending a *SwarmingRequestMessage*, to which you add the new hosting agent ID and booking ID. 
 This can be done as follows:
 
 ```csharp
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Swarming;
 
@@ -21,9 +24,14 @@ public class Script
     public void Run(Engine engine)
     {
         var newHostingAgent = 123;
-        var bookingId = Guid.Parse("...");
+        var bookingIds = new List<Guid>()
+        {
+            Guid.Parse("..."),
+            Guid.Parse("..."),
+        };
 
-        var request = SwarmingRequestMessage.ForBooking(newHostingAgent, bookingId);
+
+        var request = SwarmingRequestMessage.ForBookings(newHostingAgent, bookingIds.ToArray());
         var response = engine.SendSLNetMessage(request)?.First() as SwarmingResponseMessage;
 
         if (response == null)
@@ -45,7 +53,7 @@ public class Script
 > [!NOTE]
 >
 > - In order to swarm a booking, the new hosting agent must be up and running. In case the current hosting agent is unreachable, swarming will still take place but an error will be in the log file. 
-> -  If you swarm a booking which has services or resources linked to it, these will not be swarmed to the new agent. 
+> -  If you swarm a booking to a new agent, the linked resources and/or services will not be swarmed to that new agent. 
 
 Bookings can also be swarmed async and in bulk. When doing this, progress events will be sent out to the client every time the swarming of a booking is completed. This can be done as follows: 
 
@@ -85,18 +93,26 @@ void HandleProgressEvent(object sender, AsyncProgressArgs args)
 
     // The response messages in the progress event will always be of type 'SwarmingResponseMessage'
     var typedResponses = responseEvent.Response.OfType<SwarmingResponseMessage>().ToList();
-
+    var resultBuilder = new StringBuilder();
     foreach (var oneResponse in typedResponses)
     {
         foreach (var result in oneResponse.SwarmingResults)
         {
             // Handle the progress for the booking. In this case generate an information event
             var resultDetails = result.Success ? "completed successfully" : $"failed with error: {result.Messsage}";
-            engine.GenerateInformation($"Swarming booking with id {result.DmaObjectRef} {resultDetails}");
+            resultBuilder.AppendLine($"Swarming booking with id {result.DmaObjectRef} {resultDetails}");
         }
     }
+
+    // Example value of 'resultBuilder.ToString()':
+    //      Swarming booking with id 54add931-66fc-44f5-a76e-95ad0317f6af completed successfully
+    //      Swarming booking with id a250cffb-7054-4704-aa58-96200b0c49b3 failed with error: Could not swarm booking with id 'a250cffb-7054-4704-aa58-96200b0c49b3': ResourceManager is not initialized
 }
 
 // Swarming request can be aborted on the asyncReference:
 // asyncReference.Abort();
 ```
+
+> [!NOTE]
+>
+> Currently, progress events don't work when sent via the impersonated connection in Automation Scripts (engine.GetUserConnection().Async).
