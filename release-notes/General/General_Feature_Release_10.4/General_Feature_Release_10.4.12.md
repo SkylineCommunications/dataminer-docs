@@ -201,7 +201,7 @@ Because of a number of enhancements, on STaaS systems, overall performance has i
 
 In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
 
-If you want to disable certificate validation for an element created after a 10.5.0/10.4.2 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.2 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
 
 When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
 
