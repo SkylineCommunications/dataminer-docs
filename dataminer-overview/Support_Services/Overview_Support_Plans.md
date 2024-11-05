@@ -11,7 +11,7 @@ DataMiner support plans are technical support services for the DataMiner core pl
 |                        | [Community](#community)  | [Continuity](#continuity)| [Evolve](#evolve)                                      |
 |------------------------|:----------------------------------------------:|:-------------------------:|:-------------------------------------------:|
 | **Unlimited technical remote support during business hours** | - | ✔ | ✔ |
-| **Software updates & upgrades**<br><sub>(core software & connectors)</sub> |  ✔ <sup>[1]</sup> | ✔ | ✔ |
+| **Software updates & upgrades**<sup>[1]</sup><br><sub>(core software & connectors)</sub> |  ✔ <sup>[2]</sup> | ✔ | ✔ |
 | **[Proactive support services](xref:Proactive_Support)**  | ✔ | ✔ | ✔ |
 | **Response times**     | -                                              | level 1: 1 hr<br>level 2: 8 hrs<br>level 3: 24 hrs | level 1: 1 hr<br>level 2: 4 hrs<br>level 3: 8 hrs  |
 | **corrective action times** | - | level 1: 12 hrs<br>level 2: 16 hrs<br>level 3: N/A | level 1: 8 hrs<br>level 2: 12 hrs<br>level 3: N/A |
@@ -22,7 +22,9 @@ DataMiner support plans are technical support services for the DataMiner core pl
 | **Professional service credits [included](#professional-service-credits-included)** | - | ✔ | ✔ |
 | **Technical resources**<br><sub> [docs.dataminer.services](https://docs.dataminer.services/), [dojo forum](https://community.dataminer.services/questions/), [free learning](https://community.dataminer.services/learning/)</sub> | ✔ | ✔ | ✔ |
 
-<sup>[1]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Updates to the DataMiner core software are included.
+<sup>[1]</sup>Upgrades and Updates can be downloaded/deployed from dataminer.services. Please note that installing these on your system is not part of our support services.
+
+<sup>[2]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Access to updates to the DataMiner core software is included.
 
 > [!NOTE]
 > While this section refers to support during business hours, you can also subscribe to the [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) add-on to *Continuity* and *Evolve*.
