@@ -195,17 +195,33 @@ In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
 
-#### SLPort will now validate SSL/TLS certificates by default [ID 40877]
+#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877]
 
-<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+<!-- MR 10.5.0 - FR 10.4.12 -->
 
-In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
+In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
+
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.2 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.2 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
+
+When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
+
+- DataMiner will ignore invalid certificates in the following cases:
+
+  - When the server certificate is expired.
+  - When the server certificate is revoked.
+  - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
+  - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
+
+- DataMiner will block communication in the following cases:
+
+  - When the server is offering a non-server certificate.
+  - When the server certificate is signed by a weak signature.
 
 > [!NOTE]
 >
-> - If you want SLPort to skip the default SSL/TLS certification validation for a particular element, you can set the `InsecureHttps` element to true in the *element.xml* file of that element.
-> - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
-> - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want the SSL/TLS certification validation to be skipped when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
 
 #### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
 
