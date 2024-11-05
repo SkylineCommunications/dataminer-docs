@@ -13,7 +13,7 @@ The dashboard is organized into two main sections:
 - The top section combines a DMS and DMA health summary with an active error/timeout monitoring panel, allowing quick identification of immediate system issues
 - The bottom section presents crucial server performance metrics, including processor load, memory usage, and available disk space, complemented by a process leak detection panel that monitors VM size variations over time
 
-![Email Report](../../../images/Health_Check_Dasboard.png)
+![Email Report](~/user-guide/images/Health_Check_Dasboard.png)
 
 ## Health Check Results Dashboard
 
@@ -26,4 +26,4 @@ The main interface is organized into two detailed sections:
 - Failed Tests: Highlights tests that didn't pass, showing information such as failure rates and timestamps. Clicking on a failed test reveals additional details in an adjacent panel.
 - Passed Tests: Lists successfully completed tests with their results, failure rates (both last run and long duration), and execution timestamps.
 
-![Email Report](../../../images/Health_Check_Dasboard_Tests.png)
+![Email Report](~/user-guide/images/Health_Check_Dasboard_Tests.png)

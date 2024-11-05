@@ -8,13 +8,13 @@ The **General** page provides an overview of the available tests. It displays ke
 
 > **NOTE**: The time range for this second metric can be adjusted in the **Test Configuration** settings.
 
-![General Page](../../../images/Health_Check_General_Page.png)
+![General Page](~/user-guide/images/Health_Check_General_Page.png)
 
 ### Test Configuration Data Page
 
 This page allows you to manage the configuration of both **tests** and **subscriptions**, ensuring they align with your monitoring needs. For detailed instructions on configuring them, refer to the sections on **Script-Based Tests** and **Parameter Subscriptions**.
 
-![Test Configuration Page](../../../images/Health_Check_Results.png)
+![Test Configuration Page](~/user-guide/images/Health_Check_Results.png)
 
 ### Results Data Page
 
@@ -53,7 +53,7 @@ Additionally, you can configure the time span using the **Auto Clear** parameter
 
 It is essential to set the **Auto Clear** parameter with a time span equal to or longer than the one configured in the **Long Duration Time** parameter. If the **Auto Clear** time span is shorter, there won't be enough historical data retained to accurately calculate the long-term failure rate.
 
-![Results Page](../../../images/Health_Check_Result_table.png)
+![Results Page](~/user-guide/images/Health_Check_Result_table.png)
 
 ## Email Report Results
 
@@ -66,4 +66,4 @@ Additionally, the report displays the **overall failure rate** of the most recen
 > [!NOTE]
 > The time span for the longer duration failure rate can be adjusted on the **Configuration** page within the Health Check Manager.
 
-![Email Report](../../../images/Health_Check_Email_Report.png)
+![Email Report](~/user-guide/images/Health_Check_Email_Report.png)

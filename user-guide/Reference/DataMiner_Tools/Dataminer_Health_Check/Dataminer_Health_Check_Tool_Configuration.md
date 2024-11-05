@@ -21,7 +21,7 @@ The system offers several default tests related to the state of the Dataminer sy
 
 For the Health Check tool to recognize the new tests, the automation scripts must be placed in the Dataminer Automation Scripts module under the following path: **Automation Scripts > Health Check > Health Check Tests**.
 
-![Automation Scripts Path](../../../images/Health_Check_Automation_Path.png)
+![Automation Scripts Path](~/user-guide/images/Health_Check_Automation_Path.png)
 
 #### Test Creation
 
@@ -34,7 +34,7 @@ Create a new test with the following steps:
 2. Access the Add Test option
    - To create a new test, right-click on the **Test Configuration Table** to open the context menu and select **Add Test** from the menu
 
-![Add Test Option](../../../images/Health_Check_Add_Test.png)
+![Add Test Option](~/user-guide/images/Health_Check_Add_Test.png)
 
 3. Configure the Test
    In the new test window, fill out the required fields:
@@ -47,7 +47,7 @@ Create a new test with the following steps:
    - **Display Key Filter**: Apply this filter if you want the test to consider only certain entries for the test
    - **Status Checkbox**: Check this box if you wish to enable the test upon creation
 
-![Test Configuration](../../../images/Health_Check_Configure_Test.png)
+![Test Configuration](~/user-guide/images/Health_Check_Configure_Test.png)
 
 #### Test Editing
 
@@ -61,7 +61,7 @@ To edit an existing test, follow the steps below:
    - Right-click on the test you would like to edit to open the context menu
    - From the menu, choose **Edit Test**
 
-![Test Edit](../../../images/Health_Check_Edit_Test.png)
+![Test Edit](~/user-guide/images/Health_Check_Edit_Test.png)
 
 3. Modify the Test Configuration
    - A window will appear displaying the current configuration of the selected test
@@ -87,7 +87,7 @@ To create a new subscription, follow these steps:
    - Right-click on the **Parameter Subscription Table** to open the context menu
    - Select the option **Add Subscription**
 
-![Add Subscription](../../../images/Health_Check_Add_Subscription.png)
+![Add Subscription](~/user-guide/images/Health_Check_Add_Subscription.png)
 
 3. Configure the Subscription
    A window will appear where you can set up the subscription. Fill in the following fields:
@@ -98,7 +98,7 @@ To create a new subscription, follow these steps:
      - If you select Standalone Parameter, in the **Parameter** field, select the name of the parameter you want to subscribe to from the dropdown menu
      - If you select Table Parameter, you will need to specify the table name and the column name in the respective **Table** and **Parameter** fields
 
-![Add Subscription](../../../images/Health_Check_Configure_Subscription.png)
+![Add Subscription](~/user-guide/images/Health_Check_Configure_Subscription.png)
 
 ##### Subscription Editing
 
@@ -111,7 +111,8 @@ To modify an existing subscription, follow these steps:
 2. Access the Edit Subscription Option
    - Right-click on the subscription you want to edit to open the context menu
    - From the menu, select **Edit Subscription**
-![Edit Subscription](../../../images/Health_Check_Edit_Subscription.png)
+
+   ![Edit Subscription](~/user-guide/images/Health_Check_Edit_Subscription.png)
 
 3. Modify the Subscription Configuration
    - A window will appear with the current configuration of the selected subscription
@@ -141,7 +142,7 @@ After a Subscription is created it is necessary to link it to a test. Follow the
    - **Display Key Filter:** Use this field if the test should only consider specific entries
    - **Status Checkbox:** Check this box to enable the test upon creation
 
-![Link Subscription to Test](../../../images/Health_Check_Link_Subscription.png)
+![Link Subscription to Test](~/user-guide/images/Health_Check_Link_Subscription.png)
 
 ### General Solution Settings
 
@@ -181,4 +182,4 @@ You have the flexibility to schedule when and how frequently tests will run to e
 
 In this section, you'll also find the **Long Duration Time** parameter, which lets you set the time span for including test results in the **Long Duration Overall Failure Rate** calculations. For example, if set to 7 days, only test results from the last 7 days will be considered in the failure rate.
 
-![Test Recurrance](../../../images/Health_Check_Recurrance.png)
+![Test Recurrance](~/user-guide/images/Health_Check_Recurrance.png)
