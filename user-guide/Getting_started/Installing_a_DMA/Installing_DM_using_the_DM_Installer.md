@@ -49,6 +49,10 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
 
    Once the installation is complete, the configuration window will be displayed.
 
+> [!IMPORTANT]
+>
+> - If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a DataMiner Agent](xref:Restoring_a_DataMiner_Agent).
+
 1. Click *Start*.
 
 1. Select the desired database type, and click *Next*.
@@ -75,6 +79,10 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
 1. When the configuration is complete, click *Finish* to close the installer.
 
 DataMiner will automatically start up, get licensed, and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
+
+At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
+
+- [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
 
 > [!IMPORTANT]
 > During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights in DataMiner. To grant others access to the newly installed DMA, log in to Cube using the same Windows account as was used to install DataMiner, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
