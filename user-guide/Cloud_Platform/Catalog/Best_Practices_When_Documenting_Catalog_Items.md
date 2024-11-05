@@ -35,7 +35,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Purpose:** Enhance the *Overview*, *Key Features*, and *Use Cases* sections where appropriate by showcasing key features or advantages with visuals.
 
-**Format:** Add the images to the *Images* folder within the `manifest.zip` file. For a list of the supported image formats, see [Registering a Catalog item](xref:Register_Catalog_Item#body)
+**Format:** Add the images to the *Images* folder within the `manifest.zip` file. For a list of the supported image formats, see [Registering a Catalog item](xref:Register_Catalog_Item#body).
 
 **Do's:**
 
@@ -53,7 +53,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 - Avoid blurry or pixelated visuals — **quality is key**.
 - Avoid **unnecessary open panels**. Collapse panels like the Alarm Console if these do not add value.
 - Avoid **unnecessary blank space** by resizing the window when taking a screen capture.
-- Make sure not to show any **confidential data**. Blur any sensitive data, but keep the data that is not sensitive to still have a useful image.
+- Make sure not to show any **confidential data**. Blur any sensitive data, but keep the data that is not sensitive visible to still have a useful image.
 
 ## Overview section
 
@@ -74,7 +74,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 **Don'ts:**
 
 - Avoid **excessive technical details**; link to reference documentation instead.
-- Refrain from jargon or **overly complex language** that could obscure the message.
+- Avoid jargon or **overly complex language** that could obscure the message.
 - Avoid **excessive** amounts of **bold text and/or alerts**, as these then lose their purpose of drawing the reader's attention.
 
 ## Key Features section
@@ -115,7 +115,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Purpose:** List essential technical requirements needed for deployment.
 
-**Format:** Concise bullet points, limited to information that is strictly necessary.
+**Format:** Use concise bullet points, limited to information that is strictly necessary.
 
 **applicable requirements**:
 
@@ -139,7 +139,7 @@ For most of the items below, you can evaluate if there is a maximum and/or minim
 
 - Avoid **installation or configuration steps**. Link to comprehensive documentation instead.
 - Avoid listing every **small technical dependency**. Focus only on the essentials.
-- If the minimum required DataMiner version for the Catalog item is **below the currently supported DataMiner versions**, do not mention it.
+- If the minimum required DataMiner version for the Catalog item is **below the [currently supported DataMiner versions](xref:Software_support_life_cycles)**, do not mention it.
 
 ## Technical Reference section
 
