@@ -2,6 +2,8 @@
 uid: DataMiner_Health_Check_Usage
 ---
 
+# Using the DataMiner Health Check Tool
+
 ## General Data Page
 
 The **General** page provides an overview of the available tests. It displays key metrics, such as the **failure rate of the last run** and the **failure rate longer duration**.

@@ -114,16 +114,16 @@ items:
         topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
-      - name: Dataminer Health Check Tool
+      - name: DataMiner Health Check Tool
         topicUid: DataMiner_Health_Check_Tool
         items:
-          - name: Installation
+          - name: Installing the Health Check Tool
             topicUid: DataMiner_Health_Check_Tool_Installation
-          - name: Configuration
+          - name: Configuring the Health Check Tool
             topicUid: DataMiner_Health_Check_Tool_Configuration
-          - name: How to use
+          - name: Using the Health Check Tool
             topicUid: DataMiner_Health_Check_Usage
-          - name: Dashboards
+          - name: Health Check Tool Dashboards
             topicUid: DataMiner_Health_Dashboards
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
