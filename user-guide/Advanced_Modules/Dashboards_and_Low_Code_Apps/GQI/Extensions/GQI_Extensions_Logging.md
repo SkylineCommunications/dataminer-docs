@@ -1,5 +1,6 @@
 ---
 uid: GQI_Extensions_Logging
+keywords: GQI Logging
 ---
 
 # Logging
