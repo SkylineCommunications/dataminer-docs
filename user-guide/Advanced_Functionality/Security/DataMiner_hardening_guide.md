@@ -34,6 +34,9 @@ After you have run a BPA test, it will provide an overview of the detected issue
 
 ## DataMiner Agent hardening
 
+> [!NOTE]
+> If you have deployed DataMiner using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), your system will be hardened out of the box, so you do not need to do anything to harden DataMiner. For an overview of the implemented measures, refer to [DataMiner Dojo](https://community.dataminer.services/download/overview-hardening-pre-installed-dataminer-vhdx/). However, note that if you have selected the data storage type *Self-hosted - External Storage*, you are responsible for the management of the external Cassandra and OpenSearch database clusters. See [Secure self-hosted DataMiner storage](#secure-self-hosted-dataminer-storage).
+
 ### Secure Cube-server communication
 
 By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.

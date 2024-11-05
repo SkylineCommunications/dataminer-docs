@@ -187,6 +187,32 @@ In the color themes used by the web apps, the gray colors have been updated.
 
 Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
 
+#### Dashboards/Low-Code Apps: Term 'Feed' replaced by 'Components' and 'URL' [ID 41141]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, Dashboards and Low-Code Apps had a separate "feed" component category. Now, the term "Feed" has been removed from the UI across all contexts, reflecting that all components in a dashboard or low-code app can expose data, and not just feed components.
+
+The following changes have been made:
+
+- The *Feeds* visualization category has been removed. Its components have been redistributed as follows:
+
+  - General: Time range, query filter, and trigger components
+
+  - Other: List, tree, parameter picker (previously "parameter feed"), and EPM picker (previously "EPM feed") components
+
+- The *Feeds* section in the *Data* tab is now called "Components". This section now represents data exposed by each component in the dashboard or app.
+
+- URL data, previously included under *Feeds* in the *Data* tab, now has its own section named "URL".
+
+- The syntax for [dynamically referencing data in text](xref:Feed_Link) has been updated. For example:
+
+  - Old: `{Feed."Table 1"."Selected rows"...}`
+
+  - New: `{Component."Table 1"."Selected rows"...}`
+
+- Several settings that previously included the term "Feed" have been renamed.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -326,6 +352,12 @@ The *Web* component would no longer detect that the URL had changed. As a result
 
 Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
 
+#### Low-Code Apps: Problem when migrating a low-code app created before the introduction of the template editor [ID 41193]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+During the migration of a low-code app that was created before the introduction of the template editor, in some cases, an error could occur.
+
 #### Dashboards/Low-Code Apps: GQI components did not fully support static tables [ID 41197]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -347,3 +379,21 @@ When you had duplicated a dashboard, the components in the newly created duplica
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
+
+#### Low-Code Apps: Additions, updates and removals would not be synchronized among the DMAs in the DMS [ID 41228]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+When you created, updated or deleted a low-code app, this would incorrectly not be synchronized among the DataMiner Agents in the DMS.
+
+#### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
+
+#### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.

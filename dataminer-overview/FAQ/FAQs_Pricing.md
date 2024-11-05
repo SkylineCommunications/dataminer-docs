@@ -4,26 +4,41 @@ uid: FAQs_Pricing
 
 # Questions related to commercial models
 
-- **Can different commercial models exist in the same organization?**
+## General
 
-  Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An organization can have perpetual licenses on one DMS while running usage-based services on a different DMS. On the same DMS, only one model can exist.
+### What commercial and deploy models does Skyline offer?
 
-- **Can I transition my perpetual licenses into subscription?**
+Commercial models define how you pay for software and determine ownership and usage rights. We offer two models:
 
-  Yes. Get in touch with [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+- Usage-based services
+- Perpetual-use licenses
 
-- **Are there any sign-up fees or one-time fees for usage-based models?**
+Deploy or delivery models determine how that same software is deployed. We offer three models:
 
-  No.
+- Self-managed on private/public cloud or on-premises
+- Software-as-a-Service (SaaS)
+- Hybrid: self-managed DataMiner nodes with Storage-as-a-Service (STaaS)
 
-- **What level of support is included in usage-based services?**
+Usage-based services can use any of the deploy models.
 
-  See [DataMiner Support Services](xref:Overview_Support_DMS_M_and_S).
+Perpetual-use licenses can be fully self-managed (DataMiner nodes and storage nodes) or hybrid.
 
-- **Is outside business hours support available?**
+### Can different commercial models exist in the same organization?
 
-  Yes, through an optional service subscription.
+Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An organization can have perpetual licenses on one DMS while running usage-based services on a different DMS.
 
-- **Can I use Professional Services credits in exchange for DataMiner credits?**
+### Can different commercial models exist in the same DataMiner System?
 
-  No.
+Yes, but limited. If a DMS has a perpetual license, it can only use dataminer.services and STaaS from the usage services.
+
+### Can I transition my perpetual licenses into a subscription?
+
+Yes. Your Account Manager will be able to provide more information and assist you with this.
+
+### Are there any sign-up fees or one-time fees for usage-based models?
+
+No.
+
+### Can I use Professional Services credits in exchange for DataMiner credits?
+
+No.

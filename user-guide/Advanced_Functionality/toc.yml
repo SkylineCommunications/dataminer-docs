@@ -277,6 +277,8 @@ items:
                 topicUid: Configuring_the_database_settings_in_Cube
               - name: Migrating existing systems to dedicated clustered storage
                 topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+              - name: Decommissioning WSL
+                topicUid: Decommissioning_WSL
           - name: Configuring storage per DMA
             topicUid: Configuring_storage_per_DMA
             items:
@@ -472,8 +474,8 @@ items:
             topicUid: Frequently_asked_questions_about_user_group_settings
       - name: Advanced security configuration
         items:
-          - name: Lockbox service for DaaS and STaaS systems
-            topicUid: Lockbox
+#          - name: Lockbox service for DaaS and STaaS systems
+#            topicUid: Lockbox
           - name: Securing self-hosted DataMiner storage
             items:
               - name: Securing the Cassandra general database
@@ -585,6 +587,10 @@ items:
             topicUid: Connectivity_xml_files_representing_chains
           - name: Automatically generating service RCA chains based on connectivity
             topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
+      - name: Tutorials
+        items:
+          - name: Getting started with DCF
+            topicUid: getting_started_dataminer_connectivity_framework
   - name: TCP-IP sockets
     items:
       - name: About TCP-IP sockets

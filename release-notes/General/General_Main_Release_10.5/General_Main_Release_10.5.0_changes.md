@@ -52,6 +52,14 @@ In the *Get alarms* data source, the following columns have been updated:
 > [!NOTE]
 > "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
+
 ### Enhancements
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]
@@ -855,19 +863,39 @@ Because of a number of enhancements, overall performance has increased when load
 
 From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
 
-#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
-
-Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
-
 #### STaaS: Enhanced performance when writing data to the database [ID 40870]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
+
+#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
+
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.2 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.2 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
+
+When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
+
+- DataMiner will ignore invalid certificates in the following cases:
+
+  - When the server certificate is expired.
+  - When the server certificate is revoked.
+  - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
+  - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
+
+- DataMiner will block communication in the following cases:
+
+  - When the server is offering a non-server certificate.
+  - When the server certificate is signed by a weak signature.
+
+> [!NOTE]
+>
+> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want the SSL/TLS certification validation to be skipped when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
 
 #### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
 
@@ -936,6 +964,16 @@ When initialized, SLManagedAutomation and SLManagedScripting will now set the al
 
 This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
 
+#### Notification message templates: New [treeid] placeholder [ID 41052]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When defining a notification message template in the *NotifyTemplates.xml* file, you can use the [treeid] placeholder.
+
+This placeholder will be replaced by the tree ID of the alarm.
+
+For more information, see [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
+
 #### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
@@ -943,6 +981,12 @@ This will ensure that SLManagedAutomation and SLManagedScripting are capable of 
 The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
 
 Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
+#### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
 ### Fixes
 

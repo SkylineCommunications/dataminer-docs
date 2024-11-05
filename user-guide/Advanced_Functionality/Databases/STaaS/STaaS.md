@@ -271,6 +271,8 @@ In addition, the following **other limitations** currently apply:
 
 - DMZ setups are currently not supported.
 
+- Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+
 - Regarding logger tables:
 
   - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag is not supported.

@@ -50,6 +50,9 @@ To use an ad hoc data source in a query:
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
+> [!IMPORTANT]
+> Ad hoc data sources are identified by a combination of their script name, library name, and class name. Changing any of these values will cause existing queries to stop working, because they will no longer be able to find the script based on the identifier they are using.
+
 > [!NOTE]
 > From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of an ad hoc data source to existing data in the dashboard or low-code app. Depending on the linked data, more information may need to be specified. For example, if you link to existing query data with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
 

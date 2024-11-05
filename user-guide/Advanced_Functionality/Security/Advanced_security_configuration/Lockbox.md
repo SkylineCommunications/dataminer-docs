@@ -6,7 +6,9 @@ uid: Lockbox
 
 DataMiner Lockbox is an **opt-in service** designed to support controlled access requests to [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) or [Storage as a Service (STaaS)](xref:STaaS) systems for a limited time period. This service is not enabled by default and is primarily intended for production systems containing sensitive information.
 
-The Lockbox service ensures that Skyline cannot access your DataMiner System to perform service operations without your explicit approval. With DataMiner Lockbox, you remain in control via the [approval workflow process](#workflow) that Skyline uses to ensure that only authorized requests allow access to your system.
+For more information about this service, contact your Skyline representative.
+
+<!-- The Lockbox service ensures that Skyline cannot access your DataMiner System to perform service operations without your explicit approval. With DataMiner Lockbox, you remain in control via the [approval workflow process](#workflow) that Skyline uses to ensure that only authorized requests allow access to your system.
 
 If you want to grant a support engineer access to your DataMiner System for troubleshooting or maintenance (e.g. installing DataMiner updates), Lockbox enables this process with your approval. Alternatively, if a Skyline support engineer cannot fully resolve an issue without access to your system, they may initiate an access request, which you then have the option to approve or deny.
 
@@ -48,3 +50,4 @@ The following workflow outlines the steps involved in initiating, reviewing, and
 1. Once the support engineer completes the specified tasks, an email is sent to inform the user.
 
 1. When the specified access period ends, access to the DataMiner System is automatically revoked.
+ -->

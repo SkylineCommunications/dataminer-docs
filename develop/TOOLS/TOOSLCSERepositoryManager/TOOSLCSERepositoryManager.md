@@ -5,7 +5,7 @@ uid: TOOSLCSERepositoryManager
 # SLC SE Repository Manager
 
 > [!IMPORTANT]
-> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+> This tool is only intended to be used by Skyline employees. Consequently, this section includes information that is only applicable to Skyline employees and links that are only accessible to Skyline employees.
 
 The SLC SE Repository Manager is the main tool to interact with the Gerrit server that hosts all Git repositories for System Engineering. This tool can be used to perform the following operations:
 

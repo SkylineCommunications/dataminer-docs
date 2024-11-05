@@ -69,7 +69,33 @@ The proactive cap detection feature is now able to generate an alarm when it exp
 
 For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837-id-41109)
 
+#### SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies [ID 41068]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to improve troubleshooting assembly resolution issues, the SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies.
+
+Also, SLManagedScripting will now add an entry in the *SLManagedScripting.txt* log file each time it has loaded or failed to load an assembly. This log entry will include both the requested version and the actual version of the assembly.
+
+To see the current hint paths per SLScripting process, do the following:
+
+1. Open the SLNetClientTest tool.
+1. Go to *Diagnostics > DMA > SLScripting AssemblyResolve HintPaths*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ## Changes
+
+### Breaking changes
+
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
 ### Enhancements
 
@@ -163,31 +189,39 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements fo
 
 In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
 
-#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
-
-Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
-
 #### STaaS: Enhanced performance when writing data to the database [ID 40870]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
 
-#### SLPort will now validate SSL/TLS certificates by default [ID 40877]
+#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877]
 
-<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
+<!-- MR 10.5.0 - FR 10.4.12 -->
 
-In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
+In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
+
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.2 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.2 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
+
+When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
+
+- DataMiner will ignore invalid certificates in the following cases:
+
+  - When the server certificate is expired.
+  - When the server certificate is revoked.
+  - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
+  - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
+
+- DataMiner will block communication in the following cases:
+
+  - When the server is offering a non-server certificate.
+  - When the server certificate is signed by a weak signature.
 
 > [!NOTE]
 >
-> - If you want SLPort to skip the default SSL/TLS certification validation for a particular element, you can set the `InsecureHttps` element to true in the *element.xml* file of that element.
-> - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
-> - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want the SSL/TLS certification validation to be skipped when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
 
 #### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
 
@@ -307,6 +341,16 @@ When initialized, SLManagedAutomation and SLManagedScripting will now set the al
 
 This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
 
+#### Notification message templates: New [treeid] placeholder [ID 41052]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When defining a notification message template in the *NotifyTemplates.xml* file, you can use the [treeid] placeholder.
+
+This placeholder will be replaced by the tree ID of the alarm.
+
+For more information, see [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
+
 #### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
@@ -314,6 +358,12 @@ This will ensure that SLManagedAutomation and SLManagedScripting are capable of 
 The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
 
 Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
+#### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
 ### Fixes
 
@@ -469,14 +519,34 @@ After a DataMiner start-up, in some cases, the NATS cluster would be configured 
 
 `ResetLocalNatsCluster|ERR|0|18|System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.`
 
+#### No longer possible to send a SetAlarmStateMessage for an alarm if the associated element had been imported via a DELT package [ID 41074]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39193 -->
+
+In some cases, it would incorrectly no longer be possible to send a `SetAlarmStateMessage` for a particular alarm if the associated element had been imported via a DELT package.
+
 #### Protocols: Stuffing attribute of Protocol.Advanced element was not parsed correctly [ID 41092]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 The value of the `stuffing` attribute of the *Protocol.Advanced* element was not parsed correctly.
 
+#### SLElement would leak memory whenever an element was started or restarted [ID 41102]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39718 -->
+
+Since DataMiner feature release 10.4.8, SLElement would leak memory whenever an element was started or restarted.
+
 #### Enhanced exception handling in SLDMS, SLASPConnection and SLWatchdog [ID 41121]
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog with regard to exception handling.
+
+#### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
+
+<!-- MR 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.
