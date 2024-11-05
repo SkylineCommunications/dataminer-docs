@@ -6,7 +6,7 @@ uid: orchestrator_change_log
 
 #### 5 November 2024 - Fix - Orchestrator 1.7.2 - Fix memory leak [ID 41336]
 
-Updated dependencies to resolve potential memory leak.
+A NuGet dependency used by Orchestrator could cause a memory leak. The dependencies have been updated to resolve this.
 
 #### 30 October 2024 - Enhancement - Orchestrator 1.7.1 - Dependencies updated [ID 41284]
 
