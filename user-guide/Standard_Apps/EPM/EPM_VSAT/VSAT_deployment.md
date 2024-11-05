@@ -10,7 +10,7 @@ This page outlines the procedure for deploying the DataMiner EPM VSAT package on
 
 Start by deploying the DataMiner EPM VSAT package to the system:
 
-1. Go to the [DataMiner VSAT](https://catalog.dataminer.services/details/b37e7be5-178e-4b34-be9c-2115991d90ea) package in the DataMiner Catalog.
+1. Go to the [DataMiner EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the DataMiner Catalog.
 
 1. Click the *Deploy* button to [deploy the package](xref:Deploying_a_catalog_item) on your DMA.
 
