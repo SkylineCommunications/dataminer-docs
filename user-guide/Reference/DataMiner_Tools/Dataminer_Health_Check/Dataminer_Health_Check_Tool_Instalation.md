@@ -18,9 +18,9 @@ uid: DataMiner_Health_Check_Tool_Installation
 
 By default, the Heath Check Manager element will include a series of tests related to the Dataminer Systems' health.
 
-![Element Path](../../../images/Health_Check_Element_Path.png)
+![Element Path](~/user-guide/images/Health_Check_Element_Path.png)
 
-![Dashboard Path](../../../images/Health_Check_Dasboard_Path.png)
+![Dashboard Path](~/user-guide/images/Health_Check_Dasboard_Path.png)
 
 > [!NOTE]
 > To **update** the DataMiner Health Check tool, redeploy the [*DataMiner Health Check* package](https://catalog.dataminer.services/details/56b1b9e0-ffe1-4bd2-b5d2-06c17d97c6b1). The tool will be updated, but a new Health Check Manager element will not be created, as one should already exist in your DMS.
