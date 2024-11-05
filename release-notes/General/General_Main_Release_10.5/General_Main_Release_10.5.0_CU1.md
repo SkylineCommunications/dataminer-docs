@@ -58,3 +58,9 @@ On STaaS systems, in case of connection problems, a large number of the followin
 - *Unable to connect to the remote server.*
 
 From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
+
+#### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
+
+<!-- MR 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.

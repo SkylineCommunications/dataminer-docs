@@ -528,3 +528,9 @@ Since DataMiner feature release 10.4.8, SLElement would leak memory whenever an 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog with regard to exception handling.
+
+#### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
+
+<!-- MR 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+
+On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.
