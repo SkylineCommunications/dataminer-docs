@@ -16,6 +16,14 @@ uid: General_Main_Release_10.4.0_CU10
 
 ### Fixes
 
+#### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
+
+When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
+
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
+
 #### SLElement would leak memory when filtering a recursive table or a directview/view table that had to be sorted [ID 41058]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
