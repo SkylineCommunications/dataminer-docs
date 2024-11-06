@@ -39,6 +39,12 @@ Because of a number of enhancements with regard to file operations, overall perf
 
 ### Fixes
 
+#### Dashboards/Low-Code Apps: Labels of lazy-loaded data would incorrectly not be displayed in edit mode [ID 41189]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+
+When you were editing a dashboard or a page or a panel of a low-code app, the labels of lazy-loaded data would incorrectly not be displayed.
+
 #### Legacy Reporter would leak memory when requesting history alarms [ID 41247]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
