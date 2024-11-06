@@ -31,7 +31,11 @@ This type of action will allow users to set the current value of any variable th
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app: Enhanced performance [ID 41148]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+
+Because of a number of enhancements with regard to file operations, overall performance has increased when working with the Dashboards app.
 
 ### Fixes
 
