@@ -22,7 +22,11 @@ uid: Cube_Feature_Release_10.5.1
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Cards: Enhancements to prevent view cards from showing a 'Loading' message when opened [ID 41162]
+
+<!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
+
+A number of enhancements have been made to prevent view cards from showing a "Loading" message when opened.
 
 ### Fixes
 
