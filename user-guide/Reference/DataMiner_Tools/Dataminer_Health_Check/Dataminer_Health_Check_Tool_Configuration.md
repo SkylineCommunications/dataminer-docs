@@ -36,8 +36,8 @@ Several default tests are available related to the state of the DataMiner System
    - *Name*: Select an available script-based test.
    - *Operator* and *Threshold*: Define the conditions for the test to determine whether it passes or fails.
    - *Display Title*: Optionally, enter a custom name for the test to make it easily identifiable. If provided, this title will be used to identify the test in the email report; otherwise, the default test name will be displayed.
-   - *Element/DMA Filter*: Use this field to apply the test to a specific element. Enter the element/DMA you wish to target.
-   - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test.
+   - *Element/DMA Filter*: Use this field to apply the test to a specific element. Enter the name of the element you wish to target.
+   - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test. This field must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
 
    ![Test configuration](~/user-guide/images/Health_Check_Configure_Test.png)
