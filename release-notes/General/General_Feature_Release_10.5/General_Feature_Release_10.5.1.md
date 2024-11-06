@@ -42,6 +42,16 @@ The DataMiner installer has been updated.
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
+#### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
+
+A number of enhancements have been made to the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*):
+
+- The initialization of a single agent has been disabled in favor of the global initialization, unless not all agents could be initialized.
+- Connection details will now only be requested once, unless not all agents could not be initialized.
+- The migration can now only be started when all agents have successfully been initialized.
+
 #### DxMs upgraded [ID 41297]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -80,6 +90,12 @@ When SLElement had to process a table filter request, it would leak memory in th
 
 - When the table had a foreign key to itself.
 - When a directview or view table with a number of non-initialized columns had to be sorted.
+
+#### SLElement would leak memory when SLNet needed to be notified of baseline changes [ID 41088]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
+
+When a baseline changed and SLNet needed to be notified of the new values, SLElement would leak memory.
 
 #### Failover: Problem when an element.xml file was updated while StorageModule was synchronizing its cache [ID 41133]
 
