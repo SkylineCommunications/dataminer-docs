@@ -22,7 +22,7 @@ DataMiner support plans are technical support services for the DataMiner core pl
 | **Professional service credits [included](#professional-service-credits-included)** | - | ✔ | ✔ |
 | **Technical resources**<br><sub> [docs.dataminer.services](https://docs.dataminer.services/), [dojo forum](https://community.dataminer.services/questions/), [free learning](https://community.dataminer.services/learning/)</sub> | ✔ | ✔ | ✔ |
 
-<sup>[1]</sup>Upgrades and Updates can be downloaded/deployed from dataminer.services. Please note that installing these on your system is not part of our support services.
+<sup>[1]</sup>Upgrades and updates can be downloaded/deployed from dataminer.services. Note that installing these on your system is not part of our support services.
 
 <sup>[2]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Access to updates to the DataMiner core software is included.
 
