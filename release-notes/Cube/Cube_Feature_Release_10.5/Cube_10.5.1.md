@@ -30,4 +30,10 @@ A number of enhancements have been made to prevent view cards from showing a "Lo
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
+
+<!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in the *Resources* app, you added or updated a resource, up to now, a pop-up window showing a quarantine warning would appear whenever something went wrong.
+
+From now on, a pop-up window showing a quarantine warning will only appear in cases where quarantine applies.
