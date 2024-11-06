@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 30 October 2024 - Enhancement - CloudGateway 2.14.5 - Dependencies updated [ID 41294]
+#### 6 November 2024 - Enhancement - CloudGateway 2.14.5 - Dependencies updated [ID 41294]
 
 Several dependencies have been updated.
 
