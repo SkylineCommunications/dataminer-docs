@@ -10,7 +10,7 @@ Several dependencies have been updated.
 
 #### 6 November 2024 - Enhancement - CloudGateway 2.14.5 - Token refresh logging improved [ID 40693]
 
-The logging about the token refresh has been improved. Before it would log that a token refresh succeeded together with an exceeded expiry date, while it wasn't refreshed at all.
+The logging for the token refresh has been improved. Previously, it would log that a token refresh succeeded together with an exceeded expiry date, while it was not refreshed at all.
 
 #### 27 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID 40527]
 
