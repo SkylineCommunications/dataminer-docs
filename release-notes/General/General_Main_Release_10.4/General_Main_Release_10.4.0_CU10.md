@@ -24,6 +24,12 @@ When an element that was used in an alarm level link configuration was restarted
 
 For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
 
+#### SLElement: Incorrect alarm linking [ID 41057]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
+
+In some cases, new alarm events could incorrectly get linked to previously closed external events or information events on the same element.
+
 #### SLElement would leak memory when filtering a recursive table or a directview/view table that had to be sorted [ID 41058]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU1] - FR 10.5.1 -->
