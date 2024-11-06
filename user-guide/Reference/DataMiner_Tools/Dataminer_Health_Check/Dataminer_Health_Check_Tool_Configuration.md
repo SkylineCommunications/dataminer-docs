@@ -126,38 +126,36 @@ After you have created a subscription, you will still need to link it to a test:
 
 ## Configuring email reports
 
-The **Health Check solution** can provide daily email reports summarizing the result of the tests that have been executed.
+The DataMiner Health Check Tool can provide daily email reports summarizing the result of the tests that have been executed.
 
 To set up the recipients for the email reports, follow these steps:
 
-1. Access the Configuration Page
-   - Navigate to the **Configuration** page of the **Health Check Manager** element and go to the **Email Configuration** section
+1. In DataMiner Cube, open the *Health Check Manager* element and go to the *Configuration* page.
 
-1. Enable Email State
-   - Ensure the **Email State** is enabled to activate email reporting
+1. In the *Email Configuration* section, make sure *Email State* is set to *Enabled*, so that email reporting is activated.
 
-1. Add Recipient Email Addresses
-   - In the **Email Address** field, enter the list of email addresses you want to receive the reports
-   - Make sure each email address is **separated by a comma ( , )**
+1. In the *Email Addresses* field, enter a list of email addresses that should get the reports, using a **comma** (`,`) as a separator.
 
-## Configuring test execution
+## Configuring the test execution schedule
 
 You have the flexibility to schedule when and how frequently tests will run to ensure they align with your operational needs. Follow the steps below to configure the test execution schedule:
 
-1. Access the Test Settings Section
-   - Open the **Health Check Manager** element and navigate to the **Configuration** page
-   - In this page, locate the **Test Settings** section
+1. In DataMiner Cube, open the *Health Check Manager* element and go to the *Configuration* page.
 
-1. Open the Edit Window
-   - Click the **Edit** button
-   - A new window will appear, allowing you to configure the test schedule
+1. In the *Test Settings* section, click the *Edit* button.
 
-1. Configure the Execution Time and Recurrence
-   - First specify the exact time you want the tests to run (e.g., 22:00)
-   - After you can choose how often the tests should execute (e.g., Daily, Weekly, Every X number of days etc.)
-   - Once you've configured the schedule, click **OK**
-   - The updated settings will be reflected in the **Test Settings** section
+   This will open a new window where you can configure the test schedule.
 
-In this section, you'll also find the **Long Duration Time** parameter, which lets you set the time span for including test results in the **Long Duration Overall Failure Rate** calculations. For example, if set to 7 days, only test results from the last 7 days will be considered in the failure rate.
+1. Configure the settings for the test schedule:
 
-![Test recurrence](~/user-guide/images/Health_Check_Recurrance.png)
+   - Select the time when the tests should run (for example, `22:00`)
+   - Select how often the tests should be executed (*Daily*, *Weekly*, *Every* X *days*, etc.)
+
+   ![Test recurrence](~/user-guide/images/Health_Check_Recurrence.png)
+
+1. When you have configured the schedule, click *OK*.
+
+   The updated settings will be reflected in the *Test Settings* section.
+
+> [!NOTE]
+> The *Test Settings* section also contains the **Long Duration Time** parameter, which lets you set the time span for including test results in the *Overall Failure Rate (Longer Duration)* calculations. For example, if this is set to 7 days, only test results from the last 7 days will be considered in the failure rate.

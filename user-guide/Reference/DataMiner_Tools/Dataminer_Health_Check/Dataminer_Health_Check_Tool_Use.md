@@ -4,50 +4,55 @@ uid: DataMiner_Health_Check_Usage
 
 # Using the DataMiner Health Check Tool
 
-## General Data Page
+## Health Check Manager element pages
 
-The **General** page provides an overview of the available tests. It displays key metrics, such as the **failure rate of the last run** and the **failure rate longer duration**.
+## General data page
 
-> **NOTE**: The time range for this second metric can be adjusted in the **Test Configuration** settings.
+The *General* page of the *Health Check Manager* element provides an overview of information about the available tests.
+
+Key metrics on this page are the **overall failure rate** of the **last run** and for a **longer duration**. The time range for this second metric can be adjusted with the *Longer Duration Time* parameter on the *Configuration* page.
 
 ![General Page](~/user-guide/images/Health_Check_General_Page.png)
 
-### Test Configuration Data Page
+### Test Configuration data page
 
-This page allows you to manage the configuration of both **tests** and **subscriptions**, ensuring they align with your monitoring needs. For detailed instructions on configuring them, refer to the sections on **Script-Based Tests** and **Parameter Subscriptions**.
+This page allows you to manage the configuration of both **tests** and **subscriptions**, ensuring they align with your monitoring needs. For more information, see [Configuring the DataMiner Health Check Tool](xref:DataMiner_Health_Check_Tool_Configuration).
 
 ![Test Configuration Page](~/user-guide/images/Health_Check_Results.png)
 
 ### Results Data Page
 
-In the **Results** page, you will find the **Results Table**, which presents all tests that have been executed within a specified time span. This table contains essential details, including the execution time, test results, and the Failure Rate.
+The *Results* page displays a table listing all the tests that have been executed within a specified time span. This table contains essential details, including the execution time, test results, and the failure rate.
 
-The Success Count and Failure Count metrics are calculated based on DataMiner Agent within the DataMiner System. Below are the detailed calculation methods for each test type:
+The *Success Count* and *Failure Count* metrics are calculated based on the DataMiner Agents within the DataMiner System. Below are the detailed calculation methods for each test type:
 
-**Script-Based Tests**
-- **Evaluation Method**: Tests evaluate if DataMiner Agents meet the configured threshold for the test type
-- **Success Count**: Number of DMAs that passed the threshold requirement
-- **Failure Count**: Number of DMAs that failed to meet the threshold requirement
+- Script-based tests:
 
-**Subscription-Based Tests for Standalone Parameters**
-- **Evaluation Process**:
-  - Tests evaluate the defined standalone parameter for each element within each DataMiner Agent
-  - A DMA passes only if all its elements meet the configured threshold for the standalone parameter
-  - A DMA fails if any single element fails to meet the threshold for the standalone parameter
-- **Success Count**: Total number of DataMiner Agents where all elements passed
-- **Failure Count**: Total number of DataMiner Agents where any element failed
+  - *Evaluation Method*: Tests evaluate if DataMiner Agents meet the configured threshold for the test type.
+  - *Success Count*: The number of DMAs that passed the threshold requirement.
+  - *Failure Count*: The number of DMAs that failed to meet the threshold requirement.
 
-**Subscription-Based Tests for table columns**
-- **Evaluation Process**:
-  - Tests evaluate all values within the specified table column for each element
-  - **Element Evaluation**:
-    - Passes if all cells in the column meet the threshold
-    - Fails if any cell in the column fails to meet the threshold
-  - **DMA Evaluation**:
-    - Passes if all elements pass
-    - Fails if any element fails
-- **Success Count**: Total number of DataMiner Agents with all passing elements
-- **Failure Count**: Total number of DataMiner Agents with any failing elements
+- Subscription-based tests for standalone parameters:
+
+  - *Evaluation Process*:
+    - Tests evaluate the defined standalone parameter for each element within each DataMiner Agent.
+    - A DMA passes only if all its elements meet the configured threshold for the standalone parameter.
+    - A DMA fails if any single element fails to meet the threshold for the standalone parameter.
+  - *Success Count*: The total number of DataMiner Agents where all elements passed.
+  - *Failure Count*: The total number of DataMiner Agents where any element failed.
+
+- Subscription-based tests for table columns:
+
+  - *Evaluation Process*:
+    - Tests evaluate all values within the specified table column for each element.
+    - *Element Evaluation*:
+      - Passes if all cells in the column meet the threshold.
+      - Fails if any cell in the column fails to meet the threshold.
+    - *DMA Evaluation*:
+      - Passes if all elements pass.
+      - Fails if any element fails.
+  - *Success Count*: The total number of DataMiner Agents where all elements passed.
+  - *Failure Count*: The total number of DataMiner Agents where any element failed.
 
 The Failure Rate is calculated considering the Failure count and the total number of DMAs in the system.
 
