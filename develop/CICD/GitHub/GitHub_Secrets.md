@@ -2,7 +2,7 @@
 uid: GitHub_Secrets
 ---
 
-# GitHub Secrets
+# GitHub secrets and tokens
 
 Several tools, starter workflows and reusable workflows provided by Skyline will require secrets and tokens to run correctly.
 On this page you can find where to find the tokens you may need and how to add them as a secret in your repository.

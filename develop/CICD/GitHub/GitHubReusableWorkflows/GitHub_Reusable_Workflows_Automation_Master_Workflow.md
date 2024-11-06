@@ -39,9 +39,9 @@ AutomationScript solutions (and therefor this workflow) can be used to create mo
 
 - Part of our quality control involves static code analysis through sonarcloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a sonarcloud organization setup, linked to your GitHub Organization as described in [sonarcloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
-- Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+- Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
-## **GitHub UI to Catalog Details**
+## GitHub UI to Catalog Details
 
 This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
 
@@ -103,7 +103,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 > [!NOTE]
-> For public repositories in SkylineCommunications, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+> For public repositories in SkylineCommunications, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ### Quality gate
 

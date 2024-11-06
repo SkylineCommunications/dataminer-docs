@@ -2,21 +2,21 @@
 uid: CICD_Tutorial_GitHub_Code_To_Product
 ---
 
-# Going from Code to Product in GitHub
+# Going from code to product in GitHub
 
-In this tutorial, you'll learn how to develop, (pre-)release, and optionally deploy any supported DataMiner artifact with a CI/CD pipeline specifically in GitHub. These processes follow the same quality standards that developers within Skyline Communications adhere to.  
-If you're interested in learning how to set up CI/CD in different technologies, such as Jenkins, GitLab, Concourse, Azure DevOps, etc., take a look at the [Setting up a basic CI/CD for connectors](xref:CICD_Tutorial_Connector) tutorial.
+In this tutorial, you will learn how to develop, (pre-)release, and optionally deploy any supported DataMiner artifact with a CI/CD pipeline specifically in GitHub. These processes follow the same quality standards that developers within Skyline Communications adhere to.
+
+If you are interested in learning how to set up CI/CD in different technologies, such as Jenkins, GitLab, Concourse, Azure DevOps, etc., take a look at the [Setting up basic CI/CD for connectors](xref:CICD_Tutorial_Connector) tutorial.
 
 This CI/CD pipeline will ensure strict quality standards, provide you with an item registered in your private catalog, and give you the ability to deploy automatically.
 
 Expected duration: 10 minutes.
 
-## Private versus Public Code
+## Private versus public code
 
-Both SonarCloud and GitHub require paid licenses to fully support Private GitHub Repositories.  
-For this tutorial, it's recommended to create a Public Repository.
+Both SonarCloud and GitHub require paid licenses to fully support private GitHub repositories. For this tutorial, we recommend creating a public repository.
 
-For real-world scenarios, you'll likely require at least a paid SonarCloud license to work with Private GitHub Repositories. A free GitHub version can still be used for Private Repositories, but it will slightly change the tutorial below.
+For real-world scenarios, you will likely need at least a paid SonarCloud license to work with private GitHub repositories. A free GitHub version can still be used for private repositories, but it will slightly change the tutorial below.
 
 ## Prerequisites
 

@@ -13,13 +13,13 @@ We recommend combining this with quality control beforehand, such as executing s
 > [!TIP]
 > For information on creating a new pipeline in GitHub, see [GitHub Tutorial](https://docs.github.com/en/actions/quickstart).
 
-## **Production-Level Workflows**
+## Production-level workflows
 
-For those interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, please see the [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 ### GitHub workflow
 
-You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp). You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 On a **Ubuntu** runner:
 

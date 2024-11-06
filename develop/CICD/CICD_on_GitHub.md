@@ -17,8 +17,8 @@ We use a combination of:
 
 If you and your organization are ready to dive into GitHub, check out these tutorials:
 
-- [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product)
-- [Setting Up Your Development Environment in GitHub](xref:CICD_Tutorial_GitHub_Setting_Up_Organization)
+- [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product)
+- [Setting up your development environment in GitHub](xref:CICD_Tutorial_GitHub_Setting_Up_Organization)
 
 For more information, refer to:
 

@@ -2,19 +2,19 @@
 uid: CICD_Tutorial_GitHub_Setting_Up_Organization
 ---
 
-# Setting Up Your Development Environment in GitHub
+# Setting up your development environment in GitHub
 
-In this tutorial, you'll learn how to set up an Organization in GitHub and SonarCloud so that you and your development team can collaboratively develop DataMiner artifacts while maintaining high-quality standards. This tutorial sets up the framework to achieve the same quality standards that developers at Skyline Communications adhere to. It will also add Starter Workflows provided by Skyline to improve efficiency. Additionally, you'll learn how to set up SonarCloud, a mandatory static analysis tool used in all Skyline-provided GitHub workflows.
+In this tutorial, you will learn how to set up an Organization in GitHub and SonarCloud so that you and your development team can collaboratively develop DataMiner artifacts while maintaining high-quality standards. This tutorial sets up the framework to achieve the same quality standards that developers at Skyline Communications adhere to. It will also add Starter Workflows provided by Skyline to improve efficiency. Additionally, you will learn how to set up SonarCloud, a mandatory static analysis tool used in all Skyline-provided GitHub workflows.
 
-If you're interested in learning how to set up CI/CD in other technologies, such as Jenkins, GitLab, Concourse, Azure DevOps, etc., check out the [Setting up a basic CI/CD for connectors](xref:CICD_Tutorial_Connector) tutorial.
+If you are interested in learning how to set up CI/CD in other technologies, such as Jenkins, GitLab, Concourse, Azure DevOps, etc., check out the [Setting up basic CI/CD for connectors](xref:CICD_Tutorial_Connector) tutorial.
 
 Expected duration: 10 minutes.
 
-## Private versus Public Code
+## Private versus public code
 
-Both SonarCloud and GitHub require paid licenses to fully support Private GitHub Repositories.
+Both SonarCloud and GitHub require paid licenses to fully support private GitHub repositories.
 
-For real-world scenarios, you'll likely need at least a paid SonarCloud license to work with Private GitHub Repositories. A free GitHub version can still be used for Private Repositories, but this will slightly alter how you work with the product.
+For real-world scenarios, you will likely need at least a paid SonarCloud license to work with private GitHub repositories. A free GitHub version can still be used for private repositories, but this will slightly alter how you work with the product.
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 uid: CICD_Tutorial_Connector
 ---
 
-# Setting up a basic CI/CD for connector deployment
+# Setting up basic CI/CD for connector deployment
 
 In this tutorial, you will learn how to create a custom pipeline from scratch. This pipeline will establish basic quality control and automate the deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This setup can function with or without the staging system being connected to dataminer.services. The tutorial uses a DataMiner Agent hosted on an internet-accessible virtual machine.
 
@@ -12,13 +12,16 @@ In this tutorial, you will learn how to create a custom pipeline from scratch. T
 You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [documentation](xref:Platform_independent_CICD).
 
 > [!TIP]
-> See also: [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> [Registering a new version of a connector in the Catalog using a GitHub Action](xref:Tutorial_Register_Catalog_Version_GitHub_Actions)
 
 Expected duration: 20 minutes.
 
 ## Pre-Made Workflows on GitHub
 
-For those interested in reusing Skyline's pre-made GitHub workflows, which offer robust functionality, quality-of-life features, and a strong quality gate, please see the [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 ## Prerequisites
 

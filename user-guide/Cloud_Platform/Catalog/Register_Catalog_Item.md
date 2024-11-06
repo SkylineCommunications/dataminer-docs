@@ -38,7 +38,7 @@ dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.y
 
 ### pre-made workflows on GitHub
 
-For those interested in reusing Skyline's pre-made GitHub workflows—which include robust functionality, quality-of-life features, and a strong quality gate—please refer to the [From Code to Product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 ## Registering a Catalog item with the API
 

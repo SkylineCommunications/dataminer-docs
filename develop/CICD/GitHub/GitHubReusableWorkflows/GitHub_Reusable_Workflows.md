@@ -19,11 +19,12 @@ These reusable workflows are public and can be accessed by any organization. The
 
 You can find all available reusable workflows in the [_ReusableWorkflows](https://github.com/SkylineCommunications/_ReusableWorkflows/tree/main/.github/workflows) repository.
 
-For more details about what each workflow does, you can check one of the below links:
+For more details about what each workflow does, you can check one of the links below:
 
 - [Automation Master Workflow](xref:github_reusable_workflows_automation_master_workflow)
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [SRM Function Master Workflow](xref:github_reusable_workflows_srm_function_master_workflow)
+- [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
 
 ## GitHub UI to Catalog Details
 
@@ -44,7 +45,7 @@ jobs:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
 ```
 
-For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file. You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file. For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 However, we recommend that you instead use one of the available [starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and that are preconfigured with most of the arguments.
 
@@ -69,4 +70,4 @@ jobs:
 ```
 
 > [!NOTE]
-> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).

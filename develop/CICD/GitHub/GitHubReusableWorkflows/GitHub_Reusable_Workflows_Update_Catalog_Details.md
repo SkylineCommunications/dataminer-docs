@@ -4,7 +4,8 @@ uid: github_reusable_workflows_update_catalog_details
 
 # Update Catalog Details
 
-The Update Catalog Details workflow can run on any repository. It's intended to update only the catalog meta data and details without uploading new versions of artifacts.
+The Update Catalog Details workflow can run on any repository. It is intended to update only the Catalog metadata and details without uploading new versions of artifacts.
+
 This is an optional workflow, running the regular AutomationScript or Connector reusable workflows will perform the same as this but with additional quality control and the ability to release new artifacts.
 
 The following actions will be performed:
@@ -15,7 +16,7 @@ The following actions will be performed:
 - [Retrieve Images](#retrieve-images)
 - [Upload to Catalog](#upload-to-catalog)
 
-## **GitHub UI to Catalog Details**
+## GitHub UI to Catalog Details
 
 This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
 

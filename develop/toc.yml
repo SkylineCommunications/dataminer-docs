@@ -5120,14 +5120,12 @@ items:
     topicUid: Platform_independent_CICD
   - name: Tutorials
     items:
-     - name: Setting up your organization for GitHub
+     - name: Setting up your development environment in GitHub
        topicUid: CICD_Tutorial_GitHub_Setting_Up_Organization
-     - name: Going from Code to Product in GitHub
+     - name: Going from code to product in GitHub
        topicUid: CICD_Tutorial_GitHub_Code_To_Product
-     - name: Setting up a basic CI/CD for connector deployment
+     - name: Setting up basic CI/CD for connector deployment
        topicUid: CICD_Tutorial_Connector
-     - name: Setting up a basic CI/CD for connector catalog registration
-       topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
   - name: CI/CD using command line
     items:
     - name: Command line examples
@@ -5135,7 +5133,7 @@ items:
   - name: CI/CD using GitHub
     topicUid: CICD_on_GitHub
     items:
-    - name: GitHub Secrets and Tokens
+    - name: GitHub secrets and tokens
       topicUid: GitHub_Secrets
     - name: GitHub example workflows
       topicUid: CICD_GitHub_Examples
@@ -5154,6 +5152,8 @@ items:
         topicUid: github_reusable_workflows_nuget_solution_master_workflow
       - name: Reusable workflow SRM function
         topicUid: github_reusable_workflows_srm_function_master_workflow
+      - name: Reusable workflow connectors
+        topicUid: github_reusable_workflows_connector_master_workflow
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples

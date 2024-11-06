@@ -23,10 +23,10 @@ Only when the actions above have been successful, will the "Artifact Registratio
 - [Upload artifact package](#upload-artifact-package)
 - [Set artifact ID](#set-artifact-id)
 
-In parallel to these stages it will execute two jobs:
+In parallel to these stages, it will execute two jobs:
 
-- [Artifact Creation](#artifact-creation)
-- [Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github)
+- [Artifact creation](#artifact-creation)
+- [Auto-generating Catalog from GitHub](#auto-generating-catalog-from-github)
 
 > [!IMPORTANT]
 > This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D` or `A.B.C`. During a development cycle, only the quality control actions are performed and artifact uploading is ignored (this means the secret "DATAMINER_DEPLOY_KEY" is optional). During a release cycle, an actual artifact is created and uploaded to the catalog (this means the secret "DATAMINER_DEPLOY_KEY" is required). A release cycle can also be a pre-release with versions of format `A.B.C.D-text` or `A.B.C-text`.
@@ -37,9 +37,9 @@ In parallel to these stages it will execute two jobs:
 
 - Part of our quality control involves static code analysis through sonarcloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a sonarcloud organization setup, linked to your GitHub Organization as described in [sonarcloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
-- Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+- Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
-## **GitHub UI to Catalog Details**
+## GitHub UI to Catalog Details
 
 This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
 
@@ -105,7 +105,7 @@ This step runs the DataMiner Connector Validator, also included with DIS, to ver
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 > [!NOTE]
-> For public repositories in SkylineCommunications, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). You can find more information on secrets and on the [GitHub Secrets](xref:GitHub_Secrets) page.
+> For public repositories in SkylineCommunications, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ### Quality gate
 
