@@ -40,9 +40,9 @@ Several default tests are available related to the state of the DataMiner System
    - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
 
-1. Click *OK* to create the test.
+   ![Test configuration](~/user-guide/images/Health_Check_Configure_Test.png)
 
-![Test configuration](~/user-guide/images/Health_Check_Configure_Test.png)
+1. Click *OK* to create the test.
 
 #### Editing a script-based test
 
@@ -68,7 +68,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
 
 #### Creating a subscription
 
-1. In DataMiner Cube, open the *Health Check Manager* element, go to the *Test Configuration* page.
+1. In DataMiner Cube, open the *Health Check Manager* element and go to the *Test Configuration* page.
 
 1. Right-click the *Parameter Subscription Table* and select *Add Subscription* in the context menu.
 
@@ -88,7 +88,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
 
 #### Editing a subscription
 
-1. In DataMiner Cube, open the *Health Check Manager* element, go to the *Test Configuration* page.
+1. In DataMiner Cube, open the *Health Check Manager* element and go to the *Test Configuration* page.
 
 1. Right-click the *Parameter Subscription Table* and select *Edit Subscription* in the context menu.
 
@@ -126,7 +126,7 @@ After you have created a subscription, you will still need to link it to a test:
 
 ## Configuring email reports
 
-The DataMiner Health Check Tool can provide daily email reports summarizing the result of the tests that have been executed.
+The DataMiner Health Check Tool can provide daily email reports summarizing the results of the tests that have been executed.
 
 To set up the recipients for the email reports, follow these steps:
 
@@ -134,7 +134,7 @@ To set up the recipients for the email reports, follow these steps:
 
 1. In the *Email Configuration* section, make sure *Email State* is set to *Enabled*, so that email reporting is activated.
 
-1. In the *Email Addresses* field, enter a list of email addresses that should get the reports, using a **comma** (`,`) as a separator.
+1. In the *Email Addresses* field, enter a list of email addresses that should get the reports, using a comma (`,`) as a separator.
 
 ## Configuring the test execution schedule
 
@@ -148,8 +148,8 @@ You have the flexibility to schedule when and how frequently tests will run to e
 
 1. Configure the settings for the test schedule:
 
-   - Select the time when the tests should run (for example, `22:00`)
-   - Select how often the tests should be executed (*Daily*, *Weekly*, *Every* X *days*, etc.)
+   - Select the time when the tests should run (for example, `22:00`).
+   - Select how often the tests should be executed (*Daily*, *Weekly*, *Every* X *days*, etc.).
 
    ![Test recurrence](~/user-guide/images/Health_Check_Recurrence.png)
 
@@ -158,4 +158,4 @@ You have the flexibility to schedule when and how frequently tests will run to e
    The updated settings will be reflected in the *Test Settings* section.
 
 > [!NOTE]
-> The *Test Settings* section also contains the **Long Duration Time** parameter, which lets you set the time span for including test results in the *Overall Failure Rate (Longer Duration)* calculations. For example, if this is set to 7 days, only test results from the last 7 days will be considered in the failure rate.
+> The *Test Settings* section also contains the **Long Duration Time** parameter, which lets you set the time span for including test results in the *Overall Failure Rate (Longer Duration)* calculations. For example, if this is set to *7 days*, only test results from the last 7 days will be considered in the failure rate.

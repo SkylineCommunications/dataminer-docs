@@ -1,6 +1,7 @@
 ---
 uid: DataMiner_Health_Check_Tool_Installation
 ---
+
 # Installing the DataMiner Health Check Tool
 
 ## Prerequisites
