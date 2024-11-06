@@ -8,10 +8,12 @@ Cassandra has some operational limits regarding the size of its files, for examp
 
 The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
-This BPA test is available by default from DataMiner 10.1.4 onwards.
+This BPA test is available from DataMiner 10.1.4 onwards. However, as of DataMiner 10.4.12/10.5.0<!--RN 40751-->, it is no longer included as a standard BPA test and may not appear in the BPA overview located in *System Center* > *Agents* > *bpa*, depending on your [data storage architecture](xref:Databases_about).
 
 > [!NOTE]
-> This BPA test does not work for remote Cassandra nodes or for systems with a Cassandra Cluster setup.
+>
+> - This BPA test does not work for remote Cassandra nodes or for systems with a Cassandra Cluster setup.
+> - Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test does not work if your IP address is "localhost".
 
 ## Metadata
 
@@ -85,6 +87,10 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 `Unable to detect any Cassandra installation on the system`
 
 When no Cassandra database is installed on the system or the installed Cassandra database is not the active database for the DMA, the test will halt execution and report this.
+
+`This BPA does not apply for this DataMiner Agent`
+
+When the BPA test is not applicable to the current setup, the test will fail execution and report this. From DataMiner 10.4.12/10.5.0 onwards<!--RN 40751-->, this message no longer appears on DMAs using [STaaS](xref:STaaS).
 
 ## List of rules being checked
 
