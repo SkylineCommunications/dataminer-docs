@@ -199,7 +199,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
 - *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes")<!-- RN 32594 -->. To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
 
-- *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a **text input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all text input components, while in recent DataMiner versions you can specify a feed per component.
+- *texts*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a **text input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all text input components, while in recent DataMiner versions you can specify a feed per component. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, this object is called "strings" instead.
 
 - *numbers*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a **numeric input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all numeric input components, while in recent DataMiner versions you can specify a feed per component.
 
@@ -221,7 +221,9 @@ Within the dashboard or app URL, the following data objects can be specified:
 
     `?query columns=3af9e5a7-91fc-4333-94c0-e39a59f0d900%1e23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number%1erange%1e5%1f10%1ffalse%1ftrue`
 
-- *query rows*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->. An array of query rows. Each row must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
+- *tables*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->.  An array of query rows. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this object is called "query rows" instead.
+
+  Each row must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
 
   - *VERSION*: A parameter with the data version, currently always `v:1`.
 
