@@ -19,7 +19,7 @@ To configure which users can access and/or edit a folder or dashboard:
 
 1. Right-click the folder or dashboard in the list pane and select *Settings*.
 
-1. Under *Access*, determine which users and groups are allowed to view and/or edit the folder or dashboard. You can configure access for specific users, groups, or everyone.
+1. Under *Permissions*, determine which users and groups are allowed to view and/or edit the folder or dashboard. You can configure permissions for specific users, groups, or everyone. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41079-->, this section of the settings is called "Access" instead.
 
    - The *Everyone* field is always available. This determines the access level for all users who have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
 
@@ -38,6 +38,7 @@ To configure which users can access and/or edit a folder or dashboard:
    > [!NOTE]
    >
    > - If *Everyone* is set to *No access*, you must assign at least one user or group as an editor to keep the folder/dashboard functional. If you do not add your own user account as an editor, you will lose the ability to make further changes to the folder or dashboard.
+   > - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41079-->, if you strip the user who created a dashboard of their edit rights, the following message will appear: `You have removed the edit rights from the creator`.
    > - If a user has been given an access level both as an individual and as part of a group, the level with the most privileges is the one that counts.
    > - Granting a user *Viewer* rights to a folder allows them to view all subfolders and dashboards within. However, granting a user *Editor* rights to a folder does not automatically grant them edit rights to subfolders and dashboards within.
    > - The built-in Administrator account always has full access to all dashboards.

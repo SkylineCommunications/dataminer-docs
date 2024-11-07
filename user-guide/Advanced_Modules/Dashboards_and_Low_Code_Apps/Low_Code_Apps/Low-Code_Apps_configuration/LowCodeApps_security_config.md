@@ -12,7 +12,7 @@ To configure which users can access and/or edit a low-code application:
 
 1. Click the ellipsis button ("...")<!--RN 40077--> in the top-right corner and select *Settings*.
 
-1. Under *Access*, determine which users and groups are allowed to view and/or edit the app. You can configure access for specific users, groups, and everyone.
+1. Under *Permissions*, determine which users and groups are allowed to view and/or edit the app. You can configure permissions for specific users, groups, and everyone. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41079-->, this section of the settings is called "Access" instead.
 
    - The *Everyone* field is always available. This determines the access level for all users who have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission as well as any other user permissions required to access specific apps.
 
@@ -31,6 +31,7 @@ To configure which users can access and/or edit a low-code application:
    > [!NOTE]
    >
    > - If you set *Everyone* to *No access*, you must assign at least one user or group as an editor to keep the app functional. If you do not add your own user account as an editor, you will lose the ability to make further changes to the application.
+   > - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41079-->, if you strip the user who created an app of their edit rights, the following message will appear: `You have removed the edit rights from the creator`.
    > - If a user has been given an access level both as an individual and as part of a group, the level with the most privileges is the one that counts.
    > - The built-in Administrator account always has full access to all apps.
 
