@@ -10,21 +10,8 @@ While the tutorial uses the example of a connector, registering a new version fo
 
 Expected duration: 15 minutes
 
-## Platform-Independent Tooling
-
-Alternatively, if you’d prefer not to use Postman and https directly, you can try our convenient, [Platform-Independent](xref:Platform_independent_CICD) **Catalog Uploader** tool:
-- [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
-
-To install and use the tool in any commandline or bash:
-
-```bash
-dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
-dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.yml" --path-to-readme "README.md" --path-to-images "resources/images" --dm-catalog-token "abc123"
-```
-
-## pre-made workflows on GitHub
-
-If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+> [!NOTE]
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial. Alternatively, if you would prefer not to use Postman and HTTPS directly, you can try our [platform-independent tooling](xref:Register_Catalog_Item##registering-a-catalog-item-with-workflows-and-tooling).
 
 ## Prerequisites
 

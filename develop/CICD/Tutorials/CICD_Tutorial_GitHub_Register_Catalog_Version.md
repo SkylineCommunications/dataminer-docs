@@ -10,9 +10,8 @@ While this tutorial uses the example of a connector, registering a new version f
 
 Expected duration: 10 minutes
 
-## Pre-Made Workflows on GitHub
-
-If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+> [!NOTE]
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 ## Prerequisites
 
