@@ -34,7 +34,10 @@ To create component references inside textual settings, use the following syntax
 
 - **Category name**: The part of the component that will contain the data, e.g. "Selected rows".
 
-- **Data type**: The type of data, e.g. "Elements".
+- **Data type**: The type of data, e.g. "Elements" or "Tables".
+
+  > [!NOTE]
+  > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
 
 - **Property name**: The property of the data that should be used, e.g. "Protocol Name".
 
@@ -64,7 +67,10 @@ To create URL references inside textual settings, use the following syntax:
 
 - **Category name**: The part of the URL where the data will be embedded, e.g. "Query parameters".
 
-- **Type**: The type of data, e.g. "Numbers".
+- **Type**: The type of data, e.g. "Numbers" or "Texts".
+
+  > [!NOTE]
+  > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
 
 - **Value**: The property of the data that should be used in the URL.
 
