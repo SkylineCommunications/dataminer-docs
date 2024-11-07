@@ -296,6 +296,8 @@ items:
             topicUid: Ping_Monitoring_UI
           - name: Managing groups and destinations
             topicUid: Ping_Monitoring_managing_groups_destinations
+          - name: Getting started tutorial
+            topicUid: Tutorial_Apps_Ping_Monitoring_App
       - name: DataMiner Planned Maintenance (PLM) tool
         topicUid: DataMiner_PLM_Tool_Overview
         items:
