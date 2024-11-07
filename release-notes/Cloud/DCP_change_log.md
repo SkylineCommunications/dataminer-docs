@@ -9,6 +9,47 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 7 November 2024 - Fix - Catalog - Items without any version will now show an info message [ID 41325]
+
+When a user would open the versions section of an item without any versions it would stay in a loading state.
+This has now been fixed: an info message will be shown saying this item does not have any versions.
+
+### 7 November 2024 - Enhancement - Catalog - Permalinks are shown for titles of a catalog description [ID 41322]
+
+The description of an item will show a link next to the titles in the form of a '#'.
+This link can be copied and shared with other users and will open the current page on the selected heading.
+
+### 7 November 2024 - Enhancement - Catalog - Support for relative (local) links in the description of an item [ID 41319]
+
+On the catalog details page headings can now be linked to.
+Users can link to the heading by using a relative link in their markdown.
+If a fragment link (indicated by # in the URL) is detected, the details page will scroll to said heading.
+
+### 7 November 2024 - Enhancement - Sharing - An e-mail will be set when the user leaves the input [ID 41244]
+
+After a user fills in the e-mail input field and leaves it, the e-mail will be saved and the share button will be enabled.
+
+### 7 November 2024 - Fix - Sharing - Updating expiry date after enabling it will enable the share button [ID 41244]
+
+Before when you enabled the expiration date and then set a date, the share button would still be disabled.
+This has now been fixed: as soon as you set an expiry date, the share button will be enabled.
+
+### 7 November 2024 - Enhancement - Admin app - Reworded audit export [ID 41234]
+
+From now on, the audit export entry will have a better title, e.g. Usage export by ...
+
+#### 7 November 2024 - Fix - Catalog API - Missing search results [ID 41226]
+
+​Items that had no reference to a vendor may no longer be included in search results.
+
+#### 7 November 2024 - Enhancement - Catalog - Catalog versioning format has been updated [ID 41225]
+
+​The Catalog API now allows all formats when registering a Catalog version.
+
+Versions following semantic version of A.B.C.D will be displayed in a A.B.C range.
+Versions following semantic version of A.B.C will be displayed in a A range
+All other version formats will be displayed in a "Other" range.
+
 #### 24 October 2024 - Ehancement - Catalog - Improved displaying tags of a Catalog item [ID 41182]
 
 Tags of a Catalog item will now be shown based on the available space. If a tag is too big it will be grouped in a '+x' tag where you can hover over to display the values of the grouped ones.
@@ -20,18 +61,6 @@ Rendering of the Catalog headerbar has been improved.
 #### 24 October 2024 - Enhancement - Catalog - Catalog description supports markdown alert stying [ID 41053]
 
 Alert styling in the Catalog description readme.md is now supported. The current supported types are "Caution", "Important", "Note", "Tip" and "Warning".
-
-#### 24 October 2024 - Fix - Catalog API - Missing search results [ID 41226]
-
-​Items that had no reference to a vendor may no longer be included in search results.
-
-#### 24 October 2024 - Enhancement - Catalog - Catalog versioning format has been updated [ID 41225]
-
-​The Catalog API now allows all formats when registering a Catalog version.
-
-Versions following semantic version of A.B.C.D will be displayed in a A.B.C range.
-Versions following semantic version of A.B.C will be displayed in a A range
-All other version formats will be displayed in a "Other" range.
 
 #### 24 October 2024 - Enhancement - Catalog API - Catalog registration using a DMS key [ID 41215]
 
