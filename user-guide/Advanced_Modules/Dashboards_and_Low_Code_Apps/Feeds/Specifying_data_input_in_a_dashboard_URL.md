@@ -223,7 +223,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
 - *tables*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->.  An array of query rows. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this object is called "query rows" instead.
 
-  Each row must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
+  Each table must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
 
   - *VERSION*: A parameter with the data version, currently always `v:1`.
 
