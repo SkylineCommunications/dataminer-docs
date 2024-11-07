@@ -11,7 +11,7 @@ DataMiner supports any LDAP-compatible directory (e.g. OpenLDAP) as an alternati
 
 ## Configuring LDAP settings in DataMiner Cube
 
-Most custom LDAP settings can be configured in DataMiner Cube:
+Most custom LDAP settings can be configured in DataMiner Cube. However, it is not possible to setup the initial configuration in Cube on a DMA that is not joined in a Windows ActiveDirectory domain. In that scenario, it is necessary to first manually configure the `<LDAP nonDomainLDAP="true" ... />` tag in DataMiner.xml and restart the DMA. Afterwards, those settings can be further edited in DataMiner Cube.
 
 1. Go to *System Center* > *System settings* > *LDAP*.
 
