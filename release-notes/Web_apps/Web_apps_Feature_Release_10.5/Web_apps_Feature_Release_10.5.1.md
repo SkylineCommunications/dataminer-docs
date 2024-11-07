@@ -37,6 +37,14 @@ This type of action will allow users to set the current value of any variable th
 
 Because of a number of enhancements with regard to file operations, overall performance has increased when working with the Dashboards app.
 
+#### Dashboards/Low-Code Apps: Pickers have been made more consistent [ID 41251]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+
+When you create a variable of type *DOM instance*, you will now have to click *Apply* or *Cancel* after selecting a DOM instance.
+
+In addition, the *Link to* data pickers have now been made more consistent. The *Apply* button has been renamed to *Link*, and will only be clickable when a valid link has been configured. Also, when you edit a link, an *Unlink* button will allow you to remove the link.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Labels of lazy-loaded data would incorrectly not be displayed in edit mode [ID 41189]
@@ -68,3 +76,13 @@ When the value of a parameter selected in another component (e.g. a *Gauge* or a
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
 In some cases, a *Line & area chart* component would incorrectly remain empty until it was resized.
+
+#### Low-Code Apps: Problem when multiple users would continually refresh a page with a number of queries [ID 41316]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When multiple users would open a page containing a number of queries and then continually refreshed the page within a time frame of 5 minutes, in some cases, the following GQI exception could be thrown:
+
+`Maximum amount of concurrent sessions`
+
+To prevent this exception from being thrown, the above-mentioned time frame has now been reduced to 1 minute.

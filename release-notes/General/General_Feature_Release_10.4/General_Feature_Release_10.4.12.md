@@ -228,12 +228,9 @@ When certificate validation is skipped, in case an HTTP connector polls an HTTPS
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters of the same element that were related to the parameter shown in the graph.
+When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters in the same service that were related to the parameter shown in the graph.
 
-From now on, the menu will no longer only show all parameters of the same element that were related in the selected time range. It will now also show
-
-- all parameters of the other elements in the same service that were related in the selected time range, and
-- the top 10 parameters system-wide that were related in the selected time range.
+From now on, the menu will no longer only show all parameters in the same service that were related in the selected time range. It will now also show the top 10 parameters system-wide that were related in the selected time range.
 
 #### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
