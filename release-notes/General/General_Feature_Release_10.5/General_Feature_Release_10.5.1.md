@@ -34,11 +34,13 @@ In future versions, this call will be used to verify whether DataMiner Swarming 
 
 ### Enhancements
 
-#### DataMiner installer has been updated [ID 40409]
+#### DataMiner installer has been updated [ID 40409] [ID 41299]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
 The DataMiner installer has been updated.
+
+When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
