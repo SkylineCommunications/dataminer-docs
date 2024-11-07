@@ -30,7 +30,7 @@ To create a new variable:
 
    - Number
 
-   - Table <!--RN 41131-->
+   - Table <!--RN 41132-->
 
 1. Optionally, enable the ***Read-only* setting** if you want the variable's value to remain fixed and unchangeable when interacting with the app. This setting is only available for Low-Code Apps, as Dashboard variables are always read-only.
 
