@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.5.1
 
 ### Enhancements
 
+#### System Center - Users/Groups: Tooltip of 'Admin tools' permission has been enhanced [ID 40983]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you hover over the information icon next to the *Modules > System configuration > Tools > Admin tools* user permission, a tooltip appears, showing more information on this permission. The text of this tooltip has now been enhanced.
+
 #### Cards: Enhancements to prevent view cards from showing a 'Loading' message when opened [ID 41162]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
