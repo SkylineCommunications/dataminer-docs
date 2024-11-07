@@ -86,3 +86,9 @@ When multiple users would open a page containing a number of queries and then co
 `Maximum amount of concurrent sessions`
 
 To prevent this exception from being thrown, the above-mentioned time frame has now been reduced to 1 minute.
+
+#### Dashboards app: Not possible to generate a PDF report based on a dashboard containing empty components [ID 41317]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, it would incorrectly not be possible to generate a PDF report based on a dashboard that contained empty components.
