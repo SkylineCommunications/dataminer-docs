@@ -22,8 +22,30 @@ uid: Cube_Feature_Release_10.5.1
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center - Users/Groups: Tooltip of 'Admin tools' permission has been enhanced [ID 40983]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you hover over the information icon next to the *Modules > System configuration > Tools > Admin tools* user permission, a tooltip appears, showing more information on this permission. The text of this tooltip has now been enhanced.
+
+#### Cards: Enhancements to prevent view cards from showing a 'Loading' message when opened [ID 41162]
+
+<!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
+
+A number of enhancements have been made to prevent view cards from showing a "Loading" message when opened.
+
+#### Alarm templates: Text in 'Augmented Operations alarm settings' pop-up window has been made more translation-friendly [ID 41254]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+In the *Augmented Operations alarm settings* pop-up window, the text has been adjusted to allow a more natural translation to other languages.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
+
+<!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in the *Resources* app, you added or updated a resource, up to now, a pop-up window showing a quarantine warning would appear whenever something went wrong.
+
+From now on, a pop-up window showing a quarantine warning will only appear in cases where quarantine applies.

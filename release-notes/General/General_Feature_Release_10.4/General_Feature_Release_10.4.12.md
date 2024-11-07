@@ -19,6 +19,7 @@ uid: General_Feature_Release_10.4.12
 ## Highlights
 
 - [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
+- [Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877]](#elements-ssltls-certificates-will-now-be-validated-by-default-for-all-newly-created-http-elements-id-40877)
 - [Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]](#default-number-of-simultaneously-running-slprotocol-processes-has-been-increased-from-5-to-10-id-41077)
 
 ## New features
@@ -547,6 +548,6 @@ A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog
 
 #### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
 
-<!-- MR 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.

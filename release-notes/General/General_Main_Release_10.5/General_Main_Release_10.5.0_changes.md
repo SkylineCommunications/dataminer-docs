@@ -176,21 +176,22 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id-2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID 38499] [ID 38596] [ID 38743] [ID 38900] [ID 39278] [ID 39802] [ID 39803]
+#### DxMs upgraded [ID 38499] [ID 38596] [ID 38743] [ID 38900] [ID 39278] [ID 39802] [ID 39803] [ID 41297]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
 <!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
 <!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
 <!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
+<!-- RN 41297: MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.7.1
-- DataMiner CoreGateway: version 2.14.7
-- DataMiner FieldControl: version 2.10.6
-- DataMiner Orchestrator: version 1.6.0
-- DataMiner SupportAssistant: version 1.6.9
+- DataMiner ArtifactDeployer: version 1.8.1
+- DataMiner CoreGateway: version 2.14.11
+- DataMiner FieldControl: version 2.11.1
+- DataMiner Orchestrator: version 1.7.1
+- DataMiner SupportAssistant: version 1.7.1
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
@@ -875,7 +876,7 @@ Because of a number of enhancements, on STaaS systems, overall performance has i
 
 In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
 
-If you want to disable certificate validation for an element created after a 10.5.0/10.4.2 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.2 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
 
 When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
 
@@ -981,6 +982,16 @@ For more information, see [Customizing the layout of notification messages](xref
 The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
 
 Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
+#### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of enhancements have been made to the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*):
+
+- The initialization of a single agent has been disabled in favor of the global initialization, unless not all agents could be initialized.
+- Connection details will now only be requested once, unless not all agents could not be initialized.
+- The migration can now only be started when all agents have successfully been initialized.
 
 #### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
 
@@ -1154,3 +1165,72 @@ From now on, when an action tries to send an email with a non-existing dashboard
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 When a DELT element was masked or unmasked, when no hosting agent ID was passed along in the SetAlarmStateMessage, the message would be sent to the DataMiner Agent referred to by the DataMiner ID of the element. In some rare cases, this DataMiner ID could refer to a non-existing DataMiner Agent, causing an exception to be thrown.
+
+#### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
+
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
+
+#### SLElement: Incorrect alarm linking [ID 41057]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+In some cases, new alarm events could incorrectly get linked to previously closed external events or information events on the same element.
+
+#### SLElement would leak memory when filtering a recursive table or a directview/view table that had to be sorted [ID 41058]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+When SLElement had to process a table filter request, it would leak memory in the following cases:
+
+- When the table had a foreign key to itself.
+- When a directview or view table with a number of non-initialized columns had to be sorted.
+
+#### SLElement would leak memory when SLNet needed to be notified of baseline changes [ID 41088]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+When a baseline changed and SLNet needed to be notified of the new values, SLElement would leak memory.
+
+#### Failover: Problem when an element.xml file was updated while StorageModule was synchronizing its cache [ID 41133]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in a Failover setup, SLDMS was synchronizing an updated *element.xml* file while the StorageModule DcM was synchronizing its cache to an XML file, in some rare cases, an exception could be thrown in the StorageModule DcM, causing the *element.xml* update to fail.
+
+#### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41143]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+Since DataMiner 10.4.0 [CU4]/10.4.7, in some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When such a user tried to log in, the following entry would be added to the SLNet.txt log file:
+
+`Authentication Step Failure: Not a DataMiner user: CONTOSA\user`
+
+This issue would only occur on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configuration,DC=contosa,DC=com` does not have a `nETBIOSName` attribute, for example when accessing the GlobalCatalog of a forest.
+
+After having upgraded to a DataMiner version that contains this fix, you can do the following:
+
+- Wait up to an hour for the next LDAP synchronization to occur, or
+- Manually trigger the "Skyline DataMiner LDAP Resync" task in Windows Task Scheduler.
+
+All users should then be able to log in again.
+
+#### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+On STaaS systems, in case of connection problems, a large number of the following errors would be added to the *SLErrors.txt* log file:
+
+- *The remote name could not be resolved.*
+- *Unable to connect to the remote server.*
+
+From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
+
+#### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
+
+<!-- MR 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.

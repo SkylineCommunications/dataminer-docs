@@ -382,18 +382,18 @@ Uploaded images shown in an *Image* component would incorrectly not be synchroni
 
 #### Low-Code Apps: Additions, updates and removals would not be synchronized among the DMAs in the DMS [ID 41228]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When you created, updated or deleted a low-code app, this would incorrectly not be synchronized among the DataMiner Agents in the DMS.
 
 #### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
 
 #### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
