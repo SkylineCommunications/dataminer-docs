@@ -15,6 +15,9 @@ From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet req
 > [!NOTE]
 > The logs are buffered and written asynchronously, so it may take a few seconds for them to appear in the file.
 
+> [!TIP]
+> For information about logging for ad hoc data sources and custom operators, see [GQI extensions logging](xref:GQI_Extensions_Logging).
+
 ## Metrics
 
 From DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`. These can be used to investigate potential performance issues.

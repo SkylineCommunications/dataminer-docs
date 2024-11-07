@@ -13,7 +13,7 @@ Below you can find information about the [basic syntax](#basic-syntax), as well 
 After you have modified the file, you will also need to restart the *SLAnalytics.exe* process on the leader Agent for the changes to take effect.
 
 > [!IMPORTANT]
-> The *configuration.xml* files are not synced across a DataMiner cluster, and only the configuration on the leader Agent is taken into account. For this reason, it is important to always edit the file on the leader Agent. If possible, it is good practice to manually replace the file on all Agents in the cluster at the same time. This way, no unwanted behavior will occur when the leader Agent is changed at a later moment.
+> The *configuration.xml* files are not synced across a DataMiner cluster, and only the configuration on the leader Agent is taken into account. For this reason, it is important to always edit the file on the leader Agent. If possible, it is good practice to also synchronize the file across the cluster, so that no unwanted behavior will occur when the leader Agent is changed at a later moment. From DataMiner 10.5.1/10.6.0 onwards<!-- RN 41270 -->, you can [force the synchronization of the file via Cube](xref:Synchronizing_data_between_DataMiner_Agents). In earlier DataMiner versions, you will need to manually replace the file on all Agents in the cluster at the same time.
 
 ## Basic syntax
 

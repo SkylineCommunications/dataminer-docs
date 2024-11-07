@@ -14,6 +14,8 @@ items:
         topicUid: ChatOps_Tutorials
       - name: CI/CD tutorials
         topicUid: CICD_Tutorials
+      - name: Connectivity Framework (DCF) tutorials
+        topicUid: DCF_tutorials
       - name: Correlation tutorials
         topicUid: Correlation_Tutorials
       - name: Dashboards and Low-Code Apps tutorials

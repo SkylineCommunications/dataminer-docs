@@ -184,6 +184,14 @@ When you gave a downward trend change a "thumbs up" and then selected *Improve a
 
 Up to now, it would incorrectly not be possible to make corrections to corrupt anomaly alarm templates in DataMiner Cube. This has now been made possible.
 
+#### Visual Overview: Problem when updating path data [ID 41027]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When shape data of type *Path* was updated in such a way that it affected the constraints, up to now, the constraints would not be updated correctly. In some situations, this would result in paths not being visible.
+
+From now on, the constraints will always follow those of the active path.
+
 #### Alarm Console: Not all base alarms would be moved to the active alarms tab when a correlation alarm was cleared [ID 41071]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->

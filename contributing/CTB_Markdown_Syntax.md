@@ -125,11 +125,15 @@ For example:
 #### Third sublevel: heading level 4.
 
 ##### Fourth sublevel: heading level 5.
+
+Paragraph text.
 ```
 
 Do not skip heading levels. For example, do not use heading level 3 right after heading level 1 while there is no heading level 2 in between.
 
 You can use up to five heading levels on a single page. If you need more levels, you will need to divide your content over several pages.
+
+Headings should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
 
 ## Tables
 
