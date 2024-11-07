@@ -98,3 +98,9 @@ To prevent this exception from being thrown, the above-mentioned time frame has 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
 Up to now, it would incorrectly not be possible to generate a PDF report based on a dashboard that contained empty components.
+
+#### Dashboards/Low-Code Apps - GQI components: No query session would be opened when no WebSocket connection had been established [ID 41349]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When a GQI component had its *Update data* setting enabled, no query session would be opened when no WebSocket connection had been established. As a result, no data would be fetched.
