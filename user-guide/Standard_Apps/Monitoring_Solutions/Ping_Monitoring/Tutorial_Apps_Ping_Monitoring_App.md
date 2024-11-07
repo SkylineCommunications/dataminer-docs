@@ -6,16 +6,6 @@ uid: Tutorial_Apps_Ping_Monitoring_App
 
 In this tutorial, you will learn how to use the Ping Monitoring tool for network monitoring and diagnostics.
 
-You will carry out the following tasks:
-
-1. Deploy Ping Monitoring package from Catalog
-2. Open the application installed in your system
-3. Create a new group
-4. Create a new destination
-5. Analyze the results
-6. Filter and access destination details
-7. Delete a destination
-
 Expected duration: 15 minutes
 
 > [!NOTE]
@@ -26,38 +16,56 @@ Expected duration: 15 minutes
 - A DataMiner System using DataMiner 10.3.9-CU2 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Your dataminer.services [organization has been verified](xref:CloudConnectionVerification).
 
-## Step 1: Deploy Ping Monitoring package from Catalog
+## Overview
 
-1. Locate [Ping Monitoring | Catalog (dataminer.services)](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96).
-2. Deploy to your system. See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
+- [Step 1: Deploy the Ping Monitoring package from the Catalog](#step-1-deploy-the-ping-monitoring-package-from-the-catalog)
+- [Step 2: Create a new group](#step-2-create-a-new-group)
+- [Step 3: Create a new destination](#step-3-create-a-new-destination)
+- [Step 4: Analyze the results](#step-4-analyze-the-results)
+- [Step 5: Filter and access destination details](#step-5-filter-and-access-destination-details)
+- [Step 6: Delete a destination](#step-6-delete-a-destination)
 
-## Step 2: Open the application installed in your system
+## Step 1: Deploy the Ping Monitoring package from the Catalog
 
-The newly installed application will be visible when you open your system homepage URL.
+1. Look up the [Ping Monitoring](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) package in the DataMiner Catalog.
 
-![root](~/user-guide/images/DMAroot-PingMonitoring.png)
+1. click the *Deploy* button.
 
-If you don’t know where to find the homepage URL, open https://dataminer.services/ in a browser, and you can copy the URL or click the Home button.
+   > [!TIP]
+   > See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
-![dataminer.services](~/user-guide/images/dataminerservices-PingMonitoring.png)
+1. Go to the root page of your DataMiner System and check if the tool has been added:
 
-This is what the application will look like when you first open it in a browser:
+   ![DMS root page](~/user-guide/images/DMAroot-PingMonitoring.png)
 
-![new system](~/user-guide/images/brand_new_destinations-PingMonitoring.png)
+   If you do not know where to find the homepage URL, open <https://dataminer.services/> in a browser, and copy the URL or click the *Home* button.
+
+   ![dataminer.services](~/user-guide/images/dataminerservices-PingMonitoring.png)
+
+1. Open the Ping Monitoring tool.
+
+   This is what the application will look like:
+
+   ![Ping Monitoring UI](~/user-guide/images/brand_new_destinations-PingMonitoring.png)
 
 > [!TIP]
-> See also [Ping Monitoring UI overview | DataMiner Docs](xref:Ping_Monitoring_UI)
+> See also: [Ping Monitoring UI overview](xref:Ping_Monitoring_UI)
 
-## Step 3: Create a new group
+## Step 2: Create a new group
 
 Groups are used to organize the destinations configured in the application. Destinations that belong to the same group share the same properties that differentiate them from other destinations.
-For more information on the different options available, see [creating a new group](xref:Ping_Monitoring_managing_groups_destinations#creating-a-new-group).
 
-1. Create a group that you will use during the rest of this tutorial when creating new destinations.
+1. In the Ping Monitoring tool, go to the *Groups* page.
+
+1. In the header bar, click *Create Group*.
+
+   This will open a pop-up window.
+
+1. 
 
 ![new group](~/user-guide/images/Create_New_Group-PingMonitoring.gif)
 
-## Step 4: Create a new destination
+## Step 3: Create a new destination
 
 A destination is a point in the network you want to test against. The Ping Monitor application allows you to easily manage hundreds and even thousands of destinations to monitor the availability of different devices and services in your network. See [adding a new destination](xref:Ping_Monitoring_managing_groups_destinations#adding-a-new-destination).
 
@@ -65,7 +73,7 @@ A destination is a point in the network you want to test against. The Ping Monit
 
 ![new destination](~/user-guide/images/Create_New_Destination-PingMonitoring.gif)
 
-## Step 5: Analyze the results
+## Step 4: Analyze the results
 
 After configuring your destination(s), the application will update to display the results of the latest test cycles.
 
@@ -84,15 +92,15 @@ These values can help you monitor network congestion and detect outages. For mor
 
 ![destinations](~/user-guide/images/destinations-PingMonitoring.png)
 
-## Step 6: Filter and access destination details
+## Step 5: Filter and access destination details
 
 1. Open the Grid View, which shows all the active destinations sorted by cycle packet loss.
-2. Use the filter panel to the left of the grid to look for specific destinations.
-3. Click on any destination to open its details, which include Host Information, Results, and Settings.
+1. Use the filter panel to the left of the grid to look for specific destinations.
+1. Click on any destination to open its details, which include Host Information, Results, and Settings.
 
 ![filtering and details](~/user-guide/images/Filter_Details-PingMonitoring.gif)
 
-## Step 7: Delete a destination
+## Step 6: Delete a destination
 
 To finalize this tutorial, you will delete one or more of the destinations you created. Please take a look at [deleting a destination](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-destination) if you have questions on how to do so.
 
