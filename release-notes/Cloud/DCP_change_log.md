@@ -9,6 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+
 ### 7 November 2024 - Fix - Catalog - Items without any version will now show an info message [ID 41325]
 
 When a user would open the versions section of an item without any versions it would stay in a loading state.
@@ -49,6 +50,14 @@ From now on, the audit export entry will have a better title, e.g. Usage export 
 Versions following semantic version of A.B.C.D will be displayed in a A.B.C range.
 Versions following semantic version of A.B.C will be displayed in a A range
 All other version formats will be displayed in a "Other" range.
+
+#### 28 October 2024 - Enhancement - Admin app - Audit export file download with a trusted dataminer.services URL [ID 41239]
+
+From now on, the audit export emails will contain a trusted dataminer.services URL for the file download.
+
+#### 28 October 2024 - Enhancement - Admin app - Enhanced stability and performance of the Audit page [ID 41238]
+
+Enhancements have been implemented to the *Audit* page in the [Admin app](https://admin.dataminer.services), improving the stability, availability, and performance with immediate effect.
 
 #### 24 October 2024 - Ehancement - Catalog - Improved displaying tags of a Catalog item [ID 41182]
 

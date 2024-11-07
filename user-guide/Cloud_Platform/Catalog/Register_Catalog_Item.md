@@ -45,6 +45,9 @@ The value of this key should be a .zip file containing the following items:
 
 - A *README.md* file containing the description of the Catalog item (optional).
 
+  > [!TIP]
+  > See also: [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
+
 - An *images* folder containing any image referenced in the readme file (optional). Supported image extensions are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
 ```json

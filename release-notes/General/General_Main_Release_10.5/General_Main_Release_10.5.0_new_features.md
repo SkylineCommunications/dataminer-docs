@@ -9,6 +9,9 @@ uid: General_Main_Release_10.5.0_new_features
 
 ## Highlights
 
+- [DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID 37891]](#dataminer-object-models-creating-updating-and-deleting-multiple-dom-instances-in-one-call-id-37891)
+- [Alarms - Behavioral anomaly detection: User feedback [ID 38707] [ID 38980] [ID 39944]](#alarms---behavioral-anomaly-detection-user-feedback-id-38707-id-38980-id-39944)
+- [Storage as a Service: Proxy support [ID 39221]](#storage-as-a-service-proxy-support-id-39221-id-39313)
 - [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
@@ -357,6 +360,22 @@ A connector will only be promoted to "production version" if its first version i
 
 > [!NOTE]
 > When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
+
+#### SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies [ID 41068]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to improve troubleshooting assembly resolution issues, the SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies.
+
+Also, SLManagedScripting will now add an entry in the *SLManagedScripting.txt* log file each time it has loaded or failed to load an assembly. This log entry will include both the requested version and the actual version of the assembly.
+
+To see the current hint paths per SLScripting process, do the following:
+
+1. Open the SLNetClientTest tool.
+1. Go to *Diagnostics > DMA > SLScripting AssemblyResolve HintPaths*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ### Automation
 

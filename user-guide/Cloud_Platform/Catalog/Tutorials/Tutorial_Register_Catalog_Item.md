@@ -71,6 +71,9 @@ The Catalog item register API call is authenticated using an [organization key](
      This Catalog item has been made available as part of the [Catalog registration tutorial](https://docs.dataminer.services/tutorials/Tutorials.html)
      ```
 
+     > [!TIP]
+     > See also: [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
+
    - Optionally, if you want to use images in the readme, an images folder containing those images.
 
    - A *manifest.yml* file describing the properties of the Catalog item.
