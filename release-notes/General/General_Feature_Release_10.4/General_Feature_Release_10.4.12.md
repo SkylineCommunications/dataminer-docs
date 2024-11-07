@@ -548,6 +548,6 @@ A number of enhancements have been made to SLDMS, SLASPConnection and SLWatchdog
 
 #### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
 
-<!-- MR 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.
