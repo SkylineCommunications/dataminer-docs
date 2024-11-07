@@ -5,9 +5,12 @@ uid: SwarmingBookings
 # Swarming bookings
 
 Since 10.4.4, it is possible to swarm bookings. To do so, you need the *Swarming* soft-launch option. 
-From 10.5.1 onwards, the feature is placed behind a different soft-launch option, namely *BookingSwarming*.
+From 10.5.1 onwards, the feature is placed behind a different soft-launch option, namely *BookingSwarming*. This also means that you can swarm bookings without having the permission to swarm other objects. 
 
-When swarming bookings to a new agent, an attempt is made to unregister the booking and we will wait until all ongoing actions have been completed. Only when this is done, we will try to register the booking on the new hosting agent. Also note that, when the booking is swarmed to the new agent, event scripts of that booking will be executed on that new agent.
+When an agent hosts a booking, it will register the booking and execute the start, end and event actions. If you want this to happen on a different agent than the currently hosting agent, you can swarm the booking to a different agent in the cluster. While swarming, an attempt is made to unregister the booking from the agent where it is currently hosted and waits until all ongoing actions have been completed. Only when this is done, we will try to register the booking on the new hosting agent. Also note that, when the booking is swarmed to the new agent, event scripts of that booking will be executed on that new agent.
+
+> [!TIP]
+> If you want to know where the booking is currently hosted, you can check the *HostingAgentID* property on the booking.
 
 Swarming bookings can be done by sending a *SwarmingRequestMessage*, to which you add the new hosting agent ID and booking ID. 
 This can be done as follows:
@@ -52,7 +55,7 @@ public class Script
 
 > [!NOTE]
 >
-> - In order to swarm a booking, the new hosting agent must be up and running. In case the current hosting agent is unreachable, swarming will still take place but an error will be in the log file. 
+> - In order to swarm a booking, the new hosting agent must be up and running. In case the current hosting agent is unreachable, swarming will still take place but an error will be in the *SLResourceManager* log file. 
 > -  If you swarm a booking to a new agent, the linked resources and/or services will not be swarmed to that new agent. 
 
 Bookings can also be swarmed async and in bulk. When doing this, progress events will be sent out to the client every time the swarming of a booking is completed. This can be done as follows: 
