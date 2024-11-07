@@ -28,6 +28,12 @@ uid: Cube_Feature_Release_10.5.1
 
 A number of enhancements have been made to prevent view cards from showing a "Loading" message when opened.
 
+#### Alarm templates: Text in 'Augmented Operations alarm settings' pop-up window has been made more translation-friendly [ID 41254]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+In the *Augmented Operations alarm settings* pop-up window, the text has been adjusted to allow a more natural translation to other languages.
+
 ### Fixes
 
 #### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
