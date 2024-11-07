@@ -50,7 +50,7 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
    Once the installation is complete, the configuration window will be displayed.
 
    > [!IMPORTANT]
-   > If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner](#restoring-a-backup-onto-the-new-installed-dataminer).
+   > If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](#restoring-a-backup-onto-the-new-installed-dataminer-agent).
 
 1. Click *Start*.
 
@@ -89,11 +89,11 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
 > - After the installation, if you have [configured security](xref:Managing_users) so that there is at least one other user with full administrator rights, you can safely remove the account you used for the installation if necessary.
 
-## Restoring a backup onto the new installed DataMiner
+### Restoring a backup onto the new installed DataMiner Agent
 
-If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, follow the steps below:
+If you are using the DataMiner Installer v10.4 to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, after you have installed DataMiner, instead of clicking *Start* to configure the DataMiner Agent, follow the steps below:
 
-1. Restore the backup in the same way as for a regular DataMiner Agent. See [Restoring a DataMiner Agent](xref:Restoring_a_DataMiner_Agent).
+1. Restore the backup in the same way as for a regular DataMiner Agent. See [Restoring a DataMiner Agent using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
@@ -113,7 +113,7 @@ If you want to restore a backup coming from another machine because of e.g. a ha
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-## Switching from subscription mode to perpetual license
+### Switching from subscription mode to perpetual license
 
 When you deploy a DataMiner Agent using the installer, your system will run in subscription mode and get licensed automatically. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
 
