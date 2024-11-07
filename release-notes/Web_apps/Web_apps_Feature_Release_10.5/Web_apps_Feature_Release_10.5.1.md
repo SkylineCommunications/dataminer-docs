@@ -39,11 +39,17 @@ Because of a number of enhancements with regard to file operations, overall perf
 
 #### Dashboards/Low-Code Apps: Pickers have been made more consistent [ID 41251]
 
-<!-- MR 10.4.0 [CU10] / 10.5.0 [CU1] - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
 When you create a variable of type *DOM instance*, you will now have to click *Apply* or *Cancel* after selecting a DOM instance.
 
 In addition, the *Link to* data pickers have now been made more consistent. The *Apply* button has been renamed to *Link*, and will only be clickable when a valid link has been configured. Also, when you edit a link, an *Unlink* button will allow you to remove the link.
+
+#### Web apps: Users will be redirected to the login screen when the connection cannot be restored [ID 41334]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+From now on, when the WebSocket is able to reconnect but the connection itself cannot be restored, users will be redirected to the login screen.
 
 ### Fixes
 
