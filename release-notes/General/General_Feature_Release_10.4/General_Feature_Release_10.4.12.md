@@ -283,7 +283,7 @@ Because of a number of enhancements, overall performance of GQI "top X" queries 
 
 Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
 
-From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo` option is set to true in the ResourceManager configuration.
 
 Also, the following scripts will now only be executed when the above-mentioned option is set to true:
 
@@ -295,7 +295,7 @@ Additionally, the following script will also no longer generate an information e
 - the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
 
 > [!IMPORTANT]
-> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+> The `ShowScriptStartEventInfo` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
 
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 

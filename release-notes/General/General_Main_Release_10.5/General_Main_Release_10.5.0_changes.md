@@ -934,7 +934,7 @@ Because of a number of enhancements, overall performance of GQI "top X" queries 
 
 Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
 
-From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo` option is set to true in the ResourceManager configuration.
 
 Also, the following scripts will now only be executed when the above-mentioned option is set to true:
 
@@ -946,7 +946,7 @@ Additionally, the following script will also no longer generate an information e
 - the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
 
 > [!IMPORTANT]
-> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+> The `ShowScriptStartEventInfo` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
 
 #### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
 
@@ -1236,7 +1236,7 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 
 - Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
 
-- Up to now , only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column is empty will be added to the table with the first column showing "Not Initialized".
+- Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
 
 #### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
 
