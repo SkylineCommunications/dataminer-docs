@@ -143,7 +143,7 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
 
    - To link to a feed instead of selecting a fixed element, service, or view, click the link icon next to the selection box, select the feed, and click *Apply*.
 
-     If you selected the *Name* option, you can link to a text input feed, which allows you to dynamically enter the name of the element, service, or view in the published app.
+     If you selected the *Name* option, you can link to text input, which allows you to dynamically specify the name of the element, service, or view in the published app. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, you can only link to the text input from a [text input component](xref:DashboardTextInputFeed), but in later DataMiner versions you can link to any text data source, including columns from a table selection.<!-- RN 41067 -->
 
      ![Open monitoring card](~/user-guide/images/Open_Monitoring_Card.gif)<br>*Low-Code Apps module in DataMiner 10.4.11*
 
