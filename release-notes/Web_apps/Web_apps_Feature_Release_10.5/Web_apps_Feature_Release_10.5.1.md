@@ -120,9 +120,3 @@ For more information on how to configure a warning message to be displayed when 
 
 > [!IMPORTANT]
 > In the Dashboards app, the *Button* component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
-
-#### Dashboards/Low-Code Apps - GQI components: No query session would be opened when no WebSocket connection had been established [ID 41349]
-
-<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
-
-When a GQI component had its *Update data* setting enabled, no query session would be opened when no WebSocket connection had been established. As a result, no data would be fetched.
