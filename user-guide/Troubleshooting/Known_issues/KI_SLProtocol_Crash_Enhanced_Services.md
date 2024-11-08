@@ -42,4 +42,4 @@ The enhanced service alarm monitoring feature is not completely disabled when th
 
 ## Issue description
 
-The alarm monitoring feature is not properly disabled when parameters are missing from the protocol, leading to access violations.
+In a DataMiner System where one or more enhanced service protocols are used with alarm monitoring, when an element is restarted, SLProtocol can stop functioning correctly. Depending on the DataMiner version, this can cause DataMiner to restart unexpectedly, or it can cause all elements hosted by the relevant SLProtocol process to be in error.
