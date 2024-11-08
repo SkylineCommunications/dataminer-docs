@@ -82,7 +82,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      > [!NOTE]
      > To add a [time range component](xref:DashboardTimeRange) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
      >
-     > 1. Select *Timeline # > Viewport > Timespans* in the *Components* or *Feeds* section of the *Data* tab (depending on your DataMiner version).
+     > 1. Select *Timeline # > Viewport > Timespans* in the *Components* section of the data pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this data source can be found in the *Feeds* section of the data pane.
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
      >
      > When you manually adjust the time range by zooming in or out, or by moving across the timeline component, the time range displayed in the time range component will automatically be adjusted.
