@@ -11,13 +11,13 @@ uid: EPM_7.0.8_Integrated_DOCSIS
 
 ### Enhancements
 
-#### CISCO CBR-8 CCAP Platform: CCAP TV data added [ID 41139]
+#### CISCO CBR-8 CCAP Platform: CCAP video data added [ID 41139]
 
-Two new tables are now available in the CISCO CBR-8 element: the *Video QAM Channel* table and the *MPEG Output Streams* table. These tables are shown on the *Video Data* page of the element. You can also retrieve the data from these tables in a dashboard or low-code app. If you do not need this TV data for your implementation, leave the *Poll Video Data Tables* parameter set to its default setting *Disabled*, so that this data will not be polled.
+Two new tables are now available in the CISCO CBR-8 element: the *Video QAM Channel* table and the *MPEG Output Streams* table. These tables are shown on the *Video Data* page of the element. You can also visualize data from these tables in a dashboard or low-code app. By default, these tables are not polled. To enable or disable polling, use the parameter *Poll Video Data Tables* on the *Configuration* page.
 
 #### New OFDMA + LowSplitSCQAM column added in US FN Peak dashboard [ID 41311]
 
-In the US FN Peak dashboard, a new column, *OFDMA + LowSplitSCQAM*, has been added. The values in this column are calculated by adding the highest peak at the same timestamp for the Low Split SCQAM and OFDMA Utilization for a user-defined time period. Note that the Peak OFDMA Utilization used in this calculation is different than the Peak OFDMA Utilization displayed on the dashboard. It is the highest peak in a 24-hour period, without taking the 3 highest peaks like the parameter shown in the dashboard.
+In the US FN Peak dashboard, a new column, *OFDMA + LowSplitSCQAM*, has been added. The values in this column are calculated by adding the highest peak at the same timestamp for the Low Split SCQAM and OFDMA Utilization for a user-defined time period. Note that the Peak OFDMA Utilization used in this calculation is different from the Peak OFDMA Utilization displayed on the dashboard. It is the highest peak in a 24-hour period, without taking the 3 highest peaks like the parameter shown in the dashboard.
 
 ### Fixes
 
