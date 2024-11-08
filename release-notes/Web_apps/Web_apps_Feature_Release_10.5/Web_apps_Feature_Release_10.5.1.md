@@ -99,6 +99,17 @@ To prevent this exception from being thrown, the above-mentioned time frame has 
 
 Up to now, it would incorrectly not be possible to generate a PDF report based on a dashboard that contained empty components.
 
+#### Dashboards app - Button component: No pop-up message would appear when clicking a button linked to a parameter for which a warning message had been configured [ID 41344]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When you clicked the button of a *Button* component linked to a button parameter for which a warning message had been configured in the *protocol.xml* file, no pop-up message would appear.
+
+For more information on how to configure a warning message to be displayed when users change a parameter value, see [Message element](xref:Protocol.Params.Param.Message).
+
+> [!IMPORTANT]
+> In the Dashboards app, the *Button* component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
+
 #### Dashboards/Low-Code Apps - GQI components: No query session would be opened when no WebSocket connection had been established [ID 41349]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
