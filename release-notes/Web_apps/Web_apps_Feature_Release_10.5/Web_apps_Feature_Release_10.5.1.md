@@ -27,6 +27,17 @@ This type of action will allow users to set the current value of any variable th
 > [!NOTE]
 > Variables of type *Table* can only be set to a static value.
 
+#### Low-Code Apps: New 'Add row' and 'Clear table' actions [ID 41324]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+It is now possible to configure the following actions:
+
+| Action | Function |
+|--------|----------|
+| Add row     | Adds a row to a variable of type *Table*. |
+| Clear table | Clears all rows defined in a variable of type *Table*. |
+
 ## Changes
 
 ### Enhancements
