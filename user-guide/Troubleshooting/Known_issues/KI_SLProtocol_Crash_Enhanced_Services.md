@@ -2,7 +2,7 @@
 uid: KI_SLProtocol_Crash_Enhanced_Services
 ---
 
-# SLProtocol crashes when Enhanced Service protocol is missing table 100
+# SLProtocol crashes when enhanced service protocol is missing table 100
 
 ## Affected versions
 
@@ -10,25 +10,36 @@ uid: KI_SLProtocol_Crash_Enhanced_Services
 
 ## Cause
 
-Enhanced service Alarm monitoring feature is not completely disabled when the enhanced service protocol is missing table 100. Leading to access violations when Alarm Monitoring is enabled (PID 198) and elements are restarted.
+The enhanced service alarm monitoring feature is not completely disabled when the enhanced service protocol is missing table 100. This can lead to access violations when alarm monitoring is enabled (PID 198) and elements are restarted.
 
 ## Workaround
 
-- Stop the DataMiner agent
-- Run *Change Element States Offline.exe* as Administrator (found in C:\Skyline DataMiner\Tools or C:\Skyline DataMiner\Tools\Change Element States Offline)
-- Go to the *Elements by Protocol*-tab
-- Select all protocols
-    > [!CAUTION]
-    > Older versions of this tool may also include Service-protocols in this list, these should never be stopped and thus be excluded from the mentioned selection.
-    > Enhanced service protocols have the type *service* in the protocol.xml
-- In the *Desired state for selected elements*-dropdown select *Stopped*
-- Click the *SET STATE* button
-- Start the DataMiner
-- On each Enhanced Service, set PID 198 to disabled/0/false
-    > [!NOTE]
-    > The name and location of this parameter can differ between protocols. Please refer to the protocol.xml for the name, values and location.
-- Start the elements
-  
+1. Stop the DataMiner Agent.
+
+1. Run *Change Element States Offline.exe* as Administrator.
+
+   This tool is available on the DMA in the folder `C:\Skyline DataMiner\Tools` or `C:\Skyline DataMiner\Tools\Change Element States Offline`, depending on the DataMiner version. For more information , see [Change Element States Offline](xref:Change_Element_States_Offline).
+
+1. Go to the *Elements by Protocol* tab.
+
+1. Select all protocols.
+
+   > [!CAUTION]
+   > Older versions of this tool may also include **service protocols** in this list. These should **never be stopped** and should therefore be excluded from the mentioned selection. Service protocols have the type *service* in their *protocol.xml*.
+
+1. In the *Desired state for selected elements* dropdown box, select *Stopped*.
+
+1. Click the *SET STATE* button.
+
+1. Start the DataMiner Agent.
+
+1. In each enhanced service, set PID 198 to *disabled*, *0*, or *false* (depending on the protocol).
+
+   > [!NOTE]
+   > The name and location of this parameter can differ between protocols. Check the *protocol.xml* file to find the name, values, and location.
+
+1. Start the elements.
+
 ## Issue description
 
-Alarm Monitoring feature not properly disabled when parameters are missing from the protocol, leading to access violations.
+The alarm monitoring feature is not properly disabled when parameters are missing from the protocol, leading to access violations.
