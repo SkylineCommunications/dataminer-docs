@@ -54,6 +54,14 @@ A number of enhancements have been made to the Cassandra Cluster Migrator tool (
 - Connection details will now only be requested once, unless not all agents could not be initialized.
 - The migration can now only be started when all agents have successfully been initialized.
 
+#### Service & Resource Management: Starting bookings with elements that are not active [ID 41129]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+It is now possible to start bookings with elements that are not active.
+
+To do so, in the Resource Manager configuration file, set the *AllowNotActiveElements* option to true.
+
 #### DxMs upgraded [ID 41297]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
