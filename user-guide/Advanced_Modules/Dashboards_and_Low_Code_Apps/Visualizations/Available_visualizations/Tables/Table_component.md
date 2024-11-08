@@ -198,7 +198,7 @@ You can do this in several different ways, for example:
 
   1. Add a [text input](xref:DashboardTextInputFeed) or [search input](xref:DashboardSearchInputFeed) feed component to your dashboard or app.
 
-  1. Hover over the table component, click the filter icon, and then add a filter feed from the *Feeds > Text input/Search input > Value > Strings* section of the data pane.
+  1. Hover over the table component, click the filter icon, and then add a filter feed from the *Feeds > Text input/Search input > Value > Texts* section of the data pane (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->: *Feeds > Text input/Search input > Value > Strings*).
 
   When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
 
@@ -209,13 +209,13 @@ You can do this in several different ways, for example:
 
 - Specify a **text string in the dashboard or app URL**:
 
-  1. Hover over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Strings* section of the data pane.
+  1. Hover over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Texts* section of the data pane (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12: *Feeds > URL > Strings*).
 
   1. Pass a string data object within the URL, as explained in [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
 
      This URL will automatically display a filtered version of the table when the dashboard or app is opened.
 
-     In the following example, the string "test" is sent to the component with component ID 1:
+     In the following example, the text string "test" is sent to the component with component ID 1:
 
      `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`
 
