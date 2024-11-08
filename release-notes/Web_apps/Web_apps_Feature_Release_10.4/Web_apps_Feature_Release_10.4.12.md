@@ -2,17 +2,18 @@
 uid: Web_apps_Feature_Release_10.4.12
 ---
 
-# DataMiner web apps Feature Release 10.4.12 – Preview
+# DataMiner web apps Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: Flows [ID 40974]](#dashboardslow-code-apps-flows-id-40974)
+- [Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]](#dashboardslow-code-apps-variables-id-41039-id-41063-id-41132)
 
 ## New features
 
