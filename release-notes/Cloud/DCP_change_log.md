@@ -9,6 +9,42 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
+
+Up to now, when you opened the versions section of an item without any versions, it would stay in a loading state. This has now been fixed: an info message will be shown saying this item does not have any versions.
+
+### 7 November 2024 - Enhancement - Catalog - Permalinks shown for titles of a Catalog description [ID 41322]
+
+The description of an item will now show a link next to the titles in the form of a "#". This link can be copied and shared with other users and will open the current page at the selected title.
+
+### 7 November 2024 - Enhancement - Catalog - Support for relative (local) links in the description of an item [ID 41319]
+
+On the Catalog details page, headings can now be linked to. You can link to the heading using the relative link from their markdown source. If a fragment link (indicated by # in the URL) is detected, the details page will scroll to the corresponding heading.
+
+### 7 November 2024 - Enhancement - Sharing - Email now set when user leaves input field [ID 41244]
+
+After a user fills in the email input field and leaves it, the email will now be saved and the share button will be enabled.
+
+### 7 November 2024 - Fix - Sharing - Share button not enabled after setting expiration date [ID 41244]
+
+Previously, when you enabled the expiration date for a share and then set a date, the share button would still be disabled. This has now been fixed: as soon as you set an expiration date, the share button will be enabled.
+
+### 7 November 2024 - Enhancement - Admin app - Audit export rephrased [ID 41234]
+
+From now on, the audit export entry will have a better title, e.g. "Usage export by ...".
+
+#### 7 November 2024 - Fix - Catalog API - Missing search results [ID 41226]
+
+When items had no reference to a vendor, it could occur that they were not included in search results.
+
+#### 7 November 2024 - Enhancement - Catalog - Catalog versioning format updated [ID 41225]
+
+​The Catalog API now allows all formats when registering a version of a Catalog item.
+
+- Versions following semantic version A.B.C.D will be displayed in an A.B.C range.
+- Versions following semantic version A.B.C will be displayed in an A range
+- All other version formats will be displayed in the "Other" range.
+
 #### 28 October 2024 - Enhancement - Admin app - Audit export file download with a trusted dataminer.services URL [ID 41239]
 
 From now on, the audit export emails will contain a trusted dataminer.services URL for the file download.
@@ -17,6 +53,22 @@ From now on, the audit export emails will contain a trusted dataminer.services U
 
 Enhancements have been implemented to the *Audit* page in the [Admin app](https://admin.dataminer.services), improving the stability, availability, and performance with immediate effect.
 
+#### 24 October 2024 - Enhancement - Catalog API - Catalog registration using a DMS key [ID 41215]
+
+The Catalog API can now be used with a DMS key for authentication providing compatibility with existing pipelines that deployed a Catalog item on a DMS.
+
+#### 24 October 2024 - Enhancement - Catalog - Improved the way tags of a Catalog item are displayed [ID 41182]
+
+Tags of a Catalog item will now be shown based on the available space. If a tag is too large, it will be grouped in a "+x" tag that will show the values of the grouped tags when hovered over.
+
+#### 24 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
+
+The style of the headings in the Catalog has been adjusted to match the overall style of the application.
+
+#### 24 October 2024 - Enhancement - Catalog - Catalog description supports markdown alert styling [ID 41053]
+
+Alert styling in the Catalog description readme.md is now supported. The currently supported types are "Caution", "Important", "Note", "Tip", and "Warning".
+
 #### 22 October 2024 - Enhancement - Admin app - Irrelevant modules no longer shown on DxMs page [ID 41187]
 
 Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) will no longer be shown.
@@ -24,10 +76,6 @@ Modules for which no updates are provided on the DxMs page in the [Admin app](ht
 #### 18 October 2024 - Enhancement - ChatOps - Enhanced stability and performance of Teams Chat Integration [ID 41149]
 
 Enhancements have been implemented to the Teams Chat Integration feature, ensuring improvements in stability, availability, and performance with immediate effect.
-
-#### 17 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
-
-The style of the headings in the Catalog has been adjusted to match the overall style of the application.
 
 #### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
 
@@ -80,6 +128,15 @@ When a search is performed in the Catalog, the search result items will now cont
 #### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40948]
 
 When you searched or browsed in the Catalog using the visibility setting "All", DVE connectors were included in the results, while this should not happen because these do not have versions that can be deployed.
+
+#### 8 October 2024 - Enhancement - Catalog API - V1 APIs removed [ID 41016]
+
+The following APIs are no longer available:
+
+- PublicCatalog V1
+- UserCatalog V1
+
+Instead, the V2 versions of these APIs should now be used.
 
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
