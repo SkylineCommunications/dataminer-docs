@@ -21,4 +21,33 @@ By default, the scheduled task triggers validation every hour. You can adjust th
 
 These settings allow to adapt the validation timings according to your specific needs.
 
-### Implementation of tests
+### Current tests
+
+The following tests are being executed on job instances:
+
+- All resources exist and are valid
+- All mandatory configuration is done
+- All virtual signal groups exist and are valid (if defined on resource)
+- All flows exist and are valid (if VSG defined on resource)
+
+This is currently still very basic, but can easily be extended in the future.
+
+## Implementation of tests
+
+A framework was created that allows to validate and store results in a generic way. This framework can be used to validate various types of objects: i.e. jobs, resources, resource pools, ...
+
+### IValidatable interface
+
+Objects that can be validated and store results, should be extended with the **IValidatable** interface, i.e. job, resource, etc. This interface defines methods to validate the object and store detected errors in the DOM object.
+
+Methods and properties:
+- Validate()
+- SetError()
+- ClearError()
+- HasErrors
+
+### IValidator interface
+
+The **IValidator** interface should be used on classes that implement the logic to validate an object.
+
+The results that are returned by the Validate() method always replace all existing results. This means that the object that is provided should always be validated completely.
