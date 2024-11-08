@@ -57,10 +57,9 @@ Protocol implementation:
   Define column parameters for every column defined in the MIB for this table. Do not define SNMP tags for the column parameters.
 
   > [!NOTE]
-  > It is possible to define a table in the protocol that only contains the first columns. In the example above, the protocol table only defines column parameters for the first eight columns of the ifTable.
   >
-  > Note, however, that once you include a column, all preceding columns must be included as well.
-  > Note also that all columns will still be retrieved from the agent, even though these are not visualized. This is a consequence of the way tables are structured in SNMP and the GetNext operation.
+  > - It is possible to define a table in the protocol that only contains the first columns. In the example above, the protocol table only defines column parameters for the first eight columns of the ifTable. Note, however, that once you include a column, all preceding columns must be included as well.
+  > - In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, all columns were retrieved from the agent, even though these were not visualized.<!-- RN 41235 -->
 
 Capture observation:
 
