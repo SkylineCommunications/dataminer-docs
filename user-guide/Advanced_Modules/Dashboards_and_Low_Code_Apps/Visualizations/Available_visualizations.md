@@ -67,13 +67,13 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/DL_Maps.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/DashboardQueryFilter.html" title="Query Filter" target="_self"><img src="~/user-guide/images/Query_Filter.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/DashboardQueryFilter.html" title="Query Filter" target="_self"><img src="~/user-guide/images/Query_Filter.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Stepper.html" title="Stepper" target="_self"><img src="~/user-guide/images/Stepper.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/Trigger.html" title="Trigger" target="_self"><img src="~/user-guide/images/Trigger.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Trigger.html" title="Trigger" target="_self"><img src="~/user-guide/images/Trigger.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -82,7 +82,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Web.html" title="Web" target="_self"><img src="~/user-guide/images/Web.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TimeRange.html" title="Time Range" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/TimeRange.html" title="Time Range" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -204,10 +204,10 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Timeline_component.html" title="Timeline" target="_self"><img src="~/user-guide/images/Timeline.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/ListFeed.html" title="List" target="_self"><img src="~/user-guide/images/List.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/List.html" title="List" target="_self"><img src="~/user-guide/images/List.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/EPMPicker.html" title="EPM picker" target="_self"><img src="~/user-guide/images/EPM_Picker.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/EPMPicker.html" title="EPM picker" target="_self"><img src="~/user-guide/images/EPM_Picker.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Grid.html" title="Grid" target="_self"><img src="~/user-guide/images/Grid.svg" style="width:100%"></a>
@@ -237,10 +237,10 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/TreeFeed.html" title="Tree" target="_self"><img src="~/user-guide/images/Tree.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Tree.html" title="Tree" target="_self"><img src="~/user-guide/images/Tree.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Feeds/ParameterPicker.html" title="Parameter picker" target="_self"><img src="~/user-guide/images/Parameter_Picker.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/ParameterPicker.html" title="Parameter picker" target="_self"><img src="~/user-guide/images/Parameter_Picker.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Trend_statistics.html" title="Trend Statistics" target="_self"><img src="~/user-guide/images/Trend_Statistics.svg" style="width:100%"></a>
@@ -266,10 +266,10 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DropdownFeed.html" title="DropDown" target="_self"><img src="~/user-guide/images/Dropdown.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/Dropdown.html" title="DropDown" target="_self"><img src="~/user-guide/images/Dropdown.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardNumericInputFeed.html" title="Numeric Input" target="_self"><img src="~/user-guide/images/Numeric_Input.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardNumericInput.html" title="Numeric Input" target="_self"><img src="~/user-guide/images/Numeric_Input.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardSearchInput.html" title="DropDown" target="_self"><img src="~/user-guide/images/Search_Input.svg" style="width:100%"></a>

@@ -484,6 +484,8 @@ items:
                 topicUid: DashboardParameterPicker
               - name: Trend statistics
                 topicUid: DashboardTrendStatistics
+          - name: Feeds
+            topicUid: Feeds
           - name: Basic controls
             items:
               - name: Dropdown
