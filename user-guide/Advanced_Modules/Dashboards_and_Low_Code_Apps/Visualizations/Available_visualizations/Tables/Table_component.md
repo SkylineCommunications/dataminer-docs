@@ -219,9 +219,6 @@ You can do this in several different ways, for example:
 
      `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`
 
-     > [!NOTE]
-     > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, "strings" is used instead of "texts": `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`.
-
 ### Sorting
 
 To sort the table, you can **click a column header**. To toggle between ascending and descending order, click the column header again.
