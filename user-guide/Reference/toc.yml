@@ -114,6 +114,17 @@ items:
         topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: DataMiner Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool
+        items:
+          - name: Installing the Health Check Tool
+            topicUid: DataMiner_Health_Check_Tool_Installation
+          - name: Configuring the Health Check Tool
+            topicUid: DataMiner_Health_Check_Tool_Configuration
+          - name: Using the Health Check Tool
+            topicUid: DataMiner_Health_Check_Usage
+          - name: Health Check Tool Dashboards
+            topicUid: DataMiner_Health_Dashboards
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
@@ -280,6 +291,8 @@ items:
             items:
               - name: Aborting a running Automation script
                 topicUid: SLNetClientTest_aborting_running_script
+              - name: Accessing script execution metrics
+                topicUid: SLNetClientTest_accessing_script_execution_metrics
               - name: Changing the grace period for the SLNetCom Notification thread
                 topicUid: SLNetClientTest_grace_period_SLNetCom_notification
               - name: Changing the number of records in the protocol cache

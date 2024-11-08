@@ -261,7 +261,7 @@ The following minor issues regarding the *Time range* component have been fixed:
 
 - The option *Layout > Advanced > Layout & Alignment > Show refresh timer* would always be visible, but would have no effect when the option *Settings > General > Allow refresh* was disabled.
 
-  From now on, the option *Layout > Advanced > Layout & Alignment > Show refresh timer* wil only be visible when *Settings > General > Allow refresh* is enabled.
+  From now on, the option *Layout > Advanced > Layout & Alignment > Show refresh timer* will only be visible when *Settings > General > Allow refresh* is enabled.
 
 - When, in the *Layout > Advanced* section, you had only selected quick picks from the *Starting from now*, **Near future* and *Distant future* categories, the *Time range* component would incorrectly show `No quick picks have been selected`.
 

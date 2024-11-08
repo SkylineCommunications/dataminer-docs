@@ -148,6 +148,7 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Average trending (long)  | 10 years     |
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
+| Alarm events             | 1 year       |
 
 ## Cost estimation
 
@@ -269,6 +270,8 @@ In addition, the following **other limitations** currently apply:
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
 
 - DMZ setups are currently not supported.
+
+- Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
 - Regarding logger tables:
 

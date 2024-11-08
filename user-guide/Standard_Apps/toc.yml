@@ -1,6 +1,6 @@
 items:
-  - name: Common Data Model (CDM)
-    topicUid: CDM
+  - name: Standard Data Model (SDM)
+    topicUid: SDM
   - name: DataMiner EPM Solution
     topicUid: SolEPM
     items:
@@ -147,6 +147,15 @@ items:
             topicUid: VSAT_metrics
           - name: Available parameters in VSAT
             topicUid: VSAT_parameters
+      - name: DataMiner EPM Availability
+        topicUid: Availability_Overview
+        items:
+          - name: Deploying the DataMiner EPM Availability solution
+            topicUid: Availability_deployment
+          - name: Using the EPM Availability solution
+            topicUid: Availability_Using
+          - name: Available parameters in Availability
+            topicUid: Availability_parameters
   - name: DataMiner IDP app
     topicUid: SolIDP
     items:

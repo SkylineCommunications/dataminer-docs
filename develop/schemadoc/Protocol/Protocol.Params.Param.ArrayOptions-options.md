@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.ArrayOptions-options
 
 # options attribute
 
-Specifies a number of options, separated by semicolons (';').
+Specifies a number of options, separated by semicolons (`;`).
 
 ## Content Type
 
@@ -57,7 +57,7 @@ By default, 500 rows will be kept in memory. If you want to override this defaul
 options=";database:1000"
 ```
 
-The column parameters are used to create the table. Whitespace characters will be replaced by underscores. So be sure that the parameter name does not contain illegal SQL syntax. For example, “Asset (Log)” will cause errors.
+The column parameters are used to create the table. Whitespace characters will be replaced by underscores. So be sure that the parameter name does not contain illegal SQL syntax. For example, "Asset (Log)" will cause errors.
 
 > [!NOTE]
 >
@@ -85,7 +85,7 @@ See also: [Logger tables](xref:AdvancedLoggerTables).
 
 To be used in combination with the [database](xref:Protocol.Params.Param.ArrayOptions-options#database) option.
 
-By default, the name of the logger table in the database will be `elementdata_[AgentId]_[ElementId]_[TableParameterId]` (e.g. "elementdata_346_353_1000") and this table will be created in the default local DataMiner schema. When the `databaseNameProtocol` option is used, the table is created in a separate table schema (where the name of the schema is the name of the protocol) and the name of the table within this schema is the name of the table.
+By default, the name of the logger table in the database will be `elementdata_[AgentId]_[ElementId]_[TableParameterId]` (e.g. "elementdata_346_353_1000"), and this table will be created in the default local DataMiner schema. When the `databaseNameProtocol` option is used, the table is created in a separate table schema (where the name of the schema is the name of the protocol), and the name of the table within this schema is the name of the table.
 
 Example:
 
@@ -164,6 +164,8 @@ See [Custom element properties](xref:AdvancedCustomPropertiesCustomElementProper
 
 ### processingOrder
 
+<!-- RN 5431, RN 11582 -->
+
 Use this option to force the SLElement process to use a particular processing order when a table update is received.
 
 By default, the order is as follows:
@@ -176,8 +178,6 @@ By default, the order is as follows:
 1. Other parameter ID(s)
 1. Parameter ID(s) to which conditions have been applied
 
-*Feature introduced in DataMiner 7.5.6 (RN 5431) and updated in DataMiner 9.0.0.0 (RN 11582).*
-
 Example:
 
 ```xml
@@ -188,9 +188,7 @@ See also: [Column processing order in tables](xref:InnerWorkingsSLElement#column
 
 ### queryTablePID=
 
-Specifies the ID of the table parameter to query for more information in an EPM (formerly known as CPE) environment.
-
-*Feature introduced in DataMiner 9.6.2 (RN19897).*
+Specifies the ID of the table parameter to query for more information in an EPM environment.<!-- RN 19897 -->
 
 Example:
 
@@ -200,7 +198,7 @@ Example:
 
 ### sizeHint
 
-For large volatile tables, the sizeHint option (available from DataMiner version 9.0 onwards) can be specified with the expected number of rows, allowing the SLElement process to perform some optimizations.
+For large volatile tables, the sizeHint option can be specified with the expected number of rows, allowing the SLElement process to perform some optimizations.
 
 > [!NOTE]
 > This option should not be used on non-volatile tables.
@@ -223,11 +221,7 @@ Example:
 options=";view=1000"
 ```
 
-From Dataminer 8.0.7 (RN 6914) onwards, direct view tables can have a different element or protocol as their source.
-
-This allows you, for example, to show collector info in an EPM (formerly known as CPE) element that is not aware of all possible values (e.g. frequency info in a collector).
-
-To configure it:
+Direct view tables can have a different element or protocol as their source.<!-- RN 6914 --> This will for example allow you to show collector info in an EPM element that is not aware of all possible values (e.g. frequency info in a collector). To configure this:
 
 1. Create a directView table. In other words, link to a column (parameter ID) that defines the remote elements.
 

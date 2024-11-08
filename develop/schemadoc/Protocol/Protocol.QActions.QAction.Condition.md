@@ -18,8 +18,6 @@ string
 
 Refer to <xref:LogicConditions> for more information about conditions.
 
-*Feature introduced in DataMiner 7.5.4.3.*
-
 ## Examples
 
 In the following example, the QAction will be executed on trigger of parameter ID 3000 and only when the value of parameter ID 500 is equal to Active:

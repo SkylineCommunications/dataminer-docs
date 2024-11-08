@@ -28,14 +28,14 @@ In general, the range [1, 63 999] can be used in a protocol for parameters. Howe
 
 |Protocol type|Restricted range|Owner|Description|
 |--- |--- |--- |--- |
-|Aggregation|[1-4 999]|DataMiner|Parameters in this range are used for communication between DataMiner and aggregation drivers.|
+|Aggregation|[1-4 999]|DataMiner|Parameters in this range are used for communication between DataMiner and aggregation connectors.|
 |Enhanced Service|[1, 999]|DataMiner|This range must only be used to communicate with DataMiner via predefined parameters.|
-|SLA|[1, 2 999]|DataMiner|Parameters in this range are used for communication between DataMiner and SLA drivers.|
+|SLA|[1, 2 999]|DataMiner|Parameters in this range are used for communication between DataMiner and SLA connectors.|
 |Spectrum Analyzer|[50 000, 60 000]|DataMiner|This range is used by the SLSpectrum process to create dynamic parameters for spectrum monitoring results.|
 
 ## [64 000, 64 299]
 
-Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service drivers, spectrum analyzer drivers, ticketing drivers, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
+Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service protocols, spectrum analyzer protocols, ticketing protocols, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
 
 ## [64 300, 69 999]
 
@@ -46,15 +46,9 @@ Only to be used for communication with DataMiner modules. This range contains pa
 
 Only to be used in mediation/base protocols.
 
-> [!NOTE]
-> Minimum DataMiner version: 7.5.6
-
 ## [80 000, 99 999]
 
-Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service drivers, spectrum analyzer drivers, ticketing drivers, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
-
-> [!NOTE]
-> Minimum DataMiner version: 9.0.4 (RN 13161)
+Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service protocols, spectrum analyzer protocols, ticketing protocols, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.<!-- RN 13161 -->
 
 ## [100 000, 999 999]
 
@@ -63,10 +57,7 @@ Only to be used for communication with DataMiner modules. This range contains pa
 
 ## [1 000 000, 9 989 999]
 
-Must only be used in case all parameters in the range [1, 63 999] are already in use.
-
-> [!NOTE]
-> Minimum DataMiner version: 9.0.4 (RN 13161)
+Must only be used in case all parameters in the range [1, 63 999] are already in use.<!-- RN 13161 -->
 
 ## [9 990 000 - 9 999 999]
 

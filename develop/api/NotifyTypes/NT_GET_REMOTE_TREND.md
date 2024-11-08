@@ -38,7 +38,7 @@ object result = protocol.NotifyDataMiner(216 /* NT_GET_REMOTE_TREND */, elementD
 ## Return Value
 
 - object[] result:
-  - result[0]: string array, denoting the meaning of the cells (e.g.: `["chValue","dtFirst","iStatus","dtLast"]`.
+  - result[0]: string array, denoting the meaning of the cells (e.g. `["chValue","dtFirst","iStatus","dtLast"]`).
   - result[1]: string array containing the trend data.
 
     string[] data = (string[]) result[1];
@@ -52,5 +52,4 @@ object result = protocol.NotifyDataMiner(216 /* NT_GET_REMOTE_TREND */, elementD
 
 ## Remarks
 
-- The use of this call is deprecated. Instead, the GetTrendDataMessage SLNet message should be used.
-- Since DataMiner 9.0.0, this call goes via the SLDataGateway process instead of the SLDatabase process. Therefore, Cassandra is also supported as of DataMiner 9.0.0 (RN 11832).
+- The use of this call is **deprecated**. Instead, the [GetTrendDataMessage](xref:Skyline.DataMiner.Net.Messages.GetTrendDataMessage) SLNet message should be used.

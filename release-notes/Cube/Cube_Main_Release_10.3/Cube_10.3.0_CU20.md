@@ -2,7 +2,7 @@
 uid: Cube_Main_Release_10.3.0_CU20
 ---
 
-# DataMiner Cube Main Release 10.3.0 CU20 – Preview
+# DataMiner Cube Main Release 10.3.0 CU20
 
 This Main Release of the DataMiner Cube client application contains all new features, enhancements and fixes that were added to [DataMiner Cube Feature Release 10.4.11](xref:Cube_Feature_Release_10.4.11).
 

@@ -22,14 +22,14 @@ The register API call allows you to create or update a Catalog item. To add a ve
 
 ### API Definition
 
-For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
 This page also provides a quick way to execute the call: Expand the "catalog/register" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the register call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -44,6 +44,9 @@ The value of this key should be a .zip file containing the following items:
 - A [manifest.yml](xref:Register_Catalog_Item#manifest-file) file (required).
 
 - A *README.md* file containing the description of the Catalog item (optional).
+
+  > [!TIP]
+  > See also: [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
 - An *images* folder containing any image referenced in the readme file (optional). Supported image extensions are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
@@ -155,14 +158,14 @@ To obtain this ID for an existing Catalog item, navigate to its details page in 
 
 ### API Definition
 
-For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v1.0).
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
 This page also provides a quick way to execute the call: Expand the "catalog/{catalogId}/register/version" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the register call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_1.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -179,4 +182,7 @@ versionDescription: <The description of the version you want to register>
 ```
 
 > [!NOTE]
-> Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+>
+> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+> - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->
+> - Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41225 -->

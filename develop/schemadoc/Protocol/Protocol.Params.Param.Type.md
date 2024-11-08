@@ -29,7 +29,7 @@ Specifies the parameter type.
 
 ## Remarks
 
-Contains one of the following predefined values, detailed in the sections below:
+Contains one of the predefined values detailed in the sections below.
 
 ### array
 

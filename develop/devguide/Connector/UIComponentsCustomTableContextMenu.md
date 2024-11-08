@@ -170,26 +170,26 @@ public class QAction
 ```
 
 > [!NOTE]
-> From DataMiner 10.1.4 (RN 28753) onwards, when you open a context menu of a table and select an option from it, an information event will be generated similar to the one that is generated when you set a parameter. This information event will contain the following data:
+> When you open a context menu of a table and select an option from it, an information event will be generated similar to the one that is generated when you set a parameter. This information event will contain the following data:<!-- RN 28753 -->
 >
 > - Parameter description: The full display name of the context menu parameter, in the format <TableName>_ContextMenu.
 > - Parameter value: A value in the format `Set by <user> to <command display value>`. If there are dependency values, the value will have the following format: `Set by <user> to <command display value>: "<dependency 1>"; "<dependency 2>"`.
 
 ## Placeholders
 
-When defining menu items, you can use one or more of the following placeholders both in the options attribute and the Display tag. Feature introduced in DataMiner 8.5.0 (RN 7360).
+When defining menu items, you can use one or more of the following placeholders both in the options attribute and the Display tag.<!-- RN 7360 -->
 
-|Placeholder|Refers to|
-|--- |--- |
-|[var:abc]|A session variable.|
-|[cardvar:abc]|A card-scope session variable. *Feature introduced in DataMiner 8.5.1 (RN 7912).*|
-|[pagevar:abc]|A Visio page-scope session variable. *Feature introduced in DataMiner 8.5.1 (RN 7912).*|
-|[this element]|The element that holds the dynamic table. This way, you can for example add a dummy to a script or display an element ID.|
-|[property:abc]|The value of an element property.|
-|[value:123]|The cell value found in the selected row of the specified column. 123 has to be a column parameter ID.|
-|[tableindex], [primarykey]|The primary key for the selected row.|
-|[displaytableindex], [displaykey]|The display key for the selected row.|
-|[param:12/34,56:78]|The value of a parameter, where 12 is the DMA ID, 34 is the element ID, 56 is the column parameter ID, and 78 is the display key value. See warning below.|
+| Placeholder | Refers to |
+|--|--|
+| [var:abc] | A session variable. |
+| [cardvar:abc] | A card-scope session variable.<!-- RN 7912 --> |
+| [pagevar:abc] | A Visio page-scope session variable.<!-- RN 7912 --> |
+| [this element] | The element that holds the dynamic table. This way, you can for example add a dummy to a script or display an element ID. |
+| [property:abc] | The value of an element property. |
+| [value:123] | The cell value found in the selected row of the specified column. 123 has to be a column parameter ID. |
+| [tableindex], [primarykey] | The primary key for the selected row. |
+| [displaytableindex], [displaykey] | The display key for the selected row. |
+| [param:12/34,56:78] | The value of a parameter, where 12 is the DMA ID, 34 is the element ID, 56 is the column parameter ID, and 78 is the display key value. See warning below. |
 
 Values used in a [param:...] placeholder must be available. If not, a blocking server call may occur.
 
@@ -207,38 +207,38 @@ Example:
 - [param:506:1] = value of column 506, row with display key "1".
 
 > [!NOTE]
->
-> - From DataMiner 9.5.3 (RN 15743) onwards, using the prefix "^pk^" to indicate that the following index is a primary key index instead of a display index is supported in button values.
-> - From DataMiner 9.5.4 (RN 16071) onwards, when placeholders are used in button values, it is possible to use the prefix ^pk^ using the placeholder syntax described below.
+> In button values, you can use the prefix `^pk^` to indicate that the following index is a primary key index instead of a display index.<!-- RN 15743 --> When placeholders are used in button values, you can also use the prefix `^pk^` with the placeholder syntax described below.<!-- RN 16071 -->
 
-From DataMiner 9.5.2 onwards (RN 14711), it is also possible to insert the following dynamic values into button
-values and context menu items.
+You can insert the following dynamic values into button values and context menu items:<!-- RN 14711 -->
 
-|Syntax|Value|
-|--- |--- |
-|{sessionVar:x}|Value of session variable x|
-|{pageVar:x}|Value of page variable x|
-|{cardVar:x}|Value of card variable x|
-|{elementName}|Name of the current element|
-|{elementProperty:x}|Value of the element property x|
-|{rowPK}|Primary key of the current row|
-|{rowDK}|Display key of the current row|
-|{extPID:epid/pid/key}|Value of a parameter from another element: **epid** = Parameter ID of the parameter containing the element ID (format "DMAID/element ID", e.g. 200/400, **pid** = Parameter ID, **key** = Row key (optional) )|
-|{extPID:[dmaID/eID]/pid/key}|Value of a parameter from another element: *[dmaID/eID]* = Element ID (format "dmaid/eid"), **pid** = Parameter ID, **key** = Row key (optional) *Feature introduced in DataMiner 9.5.4 (RN 16071).*|
-|{pid:x/k}|Value of a parameter from the current element: **x** = Parameter ID, **k** = Row key (optional) Note: Row key (k) can be omitted if the parameter is a column of the current row.|
-|{fkPid:x}|Value of the column with parameter ID x of the first row with a foreign key relation to the current row.|
+| Syntax | Value |
+|--|--|
+| {sessionVar:x} | Value of session variable x. |
+| {pageVar:x} | Value of page variable x. |
+| {cardVar:x} | Value of card variable x. |
+| {elementName} | Name of the current element. |
+| {elementProperty:x} | Value of the element property x. |
+| {rowPK} | Primary key of the current row. |
+| {rowDK} | Display key of the current row. |
+| {extPID:epid/pid/key} | Value of a parameter from another element:<br>- **epid** = Parameter ID of the parameter containing the element ID (format "DMAID/element ID", e.g. 200/400)<br>- **pid** = Parameter ID<br>- **key** = Row key (optional) |
+| {extPID:[dmaID/eID]/pid/key} | Value of a parameter from another element:<!-- RN 16071 --><br>- *[dmaID/eID]* = Element ID (format "dmaid/eid")<br>- **pid** = Parameter ID<br>- **key** = Row key (optional) |
+| {pid:x/k} | Value of a parameter from the current element:<br>- **x** = Parameter ID<br>- **k** = Row key (optional)<br>Note: You can omit row key (k) if the parameter is a column of the current row. |
+| {fkPid:x} | Value of the column with parameter ID x of the first row with a foreign key relation to the current row. |
 
 The following types of recursion are supported:
 
 - Dynamic value inside dynamic value.
+
   Example: {pid:1004/{pid:102}} will be replaced by the value found in column 1004 on the row of which the index is stored in parameter 102.
+
 - Dynamic value refers to another dynamic value.
+
   Example: If you use {pid:1003}, and the value of parameter 1003 is "{pid:1004}", then {pid:1003} will be replaced by the value of parameter 1004. If the row index is not specified in a placeholder, then the current row index will be used. In other words, if parameters 1003 and 1004 in the example above are column parameters, the current row index will be used to retrieve the value of column 1004. This type of recursion goes up to 5 levels deep.
 
 > [!NOTE]
 >
 > - Not all placeholders listed in the table above can be used in all situations. If you use a placeholder in a situation where the value cannot be resolved, the placeholder will be replaced by an empty string.
-> - From DataMiner 9.5.2 onwards (RN 14506), the placeholders are supported in URLs of buttons of type "open" in an EPM (formerly known as CPE) environment.
+> - In an EPM environment, you can use these placeholders in URLs of buttons of type "open".<!-- RN 14506 -->
 
 Examples
 
@@ -258,18 +258,18 @@ Examples
 
 ## Sending feedback to the client
 
+<!-- RN 7360 -->
+
 When a QAction is executed via a context menu, that QAction can send an INFO or ERROR feedback message to the client, which will be displayed in a message box.
 
-To do so, use the protocol.ShowInformationMessage(“xyz”) method.
+To do so, use the protocol.ShowInformationMessage("xyz") method.
 
-You can also send a feedback message by setting a parameter named “xxx_QActionFeedback” (xxx being the name of the table) to one of the following values:
+You can also send a feedback message by setting a parameter named "xxx_QActionFeedback" (xxx being the name of the table) to one of the following values:
 
 - yyy|INFO|abc
 - yyy|ERROR|xyz
 
 yyy is the unique ID of the client to which to send the message. This ID can be retrieved from the first cell of the object containing the context menu data.
-
-*Feature introduced in DataMiner 8.5.0 (RN 7360).*
 
 ## See also
 
