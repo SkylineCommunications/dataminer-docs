@@ -14,6 +14,10 @@ By default, behavioral anomaly detection is enabled on trended parameters. Simil
 
 Estimated duration: 25 minutes.
 
+>[!TIP]
+>See also: [Kata #46: Improve anomaly detection with feedback](https://community.dataminer.services/courses/kata-46/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
+
 > [!NOTE]
 > The content and screenshots for this tutorial were created in DataMiner 10.4.11.
 
