@@ -24,4 +24,7 @@ Alarm cards can be accessed from the Alarm Console, but you can also navigate di
 
 - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41059-->: `https://<DMA IP>/monitoring/alarm/<DMA ID>/<element ID>/<root alarm ID>/<alarm ID>`
 
-- Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12: `http(s)://<DMA IP>/monitoring/alarm/<DMA ID>/<alarm ID>`
+- Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12: `http(s)://<DMA IP>/monitoring/alarm/<DMA ID>/<root alarm ID>/<alarm ID>`
+
+> [!NOTE]
+> For both versions of the URL path, the alarm ID is optional and can be omitted.
