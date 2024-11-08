@@ -27,6 +27,17 @@ This type of action will allow users to set the current value of any variable th
 > [!NOTE]
 > Variables of type *Table* can only be set to a static value.
 
+#### Low-Code Apps: New 'Add row' and 'Clear table' actions [ID 41324]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+It is now possible to configure the following actions:
+
+| Action | Function |
+|--------|----------|
+| Add row     | Adds a row to a variable of type *Table*. |
+| Clear table | Clears all rows defined in a variable of type *Table*. |
+
 ## Changes
 
 ### Enhancements
@@ -109,9 +120,3 @@ For more information on how to configure a warning message to be displayed when 
 
 > [!IMPORTANT]
 > In the Dashboards app, the *Button* component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
-
-#### Dashboards/Low-Code Apps - GQI components: No query session would be opened when no WebSocket connection had been established [ID 41349]
-
-<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
-
-When a GQI component had its *Update data* setting enabled, no query session would be opened when no WebSocket connection had been established. As a result, no data would be fetched.

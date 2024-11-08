@@ -38,15 +38,15 @@ This component allows you to visualize and manage bookings, events, and other ti
 
    1. To make sure users can see which group is selected, you can add a table component displaying the selected group:
 
-      1. Go to the *Components*/*Feeds* > *Timeline #* > *Selected groups* > *Query rows* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page.
-
+      1. Go to *Components* > *Timeline #* > *Selected groups* > *Tables* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected groups > Query rows* in the *Data* tab instead.
+  
       1. Hover the mouse pointer over the component and click the ![visualization](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
       1. Select the table visualization.
 
    1. To make sure users can see which item is selected, you can add a table component displaying the selected item:
 
-      1. Go to *Components*/*Feeds* > *Timeline #* > *Selected items* > *Query rows* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page.
+      1. Go to *Components* > *Timeline #* > *Selected items* > *Tables* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected items > Query rows* in the *Data* tab instead.
 
       1. Hover the mouse pointer over the component and click the ![visualization](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
