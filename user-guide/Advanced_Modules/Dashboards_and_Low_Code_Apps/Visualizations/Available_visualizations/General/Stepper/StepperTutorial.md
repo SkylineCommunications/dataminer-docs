@@ -56,7 +56,7 @@ Each of the components on the page has to receive some data:
 
   ![Incidents query](~/user-guide/images/StepperQuery.png)
 
-- Link the *Object manager instances* feed from the table component to both the stepper and the form component. Make sure to select a row in the table to expose this feed.
+- Link the *Object manager instances* data from the table component to both the stepper and the form component. Make sure to select a row in the table to expose this data.
 
   ![Instance data](~/user-guide/images/StepperInstanceData.png)
 
