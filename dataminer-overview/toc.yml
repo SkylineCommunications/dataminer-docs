@@ -98,6 +98,8 @@ items:
                   topicUid: Overview_MediaOps_Resource_Studio
             - name: Supported connectors
               topicUid: Overview_MediaOps_supported_connectors
+            - name: Validation of (upcoming) jobs
+              topicUid: Overview_MediaOps_Validation
         - name: DOM Viewer
           topicUid: domviewer_about
     - name: Agile partnership
