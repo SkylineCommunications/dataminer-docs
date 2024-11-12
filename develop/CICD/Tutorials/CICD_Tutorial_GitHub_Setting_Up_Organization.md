@@ -66,9 +66,13 @@ Follow the instructions specified in the [SonarCloud documentation](https://docs
 
 1. Go to the *Actions* tab, verify the workflow content, and enable the workflow.
 
+![Enable Workflow](~/develop/images/github-enable-workflow.png)
+
 1. Go to the workflow and trigger an initial run manually.
 
    After this, it will automatically run daily to check for upstream changes.
+
+![Run Workflow](~/develop/images/github-run-workflow.png)
 
 ## Step 4: Adjust permissions for GITHUB_TOKEN
 
