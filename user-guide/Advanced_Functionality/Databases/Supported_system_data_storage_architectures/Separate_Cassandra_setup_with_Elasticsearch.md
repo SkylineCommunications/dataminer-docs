@@ -18,7 +18,7 @@ With this architecture, **each DMA has its own Cassandra database** (which can b
 >
 > In the setups described below, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). In the images illustrating the setups, the dark-blue line indicates a cluster of nodes, the gray line indicates a compute node, and the light-blue line indicates a regional boundary (high latency).
 
-In a development environment with limited load, it is possible to host DataMiner, Cassandra, and OpenSearch/Elasticsearch on one Windows machine. In this case, OpenSearch/Elasticsearch and DataMiner must be installed on a separate disk or partition. However, this is not recommended for normal production environments.
+In a development environment with limited load, it is possible to host DataMiner, Cassandra, and OpenSearch/Elasticsearch on one Windows machine. In this case, OpenSearch/Elasticsearch and DataMiner must be installed on a separate disk or partition. However, this is not recommended for normal production environments. In addition, note that Cassandra is no longer supported on Windows starting from Cassandra 4.x and DataMiner 10.4.x.
 
 ![Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)<br>
 *Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine*
@@ -27,7 +27,7 @@ Instead, we recommend running DataMiner, Cassandra, and OpenSearch/Elasticsearch
 
 The OpenSearch/Elasticsearch cluster should ideally consist of at least 3 nodes, running on Windows or Linux machines. While it is possible to use one single OpenSearch/Elasticsearch node, this means you will miss out on the replication features.
 
-For Cassandra, any number of nodes can be used, ideally running on Linux machines. To get an idea of how many nodes would be required for your system, use the [node calculator](https://community.dataminer.services/calculator/).
+For Cassandra, any number of nodes can be used, running on Linux machines. To get an idea of how many nodes would be required for your system, use the [node calculator](https://community.dataminer.services/calculator/).
 
 Several possible setups are illustrated below.
 
