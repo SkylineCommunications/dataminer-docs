@@ -40,6 +40,20 @@ A number of enhancements have been made to prevent view cards from showing a "Lo
 
 In the *Augmented Operations alarm settings* pop-up window, the text has been adjusted to allow a more natural translation to other languages.
 
+#### Redundancy groups: Configuration enhancements [ID 41315]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of enhancements have been made with regard to the configuration of redundancy groups and redundancy group templates:
+
+- When a block is loading in the *Switching detection* section, a "Loading" message will now be displayed on top of that block, making it impossible to make changes to the settings in that block until all settings have been loaded.
+
+- The blocks in the *Switching detection* section will now initially be in an error state instead of a valid state. This will prevent users from saving an invalid configuration when data is still being loaded or when certain blocks contain invalid or corrupted data.
+
+- More validation checks will now be done when scanning the changes made to the configuration. The outcome of those checks will determine whether the Apply button get enabled or not.
+
+- When a validation scan detects invalid data, an entry will be added to the SLClient server logging. However, that entry will only be visible in the Logging module when the *Show debug logging* option is enabled. Also, in that case, no update message will be sent to the server. The user will receive a message saying that a problem occurred and that more details can be found in the Logging module.
+
 ### Fixes
 
 #### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]

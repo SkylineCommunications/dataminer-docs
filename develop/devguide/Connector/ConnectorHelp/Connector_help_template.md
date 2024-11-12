@@ -6,26 +6,6 @@ uid: Connector_help_template
 
 [Short description of the data source and of the function of the connector.]
 
-## About
-
-### Version Info
-
-| Range            | Key Features | Based on | System Impact |
-|----------------------|------------------|--------------|-------------------|
-| 1.0.0.x [SLC Main] | Initial version. | -           | -                |
-
-### Product Info
-
-| Range | Supported Firmware |
-|-----------|------------------------|
-| 1.0.0.x   | -                     |
-
-### System Info
-
-| Range | DCF Integration | Cassandra Compliant | Linked Components | Exported Components |
-|-----------|---------------------|-------------------------|-----------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | -                    | -                      |
-
 ## Configuration
 
 ### Connections

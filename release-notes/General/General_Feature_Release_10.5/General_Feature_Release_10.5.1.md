@@ -32,13 +32,31 @@ In future versions, this call will be used to verify whether DataMiner Swarming 
 
 ## Changes
 
+### Breaking changes
+
+#### Automation: Locking behavior of Automation script actions has been enhanced [ID 41195]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+A number of enhancements have been made with regard to the locking behavior of certain Automation script actions. This should significantly reduce the chances of scripts influencing each other and slowing each other down.
+
+Breaking changes:
+
+| Actions | Breaking change |
+|---------|-----------------|
+| Generate Information<br>Log<br>Send Notification<br>Send Report | Text that supports the `[dummy<id>]` placeholder will display the old element name if it was updated during the execution of a script or it will still display the element name even if the element was deleted in the meantime. |
+| Set State | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to change element state...". |
+| Set Template | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to set template...". |
+
 ### Enhancements
 
-#### DataMiner installer has been updated [ID 40409]
+#### DataMiner installer has been updated [ID 40409] [ID 41299]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
 The DataMiner installer has been updated.
+
+When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
@@ -51,6 +69,22 @@ A number of enhancements have been made to the Cassandra Cluster Migrator tool (
 - The initialization of a single agent has been disabled in favor of the global initialization, unless not all agents could be initialized.
 - Connection details will now only be requested once, unless not all agents could not be initialized.
 - The migration can now only be started when all agents have successfully been initialized.
+
+#### Service & Resource Management: Starting bookings with elements that are not active [ID 41129]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+It is now possible to start bookings with elements that are not active.
+
+To do so, in the Resource Manager configuration file, set the *AllowNotActiveElements* option to true.
+
+#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
+
+Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
 
 #### DxMs upgraded [ID 41297]
 
@@ -130,3 +164,22 @@ On STaaS systems, in case of connection problems, a large number of the followin
 - *Unable to connect to the remote server.*
 
 From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
+
+#### Protocols: Problems when polling SNMP tables using GetNext [ID 41235]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of problems that occurred when polling SNMP tables using *GetNext* have been fixed:
+
+- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g. 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
+
+- Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
+
+- Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
+
+#### No longer possible to clear certain DVE alarm events [ID 41343]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39626 -->
+
+Since DataMiner feature version 10.4.8, it would incorrectly no longer be possible to clear DVE alarm events generated by DataMiner modules like Correlation, Automation, SLAnalytics, etc.

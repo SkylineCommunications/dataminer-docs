@@ -319,6 +319,8 @@ items:
           topicUid: FAQ_Bandwidth_data_acquisition
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
+        - name: How can I view documentation in a different language
+          topicUid: FAQ_doc_change_language
       - name: Connectors
         topicUid: FAQs_Connectors
         items:

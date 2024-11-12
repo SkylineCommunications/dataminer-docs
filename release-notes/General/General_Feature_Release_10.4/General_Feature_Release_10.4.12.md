@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.12
 ---
 
-# General Feature Release 10.4.12 – Preview
+# General Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -228,12 +228,9 @@ When certificate validation is skipped, in case an HTTP connector polls an HTTPS
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters of the same element that were related to the parameter shown in the graph.
+When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters in the same service that were related to the parameter shown in the graph.
 
-From now on, the menu will no longer only show all parameters of the same element that were related in the selected time range. It will now also show
-
-- all parameters of the other elements in the same service that were related in the selected time range, and
-- the top 10 parameters system-wide that were related in the selected time range.
+From now on, the menu will no longer only show all parameters in the same service that were related in the selected time range. It will now also show the top 10 parameters system-wide that were related in the selected time range.
 
 #### Certain information events will no longer be generated when an element is replicated [ID 40926]
 
@@ -286,7 +283,7 @@ Because of a number of enhancements, overall performance of GQI "top X" queries 
 
 Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
 
-From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo` option is set to true in the ResourceManager configuration.
 
 Also, the following scripts will now only be executed when the above-mentioned option is set to true:
 
@@ -298,7 +295,7 @@ Additionally, the following script will also no longer generate an information e
 - the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
 
 > [!IMPORTANT]
-> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+> The `ShowScriptStartEventInfo` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
 
 #### SLXML: Enhanced error when erroneous XML code is received [ID 40995]
 
@@ -440,7 +437,7 @@ When a DataMiner Agent that was part of a Failover setup started up, in some cas
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur.
+When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur. This will now be prevented. In addition, information events will no longer be generated for the [Clients connected] parameter.
 
 #### Incomplete CorrelationDetailsEvent messages after a DMA had reconnected to the DMS [ID 40934]
 
