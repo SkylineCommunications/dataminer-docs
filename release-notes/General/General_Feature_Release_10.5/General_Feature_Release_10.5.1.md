@@ -42,8 +42,8 @@ A number of enhancements have been made with regard to the locking behavior of c
 
 Breaking changes:
 
-| Actions | Breaking change |
-|---------|-----------------|
+| <div style="width: 150px;">Actions</div> | Breaking change |
+|---|---|
 | Generate Information<br>Log<br>Send Notification<br>Send Report | Text that supports the `[dummy<id>]` placeholder will display the old element name if it was updated during the execution of a script or it will still display the element name even if the element was deleted in the meantime. |
 | Set State | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to change element state...". |
 | Set Template | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to set template...". |
