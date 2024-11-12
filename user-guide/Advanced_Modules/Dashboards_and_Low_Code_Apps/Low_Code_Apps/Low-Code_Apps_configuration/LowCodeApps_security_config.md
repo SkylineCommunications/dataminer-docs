@@ -31,7 +31,6 @@ To configure which users can access and/or edit a low-code application:
    > [!NOTE]
    >
    > - If you set *Everyone* to *No access*, you must assign at least one user or group as an editor to keep the app functional. If you do not add your own user account as an editor, you will lose the ability to make further changes to the application.
-   > - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41079-->, if you strip the user who created an app of their edit rights, the following message will appear: `You have removed the edit rights from the creator`.
    > - If a user has been given an access level both as an individual and as part of a group, the level with the most privileges is the one that counts.
    > - The built-in Administrator account always has full access to all apps.
 
