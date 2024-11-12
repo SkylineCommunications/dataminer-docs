@@ -2774,6 +2774,13 @@ items:
             topicUid: Protocol.PortSettings.SetCommunity.DefaultValue
           - name: Disabled
             topicUid: Protocol.PortSettings.SetCommunity.Disabled
+        - name: SkipCertificateVerification
+          topicUid: Protocol.PortSettings.SkipCertificateVerification
+          items: 
+          - name: DefaultValue
+            topicUid: Protocol.PortSettings.SkipCertificateVerification.DefaultValue
+          - name: Disabled
+            topicUid: Protocol.PortSettings.SkipCertificateVerification.Disabled
         - name: SlowPoll
           topicUid: Protocol.PortSettings.SlowPoll
           items: 
