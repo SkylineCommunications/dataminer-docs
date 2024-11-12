@@ -56,6 +56,12 @@ A number of enhancements have been made with regard to the configuration of redu
 
 ### Fixes
 
+#### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When a shape linked to an element or a view contained shape data of which the value started with "[property:" and ended with "]", up to now, the entire value would be interpreted as a property, even when it included other types of placeholders.
+
 #### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
