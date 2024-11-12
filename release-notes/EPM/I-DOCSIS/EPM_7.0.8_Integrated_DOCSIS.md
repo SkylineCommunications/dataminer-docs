@@ -13,7 +13,7 @@ uid: EPM_7.0.8_Integrated_DOCSIS
 
 #### CISCO CBR-8 CCAP Platform: CCAP video data added [ID 41139]
 
-Two new tables are now available in the CISCO CBR-8 element: the *Video QAM Channel* table and the *MPEG Output Streams* table. These tables are shown on the *Video Data* page of the element. You can also visualize data from these tables in a dashboard or low-code app. By default, these tables are not polled. To enable or disable polling, use the parameter *Poll Video Data Tables* on the *Configuration* page.
+Two new tables are now available in the CISCO CBR-8 element: the *Video QAM Channel* table (OID 1.3.6.1.4.1.5591.1.11.5.3.1.1.1) and the *MPEG Output Streams* table (OID 1.3.6.1.4.1.5591.1.11.5.4.1.1.2.3). These tables are shown on the *Video Data* page of the element. You can also visualize data from these tables in a dashboard or low-code app. By default, these tables are not polled. To enable or disable polling, use the parameter *Poll Video Data Tables* on the *Configuration* page.
 
 #### New OFDMA + LowSplitSCQAM column added in US FN Peak dashboard [ID 41311]
 
