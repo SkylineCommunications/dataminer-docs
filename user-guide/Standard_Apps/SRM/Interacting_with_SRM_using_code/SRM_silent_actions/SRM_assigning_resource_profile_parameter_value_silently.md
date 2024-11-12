@@ -99,6 +99,5 @@ public class Script
 ```
 
 > [!NOTE]
-> When the *TargetNodeLabel* is empty or null, the resource added to the booking will not be mapped to any node in the service definition.<!-- RN 30150 -->
-> To unassign a resource that is not mapped to any mode in the service definition method UnassignResources needs to be used, see example above.
-> A resource that is not mapped to a node in the service definition can only be present once per booking.
+>
+> - When the *TargetNodeLabel* is empty or null, the resource added to the booking will not be mapped to any node in the service definition.<!-- RN 30150 --> Such an unmapped resource can only be present once per booking. To unassign a resource that is not mapped to any node in the service definition, use the method *UnassignResources* as illustrated above.
