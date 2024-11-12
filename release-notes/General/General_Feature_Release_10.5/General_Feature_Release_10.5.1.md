@@ -32,6 +32,22 @@ In future versions, this call will be used to verify whether DataMiner Swarming 
 
 ## Changes
 
+### Breaking changes
+
+#### Automation: Locking behavior of Automation script actions has been enhanced [ID 41195]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+A number of enhancements have been made with regard to the locking behavior of certain Automation script actions. This should significantly reduce the chances of scripts influencing each other and slowing each other down.
+
+Breaking changes:
+
+| Actions | Breaking change |
+|---------|-----------------|
+| Generate Information<br>Log<br>Send Notification<br>Send Report | Text that supports the `[dummy<id>]` placeholder will display the old element name if it was updated during the execution of a script or it will still display the element name even if the element was deleted in the meantime. |
+| Set State | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to change element state...". |
+| Set Template | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to set template...". |
+
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299]
@@ -69,20 +85,6 @@ To do so, in the Resource Manager configuration file, set the *AllowNotActiveEle
 Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
 
 Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
-
-#### Automation: Locking behavior of Automation script actions has been enhanced [ID 41195]
-
-<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
-
-A number of enhancements have been made with regard to the locking behavior of certain Automation script actions.
-
-Breaking changes:
-
-| Actions | Breaking change |
-|---------|-----------------|
-| Generate Information<br>Log<br>Send Notification<br>Send Report | Text that supports the `[dummy<id>]` placeholder will display the old element name if it was updated during the execution of a script or it will still display the element name even if the element was deleted in the meantime. |
-| Set State | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to change element state...". |
-| Set Template | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to set template...". |
 
 #### DxMs upgraded [ID 41297]
 
