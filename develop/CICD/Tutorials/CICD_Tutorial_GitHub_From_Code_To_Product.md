@@ -115,7 +115,7 @@ You should now see your CI jobs complete successfully, ensuring that quality sta
 
 1. Click *Choose a tag* and enter the version, for example `1.0.0.1-beta1`.
 
-   You can use any version you want. For a pre-release, a "-text" suffix is usually used.
+   You can use any version you want. For a pre-release, usually a suffix is added, which can contain any text, e.g. "-beta1" in the example above.
 
 1. Enter a description of your release.
 
