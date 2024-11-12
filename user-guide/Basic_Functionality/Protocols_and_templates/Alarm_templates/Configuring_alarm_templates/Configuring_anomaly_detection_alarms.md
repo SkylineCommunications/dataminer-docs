@@ -7,7 +7,7 @@ uid: Configuring_anomaly_detection_alarms
 In an alarm template, you can select to have alarms generated based on Augmented Operations features. You can enable alarm monitoring on specific types of behavioral anomalies for specific parameters, so that an alarm is generated whenever an anomaly of the relevant type is detected for those parameters, and you can configure alarms that should be triggered based on proactive cap detection.
 
 > [!NOTE]
-> Anomaly detection is not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
+> These settings are not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
 
 ## [From DataMiner 10.3.12/10.4.0 onwards](#tab/tabid-1)
 
@@ -74,9 +74,11 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
 
    1. Select the checkbox.
 
-   1. Select the severity of the generated alarms: *Warning*, *Minor*, *Major*, or *Critical*.
+   1. Select the severity of the generated alarms.
 
-   1. Select the trend prediction range that will trigger the alarms: *Upper range (100.0 %)*, *Critical high (90.0 %)*, *Major High (80.0 %)*, or *Lower range (0.0 %)*.
+   1. Select the trend prediction range that will trigger the alarms.
+
+      The ranges you can select depend on the thresholds that have been configured in the alarm template itself. For example, if a Critical High alarm threshold of 100 Kbps is configured in the alarm template for an *Audio Bit Rate* parameter, here you will be able to select the option *Critical High (100 Kbps)* for that parameter.
 
 1. Click *Close* in the lower right corner to return to the alarm template editor.
 
