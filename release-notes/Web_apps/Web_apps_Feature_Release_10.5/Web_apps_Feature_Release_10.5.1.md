@@ -120,3 +120,9 @@ For more information on how to configure a warning message to be displayed when 
 
 > [!IMPORTANT]
 > In the Dashboards app, the *Button* component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
+
+#### Dashboards app: Variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the 'Data' pane [ID 41367]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, while editing a dashboard, you clicked a component's *Data*, *Filter* or *Group* button, variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the *Data* pane.
