@@ -67,7 +67,7 @@ var targetDmaId = 123;
 // The IDs of the bookings that need to be swarmed
 var bookingIds = new List<Guid>() { ... };
 
-var swarmingRequest = SwarmingRequestMessage.ForBookings(targetDmaId, bookingIds);
+var swarmingRequest = SwarmingRequestMessage.ForBookings(targetDmaId, bookingIds.ToArray());
 
 var asyncConnection = connection.Async;
 
