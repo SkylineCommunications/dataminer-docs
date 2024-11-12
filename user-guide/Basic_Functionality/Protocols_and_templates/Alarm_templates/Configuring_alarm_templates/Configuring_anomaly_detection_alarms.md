@@ -78,7 +78,10 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
 
    1. Select the trend prediction range that will trigger the alarms.
 
-      The ranges you can select depend on the thresholds that have been configured in the alarm template itself. For example, if a Critical High alarm threshold of 100 Kbps is configured in the alarm template for an *Audio Bit Rate* parameter, here you will be able to select the option *Critical High (100 Kbps)* for that parameter.
+      The following ranges will be available for selection:
+
+      - Ranges corresponding with the thresholds that have been configured in the alarm template itself. For example, if a Critical High alarm threshold of 100 Kbps is configured in the alarm template for an *Audio Bit Rate* parameter, here you will be able to select the option *Critical High (100 Kbps)* for that parameter.
+      - An upper and a lower range, if these are specified in the protocol. In case no upper and lower range are specified in the protocol, but the parameter shows a percentage, 100% will be available as the upper range and 0% as the lower range.
 
 1. Click *Close* in the lower right corner to return to the alarm template editor.
 
