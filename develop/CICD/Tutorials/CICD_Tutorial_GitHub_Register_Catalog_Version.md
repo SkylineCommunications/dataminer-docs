@@ -15,7 +15,7 @@ Expected duration: 10 minutes
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create organization keys.
 
   > [!TIP]
   > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
@@ -61,7 +61,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use GitHub run number for versioning
         run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
@@ -118,6 +118,9 @@ To securely store sensitive information like the API token, you will need to add
    ![New repository secret button](~/user-guide/images/tutorial_catalog_registration_new_secret.png)
 
 1. Specify the name `API_TOKEN`, and add the organization key you copied earlier as the value.
+
+> [!NOTE]
+> When an organization key would give issues, you can also try to use a [system key](xref:Managing_DCP_keys#system-keys).
 
 ## Step 3: Push the workflow file
 

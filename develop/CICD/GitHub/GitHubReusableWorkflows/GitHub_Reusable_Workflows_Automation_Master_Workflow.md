@@ -18,16 +18,12 @@ The following actions will be performed:
 - [Analyze](#analyze)
 - [Quality gate](#quality-gate)
 
-Only when the actions above have been successful, will the "Artifact Registration and Upload" job be executed. This job will create an artifact (.dmapp) based on the Automation script solution and upload it, with the following steps:
+In parallel the "[Artifact Creation](#artifact-creation)" and "[Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github)" jobs will be executed.
 
-- [NuGet restore solution](#nuget-restore-solution)
+Only when the actions above and "Artifact Creation" job have been successful, will the "Artifact Registartion & Upload" job be executed. This job will upload an artifact (.dmapp) based on the Automation script solution, with the following steps:
+
 - [Upload artifact package](#upload-artifact-package)
 - [Set artifact ID](#set-artifact-id)
-
-In parallel to these stages it will execute two jobs:
-
-- [Artifact Creation](#artifact-creation)
-- [Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github)
 
 > [!IMPORTANT]
 > This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D` or `A.B.C`. During a development cycle, only the quality control actions are performed and artifact uploading is ignored (this means the secret "DATAMINER_DEPLOY_KEY" is optional). During a release cycle, an actual artifact is created and uploaded to the catalog (this means the secret "DATAMINER_DEPLOY_KEY" is required). A release cycle can also be a pre-release with versions of format `A.B.C.D-text` or `A.B.C-text`.
@@ -35,9 +31,9 @@ In parallel to these stages it will execute two jobs:
 ## Prerequisites
 
 - Either the repository’s name or a GitHub topic must be used to infer the catalog item type.
-AutomationScript solutions (and therefor this workflow) can be used to create more than an Automation Script. It can contain Add-Hoc Data sources, GQI Queries, chatops extensions, ... This reusable workflow requires that GitHub has information that defines the catalog item type.
+AutomationScript solutions (and therefor this workflow) can be used to create more than an Automation Script. It can contain Ad-Hoc Data sources, GQI Queries, ChatOps extensions, ... This reusable workflow requires that GitHub has information that defines the catalog item type.
 
-- Part of our quality control involves static code analysis through sonarcloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a sonarcloud organization setup, linked to your GitHub Organization as described in [sonarcloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
+- Part of our quality control involves static code analysis through SonarCloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a SonarCloud organization setup, linked to your GitHub Organization as described in [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
 - Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
@@ -109,23 +105,17 @@ Performs static code analysis using [SonarCloud](https://www.sonarsource.com/pro
 
 Checks the results of all previous steps and combines them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
 
-## Artifact Registration and Upload job
+## Artifact Creation
+
+This job runs in parallel and will create the .dmapp package. This will be provided as an artifact, downloadable directly from the run and can be used for manual testing.
 
 ### NuGet restore solution
 
 This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation script solution.
 
-### Upload artifact package
+### Create dmapp package
 
-This step performs the Skyline Communications [Deploy Action](xref:Marketplace_deployment_action), set to only "Upload", because deployment is handled in other user-configured jobs.
-
-### Set artifact ID
-
-If artifact creation and upload was successful, this step will make sure the ID to the artifact is returned so other jobs may use it to deploy or download the artifact.
-
-## Artifact Creation
-
-This job runs in parallel and will create the .dmapp package. This will be provided as an artifact, downloadable directly from the run and can be used for manual testing.
+This step will create an application package (.dmapp) with the [Packager .NET Tool](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager).
 
 ## Auto-Generating Catalog from GitHub
 
@@ -133,3 +123,13 @@ This job runs in parallel and provides significant quality of life improvements.
 
 > [!NOTE]
 > You can still write and include your own catalog.yml (or manifest.yml) file directly in the root of the solution following the information on the [Registering a Catalog Item](xref:Register_Catalog_Item) page. This will always override anything from the automatic generation. You can check what was automatically generated by looking at the ".githubtocatalog\auto-generated-catalog.yml" file that gets added to the repository.
+
+## Artifact Registration and Upload job
+
+### Upload artifact package
+
+This step performs the upload with the [CatalogUpload .NET Tool](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload). Deployment is handled in other user-configured jobs.
+
+### Set artifact ID
+
+If artifact creation and upload was successful, this step will make sure the ID to the artifact is returned so other jobs may use it to deploy or download the artifact.

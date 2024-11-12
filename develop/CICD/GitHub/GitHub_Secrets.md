@@ -33,9 +33,9 @@ The key should be added as a secret in the repository, so that it is stored secu
 > [!NOTE]
 > For more information about secrets, refer to the [GitHub Documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
-## SONAR_TOKEN: Creating a sonarcloud key
+## SONAR_TOKEN: Creating a SonarCloud key
 
-Several provided workflows may require static code analysis through sonarcloud in order to meet quality standards. To perform such analysis access is needed to a sonarcloud project.
+Several provided workflows may require static code analysis through SonarCloud in order to meet quality standards. To perform such analysis access is needed to a SonarCloud project.
 
 Name: SONAR_TOKEN
 Value: The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.

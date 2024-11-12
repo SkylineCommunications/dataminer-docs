@@ -13,7 +13,7 @@ While the tutorial uses the example of a connector, registering a different type
 Expected duration: 10 minutes
 
 > [!NOTE]
-> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial. Alternatively, if you would prefer not to use Postman and HTTPS directly, you can try our [platform-independent tooling](xref:Register_Catalog_Item##registering-a-catalog-item-with-workflows-and-tooling).
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial. Alternatively, if you would prefer not to use Postman and HTTPS directly, you can try our [platform-independent tooling](xref:Register_Catalog_Item#registering-a-catalog-item-with-workflows-and-tooling).
 
 ## Prerequisites
 
