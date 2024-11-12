@@ -61,7 +61,7 @@ In the **first paragraph** below the title, add a short paragraph explaining the
 
 **OBSOLETE**
 
-Older connector documentation will contain an *About* section with tables with version info, product info, and system info, but this is no longer required.
+Older connector documentation will contain an *About* section with tables with version info, product info, and system info, but this is no longer required as this information is now included directly within the protocol.xml via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
 
 ### 'Configuration' section
 
