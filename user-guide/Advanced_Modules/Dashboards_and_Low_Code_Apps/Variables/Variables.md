@@ -51,7 +51,7 @@ To create a new variable:
 
      1. Enter the name of an instance in your DataMiner System or select from the dropdown list.
 
-   - Default text: Enter custom text. HTML text formatting is supported, except when the variable is passed to a text input or search input component.
+   - Default text: Enter custom text.
 
    - Default number: Enter a number or use the arrow icons to increase or decrease the value.
 
