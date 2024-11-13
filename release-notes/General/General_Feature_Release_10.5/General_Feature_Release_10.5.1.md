@@ -96,6 +96,14 @@ From now on, when ReservationInstances are deleted in bulk, a single delete requ
 
 This will significantly enhance overall performance when deleting large numbers of ReservationInstances.
 
+#### SLAnalytics: Synchronization of the configuration.xml file can now be forced via Cube [ID 41270]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
+
+See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
+
 #### DxMs upgraded [ID 41297]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
