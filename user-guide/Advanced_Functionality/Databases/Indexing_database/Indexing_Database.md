@@ -20,7 +20,7 @@ An indexing database is required for many DataMiner features, including:
 
 - [Specific GQI data sources](xref:Query_data_sources)
 
-- [Active and historical alarms and information events](xref:About_alarms) (required for [Dedicated clustered storage](xref:Configuring_dedicated_clustered_storage), optional for [Separate Cassandra storage](xref:Separate_Cassandra_setup_without_Elasticsearch))
+A [dedicated clustered storage setup](#dedicated-clustered-storage-setup) always requires indexing, among others to store active and historical alarms and information events. 
 
 > [!IMPORTANT]
 > Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, we recommend using OpenSearch instead.
