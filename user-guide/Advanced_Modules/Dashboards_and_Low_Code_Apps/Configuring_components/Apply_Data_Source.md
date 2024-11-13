@@ -41,6 +41,8 @@ To add data or change the data of a component:
 
    - Data input can also be provided by any another component. When a component has been added to the dashboard or low-code app, the *Components* or *Feeds* section (depending on your DataMiner version<!--RN 41141-->) is added to the available data in the *Data* pane. You can then drag an entry from this section to a different component in order to link it to the component. For more information, see [Component data](xref:Component_Data).
 
+   - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41039-->, data can also be provided by a **variable**. [Variables](xref:Variables) are reusable data objects that can be dynamically updated.
+
    - Some components allow you to specify **multiple data entries**. For example, for a state component and a line chart component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]
