@@ -213,6 +213,8 @@ items:
         items:
           - name: Responding to element timeouts using Correlation
             topicUid: Correlation_Tutorial_Element_Timeout
+          - name: Removing Legacy Correlation Rules
+            topicUid: Correlation_Tutorial_RemovingLegacyRules
       - name: Correlation rule syntax
         topicUid: Correlation_rule_syntax
         items:
