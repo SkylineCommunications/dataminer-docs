@@ -14,14 +14,14 @@ By default, behavioral anomaly detection is enabled on trended parameters. Simil
 
 Estimated duration: 25 minutes.
 
-> [!TIP]
-> See also: [Kata #46: Improve anomaly detection with feedback](https://community.dataminer.services/courses/kata-46/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 > [!NOTE]
-> The content and screenshots for this tutorial were created in DataMiner 10.4.11.
+> The content and screenshots for this tutorial were created in **DataMiner 10.4.11**.
 
 > [!TIP]
-> See also: [Providing feedback on behavioral anomalies](xref:Providing_feedback_on_behavioral_anomalies)
+> See also:
+>
+> - [Providing feedback on behavioral anomalies](xref:Providing_feedback_on_behavioral_anomalies)
+> - [Kata #46: Improve anomaly detection with feedback](https://community.dataminer.services/courses/kata-46/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -231,7 +231,7 @@ In this step, you will use the light bulb feature to configure an alarm template
 
    In this case, it suggests enabling smart alarming for level increases, as you just provided positive feedback for this type of anomaly. This means that, in the future, an alarm will be generated when this type of anomaly is detected, rather than just a suggestion event.
 
-   ![Popup suggesting to turn on alarming for level increases](~/user-guide/images/Memory_Usage_Task_Manager_Template_Improvement.gif)
+   ![Pop-up window with proposed configuration](~/user-guide/images/Memory_Usage_Task_Manager_Template_Improvement.gif)
 
 1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
 
