@@ -7,7 +7,7 @@ uid: orchestrator_change_log
 #### 12 November 2024 - Fix - Orchestrator 1.7.4 - Fix installer [ID ]
 
 A dll issue in the installer of Orchestrator 1.7.2 caused the service not being able to start, leading to not being able to updated DxMs anymore from the Admin app. 
-In that case [the DataMiner Cloud Pack 3.2.2](https://community.dataminer.services/dataminer-cloud-pack/) or higher can be used to install Orchestrator 1.7.4 or higher on each server again.
+In that case [the DataMiner Cloud Pack 3.2.2](https://community.dataminer.services/dataminer-cloud-pack/) or higher can be used to install Orchestrator 1.7.4 or higher on each server.
 
 #### 5 November 2024 - Fix - Orchestrator 1.7.2 - Fix memory leak [ID 41336]
 
