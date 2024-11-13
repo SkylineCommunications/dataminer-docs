@@ -398,3 +398,9 @@ The default margin of a *Web* component in which *Type* was set to "Custom HTML"
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
+
+#### Dashboards/Low-Code Apps: No chart data would be shown when a parameter value was fed to a Line & area chart component linked to a Time range component [ID 41252]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.

@@ -167,7 +167,7 @@ A high-speed network is required to be able to transfer the data between the dif
 
 ### Operating System
 
-We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 onwards, only Linux is supported. Older Cassandra versions also support Windows.
+We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 and DataMiner 10.4.x onwards, only Linux is supported.
 
 ### Time
 

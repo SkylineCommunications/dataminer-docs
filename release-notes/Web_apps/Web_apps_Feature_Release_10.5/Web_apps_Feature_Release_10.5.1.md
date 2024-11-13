@@ -82,12 +82,6 @@ Up to now, the legacy Reporter (SLASPConnection) would leak memory on every Data
 
 When an *Alarm table* component was configured to retrieve history alarms, it would incorrectly always retrieve all history alarms from the database, regardless of what was specified in the time filter.
 
-#### Dashboards/Low-Code Apps: No chart data would be shown when a parameter value was fed to a Line & area chart component linked to a Time range component [ID 41252]
-
-<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
-
-When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
-
 #### Dashboards/Low-Code Apps: Line & area chart component would incorrectly remain empty until it was resized [ID 41278]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
@@ -120,3 +114,9 @@ For more information on how to configure a warning message to be displayed when 
 
 > [!IMPORTANT]
 > In the Dashboards app, the *Button* component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
+
+#### Dashboards app: Variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the 'Data' pane [ID 41367]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, while editing a dashboard, you clicked a component's *Data*, *Filter* or *Group* button, variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the *Data* pane.

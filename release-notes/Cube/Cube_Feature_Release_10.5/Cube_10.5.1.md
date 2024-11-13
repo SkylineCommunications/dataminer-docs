@@ -40,7 +40,41 @@ A number of enhancements have been made to prevent view cards from showing a "Lo
 
 In the *Augmented Operations alarm settings* pop-up window, the text has been adjusted to allow a more natural translation to other languages.
 
+#### Client compatibility framework: Baseline updated [ID 41276]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+To make sure a Cube client is backwards compatible with all servers it connects to, it is necessary for that client to know which features a server is aware of. Therefore, when a Cube client connects to a particular server, that server will return a list of features it supports.
+
+However, to prevent these feature lists from getting too large, a feature baseline is set on a regular basis. This will allow a server to only return features that have been added or modified since a particular version. Now, the baseline has been updated to DataMiner version 10.4.12.
+
+#### Redundancy groups: Configuration enhancements [ID 41315]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of enhancements have been made with regard to the configuration of redundancy groups and redundancy group templates:
+
+- When a block is loading in the *Switching detection* section, a "Loading" message will now be displayed on top of that block, making it impossible to make changes to the settings in that block until all settings have been loaded.
+
+- The blocks in the *Switching detection* section will now initially be in an error state instead of a valid state. This will prevent users from saving an invalid configuration when data is still being loaded or when certain blocks contain invalid or corrupted data.
+
+- More validation checks will now be done when scanning the changes made to the configuration. The outcome of those checks will determine whether the Apply button get enabled or not.
+
+- When a validation scan detects invalid data, an entry will be added to the SLClient server logging. However, that entry will only be visible in the Logging module when the *Show debug logging* option is enabled. Also, in that case, no update message will be sent to the server. The user will receive a message saying that a problem occurred and that more details can be found in the Logging module.
+
 ### Fixes
+
+#### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When a shape linked to an element or a view contained shape data of which the value started with "[property:" and ended with "]", up to now, the entire value would be interpreted as a property, even when it included other types of placeholders.
+
+#### Connection object would leak memory when you logged out of DataMiner Cube [ID 41103]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you logged out of DataMiner Cube, the connection object would leak memory.
 
 #### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
 
