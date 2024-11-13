@@ -41,7 +41,7 @@ The cleanup method of the optics table has been adjusted so that it no longer re
 
 #### Dashboards for EPM entities now preloaded with relevant information \[ID 32036\]
 
-When you click a dashboard link for a specific entity, the information for that entity will now be preloaded in the dashboard. In addition, using the EPM feed in a dashboard will fill in all pertinent component information, so that the user does not have to keep selecting the same entity.
+When you click a dashboard link for a specific entity, the information for that entity will now be preloaded in the dashboard. In addition, using the EPM selector in a dashboard will fill in all pertinent component information, so that the user does not have to keep selecting the same entity.
 
 #### Improved visualization of interface alarms \[ID 32037\]
 
