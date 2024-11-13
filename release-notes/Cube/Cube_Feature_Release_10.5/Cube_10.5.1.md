@@ -70,6 +70,12 @@ A number of enhancements have been made with regard to the configuration of redu
 
 When a shape linked to an element or a view contained shape data of which the value started with "[property:" and ended with "]", up to now, the entire value would be interpreted as a property, even when it included other types of placeholders.
 
+#### Connection object would leak memory when you logged out of DataMiner Cube [ID 41103]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you logged out of DataMiner Cube, the connection object would leak memory.
+
 #### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
