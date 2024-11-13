@@ -6,6 +6,11 @@ uid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
 
 You can [download a virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) with DataMiner pre-installed to immediately get started. The virtual hard disk is available in **VHD**, **VHDX**, and **VMDK** format. The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out-of-the box for improved security.
 
+> [!NOTE]
+> The **VMDK** hard disk is compatible with desktop hypervisors such as VMWare Workstation.
+> When using the hard disk in a VMware vSphere ESXi environment, you can see an error mentioning **Unsupported and/or invalid disk type**.
+> Please refer to [this article](https://knowledge.broadcom.com/external/article/310567/a-virtual-machine-fails-to-power-on-with.html) on how to resolve the issue.
+
 When you configure this setup, you will be able to choose between different data storage setups:
 
 - [STaaS](xref:STaaS), i.e. the recommended setup.
