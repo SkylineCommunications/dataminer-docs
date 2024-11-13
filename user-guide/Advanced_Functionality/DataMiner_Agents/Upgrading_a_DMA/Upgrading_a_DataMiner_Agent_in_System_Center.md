@@ -39,7 +39,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
    > [!NOTE]
    >
-   > If you choose to upgrade one or more individual Agents, please, make sure you have only one agent orchestrating the upgrade. If you are upgrading a group of agents, wait until the upgrade is completed, only then you can trigger a new group or agent to upgrade.
+   > If you start an upgrade of one or more individual Agents, make sure no additional upgrade operation is started until this first upgrade has been fully completed.
 
 1. If you do not want to use the default upgrade options settings, expand the *Advanced upgrade options* section and select the necessary upgrade options. For more information on these, options, see [default upgrade options](xref:Configuring_the_default_upgrade_options).
 
