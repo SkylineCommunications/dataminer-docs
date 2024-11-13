@@ -40,6 +40,14 @@ A number of enhancements have been made to prevent view cards from showing a "Lo
 
 In the *Augmented Operations alarm settings* pop-up window, the text has been adjusted to allow a more natural translation to other languages.
 
+#### Client compatibility framework: Baseline updated [ID 41276]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+To make sure a Cube client is backwards compatible with all servers it connects to, it is necessary for that client to know which features a server is aware of. Therefore, when a Cube client connects to a particular server, that server will return a list of features it supports.
+
+However, to prevent these feature lists from getting too large, a feature baseline is set on a regular basis. This will allow a server to only return features that have been added or modified since a particular version. Now, the baseline has been updated to DataMiner version 10.4.12.
+
 #### Redundancy groups: Configuration enhancements [ID 41315]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
