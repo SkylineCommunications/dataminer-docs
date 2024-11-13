@@ -64,7 +64,7 @@ Protocol implementation:
 Capture observation:
 
 - The initial request is an SNMP get next request with the OID of ifEntry (1.3.6.1.2.1.2.2.1). This returns the content of 1.3.6.1.2.1.2.2.1.1 (first row, first column).
-- Additional get next requests are performed until the OID in the response exceeds the table OID range.
+- In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, additional get next requests were performed until the OID in the response exceeds the table OID range. In versions 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 or above, get next requests are performed until the values of the defined column parameters are retrieved or, in case the number of defined columns exceeds the number of column values, until the table OID range is exceeded.
 
 ### GetNext + MultipleGet
 
