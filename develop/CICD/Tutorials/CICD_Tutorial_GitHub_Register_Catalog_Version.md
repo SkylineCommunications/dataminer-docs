@@ -120,7 +120,7 @@ To securely store sensitive information like the API token, you will need to add
 1. Specify the name `API_TOKEN`, and add the organization key you copied earlier as the value.
 
 > [!NOTE]
-> When an organization key would give issues, you can also try to use a [system key](xref:Managing_DCP_keys#system-keys).
+> In case using an organization key results in issues, you can try using a [system key](xref:Managing_DCP_keys#system-keys) instead.
 
 ## Step 3: Push the workflow file
 

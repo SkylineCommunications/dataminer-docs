@@ -2,9 +2,9 @@
 uid: github_reusable_workflows_automation_master_workflow
 ---
 
-# Automation master workflow
+# Automation Master Workflow
 
-The Automation workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
+The Automation Master Workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
 
 It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
 
@@ -18,30 +18,28 @@ The following actions will be performed:
 - [Analyze](#analyze)
 - [Quality gate](#quality-gate)
 
-In parallel the "[Artifact Creation](#artifact-creation)" and "[Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github)" jobs will be executed.
+In parallel, the [Artifact Creation](#artifact-creation) and [Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github) jobs will be executed.
 
-Only when the actions above and "Artifact Creation" job have been successful, will the "Artifact Registartion & Upload" job be executed. This job will upload an artifact (.dmapp) based on the Automation script solution, with the following steps:
+Only when the actions above and the "Artifact Creation" job have been successful, will the "Artifact Registration and Upload" job be executed. This job will upload an artifact (.dmapp) based on the Automation script solution, with the following steps:
 
 - [Upload artifact package](#upload-artifact-package)
 - [Set artifact ID](#set-artifact-id)
+
+> [!NOTE]
+> This workflow makes use of the [GitHub to Catalog tool](xref:github_reusable_workflows#github-to-catalog-tool). For this tool to work, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics.
 
 > [!IMPORTANT]
 > This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D` or `A.B.C`. During a development cycle, only the quality control actions are performed and artifact uploading is ignored (this means the secret "DATAMINER_DEPLOY_KEY" is optional). During a release cycle, an actual artifact is created and uploaded to the catalog (this means the secret "DATAMINER_DEPLOY_KEY" is required). A release cycle can also be a pre-release with versions of format `A.B.C.D-text` or `A.B.C-text`.
 
 ## Prerequisites
 
-- Either the repository’s name or a GitHub topic must be used to infer the catalog item type.
-AutomationScript solutions (and therefor this workflow) can be used to create more than an Automation Script. It can contain Ad-Hoc Data sources, GQI Queries, ChatOps extensions, ... This reusable workflow requires that GitHub has information that defines the catalog item type.
+- Either the repository’s name or a GitHub topic must be used to infer the Catalog item type.
 
-- Part of our quality control involves static code analysis through SonarCloud as a mandatory step. When wishing to use this reusable workflow you'll be required to have a SonarCloud organization setup, linked to your GitHub Organization as described in [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
+  Automation script solutions (and therefore this workflow) can be used to create more than an Automation script. They can contain ad hoc data sources, GQI queries, ChatOps extensions, etc. This reusable workflow requires that GitHub has information that defines the Catalog item type.
+
+- Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub Organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
 - Creating a GitHub Release or Tag will attempt to register your item to your private catalog. This requires the repository to have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
-
-## GitHub UI to Catalog Details
-
-This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
-
-For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
 ## How to use
 
@@ -107,7 +105,7 @@ Checks the results of all previous steps and combines them into a single result 
 
 ## Artifact Creation
 
-This job runs in parallel and will create the .dmapp package. This will be provided as an artifact, downloadable directly from the run and can be used for manual testing.
+This job runs in parallel and will create the .dmapp package. This will be provided as an artifact, which is directly downloadable from the run and can be used for manual testing.
 
 ### NuGet restore solution
 
@@ -132,4 +130,4 @@ This step performs the upload with the [CatalogUpload .NET Tool](https://www.nug
 
 ### Set artifact ID
 
-If artifact creation and upload was successful, this step will make sure the ID to the artifact is returned so other jobs may use it to deploy or download the artifact.
+If artifact creation and upload were successful, this step will make sure the ID of the artifact is returned so other jobs can use it to deploy or download the artifact.

@@ -7,14 +7,15 @@ uid: GitHub_Secrets
 Several tools, starter workflows and reusable workflows provided by Skyline will require secrets and tokens to run correctly.
 On this page you can find where to find the tokens you may need and how to add them as a secret in your repository.
 
-## Public vs Private Repositories
+## Public vs. private repositories
 
-When using a **paid GitHub License** or **Public** Repositories it's possible that some secrets and tokens have been set as Organization Secrets and then those can be used.
-Otherwise you'll have to 'override' the organization secrets by adding Repository Secrets.
+If you use a **paid GitHub License** or a **public** repository, it is possible that some secrets and tokens have been set as organization secrets, in which case you can use those.
 
-## Adding the key as a secret in the repository
+Otherwise, you will have to "override" the organization secrets by adding repository secrets.
 
-The key should be added as a secret in the repository, so that it is stored securely in GitHub and not stored in source control.
+## Adding a key as a secret in the repository
+
+A key should be added as a secret in the repository, so that it is stored securely in GitHub and not in source control.
 
 1. Copy the value from the required key.
 
@@ -33,24 +34,23 @@ The key should be added as a secret in the repository, so that it is stored secu
 > [!NOTE]
 > For more information about secrets, refer to the [GitHub Documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 
-## SONAR_TOKEN: Creating a SonarCloud key
+## SONAR_TOKEN SonarCloud key
 
-Several provided workflows may require static code analysis through SonarCloud in order to meet quality standards. To perform such analysis access is needed to a SonarCloud project.
+Several provided workflows may require static code analysis through SonarCloud in order to meet quality standards. To perform such analysis, access is needed to a SonarCloud project.
 
-Name: SONAR_TOKEN
-Value: The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
+- Name: SONAR_TOKEN
+- Value: The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
 
-## DATAMINER_DEPLOY_KEY: Creating a dataminer.services System key
+## DATAMINER_DEPLOY_KEY dataminer.services system key
 
-A dataminer.services System key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
-It can also be used to upload artifacts to the private catalog of the organization that your DMS belongs to.
+A dataminer.services system key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
+It can also be used to upload private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to.
 
-Name: DATAMINER_DEPLOY_KEY
-Value: For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+- Name: DATAMINER_DEPLOY_KEY
+- Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-## Creating a dataminer.services Organization key
+## dataminer.services organization key
 
-A dataminer.services Organization key is scoped to the specific organization for which it was created and can **only be used to perform catalog uploads**.
-It can also be used to upload artifacts to the private catalog of the organization that your DMS belongs to.
+A dataminer.services organization key is scoped to the specific organization for which it was created and can **only be used to perform uploads to the DataMiner Catalog**. This includes uploading private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to.
 
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+For more information on how to create a dataminer.services key, see [Managing dataminer.services keys](xref:Managing_DCP_keys).

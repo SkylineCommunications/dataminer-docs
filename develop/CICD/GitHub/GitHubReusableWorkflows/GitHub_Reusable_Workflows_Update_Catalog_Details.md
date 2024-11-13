@@ -6,21 +6,18 @@ uid: github_reusable_workflows_update_catalog_details
 
 The Update Catalog Details workflow can run on any repository. It is intended to update only the Catalog metadata and details without uploading new versions of artifacts.
 
-This is an optional workflow, running the regular AutomationScript or Connector reusable workflows will perform the same as this but with additional quality control and the ability to release new artifacts.
+This is an optional workflow. Running the regular Automation script or connector reusable workflows will perform the same actions, but with additional quality control and the ability to release new artifacts.
 
 The following actions will be performed:
 
-- [Create or Extend Catalog.yml](#create-or-extend-catalogyml)
-- [Commit and Push auto-generated-catalog.yml](#commit-and-push-auto-generated-catalogyml)
-- [Retrieve ReadMe](#retrieve-readme)
-- [Retrieve Images](#retrieve-images)
+- [Create or extend catalog.yml](#create-or-extend-catalogyml)
+- [Commit and push auto-generated-catalog.yml](#commit-and-push-auto-generated-catalogyml)
+- [Retrieve readme](#retrieve-readme)
+- [Retrieve images](#retrieve-images)
 - [Upload to Catalog](#upload-to-catalog)
 
-## GitHub UI to Catalog Details
-
-This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
-
-For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
+> [!NOTE]
+> This workflow makes use of the [GitHub to Catalog tool](xref:github_reusable_workflows#github-to-catalog-tool). For this tool to work, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics.
 
 ## How to use
 
@@ -51,23 +48,23 @@ jobs:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
 ```
 
-## Create or Extend Catalog.yml
+## Create or extend catalog.yml
 
 - Uses the `github-to-catalog-yaml` tool to either create a new `catalog.yml` file or update an existing one. This file defines catalog metadata based on the repository details.
 For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab).
 
-## Commit and Push auto-generated-catalog.yml
+## Commit and push auto-generated-catalog.yml
 
 - Checks if there are changes to the `auto-generated-catalog.yml`. If so, it commits the changes and pushes them back to the repository.
 
-## Retrieve ReadMe
+## Retrieve readme
 
-- Searches for a `README.md` file within the repository. If found, it retrieves its path for use in catalog updates.
+- Searches for a `README.md` file within the repository. If found, it retrieves its path for use in Catalog updates.
 
-## Retrieve Images
+## Retrieve images
 
 - Looks for an `Images` folder, initially near the `README.md` or, if not found, in the workspace. This folder is intended to store image assets for the catalog.
 
 ## Upload to Catalog
 
-- Uploads the collected `catalog.yml`, `README.md`, and images to the DataMiner catalog using the specified API key for authentication.
+- Uploads the collected `catalog.yml`, `README.md`, and images to the DataMiner Catalog using the specified API key for authentication.

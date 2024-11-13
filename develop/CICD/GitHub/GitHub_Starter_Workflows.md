@@ -40,7 +40,8 @@ In the free version of GitHub, you will not see starter workflows in the UI dire
 
 1. Paste your starter workflow.
 
-1. Most starter workflows will require some secrets and tokens to be configured. For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+> [!NOTE]
+> For most starter workflows, you will also need to configure some secrets and tokens. For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ### Deployment jobs
 

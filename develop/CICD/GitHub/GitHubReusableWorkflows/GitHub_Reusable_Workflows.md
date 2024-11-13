@@ -25,12 +25,13 @@ For more details about what each workflow does, you can check one of the links b
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [SRM Function Master Workflow](xref:github_reusable_workflows_srm_function_master_workflow)
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
+- [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
 
-## GitHub UI to Catalog Details
+### GitHub to Catalog tool
 
-This workflow utilizes a tool that auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a catalog item. To function, the GitHub repository must infer the catalog item type using either naming conventions or GitHub topics.
+Most reusable workflows make use of the GitHub to Catalog tool. This tool auto-generates an `auto-generated-catalog.yml` file, which can extend an existing `catalog.yml` (or `manifest.yml`) file by adding metadata and registration details for a DataMiner Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics.
 
-For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [Inferring Catalog Item Type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
+For more information, refer to the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [inferring the Catalog item type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
 ## How to use
 
