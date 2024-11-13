@@ -21,7 +21,7 @@ It displays the different possible data sources of queries as follows:
 > [!NOTE]
 >
 > - From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
-> - Prior to DataMiner 10.3.7/10.4.0, if the data in the table is fetched again by means of a [trigger component](xref:DashboardTrigger) or a [component action](xref:LowCodeApps_event_config) while data is selected in the table, this selection is lost. From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the selection. This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row is missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its feeds to reflect the new selection. <!-- RN 36372 -->
+> - Prior to DataMiner 10.3.7/10.4.0, if the data in the table is fetched again by means of a [trigger component](xref:DashboardTrigger) or a [component action](xref:LowCodeApps_event_config) while data is selected in the table, this selection is lost. From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the selection. This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row is missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its data to reflect the new selection. <!-- RN 36372 -->
 
 > [!TIP]
 > See also: [Tutorial: Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed)
@@ -190,26 +190,26 @@ To apply a filter based on a specific column:
 
 ### Filter based on text string
 
-From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can filter the table by feeding it a text string.
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can filter the table by passing it a text string.
 
 You can do this in several different ways, for example:
 
-- Use a **text input feed** or **search input feed**:
+- Use a **text input** or **search input** component:
 
-  1. Add a [text input](xref:DashboardTextInput) or [search input](xref:DashboardSearchInput) feed component to your dashboard or app.
+  1. Add a [text input](xref:DashboardTextInput) or [search input](xref:DashboardSearchInput) component to your dashboard or app.
 
-  1. Hover over the table component, click the filter icon, and then add a filter feed from the *Feeds > Text input/Search input > Value > Texts* section of the data pane (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->: *Feeds > Text input/Search input > Value > Strings*).
+  1. Hover over the table component, click the filter icon, and then add a filter from the *Components > Text input #/Search input # > Value > Texts* section of the data pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, add a filter from the *Feeds > Text input #/Search input # > Value > Strings* section of the data pane.
 
   When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
 
   > [!NOTE]
-  > If you do not want the search box to appear when using a text or search input feed as a filter, disable the [*Show quick filter* setting](#filtering--highlighting) in the *Layout* tab.
+  > If you do not want the search box to appear when using text or search input data as a filter, disable the [*Show quick filter* setting](#filtering--highlighting) in the *Layout* tab.
 
-  ![Text input feed](~/user-guide/images/Text_input_feed_filter_table.gif)<br>*Text input feed and table components in DataMiner 10.4.11*
+  ![Text input](~/user-guide/images/Text_input_filter_table.gif)<br>*Text input and table components in DataMiner 10.4.11*
 
 - Specify a **text string in the dashboard or app URL**:
 
-  1. Hover over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Texts* section of the data pane (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12: *Feeds > URL > Strings*).
+  1. Hover over the component, click the filter icon, and then add a filter from the *URL > Text* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, add a filter from the *Feeds > URL > Strings* section of the *Data* pane.
 
   1. Pass a string data object within the URL, as explained in [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
 

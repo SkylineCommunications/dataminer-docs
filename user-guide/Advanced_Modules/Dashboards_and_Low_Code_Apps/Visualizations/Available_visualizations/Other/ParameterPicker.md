@@ -17,22 +17,22 @@ This picker component allows the user to select multiple parameters from a prede
 
 ## Configuring the component
 
-1. Apply the necessary data feeds. See [Adding data to a component](xref:Adding_data_to_component).
+1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
 
-   - The component supports element and parameter data feeds. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, a protocol or view feed can be used as an additional filter.
+   - The component supports element and parameter data. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, protocol or view data can be used as an additional filter.
 
    - Multiple view filters can be applied to a parameter picker. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
    - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard or app URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
 
      > [!NOTE]
-     > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use filter feeds found either on a dashboard, on the same low-code app page/panel, or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, these filter feeds can only be found on a dashboard or the same low-code app page/panel.
+     > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use filters found either on a dashboard, on the same low-code app page/panel, or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, these filters can only be found on a dashboard or the same low-code app page/panel.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-   - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
+   - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the data when the dashboard is opened, unless a custom URL is used specifying a different value.
 
      > [!NOTE]
      >
@@ -68,13 +68,13 @@ This picker component allows the user to select multiple parameters from a prede
 > [!NOTE]
 > After selecting column parameter indices in a parameter picker, you can pass those selected indices to other components that support the same data. From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter pickers listing EPM parameters.
 >
-> 1. In the *Parameter Feed* window, select the checkboxes in front of the parameters you wish to include.
+> 1. In the *Parameter Picker* window, select the checkboxes in front of the parameters you wish to include.
 >
 > 1. Available indices will appear under *Indices*. Select the checkboxes in front of the indices you wish to include. For example:
 >
->    ![EPM Feed Indices](~/user-guide/images/EPM_Feed_Indices.png)
+>    ![EPM Indices](~/user-guide/images/EPM_Indices.png)
 >
-> 1. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and drag *Indices* to the component of your choice.
+> 1. In the *Data* pane, go to *All available data* > *Components* > *Parameter picker* > *Selected items* and drag *Indices* to the component of your choice. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find *Indices* under *All available data* > *Feeds* > *Parameter feed* > *Selected items* instead.
 
 ## Customizing the default grouping
 
@@ -82,29 +82,29 @@ When other components are linked to the parameter picker, so that their content 
 
 To configure the default grouping:
 
-- Once a data feed has been added to the component, go to the *Component* > *Settings* tab, and set *Default grouping* setting to the option of your choice.
+- Once data has been added to the component, go to the *Component* > *Settings* tab, and set *Default grouping* setting to the option of your choice.
 
   For example (in DataMiner 10.3.8):
 
   - Default grouping: *All together*
 
-    ![Grouped all together](~/user-guide/images/ParameterFeed_GroupAllTogether.png)
+    ![Grouped all together](~/user-guide/images/ParameterPicker_GroupAllTogether.png)
 
   - Default grouping: *Parameter*
 
-    ![Grouped by parameter](~/user-guide/images/ParameterFeed_GroupParameter.png)
+    ![Grouped by parameter](~/user-guide/images/ParameterPicker_GroupParameter.png)
 
   - Default grouping: *Table index*
 
-    ![Grouped by index](~/user-guide/images/ParameterFeed_GroupIndex.png)
+    ![Grouped by index](~/user-guide/images/ParameterPicker_GroupIndex.png)
 
   - Default grouping: *Element*
 
-    ![Grouped by element](~/user-guide/images/ParameterFeed_GroupElement.png)
+    ![Grouped by element](~/user-guide/images/ParameterPicker_GroupElement.png)
 
   - Default grouping: *No grouping*
 
-    ![No grouping](~/user-guide/images/ParameterFeed_NoGrouping.png)
+    ![No grouping](~/user-guide/images/ParameterPicker_NoGrouping.png)
 
 > [!NOTE]
 >

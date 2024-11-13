@@ -45,7 +45,7 @@ To configure an event to launch a script:
 1. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
 
 > [!NOTE]
-> Data can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
+> Data can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is provided.
 
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.

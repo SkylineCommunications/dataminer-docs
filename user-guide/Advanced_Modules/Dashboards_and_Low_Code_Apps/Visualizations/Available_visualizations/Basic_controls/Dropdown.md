@@ -17,7 +17,7 @@ To configure the component:
 
    > [!NOTE]
    >
-   > - From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data source or *Tables* data source, individual rows from that query or table are listed instead of the query or table itself. Additionally, if you want to use this dropdown feed component as a data feed, the entry will be listed as *Tables* or *Query rows* in the *Data* pane (depending on your DataMiner version<!--RN 41075-->). When you apply multiple query data sources or *Tables* data sources, the queries or tables themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data feed, the query itself is listed as data. If you use this dropdown feed component as a data feed, the entry will be listed as *Queries* in the *Data* pane.
+   > - From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data source or *Tables* data source, individual rows from that query or table are listed instead of the query or table itself. Additionally, if you want to use this dropdown component as data, the entry will be listed as *Tables* or *Query rows* in the *Data* pane (depending on your DataMiner version<!--RN 41075-->). When you apply multiple query data sources or *Tables* data sources, the queries or tables themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data source, the query itself is listed as data. If you use this dropdown component as data, the entry will be listed as *Queries* in the *Data* pane.
    > - You can use the *Tables* data source for this component from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!--RN 41161-->
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
@@ -32,9 +32,9 @@ To configure the component:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-   - *Initial Selection > Select first item by default*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->. Sets the first item as the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value. This setting is enabled by default.
+   - *Initial Selection > Select first item by default*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->. Sets the first item as the value that will be applied in the data when the dashboard is opened, unless a custom URL is used specifying a different value. This setting is enabled by default.
 
-   - *Initial Selection > Select item by default*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value. From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->, this setting is only available when the *Select first item by default* setting is disabled.
+   - *Initial Selection > Select item by default*: Allows you to specify a default value. This is the value that will be applied in the data when the dashboard is opened, unless a custom URL is used specifying a different value. From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->, this setting is only available when the *Select first item by default* setting is disabled.
 
      > [!NOTE]
      >
@@ -43,4 +43,4 @@ To configure the component:
 
    - *Clear selection*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38758-->. Allows you to clear the selected values in the component by clicking the X button in the top-right corner of the filter box. This setting is disabled by default.
 
-   - *Data retrieval > Update data*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows the values displayed in the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). This setting is only available when a single query data feed or an indices data set was applied. This setting is disabled by default.
+   - *Data retrieval > Update data*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows the values displayed in the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). This setting is only available when a single query data source or an indices data set was applied. This setting is disabled by default.

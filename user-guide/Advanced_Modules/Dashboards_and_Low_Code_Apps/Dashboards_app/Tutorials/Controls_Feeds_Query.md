@@ -39,7 +39,7 @@ Expected duration: 10 minutes
 
 1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-1. Add a [Text input](xref:DashboardTextInputFeed) component so the user can enter a search term:
+1. Add a [Text input](xref:DashboardTextInput) component so the user can enter a search term:
 
    1. In edit mode, drag and drop the *Text input* visualization from the pane on the left on to the main dashboard area.
 

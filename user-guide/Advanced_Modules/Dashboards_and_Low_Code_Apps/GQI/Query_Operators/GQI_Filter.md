@@ -8,7 +8,7 @@ The *Filter* query operator filters the data set. When you select this option, s
 
 From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter value, use the available data in the dashboard as the column filter. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the value box. Depending on the type of data, you will then need to specify the following information:
 
-- *Data*/*Feed*: The name of the data (component, URL, variable, etc.). If only one data entry is available, it will automatically be selected.
+- *Data*<!--RN 41141-->/*Feed*: The name of the data (component, URL, variable, etc.). If only one data entry is available, it will automatically be selected.
 
 - *Type*: The type of data that needs to be selected. If only one type of data is provided, it will automatically be selected. The type *Tables* (from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]10.4.12 onwards<!--RN 41075-->) or *Query rows* (from DataMiner 10.2.0 [CU2]/10.2.4 onwards) allows you to link the filter to rows from another query, if a compatible query is available.
 

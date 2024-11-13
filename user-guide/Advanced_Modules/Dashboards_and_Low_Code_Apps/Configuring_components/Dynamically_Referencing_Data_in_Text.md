@@ -103,7 +103,7 @@ To create a flow reference inside textual settings, use the following syntax:
 
 - **Flow name**: The name of the flow you want to reference.
 
-- **Property name**: The property of the fed data that should be used, e.g. "Protocol Name".
+- **Property name**: The property of the provided data that should be used, e.g. "Protocol Name".
 
 > [!NOTE]
 >

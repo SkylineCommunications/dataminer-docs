@@ -185,11 +185,11 @@ Query results are supported as data for this component from DataMiner 10.2.9/10.
 
 ### [Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6](#tab/tabid-2)
 
-1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
 
-   - *Query*: The query data feed you want to use.
+   - *Query*: The query data you want to use.
 
    - *X axis*: The column that should be used for the X-axis data.
 

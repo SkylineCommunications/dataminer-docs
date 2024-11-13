@@ -491,11 +491,11 @@ items:
               - name: Dropdown
                 topicUid: DashboardDropdown
               - name: Numeric input
-                topicUid: DashboardNumericInputFeed
+                topicUid: DashboardNumericInput
               - name: Search input
-                topicUid: DashboardSearchInputFeed
+                topicUid: DashboardSearchInput
               - name: Text input
-                topicUid: DashboardTextInputFeed
+                topicUid: DashboardTextInput
       - name: Component data
         topicUid: Component_Data
       - name: Flows
