@@ -47,4 +47,7 @@ uid: Monitoring_Solutions
   <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/user-guide/images/Tag_Management.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Performance_Analyzer/Performance_Analyzer.html" title="Performance Analyzer" target="_self"><img src="~/user-guide/images/performance_analyzer.svg" style="width:100%"></a>
+  </div>  
 </div>

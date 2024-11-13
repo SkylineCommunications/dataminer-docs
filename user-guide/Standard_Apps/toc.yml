@@ -285,6 +285,13 @@ items:
             topicUid: Installing_DataMiner_Objects_Tool
           - name: Working with the DataMiner Objects Tool
             topicUid: Using_DataMiner_Objects_Tool
+      - name: Performance Analyzer
+        topicUid: Performance_Analyzer
+        items:
+          - name: Performance Analyzer Library
+            topicUid: Performance_Analyzer_Library
+          - name: Performance Analyzer LCA
+            topicUid: Performance_Analyzer_LCA
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:
