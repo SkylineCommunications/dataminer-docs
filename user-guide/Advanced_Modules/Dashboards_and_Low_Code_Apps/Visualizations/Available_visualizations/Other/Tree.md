@@ -8,7 +8,7 @@ This component allows the user to select one or more items in a tree view. The s
 
 To configure the component:
 
-1. Apply the necessary data feeds. See [Adding data to a component](xref:Adding_data_to_component).
+1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
    >

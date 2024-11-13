@@ -4,7 +4,7 @@ uid: Variables
 
 # Variables
 
-Variables are reusable data objects that can be dynamically updated. They are defined independently from components and can be [passed to components as data](xref:Apply_Data_Feed), linked in a [query](xref:Creating_GQI_query), used in a [flow](xref:Using_flows), and more.
+Variables are reusable data objects that can be dynamically updated. They are defined independently from components and can be [passed to components as data](xref:Adding_data_to_component), linked in a [query](xref:Creating_GQI_query), used in a [flow](xref:Using_flows), and more.
 
 Variables are available starting from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41039-->.
 
