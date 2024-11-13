@@ -3294,6 +3294,188 @@ items:
                       topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-max
                     - name: '@min'
                       topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-min
+    - name: SchemaTypes
+      items:
+      - name: EnumActionOn
+        topicUid: Protocol-EnumActionOn
+      - name: EnumActionType
+        topicUid: Protocol-EnumActionType
+      - name: EnumChainsFilters
+        topicUid: Protocol-EnumChainsFilters
+      - name: EnumColumnOptionType
+        topicUid: Protocol-EnumColumnOptionType
+      - name: EnumCpeAlignment
+        topicUid: Protocol-EnumCpeAlignment
+      - name: EnumDatabasePartition
+        topicUid: Protocol-EnumDatabasePartition
+      - name: EnumDiscreteValue
+        topicUid: Protocol-EnumDiscreteValue
+      - name: EnumDisplayState
+        topicUid: Protocol-EnumDisplayState
+      - name: EnumDisplayType
+        topicUid: Protocol-EnumDisplayType
+      - name: EnumEncoding
+        topicUid: Protocol-EnumEncoding
+      - name: EnumGeneralParameterGroupType
+        topicUid: Protocol-EnumGeneralParameterGroupType
+      - name: EnumGroupType
+        topicUid: Protocol-EnumGroupType
+      - name: EnumHttpHeader
+        topicUid: Protocol-EnumHttpHeader
+      - name: EnumHttpLoginMethod
+        topicUid: Protocol-EnumHttpLoginMethod
+      - name: EnumHttpRequestHeader
+        topicUid: Protocol-EnumHttpRequestHeader
+      - name: EnumHttpRequestVerb
+        topicUid: Protocol-EnumHttpRequestVerb
+      - name: EnumHttpResponseHeader
+        topicUid: Protocol-EnumHttpResponseHeader
+      - name: EnumIcons
+        topicUid: Protocol-EnumIcons
+      - name: EnumInterpretTypeTrim
+        topicUid: Protocol-EnumInterpretTypeTrim
+      - name: EnumMatrixInputsMappingNameType
+        topicUid: Protocol-EnumMatrixInputsMappingNameType
+      - name: EnumMatrixMappingType
+        topicUid: Protocol-EnumMatrixMappingType
+      - name: EnumMatrixMatrixOptionNameType
+        topicUid: Protocol-EnumMatrixMatrixOptionNameType
+      - name: EnumMatrixMatrixOptionType
+        topicUid: Protocol-EnumMatrixMatrixOptionType
+      - name: EnumMatrixOutputsMappingNameType
+        topicUid: Protocol-EnumMatrixOutputsMappingNameType
+      - name: EnumOIDType
+        topicUid: Protocol-EnumOIDType
+      - name: EnumOnOff
+        topicUid: Protocol-EnumOnOff
+      - name: EnumOwnershipAccessType
+        topicUid: Protocol-EnumOwnershipAccessType
+      - name: EnumParamConfirmPopup
+        topicUid: Protocol-EnumParamConfirmPopup
+      - name: EnumParamCRCType
+        topicUid: Protocol-EnumParamCRCType
+      - name: EnumParametersViewType
+        topicUid: Protocol-EnumParametersViewType
+      - name: EnumParamGroupType
+        topicUid: Protocol-EnumParamGroupType
+      - name: EnumParamInformationInclude
+        topicUid: Protocol-EnumParamInformationInclude
+      - name: EnumParamInterpretAlignment
+        topicUid: Protocol-EnumParamInterpretAlignment
+      - name: EnumParamInterpretEndian
+        topicUid: Protocol-EnumParamInterpretEndian
+      - name: EnumParamInterpretLengthType
+        topicUid: Protocol-EnumParamInterpretLengthType
+      - name: EnumParamInterpretRawType
+        topicUid: Protocol-EnumParamInterpretRawType
+      - name: EnumParamInterpretType
+        topicUid: Protocol-EnumParamInterpretType
+      - name: EnumParamMeasurementType
+        topicUid: Protocol-EnumParamMeasurementType
+      - name: EnumParamMeasurementTypeCase
+        topicUid: Protocol-EnumParamMeasurementTypeCase
+      - name: EnumParamType
+        topicUid: Protocol-EnumParamType
+      - name: EnumPortSettingsFlowControl
+        topicUid: Protocol-EnumPortSettingsFlowControl
+      - name: EnumPortSettingsParity
+        topicUid: Protocol-EnumPortSettingsParity
+      - name: EnumPortSettingsStopBits
+        topicUid: Protocol-EnumPortSettingsStopBits
+      - name: EnumPortTypes
+        topicUid: Protocol-EnumPortTypes
+      - name: EnumProcessAutomationOptionName
+        topicUid: Protocol-EnumProcessAutomationOptionName
+      - name: EnumProtocolType
+        topicUid: Protocol-EnumProtocolType
+      - name: EnumProtocolTypeRelativeTimers
+        topicUid: Protocol-EnumProtocolTypeRelativeTimers
+      - name: EnumQActionEncoding
+        topicUid: Protocol-EnumQActionEncoding
+      - name: EnumQActionOption
+        topicUid: Protocol-EnumQActionOption
+      - name: EnumRounding
+        topicUid: Protocol-EnumRounding
+      - name: EnumScientificNotation
+        topicUid: Protocol-EnumScientificNotation
+      - name: EnumSNMP
+        topicUid: Protocol-EnumSNMP
+      - name: EnumSNMPType
+        topicUid: Protocol-EnumSNMPType
+      - name: EnumSuppressionType
+        topicUid: Protocol-EnumSuppressionType
+      - name: EnumTrapOIDType
+        topicUid: Protocol-EnumTrapOIDType
+      - name: EnumTrendingType
+        topicUid: Protocol-EnumTrendingType
+      - name: EnumTriggerOn
+        topicUid: Protocol-EnumTriggerOn
+      - name: EnumTriggerTime
+        topicUid: Protocol-EnumTriggerTime
+      - name: EnumTriggerType
+        topicUid: Protocol-EnumTriggerType
+      - name: EnumTrueFalse
+        topicUid: Protocol-EnumTrueFalse
+      - name: EnumTypePortSlowPollBase
+        topicUid: Protocol-EnumTypePortSlowPollBase
+      - name: EnumWebSocketMessageType
+        topicUid: Protocol-EnumWebSocketMessageType
+      - name: TypeAlarmTemplateDefaultValues
+        topicUid: Protocol-TypeAlarmTemplateDefaultValues
+      - name: TypeCamelCaseName
+        topicUid: Protocol-TypeCamelCaseName
+      - name: TypeCommaSeparatedNumbers
+        topicUid: Protocol-TypeCommaSeparatedNumbers
+      - name: TypeDataMinerVersion
+        topicUid: Protocol-TypeDataMinerVersion
+      - name: TypeDllImport
+        topicUid: Protocol-TypeDllImport
+      - name: TypeEmptyString
+        topicUid: Protocol-TypeEmptyString
+      - name: TypeGroupParamId
+        topicUid: Protocol-TypeGroupParamId
+      - name: TypeNonEmptyString
+        topicUid: Protocol-TypeNonEmptyString
+      - name: TypeNonLeadingZeroUnsignedInt
+        topicUid: Protocol-TypeNonLeadingZeroUnsignedInt
+      - name: TypeObjectId
+        topicUid: Protocol-TypeObjectId
+      - name: TypeParamId
+        topicUid: Protocol-TypeParamId
+      - name: TypeProcessAutomationOptionName
+        topicUid: Protocol-TypeProcessAutomationOptionName
+      - name: TypePingInterval
+        topicUid: Protocol-TypePingInterval
+      - name: TypePortNumber
+        topicUid: Protocol-TypePortNumber
+      - name: TypePortRetryCount
+        topicUid: Protocol-TypePortRetryCount
+      - name: TypePortSlowPoll
+        topicUid: Protocol-TypePortSlowPoll
+      - name: TypeProtocolVersion
+        topicUid: Protocol-TypeProtocolVersion
+      - name: TypeQActionOptions
+        topicUid: Protocol-TypeQActionOptions
+      - name: TypeSemicolonSeparatedNumbers
+        topicUid: Protocol-TypeSemicolonSeparatedNumbers
+      - name: TypeSemicolonSeparatedValidatorIds
+        topicUid: Protocol-TypeSemicolonSeparatedValidatorIds
+      - name: TypeTimerContentGroup
+        topicUid: Protocol-TypeTimerContentGroup
+      - name: TypeTimerContentGroupCol
+        topicUid: Protocol-TypeTimerContentGroupCol
+      - name: TypeTriggerOnId
+        topicUid: Protocol-TypeTriggerOnId
+      - name: TypeTriggerTime
+        topicUid: Protocol-TypeTriggerTime
+      - name: TypeTrueOrSemicolonSeparatedNumbers
+        topicUid: Protocol-TypeTrueOrSemicolonSeparatedNumbers
+      - name: TypeVendorOID
+        topicUid: Protocol-TypeVendorOID
+      - name: TypeWildcard
+        topicUid: Protocol-TypeWildcard
+      - name: TypeWildcardOrNumber
+        topicUid: Protocol-TypeWildcardOrNumber
   - name: Automation script schema
     topicUid: SchemaAutomationScript
     items:
