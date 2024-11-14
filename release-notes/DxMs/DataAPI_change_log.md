@@ -23,10 +23,6 @@ If the TraceParent header was specified in a request, it could occur that the te
 
 Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the DataAPI DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-dataapi-dxm-id-41003)), and the Data API installer will instead create the log configuration file upon installation.
 
-### 14 November - Fix - DataAPI 1.2.4 - Not all symbol files stored internally for DataAPI [ID 40916]
-
-All symbol files are now removed from the installer (since [[ID 40901]](#14-november---enhancement---dataapi-124---pdb-files-removed-from-installer-id-40901)), but up to now many of these PDB files were not stored internally to be used for debug purposes. The files will now be correctly stored for these purposes.
-
 ### 14 November - Enhancement - DataAPI 1.2.4 - PDB files removed from installer [ID 40901]
 
 To improve security, the DataAPI installer has been updated so that it will no longer install PDB files.
