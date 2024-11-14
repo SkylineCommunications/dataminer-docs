@@ -31,11 +31,9 @@ For HTTP(S) connections, you can specify the following connection settings while
 
     - The certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
 
-  - DataMiner will block communication in the following cases:
-
-    - The server is offering a non-server certificate.
-
     - The server certificate is signed by a weak signature.
+
+  - DataMiner will block communication when the server is offering a non-server certificate.
 
   > [!NOTE]
   >
