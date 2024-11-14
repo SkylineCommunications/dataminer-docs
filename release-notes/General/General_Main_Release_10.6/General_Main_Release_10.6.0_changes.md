@@ -21,6 +21,14 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
+#### Clustering compatibility check enhancements [ID 41046]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added.
+
+The checks with regard to database compatibility have now been enhanced.
+
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
