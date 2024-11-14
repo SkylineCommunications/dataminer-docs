@@ -7,37 +7,33 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-### 14 November - Fix - DataAPI 1.2.4 - Update MessageBroker [ID 41381]
+### 14 November - Fix - DataAPI 1.2.4 - MessageBroker updated [ID 41381]
 
-DataAPI was updated to use the latest MessageBroker nuget version.
+DataAPI has been updated to use the latest MessageBroker NuGet version.
 
-### 14 November - Fix - DataAPI 1.2.4 - Soft-launch verification is now compatible with DataMiner version 10.5.X and higher [ID 41286]
+### 14 November - Fix - DataAPI 1.2.4 - Soft-launch verification incompatible with DataMiner 10.5.x and higher [ID 41286]
 
-The soft-launch feature would verify if Data API was running on a compatible DataMiner version.
-However, it would only verify 10.4.X. This has now been corrected to support 10.5.X and higher.
+Previously, the soft-launch verification, which checks whether Data API is running on a compatible DataMiner version, verified only 10.4.x versions. Now 10.5.x versions and higher will be included in the check.
 
-### 14 November - Fix - DataAPI 1.2.4 - Set open telemetry sampler to AlwaysOnSampler [ID 40512]
+### 14 November - Fix - DataAPI 1.2.4 - Telemetry data not collected when TraceParent header was specified in request [ID 40512]
 
-This release fixes the situation where the telemetry data is not collected if the TraceParent header is specified in the request.
+If the TraceParent header was specified in a request, it could occur that the telemetry data was not collected. To prevent this, the AlwaysOnSampler option has been added to the open telemetry setup.
 
-### 14 November - Enhancement - DataAPI 1.2.4 - Deploy Log Collector config file with installation of Data API DxM [ID 41003]
+### 14 November - Enhancement - DataAPI 1.2.4 - SLLogCollector config file deployed with installation of Data API DxM [ID 41003]
 
-Currently, the Log Collector comes with a hardcoded configuration (Collector-xml) to take the logs of the Data API DxM (even when the DxM is not installed). This change modifies the Data API installer to create the log configuration file upon installation and removes it from the Log Collector configuration.
+Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the DataAPI DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-dataapi-dxm-id-41003)), and the Data API installer will instead create the log configuration file upon installation.
 
-### 14 November - Fix - DataAPI 1.2.4 - Not all symbol files were stored internally for DataAPI [ID 40916]
+### 14 November - Fix - DataAPI 1.2.4 - Not all symbol files stored internally for DataAPI [ID 40916]
 
-Since [ID 40901], all symbol files have been correctly removed from the installer. However, many of those PDBs are currently not stored internally to be used for debug purposes when we take a process dump at the customer.
-From now on, all PDBs are correctly stored.
+All symbol files are now removed from the installer (since [[ID 40901]](#14-november---enhancement---dataapi-124---pdb-files-removed-from-installer-id-40901)), but up to now many of these PDB files were not stored internally to be used for debug purposes. The files will now be correctly stored for these purposes.
 
-### 14 November - Fix - DataAPI 1.2.4 - Remove PDB files from installer [ID 40901]
+### 14 November - Enhancement - DataAPI 1.2.4 - PDB files removed from installer [ID 40901]
 
-PDB symbols are no longer included with the DxM installer.
+To improve security, the DataAPI installer has been updated so that it will no longer install PDB files.
 
-### 14 November - Enhancement - DataAPI 1.2.4 - Handle missing columns when parsing request [ID 40222]
+### 14 November - Enhancement - DataAPI 1.2.4 - Improved handling of missing columns when parsing request [ID 40222]
 
-DataAPI will not fail the request or have unexpected behaviors if the request contains missing columns.
-Previously, sending a request with `{"table": [{"param1": 4}, {"param2": 3}]}`, would result in a table with one single row, instead of two rows.
-Now, sending `{"table": [{"param1": 4}, {"param2": 3}]}` generates the same result as `{"table": [{"Id": 1, "param1": 4}, {"Id": 2, "param2": 3}]}`.
+If a request contains missing columns, DataAPI will no longer fail to handle the request or encounter unexpected behavior. Previously, sending a request with `{"table": [{"param1": 4}, {"param2": 3}]}` would result in a table with one single row, instead of two rows. Now, sending `{"table": [{"param1": 4}, {"param2": 3}]}` generates the same result as `{"table": [{"Id": 1, "param1": 4}, {"Id": 2, "param2": 3}]}`.
 
 ### 12 September - Fix - DataAPI 1.2.3 - Auto-increment column duplicated when ID column was specified in new request [ID 40187]
 
