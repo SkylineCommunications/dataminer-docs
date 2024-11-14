@@ -29,7 +29,7 @@ Expected duration: 15 minutes
 
 1. Look up the [Ping Monitoring](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) package in the DataMiner Catalog.
 
-1. click the *Deploy* button.
+1. Click the *Deploy* button.
 
    > [!TIP]
    > See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
@@ -61,7 +61,10 @@ Groups are used to organize the destinations configured in the application. Dest
 
    This will open a pop-up window.
 
-1. 
+1. Enter Group Name *Demo*, then click *Next*.
+2. Populate the three Property fields with these values, respectively: Americas, Gold, CustomerXYZ; then click *Next*.
+3. Change the Interval to 60.
+4. Click *Save*.
 
 ![new group](~/user-guide/images/Create_New_Group-PingMonitoring.gif)
 
@@ -69,7 +72,18 @@ Groups are used to organize the destinations configured in the application. Dest
 
 A destination is a point in the network you want to test against. The Ping Monitor application allows you to easily manage hundreds and even thousands of destinations to monitor the availability of different devices and services in your network. See [adding a new destination](xref:Ping_Monitoring_managing_groups_destinations#adding-a-new-destination).
 
-1. Create one or more destinations using IP addresses or hostnames accessible on the public internet, such as 8.8.8.8 (Google DNS)
+In this step, you will create three destinations using the following addresses accessible on the public internet. The first value corresponds with the Address, and the second is the Description:
+- 8.8.8.8 (Google DNS)
+- skyline.be (Skyline website)
+- dataminer.services (DataMiner Services)
+
+Repear the following steps three times, one for each one of the destinations above:
+1. In the Ping Monitoring tool, go to the *Destinations* page.
+2. In the header bar, click *Add Destination*.
+3. Select *Demo* group.
+4. Enter the Address.
+5. Enter the Desciption.
+6. Click *Add Destination*.
 
 ![new destination](~/user-guide/images/Create_New_Destination-PingMonitoring.gif)
 
@@ -94,14 +108,19 @@ These values can help you monitor network congestion and detect outages. For mor
 
 ## Step 5: Filter and access destination details
 
-1. Open the Grid View, which shows all the active destinations sorted by cycle packet loss.
-1. Use the filter panel to the left of the grid to look for specific destinations.
-1. Click on any destination to open its details, which include Host Information, Results, and Settings.
+1. In the app, go to the *Grid View* page, which shows all the active destinations sorted by cycle packet loss.
+2. In the left panel, select skyline.be in the section *Destination Address*. This is going to  filter out all other destinations in the grid.
+3. Click the destination tile in the grid to open its details, which include Host Information, Results, and Settings.
+4. Close the right panel by clicking the *Close* button near the top-right corner.
 
 ![filtering and details](~/user-guide/images/Filter_Details-PingMonitoring.gif)
 
 ## Step 6: Delete a destination
 
-To finalize this tutorial, you will delete one or more of the destinations you created. Please take a look at [deleting a destination](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-destination) if you have questions on how to do so.
+To finalize this tutorial, you will delete all the destinations you created. Please take a look at [deleting a destination](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-destination) if you have questions on how to do so.
+
+First, navigate to the *Destinations* page, then follow these steps for each destination:
+1. Click the garbage can icon next to the destination you want to delete.
+2. In the confirmation dialog, click *Next* to permanently delete the destination.
 
 ![delete destination](~/user-guide/images/Delete_Destination-PingMonitoring.gif)
