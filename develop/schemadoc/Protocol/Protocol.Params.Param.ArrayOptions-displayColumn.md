@@ -21,6 +21,11 @@ This column has to be of type “String”. It can be updated, and normally cont
 > [!NOTE]
 > For performance reasons, using either the "naming" option or the NamingFormat tag is favored over using the displayColumn attribute for new protocols.
 
+> [!CAUTION]
+> Depending on how the display key is defined, there is an important difference in the way trend data is stored in the trend data database table. If the *displayColumn* attribute is used, the **display key** is used in the trend data table. In case either the *Naming* option or *NamingFormat* is used, the **primary key** is used in the trend data table.
+>
+> You should therefore never change existing protocols to start using *naming* instead of the *displayColumn* attribute, as this would result in the trend history becoming unavailable (even though it would still be present in the database).
+
 ## See also
 
 - [Display keys](xref:UIComponentsTableDisplayKeys)
