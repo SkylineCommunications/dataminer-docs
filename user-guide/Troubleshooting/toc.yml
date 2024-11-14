@@ -232,6 +232,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLProtocol crash when restarting elements used by enhanced services
+            topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules
             topicUid: KI_sticky_element_alarm_state_caused_by_correlation_rules
           - name: DataMiner incorrectly reports a Cassandra issue when another database fails

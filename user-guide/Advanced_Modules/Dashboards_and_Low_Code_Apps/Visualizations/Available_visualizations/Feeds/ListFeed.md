@@ -13,13 +13,15 @@ To configure the component:
 1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
    > [!NOTE]
-   > From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data feed, the resulting rows from that query are listed instead of the query itself. Additionally, if you want to use this list feed component as a data feed, the entry will be listed as *Query rows* in the *Data* pane. When you apply multiple query data feeds, the queries themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data feed, the query itself is listed as data. If you use this list feed component as a data feed, the entry will be listed as *Queries* in the *Data* pane.
+   >
+   > - From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data source or *Tables* component data source , individual rows from that query or table are listed instead of the query or table itself. Additionally, if you want to use this list feed component as a data feed, the entry will be listed as *Tables* or *Query rows* in the *Data* pane (depending on your DataMiner version<!--RN 41075-->). When you apply multiple query data sources or *Tables* component data sources, the queries or tables themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data feed, the query itself is listed as data. If you use this list feed component as a data feed, the entry will be listed as *Queries* in the *Data* pane.
+   > - You can use the *Tables* data source for this component from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!--RN 41161-->
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-   - *Display column*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows you to select a column that should be picked to display the query rows items. This setting is only available when a single query data feed was applied.
+   - *Display column*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows you to select a column that should be picked to display the query rows items. This setting is only available when a single query data source or *Tables* component data source was applied.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 

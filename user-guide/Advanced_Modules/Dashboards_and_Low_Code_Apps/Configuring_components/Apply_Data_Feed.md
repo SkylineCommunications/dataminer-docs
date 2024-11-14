@@ -41,6 +41,8 @@ To apply a data feed or change the data feed of a component:
 
    - A data feed can also be provided by a **feed component**. When such a component has been added to the dashboard or low-code app, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
 
+   - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41039-->, data can also be provided by a **variable**. [Variables](xref:Variables) are reusable data objects that can be dynamically updated.
+
    - Some components allow you to specify **multiple data feeds**. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]

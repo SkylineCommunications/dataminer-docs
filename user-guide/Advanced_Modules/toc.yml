@@ -511,6 +511,8 @@ items:
             topicUid: Configuring_a_flow
           - name: Flow operators
             topicUid: Flow_operators
+      - name: Variables
+        topicUid: Variables
       - name: Generic Query Interface (GQI)
         items:
           - name: About the Generic Query Interface
