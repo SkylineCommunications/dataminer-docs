@@ -14,13 +14,12 @@ For HTTP(S) connections, you can specify the following connection settings while
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
-- **Insecure HTTPS**: From DataMiner 10.4.12/10.5.0 onwards<!--RN 40877-->, SSL/TLS certificates are validated by default for all newly created HTTP elements.
+- **Skip SSL/TLS certificate verification (insecure)**: From DataMiner 10.4.12/10.5.0 onwards<!--RN 40877 + 41285-->, SSL/TLS certificates are validated by default for all HTTP elements created after these versions are installed. When this setting is enabled, SSL/TLS certificates will not be automatically validated.
 
-  - To disable certificate validation for an element created after a 10.4.12/10.5.0 upgrade, enable the *Insecure HTTPS* option.
+  > [!NOTE]
+  > For HTTP elements created before the upgrade to 10.4.12/10.5.0, disable this option to enable automatic certificate verification.
 
-  - To enable certificate validation for an HTTP element created before a 10.4.12/10.5.0 upgrade, disable the *Insecure HTTPS* option.
-
-  When the *Insecure HTTPS* setting is enabled, in case an HTTP connector polls an HTTPS endpoint:
+  When the *Skip SSL/TLS certificate verification (insecure)* setting is enabled, in case an HTTP connector polls an HTTPS endpoint:
 
   - DataMiner will ignore invalid certificates in the following cases:
 
@@ -40,6 +39,6 @@ For HTTP(S) connections, you can specify the following connection settings while
 
   > [!NOTE]
   >
-  > - To skip SSL/TLS certificate validation for all elements that share the same *protocol.xml* file, set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
-  > - To skip SSL/TLS certificate validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+  > - To skip SSL/TLS certificate validation for all elements that share the same *protocol.xml* file, set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
+  > - To enable SSL/TLS certificate validation when using multi-threaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
   > - For backward compatibility, the SSL/TLS certificate validation is skipped by default for all elements created before version 10.5.0/10.4.12.
