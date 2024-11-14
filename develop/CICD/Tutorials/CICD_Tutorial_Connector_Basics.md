@@ -2,23 +2,25 @@
 uid: CICD_Tutorial_Connector
 ---
 
-# Setting up a GitHub workflow for connectors
+# Setting up basic CI/CD for connector deployment
 
-In this tutorial, you will learn how to set up basic quality control and automatic deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This can be done with or without the staging system being connected to dataminer.services. This tutorial uses a DataMiner Agent on an internet-accessible virtual machine.
+In this tutorial, you will learn how to create a custom pipeline from scratch. This pipeline will establish basic quality control and automate the deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This setup can function with or without the staging system being connected to dataminer.services. The tutorial uses a DataMiner Agent hosted on an internet-accessible virtual machine.
 
-You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [documentation](xref:Platform_independent_CICD).
+You can also apply the instructions in this tutorial (with limited syntax changes) to use other CI/CD technology, such as Jenkins, GitLab, Concourse, Azure DevOps, etc. You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [CI/CD documentation](xref:Platform_independent_CICD).
 
-> [!NOTE]
-> You can also apply the instructions in this tutorial (with limited syntax changes) to use other CI/CD technology, such as Jenkins, GitLab, Concourse, Azure DevOps, etc.
+If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 > [!TIP]
-> See also: [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Registering a new version of a connector in the Catalog using a GitHub Action](xref:Tutorial_Register_Catalog_Version_GitHub_Actions)
 
 Expected duration: 20 minutes.
 
 ## Prerequisites
 
-- Runtime .NET SDK 8.0. ([download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
+- Runtime .NET SDK 8.0 ([download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
 
 - A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 
@@ -26,7 +28,7 @@ Expected duration: 20 minutes.
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-- [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+- A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 
@@ -88,7 +90,7 @@ Expected duration: 20 minutes.
 
 ## Step 2: Create a GitHub repository
 
-1. In the menu bar of Visual Studio, select *GIT > Create GIT Repository...*.
+1. In the menu bar of Visual Studio, select *GIT > Create GIT Repository*.
 
 1. Create a new GitHub repository.
 
