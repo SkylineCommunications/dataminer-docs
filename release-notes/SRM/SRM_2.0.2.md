@@ -62,9 +62,9 @@ The behavior of the *SRM_ImportFunctions* script has been adjusted as follows wh
 - When functions already exist for a protocol, the import will consider only functions that have a version superior to the existing version, if the function is different from the current function.
 - When functions already exist for a protocol, and the provided import does not have all the active functions, the ones from the import will be concatenated with the existing active functions.
 
-#### Skyline Booking Manager: Debug logging behavior adjusted for QAction 330 [ID 41118]
+#### Skyline Booking Manager: Debug logging removed for QActions 330 and 548 [ID 41118]
 
-In the Skyline Booking Manager connector, the debug logging behavior of QAction 330 has been adjusted. Previously, all information related to this QAction was logged when the log type was set to *Debug*. Now, logging will only be added for this QAction when both the log type is set to *Debug* and the log level is set to 1, preventing unnecessary log entries.
+The Skyline Booking Manager connector will no longer add debug logging for QActions 330 and 548. This will prevent unnecessary log entries from being added and improve the overall clarity of the logging when the log type is set to "Debug".
 
 ### Fixes
 
