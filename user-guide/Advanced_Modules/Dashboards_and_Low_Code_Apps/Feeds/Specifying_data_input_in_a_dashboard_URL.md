@@ -221,7 +221,9 @@ Within the dashboard or app URL, the following data objects can be specified:
 
     `?query columns=3af9e5a7-91fc-4333-94c0-e39a59f0d900%1e23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number%1erange%1e5%1f10%1ffalse%1ftrue`
 
-- *query rows*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->. An array of query rows. Each row must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
+- *query rows*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->.  An array of query rows.
+
+  Each table must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
 
   - *VERSION*: A parameter with the data version, currently always `v:1`.
 

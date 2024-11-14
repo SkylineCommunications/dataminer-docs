@@ -126,7 +126,7 @@ Follow the below steps to configure your DataMiner Agent:
 
 If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, after you have created and connected the VM, instead of the configuration steps detailed above, follow the steps below:
 
-1. Restore the backup in the same way as for a regular DataMiner Agent. See [Restoring a DataMiner Agent](xref:Restoring_a_DataMiner_Agent).
+1. Restore the backup in the same way as for a regular DataMiner Agent. See [Restoring a DataMiner Agent using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 

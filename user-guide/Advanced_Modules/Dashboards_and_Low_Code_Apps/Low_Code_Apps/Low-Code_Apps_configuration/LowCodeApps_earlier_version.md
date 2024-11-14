@@ -18,13 +18,15 @@ To go back to a previous version of a low-code app:
 
    This will show the version history of the app.
 
-   ![Version history](~/user-guide/images/Version_History.png)<br>*Low-Code App version history in DataMiner 10.4.6*
+   ![Version history](~/user-guide/images/Version_History.png)<br>*Low-Code App version history in DataMiner 10.4.12*
 
-   - The currently published version, if any, is indicated with a green *Published* label. <!-- RN 32200 -->
+   - The currently published version, if any, is indicated with a green label. <!-- RN 32200 -->
 
-   - The current draft is indicated with an orange *Draft* label.
+   - The current draft is indicated with an orange label.
 
    - No label is displayed for old draft versions that were never published.
+
+   - From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41034-->, version numbers are included in the version history as well.
 
 1. Click the version you want to go back to. You can also click the pencil icon next to that version in the list to immediately start editing it.
 
