@@ -14,7 +14,7 @@ For HTTP(S) connections, you can specify the following connection settings while
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
-- **Skip SSL/TLS certificate verification (insecure)**: From DataMiner 10.4.12/10.5.0 onwards<!--RN 40877 + 41285-->, SSL/TLS certificates are validated by default for all HTTP elements created after these versions are installed. When this setting is enabled, SSL/TLS certificates will not be automatically validated.
+- **Skip SSL/TLS certificate verification (insecure)**: From DataMiner 10.4.12/10.5.0 onwards<!--RN 40877 + 41285-->, SSL/TLS certificates are validated by default for all newly created HTTP elements. When this setting is enabled, SSL/TLS certificates will not be automatically validated.
 
   > [!NOTE]
   > For HTTP elements created before the upgrade to 10.4.12/10.5.0, disable this option to enable automatic certificate verification.
