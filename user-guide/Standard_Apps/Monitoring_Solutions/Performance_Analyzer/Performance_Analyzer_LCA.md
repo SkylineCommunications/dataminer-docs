@@ -14,7 +14,7 @@ Collecting the data is only piece of the puzzle, if we want the solution to brin
 
 ![Performance Analyzer LCA](~/user-guide/images/performance_analyzer_lca.png)
 
-1.	**Performance Analyzer Metrics Folder**: Defines the folder where performance data files are located.
+1.	**Performance Analyzer Metrics Folder**: Defines the folder where performance data files are located. By default that folder is located at *C:\Skyline_Data\PerformanceAnalyzer*.
 2.	**Files**: Shows a list of files available in the selected directory, with each file’s name, creation date, last modified date, and size. This table allows you to choose specific data file to analyze.
 3.	**Collections**: Displays a list of all runs in the selected file. In Performance Analyzer terms, a "run" simply refers to the disposal of the collector.
 4.	**Collections Filter**: Enables filtering of runs based on metadata, making it easy to locate a specific run or understand its context.

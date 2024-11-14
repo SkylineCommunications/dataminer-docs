@@ -20,7 +20,7 @@ The Performance Analyzer NuGet is designed to track and log performance metrics 
 > The NuGet can be used as standalone tool.
 
 ## Low Code App
-Library allows us to gather the performance metrics for our solution, but collecting the data is only piece of the puzzle. If we want the collected metrics to bring value, we need to be able to interpret them and use them for decision-making. Performance Analyzer LCA provide a more intuitive way to interpret the data, by visualizing it.
+Using the NuGet allows us to gather the performance metrics for our solution, but collecting the data is only piece of the puzzle. If we want the collected metrics to bring value, we need to be able to interpret them and use them for decision-making. Performance Analyzer LCA provide a more intuitive way to interpret the data, by visualizing it.
 
 > [!INSTALL]
 > The LCA can be installed by deploying package [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349).
