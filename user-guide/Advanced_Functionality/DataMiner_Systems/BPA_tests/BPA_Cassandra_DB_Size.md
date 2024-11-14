@@ -8,7 +8,7 @@ Cassandra has some operational limits regarding the size of its files, for examp
 
 The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
-This BPA test is available from DataMiner 10.1.4 onwards. However, as of DataMiner 10.4.12/10.5.0<!--RN 40751-->, it is no longer included as a standard BPA test and may not appear in the BPA overview located in *System Center* > *Agents* > *bpa*, depending on your [data storage architecture](xref:Databases_about).
+This BPA test is available from DataMiner 10.1.4 onwards. However, as of DataMiner 10.4.12/10.5.0<!--RN 40751-->, it is no longer included as a standard BPA test in the *System Center* > *Agents* > *bpa* overview and cannot be executed.
 
 > [!NOTE]
 >
@@ -35,22 +35,31 @@ None of the files in the Cassandra file system violated any of the rules.
 
 ### Error
 
-One or more of the critical rules have been violated (see [Critical rules](#critical-rules) below)
+- One or more of the critical rules have been violated (see [Critical rules](#critical-rules) below).
 
-- Result message: Cassandra DB size errors detected.
-- Impact: Cassandra operations (i.e. read/write/compaction/repair/…) will fail.
+  - Result message: Cassandra DB size errors detected.
+  - Impact: Cassandra operations (i.e. read/write/compaction/repair/…) will fail.
 
-Each rule violation will be described in detail in the *Detailed Result* and *Corrective Action* field. The following list shows what kind of detailed result will be added for each rule.
+  Each rule violation will be described in detail in the *Detailed Result* and *Corrective Action* field. The following list shows what kind of detailed result will be added for each rule.
 
-- Free disk space < Total size of table
+  - Free disk space < Total size of table
 
-  - Detailed result: Not enough disk space free on disk [Driveletter].
-  - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
+    - Detailed result: Not enough disk space free on disk [Driveletter].
+    - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
 
-- KeySpace not found
+  - KeySpace not found
 
-  - Detailed result: Could not find the [KeySpaceName] keyspace.
-  - Corrective action: Make sure *DB.xml* is configured correctly and DataMiner was able to create the keyspace.
+    - Detailed result: Could not find the [KeySpaceName] keyspace.
+    - Corrective action: Make sure *DB.xml* is configured correctly and DataMiner was able to create the keyspace.
+
+- The BPA test is not applicable to the current setup.
+
+  - Result message: This BPA does not apply for this DataMiner Agent.
+
+    > [!NOTE]
+    > From DataMiner 10.4.12/10.5.0 onwards<!--RN 40751-->, this message no longer appears on DMAs using [STaaS](xref:STaaS).
+
+  - Impact: The test will fail.
 
 ### Warning
 
@@ -87,10 +96,6 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 `Unable to detect any Cassandra installation on the system`
 
 When no Cassandra database is installed on the system or the installed Cassandra database is not the active database for the DMA, the test will halt execution and report this.
-
-`This BPA does not apply for this DataMiner Agent`
-
-When the BPA test is not applicable to the current setup, the test will fail execution and report this. From DataMiner 10.4.12/10.5.0 onwards<!--RN 40751-->, this message no longer appears on DMAs using [STaaS](xref:STaaS).
 
 ## List of rules being checked
 

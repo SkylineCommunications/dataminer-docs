@@ -1,21 +1,22 @@
 ---
 uid: BPA_Check_Antivirus_DLLs
-keywords: Check Antivirus DLLs
 ---
 
-# Antivirus on the DataMiner Agents
+# Check Antivirus DLLs
 
-Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Antivirus DLLs".
+<!-- # Antivirus on the DataMiner Agents
+
+Prior to DataMiner 10.4.12/10.5.0, this BPA test is called "Check Antivirus DLLs".-->
 
 When installed on a DataMiner Agent, [antivirus software must be configured to exclude the DataMiner processes](xref:Regarding_antivirus_software).
 
-The *Antivirus on the DataMiner Agents* BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
+The *Check Antivirus DLLs*<!--*Antivirus on the DataMiner Agents*--> BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
 
 This BPA test is available by default from DataMiner 10.1.4 onwards.
 
 ## Metadata
 
-- Name: Antivirus on the DataMiner Agents
+- Name: Check Antivirus DLLs <!--Antivirus on the DataMiner Agents-->
 - Description: Verifies that no antivirus DLLs have been loaded into DataMiner processes
 - Author: Skyline Communications
 - Default Schedule: Every day
