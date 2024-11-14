@@ -28,6 +28,14 @@ uid: Cube_Feature_Release_10.5.1
 
 When you hover over the information icon next to the *Modules > System configuration > Tools > Admin tools* user permission, a tooltip appears, showing more information on this permission. The text of this tooltip has now been enhanced.
 
+#### System Center - Agents: Clustering compatibility checks will now be performed by the DMA to which Cube is connected [ID 41049]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+When you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added. Up to now, these compatibility checks would be performed by Cube. From now on, they will be performed by the DataMiner Agent to which Cube is connected.
+
+See also: [Clustering compatibility check enhancements [ID 41046]](xref:General_Feature_Release_10.5.1#clustering-compatibility-check-enhancements-id-41046)
+
 #### Cards: Enhancements to prevent view cards from showing a 'Loading' message when opened [ID 41162]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->

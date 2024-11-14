@@ -106,6 +106,8 @@ When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner 
 
 The checks with regard to database compatibility have now been enhanced.
 
+See also: [System Center - Agents: Clustering compatibility checks will now be performed by the DMA to which Cube is connected [ID 41049]](xref:Cube_Feature_Release_10.5.1#system-center---agents-clustering-compatibility-checks-will-now-be-performed-by-the-dma-to-which-cube-is-connected-id-41049)
+
 #### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
