@@ -18,7 +18,7 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 
 ## Registering a Catalog item with workflows and tooling
 
-1. Create a `catalog.yml` or `manifest.yml` file as outlined under [Manifest file](#manifest-file) below.
+1. Create a *catalog.yml* or *manifest.yml* file as outlined under [Manifest file](#manifest-file) below.
 
 1. Generate an [organization key](xref:Managing_DCP_keys#organization-keys) with the *Register Catalog items* permission.
 
@@ -26,7 +26,7 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 
    - If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
-   - If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) **Catalog Uploader** tool: [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab).
+   - If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) *Catalog Uploader* tool: [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab).
 
      To install and use the tool in any command line or bash:
 

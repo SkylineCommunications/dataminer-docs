@@ -104,7 +104,7 @@ Performs static code analysis using [SonarCloud](https://www.sonarsource.com/pro
 
 Checks the results of all previous steps and combines them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
 
-## Artifact creation
+## Artifact Creation
 
 This job runs in parallel and will create the .dmprotocol package. This will be provided as an artifact, which is directly downloadable from the run and can be used for manual testing.
 

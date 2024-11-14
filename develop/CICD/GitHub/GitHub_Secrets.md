@@ -4,8 +4,7 @@ uid: GitHub_Secrets
 
 # GitHub secrets and tokens
 
-Several tools, starter workflows and reusable workflows provided by Skyline will require secrets and tokens to run correctly.
-On this page you can find where to find the tokens you may need and how to add them as a secret in your repository.
+Several tools, starter workflows, and reusable workflows provided by Skyline will require secrets and tokens to run correctly. Below, you can find information on where to find the tokens you may need and how to add them as a secret in your repository.
 
 ## Public vs. private repositories
 
@@ -32,7 +31,7 @@ A key should be added as a secret in the repository, so that it is stored secure
    Once it is saved, your secret will be displayed in the *repository secrets*, and you will be able to use it in a workflow.
 
 > [!NOTE]
-> For more information about secrets, refer to the [GitHub Documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+> For more information about secrets, refer to the [GitHub Documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
 ## SONAR_TOKEN SonarCloud key
 

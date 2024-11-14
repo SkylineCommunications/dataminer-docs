@@ -46,8 +46,8 @@ The following tools are the most useful:
   This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner System. You can either do this by using the artifact ID that is returned when a catalog upload is performed, or with a .dmapp directly to a DataMiner Agent you have direct access to.
 
 - [Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab)
-  
-  This is particularly useful when combined with the **CatalogUpload** tool. Designed to run in a GitHub workflow, this tool checks the GitHub UI and repository information to auto-generate a `catalog.yml` file. This file contains the necessary details to register an item on the catalog.
+
+  This tool is particularly useful when combined with the *CatalogUpload* tool mentioned above. Designed to run in a GitHub workflow, this tool checks the GitHub UI and repository information to auto-generate a *catalog.yml* file. This file contains the necessary details to register an item in the DataMiner Catalog.
 
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 

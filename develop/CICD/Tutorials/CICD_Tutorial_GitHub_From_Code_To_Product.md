@@ -20,7 +20,7 @@ For real-world scenarios, you will likely need at least a paid SonarCloud licens
 
 ## Prerequisites
 
-- A GitHub and SonarCloud Organization as set up as detailed under [Setting up your development environment in GitHub](xref:CICD_Tutorial_GitHub_Setting_Up_Organization) (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox>)
+- A GitHub and SonarCloud Organization set up as detailed under [Setting up your development environment in GitHub](xref:CICD_Tutorial_GitHub_Setting_Up_Organization) (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox>)
 - Runtime .NET SDK 8.0 ([download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
 - A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 - [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
@@ -39,9 +39,9 @@ For real-world scenarios, you will likely need at least a paid SonarCloud licens
 
 1. Open Visual Studio, and select *Create a new project*.
 
-1. Select one of the available DataMiner templates from the list of templates (for example *Ad-Hoc Data Source Solution*), and click *Next*.
+1. Select one of the available DataMiner templates from the list of templates (for example *Ad Hoc Data Source Solution*), and click *Next*.
 
-1. Enter a solution name, for example *SLC-GQIDS-MyDataSourceTest*, and click *Next*
+1. Enter a solution name, for example *SLC-GQIDS-MyDataSourceTest*, and click *Next*.
 
    We recommend adhering to [Skyline's naming conventions](xref:Using_GitHub_for_CICD#repository-naming-convention), though this is not mandatory.
 

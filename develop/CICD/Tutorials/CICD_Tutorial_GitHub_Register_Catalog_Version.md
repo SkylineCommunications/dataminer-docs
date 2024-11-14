@@ -15,7 +15,7 @@ Expected duration: 10 minutes
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create organization keys.
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create keys.
 
   > [!TIP]
   > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)

@@ -50,12 +50,12 @@ jobs:
 
 ## Create or extend catalog.yml
 
-- Uses the `github-to-catalog-yaml` tool to either create a new `catalog.yml` file or update an existing one. This file defines catalog metadata based on the repository details.
+- Uses the `github-to-catalog-yaml` tool to either create a new *catalog.yml* file or update an existing one. This file defines catalog metadata based on the repository details.
 For more information, see the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab).
 
 ## Commit and push auto-generated-catalog.yml
 
-- Checks if there are changes to the `auto-generated-catalog.yml`. If so, it commits the changes and pushes them back to the repository.
+- Checks if there are changes to the *auto-generated-catalog.yml*. If so, it commits the changes and pushes them back to the repository.
 
 ## Retrieve readme
 
@@ -67,4 +67,4 @@ For more information, see the [GitHubToCatalogYaml README](https://github.com/Sk
 
 ## Upload to Catalog
 
-- Uploads the collected `catalog.yml`, `README.md`, and images to the DataMiner Catalog using the specified API key for authentication.
+- Uploads the collected *catalog.yml*, `README.md`, and images to the DataMiner Catalog using the specified API key for authentication.

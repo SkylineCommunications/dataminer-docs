@@ -66,19 +66,21 @@ Follow the instructions specified in the [SonarCloud documentation](https://docs
 
 1. Go to the *Actions* tab, verify the workflow content, and enable the workflow.
 
-![Enable Workflow](~/develop/images/github-enable-workflow.png)
+   ![Enable Workflow](~/develop/images/github-enable-workflow.png)
 
 1. Go to the workflow and trigger an initial run manually.
 
-   After this, it will automatically run daily to check for upstream changes.
+   ![Run Workflow](~/develop/images/github-run-workflow.png)
 
-![Run Workflow](~/develop/images/github-run-workflow.png)
+   After this, the workflow will automatically run daily to check for upstream changes.
 
 ## Step 4: Adjust permissions for GITHUB_TOKEN
 
-Some workflows provided by Skyline will automatically create files containing information needed when you upload an artifact to the Catalog. These files retrieve data from the GitHub UI. To create an auto-generated file, the GITHUB_TOKEN in workflows must have write permissions.
+Some workflows provided by Skyline will automatically create files containing the information needed when you upload an artifact to the Catalog. These files retrieve data from the GitHub UI. To create an auto-generated file, the GITHUB_TOKEN in workflows must have write permissions.
 
-Enable this at the organization level by setting the workflow permissions to *Read and write permissions*. Refer to the [GitHub documentation](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization) for more information.
+Enable this at the organization level by setting the workflow permissions to *Read and write permissions*.
+
+For more information, refer to the [GitHub documentation](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization).
 
 > [!NOTE]
 > The GITHUB_TOKEN only has access to the currently running workflow. It also does not trigger new workflow runs when used to push new files, which helps prevent endless loops of CI/CD flows.
@@ -91,6 +93,6 @@ Unless you have a paid GitHub subscription, these secrets will only be available
 
 1. On your GitHub organization page, select the *Settings* tab.
 
-1. Under *Security* expand *Secrets and variables* and select *Actions*.
+1. Under *Security*, expand *Secrets and variables* and select *Actions*.
 
-1. On the Actions secrets and variables page, add a new organization secret such as `SONAR_TOKEN`, as explained under [GitHub secrets and tokens](xref:GitHub_Secrets).
+1. On the *Actions secrets and variables* page, add a new organization secret such as `SONAR_TOKEN`, as explained under [GitHub secrets and tokens](xref:GitHub_Secrets).
