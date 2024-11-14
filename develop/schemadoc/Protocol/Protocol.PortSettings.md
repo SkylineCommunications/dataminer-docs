@@ -39,7 +39,7 @@ Defines the default port settings of the main device port. It also allows you to
 |&nbsp;&nbsp;[PortTypeUDP](xref:Protocol.PortSettings.PortTypeUDP)|[0, 1]|Specifies settings related to the UDP/IP port type.|
 |&nbsp;&nbsp;[Retries](xref:Protocol.PortSettings.Retries)|[0, 1]|Configures the number of retries.|
 |&nbsp;&nbsp;[SetCommunity](xref:Protocol.PortSettings.SetCommunity)|[0, 1]|Specifies the SNMP set community string.|
-|&nbsp;&nbsp;[SkipCertificateVerification](xref:Protocol.PortSettings.SkipCertificateVerification)|[0, 1]|Specifies settings related to verification process of SSL/TLS certificates. Feature introduced in DataMiner 10.4.12 (RN 40877, RN 41285).|
+|&nbsp;&nbsp;[SkipCertificateVerification](xref:Protocol.PortSettings.SkipCertificateVerification)|[0, 1]|Specifies settings related to the verification process of SSL/TLS certificates. Feature introduced in DataMiner 10.4.12 (RN 40877, RN 41285).|
 |&nbsp;&nbsp;[SlowPoll](xref:Protocol.PortSettings.SlowPoll)|[0, 1]|Specifies the slow poll configuration.|
 |&nbsp;&nbsp;[SlowPollBase](xref:Protocol.PortSettings.SlowPollBase)|[0, 1]|Specifies the slow poll base settings.|
 |&nbsp;&nbsp;[SSH](xref:Protocol.PortSettings.SSH)|[0, 1]|Specifies the SSH settings.|
