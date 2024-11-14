@@ -30,11 +30,17 @@ When you hover over the information icon next to the *Modules > System configura
 
 #### System Center - Agents: Clustering compatibility checks will now be performed by the DMA to which Cube is connected [ID 41049]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
 When you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added. Up to now, these compatibility checks would be performed by Cube. From now on, they will be performed by the DataMiner Agent to which Cube is connected.
 
 See also: [Clustering compatibility check enhancements [ID 41046]](xref:General_Feature_Release_10.5.1#clustering-compatibility-check-enhancements-id-41046)
+
+#### DataMiner Cube now support alarm tree IDs when processing correlation and incident alarms [ID 41156]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+DataMiner Cube now supports the newly introduced alarm tree IDs when processing correlation and incident alarms.
 
 #### Cards: Enhancements to prevent view cards from showing a 'Loading' message when opened [ID 41162]
 
