@@ -82,6 +82,16 @@ A number of enhancements have been made with regard to the configuration of redu
 
 When the alarm template editor receives a baseline update for a table cell, Cube checks whether average trending is enabled for the table cell in question. It will now also check whether the table cell is empty or not.
 
+#### Correlation app: No longer possible to add or load Correlation rules that use the deprecated System Display Correlation engine [ID 41363]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, in the *Correlation* app, it was possible to add Correlation rules that used the deprecated System Display Correlation engine. To do so, you had to right-click a folder in the tree view pane (or click the *More...* button at the bottom of the pane) and select *Advanced > Old engine > Add rule*.
+
+From now on, when Cube is connected to a DataMiner Agent running version 10.5.1 or newer, this will no longer be possible, and existing Correlation rules using the deprecated System Display Correlation engine will no longer be loaded.
+
+Also, when you open the *dataminer* tab in the *Logging* section of *System Center* when connected to a DataMiner Agent running version 10.5.1 or newer, the *Correlation (SD)* log file will be removed from the log file list.
+
 #### Correlation & Scheduler apps - 'Send email' action: Attached dashboard will be shown in red when it no longer exists [ID 41364]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
@@ -116,7 +126,7 @@ When, in the *Resources* app, you added or updated a resource, up to now, a pop-
 
 From now on, a pop-up window showing a quarantine warning will only appear in cases where quarantine applies.
 
-#### DataMiner Cube desktop app: Argument screen=\\\\.\\DISPLAY2 will now also be applied when no screen argument is passed to the DataMiner Agent [ID 41340]
+#### DataMiner Cube desktop app: Argument screen=\\\\.\\DISPLAY2 will now be applied when no screen argument is passed to the DataMiner Agent [ID 41340]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
 
