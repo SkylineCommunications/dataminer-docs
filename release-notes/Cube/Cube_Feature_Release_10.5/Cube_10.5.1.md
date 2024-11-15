@@ -116,10 +116,10 @@ When, in the *Resources* app, you added or updated a resource, up to now, a pop-
 
 From now on, a pop-up window showing a quarantine warning will only appear in cases where quarantine applies.
 
-#### DataMiner Cube desktop app: Argument screen=\\\\.\\DISPLAY2 would no longer work in combination with other arguments [ID 41340]
+#### DataMiner Cube desktop app: Argument screen=\\\\.\\DISPLAY2 will now also be applied when no screen argument is passed to the DataMiner Agent [ID 41340]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
 
 If you have multiple monitors and want the DataMiner Cube desktop app to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
-This *screen* argument would no longer work when other arguments had been specified.
+Up to now, this *screen* argument would not be applied to the DataMiner Agent when passed to DataMiner Cube, only when it was explicitly passed to the DataMiner Agent.
