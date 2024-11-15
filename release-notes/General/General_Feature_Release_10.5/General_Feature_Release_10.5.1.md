@@ -152,7 +152,7 @@ Because of a number of enhancements, the process of starting blocking tasks has 
 
 #### Service & Resource Management: Enhanced deletion of ReservationInstances in bulk [ID 41236]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When ReservationInstances were deleted in bulk, up to now, an individual delete request would be sent to the database for every instance.
 
