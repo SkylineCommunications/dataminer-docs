@@ -8,7 +8,7 @@ Cassandra has some operational limits regarding the size of its files, for examp
 
 The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
-This BPA test is available from DataMiner 10.1.4 onwards. However, as of DataMiner 10.4.12/10.5.0<!--RN 40751-->, it is no longer included as a standard BPA test in the *System Center* > *Agents* > *bpa* overview and cannot be executed.
+This BPA test is available from DataMiner 10.1.4 up to DataMiner 10.4.11/10.4.0 [CU9].<!--RN 40751-->
 
 > [!NOTE]
 >
