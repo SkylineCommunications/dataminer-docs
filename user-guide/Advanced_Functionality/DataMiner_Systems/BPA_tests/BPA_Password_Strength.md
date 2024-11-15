@@ -9,7 +9,7 @@ Weak passwords are a bad practice and easy to guess or crack. We recommend chang
 This BPA test will verify whether the database passwords are strong enough. It will analyze the length of the passwords and check whether they are in the top 10,000 most common passwords. It will also detect weak, default credentials.
 
 > [!NOTE]
-> This BPA test has been replaced by the [Security Advisory](xref:BPA_Security_Advisory) BPA test, available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards. From DataMiner 10.4.12/10.5.0 onwards<!--RN 40751-->, the test is no longer included as a standard BPA test in the *System Center* > *Agents* > *bpa* overview and cannot be executed.
+> This BPA test has been replaced by the [Security Advisory](xref:BPA_Security_Advisory) BPA test, available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards.
 
 ## Metadata
 
