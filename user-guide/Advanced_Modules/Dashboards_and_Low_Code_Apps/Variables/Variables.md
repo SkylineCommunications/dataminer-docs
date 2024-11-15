@@ -82,10 +82,11 @@ To create a new variable:
         1. Optionally, add a different display value, which will be used in the user interface. If left untouched, the display value defaults to the raw value.
 
         > [!NOTE]
-        > Right-click a column header to insert or delete a column or change its data type.
         >
-        > Right-click a cell to insert or delete a row or column.
-        > ![Right-click menu](~/user-guide/images/Variables_Right-click_Menu.png)<br>*Table editor in DataMiner 10.4.12*
+        > - Right-click a column header to insert or delete a column or change its data type.
+        > - Right-click a cell to insert or delete a row or column.
+        >
+        >   ![Right-click menu](~/user-guide/images/Variables_Right-click_Menu.png)<br>*Table editor in DataMiner 10.4.12*
 
      1. Click *Save* in the lower right corner.
 
