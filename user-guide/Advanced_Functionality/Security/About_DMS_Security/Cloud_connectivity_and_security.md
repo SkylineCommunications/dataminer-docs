@@ -40,7 +40,7 @@ At the end of this flow, a **secure JSON Web Token** is delivered directly from 
 
 - Every JSON web token is only valid for 1 week, after which it is automatically renewed using a single-use refresh key.
 
-All communication between the DataMiner System and dataminer.services happens using HTTPS and WSS protocols, both using encrypted TLS connections. Currently, **only TLS 1.2 is supported**.
+All communication between the DataMiner System and dataminer.services happens using HTTPS and WSS protocols, both using encrypted TLS connections. We require a minimum TLS version of 1.2 for all connections.
 
 Only outgoing traffic needs to be allowed through for the domain *.dataminer.services.
 
