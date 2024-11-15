@@ -11,7 +11,8 @@ This BPA will verify if DataMiner and IIS are correctly configured to server Cub
 From DataMiner 10.3.0 onwards, DataMiner supports gRPC instead of the deprecated .NET Remoting technology. When gRPC is enabled, all communication with DataMiner is TLS-encrypted. This BPA test will also verify if it is possible to enable gRPC and recommend to do so. It will also verify whether the correct firewall ports are closed or open based on the supported technologies (.NET Remoting or gRPC).
 
 > [!NOTE]
-> This BPA test has been replaced by the [Security Advisory](xref:BPA_Security_Advisory) BPA test, available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards. From DataMiner 10.4.12/10.5.0 onwards<!--RN 40751-->, the test is no longer included as a standard BPA test in the *System Center* > *Agents* > *bpa* overview and cannot be executed.
+> This BPA test has been replaced by the [Security Advisory](xref:BPA_Security_Advisory) BPA test, available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards.
+
 
 ## Metadata
 
