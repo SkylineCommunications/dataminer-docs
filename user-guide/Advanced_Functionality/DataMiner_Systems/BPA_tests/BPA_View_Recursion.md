@@ -8,7 +8,7 @@ Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "View 
 
 This BPA will check the *Views.xml* file to see if any loops are present.
 
-This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 up to DataMiner 10.4.11/10.4.0 [CU9]<!--RN 40751-->.
+This BPA test is available from DataMiner 10.1.0 [CU4]/10.1.7 up to DataMiner 10.4.11/10.4.0 [CU9]<!--RN 40751-->.
 
 ## Metadata
 
