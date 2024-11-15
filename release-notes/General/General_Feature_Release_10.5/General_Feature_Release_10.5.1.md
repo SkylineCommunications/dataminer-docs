@@ -60,6 +60,22 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 };
 ```
 
+#### SLNet 'GetInfo' messages for the PropertyConfiguration' and 'ViewInfo' types now support retrieving information for a specific item [ID 41169]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or Automation scripts.
+
+##### Type PropertyConfiguration
+
+In the `ExtraData` property you can now specify ";type=\<propertyType\>" or ";type=\<propertyType\>;", where \<propertyType\> is either ELEMENT, SERVICE or VIEW.
+
+If another value is specified, then all property configurations will be returned.
+
+##### Type ViewInfo
+
+In the `ExtraData` property you can now specify ";viewId=\<ID\>" or ";viewId=\<ID\>;", where \<ID\> is the ID of the view for which you want to retrieve more information.
+
 #### New SLNet call GetProtocolQActionsStateRequestMessage to retrieve QAction compilation warnings and errors [ID 41218]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
