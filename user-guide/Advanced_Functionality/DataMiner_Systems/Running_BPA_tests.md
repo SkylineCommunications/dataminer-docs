@@ -6,7 +6,7 @@ uid: Running_BPA_tests
 
 From the *Agents* > *BPA* page in System Center, you can run BPA (i.e. Best Practices Analysis) tests. These tests can be used to verify that a specific part of a DataMiner setup conforms with Skyline recommendations, in order to guarantee an optimal DataMiner experience.
 
-From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!-- RN 40201-->, all BPA tests are executed between 10 and 60 minutes after DataMiner has been started, with the exception of the [*Report Active RTE* test](xref:BPA_Report_Active_RTE), which is executed 8 minutes after DataMiner has been started. Prior to DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10, all BPA tests are executed immediately after a DataMiner restart.
+From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!-- RN 40201-->, all BPA tests are executed between 10 and 60 minutes after DataMiner has been started, with the exception of the [*Active Runtime Errors* test](xref:BPA_Report_Active_RTE), which is executed 8 minutes after DataMiner has been started. Prior to DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10, all BPA tests are executed immediately after a DataMiner restart.
 
 The *BPA* page shows a list of all the BPA tests that are currently available in the system. Depending on the type of test, you can run a BPA test on an individual DMA or across a cluster. A button at the top of the list allows you to group the displayed information either by test (default) or by the DMA or DMS the tests can be executed on.
 
