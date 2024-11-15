@@ -60,6 +60,22 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 };
 ```
 
+#### SLNet 'GetInfo' messages for the PropertyConfiguration' and 'ViewInfo' types now support retrieving information for a specific item [ID 41169]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or Automation scripts.
+
+##### Type PropertyConfiguration
+
+In the `ExtraData` property you can now specify ";type=\<propertyType\>" or ";type=\<propertyType\>;", where \<propertyType\> is either ELEMENT, SERVICE or VIEW.
+
+If another value is specified, then all property configurations will be returned.
+
+##### Type ViewInfo
+
+In the `ExtraData` property you can now specify ";viewId=\<ID\>" or ";viewId=\<ID\>;", where \<ID\> is the ID of the view for which you want to retrieve more information.
+
 #### New SLNet call GetProtocolQActionsStateRequestMessage to retrieve QAction compilation warnings and errors [ID 41218]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -98,6 +114,16 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
+#### Clustering compatibility check enhancements [ID 41046]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added.
+
+The checks with regard to database compatibility have now been enhanced.
+
+See also: [System Center - Agents: Clustering compatibility checks will now be performed by the DMA to which Cube is connected [ID 41049]](xref:Cube_Feature_Release_10.5.1#system-center---agents-clustering-compatibility-checks-will-now-be-performed-by-the-dma-to-which-cube-is-connected-id-41049)
+
 #### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
@@ -126,7 +152,7 @@ Because of a number of enhancements, the process of starting blocking tasks has 
 
 #### Service & Resource Management: Enhanced deletion of ReservationInstances in bulk [ID 41236]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When ReservationInstances were deleted in bulk, up to now, an individual delete request would be sent to the database for every instance.
 
@@ -172,7 +198,7 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
 
-For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xref:How_to_aggregate_alarm_severities)
 
 #### SLElement: Incorrect alarm linking [ID 41057]
 

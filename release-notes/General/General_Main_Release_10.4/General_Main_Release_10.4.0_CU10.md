@@ -38,6 +38,16 @@ A number of enhancements have been made to the Cassandra Cluster Migrator tool (
 - Connection details will now only be requested once, unless not all agents could not be initialized.
 - The migration can now only be started when all agents have successfully been initialized.
 
+#### Service & Resource Management: Enhanced deletion of ReservationInstances in bulk [ID 41236]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When ReservationInstances were deleted in bulk, up to now, an individual delete request would be sent to the database for every instance.
+
+From now on, when ReservationInstances are deleted in bulk, a single delete request will be sent to the database for every batch of 200 ReservationInstances.
+
+This will significantly enhance overall performance when deleting large numbers of ReservationInstances.
+
 #### DxMs upgraded [ID 41297]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
@@ -60,7 +70,7 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
 
-For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xref:How_to_aggregate_alarm_severities)
 
 #### SLElement: Incorrect alarm linking [ID 41057]
 

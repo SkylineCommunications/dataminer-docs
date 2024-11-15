@@ -26,6 +26,11 @@ From now on, when the virtual IP address check has concluded that the IP address
 
 Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
 
+Limitations:
+
+- In visual overviews shown on mobile devices, unlike in DataMiner Cube, grouped shapes will not ungroup when zooming.
+- Scrolling on *Children* shapes that extend their boundaries will cause the visual overview to zoom instead of scroll. If you want the visual overview to scroll, you will have to use the scrollbar.
+
 #### Cassandra Cluster Migrator tool: Enhanced migration of Failover systems [ID 40576]
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->

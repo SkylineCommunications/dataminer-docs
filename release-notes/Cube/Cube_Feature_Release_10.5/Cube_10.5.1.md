@@ -28,6 +28,20 @@ uid: Cube_Feature_Release_10.5.1
 
 When you hover over the information icon next to the *Modules > System configuration > Tools > Admin tools* user permission, a tooltip appears, showing more information on this permission. The text of this tooltip has now been enhanced.
 
+#### System Center - Agents: Clustering compatibility checks will now be performed by the DMA to which Cube is connected [ID 41049]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added. Up to now, these compatibility checks would be performed by Cube. From now on, they will be performed by the DataMiner Agent to which Cube is connected.
+
+See also: [Clustering compatibility check enhancements [ID 41046]](xref:General_Feature_Release_10.5.1#clustering-compatibility-check-enhancements-id-41046)
+
+#### DataMiner Cube now support alarm tree IDs when processing correlation and incident alarms [ID 41156]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+DataMiner Cube now supports the newly introduced alarm tree IDs when processing correlation and incident alarms.
+
 #### Cards: Enhancements to prevent view cards from showing a 'Loading' message when opened [ID 41162]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
@@ -61,6 +75,18 @@ A number of enhancements have been made with regard to the configuration of redu
 - More validation checks will now be done when scanning the changes made to the configuration. The outcome of those checks will determine whether the Apply button get enabled or not.
 
 - When a validation scan detects invalid data, an entry will be added to the SLClient server logging. However, that entry will only be visible in the Logging module when the *Show debug logging* option is enabled. Also, in that case, no update message will be sent to the server. The user will receive a message saying that a problem occurred and that more details can be found in the Logging module.
+
+#### Smart baselines: Cube will now also check whether a table cell is empty when it receives a baseline update for that cell [ID 41320]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When the alarm template editor receives a baseline update for a table cell, Cube checks whether average trending is enabled for the table cell in question. It will now also check whether the table cell is empty or not.
+
+#### Correlation & Scheduler apps - 'Send email' action: Attached dashboard will be shown in red when it no longer exists [ID 41364]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in the *Correlation* app or the *Scheduler* app, you open an existing *Send email* action to which a dashboard is attached, from now on, that dashboard will be shown in red when it no longer exists.
 
 ### Fixes
 
