@@ -4,7 +4,7 @@ uid: DashboardDropdown
 
 # Dropdown
 
-This basic control allows the user to select an item in a dropdown list. The selectable items can be based on any data feed.
+This basic control allows the user to select an item in a dropdown list. The selectable items can be based on any data.
 
 ![Dropdown](~/user-guide/images/Dropdown.png)<br>*Dropdown component in DataMiner 10.4.6*
 

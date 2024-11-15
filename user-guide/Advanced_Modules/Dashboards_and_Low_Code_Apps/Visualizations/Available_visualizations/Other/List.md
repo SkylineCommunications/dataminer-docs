@@ -4,7 +4,7 @@ uid: DashboardList
 
 # List
 
-This component allows the user to select one or more items in a list. The selectable items can be based on any data feed.
+This component allows the user to select one or more items in a list. The selectable items can be based on any data.
 
 ![List](~/user-guide/images/List.gif)<br>*List component in DataMiner 10.4.6*
 
