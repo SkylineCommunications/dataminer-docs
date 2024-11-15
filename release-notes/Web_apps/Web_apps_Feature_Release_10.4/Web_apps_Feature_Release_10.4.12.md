@@ -206,7 +206,7 @@ The following changes have been made:
 
 - URL data, previously included under *Feeds* in the *Data* tab, now has its own section named "URL".
 
-- The syntax for [dynamically referencing data in text](xref:Feed_Link) has been updated. For example:
+- The syntax for [dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text) has been updated. For example:
 
   - Old: `{Feed."Table 1"."Selected rows"...}`
 
