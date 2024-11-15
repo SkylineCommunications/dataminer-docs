@@ -102,6 +102,12 @@ When a shape linked to an element or a view contained shape data of which the va
 
 When you logged out of DataMiner Cube, the connection object would leak memory.
 
+#### Alarm Console - Hyperlinks: [PROPERTY:] placeholder would incorrectly not get resolved when the alarm did not contain the property in question [ID 41112]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When an alarm hyperlink contained a [PROPERTY:] placeholder, that placeholder would incorrectly not get resolved when the selected alarm did not contain the property in question.
+
 #### Resources app: Quarantine warning would always appear when something went wrong while adding or updating a resource [ID 41201]
 
 <!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
@@ -109,3 +115,11 @@ When you logged out of DataMiner Cube, the connection object would leak memory.
 When, in the *Resources* app, you added or updated a resource, up to now, a pop-up window showing a quarantine warning would appear whenever something went wrong.
 
 From now on, a pop-up window showing a quarantine warning will only appear in cases where quarantine applies.
+
+#### DataMiner Cube desktop app: Argument screen=\\\\.\\DISPLAY2 would no longer work in combination with other arguments [ID 41340]
+
+<!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] - FR 10.5.1 -->
+
+If you have multiple monitors and want the DataMiner Cube desktop app to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
+
+This *screen* argument would no longer work when other arguments had been specified.
