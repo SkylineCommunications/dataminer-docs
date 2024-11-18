@@ -8,7 +8,7 @@ Cassandra has some operational limits regarding the size of its files, for examp
 
 The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
-This BPA test is available from DataMiner 10.1.4 up to DataMiner 10.4.11/10.4.0 [CU9].<!--RN 40751-->
+This BPA test is available on demand. From DataMiner 10.1.4 up to DataMiner 10.4.11/10.4.0 [CU9], it is available in System Center.<!--RN 40751-->
 
 > [!NOTE]
 >
@@ -44,7 +44,7 @@ None of the files in the Cassandra file system violated any of the rules.
 
   - Free disk space < Total size of table
 
-    - Detailed result: Not enough disk space free on disk [Driveletter].
+    - Detailed result: Not enough disk space free on disk [DriveLetter].
     - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
 
   - KeySpace not found
@@ -72,17 +72,17 @@ Each rule violation will be described in detail in the *Detailed Result* and *Co
 
 - Largest SSTable file for a table > 1/3 of the total installed RAM
 
-  - Detailed result: System might not have enough RAM to process [Tablename].
-  - Corrective action: Have at least [MinRamRequired] GB of RAM installed or reduce the amount of data in [Tablename].
+  - Detailed result: System might not have enough RAM to process [TableName].
+  - Corrective action: Have at least [MinRamRequired] GB of RAM installed or reduce the amount of data in [TableName].
 
 - Duplicate folders detected
 
-  - Detailed result: Duplicate folders detected for [Tablename]
+  - Detailed result: Duplicate folders detected for [TableName]
   - Corrective action: Remove unused folders
 
 - Large partitions detected
 
-  - Detailed result: Large partitions detected for table [Tablename] Partitions: [Tablename:Partition_key] - size: [Partition_size]
+  - Detailed result: Large partitions detected for table [TableName] Partitions: [TableName:Partition_key] - size: [Partition_size]
   - Corrective action: Reduce the amount of data in these tables/partitions
 
 ### Not Executed
