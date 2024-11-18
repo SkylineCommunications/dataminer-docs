@@ -66,7 +66,7 @@ The revised APA% rate will be formally communicated and integrated into the supp
 
 ### What is the APA for the current year?
 
-This is set by default globally at xx % (refer to Skyline Communications’ quotation for the current value).
+For the current value, refer to Skyline Communications’ quotation.
 
 ## Multi-year support renewals
 
