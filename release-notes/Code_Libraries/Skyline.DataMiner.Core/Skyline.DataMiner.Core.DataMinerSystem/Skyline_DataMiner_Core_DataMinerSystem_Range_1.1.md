@@ -11,9 +11,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### API changes for improved performance [ID 41178]
 
-Version 1.1.2.1 introduces some changes (of which some are breaking) to the class library API to reduce the number of SLNet calls that are executed in the background.
+Version 1.1.2.1 introduces changes (some of which are breaking) to the class library API to reduce the number of SLNet calls that are executed in the background.
 
-**Extended IDms interface**
+##### Extended IDms interface
 
 The IDms interface has been extended with additional methods for retrieving an object that represents an existing DataMiner object (without checking whether it actually exists):
 
@@ -21,18 +21,13 @@ The IDms interface has been extended with additional methods for retrieving an o
 - IDmsElement GetElementReference(DmsElementId dmsElementId)
 - IDmsView GetViewReference(int viewId)
 
-These methods can be used as an alternative to the IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) methods.
-The IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) methods will in the background perform an SLNet call to request info about the item.
+These methods can be used as an alternative to the *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, and *IDms.GetAgent(int)* methods. The *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, and *IDms.GetAgent(int)* methods will perform an SLNet call in the background to request info about the item. With the new *GetAgentReference*, *GetElementReference*, and *GetViewReference* methods, this additional SLNet call will only be called when information is requested. Therefore if you perform a set, e.g. a parameter set on an element, the *SetParameterMessage* SLNet call is performed in the background without having to request additional data from SLNet.
 
-Using the GetAgentReference, GetElementReference or GetViewReference methods, this additional SLNet call will only be called when information is requested.
-Therefore if you perform a set, e.g. a parameter set on an element, the SetParameterMessage SLNet call in the background without having to request additional data from SLNet.
+However, note that if you request a reference to an object that does not exist in the system by providing an invalid ID, an exception will only be thrown when a call to the server is performed. If the *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)* or *IDms.GetAgent(int)* method is used, an exception will already be thrown if the Agent does not exist when the method is executed.
 
-Note, however, if you create you request a reference to an object that does not exist on the System by providing an invalid ID, an exception will only be thrown when a call to the server is performed. Using the IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) method will already throw an exception if the Agent does not exist when the method executes.
+In summary, you can use these methods if you are sure the item exists, and these can result in improved performance because some additional SLNet calls can be avoided. If you do not know whether the item exists, you should use the *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, or *IDms.GetAgent(int)* method instead.
 
-In summary, you can use these methods if you are sure the item exists which can result in improved performance because some additional SLNet calls can be avoided.
-If you do not know the item exists, you should use the IDms.GetElement(DmsElementId), IDms.GetView(int) or IDms.GetAgent(int) method.
-
-Behavior prior to this RN:
+Behavior prior to this change:
 
 ```csharp
 var dms = protocol.GetDms();
@@ -41,7 +36,7 @@ var parameter = element.GetStandaloneParameter<double?>(10);
 parameter.SetValue(100); // Throws ElementStoppedException in case the State property of the ElementInfoEvent message obtained in the GetElement call indicates the element is stopped. In this case no server call is executed.
 ```
 
-Behavior since this RN:
+Behavior since this change:
 
 ```csharp
 var dms = protocol.GetDms();
@@ -59,49 +54,48 @@ var parameter = element.GetStandaloneParameter<double?>(10);
 parameter.SetValue(100); // Does not check State property of the ElementInfoEvent message obtained in the GetElement call indicates the element is stopped. Server call is executed.
 ```
 
-**Breaking changes**
+##### Breaking changes
 
-Note also that the API has some breaking changes with regard to exceptions that are being thrown because the State property for an element is not checked anymore before a set executes.
-This means that some calls no longer throw an ElementStoppedException but instead a ElementNotFoundException (or no exception at all).
-Refer to the XML documentation on the methods to see if/when an exception is now thrown.
+Some breaking changes have been introduced in the API with regard to exceptions that are thrown because the *State* property for an element is no longer checked before a set is executed. This means that some calls no longer throw an ElementStoppedException but instead an ElementNotFoundException or no exception at all.
 
-- IDmsElement.GetStandaloneParameter\<T\> no longer throws an ElementNotFoundException
-- IDmsElement.GetTable no longer throws an ElementNotFoundException
-- IDmsColumn.GetAlarmLevel no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsColumn.GetDisplayValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsColumn\<T\>.GetValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsColumn.Lookup no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsColumn\<T\>.SetValue no longer throws an exception
-- IDmsStandaloneParameter.GetAlarmLevel no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsStandaloneParameter.GetDisplayValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsStandaloneParameter\<T\>.GetValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsStandaloneParameter\<T\>.SetValue no longer throws an exception
-- IDmsTable.AddRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsTable.DeleteRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsTable.DeleteRows no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsTable.GetDisplayKey no longer throws an ElementStoppedException but instead will return null if the element is stopped
-- IDmsTable.GetDisplayKeys no longer throws an ElementStoppedException but instead will return an empty set if the element is stopped
-- IDmsTable.GetPrimaryKey no longer throws an ElementStoppedException but instead will return null if the element is stopped
-- IDmsTable.GetPrimaryKeys no longer throws an ElementStoppedException but instead will return an empty set if the element is stopped
-- IDmsTable.GetRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsTable.GetRows no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsTable.RowExists no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
-- IDmsTable.SetRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped
+To see if and when an exception is thrown, refer to the XML documentation on the methods.
 
-**Updated/changed SLNet calls**
+- IDmsElement.GetStandaloneParameter\<T\> no longer throws an ElementNotFoundException.
+- IDmsElement.GetTable no longer throws an ElementNotFoundException.
+- IDmsColumn.GetAlarmLevel no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsColumn.GetDisplayValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsColumn\<T\>.GetValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsColumn.Lookup no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsColumn\<T\>.SetValue no longer throws an exception.
+- IDmsStandaloneParameter.GetAlarmLevel no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsStandaloneParameter.GetDisplayValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsStandaloneParameter\<T\>.GetValue no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsStandaloneParameter\<T\>.SetValue no longer throws an exception.
+- IDmsTable.AddRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsTable.DeleteRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsTable.DeleteRows no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsTable.GetDisplayKey no longer throws an ElementStoppedException but instead will return null if the element is stopped.
+- IDmsTable.GetDisplayKeys no longer throws an ElementStoppedException but instead will return an empty set if the element is stopped.
+- IDmsTable.GetPrimaryKey no longer throws an ElementStoppedException but instead will return null if the element is stopped.
+- IDmsTable.GetPrimaryKeys no longer throws an ElementStoppedException but instead will return an empty set if the element is stopped.
+- IDmsTable.GetRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsTable.GetRows no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsTable.RowExists no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+- IDmsTable.SetRow no longer throws an ElementStoppedException but instead will throw an ElementNotFoundException if the element is stopped.
+
+##### Updated/changed SLNet calls
 
 Additionally, some changes have been made to the SLNet calls that are executed in the background:
 
-- When info for a single view is requested, the GetInfo message of type ViewInfo will now have the viewId mentioned in the ExtraData property of the SLNet call. If the request is sent to a DataMiner verion that supports this (see RN41169, then DataMiner will only proivde info in the response for that view instead of all.
-- When property configurations are requests, the GetINfo message of type PropertyConfiguration will now include type requested type (e.g. ELEMENT, SERVICE or VIEW) so rthe response only includes the property configurations of the requested type.
-- The ReferencedVersion property of IDmsProtocol will now be obtained via a GetInfo SLNet call of type Protocols instead of the GetProtocolMessage. Perfomrance tests indicate that this is a less impacting call.
+- When info for a single view is requested, the *GetInfo* message of type *ViewInfo* will now have the *viewId* mentioned in the *ExtraData* property of the SLNet call. If the request is sent to a DataMiner version that supports this (see [RN 41169](xref:General_Feature_Release_10.5.1#slnet-getinfo-messages-for-the-propertyconfiguration-and-viewinfo-types-now-support-retrieving-information-for-a-specific-item-id-41169)), DataMiner will only provide info in the response for that view instead of all.
+- When property configurations are requested, the *GetInfo* message of type *PropertyConfiguration* will now include the requested type (e.g. ELEMENT, SERVICE, or VIEW) so the response only includes the property configurations of the requested type.
+- The *ReferencedVersion* property of *IDmsProtocol* will now be obtained via a *GetInfo* SLNet call of type *Protocols* instead of a *GetProtocolMessage* call. Performance tests indicate that this is a less impacting call.
 
-Note that only DataMiner versions where RN 41169 is implemented DataMiner will respond with only the requested information. If the request is made to an older DataMiner version,
-all info will be in the response. In that case, class library will just filter out the needed info.
+Note that only in DataMiner versions where [RN 41169](xref:General_Feature_Release_10.5.1#slnet-getinfo-messages-for-the-propertyconfiguration-and-viewinfo-types-now-support-retrieving-information-for-a-specific-item-id-41169) is implemented, DataMiner will respond with only the requested information. If the request is made to an older DataMiner version, all info will be in the response. In that case, the class library will just filter out the needed info.
 
 ### 1.1.1.13
 
-#### New Feature - Added SendMessages method to ICommunications interface
+#### New feature - SendMessages method added to ICommunications interface
 
 The ICommunications interface has been extended with the following method:
 
