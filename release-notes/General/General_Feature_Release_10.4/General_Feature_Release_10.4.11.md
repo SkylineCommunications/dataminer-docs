@@ -87,6 +87,11 @@ From now on, when the virtual IP address check has concluded that the IP address
 
 Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
 
+Limitations:
+
+- In visual overviews shown on mobile devices, unlike in DataMiner Cube, grouped shapes will not ungroup when zooming.
+- Scrolling on *Children* shapes that extend their boundaries will cause the visual overview to zoom instead of scroll. If you want the visual overview to scroll, you will have to use the scrollbar.
+
 #### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
 
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
@@ -325,3 +330,9 @@ When an unhandled exception was thrown by a QAction after an element had been st
 <!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
 
 Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longer be sent from clients running feature version 10.4.10 to DataMiner Agents running feature version 10.4.1 or older.
+
+#### DataMiner as a Service: Incorrect 'This DataMiner Agent is not licensed' message [ID 41130]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.11 [CU0] -->
+
+On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g. DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.

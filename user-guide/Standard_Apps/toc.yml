@@ -147,6 +147,15 @@ items:
             topicUid: VSAT_metrics
           - name: Available parameters in VSAT
             topicUid: VSAT_parameters
+      - name: DataMiner EPM Availability
+        topicUid: Availability_Overview
+        items:
+          - name: Deploying the DataMiner EPM Availability solution
+            topicUid: Availability_deployment
+          - name: Using the EPM Availability solution
+            topicUid: Availability_Using
+          - name: Available parameters in Availability
+            topicUid: Availability_parameters
   - name: DataMiner IDP app
     topicUid: SolIDP
     items:
@@ -330,6 +339,8 @@ items:
                 topicUid: Processor_configuration
               - name: Monitoring processed traps
                 topicUid: Monitoring_Processed_Traps
+          - name: Getting started tutorial
+            topicUid: Smart_Trap_Processor_Tutorial
       - name: DataMiner TAG Management app
         topicUid: Overview_TAG_App
         items:

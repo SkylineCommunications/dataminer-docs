@@ -2,17 +2,18 @@
 uid: Web_apps_Feature_Release_10.4.12
 ---
 
-# DataMiner web apps Feature Release 10.4.12 – Preview
+# DataMiner web apps Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: Flows [ID 40974]](#dashboardslow-code-apps-flows-id-40974)
+- [Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]](#dashboardslow-code-apps-variables-id-41039-id-41063-id-41132)
 
 ## New features
 
@@ -45,7 +46,7 @@ Currently, you can use the following operators:
 | Debounce | Delays the emission of a value until a specified amount of time has passed without another value having been received. |
 | Merge    | Merges multiple inputs into one by forwarding *the most recently updated input* as the output. Whenever any input changes, the operator will emit the *latest* value. |
 
-#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063]
+#### Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -54,7 +55,7 @@ When editing a dashboard or a low-code app, you can now create data objects call
 A variable has the following properties:
 
 - A name, which must be unique within the dashboard or the low-code app.
-- A type: Element, View, Service, String, Number, DOM instance
+- A type: Element, View, Service, Text, Number, Table, DOM instance
 - A default value
 
   > [!NOTE]
@@ -68,6 +69,19 @@ A variable has the following properties:
   > - If, in a low-code app, you make a variable read-only, specifying a default value for it will no longer be optional.
 
 Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
+
+Variables of type *Table* are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
+
+#### Dashboards/Low-Code Apps: 'Dropdown', 'Tree' and 'List' components are now also able to show table data [ID 41161]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+*Dropdown*, *Tree* and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
+
+- If you add a single table/query, the component will show the individual rows as entries. Selecting an entry will expose the entire row.
+- If you add multiple tables/queries, the component will show the list of tables/queries. Selecting an entry will expose the entire table (in case of table data) or the query (in case of query data).
+
+When you add a table/query to one of the above-mentioned components, you can specify the column that contains the display values in the *Layout > Advanced > Display column* setting.
 
 ## Changes
 
@@ -168,6 +182,38 @@ The alarm ID in the *Alarm ID* and *Root Alarm ID* columns will now also include
 
 In the color themes used by the web apps, the gray colors have been updated.
 
+#### Root page: Adding, updating or deleting an application will no longer cause the entire application list to get refreshed [ID 41135]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
+
+#### Dashboards/Low-Code Apps: Term 'Feed' replaced by 'Components' and 'URL' [ID 41141]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, Dashboards and Low-Code Apps had a separate "feed" component category. Now, the term "Feed" has been removed from the UI across all contexts, reflecting that all components in a dashboard or low-code app can expose data, and not just feed components.
+
+The following changes have been made:
+
+- The *Feeds* visualization category has been removed. Its components have been redistributed as follows:
+
+  - General: Time range, query filter, and trigger components
+
+  - Other: List, tree, parameter picker (previously "parameter feed"), and EPM picker (previously "EPM feed") components
+
+- The *Feeds* section in the *Data* tab is now called "Components". This section now represents data exposed by each component in the dashboard or app.
+
+- URL data, previously included under *Feeds* in the *Data* tab, now has its own section named "URL".
+
+- The syntax for [dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text) has been updated. For example:
+
+  - Old: `{Feed."Table 1"."Selected rows"...}`
+
+  - New: `{Component."Table 1"."Selected rows"...}`
+
+- Several settings that previously included the term "Feed" have been renamed.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -265,7 +311,7 @@ When you installed a low-code app, in some cases, it would not have the correct 
 
 Also, it would not be possible to install more than one low-code app per DataMiner Agent.
 
-#### Dashboards/Low-Code Apps - Table component: Problem when removing the only of the last query [ID 41096]
+#### Dashboards/Low-Code Apps - Table component: Problem when removing the only or the last query [ID 41096]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -288,3 +334,73 @@ When you panned or zoomed out while map data was being retrieved, in some cases,
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
+
+#### Interactive Automation scripts: Problem when none of the components had an identifier configured [ID 41128]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
+
+#### Dashboards/Low-Code Apps - Web component: URL changes would no longer be detected [ID 41179]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The *Web* component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
+
+#### Dashboards/Low-Code Apps - Table component: Users would incorrectly be able to select rows while the data was being loaded [ID 41186]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, users would incorrectly be able to select rows while the data was being loaded into the table.
+
+#### Low-Code Apps: Problem when migrating a low-code app created before the introduction of the template editor [ID 41193]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+During the migration of a low-code app that was created before the introduction of the template editor, in some cases, an error could occur.
+
+#### Dashboards/Low-Code Apps: GQI components did not fully support static tables [ID 41197]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+
+In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
+
+From now on, the GQI components will fully support dropping tables onto them as data.
+
+#### Dashboards app: After duplicating a dashboard, the components in both dashboards would incorrectly have the same ID [ID 41199]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you had duplicated a dashboard, the components in the newly created duplicate dashboard incorrectly had the same IDs as the components in the original dashboard. As a result, when you changed a component in one dashboard, those changes would also be applied to that same component in the other dashboard.
+
+#### Dashboards/Low-Code Apps - Image component: Uploaded images would incorrectly not be synchronized within a DMS [ID 41202]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
+
+#### Low-Code Apps: Additions, updates and removals would not be synchronized among the DMAs in the DMS [ID 41228]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When you created, updated or deleted a low-code app, this would incorrectly not be synchronized among the DataMiner Agents in the DMS.
+
+#### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
+
+#### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
+
+#### Dashboards/Low-Code Apps: No chart data would be shown when a parameter value was fed to a Line & area chart component linked to a Time range component [ID 41252]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.

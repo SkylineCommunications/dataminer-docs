@@ -2,17 +2,13 @@
 uid: Cube_Feature_Release_10.4.12
 ---
 
-# DataMiner Cube Feature Release 10.4.12 – Preview
+# DataMiner Cube Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -24,6 +20,17 @@ DataMiner Cube now supports the new `SkipAbortConfirmation` property that was ad
 
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
+
+#### Settings: New settings to open view cards and EPM cards undocked [ID 40782]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the *User > Card* section of the *Settings* windows, you can now find the following new settings:
+
+| Section | Setting | Description |
+|---------|---------|-------------|
+| View card | Open EPM cards undocked  | When selected, all EPM cards will be opened undocked.  |
+| EPM card  | Open view cards undocked | When selected, all view cards will be opened undocked. |
 
 #### Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]
 
@@ -48,6 +55,17 @@ Now, at the bottom of this *Augmented Operations alarm settings* pop-up window, 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 On each of the four Cube sides, it is now possible to specify a different layout.
+
+#### Settings: New computer setting to clear the Edge WebView2 cache [ID 41026]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+In the *Computer > Advanced* section of the *Settings* windows, you can now find the following new settings:
+
+| Setting | Description |
+|---------|-------------|
+| Clear browser cache on sign-out | When selected, the Edge WebView2 browser cache will be cleared on sign-out, ensuring that the SAML authentication window appears the next time you log on. |
+| Clear cache now | When clicked, the Edge WebView2 browser cache will be cleared immediately. |
 
 ## Changes
 
@@ -132,6 +150,12 @@ When you opened a trend graph, in some rare cases, its viewport would incorrectl
 
 In some cases, when you used Cube to connect to the DataMiner Agent running on the same machine with *Connecting type* set to "Auto", due to a hostname resolution issue, it was no longer possible to open web apps like Monitoring or Dashboards from within Cube. Also, the name of the DataMiner System would no longer be displayed in the Cube header.
 
+#### Visual Overview: Problem when loading AlarmSummary shapes [ID 40962]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, when a visual overview contained a large number of *AlarmSummary* shapes, in some cases, Cube could become unresponsive due to the shapes being loaded sequentially. From now on, *AlarmSummary* shapes will be loaded asynchronously.
+
 #### System Center: Problem when opening the 'Permissions > Views' tab of a user group [ID 40969]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -150,6 +174,20 @@ When you locked an element by clicking *Lock element* in the hamburger menu of t
 
 When you gave a downward trend change a "thumbs up" and then selected *Improve alarm template*, the pop-up window that appeared would incorrectly not show the button needed to switch between the proposed configuration and the current configuration for downward trend changes.
 
+#### Not possible to make corrections to corrupt anomaly alarm templates [ID 41007]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, it would incorrectly not be possible to make corrections to corrupt anomaly alarm templates in DataMiner Cube. This has now been made possible.
+
+#### Visual Overview: Problem when updating path data [ID 41027]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When shape data of type *Path* was updated in such a way that it affected the constraints, up to now, the constraints would not be updated correctly. In some situations, this would result in paths not being visible.
+
+From now on, the constraints will always follow those of the active path.
+
 #### Alarm Console: Not all base alarms would be moved to the active alarms tab when a correlation alarm was cleared [ID 41071]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
@@ -167,3 +205,15 @@ When you tried to open a view card, in some rare cases, the card could remain em
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 When, in the Alarm Console, you created a manual incident, and you then added a new active alarms tab, the incident you created would incorrectly not appear in the newly-created active alarms tab.
+
+#### Parameter-specific alarm template editor would incorrectly overwrite an existing template [ID 41120]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When you double-click a parameter in Data Display and go to the *Templates* tab, or when you right-click an alarm and select *Change > Alarm range*, a parameter-specific template editor will open. Up to now, in some cases, that editor would incorrectly overwrite an existing template when a new template had to be created.
+
+#### Visual Overview: Problem when viewing a visual overview with an AlarmSummary shape while correlation updates were being processed [ID 41124]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+When a large number of correlation updates were being processed while you were viewing a visual overview with an *AlarmSummary* shape, in some cases, an exception could be thrown.

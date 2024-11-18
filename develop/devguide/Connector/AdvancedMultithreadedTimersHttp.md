@@ -98,6 +98,7 @@ Format of the request: httpRequestInfo (object[]):
   - requestSettings[3]: Password.
   - requestSettings[4]: Request headers. Use the pipe character ('|') to separate the header from the header value. Use a semicolon (';') to specify multiple request headers.
   - requestSettings[5]: Timeout (ms).
+  - requestSettings[6]: Specifies whether to skip the SSL/TLS certificate verification. Default: true. Feature introduced in DataMiner 10.4.12 (RN 40877, RN 41285).
 - httpRequestInfo[2] (string[]): The resource path(s).
 
   From DataMiner 10.0.12 (RN 27438) onwards, it is possible to add a message body for the HTTP request (e.g. for a POST request).

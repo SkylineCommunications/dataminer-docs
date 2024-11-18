@@ -7,6 +7,30 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 14 November - Fix - DataAPI 1.2.4 - MessageBroker updated [ID 41381]
+
+DataAPI has been updated to use the latest MessageBroker NuGet version.
+
+### 14 November - Fix - DataAPI 1.2.4 - Soft-launch verification incompatible with DataMiner 10.5.x and higher [ID 41286]
+
+Previously, the soft-launch verification, which checks whether Data API is running on a compatible DataMiner version, verified only 10.4.x versions. Now 10.5.x versions and higher will be included in the check.
+
+### 14 November - Fix - DataAPI 1.2.4 - Telemetry data not collected when TraceParent header was specified in request [ID 40512]
+
+If the TraceParent header was specified in a request, it could occur that the telemetry data was not collected. To prevent this, the AlwaysOnSampler option has been added to the open telemetry setup.
+
+### 14 November - Enhancement - DataAPI 1.2.4 - SLLogCollector config file deployed with installation of Data API DxM [ID 41003]
+
+Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the DataAPI DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-dataapi-dxm-id-41003)), and the Data API installer will instead create the log configuration file upon installation.
+
+### 14 November - Enhancement - DataAPI 1.2.4 - PDB files removed from installer [ID 40901]
+
+To improve security, the DataAPI installer has been updated so that it will no longer install PDB files.
+
+### 14 November - Enhancement - DataAPI 1.2.4 - Improved handling of missing columns when parsing request [ID 40222]
+
+If a request contains missing columns, DataAPI will no longer fail to handle the request or encounter unexpected behavior. Previously, sending a request with `{"table": [{"param1": 4}, {"param2": 3}]}` would result in a table with one single row, instead of two rows. Now, sending `{"table": [{"param1": 4}, {"param2": 3}]}` generates the same result as `{"table": [{"Id": 1, "param1": 4}, {"Id": 2, "param2": 3}]}`.
+
 ### 12 September - Fix - DataAPI 1.2.3 - Auto-increment column duplicated when ID column was specified in new request [ID 40187]
 
 When DataAPI generates a table, it uses the *ID* column from the request as the index. If the request does not include an *ID* column, DataAPI creates an *Idx* column with auto-incremented values. However, up to now, when the *ID* column was added in later requests, it could occur that two *Idx* columns were created.

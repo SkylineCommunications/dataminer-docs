@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Apps_Style_A_Table
+keywords: table templates
 ---
 
 # Styling a table component
@@ -636,7 +637,7 @@ To conclude this tutorial, incorporate a context menu into the table.
            > IntelliSense will only provide suggestions if a table row was selected in the low-code app edit mode.
 
            > [!TIP]
-           > For more information on how to create feed references inside textual settings, see [Dynamically referencing feed values in text](xref:Feed_Link).
+           > For more information on how to create feed references inside textual settings, see [Dynamically referencing feed values in text](xref:Dynamically_Referencing_Data_in_Text).
 
    - Add a menu item to google the order ID:
 
