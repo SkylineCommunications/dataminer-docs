@@ -10,14 +10,14 @@ This component shows the value of one or more analog parameters with a progress 
 
 To configure the component:
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply parameter data. See [Adding data to a component](xref:Adding_data_to_component).
 
-   - Column parameter feeds are supported.
+   - Column parameter data is supported.
 
      > [!NOTE]
-     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter picker](xref:DashboardParameterPicker) and link this to the state component.
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
 1. Optionally, customize the following component options:
 

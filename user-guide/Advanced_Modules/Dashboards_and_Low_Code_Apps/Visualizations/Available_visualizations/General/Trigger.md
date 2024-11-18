@@ -1,18 +1,18 @@
 ---
-uid: DashboardTriggerFeed
+uid: DashboardTrigger
 ---
 
-# Trigger feed
+# Trigger
 
-This feed (available from DataMiner 10.2.0/10.1.1 onwards) allows you to trigger other components either manually or automatically.
+This component (available from DataMiner 10.2.0/10.1.1 onwards) allows you to trigger other components either manually or automatically.
 
-![Trigger feed](~/user-guide/images/Trigger_Feed.png)<br>*Trigger feed component in DataMiner 10.4.6*
+![Trigger](~/user-guide/images/Trigger.png)<br>*Trigger component in DataMiner 10.4.6*
 
-At present, this feed can only be used as a filter feed for a component displaying a [GQI query](xref:Creating_GQI_query) result. It will function as a refresh trigger for that query.
+At present, this component can only be used as a filter for a component displaying a [GQI query](xref:Creating_GQI_query) result. It will function as a refresh trigger for that query.
 
 You can for example use this in a low-code app or a dashboard to refresh a [table component](xref:DashboardTable) based on a timer.
 
-To configure the trigger feed:
+To configure the trigger:
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
@@ -39,4 +39,4 @@ To configure the trigger feed:
 
    - *Align*: Determines whether the label and icon are displayed on the left side, in the middle or on the right side of the component.
 
-1. Select the trigger feed in the data pane and drag it to the component (e.g. a table component) that should be refreshed based on the trigger.
+1. Select the trigger component data in the data pane and drag it to the component (e.g. a table component) that should be refreshed based on the trigger.

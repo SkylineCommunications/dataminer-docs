@@ -20,8 +20,8 @@ A number of enhancements have been made with regard to the locking behavior of c
 
 Breaking changes:
 
-| Actions | Breaking change |
-|---------|-----------------|
+| <div style="width: 150px;">Actions</div> | Breaking change |
+|---|---|
 | Generate Information<br>Log<br>Send Notification<br>Send Report | Text that supports the `[dummy<id>]` placeholder will display the old element name if it was updated during the execution of a script or it will still display the element name even if the element was deleted in the meantime. |
 | Set State | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to change element state...". |
 | Set Template | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to set template...". |
@@ -37,6 +37,16 @@ A number of enhancements have been made to the Cassandra Cluster Migrator tool (
 - The initialization of a single agent has been disabled in favor of the global initialization, unless not all agents could be initialized.
 - Connection details will now only be requested once, unless not all agents could not be initialized.
 - The migration can now only be started when all agents have successfully been initialized.
+
+#### Service & Resource Management: Enhanced deletion of ReservationInstances in bulk [ID 41236]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When ReservationInstances were deleted in bulk, up to now, an individual delete request would be sent to the database for every instance.
+
+From now on, when ReservationInstances are deleted in bulk, a single delete request will be sent to the database for every batch of 200 ReservationInstances.
+
+This will significantly enhance overall performance when deleting large numbers of ReservationInstances.
 
 #### DxMs upgraded [ID 41297]
 
@@ -60,7 +70,7 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
 
-For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xref:How_to_aggregate_alarm_severities)
 
 #### SLElement: Incorrect alarm linking [ID 41057]
 

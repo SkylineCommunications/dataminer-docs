@@ -8,11 +8,14 @@ This tutorial demonstrates how to add a new version to a Catalog item using the 
 
 While this tutorial uses the example of a connector, registering a new version for a different type of Catalog item is very similar.
 
-Expected duration: 15 minutes
+Expected duration: 10 minutes
+
+> [!NOTE]
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create keys.
 
   > [!TIP]
   > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
@@ -34,68 +37,60 @@ Expected duration: 15 minutes
 
 ## Step 1: Create the GitHub Actions Workflow file
 
-1. Go to your GitHub repository where you want to add this GitHub Actions workflow.
-
-1. In the root of your repository, if no such directory exists yet, create a directory named *.github*.
-
-1. Within the *.github* directory, create another directory called *workflows*.
-
-1. Within the *workflows* directory, create a new file named *dataminer-catalog-pipeline.yml*.
+1. On your GitHub page, go to the *Actions* tab and select **set up workflow yourself**.
 
 1. Paste the pipeline template below into this file.
 
    > [!IMPORTANT]
    > Make sure to change the *CATALOG_ID* environment variable to the Catalog ID of the item for which you will register a new version. If you followed the tutorial [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), this is the ID that was returned in the last step. If you are registering a new version for a different Catalog item, you can find it by navigating to its details page in the [Catalog](https://catalog.dataminer.services/) and checking the last part of the URL.
 
-   ```yaml
-   name: Build and Register a Catalog version
+```yaml
 
-   on:
-     push:
-       branches:
-         - main
-     workflow_dispatch:  # Add this line to enable manual triggering
-  
-   jobs:
-     build_and_upload:
-       runs-on: ubuntu-latest
+name: Build and Register a Catalog version
 
-       steps:
-         # Checkout the repository
-         - name: Checkout repository
-           uses: actions/checkout@v3
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Add this line to enable manual triggering
 
-         - name: Use GitHub run number for versioning
-           run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
+jobs:
+  build_and_upload:
+    runs-on: ubuntu-latest
 
-         - name: Use GitHub environment variable to store Catalog ID
-           run: echo "CATALOG_ID=1742495c-9231-4eeb-a56e-1fec8189246e" >> $GITHUB_ENV
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-         # Install the Skyline DataMiner CICD Packager Tool
-         - name: Install Skyline DataMiner CICD Packager Tool
-           run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager
+      - name: Use GitHub run number for versioning
+        run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
 
-         # Create the DataMiner Protocol package
-         - name: Create DataMiner Protocol Package
-           run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name catalog_registration_tutorial --output "${{ github.workspace }}/Packages"
+      - name: Use GitHub environment variable to store Catalog ID
+        run: echo "CATALOG_ID=1742495c-9231-4eeb-a56e-1fec8189246e" >> $GITHUB_ENV
 
-         # Prepare the package file and version details
-         - name: Register on Catalog
-           shell: pwsh
-           run: |
-             $file = Get-Item "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol"
-             $uri = "https://api.dataminer.services/api/key-catalog/v2-0/catalogs/${{ env.CATALOG_ID }}/register/version"
+      # Install the Skyline DataMiner Tooling
+      - name: Install .NET Tools
+        run: |
+          dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager              
+          dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
 
-             # Define the form data (package file, version, and description)
-             $formData = @{
-               file = Get-Item $file.FullName
-               versionNumber = "${{ env.VERSION }}"
-               versionDescription = "New version registered by GitHub Actions pipeline"
-             }
+      # Create the DataMiner Protocol package
+      - name: Create DataMiner Protocol Package
+        run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name catalog_registration_tutorial --output "${{ github.workspace }}/Packages"
 
-             # Set up the API request to register the new version in the catalog
-             Invoke-RestMethod -Uri $uri -Method Post -Headers @{ 'Ocp-Apim-Subscription-Key' = "${{ secrets.API_TOKEN }}" } -Form $formData
-   ```
+      # Upload the DataMiner Protocol package
+      - name: Upload DataMiner Protocol Package to Catalog
+        id: upload_to_catalog
+        shell: bash
+        run: |
+          dataminer-catalog-upload with-registration \
+            --path-to-artifact "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol" \
+            --artifact-version "${{ env.VERSION }}" \
+            --dm-catalog-token "${{ secrets.API_TOKEN }}" \
+            --catalog-identifier "${{ env.CATALOG_ID }}"
+
+```
 
 ## Step 2: Add a GitHub secret
 
@@ -123,6 +118,9 @@ To securely store sensitive information like the API token, you will need to add
    ![New repository secret button](~/user-guide/images/tutorial_catalog_registration_new_secret.png)
 
 1. Specify the name `API_TOKEN`, and add the organization key you copied earlier as the value.
+
+> [!NOTE]
+> In case using an organization key results in issues, you can try using a [system key](xref:Managing_DCP_keys#system-keys) instead.
 
 ## Step 3: Push the workflow file
 

@@ -22,7 +22,9 @@ Once you have downloaded the [pre-installed virtual hard disk](https://community
 1. Optionally, [switch from subscription mode to a perpetual-license setup](#switching-from-subscription-mode-to-perpetual-license).
 
 > [!NOTE]
-> If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
+>
+> - If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
+> - The **VMDK** hard disk is compatible with desktop hypervisors such as VMWare Workstation. If you use the hard disk in a VMware vSphere ESXi environment, an error mentioning *Unsupported and/or invalid disk type* can be shown. For information on how to resolve this issue, refer to [A virtual machine fails to power on with the error: Unsupported and/or invalid disk type](https://knowledge.broadcom.com/external/article/310567/a-virtual-machine-fails-to-power-on-with.html).
 
 ## Creating the VM
 

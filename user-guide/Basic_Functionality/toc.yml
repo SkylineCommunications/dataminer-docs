@@ -412,7 +412,7 @@ items:
                 topicUid: Configuring_alarm_template_information_message
               - name: Using conditions in an alarm template
                 topicUid: Using_conditions_in_an_alarm_template
-              - name: Configuring anomaly detection alarms for specific parameters
+              - name: Configuring Augmented Operations alarm settings
                 topicUid: Configuring_anomaly_detection_alarms
               - name: Setting the autoclear options for alarms in an alarm template
                 topicUid: Setting_the_autoclear_option_in_alarm_template

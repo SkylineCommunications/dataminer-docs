@@ -1,17 +1,17 @@
 ---
-uid: DashboardTimeRangeFeed
+uid: DashboardTimeRange
 ---
 
-# Time range feed
+# Time range
 
-This feed component allows the user to specify a time range. You can either select a **quick pick button** or a **preset**, or manually set a **custom time range**.
+This component allows the user to specify a time range. You can either select a **quick pick button** or a **preset**, or manually set a **custom time range**.
 
-This time range feed can be used as a filter for compatible components, such as the [line & area chart](xref:LineAndAreaChart). When you modify the time range in the feed component, the time span displayed in the filtered component will update accordingly.
+This time range can be used as a filter for compatible components, such as the [line & area chart](xref:LineAndAreaChart). When you modify the time range in the component, the time span displayed in the filtered component will update accordingly.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40622-->, when you set a custom time range, the feed of the component is only updated after you click the *Apply* button. If you have not yet clicked this button, you can revert any changes to the custom time range by clicking *Cancel*. In previous versions, changing the custom time range automatically updates the feed.
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40622-->, when you set a custom time range, the data of the component is only updated after you click the *Apply* button. If you have not yet clicked this button, you can revert any changes to the custom time range by clicking *Cancel*. In previous versions, changing the custom time range automatically updates the component data.
 
-![Time range feed](~/user-guide/images/Time_Range.png)<br>*Time range feed component in DataMiner 10.4.11*
+![Time range](~/user-guide/images/Time_Range.png)<br>*Time range component in DataMiner 10.4.11*
 
 ## Configuring the component
 
@@ -46,12 +46,12 @@ To configure the component:
 
    - *Show current range*: Determines whether the current time range is displayed at the top of the component (4).
 
-   ![Time range feed](~/user-guide/images/Time_Range_Feed.png)<br>*Time range feed component in DataMiner 10.4.11*
+   ![Time range](~/user-guide/images/TimeRange.png)<br>*Time range component in DataMiner 10.4.11*
 
 ## Component actions
 
-From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, when you have added a time range feed component to a low-code app, you can configure the following [component action](xref:LowCodeApps_event_config#executing-a-component-action) in your low-code app to interact with the component:
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, when you have added a time range component to a low-code app, you can configure the following [component action](xref:LowCodeApps_event_config#executing-a-component-action) in your low-code app to interact with the component:
 
 - *Set value*: Allows you to set the current value of the component to a preset or custom time range.
 
-  ![Example](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range feed, button, and line & area chart components in DataMiner 10.4.11*
+  ![Example](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range, button, and line & area chart components in DataMiner 10.4.11*
