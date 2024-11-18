@@ -87,7 +87,7 @@ To see if and when an exception is thrown, refer to the XML documentation on the
 
 Additionally, some changes have been made to the SLNet calls that are executed in the background:
 
-- When info for a single view is requested, the *GetInfo* message of type *ViewInfo* will now have the *viewId* mentioned in the *ExtraData* property of the SLNet call. If the request is sent to a DataMiner version that supports this (see [RN 41169](xref:General_Feature_Release_10.5.1#slnet-getinfo-messages-for-the-propertyconfiguration-and-viewinfo-types-now-support-retrieving-information-for-a-specific-item-id-41169)), DataMiner will only provide info in the response for that view instead of all.
+- When info for a single view is requested, the *GetInfo* message of type *ViewInfo* will now have the *viewId* mentioned in the *ExtraData* property of the SLNet call. If the request is sent to a DataMiner version that supports this (see [RN 41169](xref:General_Feature_Release_10.5.1#slnet-getinfo-messages-for-the-propertyconfiguration-and-viewinfo-types-now-support-retrieving-information-for-a-specific-item-id-41169)), DataMiner will only provide info in the response for that view instead of for all views.
 - When property configurations are requested, the *GetInfo* message of type *PropertyConfiguration* will now include the requested type (e.g. ELEMENT, SERVICE, or VIEW) so the response only includes the property configurations of the requested type.
 - The *ReferencedVersion* property of *IDmsProtocol* will now be obtained via a *GetInfo* SLNet call of type *Protocols* instead of a *GetProtocolMessage* call. Performance tests indicate that this is a less impacting call.
 
