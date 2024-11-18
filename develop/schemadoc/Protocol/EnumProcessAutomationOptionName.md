@@ -4,7 +4,7 @@ uid: Protocol-EnumProcessAutomationOptionName
 
 # EnumProcessAutomationOptionName simple type
 
-List of Process Automation Option names that can be used.
+List of Process Automation option names that can be used.
 
 ## Content Type
 

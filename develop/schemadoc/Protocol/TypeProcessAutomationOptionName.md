@@ -4,7 +4,7 @@ uid: Protocol-TypeProcessAutomationOptionName
 
 # ProcessAutomationOptionName simple type
 
-List of Process Automation Option names.
+List of Process Automation option names.
 
 ## Content Type
 
@@ -13,4 +13,3 @@ List of Process Automation Option names.
 |***Union***|||
 |&nbsp;&nbsp;[EnumProcessAutomationOptionName](xref:Protocol-EnumProcessAutomationOptionName)|||
 |&nbsp;&nbsp;string|||
-
