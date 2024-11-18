@@ -9,7 +9,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.2.1
 
-#### API changes for improved performance
+#### API changes for improved performance [ID 41178]
 
 Version 1.1.2.1 introduces some changes (of which some are breaking) to the class library API to reduce the number of SLNet calls that are executed in the background.
 
@@ -98,6 +98,16 @@ Additionally, some changes have been made to the SLNet calls that are executed i
 
 Note that only DataMiner versions where RN 41169 is implemented DataMiner will respond with only the requested information. If the request is made to an older DataMiner version,
 all info will be in the response. In that case, class library will just filter out the needed info.
+
+### 1.1.1.13
+
+#### New Feature - Added SendMessages method to ICommunications interface
+
+The ICommunications interface has been extended with the following method:
+
+```csharp
+DMSMessage[] SendMessages(DMSMessage[] messages);
+```
 
 ### 1.1.1.12
 
