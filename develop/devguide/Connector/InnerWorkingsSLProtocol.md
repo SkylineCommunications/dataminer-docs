@@ -4,7 +4,7 @@ uid: InnerWorkingsSLProtocol
 
 # SLProtocol
 
-The SLProtocol process is responsible for executing the logic defined in the protocol. By default, five SLProtocol processes are running simultaneously and the elements of the DataMiner Agent are spread over these processes at startup.
+The SLProtocol process is responsible for executing the logic defined in the protocol. Starting from DataMiner 10.4.12, ten SLProtocol processes are running simultaneously and the elements of the DataMiner Agent are spread over these processes at startup. Previously, five SLProtocol processes ran simultaneously.
 
 > [!NOTE]
 > The number of simultaneously running SLProtocol processes on a DataMiner Agent can be customized. For more information, refer to [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slport-processes).
