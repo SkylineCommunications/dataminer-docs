@@ -2,13 +2,17 @@
 uid: Performance_Analyzer_Library
 ---
 
-# Problem
+# Performance Analyzer Library
+
+The first component of the Performance Analyzer solution is the [library](https://www.nuget.org/packages/Skyline.DataMiner.Utils.PerformanceAnalyzer). To make the most of it, it's essential to understand the reasoning behind its design. This section will help you with that.
+
+## Problem
 
 Let's consider the following example:
 
 We have a script that connects to the database, fetches the data, processes, and stores it. Imagine that this is performance critical, and we need to keep an eye on it and make sure any performance related issues are detected and resolved in a timely manner.
 
-# Tracking the performance
+## Tracking the performance
 
 We'll start with the simplest solution and gradually move towards implementing the Performance Analyzer. To do this, we'll use dummy methods with arbitrary ```Thread.Sleep``` calls to simulate execution.
 
