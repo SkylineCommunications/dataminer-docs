@@ -61,55 +61,72 @@ public class Script
 Bookings can also be swarmed async and in bulk. When doing this, progress events will be sent out to the client every time the swarming of a booking is completed. This can be done as follows: 
 
 ```csharp
-// The DMA that should host the bookings after swarming them
-var targetDmaId = 123;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Async;
+using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.Swarming;
 
-// The IDs of the bookings that need to be swarmed
-var bookingIds = new List<Guid>() { ... };
-
-var swarmingRequest = SwarmingRequestMessage.ForBookings(targetDmaId, bookingIds.ToArray());
-
-var asyncConnection = connection.Async;
-
-// Event that will be set in the complete handler
-var completeEvent = new ManualResetEventSlim(false);
-
-var asyncReference = asyncConnection.Launch(
-    swarmingRequest, 
-    onCompleteHandler: (o, args) => completeEvent.Set(),
-    onProgressHandler: HandleProgressEvent
-);
-
-void HandleProgressEvent(object sender, AsyncProgressArgs args)
+public class Script
 {
-     if (!(args.Progress is AsyncProgressResponseEvent responseEvent))
-     {
-         // This should not happen, progress event sent out for booking swarming will always be of type 'AsyncProgressResponseEvent'
-         return;
-     }
-
-     if (responseEvent.Response == null || responseEvent.Response.Length == 0)
-     {
-        // This should not happen either, there should always be at least one response in the event.
-         return;
-     }
-
-    // The response messages in the progress event will always be of type 'SwarmingResponseMessage'
-    var typedResponses = responseEvent.Response.OfType<SwarmingResponseMessage>().ToList();
-    var resultBuilder = new StringBuilder();
-    foreach (var oneResponse in typedResponses)
+    public void Run(Engine engine)
     {
-        foreach (var result in oneResponse.SwarmingResults)
+        // The DMA that should host the bookings after swarming them
+        var targetDmaId = 123;
+
+        // The IDs of the bookings that need to be swarmed
+        var bookingIds = new List<Guid>() { ... };
+
+        var swarmingRequest = SwarmingRequestMessage.ForBookings(targetDmaId, bookingIds.ToArray());
+
+        var connection = engine.GetUserConnection();
+        var asyncConnection = connection.Async;
+
+        // Event that will be set in the complete handler
+        var completeEvent = new ManualResetEventSlim(false);
+
+        var asyncReference = asyncConnection.Launch(
+            swarmingRequest,
+            onCompleteHandler: (o, args) => completeEvent.Set(),
+            onProgressHandler: HandleProgressEvent
+        );
+
+        void HandleProgressEvent(object sender, AsyncProgressArgs args)
         {
-            // Handle the progress for the booking. In this case generate an information event
-            var resultDetails = result.Success ? "completed successfully" : $"failed with error: {result.Messsage}";
-            resultBuilder.AppendLine($"Swarming booking with id {result.DmaObjectRef} {resultDetails}");
+            if (!(args.Progress is AsyncProgressResponseEvent responseEvent))
+            {
+                // This should not happen, progress event sent out for booking swarming will always be of type 'AsyncProgressResponseEvent'
+                return;
+            }
+
+            if (responseEvent.Response == null || responseEvent.Response.Length == 0)
+            {
+                // This should not happen either, there should always be at least one response in the event.
+                return;
+            }
+
+            // The response messages in the progress event will always be of type 'SwarmingResponseMessage'
+            var typedResponses = responseEvent.Response.OfType<SwarmingResponseMessage>().ToList();
+            var resultBuilder = new StringBuilder();
+            foreach (var oneResponse in typedResponses)
+            {
+                foreach (var result in oneResponse.SwarmingResults)
+                {
+                    // Handle the progress for the booking. In this case generate an information event
+                    var resultDetails = result.Success ? "completed successfully" : $"failed with error: {result.Message}";
+                    resultBuilder.AppendLine($"Swarming booking with id {result.DmaObjectRef} {resultDetails}");
+                }
+            }
+
+            // Example value of 'resultBuilder.ToString()':
+            //      Swarming booking with id 54add931-66fc-44f5-a76e-95ad0317f6af completed successfully
+            //      Swarming booking with id a250cffb-7054-4704-aa58-96200b0c49b3 failed with error: Could not swarm booking with id 'a250cffb-7054-4704-aa58-96200b0c49b3': ResourceManager is not initialized
         }
     }
-
-    // Example value of 'resultBuilder.ToString()':
-    //      Swarming booking with id 54add931-66fc-44f5-a76e-95ad0317f6af completed successfully
-    //      Swarming booking with id a250cffb-7054-4704-aa58-96200b0c49b3 failed with error: Could not swarm booking with id 'a250cffb-7054-4704-aa58-96200b0c49b3': ResourceManager is not initialized
 }
 
 // Swarming request can be aborted on the asyncReference:

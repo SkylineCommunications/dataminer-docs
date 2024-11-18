@@ -35,7 +35,7 @@ Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-s
 
 ### BookingSwarming
 
-Makes is possible to [swarm a booking](xref:SwarmingBookings).
+Makes it possible to [swarm a booking](xref:SwarmingBookings).
 
 - **Minimum version**: 10.5.1.0
 - **Release version**: To be determined
