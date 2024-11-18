@@ -2,23 +2,26 @@
 uid: Performance_Analyzer_Library
 ---
 
-# Performance Analyzer Library
+# Performance Analyzer library
 
-The first component of the Performance Analyzer solution is the [library](https://www.nuget.org/packages/Skyline.DataMiner.Utils.PerformanceAnalyzer). To make the most of it, it's essential to understand the reasoning behind its design. This section will help you with that.
+The first component of the Performance Analyzer solution is the library, which is available as a NuGet package. You can use this component on its own, or together with the [Performance Analyzer app](xref:Performance_Analyzer_LCA).
 
-## Problem
+## Installing the library
 
-Let's consider the following example:
+To install the library, download the [Skyline.DataMiner.Utils.PerformanceAnalyzer](https://www.nuget.org/packages/Skyline.DataMiner.Utils.PerformanceAnalyzer) NuGet package.
 
-We have a script that connects to the database, fetches the data, processes, and stores it. Imagine that this is performance critical, and we need to keep an eye on it and make sure any performance related issues are detected and resolved in a timely manner.
+> [!NOTE]
+> The [Performance Analyzer repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer) is open source. Pull requests are welcome.
 
-## Tracking the performance
+## Tracking performance using the library
 
-We'll start with the simplest solution and gradually move towards implementing the Performance Analyzer. To do this, we'll use dummy methods with arbitrary ```Thread.Sleep``` calls to simulate execution.
+To make the most of the Performance Analyzer library, you need to understand the reasoning behind its design. Below, this will be explained with examples, starting from a simple solution and gradually moving towards implementing the Performance Analyzer library.
 
-Let's define the dummy methods first.
+Consider the following example: A script is used that connects to the database, fetches data, processes it, and stores it. Imagine that this is performance-critical, and you need to keep an eye on it and make sure any performance-related issues are detected and resolved in a timely manner.
 
-```c#
+For the example script, dummy methods will be used with arbitrary `Thread.Sleep` calls to simulate execution. Let's define the dummy methods first.
+
+```csharp
 public static void Connect()
 {
   Thread.Sleep(100);
@@ -48,11 +51,11 @@ public static void Log(string message)
 }
 ```
 
-Now that we have the basic setup configured, we can proceed. The first question becomes: how do we track the performance of our script? 
+Now that the basic setup has been configured, the first question is: how can the performance of the script be tracked?
 
-We will start with the simplest approach: call ```DateTime.Now``` at the start and end of the script, then subtract those values to calculate the execution time.
+The simplest approach is to call `DateTime.Now` at the start and end of the script, then subtract those values to calculate the execution time.
 
-```c#
+```csharp
 public static void Solution()
 {
   var startTime = DateTime.Now;
@@ -73,11 +76,11 @@ public static void Solution()
 }
 ```
 
-This approach gives us fairly accurate execution times and a general sense of how our system is performing. While it's a good indicator of whether there is a problem, it doesn't help us identify the root cause. How can we determine which part of the script requires investigation? Is it a slow connection causing delays in fetching or storing data, or perhaps an inefficiently implemented processing method? With our current approach, we simply can't tell. 
+This approach gives you fairly accurate execution times and a general sense of how the system is performing. While it is a good indicator of whether there is a problem, it does not help you identify the root cause. How can you determine which part of the script requires investigation? Is it a slow connection causing delays in fetching or storing data, or perhaps an inefficiently implemented processing method? With the current approach, it is not possible to tell. Measuring the overall script execution time can alert you to a problem, but it will not help you pinpoint the issue.
 
-It seems more detailed performance tracking is needed. Measuring the overall script execution time can alert us to a problem, but it won't help us pinpoint the issue. While we could track arbitrary code sections, a more intuitive approach would be to implement tracking at the method level.
+While you could track arbitrary code sections for this, a more intuitive approach would be to implement tracking at the method level.
 
-```c#
+```csharp
 public static void Solution()
 {
   var scriptStartTime = DateTime.Now;
@@ -111,16 +114,16 @@ public static void Solution()
 }
 ```
 
-We're now able to narrow down issues to specific methods—great! But wait, we've significantly bloated our once simple code. Imagine applying this to an entire project. Not only do we need to call ```DateTime.Now```—which is relatively expensive—before and after every method, but this tracking is also limited to one place. If these methods are called elsewhere, we must repeat the same process. Additionally, we must handle variable scope carefully; for instance, ```processExecutionTime``` had to be defined before the loop and shared between multiple calls to ```Process``` method, meaning that the execution time metric for it will only capture the last processed item.
+Now you can narrow down issues to specific methods, which is great, but a major drawback is that the once simple code is now very bloated. Imagine applying this to an entire project. Not only do you need to call `DateTime.Now`, which is relatively expensive, before and after every method, but this tracking is also limited to one place. If these methods are called elsewhere, the same process must be repeated. Additionally, careful handling of variable scope is needed; for instance, `processExecutionTime` had to be defined before the loop and shared between multiple calls to the `Process` method, meaning that the execution time metric for it will only capture the last processed item.
 
-We need more scalable solution that won't bloat our code as much. To reduce code bloat and improve scalability, we could replace the start and end time tracking with simpler language constructs and move the tracking logic directly into each method. The simplest constructs we can use are curly braces to define the start and end of a method. By defining a block of code using curly braces, we can call ```DateTime.Now``` at ```{``` and perform our calculation at ```}```. To achieve this behavior, we can leverage the ```IDisposable``` interface and the ```using``` statement. This requires modifying our method implementations and creating a class that implements ```IDisposable```. 
+To reduce code bloat and improve scalability, you could replace the start and end time tracking with simpler language constructs and move the tracking logic directly into each method. The simplest constructs you can use are curly braces to define the start and end of a method. By defining a block of code using curly braces, you can call `DateTime.Now` at "`{`" and perform the calculation at "`}`". To achieve this behavior, you can leverage the `IDisposable` interface and the `using` statement. This requires modifying the method implementations and creating a class that implements `IDisposable`.
 
 > [!NOTE]
-> This example will only show the implementation for the ```Connect``` method. The ```Fetch```, ```Process```, and ```Store``` methods follow the same pattern. We'll continue with this approach throughout the rest of the article.
+> The examples below will only show the implementation for the `Connect` method. The `Fetch`, `Process`, and `Store` methods follow the same pattern.
 
-First, we will define our tracker and apply it in our methods.
+First, define the tracker and apply it in your methods.
 
-```c#
+```csharp
 public class Tracker : IDisposable
 {
   private DateTime startTime;
@@ -150,9 +153,9 @@ public static void Connect(out TimeSpan executionTime)
 }
 ```
 
-Let’s update our script to use the ```Tracker``` we’ve just defined.
+Now update the script to use the `Tracker` you have just defined.
 
-```c#
+```csharp
 public static void Solution()
 {
   Tracker tracker;
@@ -183,12 +186,11 @@ public static void Solution()
 }
 ```
 
-There's still some boilerplate, but we can now scale this with much less effort. The main issue is that we need to return the results to the caller, which is why we're using ```out``` arguments, and we still haven’t fixed the scope issue, or issue with tracking multiple calls to the same method. We need to find a better way to store these results.
+While this already allows much easier scaling, the results still need to be returned to the caller, which is why `out` arguments are used. In addition, the scope issue and the issue with tracking multiple calls to the same method have not been fixed yet. This means a better way is still needed to store these results.
 
-We could introduce a collector to gather all the results. The simplest implementation is a dictionary, where the method name serves as the key and the execution time as the value. Here we're using ```StackTrace``` to generate the method names, but we could have just passed the method name directly into the tracker's constructor.
-Start by defining the collector and modifying the tracker to make use of it.
+You could introduce a collector to gather all the results. The simplest implementation is a dictionary, where the method name serves as the key and the execution time as the value. Here `StackTrace` is used to generate the method names, but you could just have passed the method name directly into the tracker's constructor. Start by defining the collector and modifying the tracker to make use of it.
 
-```c#
+```csharp
 public static Dictionary<string, TimeSpan> Collector = new Dictionary<string, TimeSpan>();
 
 public class Tracker : IDisposable
@@ -225,9 +227,9 @@ public static void Connect()
 }
 ```
 
-Due to multiple calls to the ```Process``` method, we had to implement ```GenerateMethodName``` in our tracker to avoid duplicate key exceptions, at least we can finally track all of those calls.
+Because there are multiple calls to the `Process` method, `GenerateMethodName` had to be implemented in the tracker to avoid duplicate key exceptions, but now you can finally track all of those calls.
 
-```c#
+```csharp
 public static void Solution()
 {
   using (new Tracker())
@@ -251,11 +253,11 @@ public static void Solution()
 }
 ```
 
-Even though we've minimized boilerplate to just one ```using``` statement, we still need to consider when to log our results. It's possible that ```Solution``` is not the last method executed in the script, meaning if we log results at the end of it, we might miss performance data gathered afterward. We need to ensure that logging occurs only when all trackers are completed and disposed of, and that it happens automatically.
+The boilerplate has now been minimized to just one `using` statement, but at this point you still need to consider when to log the results. It is possible that `Solution` is not the last method executed in the script, meaning if you log results at the end of it, you might miss performance data gathered afterward. It is important to ensure that logging occurs only when all trackers are completed and have been disposed of, and that this happens automatically.
 
-To address the this issue, we need to expand our collector logic, as a dictionary alone will not suffice. We'll create a new class that implements ```IDisposable``` and tracks how many trackers are currently active. Only when the last tracker finishes collecting performance metrics will we log the results.
+To address this issue, the collector logic must be expanded, as a dictionary alone will not suffice. Create a new class that implements `IDisposable` and tracks how many trackers are currently active. Only when the last tracker finishes collecting performance metrics, will the results be logged.
 
-```c#
+```csharp
 public class Collector : IDisposable
 {
   public Dictionary<string, TimeSpan> Results { get; private set; } = new Dictionary<string, TimeSpan>();
@@ -306,12 +308,9 @@ public static void Connect()
 }
 ```
 
-Here, we’ve made the ```Collector``` instance is a static object to keep it simple.
+Here, the `Collector` instance is a static object to keep it simple. Note that this example would not be very good design in real life, but it will give you a good idea of the bigger picture.
 
-> [!NOTE] 
-> Please ignore the poor design—what matters most here is the big picture.
-
-```c#
+```csharp
 public static void Solution()
 {
   using (new Tracker(CollectorInstance))
@@ -330,20 +329,20 @@ public static void Solution()
 }
 ```
 
-This now looks like something we can be proud of. The only addition compared to the original implementation is the ```using``` statement. However, I'd like to emphasize the word **looks**, because in reality, there are several scenarios where this implementation falls short. 
-For example:
- - Just having the method name and execution time provides limited insight.
- - Methods are inherently nested, but our logs are not. How will we know where a method is called from?
- - What if we want to save the results somewhere other than a log file?
- - As the size of the data increases, it's expected for processing time to rise, but we can't track if the data size changes.
- - How will this implementation behave in multithreaded environments?
- - How can we visualize the data effectively? Scrolling endlessly through logs is far from ideal.
- 
-Let's see how the **Performance Analyzer** can help with these, and many other, challenges. The underlying logic of the **Performance Analyzer** is identical to what we've demonstrated so far; the only difference lies in the implementation details. Thanks to abstraction—one of the key pillars of OOP (yes, I snuck this in here)—these details won't impact how we use the solution.
+While this now looks acceptable, with the only addition compared to the original implementation being the `using` statement, there are still several ways this implementation can fall short, such as:
 
-The key difference between our implementation and the **Performance Analyzer** is that we need to provide the ```PerformanceCollector``` with an instance of an object that implements the ```IPerformanceLogger``` interface. This gives us the flexibility to report metrics in various ways. The library provides a default implementation called ```PerformanceFileLogger```, which logs metrics to a file.
+- Just having the method name and execution time provides limited insight.
+- Methods are inherently nested, but the logs are not, so it may be difficult to know where a method is called from.
+- It is not possible to save the results somewhere other than in a log file.
+- As the size of the data increases, processing time will increase, but it is not possible to track if the data size changes.
+- It is not clear how this implementation will behave in multi-threaded environments.
+- The data is not visualized effectively, so you may need to scroll to vast amounts logging.
 
-```c#
+The **Performance Analyzer** can help with these and many other challenges. Its underlying logic is similar to what is illustrated above; the only difference lies in the implementation details. Thanks to abstraction — one of the key pillars of OOP — these details will not affect how the solution is used.
+
+The key difference between the implementation above and the Performance Analyzer is that you need to provide the `PerformanceCollector` with an instance of an object that implements the `IPerformanceLogger` interface. This gives you the flexibility to report metrics in various ways. The library provides a default implementation called `PerformanceFileLogger`, which logs metrics to a file.
+
+```csharp
 public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogger("results");
 
 public static PerformanceCollector Collector { get; set; } = new PerformanceCollector(Logger);
@@ -357,9 +356,9 @@ public static void Connect()
 }
 ```
 
-By default, the file, *results.json* in this case, will be created at *C:\Skyline_Data\PerformanceLogger*.
+By default, the file, *results.json* in this case, will be created in the folder *C:\Skyline_Data\PerformanceLogger*.
 
-```c#
+```csharp
 public static void Solution()
 {
   using (new PerformanceTracker(Collector))
@@ -378,14 +377,11 @@ public static void Solution()
 }
 ```
 
-> [!NOTE]
-> The [repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer) is open source, pull requests are welcome.
+`IPerformanceLogger` defines a single method: `Report(List<PerformanceData>)`. `PerformanceData` represents each method being tracked. It includes details such as the name of the class the method belongs to, the method's name, start and execution times, as well as metadata. This already provides much more information than a simple dictionary could, and in addition to this, `PerformanceData` also contains a list of sub-methods, allowing you to represent the nesting of method calls. This means that in the results, you can determine exactly where each method was called.
 
-```IPerformanceLogger``` defines a single method: ```Report(List<PerformanceData>)```. But what is ```PerformanceData```? ```PerformanceData``` represents each method being tracked. It includes details such as the name of the class the method belongs to, the method's name, start and execution times, as well as metadata. This already provides much more information than a simple dictionary could, but there's more (every infomercial ever): ```PerformanceData``` also contains a list of sub-methods, allowing us to represent the nesting of method calls. This means that in the results, we can determine exactly where each method was called. 
-Even when executing the same code repeatedly, not all executions are identical. The amount of data may vary, the type of data could differ, or the server's state might change. All these factors can impact performance, and without the right context, understanding the metrics can be challenging. It would be ideal if we could include context in our results—and, as you might have guessed, we can do this using metadata.
-Metadata can be defined either on the ```PerformanceFileLogger``` or on the ```PerformanceTracker```. Metadata at the logger level can be used to provide context for the overall script execution, while metadata at the tracker level can add context for specific method calls.
+Even when the same code is executed repeatedly, not all executions are identical. The amount of data may vary, the type of data could differ, or the server's state might change. All these factors can impact performance, and without the right context, understanding the metrics can be challenging. This means it would be ideal if the context could be included in the results, and this is possible using **metadata**. Metadata can be defined either on the `PerformanceFileLogger` or on the `PerformanceTracker`. Metadata at the logger level can be used to provide context for the overall script execution, while metadata at the tracker level can add context for specific method calls.
 
-```c#
+```csharp
 public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogger("results").AddMetadata("Server", GetServer());
 
 public static List<string> Fetch()
@@ -401,9 +397,9 @@ public static List<string> Fetch()
 }
 ```
 
-Adding context helps us interpret the results accurately—yay! But what if data processing can happen in parallel? How does the **Performance Analyzer** handle multithreaded environments? Generally, the **Performance Analyzer** is environment-agnostic. However, there's one caveat: in multithreaded scenarios, we need to handle nesting explicitly. This means we must define the parent tracker by passing it to the constructor of the tracker running on a separate thread.
+With context added, it will now be a lot easier to interpret the results accurately. But what if data processing can happen in parallel? Generally, it does not matter whether the Performance Analyzer is used in single- or multi-threaded environments, but there is one important thing to keep in mind: **in multi-threaded scenarios, nesting must be handled explicitly**. This means the parent tracker must be defined by passing it to the constructor of the tracker running on a separate thread.
 
-```c#
+```csharp
 public static void Solution()
 {
   using (var parentTracker = new PerformanceTracker(Collector))
@@ -425,8 +421,7 @@ public static void Solution()
 }
 ```
 
-> [!IMPORTANT]
-> Although this isn't an issue here since Parallel.ForEach is a blocking call, it's crucial to wait for all tracked threads to complete before disposing of the parent tracker. Otherwise, the results may not be as expected.
+Note that while this is not an issue here since `Parallel.ForEach` is a blocking call, it is crucial to **wait for all tracked threads to complete** before disposing of the parent tracker. Otherwise, the results may not be as expected.
 
-> [!NOTE]
-> More examples can be found in the ReadMe file of the [repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer).
+> [!TIP]
+> For more examples, refer to the readme file in the [Performance Analyzer repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer).

@@ -2,29 +2,41 @@
 uid: Performance_Analyzer_LCA
 ---
 
-# Performance Analyzer Low-Code App
+# Performance Analyzer app
 
-The second component of the Performance Analyzer solution is the Low-Code App. Raw numbers can often be difficult to interpret, which is why Performance Analyzer provides a built-in method to visualize the collected data using the Low-Code App.
+Raw numbers can often be difficult to interpret, which is why the Performance Analyzer solution provides a built-in low-code app to visualize the data collected by the solution. Using this app will make it much easier to make decisions based on the collected performance metrics.
 
-## Problem
+To use this app, the [Performance Analyzer library](xref:Performance_Analyzer_Library) must have been implemented in the system.
 
-Let's consider the following example:
+## Installing the Performance Analyzer app
 
-You have collected the necessary performance metrics from your solution, and now need to make decisions based on those results.
+To install the Performance Analyzer app, deploy the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package from the DataMiner Catalog.
 
-## Visualizing the performance
+> [!TIP]
+> See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
 
-Collecting the data is only piece of the puzzle, if you want the solution to bring value, you need to be able to make sense of the data and make decision based on it. As human, you might struggle to comprehend the numbers, particularly when they are extremely large or, as is often the case with performance metrics, very small. This makes it essential to provide a more intuitive way to interpret the data, such as visualization. Performance Analyzer provides a generic LCA that works out of the box, along with collection of GQIs that allows you to visualize the data based on your specific needs.
+## Performance Analyzer app user interface
+
+Below, you can find an overview of the main components of the app.
 
 ![Performance Analyzer LCA](~/user-guide/images/performance_analyzer_lca.png)
 
-1.	**Performance Analyzer Metrics Folder**: Defines the folder where performance data files are located. By default that folder is located at *C:\Skyline_Data\PerformanceAnalyzer*.
-2.	**Files**: Shows a list of files available in the selected directory, with each file’s name, creation date, last modified date, and size. This table allows you to choose specific data file to analyze.
-3.	**Collections**: Displays a list of collections in the selected file. In Performance Analyzer terms, a "collection" simply refers to one disposal of the collector.
-4.	**Collections Filter**: Enables filtering of collections based on metadata, making it easy to locate a specific collection or understand its context.
-5.	**Collection Metadata**: Understanding the context in which a collection was created is crucial, and this section provides all the relevant details. 
-6.	**Metrics**: Provides a detailed list of individual metrics, each representing a specific operation or method call. The table includes information such as class, method, start and end times, making it easier to identify which parts of the code impact the performance. 
-7.	**Metrics Filter**: Allows filtering metrics by specific classes, methods, execution time ranges, or metadata.
-8.	**Metric Metadata**: Understanding metrics without context is challenging, so this section provides it.
-9.	**Timeline**: Visual representation of every metric. You can focus on a specific block by double-clicking its corresponding table entry for it.
-10.	**Metric Metadata (Timeline)**: Provides overview of the context for selected timeline block.
+1. **Performance Analyzer Metrics Folder**: Defines the folder where performance data files are located. By default, this is `C:\Skyline_Data\PerformanceAnalyzer`.
+
+1. **Files**: Shows a list of files available in the selected directory, with each file’s name, creation date, last modified date, and size. You can select a file in this list to analyze it in detail.
+
+1. **Collections**: Displays a list of collections in the selected file. A "collection" refers to one disposal of the collector.
+
+1. **Collections Filter**: Allows you to filter collections based on metadata, making it easy to locate a specific collection or understand its context.
+
+1. **Collection Metadata**: Provides all the relevant details related to the context in which a collection was created.
+
+1. **Metrics**: Provides a detailed list of individual metrics, each representing a specific operation or method call. The table includes information such as class, method, and start and end times, making it easier to identify which parts of the code impact the performance.
+
+1. **Metrics Filter**: Allows you to filter metrics by specific classes, methods, execution time ranges, or metadata.
+
+1. **Metric Metadata**: Provides more context information for the metrics, making it easier to understand them.
+
+1. **Timeline**: Visual representation of every metric. You can focus on a specific block by double-clicking the corresponding table entry.
+
+1. **Metric Metadata (Timeline)**: Provides an overview of the context for the selected timeline block.
