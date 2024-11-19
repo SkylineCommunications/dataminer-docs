@@ -98,6 +98,14 @@ Also, when you open the *dataminer* tab in the *Logging* section of *System Cent
 
 When, in the *Correlation* app or the *Scheduler* app, you open an existing *Send email* action to which a dashboard is attached, from now on, that dashboard will be shown in red when it no longer exists.
 
+#### Setting 'Enable search indexing on the client' will now be disregarded when Cube is used as a service [ID 41422]
+
+<!-- MR 10.3.0 [CU22] / 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+In the *Search & Indexing* section of *System Center*, you can indicate whether search indexing has to be enabled on the client.
+
+From now on, when Cube is used as a service (i.e. running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
+
 ### Fixes
 
 #### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
