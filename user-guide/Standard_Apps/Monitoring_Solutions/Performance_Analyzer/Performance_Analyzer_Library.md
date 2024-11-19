@@ -188,7 +188,10 @@ public static void Solution()
 
 While this already allows much easier scaling, the results still need to be returned to the caller, which is why `out` arguments are used. In addition, the scope issue and the issue with tracking multiple calls to the same method have not been fixed yet. This means a better way is still needed to store these results.
 
-You could introduce a collector to gather all the results. The simplest implementation is a dictionary, where the method name serves as the key and the execution time as the value. Here `StackTrace` is used to generate the method names, but you could just have passed the method name directly into the tracker's constructor. Start by defining the collector and modifying the tracker to make use of it.
+You could introduce a collector to gather all the results. The simplest implementation is a dictionary, where the method name serves as the key and the execution time as the value. Start by defining the collector and modifying the tracker to make use of it.
+
+> [!NOTE]
+> Here `StackTrace` is used to generate the method names, but you could just have passed the method name directly into the tracker's constructor.
 
 ```csharp
 public static Dictionary<string, TimeSpan> Collector = new Dictionary<string, TimeSpan>();
