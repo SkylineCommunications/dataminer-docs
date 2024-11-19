@@ -2,172 +2,163 @@
 uid: Creating_a_cypress_test_for_an_interactive_automation_script
 ---
 
-# Creating a Cypress Test for an Interactive Automation Script
+# Creating a Cypress test for an interactive Automation script
 
-[Cypress](https://www.cypress.io/) is a powerful end-to-end testing framework designed for the modern web. While it simplifies UI testing, leveraging its full potential requires a solid understanding of its core concepts and best practices. This guide will walk through creating a Cypress test for an interactive automation script, covering everything from setup and configuration to implementation and testing.
+[Cypress](https://www.cypress.io/) is a powerful end-to-end testing framework designed for the modern web. While it simplifies UI testing, leveraging its full potential requires a solid understanding of its core concepts and best practices. This page covers the essential steps to set up, configure, and test an interactive Automation script using Cypress. By following these steps, you can create reliable, reusable tests to validate new components and UI interactions within a real application environment.
 
 > [!TIP]
-For additional information, explore these resources:
-> [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress)
-> [Cypress API Documentation](https://docs.cypress.io/api/table-of-contents/)
+> For additional information, explore these resources:
+>
+> - [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress)
+> - [Cypress API documentation](https://docs.cypress.io/api/table-of-contents/)
 
-## Getting Started
+## Prerequisites
 
-1. **Install Node.js**  
-    Download and install Node.js from [Node.js](https://nodejs.org/). Make sure to add Node to your PATH to enable terminal commands.
+- [Node.js](https://nodejs.org/) must be installed. Make sure *Node* has been added to your *PATH* to enable terminal commands.
 
-2. **Install an IDE**  
-    Download and install an Integrated Development Environment (IDE) like [Visual Studio Code](https://code.visualstudio.com/).
+- An Integrated Development Environment (IDE) such as [Visual Studio Code](https://code.visualstudio.com/) must be available.
 
-## Project Setup and Cypress Installation
+  In the steps below, Visual Studio Code will be mentioned, but a different IDE could be used instead.
 
-1. **Create a Project Folder**  
-    Set up a folder for your project (e.g., `C:\Testing`) and open it in Visual Studio Code.
+## Project setup and Cypress installation
 
-2. **Initialize the Project and Install Cypress**  
-    Open a new terminal in Visual Studio Code and execute the following commands:
+1. Create a folder for your project (e.g. `C:\Testing`) and open it in Visual Studio Code.
 
-    ```cmd
-    npm init
-    ```
+1. Initialize the project and install Cypress:
 
-    - Press **Enter** to proceed through the setup without specifying values until the initialization complete.
+   1. Open a new terminal in Visual Studio Code and execute the following commands:
 
-    Then, install Cypress:
+      ```cmd
+      npm init
+      ```
 
-    ```cmd
-    npm install cypress
-    ```
+   1. Press Enter to proceed through the setup without specifying values until the initialization is complete.
 
-3. **Configure Cypress in `package.json`**  
-    To simplify running Cypress, add the following line to the `"scripts"` section of your `package.json` file:
+   1. Use the following command to install Cypress:
 
-    ```json
-    "scripts": {
-        "start": "npx cypress open"
+      ```cmd
+      npm install cypress
+      ```
+
+1. To simplify running Cypress, add the following line to the `"scripts"` section of your `package.json` file:
+
+   ```json
+   "scripts": {
+       "start": "npx cypress open"
+   }
+   ```
+
+1. To verify the installation, run `npm run start` to launch Cypress and confirm that it opens successfully.
+
+1. If it is the first time you run Cypress, select *E2E Testing* as the testing type when prompted.
+
+## Creating the interactive Automation script
+
+1. Create an Automation script as a Visual Studio solution, as explained under [Automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution).
+
+1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
+
+1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
+
+   ```csharp
+   /// <summary>
+   /// Represents a DataMiner Automation script.
+   /// </summary>
+   public class Script
+   {
+       /// <summary>
+       /// The script entry point.
+       /// </summary>
+       /// <param name="engine">Link with SLAutomation process.</param>
+       public void Run(IEngine engine)
+       {
+          // DO NOT REMOVE THE COMMENTED OUT CODE BELOW OR THE SCRIPT WONT RUN!
+          // Interactive scripts need to be launched differently.
+          // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+          // However, due to the NuGet package, this string can no longer be detected.
+          // This comment is here as a temporary workaround until it has been fixed.
+          //// engine.ShowUI(
+
+          try
+          {
+             // Controls the event loop and switch between dialogs
+             var controller = new InteractiveController(engine);
+
+             // Create an instance of the dialog you wish to show.
+             var helloWorldDialog = new HelloWorldDialog(engine);
+             
+             // Starts the event loop and shows the first dialog.
+             controller.ShowDialog(helloWorldDialog);
+          }
+          catch (ScriptAbortException)
+          {
+             // Catch normal abort exceptions (engine.ExitFail or engine.ExitSuccess)
+             throw; // Comment if it should be treated as a normal exit of the script.
+          }
+          catch (ScriptForceAbortException)
+          {
+             // Catch forced abort exceptions, caused via external maintenance messages.
+             throw;
+          }
+          catch (ScriptTimeoutException)
+          {
+             // Catch timeout exceptions for when a script has been running for too long.
+             throw;
+          }
+          catch (InteractiveUserDetachedException)
+          {
+             // Catch a user detaching from the interactive script by closing the window.
+             // Only applicable for interactive scripts, can be removed for non-interactive scripts.
+             throw;
+          }
+          catch (Exception e)
+          {
+             engine.ExitFail($"Run|Something went wrong: {e}");
+          }
+       }
+   }
+
+   public class HelloWorldDialog : Dialog
+   {
+      public HelloWorldDialog(IEngine engine) : base(engine)
+      {
+          // Create a label widget
+          var label = new Label("Hello, World!") { Style = TextStyle.Title };
+          
+          // Define the debug tag to be used in the cypress test
+          label.DebugTag = "label";
+          
+          // Add it to the dialog grid at position 0,0
+          AddWidget(label, 0, 0);
+          
+          // Create a button widget
+          var button = new Button("OK");
+          
+          // Define the debug tag to be used in the cypress test
+          button.DebugTag = "button";
+          
+          // Add it to the dialog just below the label
+          AddWidget(button, 1, 0);
+          
+          // Add an action to be performed whenever the button is clicked
+          button.Pressed += (sender, args) => engine.ExitSuccess("Done");
+      }
     }
     ```
 
-4. **Verify Installation**  
-    Run `npm run start` to launch Cypress and confirm that it opens successfully.
+## Setting up the web environment
 
-5. **Cypress Initial Setup**  
-    Cypress will prompt for initial configuration if it's the first time running. Choose **E2E Testing** as the testing type if prompted.
+1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-## Create the Interactive Automation Script
+1. Add a button to the dashboard and configure it to trigger the created interactive Automation script when clicked.
 
-To create the **Interactive Automation Script**:
+   For more information, see [Button](xref:DashboardButton).
 
-1. Set Up a Visual Studio Solution
+Below is an example of what the dashboard might look like when the button has been added:
 
-    Follow [this guide](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Gerrit%20and%20Jenkins/Automation_scripts_as_a_Visual_Studio_solution.html) to create an automation script as a Visual Studio solution.
-2. Install Required Dependencies
+![Interactive scripts dashboard](~/develop/images/InteractiveScriptsDashboard.png)
 
-    Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
-
-3. Implement the Interactive Automation Script
-
-    Use the following c# code to implement a sample interactive script that displays a "Hello, World!" message with an **OK** button:
-
-    ```csharp
-    /// <summary>
-    /// Represents a DataMiner Automation script.
-    /// </summary>
-    public class Script
-    {
-        /// <summary>
-        /// The script entry point.
-        /// </summary>
-        /// <param name="engine">Link with SLAutomation process.</param>
-        public void Run(IEngine engine)
-        {
-            // DO NOT REMOVE THE COMMENTED OUT CODE BELOW OR THE SCRIPT WONT RUN!
-            // Interactive scripts need to be launched differently.
-            // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
-            // However, due to the NuGet package, this string can no longer be detected.
-            // This comment is here as a temporary workaround until it has been fixed.
-            //// engine.ShowUI(
-
-            try
-            {
-                // Controls the event loop and switch between dialogs
-                var controller = new InteractiveController(engine);
-
-                // Create an instance of the dialog you wish to show.
-                var helloWorldDialog = new HelloWorldDialog(engine);
-                
-                // Starts the event loop and shows the first dialog.
-                controller.ShowDialog(helloWorldDialog);
-            }
-            catch (ScriptAbortException)
-            {
-                // Catch normal abort exceptions (engine.ExitFail or engine.ExitSuccess)
-                throw; // Comment if it should be treated as a normal exit of the script.
-            }
-            catch (ScriptForceAbortException)
-            {
-                // Catch forced abort exceptions, caused via external maintenance messages.
-                throw;
-            }
-            catch (ScriptTimeoutException)
-            {
-                // Catch timeout exceptions for when a script has been running for too long.
-                throw;
-            }
-            catch (InteractiveUserDetachedException)
-            {
-                // Catch a user detaching from the interactive script by closing the window.
-                // Only applicable for interactive scripts, can be removed for non-interactive scripts.
-                throw;
-            }
-            catch (Exception e)
-            {
-                engine.ExitFail($"Run|Something went wrong: {e}");
-            }
-        }
-    }
-
-    public class HelloWorldDialog : Dialog
-    {
-        public HelloWorldDialog(IEngine engine) : base(engine)
-        {
-            // Create a label widget
-            var label = new Label("Hello, World!") { Style = TextStyle.Title };
-            
-            // Define the debug tag to be used in the cypress test
-            label.DebugTag = "label";
-            
-            // Add it to the dialog grid at position 0,0
-            AddWidget(label, 0, 0);
-            
-            // Create a button widget
-            var button = new Button("OK");
-            
-            // Define the debug tag to be used in the cypress test
-            button.DebugTag = "button";
-            
-            // Add it to the dialog just below the label
-            AddWidget(button, 1, 0);
-            
-            // Add an action to be performed whenever the button is clicked
-            button.Pressed += (sender, args) => engine.ExitSuccess("Done");
-        }
-    }
-    ```
-
-## Set Up the Web Environment
-
-1. **Create a Dashboard**  
-    Create a new dashboard.
-
-2. **Add a Button**  
-    Add a button to the dashboard and configure it to trigger the created Interactive Automation Script when clicked (this can be configured in the Settings tab in edit mode).
-
-Below is an example of how the dashboard might look after adding the button:
-
-![InteractiveScriptsDashboard](~/develop/images/InteractiveScriptsDashboard.png)
-
-## Create the Cypress Test
+## Creating the Cypress test
 
 1. **Set Up the Test File**  
     In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
@@ -227,7 +218,7 @@ Below is an example of how the dashboard might look after adding the button:
 > [!NOTE]
 > Ensure all variable values are updated with the correct information (dmaIp, username, password, etc.) before running the test. This allows the script to interact properly with your specific application environment.
 
-## Running the Cypress Test
+## Running the Cypress test
 
 1. **Launch Cypress**  
     In the terminal, run:
@@ -238,7 +229,3 @@ Below is an example of how the dashboard might look after adding the button:
 
 2. **Select and Run the Test**  
     Choose the test file (`HelloWorldDialog.cy.ts`). Cypress will execute the test, displaying results in real time: green indicates success, and any errors are logged in detail for debugging.
-
-## Conclusion
-
-This guide covers the essential steps to set up, configure, and test an interactive automation script using Cypress. By following these best practices, you can create reliable, reusable tests to validate new components and UI interactions within a real application environment.
