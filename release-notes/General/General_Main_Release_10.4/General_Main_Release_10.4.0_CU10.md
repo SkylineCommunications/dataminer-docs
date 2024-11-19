@@ -156,3 +156,11 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 - Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
 
 - Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
+
+#### Files modified during an initial full synchronization could incorrectly be rechecked multiple times [ID 41368]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+All files that are modified in the DataMiner System while SLDMS is performing the initial full synchronization of a newly added agent are added to a list of files to be re-checked.
+
+Up to now, that list could incorrectly contain multiple entries for the same file, causing the file in question to be re-checked multiple times after the synchronization had finished. From now on, each modified file will only be added once.
