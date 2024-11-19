@@ -19,6 +19,10 @@ Two new tables are now available in the CISCO CBR-8 element: the *Video QAM Chan
 
 In the US FN Peak dashboard, a new column, *OFDMA + LowSplitSCQAM*, has been added. The values in this column are calculated by adding the highest peak at the same timestamp for the Low Split SCQAM and OFDMA Utilization for a user-defined time period. Note that the Peak OFDMA Utilization used in this calculation is different from the Peak OFDMA Utilization displayed on the dashboard. It is the highest peak in a 24-hour period, without taking the 3 highest peaks like the parameter shown in the dashboard.
 
+#### Harmonic CableOS: Kafka integration [ID 41428]
+
+The Harmonic CableOS connector can now parse Kafka stream data related to its system and CMTS metrics. It currently retrieves the metrics for CPU and memory utilization of the CCAP. When you open the CCAP in the EPM Topology app, these are displayed in the CCAP Overview table.
+
 ### Fixes
 
 #### Generic DOCSIS CM Collector: OOS status parameters showing 'OK' when no DS QAM channels exist [ID 40980]
