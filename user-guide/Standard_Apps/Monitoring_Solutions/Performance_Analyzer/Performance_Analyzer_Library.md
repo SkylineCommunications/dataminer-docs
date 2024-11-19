@@ -346,7 +346,7 @@ The **Performance Analyzer** can help with these and many other challenges. Its 
 The key difference between the implementation above and the Performance Analyzer is that you need to provide the `PerformanceCollector` with an instance of an object that implements the `IPerformanceLogger` interface. This gives you the flexibility to report metrics in various ways. The library provides a default implementation called `PerformanceFileLogger`, which logs metrics to a file.
 
 ```csharp
-public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogger("results");
+public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogger("firstCollection", "results");
 
 public static PerformanceCollector Collector { get; set; } = new PerformanceCollector(Logger);
 
@@ -359,7 +359,7 @@ public static void Connect()
 }
 ```
 
-By default, the file, *results.json* in this case, will be created in the folder *C:\Skyline_Data\PerformanceLogger*.
+By default, the file, *results.json* in this case, will be created in the folder *C:\Skyline_Data\PerformanceAnalyzer*.
 
 ```csharp
 public static void Solution()
@@ -385,7 +385,7 @@ public static void Solution()
 Even when the same code is executed repeatedly, not all executions are identical. The amount of data may vary, the type of data could differ, or the server's state might change. All these factors can impact performance, and without the right context, understanding the metrics can be challenging. This means it would be ideal if the context could be included in the results, and this is possible using **metadata**. Metadata can be defined either on the `PerformanceFileLogger` or on the `PerformanceTracker`. Metadata at the logger level can be used to provide context for the overall script execution, while metadata at the tracker level can add context for specific method calls.
 
 ```csharp
-public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogger("results").AddMetadata("Server", GetServer());
+public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogger("secondCollection", "results").AddMetadata("Server", GetServer());
 
 public static List<string> Fetch()
 {
