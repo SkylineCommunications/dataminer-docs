@@ -58,7 +58,7 @@ parameter.SetValue(100); // Does not check State property of the ElementInfoEven
 
 Some breaking changes have been introduced in the API with regard to exceptions that are thrown because the *State* property for an element is no longer checked before a set is executed. This means that some calls no longer throw an ElementStoppedException but instead an ElementNotFoundException or no exception at all.
 
-To see if and when an exception is thrown, refer to the XML documentation on the methods.
+To see if and when an exception is thrown, refer to the documentation on the methods in the API section (e.g. [GetElement](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma.GetElement*)).
 
 - IDmsElement.GetStandaloneParameter\<T\> no longer throws an ElementNotFoundException.
 - IDmsElement.GetTable no longer throws an ElementNotFoundException.
