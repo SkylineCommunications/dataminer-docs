@@ -24,23 +24,23 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 1. Create a folder for your project (e.g. `C:\Testing`) and open it in Visual Studio Code.
 
-1. Initialize the project and install Cypress:
+2. Initialize the project and install Cypress:
 
-   1. Open a new terminal in Visual Studio Code and execute the following commands:
+   1. Open a new terminal in Visual Studio Code and execute the following command:
 
       ```cmd
       npm init
       ```
 
-   1. Press Enter to proceed through the setup without specifying values until the initialization is complete.
+   2. Press Enter to proceed through the setup without specifying values until the initialization is complete.
 
-   1. Use the following command to install Cypress:
+   3. Use the following command to install Cypress:
 
       ```cmd
       npm install cypress
       ```
 
-1. To simplify running Cypress, add the following line to the `"scripts"` section of your `package.json` file:
+3. To simplify running Cypress, add the following line to the `"scripts"` section of your `package.json` file:
 
    ```json
    "scripts": {
@@ -48,17 +48,17 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    }
    ```
 
-1. To verify the installation, run `npm run start` to launch Cypress and confirm that it opens successfully.
+4. To verify the installation, run `npm run start` to launch Cypress and confirm that it opens successfully.
 
-1. If it is the first time you run Cypress, select *E2E Testing* as the testing type when prompted.
+5. If it is the first time you run Cypress, select *E2E Testing* as the testing type when prompted.
 
 ## Creating the interactive Automation script
 
 1. Create an Automation script as a Visual Studio solution, as explained under [Automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution).
 
-1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
+2. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
 
-1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
+3. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
 
    ```csharp
    /// <summary>
@@ -148,15 +148,11 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 ## Setting up the web environment
 
-1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
+1. [Create a new low-code app](xref:Creating_custom_apps).
 
-1. Add a button to the dashboard and configure it to trigger the created interactive Automation script when clicked.
+2. Add a button to the low-code app and configure it to trigger the created interactive Automation script when clicked.
 
    For more information, see [Button](xref:DashboardButton).
-
-Below is an example of what the dashboard might look like when the button has been added:
-
-![Interactive scripts dashboard](~/develop/images/InteractiveScriptsDashboard.png)
 
 ## Creating the Cypress test
 
@@ -164,20 +160,19 @@ Below is an example of what the dashboard might look like when the button has be
     In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
 
 2. **Implement the Cypress test**  
-    Implement the following Cypress test to log in, navigate to the dashboard, and interact with the automation script.
-    Be sure to fill in the relevant values for the variables (dmaIp, username, password, dashboardName, scriptName) at the beginning of the file:
+    Implement the following Cypress test to log in, navigate to the low-code app, and interact with the automation script.
 
     ```javascript
     describe('Test Interactive Automation Script', () => {
         // Define the necessary variables and replace with your specific details
-        const dmaIp = ''; // Replace with the DataMiner IP (e.g., 'localhost')
+        const dmaAddress = ''; // Replace with the IP or hostname of a DMA (e.g., 'localhost')
         const username = ''; // Replace with the user username
         const password = ''; // Replace with the user password
-        const dashboardName = ''; // Replace with the name of the dashboard page
-        const scriptName = ''; // Replace with the name of the script
+        const buttonLabel = ''; // Replace with the button label
+        const appId = ''; // Replace with the app ID
 
-        // Before running the tests, visit the dashboards page
-        before(() => cy.visit(`http://${dmaIp}/dashboard`));
+        // Before running the tests, visit the low-code app
+        before(() => cy.visit(`http://${dmaAddress}/app/${appId}`));
 
         it('should log in and execute the Interactive Automation Script', () => {
             // Check if the login component exists
@@ -192,13 +187,9 @@ Below is an example of what the dashboard might look like when the button has be
 
             // Verify successful login
             cy.get('dma-login').should('not.exist');
-            cy.get('dma-app').should('exist');
-
-            // Navigate to the specified dashboard
-            cy.get('dma-folder-list-item').contains(dashboardName).click();
 
             // Start the IAS script by clicking the associated button
-            cy.contains('dma-button', scriptName).click();
+            cy.contains('dma-button', buttonLabel).click();
 
             // Validate that the popup appears with the correct title
             cy.get('[data-cy="popup"]').contains('Dialog').should('be.visible');
@@ -208,15 +199,12 @@ Below is an example of what the dashboard might look like when the button has be
 
             // Get the component with the debug tag 'button' and click the OK button
             cy.get('[data-cy="button"]').should('have.text', 'OK').click();
-
-            // Validate that the success message is displayed
-            cy.get('[data-cy="popup"]').contains('Succeeded').should('be.visible');
         });
     });
     ```
 
 > [!NOTE]
-> Ensure all variable values are updated with the correct information (dmaIp, username, password, etc.) before running the test. This allows the script to interact properly with your specific application environment.
+> Ensure all variable values are updated with the correct information (dmaAddress, username, password, etc.) before running the test. This allows the script to interact properly with your specific application environment.
 
 ## Running the Cypress test
 
