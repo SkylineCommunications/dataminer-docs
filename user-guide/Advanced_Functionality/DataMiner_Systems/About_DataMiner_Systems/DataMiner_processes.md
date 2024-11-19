@@ -157,7 +157,7 @@ The DataMiner Automation process.
 The DataMiner Legacy Correlation process.
 
 > [!NOTE]
-> Only available on DataMiner versions before 10.5.1.
+> Only available on DataMiner versions before 10.5.1/10.6.0.
 
 > [!TIP]
 > See also: [DataMiner Correlation](xref:About_DMS_Correlation)
