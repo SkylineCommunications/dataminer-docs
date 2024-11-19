@@ -10,7 +10,7 @@ This component displays the results of queries in a chart shaped like a pie or d
 
 To configure the component:
 
-1. Apply a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+1. Apply query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 

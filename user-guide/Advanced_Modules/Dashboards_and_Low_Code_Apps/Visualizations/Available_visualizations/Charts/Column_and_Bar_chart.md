@@ -15,11 +15,11 @@ It can also be used to represent any data based on a data query in the form of a
 
 To configure the component:
 
-1. Apply a view data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
    This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. to do so, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *parameters* section of the data pane.
+1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. To do so, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *parameters* section of the data pane.
 
 1. Optionally, customize the following component options in the *Settings* tab:
 

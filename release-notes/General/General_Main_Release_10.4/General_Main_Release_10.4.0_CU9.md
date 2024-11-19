@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU9
 ---
 
-# General Main Release 10.4.0 CU9 - Preview
+# General Main Release 10.4.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -32,18 +32,6 @@ Alarm filters containing brackets can now be translated to OpenSearch queries. T
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
 A number of security enhancements have been made.
-
-#### SLPort will now validate SSL/TLS certificates by default [ID 40877]
-
-<!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
-
-In order to enhance secure connector communication, SLPort will now validate SSL/TLS certificates by default.
-
-> [!NOTE]
->
-> - If you want SLPort to skip the default SSL/TLS certification validation for a particular element, you can set the `InsecureHttps` element to true in the *element.xml* file of that element.
-> - If you want SLPort to skip the default SSL/TLS certification validation for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
-> - If you want SLPort to skip the default SSL/TLS certification validation when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
 
 #### NT Notify types NT_ADD_VIEW_NO_LOCK and NT_ADD_VIEWS_NO_LOCK have been deprecated [ID 40928]
 
@@ -155,7 +143,7 @@ When a DataMiner Agent that was part of a Failover setup started up, in some cas
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur.
+When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur. This will now be prevented. In addition, information events will no longer be generated for the [Clients connected] parameter.
 
 #### Incomplete CorrelationDetailsEvent messages after a DMA had reconnected to the DMS [ID 40934]
 

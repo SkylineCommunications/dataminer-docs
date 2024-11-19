@@ -37,6 +37,9 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
    - To upgrade one or more individual Agents, select *Individual Agents* and expand the *DataMiner Agents* section to select the Agents or add them by entering an external IP.
 
+   > [!NOTE]
+   > If you start an upgrade of one or more individual Agents, make sure no additional upgrade operation is started until this first upgrade has been fully completed.
+
 1. If you do not want to use the default upgrade options settings, expand the *Advanced upgrade options* section and select the necessary upgrade options. For more information on these, options, see [default upgrade options](xref:Configuring_the_default_upgrade_options).
 
 1. If you do not want to use the default policy for Agents in a Failover setup, open the section *Advanced Failover options* and select the Failover policy, which determines in what order the DMAs are upgraded. The following options are available:

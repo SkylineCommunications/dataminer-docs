@@ -10,34 +10,34 @@ This component can be used to display a trend graph.
 
 > [!NOTE]
 >
-> - If this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
+> - If this type of component is added, the time span displayed by the component is available as an output in the data pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 
 ## Configuring the component
 
 To configure the component:
 
-1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
    > [!NOTE]
    >
-   > - If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
-   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* feed of the table to the line chart in order to see the data, similar to when you use a [parameter feed component](xref:DashboardParameterFeed).
+   > - If a query is used as data, additional configuration is required. See [Configuration with query data](#configuration-with-query-data).
+   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to pass a line chart by linking *Parameters* and *Indices* data, available in the data pane. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* data of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
 
-1. Optionally, apply a filter feed:
+1. Optionally, apply a filter:
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
-   - For a table parameter, an *indices* filter feed is supported.
+   - For a table parameter, an *indices* filter is supported.
 
-   - In a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - In a system using Service & Resource Management, you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
 
-   - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+   - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
      > [!NOTE]
      >
      > - When you update a filter that is already used in the component, re-add the filter in order to update it in the component.
-     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use feeds found either on the same low-code app page/panel or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, you can only use feeds found on the same low-code app page/panel.
+     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use data found either on the same low-code app page/panel or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, you can only use data found on the same low-code app page/panel.
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
@@ -132,15 +132,15 @@ To configure the component:
      > [!TIP]
      > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
 
-## Configuration with query data feed
+## Configuration with query data
 
-Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
+Query results are supported as data for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data:
 
 ### [From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards](#tab/tabid-1)
 
 <!--RN 39509-->
 
-1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. In the *Component* > *Layout* tab, configure the following fields in the *Lines* section:
 
@@ -185,11 +185,11 @@ Query results are supported as a data feed for this component from DataMiner 10.
 
 ### [Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6](#tab/tabid-2)
 
-1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
 
-   - *Query*: The query data feed you want to use.
+   - *Query*: The query data you want to use.
 
    - *X axis*: The column that should be used for the X-axis data.
 
@@ -231,7 +231,7 @@ When visualized on a mobile device<!--RN 39586-->:
 - You can move left or right by sliding one finger across the component.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using a query data feed](#configuration-with-query-data-feed), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
+> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using query data](#configuration-with-query-data), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
 
 ## Examples
 
@@ -241,7 +241,7 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
 
 1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
 
@@ -262,7 +262,7 @@ To add a component to a dashboard to show a basic trend graph using profile para
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
 
 1. Expand the *Profile parameters* section in the data pane.
 

@@ -10,7 +10,7 @@ This component displays the minimum, average and maximum value of one or more tr
 
 To configure the component:
 
-1. Add a (multiple) parameter data feed.
+1. Add (multiple) parameter data sources.
 
 1. In case a table parameter has been added, optionally add an index filter.
 

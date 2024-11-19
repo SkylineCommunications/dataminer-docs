@@ -35,7 +35,7 @@ To set a different number:
 
 The number of simultaneously running SLProtocol processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
 
-By default, the number of simultaneously running processes is set to 5.
+The default number of simultaneously running processes depends on the DataMiner version. From DataMiner 10.4.12/10.5.0 onwards, the default number is 10, in earlier DataMiner versions it is 5.<!-- RN 41077 -->
 
 To set a different number:
 

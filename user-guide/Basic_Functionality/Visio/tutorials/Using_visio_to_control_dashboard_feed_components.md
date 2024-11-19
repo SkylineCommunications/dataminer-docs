@@ -67,7 +67,7 @@ Expected duration: 45 minutes
 
 1. If you are not yet in edit mode, then click *Start editing*.
 
-1. Add a [Parameter feed component](xref:DashboardParameterFeed).
+1. Add a [Parameter picker component](xref:DashboardParameterPicker).
 
 1. From the *Data* pane on the right, drag the *ELEMENTS* header onto the *Parameter feed* component to be used as data.
 
@@ -242,6 +242,6 @@ For each table row that was added in [step 1](#step-1-create-a-new-virtual-conne
 - [Dashboards tutorials](xref:Tutorial_Dashboards)
 - [Visio drawings](xref:visio)
 - [Getting started with basic shapes](xref:Getting_started_with_basic_shapes)
-- [Feeds](xref:Using_dashboard_feeds)
+- [Component data](xref:Component_Data)
 - [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
 - [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows)

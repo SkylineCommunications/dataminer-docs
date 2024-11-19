@@ -8,7 +8,7 @@ Regardless of whether you are restoring the backup to the DMA it was taken from 
 
 To prepare the destination server, there are several possibilities:
 
-- Install a blank, fully functional DataMiner Agent, as described in the DataMiner Installation Guide.
+- Install a blank, fully functional DataMiner Agent, as described under [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
 - Create a virtual machine using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
 

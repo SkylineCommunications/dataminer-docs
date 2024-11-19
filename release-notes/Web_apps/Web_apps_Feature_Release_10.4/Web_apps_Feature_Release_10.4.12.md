@@ -2,17 +2,18 @@
 uid: Web_apps_Feature_Release_10.4.12
 ---
 
-# DataMiner web apps Feature Release 10.4.12 – Preview
+# DataMiner web apps Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: Flows [ID 40974]](#dashboardslow-code-apps-flows-id-40974)
+- [Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]](#dashboardslow-code-apps-variables-id-41039-id-41063-id-41132)
 
 ## New features
 
@@ -187,6 +188,32 @@ In the color themes used by the web apps, the gray colors have been updated.
 
 Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
 
+#### Dashboards/Low-Code Apps: Term 'Feed' replaced by 'Components' and 'URL' [ID 41141]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+Up to now, Dashboards and Low-Code Apps had a separate "feed" component category. Now, the term "Feed" has been removed from the UI across all contexts, reflecting that all components in a dashboard or low-code app can expose data, and not just feed components.
+
+The following changes have been made:
+
+- The *Feeds* visualization category has been removed. Its components have been redistributed as follows:
+
+  - General: Time range, query filter, and trigger components
+
+  - Other: List, tree, parameter picker (previously "parameter feed"), and EPM picker (previously "EPM feed") components
+
+- The *Feeds* section in the *Data* tab is now called "Components". This section now represents data exposed by each component in the dashboard or app.
+
+- URL data, previously included under *Feeds* in the *Data* tab, now has its own section named "URL".
+
+- The syntax for [dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text) has been updated. For example:
+
+  - Old: `{Feed."Table 1"."Selected rows"...}`
+
+  - New: `{Component."Table 1"."Selected rows"...}`
+
+- Several settings that previously included the term "Feed" have been renamed.
+
 ### Fixes
 
 #### Web APIs: Problem when an exception was thrown while processing a bulk request [ID 40884]
@@ -354,14 +381,26 @@ When you had duplicated a dashboard, the components in the newly created duplica
 
 Uploaded images shown in an *Image* component would incorrectly not be synchronized among all DataMiner Agents in a DMS. As a result, no image would be shown if the dashboard or low-code app was accessed from a DMA other than the one onto which the image had been uploaded.
 
+#### Low-Code Apps: Additions, updates and removals would not be synchronized among the DMAs in the DMS [ID 41228]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When you created, updated or deleted a low-code app, this would incorrectly not be synchronized among the DataMiner Agents in the DMS.
+
 #### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
 
 #### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
+
+#### Dashboards/Low-Code Apps: No chart data would be shown when a parameter value was fed to a Line & area chart component linked to a Time range component [ID 41252]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
