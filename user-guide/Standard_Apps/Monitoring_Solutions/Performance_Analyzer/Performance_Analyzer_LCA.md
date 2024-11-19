@@ -23,20 +23,20 @@ Below, you can find an overview of the main components of the app.
 
 1. **Performance Analyzer Metrics Folder**: Defines the folder where performance data files are located. By default, this is `C:\Skyline_Data\PerformanceAnalyzer`.
 
-1. **Files**: Shows a list of files available in the selected directory, with each file’s name, creation date, last modified date, and size. You can select a file in this list to analyze it in detail.
+2. **Files**: Shows a list of files available in the selected directory, with each file’s name, creation date, last modified date, and size. You can select a file in this list to analyze it in detail.
 
-1. **Collections**: Displays a list of collections in the selected file. A "collection" refers to one disposal of the collector.
+3. **Collections**: Displays a list of collections in the selected file. A "collection" refers to one disposal of the collector.
 
-1. **Collections Filter**: Allows you to filter collections based on metadata, making it easy to locate a specific collection or understand its context.
+4. **Collections Filter**: Allows you to filter collections based on metadata, making it easy to locate a specific collection or understand its context.
 
-1. **Collection Metadata**: Provides all the relevant details related to the context in which a collection was created.
+5. **Collection Metadata**: Provides all the relevant details related to the context in which a collection was created.
 
-1. **Metrics**: Provides a detailed list of individual metrics, each representing a specific operation or method call. The table includes information such as class, method, and start and end times, making it easier to identify which parts of the code impact the performance.
+6. **Metrics**: Provides a detailed list of individual metrics, each representing a specific operation or method call. The table includes information such as class, method, and start and end times, making it easier to identify which parts of the code impact the performance.
 
-1. **Metrics Filter**: Allows you to filter metrics by specific classes, methods, execution time ranges, or metadata.
+7. **Metrics Filter**: Allows you to filter metrics by specific classes, methods, execution time ranges, or metadata.
 
-1. **Metric Metadata**: Provides more context information for the metrics, making it easier to understand them.
+8. **Metric Metadata**: Provides more context information for the metrics, making it easier to understand them.
 
-1. **Timeline**: Visual representation of every metric. You can focus on a specific block by double-clicking the corresponding table entry.
+9. **Timeline**: Visual representation of every metric. You can focus on a specific block by double-clicking the corresponding table entry.
 
-1. **Metric Metadata (Timeline)**: Provides an overview of the context for the selected timeline block.
+10. **Metric Metadata (Timeline)**: Provides an overview of the context for the selected timeline block.
