@@ -25,4 +25,5 @@ DataMiner Experience and Performance Management (EPM) is a software platform spe
 
 | Name | Description |
 |--|--|
+| [Getting started with the Ping Monitoring tool](xref:Tutorial_Apps_Ping_Monitoring_App) | Learn how to use the Ping Monitoring tool for network monitoring and diagnostics. |
 | [Getting started with the Smart Trap Processor](xref:Smart_Trap_Processor_Tutorial) | Learn to configure trap rules in different ways to process traps. |
