@@ -2,10 +2,7 @@
 uid: EPM_7.0.8_Integrated_DOCSIS
 ---
 
-# EPM 7.0.8 Integrated DOCSIS - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be added, modified, or moved to a later release. Check back soon for updates!
+# EPM 7.0.8 Integrated DOCSIS
 
 ## Changes
 
