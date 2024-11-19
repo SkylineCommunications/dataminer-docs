@@ -255,6 +255,12 @@ On STaaS systems, in case of connection problems, a large number of the followin
 
 From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
 
+#### SLPort would leak memory when a smart-serial UDP element was stopped [ID 41216]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When a smart-serial UDP element was stopped, the client connections would incorrectly stay open, causing SLPort to leak memory.
+
 #### Protocols: Problems when polling SNMP tables using GetNext [ID 41235]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
