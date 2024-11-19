@@ -17,4 +17,4 @@ The different components of a version A.B.C.D represent the following:
 
 ## Released versions
 
-Refer to the [class library release notes](xref:ClassLibrary_Range_1.2) for an overview of the released versions.
+Refer to the [Skyline.DataMiner.Core.DataMinerSystem](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.1) release notes for an overview of the released versions.
