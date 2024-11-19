@@ -48,6 +48,24 @@ From now on, when ReservationInstances are deleted in bulk, a single delete requ
 
 This will significantly enhance overall performance when deleting large numbers of ReservationInstances.
 
+#### gRPC connection reliability has been enhanced [ID 41261]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing run-time errors to occur in other processes.
+
+GrpcConnection has now been updated. All gRPC calls will now have a deadline of 15 minutes instead of NO_TIMEOUT.
+
+Also, a new SLNet option `HttpTcpKeepAliveInterval` can now be configured on DataMiner Agents that are known to have unstable network connectivity. See the example below.
+
+```xml
+<MaintenanceSettings>
+    <SLNet>
+        <HttpTcpKeepAliveInterval>60</HttpTcpKeepAliveInterval>
+    </SLNet>
+</MaintenanceSettings>
+```
+
 #### DxMs upgraded [ID 41297]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
