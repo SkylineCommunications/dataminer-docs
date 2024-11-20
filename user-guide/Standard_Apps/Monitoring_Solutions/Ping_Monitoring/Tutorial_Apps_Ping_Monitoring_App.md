@@ -11,11 +11,8 @@ Expected duration: 15 minutes
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.8 and Ping Monitoring version 1.0.1-CU12.
 
->[!TIP]
->See also: [Kata #47: Monitor a network with ping commands](https://community.dataminer.services/courses/kata-47/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-![image](https://github.com/user-attachments/assets/e6e51765-55e5-4546-80a2-192b69e3a0c2)
-
-
+> [!TIP]
+> See also: [Kata #47: Monitor a network with ping commands](https://community.dataminer.services/courses/kata-47/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
