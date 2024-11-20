@@ -4,7 +4,7 @@ uid: Connect_to_cloud_via_proxy
 
 # Connecting to dataminer.services via proxy server
 
-From DataMiner CloudFeed 1.0.6, CloudGateway 2.7.0, and ArtifactDeployer 1.4.1 onwards, proxy support is available for these DxMs. This means that you can enable a proxy server so that all outgoing traffic towards the public internet will pass through that proxy server. You can use the [Proxy Cloud Pack](https://community.dataminer.services/dataminer-cloud-pack/) to install these modules on your proxy server.
+From DataMiner CloudFeed 1.0.6, CloudGateway 2.7.0, and ArtifactDeployer 1.4.1 onwards, proxy support is available for these DxMs. This means that you can enable a proxy server so that all outgoing traffic towards the public internet will pass through that proxy server.
 
 The proxy server has to support both HTTP and WebSocket traffic.
 
@@ -22,6 +22,8 @@ To configure this:
       }
    }
    ```
+
+   - **Address**: The adress of the proxy server. Example: `127.0.0.1` or `localhost`.
 
 1. Restart the CloudGateway service for the changes to take effect.
 
