@@ -83,7 +83,7 @@ public class Script
 
         var swarmingRequest = SwarmingRequestMessage.ForBookings(targetDmaId, bookingIds.ToArray());
 
-        var connection = engine.GetUserConnection();
+        // TODO: provide your connection here
         var asyncConnection = connection.Async;
 
         // Event that will be set in the complete handler
