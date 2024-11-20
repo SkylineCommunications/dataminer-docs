@@ -109,7 +109,7 @@ When you have configured the destinations, the application will update to displa
 
    These values can help you monitor network congestion and detect outages.
 
-1. If you are a member of the DevOps Program, take a screenshot of the *Destinations* table (similar to the one below), ensuring all columns are clearly visible, and send it to TBD to get DevOps Points.
+1. If you are a member of the DevOps Program, take a screenshot of the *Destinations* table (similar to the one below), ensuring all columns are clearly visible, and upload it on the [Kata page on DataMiner Dojo](https://community.dataminer.services/courses/kata-47/).
 
    ![destinations](~/user-guide/images/destinations-PingMonitoring.png)
 
