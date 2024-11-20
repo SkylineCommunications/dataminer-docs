@@ -8,6 +8,11 @@ This tutorial demonstrates how to add a new version to a Catalog item using the 
 
 While the tutorial uses the example of a connector, registering a new version for a different type of Catalog item is very similar.
 
+Expected duration: 15 minutes
+
+> [!NOTE]
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial. Alternatively, if you would prefer not to use Postman and HTTPS directly, you can try our [platform-independent tooling](xref:Register_Catalog_Item#registering-a-catalog-item-with-workflows-and-tooling).
+
 ## Prerequisites
 
 - An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
@@ -33,7 +38,7 @@ While the tutorial uses the example of a connector, registering a new version fo
 
 To register a new version of a connector, you will need to use the register version call from the Catalog API:
 
-1. Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId}/register/version`.
+1. Create a new HTTP request using the POST HTTP method and the URL `https://api.dataminer.services/api/key-catalog/v2-0/catalogs/{catalogId}/register/version`.
 
 1. As the *catalogId* route parameter, fill in the Catalog ID of the connector.
 

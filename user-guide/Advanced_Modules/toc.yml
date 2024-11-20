@@ -283,6 +283,10 @@ items:
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
+              - name: Specifying data input in a dashboard or app URL
+                topicUid: Specifying_data_input_in_a_dashboard_URL
+              - name: Configuring a dashboard to use data in a URL without a dedicated component
+                topicUid: Using_data_in_URL_without_dedicated_component
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
@@ -373,10 +377,12 @@ items:
         items:
           - name: Applying a visualization
             topicUid: Apply_Visualization
-          - name: Applying a data feed
-            topicUid: Apply_Data_Feed
+          - name: Adding data to a component
+            topicUid: Adding_data_to_component
           - name: Customizing the component layout
             topicUid: Customize_Component_Layout
+          - name: Dynamically referencing data in text
+            topicUid: Dynamically_Referencing_Data_in_Text
           - name: Using the Template Editor
             topicUid: Template_Editor
           - name: Deleting a component
@@ -386,34 +392,40 @@ items:
         items:
           - name: General
             items:
+              - name: Block
+                topicUid: DashboardBlock
               - name: Button
                 topicUid: DashboardButton
               - name: Button panel
                 topicUid: DashboardButtonPanel
-              - name: Text
-                topicUid: DashboardText
-              - name: Clock (digital)
-                topicUid: DashboardClockDigital
               - name: Form
                 topicUid: DashboardForm
+              - name: Text
+                topicUid: DashboardText
               - name: Image
                 topicUid: DashboardImage
               - name: Icon
                 topicUid: DashboardIcon
-              - name: Maps
-                topicUid: DashboardMaps
-              - name: Stepper
-                topicUid: DashboardStepper
-              - name: Web
-                topicUid: DashboardWeb
               - name: Generic map
                 topicUid: DashboardGenericMap
+              - name: Clock (digital)
+                topicUid: DashboardClockDigital
               - name: Clock (analog)
                 topicUid: DashboardClockAnalog
-              - name: Block
-                topicUid: DashboardBlock
               - name: Group
                 topicUid: DashboardGroup
+              - name: Maps
+                topicUid: DashboardMaps
+              - name: Query filter
+                topicUid: DashboardQueryFilter
+              - name: Stepper
+                topicUid: DashboardStepper
+              - name: Trigger
+                topicUid: DashboardTrigger
+              - name: Web
+                topicUid: DashboardWeb
+              - name: Time range
+                topicUid: DashboardTimeRange
           - name: States and values
             items:
               - name: State
@@ -446,6 +458,12 @@ items:
                 topicUid: PieAndDonutChart
           - name: Other
             items:
+              - name: Timeline
+                topicUid: DashboardTimeline
+              - name: List
+                topicUid: DashboardList
+              - name: EPM picker
+                topicUid: DashboardEPMPicker
               - name: Grid
                 topicUid: DashboardGrid
               - name: Interactive Automation script
@@ -460,50 +478,35 @@ items:
                 topicUid: DashboardSpectrumAnalyzer
               - name: Visual Overview
                 topicUid: DashboardVisualOverview
-              - name: Timeline
-                topicUid: DashboardTimeline
+              - name: Tree
+                topicUid: DashboardTree
+              - name: Parameter picker
+                topicUid: DashboardParameterPicker
               - name: Trend statistics
                 topicUid: DashboardTrendStatistics
           - name: Feeds
             topicUid: Feeds
-            items:
-              - name: Time range feed
-                topicUid: DashboardTimeRangeFeed
-              - name: List feed
-                topicUid: DashboardListFeed
-              - name: Tree feed
-                topicUid: DashboardTreeFeed
-              - name: Parameter feed
-                topicUid: DashboardParameterFeed
-              - name: EPM feed
-                topicUid: DashboardCPEFeed
-              - name: Query filter feed
-                topicUid: DashboardQueryFilterFeed
-              - name: Trigger feed
-                topicUid: DashboardTriggerFeed
-              - name: Dropdown feed
-                topicUid: DashboardDropdownFeed
           - name: Basic controls
             items:
               - name: Dropdown
                 topicUid: DashboardDropdown
               - name: Numeric input
-                topicUid: DashboardNumericInputFeed
-              - name: Text input
-                topicUid: DashboardTextInputFeed
+                topicUid: DashboardNumericInput
               - name: Search input
-                topicUid: DashboardSearchInputFeed
-      - name: Feeds
-        topicUid: Using_dashboard_feeds
+                topicUid: DashboardSearchInput
+              - name: Text input
+                topicUid: DashboardTextInput
+      - name: Component data
+        topicUid: Component_Data
+      - name: Flows
+        topicUid: Using_flows
         items:
-          - name: Configuring feed components
-            topicUid: Configuring_feed_components
-          - name: Dynamically referencing feed values in text
-            topicUid: Feed_Link
-          - name: Specifying data input in a dashboard or app URL
-            topicUid: Specifying_data_input_in_a_dashboard_URL
-          - name: Configuring a dashboard to use a URL feed without a feed component
-            topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+          - name: Configuring a flow
+            topicUid: Configuring_a_flow
+          - name: Flow operators
+            topicUid: Flow_operators
+      - name: Variables
+        topicUid: Variables
       - name: Generic Query Interface (GQI)
         items:
           - name: About the Generic Query Interface

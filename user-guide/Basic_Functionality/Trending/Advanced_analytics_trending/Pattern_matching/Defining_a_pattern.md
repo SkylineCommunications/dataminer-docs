@@ -34,12 +34,9 @@ There are two ways to define the pattern, a quick way where you use all default 
 
 1. Click the tag icon and enter a name for the pattern definition.
 
-1. From DataMiner 10.0.13 onwards, for a table parameter, optionally clear the checkbox *\[Display key instance\] only* if you do not want the display key of the parameter to be taken into account to match the tag.
+1. For a table parameter, optionally clear the checkbox *\[Display key instance\] only* if you do not want the display key of the parameter to be taken into account to match the tag.
 
-   > [!NOTE]
-   > Prior to DataMiner 10.0.13, patterns can only be detected in the trending for a specific parameter ID, without taking any possible table index into account. Clearing the *\[Display key instance\] only* checkbox therefore results in the behavior of DataMiner versions prior to 10.0.13.
-
-1. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. DataMiner will then also monitor the affected parameters in real time and save every pattern occurrence. For more information, see [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns).
+1. Optionally, select *Generate an alarm when detected* to have DataMiner generate a "suggestion event" type of alarm whenever the pattern is detected. DataMiner will then also monitor the affected parameters in real time and save every pattern occurrence. For more information, see [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns).
 
 1. Click the check mark to save the pattern definition.
 

@@ -1,5 +1,6 @@
 ---
 uid: Extended_conditional_shape_manipulation_actions
+description: To apply conditional shape manipulation actions, configure the correct shape data field (e.g. Blink, Enabled, Hide, etc.) and enter the condition.
 ---
 
 # Extended conditional shape manipulation actions

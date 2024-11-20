@@ -168,7 +168,7 @@ To do so, use the following configuration in the webpage:
 
 You can link to a dashboard or low-code app in the same way as you would link to another webpage.
 
-In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify a feed for the dashboard or low-code app.
+In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify data for the dashboard or low-code app.
 
 > [!TIP]
 > For more information about the URL syntax, refer to [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).

@@ -9,25 +9,25 @@ This component displays the state, name and, if applicable, the value of a DataM
 ![State](~/user-guide/images/State.png)<br>*State component in DataMiner 10.4.6*
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as a feed for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
+> From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as data input for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
-   - Column parameter feeds are supported.
+   - Column parameter data is supported.
 
      > [!NOTE]
-     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter picker](xref:DashboardParameterPicker) and link this to the state component.
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
    - This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
+   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
 
    > [!NOTE]
-   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *feeds* section of the data pane so that it can be used as a feed for other components. This way, if the input for this component changes, it will also change for all other components using this component as their feed. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
+   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *Components* section of the data pane so that it can be used as data for other components. Prior to DataMiner 10.3.0[CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, the component is available in the *Feeds* section of the data pane instead. This way, if the input for this component changes, it will also change for all other components using this component as their data input. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
 
 1. Optionally, customize the following component options:
 
@@ -47,14 +47,7 @@ To configure the component:
 
    - In case the component displays more than one item, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
-     - *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the items are viewed on a small screen, they will always be displayed below each other.
-
-     - *Maximum rows per page*: Determines how many items can at most be displayed below each other on a single page.
-
-     - *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
-
-     > [!NOTE]
-     > These options are only available for parameters, and only prior to DataMiner 10.0.10. In later DataMiner versions, these are replaced by the *Layout flow* option.
+   - If the component shows a parameter, in the *Labels* section, you can select whether the parameter name, element name, index, and/or value should be displayed in the component.
 
    - In the *Style* section, the following options are available:
 
@@ -81,5 +74,3 @@ To configure the component:
      - *Layout flow*: Allows you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will be displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
      - Alignment: Available from DataMiner 10.1.0/10.1.3 onwards. Only displayed if *Design* is set to *Large* or *Auto Size*. Allows you to align the contents of the components to the left, in the center or to the right.
-
-   - If a parameter was added as a feed, in the *Labels* section, you can select whether the parameter name, element name or index should be displayed in the component.

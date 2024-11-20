@@ -23,6 +23,7 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Inspecting the parameter notification queue](xref:SLNetClientTest_Inspecting_the_parameter_notification_queue)
 - [Inspecting the SLNet event subscriptions](xref:SLNetClientTest_viewing_connection_details)
 - [Inspecting the stack sizes in SLNet](xref:SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet)
+- [Querying the assembly resolution hint paths](xref:SLNetClientTest_query_hint_paths)
 - [Requesting a list of active merge actions for a protocol](xref:SLNetClientTest_active_merge_actions_protocols)
 - [Requesting an estimate of the number of rows for a storage type in the database](xref:SLNetClientTest_estimate_number_rows_for_storage_type)
 - [Requesting information about pending incoming events](xref:SLNetClientTest_info_pending_incoming_events)

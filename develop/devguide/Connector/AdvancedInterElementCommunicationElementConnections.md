@@ -34,7 +34,7 @@ The virtual attribute allows you to further restrict to which protocols or param
 
 In the Element Connections app, this parameter will be included in the overview of the elements running this protocol:
 
-![alt text](../../images/element_connections_app.png "DataMiner Cube Element Connections app")
+![alt text](~/develop/images/element_connections_app.png "DataMiner Cube Element Connections app")
 
 Here you can specify the protocol and parameter of the protocol to use in the connection. Note that this method does not require any change in the protocol that defines the parameter you want to connect with.
 

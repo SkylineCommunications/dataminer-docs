@@ -11,6 +11,7 @@ DataMiner Integration Studio has to be able to connect to addresses in the follo
 ```txt
 https://login.microsoftonline.com/*
 https://aadcdn.msftauth.net/*
+https://dataminerservices.b2clogin.com/*
 https://*.dataminer.services/*
 https://*.skyline.be/*
 ```

@@ -12,10 +12,26 @@ If this folder does not exist, it will be created automatically with the first l
 
 From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet requests is also logged to the log files in the `C:\Skyline DataMiner\Logging\GQI` folder, if the minimum log level is set to *Debug* or lower.
 
-From DataMiner 10.4.0 [CU3]/10.4.5 onwards, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`.
-
 > [!NOTE]
 > The logs are buffered and written asynchronously, so it may take a few seconds for them to appear in the file.
+
+> [!TIP]
+> For information about logging for ad hoc data sources and custom operators, see [GQI extensions logging](xref:GQI_Extensions_Logging).
+
+## Metrics
+
+From DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`. These can be used to investigate potential performance issues.
+
+Currently, the following kinds of metrics are logged:
+
+- **RequestDuration**: Measures the time between the arrival and resolution of any request that is handled by GQI. This can be helpful to trace issues in a specific time interval.
+- **FirstPageDuration**: Measures the execution time for queries optimized for lazy loading. It measures the duration from the start of the retrieval of the first page until the moment when that first page is fully created. No metrics are logged for subsequent pages.
+- **AllPagesDuration**: Measures the execution time for queries optimized to get all results at once. It measures the combined duration from the start of the retrieval of each page until the moment when that page is fully created.
+
+> [!NOTE]
+>
+> - For the *FirstPageDuration* and *AllPagesDuration* metrics, a query identifier is logged that can be used to find the query source. For example, `"Query":"db/My Dashboard/f985ce2c-2b1d-4aff-81e7-8f81cfe01d6e"` indicates that the query originated from a dashboard called "My Dashboard" where a query is stored with that GUID.
+> - For the sake of efficiency, timestamps for metrics are logged in Unix time, which is defined as the number of milliseconds since January 1st, 1970, at midnight (UTC). Converters can be found online.
 
 ## Minimum log level
 
@@ -47,7 +63,7 @@ To change the minimum log level, change the configuration in the *appSettings* s
 > [!IMPORTANT]
 > Prior to DataMiner 10.4.6/10.5.0, a change to the minimum log level requires an SLHelper restart. From DataMiner 10.4.6/10.5.0 onwards<!--RN 39309-->, it is no longer necessary to restart SLHelper. The change takes effect immediately upon saving the *SLHelper.exe.config* file.
 
-For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards, the query name is included in the logging. However, if you set the minimum log level to *Debug*, the full query is logged instead.
+For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, the query name is included in the logging. However, if you set the minimum log level to *Debug*, the full query is logged instead.
 
 > [!NOTE]
 > Any changes to the configuration file are reset after a full DataMiner upgrade or downgrade.

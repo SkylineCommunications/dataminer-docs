@@ -230,8 +230,6 @@ items:
           items:
             - name: Support level roles
               topicUid: Support_Level_Roles
-        - name: Adding third-party connectors
-          topicUid: Overview_adding_third_party_connectors
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
@@ -279,12 +277,16 @@ items:
               topicUid: Terms_of_Sale
             - name: Terms for online deployments
               topicUid: Terms_Online_Deployments
+            - name: Terms for partners
+              topicUid: Terms_partners
         - name: Support terms
           items:
             - name: On premises
               topicUid: Support_Terms_On_Premises
             - name: SaaS
               topicUid: Support_Terms_SaaS
+        - name: DaaS Planned Maintenance Policy
+          topicUid: DaaS_Planned_Maintenance_Policy
     - name: Frequently asked questions
       topicUid: FAQs
       items:
@@ -317,6 +319,8 @@ items:
           topicUid: FAQ_Bandwidth_data_acquisition
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
+        - name: How can I view documentation in a different language
+          topicUid: FAQ_doc_change_language
       - name: Connectors
         topicUid: FAQs_Connectors
         items:
@@ -332,6 +336,8 @@ items:
           topicUid: FAQ_DIS_Training
         - name: Does technical support apply to the actual DataMiner connectors I design
           topicUid: FAQ_Support_for_own_connector
+        - name: How are third-party connectors added
+          topicUid: Overview_adding_third_party_connectors
         - name: Can I copy existing third-party DataMiner connectors or parts of them
           topicUid: FAQ_Copy_existing_connector
         - name: What if a second- or third-party DataMiner connector malfunctions

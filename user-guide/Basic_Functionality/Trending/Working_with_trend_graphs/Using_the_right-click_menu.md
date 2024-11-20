@@ -42,12 +42,12 @@ The trending right-click menu contains the following commands:
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data.
 
-- **Expand tags**: Available from DataMiner 10.0.7 onwards. Highlights all patterns matching the configured tags. See [Working with pattern matching](xref:Working_with_pattern_matching).
+- **Expand tags**: Highlights all patterns matching the configured tags. See [Working with pattern matching](xref:Working_with_pattern_matching).
 
-- **Show percentile**: Available from DataMiner 10.0.12 onwards. Displays a percentile line for the currently displayed data. The calculated percentile and its value will be displayed to the right of the line. Changing the displayed range does not update the percentile line, so that you can compare it with the data for a larger or smaller time frame. The percentile line will be displayed as a full line over the range for which it was originally displayed, and as a dashed line over the rest of the graph. Click the line to change the percentile or to refresh it to the currently displayed data.
+- **Show percentile**: Displays a percentile line for the currently displayed data. The calculated percentile and its value will be displayed to the right of the line. Changing the displayed range does not update the percentile line, so that you can compare it with the data for a larger or smaller time frame. The percentile line will be displayed as a full line over the range for which it was originally displayed, and as a dashed line over the rest of the graph. Click the line to change the percentile or to refresh it to the currently displayed data.
 
   > [!NOTE]
   > - By default, the 95 percentile is displayed, but this can be customized in the user settings. See [Trending settings](xref:User_settings#trending-settings).
-  > - From DataMiner 10.0.13 onwards, if the trend graph contains average data points in its most detailed data set, only average data will be used in the percentile calculation. This will be indicated with a warning icon in the percentile menu.
+  > - If the trend graph contains average data points in its most detailed data set, only average data will be used in the percentile calculation. This will be indicated with a warning icon in the percentile menu.
 
 - **Add to dashboard**: Obsolete from DataMiner 10.4.0/10.4.1 onwards. Adds the trend graph to a legacy dashboard. See [Adding an item to a dashboard from outside the Dashboards app](xref:Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app).

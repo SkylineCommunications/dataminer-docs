@@ -1,5 +1,6 @@
 ---
 uid: CodingGuidelines
+description: To uphold the quality level of DataMiner protocols and improve readability, maintainability, and performance, adhere to these best practices.
 ---
 
 # Best practices for protocol development

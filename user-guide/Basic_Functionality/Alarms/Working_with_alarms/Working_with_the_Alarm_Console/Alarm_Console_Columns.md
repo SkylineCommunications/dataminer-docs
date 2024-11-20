@@ -82,7 +82,7 @@ For more information on changing the column layout, see [Changing the column lay
 - **Severity duration**: The length of time that the alarm has had its current severity
 
   > [!NOTE]
-  > If history tracking is disabled, prior to DataMiner 10.0.5, no severity duration is displayed. This column is only available in history tabs from DataMiner 10.0.5 onwards, and only in case no filter is applied, or the filter is related to the element ID, DMA ID, element type, parameter ID, protocol ID or source ID. If the duration cannot be calculated, for example because the next alarm is not within the time span of the history tab, "N/A" will be displayed.
+  > This column is only available in history tabs in case no filter is applied or the filter is related to the element ID, DMA ID, element type, parameter ID, protocol ID, or source ID. If the duration cannot be calculated, for example because the next alarm is not within the time span of the history tab, "N/A" will be displayed.
 
 - **Owner**: Shown by default. The name of the DataMiner user who has taken ownership of the alarm. If no one has taken ownership of the alarm yet, the field remains empty.
 
@@ -153,6 +153,8 @@ For more information on changing the column layout, see [Changing the column lay
 - **Actions \> Masking**: Action button that allows the user to mask or unmask an alarm.
 
 - **Actions \> Clear alarm**: Action button that allows the user to clear clearable alarms.
+
+- **Actions** > **Feedback**: Shown by default in the *Anomalies* and *Suggestion events* tabs when behavioral anomaly detection finds an anomalous level shift, trend change, variance change, or flatline for a parameter, and a suggestion event/alarm is generated in the Alarm Console. This action button allows the user to provide positive or negative feedback on the behavioral anomaly. See [Providing feedback on behavioral anomalies](xref:Providing_feedback_on_behavioral_anomalies).
 
 - **Actions \> Copy full alarm**: Action button that allows the user to copy all information regarding an alarm in one click.
 

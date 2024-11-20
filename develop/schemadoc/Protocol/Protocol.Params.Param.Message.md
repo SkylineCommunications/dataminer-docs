@@ -6,6 +6,8 @@ uid: Protocol.Params.Param.Message
 
 Specifies a message to be displayed when users change the parameter on the user interface.
 
+This has to be specified on the write parameter; it will not have any effect on the read parameter.
+
 ## Type
 
 string

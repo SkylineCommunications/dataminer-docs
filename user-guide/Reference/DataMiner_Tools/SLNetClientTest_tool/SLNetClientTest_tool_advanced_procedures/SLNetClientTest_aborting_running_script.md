@@ -8,7 +8,7 @@ To abort an Automation script while it is running:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-1. In the *Advanced menu, select Automation*.
+1. In the *Advanced* menu, select *Automation*.
 
    The *Maintain Automation* window will open.
 
