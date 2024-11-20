@@ -393,6 +393,8 @@ items:
         topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Legacy Correlation
+        topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards
         topicUid: Verify_No_Legacy_Reports_Dashboards
       - name: Verify No Obsolete API Deployed
