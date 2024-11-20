@@ -12,4 +12,3 @@ With Correlation, you can take action whenever something is happening in your Da
 | Name | Description |
 |--|--|
 | [Responding to element timeouts using Correlation](xref:Correlation_Tutorial_Element_Timeout) | Build a Correlation rule that runs an Automation script and sends an email when an element is in timeout for more than 5 minutes. |
-| [Removing Legacy Correlation Rules](xref:Correlation_Tutorial_RemovingLegacyRules) | Remove leftover rules for the Legacy Correlation Engine. |
