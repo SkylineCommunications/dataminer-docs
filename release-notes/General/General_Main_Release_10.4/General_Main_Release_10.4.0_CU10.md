@@ -48,6 +48,24 @@ From now on, when ReservationInstances are deleted in bulk, a single delete requ
 
 This will significantly enhance overall performance when deleting large numbers of ReservationInstances.
 
+#### gRPC connection reliability has been enhanced [ID 41261]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing run-time errors to occur in other processes.
+
+GrpcConnection has now been updated. All gRPC calls will now have a deadline of 15 minutes instead of NO_TIMEOUT.
+
+Also, a new SLNet option `HttpTcpKeepAliveInterval` can now be configured on DataMiner Agents that are known to have unstable network connectivity. See the example below.
+
+```xml
+<MaintenanceSettings>
+    <SLNet>
+        <HttpTcpKeepAliveInterval>60</HttpTcpKeepAliveInterval>
+    </SLNet>
+</MaintenanceSettings>
+```
+
 #### DxMs upgraded [ID 41297]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
@@ -121,6 +139,12 @@ On STaaS systems, in case of connection problems, a large number of the followin
 
 From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
 
+#### SLPort would leak memory when a smart-serial UDP element was stopped [ID 41216]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When a smart-serial UDP element was stopped, the client connections would incorrectly stay open, causing SLPort to leak memory.
+
 #### Protocols: Problems when polling SNMP tables using GetNext [ID 41235]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
@@ -132,3 +156,11 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 - Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
 
 - Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
+
+#### Files modified during an initial full synchronization could incorrectly be rechecked multiple times [ID 41368]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+All files that are modified in the DataMiner System while SLDMS is performing the initial full synchronization of a newly added agent are added to a list of files to be re-checked.
+
+Up to now, that list could incorrectly contain multiple entries for the same file, causing the file in question to be re-checked multiple times after the synchronization had finished. From now on, each modified file will only be added once.
