@@ -163,6 +163,12 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 
 - Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
 
+#### Conditional monitoring: Conditions of standalone parameters would incorrectly not be taken into account when the alarm template was reapplied [ID 41292]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in an alarm template, multiple conditions had been defined for a standalone parameter, in some cases, those conditions would incorrectly not be taken into account when the alarm template was reapplied either manually in DataMiner Cube or automatically due to baseline changes.
+
 #### Files modified during an initial full synchronization could incorrectly be rechecked multiple times [ID 41368]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
