@@ -20,7 +20,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
   In the steps below, Visual Studio Code will be mentioned, but a different IDE could be used instead.
 
-- A DataMiner System running DataMiner 10.2.5/10.3.0 or higher.
+- A DataMiner System running DataMiner 10.4.7, 10.3.0 [CU16], or 10.4.0 [CU4] or higher.
 
 ## Project setup and Cypress installation
 
@@ -58,11 +58,18 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 1. Create an Automation script as a Visual Studio solution, as explained under [Automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution).
 
-1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
+1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) to your project.
+
+> [!NOTE]
+   > Ensure that your project uses at least version 9.0.2 of the [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) and version 10.4.7 of the [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation/10.4.7).
 
 1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
 
    ```csharp
+   using System;
+   using Skyline.DataMiner.Automation;
+   using Skyline.DataMiner.Utils.InteractiveAutomationScript;
+
    /// <summary>
    /// Represents a DataMiner Automation script.
    /// </summary>
@@ -169,15 +176,15 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    describe('Test Interactive Automation Script', () => {
        // Define the necessary variables and replace with your specific details
        const dmaAddress = ''; // Replace with the IP or hostname of a DMA (e.g. 'localhost')
-       const username = ''; // Replace with the user username
-       const password = ''; // Replace with the user password
+       const username = ''; // Replace with username of a test user
+       const password = ''; // Replace with password of the test user
        const buttonLabel = ''; // Replace with the button label
        const appId = ''; // Replace with the app ID
 
        // Before running the tests, visit the low-code app
        before(() => cy.visit(`http://${dmaAddress}/app/${appId}`));
 
-       it('should log in and execute the Interactive Automation Script', () => {
+       it('should log in, execute the Interactive Automation Script, check label and click the button', () => {
            // Check if the login component exists
            cy.get('dma-login').should('exist');
 
@@ -217,3 +224,12 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 1. Select the test file (`HelloWorldDialog.cy.ts`).
 
    Cypress will execute the test, displaying results in real time: green indicates success, and any errors are logged in detail for debugging.
+
+   The image below shows the result of a successful test:
+   ![CypressTest_IAS_Success](~/develop/images/CypressTest_IAS_Success.png)
+
+1. Simulating a Failure:
+
+   To test a failure scenario, modify the interactive Automation script by changing the label text from "Hello, World!" to "Goodbye, World!".
+   When you re-run the Cypress test, you should observe a failure due to the mismatch of the expected text. This failure will be reflected in the Cypress results:
+   ![CypressTest_IAS_Failure](~/develop/images/CypressTest_IAS_Failure.png)
