@@ -3623,6 +3623,14 @@ items:
               topicUid: DMSScript.Script.Exe.Value-ref
       - name: Type
         topicUid: DMSScript.Type
+    - name: SchemaTypes
+      items:
+      - name: EnumTrueFalse
+        topicUid: Automation-EnumTrueFalse
+      - name: EnumTrueFalseLowerCase
+        topicUid: Automation-EnumTrueFalseLowerCase
+      - name: NonEmptyStringType
+        topicUid: Automation-NonEmptyStringType
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
