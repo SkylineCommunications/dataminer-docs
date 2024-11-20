@@ -317,3 +317,9 @@ Since DataMiner feature version 10.4.8, it would incorrectly no longer be possib
 All files that are modified in the DataMiner System while SLDMS is performing the initial full synchronization of a newly added agent are added to a list of files to be re-checked.
 
 Up to now, that list could incorrectly contain multiple entries for the same file, causing the file in question to be re-checked multiple times after the synchronization had finished. From now on, each modified file will only be added once.
+
+#### Problem with 'Clean up unused' in DataMiner Cube when the user folder on the DMA contained a deprecated clientsettings.dat file [ID 41386]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
