@@ -127,9 +127,6 @@ You should now see your CI jobs complete successfully, ensuring that quality sta
 
    You should now see your new workflow running in this tab. Your CI and CD jobs should complete successfully, ensuring quality standards are met and uploading the item to the Catalog UI as a private item.
 
-   > [!NOTE]
-   > To be granted DevOps Points, take a screenshot of the successful run and send it to <thunder@skyline.be>.
-
 1. Go to <https://catalog.dataminer.services/>, make sure your organization is selected in the top-right corner, and look up your artifact.
 
 > [!NOTE]
