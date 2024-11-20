@@ -24,7 +24,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 1. Create a folder for your project (e.g. `C:\Testing`) and open it in Visual Studio Code.
 
-2. Initialize the project and install Cypress:
+1. Initialize the project and install Cypress:
 
    1. Open a new terminal in Visual Studio Code and execute the following command:
 
@@ -32,15 +32,15 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
       npm init
       ```
 
-   2. Press Enter to proceed through the setup without specifying values until the initialization is complete.
+   1. Press Enter to proceed through the setup without specifying values until the initialization is complete.
 
-   3. Use the following command to install Cypress:
+   1. Use the following command to install Cypress:
 
       ```cmd
       npm install cypress
       ```
 
-3. To simplify running Cypress, add the following line to the `"scripts"` section of your `package.json` file:
+1. To simplify running Cypress, add the following line to the `"scripts"` section of your `package.json` file:
 
    ```json
    "scripts": {
@@ -48,17 +48,17 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    }
    ```
 
-4. To verify the installation, run `npm run start` to launch Cypress and confirm that it opens successfully.
+1. To verify the installation, run `npm run start` to launch Cypress and confirm that it opens successfully.
 
-5. If it is the first time you run Cypress, select *E2E Testing* as the testing type when prompted.
+1. If it is the first time you run Cypress, select *E2E Testing* as the testing type when prompted.
 
 ## Creating the interactive Automation script
 
 1. Create an Automation script as a Visual Studio solution, as explained under [Automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution).
 
-2. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
+1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.3) to your project.
 
-3. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
+1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
 
    ```csharp
    /// <summary>
@@ -150,7 +150,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 1. [Create a new low-code app](xref:Creating_custom_apps).
 
-2. Add a button to the low-code app and configure it to trigger the created interactive Automation script when clicked.
+1. Add a button to the low-code app and configure it to trigger the created interactive Automation script when clicked.
 
    For more information, see [Button](xref:DashboardButton).
 
@@ -159,7 +159,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 1. **Set Up the Test File**  
     In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
 
-2. **Implement the Cypress test**  
+1. **Implement the Cypress test**  
     Implement the following Cypress test to log in, navigate to the low-code app, and interact with the automation script.
 
     ```javascript
@@ -215,5 +215,5 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
     npm run start
     ```
 
-2. **Select and Run the Test**  
+1. **Select and Run the Test**  
     Choose the test file (`HelloWorldDialog.cy.ts`). Cypress will execute the test, displaying results in real time: green indicates success, and any errors are logged in detail for debugging.
