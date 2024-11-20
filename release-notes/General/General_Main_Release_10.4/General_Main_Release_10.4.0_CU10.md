@@ -80,6 +80,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### SNMPv3 elements will now go into an error state when the user name is missing [ID 41312]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When an element of type SNMPv3 does not have its user name filled in, from now on, it will go into an error state and an alarm will be generated.
+
 ### Fixes
 
 #### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]
