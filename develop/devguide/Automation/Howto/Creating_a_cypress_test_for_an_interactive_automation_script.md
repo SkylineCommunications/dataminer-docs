@@ -20,6 +20,8 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
   In the steps below, Visual Studio Code will be mentioned, but a different IDE could be used instead.
 
+- A DataMiner System running DataMiner 10.2.5/10.3.0 or higher.
+
 ## Project setup and Cypress installation
 
 1. Create a folder for your project (e.g. `C:\Testing`) and open it in Visual Studio Code.
@@ -72,7 +74,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
        /// <param name="engine">Link with SLAutomation process.</param>
        public void Run(IEngine engine)
        {
-          // DO NOT REMOVE THE COMMENTED OUT CODE BELOW OR THE SCRIPT WONT RUN!
+          // DO NOT REMOVE THE COMMENTED OUT CODE BELOW OR THE SCRIPT WILL NOT RUN!
           // Interactive scripts need to be launched differently.
           // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
           // However, due to the NuGet package, this string can no longer be detected.
@@ -156,64 +158,62 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 ## Creating the Cypress test
 
-1. **Set Up the Test File**  
-    In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
+1. In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
 
-1. **Implement the Cypress test**  
-    Implement the following Cypress test to log in, navigate to the low-code app, and interact with the automation script.
+1. Implement the Cypress test below to log in, navigate to the low-code app, and interact with the Automation script.
 
-    ```javascript
-    describe('Test Interactive Automation Script', () => {
-        // Define the necessary variables and replace with your specific details
-        const dmaAddress = ''; // Replace with the IP or hostname of a DMA (e.g., 'localhost')
-        const username = ''; // Replace with the user username
-        const password = ''; // Replace with the user password
-        const buttonLabel = ''; // Replace with the button label
-        const appId = ''; // Replace with the app ID
+   > [!NOTE]
+   > Ensure all variable values in the test below are updated with the correct information (*dmaAddress*, *username*, *password*, etc.) before you run the test. This allows the script to interact properly with your specific application environment.
 
-        // Before running the tests, visit the low-code app
-        before(() => cy.visit(`http://${dmaAddress}/app/${appId}`));
+   ```javascript
+   describe('Test Interactive Automation Script', () => {
+       // Define the necessary variables and replace with your specific details
+       const dmaAddress = ''; // Replace with the IP or hostname of a DMA (e.g. 'localhost')
+       const username = ''; // Replace with the user username
+       const password = ''; // Replace with the user password
+       const buttonLabel = ''; // Replace with the button label
+       const appId = ''; // Replace with the app ID
 
-        it('should log in and execute the Interactive Automation Script', () => {
-            // Check if the login component exists
-            cy.get('dma-login').should('exist');
+       // Before running the tests, visit the low-code app
+       before(() => cy.visit(`http://${dmaAddress}/app/${appId}`));
 
-            // Enter login credentials
-            cy.get('[data-cy="login.username"]').type(username);
-            cy.get('[data-cy="login.password"]').type(password);
+       it('should log in and execute the Interactive Automation Script', () => {
+           // Check if the login component exists
+           cy.get('dma-login').should('exist');
 
-            // Click the login button
-            cy.contains('dma-button', 'Log on').click();
+           // Enter login credentials
+           cy.get('[data-cy="login.username"]').type(username);
+           cy.get('[data-cy="login.password"]').type(password);
 
-            // Verify successful login
-            cy.get('dma-login').should('not.exist');
+           // Click the login button
+           cy.contains('dma-button', 'Log on').click();
 
-            // Start the IAS script by clicking the associated button
-            cy.contains('dma-button', buttonLabel).click();
+           // Verify successful login
+           cy.get('dma-login').should('not.exist');
 
-            // Validate that the popup appears with the correct title
-            cy.get('[data-cy="popup"]').contains('Dialog').should('be.visible');
+           // Start the IAS by clicking the associated button
+           cy.contains('dma-button', buttonLabel).click();
 
-            // Get the component with the debug tag 'label' and check if the component has the correct text
-            cy.get('[data-cy="label"]').should('have.text', 'Hello, World!');
+           // Validate that the pop-up message appears with the correct title
+           cy.get('[data-cy="popup"]').contains('Dialog').should('be.visible');
 
-            // Get the component with the debug tag 'button' and click the OK button
-            cy.get('[data-cy="button"]').should('have.text', 'OK').click();
-        });
-    });
-    ```
+           // Get the component with the debug tag 'label' and check if the component has the correct text
+           cy.get('[data-cy="label"]').should('have.text', 'Hello, World!');
 
-> [!NOTE]
-> Ensure all variable values are updated with the correct information (dmaAddress, username, password, etc.) before running the test. This allows the script to interact properly with your specific application environment.
+           // Get the component with the debug tag 'button' and click the OK button
+           cy.get('[data-cy="button"]').should('have.text', 'OK').click();
+       });
+   });
+   ```
 
 ## Running the Cypress test
 
-1. **Launch Cypress**  
-    In the terminal, run:
+1. Launch Cypress by running the following command in the terminal:
 
-    ```cmd
-    npm run start
-    ```
+   ```cmd
+   npm run start
+   ```
 
-1. **Select and Run the Test**  
-    Choose the test file (`HelloWorldDialog.cy.ts`). Cypress will execute the test, displaying results in real time: green indicates success, and any errors are logged in detail for debugging.
+1. Select the test file (`HelloWorldDialog.cy.ts`).
+
+   Cypress will execute the test, displaying results in real time: green indicates success, and any errors are logged in detail for debugging.
