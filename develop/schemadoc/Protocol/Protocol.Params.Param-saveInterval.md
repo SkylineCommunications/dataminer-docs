@@ -23,7 +23,9 @@ duration
 
 Specifies that only one save operation must be executed per interval.
 
-For this attribute to have any effect, the parameter must be saved. For standalone parameters, this is configurable through the save attribute. For column parameters, this is configured by specifying the save option for this column on the table parameter.
+For this attribute to have any effect, the parameter must be saved. For standalone parameters, this is configurable through the save attribute.
+
+For column parameters, this is configured by specifying the save option for this column on the table parameter. Additionally, for column parameters, the saveInterval attribute will need to be configured in the table parameter.
 
 If you specify a saveInterval attribute, the database will only allow one save operation per interval. Intermediate value updates will not be saved.
 
@@ -37,8 +39,33 @@ For more information about this format, refer to [https://www.w3.org/TR/xmlschem
 
 ## Examples
 
+### Standalone parameter
+
 The following example parameter is configured to save its value every 20 seconds.
 
 ```xml
 <Param id="1" trending="true" save="true" saveInterval="PT20S ">
+```
+
+### Table parameter
+
+The following example table is configured to save the value of a cell every 5 minutes.
+
+```xml
+<Param id="100" saveInterval="PT5M">
+	<Name>myTable</Name>
+	<Description>My Table</Description>
+	<Type>array</Type>
+	<ArrayOptions index="0">
+		<ColumnOption idx="0" pid="101" type="retrieved" options="" />
+		<ColumnOption idx="1" pid="102" type="retrieved" options=";save" />
+	</ArrayOptions>
+	...
+</Param>
+<Param id="101" trending="false">
+	...
+</Param>
+<Param id="102" trending="false" saveInterval="PT5M">
+	...
+</Param>
 ```
