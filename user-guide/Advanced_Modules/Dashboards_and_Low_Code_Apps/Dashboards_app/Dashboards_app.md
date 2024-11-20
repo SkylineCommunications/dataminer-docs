@@ -8,7 +8,7 @@ With the Dashboards app, you can make, manage, and view dashboards that can disp
 
 ![Dashboards app](~/user-guide/images/Dashboards_app.png)<br>*Dashboards app in DataMiner 10.4.5*
 
-Many different [visualizations](xref:Available_visualizations) are available, which can make use of all sorts of [data feeds](xref:Using_dashboard_feeds), including [GQI-based query feeds](xref:Creating_GQI_query).
+Many different [visualizations](xref:Available_visualizations) are available, which can make use of all sorts of data, including [GQI queries](xref:Creating_GQI_query).
 
 > [!NOTE]
 >

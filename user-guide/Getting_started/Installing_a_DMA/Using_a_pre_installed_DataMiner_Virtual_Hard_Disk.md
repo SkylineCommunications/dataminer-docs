@@ -22,7 +22,9 @@ Once you have downloaded the [pre-installed virtual hard disk](https://community
 1. Optionally, [switch from subscription mode to a perpetual-license setup](#switching-from-subscription-mode-to-perpetual-license).
 
 > [!NOTE]
-> If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
+>
+> - If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
+> - The **VMDK** hard disk is compatible with desktop hypervisors such as VMWare Workstation. If you use the hard disk in a VMware vSphere ESXi environment, an error mentioning *Unsupported and/or invalid disk type* can be shown. For information on how to resolve this issue, refer to [A virtual machine fails to power on with the error: Unsupported and/or invalid disk type](https://knowledge.broadcom.com/external/article/310567/a-virtual-machine-fails-to-power-on-with.html).
 
 ## Creating the VM
 
@@ -106,7 +108,7 @@ Follow the below steps to configure your DataMiner Agent:
    - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
    - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
-   - *Admin Email*: This email is associated with the dataminer.services account that has the administrator role for the organization.
+   - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
    - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
 
 1. Verify the selected configuration and click *Configure*

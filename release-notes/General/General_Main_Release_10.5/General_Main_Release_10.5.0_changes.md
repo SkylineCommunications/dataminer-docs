@@ -800,7 +800,7 @@ A number of minor enhancements have been made to the following BPAs:
 
 - Will no longer be considered a standard BPA test.
 - Will no longer fail when the IP address is "localhost".
-- Error `! execution failed | This BPA does apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.
+- Error `! execution failed | This BPA does not apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.
 
 ##### Check Agent Presence Test In NATS
 
@@ -870,13 +870,13 @@ From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMine
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
 
-#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877]
+#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877] [ID 41285]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
 
-If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip certificate validation* option.
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip SSL/TLS certificate verification (insecure)* option.
 
 When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
 
@@ -886,16 +886,16 @@ When certificate validation is skipped, in case an HTTP connector polls an HTTPS
   - When the server certificate is revoked.
   - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
   - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
+  - When the server certificate is signed by a weak signature.
 
 - DataMiner will block communication in the following cases:
 
   - When the server is offering a non-server certificate.
-  - When the server certificate is signed by a weak signature.
 
 > [!NOTE]
 >
-> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `InsecureHttps` element to true in the `PortSettings` element of the *protocol.xml* file.
-> - If you want the SSL/TLS certification validation to be skipped when using multi-threaded HTTP communication, set `requestSettings[6]` to true when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want the SSL/TLS certification validation to be enabled when using multi-threaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. By default, this option is set to true, meaning that SSL/TLS certification validation will be skipped. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
 > - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
 
 #### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
@@ -934,7 +934,7 @@ Because of a number of enhancements, overall performance of GQI "top X" queries 
 
 Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
 
-From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo,` option is set to true in the ResourceManager configuration.
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo` option is set to true in the ResourceManager configuration.
 
 Also, the following scripts will now only be executed when the above-mentioned option is set to true:
 
@@ -946,7 +946,7 @@ Additionally, the following script will also no longer generate an information e
 - the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
 
 > [!IMPORTANT]
-> The `ShowScriptStartEventInfo,` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+> The `ShowScriptStartEventInfo` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
 
 #### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
 
@@ -989,6 +989,14 @@ A number of enhancements have been made to the Cassandra Cluster Migrator tool (
 - The initialization of a single agent has been disabled in favor of the global initialization, unless not all agents could be initialized.
 - Connection details will now only be requested once, unless not all agents could not be initialized.
 - The migration can now only be started when all agents have successfully been initialized.
+
+#### Service & Resource Management: Starting bookings with elements that are not active [ID 41129]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+It is now possible to start bookings with elements that are not active.
+
+To do so, in the Resource Manager configuration file, set the *AllowNotActiveElements* option to true.
 
 #### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
 
@@ -1169,7 +1177,7 @@ When a DELT element was masked or unmasked, when no hosting agent ID was passed 
 
 When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
 
-For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xef:How_to_aggregate_alarm_severities)
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xref:How_to_aggregate_alarm_severities)
 
 #### SLElement: Incorrect alarm linking [ID 41057]
 
@@ -1225,6 +1233,18 @@ On STaaS systems, in case of connection problems, a large number of the followin
 - *Unable to connect to the remote server.*
 
 From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
+
+#### Protocols: Problems when polling SNMP tables using GetNext [ID 41235]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of problems that occurred when polling SNMP tables using *GetNext* have been fixed:
+
+- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g. 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
+
+- Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
+
+- Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
 
 #### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
 

@@ -34,16 +34,15 @@ The following tools are the most useful:
 
 - [Skyline.DataMiner.CICD.Tools.CatalogUpload](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
 
-  This .NET tool allows you to upload application (.dmapp) [packages](xref:ApplicationPackages) directly onto Skyline's Azure cloud storage. This can be done without registration, so that you just use the returned GUID for further actions, or with registration, which will make it visible on your private catalog UI.
-
-  > [!NOTE]
-  >
-  > - Currently, the private catalog UI is not visible yet.
-  > - Currently, uploading protocol packages (.dmprotocol) is not supported yet.
+  This .NET tool allows you to upload application (.dmapp) [packages](xref:ApplicationPackages) directly to the DataMiner Catalog on dataminer.services. This can be done without registration, so that you just use the returned GUID for further actions, or with registration, which will make it visible as a private item in the DataMiner Catalog. You can also upload only the registration details, without needing a new application version.
 
 - [Skyline.DataMiner.CICD.Tools.DataMinerDeploy](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.DataMinerDeploy#readme-body-tab)
 
   This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner System. You can either do this by using the artifact ID that is returned when a catalog upload is performed, or with a .dmapp directly to a DataMiner Agent you have direct access to.
+
+- [Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab)
+
+  This tool is particularly useful when combined with the *CatalogUpload* tool mentioned above. Designed to run in a GitHub workflow, this tool checks the GitHub UI and repository information to auto-generate a *catalog.yml* file. This file contains the necessary details to register an item in the DataMiner Catalog.
 
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 

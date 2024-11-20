@@ -12,9 +12,9 @@ This component is used to guide the user through a workflow by splitting it up i
 
 To configure the component:
 
-1. Apply a DOM definition or DOM instance data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply DOM definition or DOM instance data. See [Adding data to a component](xref:Adding_data_to_component).
 
-   You can apply a DOM definition or DOM instance directly, or use e.g. a feed based on a table component, so that the stepper will display the information linked to the item selected in the table component.
+   You can apply a DOM definition or DOM instance directly, or use e.g. data based on a table component, so that the stepper will display the information linked to the item selected in the table component.
 
    - When a DOM definition is applied, this will be used to display states along the typical path of the definition, i.e. the "happy path". This path illustrates the states an instance would undergo following the standard workflow.
 

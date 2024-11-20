@@ -21,4 +21,10 @@ In the header of the card, two buttons are available:
 - *Ownership*: Allows you to take or release ownership of the alarm.
 
 Alarm cards can be accessed from the Alarm Console, but you can also navigate directly to an alarm card by specifying the following URL:
-<br>*http://*\<DMA IP>*/monitoring/alarm/*\<DMA ID>*/*\<alarm ID>
+
+- From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41059-->: `https://<DMA IP>/monitoring/alarm/<DMA ID>/<element ID>/<root alarm ID>/<alarm ID>`
+
+- Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12: `http(s)://<DMA IP>/monitoring/alarm/<DMA ID>/<root alarm ID>/<alarm ID>`
+
+> [!NOTE]
+> For both versions of the URL path, the alarm ID is optional and can be omitted.

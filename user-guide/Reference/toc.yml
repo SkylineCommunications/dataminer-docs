@@ -262,6 +262,8 @@ items:
                 topicUid: SLNetClientTest_viewing_connection_details
               - name: Inspecting the stack sizes in SLNet
                 topicUid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+              - name: Querying the assembly resolution hint paths
+                topicUid: SLNetClientTest_query_hint_paths
               - name: Requesting a list of active merge actions for a protocol
                 topicUid: SLNetClientTest_active_merge_actions_protocols
               - name: Requesting an estimate of the number of rows for a storage type in the database
@@ -391,6 +393,8 @@ items:
         topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Legacy Correlation
+        topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards
         topicUid: Verify_No_Legacy_Reports_Dashboards
       - name: Verify No Obsolete API Deployed

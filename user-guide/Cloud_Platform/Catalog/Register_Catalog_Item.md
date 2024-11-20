@@ -16,6 +16,28 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 > [!TIP]
 > For practical examples, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
 
+## Registering a Catalog item with workflows and tooling
+
+1. Create a *catalog.yml* or *manifest.yml* file as outlined under [Manifest file](#manifest-file) below.
+
+1. Generate an [organization key](xref:Managing_DCP_keys#organization-keys) with the *Register Catalog items* permission.
+
+1. Either use our pre-made workflows on GitHub or platform-independent tooling.
+
+   - If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+
+   - If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) *Catalog Uploader* tool: [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab).
+
+     To install and use the tool in any command line or bash:
+
+     ```bash
+     dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
+     dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.yml" --path-to-readme "README.md" --path-to-images "resources/images" --dm-catalog-token "abc123"
+     ```
+
+> [!IMPORTANT]
+> Unlike the API, the platform-independent tooling can operate without a predefined unique ID (GUID). If no ID is provided, it will create a new Catalog record and return the Catalog ID. For subsequent uploads, it is essential to use this returned Catalog ID to avoid creating duplicate records.
+
 ## Registering a Catalog item with the API
 
 The register API call allows you to create or update a Catalog item. To add a version after you have successfully registered an item, see [Registering a new version with the API](#registering-a-new-version-with-the-api).
@@ -185,3 +207,4 @@ versionDescription: <The description of the version you want to register>
 >
 > - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
 > - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->
+> - Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41225 -->
