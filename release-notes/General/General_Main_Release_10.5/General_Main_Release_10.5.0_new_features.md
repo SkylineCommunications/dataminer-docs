@@ -9,7 +9,10 @@ uid: General_Main_Release_10.5.0_new_features
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID 37891]](#dataminer-object-models-creating-updating-and-deleting-multiple-dom-instances-in-one-call-id-37891)
+- [Alarms - Behavioral anomaly detection: User feedback [ID 38707] [ID 38980] [ID 39944]](#alarms---behavioral-anomaly-detection-user-feedback-id-38707-id-38980-id-39944)
+- [Storage as a Service: Proxy support [ID 39221]](#storage-as-a-service-proxy-support-id-39221-id-39313)
+- [DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]](#dataminer-agent-will-no-longer-restart-when-an-slprotocol-process-crashes-id-40335)
 
 ## New features
 
@@ -179,6 +182,28 @@ The *Info* object has the following properties:
 > - The *PcapInfoRequestMessage* will normally be sent from DataMiner Cube to the DataMiner Agent to which it is connected when the user opens the *Failover Config* window. Only users who have been granted the *Modules > System configuration > Agents > Configure Failover* permission are allowed to send this message. When you do not have this permission, an error message will appear.
 > - See also [RN 40267](xref:Cube_Feature_Release_10.4.10#failover-config-window-will-now-show-information-regarding-the-pcap-libraries-that-are-installed-on-the-dmas-id-40267)
 
+#### DataMiner Agent will no longer restart when an SLProtocol process crashes [ID 40335]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an SLProtocol process disappeared, the DataMiner Agent would restart. From now on, when an SLProtocol process disappears, a new SLProtocol process will be started and all elements that were hosted by the process that disappeared will now be hosted by the newly created process. However, as all parameter data in the SLProtocol process that disappeared is lost, all affected elements will be restarted. Also, a notice alarm will be created with the following value:
+
+`Process disappearance of SLProtocol.exe with PID <processId>; <x> elements hosted by the disappeared process have been restarted.`
+
+> [!IMPORTANT]
+> When an SLProtocol process disappears, typically, a crashdump will also be created. It is highly recommended to ask [Skyline TechSupport](mailto:techsupport@skyline.be) to investigate that crashdump so that future SLProtocol disappearances and subsequent element restarts can be prevented.
+
+In the *SLElementInProtocol.txt* log file, the following fields have been added:
+
+- *NormalStart*/*SLProtocolCrashRestart* will indicate whether the element was started by a start action or due to an SLProtocol process disappearance.
+- The number of times the element was started by a normal start action since the DataMiner Agent was started.
+- The number of times the element was started due to an SLProtocol process disappearance.
+
+> [!NOTE]
+>
+> - The process ID of the new SLProtocol process can be found in the *elementName.txt* log file, while the process ID of the old SLProtocol process can be found in the *elementName_BAK.txt* log file.
+> - There will be a delay of one minute between the disappearance of an SLProtocol process and the creation of a new SLProtocol process.
+
 #### Automation: Basic script execution metrics [ID 40687]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -198,6 +223,14 @@ To view these metrics, open the *SLNetClientTest* tool, go to *Advanced > Automa
 |-----|-------------|
 | Scripts Statistics    | Information about each script execution.     |
 | Automation Statistics | General information about script executions. |
+
+#### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 41017]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The proactive cap detection feature is now able to generate an alarm when it expects that the value of the parameter will soon cross a particular alarm threshold or be outside a set range.
+
+For more information on how to use this new feature in DataMiner Cube, see [Alarm templates - 'Anomaly alarm settings' window: New option to generate an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 40837] [ID 41109]](xref:Cube_Feature_Release_10.4.12#alarm-templates---anomaly-alarm-settings-window-new-option-to-generate-an-alarm-when-a-parameter-is-expected-to-cross-a-particular-alarm-threshold-or-be-outside-a-set-range-id-40837-id-41109)
 
 ### Protocols
 
@@ -327,6 +360,40 @@ A connector will only be promoted to "production version" if its first version i
 
 > [!NOTE]
 > When you install the first version of a connector by uploading its *protocol.xml* file from the *Protocols & Templates* app in DataMiner Cube (instead of its *.dmprotocol* file), the connector will not be automatically promoted to "production version".
+
+#### SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies [ID 41068]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to improve troubleshooting assembly resolution issues, the SLNetClientTest tool now allows you to query the hint paths used to look up QAction dependencies.
+
+Also, SLManagedScripting will now add an entry in the *SLManagedScripting.txt* log file each time it has loaded or failed to load an assembly. This log entry will include both the requested version and the actual version of the assembly.
+
+To see the current hint paths per SLScripting process, do the following:
+
+1. Open the SLNetClientTest tool.
+1. Go to *Diagnostics > DMA > SLScripting AssemblyResolve HintPaths*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+### Automation
+
+#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+
+Example:
+
+```csharp
+UIBuilder uib = new UIBuilder();
+uib.SkipAbortConfirmation = true;
+```
+
+> [!TIP]
+> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
 ### DataMiner modules
 

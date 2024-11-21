@@ -27,3 +27,6 @@ When you open up the Catalog, a search box is displayed.
 1. If you see the item you are looking for, click it to open a page where you can see information about that item and its versions.
 
    From here, you can also [deploy the item to your DataMiner System](xref:Deploying_a_catalog_item).
+
+   > [!TIP]
+   > See also: [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items)

@@ -19,7 +19,7 @@ Rights can be granted according to three concepts:
     Access levels for regular users range from 1 (the level with most access) to 100 (the level with least access). The Administrator user has access level 0.
 
 > [!NOTE]
-> The user permissions and view access of a user are always inherited from the group the user is a member of. You can only change these by changing the group membership or by editing the group. See [Managing user groups](xref:Managing_user_groups).
+> The user permissions and view access of a user are always inherited from the group the user is a member of. You can only change these by changing the group membership or by editing the group. See [Configuring a user group](xref:Configuring_a_user_group).
 
 > [!TIP]
 > See also: [DataMiner user permissions](xref:DataMiner_user_permissions)

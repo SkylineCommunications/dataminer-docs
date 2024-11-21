@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.11
 ---
 
-# General Feature Release 10.4.11 – Preview
+# General Feature Release 10.4.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -15,10 +15,6 @@ uid: General_Feature_Release_10.4.11
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.11](xref:Cube_Feature_Release_10.4.11).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.11](xref:Web_apps_Feature_Release_10.4.11).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -73,7 +69,7 @@ In the *Get alarms* data source, the following columns have been updated:
 | Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
 
 > [!NOTE]
-> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+> "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
 ### Enhancements
 
@@ -90,6 +86,11 @@ From now on, when the virtual IP address check has concluded that the IP address
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
+
+Limitations:
+
+- In visual overviews shown on mobile devices, unlike in DataMiner Cube, grouped shapes will not ungroup when zooming.
+- Scrolling on *Children* shapes that extend their boundaries will cause the visual overview to zoom instead of scroll. If you want the visual overview to scroll, you will have to use the scrollbar.
 
 #### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
 
@@ -174,6 +175,19 @@ The following calls have been improved:
 When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+
+#### Service & Resource Management: Switching master agents [ID 40712]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
+
+When the DataMiner Agent that is currently the master agent is marked "not eligible to be promoted to master", the other DataMiner Agents in the DMS will elect a new master from the pool of DataMiner Agents that have been marked "eligible to be promoted to master".
+
+The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
+
+> [!NOTE]
+> If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
 
 #### SLAnalytics will now wait longer for a message from SLNet announcing that it has finished loading the configuration [ID 40729]
 
@@ -303,3 +317,22 @@ When, in a DataMiner System, a DataMiner Agent using STaaS/DaaS was hosting more
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
 In element log file, up to now, the word "asynchronous" would be spelled incorrectly as "ascynchronous" in entries notifying that an asynchronous QAction had failed. In those log entries, this word will now be spelled correctly.
+
+#### Problem with SLProtocol when processing actions that occurred when an element was stopped or deleted [ID 40859]
+
+<!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
+
+When an unhandled exception was thrown by a QAction after an element had been stopped or deleted or when a *force group* action was executed while an element was being stopped or deleted, in some cases, SLProtocol could stop working.
+
+#### GetAlarmDetailsMessage: Version compatibility problem [ID 40895]
+
+<!-- MR 10.5.0 - FR 10.4.11 [CU0] -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 40089 -->
+
+Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longer be sent from clients running feature version 10.4.10 to DataMiner Agents running feature version 10.4.1 or older.
+
+#### DataMiner as a Service: Incorrect 'This DataMiner Agent is not licensed' message [ID 41130]
+
+<!-- MR 10.4.0 [CU9] - FR 10.4.11 [CU0] -->
+
+On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g. DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.

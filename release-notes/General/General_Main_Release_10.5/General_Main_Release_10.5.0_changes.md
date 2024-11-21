@@ -50,7 +50,15 @@ In the *Get alarms* data source, the following columns have been updated:
 | Root Alarm ID | HostingDMAID/RootAlarmID | DMAID/EID/RootAlarmID         |
 
 > [!NOTE]
-> DMAID is the DataMiner ID of the DataMiner Agent on which the alarm was generated.
+> "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
+
+#### Automation: SubScriptOptions.SkipStartedInfoEvent will now by default be set to true [ID 40867]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+
+Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
 ### Enhancements
 
@@ -168,21 +176,22 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id-2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID 38499] [ID 38596] [ID 38743] [ID 38900] [ID 39278] [ID 39802] [ID 39803]
+#### DxMs upgraded [ID 38499] [ID 38596] [ID 38743] [ID 38900] [ID 39278] [ID 39802] [ID 39803] [ID 41297]
 
 <!-- RNs 38499/38596: MR 10.5.0 - FR 10.4.3 -->
 <!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
 <!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
 <!-- RN 39802: MR 10.5.0 - FR 10.4.8 -->
 <!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
+<!-- RN 41297: MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.7.1
-- DataMiner CoreGateway: version 2.14.7
-- DataMiner FieldControl: version 2.10.6
-- DataMiner Orchestrator: version 1.6.0
-- DataMiner SupportAssistant: version 1.6.9
+- DataMiner ArtifactDeployer: version 1.8.1
+- DataMiner CoreGateway: version 2.14.11
+- DataMiner FieldControl: version 2.11.1
+- DataMiner Orchestrator: version 1.7.1
+- DataMiner SupportAssistant: version 1.7.1
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
@@ -457,14 +466,13 @@ In alarm templates, the rounding of anomaly threshold values has been enhanced. 
 
 Also, the mechanism used to associate severities with anomaly thresholds has been optimized.
 
-#### SLLogCollector packages will now include nslookup output for hostnames [ID 39526]
+#### DataMiner Object Models: Length of string fields is now limited in order to prevent database errors [ID 39496]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.5.0 - FR 10.4.12 -->
 
-From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
+Values of DOM fields of type `String` are now limited to 32,766 UTF8 bytes.
 
-- *MaintenanceSettings.xml* (HTTPS) and/or
-- *DMS.xml* (Failover).
+When a DOM instance contains string fields of which the value exceeds this limit, a `DomInstanceError` will be returned with error reason *ValueTooLarge*. The `AssociatedFields` collection will contain the SectionDefinition, Section and FieldDescriptor IDs referring to the incorrect FieldValue as well as the new `ActualSize` property, which will contain the actual UTF8 size of the string that exceeds the limit.  
 
 #### SLLogCollector packages now include GQI and Web API logging [ID 39557]
 
@@ -753,6 +761,14 @@ Up to now, this feature only proposed parameters from the same DataMiner element
 
 Up to now, SLNet would cache all information about all entries in a correlation alarm (group) tree. In order to reduce the amount of data in this cache, from now on, only the most recent information about these entries will be kept in memory.
 
+#### VerifyDotNetVersion prerequisite check now returns the missing .NET version and a link to the download page [ID 40677]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyDotNetVersion* prerequisite check will verify whether Microsoft ASP.NET 8.0 is installed. When this is not the case, the installation or upgrade will be aborted and a pop-up window will appear, showing the following message:
+
+*Please install the latest \"ASP.NET Core Runtime hosting bundle\" for .NET 8.0 from [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download)*
+
 #### Failover: Both agents will now keep a copy of the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file [ID 40702]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -760,6 +776,81 @@ Up to now, SLNet would cache all information about all entries in a correlation 
 When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+
+#### Service & Resource Management: Switching master agents [ID 40712]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
+
+When the DataMiner Agent that is currently the master agent is marked "not eligible to be promoted to master", the other DataMiner Agents in the DMS will elect a new master from the pool of DataMiner Agents that have been marked "eligible to be promoted to master".
+
+The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
+
+> [!NOTE]
+> If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
+
+#### Minor enhancements made to BPAs [ID 40751]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of minor enhancements have been made to the following BPAs:
+
+##### Cassandra DB Size
+
+- Will no longer be considered a standard BPA test.
+- Will no longer fail when the IP address is "localhost".
+- Error `! execution failed | This BPA does not apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.
+
+##### Check Agent Presence Test In NATS
+
+- Renamed to *Nats connections between the DataMiner Agents*.
+
+##### Check Antivirus DLLs
+
+- Renamed to *Antivirus on the DataMiner Agents*.
+
+##### Check Cluster SLNet Connections
+
+- Renamed to *SLNet connections between the DataMiner Agents*.
+- Message `No potential issues detected` renamed to `No issues detected`.
+
+##### HTTPS Configuration
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Minimum Requirements Check
+
+- Renamed to *DataMiner Agent Minimum Requirements*.
+- When Cassandra is not installed, this BPA will no longer report Cassandra is a requirement.
+- Memory calculation has been enhanced.
+
+##### Password Strength
+
+- Will no longer be considered a standard BPA test.
+- Will by default be executed as part of the *Security Advisory* BPA.
+
+##### Report active RTE
+
+- Renamed to *Active Runtime errors*.
+
+##### Security Advisory BPA
+
+- Renamed to *Security Advisory*.
+
+##### View Recursion BPA
+
+- Renamed to *View recursive loops*.
+- Will no longer be considered a standard BPA test.
+
+#### PortLog.txt file now supports IPv6 addresses [ID 40753]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
+
+In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well as IPv4 addresses.
 
 #### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
 
@@ -772,6 +863,146 @@ Because of a number of enhancements, overall performance has increased when load
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
+
+#### STaaS: Enhanced performance when writing data to the database [ID 40870]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
+
+#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877] [ID 41285]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
+
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip SSL/TLS certificate verification (insecure)* option.
+
+When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
+
+- DataMiner will ignore invalid certificates in the following cases:
+
+  - When the server certificate is expired.
+  - When the server certificate is revoked.
+  - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
+  - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
+  - When the server certificate is signed by a weak signature.
+
+- DataMiner will block communication in the following cases:
+
+  - When the server is offering a non-server certificate.
+
+> [!NOTE]
+>
+> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want the SSL/TLS certification validation to be enabled when using multi-threaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. By default, this option is set to true, meaning that SSL/TLS certification validation will be skipped. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
+
+#### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, after selecting a section of a trend graph showing trend information for a particular parameter, you clicked the light bulb icon, up to now, a menu would open, showing the other parameters in the same service that were related to the parameter shown in the graph.
+
+From now on, the menu will no longer only show all parameters in the same service that were related in the selected time range. It will now also show the top 10 parameters system-wide that were related in the selected time range.
+
+#### Certain information events will no longer be generated when an element is replicated [ID 40926]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When an element is replicated, the following information events will no longer be generated:
+
+- [Replicated Element]
+- [Remote Element Name]
+- [Remote DMA IP]
+
+#### Failover: Enhanced updating of values stored in the C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json file based on current system status [ID 40930]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+A number of enhancements have been made with regard to updating values stored in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file based on current system status.
+
+#### GQI: Enhanced performance of 'top X' queries using the 'Get alarms' data source [ID 40937]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Because of a number of enhancements, overall performance of GQI "top X" queries using the *Get alarms* data source has increased.
+
+#### Service & Resource Management: Controlling the generation of information events when starting booking event scripts [ID 40972]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when a booking event script was executed, an information event would automatically be generated to indicate that a script had been executed. This information event had the description "Script started" and its value contained the name of the script.
+
+From now on, these information events will no longer be generated unless the `ShowScriptStartEventInfo` option is set to true in the ResourceManager configuration.
+
+Also, the following scripts will now only be executed when the above-mentioned option is set to true:
+
+- the *StateChangeScript*, defined on an `SRMServiceInfo` object, which is executed when the state of the `SRMServiceInfo` object changes.
+- the *SRM_QuarantineHandling* script, which is executed when there is a conflict with a booking causing that booking to be put in quarantine.
+
+Additionally, the following script will also no longer generate an information event when it is executed:
+
+- the *UpdateBookingConfigByReferenceScript* script, defined in the `ProfileHelper` configuration, which is executed when the `UpdateAndApply` method of the `ProfileInstances` class is run successfully.
+
+> [!IMPORTANT]
+> The `ShowScriptStartEventInfo` option is not synchronized among the DataMiner Agents in a DMS. It has to be set on every individual DataMiner Agent.
+
+#### Web apps - Visual Overview: Default page will now be the first page that has not been set to 'hidden' [ID 41013]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
+
+#### SLManagedAutomation and SLManagedScripting will now use at least TLS 1.2 encryption when communicating with BrokerGateway [ID 41048]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When initialized, SLManagedAutomation and SLManagedScripting will now set the allowed security protocol to "Tls1 | Tls11 | Tls12".
+
+This will ensure that SLManagedAutomation and SLManagedScripting are capable of communicating with BrokerGateway and other HTTP APIs that reject anything below TLS 1.2.
+
+#### Notification message templates: New [treeid] placeholder [ID 41052]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When defining a notification message template in the *NotifyTemplates.xml* file, you can use the [treeid] placeholder.
+
+This placeholder will be replaced by the tree ID of the alarm.
+
+For more information, see [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
+
+#### Default number of simultaneously running SLProtocol processes has been increased from 5 to 10 [ID 41077]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+The number of simultaneously running SLProtocol processes can be set in the `<ProcessOptions>` tag of the *DataMiner.xml* file.
+
+Up to now, the number of simultaneously running processes was by default set to 5. From now on, this number will by default be set to 10.
+
+#### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of enhancements have been made to the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*):
+
+- The initialization of a single agent has been disabled in favor of the global initialization, unless not all agents could be initialized.
+- Connection details will now only be requested once, unless not all agents could not be initialized.
+- The migration can now only be started when all agents have successfully been initialized.
+
+#### Service & Resource Management: Starting bookings with elements that are not active [ID 41129]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+It is now possible to start bookings with elements that are not active.
+
+To do so, in the Resource Manager configuration file, set the *AllowNotActiveElements* option to true.
+
+#### Service & Resource Management: More detailed logging when an error occurs while a booking is being created [ID 41168]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
 ### Fixes
 
@@ -920,6 +1151,12 @@ When SLDataGateway detected a database problem, up to now, it would incorrectly 
 
 Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
 
+#### SLNet: Problem when internal and external authentication were used within the same DMS [ID 40635]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+When, in a DataMiner System, some agents used external authentication while other agents used internal authentication, in some rare cases, the SLNet error "SSPI.DLL is no longer supported" could be thrown on certain agents.
+
 #### DataMiner Cube - Scheduler app: No error would be shown when trying to send an email with a non-existing dashboard in attachment [ID 40705]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -933,3 +1170,84 @@ From now on, when an action tries to send an email with a non-existing dashboard
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 When a DELT element was masked or unmasked, when no hosting agent ID was passed along in the SetAlarmStateMessage, the message would be sent to the DataMiner Agent referred to by the DataMiner ID of the element. In some rare cases, this DataMiner ID could refer to a non-existing DataMiner Agent, causing an exception to be thrown.
+
+#### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+When an element that was used in an alarm level link configuration was restarted, in some cases, both SLElement and SLProtocol could leak memory, as would SLDataMiner when the alarm level links were pushed to locked elements.
+
+For more information on the `<AlarmLevelLinks>` element, see [How to aggregate alarm severities](xref:How_to_aggregate_alarm_severities)
+
+#### SLElement: Incorrect alarm linking [ID 41057]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+In some cases, new alarm events could incorrectly get linked to previously closed external events or information events on the same element.
+
+#### SLElement would leak memory when filtering a recursive table or a directview/view table that had to be sorted [ID 41058]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+When SLElement had to process a table filter request, it would leak memory in the following cases:
+
+- When the table had a foreign key to itself.
+- When a directview or view table with a number of non-initialized columns had to be sorted.
+
+#### SLElement would leak memory when SLNet needed to be notified of baseline changes [ID 41088]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+When a baseline changed and SLNet needed to be notified of the new values, SLElement would leak memory.
+
+#### Failover: Problem when an element.xml file was updated while StorageModule was synchronizing its cache [ID 41133]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in a Failover setup, SLDMS was synchronizing an updated *element.xml* file while the StorageModule DcM was synchronizing its cache to an XML file, in some rare cases, an exception could be thrown in the StorageModule DcM, causing the *element.xml* update to fail.
+
+#### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41143]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+Since DataMiner 10.4.0 [CU4]/10.4.7, in some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When such a user tried to log in, the following entry would be added to the SLNet.txt log file:
+
+`Authentication Step Failure: Not a DataMiner user: CONTOSA\user`
+
+This issue would only occur on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configuration,DC=contosa,DC=com` does not have a `nETBIOSName` attribute, for example when accessing the GlobalCatalog of a forest.
+
+After having upgraded to a DataMiner version that contains this fix, you can do the following:
+
+- Wait up to an hour for the next LDAP synchronization to occur, or
+- Manually trigger the "Skyline DataMiner LDAP Resync" task in Windows Task Scheduler.
+
+All users should then be able to log in again.
+
+#### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+On STaaS systems, in case of connection problems, a large number of the following errors would be added to the *SLErrors.txt* log file:
+
+- *The remote name could not be resolved.*
+- *Unable to connect to the remote server.*
+
+From now on, in case of connection problems, the generation of *SLErrors.txt* log file entries will be throttled in order to reduce the number of duplicate entries.
+
+#### Protocols: Problems when polling SNMP tables using GetNext [ID 41235]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+A number of problems that occurred when polling SNMP tables using *GetNext* have been fixed:
+
+- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g. 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
+
+- Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
+
+- Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
+
+#### STaaS: Incorrect data would be returned when data was read immediately after a write operation had been executed [ID 41269]
+
+<!-- MR 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.

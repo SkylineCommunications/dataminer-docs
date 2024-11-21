@@ -12,6 +12,9 @@ While the tutorial uses the example of a connector, registering a different type
 
 Expected duration: 10 minutes
 
+> [!NOTE]
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial. Alternatively, if you would prefer not to use Postman and HTTPS directly, you can try our [platform-independent tooling](xref:Register_Catalog_Item#registering-a-catalog-item-with-workflows-and-tooling).
+
 ## Prerequisites
 
 - An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create organization keys.
@@ -28,7 +31,7 @@ Expected duration: 10 minutes
 
 ## Step 1: Register the Catalog item URL
 
-Add a new request using an HTTP method of type **PUT** and the following URL: `https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
+Add a new request using an HTTP method of type **PUT** and the following URL: `https://api.dataminer.services/api/key-catalog/v2-0/catalogs/register`
 
 ![Register item HTTP URL](~/user-guide/images/tutorial_catalog_registration_item_url.png)
 
@@ -70,6 +73,9 @@ The Catalog item register API call is authenticated using an [organization key](
 
      This Catalog item has been made available as part of the [Catalog registration tutorial](https://docs.dataminer.services/tutorials/Tutorials.html)
      ```
+
+     > [!TIP]
+     > See also: [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
    - Optionally, if you want to use images in the readme, an images folder containing those images.
 

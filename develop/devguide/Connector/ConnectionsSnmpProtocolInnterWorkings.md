@@ -8,7 +8,7 @@ uid: ConnectionsSnmpProtocolInnterWorkings
 
 The illustration below shows what happens when an SNMP set request is issued by a protocol that is successfully processed by the SNMP agent of the device (i.e. the ErrorStatus field contains the value 0, indicating "noError").
 
-![alt text](../../images/DMA_-_SNMP_Device_parameter_SetRequest.svg "DataMiner Agent inner workings – altering a variable via SNMP")
+![alt text](~/develop/images/DMA_-_SNMP_Device_parameter_SetRequest.svg "DataMiner Agent inner workings – altering a variable via SNMP")
 
 When a protocol issues an SNMP set request, this request is sent to the SLSNMPManager process. This is done by a blocking call, which adds the SNMP request to a queue. The call blocks until the SNMP request has been added to the queue. This queue is a priority queue where SetRequests always receive a higher priority than GetRequests.
 
@@ -31,7 +31,7 @@ When a table enters SLProtocol, this is what happens:
 
 See the following diagram:
 
-![alt text](../../images/ProcessingTables.svg "How tables are processed internally")
+![alt text](~/develop/images/ProcessingTables.svg "How tables are processed internally")
 
 ## About SNMP tables
 

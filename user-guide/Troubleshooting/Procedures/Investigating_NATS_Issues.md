@@ -1,5 +1,6 @@
 ---
 uid: Investigating_NATS_Issues
+keywords: VerifyNatsIsRunning
 description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATs are running, check the configs, …
 ---
 

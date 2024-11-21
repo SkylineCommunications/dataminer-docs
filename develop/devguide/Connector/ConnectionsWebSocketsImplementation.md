@@ -4,7 +4,9 @@ uid: ConnectionsWebSocketsImplementation
 
 # Implementing a WebSocket
 
-DataMiner supports WebSockets since version 8.5.7 (RN 9962). To create a WebSocket, define a new WebSocket connection in the protocol. The Connection tag needs to be included in the Protocol.Connections tag.
+<!-- RN 9962 -->
+
+To create a WebSocket, define a new WebSocket connection in the protocol. The Connection tag needs to be included in the Protocol.Connections tag.
 
 ```xml
 <Connection id="1" name="WebSocket Connection Panel">
@@ -67,10 +69,10 @@ If the URL used to set up the connection comes from a parameter value, e.g. from
 For example, suppose you need to connect to ws://10.4.2.8:4601/x-nmos/events, then there are two possibilities:
 
 - If the IP address/host and port are known by the operator and the last part of the URL is fixed:
-  - Set “ws://10.4.2.8” as the IP address/host of the element in DataMiner Cube.
-  - Set “4601” as the IP port of the element in DataMiner Cube.
+  - Set "ws://10.4.2.8" as the IP address/host of the element in DataMiner Cube.
+  - Set "4601" as the IP port of the element in DataMiner Cube.
   - Set `<Request verb="GET" url="10">`.
-  - Set parameter 10 to the value “/x-nmos/events”.
+  - Set parameter 10 to the value "/x-nmos/events".
 - If the URL first needs to be polled, use a parameter with `<Type options="dynamic ip">read</Type>` and set as value the complete URL: ws://10.4.2.8:4601/x-nmos/events
 
 ## Behavior
@@ -102,9 +104,9 @@ These are possible reasons why the connection might be terminated:
 
 By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame with Opcode 0x2, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
 
-If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). 
+If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)).
 
-In case the server supports text frames, it should now respond to this command. Note that the WebSocketMessageType tag is only supported from DataMiner 9.5.1 (RN 14177) onwards.
+In case the server supports text frames, it should now respond to this command.<!-- WebSocketMessageType: RN 14177 -->
 
 ## Unicode protocols
 

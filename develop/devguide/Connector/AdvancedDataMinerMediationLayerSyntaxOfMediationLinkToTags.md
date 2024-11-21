@@ -28,9 +28,9 @@ In a base protocol, you can look up a parameter in a device protocol by specifyi
   <LinkTo pid="71000" />
   ```
 
-In a description tag, you can use simple wildcards (* and ?). You can also specify multiple descriptions separated by colons (':'). In case of a read parameter, only read parameters will be checked. In case of a write parameter, only write parameters will be checked.
+In a description tag, you can use simple wildcards (`*` and `?`). You can also specify multiple descriptions separated by colons (`:`). In case of a read parameter, only read parameters will be checked. In case of a write parameter, only write parameters will be checked.
 
-In an ops attribute, you can specify one or more conversions separated by semicolons (";").
+In an ops attribute, you can specify one or more conversions separated by semicolons (`;`).
 
 Supported operations:
 

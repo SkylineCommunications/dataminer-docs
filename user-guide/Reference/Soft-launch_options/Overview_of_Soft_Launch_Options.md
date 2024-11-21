@@ -14,7 +14,7 @@ The table also details the minimum DataMiner version to start using each option 
 Allows you to provide positive or negative feedback on anomaly suggestion events and alarms. This feedback is stored in the *ai_anomalyfeedback* table in the indexing database and is used to enhance anomaly event generation.
 
 - **Minimum version**: 10.4.4<!--RN 38980-->
-- **Release version**: To be determined
+- **Release version**: 10.4.11<!--RN 39944+39945-->
 
 ### Applications
 
@@ -190,7 +190,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.12
+- **Estimated release version**: 10.5.2
 
 ### ReportsAndDashboardsPTP
 

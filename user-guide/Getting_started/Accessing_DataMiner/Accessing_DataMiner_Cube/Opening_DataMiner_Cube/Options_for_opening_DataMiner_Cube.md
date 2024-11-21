@@ -4,17 +4,14 @@ uid: Options_for_opening_DataMiner_Cube
 
 # Arguments for DataMiner Cube
 
-It is possible to [connect to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments). Below you can find an overview of the different arguments, as well as some examples of how you can use these.
+It is possible to [connect to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments). Below you can find an [overview of the different arguments](#overview-of-the-arguments), as well as some [examples](#examples) of how you can use these.
 
 To combine different options, use a **space as separator**.
 
 > [!NOTE]
 >
 > - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&" instead of a space. Note that the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
-> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use **cube:// protocol** to connect to a specific host. For example:
->
->   - cube://mydma?element=MyElement
->   - cube://10.11.12.13?view=12
+> - If the Cube desktop app is installed, you can also [use a cube:// URL to connect to a specific host](#using-a-cube-url-to-connect-to-a-specific-host).
 
 ## Examples
 
@@ -401,3 +398,26 @@ workspace=Classic
 
 > [!NOTE]
 > If you want an empty workspace to be opened, use the argument *workspace=Clean*.
+
+## Using a cube:// URL to connect to a specific host
+
+If the Cube desktop app is installed, you can also use **cube:// protocol** to connect to a specific host. For example:
+
+- cube://mydma?element=MyElement
+
+- cube://10.11.12.13?view=12
+
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40795-->, you can add or update the following arguments in a *cube://* URL of a Cube instance that is already running:
+
+- `alarm=`
+
+- `app=`
+
+- `element=`
+
+- `service=`
+
+- `view=`
+
+> [!NOTE]
+> If you want to open a new Cube instance instead of updating the arguments of an open Cube instance, add the following argument to the URL: `forcenewsession=true`.
