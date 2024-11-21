@@ -169,6 +169,12 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 
 When, in an alarm template, multiple conditions had been defined for a standalone parameter, in some cases, those conditions would incorrectly not be taken into account when the alarm template was reapplied either manually in DataMiner Cube or automatically due to baseline changes.
 
+#### GetInfoMessage(Type.DataMinerInfo) request sent to retrieve the connection state of a disconnected agent would incorrectly return 'Normal' [ID 41338]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When a particular agent had disconnected from the rest of the agents in the DMS, a `GetInfoMessage(Type.DataMinerInfo)` request sent to another agent to retrieve the connection state of the disconnected agent would incorrectly return "Normal".
+
 #### Files modified during an initial full synchronization could incorrectly be rechecked multiple times [ID 41368]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
