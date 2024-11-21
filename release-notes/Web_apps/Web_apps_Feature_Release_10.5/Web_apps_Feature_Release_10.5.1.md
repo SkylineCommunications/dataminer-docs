@@ -38,6 +38,14 @@ It is now possible to configure the following actions:
 | Add row     | Adds a row to a variable of type *Table*. |
 | Clear table | Clears all rows defined in a variable of type *Table*. |
 
+#### Dashboards/Low-Code Apps - Numeric input/Search input/Text input components : Default value [ID 41401]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+The *Numeric input*, *Search input* and *Text input* components now allow you to specify a default value.
+
+To do so, in edit mode, select the component, go to *Settings > General > Default value*, and enter a value.
+
 ## Changes
 
 ### Enhancements
