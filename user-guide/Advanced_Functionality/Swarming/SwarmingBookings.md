@@ -4,16 +4,16 @@ uid: SwarmingBookings
 
 # Swarming bookings
 
-Since 10.4.4, it is possible to swarm bookings. To do so, you need the *Swarming* soft-launch option. 
-From 10.5.1 onwards, the feature is placed behind a different soft-launch option, namely *BookingSwarming*. This means that you can swarm bookings without enabling the swarming of other DataMiner objects. 
+From DataMiner 10.4.4/10.5.0 onwards<!-- RN 38181 -->, it is possible to swarm bookings if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled. However, from DataMiner 10.5.1/10.6.0 onwards<!-- RN 41293 -->, a different soft-launch option needs to be enabled for this, namely *BookingSwarming*. By enabling only this last option and not the *Swarming* option, you can swarm bookings without enabling the swarming of other DataMiner objects.
 
-When an agent hosts a booking, it will register the booking and execute the start, end and event actions. If you want this to happen on a different agent than the currently hosting agent, you can swarm the booking to a different agent in the cluster. While swarming, an attempt is made to unregister the booking from the agent where it is currently hosted and waits until all ongoing actions have been completed. Only when this is done, we will try to register the booking on the new hosting agent. Also note that, when the booking is swarmed to the new agent, event scripts of that booking will be executed on that new agent.
+When an Agent hosts a booking, it will register the booking and execute the start, end, and event actions. If you want this to happen on a different Agent than the current hosting Agent, you can swarm the booking to a different Agent in the cluster. While swarming, DataMiner will try to unregister the booking from the Agent where it is currently hosted and wait until all ongoing actions have been completed. When this is done, DataMiner will try to register the booking on the new hosting Agent. When the booking is swarmed to the new Agent, event scripts of that booking will be executed on the new Agent.
 
-> [!TIP]
-> If you want to know where the booking is currently hosted, you can check the *HostingAgentID* property on the booking.
+> [!NOTE]
+> To find out where a booking is currently hosted, you can check the *HostingAgentID* property of the booking.
 
-Swarming bookings can be done by sending a *SwarmingRequestMessage*, to which you add the new hosting agent ID and booking ID. 
-This can be done as follows:
+## Triggering swarming for a booking
+
+To trigger the swarming of a booking, send a *SwarmingRequestMessage* with the new hosting Agent ID and the booking ID. This can be done as follows:
 
 ```csharp
 using System;
@@ -55,10 +55,14 @@ public class Script
 
 > [!NOTE]
 >
-> - In order to swarm a booking, the new hosting agent must be up and running. In case the current hosting agent is unreachable, swarming will still take place but an error will be in the *SLResourceManager* log file. 
-> -  If you swarm a booking to a new agent, the linked resources and/or services will not be swarmed to that new agent. 
+> - To swarm a booking, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLResourceManager* log file.
+> - If you swarm a booking to a new Agent, the linked resources and/or services will **not** be swarmed to that new Agent.
 
-Bookings can also be swarmed async and in bulk. When doing this, progress events will be sent out to the client every time the swarming of a booking is completed. This can be done as follows: 
+## Swarming bookings asynchronously and in bulk
+
+Bookings can also be swarmed asynchronously and in bulk. When this happens, progress events will be sent out to the client every time the swarming of a booking is completed.
+
+You can trigger this as follows:
 
 ```csharp
 using System;
@@ -134,5 +138,4 @@ public class Script
 ```
 
 > [!NOTE]
->
-> Currently, progress events don't work when sent via the impersonated connection in Automation Scripts (engine.GetUserConnection().Async).
+> Currently, progress events do not work when sent via the impersonated connection in Automation scripts (engine.GetUserConnection().Async).
