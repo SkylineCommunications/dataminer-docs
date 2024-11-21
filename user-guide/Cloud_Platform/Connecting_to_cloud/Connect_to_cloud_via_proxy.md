@@ -12,7 +12,7 @@ To configure this:
 
 1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).
 
-1. In the folder `C:\ProgramData\Skyline Communications\DxMs Shared\` on the DMA, configure the file *appsettings.proxy.json* as follows:
+1. In the folder `C:\ProgramData\Skyline Communications\DxMs Shared\` on the DMA, configure the *ProxyOptions* in the file *appsettings.proxy.json* as follows:
 
    ```json
    {
@@ -23,7 +23,8 @@ To configure this:
    }
    ```
 
-   - **Address**: The address of the proxy server. Example: `127.0.0.1` or `localhost`.
+   - **Enabled**: Set this to `true`.
+   - **Address**: Specify the address of the proxy server. Example: `127.0.0.1` or `localhost`.
 
 1. Restart the CloudGateway service for the changes to take effect.
 
