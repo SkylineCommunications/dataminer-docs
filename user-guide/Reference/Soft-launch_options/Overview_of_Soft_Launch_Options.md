@@ -152,7 +152,7 @@ Enables the alarm list component in the Dashboards app.
 
 ### ReportsAndDashboardsAutomationScript
 
-Enables the Automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters.
+Enables the Automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters. If the *ReportsAndDashboardsButton* option is also enabled, Automation script settings are enabled for the button component in the *Settings* pane, which allows the component to be used to execute scripts.
 
 - **Minimum version**: 9.6.8
 - **Estimated release version**: To be determined
