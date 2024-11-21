@@ -168,3 +168,20 @@ When, while editing a dashboard, you clicked a component's *Data*, *Filter* or *
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When you generated a PDF report of a dashboard containing a *Column & bar chart* component, up to now, the larger the paper size of the PDF, the fewer axis labels would incorrectly be shown on the chart.
+
+#### Web API - GQI: Custom display values specified for cells containing Infinity or NaN values would incorrectly be overwritten [ID 41456]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in an ad hoc data source, a custom display value was specified for a cell containing a raw value equal to PositiveInfinity, NegativeInfinity or NaN, that custom display value would incorrectly be overwritten by "+Infinity", "-Infinity" or "NaN" respectively. As a result, the custom display value would never be shown in the client application.
+
+From now on, when you specify a custom display value for a cell containing a raw value equal to PositiveInfinity, NegativeInfinity or NaN, that custom display value will no longer be overwritten. Also, when cells containing a raw value equal to PositiveInfinity, NegativeInfinity or NaN do not have a custom display value specified, then the following display values will be shown:
+
+| Raw value | Display value |
+|---|---|
+| Double.PositiveInfinity | Infinity              |
+| Double.NegativeInfinity | Infinity              |
+| Double.NaN              | NaN                   |
+| float.PositiveInfinity  | <span>&#8734;</span>  |
+| float.NegativeInfinity  | -<span>&#8734;</span> |
+| float.NaN               | Infinity              |
