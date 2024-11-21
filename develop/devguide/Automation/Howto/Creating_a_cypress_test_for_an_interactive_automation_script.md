@@ -20,7 +20,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
   In the steps below, Visual Studio Code will be mentioned, but a different IDE could be used instead.
 
-- A DataMiner System running DataMiner 10.4.7, 10.3.0 [CU16], or 10.4.0 [CU4] or higher.
+- A DataMiner System running DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 or higher.
 
 ## Project setup and Cypress installation
 
@@ -60,8 +60,8 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) to your project.
 
-> [!NOTE]
-   > Ensure that your project uses at least version 9.0.2 of the [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) and version 10.4.7 of the [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation/10.4.7).
+   > [!NOTE]
+   > Ensure that your project uses at least version 9.0.2 of [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) and version 10.4.7 of [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation/10.4.7).
 
 1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
 
@@ -226,10 +226,11 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    Cypress will execute the test, displaying results in real time: green indicates success, and any errors are logged in detail for debugging.
 
    The image below shows the result of a successful test:
+
    ![CypressTest_IAS_Success](~/develop/images/CypressTest_IAS_Success.png)
 
-1. Simulating a Failure:
+1. If you want to test a failure scenario, modify the interactive Automation script by changing the label text from "Hello, World!" to "Goodbye, World!", and run the test again.
 
-   To test a failure scenario, modify the interactive Automation script by changing the label text from "Hello, World!" to "Goodbye, World!".
-   When you re-run the Cypress test, you should observe a failure due to the mismatch of the expected text. This failure will be reflected in the Cypress results:
+   You should now observe a failure because of the mismatch with the expected text. This failure will be reflected in the Cypress results:
+
    ![CypressTest_IAS_Failure](~/develop/images/CypressTest_IAS_Failure.png)
