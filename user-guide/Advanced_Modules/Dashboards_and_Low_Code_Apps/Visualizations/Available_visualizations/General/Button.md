@@ -30,7 +30,7 @@ To configure the component:
 In the Dashboards app, the soft-launch button component can be used to execute the action of a button parameter. As such, it must be configured with button parameter data.
 
 > [!NOTE]
-> If the *ReportsAndDashboardsAutomationScript* soft-launch option is enabled as well, this component functions as an Automation script component, and you can link it directly to an Automation script in the *Settings* tab.
+> If the *ReportsAndDashboardsAutomationScript* soft-launch option is enabled as well, this component functions as an Automation script component, and you can link it directly to an Automation script in the *Settings* pane.
 
 1. Apply parameter data. See [Adding data to a component](xref:Adding_data_to_component).
 
