@@ -49,6 +49,9 @@ The following types have been removed:
 - SLA Model
 - Testing solution
 
+### 21 November 2024 - Enhancement - Catalog - Support to change publishing state of a Catalog Item [ID 41418]
+On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
+
 ### 21 November 2024 - Enhancement - Catalog - Highlighting items that are from external publishers [ID 41402]
 On the Catalog details page, if the publisher is not from your currently selected Organization or Skyline Communications a tag 'External' will be shown next to the Publisher in the side panel
 
