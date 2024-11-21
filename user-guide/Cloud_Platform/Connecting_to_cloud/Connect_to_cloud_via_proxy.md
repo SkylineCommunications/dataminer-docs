@@ -23,7 +23,7 @@ To configure this:
    }
    ```
 
-   - **Address**: The adress of the proxy server. Example: `127.0.0.1` or `localhost`.
+   - **Address**: The address of the proxy server. Example: `127.0.0.1` or `localhost`.
 
 1. Restart the CloudGateway service for the changes to take effect.
 
