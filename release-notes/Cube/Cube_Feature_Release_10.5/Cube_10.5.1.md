@@ -16,7 +16,28 @@ uid: Cube_Feature_Release_10.5.1
 
 ## New features
 
-*No new features have been added yet.*
+#### New SLHelper option to skip alarm subscriptions when Cube is used as a service [ID 41327]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, when Cube was used as a service (i.e. running inside SLHelper) to e.g. show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
+
+From now on, in the *SLHelper.exe.config* file, it is possible to indicate that you want alarm subscriptions to be skipped by setting the `helper:load-alarms` option to false. See the example below.
+
+```xml
+<configuration>
+    ...
+    <appSettings>
+        ...
+        <add key="helper:load-alarms" value="false"/>
+        ...
+      </appSettings>
+    ...
+</configuration>
+```
+
+> [!NOTE]
+> When `helper:load-alarms` is set to false, no alarms will be loaded, even when the visual overview in question needs alarm information to render correctly.
 
 ## Changes
 
