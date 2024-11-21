@@ -10,7 +10,7 @@ namespace SLNetTypes.Automation
     /// var downloadButtonOptions = new AutomationDownloadButtonOptions()
     /// {
     ///     URL = @"/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf",
-    ///     StartDownloadImmediately = false
+    ///     StartDownloadImmediately = false,
     ///     ReturnWhenDownloadIsStarted = false,
     ///     FileNameToSave = "Report.PDF",
     /// };
