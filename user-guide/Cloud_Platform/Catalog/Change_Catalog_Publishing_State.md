@@ -20,7 +20,7 @@ A "Make private" or "Make public" button is shown in the top of the page.
 
 ## Change publishing state with the API
 
-The publishing-state API call allows you to change the visibility of a Catalog item using a HTTP PATCH request and an organization key to authenticate.
+The publishing-state API call allows you to change the publishing state of a Catalog item using a HTTP PATCH request and an organization key to authenticate.
 
 > [!IMPORTANT]
 > The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Update catalog publishing state* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys.
@@ -32,7 +32,7 @@ For a complete definition of the API, go to [Key Catalog API Swagger](https://ca
 This page also provides a quick way to execute the call: Expand the "publishing-state" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
-> Clicking the *Try it out* button will execute the register call on the production Catalog.
+> Clicking the *Try it out* button will execute the publishing-state call on the Catalog.
 
 The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
