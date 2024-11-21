@@ -4,6 +4,8 @@ uid: Managing_DCP_keys
 
 # Managing dataminer.services keys
 
+> [!IMPORTANT] you need to have the *Owner* role in order to access or create keys.
+
 ## System keys
 
 System keys can be used with the [GitHub action to deploy Automation scripts](xref:Marketplace_deployment_action) to a DMS that is connected to dataminer.services.
@@ -23,7 +25,7 @@ To view your system keys:
 
 ## Organization keys
 
-Organization keys are among others used to [register new Catalog items](xref:Register_Catalog_Item) or add new DataMiner nodes.
+Organization keys are among others used to [register new Catalog items](xref:Register_Catalog_Item), [change publishing state of a Catalog item](xref:Change_Catalog_Publishing_State) or add new DataMiner nodes.
 
 To view your organization keys:
 

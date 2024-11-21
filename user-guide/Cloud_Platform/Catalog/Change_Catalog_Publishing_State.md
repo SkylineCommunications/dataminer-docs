@@ -23,7 +23,7 @@ A "Make private" or "Make public" button is shown in the top of the page.
 The publishing-state API call allows you to change the publishing state of a Catalog item using a HTTP PATCH request and an organization key to authenticate.
 
 > [!IMPORTANT]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Update catalog publishing state* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys.
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Update catalog publishing state* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
 ### API Definition
 
