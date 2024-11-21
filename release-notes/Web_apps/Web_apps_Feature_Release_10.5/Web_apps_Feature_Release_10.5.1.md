@@ -156,3 +156,9 @@ For more information on how to configure a warning message to be displayed when 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When, while editing a dashboard, you clicked a component's *Data*, *Filter* or *Group* button, variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the *Data* pane.
+
+#### Dashboards app - Column & bar chart component: Less axis labels were shown on PDF reports with a large paper size [ID 41408]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When you generated a PDF report of a dashboard containing a *Column & bar chart* component, up to now, the larger the paper size of the PDF, the fewer axis labels would incorrectly be shown on the chart.
