@@ -9,6 +9,52 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 21 November 2024 - Enhancement - Catalog - Deployment warning for item that have external publisher [ID 41486]
+On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning popup will be shown.
+
+### 21 November 2024 - Enhancement - Admin - DXM Dependencies will include DataMiner version warnings [ID 41459]
+On the Admin Dxm's page, when a DataMiner version dependency is not met for a Dxm a warning popup will be shown.
+
+### 21 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
+On the Catalog browse page, the 'Type' filter will now group its available values by category.
+
+The following Catalog types have been updated or introduced:
+
+ Category               | Type (before)      | Type (new)         
+------------------------|--------------------|--------------------
+ Data Ingest            | Connector          | Connector          
+ Data Ingest            | Scripted Connector | Scripted Connector 
+ Data Processing        | Ad Hoc Data Source | Ad Hoc Data Source 
+ Data Processing        | Automation Script  | Automation         
+ Data Processing        | Data Transformer   | Automation         
+ Data Processing        | Data Query         | Data Query         
+ Data Consumption       | ChatOps Extension  | ChatOps Extension  
+ Data Consumption       | Dashboard          | Dashboards         
+ Data Consumption       | User-Defined API   | User-Defined API   
+ Data Consumption       | Visual Overview    | Visual Overview    
+ Solutions              | /                  | Product Solution   
+ Solutions              | Standard Solution  | Standard Solution  
+ Solutions              | Solution           | Custom Solution    
+ Productivity & Utility | /                  | DevTools           
+ Productivity & Utility | /                  | System Health      
+
+The following types have been removed:
+- Best Practices Analyzer
+- Enhanced Service Model
+- Function Definition
+- Life Cycle Service Orchestration
+- Low-Code App
+- Profile-Load Script (now consider Automation)
+- Sample Solution
+- SLA Model
+- Testing solution
+
+### 21 November 2024 - Enhancement - Catalog - Highlighting items that are from external publishers [ID 41402]
+On the Catalog details page, if the publisher is not from your currently selected Organization or Skyline Communications a tag 'External' will be shown next to the Publisher in the side panel
+
+### 21 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
+On the Catalog details page, the side panel will now include a 'Documentation' button to go to the external documentation.
+
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
 Up to now, when you opened the versions section of an item without any versions, it would stay in a loading state. This has now been fixed: an info message will be shown saying this item does not have any versions.
