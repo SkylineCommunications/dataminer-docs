@@ -48,6 +48,19 @@ It is now possible to configure the following actions:
 
 Because of a number of enhancements with regard to file operations, overall performance has increased when working with the Dashboards app.
 
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'TextBox' and 'StaticText' [ID 41188]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+The following UI components have been redesigned:
+
+- `UIBlockType.StaticText`
+- `UIBlockType.TextBox`
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new *StaticText* and *TextBox* components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### Dashboards/Low-Code Apps: Pickers have been made more consistent [ID 41251]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
