@@ -36,7 +36,7 @@ The validator results are listed in a tree grid that groups the validation resul
 
 ## Suppressing or postponing a validation result
 
-In case a validation result is not valid, it can be suppressed. While it is possible to suppress any validation result, in principle this should only be done for checks that are marked as "Uncertain". For such checks, a double-check is required as the automated validation cannot be certain. If there is a result that is indicated as "Certain", and you have the impression that this should be suppressed, this usually means that the check should be improved. In that case, you should create a validator issue task and postpone the validation result.
+In case a validation result is not valid, it can be suppressed. While it is possible to suppress any validation result, in principle this should only be done for checks that are marked as "Uncertain". For such checks, a double-check is required as the automated validation cannot be certain. If there is a result that is indicated as "Certain", and you have the impression that this should be suppressed, this usually means that the check should be improved. In that case, you should report the issue and postpone the validation result. You can use the *Send Feedback* option in the DIS menu to report the issue. Skyline users should use the *Report Issue* option in the DIS menu (which is not available to external users), and create a validator issue task.
 
 To **suppress** a validation result, select the item in the list, right-click to open the context menu, and select *Suppress*. In the *Suppress Validator Result* window, provide a reason why the result has been suppressed.
 
