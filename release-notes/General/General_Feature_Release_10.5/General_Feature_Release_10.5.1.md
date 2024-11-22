@@ -102,6 +102,14 @@ Breaking changes:
 | Set State | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to change element state...". |
 | Set Template | The action will fail with a different error. Previously, when an element would be removed during the execution of a script, it would state "No valid protocol mapping found". Now, it will depend on the state, but should be "Failed to set template...". |
 
+#### Soft-launch option 'DynamicUnits' is now enabled by default [ID 41436]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+The soft-launch option *DynamicUnits* can be used to enable or disable the use of dynamic units in Data Display, both in DataMiner Cube and the Monitoring app.
+
+Up to now, this option was disabled by default. From now on, it will be enabled by default.
+
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299]
