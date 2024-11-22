@@ -28,7 +28,7 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
 
 1. Make sure that no anti-virus software will interfere with the DataMiner installer and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).
 
-1. Make sure you have a Windows account with administrator rights. If you intend to use a DataMiner installer older than version 10.2, this must be the server's local Administrator account. For later installers, any account with administrator rights will suffice.
+1. Make sure you have access to the server with the local Administrator account, or if you intend to use the deprecated 10.2 installer, make sure you have an account with administrator rights.
 
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/).
 
