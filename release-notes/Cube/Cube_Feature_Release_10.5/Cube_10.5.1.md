@@ -137,6 +137,12 @@ Up to now, when resources would get assigned to or unassigned from the booking i
 
 From now on, the comma-separated list of resource GUIDs stored in the *ResourcesInSelectedReservation* variable will be updated automatically while the booking is selected.
 
+#### Visual Overview: Enhanced rendering of embedded visual overviews [ID 41437]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Because of a number of enhancements, embedded visual overviews will now be rendered more quickly.
+
 ### Fixes
 
 #### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
