@@ -4,7 +4,7 @@ uid: SLNetClientTest_query_hint_paths
 
 # Querying the assembly resolution hint paths
 
-To troubleshoot assembly resolution issues, from DataMiner 10.4.12/10.5.0 onwards, you can use the SLNetClientTest tool to query the hint paths used to look up QAction dependencies:
+To troubleshoot assembly resolution issues, from DataMiner 10.4.12/10.5.0 onwards<!--RN 41068-->, you can use the SLNetClientTest tool to query the hint paths used to look up QAction dependencies:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
