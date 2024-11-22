@@ -230,6 +230,15 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element of type SNMPv3 does not have its user name filled in, from now on, it will go into an error state and an alarm will be generated.
 
+#### DataMiner upgrade packages will now include the most recent version of the CloudFeed DxM [ID 41357]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+From now on, DataMiner upgrade packages will include the most recent version of the *CloudFeed* DxM.
+
+> [!NOTE]
+> It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
+
 ### Fixes
 
 #### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]

@@ -1020,6 +1020,15 @@ Up to now, all log entries regarding visual overviews shown in web apps would ha
 
 From now on, these log entries will be assigned a log level that indicates their importance.
 
+#### DataMiner upgrade packages will now include the most recent version of the CloudFeed DxM [ID 41357]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+From now on, DataMiner upgrade packages will include the most recent version of the *CloudFeed* DxM.
+
+> [!NOTE]
+> It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
