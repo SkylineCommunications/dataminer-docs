@@ -9,6 +9,52 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
+
+If you register a catalog item using a manifest that contained an invalid syntax for owner, a HTTP 500 internal server error was returned.
+This has been improved by returning a HTTP 400 Bad Request containing detail which field is invalid.
+
+### 22 November 2024 - Fix - Catalog API - Registration with ID that exists in another organization returned internal server error [ID 41515]
+
+​If you register a catalog item with an ID that existed already in another organization, an internal server error was returned.
+
+This has been improved by returning a HTTP 409 Conflict result.
+
+### 22 November 2024 - Feature - Catalog API - Service authenticated API [ID 41353]
+
+The api/service-catalog/v1-0/ route now exposes methods that allows applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer". 
+Requires permission on role "catalog.api.read" of the catalog API.
+
+Following methods are made available:
+
+/catalogs/search
+
+/catalogs/{CatalogId}
+
+/catalogs/{CatalogId}/ranges
+
+/catalogs/{CatalogId}/versions
+
+/catalogs/{CatalogId}/versions/recommended
+
+/catalogs/{CatalogId}/doc
+
+/catalogs/categories
+
+rate limit : 5 requests per sec and a burst of 20. This results in 300 requests per minute and after a burst of 20, the bucket will fill with 5 requests per sec before another burst can occur.
+
+### 22 November 2024 - Feature - Catalog API - Get Catalog item categories [ID 41411]
+
+User, service and public Catalog APIs are extended with a categories call to obtain all categories supported in catalog
+
+"/api/user-catalog/v2-0/catalogs/categories"
+"/api/public-catalog/v2-0/catalogs/categories"
+"/api/service-catalog/v1-0/catalogs/categories"
+
+### 22 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 4191]
+
+Using an organization key with permission "Update catalog publishig state" it is possible to make a Catalog item public or private.
+
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
 Up to now, when you opened the versions section of an item without any versions, it would stay in a loading state. This has now been fixed: an info message will be shown saying this item does not have any versions.
