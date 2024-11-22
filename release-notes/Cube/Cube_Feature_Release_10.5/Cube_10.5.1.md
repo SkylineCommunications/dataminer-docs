@@ -127,6 +127,16 @@ In the *Search & Indexing* section of *System Center*, you can indicate whether 
 
 From now on, when Cube is used as a service (i.e. running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
 
+#### Visual Overview - Resource Manager component: Session variable 'ResourcesInSelectedReservation' will be updated automatically when the list of resources assigned to the selected booking changes [ID 41432]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you select a booking block in a *Resource Manager* component showing a booking timeline, the session variable *ResourcesInSelectedReservation* will contain a comma-separated list of resource GUIDs.
+
+Up to now, when resources would get assigned to or unassigned from the booking in question while it remained selected in the timeline, the *ResourcesInSelectedReservation* variable would not get updated. To force an update of the variable, you had to reselect the booking.
+
+From now on, the comma-separated list of resource GUIDs stored in the *ResourcesInSelectedReservation* variable will be updated automatically while the booking is selected.
+
 ### Fixes
 
 #### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
