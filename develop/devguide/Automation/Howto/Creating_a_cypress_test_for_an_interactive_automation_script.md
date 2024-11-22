@@ -4,7 +4,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 # Creating a Cypress test for an interactive Automation script
 
-[Cypress](https://www.cypress.io/) is a powerful end-to-end testing framework designed for the modern web. While it simplifies UI testing, leveraging its full potential requires a solid understanding of its core concepts and best practices. This page covers the essential steps to set up, configure, and test an interactive Automation script using Cypress. By following these steps, you can create reliable, reusable tests to validate new components and UI interactions within a real application environment.
+[Cypress](https://www.cypress.io/) is a powerful end-to-end testing framework designed for the modern web. While it simplifies UI testing, leveraging its full potential requires a solid understanding of its core concepts and best practices. This page covers the essential steps to set up, configure, and test an interactive Automation script using Cypress, using an example. By following these steps, you can create reliable, reusable tests to validate new components and UI interactions within a real application environment.
 
 > [!TIP]
 > For additional information, explore these resources:
@@ -167,17 +167,16 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 This Cypress test demonstrates how to use the *DebugTag* defined in an Automation script to verify that the text displayed on a label and button is correct.
 
-   > [!NOTE]
-   > Ensure that all *DebugTag* values used in your Automation script are unique per IAS page. This allows you to reference widgets unambiguously during testing.
-   > For example, by setting the *DebugTag* for a label to *myLabel*, you can locate the widget in the test using the following code:
-   >
-   > ```javascript
-   > cy.get('[data-cy="myLabel"]');
-   > ```
+> [!NOTE]
+> Ensure that all *DebugTag* values used in your Automation script are unique per IAS page. This allows you to reference widgets unambiguously during testing. For example, by setting the *DebugTag* for a label to *myLabel*, you can locate the widget in the test using the following code:
+>
+> ```javascript
+> cy.get('[data-cy="myLabel"]');
+> ```
 
 1. In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
 
-1. Implement the Cypress test below to log in, navigate to the low-code app, and interact with the Automation script.
+1. Implement the example Cypress test below to log in, navigate to the low-code app, and interact with the Automation script.
 
    > [!NOTE]
    > Ensure all variable values in the test below are updated with the correct information (*dmaAddress*, *username*, *password*, etc.) before you run the test. This allows the script to interact properly with your specific application environment.
