@@ -60,14 +60,6 @@ If you have created an Automation script that launches subscripts, you can use t
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
-#### Soft-launch option 'DynamicUnits' is now enabled by default [ID 41436]
-
-<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
-
-The soft-launch option *DynamicUnits* can be used to enable or disable the use of dynamic units in Data Display, both in DataMiner Cube and the Monitoring app.
-
-Up to now, this option was disabled by default. From now on, it will be enabled by default.
-
 ### Enhancements
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]
@@ -1028,6 +1020,14 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 
 > [!NOTE]
 > It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
+
+#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+
+If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
 
 ### Fixes
 
