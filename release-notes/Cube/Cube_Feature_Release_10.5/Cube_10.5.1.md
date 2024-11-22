@@ -143,6 +143,12 @@ From now on, the comma-separated list of resource GUIDs stored in the *Resources
 
 Because of a number of enhancements, embedded visual overviews will now be rendered more quickly.
 
+#### Sidebar: Link to deprecated 'Resources' page removed from 'Community' menu [ID 41445]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Clicking the *Community* button at the bottom of DataMiner Cube's sidebar opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/). As the *Resources* page no longer exists, the link to that page has now been removed from the menu.
+
 ### Fixes
 
 #### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
