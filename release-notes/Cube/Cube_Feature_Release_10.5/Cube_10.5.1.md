@@ -16,7 +16,28 @@ uid: Cube_Feature_Release_10.5.1
 
 ## New features
 
-*No new features have been added yet.*
+#### New SLHelper option to skip alarm subscriptions when Cube is used as a service [ID 41327]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, when Cube was used as a service (i.e. running inside SLHelper) to e.g. show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
+
+From now on, in the *SLHelper.exe.config* file, it is possible to indicate that you want alarm subscriptions to be skipped by setting the `helper:load-alarms` option to false. See the example below.
+
+```xml
+<configuration>
+    ...
+    <appSettings>
+        ...
+        <add key="helper:load-alarms" value="false"/>
+        ...
+      </appSettings>
+    ...
+</configuration>
+```
+
+> [!NOTE]
+> When `helper:load-alarms` is set to false, no alarms will be loaded, even when the visual overview in question needs alarm information to render correctly.
 
 ## Changes
 
@@ -105,6 +126,28 @@ When, in the *Correlation* app or the *Scheduler* app, you open an existing *Sen
 In the *Search & Indexing* section of *System Center*, you can indicate whether search indexing has to be enabled on the client.
 
 From now on, when Cube is used as a service (i.e. running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
+
+#### Visual Overview - Resource Manager component: Session variable 'ResourcesInSelectedReservation' will be updated automatically when the list of resources assigned to the selected booking changes [ID 41432]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When you select a booking block in a *Resource Manager* component showing a booking timeline, the session variable *ResourcesInSelectedReservation* will contain a comma-separated list of resource GUIDs.
+
+Up to now, when resources would get assigned to or unassigned from the booking in question while it remained selected in the timeline, the *ResourcesInSelectedReservation* variable would not get updated. To force an update of the variable, you had to reselect the booking.
+
+From now on, the comma-separated list of resource GUIDs stored in the *ResourcesInSelectedReservation* variable will be updated automatically while the booking is selected.
+
+#### Visual Overview: Enhanced rendering of embedded visual overviews [ID 41437]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Because of a number of enhancements, embedded visual overviews will now be rendered more quickly.
+
+#### Sidebar: Link to deprecated 'Resources' page removed from 'Community' menu [ID 41445]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Clicking the *Community* button at the bottom of DataMiner Cube's sidebar opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/). As the *Resources* page no longer exists, the link to that page has now been removed from the menu.
 
 ### Fixes
 

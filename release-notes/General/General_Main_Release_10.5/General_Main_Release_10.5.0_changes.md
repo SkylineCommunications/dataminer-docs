@@ -1004,6 +1004,31 @@ To do so, in the Resource Manager configuration file, set the *AllowNotActiveEle
 
 Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
+#### Web apps - Visual Overview: Multiple log levels [ID 41200]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, all log entries regarding visual overviews shown in web apps would have a log level equal to 5.
+
+From now on, these log entries will be assigned a log level that indicates their importance.
+
+#### DataMiner upgrade packages will now include the most recent version of the CloudFeed DxM [ID 41357]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+From now on, DataMiner upgrade packages will include the most recent version of the *CloudFeed* DxM.
+
+> [!NOTE]
+> It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
+
+#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+
+If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]

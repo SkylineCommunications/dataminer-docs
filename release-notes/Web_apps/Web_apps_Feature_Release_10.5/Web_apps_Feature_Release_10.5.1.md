@@ -38,6 +38,20 @@ It is now possible to configure the following actions:
 | Add row     | Adds a row to a variable of type *Table*. |
 | Clear table | Clears all rows defined in a variable of type *Table*. |
 
+#### Dashboards/Low-Code Apps - Numeric input/Search input/Text input components : Default value [ID 41401]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+The *Numeric input*, *Search input* and *Text input* components now allow you to specify a default value.
+
+To do so, in edit mode, select the component, go to *Settings > General > Default value*, and enter a value.
+
+#### Video thumbnails of type HTML5-HLS with multiple audio tracks will now allow you to select one of those audio tracks [ID 41407]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+If the HLS stream of a video thumbnail of type HTML5-HLS has multiple audio tracks, the thumbnail will now have a drop-down box in which you can select one of the available audio tracks.
+
 ## Changes
 
 ### Enhancements
@@ -47,6 +61,19 @@ It is now possible to configure the following actions:
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
 Because of a number of enhancements with regard to file operations, overall performance has increased when working with the Dashboards app.
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'TextBox' and 'StaticText' [ID 41188]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+The following UI components have been redesigned:
+
+- `UIBlockType.StaticText`
+- `UIBlockType.TextBox`
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new *StaticText* and *TextBox* components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
 
 #### Dashboards/Low-Code Apps: Pickers have been made more consistent [ID 41251]
 
@@ -135,3 +162,26 @@ For more information on how to configure a warning message to be displayed when 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When, while editing a dashboard, you clicked a component's *Data*, *Filter* or *Group* button, variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the *Data* pane.
+
+#### Dashboards app - Column & bar chart component: Less axis labels were shown on PDF reports with a large paper size [ID 41408]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When you generated a PDF report of a dashboard containing a *Column & bar chart* component, up to now, the larger the paper size of the PDF, the fewer axis labels would incorrectly be shown on the chart.
+
+#### Web API - GQI: Custom display values specified for cells containing Infinity or NaN values would incorrectly be overwritten [ID 41456]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in an ad hoc data source, a custom display value was specified for a cell containing a raw value equal to PositiveInfinity, NegativeInfinity or NaN, that custom display value would incorrectly be overwritten by "+Infinity", "-Infinity" or "NaN" respectively. As a result, the custom display value would never be shown in the client application.
+
+From now on, when you specify a custom display value for a cell containing a raw value equal to PositiveInfinity, NegativeInfinity or NaN, that custom display value will no longer be overwritten. Also, when cells containing a raw value equal to PositiveInfinity, NegativeInfinity or NaN do not have a custom display value specified, then the following display values will be shown:
+
+| Raw value | Display value |
+|---|---|
+| Double.PositiveInfinity | Infinity              |
+| Double.NegativeInfinity | Infinity              |
+| Double.NaN              | NaN                   |
+| float.PositiveInfinity  | <span>&#8734;</span>  |
+| float.NegativeInfinity  | -<span>&#8734;</span> |
+| float.NaN               | Infinity              |

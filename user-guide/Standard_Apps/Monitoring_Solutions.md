@@ -30,17 +30,20 @@ uid: Monitoring_Solutions
 
 <div class="row"> 
   <div class="column">
+    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Performance_Analyzer/Performance_Analyzer.html" title="Performance Analyzer" target="_self"><img src="~/user-guide/images/performance_analyzer.svg" style="width:100%"></a>
+  </div>  
+  <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Ping_Monitoring/PingMonitoring.html" title="Ping Monitoring" target="_self"><img src="~/user-guide/images/Ping_Monitoring.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/user-guide/images/PLM.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/user-guide/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/user-guide/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/user-guide/images/Smart_Trap_Processor.svg" style="width:100%"></a>
   </div>  

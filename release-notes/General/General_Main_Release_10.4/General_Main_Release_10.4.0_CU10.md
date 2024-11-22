@@ -38,6 +38,14 @@ A number of enhancements have been made to the Cassandra Cluster Migrator tool (
 - Connection details will now only be requested once, unless not all agents could not be initialized.
 - The migration can now only be started when all agents have successfully been initialized.
 
+#### Web apps - Visual Overview: Multiple log levels [ID 41200]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, all log entries regarding visual overviews shown in web apps would have a log level equal to 5.
+
+From now on, these log entries will be assigned a log level that indicates their importance.
+
 #### Service & Resource Management: Enhanced deletion of ReservationInstances in bulk [ID 41236]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
@@ -85,6 +93,14 @@ For detailed information about the changes included in those versions, refer to 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When an element of type SNMPv3 does not have its user name filled in, from now on, it will go into an error state and an alarm will be generated.
+
+#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+
+If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
 
 ### Fixes
 
@@ -163,6 +179,18 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 
 - Up to now, only the rows with a value in the first column would be added to the table. From now on, when the table parameter has the `instance` option defined, rows of which the first column on the right of the instance column is empty will also be added to the table.
 
+#### Conditional monitoring: Conditions of standalone parameters would incorrectly not be taken into account when the alarm template was reapplied [ID 41292]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in an alarm template, multiple conditions had been defined for a standalone parameter, in some cases, those conditions would incorrectly not be taken into account when the alarm template was reapplied either manually in DataMiner Cube or automatically due to baseline changes.
+
+#### GetInfoMessage(Type.DataMinerInfo) request sent to retrieve the connection state of a disconnected agent would incorrectly return 'Normal' [ID 41338]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When a particular agent had disconnected from the rest of the agents in the DMS, a `GetInfoMessage(Type.DataMinerInfo)` request sent to another agent to retrieve the connection state of the disconnected agent would incorrectly return "Normal".
+
 #### Files modified during an initial full synchronization could incorrectly be rechecked multiple times [ID 41368]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
@@ -170,3 +198,9 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 All files that are modified in the DataMiner System while SLDMS is performing the initial full synchronization of a newly added agent are added to a list of files to be re-checked.
 
 Up to now, that list could incorrectly contain multiple entries for the same file, causing the file in question to be re-checked multiple times after the synchronization had finished. From now on, each modified file will only be added once.
+
+#### Problem with 'Clean up unused' in DataMiner Cube when the user folder on the DMA contained a deprecated clientsettings.dat file [ID 41386]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
