@@ -8,16 +8,15 @@ In this tutorial, you will learn how to get started with the Smart Trap Processo
 
 Expected duration: 30 minutes.
 
+> [!TIP]
+> See also: [Kata #48: Smart Trap Processor tool](https://community.dataminer.services/courses/kata-48/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
 > If you use a [DaaS system](xref:Creating_a_DMS_on_dataminer_services), these prerequisites are automatically met.
-
->[!TIP]
->See also: [Kata #48: Smart Trap Processor tool](https://community.dataminer.services/courses/kata-48/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-![image](https://github.com/user-attachments/assets/144002c6-f056-4434-b25c-78f3ae0301fe)
 
 ## Overview
 
