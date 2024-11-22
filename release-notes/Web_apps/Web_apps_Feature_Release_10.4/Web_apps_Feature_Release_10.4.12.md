@@ -404,3 +404,20 @@ When a GQI query was run multiple times in quick succession, in some cases, a `S
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
+
+#### Monitoring/Dashboards/Low-Code Apps - Line & area chart component: Changes would not always be detected and processed properly [ID 41470]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 [CU0] -->
+
+Up to now, in some cases, changes made to a *Line & area chart* component would not be reflected corrected in the UI. This could lead to the following problems:
+
+- Trend cards in the *Monitoring* app would be empty or would not update properly.
+- Trend cards in the *Monitoring* app would not use the proper *Monitoring* app color as trend line color.
+- Data changes in dashboards would not always be applied in *Line & area chart* components:
+
+  - Time ranges would not always be applied correctly.
+  - The trend lines would not always correctly reflect the actual trend of a parameter.
+  - Scrolling fast through a trend chart could result in that chart getting stuck in a loading state.
+  - etc.
+
+Also, an issue has been fixed regarding errors coming from trend requests. Up to now, in some cases, "[Object object]" would be displayed instead of the actual error message.
