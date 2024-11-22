@@ -150,6 +150,14 @@ Up to now, when blocking tasks with the same start time needed to be scheduled f
 
 Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
 
+#### Web apps - Visual Overview: Multiple log levels [ID 41200]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, all log entries regarding visual overviews shown in web apps would have a log level equal to 5.
+
+From now on, these log entries will be assigned a log level that indicates their importance.
+
 #### Service & Resource Management: Enhanced deletion of ReservationInstances in bulk [ID 41236]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
