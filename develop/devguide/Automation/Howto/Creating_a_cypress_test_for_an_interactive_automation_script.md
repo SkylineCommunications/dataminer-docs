@@ -20,7 +20,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
   In the steps below, Visual Studio Code will be mentioned, but a different IDE could be used instead.
 
-- A DataMiner System running DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 or higher.
+- A DataMiner System running DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 or higher. <!-- RN 39365 -->
 
 ## Project setup and Cypress installation
 
@@ -61,7 +61,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) to your project.
 
    > [!NOTE]
-   > Ensure that your project uses at least version 9.0.2 of [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) and version 10.4.7 of [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation/10.4.7).
+   > Ensure that your project uses at least version 9.0.2 of [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) and version 10.4.7 of [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation/10.4.7) to have the *DebugTag* property available on a widget.
 
 1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
 
@@ -164,6 +164,16 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    For more information, see [Button](xref:DashboardButton).
 
 ## Creating the Cypress test
+
+This Cypress test demonstrates how to use the *DebugTag* defined in an Automation script to verify that the text displayed on a label and button is correct.
+
+   > [!NOTE]
+   > Ensure that all *DebugTag* values used in your Automation script are unique per IAS page. This allows you to reference widgets unambiguously during testing.
+   > For example, by setting the *DebugTag* for a label to *myLabel*, you can locate the widget in the test using the following code:
+   >
+   > ```javascript
+   > cy.get('[data-cy="myLabel"]');
+   > ```
 
 1. In the `cypress/e2e` folder, create a test file with a `.cy.js` extension, such as `HelloWorldDialog.cy.js`.
 
