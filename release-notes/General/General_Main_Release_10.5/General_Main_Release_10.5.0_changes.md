@@ -1012,6 +1012,14 @@ Up to now, all log entries regarding visual overviews shown in web apps would ha
 
 From now on, these log entries will be assigned a log level that indicates their importance.
 
+#### VerifyClusterPorts: Endpoints to be tested will be retrieved from the Single Source of Truth [ID 41262]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (*C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json*) to determine which endpoints should be tested.
+
+If this JSON file cannot be found, the endpoint to be tested will be retrieved from the *DMS.xml* and *SLCloud.xml* files.
+
 #### DataMiner upgrade packages will now include the most recent version of the CloudFeed DxM [ID 41357]
 
 <!-- MR 10.5.0 - FR 10.5.1 -->

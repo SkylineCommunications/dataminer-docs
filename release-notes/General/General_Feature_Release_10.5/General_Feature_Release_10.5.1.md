@@ -188,7 +188,7 @@ Also, a new SLNet option `HttpTcpKeepAliveInterval` can now be configured on Dat
 
 #### VerifyClusterPorts: Endpoints to be tested will be retrieved from the Single Source of Truth [ID 41262]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.5.0 - FR 10.5.1 -->
 
 The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (*C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json*) to determine which endpoints should be tested.
 
