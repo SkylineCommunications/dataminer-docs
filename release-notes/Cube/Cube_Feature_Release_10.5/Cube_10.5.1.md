@@ -151,6 +151,14 @@ Because of a number of enhancements, embedded visual overviews will now be rende
 
 Clicking the *Community* button at the bottom of DataMiner Cube's sidebar opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/). As the *Resources* page no longer exists, the link to that page has now been removed from the menu.
 
+#### Visual Overview will again subscribe on all properties associated with the linked object when property placeholders are being used [ID 41479]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in a visual overview, a property placeholder was used, up to feature release 10.4.9, the visual overview would always subscribe on all properties associated with the linked object, regardless of the property specified in the property placeholder. As of feature release 10.4.9, the visual overview would only subscribe on the property name that was specified.
+
+This change has now been reverted. When, in a visual overview, a property placeholder is used, the visual overview will again subscribe on all properties associated with the linked object, regardless of the property specified in the property placeholder.
+
 ### Fixes
 
 #### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
