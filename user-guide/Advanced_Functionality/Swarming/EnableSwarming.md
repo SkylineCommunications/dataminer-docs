@@ -4,8 +4,6 @@ uid: SwarmingEnable
 
 # Enabling the Swarming feature
 
-This page shows how you can activate the Swarming feature on a DataMiner system.
-
 > [!WARNING]
 > It is highly recommended to create a backup before enabling the Swarming feature.
 
@@ -13,38 +11,45 @@ This page shows how you can activate the Swarming feature on a DataMiner system.
 
 - DataMiner v10.5.1+
 - [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)
-- There may not be Failover agents in the cluster
-- There may not be an offload database configured
+- There may not be [Failover agents](xref:About_DMA_Failover) in the cluster
+- There may not be an [offload database](xref:Offload_database) configured
 - There may not be Enhanced Services using non-compatible connectors ([more info](xref:SwarmingPrepare))
-- Scripts (Automation/GQI) should not use any obsolete and incompatible SLNet calls/properties that handle AlarmIDs as 'DmaID/AlarmID' ([more info](xref:SwarmingPrepare))
+- Scripts (Automation/GQI) and QActions in connectors should not use any obsolete and incompatible SLNet calls/properties that handle AlarmIDs as 'DmaID/AlarmID' ([more info](xref:SwarmingPrepare))
 - Only users having the *Admin Tools* permission can enable Swarming.
 
 > [!TIP]
-> To verify whether your system satisfies these prerequisites ahead of trying to enable Swarming, you can send a `SwarmingPrerequisitesCheckRequest` message to SLNet using the SLNetClientTest tool. This which will give you a summary of above checks.
+> To verify whether your system satisfies these prerequisites ahead of trying to enable Swarming, you can send a `SwarmingPrerequisitesCheckRequest` message to SLNet using the [SLNetClientTest tool](xref:SLNetClientTest_tool). This which will give you a summary of above checks.
 > The response will show which prerequisites are not met. For the obsolete AlarmID usages that need to be replaced or removed, it will give you a summary of which scripts use which deprecated calls and/or properties.
 >
 > The same checks are also executed when enabling Swarming and must pass to be able to be allowed to enable Swarming.
 >
 > Note that this `SwarmingPrerequisitesCheckRequest` might take a while to execute because of legacy alarm id usage detection in scripts.
 
+## What will change
+
+When Swarming is enabled:
+
+- When Swarming is enabled, element configuration will be stored in the cluster wide database rather than in element XML files on disk of the DataMiner agent hosting the element.
+- Alarm identifiers will be generated on a per-element level instead of per agent to make them unique within the cluster. Also see [Preparing your system for Swarming](xref:SwarmingPrepare)
+
 ## Enabling Swarming
 
 This section describes how to enable the Swarming feature on a DataMiner System.
 
-When Swarming is enabled, element configuration will be stored in the cluster wide database rather than in element XML files on disk. Next to that, alarm ids will be generated on a per-element level instead of per agent. These changes enable other agents to swarm elements from dead agents.
-
-On first startup, the existing element XML files get moved from disk into the database. Moving these files can take some minutes. While this is happening, a message is displayed on the clients that are trying to connect.
+On first startup, the existing element XML files get moved from disk into the database. Moving these files can take some minutes. While this is happening, a message will be displayed on the clients that are trying to connect.
 
 The migrated element files are **temporarily** backed up in the `Recycle Bin` (e.g. `2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip`). It is advised to store these somewhere safe if you ever want to access these again later, or to take a backup prior to enabling the Swarming feature.
 
 > [!IMPORTANT]
-> There is no good way to move these files back from database to disk. This effectively means there is no good way to turn Swarming off. Disabling Swarming would mean you would lose all your elements leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rollback Swarming](xref:TutorialSwarmingPartiallyRollBack).
+> There is no good way to move these files back from database to disk. This effectively means there is no good way to turn Swarming off. Disabling Swarming would mean you would lose all your elements leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rollback Swarming](xref:SwarmingRollback).
 
-Enabling Swarming for the whole DMS can be done via the SLNet message `EnableSwarmingRequest` with the default parameters. This message will check for all agents if the prerequisites are met and if so, enable Swarming and **restart** the whole DMS.
+Enabling Swarming for the whole DMS can be done via the SLNet message `EnableSwarmingRequest` with the default parameters, sent through the [SLNetClientTest tool](xref:SLNetClientTest_tool). This message will check for if the prerequisites are met on all of the agents and if so, enable Swarming and **restart** the whole DMS.
 There is currently no UI for this in Cube, so this has to be done via another client such as Client Test Tool or via an automation script.
 
 > [!NOTE]
 > The `EnableSwarmingRequest` might take a while to execute because of the prerequisite checks it does (legacy alarm id usage detection in scripts).
+
+## Verifying that the feature is active
 
 After the restart, one way to verify that the Swarming feature has been activated is by checking the *SLSwarming.txt* logfile for the presence of a line `SwarmingManager::SwarmingManager|INF|-1|Swarming enabled`. This can be done in Cube through *System Center > Logging > dataminer > Swarming*. This logfile also shows details on the migration of elements that happened during DMA startup.
 
@@ -90,7 +95,7 @@ Below is an overview of the differences between a system that does not have the 
 
 (*) In initial release
 
-(**) [Enhanced Service connectors might need an update](xref:TutorialSwarmingUpdateServiceConnector)
+(**) [Enhanced Service connectors might need an update](xref:SwarmingPrepare)
 
 ## Troubleshooting
 

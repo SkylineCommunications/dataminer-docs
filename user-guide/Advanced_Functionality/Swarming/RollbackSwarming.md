@@ -13,9 +13,9 @@ There are some things you can do partially recover some data.
 
 ## Partial Rollback from backup
 
-When DataMiner is moving the XML files from disk to database, it will take a backup first.
+When DataMiner is moving the XML files from disk to database, it will take a backup first. This migration happens during first startup after enabling the Swarming feature.
 
-This is initially stored in `Recycle Bin`, but could be manually stored somewhere else long term.
+The backup gets initially stored in `Recycle Bin`, but could be manually copied over to a different locationto have long term access.
 These .zip files are a snapshot in time at the moment Swarming was enabled.
 
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ Restoring will go as follows:
 
 ## DELT
 
-For small systems, you can also use DELT to extract the elements. You would then export the elements and reimport them once Swarming is disabled.
+For small systems, an alternative is to use DELT to extract the latest version of the elements. You would then export the elements and reimport them once Swarming is disabled.
 
 1. Export the elements you wish to save, don't export any data from database, you only want the element xml files.
 1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files)

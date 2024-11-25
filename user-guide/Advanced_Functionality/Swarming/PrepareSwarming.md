@@ -2,14 +2,14 @@
 uid: SwarmingPrepare
 ---
 
-# Preparing your system for Swarming
+# Preparing your system for Swarming (Alarm ID ranges)
 
-# Tutorial: Making code compatible with updated Alarm Tree IDs
+When the Swarming feature is enabled, alarm references need to be globally unique within the cluster. For that reason, alarm ids are being generated in a different way as compared to before. It is important to make sure that scripts and connectors are compatible with this to be able to successfully operate on a Swarming-enabled setup.
 
 > [!NOTE]
-> This changes mentioned in this document can only be made when targeting versions 10.4 FR, 10.5 MR and up.
+> This changes mentioned in this document can only be made when targeting versions 10.5.1/10.5.0 and up.
 >
-> Legacy alarm references may still be used in 10.5 but must no longer be used once the Swarming feature has been enabled.
+> Legacy alarm references may still be used in 10.5.1+ but must no longer be used once the Swarming feature has been enabled.
 
 ## Terminology
 
@@ -34,10 +34,10 @@ As long as the Swarming feature has not been enabled, legacy calls will remain f
 This document assists in updating code for this. Typically, methods, fields or properties marked as obsolete will also contain guidance in their message.
 
 > [!NOTE]
-> Applying these changes is currently only available when already having access to 10.4.x FR or 10.5 MR code base. The updated/extended requests only exist in these newer versions. In most cases, they can be used to communicate with older server versions.
+> Applying these changes is currently only available when already having access to 10.5.1 or 10.5.0 code base. The updated/extended requests only exist in these newer versions. In most cases, they can be used to communicate with older server versions.
 
 > [!NOTE]
-> As long as a DataMiner agent has not been upgraded to become a Swarming setup, the 10.4 FR and 10.5 MR versions can still deal with old style alarm references without risk.
+> As long as a DataMiner agent has not been upgraded to become a Swarming setup, the 10.5.1 and 10.5.0 versions can still deal with old style alarm references without risk.
 
 ## Using `AlarmEventMessage`
 
@@ -47,7 +47,7 @@ A number of properties in the `AlarmEventMessage` class have been marked as obso
 | -- | -- |
 | `alarm.RootAlarmID` | Use `alarm.TreeID` instead. |
 | `alarm.HostingAgentID` combined with `alarm.RootAlarmID` | Use `alarm.TreeID` instead. |
-| `alarm.HostingAgentID` | Avoid using at all. Client applications should generally not care where the element is hosted. If on server side and in need of the current hosting agent, look into classes like `HostingAgentCache` in the SLNet process. |
+| `alarm.HostingAgentID` | Avoid using at all. Client applications should generally not care where the element is hosted. |
 | `alarm.BaseAlarms` | Use `CorrelationBaseAlarmReferences` instead. |
 | `alarm.CorrelationReferences` | Use `CorrelationBaseAlarmReferences` instead. |
 | `alarm.RootAlarmGuid` | Use `alarm.TreeID` instead. |
@@ -99,14 +99,8 @@ When communicating with the server, make sure to always pass along the `TreeID`
 | `new GetAlarmTreeDetailsMessage(dmaid, rootAlarmID)` | `new GetAlarmTreeDetailsMessage(AlarmTreeID)` |
 | `GetAlarmDetailsMessage` | Use `.Trees` |
 | `new CorrelateNowRequest(...)` | Use incident tracking / alarm grouping functionaly instead |
-| `IAlarm.Alarm(...)` | `IDataMiner.NotifyDataMiner(..., NT_GENERATE_ALARM, ...)` |
-| `IDataMiner.NotifyDataMiner(..., NT_MAKE_ALARM, ...)` | `IDataMiner.NotifyDataMiner(..., NT_GENERATE_ALARM, ...)` (be aware that the alarm data is the first argument now instead of the second) |
 | `GetCorrelationBaseAlarmDetailsMessage` | Use `AlarmEventID` instead of `AlarmID` |
 | `GetAlarmLinksMessage` | Do not use. |
-| `` | |
-
-> [!NOTE]
-> This document is a work in progress. Not all messages/requests have been updated yet. If you come across one that has not been updated, contact the Data Core domain.
 
 ## String references
 
@@ -170,77 +164,40 @@ set.Add(new AlarmTreeID(new ElementID(123, 456), 789));
 set.Contains(AlarmTreeID.BuildLegacy(123, 789)); // true
 ```
 
-## C++ Types
+## Enhanced Service Connectors
 
-Similarly to C#, the C++ SLGlobal project defines a number of classes that can be used to represent alarm tree or event references.
+As service elements can have an *Active Service Alarms* table which uses alarm references and these tables are being filled out by DataMiner with alarm references, a connector update might be required before that enhanced service is compatible with a Swarming-enabled system.
 
-| C# | C++ | |
-| --- | --- | --- |
-| `AlarmTreeID` | `SLAlarmTreeKey` | Reference to an alarm tree |
-| `AlarmID` | `SLAlarmEventKey` | Reference to an alarm event |
+> [!NOTE]
+> Running enhanced services using non-compatible drivers is being actively blocked when the Swarming feature has been enabled on the system. Having such enhanced services present will block the migration towards a Swarming-enabled system.
 
-Prefer using the types listed above to indicate alarm references over using raw dataminer/element/alarm `unsigned int` type variables.
+> [!NOTE]
+> Not all connectors require an update: an update is only required if the current connector defines a parameter 4 (`raw_alarm_input`). Connectors without this parameter do not have an *Active Service Alarms* table and do not need an update.
 
-Where possible, prefer tree references over references to individual alarm events.
+- Updating the driver starts by adding a new parameter 7 (`raw_alarmid_input`). Note that the name is different from the name of parameter 4.
 
-## C++ interfacing
+    ```xml
+    <Param id="7">
+      <Name>raw_alarmid_input</Name>
+      <Description>raw_alarmid_input</Description>
+      <Type>read</Type>
+      <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>string</Type>
+      </Interprete>
+      <Measurement>
+        <Type>string</Type>
+      </Measurement>
+    </Param>
+    ```
 
-A number of methods have been made deprecated as they were not able to return fully qualified alarm event or tree keys.
+    When this parameter 7 is present, the driver will update the *Active Service Alarms* table using full alarm references on DataMiner versions 10.5.1 or up.
 
-| Before | After | Notes |
-| --- | --- | --- |
-| `IAlarm.Alarm` (COM interface) | Switch to `NotifyDataMiner(NT_GENERATE_ALARM, alarmData)`, which returns an `SLAlarmEventKey` | |
-| `NotifyDataMiner(NT_MAKE_ALARM, version, alarmData)` | Switch to `NotifyDataMiner(NT_GENERATE_ALARM, alarmData)`, which returns an `SLAlarmEventKey` | Beware of the dropped version parameter. Alarm data now needs to be passed in as first parameter. |
+- If you have a QAction triggering on parameter 4, create an extra QAction triggering on the new parameter 7. This QAction will receive full alarm event references (formatted like `dmaid/eid/rootalarmid/alarmid`).
 
-Also be aware of the updated [trap data format](xref:DataStructure_Alarm_Trap), especially involving correlation base alarm references.
+- If you want to keep supporting DataMiner versions before 10.5.1 / 10.6, keep the previously existing parameter 4 and make sure that your QActions can deal with both scenarios (legacy alarm references through parameter 4 or full alarm references through parameter 7)
 
-## C# / C++ interoperability
+- If you only need to support DataMiner versions higher than 10.5.1 / 10.6, the parameter 4 and associated QActions can be removed.
 
-When passing along tree or event references between C# and C++ code over COM interfaces, the following conversion helpers can be used to convert to and from `VARIANT`:
-
-C# to C++:
-
-```csharp
-AlarmTreeID alarmTree = ...;
-object dataTree = alarmTree.ToInterop();
-
-AlarmID alarmId = ...;
-object dataEvent = alarmId.ToInterop();
-```
-
-```C++
-SLAlarmTreeKey alarmTreeKey = SLAlarmTreeKey::FromVariant(varDataTree);
-SLAlarmEventKey alarmEventKey = SLAlarmEventKey::FromVariant(varDataEvent);
-```
-
-C++ to C#:
-
-```C++
-SLAlarmTreeKey alarmTree;
-_variant_t varDataTree;
-alarmTree.ToVariant(varDataTree);
-
-SLAlarmEventKey alarmEvent;
-_variant_t varDataEvent;
-alarmEvent.ToVariant(varDataEvent);
-```
-
-```C#
-AlarmTreeID tree = AlarmTreeID.FromInterop(dataTree);
-AlarmID eventId = AlarmId.FromInterop(dataEvent);
-```
-
-One example where these conversions come into play is when calling the `NT_GENERATE_ALARM` `NotifyDataMiner` call.
-
-## RN references
-
-- [RN37950 - AlarmTreeID](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm.aspx?ID=37950)
-- [RN38305 - AlarmTreeID equality](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=38305)
-- [RN38624 - Updated more messages to use AlarmTreeID](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm.aspx?ID=38624)
-- [RN38892 - Update AlarmID class ToString/Equals methods](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=38892)
-- [RN39006 - The "Correlate Now" feature has been marked as obsolete](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm.aspx?ID=39006)
-- [RN39019 - Updated Correlation-related messages to support AlarmTreeID](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=39019)
-- [RN39193 - ToInterop/FromInterop/ToVariant/FromVariant](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=39193)
-- [RN39613 - SLDataMiner: provide alternative to NT_MAKE_ALARM / IAlarm.Alarm which returns SLAlarmEventKey](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=39613)
-- [RN39797 - AlarmTreeID.BuildLegacy](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=39193)
-- [RN39919 - AlarmTreeID Extension methods for dealing with legacy references](https://intranet.skyline.be/DataMiner/Lists/Release%20Notes/DispForm2.aspx?ID=39919)
+- In any case, if any QActions or code relies on the IDs as stored in the *Active Service Alarms* table, make sure that they can deal with either full or legacy type references depending on the DataMiner version they will run on.
