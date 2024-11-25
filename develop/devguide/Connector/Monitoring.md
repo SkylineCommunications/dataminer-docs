@@ -18,4 +18,4 @@ DataMiner Protocol Markup Language:
 
 Coding Guidelines:
 
-- [Monitoring](xref:CODMonitoring)
+- [Monitoring](xref:Trending1)

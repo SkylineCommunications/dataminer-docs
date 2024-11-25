@@ -94,6 +94,8 @@ To search for an **element**, enter (part of):
 
 - an element description
 
+- a polling IP
+
 - an alarm severity (e.g. critical, etc.)
 
 - an element property displayed in Surveyor

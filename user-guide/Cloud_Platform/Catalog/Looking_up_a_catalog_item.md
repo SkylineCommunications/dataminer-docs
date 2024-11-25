@@ -18,10 +18,6 @@ When you open up the Catalog, a search box is displayed.
 
    This page contains all search results, and has filters on the left that allow you to narrow down your search.
 
-   Each search result shows the item's tags<!--RN 40259-->.
-
-   ![Tags](~/user-guide/images/Catalog_Tags.png)
-
    If you only want to see the items that have been registered by your organization, you can use the *All/Public/Private* filter:
 
    - **All**: This will return search results from all items in the Catalog that you have access to. This includes the private items that are only visible to people in your organization.
@@ -31,3 +27,6 @@ When you open up the Catalog, a search box is displayed.
 1. If you see the item you are looking for, click it to open a page where you can see information about that item and its versions.
 
    From here, you can also [deploy the item to your DataMiner System](xref:Deploying_a_catalog_item).
+
+   > [!TIP]
+   > See also: [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items)

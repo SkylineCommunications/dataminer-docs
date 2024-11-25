@@ -1,5 +1,6 @@
 ---
 uid: Using_the_Web_Services_v1
+description: The DataMiner Web Services v1 methods can be used in SOAP, JSON, or URL-encoded requests. First authenticate to get a connection string.
 ---
 
 # Using the Web Services (v1)
@@ -7,7 +8,7 @@ uid: Using_the_Web_Services_v1
 The v1 methods can be used in SOAP, JSON, or URL-encoded requests.
 
 > [!WARNING]
-> We strongly recommend that you use HTTPS when accessing the Web Service APIs over public Internet. If you do not do so, all information – including logon credentials – will be sent over the Internet as plain, unencrypted text.
+> We strongly recommend that you use HTTPS when accessing the Web Service APIs over public internet. If you do not do so, all information – including logon credentials – will be sent over the internet as plain, unencrypted text.
 
 > [!NOTE]
 > Because of the additional security layer used in [DaaS systems](xref:Creating_a_DMS_in_the_cloud), at present, it is not possible to connect to a DaaS system using the Web Services (v1).

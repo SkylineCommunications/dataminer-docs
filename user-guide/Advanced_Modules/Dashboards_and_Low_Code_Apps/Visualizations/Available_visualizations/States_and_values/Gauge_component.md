@@ -10,17 +10,17 @@ This component displays a numeric parameter value as a gauge.
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
-   - Column parameter feeds are supported.
+   - Column parameter data is supported.
 
      > [!NOTE]
-     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter picker](xref:DashboardParameterPicker) and link this to the state component.
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
    > [!NOTE]
-   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *feeds* section of the data pane so that it can be used as a feed for other components. This way, if the input for this component changes, it will also change for all other components using this component as their feed. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
+   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *Components* section of the data pane so that it can be used as data for other components. This way, if the input for this component changes, it will also change for all other components using this component as their data. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
 
 1. Optionally, customize the following component options:
 
@@ -45,7 +45,7 @@ To configure the component:
      - *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
 
      > [!NOTE]
-     > Feeds with multiple elements, services, views, or redundancy groups are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
+     > Data with multiple elements, services, views, or redundancy groups are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
 
    - In the *Style* section, the following options are available:
 

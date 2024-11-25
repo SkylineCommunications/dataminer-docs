@@ -22,7 +22,7 @@ The Skyline team and the broader DevOps community are always available to assist
 
 ## Catalog
 
-The Catalog serves as a central location to access and manage all your DataMiner artifacts, including connectors, with the ability to easily download and upload. The upcoming iteration of the Catalog will include a wider range of artifacts, such as Visio diagrams *(coming soon)*, Automation scripts *(coming soon)*, and DMAPP packages *(coming soon)*!
+The Catalog serves as a central location to access and manage all your DataMiner artifacts, including connectors, with the ability to easily download and upload.
 
 > [!TIP]
 > See also:

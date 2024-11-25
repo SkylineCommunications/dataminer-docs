@@ -1,5 +1,6 @@
 ---
 uid: Pricing_Commercial_Models
+description: DataMiner is available in two commercial models, i.e. perpetual-use licenses or usage-based services, combined with your preferred deploy model.
 ---
 
 # Commercial & deploy models summary
@@ -77,7 +78,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | Sample applications | Included. | Included. |
 | DataMiner Solutions | Some solutions may not be offered in the perpetual model.  | Usage-based, follows the standard metering units. |
 | Cloud services | Usage-based | Usage-based. |
-| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)). |
+| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [Support plans](xref:Overview_Support_Plans)). |
 | DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |
 
 > [!NOTE]

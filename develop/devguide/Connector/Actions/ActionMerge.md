@@ -40,7 +40,7 @@ Option to define a default value if no result was returned for a certain row.
 
 Format: Column Parameter Id , Value
 
-In the following example, the parameter with ID 1006 is set to 6:
+In the following example, the parameter with ID 1002 is set to 6:
 
 ```xml
 options="defaultValue:1002,6"
@@ -52,7 +52,7 @@ Option to define a condition when to fill in the defaultValue.
 
 Format: Column Idx (0-based) , Value
 
-In the following example, the parameter with ID 1006 is set to 6 only if value in column 3 (0-based) equals 1:
+In the following example, the parameter with ID 1002 is set to 6 only if value in column 3 (0-based) equals 1:
 
 ```xml
 options="defaultValue:1002,6;defaultIf:3,1"
@@ -70,7 +70,7 @@ Parameter ID(s) of the column(s) containing the primary key(s) of the destinatio
 
 Option to filter out certain results.
 
-Example (see DataMiner 8.0.0 – RN 5071):
+Example:<!-- RN 5071 -->
 
 ```xml
 <Type options="limitresult:x">merge</Type>
@@ -98,7 +98,7 @@ ID of the parameter that fires the trigger leading to an aggregate action on a t
 
 The type of merge (average, sum, count, percentage, etc.)
 
-Example (see DataMiner 8.0.0 – RN 5071):
+Example:<!-- RN 5071 -->
 
 ```xml
 <Type options="type:avg extended;destination:a,b,c,d">merge</Type>

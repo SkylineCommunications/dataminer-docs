@@ -11,68 +11,92 @@ The example below shows how resource, profile, and parameter values can be assig
 
 ```csharp
 using System;
-using Skyline.DataMiner.Library.Solutions.SRM;
-using Skyline.DataMiner.Library.Solutions.SRM.Model.AssignProfilesAndResources;
-using Skyline.DataMiner.Library.Solutions.SRM.Model;
 using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Core.SRM;
+using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
+using Skyline.DataMiner.Core.SRM.Model;
+using Skyline.DataMiner.Core.SRM.Model.AssignProfilesAndResources;
 using Skyline.DataMiner.Net.ResourceManager.Objects;
 
 public class Script
 {
- public static void Run(Engine engine)
- {
- // Replace with reservation guid
- var reservationId = Guid.NewGuid();
+	public static void Run(Engine engine)
+	{
+		// Replace with reservation guid
+		var reservationId = Guid.NewGuid();
 
- var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId) as ServiceReservationInstance;
+		var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId) as ServiceReservationInstance;
 
- var requests = new[]
- {
- // Assign a resource (update with relevant data)
- new AssignResourceRequest
- {
- TargetNodeLabel = "DEC1",
- NewResourceId = Guid.Parse("4d4c6525-8fbc-419c-9250-7e8b59dd2fcb")
+		var requests = new[]
+		{
+			// Assign a resource (update with relevant data)
+			new AssignResourceRequest
+			{
+				TargetNodeLabel = "DEC1",
+				NewResourceId = Guid.Parse("4d4c6525-8fbc-419c-9250-7e8b59dd2fcb")
+			},
+			// Unassign a resource (update with relevant data)
+			new AssignResourceRequest
+			{
+				TargetNodeLabel = "DEC2",
+				NewResourceId = Guid.Empty
+			},
+			// Assign a profile instance (update with relevant data)
+			new AssignResourceRequest
+			{
+				TargetNodeLabel = "DEC3",
+				ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
+				ByReference = false
+			},
+		};
+		reservationInstance.AssignResources(engine, requests);
 
- },
- // Unassign a resource (update with relevant data)
- new AssignResourceRequest
- {
- TargetNodeLabel = "DEC2",
- NewResourceId = Guid.Empty
+		// Assign a profile parameter value (update with relevant data)
+		var request = new AssignResourceRequest
+		{
+			TargetNodeLabel = "DEC3",
+			ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
+			ByReference = false
+		};
+		var param = new Parameter
+		{
+			Id = Guid.Parse("7f8bd260-0d26-46c1-9093-08b16a5f7dcf"),
+			Value = "abc"
+		};
+		request.OverriddenParameters.Add(param);
+		reservationInstance.AssignResources(engine, request);
 
- },
- // Assign a profile instance (update with relevant data)
- new AssignResourceRequest
- {
- TargetNodeLabel = "DEC3",
- ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
- ByReference = false
+		// Replace by the correct Guid of the resource
+		var resourceId = Guid.NewGuid();
 
- },
- };
- reservationInstance.AssignResources(engine, requests);
+		// Assign an unmapped resource (update with relevant data)
+		var unmappedAssignRequest = new AssignResourceRequest
+		{
+			NewResourceId = resourceId
+		};
+		reservationInstance.AssignResources(engine, unmappedAssignRequest);
 
- // Assign a profile parameter value (update with relevant data)
- var request = new AssignResourceRequest
- {
- TargetNodeLabel = "DEC3",
- ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
- ByReference = false
- };
- var param = new Parameter
- {
- Id = Guid.Parse("7f8bd260-0d26-46c1-9093-08b16a5f7dcf"),
- Value = "abc"
- };
- request.OverriddenParameters.Add(param);
- reservationInstance.AssignResources(engine, request);
+		// Assign a profile instance to an unmapped node  (update with relevant data)
+		var unmappedAssignProfileRequest = new AssignResourceRequest
+		{
+			NewResourceId = resourceId,
+			ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
+			ByReference = true
+		};
+		reservationInstance.AssignResources(engine, unmappedAssignProfileRequest);
 
- // PLEASE USE VISUAL STUDIO TO SEE ALL OPTIONS ON AssignResourceRequest,
- // including manipulating parameters and instance on interface level
- }
+		// Unassign an unmapped resource (update with relevant data)
+		var unmappedUnassignRequest = new AssignResourceRequest
+		{
+			NewResourceId = resourceId
+		};
+		reservationInstance.UnassignResources(engine, unmappedUnassignRequest);
+
+		// PLEASE USE VISUAL STUDIO TO SEE ALL OPTIONS ON AssignResourceRequest,
+		// including manipulating parameters and instance on interface level
+	}
 }
 ```
 
 > [!NOTE]
-> When the *TargetNodeLabel* is empty or null, the resource added to the booking will not be mapped to any node in the service definition.<!-- RN 30150 -->
+> When the *TargetNodeLabel* is empty or null, the resource added to the booking will not be mapped to any node in the service definition.<!-- RN 30150 --> Such an unmapped resource can only be present once per booking. To unassign a resource that is not mapped to any node in the service definition, use the method *UnassignResources* as illustrated above.

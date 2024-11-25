@@ -17,12 +17,12 @@ In addition to the options determining how connections are displayed, there are 
 | HighlightTarget | [Conditionally applying a highlight style](#conditionally-applying-a-highlight-style) |
 | IgnoreInternalConnections | [Ignoring internal connections](#ignoring-internal-connections) |
 | NoHighlightLineStyle<br>NoHighlightFillStyle<br>NoHighlightTextStyle | [Ignoring the highlight style](#ignoring-the-highlight-style) |
-| SelectionHighlighting | Available from DataMiner 10.0.3 onwards.<br>[Disabling path highlighting when a connection line is clicked](#disabling-path-highlighting-when-a-connection-line-is-clicked) |
+| SelectionHighlighting | [Disabling path highlighting when a connection line is clicked](#disabling-path-highlighting-when-a-connection-line-is-clicked) |
 
 > [!NOTE]
 >
 > - When connectivity has been defined in a drawing, you can highlight the connectivity chain using a shortcut menu command. Right-click a shape, and select *Display connectivity*.
-> - As of DataMiner version 8.5.4, when a shape or connection is highlighted, only the connections before and after the shape will be highlighted, instead of the entire connected framework.
+> - When a shape or connection is highlighted, only the connections before and after the shape will be highlighted, instead of the entire connected framework.
 > - If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
 > - If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the **HighlightTarget** shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape is highlighted as soon as one of the highlight conditions is true.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[dcf]* page.

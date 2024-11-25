@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_user_permissions
+description: With the user permissions in the Cube System Center, you can fine-tune which users and groups have access to specific DataMiner functionality.
 ---
 
 # DataMiner user permissions
@@ -310,6 +311,10 @@ Permission to edit audio files that can be used for audible alerts.
 #### General \> Alarms \> Audible alert \> Delete audio files
 
 Permission to delete audio files that can be used for audible alerts.
+
+#### General \> Alarms \> Allow to add or update hyperlinks
+
+Available from DataMiner 10.2.6/10.3.0 onwards. Permission to ad or update custom commands in the Alarm Console context menu.
 
 ### General \> Workspaces
 
@@ -666,7 +671,7 @@ Permission to delete DataMiner protocols.
 
 #### Modules \> Protocols & Templates \> Protocols \> Download protocols from DCP
 
-Permission to download protocols from the DataMiner Collaboration Platform.
+Permission to download protocols via the Update Center in Cube. This permission is not required to [deploy protocols from the Catalog](xref:Deploying_a_catalog_item).
 
 #### Modules \> Protocols & Templates \> Protocols \> Generate MIB
 

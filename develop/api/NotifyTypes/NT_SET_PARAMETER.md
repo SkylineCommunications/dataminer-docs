@@ -26,12 +26,11 @@ protocol.NotifyDataMiner(50 /*NT_SET_PARAMETER*/, ids, value);
   - ids[2]: Parameter ID
 - value (object): Value to set, depends on type of set (standalone parameter, matrix, table cell)
   - standalone parameter: value is the value that needs to be set (e.g. a string).
-  - matrix: value contains the input, output and the crosspoint that needs to be set (e.g. value = input + "," + output + "," + crosspoint;
+  - matrix: value contains the input, output and the crosspoint that needs to be set (e.g. value = input + "," + output + "," + crosspoint;)
   - table cell: value is an object array identifying the cell that needs to be set.
 
   > [!NOTE]
   > In this case, ids[2] specifies the ID of the column parameter.
-
 
   ```csharp
   string primaryKey = "Row 1";

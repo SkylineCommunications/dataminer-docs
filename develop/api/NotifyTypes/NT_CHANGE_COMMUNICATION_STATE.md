@@ -42,7 +42,7 @@ protocol.NotifyDataMiner(249/*NT_CHANGE_COMMUNICATION_STATE*/ , data, connection
   - data[2]: Communication state. 0 = timeout, 1 = responding.
 - connectionID (int): Connection ID (0 for the main connection).
 
-To set the communication state of a **DVE** (supported since DataMiner version 7.5.0 (RN 4184)):
+To set the communication state of a **DVE**:<!-- RN 4184 -->
 
 Use the same call as for setting the communication state of a remote element, but set the connectionID to -1.
 

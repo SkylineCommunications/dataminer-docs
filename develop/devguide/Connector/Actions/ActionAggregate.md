@@ -20,20 +20,21 @@ Specifies the aggregation options.
 
 The following options are available:
 
-- allowValues/ignoreValues
-- avoidZeroInResult
-- defaultIf
-- defaultValue
-- equation
-- equationvalue
-- filter
-- groupby
-- groupbyTable
-- join
-- return
-- status
-- threaded
-- type
+- [allowValues/ignoreValues](#allowvaluesignorevalues)
+- [avoidZeroInResult](#avoidzeroinresult)
+- [defaultIf](#defaultif)
+- [defaultValue](#defaultvalue)
+- [equation](#equation)
+- [equationvalue](#equationvalue)
+- [filter](#filter)
+- [groupby](#groupby)
+- [groupbyTable](#groupbytable)
+- [join](#join)
+- [return](#return)
+- [status](#status)
+- [threaded](#threaded)
+- [type](#type)
+- [weight](#weight)
 
 #### allowValues/ignoreValues
 
@@ -50,14 +51,14 @@ For example, if you specify ignoreValues:2/4,3/5, the row will be ignored if col
 
 > [!NOTE]
 >
-> Suppose that groupby column 8 contains an exception key “-1” for special rows (e.g. parent not found) you do not want to aggregate, and that the aggregate action is groupby:8;count;ignoreValues:8/-1. In the parent table, this will return a row with key “-1” and value 0 (if there is at least one row in the source table that contains “-1”).
+> Suppose that groupby column 8 contains an exception key "-1" for special rows (e.g. parent not found) you do not want to aggregate, and that the aggregate action is groupby:8;count;ignoreValues:8/-1. In the parent table, this will return a row with key "-1" and value 0 (if there is at least one row in the source table that contains "-1").
 >
 > This is the case for aggregate actions of type count, sum and pct. When type is avg, no row will be created and no value will be returned in the parent table.
 >
-> To avoid the creation of the undesired “-1” key row in the parent table, you have a number of options:
+> To avoid the creation of the undesired "-1" key row in the parent table, you have a number of options:
 >
 > - Use limitresult (In that case, only the rows of the parent will be taken into account), or
-> - Specify “avoidZeroInResult” in the aggregate action. In that case, the row will not be included. To see the valid zero results in the parent table, you can use the defaultValue option. For more information, see avoidZeroInResult
+> - Specify "avoidZeroInResult" in the aggregate action. In that case, the row will not be included. To see the valid zero results in the parent table, you can use the defaultValue option. For more information, see avoidZeroInResult
 
 #### avoidZeroInResult
 
@@ -74,9 +75,9 @@ Note that if this primary key is already present in the result table from a prev
 
 The following examples illustrate the behavior. The example performs aggregation on the following table:
 
-|Primary Key|GroupBy column (IDX 1)|Value Column|
-|--- |--- |--- |
-|1|2|-1 (This is typically implemented as an exception value)|
+| Primary Key | GroupBy column (IDX 1) | Value Column                                             |
+|-------------|------------------------|----------------------------------------------------------|
+| 1           | 2                      | -1 (This is typically implemented as an exception value) |
 
 - **Example 1**: groupby:1;type:sum;ignoreValues:-1;return:3103
 
@@ -84,9 +85,9 @@ The grouping for rows that have value 2 results in a single row to be taken into
 
 Result table:
 
-|Primary Key|Aggregation Result Value (pid 3103)|
-|--- |--- |
-|2|0|
+| Primary Key | Aggregation Result Value (pid 3103) |
+|-------------|-------------------------------------|
+| 2           | 0                                   |
 
 - **Example 2**: groupby:1;type:sum;ignoreValues:-1;return:3103;avoidZeroInResult
 
@@ -96,9 +97,9 @@ In case the result table did already contain a row with primary key "2" (e.g. wi
 
 Result table:
 
-|Primary Key|Aggregation Result Value (pid 3103)|
-|--- |--- |
-|2|20|
+| Primary Key | Aggregation Result Value (pid 3103) |
+|-------------|-------------------------------------|
+| 2           | 20                                  |
 
 - **Example 3**: groupby:1;type:sum;ignoreValues:-1;return:3103;avoidZeroInResult;defaultValue:3103,-1
 
@@ -108,9 +109,9 @@ In case the result table did already contain a row with primary key "2" (e.g. wi
 
 Result table:
 
-|Primary Key|Aggregation Result Value (pid 3103)|
-|--- |--- |
-|2|-1|
+| Primary Key | Aggregation Result Value (pid 3103) |
+|-------------|-------------------------------------|
+| 2           | -1                                  |
 
 #### defaultIf
 
@@ -149,7 +150,7 @@ Format: `<operator>,<PID>`
   - ==
   - &lt;=
   - &gt;=
-  - regex (from DataMiner 10.1.8/10.2.0 onwards – RN 30199, see aggregate)
+  - regex (see [aggregate](#aggregate))<!-- RN 30199 -->
 - PID: ID of the parameter containing the value to which to compare the values to be aggregated
 
 Example:
@@ -176,9 +177,9 @@ For the regex operator, instead of specifying a parameter ID, the regex can be p
 
 #### equationvalue
 
-Filter on value (param or instances of a table)
+<!-- RN 6557 -->
 
-Feature introduced in DataMiner 8.0.5.4 (RN6557)
+Filter on value (param or instances of a table)
 
 ```xml
 <Type options= "threaded;type:count;equationvalue:a,b,c,d;avoidzeroinresult;">
@@ -193,7 +194,7 @@ Feature introduced in DataMiner 8.0.5.4 (RN6557)
   - &lt;
   - &gt;
   - !=
-  - regex (from DataMiner 10.1.8/10.2.0 onwards – RN 30199, see aggregate)
+  - regex (see [aggregate](#aggregate))<!-- RN 30199 -->
 
 For all equation types except for regex, the parts b, c and d specify the following:
 
@@ -204,8 +205,8 @@ For all equation types except for regex, the parts b, c and d specify the follow
   This is the PK value.
 
   - If an instance is specified, that instance from the table will always be used to compare.
-  - If there is no instance and a parameter ID of that same table is set in “c”, the compare is done cell by cell.
-  - If a column parameter ID of a remote table is set in “c”, it is used to filter only the linked rows.
+  - If there is no instance and a parameter ID of that same table is set in "c", the compare is done cell by cell.
+  - If a column parameter ID of a remote table is set in "c", it is used to filter only the linked rows.
 
 For equation type regex, the parts b, c and d specify the following, depending on how the regular expression is defined:
 
@@ -225,7 +226,7 @@ For equation type regex, the parts b, c and d specify the following, depending o
   ```
 
   > [!NOTE]
-  > When you opt to store a regular expression in a parameter, then this parameter should be a standalone, single-value parameter of type string. 
+  > When you opt to store a regular expression in a parameter, then this parameter should be a standalone, single-value parameter of type string.
 
 - Equation value with a regular expression defined in a regex attribute:
   - b: Empty when regular expression is specified in a separate regex attribute.
@@ -257,7 +258,7 @@ Specify these destination columns by:
 
 The first possibility is the preferred one as it gives a clearer indication of where a certain group by column will be written to. Using e.g. "groupby:3,2;return:1105" will result in unexpected behavior, as the first group by column will be placed in destination column 1105 instead of the expected result of the aggregate action.
 
-The groupby column of the source table is preferably of type string. When using a parameter of type signed number with a fixed length of 4 bytes and value “-1”, then in the result table this key will not be “-1” but 4294967295 (or 2^32 -1). No problems will occur if you use positive numbers or string parameters with value “-1”.
+The groupby column of the source table is preferably of type string. When using a parameter of type signed number with a fixed length of 4 bytes and value "-1", then in the result table this key will not be "-1" but 4294967295 (or 2^32 -1). No problems will occur if you use positive numbers or string parameters with value "-1".
 
 #### groupbyTable
 
@@ -286,6 +287,15 @@ You can configure where the result should be placed by specifying comma-separate
 
 It is not mandatory to put all returned result columns into parameters; you could choose to only retrieve the calculated value and omit the weight, e.g. "return:1105".
 
+Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
+
+The following code will take all values from the bandwidth column of the PID table (parameter ID 103), group them by the second column in the PID table (containing for example the service ID), count them together (per service), and store them in the total bandwidth column of the Services table (parameter ID 203).
+
+```xml
+<On id="103">parameter</On>
+<Type options="type:sum;groupby:1;return:203">aggregate</Type>
+```
+
 The table must at least have three columns:
 
 - one for the groupby key
@@ -297,7 +307,7 @@ The table must at least have three columns:
 - one for the weight
 
 > [!NOTE]
-> All columns of the “return table” must have the type attribute of their ColumnOption tag set to “retrieved”.
+> All columns of the "return table" must have the type attribute of their ColumnOption tag set to "retrieved".
 
 #### status
 
@@ -308,15 +318,6 @@ Possible status values:
 - 0: Finished
 - 1: Busy
 - 2: Finished with failure
-
-Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
-
-The following code will take all values from the bandwidth column of the PID table (parameter ID 103), group them by the second column in the PID table (containing for example the service ID), count them together (per service), and store them in the total bandwidth column of the Services table (parameter ID 203).
-
-```xml
-<On id="103">parameter</On>
-<Type options="type:sum;groupby:1;return:203">aggregate</Type>
-```
 
 #### threaded
 
@@ -375,51 +376,55 @@ In the following example, the result values of the avg extended will be placed i
 </Action>
 ```
 
-### Type@regex
+#### weight
 
-(optional): Specifies the regular expression to use. Feature introduced in DataMiner 10.1.8 (RN 30199).
+The weight option is used when the value column represents an average with an associated weight. This weight adjusts the relative significance of each row in the final result, ensuring accurate aggregation.
 
-## Examples
+Alternatively, the weight can represent the frequency of occurrences, acting as a multiplier to indicate that some rows may represent more items than others.
 
-### Example 1
+Example:
 
 ```xml
-<Action id="102">
+<Action id="1">
   <On id="102">parameter</On>
   <Type options="groupby:3;weight:103;type:avg;return:202">aggregate</Type>
 </Action>
 ```
 
-|PK (101)|Value (102)|Weight (103)|Group (104)|
-|--- |--- |--- |--- |
-|1|10|50|1|
-|2|2|5|1|
+In this case, the weight is defined by column 103, which represents how many times the corresponding value in column 102 occurs.
 
-This results in:
+| PK (101) | Value (102) | Weight (103) | Group (104) |
+|----------|-------------|--------------|-------------|
+| 1        | 10          | 50           | 1           |
+| 2        | 2           | 5            | 1           |
 
-|PK (201)|Value (202)|
-|--- |--- |
-|1|9|
+Results in:
 
-The weight is specified because one row represents more items than the other, and when aggregating, this must be taken into account.
+| PK (201) | Value (202) |
+|----------|-------------|
+| 1        | 9           |
 
-### Example 2
+### Type@regex
+
+(optional): Specifies the regular expression to use.<!-- RN 30199 -->
+
+## Examples
 
 ```xml
 <Type options="groupby:1:202,2:203;type:count;return:204">aggregate</Type>
 ```
 
-|PK (101)|Group1 (102)|Group2 (103)|
-|--- |--- |--- |
-|11.12.1|11|12|
-|11.12.2|11|12|
-|11.12.3|11|12|
+| PK (101) | Group1 (102) | Group2 (103) |
+|----------|--------------|--------------|
+| 11.12.1  | 11           | 12           |
+| 11.12.2  | 11           | 12           |
+| 11.12.3  | 11           | 12           |
 
 This results in:
 
-|PK (201)|Group1 (202)|Group2 (203)|Value (204)|
-|--- |--- |--- |--- |
-|11.12 11|1|2|3|
+| PK (201) | Group1 (202) | Group2 (203) | Value (204) |
+|----------|--------------|--------------|-------------|
+| 11.12 11 | 1            | 2            | 3           |
 
 The Groupby will create a row with a PK and the values of the groupby separated by a dot. But it is also possible to put the values in separate columns.
 

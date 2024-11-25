@@ -6,8 +6,6 @@ uid: NT_DELETE_ROW
 
 Removes a row from a table.
 
-
-
 ## Parameters
 
 Removing a row from the **local element**:
@@ -20,7 +18,7 @@ int rowCount = (int)protocol.NotifyProtocol(156/*NT_DELETE_ROW*/ , tableID, prim
 ```
 
 - tableID (int): ID of the table parameter.
-- primaryKey (string): Primary key of the row that needs to be removed. 
+- primaryKey (string): Primary key of the row that needs to be removed.
 
 Removing a row from a **remote element**:
 
@@ -48,7 +46,7 @@ int rowCount = (int)protocol.NotifyDataMiner(156 /*NT_DELETE_ROW*/, ids, primary
 ## Remarks
 
 - In order to delete multiple rows, provide a string array containing the primary keys of the rows to remove as second parameter.
-- Also supported for logger tables in the indexing database from DataMiner 9.6.4 (RN 17018) onwards.
+- Also supported for logger tables in the indexing database.<!-- RN 17018 -->
 
 ## See also
 

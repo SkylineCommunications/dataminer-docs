@@ -17,7 +17,6 @@ string
 ## Remarks
 
 - The condition can be specified in a CDATA tag.
-- Feature introduced in DataMiner 7.5.4.3.
 - Refer to <xref:LogicConditions> for more information about conditions.
 
 ## Examples

@@ -8,11 +8,28 @@ uid: Overview_Support_Plans
 
 DataMiner support plans are technical support services for the DataMiner core platform, connectors, and cloud services. Three support plans are available, providing different levels of support depending on the user's needs and goals.
 
-- [Community](#community)
-- [Continuity](#continuity)
-- [Evolve](#evolve)
+|                        | [Community](#community)  | [Continuity](#continuity)| [Evolve](#evolve)                                      |
+|------------------------|:----------------------------------------------:|:-------------------------:|:-------------------------------------------:|
+| **Unlimited technical remote support during business hours** | - | ✔ | ✔ |
+| **Software updates & upgrades**<sup>[1]</sup><br><sub>(core software & connectors)</sub> |  ✔ <sup>[2]</sup> | ✔ | ✔ |
+| **[Proactive support services](xref:Proactive_Support)**  | ✔ | ✔ | ✔ |
+| **Response times**     | -                                              | level 1: 1 hr<br>level 2: 8 hrs<br>level 3: 24 hrs | level 1: 1 hr<br>level 2: 4 hrs<br>level 3: 8 hrs  |
+| **corrective action times** | - | level 1: 12 hrs<br>level 2: 16 hrs<br>level 3: N/A | level 1: 8 hrs<br>level 2: 12 hrs<br>level 3: N/A |
+| **Dedicated appointed support contact** | - | - | ✔ |
+| **Direct Message channel**<br><sup>Available for Microsoft Teams</sup> | - | - | ✔ |
+| **Dedicated customer success team** | - | - | ✔ |
+| **Quarterly executive reviews** | - | - | ✔ |
+| **Professional service credits [included](#professional-service-credits-included)** | - | ✔ | ✔ |
+| **Technical resources**<br><sub> [docs.dataminer.services](https://docs.dataminer.services/), [dojo forum](https://community.dataminer.services/questions/), [free learning](https://community.dataminer.services/learning/)</sub> | ✔ | ✔ | ✔ |
 
-In addition to *Continuity* or *Evolve*, you can subscribe to the [Out-of-Business-Hours support](xref:Overview_Out_Of_Business_Hours_Support) add-on.
+<sup>[1]</sup>Upgrades and updates can be downloaded/deployed from dataminer.services. Note that installing these on your system is not part of our support services.
+
+<sup>[2]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Access to updates to the DataMiner core software is included.
+
+> [!NOTE]
+> While this section refers to support during business hours, you can also subscribe to the [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) add-on to *Continuity* and *Evolve*.
+
+For additional information, consult the [FAQ section](xref:FAQs_Support_Services)
 
 ### Community
 
@@ -20,7 +37,7 @@ The *Community* plan enables access to Skyline's Operations team through the for
 
 While software updates to the DataMiner core software are included, connector updates and access to remote technical support (i.e. Operations team) are charged per hour.
 
-This plan is primarily intended for DataMiner platform users who have free or pay-per-use systems or entry-level subscriptions.
+This plan is primarily intended for DataMiner platform users who have a [Community Edition](https://community.dataminer.services/usage-based-pricing/), pay-per-use systems, or entry-level subscriptions.
 
 ### Continuity
 
@@ -44,21 +61,26 @@ Because its foundation is mutual commitment, the Evolve plan is not sold as a se
 > [!NOTE]
 > The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e. *Continuity* or *Evolve*.
 
-## Minimum requirements
+## Minimum requirements for each level
 
-| Plan | Pay-per-use credits | Subscription plan | Perpetual-use licenses |
-|---|:-:|:-:|:-:|
-| Community | Included | Included | - |
-| Continuity | - | MUA >= 200 DataMiner credits | Active Support Services agreement |
-| Evolve | - | MUA >= 200 DataMiner credits <br>  **50,000 DevOps Points** | Active Support Services agreement <br> **50,000 DevOps Points**  |
+The three levels mentioned above are available for usage-based services. However, the Community plan is not available for perpetual-use licenses. The requirements listed below determine your support level.
 
-## Professional Service Credits
+| Plan | Usage-based services | Perpetual-use licenses |
+|---|:-:|:-:|
+| Community | Included | - |
+| Continuity | MUA >= 200 DataMiner credits | Active Support Services agreement |
+| Evolve | MUA >= 200 DataMiner credits <br>  **50,000 DevOps Points** | Active Support Services agreement <br> **50,000 DevOps Points**  |
 
-Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team. 
+> [!IMPORTANT]
+> All support plans require an active connection to [dataminer.services](xref:Overview_DCP).
 
-| Pay-per-use credits | Subscription plan | Perpetual-Use Licenses |
-|:-:|:-:|:-:|
-| 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 400 | 200 <br> Only available with Evolve plan |
+## Professional Service Credits included
+
+Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team.
+
+| Usage-based services | Perpetual-Use Licenses |
+|:-:|:-:|
+|  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 400 | 200 <br> Only available with Evolve plan |
 
 > [!NOTE]
-> These Professional Service Credits must be used within the contracted year. They will not be carried over to the next year. 
+> These Professional Service Credits must be used within the contracted year. They will not be carried over to the next year.

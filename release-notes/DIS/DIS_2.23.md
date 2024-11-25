@@ -8,7 +8,7 @@ uid: DIS_2.23
 
 ### IDE
 
-#### File editors: New menu command ‘Copy File Content to Clipboard’ \[ID_23663\]
+#### File editors: New menu command ‘Copy File Content to Clipboard’ \[ID 23663\]
 
 When you right-click in the XML editor or the C# editor, you can now use the new *Copy File Content to Clipboard* command to copy the entire content of the file you are editing to the Windows clipboard, without needing to select all text first.
 
@@ -17,13 +17,13 @@ Also, from now on, DIS menu items that are not available will no longer appear g
 > [!NOTE]
 > The *Copy File Content to Clipboard* command is not available when you are editing a Protocol.xml file. To copy the content of a protocol file, use the *Copy Protocol to Clipboard* command instead.
 
-#### DIS Macros: New example macro ‘Basic UI’ \[ID_23667\]
+#### DIS Macros: New example macro ‘Basic UI’ \[ID 23667\]
 
 In the *DIS Macros* tool window, a new ‘Basic UI’ example macro can now be found in the *DIS Macros \> Examples* folder.
 
 This macro shows you how to create a basic user interface using WPF code.
 
-#### DIS now supports C# version 6 and above \[ID_23745\]
+#### DIS now supports C# version 6 and above \[ID 23745\]
 
 Up to now, DIS only supported C# version 4. From now on, it also supports C# version 6 and above.
 
@@ -35,17 +35,17 @@ When you open a Protocol.xml file of which the DMA version specified in the *Pro
 > [!NOTE]
 > When no minimum required DMA version is specified in the protocol, then by default DIS will set the language version of the C# projects to 4.0.
 
-#### ‘Check for updates...’ command in DIS menu \[ID_23883\]
+#### ‘Check for updates...’ command in DIS menu \[ID 23883\]
 
 The *Check for updates...* command has now been moved from the *Settings* window to the DIS menu.
 
 Also, in the *Info* tab page of the *Settings* window, you can now click *Release notes...* to open the release notes document of the DIS version you are using.
 
-#### DIS Settings - Class Library: New ‘Enable Class Library feature’ option \[ID_23791\]
+#### DIS Settings - Class Library: New ‘Enable Class Library feature’ option \[ID 23791\]
 
 In the *Class Library* tab page of the *DIS Settings* window, it is now possible to either enable or disable the Class Library feature.
 
-#### Table Editor: Table columns can now be deleted by pressing the DELETE key \[ID_23957\]
+#### Table Editor: Table columns can now be deleted by pressing the DELETE key \[ID 23957\]
 
 When configuring a table in the table editor, it is now possible to delete columns by pressing the DELETE key.
 
@@ -56,7 +56,7 @@ To delete one or more columns from a table, do the following:
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_23509\]
+#### New and updated checks and error messages \[ID 23509\]
 
 The following checks and error messages have been added or updated.
 
@@ -151,14 +151,14 @@ The following checks and error messages have been added or updated.
 
 ### XML Schema
 
-#### Protocol Schema: New elements \[ID_23608\]\[ID_23611\]
+#### Protocol Schema: New elements \[ID 23608\]\[ID 23611\]
 
 The Protocol XML schema now supports the following elements:
 
 - Protocol.Params.Param.Dashboard
 - Protocol.Params.Param.Measurement.Discreets.Discreet.Tooltip
 
-#### Protocol Schema: ArrayOptions.ColumnOption now preferred above ArrayOptions.ColumnOptions.ColumnOption \[ID_23741\]
+#### Protocol Schema: ArrayOptions.ColumnOption now preferred above ArrayOptions.ColumnOptions.ColumnOption \[ID 23741\]
 
 When defining a table in a *Protocol.xml* file, there are two ways to specify *\<ColumnOption>* elements:
 
@@ -190,16 +190,16 @@ In Visual Studio, up to now, when you used the AutoComplete feature after enteri
 
 ### Enhancements
 
-#### Class Library: Element properties will only be retrieved when needed \[ID_23514\]
+#### Class Library: Element properties will only be retrieved when needed \[ID 23514\]
 
 From now on, element properties will only be retrieved when needed.
 
-#### Class Library: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element \[ID_23515\]
+#### Class Library: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element \[ID 23515\]
 
 The exception that is thrown when an element with duplicate properties is detected will now also contain the name and the ID of the element in question.
 
 ### Fixes
 
-#### Class Library: View name would be retrieved when it was already known \[ID_22303\]
+#### Class Library: View name would be retrieved when it was already known \[ID 22303\]
 
 Up to now, in some cases, the name of a view would be retrieved when it was already known. From now on, when the name of a view is already known, it will no longer be retrieved a second time.

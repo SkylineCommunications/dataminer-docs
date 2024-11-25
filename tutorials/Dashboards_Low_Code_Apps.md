@@ -14,6 +14,7 @@ keywords: low-code, low code, lowcode
 | [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
+| [Creating an anomaly overview dashboard](xref:Creating_Anomaly_Overview_Dashboard) | Create a dashboard that shows an overview of behavioral change event data. |
 
 > [!NOTE]
 > Most of the content in the Dashboards tutorials also applies for Low-Code Apps, as the functionality of these modules overlaps. Components that can be used in a dashboard can usually be used in exactly the same way in a low-code app. Consequently, it can occur that a low-code app is used as an example within a Dashboards tutorial.
@@ -25,7 +26,7 @@ keywords: low-code, low code, lowcode
 > - [Using Visual Overview to control dashboard feed components](xref:Using_visio_to_control_dashboard_feed_components)
 
 ### Low-Code Apps tutorials
-
+ 
 | Name | Description |
 |--|--|
 | [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing) | Create and publish your first low-code app. |
@@ -49,7 +50,6 @@ keywords: low-code, low code, lowcode
 | [Creating a duration operator](xref:Creating_Duration_Operator) | Create a custom operator that calculates the duration based on two datetime values. |
 | [Optimizing your custom operator](xref:Custom_Operator_Tutorial) | Optimize your custom operator while keeping an eye out for common pitfalls. |
 | [Providing a custom sort order](xref:GQI_Redirect_Sort_Tutorial) | Implement a custom GQI column sort order using a custom operator. |
-| [Forwarding dummy data to the GQI](xref:Ad_hoc_Tutorials) | Go through an example script that forwards dummy data to the GQI. |
 | [Building a GQI data source that fetches satellites](xref:Ad_hoc_Tutorials_Satellites) | Go through an example script that forwards satellites data to the GQI. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 | [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_GQIDMS) | Create an ad hoc data source to retrieve data from your DMS. |

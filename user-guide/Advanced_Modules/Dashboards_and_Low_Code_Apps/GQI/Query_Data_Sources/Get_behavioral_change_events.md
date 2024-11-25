@@ -26,7 +26,7 @@ The following columns are also available after a [Select](xref:GQI_Select) opera
 - **Creation time**: The time when the change point was first detected.
 - **Last update**: The time when the change point was last updated.
 
-When one or more table rows are selected, the following feeds are available in the *feeds* section of the data pane:
+When one or more table rows are selected, the following component data is available in the *Components* or *Feeds* section (depending on your DataMiner version<!--RN 41141-->) of the *Data* pane:
 
 - **Parameters**: The parameters for which the selected change points were detected.
 - **Timespans**: The time ranges from the start time to the end time of the selected change points.

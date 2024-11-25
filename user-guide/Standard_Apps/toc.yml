@@ -1,6 +1,6 @@
 items:
-  - name: Common Data Model (CDM)
-    topicUid: CDM
+  - name: Standard Data Model (SDM)
+    topicUid: SDM
   - name: DataMiner EPM Solution
     topicUid: SolEPM
     items:
@@ -147,6 +147,15 @@ items:
             topicUid: VSAT_metrics
           - name: Available parameters in VSAT
             topicUid: VSAT_parameters
+      - name: DataMiner EPM Availability
+        topicUid: Availability_Overview
+        items:
+          - name: Deploying the DataMiner EPM Availability solution
+            topicUid: Availability_deployment
+          - name: Using the EPM Availability solution
+            topicUid: Availability_Using
+          - name: Available parameters in Availability
+            topicUid: Availability_parameters
   - name: DataMiner IDP app
     topicUid: SolIDP
     items:
@@ -262,6 +271,13 @@ items:
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview
             topicUid: Implementing_DITT_in_Visio
+      - name: META Whatsapp Messaging solution
+        topicUid: META_WhatsApp_Messaging
+        items:
+          - name: Installing the META WhatsApp Messaging solution
+            topicUid: META_WhatsApp_Messaging_Installation
+          - name: Using the META WhatsApp Messaging solution
+            topicUid: Using_META_WhatsApp_Messaging
       - name: DataMiner Objects Tool
         topicUid: DataMiner_Objects_Tool
         items:
@@ -269,6 +285,13 @@ items:
             topicUid: Installing_DataMiner_Objects_Tool
           - name: Working with the DataMiner Objects Tool
             topicUid: Using_DataMiner_Objects_Tool
+      - name: Performance Analyzer solution
+        topicUid: Performance_Analyzer
+        items:
+          - name: Performance Analyzer library
+            topicUid: Performance_Analyzer_Library
+          - name: Performance Analyzer app
+            topicUid: Performance_Analyzer_LCA
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:
@@ -280,6 +303,8 @@ items:
             topicUid: Ping_Monitoring_UI
           - name: Managing groups and destinations
             topicUid: Ping_Monitoring_managing_groups_destinations
+          - name: Getting started tutorial
+            topicUid: Tutorial_Apps_Ping_Monitoring_App
       - name: DataMiner Planned Maintenance (PLM) tool
         topicUid: DataMiner_PLM_Tool_Overview
         items:
@@ -323,6 +348,8 @@ items:
                 topicUid: Processor_configuration
               - name: Monitoring processed traps
                 topicUid: Monitoring_Processed_Traps
+          - name: Getting started tutorial
+            topicUid: Smart_Trap_Processor_Tutorial
       - name: DataMiner TAG Management app
         topicUid: Overview_TAG_App
         items:
@@ -416,6 +443,10 @@ items:
             topicUid: srm_instantiations
           - name: SRM scripting
             topicUid: srm_scripting
+          - name: Advanced SRM concepts
+            items:
+              - name: Quarantine
+                topicUid: SRM_Quarantine
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:
@@ -568,6 +599,8 @@ items:
                 topicUid: SRM_launching_booking_wizard_pages
               - name: Launching the Service Profile Booking Wizard from a custom script
                 topicUid: SRM_launching_service_profile_wizard
+          - name: Interacting with Resource Manager
+            topicUid: srm_using_resourcemanagerhelper
           - name: Frequently asked questions related to bookings and scripting
             topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging

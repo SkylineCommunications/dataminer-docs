@@ -342,7 +342,7 @@ For each connection, this section also has to contain one of the following array
 
     - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding elements](xref:Adding_elements)).
 
-    - **IsSslTlsEnabled**: Indicates whether SSL/TLS encryption should be enabled, similar to the SSL/TLS checkbox in the element editor in DataMiner Cube (see [Adding elements](xref:Adding_elements)). This is only relevant when *TypeConnection* is *Serial* or *SmartSerial* and *Type* is *IP*. This also requires DataMiner version 10.0.3 or higher. The default value is false.
+    - **IsSslTlsEnabled**: Indicates whether SSL/TLS encryption should be enabled, similar to the SSL/TLS checkbox in the element editor in DataMiner Cube (see [Adding elements](xref:Adding_elements)). This is only relevant when *TypeConnection* is *Serial* or *SmartSerial* and *Type* is *IP*. The default value is false.
 
     - **IsServerModeEnabled**: If this is set to true, the accepted IP addresses (cf. below) can be configured. Otherwise, this is not possible. This boolean is only relevant if *TypeConnection* is *SmartSerial*, *Type* is *IP* and the IP address is "any" or "127.0.0.1".
 

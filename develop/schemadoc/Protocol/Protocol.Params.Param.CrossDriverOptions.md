@@ -18,7 +18,7 @@ Allows the creation of a direct view table using multiple columns from multiple 
 
 ## Remarks
 
-Feature introduced in DataMiner 10.2.9 (RN 33253).
+Feature introduced in DataMiner 10.2.9/10.3.0 (RN 33253).
 
 ## Examples
 
