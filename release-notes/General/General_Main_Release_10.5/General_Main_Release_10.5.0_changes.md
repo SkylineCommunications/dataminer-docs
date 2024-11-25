@@ -1293,3 +1293,9 @@ A number of problems that occurred when polling SNMP tables using *GetNext* have
 <!-- MR 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 On STaaS systems, in some cases, when data was read immediately after a write operation had been executed, incorrect data would be returned, especially while restarting elements.
+
+#### Issues when synchronizing files among agents in a DMS [ID 41382]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+A number of issues that occurred while synchronizing files among agents in a DMS have been fixed.

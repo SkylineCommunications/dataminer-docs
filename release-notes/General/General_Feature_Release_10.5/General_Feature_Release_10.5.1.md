@@ -366,6 +366,12 @@ All files that are modified in the DataMiner System while SLDMS is performing th
 
 Up to now, that list could incorrectly contain multiple entries for the same file, causing the file in question to be re-checked multiple times after the synchronization had finished. From now on, each modified file will only be added once.
 
+#### Issues when synchronizing files among agents in a DMS [ID 41382]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+A number of issues that occurred while synchronizing files among agents in a DMS have been fixed.
+
 #### Problem with 'Clean up unused' in DataMiner Cube when the user folder on the DMA contained a deprecated clientsettings.dat file [ID 41386]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
