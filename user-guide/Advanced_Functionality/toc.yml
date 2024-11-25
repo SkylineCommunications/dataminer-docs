@@ -620,3 +620,10 @@ items:
         topicUid: SwarmingElements
       - name: Swarming bookings
         topicUid: SwarmingBookings
+      - name: Preparing your system for Swarming
+        topicUid: SwarmingPrepare
+      - name: Enabling the Swarming Feature
+        topicUid: SwarmingEnable
+      - name: Partially rolling back Swarming
+        topicUid: SwarmingRollback
+
