@@ -139,10 +139,12 @@ In addition to enabling HTTPS, we also recommend that you configure your operati
 For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTLS, and SSL protocol version settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-dtls-and-ssl-protocol-version-settings) in the Microsoft documentation. We have also made tools and scripts available for this [on GitHub](https://github.com/SkylineCommunications/windows-hardening), or you can use third-party tools such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto).
 
 ### Configure the firewall
-Depending on which version of the DataMiner Installer used, different firewall ports are opened by default:
 
-#### [10.4 Installer](#tab/tabid-1)
-On DataMiner versions installed using the **10.4 installer**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+Depending on which version of the DataMiner Installer is used, different firewall ports are opened by default. You can find more information about this below.
+
+#### [Installer v10.4](#tab/tabid-1)
+
+If DataMiner is installed with the **DataMiner Installer v10.4**, the following (inbound) ports and rules are opened in the Windows firewall:
 
 - TCP 80: HTTP
 
@@ -150,7 +152,7 @@ On DataMiner versions installed using the **10.4 installer**, the DataMiner inst
 
 - TCP 5100: CloudGateway (dataminer.services endpoint)
 
-- TCP 4222, 6222: NATS (inter-process communication)
+- TCP 4222 and 6222: NATS (inter-process communication)
 
 - TCP 9090: NATS Account Server
 
@@ -162,15 +164,15 @@ Some of the ports that are opened by default can potentially be closed depending
 
 - TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube to DMA and inter-DMA communication.
+- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube-to-DMA and inter-DMA communication.
 
-- The ports for NATS communication (**4222, 6222, and 9090**)can be closed when the DMA is not part of a cluster.
+- The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
 
 - TCP port **5100** can be closed when the DMA is not part of a cluster and no DxMs are hosted on external machines.
 
-#### [10.1 Installer](#tab/tabid-2)
+#### [Installer v10.1](#tab/tabid-2)
 
-On DataMiner versions installed using the **10.1 installer**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+On DataMiner versions installed using the **DataMiner Installer v10.1**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
 
 - TCP 80: HTTP
 
@@ -181,8 +183,7 @@ On DataMiner versions installed using the **10.1 installer**, the DataMiner inst
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
-  > If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -191,7 +192,7 @@ On DataMiner versions installed using the **10.1 installer**, the DataMiner inst
   > [!NOTE]
   > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database locally.
 
-- TCP 4222, 6222: NATS (inter-process communication)
+- TCP 4222 and 6222: NATS (inter-process communication)
 
 - TCP 9090: NATS Account Server
 
@@ -203,18 +204,18 @@ Some of the ports that are opened by default can potentially be closed depending
 
 - TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube to DMA and inter-DMA communication.
+- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube-to-DMA and inter-DMA communication.
 
-- The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
- 
+- The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
+
 - If your DMA is not using a locally installed Cassandra/Elasticsearch, the respective ports can be closed.
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
 
-#### [10.0 Installer (or older)](#tab/tabid-3)
+#### [Installer v10.0 (or older)](#tab/tabid-3)
 
-On DataMiner versions installed using the **10.0 installer (or older)**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+On DataMiner versions installed using the **DataMiner Installer v10.0 (or older)**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
 
 - TCP 23: Telnet
 
@@ -229,8 +230,7 @@ On DataMiner versions installed using the **10.0 installer (or older)**, the Dat
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
-  > If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -253,9 +253,9 @@ Some of the ports that are opened by default can potentially be closed depending
 
 - TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube to DMA and inter-DMA communication.
+- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube-to-DMA and inter-DMA communication.
 
-- The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
+- The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
 
 - If your DMA is not using a locally installed Cassandra/Elasticsearch, the respective ports can be closed.
 
@@ -274,7 +274,7 @@ Some ports that are displayed above are no longer opened by default during DataM
 - **ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
 
 ***
 
