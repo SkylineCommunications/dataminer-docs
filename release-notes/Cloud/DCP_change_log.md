@@ -101,7 +101,7 @@ The following methods are now available:
 - /catalogs/{CatalogId}/doc
 - /catalogs/categories
 
-A rate limit applies of 5 requests per second or a burst of 20. This results in 300 requests per minute. After a burst of 20, the bucket will fill with 5 requests per second before another burst can occur.
+You can make up to 5 requests per second, with occasional bursts of up to 20 requests allowed. After you trigger a burst, you will need to wait for the system to "refill" at a rate of 5 requests per second before you can trigger a burst again. Over a full minute, this allows for up to 300 requests.
 
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
