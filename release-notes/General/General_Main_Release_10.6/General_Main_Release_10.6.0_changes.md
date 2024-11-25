@@ -21,6 +21,12 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
+#### Legacy correlation engine is now deprecated [ID 40834]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+The legacy correlation engine is now deprecated. As of this version, DataMiner will no longer support legacy correlation rules.
+
 #### Clustering compatibility check enhancements [ID 41046]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
