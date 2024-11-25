@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.5.1
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.5.1](xref:General_Feature_Release_10.5.1).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.5.1](xref:General_Feature_Release_10.5.1).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.1](xref:Cube_Feature_Release_10.5.1).
 
 ## Highlights
 
