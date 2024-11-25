@@ -194,3 +194,11 @@ Up to now, this *screen* argument would not be applied to the DataMiner Agent wh
 Up to now, each time a Cube session was closed abruptly, its *Cube search* background thread would not be cleaned up properly. When a new session was then opened or when the closed session was restored, a new *Cube search* background thread would be created alongside the old one. From now on, when a new *Cube search* background thread is created, any existing *Cube search* background threads will first be closed.
 
 Also, when a *Cube search* background thread was closed, up to now, the memory allocated to that thread would not be freed up.
+
+#### Alarm Console: Base alarms of a correlated alarm would disappear when that alarm did not match the filter and a delay was specified on the alarm tab [ID 41463]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in an alarm tab in which an alarm filter and a delay had been specified, a correlation alarm would disappear because it no longer matched the filter, up to now, its base alarms that did match the filter would incorrectly not be added.
+
+Also, when neither a correlation alarm nor its base alarms no longer matched the filter, up to now, the correlation alarm would incorrectly not disappear from the alarm tab.
