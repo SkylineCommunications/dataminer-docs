@@ -4,6 +4,10 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 13 November 2024 - Enhancement - CommunicationGateway 3.2.3 - SLLogCollector config file deployed with installation of CommunicationGateway DxM [ID 41004]
+
+Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the CommunicationGateway DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-communicationgateway-dxm-id-41004)), and the CommunicationGateway installer will instead create the log configuration file upon installation.
+
 #### 23 September 2024 - Enhancement - CommunicationGateway 3.2.2 - PDB files removed from installer [ID 40557]
 
 To improve security, the CommunicationGateway installer has been updated so that it will no longer install PDB files.
