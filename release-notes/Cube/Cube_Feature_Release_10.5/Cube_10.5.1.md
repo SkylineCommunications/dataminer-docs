@@ -210,3 +210,9 @@ Also, when a *Cube search* background thread was closed, up to now, the memory a
 When, in an alarm tab in which an alarm filter and a delay had been specified, a correlation alarm would disappear because it no longer matched the filter, up to now, its base alarms that did match the filter would incorrectly not be added.
 
 Also, when neither a correlation alarm nor its base alarms no longer matched the filter, up to now, the correlation alarm would incorrectly not disappear from the alarm tab.
+
+#### Visual Overview: Dynamic page data would not report their 'pending' state correctly [ID 41483]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When calculating how long it took to load a Visio page, up to now, the processing of the dynamic placeholders specified on that page would incorrectly not be taken into account. As a result, dynamic page data would not report their *pending* state correctly.

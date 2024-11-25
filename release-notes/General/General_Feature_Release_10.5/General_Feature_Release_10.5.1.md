@@ -124,6 +124,17 @@ The checks with regard to database compatibility have now been enhanced.
 
 See also: [System Center - Agents: Clustering compatibility checks will now be performed by the DMA to which Cube is connected [ID 41049]](xref:Cube_Feature_Release_10.5.1#system-center---agents-clustering-compatibility-checks-will-now-be-performed-by-the-dma-to-which-cube-is-connected-id-41049)
 
+#### Service & Resource Management: Ongoing and queued requests sent to the old master agent will now be resent to the new master agent [ID 41089]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+Since DataMiner feature release 10.4.11, it is possible to switch to another master agent.
+
+Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process all ongoing and queued requests as if it were still master agent. This behavior has now changed. From now on, all ongoing and queued requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
+
+> [!NOTE]
+> Currently, property updates will still be processed by the agent that was marked "not eligible to be promoted to master" (i.e. the old master).
+
 #### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
@@ -167,6 +178,12 @@ When ReservationInstances were deleted in bulk, up to now, an individual delete 
 From now on, when ReservationInstances are deleted in bulk, a single delete request will be sent to the database for every batch of 200 ReservationInstances.
 
 This will significantly enhance overall performance when deleting large numbers of ReservationInstances.
+
+#### VerifyNatsIsRunning prerequisite will no longer fail when IgnitionValue is not found in ClusterEndpoints.json [ID 41248]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
 
 #### gRPC connection reliability has been enhanced [ID 41261]
 

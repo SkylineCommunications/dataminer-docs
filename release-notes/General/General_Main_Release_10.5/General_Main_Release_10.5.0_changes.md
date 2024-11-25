@@ -777,9 +777,10 @@ When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\S
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
 
-#### Service & Resource Management: Switching master agents [ID 40712]
+#### Service & Resource Management: Switching master agents [ID 40712] [ID 41089]
 
-<!-- MR 10.5.0 - FR 10.4.11 -->
+<!-- RN 40712: MR 10.5.0 - FR 10.4.11 -->
+<!-- RN 41089: MR 10.5.0 - FR 10.5.1 -->
 
 From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
 
@@ -788,7 +789,9 @@ When the DataMiner Agent that is currently the master agent is marked "not eligi
 The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
 
 > [!NOTE]
-> If the current master agent is marked "not eligible to be promoted to master", it will continue to process all ongoing and queued requests as if it were still master agent. However, all new requests will be forwarded to the new master agent. As a result, it is currently only possible to switch master agents when there are no ongoing master-synced requests.
+>
+> - If the current master agent is marked "not eligible to be promoted to master", all ongoing and queued requests that had been sent to it will fail with a `NotAMasterAgentException`, and the agents that sent those requests will resend them to the new master agent. All new requests will be forwarded to the new master agent.
+> - Currently, property updates will still be processed by the agent that was marked "not eligible to be promoted to master" (i.e. the old master).
 
 #### Minor enhancements made to BPAs [ID 40751]
 
@@ -1011,6 +1014,12 @@ Up to now, when an error occurred while a booking is being created, in some case
 Up to now, all log entries regarding visual overviews shown in web apps would have a log level equal to 5.
 
 From now on, these log entries will be assigned a log level that indicates their importance.
+
+#### VerifyNatsIsRunning prerequisite will no longer fail when IgnitionValue is not found in ClusterEndpoints.json [ID 41248]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
 
 #### VerifyClusterPorts: Endpoints to be tested will be retrieved from the Single Source of Truth [ID 41262]
 
