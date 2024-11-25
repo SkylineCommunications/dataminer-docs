@@ -50,6 +50,8 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 - Impact: Operation of the DataMiner System might be affected by the antivirus software.
 - Corrective action: Please configure the antivirus software to exclude DataMiner processes (sl*.exe).
 
+Note: Since some antiviruses inject themselves into the DataMiner processes, it may be necessary to restart DataMiner to resolve this error.
+
 ## List of DLLs being checked
 
 The following DLLs are currently checked (case insensitive):
