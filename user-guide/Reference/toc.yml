@@ -517,6 +517,8 @@ items:
         topicUid: service_profile_benchmarks
       - name: Service & Resource Management benchmarks
         topicUid: service_resource_management_benchmarks
+      - name: Swarming bookings benchmarks
+        topicUid: swarming_bookings_benchmarks
       - name: Trending benchmarks
         topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks
