@@ -4,19 +4,23 @@ uid: SwarmingEnable
 
 # Enabling the Swarming feature
 
-This tutorial shows how you can activate the Swarming feature on a DataMiner system.
+This page shows how you can activate the Swarming feature on a DataMiner system.
+
+> [!WARNING]
+> It is highly recommended to create a backup before enabling the Swarming feature.
 
 ## Prerequisites
 
 - DataMiner v10.5.1+
-- [STaaS](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/STaaS/STaaS.html) or a [dedicated clustered storage](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Configuring_dedicated_clustered_storage/Configuring_dedicated_clustered_storage.html)
+- [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)
 - There may not be Failover agents in the cluster
 - There may not be an offload database configured
-- There may not be Enhanced Services using non-compatible connectors
-- Scripts (Automation/GQI) should not use any obsolete and incompatible SLNet calls/properties that handle AlarmIDs as 'DmaID/AlarmID'
+- There may not be Enhanced Services using non-compatible connectors ([more info](xref:SwarmingPrepare))
+- Scripts (Automation/GQI) should not use any obsolete and incompatible SLNet calls/properties that handle AlarmIDs as 'DmaID/AlarmID' ([more info](xref:SwarmingPrepare))
+- Only users having the *Admin Tools* permission can enable Swarming.
 
 > [!TIP]
-> To verify whether your system satisfies these prerequisites ahead of trying to enable Swarming, you can send a `SwarmingPrerequisitesCheckRequest` message to SLNet. This which will give you a summary of above checks.
+> To verify whether your system satisfies these prerequisites ahead of trying to enable Swarming, you can send a `SwarmingPrerequisitesCheckRequest` message to SLNet using the SLNetClientTest tool. This which will give you a summary of above checks.
 > The response will show which prerequisites are not met. For the obsolete AlarmID usages that need to be replaced or removed, it will give you a summary of which scripts use which deprecated calls and/or properties.
 >
 > The same checks are also executed when enabling Swarming and must pass to be able to be allowed to enable Swarming.
@@ -47,7 +51,7 @@ After the restart, one way to verify that the Swarming feature has been activate
 Once swarming is enabled, eligible elements can be swarmed in a cluster through e.g. the *System Center > Agents > Status > Swarm* window.
 
 > [!NOTE]
-> Elements that are not Swarmable, will not show up in this UI.
+> Elements that are not Swarmable will not show up in this UI.
 
 ## Permissions
 

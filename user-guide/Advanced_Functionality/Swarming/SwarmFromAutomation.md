@@ -18,7 +18,7 @@ This tutorial lesson demonstrates how you can create an automation script that c
 
 As a fist step, you will create a short automation script that will swarm a fixed element to a fixed destination:
 
-1. [Create a new automation script](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation_module/Managing_Automation_scripts.html#adding-a-new-automation-script)
+1. [Create a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)
 
 1. Collect the following information
 
@@ -88,7 +88,7 @@ The lines above deal with failures, if any.
 
 You will now be extending the script above to use input variables instead of specifying a fixed element and target agent. This will make the script re-usable for all element swarm actions.
 
-1. Add two [script input parameters](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation_module/Designing_Automation_scripts/Script_variables.html#creating-a-parameter) to the Automation script created in the previous step.
+1. Add two [script input parameters](xref:Script_variables#creating-a-parameter) to the Automation script created in the previous step.
 
     - One named `Element Key`
 

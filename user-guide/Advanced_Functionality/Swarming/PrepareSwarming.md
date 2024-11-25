@@ -25,7 +25,7 @@ uid: SwarmingPrepare
 
 Up to DataMiner 10.4, the combination `HostingAgentID/RootAlarmID` was typically being used to refer to an alarm tree.
 
-When elements are being migrated between agents ([DELT](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/Migrating_elements_in_a_DataMiner_System.html?q=migrate%20)) or swarmed from one agent to another, this combination of fields is inadequate as it is not unique nor fixed.
+When elements are being migrated between agents ([DELT](xref:Migrating_elements_in_a_DataMiner_System)) or swarmed from one agent to another, this combination of fields is inadequate as it is not unique nor fixed.
 
 While DataMiner will still try to resolve these references where it can, new code should be using `AlarmTreeID` references instead. These combine the `DataMinerID/ElementID/RootAlarmID` fields to end up with a unique reference. Existing code should also be updated to ensure future compatibility.
 
