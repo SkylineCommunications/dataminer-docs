@@ -97,7 +97,7 @@ This file will contain all the necessary information to register a Catalog item 
 #   - Product Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific product.
 #   - Scripted Connector: If the Catalog item is a DataMiner scripted connector.
 #   - Standard Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
-#   - System Health: If the Catalog item is to monitor the health of a system.
+#   - System Health: If the Catalog item is intended to monitor the health of a system.
 #   - User-Defined API: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
 #   - Visual Overview: If the Catalog item is a Microsoft Visio design.
 

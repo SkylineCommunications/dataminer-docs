@@ -11,18 +11,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
 
-If you register a catalog item using a manifest that contained an invalid syntax for owner, a HTTP 500 internal server error was returned.
-This has been improved by returning a HTTP 400 Bad Request containing detail which field is invalid.
+When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
 
-### 25 November 2024 - Fix - Catalog API - Registration with ID that exists in another organization returned internal server error [ID 41515]
+### 25 November 2024 - Fix - Catalog API - Registration with existing ID from other organization returned internal server error [ID 41515]
 
-If you register a catalog item with an ID that existed already in another organization, an internal server error was returned.
+When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
 
-This has been improved by returning a HTTP 409 Conflict result.
+### 25 November 2024 - New feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
 
-### 25 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 41491]
-
-Using an organization key with permission "Update catalog publishing state" it is possible to make a Catalog item public or private.
+It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
 
 ### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
 
@@ -72,13 +69,13 @@ The following types have been removed:
 
 On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
 
-### 25 November 2024 - Feature - Catalog API - Get Catalog item categories [ID 41411]
+### 25 November 2024 - New feature - Catalog API - Get Catalog item categories [ID 41411]
 
-User, service and public Catalog APIs are extended with a categories call to obtain all categories supported in catalog
+The user, service, and public Catalog APIs have been extended with a categories call to obtain all categories supported in Catalog:
 
-"/api/user-catalog/v2-0/catalogs/categories"
-"/api/public-catalog/v2-0/catalogs/categories"
-"/api/service-catalog/v1-0/catalogs/categories"
+- "/api/user-catalog/v2-0/catalogs/categories"
+- "/api/public-catalog/v2-0/catalogs/categories"
+- "/api/service-catalog/v1-0/catalogs/categories"
 
 ### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
 
@@ -88,23 +85,23 @@ On the Catalog details page, if the publisher is not from your currently selecte
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
 
-### 25 November 2024 - Feature - Catalog API - Service authenticated API [ID 41353]
+### 25 November 2024 - New feature - Catalog API - Service authenticated API [ID 41353]
 
-The api/service-catalog/v1-0/ route now exposes methods that allows applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer".
-Requires permission on role "catalog.api.read" of the catalog API.
+The *api/service-catalog/v1-0/* route now exposes methods that allow applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer".
 
-Following methods are made available:
+This requires permission on the role "catalog.api.read" of the Catalog API.
 
-* /catalogs/search
-* /catalogs/{CatalogId}
-* /catalogs/{CatalogId}/ranges
-* /catalogs/{CatalogId}/versions
-* /catalogs/{CatalogId}/versions/recommended
-* /catalogs/{CatalogId}/doc
-* /catalogs/categories
+The following methods are now available:
 
-rate limit : 5 requests per sec and a burst of 20. This results in 300 requests per minute and after a burst of 20, the bucket will fill with 5 requests per sec before another burst can occur.
+- /catalogs/search
+- /catalogs/{CatalogId}
+- /catalogs/{CatalogId}/ranges
+- /catalogs/{CatalogId}/versions
+- /catalogs/{CatalogId}/versions/recommended
+- /catalogs/{CatalogId}/doc
+- /catalogs/categories
 
+A rate limit applies of 5 requests per second or a burst of 20. This results in 300 requests per minute. After a burst of 20, the bucket will fill with 5 requests per second before another burst can occur.
 
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
@@ -443,11 +440,11 @@ Users can now view documentation for all items, if provided.
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
-#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
+#### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 
 It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
 
-#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID 40144]
+#### 23 July 2024 - New feature - Catalog - Support for more Catalog types [ID 40144]
 
 The following new Catalog types are now supported:
 
