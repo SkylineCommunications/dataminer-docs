@@ -186,3 +186,11 @@ From now on, a pop-up window showing a quarantine warning will only appear in ca
 If you have multiple monitors and want the DataMiner Cube desktop app to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
 Up to now, this *screen* argument would not be applied to the DataMiner Agent when passed to DataMiner Cube, only when it was explicitly passed to the DataMiner Agent.
+
+#### 'Cube search' background thread would not be closed when a Cube session was closed abruptly [ID 41359]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, each time a Cube session was closed abruptly, its *Cube search* background thread would not be cleaned up properly. When a new session was then opened or when the closed session was restored, a new *Cube search* background thread would be created alongside the old one. From now on, when a new *Cube search* background thread is created, any existing *Cube search* background threads will first be closed.
+
+Also, when a *Cube search* background thread was closed, up to now, the memory allocated to that thread would not be freed up.
