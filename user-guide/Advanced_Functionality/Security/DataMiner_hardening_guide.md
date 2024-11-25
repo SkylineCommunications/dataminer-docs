@@ -170,9 +170,9 @@ Some of the ports that are opened by default can potentially be closed depending
 
 - TCP port **5100** can be closed when the DMA is not part of a cluster and no DxMs are hosted on external machines.
 
-#### [Installer v10.1](#tab/tabid-2)
+#### [Installer v10.2](#tab/tabid-2)
 
-On DataMiner versions installed using the **DataMiner Installer v10.1**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+On DataMiner versions installed using the **DataMiner Installer v10.2**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
 
 - TCP 80: HTTP
 
@@ -183,14 +183,14 @@ On DataMiner versions installed using the **DataMiner Installer v10.1**, the Dat
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
 - TCP 9300: Elasticsearch (inter-node communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database locally.
+  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database that is installed on the same machine as DataMiner.
 
 - TCP 4222 and 6222: NATS (inter-process communication)
 
@@ -208,7 +208,7 @@ Some of the ports that are opened by default can potentially be closed depending
 
 - The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
 
-- If your DMA is not using a locally installed Cassandra/Elasticsearch, the respective ports can be closed.
+- If DataMiner is not installed on the same machine as Cassandra/Elasticsearch, the respective ports can be closed.
 
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
@@ -230,14 +230,14 @@ On DataMiner versions installed using the **DataMiner Installer v10.0 (or older)
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
 - TCP 9300: Elasticsearch (inter-node communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database locally.
+  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database that is installed on the same machine as DataMiner.
 
 - TCP 4222, 6222, 8222: NATS (inter-process communication)
 
@@ -257,7 +257,7 @@ Some of the ports that are opened by default can potentially be closed depending
 
 - The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
 
-- If your DMA is not using a locally installed Cassandra/Elasticsearch, the respective ports can be closed.
+- If DataMiner is not installed on the same machine as Cassandra/Elasticsearch, the respective ports can be closed.
 
 Some ports that are displayed above are no longer opened by default during DataMiner installation with newer versions of the installer. However, to avoid breaking changes, these ports are **not closed when you upgrade an existing DataMiner System** that was installed with an installer prior to version 10.1. We therefore recommend that you verify if any of the following ports can be closed manually:
 
