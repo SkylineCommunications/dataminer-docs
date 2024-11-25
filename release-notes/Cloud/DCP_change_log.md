@@ -9,15 +9,30 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 21 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
+### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
+
+If you register a catalog item using a manifest that contained an invalid syntax for owner, a HTTP 500 internal server error was returned.
+This has been improved by returning a HTTP 400 Bad Request containing detail which field is invalid.
+
+### 25 November 2024 - Fix - Catalog API - Registration with ID that exists in another organization returned internal server error [ID 41515]
+
+If you register a catalog item with an ID that existed already in another organization, an internal server error was returned.
+
+This has been improved by returning a HTTP 409 Conflict result.
+
+### 25 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 41491]
+
+Using an organization key with permission "Update catalog publishing state" it is possible to make a Catalog item public or private.
+
+### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
 
 On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
 
-### 21 November 2024 - Enhancement - Admin - Warning in case DataMiner version dependency is not met for DxM [ID 41459]
+### 25 November 2024 - Enhancement - Admin - Warning in case DataMiner version dependency is not met for DxM [ID 41459]
 
 On the *DxMs* page in the Admin app, when a DataMiner version dependency is not met for a DxM, a warning will now be shown.
 
-### 21 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
+### 25 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
 
 On the Catalog browse page, the *Type* filter will now group its available values by category.
 
@@ -53,17 +68,43 @@ The following types have been removed:
 - SLA Model
 - Testing Solution
 
-### 21 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
+### 25 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
 
 On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
 
-### 21 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
+### 25 November 2024 - Feature - Catalog API - Get Catalog item categories [ID 41411]
+
+User, service and public Catalog APIs are extended with a categories call to obtain all categories supported in catalog
+
+"/api/user-catalog/v2-0/catalogs/categories"
+"/api/public-catalog/v2-0/catalogs/categories"
+"/api/service-catalog/v1-0/catalogs/categories"
+
+### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
 
 On the Catalog details page, if the publisher is not from your currently selected organization or Skyline Communications, the tag "External" will be shown next to the publisher in the side panel.
 
-### 21 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
+### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
+
+### 25 November 2024 - Feature - Catalog API - Service authenticated API [ID 41353]
+
+The api/service-catalog/v1-0/ route now exposes methods that allows applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer".
+Requires permission on role "catalog.api.read" of the catalog API.
+
+Following methods are made available:
+
+* /catalogs/search
+* /catalogs/{CatalogId}
+* /catalogs/{CatalogId}/ranges
+* /catalogs/{CatalogId}/versions
+* /catalogs/{CatalogId}/versions/recommended
+* /catalogs/{CatalogId}/doc
+* /catalogs/categories
+
+rate limit : 5 requests per sec and a burst of 20. This results in 300 requests per minute and after a burst of 20, the bucket will fill with 5 requests per sec before another burst can occur.
+
 
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
