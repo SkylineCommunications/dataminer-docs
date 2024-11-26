@@ -4,6 +4,13 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 25 November 2024 - Enhancement - CommunicationGateway 4.0.0 - MessageBroker version 3.0.3 [ID 41467]
+
+The CommunicationGateway DxM has been updated so that it from now on uses MessageBroker version 3.0.3.
+
+> [!IMPORTANT]
+> From CommunicationGateway 4.0.0 onwards, connectors that use the [Skyline.DataMiner.DataSources.OpenConfig.Gnmi](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x) NuGet package need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.x](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x) or higher.
+
 #### 13 November 2024 - Enhancement - CommunicationGateway 3.2.3 - SLLogCollector config file deployed with installation of CommunicationGateway DxM [ID 41004]
 
 Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the CommunicationGateway DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-communicationgateway-dxm-id-41004)), and the CommunicationGateway installer will instead create the log configuration file upon installation.
