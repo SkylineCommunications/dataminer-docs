@@ -51,6 +51,12 @@ Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\con
 
 See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
 
+#### Business intelligence: SLAs will now use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID [ID 41328]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
+
 ### Fixes
 
 *No fixes have been added yet.*

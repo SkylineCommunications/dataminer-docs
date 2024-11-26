@@ -251,6 +251,12 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element of type SNMPv3 does not have its user name filled in, from now on, it will go into an error state and an alarm will be generated.
 
+#### Business intelligence: SLAs will now use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID [ID 41328]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
+
 #### DataMiner upgrade packages will now include the most recent version of the CloudFeed DxM [ID 41357]
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
