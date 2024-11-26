@@ -39,9 +39,9 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
 
 If you are using DataMiner Installer v10.4, follow the steps below to install DataMiner:
 
-1. Make sure you are logged into Windows with the server's local Administrator account. Do not use a regular user account with administrative rights.
-
 1. Double-click the setup executable.
+
+   If elevated permissions are required, in case you are logged in with a user account with administrator rights, you will only need to confirm. In case you are logged in with a regular user account, you will need to provide credentials for a user account with administrator rights.
 
 1. Click *Install*.
 
