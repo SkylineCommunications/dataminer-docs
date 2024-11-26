@@ -1305,3 +1305,9 @@ On STaaS systems, in some cases, when data was read immediately after a write op
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
 A number of issues that occurred while synchronizing files among agents in a DMS have been fixed.
+
+#### DataMiner upgrade: Folder to which the contents of the upgrade package had been extracted would not be removed [ID 41393]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
