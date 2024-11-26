@@ -618,8 +618,8 @@ items:
     items:
       - name: Preparing your system for Swarming
         topicUid: SwarmingPrepare
-      - name: Enabling the Swarming Feature
-        topicUid: SwarmingEnable
+      - name: Enabling the Swarming feature
+        topicUid: EnableSwarming
       - name: Swarming elements
         topicUid: SwarmingElements
       - name: Swarming bookings

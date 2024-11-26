@@ -1,110 +1,102 @@
 ---
-uid: SwarmingEnable
+uid: EnableSwarming
 ---
 
 # Enabling the Swarming feature
 
-> [!WARNING]
-> It is highly recommended to create a backup before enabling the Swarming feature.
+> [!IMPORTANT]
+> We highly recommend creating a backup before enabling the Swarming feature.
 
 ## Prerequisites
 
-- DataMiner v10.5.1+
-- [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)
-- There may not be [Failover agents](xref:About_DMA_Failover) in the cluster
-- There may not be an [offload database](xref:Offload_database) configured
-- There may not be Enhanced Services using non-compatible connectors ([more info](xref:SwarmingPrepare))
-- Scripts (Automation/GQI) and QActions in connectors should not use any obsolete and incompatible SLNet calls/properties that handle AlarmIDs as 'DmaID/AlarmID' ([more info](xref:SwarmingPrepare))
-- Only users having the *Admin Tools* permission can enable Swarming.
+- DataMiner 10.5.1 or higher.
+- [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup
+- No [Failover Agents](xref:About_DMA_Failover) are present in the cluster.
+- No [offload database](xref:Offload_database) is configured.
+- Enhanced services in the cluster (if any) use only [compatible connectors](xref:SwarmingPrepare).
+- Scripts (Automation/GQI) and QActions in connectors have all been [made compatible](xref:SwarmingPrepare), i.e. they do not use obsolete or incompatible SLNet calls/properties that handle Alarm IDs as "DmaID/AlarmID".
+- For the user account that will be used to enable Swarming, the [Admin Tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is enabled.
 
-> [!TIP]
-> To verify whether your system satisfies these prerequisites ahead of trying to enable Swarming, you can send a `SwarmingPrerequisitesCheckRequest` message to SLNet using the [SLNetClientTest tool](xref:SLNetClientTest_tool). This which will give you a summary of above checks.
-> The response will show which prerequisites are not met. For the obsolete AlarmID usages that need to be replaced or removed, it will give you a summary of which scripts use which deprecated calls and/or properties.
->
-> The same checks are also executed when enabling Swarming and must pass to be able to be allowed to enable Swarming.
->
-> Note that this `SwarmingPrerequisitesCheckRequest` might take a while to execute because of legacy alarm id usage detection in scripts.
+## Running a prerequisites check
 
-## What will change
+To verify whether your system meets these prerequisites before you enable Swarming, you can send a *SwarmingPrerequisitesCheckRequest* message to SLNet using the [SLNetClientTest tool](xref:SLNetClientTest_tool). The prerequisite check is also executed when you enable Swarming, ensuring that all prerequisites are met before Swarming is enabled.
 
-When Swarming is enabled:
+> [!NOTE]
+> The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take a while.
 
-- When Swarming is enabled, element configuration will be stored in the cluster wide database rather than in element XML files on disk of the DataMiner agent hosting the element.
-- Alarm identifiers will be generated on a per-element level instead of per agent to make them unique within the cluster. Also see [Preparing your system for Swarming](xref:SwarmingPrepare)
+To run a prerequisites check using SLNetClientTest tool:
+
+1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+   > [!CAUTION]
+   > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
+
+1. In the *Message Type* drop-down list, select the message *Skyline.DataMiner.Net.Swarming.SwarmingPrerequisitesCheckRequest*.
+
+   By default, the *DataMinerID* property for the message will be set to -1, which means that the entire cluster will be checked.
+
+1. Click *Send Message*.
+
+   While the prerequisites check is running, this will be indicated at the bottom of the window. When the check is complete, the tool will switch to the *Properties* tab.
+
+1. In the *Properties* tab, make sure the top message is selected, and check the summary in the pane on the right.
+
+   For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g. specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
 
 ## Enabling Swarming
 
-This section describes how to enable the Swarming feature on a DataMiner System.
-
-On first startup, the existing element XML files get moved from disk into the database. Moving these files can take some minutes. While this is happening, a message will be displayed on the clients that are trying to connect.
-
-The migrated element files are **temporarily** backed up in the `Recycle Bin` (e.g. `2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip`). It is advised to store these somewhere safe if you ever want to access these again later, or to take a backup prior to enabling the Swarming feature.
+When you have made sure prerequisites are met, and you are ready to enable Swarming, you can do so using the SLNet message *EnableSwarmingRequest* (with the default parameters) in SLNetClientTest tool or an Automation script. Enabling Swarming via DataMiner Cube is currently not yet possible.
 
 > [!IMPORTANT]
-> There is no good way to move these files back from database to disk. This effectively means there is no good way to turn Swarming off. Disabling Swarming would mean you would lose all your elements leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rollback Swarming](xref:SwarmingRollback).
+> When you enable swarming, the element configuration will be moved from disk to database. This change can only partially be rolled back. See [Partially rolling back Swarming](xref:SwarmingRollback). We highly recommend taking a backup before enabling Swarming.
 
-Enabling Swarming for the whole DMS can be done via the SLNet message `EnableSwarmingRequest` with the default parameters, sent through the [SLNetClientTest tool](xref:SLNetClientTest_tool). This message will check for if the prerequisites are met on all of the agents and if so, enable Swarming and **restart** the whole DMS.
-There is currently no UI for this in Cube, so this has to be done via another client such as Client Test Tool or via an automation script.
+To enable Swarming using SLNetClientTest tool:
+
+1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+   > [!CAUTION]
+   > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
+
+1. In the *Message Type* drop-down list, select the message *Skyline.DataMiner.Net.Swarming.EnableSwarmingRequest*.
+
+   This message will need to be sent with its default settings, so do not make any changes to the settings for the message.
+
+1. Click *Send Message*.
+
+   The prerequisites will be checked for all Agents in the system, and when they are met, Swarming will enabled and all Agents in the DMS will be **restarted**.
+
+   The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take a while.
+
+   On first startup, the existing element XML files will be moved from disk into the database. This can also take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
 
 > [!NOTE]
-> The `EnableSwarmingRequest` might take a while to execute because of the prerequisite checks it does (legacy alarm id usage detection in scripts).
+> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g. *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
 
 ## Verifying that the feature is active
 
-After the restart, one way to verify that the Swarming feature has been activated is by checking the *SLSwarming.txt* logfile for the presence of a line `SwarmingManager::SwarmingManager|INF|-1|Swarming enabled`. This can be done in Cube through *System Center > Logging > dataminer > Swarming*. This logfile also shows details on the migration of elements that happened during DMA startup.
+Once all Agents have been restarted, you can verify whether the Swarming feature has been activated by checking if the following line is present in the *SLSwarming.txt* log file:
 
-Once swarming is enabled, eligible elements can be swarmed in a cluster through e.g. the *System Center > Agents > Status > Swarm* window.
+`SwarmingManager::SwarmingManager|INF|-1|Swarming enabled`
 
-> [!NOTE]
-> Elements that are not Swarmable will not show up in this UI.
+You can find this log file in DataMiner Cube via *System Center* > *Logging* > *dataminer* > *Swarming*. The log file also shows details on the migration of elements that happened during DMA startup.
 
-## Permissions
-
-Swarming elements requires the new Swarming permission and also config rights on the element. This can be configured through System Center.
+Once Swarming is enabled, you can go to *System Center* > *Agents* > *Status* > *Swarm* to swarm elements for which this feature is supported.
 
 > [!NOTE]
-> Groups that previously had the *DELT Import & Export* permissions will retroactively have the Swarming permission enabled.
-
-## Support
-
-Below is an overview of the differences between a system that does not have the swarming feature enabled vs one that has:
-
-> [!NOTE]
-> Where possible, non-supported objects are actively being blocked when trying to enabled the Swarming feature or when trying to configure/create them on a Swarming-enabled system.
-
-| | 10.5.1+&nbsp;(No&nbsp;Swarming) | 10.5.1+&nbsp;(With&nbsp;Swarming) |
-| --- | --- | --- |
-| Element Configuration | On disk (element.xml) | In database |
-| Alarm IDs | Per DataMiner Agent | Per Element |
-| Database Per Agent | Supported | Not Supported |
-| Script & QActions using legacy alarm references | Supported | Not Supported |
-| LegacyReportsAndDashboards | Supported | Not Supported |
-| Failover | Supported | Not Supported |
-| Legacy Correlation | Not Supported | Not Supported |
-| Central Database | Supported | Not Supported* |
-| SLA elements | Supported | Supported but not swarmable* |
-| Enhanced services | Supported | Supported** but not swarmable* |
-| Spectrum Elements | Supported | Supported but not swarmable* |
-| Redundancy group elements | Supported | Supported but not swarmable* |
-| Elements exporting DVEs of Functions | Supported | Supported but not swarmable* |
-| CPE elements | Supported | Supported but not swarmable* |
-| Elements polling localhost | Supported | Supported but not swarmable |
-| Elements with element connections | Supported | Supported but not swarmable* |
-| Smart-serial elements in server mode | Supported | Supported but not swarmable |
-| Elements receiving SNMP traps | Supported | Supported but not swarmable |
-
-(*) In initial release
-
-(**) [Enhanced Service connectors might need an update](xref:SwarmingPrepare)
+> Elements for which swarming is not supported will not be shown in this UI.
 
 ## Troubleshooting
 
 ### DataMiner not starting up
 
-- Double-check whether the database being used is compatible for Swarming.
+- Double-check whether the DataMiner System uses a database compatible with Swarming. See [Prerequisites](#prerequisites).
 
 - Check the *SLErrors.txt* and *SLSwarming.txt* log files for swarming-related errors.
 
 - Double-check the *Swarming.xml* configuration file for errors.
 
-- Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (eg when an invalid setup is detected)
+- Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g. an invalid setup is detected).

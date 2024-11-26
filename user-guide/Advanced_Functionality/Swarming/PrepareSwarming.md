@@ -4,12 +4,10 @@ uid: SwarmingPrepare
 
 # Preparing your system for Swarming (Alarm ID ranges)
 
-When the Swarming feature is enabled, alarm references need to be globally unique within the cluster. For that reason, alarm ids are being generated in a different way as compared to before. It is important to make sure that scripts and connectors are compatible with this to be able to successfully operate on a Swarming-enabled setup.
+When the Swarming feature is enabled, alarm references need to be globally unique within the cluster. For that reason, alarm IDs will be generated in a different way than in a system without Swarming. It is important to make sure that scripts and connectors are compatible with this to be able to successfully work with a Swarming-enabled setup.
 
 > [!NOTE]
-> This changes mentioned in this document can only be made when targeting versions 10.5.1/10.5.0 and up.
->
-> Legacy alarm references may still be used in 10.5.1+ but must no longer be used once the Swarming feature has been enabled.
+> The changes mentioned on this page require **DataMiner 10.5.1/10.5.0 or higher**. Note that while legacy alarm references may still be used in DataMiner 10.5.1 or higher, they must not be used on systems where the Swarming feature is enabled.
 
 ## Terminology
 
