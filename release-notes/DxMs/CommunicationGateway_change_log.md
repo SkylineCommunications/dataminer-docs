@@ -6,7 +6,7 @@ uid: CommunicationGateway_change_log
 
 #### 25 November 2024 - Enhancement - CommunicationGateway 4.0.0 - MessageBroker version 3.0.3 [ID 41467]
 
-The CommunicationGateway DxM has been updated so that it from now on uses MessageBroker version 3.0.3.
+The CommunicationGateway DxM has been updated so that from now on it uses MessageBroker version 3.0.3.
 
 > [!IMPORTANT]
 > From CommunicationGateway 4.0.0 onwards, connectors that use the [Skyline.DataMiner.DataSources.OpenConfig.Gnmi](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x) NuGet package need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.x](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x) or higher.
