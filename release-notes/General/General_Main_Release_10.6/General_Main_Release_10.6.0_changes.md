@@ -57,6 +57,14 @@ See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_b
 
 From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
 
+#### DataMiner upgrade: No longer possible to perform a 10.5.x web-only upgrade on DMAs running a version older than 10.4.x [ID 41395]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+From now on, it will no longer be allowed to perform a 10.5.x web-only upgrade on DMAs running a DataMiner version older than 10.4.x.
+
+If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 10.3.x, you will first have to upgrade that DMA to 10.4.0.
+
 ### Fixes
 
 *No fixes have been added yet.*
