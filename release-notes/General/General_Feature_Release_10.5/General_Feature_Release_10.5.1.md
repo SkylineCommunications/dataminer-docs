@@ -336,6 +336,14 @@ After having upgraded to a DataMiner version that contains this fix, you can do 
 
 All users should then be able to log in again.
 
+#### Elements with WebSocket connections: Excessive number of information events would be generated when specifying an incorrect IP address [ID 41167]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, while adding an element, you specified an incorrect IP address in the WebSocket connection details, an excessive number of information events would be generated, each mentioning that the parameter defined in `<NotifyConnectionPIDs>` was set to "Closed".
+
+From now on, SLPort will keep track of the parameter states that get forwarded to SLProtocol. This will make sure that only a change from "Open" to "Closed" or from "Closed" to "Open" will cause (a) a parameter state to get forwarded to SLProtocol and (b) an information event of type "set parameter" to be generated.
+
 #### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
