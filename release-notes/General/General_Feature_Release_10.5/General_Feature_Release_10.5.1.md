@@ -274,6 +274,12 @@ From now on, it will no longer be allowed to perform a 10.5.x web-only upgrade o
 
 If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 10.3.x, you will first have to upgrade that DMA to 10.4.0.
 
+#### SLAnalytics: Infinite parameter values will now be considered missing values [ID 41417]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+When a parameter is set to an infinite value, SLAnalytics will now consider this infinite value as a missing value. This will prevent parameter changes of this type from disrupting analytical models.
+
 #### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
