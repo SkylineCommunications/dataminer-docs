@@ -62,4 +62,6 @@ Element cards can look quite different depending on the element protocol. Howeve
   - **HELP**: Help page for the protocol of the element, if available.
 
   > [!NOTE]
-  > Many protocols include a web interface page as one of the data pages. However, such a web interface is only accessible when the client machine has network access to the product. Web interface pages are hidden to users who do not have the user permission [*General* > *Elements* > *Data Display* > *Device webpage access*](xref:DataMiner_user_permissions#general--elements--data-display--device-webpage-access).
+  >
+  > - Many protocols include a web interface page as one of the data pages. However, such a web interface is only accessible when the client machine has network access to the product. Web interface pages are hidden to users who do not have the user permission [*General* > *Elements* > *Data Display* > *Device webpage access*](xref:DataMiner_user_permissions#general--elements--data-display--device-webpage-access).
+  > - From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, dynamic units are enabled by default for data display pages. If you want to disable this feature, add the [*DynamicUnits* tag](xref:Overview_of_Soft_Launch_Options#dynamicunits) to the *SoftLaunchOptions.xml* file and set it to the value "false". Prior to DataMiner 10.4.0 [CU10]/10.5.0/10.5.1, dynamic units are disabled by default for data display pages, unless you enable the *DynamicUnits* soft-launch option.

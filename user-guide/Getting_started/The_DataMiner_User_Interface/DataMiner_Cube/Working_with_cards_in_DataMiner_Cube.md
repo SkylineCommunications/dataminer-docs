@@ -80,6 +80,7 @@ The pane consists of a tree view with several fixed nodes:
   > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button "Up to \[parent page name\]" is displayed, which allows you to quickly go to the parent page.
   > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
   > - Instead of a DATA node, a view has a "BELOW THIS VIEW" node with pages listing the items within the view.
+  > - From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, dynamic units are enabled by default for Data Display pages. If you want to disable this feature, add the [*DynamicUnits* tag](xref:Overview_of_Soft_Launch_Options#dynamicunits) to the *SoftLaunchOptions.xml* file and set it to the value "false". Prior to DataMiner 10.4.0 [CU10]/10.5.0/10.5.1, dynamic units are disabled by default for Data Display pages, unless you enable the *DynamicUnits* soft-launch option.
 
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
