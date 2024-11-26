@@ -86,27 +86,20 @@ This file will contain all the necessary information to register a Catalog item 
 ```yml
 # [Required]
 # Possible values for the Catalog item that can be deployed on a DataMiner System:
-#   - automationscript: If the Catalog item is a general-purpose DataMiner Automation script.
-#   - lifecycleserviceorchestration: If the Catalog item is a DataMiner Automation script designed to manage the life cycle of a service.
-#   - profileloadscript: If the Catalog item is a DataMiner Automation script designed to load a standard DataMiner profile.
-#   - userdefinedapi: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
-#   - adhocdatasource: If the Catalog item is a DataMiner Automation script designed for an ad hoc data source integration.
-#   - chatopsextension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
-#   - connector: If the Catalog item is a DataMiner XML connector.
-#   - slamodel: If the Catalog item is a DataMiner XML connector designed as DataMiner Service Level Agreement model.
-#   - enhancedservicemodel: If the Catalog item is a DataMiner XML connector designed as DataMiner enhanced service model.
-#   - visio: If the Catalog item is a Microsoft Visio design.
-#   - solution: If the Catalog item is a DataMiner Solution.
-#   - testingsolution: If the Catalog item is a DataMiner Solution designed for automated testing and validation.
-#   - samplesolution: If the Catalog item is a DataMiner Solution used for training and education.
-#   - standardsolution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
-#   - dashboard: If the Catalog item is a DataMiner dashboard.
-#   - lowcodeapp: If the Catalog item is a DataMiner low-code app.
-#   - datatransformer: If the Catalog item is a Data Transformer.
-#   - dataquery: If the Catalog item is a GQI data query.
-#   - functiondefinition: If the Catalog item is a DataMiner function definition.
-#   - scriptedconnector: If the Catalog item is a DataMiner scripted connector.
-#   - bestpracticesanalyzer: If the Catalog item is a DataMiner Best Practices Analysis file.
+#   - Automation: If the Catalog item is a general-purpose DataMiner Automation script.
+#   - Ad Hoc Data Source: If the Catalog item is a DataMiner Automation script designed for an ad hoc data source integration.
+#   - ChatOps Extension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
+#   - Connector: If the Catalog item is a DataMiner XML connector.
+#   - Custom Solution: If the Catalog item is a DataMiner Solution.
+#   - Data Query: If the Catalog item is a GQI data query.
+#   - Dashboard: If the Catalog item is a DataMiner dashboard.
+#   - DevTool: If the Catalog item is a DevTool.
+#   - Product Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific product.
+#   - Scripted Connector: If the Catalog item is a DataMiner scripted connector.
+#   - Standard Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
+#   - System Health: If the Catalog item is intended to monitor the health of a system.
+#   - User-Defined API: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
+#   - Visual Overview: If the Catalog item is a Microsoft Visio design.
 
 type: '<fill in type here>'
 

@@ -9,6 +9,96 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
+
+When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
+
+### 25 November 2024 - Fix - Catalog API - Registration with existing ID from other organization returned internal server error [ID 41515]
+
+When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
+
+### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
+
+On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Admin - Warning in case DataMiner version dependency is not met for DxM [ID 41459]
+
+On the *DxMs* page in the Admin app, when a DataMiner version dependency is not met for a DxM, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
+
+On the Catalog browse page, the *Type* filter will now group its available values by category.
+
+The following Catalog types have been updated or introduced:
+
+ Category               | Type (before)      | Type (new)         |
+------------------------|--------------------|--------------------|
+ Data Ingest            | Connector          | Connector          |
+ Data Ingest            | Scripted Connector | Scripted Connector |
+ Data Processing        | Ad Hoc Data Source | Ad Hoc Data Source |
+ Data Processing        | Automation Script  | Automation         |
+ Data Processing        | Data Transformer   | Automation         |
+ Data Processing        | Data Query         | Data Query         |
+ Data Consumption       | ChatOps Extension  | ChatOps Extension  |
+ Data Consumption       | Dashboard          | Dashboards         |
+ Data Consumption       | User-Defined API   | User-Defined API   |
+ Data Consumption       | Visual Overview    | Visual Overview    |
+ Solutions              | /                  | Product Solution   |
+ Solutions              | Standard Solution  | Standard Solution  |
+ Solutions              | Solution           | Custom Solution    |
+ Productivity & Utility | /                  | DevTools           |
+ Productivity & Utility | /                  | System Health      |
+
+The following types have been removed:
+
+- Best Practices Analyzer
+- Enhanced Service Model
+- Function Definition
+- Life Cycle Service Orchestration
+- Low-Code App
+- Profile-Load Script (now considered Automation)
+- Sample Solution
+- SLA Model
+- Testing Solution
+
+### 25 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
+
+On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
+
+### 25 November 2024 - New feature - Catalog API - Get Catalog item categories [ID 41411]
+
+The user, service, and public Catalog APIs have been extended with a categories call to obtain all categories supported in Catalog:
+
+- "/api/user-catalog/v2-0/catalogs/categories"
+- "/api/public-catalog/v2-0/catalogs/categories"
+- "/api/service-catalog/v1-0/catalogs/categories"
+
+### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
+
+On the Catalog details page, if the publisher is not from your currently selected organization or Skyline Communications, the tag "External" will be shown next to the publisher in the side panel.
+
+### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
+
+On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
+
+### 25 November 2024 - New feature - Catalog API - Service authenticated API [ID 41353]
+
+The *api/service-catalog/v1-0/* route now exposes methods that allow applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer".
+
+This requires permission on the role "catalog.api.read" of the Catalog API.
+
+The following methods are now available:
+
+- /catalogs/search
+- /catalogs/{CatalogId}
+- /catalogs/{CatalogId}/ranges
+- /catalogs/{CatalogId}/versions
+- /catalogs/{CatalogId}/versions/recommended
+- /catalogs/{CatalogId}/doc
+- /catalogs/categories
+
+You can make up to 5 requests per second, with occasional bursts of up to 20 requests allowed. After you trigger a burst, you will need to wait for the system to "refill" at a rate of 5 requests per second before you can trigger a burst again. Over a full minute, this allows for up to 300 requests.
+
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
 Up to now, when you opened the versions section of an item without any versions, it would stay in a loading state. This has now been fixed: an info message will be shown saying this item does not have any versions.
@@ -346,11 +436,11 @@ Users can now view documentation for all items, if provided.
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
-#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
+#### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 
 It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
 
-#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID 40144]
+#### 23 July 2024 - New feature - Catalog - Support for more Catalog types [ID 40144]
 
 The following new Catalog types are now supported:
 
