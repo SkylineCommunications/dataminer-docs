@@ -4,7 +4,8 @@ uid: Managing_DCP_keys
 
 # Managing dataminer.services keys
 
-> [!IMPORTANT] you need to have the *Owner* role in order to access or create keys.
+> [!IMPORTANT]
+> You need to have the *Owner* role in order to access or create keys.
 
 ## System keys
 
