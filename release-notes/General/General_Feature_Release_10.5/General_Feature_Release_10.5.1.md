@@ -159,6 +159,12 @@ It is now possible to start bookings with elements that are not active.
 
 To do so, in the Resource Manager configuration file, set the *AllowNotActiveElements* option to true.
 
+#### Deprecated NT Notify type 'NT_PING' can no longer be used [ID 41152]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+From now on, the deprecated NT Notify type *NT_PING* can no longer be used.
+
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
