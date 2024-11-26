@@ -37,10 +37,10 @@ The following Catalog types have been updated or introduced:
  Data Ingest            | Scripted Connector | Scripted Connector |
  Data Processing        | Ad Hoc Data Source | Ad Hoc Data Source |
  Data Processing        | Automation Script  | Automation         |
- Data Processing        | Data Transformer   | Automation         |
+ Data Processing        | Data Transformer   | Data Transformer   |
  Data Processing        | Data Query         | Data Query         |
  Data Consumption       | ChatOps Extension  | ChatOps Extension  |
- Data Consumption       | Dashboard          | Dashboards         |
+ Data Consumption       | Dashboard          | Dashboard          |
  Data Consumption       | User-Defined API   | User-Defined API   |
  Data Consumption       | Visual Overview    | Visual Overview    |
  Solutions              | /                  | Product Solution   |
@@ -56,6 +56,7 @@ The following types have been removed:
 - Function Definition
 - Life Cycle Service Orchestration
 - Low-Code App
+- Process Activity
 - Profile-Load Script (now considered Automation)
 - Sample Solution
 - SLA Model
