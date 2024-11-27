@@ -35,6 +35,15 @@ When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner 
 
 The checks with regard to database compatibility have now been enhanced.
 
+#### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
+
+> [!NOTE]
+> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->

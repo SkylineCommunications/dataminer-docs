@@ -26,7 +26,14 @@ uid: General_Feature_Release_10.5.2
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
+
+> [!NOTE]
+> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
 ### Fixes
 
