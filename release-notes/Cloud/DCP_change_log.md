@@ -9,28 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 26 November 2024 - New Feature - Admin app - Automation Usage [ID 41554]
+### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
 
-From now on, the usage page in the [Admin app](https://admin.dataminer.services) will provide usage data about Automation script runs when available.
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
 
-### 26 November 2024 - New Feature - Usage API - Usage API with API key [ID 41554]
+### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
 
-From now on, you can create an API key on organization level with the "Retrieve usage data' permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
+From now on, you can create an API key on organization level with the "Retrieve usage data" permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
 
-Find the swagger documentation pages about the available Usage API calls via the following references:
+The swagger documentation pages about the available Usage API calls are available in the following locations:
+
 - [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
-  - Get the features were usage data might be available for
-  - Get the metrics of a feature
+  - Get the features for which usage data might be available.
+  - Get the metrics of a feature.
 - [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
-  - Get the data in a given time range for a given feature, metric and granularity with the option to filter & split data on the dimensions or DataMiner Systems
+  - Get the data in a given time range for a given feature, metric and granularity with the option to filter and split data on the dimensions or DataMiner Systems.
 
-### 26 November 2024 - Enhancement - Admin app - Usage export email layout [ID 41554]
+### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
 
-From now on, the emails with the download link for usage exports will be in the familiar email layout.
-
-### 26 November 2024 - Enhancement - Admin app - Audit export email layout [ID 41554]
-
-From now on, the emails with the download link for audit exports will be in the familiar email layout.
+From now on, the emails with the download link for usage exports or audit exports will be in the familiar email layout.
 
 ### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
 
