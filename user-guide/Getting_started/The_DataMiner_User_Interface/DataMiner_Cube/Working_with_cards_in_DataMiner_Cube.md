@@ -70,9 +70,9 @@ The pane consists of a tree view with several fixed nodes:
   > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
   > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).
 
-- **DATA**: Contains all available Data Display pages.
+- **DATA**: Contains all available Data Display pages. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, all numerical values on the Data Display pages are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.4 GB.
 
-  ![Data Display pages](~/user-guide/images/Data_Display.png)<br>*Data Display page in DataMiner 10.4.5*
+  ![Data Display pages](~/user-guide/images/Data_Display.png)<br>*Data Display page in DataMiner 10.5.1*
 
   > [!NOTE]
   >
@@ -80,7 +80,7 @@ The pane consists of a tree view with several fixed nodes:
   > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button "Up to \[parent page name\]" is displayed, which allows you to quickly go to the parent page.
   > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
   > - Instead of a DATA node, a view has a "BELOW THIS VIEW" node with pages listing the items within the view.
-  > - From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, dynamic units are enabled by default for Data Display pages. If you want to disable this feature, add the [*DynamicUnits* tag](xref:Overview_of_Soft_Launch_Options#dynamicunits) to the *SoftLaunchOptions.xml* file and set it to the value "false". Prior to DataMiner 10.4.0 [CU10]/10.5.0/10.5.1, dynamic units are disabled by default for Data Display pages, unless you enable the *DynamicUnits* soft-launch option.
+  > - From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, to disable the dynamic units feature, add the [*DynamicUnits* tag](xref:Overview_of_Soft_Launch_Options#dynamicunits) to the *SoftLaunchOptions.xml* file and set it to the value "false". Prior to this, dynamic units are disabled by default for Data Display pages, unless the *DynamicUnits* soft-launch option is explicitly enabled.
 
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
