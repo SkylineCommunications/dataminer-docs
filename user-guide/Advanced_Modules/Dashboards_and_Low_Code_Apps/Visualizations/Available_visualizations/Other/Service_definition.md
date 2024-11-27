@@ -50,7 +50,17 @@ To configure the component:
 
    - *Visible nodes*: Allows you to select which nodes should be displayed. Below this option, a tree view is displayed, showing the nodes in the service definition. Only the selected nodes will be displayed in the component.
 
-   - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph. From DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40017-->, you can zoom in or out by pressing CTRL while using the scroll wheel of your mouse. Prior to DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9, you can zoom in or out using the scroll wheel alone.
+   - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph.
+
+     - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the CTRL key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold ctrl to zoom* option:
+
+       - Enabled: Hold the CTRL key while scrolling up or down to zoom in or out.
+
+       - Disabled: Scroll up or down to zoom in or out. This is the default option.
+
+     - From DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12, you can zoom in or out by pressing CTRL while using the scroll wheel.
+
+     - Prior to DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9, you can zoom in or out using the scroll wheel.
 
    - *Edge style*: Determines whether curly or straight edges are used in the graph.
 

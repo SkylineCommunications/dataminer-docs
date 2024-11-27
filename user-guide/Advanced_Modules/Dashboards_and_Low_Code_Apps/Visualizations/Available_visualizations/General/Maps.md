@@ -120,7 +120,13 @@ The following actions are available:
 
 Zooming functionalities are available for the maps component.
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40017-->:
+- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold ctrl to zoom* setting in the *Settings* pane:
+
+  - When this setting is enabled: Hold the CTRL key while scrolling up or down to zoom in or out.
+
+  - When this setting is disabled: Scroll up or down to zoom in or out.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
 
   - To zoom in, press CTRL while scrolling up.
 

@@ -89,6 +89,14 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
+1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the CTRL key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold ctrl to zoom* option:
+
+   - Enabled: Hold the CTRL key while scrolling up or down to zoom in or out.
+
+   - Disabled: Scroll up or down to zoom in or out. This is the default option.
+
+   This setting is only available if the *Zooming* setting is enabled in the [*Layout* pane](#layout-configuration).
+
 ## Component actions configuration
 
 If you add a node edge graph to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.

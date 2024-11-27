@@ -229,7 +229,7 @@ From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zoomin
 
   - When this setting is enabled: Hold the CTRL key while scrolling up or down (up to 10,000 times) to zoom in or out.
 
-  - When this setting is disabled: Scroll up or down (up to 10,000 times) to zoom in or out.
+  - When this setting is disabled: Scroll up or down (up to 10,000 times) to zoom in or out. This is the default option.
 
 - In versions prior to DataMiner 10.4.0 [CU10]/10.5.1, hold the CTRL key while scrolling up or down (up to 10,000 times) to zoom in or out.
 
