@@ -94,6 +94,7 @@ This file will contain all the necessary information to register a Catalog item 
 #   - Data Query: If the Catalog item is a GQI data query.
 #   - Dashboard: If the Catalog item is a DataMiner dashboard.
 #   - DevTool: If the Catalog item is a DevTool.
+#   - Learning & Sample: If the catalog item is a sample.
 #   - Product Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific product.
 #   - Scripted Connector: If the Catalog item is a DataMiner scripted connector.
 #   - Standard Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
