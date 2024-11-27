@@ -71,6 +71,14 @@ If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 1
 
 When a parameter is set to an infinite value, SLAnalytics will now consider this infinite value as a missing value. This will prevent parameter changes of this type from disrupting analytical models.
 
+#### SLLogCollector packages will now include the log files of the ModelHost and Copilot DxMs [ID 41464]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+From now on, SLLogCollector packages will also include the log files of the *ModelHost* and *Copilot*\* DxMs.
+
+*\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
+
 ### Fixes
 
 *No fixes have been added yet.*
