@@ -8,7 +8,7 @@ The *C:\\Skyline DataMiner\\Elements\\* directory contains a subdirectory for ev
 
 ## Files found in every Element subdirectory
 
-Each element subdirectory contains the following files:
+Each element subdirectory can contain the following files, depending on the DataMiner configuration:
 
 - Element.xml
 
