@@ -9,6 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
+
+### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
+
+From now on, you can create an API key on organization level with the "Retrieve usage data" permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
+
+The swagger documentation pages about the available Usage API calls are available in the following locations:
+
+- [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
+  - Get the features for which usage data might be available. Example features: `Automation`, `Storage as a Service`.
+  - Get the metrics of a feature. Example metrics: `Script Runs` for the Automation feature, `Operations` for the Storage as a Service feature.
+- [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
+  - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties or based on DataMiner System. These "splitters" can for example be `Script Name` or `Succeeded` for Automation, and `Category` or `SubCategory` for Storage as a Service.
+
+### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
+
+From now on, the emails with the download link for usage exports or audit exports will use the same template as other emails sent from dataminer.services.
+
 ### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
 
 When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
