@@ -60,7 +60,7 @@ In DataMiner Cube, this can be done when the DVE is created or edited:
 
 - In the *Advanced element settings,* select or clear *Enable DVE child creation*.
 
-Alternatively, this can be done manually in the *Element.xml* file. To do so:
+Alternatively, if [Swarming](xref:Swarming) is not enabled, this can be done manually in the *Element.xml* file. To do so:
 
 1. Stop DataMiner.
 

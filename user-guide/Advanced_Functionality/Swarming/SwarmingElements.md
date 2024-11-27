@@ -4,7 +4,7 @@ uid: SwarmingElements
 
 # Swarming elements
 
-With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent in a cluster to another.
+With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent in a cluster to another. You can do so in DataMiner Cube or via an Automation script.
 
 When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. To indicate this, the following message will be displayed:
 
@@ -18,64 +18,74 @@ During this transition, the ability to open element cards or change element conf
 > [!NOTE]
 > To be able to trigger swarming for an element, you need the *Swarming* user permission as well as config rights on the element.
 
-## Swarming an element from Cube
+## Swarming elements in DataMiner Cube
 
-From Cube, elements can be swarmed from *System Center > Agents > Status > Swarm...*
+To swarm elements in DataMiner Cube:
 
-## Swarming an element from Automation
+1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower right corner.
 
-This section demonstrates how you can create an automation script that can swarm an element from one agent to another.
+1. On the left, select the element(s) you want to swarm.
 
-## Step 1: Script with fixed info
+1. On the right, select the destination DMA.
 
-As a fist step, you will create a short automation script that will swarm a fixed element to a fixed destination:
+1. Click *Swarm*.
 
-1. [Create a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)
+## Swarming elements via Automation
 
-1. Collect the following information
+Below you can find an example of how you can create an Automation script that can swarm an element from one DMA to another.
 
-   - `[element-key]`: dmaid/eid pair for the element you want to swarm. You can find this information in the element properties window in DataMiner Cube.
-   - `[target-agent-id]`: ID of the target agent. Can be found on the *System Center > Agents* page.
+### Script with fixed info
 
-1. Add a *C# code* block with the contents below, filling out the placeholders with the collected values from above.
+As a first step, create a short Automation script that will swarm a fixed element to a fixed destination:
 
-```csharp
-using System;
-using System.Linq;
-using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Net;
-using Skyline.DataMiner.Net.Swarming.Helper;
+1. [Create a new Automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)
 
-public class Script
-{
-  public void Run(Engine engine)
-  {
-    ElementID element = ElementID.FromString("[element-key]");
-    int targetAgentId = [target-agent-id];
+1. Collect the following information:
 
-    var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
-        .SwarmElement(element)
-        .ToAgent(targetAgentId);
+   - `[element-key]`: DMA ID/element ID pair for the element you want to swarm. You can find this information in the element properties window in DataMiner Cube.
+   - `[target-agent-id]`: ID of the target DMA. You can find this on the *System Center* > *Agents* page.
 
-    var swarmingResultForElement = swarmingResults.First();  
+1. Add a *C# code* block with the contents below, replacing the placeholders with the values from the previous step.
 
-    if (!swarmingResultForElement.Success)
-    {
-      engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
-    }
+   ```csharp
+   using System;
+   using System.Linq;
+   using Skyline.DataMiner.Automation;
+   using Skyline.DataMiner.Net;
+   using Skyline.DataMiner.Net.Swarming.Helper;
+
+   public class Script
+   {
+     public void Run(Engine engine)
+     {
+       ElementID element = ElementID.FromString("[element-key]");
+       int targetAgentId = [target-agent-id];
+
+       var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
+           .SwarmElement(element)
+           .ToAgent(targetAgentId);
+
+       var swarmingResultForElement = swarmingResults.First();  
+
+       if (!swarmingResultForElement.Success)
+       {
+         engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+       }
+      }
    }
-}
-```
+   ```
 
-When executed, this script will launch a swarming action for the specified element to the specified target host.
+1. Execute the script to launch a swarming action for the specified element to the specified target host.
 
-### Code parts explained
+#### Code parts explained
+
+Below you can find some more information about specific parts of the code in the example script above.
 
 ```csharp
 using Skyline.DataMiner.Net.Swarming.Helper;
 ```
 
-This line pulls in the appropriate namespace for the `SwarmingHelper` type which is used further down.
+This line pulls in the appropriate namespace for the `SwarmingHelper` type, which is used further down.
 
 ```csharp
 var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
@@ -83,7 +93,7 @@ var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
     .ToAgent(targetAgentId);
 ```
 
-The lines above communicates with SLNet to request a swarm action to be launched for a given element. As part of this action, the element will first be unloaded on the agent where the element was previously hosted and then loaded on the new host.
+The lines above communicate with SLNet to request a swarming action for a given element. As part of this action, the element will first be unloaded from the Agent where it was previously hosted and then loaded onto the new host.
 
 ```csharp
 var swarmingResultForElement = swarmingResults.First();  
@@ -96,24 +106,23 @@ if (!swarmingResultForElement.Success)
 
 The lines above deal with failures, if any.
 
-## Step 2: Updated script with input parameters
+### Script with input parameters
 
-You will now be extending the script above to use input variables instead of specifying a fixed element and target agent. This will make the script re-usable for all element swarm actions.
+In the example below, the script above is updated to use input variables instead of a fixed element and target Agent. This will make the script reusable for all element swarming actions.
 
-1. Add two [script input parameters](xref:Script_variables#creating-a-parameter) to the Automation script created in the previous step.
+1. Add the following two [script input parameters](xref:Script_variables#creating-a-parameter) to the Automation script mentioned above:
 
-    - One named `Element Key`
+    - `Element Key`
+    - `Target Agent ID`
 
-    - One named `Target Agent ID`
-
-1. Find the following code lines in your script
+1. Find the following code lines in the script:
 
     ```csharp
     ElementID element = ElementID.FromString("[element-key]");
     int targetAgentId = [target-agent-id];
     ```
 
-    and replace these by
+1. Replace these lines with the following lines:
 
     ```csharp
     var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
@@ -122,7 +131,7 @@ You will now be extending the script above to use input variables instead of spe
 
 You now have a script that can be invoked from anywhere, specifying an element and target DataMiner Agent.
 
-The full script C# code now looks like this:
+The full script C# code should now look like this:
 
 ```csharp
 using System;

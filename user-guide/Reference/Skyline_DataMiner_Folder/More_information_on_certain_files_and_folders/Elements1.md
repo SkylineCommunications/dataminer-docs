@@ -21,7 +21,7 @@ Each element subdirectory contains the following files:
 
 ## Element.xml
 
-Every element on a DMA has its own *Element.xml* file. It contains the complete element definition:
+In systems where [Swarming](xref:Swarming) is not enabled, every element on a DMA has its own *Element.xml* file. It contains the complete element definition:
 
 - Metadata (name, description, type, Protocol, etc.),
 

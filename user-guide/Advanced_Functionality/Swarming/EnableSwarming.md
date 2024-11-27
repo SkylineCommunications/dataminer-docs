@@ -9,8 +9,8 @@ uid: EnableSwarming
 
 ## Prerequisites
 
-- DataMiner 10.5.1 or higher.
-- [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup
+- DataMiner 10.5.1/10.6.0 or higher.
+- [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.
 - No [Failover Agents](xref:About_DMA_Failover) are present in the cluster.
 - No [offload database](xref:Offload_database) is configured.
 - Enhanced services in the cluster (if any) use only [compatible connectors](xref:SwarmingPrepare).
@@ -67,6 +67,8 @@ To enable Swarming using SLNetClientTest tool:
 
 1. Click *Send Message*.
 
+   If a confirmation box appears, click *Yes*.
+
    The prerequisites will be checked for all Agents in the system, and when they are met, Swarming will enabled and all Agents in the DMS will be **restarted**.
 
    The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take a while.
@@ -84,7 +86,7 @@ Once all Agents have been restarted, you can verify whether the Swarming feature
 
 You can find this log file in DataMiner Cube via *System Center* > *Logging* > *dataminer* > *Swarming*. The log file also shows details on the migration of elements that happened during DMA startup.
 
-Once Swarming is enabled, you can go to *System Center* > *Agents* > *Status* > *Swarm* to swarm elements for which this feature is supported.
+Once Swarming is enabled, you can go to *System Center* > *Agents* > *Status* > *Swarm* to swarm elements for which this feature is supported. However, note that this is only available in DataMiner Systems consisting of multiple Agents.
 
 > [!NOTE]
 > Elements for which swarming is not supported will not be shown in this UI.
