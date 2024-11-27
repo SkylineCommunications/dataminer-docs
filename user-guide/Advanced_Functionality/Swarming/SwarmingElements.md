@@ -4,7 +4,7 @@ uid: SwarmingElements
 
 # Swarming elements
 
-With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent in a cluster to another. You can do so in DataMiner Cube or via an Automation script.
+With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent to another within a cluster. You can do so in DataMiner Cube or via an Automation script.
 
 When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. To indicate this, the following message will be displayed:
 
