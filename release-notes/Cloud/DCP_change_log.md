@@ -28,7 +28,7 @@ Find the swagger documentation pages about the available Usage API calls via the
 
 From now on, the emails with the download link for usage exports will be in the familiar email layout.
 
-### 26 November 2024 - Enhancement - Admin app - Audit export to CSV email layout [ID ]
+### 26 November 2024 - Enhancement - Admin app - Audit export email layout [ID ]
 
 From now on, the emails with the download link for audit exports will be in the familiar email layout.
 
