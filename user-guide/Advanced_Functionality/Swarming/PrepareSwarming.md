@@ -138,15 +138,15 @@ Additionally, more memory will be used when a lot of these references are kept i
 
 ## Legacy references and AlarmTreeID
 
-In some cases, you might come across legacy input references to alarm trees. These are references in the format `dmaid/rootalarmid` that do not contain info on the element id of the element involved. Below is some guidance on how to deal with these.
+In some cases, you might come across legacy input references to alarm trees. These are references in the format `dmaid/rootalarmid` that do not contain info on the element ID of the element involved. Below you can find several use cases where this occurs and how you can deal with these.
 
-| Use case | Guidance |
+| Use case | Solution |
 | --- | --- |
-| I need an `AlarmTreeID` instance but have a legacy reference | Use `var treeLegacy = AlarmTreeID.BuildLegacy(dmaid, rootalarmid)`. Be aware that this key might need special handling further down in the code. |
-| I have an input string that might be one of `dmaid/rootalarmid` or `dmaid/eid/rootalarmid` and need to make an `AlarmTreeID` from it. | Use `var potentialLegacyRef = AlarmTreeID.DeserializeFromString(str, allowLegacy: true)` |
-| I have a `Dictionary`, `List`, `HashSet`, ... with fully specified `AlarmTreeID` instances on which I want to do a best-effort `Contains` action using a potential legacy `AlarmTreeID` instance | Use `collection.Contains(tree, AlarmTreeIDComparisonOptions.AllowLegacy)`. Similar extension methods exist for `TryGetValue`, `ContainsKey` and `Remove`. |
+| I need an `AlarmTreeID` instance but have a legacy reference. | Use `var treeLegacy = AlarmTreeID.BuildLegacy(dmaid, rootalarmid)`. Keep in mind that this key might need special handling further down in the code. |
+| I have an input string that might be of `dmaid/rootalarmid` or `dmaid/eid/rootalarmid` format and need to make an `AlarmTreeID` based on this. | Use `var potentialLegacyRef = AlarmTreeID.DeserializeFromString(str, allowLegacy: true)`. |
+| I have a `Dictionary`, `List`, `HashSet`, etc. with fully specified `AlarmTreeID` instances on which I want to do a best-effort `Contains` action using a potential legacy `AlarmTreeID` instance. | Use `collection.Contains(tree, AlarmTreeIDComparisonOptions.AllowLegacy)`. Similar extension methods exist for `TryGetValue`, `ContainsKey`, and `Remove`. |
 
-An example is below:
+Example:
 
 ```csharp
 var list = new List<AlarmTreeID>();
@@ -155,7 +155,7 @@ list.Contains(AlarmTreeID.BuildLegacy(123, 789), AlarmTreeIDComparisonOptions.Al
 list.Contains(AlarmTreeID.BuildLegacy(123, 789)); // false
 ```
 
-A class `AlarmTreeIDLegacyEqualityComparer` is also available, which can be used to configure classes like `Dictionary` and `HashSet` to always be able to map to and from legacy references. Do be aware that it is not recommended mixing both legacy and non-legacy values/keys in the same collection. Prefer sticking to either legacy or full objects in your dictionary or collection (preferably full object) and limit the use of the other type to a minimum. Also be aware that legacy lookups are always best-effort. If multiple full keys match, only one will be returned.
+A class `AlarmTreeIDLegacyEqualityComparer` is also available, which can be used to configure classes like `Dictionary` and `HashSet` to always be able to map to and from legacy references. However, keep in mind that mixing legacy and non-legacy values/keys in the same collection is not recommend. If at all possible, stick to either legacy or (preferably) full objects in your dictionary or collection, and limit the use of the other type to a minimum. Note also that legacy lookups are always best-effort. If multiple full keys match, only one will be returned.
 
 ```csharp
 var set = new HashSet<AlarmTreeID>(new AlarmTreeIDLegacyEqualityComparer());
@@ -170,7 +170,7 @@ As service elements can have an *Active Service Alarms* table that uses alarm re
 Once the Swarming feature has been enabled, running enhanced services using non-compatible connectors will not be possible. It is also not possible to enable Swarming as long as such enhanced services are present in the system.
 
 > [!NOTE]
-> Not all connectors require an update: an update is only required if the connector defines a parameter 4 (`raw_alarm_input`). Connectors without this parameter do not have an *Active Service Alarms* table and do not need an update.
+> Not all connectors may require an update: an update is only required if the connector defines a parameter 4 (`raw_alarm_input`). Connectors without this parameter do not have an *Active Service Alarms* table and do not need an update.
 
 - Updating the protocol.xml starts by adding a new parameter 7 (`raw_alarmid_input`). Note that the name is different from the name of parameter 4.
 
@@ -190,10 +190,10 @@ Once the Swarming feature has been enabled, running enhanced services using non-
     </Param>
     ```
 
-    When this parameter 7 is present, the connector will update the *Active Service Alarms* table using full alarm references on DataMiner versions 10.5.1 or up.
+    When this parameter 7 is present, the connector will update the *Active Service Alarms* table using full alarm references from DataMiner 10.5.1/10.6.0 onwards.
 
-- If you have a QAction triggering on parameter 4, create an extra QAction triggering on the new parameter 7. This QAction will receive full alarm event references (formatted like `dmaid/eid/rootalarmid/alarmid`).
+- If you have a QAction triggering on parameter 4, create an extra QAction triggering on the new parameter 7. This QAction will receive full alarm event references (in the format `dmaid/eid/rootalarmid/alarmid`).
 
-- If you want to keep supporting DataMiner versions before 10.5.1/10.6.0, keep the previously existing parameter 4 and make sure that your QActions can deal with both scenarios (legacy alarm references through parameter 4 or full alarm references through parameter 7). If you only need to support DataMiner versions higher than 10.5.1/10.6.0, the parameter 4 and associated QActions can be removed.
+- If you want to keep supporting DataMiner versions prior to 10.5.1/10.6.0, keep the previously existing parameter 4 and make sure that your QActions can deal with both scenarios (legacy alarm references through parameter 4 or full alarm references through parameter 7). If you only need to support DataMiner versions higher than 10.5.1/10.6.0, the parameter 4 and associated QActions can be removed.
 
 - In any case, if any QActions or code relies on the IDs as stored in the *Active Service Alarms* table, make sure that they can deal with either full or legacy type references depending on the DataMiner version they will run on.
