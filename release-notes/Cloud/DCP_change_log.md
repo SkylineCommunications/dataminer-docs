@@ -23,7 +23,7 @@ The swagger documentation pages about the available Usage API calls are availabl
   - Get the features for which usage data might be available.
   - Get the metrics of a feature.
 - [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
-  - Get the data in a given time range for a given feature, metric and granularity with the option to filter and split data on the dimensions or DataMiner Systems.
+  - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties (e.g. the script name, whether a script succeeded, etc.) or based on DataMiner System.
 
 ### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
 
