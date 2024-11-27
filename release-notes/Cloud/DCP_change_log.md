@@ -46,7 +46,7 @@ The following Catalog types have been updated or introduced:
  Solutions              | /                  | Product Solution   |
  Solutions              | Standard Solution  | Standard Solution  |
  Solutions              | Solution           | Custom Solution    |
- Productivity & Utility | /                  | DevTools           |
+ Productivity & Utility | /                  | DevTool           |
  Productivity & Utility | /                  | System Health      |
 
 The following types have been removed:
