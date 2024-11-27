@@ -37,4 +37,8 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with SLDataMiner when deleting a connector [ID 41520]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, SLDataMiner could stop working when a connector was deleted immediately after an element using that connector had been deleted.
