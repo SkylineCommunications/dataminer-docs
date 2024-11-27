@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 26 November 2024 - New Feature - Admin app - Automation Usage [ID ]
 
-From now on, the usage page in the [Admin app](https://admin.dataminer.services) will provide usage data about the Automation script runs when available.
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will provide usage data about Automation script runs when available.
 
 ### 26 November 2024 - New Feature - Usage API - Usage API with API key [ID ]
 
