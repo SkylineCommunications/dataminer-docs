@@ -6,7 +6,7 @@ uid: Overview_NevionVideoIPath_App
 
 The Nevion Video IPath application allows you to control Sony's (Nevion) VideoIPath SDN controller which provides connection management, service assurance, and network inventory capabilities for service provides and broadcasters.
 
-![Nevion Video IPath app](~/user-guide/images/Tag_Management_app.png)
+![Nevion Video IPath app](~/user-guide/images/Nevion_OverviewPage.png)
 
 The Nevion Video IPath application retrieve all data from the Nevion VideoIPath system via this connector (https://catalog.dataminer.services/details/7b986cbc-a29e-44e5-b3b7-003e639acfac), using Nevion’s modern services API calls. With this application it is then possible to schedule, execute and view connections between endpoints. This will not only estabelish a routing path but also configures a service that could be set up as point-to-point or point-to-multipoint.
 

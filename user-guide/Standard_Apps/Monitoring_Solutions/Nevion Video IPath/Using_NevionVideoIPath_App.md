@@ -4,44 +4,50 @@ uid: How_to_NevionVideoIPath_App
 
 # Using the Nevion Video IPath app
 
+To access the application:
+
+1. Go to `http(s)://[DMA name]/root`.
+
+1. Select *Nevion Video IPath* to start using the application.
+
+## The Nevion Video IPath interface
+
 The sidebar on the left of the Nevion Video IPath application contains buttons to two pages: Connect and Services:
 
 | Button | Page description |
 |:--:|--|
-| ![Connect](~/user-guide/images/TAG_Overview_Icon.png) | Opens the [*Connect* page](#overview-page), which displays Profiles, Sources and Destinations. These sources and destinations can be connected to create services.
-| ![Services](~/user-guide/images/TAG_Channels_Icon.png) | Opens the [*Services* page](#channel-status-page), which displays an overview of all available services.
+| ![Connect](~/user-guide/images/Nevion_Connect.png) | Opens the [*Connect* page](#connect-page), which displays Profiles, Sources and Destinations. The connection between a source and a destination establishes a service.
+| ![Services](~/user-guide/images/Nevion_Services.png) | Opens the [*Services* page](#services-page), which provides an overview of all available services.
 
-## Overview page
+## Connect page
 
-The *Overview* page provides an overview of all your TAG devices, including key metrics such as CPU and memory usage. Additionally, it tracks license usage per instance and presents an overview of channel and output usage.
+The *Connect* page allows you to establish a connection between sources and destinations. Below are the steps needed to connect:
 
-![Overview page](~/user-guide/images/TAG_Overview_Page.png)
+![Overview page](~/user-guide/images/Nevion_OverviewPage.png)
 
-> [!NOTE]
-> Without TAG's Media Control System (MCS) in place, the *Overview* page may lack the following information: temperature, recorders, and outputs limit.
+**Profiles**: The first step is to select a specific profile to see compatible sources and destinations. These profiles correspond to logical, predefined sets of configurations that apply to specific types of connections.
 
-## Channel Status page
+**Source/Destination Tags**: The second step is to select sources and destinations. Nevion allows you to use tags to categorize, filter, and organize sources (inputs) and destinations (outputs).
 
-The *Channel Status* page provides a table listing the currently configured channels, alongside additional information such as alarm severity, active events, bitrate, memory usage, and more.
+**Sources & Destinations**: Next, select a source and a destination to be connected.
 
-For each listed channel, you can do the following:
+**Connection buttons**: The final step is to click Connect or Disconnect to link or unlink sources and destinations. There are three buttons available: *Connect*, *Disconnect* and *Schedule*.
 
-- **Review channel events**: When you click the ![Review channel](~/user-guide/images/TAG_Review_Channel_Icon.png) icon next to the severity level, a new panel opens with the current active and inactive events associated with the channel. The events are ordered first by state, then by timestamp.
+Additionally, there is a "Last Connection Status" display to show whether the connection was successful.
 
-  ![Channel events](~/user-guide/images/TAG_Channel_Review_Panel.png)
+## Services page
 
-  This panel provides a quick way to review the latest alarms reported by TAG.
-  
-- **Send a channel to a layout**: When you click the ![Layout](~/user-guide/images/TAG_Layout_Icon.png) button in the *Send to layout* column, a pop-up window appears that allows you to assign the channel to one of the existing layouts.
+The *Services* page provides an overview of the services in the system, which correspond to established connections between sources and destinations.
 
-  ![Layout pop-up window](~/user-guide/images/TAG_Layout_Pop-up_Window.png)
+![Overview page](~/user-guide/images/Nevion_ServicesPage.png)
 
-  If the chosen layout does not contain any more available spaces, the prompt will suggest overwriting the first position of the layout.
+In addition to this overview, services can easily be deleted from this table.
 
-> [!NOTE]
-> Without TAG's Media Control System (MCS) in place, the *Channel Status* page may lack the following information: bitrate, CPU usage, memory allocation, and profile data.
 
-In the top-left corner of the header bar you can switch to the *Channels Configuration* page by clicking *Channels Configuration*. This page offers an overview of all channels alongside its profiles and PIDs.
+  > [!NOTE]
+  > Hover the mouse pointer over the table to access easy filtering.
+  >
+  > ![Easy filtering](~/user-guide/images/Nevion_ServicesHover.png)
 
 > [!IMPORTANT]
 > If you suspect missing information falls under the latter two categories, we recommend reaching out to your Technical Account Manager. They can ensure that any necessary updates are implemented in the application.
