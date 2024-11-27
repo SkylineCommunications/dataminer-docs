@@ -21,9 +21,12 @@ The swagger documentation pages about the available Usage API calls are availabl
 
 - [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
   - Get the features for which usage data might be available.
+    - Example features: `Automation`, `Storage as a Service`
   - Get the metrics of a feature.
+    - Example metrics: `Script Runs` for feature Automation, `Operations` for feature Storage as a Service
 - [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
   - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties (e.g. the script name, whether a script succeeded, etc.) or based on DataMiner System.
+    - Example splitters: `Script Name` and `Succeeded` for feature Automation, `Category` and `SubCategory` for feature Storage as a Service
 
 ### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
 
