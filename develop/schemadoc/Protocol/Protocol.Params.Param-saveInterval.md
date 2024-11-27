@@ -25,7 +25,7 @@ Specifies that only one save operation must be executed per interval.
 
 For this attribute to have any effect, the parameter must be saved. For standalone parameters, this is configurable through the save attribute.
 
-For column parameters, this is configured by specifying the save option for this column on the table parameter. Additionally, for column parameters, the saveInterval attribute will need to be configured in the table parameter.
+For column parameters, saving is enabled by configuring the save option for the column within the table parameter. Additionally, the saveInterval attribute must be specified on both the table parameter and the column parameter to ensure proper functionality.
 
 If you specify a saveInterval attribute, the database will only allow one save operation per interval. Intermediate value updates will not be saved.
 
