@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Web apps: Angular and other dependencies have been upgraded [ID 41488]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
 ### Fixes
 
