@@ -92,6 +92,7 @@ This file will contain all the necessary information to register a Catalog item 
 #   - Connector: If the Catalog item is a DataMiner XML connector.
 #   - Custom Solution: If the Catalog item is a DataMiner Solution.
 #   - Data Query: If the Catalog item is a GQI data query.
+#   - Data Transformer: Includes a data transformer that enables you to modify data using a GQI data query before making it available to users in low-code apps or dashboards.
 #   - Dashboard: If the Catalog item is a DataMiner dashboard.
 #   - DevTool: If the Catalog item is a DevTool.
 #   - Learning & Sample: If the catalog item is a sample.
