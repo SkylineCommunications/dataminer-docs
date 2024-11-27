@@ -27,7 +27,7 @@ The swagger documentation pages about the available Usage API calls are availabl
 
 ### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
 
-From now on, the emails with the download link for usage exports or audit exports will be in the familiar email layout.
+From now on, the emails with the download link for usage exports or audit exports will use the same template as other emails sent from dataminer.services.
 
 ### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
 
