@@ -4,11 +4,7 @@ uid: Elements1
 
 # Elements
 
-The *C:\\Skyline DataMiner\\Elements\\* directory contains a subdirectory for every element on the DMA.
-
-## Files found in every Element subdirectory
-
-Each element subdirectory can contain the following files, depending on the DataMiner configuration:
+In systems where [Swarming](xref:Swarming) is not enabled, the *C:\\Skyline DataMiner\\Elements\\* directory contains a subdirectory for every element on the DMA, containing the following files:
 
 - Element.xml
 
@@ -17,11 +13,13 @@ Each element subdirectory can contain the following files, depending on the Data
 - Description.xml
 
 > [!NOTE]
-> The folder of matrix elements can also contain a file with matrix label aliases, usually called *Port.xml* or *Ports.xml*. The name of this file depends on the element protocol.
+>
+> - The folder of matrix elements can also contain a file with matrix label aliases, usually called *Port.xml* or *Ports.xml*. The name of this file depends on the element protocol.
+> - If Swarming is enabled, the element configuration is stored in the database instead.
 
 ## Element.xml
 
-In systems where [Swarming](xref:Swarming) is not enabled, every element on a DMA has its own *Element.xml* file. It contains the complete element definition:
+If Swarming is not enabled, every element on a DMA has its own *Element.xml* file. It contains the complete element definition:
 
 - Metadata (name, description, type, Protocol, etc.),
 
@@ -45,7 +43,7 @@ Several things can be configured in this file:
 
 ## Description.xml
 
-Every element on a DMA has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
+If Swarming is not enabled, every element has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
 
 When you change something to a *Description.xml* file of an element, the changes will only take effect after a restart of the element.
 
