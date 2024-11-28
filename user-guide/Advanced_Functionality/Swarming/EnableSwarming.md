@@ -22,7 +22,7 @@ uid: EnableSwarming
 To verify whether your system meets these prerequisites before you enable Swarming, you can send a *SwarmingPrerequisitesCheckRequest* message to SLNet using the [SLNetClientTest tool](xref:SLNetClientTest_tool). The prerequisite check is also executed when you enable Swarming, ensuring that all prerequisites are met before Swarming is enabled.
 
 > [!NOTE]
-> The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take a while.
+> The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take several minutes.
 
 To run a prerequisites check using SLNetClientTest tool:
 
@@ -71,7 +71,7 @@ To enable Swarming using SLNetClientTest tool:
 
    The prerequisites will be checked for all Agents in the system, and when they are met, Swarming will enabled and all Agents in the DMS will be **restarted**.
 
-   The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take a while.
+   The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take several minutes.
 
    On first startup, the existing element XML files will be moved from disk into the database. This can also take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
 

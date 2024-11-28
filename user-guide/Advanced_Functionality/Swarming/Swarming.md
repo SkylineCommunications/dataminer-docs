@@ -70,7 +70,7 @@ Below you can find a complete overview of the differences between a system using
 | Smart-serial elements in server mode             | Supported                              | Supported but not swarmable    |
 | Elements receiving SNMP traps                    | Supported                              | Supported but not swarmable    |
 
-(*) In initial release.
+(*) to be added in later versions
 
 (**) Enhanced service connectors may [need to be adjusted](xref:SwarmingPrepare).
 
