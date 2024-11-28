@@ -26,7 +26,7 @@ To view your system keys:
 
 ## Organization keys
 
-Organization keys are among others used to [register new Catalog items](xref:Register_Catalog_Item), [change publishing state of a Catalog item](xref:Change_Catalog_Publishing_State) or add new DataMiner nodes.
+Organization keys are among others used to [register new Catalog items](xref:Register_Catalog_Item), [change the publishing state of a Catalog item](xref:Change_Catalog_Publishing_State), or add new DataMiner nodes.
 
 To view your organization keys:
 

@@ -6,24 +6,29 @@ uid: Change_Catalog_Publishing_State
 
 Catalog items can have the "public" or "private" publishing state. All users can see public items, but private items are only available to users within the organization that published those items.
 
-To make a private item available to all users, or to make a public item available to the publishing organization only, you need to change the publishing state of the item. You can do so [using the Catalog UI](#change-publishing-state-with-the-catalog-ui) or [using the Catalog API](#change-publishing-state-with-the-api).
+To make a private item available to all users, or to make a public item available to the publishing organization only, you need to change the publishing state of the item. You can do so [using the Catalog UI](#changing-the-publishing-state-using-the-catalog-ui) or [using the Catalog API](#changing-the-publishing-state-using-the-catalog-api).
 
-## Change publishing state with the Catalog UI
+## Changing the publishing state using the Catalog UI
 
-Navigate to [Catalog](https://catalog.dataminer.services/), sign in with your account and open the details page of the Catalog item.
-A "Make private" or "Make public" button is shown in the top of the page.
+1. Navigate to the [DataMiner Catalog](https://catalog.dataminer.services/) and make sure you are signed in.
 
-> [!IMPORTANT]
-> You must be Owner or Admin of the organization that published the Catalog item in order to change the publishing state. You will still see the button as a Member, but an error message will be returned if you try to update the state.
+1. Make sure the correct organization is selected in the top-right corner.
 
-> You must have the publishing organization selected in order to see the "Make private" or "Make public" button.
+1. [Go to the details page](xref:Looking_up_an_item_in_the_catalog) of the Catalog item.
 
-## Change publishing state with the API
+1. At the top of the page, click *Make private* or *Make public*.
 
-The publishing-state API call allows you to change the publishing state of a Catalog item using a HTTP PATCH request and an organization key to authenticate.
+   If you cannot see these buttons, double-check whether the correct organization is selected, because these will only be shown for members of the organization that published the item.
 
-> [!IMPORTANT]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Update catalog publishing state* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+> [!NOTE]
+> You must have the Owner or Admin role in the organization that published the Catalog item in order to change the publishing state. If you have the Member role, you will be able to see the button to change the publishing state, but an error message will be shown if you try to use it.
+
+## Changing the publishing state using the Catalog API
+
+The *publishing-state* API call allows you to change the publishing state of a Catalog item using an HTTP PATCH request and an organization key to authenticate.
+
+> [!NOTE]
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Update Catalog publishing state* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
 ### API Definition
 
@@ -43,6 +48,7 @@ PATCH
 ### Body
 
 The body of the request should contain the publishing state in the body of the PATCH request (use raw - json).
-- A value of true will result in having the catalog item published as publicly available.
-- A value of false will result in having the catalog item published as private, i.e. only accessible to users included in the organization to which the item is linked.
-- If the patch was successful, an HTTP 200 OK response will be returned with the updated value of the state in the body.
+
+- A value of *true* will result in the Catalog item being published as publicly available.
+- A value of *false* will result in the Catalog item being published as private, i.e. only accessible to users included in the organization to which the item is linked.
+- If the patch was successful, an *HTTP 200 OK* response will be returned with the updated value of the state in the body.
