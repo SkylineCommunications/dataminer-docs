@@ -2,11 +2,11 @@
 uid: Change_Catalog_Publishing_State
 ---
 
-# Change publishing state of a Catalog item
+# Change the publishing state of a Catalog item
 
-In order to make a Catalog item available to everyone or to the publishing organization only, you can use the UI or Catalog API.
-- [Change publishing state with Catalog UI](#change-publishing-state-with-the-catalog-ui)
-- [Change publishing state with the API](#change-publishing-state-with-the-api)
+Catalog items can have the "public" or "private" publishing state. All users can see public items, but private items are only available to users within the organization that published those items.
+
+To make a private item available to all users, or to make a public item available to the publishing organization only, you need to change the publishing state of the item. You can do so [using the Catalog UI](#change-publishing-state-with-the-catalog-ui) or [using the Catalog API](#change-publishing-state-with-the-api).
 
 ## Change publishing state with the Catalog UI
 
