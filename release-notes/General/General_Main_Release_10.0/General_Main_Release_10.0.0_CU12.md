@@ -20,7 +20,7 @@ Due to a number of enhancements, the way in which SLDMS processes DMS_SECURITY_N
 
 In situations involving a table with columns that have a SelectionSetVar option configured and an embedded table control in Visual Overview with a SingleSelection option specified in its ParameterControlOptions data field, up to now, the session variable would not be updated when the selection was cleared.
 
-From now on, the session variable will be cleared when you click the selected table row while holding down the CTRL key.
+From now on, the session variable will be cleared when you click the selected table row while holding down the Ctrl key.
 
 #### DataMiner Cube: SurveyorSearchText session variable will now be cleared when the advanced search tab is closed \[ID 28851\]
 
@@ -120,9 +120,9 @@ When an interactive Automation script was communicating with the client app, in 
 
 When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 
-#### DataMiner Cube - Visual Overview: Problem when pressing CTRL+TAB while an item inside a Visio page had the focus \[ID 28876\]
+#### DataMiner Cube - Visual Overview: Problem when pressing Ctrl+Tab while an item inside a Visio page had the focus \[ID 28876\]
 
-When you pressed CTRL+TAB while an item inside a Visio page had the focus, in some cases, an exception could be thrown.
+When you pressed Ctrl+Tab while an item inside a Visio page had the focus, in some cases, an exception could be thrown.
 
 #### Legacy Reporter: Service definition image in the 'Booking Details' report would exceed the width of the report \[ID 28886\]
 

@@ -91,11 +91,11 @@ In addition, the *Link to* data pickers have now been made more consistent. The 
 
 From now on, when the WebSocket is able to reconnect but the connection itself cannot be restored, users will be redirected to the login screen.
 
-#### Dashboards app & Low-Code Apps: New setting to enable or disable zooming in/out using CTRL+Scroll [ID 41387]
+#### Dashboards app & Low-Code Apps: New setting to enable or disable zooming in/out using Ctrl+Scroll [ID 41387]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-Since feature version 10.4.9, the following components allow you to zoom in and out using CTRL+Scroll. From now on, this behavior can be enabled or disabled in the *Layout* tab (in the *Node edge graph* and *Service definition* components) or the *Settings* tab (in the other components).
+Since feature version 10.4.9, the following components allow you to zoom in and out using Ctrl+Scroll. From now on, this behavior can be enabled or disabled in the *Layout* tab (in the *Node edge graph* and *Service definition* components) or the *Settings* tab (in the other components).
 
 - Line & area chart
 - Node edge graph
@@ -104,7 +104,7 @@ Since feature version 10.4.9, the following components allow you to zoom in and 
 - Visual Overview
 - Timeline
 
-By default, this option is disabled, meaning that you do not need to press CTRL when zooming in or out.
+By default, this option is disabled, meaning that you do not need to press Ctrl when zooming in or out.
 
 ### Fixes
 

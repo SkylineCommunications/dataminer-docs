@@ -88,7 +88,7 @@ In the *Layout* tab, you can find the following settings to configure this:
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:
 
-- To zoom, scroll while keep the CTRL key pressed (maximum 10,000 times).
+- To zoom, scroll while keep the Ctrl key pressed (maximum 10,000 times).
 - To pan, drag while keeping the right mouse button pressed (Only works when zoomed in since the default viewport shows all the data).
 
 ## Changes
