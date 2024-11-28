@@ -57,7 +57,6 @@ Below you can find a complete overview of the differences between a system using
 | Scripts & QActions using legacy alarm references | Supported                              | Not supported                  |
 | Legacy Reports & Dashboards                      | Supported                              | Not supported                  |
 | Failover                                         | Supported                              | Not supported                  |
-| Legacy Correlation                               | Not supported                          | Not supported                  |
 | Offload Database                                 | Supported                              | Not supported*                 |
 | SLA elements                                     | Supported                              | Supported but not swarmable*   |
 | Enhanced services                                | Supported                              | Supported** but not swarmable* |
