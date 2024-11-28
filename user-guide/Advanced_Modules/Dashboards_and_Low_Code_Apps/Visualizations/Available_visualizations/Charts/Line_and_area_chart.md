@@ -70,6 +70,14 @@ To configure the component:
 
    - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 
+   - *Advanced* > *Hold Ctrl to zoom*: Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->. Determines whether pressing the Ctrl key is required to zoom in or out.
+
+     - Enabled: Hold Ctrl while scrolling up or down.
+
+     - Disabled: Scroll up or down.
+
+     This setting is disabled by default. See also: [Zooming and panning](#zooming-and-panning).
+
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
@@ -215,23 +223,29 @@ It is possible to export the trend data to CSV. To do so, click the ... icon in 
 
 From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zooming and panning functionalities are available for the line & area chart component.
 
-- To zoom in, press CTRL while scrolling up (up to 10,000 times).
+### Zooming
 
-- To zoom out, press CTRL while scrolling down (up to 10,000 times).
+- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the [*Advanced* > *Hold Ctrl to zoom* setting](#configuring-the-component):
+
+  - When this setting is enabled: Hold the Ctrl key while scrolling up or down (up to 10,000 times) to zoom in or out.
+
+  - When this setting is disabled: Scroll up or down (up to 10,000 times) to zoom in or out. This is the default option.
+
+- In versions prior to DataMiner 10.4.0 [CU10]/10.5.1, hold the Ctrl key while scrolling up or down (up to 10,000 times) to zoom in or out.
+
+- When visualized on a mobile device<!--RN 39586-->: Zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using query data](#configuration-with-query-data), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
+
+### Panning
 
 - To move left or right across the component, right-click the chart and drag your mouse.
 
   > [!NOTE]
   > Panning is only possible when the chart is zoomed in, as the default viewport shows all available data.
 
-When visualized on a mobile device<!--RN 39586-->:
-
-- You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
-
-- You can move left or right by sliding one finger across the component.
-
-> [!NOTE]
-> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using query data](#configuration-with-query-data), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
+- When visualized on a mobile device<!--RN 39586-->: Move left or right by sliding one finger across the component.
 
 ## Examples
 

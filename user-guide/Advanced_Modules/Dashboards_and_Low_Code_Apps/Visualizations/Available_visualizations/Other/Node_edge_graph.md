@@ -89,6 +89,14 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
+1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
+
+   - Enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+
+   - Disabled: Scroll up or down to zoom in or out. This is the default option.
+
+   This setting is only available if the *Zooming* setting is enabled in the [*Layout* pane](#layout-configuration).
+
 ## Component actions configuration
 
 If you add a node edge graph to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
@@ -178,7 +186,7 @@ You can fine-tune the layout of the component with the following settings in the
 
   - *Upwards*: Nodes are displayed from bottom to top in order of importance
 
-- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can zoom in or out by pressing CTRL while using the scroll wheel. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->, you can use the scroll wheel of the mouse to zoom in or out.
+- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can zoom in or out by pressing Ctrl while using the scroll wheel. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->, you can use the scroll wheel of the mouse to zoom in or out.
 
   Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
 
