@@ -70,9 +70,9 @@ To configure the component:
 
    - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 
-   - *Advanced* > *Hold ctrl to zoom*: Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->. Determines whether pressing the CTRL key is required to zoom in or out.
+   - *Advanced* > *Hold Ctrl to zoom*: Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->. Determines whether pressing the Ctrl key is required to zoom in or out.
 
-     - Enabled: Hold CTRL while scrolling up or down.
+     - Enabled: Hold Ctrl while scrolling up or down.
 
      - Disabled: Scroll up or down.
 
@@ -225,13 +225,13 @@ From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zoomin
 
 ### Zooming
 
-- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the [*Advanced* > *Hold ctrl to zoom* setting](#configuring-the-component):
+- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the [*Advanced* > *Hold Ctrl to zoom* setting](#configuring-the-component):
 
-  - When this setting is enabled: Hold the CTRL key while scrolling up or down (up to 10,000 times) to zoom in or out.
+  - When this setting is enabled: Hold the Ctrl key while scrolling up or down (up to 10,000 times) to zoom in or out.
 
   - When this setting is disabled: Scroll up or down (up to 10,000 times) to zoom in or out. This is the default option.
 
-- In versions prior to DataMiner 10.4.0 [CU10]/10.5.1, hold the CTRL key while scrolling up or down (up to 10,000 times) to zoom in or out.
+- In versions prior to DataMiner 10.4.0 [CU10]/10.5.1, hold the Ctrl key while scrolling up or down (up to 10,000 times) to zoom in or out.
 
 - When visualized on a mobile device<!--RN 39586-->: Zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
 

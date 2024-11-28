@@ -32,17 +32,17 @@ To configure this component:
 
 Zooming functionalities are available for the Visual Overview component.
 
-- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold ctrl to zoom* setting in the *Settings* pane:
+- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
 
-  - When this setting is enabled: Hold the CTRL key while scrolling up or down to zoom in or out.
+  - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
 
   - When this setting is disabled: Scroll up or down to zoom in or out.
 
 - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
 
-  - To zoom in, press CTRL while scrolling up.
+  - To zoom in, press Ctrl while scrolling up.
 
-  - To zoom out, press CTRL while scrolling down.
+  - To zoom out, press Ctrl while scrolling down.
 
 - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
 
