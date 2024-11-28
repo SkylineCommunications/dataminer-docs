@@ -34,6 +34,9 @@ To swarm elements in DataMiner Cube:
 
 Below you can find an example of how you can create an Automation script that can swarm an element from one DMA to another.
 
+> [!TIP]
+> You can also find a ready-to-use [Swarm Element](https://catalog.dataminer.services/details/ffb0166d-9394-4f14-abd0-48e2175484a0) script on the Catalog or have a look at the [SLC-AS-SwarmElements code](https://github.com/SkylineCommunications/SLC-AS-SwarmElements) on GitHub.
+
 ### Script with fixed info
 
 As a first step, create a short Automation script that will swarm a fixed element to a fixed destination:
