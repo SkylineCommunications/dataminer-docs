@@ -58,6 +58,7 @@ Below you can find a complete overview of the differences between a system using
 | Legacy Reports & Dashboards                      | Supported                              | Not supported                  |
 | Failover                                         | Supported                              | Not supported                  |
 | Offload Database                                 | Supported                              | Not supported*                 |
+| Contributing Bookings                            | Supported                              | Not supported*                 |
 | SLA elements                                     | Supported                              | Supported but not swarmable*   |
 | Enhanced services                                | Supported                              | Supported** but not swarmable* |
 | Spectrum elements                                | Supported                              | Supported but not swarmable*   |
