@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used Connectors when available. This usage is shown as an average over the selected month.
+
 ### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
 
 From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
