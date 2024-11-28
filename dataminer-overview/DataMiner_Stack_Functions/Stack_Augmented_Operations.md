@@ -19,7 +19,7 @@ Additionally, DataMiner Augmented Operations reduce setup and configuration time
 > [!TIP]
 > For more information:
 >
-> - Learn to leverage DataMiner's AI capabilities—from proactive issues detection to streamlined incident response—so you can stay ahead of potential problems and work more effectively. Free training on the DataMiner Augmented Operations functionality is available at [DataMiner AI Course](https://community.dataminer.services/learning/courses/AI/).![Video](~/user-guide/images/video_Duo.png) 
+> - Learn to leverage DataMiner's AI capabilities—from proactive issues detection to streamlined incident response—so you can stay ahead of potential problems and work more effectively, with the free [DataMiner AI course](https://community.dataminer.services/learning/courses/AI/). ![Video](~/user-guide/images/video_Duo.png)
 > - A 60-min. webinar from our Experts & Insights series, showing how DataMiner leverages AI technology, is available at [Experts & Insights - Augmented Operations](https://community.dataminer.services/video/experts-insights-dataminer-augmented-operation/) ![Video](~/user-guide/images/video_Duo.png)
 > - A high-level introduction video (50 minutes) is available in our Inspire Rewind section on our Community site, at [Inspire Rewind – Augmented Operations](https://community.dataminer.services/video/inspire-rewind-augmented-operations/) ![Video](~/user-guide/images/video_Duo.png)
 
@@ -150,7 +150,7 @@ Gain valuable insights with ease. Tagged patterns and anomalies provide context 
 > [!TIP]
 > For more information:
 >
-> - Course: [Time scoped relations](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/time-scoped-relations/)
+> - Course: [Time-scoped relations](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/time-scoped-relations/)
 > - Course: [Trend icons](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-icons/)
 > - User Guide: [Working with trend icons](xref:Working_with_trend_icons)
 > - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
