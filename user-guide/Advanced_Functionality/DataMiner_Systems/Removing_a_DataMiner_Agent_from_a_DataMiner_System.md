@@ -19,7 +19,12 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. In the confirmation box, click *Yes*.
 
-1. If you want to keep using the removed DMA as a standalone Agent, restart the DMA.
+1. Stop the Agent you have removed and decommission it.
+
+1. In case your system is cloud connected, go to [Admin.Dataminer.Services](https://admin.dataminer.services/) and navigate further to the DxMs page. Here you see an overview of all the agents with an option to remove a node from the Cloud system. Click the remove button next to the agent you have just removed and confirm.
+
+1. Restart your Cube to have a correct overview on all places.
+
 
 ## Removing a Failover DMA
 
@@ -37,4 +42,9 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. Remove all `<DMA />` and `<Redirect />` tags in *DMS.xml* that contain IP addresses from the previous cluster, and save the file.
 
-1. If you want to keep using the removed DMA as a standalone Agent, restart the DMA.
+1. Start the DMA you want to keep and decommission the removed DMA.
+
+1. In case your system is cloud connected, go to [Admin.Dataminer.Services](https://admin.dataminer.services/) and navigate further to the DxMs page. Here you see an overview of all the agents with an option to remove a node from the Cloud system. Click the remove button next to the agent you have just removed and confirm.
+
+1. Restart your Cube to have a correct overview on all places.
+   
