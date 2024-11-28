@@ -57,7 +57,7 @@ By default, webpages displayed inside a shape do not have a Back and Forward but
 By default, webpages displayed inside a shape do not display a refresh button. If you want to add a refresh button to an embedded browser, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "RefreshButtonVisibility=true".
 
 > [!NOTE]
-> To force refresh the page (i.e. clear the cache), click the refresh button while pressing CTRL.
+> To force refresh the page (i.e. clear the cache), click the refresh button while pressing Ctrl.
 
 ### SingleSignOn
 

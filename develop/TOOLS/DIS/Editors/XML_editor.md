@@ -52,7 +52,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 
 > [!NOTE]
 >
-> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key. Use this feature to e.g. copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
+> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to e.g. copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
 > - Use the filter box in the top-right corner to filter the validation results.
 
 ### Compare
@@ -141,12 +141,12 @@ Note that highlighting can also be very useful to pinpoint instances of specific
 
 #### Find next, Find all
 
-When you enter words in the search box, those words will immediately be highlighted in the XML file. You do not need to press *ENTER*. If you do press *ENTER* or *CTRL+ENTER*, you will notice the following behavior.
+When you enter words in the search box, those words will immediately be highlighted in the XML file. You do not need to press *Enter*. If you do press *Enter* or *Ctrl+Enter*, you will notice the following behavior.
 
 | If you press... | then... |
 |-----------------|---------|
-| *ENTER*, | The cursor will jump to the first instance of the word in the search box.<br> Pressing *ENTER* again will make the cursor jump to the next instance of the word.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account. |
-| *CTRL+ENTER*, | A *Find Results* pane will appear at the bottom of the screen, listing all instances of the word in the search box.<br> Double-clicking a line in the *Find Results* pane will make the cursor jump to the instance referred to by that line.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account. |
+| *Enter*, | The cursor will jump to the first instance of the word in the search box.<br> Pressing *Enter* again will make the cursor jump to the next instance of the word.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account. |
+| *Ctrl+Enter*, | A *Find Results* pane will appear at the bottom of the screen, listing all instances of the word in the search box.<br> Double-clicking a line in the *Find Results* pane will make the cursor jump to the instance referred to by that line.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account. |
 
 #### Case sensitivity
 
@@ -410,7 +410,7 @@ DataMiner Integration Studio comes with a number of custom XML snippets.
 
 To insert a snippet while working in the XML editor:
 
-1. Press CTRL+K, followed by CTRL+X.
+1. Press Ctrl+K, followed by Ctrl+X.
 1. Open the *DIS \> Protocol* folder, and select a snippet. You may have to open an additional folder.
 
 > [!NOTE]

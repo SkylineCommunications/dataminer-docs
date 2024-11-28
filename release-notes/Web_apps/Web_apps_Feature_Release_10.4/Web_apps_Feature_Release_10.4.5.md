@@ -39,7 +39,7 @@ A number of new features have been added to the *Node edge graph* component:
 
 - In low-code apps, a new node edge graph action can now be used: *Clear the data*. When executed, this action will clear the feed status of the node edge graph in question.
 - Similar to other GQI components, a node edge graph is now able to recover selections (coming from the URL or when navigating between pages in low-code apps).
-- You can now force edge labels to become fully visible by pressing *CTRL+SPACE*.
+- You can now force edge labels to become fully visible by pressing *Ctrl+Space*.
 
 Also, because of a number of enhancements, overall node edge graph performance has increased.
 

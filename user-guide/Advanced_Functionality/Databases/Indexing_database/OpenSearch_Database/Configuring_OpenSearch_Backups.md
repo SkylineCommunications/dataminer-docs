@@ -77,7 +77,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
    - "166.206.186.0/24": This will allow all nodes/servers that are in the network-address range: 166.206.186.x and subnet mask 255.255.255.0.
   
-   Save the file by pressing CTRL+O, then Enter, and exit the editor by pressing CTRL+X.
+   Save the file by pressing Ctrl+O, then Enter, and exit the editor by pressing Ctrl+X.
 
 1. Restart the NFS server:
 
@@ -127,7 +127,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
    166.206.186.146:/var/nfs/opensearch /var/nfs/opensearch nfs rw,_netdev,tcp 0 0
    ```
   
-1. Save the file by pressing CTRL+O, then Enter, and exit the editor by pressing CTRL+X.
+1. Save the file by pressing Ctrl+O, then Enter, and exit the editor by pressing Ctrl+X.
 
 1. Test if the mount was successful by running the following command:
 

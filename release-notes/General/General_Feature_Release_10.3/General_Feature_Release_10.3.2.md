@@ -666,8 +666,8 @@ Up to now, the following keyboard shortcuts would not work in the dashboard edit
 
 | Shortcut | Action                          |
 |----------|---------------------------------|
-| CTRL+a   | Select all components.          |
-| DELETE   | Delete the selected components. |
+| Ctrl+A   | Select all components.          |
+| Delete   | Delete the selected components. |
 
 #### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID 35283]
 

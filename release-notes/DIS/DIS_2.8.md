@@ -15,7 +15,7 @@ Up to now, when you wanted to remove a number of MIB files from the MIB browserâ
 From now on, when you want to remove multiple MIB files at once, you can select all of them and click *Remove* in the *Files* tab menu bar.
 
 > [!NOTE]
-> To select more than one file, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the SHIFT key.
+> To select more than one file, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the Shift key.
 
 #### Table editor: Default column option separator will now be enforced \[ID 17314\]
 

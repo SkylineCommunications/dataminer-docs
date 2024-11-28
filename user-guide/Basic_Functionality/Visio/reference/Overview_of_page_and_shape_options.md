@@ -336,7 +336,7 @@ FixedWidth=<px>|MinWidth=<px>|MaxWidth=<px>|FixedHeight=<px>|MinHeight=<px>|MaxH
 >
 > - When the maximum size is reached, the content is centered on the card.
 > - When the minimum size is reached, the content is shown in a scroll viewer.
-> - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use CTRL+Scroll to zoom.
+> - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use Ctrl+Scroll to zoom.
 
 ## FollowInput
 
