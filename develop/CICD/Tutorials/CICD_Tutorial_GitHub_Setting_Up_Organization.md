@@ -10,6 +10,9 @@ If you are interested in learning how to set up CI/CD in other technologies, suc
 
 Expected duration: 10 minutes.
 
+> [!TIP]
+> See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Private versus public code
 
 Both SonarCloud and GitHub require paid licenses to fully support private GitHub repositories.
