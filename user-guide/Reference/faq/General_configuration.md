@@ -121,7 +121,7 @@ w32tm /query /status /verbose
 ```
 
 > ![TIP]
-> Also see [Windows Time service tools and settings](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config)
+> See also: [Windows Time service tools and settings](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config)
 
 ## How do I keep DataMiner Cube from disconnecting automatically?
 
