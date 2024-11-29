@@ -30,6 +30,7 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Requesting QAction metrics](xref:SLNetClientTest_Requesting_QAction_metrics)
 - [Retrieving connection info for a particular element](xref:SLNetClientTest_retrieving_connection_info)
 - [Retrieving DCF debug information](xref:SLNetClientTest_retrieving_dcf_debug_info)
+- [Retrieving general information about elements](xref:SLNetClientTest_retrieving_element_info)
 - [Retrieving information on open GQI sessions](xref:SLNetClientTest_info_on_open_gqi_sessions)
 - [Tracking DMA communication](xref:SLNetClientTest_tracking_dma_communication)
 - [Verifying sync rules](xref:SLNetClientTest_verifying_sync_rules)

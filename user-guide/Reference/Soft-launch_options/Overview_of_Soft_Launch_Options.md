@@ -265,6 +265,7 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 Enables [Swarming](xref:Swarming) support for eligible systems.
 
 - **Minimum version**: 10.3.11
+- **Release version**: DataMiner 10.5.1/10.6.0<!-- RN 41490 -->
 
 ### UseWebIAS
 

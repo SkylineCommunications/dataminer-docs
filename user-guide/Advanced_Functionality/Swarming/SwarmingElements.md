@@ -16,7 +16,9 @@ When you are swarming an element so it gets hosted on a different DataMiner Agen
 During this transition, the ability to open element cards or change element configuration for the involved element will be temporarily suspended. Once the element migration is complete, it will become accessible again.
 
 > [!NOTE]
-> To be able to trigger swarming for an element, you need the *Swarming* user permission as well as config rights on the element.
+>
+> - To be able to trigger swarming for an element, you need the *Swarming* user permission as well as config rights on the element.
+> - Swarming is currently only possible with regular elements. See [Limitations](xref:Swarming#limitations).
 
 ## Swarming elements in DataMiner Cube
 
