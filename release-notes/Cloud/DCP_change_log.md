@@ -106,7 +106,7 @@ On the Catalog details page, if the publisher is not from your currently selecte
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
 
-### 22 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 4191]
+### 25 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 41491]
 
 Using an organization key with permission "Update catalog publishig state" it is possible to make a Catalog item public or private.
 
