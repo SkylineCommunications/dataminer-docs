@@ -41,6 +41,10 @@ When you registered a Catalog item using a manifest that contained invalid synta
 
 When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
 
+### 25 November 2024 - New feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
+
+It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
+
 ### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
 
 On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
@@ -105,24 +109,6 @@ On the Catalog details page, if the publisher is not from your currently selecte
 ### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
-
-### 25 November 2024 - New feature - Catalog API - Service authenticated API [ID 41353]
-
-The *api/service-catalog/v1-0/* route now exposes methods that allow applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer".
-
-This requires permission on the role "catalog.api.read" of the Catalog API.
-
-The following methods are now available:
-
-- /catalogs/search
-- /catalogs/{CatalogId}
-- /catalogs/{CatalogId}/ranges
-- /catalogs/{CatalogId}/versions
-- /catalogs/{CatalogId}/versions/recommended
-- /catalogs/{CatalogId}/doc
-- /catalogs/categories
-
-You can make up to 5 requests per second, with occasional bursts of up to 20 requests allowed. After you trigger a burst, you will need to wait for the system to "refill" at a rate of 5 requests per second before you can trigger a burst again. Over a full minute, this allows for up to 300 requests.
 
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
