@@ -35,8 +35,6 @@ Several things can be configured in this file:
 
 - To enable or disable the creation of DVE child elements, a *dvecreate* attribute can be added. For more information, see [Enabling or disabling the creation of DVE child elements](xref:Dynamic_virtual_elements#enabling-or-disabling-the-creation-of-dve-child-elements).
 
-- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](xref:Simulated_elements#what-happens-when-you-enable-simulation)
-
 - To enable data offloads to the offload database on element level, a *\<CentralOffload>* tag can be added. See [Disabling data offloads to the offload database on element level](xref:Configuring_data_offloads#disabling-data-offloads-to-the-offload-database-on-element-level).
 
 - SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings).
