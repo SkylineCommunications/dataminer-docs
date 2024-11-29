@@ -41,7 +41,7 @@ When you registered a Catalog item using a manifest that contained invalid synta
 
 When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
 
-### 25 November 2024 - Feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
+### 25 November 2024 - New feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
 
 It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
 
