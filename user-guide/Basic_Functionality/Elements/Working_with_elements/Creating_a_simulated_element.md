@@ -31,6 +31,9 @@ To create a simulated element:
 > [!TIP]
 > See also: [Simulated elements](xref:Simulated_elements)
 
+> [!NOTE]
+> To create a simulated spectrum element, use the [Skyline Spectrum Simulation](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html) connector.
+
 ## Creating a simulation file
 
 To create a simulation file based on an element in DataMiner Cube:

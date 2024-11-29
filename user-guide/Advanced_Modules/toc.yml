@@ -1295,8 +1295,6 @@ items:
             topicUid: Automatic_cleanup_of_alarm_recordings_folder
           - name: Configuring a spectrum element to follow the device settings
             topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
-          - name: Creating a simulated spectrum element
-            topicUid: Creating_a_simulated_spectrum_element
       - name: Tutorials
         items:
             - name: Monitoring a spectrum signal by comparing it with thresholds
