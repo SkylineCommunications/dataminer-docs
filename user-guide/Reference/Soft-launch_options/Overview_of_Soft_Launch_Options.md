@@ -267,6 +267,9 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 - **Minimum version**: 10.3.11
 - **Release version**: DataMiner 10.5.1/10.6.0<!-- RN 41490 -->
 
+> [!NOTE]
+> This soft-launch option is not supported in the 10.5.0 Main Release version.<!-- RN 41258 -->
+
 ### UseWebIAS
 
 Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
