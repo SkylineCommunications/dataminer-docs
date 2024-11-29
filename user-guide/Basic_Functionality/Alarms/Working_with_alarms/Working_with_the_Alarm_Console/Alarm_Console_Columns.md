@@ -110,6 +110,14 @@ For more information on changing the column layout, see [Changing the column lay
 
 - **Alarm ID**: The unique ID that identifies the alarm record. This ID is for instance used to link alarms to trouble tickets.
 
+  > [!NOTE]
+  > For SLAs, the content of the *Alarm ID* column may differ depending on your DataMiner version:
+  >
+  > - From DataMiner 10.5.1/10.6.0 onwards<!--RN 41328-->: DMAID/ElementID/RootAlarmID.
+  > - Prior to DataMiner 10.5.1/10.6.0: HostingDMAID/AlarmID.
+  >
+  > "DMAID" refers to the DataMiner ID of the DataMiner Agent where the SLA was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
+
 - **Root alarm ID**: The ID of the root alarm.
 
 - **Creation time**: The time when the alarm was created in DataMiner.
