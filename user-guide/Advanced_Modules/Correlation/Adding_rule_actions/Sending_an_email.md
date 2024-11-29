@@ -42,15 +42,13 @@ In the *Actions* section of the details pane:
    > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.
    > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
    > - The icon in front of each item in the drop-down list shows whether the item is a dashboard or a report.
+   > - If you edit an existing *Send email* action that uses a dashboard that no longer exists, from DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41364-->, the dashboard will be displayed in red.
 
 1. If you have selected a report or dashboard to include, optionally click the *Configure* button to further configure it. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
 1. Optionally, to also send the message when the conditions are no longer fulfilled, select *Execute on clear*.
 
 1. Optionally, to also send the message when there is a change to the base alarms of the Correlated alarm, select *Execute on base alarm updates*.
-
-> [!NOTE]
-> From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41364-->, when you open an existing *Send email* action to which a dashboard is attached, the dashboard will appear in red if it no longer exists.
 
 ## Using notification message templates
 
