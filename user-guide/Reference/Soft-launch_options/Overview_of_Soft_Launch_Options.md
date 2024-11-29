@@ -268,7 +268,7 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 - **Release version**: DataMiner 10.5.1/10.6.0<!-- RN 41490 -->
 
 > [!NOTE]
-> This soft-launch option is not supported in the 10.5.0 Main Release version.<!-- RN 41258 -->
+> This soft-launch option is not supported in the Main Release track.<!-- RN 38016+41258 -->
 
 ### UseWebIAS
 
