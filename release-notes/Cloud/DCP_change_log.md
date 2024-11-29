@@ -117,29 +117,6 @@ This has been improved by returning a HTTP 400 Bad Request containing detail whi
 
 This has been improved by returning a HTTP 409 Conflict result.
 
-### 22 November 2024 - Feature - Catalog API - Service authenticated API [ID 41353]
-
-The api/service-catalog/v1-0/ route now exposes methods that allows applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer". 
-Requires permission on role "catalog.api.read" of the catalog API.
-
-Following methods are made available:
-
-/catalogs/search
-
-/catalogs/{CatalogId}
-
-/catalogs/{CatalogId}/ranges
-
-/catalogs/{CatalogId}/versions
-
-/catalogs/{CatalogId}/versions/recommended
-
-/catalogs/{CatalogId}/doc
-
-/catalogs/categories
-
-rate limit : 5 requests per sec and a burst of 20. This results in 300 requests per minute and after a burst of 20, the bucket will fill with 5 requests per sec before another burst can occur.
-
 ### 22 November 2024 - Feature - Catalog API - Get Catalog item categories [ID 41411]
 
 User, service and public Catalog APIs are extended with a categories call to obtain all categories supported in catalog
