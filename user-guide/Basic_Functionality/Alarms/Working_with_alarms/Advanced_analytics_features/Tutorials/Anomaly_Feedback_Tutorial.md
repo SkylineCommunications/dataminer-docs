@@ -20,7 +20,7 @@ Estimated duration: 25 minutes.
 > [!TIP]
 > See also:
 >
-> - [Providing feedback on behavioral anomalies](xref:Providing_feedback_on_behavioral_anomalies)
+> - [Providing user feedback](xref:Providing_user_feedback)
 > - [Kata #46: Improve anomaly detection with feedback](https://community.dataminer.services/courses/kata-46/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
