@@ -108,7 +108,7 @@ To prepare the destination server, there are several possibilities:
 
       1. Connect to the server using the user credentials that were used to configure OpenSearch.
 
-      1. Stop OpenSearch by going to the Command Prompt or Powershell window that is running OpenSearch and either entering CTRL+C or closing the window.
+      1. Stop OpenSearch by going to the Command Prompt or Powershell window that is running OpenSearch and either entering Ctrl+C or closing the window.
 
       1. Open the *opensearch.yaml* file and look for *path.data*.
 

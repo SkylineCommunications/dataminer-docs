@@ -8,7 +8,10 @@ uid: General_Main_Release_10.4.0_CU10
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.4.0 CU10](xref:Cube_Main_Release_10.4.0_CU10).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.4.0 CU10](xref:Web_apps_Main_Release_10.4.0_CU10).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Breaking changes
 
@@ -149,6 +152,14 @@ After having upgraded to a DataMiner version that contains this fix, you can do 
 - Manually trigger the "Skyline DataMiner LDAP Resync" task in Windows Task Scheduler.
 
 All users should then be able to log in again.
+
+#### Elements with WebSocket connections: Excessive number of information events would be generated when specifying an incorrect IP address [ID 41167]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, while adding an element, you specified an incorrect IP address in the WebSocket connection details, an excessive number of information events would be generated, each mentioning that the parameter defined in `<NotifyConnectionPIDs>` was set to "Closed".
+
+From now on, SLPort will keep track of the parameter states that get forwarded to SLProtocol. This will make sure that only a change from "Open" to "Closed" or from "Closed" to "Open" will cause (a) a parameter state to get forwarded to SLProtocol and (b) an information event of type "set parameter" to be generated.
 
 #### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
 

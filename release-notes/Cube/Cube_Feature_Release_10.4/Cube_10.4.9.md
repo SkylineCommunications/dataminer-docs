@@ -8,7 +8,9 @@ uid: Cube_Feature_Release_10.4.9
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.9](xref:General_Feature_Release_10.4.9).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.9](xref:General_Feature_Release_10.4.9).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.9](xref:Web_apps_Feature_Release_10.4.9).
 
 ## Changes
 
@@ -30,7 +32,7 @@ Because of a number of enhancements, overall performance has increased when load
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in a visual overview, a property placeholder was used, up to now, the visual overview would always subscribe on all placeholders associated with the linked object, regardless of the property specified in the property placeholder. From now on, the visual overview will only subscribe on the property name that is specified.
+When, in a visual overview, a property placeholder was used, up to now, the visual overview would always subscribe on all properties associated with the linked object, regardless of the property specified in the property placeholder. From now on, the visual overview will only subscribe on the property name that is specified.
 
 #### System Center - Agents: Some buttons will no longer be visible when Cube is connected to a DaaS system [ID 40013]
 

@@ -8,7 +8,9 @@ uid: Cube_Feature_Release_10.5.1
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.5.1](xref:General_Feature_Release_10.5.1).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.5.1](xref:General_Feature_Release_10.5.1).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.1](xref:Web_apps_Feature_Release_10.5.1).
 
 ## Highlights
 
@@ -38,6 +40,61 @@ From now on, in the *SLHelper.exe.config* file, it is possible to indicate that 
 
 > [!NOTE]
 > When `helper:load-alarms` is set to false, no alarms will be loaded, even when the visual overview in question needs alarm information to render correctly.
+
+#### Alarm Console - Proactive cap detection: User feedback [ID 41451]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+In the *Suggestion events* and *Predicted alarms* tabs of the Alarm Console, the *Feedback* column now allows you to give feedback on any of the listed suggestion events and alarms created by the proactive cap detection feature.
+
+> [!IMPORTANT]
+> This feature will only work when connected to a DataMiner Agent running at least main release 10.6.0 or feature release 10.5.1.
+
+##### Thumbs up or thumbs down
+
+In the *Feedback* column, you can find two buttons to evaluate an alarm or a suggestion event:
+
+- a "thumbs up" button you can click to indicate that you like it, and
+- a "thumbs down" button you can click to indicate that you do not like it.
+
+Any feedback users give will be used by the proactive cap detection feature to tailor the detection on system level.
+
+When you click one of the two buttons, it will be pinned in the column as a black icon, and if you change your mind, you can click the other one. Buttons that have not been clicked will stay hidden and will only be visible when you hover over the alarm or suggestion event. Also, you will only see the icons you have clicked yourself. You will not be able to see feedback given by other users.
+
+Feedback given for active alarms will be saved in the user settings and will re-appear after closing Cube and opening it again. Feedback given for history alarms will disappear after restarting Cube. However, it will not be deleted. It will be used by SLAnalytics to improve the accuracy of the proactive cap detection feature.
+
+> [!NOTE]
+> Instead of clicking the "thumbs up" or "thumbs down" button, you can also right-click the alarm or suggestion event and select *Like* or *Dislike*.
+
+##### Taking action
+
+When you click either the "thumbs up" or "thumbs down" button, in some cases, a light bulb icon will appear. In the context menu under that icon, you can then find the action you are suggested to take:
+
+| Action | Description |
+|--------|-------------|
+| Clear event            | When you select this action, the alarm or suggestion event will be cleared immediately. No confirmation box will appear. |
+| Improve alarm template | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the alarms or suggestion events you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current configuration. |
+| Create alarm template | When you select this action, a pop-up window will appear, showing a proposal for a new alarm templates.<br>If you accept this proposal, a new alarm template will be created and applied to the current element.<br>A button will allow you to view the current configuration. |
+
+When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.
+
+> [!NOTE]
+>
+> - The actions listed above will only appear if you are allowed to perform them. For example, the system will not suggest you update the alarm template if you are not allowed to do so.
+> - The *Improve alarm template* and *Create alarm template* actions will not appear if the element in question has an alarm template group assigned.
+> - In case of anomaly alarms, the *Create alarm template* action will now behave in a way that is similar to the *Create alarm template* action described above. Up to now, in case of anomaly alarms, the *Create alarm template* action would create a new, empty alarm template.
+
+##### Adding a feedback column to other alarm tabs
+
+The feedback column will only be visible by default in the *Suggestion events*, *Anomalies* and *Predicted alarms* tabs. If you want this column to also be visible in another alarm tab listing either alarms or suggestion events, do the following:
+
+1. Go to the alarm tab to which you want to add a feedback column.
+1. Right-click the column headers, and select *Add or remove columns* > *Actions*.
+
+> [!NOTE]
+>
+> - The "thumbs up" and "thumbs down" buttons will only be shown for alarm or suggestion events generated by either the behavioral anomaly detection feature or the proactive cap detection feature.
+> - On systems that do not use either STaaS or dedicated clustered storage, the "thumbs up" and "thumbs down" buttons will not be shown in alarm tabs listing history alarms.
 
 ## Changes
 
@@ -149,6 +206,14 @@ Because of a number of enhancements, embedded visual overviews will now be rende
 
 Clicking the *Community* button at the bottom of DataMiner Cube's sidebar opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/). As the *Resources* page no longer exists, the link to that page has now been removed from the menu.
 
+#### Visual Overview will again subscribe on all properties associated with the linked object when property placeholders are being used [ID 41479]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in a visual overview, a property placeholder was used, up to feature release 10.4.9, the visual overview would always subscribe on all properties associated with the linked object, regardless of the property specified in the property placeholder. As of feature release 10.4.9, the visual overview would only subscribe on the property name that was specified.
+
+This change has now been reverted. When, in a visual overview, a property placeholder is used, the visual overview will again subscribe on all properties associated with the linked object, regardless of the property specified in the property placeholder.
+
 ### Fixes
 
 #### Visual Overview: Shape data values starting with '[property:' and ending with ']' would be parsed incorrectly [ID 41047]
@@ -184,3 +249,25 @@ From now on, a pop-up window showing a quarantine warning will only appear in ca
 If you have multiple monitors and want the DataMiner Cube desktop app to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
 Up to now, this *screen* argument would not be applied to the DataMiner Agent when passed to DataMiner Cube, only when it was explicitly passed to the DataMiner Agent.
+
+#### 'Cube search' background thread would not be closed when a Cube session was closed abruptly [ID 41359]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+Up to now, each time a Cube session was closed abruptly, its *Cube search* background thread would not be cleaned up properly. When a new session was then opened or when the closed session was restored, a new *Cube search* background thread would be created alongside the old one. From now on, when a new *Cube search* background thread is created, any existing *Cube search* background threads will first be closed.
+
+Also, when a *Cube search* background thread was closed, up to now, the memory allocated to that thread would not be freed up.
+
+#### Alarm Console: Base alarms of a correlated alarm would disappear when that alarm did not match the filter and a delay was specified on the alarm tab [ID 41463]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When, in an alarm tab in which an alarm filter and a delay had been specified, a correlation alarm would disappear because it no longer matched the filter, up to now, its base alarms that did match the filter would incorrectly not be added.
+
+Also, when neither a correlation alarm nor its base alarms no longer matched the filter, up to now, the correlation alarm would incorrectly not disappear from the alarm tab.
+
+#### Visual Overview: Dynamic page data would not report their 'pending' state correctly [ID 41483]
+
+<!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
+
+When calculating how long it took to load a Visio page, up to now, the processing of the dynamic placeholders specified on that page would incorrectly not be taken into account. As a result, dynamic page data would not report their *pending* state correctly.

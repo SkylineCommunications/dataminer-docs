@@ -31,7 +31,7 @@ In the DataMiner Taskbar Utility, the following options have been removed:
 > [!NOTE]
 > The following option has been kept:
 >
-> - Opening Windows file explorer in the C:\\Skyline DataMiner\\ folder by double-clicking while pressing the CTRL key.
+> - Opening Windows file explorer in the C:\\Skyline DataMiner\\ folder by double-clicking while pressing the Ctrl key.
 
 #### Enhanced performance when starting up elements \[ID 33023\]
 

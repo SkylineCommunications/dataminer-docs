@@ -28,9 +28,9 @@ When you right-click a page, a shortcut menu will appear, containing the followi
 |----------------|-------------------|---------------------------------------------------------------------------|
 | Set as default | \-                | Turns the page into the default page.                                     |
 | Rename         | F2                | Allows you to rename the page.                                            |
-| Move Up        | CTRL+UP           | Moves a page in the *Manual Order* section one position up in the list.   |
-| Move Down      | CTRL+DOWN         | Moves a page in the *Manual Order* section one position down in the list. |
-| Remove         | DELETE            | Removes the entire page.                                                  |
+| Move Up        | Ctrl+UP           | Moves a page in the *Manual Order* section one position up in the list.   |
+| Move Down      | Ctrl+DOWN         | Moves a page in the *Manual Order* section one position down in the list. |
+| Remove         | Delete            | Removes the entire page.                                                  |
 
 ## Layout / Parameters
 
@@ -69,7 +69,7 @@ When you right-click after selecting a parameter (or multiple parameters), a sho
 | Remove                    | Remove the selected parameter(s) from the page.         |
 
 > [!NOTE]
-> To select more than one parameter box, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive parameter boxes, click the first one in the list and then click the last one while holding down the SHIFT key.
+> To select more than one parameter box, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive parameter boxes, click the first one in the list and then click the last one while holding down the Shift key.
 
 ### Parameters
 

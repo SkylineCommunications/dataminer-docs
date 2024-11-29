@@ -116,7 +116,7 @@ There is also a button available that can be used to migrate booking data to the
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left Ctrl key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 

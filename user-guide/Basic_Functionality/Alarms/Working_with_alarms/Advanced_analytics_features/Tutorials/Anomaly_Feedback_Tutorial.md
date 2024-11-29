@@ -83,7 +83,7 @@ In this step, you will **give negative feedback to unwanted level shift anomalie
    Just below the bit rate drop, two dark gray blocks are displayed, indicating two detected changes in behavior, or change points. This means two anomalies were detected at that moment. If you hover the mouse over them, you will see that one is a variance change, corresponding to the parameter becoming less stable, and the other is a level shift, corresponding to the drop.
 
    > [!NOTE]
-   > Since the two anomalies occur around the same time, the labels that appear when you hover over the change points might overlap, causing one label to be hidden. To view both labels clearly, zoom in by pressing CTRL while scrolling up. After zooming in, you can revert back by clicking the *Week to date* button again.
+   > Since the two anomalies occur around the same time, the labels that appear when you hover over the change points might overlap, causing one label to be hidden. To view both labels clearly, zoom in by pressing Ctrl while scrolling up. After zooming in, you can revert back by clicking the *Week to date* button again.
 
    ![Bit rate with drop and transition from stable signal to less stable signal](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_double_anomaly.png)
 

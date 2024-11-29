@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.4.11
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.11](xref:Cube_Feature_Release_10.4.11).
 
 ## New features
 
@@ -281,7 +283,7 @@ When you imported a dashboard into a dashboard subfolder, the Dashboards app wou
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a large amount of feed data was requested at the same time (e.g. when you clicked CTRL+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
+When a large amount of feed data was requested at the same time (e.g. when you clicked Ctrl+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
 
 #### Low-Code Apps - GQI: Problem with persistent client subscriptions [ID 40852]
 

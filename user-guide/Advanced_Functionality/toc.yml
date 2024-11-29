@@ -616,5 +616,7 @@ items:
   - name: Swarming
     topicUid: Swarming
     items:
-      - name: Switching objects
-        topicUid: SwitchingObjects
+      - name: Swarming elements
+        topicUid: SwarmingElements
+      - name: Swarming bookings
+        topicUid: SwarmingBookings

@@ -9,6 +9,103 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
+
+### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
+
+### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
+
+From now on, you can create an API key on organization level with the "Retrieve usage data" permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
+
+The swagger documentation pages about the available Usage API calls are available in the following locations:
+
+- [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
+  - Get the features for which usage data might be available. Example features: `Automation`, `Storage as a Service`.
+  - Get the metrics of a feature. Example metrics: `Script Runs` for the Automation feature, `Operations` for the Storage as a Service feature.
+- [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
+  - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties or based on DataMiner System. These "splitters" can for example be `Script Name` or `Succeeded` for Automation, and `Category` or `SubCategory` for Storage as a Service.
+
+### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
+
+From now on, the emails with the download link for usage exports or audit exports will use the same template as other emails sent from dataminer.services.
+
+### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
+
+When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
+
+### 25 November 2024 - Fix - Catalog API - Registration with existing ID from other organization returned internal server error [ID 41515]
+
+When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
+
+### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
+
+On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Admin - Warning in case DataMiner version dependency is not met for DxM [ID 41459]
+
+On the *DxMs* page in the Admin app, when a DataMiner version dependency is not met for a DxM, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
+
+On the Catalog browse page, the *Type* filter will now group its available values by category.
+
+The following Catalog types have been updated or introduced:
+
+ Category               | Type (before)      | Type (new)         |
+------------------------|--------------------|--------------------|
+ Data Ingest            | Connector          | Connector          |
+ Data Ingest            | Scripted Connector | Scripted Connector |
+ Data Processing        | Ad Hoc Data Source | Ad Hoc Data Source |
+ Data Processing        | Automation Script  | Automation         |
+ Data Processing        | Data Transformer   | Data Transformer   |
+ Data Processing        | Data Query         | Data Query         |
+ Data Consumption       | ChatOps Extension  | ChatOps Extension  |
+ Data Consumption       | Dashboard          | Dashboard          |
+ Data Consumption       | User-Defined API   | User-Defined API   |
+ Data Consumption       | Visual Overview    | Visual Overview    |
+ Solutions              | /                  | Product Solution   |
+ Solutions              | Standard Solution  | Standard Solution  |
+ Solutions              | Solution           | Custom Solution    |
+ Productivity & Utility | /                  | DevTools           |
+ Productivity & Utility | /                  | System Health      |
+
+The following types have been removed:
+
+- Best Practices Analyzer
+- Enhanced Service Model
+- Function Definition
+- Life Cycle Service Orchestration
+- Low-Code App
+- Process Activity
+- Profile-Load Script (now considered Automation)
+- Sample Solution
+- SLA Model
+- Testing Solution
+
+### 25 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
+
+On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
+
+### 25 November 2024 - New feature - Catalog API - Get Catalog item categories [ID 41411]
+
+The user, service, and public Catalog APIs have been extended with a categories call to obtain all categories supported in Catalog:
+
+- "/api/user-catalog/v2-0/catalogs/categories"
+- "/api/public-catalog/v2-0/catalogs/categories"
+- "/api/service-catalog/v1-0/catalogs/categories"
+
+### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
+
+On the Catalog details page, if the publisher is not from your currently selected organization or Skyline Communications, the tag "External" will be shown next to the publisher in the side panel.
+
+### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
+
+On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
+
 ### 22 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
 
 If you register a catalog item using a manifest that contained an invalid syntax for owner, a HTTP 500 internal server error was returned.
@@ -392,11 +489,11 @@ Users can now view documentation for all items, if provided.
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
-#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
+#### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 
 It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
 
-#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID 40144]
+#### 23 July 2024 - New feature - Catalog - Support for more Catalog types [ID 40144]
 
 The following new Catalog types are now supported:
 

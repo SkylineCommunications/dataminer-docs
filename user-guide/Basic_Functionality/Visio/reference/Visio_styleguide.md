@@ -178,11 +178,11 @@ If you want to replace an icon in a KPI, do the following:
 1. Open the *Icon* stencil by clicking *More Shapes* in the *Shapes* task pane.
 1. Select the correct icon and drag it onto the Visio page.
 1. Delete the existing icon in the KPI block.
-1. Select the colored *ParamAlarmLayer* shape, and while pressing CTRL, select the new icon.
+1. Select the colored *ParamAlarmLayer* shape, and while pressing Ctrl, select the new icon.
 1. In the *Home* tab of the Visio ribbon, go to *Align*, click *Align Center* and then *Align Middle*. The icon should now be in the correct spot.
 1. Select the icon again, go to *Home > Line* in the Visio ribbon, and select line color "White" (or optionally 254,255,255).
 1. Click a random location in the Visio drawing to unselect the icon shape.
-1. Click the KPI shape, and while pressing CTRL, select the new icon shape.
+1. Click the KPI shape, and while pressing Ctrl, select the new icon shape.
 1. Go to *Home > Group* in the Visio ribbon, and click *Add to Group*.
 
 > [!NOTE]

@@ -22,6 +22,8 @@ In the *Settings* tab, you can also configure the following optional settings:
 
 - *Emit value on*: Determines when the value in the box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
 
+- *Default value*: Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41401-->. Allows you to specify the default value that will be entered into the text input component when the dashboard or low-code app is opened.
+
 - *Multiline*: Determines whether the input can consist of multiple lines or not.
 
 > [!NOTE]

@@ -22,6 +22,8 @@ In the *Settings* tab, you can also configure the following optional settings:
 
 - *Emit value on*: Determines when the value in the box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*Feed value on*" instead.
 
+- *Default value*: Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41401-->. Allows you to specify the default value that will be entered into the numeric input component when the dashboard or low-code app is opened.
+
 - *Step size*: The value the user specifies will need to be a multiple of the value specified with this option. For example, if the step size is 3, the user can enter 3, 6, 9, etc. but not 2 or 5.
 
 - *Number of decimals*: The maximum number of decimals.

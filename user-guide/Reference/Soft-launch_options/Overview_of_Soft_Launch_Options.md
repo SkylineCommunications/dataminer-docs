@@ -33,6 +33,13 @@ Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-s
 - **Minimum version**: 10.2.7
 - **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id-33215-id-36489))
 
+### BookingSwarming
+
+Makes it possible to [swarm bookings](xref:SwarmingBookings).
+
+- **Minimum version**: 10.5.1
+- **Release version**: To be determined
+
 ### BrokerGateway
 
 Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.

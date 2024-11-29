@@ -44,9 +44,9 @@ If `<RequireValidSsl>` is set to *false*, no further configuration is required. 
 
    1. Click *Next*, specify a random folder and a file name, and click *Save*.
 
-   1. Open the Microsoft Management Console. To do so, press WINDOWS+R, type "mmc", and press ENTER.
+   1. Open the Microsoft Management Console. To do so, press WINDOWS+R, type "mmc", and press Enter.
 
-   1. In the Microsoft Management Console, press CTRL+M.
+   1. In the Microsoft Management Console, press Ctrl+M.
 
    1. In the *Add or Remove Snap-ins* window, select "Certificate" from the *Available snap-ins* list, and click *Add*.
 
