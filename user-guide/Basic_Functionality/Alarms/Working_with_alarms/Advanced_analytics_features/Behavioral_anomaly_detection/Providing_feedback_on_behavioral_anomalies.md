@@ -96,7 +96,7 @@ After you have provided feedback on a suggestion event or alarm, a light bulb ic
 |--|--|
 | Clear event | Clears the suggestion event immediately. No confirmation box will appear. |
 | Improve alarm template | Opens a pop-up window suggesting changes to the alarm template, based on previous feedback for the parameter. At the top of the window, you can see the element and parameter name, along with a link to relevant documentation<!--RN 39616-->. At the bottom, it shows which elements using the same alarm template will be affected by the suggested template changes<!--RN 39729-->. A clock button allows you to view the current template configuration<!--RN 39640-->. |
-| Create alarm template | Opens a card to create a new alarm template from scratch. |
+| Create alarm template | Opens a pop-up window that suggests an alarm template configuration based on previous feedback. At the top of the window, the element and parameter name are displayed, along with a link to the relevant documentation. Prior to DataMiner 10.5.1/10.6.0<!--RN 41451-->, clicking this follow-up action will open a card to create a new alarm template from scratch. |
 
 ![Suggested actions](~/user-guide/images/Suggested_Actions.png)<br>*Alarm Console in DataMiner 10.4.11*
 
