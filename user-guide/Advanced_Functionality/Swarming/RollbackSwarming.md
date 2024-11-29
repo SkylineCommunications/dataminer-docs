@@ -9,48 +9,53 @@ uid: SwarmingRollback
 
 When Swarming is enabled, the element config XML files (e.g. `Element.xml`, `ElementData.xml`, `Description.xml`, etc.) are moved from disk to the database. There is currently no procedure to move them back to disk.
 
-There are some things you can do partially recover some data.
+However, there are some things you can do partially recover some data.
 
-## Partial Rollback from backup
+## Partial rolling back Swarming from a backup
 
-When DataMiner is moving the XML files from disk to database, it will take a backup first. This migration happens during first startup after enabling the Swarming feature.
+When DataMiner is moving the XML files from disk to database, it will take a backup first. This migration happens during the first DataMiner startup after the Swarming feature is enabled.
 
-The backup gets initially stored in `Recycle Bin`, but could be manually copied over to a different location to have long term access.
-These .zip files are a snapshot in time at the moment Swarming was enabled.
+The backup is initially stored in the *Recycle Bin* folder, but you can manually copy it over to a different location to have long-term access. It is stored in two .zip files, one for the elements folder and one for the redundancy folder. These .zip files are a snapshot from the moment Swarming was enabled. The files will for instance look like this:
 
-> [!IMPORTANT]
-> Restoring these means that any modifications to existing elements or redundancy groups and any new elements or redundancy groups are lost.
+- `2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip`
+- `2024_11_20 11_03_12_300_RedundancyFolder_BeforeSwarmingMigration.zip`
 
-Any reference to these elements could become invalid.
-
-There are 2 .zip files you need to restore, one for the elements folder and one for the redundancy folder.
-E.g.
-
-`2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip`
-
-`2024_11_20 11_03_12_300_RedundancyFolder_BeforeSwarmingMigration.zip`
-
-Restoring will go as follows:
+To restore this backup and roll back Swarming:
 
 1. Shut down all DMAs in the DMS.
-1. On every DMA, restore the `C:\Skyline DataMiner\Elements\` and the `C:\Skyline DataMiner\Redundancy\` folder by replacing the folders on disk with the ones in the zip files. This will also restore all redundancy groups (and remove new ones).
-1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files)
+
+1. On every DMA, restore the `C:\Skyline DataMiner\Elements\` and the `C:\Skyline DataMiner\Redundancy\` folder by replacing the folders on the disk with the ones in the zip files.
+
+   This will restore both the elements and redundancy groups to be back as they were at the time of the backup, meaning that any changes or additions since the backup will be lost.
+
+1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files).
+
 1. Restart all DMAs.
 
-## DELT
+> [!IMPORTANT]
+> When you restore the backup, any modifications to existing elements or redundancy groups since the backup and any new elements or redundancy groups created since the backup will be lost. Any reference to these elements could become invalid.
+
+## Restoring elements using an export and import
 
 For small systems, an alternative is to use DELT to extract the latest version of the elements. You would then export the elements and reimport them once Swarming is disabled.
 
-1. Export the elements you wish to save, don't export any data from database, you only want the element xml files.
-1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files)
-1. Import the elements again, the same element ids must be retained.
+1. Export the elements you want to save to a .dmimport file.
+
+   Do not include any data from the database in the export. Only the element XML files should be included.
+
+1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files).
+
+1. Import the elements again.
+
+   The same element IDs must be retained in the import.
 
 ## Manually disabling Swarming in the config files
 
 > [!IMPORTANT]
-> This is not advised and can have big consequences for the system.
-> For example: services, redundancy groups, etc. can have references to elements that no longer exist.
+> This is not advised and can have big consequences for the system. For example, services, redundancy groups, etc. can have references to elements that no longer exist.
 
 1. Shut down all DMAs in the DMS.
-1. On every agent, delete `C:\Skyline DataMiner\Swarming.xml`.
+
+1. On every DMA, delete the file `C:\Skyline DataMiner\Swarming.xml`.
+
 1. Restart all DMAs.
