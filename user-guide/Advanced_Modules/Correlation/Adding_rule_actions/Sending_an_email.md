@@ -49,6 +49,9 @@ In the *Actions* section of the details pane:
 
 1. Optionally, to also send the message when there is a change to the base alarms of the Correlated alarm, select *Execute on base alarm updates*.
 
+> [!NOTE]
+> From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41364-->, when you open an existing *Send email* action to which a dashboard is attached, the dashboard will appear in red if it no longer exists.
+
 ## Using notification message templates
 
 If custom *correlation-infoheader*, *correlation-infoitem*, and *correlation-infofooter* templates have been defined in the file *NotifyTemplates.xml*, you can configure the email message to use these templates.
