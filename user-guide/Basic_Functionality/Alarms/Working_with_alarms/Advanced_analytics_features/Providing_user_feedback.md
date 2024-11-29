@@ -12,7 +12,7 @@ Whenever a suggestion event or alarm is triggered by an advanced analytics featu
 
 The following analytics features support user feedback:
 
-| Feature | Availability |
+| Feature | Feedback availability |
 |--|--|
 | [Behavioral anomaly detection](xref:Behavioral_anomaly_detection) | - Fully available from DataMiner 10.4.11/10.5.0 onwards<!--RN 39945-->.<br>- Available as a soft-launch feature from DataMiner 10.4.4 onwards. |
 | [Proactive cap detection](xref:Proactive_cap_detection) | Available from DataMiner 10.5.1/10.6.0 onwards<!--RN 41451 + 41371-->. |
