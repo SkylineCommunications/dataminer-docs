@@ -69,11 +69,11 @@ To enable Swarming using SLNetClientTest tool:
 
    If a confirmation box appears, click *Yes*.
 
-   The prerequisites will be checked for all Agents in the system, and when they are met, Swarming will enabled and all Agents in the DMS will be **restarted**.
+   The prerequisites, including the usage of legacy alarm IDs in scripts, will be checked for all Agents in the system, which can take several minutes. If the prerequisites are met, Swarming will enabled and all Agents in the DMS will be **restarted**.
 
-   The prerequisites check can take some time, as checking the usage of legacy alarm IDs in scripts can take several minutes.
+   If SLNetClientTest tool is unable to reach any of the Agents at the time of the check, for example because an Agent is stopped, Swarming will not be enabled.<!-- RN 41217 -->
 
-   On first startup, the existing element XML files will be moved from disk into the database. This can also take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
+   After Swarming is enabled, when DataMiner starts up again for the first time, the existing element XML files will be moved from the disk to the database. This can also take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
 
 > [!NOTE]
 > The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g. *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
