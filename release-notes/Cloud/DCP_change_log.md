@@ -41,6 +41,10 @@ When you registered a Catalog item using a manifest that contained invalid synta
 
 When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
 
+### 25 November 2024 - Feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
+
+It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
+
 ### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
 
 On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
@@ -105,10 +109,6 @@ On the Catalog details page, if the publisher is not from your currently selecte
 ### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
-
-### 25 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 41491]
-
-Using an organization key with permission "Update catalog publishig state" it is possible to make a Catalog item public or private.
 
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
