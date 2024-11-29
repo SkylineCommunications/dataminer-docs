@@ -48,3 +48,6 @@ To create a simulation file based on an element in DataMiner Cube:
 1. Copy the file named *Simulation_ELEMENTNAME.xml* to the following directory: *C:\\Skyline DataMiner\\simulations\\*
 
 1. Restart the DMA.
+
+> [!NOTE]
+> DataMiner will automatically use the simulation file of which the *protocol* and *version* attributes match the protocol and protocol version of the element. If no such file can be found, then the one of which only the *protocol* attribute matches the protocol of the element will be used. If you have several simulation files for the same protocol and version and want one specific file to be used, make sure only that file is present in the *C:\\Skyline DataMiner\\simulations\\* folder.
