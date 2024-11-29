@@ -19,12 +19,19 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. In the confirmation box, click *Yes*.
 
-1. Stop the Agent you have removed and decommission it.
+1. Stop the Agent you have removed.
 
-1. In case your system is cloud connected, go to [Admin.Dataminer.Services](https://admin.dataminer.services/) and navigate further to the DxMs page. Here you see an overview of all the agents with an option to remove a node from the Cloud system. Click the remove button next to the agent you have just removed and confirm.
+   This DataMiner Agent should no longer be used, so you should decommission it.
 
-1. Restart your Cube to have a correct overview on all places.
+1. If your system is connected to dataminer.services, remove the corresponding node on dataminer.services:
 
+   1. Open the [Admin app](https://admin.dataminer.services/) and go to the DxMs page.
+
+      This page shows an overview of all Agents or "nodes", with the option to remove a node from the system.
+
+   1. Click the garbage can icon next to the Agent you have just removed and confirm.
+
+1. Restart DataMiner Cube to make sure the removed Agent is no longer displayed anywhere.
 
 ## Removing a Failover DMA
 
