@@ -37,11 +37,11 @@ To restore this backup and roll back Swarming:
 
 ## Restoring elements using an export and import
 
-For small systems, an alternative is to use DELT to extract the latest version of the elements. You would then export the elements and reimport them once Swarming is disabled.
+For small systems, an alternative is to export the latest version of the elements, disable Swarming, and then import the elements again.
 
 1. [Export the elements](xref:Exporting_elements_services_etc_to_a_dmimport_file) you want to save to a .dmimport file.
 
-   Do not include any data from the database in the export. Only the element XML files should be included.
+   Do not include any data from the database in the export. Only the element configuration should be included.
 
 1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files).
 
