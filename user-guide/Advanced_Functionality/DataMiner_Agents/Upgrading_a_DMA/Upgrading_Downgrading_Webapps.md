@@ -6,6 +6,8 @@ uid: Upgrading_Downgrading_Webapps
 
 From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available separately from the general DataMiner upgrades. These updates include only the web API and the web apps, leaving all other DataMiner processes untouched. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. The web upgrades only require a brief installation and do not necessitate a DataMiner restart, ensuring uninterrupted monitoring and orchestration.
 
+Starting from web upgrade 10.5.x<!--RN 41395-->, you can no longer perform a web upgrade on a DMA running a DataMiner version older than 10.4.x. To install a 10.5.x web upgrade, the DMA must first be upgraded to at least version 10.4.0.
+
 > [!NOTE]
 >
 > - Executing a DataMiner upgrade will override any DataMiner web upgrades that have been performed in the past.
