@@ -23,7 +23,7 @@ For this purpose, you need to be familiar with the following terminology:
 - **Alarm ID**: Number referencing an alarm event within an alarm tree (e.g. `444`). This should not be used on its own, but it can be used in combination with an alarm tree ID in cases where an individual alarm event needs to be referenced. Try to avoid such alarm ID references ([more info](#alarmid-references)). For root alarm events, the alarm ID is identical to the root alarm ID.
 - **Hosting Agent ID**: The DataMiner ID of the DMA where element was hosted at the time the alarm event/tree was created.
 
-In DataMiner versions prior to DataMiner 10.4, the combination `HostingAgentID/RootAlarmID` is typically used to refer to an alarm tree. When elements are [migrated between DMAs](xref:Migrating_elements_in_a_DataMiner_System) or swarmed from one DMA to another, this combination of fields is inadequate as it is not unique or fixed.
+In DataMiner versions prior to DataMiner 10.5.0/10.5.1, the combination `HostingAgentID/RootAlarmID` is typically used to refer to an alarm tree. When elements are [migrated between DMAs](xref:Migrating_elements_in_a_DataMiner_System) or swarmed from one DMA to another, this combination of fields is inadequate as it is not unique or fixed.
 
 While DataMiner will still try to resolve these references where it can, new code should use `AlarmTreeID` references instead. These combine the `DataMinerID/ElementID/RootAlarmID` fields to end up with a unique reference. Existing code should also be updated to ensure future compatibility.
 

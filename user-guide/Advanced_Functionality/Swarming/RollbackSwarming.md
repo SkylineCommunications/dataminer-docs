@@ -19,7 +19,7 @@ The backup gets initially stored in `Recycle Bin`, but could be manually copied 
 These .zip files are a snapshot in time at the moment Swarming was enabled.
 
 > [!IMPORTANT]
-> **Restoring these means that any modifications to existing elements or redundancy groups and any new elements or redundancy groups are lost.**
+> Restoring these means that any modifications to existing elements or redundancy groups and any new elements or redundancy groups are lost.
 
 Any reference to these elements could become invalid.
 

@@ -57,8 +57,8 @@ Below you can find a complete overview of the differences between a system using
 | Scripts & QActions using legacy alarm references | Supported                              | Not supported                  |
 | Legacy Reports & Dashboards                      | Supported                              | Not supported                  |
 | Failover                                         | Supported                              | Not supported                  |
-| Offload Database                                 | Supported                              | Not supported*                 |
-| Contributing Bookings                            | Supported                              | Not supported*                 |
+| Offload database                                 | Supported                              | Not supported*                 |
+| Contributing bookings                            | Supported                              | Not supported*                 |
 | SLA elements                                     | Supported                              | Supported but not swarmable*   |
 | Enhanced services                                | Supported                              | Supported** but not swarmable* |
 | Spectrum elements                                | Supported                              | Supported but not swarmable*   |
@@ -70,7 +70,7 @@ Below you can find a complete overview of the differences between a system using
 | Smart-serial elements in server mode             | Supported                              | Supported but not swarmable    |
 | Elements receiving SNMP traps                    | Supported                              | Supported but not swarmable    |
 
-(*) to be added in later versions
+(*) To be added in later versions.
 
 (**) Enhanced service connectors may [need to be adjusted](xref:SwarmingPrepare).
 
