@@ -106,25 +106,6 @@ On the Catalog details page, if the publisher is not from your currently selecte
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
 
-### 22 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
-
-If you register a catalog item using a manifest that contained an invalid syntax for owner, a HTTP 500 internal server error was returned.
-This has been improved by returning a HTTP 400 Bad Request containing detail which field is invalid.
-
-### 22 November 2024 - Fix - Catalog API - Registration with ID that exists in another organization returned internal server error [ID 41515]
-
-​If you register a catalog item with an ID that existed already in another organization, an internal server error was returned.
-
-This has been improved by returning a HTTP 409 Conflict result.
-
-### 22 November 2024 - Feature - Catalog API - Get Catalog item categories [ID 41411]
-
-User, service and public Catalog APIs are extended with a categories call to obtain all categories supported in catalog
-
-"/api/user-catalog/v2-0/catalogs/categories"
-"/api/public-catalog/v2-0/catalogs/categories"
-"/api/service-catalog/v1-0/catalogs/categories"
-
 ### 22 November 2024 - Feature - Catalog API - Update Catalog item publishing state using an organization key [ID 4191]
 
 Using an organization key with permission "Update catalog publishig state" it is possible to make a Catalog item public or private.
