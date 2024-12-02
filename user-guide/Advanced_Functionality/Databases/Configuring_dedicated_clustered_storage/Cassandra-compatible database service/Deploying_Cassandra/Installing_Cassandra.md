@@ -51,19 +51,19 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - Commands DMA 1:
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 8080,9042`  
 
      - Commands DMA 2:
   
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 8080,9042`  
 
      - And so on.
 
