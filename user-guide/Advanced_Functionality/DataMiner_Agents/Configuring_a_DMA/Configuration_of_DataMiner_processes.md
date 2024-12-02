@@ -717,6 +717,22 @@ Example:
 > [!IMPORTANT]
 > Make sure this is configured the same way for all Agents in a DMS.
 
+### Configuring a 'keep alive' interval for the connection
+
+In DataMiner Systems with unstable network connectivity, gRPC calls between SLNet instances can take a long time. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!-- RN 41261 -->, this is limited to at most 15 minutes. From these DataMiner versions onwards, you can also configure the *HttpTcpKeepAliveInterval* option to prevent issues on Agents that are known to have such connectivity problems.
+
+With this option, after the configured number of seconds of inactivity (60 in the example below), DataMiner will check if the connection is still active by sending a "keep-alive" packet. As long as there is no response, every 5 seconds a new keep-alive packet is sent. If there is still no response after 10 packets have been sent, the connection will be closed.
+
+Example:
+
+```xml
+<MaintenanceSettings>
+    <SLNet>
+        <HttpTcpKeepAliveInterval>60</HttpTcpKeepAliveInterval>
+    </SLNet>
+</MaintenanceSettings>
+```
+
 ## Configuring the port for .NET Remoting
 
 On a DMA, you can specify the port to be used for .NET Remoting.
