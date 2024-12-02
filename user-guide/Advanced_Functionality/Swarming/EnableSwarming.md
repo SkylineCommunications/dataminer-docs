@@ -37,6 +37,8 @@ To run a prerequisites check using SLNetClientTest tool:
 
    By default, the *DataMinerID* property for the message will be set to -1, which means that the entire cluster will be checked.
 
+   If you do not want to check the alarm ID usage yet, but you want to run a first, quicker check for the other prerequisites, you can set the *AnalyzeAlarmIDUsage* property to false.
+
 1. Click *Send Message*.
 
    While the prerequisites check is running, this will be indicated at the bottom of the window. When the check is complete, the tool will switch to the *Properties* tab.
