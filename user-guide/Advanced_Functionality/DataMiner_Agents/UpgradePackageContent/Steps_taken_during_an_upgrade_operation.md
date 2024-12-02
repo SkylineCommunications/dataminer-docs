@@ -12,7 +12,7 @@ When you start an upgrade operation, the following will happen:
 
 1. The existence of the following required components is checked:
 
-   - Microsoft Visual C++ redistributable packages 2010 SP1
+   - Microsoft Visual C++ redistributable packages 2010 SP1 *(up until 10.2.0 CU18 / 10.3.0 CU6 / 10.3.9)*
 
    - Microsoft .NET Framework 4.6.2
 
