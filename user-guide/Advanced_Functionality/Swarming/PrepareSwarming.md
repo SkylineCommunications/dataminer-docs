@@ -20,7 +20,7 @@ For this purpose, you need to be familiar with the following terminology:
 - **Alarm tree**: A logical alarm, combining a history of alarm events for the same alarm. A tree will always have a root alarm event. Any alarm event updates that have happened over time will be added to this. Each update links back to the original root alarm event as well as to the previous alarm event and has a unique alarm ID number (e.g. `444`) within that tree.
 - **Alarm tree ID**: Reference that can be used to uniquely refer to an alarm tree without having to refer to individual alarm events. For example, a comment is added to an alarm tree, the alarm tree ID can be sent to the server to apply the update to the most recent state of that alarm tree. An ID has the format `111/222/333`, where `111/222` is a reference to the element involved. The Alarm tree ID is the preferred way to reference alarm trees.
 - **Root alarm ID**: Legacy number (e.g. `333`) indicating a specific alarm tree. This is not guaranteed to be unique across elements or DMAs.
-- **Alarm ID**: Number referencing an alarm event within an alarm tree (e.g. `444`). This should not be used on its own, but it can be used in combination with an alarm tree ID in cases where an individual alarm event needs to be referenced. Try to avoid such alarm ID references ([more info](#alarmid-references)). For root alarm events, the alarm ID is identical to the root alarm ID.
+- **Alarm ID**: Number referencing an alarm event within an alarm tree (e.g. `444`). This should not be used on its own, but it can be used in combination with an alarm tree ID in cases where an individual alarm event needs to be referenced. Try to avoid such [alarm ID references](#alarmid-references)). For root alarm events, the alarm ID is identical to the root alarm ID.
 - **Hosting Agent ID**: The DataMiner ID of the DMA where element was hosted at the time the alarm event/tree was created.
 
 In DataMiner versions prior to DataMiner 10.5.0/10.5.1, the combination `HostingAgentID/RootAlarmID` is typically used to refer to an alarm tree. When elements are [migrated between DMAs](xref:Migrating_elements_in_a_DataMiner_System) or swarmed from one DMA to another, this combination of fields is inadequate as it is not unique or fixed.
@@ -73,7 +73,7 @@ Below you can find an overview of how these should be adapted.
 
 ## Internal data structures
 
-Often, alarm tree references are stored internally in dictionaries, lists, etc. Be sure to update these in such a way that they deal with `AlarmTreeID` rather than raw root alarm ids.
+Often, alarm tree references are stored internally in dictionaries, lists, etc. Be sure to update these in such a way that they deal with `AlarmTreeID` rather than raw root alarm IDs.
 
 Some examples:
 
@@ -85,7 +85,7 @@ Some examples:
 Some possible difficulties:
 
 - Code that previously had a list of alarm trees per hosting Agent and gets updated might lose the ability to drop all alarm events for a certain Agent (e.g. on disconnect). These scenarios will need to be solved differently, e.g. by looking up the relevant alarm trees that have their element hosted on that Agent.
-- Keep the impact of your changes on performance in mind. Some dictionaries might have previously been optimized for certain types of lookups. Try to keep these lookups fast.
+- Keep the [impact of your changes on performance](#performance-considerations) in mind. Some dictionaries might have previously been optimized for certain types of lookups. Try to keep these lookups fast.
 
 ## Communication with the server
 
@@ -114,7 +114,7 @@ Often, tree references get stored in a string variable as `HostingAgentID + "/" 
 If you control both sides of a string ID exchange, combine the methods `treeID.SerializeToString` and the static `AlarmTreeID.DeserializeFromString` to update both sides.
 
 > [!NOTE]
-> Always look into whether legacy "hostingagentid/rootalarmid" references still need to remain supported in your code. The `AlarmID.DeserializeFromString` and `SerializeToString` calls allow you to pass an `allowLegacy` parameter to be able to convert these to and from `AlarmTreeID` objects (with the element ID then set to `ElementID.MissingValue` and `IsLegacy` set to `true`). This can be useful for cases where an old reference might get loaded from old database or configuration data.
+> Always look into whether legacy `HostingAgentID/RootAlarmID` references still need to remain supported in your code. The `AlarmID.DeserializeFromString` and `SerializeToString` calls allow you to pass an `allowLegacy` parameter to be able to convert these to and from `AlarmTreeID` objects (with the element ID then set to `ElementID.MissingValue` and `IsLegacy` set to `true`). This can be useful for cases where an old reference might get loaded from old database or configuration data.
 
 ## AlarmID references
 
@@ -122,13 +122,13 @@ Sometimes code uses the `AlarmID` property of `AlarmEventMessage`. This usage sh
 
 | Case | How to adapt |
 | -- | -- |
-| using `alarm.AlarmID == alarm.RootAlarmID` to check whether an alarm event is the root/initial event of its tree. | Use `alarm.IsTreeRoot` instead. |
+| Using `alarm.AlarmID == alarm.RootAlarmID` to check whether an alarm event is the root/initial event of its tree. | Use `alarm.IsTreeRoot` instead. |
 | Using `AlarmID` to pass along to the server to trigger some kind of alarm update. | Use `TreeID` instead. In any case, only the most recent state of an alarm tree can be updated. |
-| Using `AlarmID` for sorting the events within one tree | Can still be used. Alarm IDs for individual alarm events within an alarm tree will only ever go up |
-| Using `AlarmID` to know whether more recent events have already been received within an alarm tree | Can still be used. Alarm IDs for individual alarm events within an alarm tree will only ever go up |
-| Using `AlarmID` to know whether more recent events have already been received from a particular agent | This can no longer be relied upon. Try looking into alternatives and think about whether this check is really needed |
-| Using `AlarmID` to be sure that the event has passed by already. e.g. when creating an alarm event and wanting to be sure that the event has actually been created. | This can no longer be relied upon. Try looking into alternatives and think about whether this check is really needed |
-| Using `AlarmID` + `HostingAgentID` to reference one specific alarm event in a tree | Us the `Skyline.DataMiner.Net.Messages.SLDataGateway.AlarmID` type (`new AlarmID(alarmEventMessage)`). Consider if the reference can be replaced by an alarm tree reference. |
+| Using `AlarmID` for sorting the events within one tree. | Can still be used. Alarm IDs for individual alarm events within an alarm tree will only ever go up |
+| Using `AlarmID` to know whether more recent events have already been received within an alarm tree. | Can still be used. Alarm IDs for individual alarm events within an alarm tree will only ever go up |
+| Using `AlarmID` to know whether more recent events have already been received from a particular Agent. | This can no longer be relied upon. Try looking into alternatives and think about whether this check is really needed |
+| Using `AlarmID` to be sure that the event has passed already, e.g. when creating an alarm event, to be sure that the event has actually been created. | This can no longer be relied upon. Try looking into alternatives and think about whether this check is really needed |
+| Using `AlarmID` + `HostingAgentID` to reference one specific alarm event in a tree. | Us the `Skyline.DataMiner.Net.Messages.SLDataGateway.AlarmID` type (`new AlarmID(alarmEventMessage)`). Consider if the reference can be replaced by an alarm tree reference. |
 
 ## Performance considerations
 
@@ -155,7 +155,7 @@ list.Contains(AlarmTreeID.BuildLegacy(123, 789), AlarmTreeIDComparisonOptions.Al
 list.Contains(AlarmTreeID.BuildLegacy(123, 789)); // false
 ```
 
-A class `AlarmTreeIDLegacyEqualityComparer` is also available, which can be used to configure classes like `Dictionary` and `HashSet` to always be able to map to and from legacy references. However, keep in mind that mixing legacy and non-legacy values/keys in the same collection is not recommend. If at all possible, stick to either legacy or (preferably) full objects in your dictionary or collection, and limit the use of the other type to a minimum. Note also that legacy lookups are always best-effort. If multiple full keys match, only one will be returned.
+A class `AlarmTreeIDLegacyEqualityComparer` is also available, which can be used to configure classes like `Dictionary` and `HashSet` to always be able to map to and from legacy references. However, keep in mind that mixing legacy and non-legacy values/keys in the same collection is not recommended. If at all possible, stick to either legacy or (preferably) full objects in your dictionary or collection, and limit the use of the other type to a minimum. Note also that legacy lookups are always best-effort. If multiple full keys match, only one will be returned.
 
 ```csharp
 var set = new HashSet<AlarmTreeID>(new AlarmTreeIDLegacyEqualityComparer());
@@ -196,4 +196,4 @@ Once the Swarming feature has been enabled, running enhanced services using non-
 
 - If you want to keep supporting DataMiner versions prior to 10.5.1/10.6.0, keep the previously existing parameter 4 and make sure that your QActions can deal with both scenarios (legacy alarm references through parameter 4 or full alarm references through parameter 7). If you only need to support DataMiner versions higher than 10.5.1/10.6.0, the parameter 4 and associated QActions can be removed.
 
-- In any case, if any QActions or code relies on the IDs as stored in the *Active Service Alarms* table, make sure that they can deal with either full or legacy type references depending on the DataMiner version they will run on.
+- In any case, if any QActions or code rely on the IDs as stored in the *Active Service Alarms* table, make sure that they can deal with either full or legacy type references depending on the DataMiner version they will run on.
