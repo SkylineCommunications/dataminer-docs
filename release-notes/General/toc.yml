@@ -19,8 +19,12 @@ items:
             items:
               - name: General Main Release 10.5.0 - New features
                 topicUid: General_Main_Release_10.5.0_new_features
-              - name: General Main Release 10.5.0 - Changes
-                topicUid: General_Main_Release_10.5.0_changes
+              - name: General Main Release 10.5.0 - Breaking changes
+                topicUid: General_Main_Release_10.5.0_breaking_changes
+              - name: General Main Release 10.5.0 - Enhancements
+                topicUid: General_Main_Release_10.5.0_enhancements
+              - name: General Main Release 10.5.0 - Fixes
+                topicUid: General_Main_Release_10.5.0_fixes
           - name: General Main Release 10.5.0 CU1 - Preview
             topicUid: General_Main_Release_10.5.0_CU1
       - name: Feature Release
