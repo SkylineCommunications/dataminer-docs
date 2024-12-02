@@ -107,7 +107,7 @@ Often, tree references get stored in a string variable as `HostingAgentID + "/" 
 
 - If possible, replace the `string` variable/field by an object of type `AlarmTreeID`.
 
-- Bring the `AlarmTreeID` as close to the location where an actual string reference is required.
+- Bring the `AlarmTreeID` as close as possible to the location where an actual string reference is required.
 
 - If the receiver of the string reference is known to be capable of dealing with the updated types of references, use `treeID.SerializeToString()` (generates a string `"dmaid/eid/rootalarmid"`).
 
