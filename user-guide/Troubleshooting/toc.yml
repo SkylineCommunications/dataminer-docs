@@ -266,6 +266,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Inter-DMA connection issues when ExternalAuthentication is used
+            topicUid: KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used
           - name: Problem after upgrading Window OS to Windows Server 2022
             topicUid: KI_Problem_after_OS_upgrade_to_win_2022
           - name: nats-server.config file not included in DataMiner backups
