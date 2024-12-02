@@ -63,7 +63,7 @@ Below you can find a complete overview of the differences between a system using
 | Enhanced services                                | Supported                              | Supported** but not swarmable* |
 | Spectrum elements                                | Supported                              | Supported but not swarmable*   |
 | Redundancy group elements                        | Supported                              | Supported but not swarmable*   |
-| Elements exporting DVEs of functions             | Supported                              | Supported but not swarmable*   |
+| DVE and virtual function child and parent elements            | Supported                              | Supported but not swarmable*   |
 | EPM elements                                     | Supported                              | Supported but not swarmable*   |
 | Elements polling localhost                       | Supported                              | Supported but not swarmable    |
 | Elements with element connections                | Supported                              | Supported but not swarmable*   |
