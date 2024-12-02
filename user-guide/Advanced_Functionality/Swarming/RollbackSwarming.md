@@ -5,7 +5,7 @@ uid: SwarmingRollback
 # Partially rolling back Swarming
 
 > [!IMPORTANT]
-> There is currently no good way to disable Swarming and keep everything in the DMS intact. The info below only partially recovers some data. If this is a test system and all data can be lost, a clean reinstall is advised.
+> There is currently no good way to disable Swarming and keep everything in the DMS intact. The info below only partially recovers some data. If you are using a test system and it does not matter if all data are lost, a clean reinstall is advised.
 
 When Swarming is enabled, the element config XML files (e.g. `Element.xml`, `ElementData.xml`, `Description.xml`, etc.) are moved from disk to the database. There is currently no procedure to move them back to disk.
 
