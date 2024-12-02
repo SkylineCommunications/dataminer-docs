@@ -12,7 +12,7 @@ Note that when Swarming is enabled, this will result in some major changes to th
 
 - Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster. Because of this change, you will need to make sure [your system is prepared](xref:SwarmingPrepare) before you can enable Swarming.
 
-- Element configuration will be stored in the cluster-wide database instead of in the element XML files on disk of the DataMiner Agent hosting each element.
+- Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
 
 > [!IMPORTANT]
 > Once the element configuration has been moved from disk to database, there is no good way to revert this change, which means that if you were to disable Swarming again, you would lose all your elements, leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rolling back Swarming](xref:SwarmingRollback).
@@ -21,11 +21,11 @@ Note that when Swarming is enabled, this will result in some major changes to th
 
 The Swarming feature provides these capabilities:
 
-- As a DataMiner System Admin, you are able to apply maintenance (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other agents in the cluster.
+- As a DataMiner System Admin, you can apply maintenance (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
 
-- As a DataMiner System Admin, you are able to easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster.
+- As a DataMiner System Admin, you can easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster.
 
-- Swarming makes it possible to recover functionalities from failing nodes by moving activities hosted on that node to the remaining nodes.
+- Swarming makes it possible to recover functionalities from failing nodes by moving activities hosted on such a node to the remaining nodes.
 
 In a later iteration, the Swarming feature will also be able to assist in making rolling DataMiner software updates on live clusters possible, with limited downtime of specific functionality.
 
@@ -34,7 +34,7 @@ In a later iteration, the Swarming feature will also be able to assist in making
 
 ## Limitations
 
-Some functionality is currently not yet supported for the Swarming feature. These are the most important limitations at the moment:
+Some functionality is currently not yet supported with the Swarming feature. These are the most important limitations at the moment:
 
 - Swarming is not available in DataMiner Systems with a [storage per DMA setup](xref:Configuring_storage_per_DMA) (Cassandra or MySQL).
 
