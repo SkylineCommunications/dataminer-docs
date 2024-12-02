@@ -148,7 +148,7 @@ Examples:
 
 ## Changing a variable
 
-Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41324-->. This option is only displayed if at least one [variable](xref:Variables) is configured in the low-code app.
+Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41324 + 41253-->. This option is only displayed if at least one [variable](xref:Variables) is configured in the low-code app.
 
 To configure an event to change a variable:
 
@@ -158,17 +158,20 @@ To configure an event to change a variable:
 
 1. Depending on the type of variable, specify the action to be performed when the event is triggered:
 
-   - *Set [variable type]*: Set a new element, service, view, object manager instance, text, number, or table:
+   - *Set [variable type]*<!--RN 41253-->: Set the value of the variable. Depending on the variable type, you can:
 
-     - Enter manually,
+     - Enter a static value.
 
-     - Select from the dropdown list, or
+     - Select a value from the dropdown list.
 
-     - Link to dynamic data in the app using the ![Link to data](~/user-guide/images/Link_to_Data.png) icon, if available.
+     - Link the value to dynamic data in the app using the ![Link to data](~/user-guide/images/Link_to_Data.png) icon.
 
-   - *Update* > *Add row*: Add a new row to a table variable. Enter the data for each column in the row.
+     > [!NOTE]
+     > For table variables, you can only set a static value. The columns in the table are locked to the default values specified during the variable setup.
 
-   - *Update* > *Clear table*: Remove all rows from a table variable.
+   - *Update* > *Add row*<!--RN 41324-->: Add a new row to a table variable. Enter the data for each column in the row.
+
+   - *Update* > *Clear table*<!--RN 41324-->: Remove all rows from a table variable.
 
 1. Optionally, add more actions for the variable if needed.
 
