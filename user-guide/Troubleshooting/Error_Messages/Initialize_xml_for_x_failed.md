@@ -16,8 +16,8 @@ Element "x" is not active.
 
 ## Possible cause
 
-Element "x" could not be loaded because the *element.xml* file of element "x" could not be read correctly.
+Element "x" could not be loaded because the settings of element "x" could not be read correctly.
 
 ## Resolution
 
-Check whether the correct tags were specified in the *element.xml* file of element "x".
+Check whether the settings of element "x" are correct.

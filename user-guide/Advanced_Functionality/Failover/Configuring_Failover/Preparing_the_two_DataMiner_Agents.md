@@ -20,6 +20,9 @@ Before you start the actual configuration, make sure you have the following:
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
 
+> [!IMPORTANT]
+> The [Swarming](xref:Swarming) feature must not be enabled on either of the DMAs, as Failover is not supported in combination with Swarming.
+
 ## Primary DataMiner Agent
 
 The primary DMA is a normal DataMiner Agent. In most cases, this will be an existing DMA that is a member of a DMS cluster. It does not require any additional configuration.
