@@ -733,6 +733,9 @@ Example:
 </MaintenanceSettings>
 ```
 
+> [!CAUTION]
+> Do not use this feature in networks where a firewall drops TCP keep-alive packets. Using it in such a network could cause the connection to be closed while it is actually still working.
+
 ## Configuring the port for .NET Remoting
 
 On a DMA, you can specify the port to be used for .NET Remoting.
