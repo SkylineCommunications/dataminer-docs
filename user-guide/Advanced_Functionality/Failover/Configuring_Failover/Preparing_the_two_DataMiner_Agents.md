@@ -21,7 +21,7 @@ Before you start the actual configuration, make sure you have the following:
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
 
 > [!IMPORTANT]
-> The [Swarming](xref:Swarming) must not be enabled on either of the DMAs, as Failover is not supported in combination with Swarming.
+> The [Swarming](xref:Swarming) feature must not be enabled on either of the DMAs, as Failover is not supported in combination with Swarming.
 
 ## Primary DataMiner Agent
 
