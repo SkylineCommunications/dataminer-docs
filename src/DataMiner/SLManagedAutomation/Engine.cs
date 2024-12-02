@@ -811,6 +811,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="text">Message to be shown in the information message.</param>
 		/// <exception cref="DataMinerException">Information event generation failed.</exception>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the "[dummy<id>]" placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		/// <example>
 		/// <code>
 		/// engine.GenerateInformation("Hello World!");
@@ -1079,6 +1080,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="message">The message to log.</param>
 		/// <exception cref="DataMinerException">Log failed.</exception>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the "[dummy<id>]" placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		/// <example>
 		/// <code>
 		/// engine.Log("My log message");
@@ -1093,6 +1095,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="type">The log type.</param>
 		/// <param name="logLevel">The log level.</param>
 		/// <exception cref="DataMinerException">Log failed.</exception>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the "[dummy<id>]" placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		/// <example>
 		/// <code>
 		/// engine.Log("My log message", LogType.Always, 5);
@@ -1108,6 +1111,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="logLevel">The log level.</param>
 		/// <param name="method">The method name to include in the log entry.</param>
 		/// <exception cref="DataMinerException">Log failed.</exception>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the "[dummy<id>]" placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		/// <example>
 		/// <code>
 		/// engine.Log("My log message", LogType.Always, 5, "Initialize");
@@ -1300,6 +1304,7 @@ namespace Skyline.DataMiner.Automation
 		/// <para>To create a MailReportOptions object, call the PrepareMailReport method.</para>
 		/// </remarks>
 		/// <exception cref="DataMinerException">Report failed.</exception>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the "[dummy<id>]" placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		/// <example>
 		/// <code>
 		/// MailReportOptions reportOptions;
