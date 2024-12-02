@@ -16,7 +16,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
-| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 12, 2024 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
 | [Web apps experience frequent disconnects](xref:KI_Web_apps_experience_frequent_disconnects) | DataMiner 10.4.0 [CU6]<br>DataMiner 10.4.9 | DataMiner 10.4.0 [CU7]<br>DataMiner 10.4.10 | September 23, 2024 |
 | [Problem when DMA server is named DATAMINER](xref:KI_Problem_when_server_name_is_DATAMINER) | From DataMiner 10.4.0 [CU2]/10.4.5 onwards | DataMiner 10.4.0 [CU9]<br>DataMiner 10.4.12 | September 10, 2024 |
@@ -49,6 +49,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Process crashes when trying to connect to MySQL database](xref:KI_MySQL_Unhandled_Exception) | From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 <br>onwards | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | July 15, 2024 |
@@ -106,6 +107,7 @@ uid: Known_issues
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | | April 20, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From DataMiner 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | February 29, 2024 |
@@ -166,6 +168,7 @@ uid: Known_issues
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | From DataMiner 10.1.0/10.0.13 onwards | | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [Problem after upgrading Window OS to Windows Server 2022](xref:KI_Problem_after_OS_upgrade_to_win_2022) | Systems that have recently been upgraded to Windows Server 2022 | [Requires configuration](xref:KI_Problem_after_OS_upgrade_to_win_2022) | October 11, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | February 29, 2024 |
