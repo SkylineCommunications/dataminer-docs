@@ -47,8 +47,6 @@ For small systems, an alternative is to export the latest version of the element
 
 1. [Import the elements](xref:Importing_elements_services_etc_from_a_dmimport_file) again.
 
-   The same element IDs must be retained in the import.
-
 ## Manually disabling Swarming in the config files
 
 > [!IMPORTANT]
