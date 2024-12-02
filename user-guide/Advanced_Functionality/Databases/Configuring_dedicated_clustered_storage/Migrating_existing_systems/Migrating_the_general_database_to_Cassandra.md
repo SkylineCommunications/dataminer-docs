@@ -4,9 +4,9 @@ uid: Migrating_the_general_database_to_Cassandra
 
 # Migrating the SQL general database to Cassandra
 
-In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, with such a setup you will not have access to all recent DataMiner features. In addition, while older features will continue to work with MySQL up to DataMiner 10.4.0, MSSQL is no longer supported as from DataMiner 10.3.0.
+In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, with such a setup you will not have access to many recent DataMiner features. In addition, while older features will continue to work with MySQL up to DataMiner 10.4.0, MSSQL is no longer supported as from DataMiner 10.3.0.
 
-To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to migrate to Cassandra. If you choose to keep using self-hosted storage, migrating to Cassandra is also highly recommended.
+To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to migrate to Cassandra. If you choose to keep using self-hosted storage, migrating to Cassandra is also highly recommended. However, to have access to all the latest features, you will also need to [migrate to a dedicated clustered storage](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) setup afterwards.
 
 In System Center, you can migrate the general database from MySQL or MSSQL to Cassandra using a wizard. The wizard will first check if your system is ready for the migration. It checks both if the DMS is compatible and if the system requirements are met. If the system does not meet the necessary requirements, you can exit the wizard and then open it later to check again, before actually starting the migration.
 
@@ -227,6 +227,9 @@ After you have followed the procedure above and system requirements are met, you
    1. Click *OK*.
 
 1. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folder (e.g. for MySQL: *C:\\ProgramData\\MySQL\\MySQL Server 5.5\\data\\sldmadb*).
+
+> [!NOTE]
+> When this initial migration to Cassandra is complete, to have access to the latest DataMiner features, you will also need to [migrate to dedicated clustered storage](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
 ## Switching to Cassandra in a Failover setup
 
