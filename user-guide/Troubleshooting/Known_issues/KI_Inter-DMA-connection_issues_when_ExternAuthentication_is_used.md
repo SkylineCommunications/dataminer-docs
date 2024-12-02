@@ -6,7 +6,7 @@ uid: KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used
 
 ## Affected versions
 
-From DataMiner 10.4.3 onwards.
+From DataMiner 10.1.0 [CU17]/10.2.0 [CU5]/10.2.8 onwards.
 
 ## Cause
 
