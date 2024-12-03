@@ -154,6 +154,40 @@ Once the feature has been enabled, users will need the [Swarming](xref:DataMiner
 
 To swarm an element, users will also need config rights on the element.
 
+##### Swarming elements
+
+When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA.
+
+Swarming elements is also possible **via Automation**. For this, you will need an element key, i.e. the DMA ID/element ID pair of the element you want to swarm, and the target Agent ID. You can specify these as fixed values or as input variables. For example:
+
+```csharp
+using System;
+using System.Linq;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Swarming.Helper;
+
+public class Script
+{
+  public void Run(Engine engine)
+  {
+    var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
+    int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
+    
+    var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
+        .SwarmElement(element)
+        .ToAgent(targetAgentId);
+
+    var swarmingResultForElement = swarmingResults.First();  
+
+    if (!swarmingResultForElement.Success)
+    {
+      engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+    }
+  }
+}
+```
+
 ## Changes
 
 ### Breaking changes
