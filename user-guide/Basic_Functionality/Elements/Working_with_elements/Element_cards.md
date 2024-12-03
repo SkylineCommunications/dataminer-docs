@@ -32,7 +32,7 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **VISUAL**: One or more Visual Overview pages, which show a graphic representation of the element. These pages can be completely customized in Visio.
 
-  - **DATA**: One or more Data Display pages, determined by the element protocol. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, all numerical values on the Data Display pages are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.4 GB.
+  - **DATA**: One or more Data Display pages, determined by the element protocol.
 
   - **ALARMS**: An overview of the alarms for this element, displayed in the default Alarm Console layout. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console).
 

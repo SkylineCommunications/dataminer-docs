@@ -13,7 +13,7 @@ A protocol parameter is a versatile component. A parameter can represent a table
 
 The following subsections introduce the different types of parameters that are defined in DPML
 
-### Read, write, fixed and dummy parameters
+### Read, write, fixed, and dummy parameters
 
 |Type  |Description  |
 |---------|---------|
@@ -43,6 +43,20 @@ A **fixed** parameter acts as a data placeholder that will not change. Though it
 In the example above, the Interprete tag is used to define the length of the fixed parameter and the value. For more information, see [Protocol.Params.Param.Interprete](xref:Protocol.Params.Param.Interprete).
 
 A parameter of type dummy is typically used to hold data that is not of real interest, e.g. to hold part of the response that is not processed or to trigger a QAction.
+
+From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, the dynamic units feature is automatically enabled for parameters displayed on Data Display pages in Cube. This feature converts many numerical values into more readable formats with appropriate units.
+
+The following units are automatically converted:
+
+- Bytes: B, kB, MB, GB, TB, PB, EB, ZB, YB
+- Kibibytes: KiB, MiB, GiB, TiB, PiB, EiB, ZiB, YiB
+- Bits: b, kb, Mb, Gb, Tb, Pb, Eb, Zb, Yb
+- Bits per second: bps, kbps, Mbps, Gbps, Tbps, Pbps, Ebps, Zbps, Ybps
+- Bytes per second: Bps, kBps, MBps, GBps, TBps, PBps, ZBps, YBps
+
+For numerical values not included in this list, you can specify units using the [DynamicUnits element](xref:Protocol.Params.Param.Display.DynamicUnits).
+
+Prior to DataMiner 10.4.0 [CU10]/10.5.0/10.5.1, dynamic units are disabled by default for Data Display pages, unless explicitly enabled via the [*DynamicUnits* soft-launch option](xref:Overview_of_Soft_Launch_Options#dynamicunits).
 
 ### Element information
 

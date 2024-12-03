@@ -99,7 +99,17 @@ Enables the use of DOM data in dashboards and applications.
 
 ### DynamicUnits
 
-Allows you to disable dynamic units in Data Display in DataMiner Cube and the Monitoring app.
+Allows you to enable dynamic units in Data Display in DataMiner Cube. When enabled, many numerical values are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.4 GB.
+
+The following units are automatically converted:
+
+- Bytes: B, kB, MB, GB, TB, PB, EB, ZB, YB
+- Kibibytes: KiB, MiB, GiB, TiB, PiB, EiB, ZiB, YiB
+- Bits: b, kb, Mb, Gb, Tb, Pb, Eb, Zb, Yb
+- Bits per second: bps, kbps, Mbps, Gbps, Tbps, Pbps, Ebps, Zbps, Ybps
+- Bytes per second: Bps, kBps, MBps, GBps, TBps, PBps, ZBps, YBps
+
+From DataMiner 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 onwards<!--RN 41436-->, this soft-launch feature is released and is enabled by default. To disable it, set this soft-launch option to *false*.
 
 In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, this feature is disabled by default. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 

@@ -20,9 +20,6 @@ The following pages are available:
 
   - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : From DataMiner 10.3.7/10.4.0 onwards: Allows you to access the [trending page](xref:Trending_Page).<!-- RN 36352 --> Prior to DataMiner 10.3.7/10.4.0: Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
 
-  > [!NOTE]
-  > All numerical values on the Data Display pages are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.4 GB.
-
 - *Alarms*: Displays the active alarms for the element.
 
 - *Reports*: Displays a page where you can view several different reports related to the element.
