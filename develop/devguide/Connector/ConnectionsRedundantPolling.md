@@ -25,8 +25,8 @@ This section describes the situations which would trigger Dataminer to switch be
 
 ### On timeout after retries
 
-When polling a group goes into timeout, Dataminer would retry polling that group as configured in the element settings. 
-After all retries are exhausted, Dataminer would switch interfaces and poll for the *next* group in the queue.
+When a polling for a group goes into timeout, Dataminer would retry polling that group on the same connection. The wait time for a timeout to be called and the number of retries are based on the configurations in the element settings.
+After all retries are exhausted, Dataminer would switch to the other interface and poll for the *next* group in the queue.
 
 
 ![Interface Switching on 2 SNMP Connections](../../images/RedundantPolling_Switch.png)
@@ -36,7 +36,7 @@ After all retries are exhausted, Dataminer would switch interfaces and poll for 
 
 #### SNMP
 
-If the SNMP parameter polled is invalid such as *NO SUCH NAME*, Dataminer would trigger the switching of polling interfaces and poll the next group in the queue. 
+If the SNMP parameter polled returns an error such as *NO SUCH NAME*, Dataminer would trigger the switching of polling interfaces and poll the next group in the queue. 
 In such corner cases Dataminer would switch back and forth between interfaces depending on how frequently these invalid parameters are being polled.
 
 
