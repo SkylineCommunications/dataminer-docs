@@ -123,7 +123,7 @@ var deleteSucceeded = domHelper.DomInstances.TryDelete(domInstances, out var del
 if (!deleteSucceeded && deleteResult != null)
 {
   // Log the number of DomInstances that did not get removed.
-  // Also log the `TraceData` for all failing `DomInstances`. The `TraceData` contains all errors and warnings.
+  // Also log the TraceData for all failing DomInstances. The TraceData contains all errors and warnings.
   Log($"Could not perform the delete for {deleteResult.UnsuccessfulIds.Count} items: {deleteResult.GetTraceData()}");
   return;
 }
