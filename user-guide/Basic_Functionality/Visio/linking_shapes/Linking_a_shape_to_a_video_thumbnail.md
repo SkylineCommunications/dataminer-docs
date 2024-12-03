@@ -222,7 +222,7 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 #https://<DMAIP>/VideoThumbnails/Video.htm?type=HTML5-HLS&source=https://<video server>.<stream>.m3u8
 ```
 
-From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41407-->, if the HLS stream has multiple audio tracks, you can select your preferred audio track using the dropdown menu in the top-right corner of the video thumbnail.
+From DataMiner web 10.4.0 [CU10]/10.5.1 onwards<!--RN 41407-->, if the HLS stream has multiple audio tracks, you can select your preferred audio track using the dropdown menu in the top-right corner of the video thumbnail.
 
 > [!NOTE]
 >
