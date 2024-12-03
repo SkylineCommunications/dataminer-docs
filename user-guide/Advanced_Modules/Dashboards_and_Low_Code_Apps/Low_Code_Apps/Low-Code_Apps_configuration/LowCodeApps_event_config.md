@@ -169,7 +169,7 @@ To configure an event to change a variable:
      > [!NOTE]
      > For table variables, you can only set a static value. The columns in the table are locked to the default values specified during the variable setup.
 
-   - *Update* > *Add row*<!--RN 41324-->: Add a new row to a table variable. Enter the data for each column in the row.
+   - *Update* > *Add row*<!--RN 41324-->: Add a new row to a table variable. Enter the data for each column in the row or link the values to dynamic data in the app using the ![Link to data](~/user-guide/images/Link_to_Data.png) icons.
 
    - *Update* > *Clear table*<!--RN 41324-->: Remove all rows from a table variable.
 
