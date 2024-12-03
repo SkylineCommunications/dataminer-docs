@@ -114,7 +114,7 @@ From DataMiner 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 onwards<!--RN 41436-->, this so
 In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, this feature is disabled by default. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
-- **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:General_Feature_Release_10.5.1#data-display-in-dataminer-cube-and-the-monitoring-app-now-support-dynamic-units-by-default-id-41436))
+- **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:General_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
 ### Functions
 
