@@ -105,6 +105,12 @@ From now on, dynamic units can be used by default in Data Display, both in DataM
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
 
+#### Security enhancements [ID 41542]
+
+<!-- 41542: MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]

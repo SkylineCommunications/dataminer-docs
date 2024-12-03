@@ -320,6 +320,12 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 
 *\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
 
+#### Security enhancements [ID 41542]
+
+<!-- 41542: MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]
