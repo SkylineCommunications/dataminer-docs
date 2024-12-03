@@ -46,7 +46,7 @@ domHelper.DomInstances.CreateOrUpdate(domInstances);
 
 ### Checking issues
 
-For some of the `DomInstances`, the creation or updating might not succeed. When using `CreateOrUpdate` or `Delete`, an exception will be thrown. That exception will include how many items succeeded and how many items failed for that bulk CRUD operation. Next to that a limited list of object IDs that succeeded is added. Also a list of object IDs that failed, each followed by the related TraceData. After that the default exception info gets added, including the stacktrace.
+For some of the `DomInstances`, the creation or update might not succeed. When using `CreateOrUpdate` or `Delete`, an exception will be thrown. That exception will include how many items succeeded and how many items failed for that bulk CRUD operation. Next to that a limited list of object IDs that succeeded is added. Also a list of object IDs that failed, each followed by the related TraceData. After that the default exception info gets added, including the stacktrace.
 
 Like in the previous example, some `DomInstances` need to be updated:
 
