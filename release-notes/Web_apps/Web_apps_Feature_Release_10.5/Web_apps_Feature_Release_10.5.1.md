@@ -187,3 +187,14 @@ From now on, when you specify a custom display value for a cell containing a raw
 | float.PositiveInfinity  | <span>&#8734;</span>  |
 | float.NegativeInfinity  | -<span>&#8734;</span> |
 | float.NaN               | Infinity              |
+
+#### Web API: Not possible to initialize the file caches when using a dashboard gateway [ID 41559]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+When a dashboard gateway was used, up to now, it would not be possible to initialize the different file caches used by the web API, causing the following error to be thrown:
+
+`The type initializer for 'Skyline.DataMiner.Web.Common.v1.Dashboards.DashboardsInterface' threw an exception.`
+
+> [!IMPORTANT]
+> From now on, when a dashboard gateway is used, all local KML or KMZ overlay files should be placed in the *C:\\Skyline DataMiner\\Maps* folder of the DataMiner Agent. They should no longer be placed on the dashboard gateway.
