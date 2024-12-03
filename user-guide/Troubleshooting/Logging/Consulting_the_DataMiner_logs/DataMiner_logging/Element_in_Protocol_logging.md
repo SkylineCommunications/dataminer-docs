@@ -11,7 +11,7 @@ The *Element in Protocol* log file allows you to map all the running elements on
 An entry in the *Element in Protocol* log file can for instance look like this:
 
 ```txt
-2021/02/22 08:01:52|101/184|Comstream Radyne Ku DC|11132|Comstream Radyne SFC4200A-B8-P8|Production|1.0.0.2|7952
+2021/02/22 08:01:52|101/184|Comstream Radyne Ku DC|11132|Comstream Radyne SFC4200A-B8-P8|Production|1.0.0.2|7952|NormalStart|1|0
 ```
 
 This record contains the following information, separated by pipe characters:
@@ -24,26 +24,30 @@ This record contains the following information, separated by pipe characters:
 - Selected protocol version, e.g. Production
 - Linked protocol version e.g. 1.0.0.2
 - Scripting process ID
+- Reason of the (re)start
+- Number of normal (re)starts
+- Number of restarts caused by a crash
 
 When a DMA starts up, the list of elements is added to the file, after a separator line consisting of asterisk signs. For example:
 
 ```txt
-2021/02/20 16:53:28|101/3|Example SNMP - Stand Alone|13552|Example SNMP|1.0.0.1|1.0.0.1|13572
-2021/02/20 16:53:29|101/164|{ Verimatrix RTES Pair test.Primary }|13684|Verimatrix RTES Pair - DVE|2.0.1.15|2.0.1.15|13572
+2021/02/20 16:53:28|101/3|Example SNMP - Stand Alone|13552|Example SNMP|1.0.0.1|1.0.0.1|13572|NormalStart|2|0
+2021/02/20 16:53:29|101/164|{ Verimatrix RTES Pair test.Primary }|13684|Verimatrix RTES Pair - DVE|2.0.1.15|2.0.1.15|13572|NormalStart|5|1
 ***********************
-2021/02/22 08:01:52|101/190|CPI 4940L Ku UC|11132|CPI 4940L|1.0.0.2|1.0.0.2|7952
-2021/02/22 08:01:52|101/151|smart serial 1header- Simulator|8032|Best Practice - Generic Server|Production|1.0.0.9|7952
+2021/02/22 08:01:52|101/190|CPI 4940L Ku UC|11132|CPI 4940L|1.0.0.2|1.0.0.2|7952|NormalStart|1|0
+2021/02/22 08:01:52|101/151|smart serial 1header- Simulator|8032|Best Practice - Generic Server|Production|1.0.0.9|7952|SLProtocolCrashRestart|2|1
 ```
 
 When a DataMiner element starts up, a new line is added to indicate the new protocol process that is used. For example:
 
 ```txt
-2021/02/23 12:06:39|101/193|Envivio Caster|11212|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952
-2021/02/23 12:55:54|101/193|Envivio Caster|8032|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952
+2021/02/23 12:06:39|101/193|Envivio Caster|11212|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952|NormalStart|1|0
+2021/02/23 12:55:54|101/193|Envivio Caster|8032|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952|NormalStart|1|0
 ```
 
 > [!NOTE]
 > As each element restart generates a new entry in this log file, you should look for the latest item in the file to know which protocol process is used. As such, you should always search through this file from bottom to top.
+> The last 3 fields (`reason of the (re)start`, `number of normal (re)starts` and `Number of restarts caused by a crash`) are only present in DataMiner 10.4.12 and later.
 
 ## Accessing Element in Protocol logging
 
