@@ -24,7 +24,7 @@ Specifies the dynamic units that can be used.
 
 - Dynamic units are supported on parameter pages in the Monitoring app from DataMiner 10.3.9/10.4.0 onwards.<!-- RN 36869 -->
 
-- From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, the following units are automatically converted even if they have not been specified using the DynamicUnits element.
+- From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, or in earlier DataMiner versions if the [*DynamicUnits* soft-launch option](xref:Overview_of_Soft_Launch_Options#dynamicunits) is enabled, the following units are automatically converted even if they have not been specified using the DynamicUnits element:
 
   - Bytes: B, kB, MB, GB, TB, PB, EB, ZB, YB
 
@@ -35,9 +35,6 @@ Specifies the dynamic units that can be used.
   - Bits per second: bps, kbps, Mbps, Gbps, Tbps, Pbps, Ebps, Zbps, Ybps
 
   - Bytes per second: Bps, kBps, MBps, GBps, TBps, PBps, ZBps, YBps
-
-  > [!TIP]
-  > For more information, see [DynamicUnits](xref:Overview_of_Soft_Launch_Options#dynamicunits).
 
 ## Examples
 

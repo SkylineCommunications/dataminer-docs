@@ -44,19 +44,8 @@ In the example above, the Interprete tag is used to define the length of the fix
 
 A parameter of type dummy is typically used to hold data that is not of real interest, e.g. to hold part of the response that is not processed or to trigger a QAction.
 
-From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41436-->, the dynamic units feature is automatically enabled for parameters displayed on Data Display pages in Cube. This feature converts many numerical values into more readable formats with appropriate units.
-
-The following units are automatically converted:
-
-- Bytes: B, kB, MB, GB, TB, PB, EB, ZB, YB
-- Kibibytes: KiB, MiB, GiB, TiB, PiB, EiB, ZiB, YiB
-- Bits: b, kb, Mb, Gb, Tb, Pb, Eb, Zb, Yb
-- Bits per second: bps, kbps, Mbps, Gbps, Tbps, Pbps, Ebps, Zbps, Ybps
-- Bytes per second: Bps, kBps, MBps, GBps, TBps, PBps, ZBps, YBps
-
-For numerical values not included in this list, you can specify units using the [DynamicUnits element](xref:Protocol.Params.Param.Display.DynamicUnits).
-
-Prior to DataMiner 10.4.0 [CU10]/10.5.0/10.5.1, dynamic units are disabled by default for Data Display pages, unless explicitly enabled via the [*DynamicUnits* soft-launch option](xref:Overview_of_Soft_Launch_Options#dynamicunits).
+> [!NOTE]
+> The units of measure for numeric parameters can be automatically adjusted to a more readable format if the dynamic units feature is enabled. This depends on the DataMiner version and the configuration of the *DynamicUnits* element. See [DynamicUnits](xref:Protocol.Params.Param.Display.DynamicUnits).
 
 ### Element information
 
