@@ -19,6 +19,27 @@ The option "redundantPolling" in the communicationOptions attribute is required 
 >
 > Note that for smart-serial connections, in order to get a timeout (enabling the redundant polling connections to switch) the pair must contain a response. Alternatively, you can implement logic to set the communication state using the <xref:NT_CHANGE_COMMUNICATION_STATE> Notify call.
 
+## Switching Implementation
+
+This section describes the situations which would trigger Dataminer to switch between polling interfaces during an element's runtime.
+
+### On timeout after retries
+
+When polling a group goes into timeout, Dataminer would retry polling that group as configured in the element settings. 
+After all retries are exhausted, Dataminer would switch interfaces and poll for the *next* group in the queue.
+
+
+![Interface Switching on 2 SNMP Connections](../../images/RedundantPolling_Switch.png)
+
+
+### On polling invalid parameters
+
+#### SNMP
+
+If the SNMP parameter polled is invalid such as *NO SUCH NAME*, Dataminer would trigger the switching of polling interfaces and poll the next group in the queue. 
+In such corner cases Dataminer would switch back and forth between interfaces depending on how frequently these invalid parameters are being polled.
+
+
 ## See also
 
 DataMiner Protocol Markup Language:
