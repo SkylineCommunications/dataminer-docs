@@ -46,14 +46,12 @@ domHelper.DomInstances.CreateOrUpdate(domInstances);
 
 ### Checking issues
 
-For some of the `DomInstances`, the creation or update might not succeed. When using `CreateOrUpdate` or `Delete`, an exception will be thrown. That exception will include how many items succeeded and how many items failed for that bulk CRUD operation. Next to that a limited list of object IDs that succeeded is added. Also a list of object IDs that failed, each followed by the related TraceData. After that the default exception info gets added, including the stacktrace.
-
-Like in the previous example, some `DomInstances` need to be updated:
+For some of the `DomInstances`, the creation or update might not succeed. When using `CreateOrUpdate` or `Delete`, an exception will be thrown. Like in the previous example, some `DomInstances` need to be updated:
 
 ```csharp
 try
 {
-  // Update the DomInstances.
+  // Update the DomInstances, similarly as in the above example.
 
   // Save them to the DB.
   var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
@@ -67,6 +65,16 @@ catch(Exception e)
   Log($"An unexpected issue occurred while updating: {e}");
 }
 ```
+
+In the above example, the validation done by `CreateOrUpdate` could fail for some of the `DomInstances`. In that case the exception that gets logged, will include:
+
+- How many items succeeded and how many items failed for that bulk CRUD operation.
+
+- A limited list of object IDs that succeeded.
+
+- A list of object IDs that failed, each followed by the related TraceData.
+
+- The default info about the exception, including the stacktrace.
 
 To more easily get the details for which items the operation failed or succeeded, `TryCreateOrUpdate` or `TryDelete` can be used. In this example using `TryCreateOrUpdate`, the number of `DomInstances` that fail is logged, together with the issues that occurred. Next, the number of `DomInstances` that succeed gets logged.
 
