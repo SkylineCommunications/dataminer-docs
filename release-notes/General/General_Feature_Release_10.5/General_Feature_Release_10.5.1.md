@@ -191,7 +191,7 @@ From now on, the deprecated NT Notify type *NT_PING* can no longer be used.
 
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.5.0 - FR 10.5.1 -->
 
 Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
 

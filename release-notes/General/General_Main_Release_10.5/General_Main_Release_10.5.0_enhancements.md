@@ -958,6 +958,14 @@ From now on, the deprecated NT Notify type *NT_PING* can no longer be used.
 
 Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
+#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
+
+Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
+
 #### Web apps - Visual Overview: Multiple log levels [ID 41200]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->

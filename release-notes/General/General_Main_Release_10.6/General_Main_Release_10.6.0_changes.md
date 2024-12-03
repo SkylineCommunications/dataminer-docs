@@ -44,14 +44,6 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
-#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
-
-<!-- MR 10.6.0 - FR 10.5.1 -->
-
-Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
-
-Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
-
 #### SLAnalytics: Synchronization of the configuration.xml file can now be forced via Cube [ID 41270]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
