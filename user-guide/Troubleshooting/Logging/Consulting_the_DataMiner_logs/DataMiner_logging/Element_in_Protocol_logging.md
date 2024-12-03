@@ -24,9 +24,9 @@ This record contains the following information, separated by pipe characters:
 - Selected protocol version, e.g. Production
 - Linked protocol version e.g. 1.0.0.2
 - Scripting process ID
-- Reason of the (re)start
-- Number of normal (re)starts
-- Number of restarts caused by a crash
+- Reason of the (re)start (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
+- Number of normal (re)starts (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
+- Number of restarts caused by a crash (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
 
 When a DMA starts up, the list of elements is added to the file, after a separator line consisting of asterisk signs. For example:
 
@@ -47,7 +47,6 @@ When a DataMiner element starts up, a new line is added to indicate the new prot
 
 > [!NOTE]
 > As each element restart generates a new entry in this log file, you should look for the latest item in the file to know which protocol process is used. As such, you should always search through this file from bottom to top.
-> The last 3 fields (`reason of the (re)start`, `number of normal (re)starts` and `Number of restarts caused by a crash`) are only present in DataMiner 10.4.12 and later.
 
 ## Accessing Element in Protocol logging
 
