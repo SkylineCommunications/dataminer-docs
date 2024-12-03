@@ -37,4 +37,7 @@ for (int i=0; i<amountProperties; i++)
     string propertyValue = parts[21 + i*2 + 1];
     engine.GenerateInformation("Property " + propertyName + " == " + propertyValue);
 }
+
+// from DataMiner 10.4.9/10.5.0 onwards, use the ID below to refer to the alarm tree
+AlarmTreeID treeId = new AlarmTreeID(dmaID, elementID, rootAlarmID);
 ```

@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Client_Requirements
+description: To run the DataMiner Cube client application, a recent Windows OS is required, on a system with sufficient CPU and (graphics) memory.
 ---
 
 # DataMiner Client Requirements
@@ -30,13 +31,10 @@ Recommended DataMiner client configuration:
 
 ### Microsoft .NET Framework
 
-Microsoft .NET Framework 4.6.2
+Microsoft .NET Framework 4.7.2
 
 > [!IMPORTANT]
 > We recommend always upgrading to the latest .NET Framework version.
-
-> [!NOTE]
-> When you connect to DataMiner using HTTPS, TLS 1.0 is required to install Cube. It is also possible to use TLS 1.1 or TLS 1.2, but in that case Microsoft .NET Framework 4.6.2 is required.
 
 ### Skyline certificates
 

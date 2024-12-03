@@ -6,6 +6,9 @@ uid: Protocol.Chains
 
 Contains a number of `<Chain>` or `<SearchChain>` children, which are represented as tab pages in DataMiner.
 
+> [!TIP]
+> See also: [EPM chains and fields configuration](xref:EPMManagerChainsAndFields)
+
 ## Parent
 
 [Protocol](xref:Protocol)

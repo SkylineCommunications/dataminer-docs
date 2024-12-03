@@ -8,6 +8,8 @@ An alarm card shows detailed information about an alarm. To open an alarm card, 
 
 If the user setting *Alarm double-click action* is set to *Open alarm card*, you can also simply double-click the alarm in the Alarm Console. See [Alarm Console settings](xref:User_settings#alarm-console-settings).
 
+![Alarm card](~/user-guide/images/Alarm_Card.png)<br>*Alarm card in DataMiner 10.4.5*
+
 Alarm cards consist of three panes:
 
 - The **top pane** shows **general information** about the alarm, such as which parameters are in alarm and when the alarm started.
@@ -18,7 +20,7 @@ Alarm cards consist of three panes:
 - The **pane on the left** shows the **history** of the alarm. For correlated alarms, it also shows the source alarms.
 
   > [!NOTE]
-  > If the *AlarmSettings*.*MustSquashAlarms* option is enabled in *MaintenanceSettings.xml*, from DataMiner 10.0.12 onwards, an alarm tree can contain consolidated alarm events (i.e. consecutive alarm events without a severity change that are combined into a consolidated event). To view all the separate events within a consolidated alarm event, click the *Show alarm events* option at the bottom of this pane.
+  > If the *AlarmSettings*.*MustSquashAlarms* option is enabled in *MaintenanceSettings.xml*, an alarm tree can contain consolidated alarm events (i.e. consecutive alarm events without a severity change that are combined into a consolidated event). To view all the separate events within a consolidated alarm event, click the *Show alarm events* option at the bottom of this pane.
 
 - The **large pane on the right** has three tabs:
 

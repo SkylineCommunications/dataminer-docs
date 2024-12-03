@@ -4,21 +4,25 @@ uid: Configuring_components
 
 # Configuring components
 
-Each dashboard or low-code app component consists of **a visualization and a data feed**.
+Each dashboard or low-code app component consists of **a visualization and data**.
 
-In the edit mode, visualizations are available via the panel on the left, and data feeds are available via the *Data* pane on the right.
+In the edit mode, visualizations are available via the panel on the left, and data is available via the *Data* pane on the right.
 
 There are several ways to add a component:
 
-- **Drag a visualization** from the pane on the left onto an empty section of the dashboard or low-code app page. A data feed will then need to be applied to the component.
+- **Drag a visualization** from the pane on the left onto an empty section of the dashboard or low-code app page (1). Data will then need to be added to the component (2).
 
-- **Drag a data feed** from the *Data* pane on the right onto an empty section of the dashboard or low-code app page. A visualization will then still need to be applied to the component.
+  ![Add a component](~/user-guide/images/Add_Component_Visualization.png)<br>*Dashboards app in DataMiner 10.4.5*
+
+- **Drag data** from the *Data* pane on the right onto an empty section of the dashboard or low-code app page (1). A visualization will then still need to be applied to the component (2).
+
+  ![Add a component](~/user-guide/images/Add_Component_Data_Source.png)<br>*Dashboards app in DataMiner 10.4.5*
 
 The following actions are then possible to configure the component:
 
 - [Applying a visualization](xref:Apply_Visualization)
 
-- [Applying a data feed](xref:Apply_Data_Feed)
+- [Adding data to a component](xref:Adding_data_to_component)
 
 - [Customizing the component layout](xref:Customize_Component_Layout)
 

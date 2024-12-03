@@ -34,7 +34,7 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 > See also:
 >
 > - [Automation](xref:automation)
-> - [Correlation](xref:correlation)
+> - [Correlation](xref:About_DMS_Correlation)
 
 > [!NOTE]
 > You can also have a ticket generated using the "Create ticket" Correlation rule action, but this feature is currently still in preview. See [Creating a ticket](xref:Creating_a_ticket).

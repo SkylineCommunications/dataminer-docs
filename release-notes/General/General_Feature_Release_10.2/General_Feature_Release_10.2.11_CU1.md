@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.2.11_CU1
 
 ### Fixes
 
-#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
+#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID 34775]
 
 <!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.11 [CU1] -->
 

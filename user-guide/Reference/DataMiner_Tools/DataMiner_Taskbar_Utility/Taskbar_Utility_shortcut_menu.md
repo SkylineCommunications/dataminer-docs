@@ -27,7 +27,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
 - **Launch \> Tools \> Log Collector**
 
-    Starts the SLLogCollector tool. (Available in the shortcut menu from DataMiner 9.6.0 CU23/10.0.0 CU13/10.1.0 CU2/10.1.5 onwards.)
+    Starts the SLLogCollector tool.
 
     > [!TIP]
     > See also: [SLLogCollector](xref:SLLogCollector)

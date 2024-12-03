@@ -16,25 +16,28 @@ To configure a trend template:
 
 1. In the template editor, you can do the following:
 
-   - In the *General* section, click *Show details* and enter a description in the description field.
+   - In the *General* section, click *Show details* and enter a **description** in the description field.
 
      > [!NOTE]
-     > From DataMiner 9.0.5 onwards, templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
+     > It is possible to quickly assign a template via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
+
+   - For each parameter, select the checkbox for **real-time** or for **average** trending to activate trending for this parameter.
+
+     > [!NOTE]
+     > Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu. Via the context menu of the column header of the list of parameters, you can enable or disable average and/or real-time trending for all parameters at once.
+
+   - From DataMiner 10.4.8/10.5.0 onwards<!-- RN 39691+39692 -->, if you want to override the default configuration for **[behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection), or [trend icons](xref:Working_with_trend_icons)**, click the cogwheel button next to the filter box and select *Allow Augmented Operations configuration*. You can then select whether to use the *System Default* setting or switch these features on or off for each parameter.
+
+     > [!NOTE]
+     > Behavioral anomaly detection is not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
 
    - If you are editing an existing trend template, to view parameters that are not yet trended, you may need to click the button next to the filter box and select *Only protocol parameters*.
 
    - To view general parameters as well, click the button next to the filter box and select *All parameters (protocol + general)*.
 
-   - For each parameter, select the checkbox for real-time or for average trending to activate trending for this parameter.
+   - Use the **filter box** in the top-right corner to quickly find a parameter.
 
-     > [!NOTE]
-     >
-     > - Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu.
-     > - From DataMiner 9.0.0 CU11 onwards, the context menu of the column header of the list of parameters allows you to enable or disable average and/or real-time trending for all parameters at once.
-
-   - Use the filter box in the top-right corner to quickly find a parameter.
-
-   - For dynamic table parameters, select a parameter and use one of the following options if necessary:
+   - For **dynamic table parameters**, select a parameter and use one of the following options if necessary:
 
      - Specify a mask in the filter column to apply the trend configuration only to a filtered selection of available rows of the dynamic table.
 
@@ -44,14 +47,12 @@ To configure a trend template:
 
      - Use the up and down buttons to change the order of the filters. This may be important as trending is applied top to bottom.
 
+       ![Changing filter order](~/user-guide/images/Change_Order_Filters.png)<br>*Trend template in DataMiner 10.4.5*
+
        > [!NOTE]
-       >
-       > - For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
-       > - Trending of column parameters of type string is only supported from DataMiner 10.0.9 onwards.
+       > For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
 
 1. When ready, click *Apply* to apply the trend template, or *OK* to apply the trend template and exit the editor.
-
-   From DataMiner 9.0.5 onwards, a dialog box will then appear that allows you to immediately link the template to one or more elements.
 
 > [!NOTE]
 > The trend template options button also provides an option to configure which trend data is offloaded to the offload database. For more information, see [Configuring trend templates to exclude/include data in offloads](xref:Configuring_data_offloads#configuring-trend-templates-to-excludeinclude-data-in-offloads).

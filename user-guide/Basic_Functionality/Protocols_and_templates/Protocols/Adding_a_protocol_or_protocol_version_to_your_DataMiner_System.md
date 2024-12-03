@@ -19,6 +19,15 @@ You can upload:
 > [!CAUTION]
 > When you replace a protocol version (i.e. when you add a protocol version that was already available on your DataMiner System), all elements using that protocol version will restart automatically.
 
+> [!NOTE]
+> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a protocol for the first time by [uploading a protocol package](#uploading-a-protocol-package) or by [deploying a protocol from the DataMiner Catalog](#deploying-a-protocol-from-the-catalog), this protocol version will automatically be promoted to the production version.
+>
+> You will need to manually [promote the protocol version to production version](xref:Promoting_a_protocol_version_to_production_version) in the following cases:
+>
+> - When you later deploy a new version of the same protocol and want it to be set as the production version.
+> - When you install a protocol by [uploading a *Protocol.xml* file](#uploading-a-protocolxml-file).
+> - In all instances prior to DataMiner 10.4.10/10.5.0.
+
 ## Deploying a protocol from the catalog
 
 See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
@@ -54,23 +63,50 @@ With the Update Center, you can check if protocol updates are available and, if 
 
 To do so:
 
+## [From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards](#tab/tabid-1)
+
 1. In DataMiner Cube, go to the Update Center in one of the following ways:
 
-   - From DataMiner 10.0.0/10.0.2 onwards:
+   - In the Cube header bar, click the user icon on the right and select *Check for updates*.
 
-     - In the Cube header bar, click the user icon on the right and select *Check for updates*.
+   - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
 
-     - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
+1. Authenticate yourself with your corporate email address. If your corporate email address is linked to a Microsoft (personal or work), Google, Amazon, or LinkedIn account, you can authenticate yourself via one of those identity providers<!--RN 39466-->.
 
-   - Using a version prior to DataMiner 10.0.0/10.0.2:
+   > [!NOTE]
+   > In case you are using the Microsoft login and get an error that says you need admin approval, you can find the steps that your system administrator needs to take to resolve this on [this instructions page](https://dataminer.services/make-an-account/access_dcp.html).
 
-     - On the right-hand side of the DataMiner Cube header bar, click the “Updates are available” icon.
-
-     - On the right-hand side of the DataMiner Cube header bar, click the Help icon and select *Check for updates* from the menu.
-
-     - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
+   This will open the Update Center window.
 
 1. Click the *Check for updates* button.
+
+   ![Updating protocols](~/user-guide/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.4.5*
+
+1. In the list of available protocols, select the protocols you want to install or update, and click *Install*.
+
+   > [!NOTE]
+   >
+   > - By default, only the most recent new versions of protocols in your DMS will be shown. However, if you want to see all available versions, click the *Show all available updates* button at the bottom of the list of available protocols.
+   > - To check for the latest version of a protocol, DataMiner will only look for versions in the same branch as you currently have installed. This means that the first number of the protocol version number needs to match. For example, if you have version 1.1.4.8 installed, only updates for range 1.x.x.x will be considered. This is because this first number indicates different implementations of the protocol, so that a higher number does not necessarily mean an improved version.
+   > - You can see more information on each update by selecting the protocol version and then clicking *Version history* in the pane on the right. For protocols that are already installed on your DMS, only information on newer versions is shown. Otherwise, information on all versions is displayed.
+
+1. When the installation is done, a window will appear where you can choose to set the new protocol versions as the production version:
+
+   - Select the protocol versions you want to set as the production version and click *OK*.
+
+   - If you do not want to set any of the updates as the production version, simply click *OK*.
+
+## [Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7](#tab/tabid-2)
+
+1. In DataMiner Cube, go to the Update Center in one of the following ways:
+
+   - In the Cube header bar, click the user icon on the right and select *Check for updates*.
+
+   - In the Protocols & Templates module, click the *Check for updates* (or *Updates*) link in the upper right corner.
+
+1. Click the *Check for updates* button.
+
+   ![Updating protocols](~/user-guide/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.4.5*
 
 1. Enter your DCP credentials, and click *OK*.
 
@@ -87,6 +123,8 @@ To do so:
    - Select the protocol versions you want to set as the production version and click *OK*.
 
    - If you do not want to set any of the updates as the production version, simply click *OK*.
+
+***
 
 There are different types of updates. The type of update is indicated next to each protocol version in the list of available updates.
 

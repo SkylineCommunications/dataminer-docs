@@ -16,7 +16,10 @@ The following database types are supported for the offload database:
 
 - Oracle
 
+> [!IMPORTANT]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.
+
 > [!NOTE]
 >
 > - From DataMiner 10.2.0/10.1.1 onwards, it is possible to offload data to a file in the local system cache folder instead of to an offload database. You can do so by going to System Center > *Database* > *Offload* and selecting *File* in the drop-down box at the top. Below this, you can then configure the data offloads (see [Configuring data offloads](xref:Configuring_data_offloads)) and set a maximum size for the combined offload files.
-> - An offload database is currently not supported with [STaaS](xref:STaaS) setups. As STaaS is also used for [DaaS](xref:Creating_a_DMS_in_the_cloud) Agents, this means that this also applies for DaaS Agents.
+> - An offload database is currently not supported for [DaaS](xref:Creating_a_DMS_in_the_cloud) Agents.

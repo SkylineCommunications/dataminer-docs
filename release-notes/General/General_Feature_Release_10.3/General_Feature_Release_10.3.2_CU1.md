@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.3.2_CU1
 
 ### Fixes
 
-#### Web apps: Problem when executing a GQI query [ID_35539]
+#### Web apps: Problem when executing a GQI query [ID 35539]
 
 <!-- MR 10.3.0 [CU0] - FR 10.3.2 [CU1] -->
 

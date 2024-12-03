@@ -20,7 +20,7 @@ uid: General_Main_Release_10.2.0_new_features_4
 
 ### DMS Cube
 
-#### Launching DataMiner Cube on a specific host using the cube:// protocol \[ID_28160\]
+#### Launching DataMiner Cube on a specific host using the cube:// protocol \[ID 28160\]
 
 Using the cube:// protocol, it is now possible to launch a DataMiner Cube on a specific host. All existing URL arguments are supported.
 
@@ -31,7 +31,7 @@ cube://mydma?element=MyElement
 cube://10.11.12.13?view=12
 ```
 
-#### Visual overview: Page-level execution of Automation scripts & new NodeDoubleClicked event \[ID_28185\]
+#### Visual overview: Page-level execution of Automation scripts & new NodeDoubleClicked event \[ID 28185\]
 
 On a Visio page, you can now configure to have Automation scripts executed automatically using a page-level data item of type *Execute*.
 
@@ -88,21 +88,21 @@ To configure this behavior, add a page-level data item of type *Execute*, and se
 Script:<myScript>|Parameters:IDParam=[event:NodeDoubleClicked,ID]|Options:<possibleOptions>|Trigger=Event
 ```
 
-#### Visual Overview: A shape linked to an alarm can now display the parameter key \[ID_28212\]
+#### Visual Overview: A shape linked to an alarm can now display the parameter key \[ID 28212\]
 
 Using a data field of type “Info” set to the value “PARAMETER KEY”, a shape linked to an alarm can now be made to display the parameter key of the alarm in question.
 
-#### System Center - Database: Option to offload database data to a file \[ID_28226\]
+#### System Center - Database: Option to offload database data to a file \[ID 28226\]
 
 In the *Database* section of *System Center*, you can now also opt to offload database data to a file instead of a database.
 
-#### Visual Overview: Group-level shape data fields of type 'ChildrenSort' now support placeholders \[ID_28289\]
+#### Visual Overview: Group-level shape data fields of type 'ChildrenSort' now support placeholders \[ID 28289\]
 
 In a group-level shape data field of type *ChildrenSort*, it is now possible to use placeholders.
 
 This will allow you to dynamically specify how the different child item shapes should be sorted using placeholders such as “\[var:xxx\]” and “\[param:xxx\]”.
 
-#### DataMiner Cube start window: Grouping, rearranging and filtering tiles \[ID_28346\]
+#### DataMiner Cube start window: Grouping, rearranging and filtering tiles \[ID 28346\]
 
 In the DataMiner Cube start window, tiles representing DataMiner Systems or DataMiner Agents can now be grouped, rearranged and filtered.
 
@@ -119,7 +119,7 @@ In the DataMiner Cube start window, tiles representing DataMiner Systems or Data
 > - The start window now has keyboard support. Use the arrow keys to move from one tile to the next, and press ENTER to launch.
 > - The start window can now be resized. When you resize and/or reposition the window, its new size and position will be saved.
 
-#### Visual Overview: Support for saving page and card variables \[ID_28434\]
+#### Visual Overview: Support for saving page and card variables \[ID 28434\]
 
 It is now possible to have page variables and card variables saved across sessions.
 
@@ -129,7 +129,7 @@ To do so, place the following prefix before the variable name:
 
 The variable is then saved in a separate .dat file located in the following folder on the client machine: *C:\\Users\\{Username}\\AppData\\Roaming\\Skyline\\DataMiner*. When a variable is saved, if a user reopens a card with that variable, the variable will be set to the last saved value.
 
-#### Visual Overview - ChildrenFilter: Using a regular expression to filter by name \[ID_28445\]
+#### Visual Overview - ChildrenFilter: Using a regular expression to filter by name \[ID 28445\]
 
 In a shape data field of type ChildrenFilter, it is now possible to filter by service name, view name or child element name.
 
@@ -141,13 +141,13 @@ To do so, in the ChildrenFilter data field of the child shape, add “Name=” f
 
 If you add this type of filter to a template shape, only objects of which the name matches the regular expression will use that particular template shape.
 
-#### Service & Resource Management - Services app: Visualization and configuration of the node interfaces of service profile definitions and service profile instances \[ID_28508\]
+#### Service & Resource Management - Services app: Visualization and configuration of the node interfaces of service profile definitions and service profile instances \[ID 28508\]
 
 In the *Profiles* tab of the *Services* app, it is now also possible to visualize and fully configure the node interfaces of service profile definitions and service profile instances.
 
 Also, it is now possible to select a profile instance for every node interface of a service profile instance node.
 
-#### Visual Overview: TableRowFilter option of ParameterControlOptions data item now supports FullFilter syntax \[ID_28531\]
+#### Visual Overview: TableRowFilter option of ParameterControlOptions data item now supports FullFilter syntax \[ID 28531\]
 
 When defining a table control in Visual Overview, it is now possible to use FullFilter syntax when configuring the *TableRowFilter* option in the *ParameterControlOptions* data item.
 
@@ -159,7 +159,7 @@ Example:
 | ParameterControl        | 1000                                             |
 | ParameterControlOptions | TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1) |
 
-#### Service & Resource Management - Services app: Existing connections between node interfaces can now be edited on the service diagram using drag and drop \[ID_28597\]
+#### Service & Resource Management - Services app: Existing connections between node interfaces can now be edited on the service diagram using drag and drop \[ID 28597\]
 
 In the service diagram, it is now possible to change the end points of connections between service definition node interfaces using drag and drop.
 
@@ -167,24 +167,24 @@ In the service diagram, it is now possible to change the end points of connectio
 2. Click the endpoint you want to change and drag it onto another endpoint while keeping the mouse button pressed.
 3. Release the mouse button. The connection will now have changed. Its source point will be the same as before, but its endpoint will have changed.
 
-#### DataMiner Cube start window: Opening a Cube instance without closing the start window \[ID_28608\]
+#### DataMiner Cube start window: Opening a Cube instance without closing the start window \[ID 28608\]
 
-It is now possible to connect to a DMA without closing the start window. To do so, in the start window, click a tile while holding the CTRL button.
+It is now possible to connect to a DMA without closing the start window. To do so, in the start window, click a tile while holding the Ctrl key.
 
 This will allow you to open multiple instances of DataMiner Cube, each connected to a different DMA.
 
 > [!NOTE]
-> If you press ENTER while holding the CTRL button, a Cube instance will open and connect to the DMA specified in the currently selected tile.
+> If you press ENTER while holding the Ctrl key, a Cube instance will open and connect to the DMA specified in the currently selected tile.
 
-#### DataMiner Cube: Option to return to the start window after logging out \[ID_28648\]
+#### DataMiner Cube: Option to return to the start window after logging out \[ID 28648\]
 
 When you log out of DataMiner Cube, the login window appears. In that window, you can now click the *Back to start window* button to return to the DataMiner Cube start window.
 
-#### Profiles app: Failsafe mechanism added to prevent situations where updates made by one user get overwritten by updates made by another user \[ID_28651\] \[ID_30057\]
+#### Profiles app: Failsafe mechanism added to prevent situations where updates made by one user get overwritten by updates made by another user \[ID 28651\] \[ID 30057\]
 
 The Profiles app now contains a failsafe mechanism to prevent possible situations where updates made by one user get overwritten by updates made simultaneously by another user.
 
-#### DataMiner Cube - Alarm Console: Translations added for two new reasons mentioned in Value column of group alarms generated by Automatic incident tracking \[ID_28676\]
+#### DataMiner Cube - Alarm Console: Translations added for two new reasons mentioned in Value column of group alarms generated by Automatic incident tracking \[ID 28676\]
 
 When automatic incident tracking is activated, active alarms that are related to the same incident will automatically be grouped into a new alarm, and the Value column of such an alarm will show the reason why the alarms underneath it were grouped.
 
@@ -193,7 +193,7 @@ Translations have now been added for two new reasons:
 - View group
 - Custom property group (which will be formatted as “\<propertyName> group: \<value>”)
 
-#### Visual Overview: ListView component can now be used to list resources \[ID_28723\] \[ID_30998\]
+#### Visual Overview: ListView component can now be used to list resources \[ID 28723\] \[ID 30998\]
 
 The ListView component can now also be used to list resources. To do so, add a shape data field of type “Source” and set its value to “Resources”.
 
@@ -208,7 +208,7 @@ The ListView component can now also be used to list resources. To do so, add a s
 > [!NOTE]
 > The IDOfSelection session variable contains a list of the IDs or GUIDs of the selected items, separated by pipe characters.
 
-#### EPM: Chain grouping & automatic selection of single filter values \[ID_28751\]\[ID_28834\]\[ID_28846\]
+#### EPM: Chain grouping & automatic selection of single filter values \[ID 28751\]\[ID 28834\]\[ID 28846\]
 
 In DataMiner Cube, EPM chains with the same value in the protocol’s Chain@groupingName element attribute (see example below) will now be grouped under that value in the EPM manager card (side panel and tabs) and in the chains selection box located in the topology sidebar.
 
@@ -233,7 +233,7 @@ See the following example. The chain named “MyChain” will be part of the gro
 > - Each chain can only be part of a single chain group.
 > - Chains that are not part of a group will be displayed as top-level tabs (on the same level as the group tabs).
 
-#### Information event generated when a context menu of a table is used \[ID_28753\]
+#### Information event generated when a context menu of a table is used \[ID 28753\]
 
 When, in DataMiner Cube, you open a context menu of a table and select an option from it, from now on, an information event will be generated similar to the one that is generated when you set a parameter.
 
@@ -249,32 +249,32 @@ This information event will contain the following data:
 
   `Set by <user> to <command display value>: “<dependency 1>”; “<dependency 2>”`
 
-#### Settings window: 'Surveyor' section renamed to 'Sidebar' & New 'Launch EPM card on filter selection' setting added \[ID_28788\]
+#### Settings window: 'Surveyor' section renamed to 'Sidebar' & New 'Launch EPM card on filter selection' setting added \[ID 28788\]
 
 In the user settings tab of the *Settings* window, the *Surveyor* section has been renamed to *Sidebar*.
 
 Also, in that section, the existing Surveyor settings have now been grouped under the title “Surveyor”, and a new *Launch EPM card on filter selection* setting has been added under the title “Topology”. When you enable this new setting, an EPM card will automatically be launched after selecting an item in a topology tab filter.
 
-#### DataMiner Cube will now use Chromium to handle SAML authentication \[ID_28922\]
+#### DataMiner Cube will now use Chromium to handle SAML authentication \[ID 28922\]
 
 In order to support a wider range of identity providers (e.g. Azure AD), DataMiner Cube will now use Chromium instead of Internet Explorer when handling SAML authentication.
 
 > [!NOTE]
 > DataMiner Cube clients will now automatically download the CefSharp package from the DataMiner Agent they connect to.
 
-#### Alarm Console: New option to allow a history tab to show alarms associated with an enhanced service deleted in the selected time frame \[ID_28942\]
+#### Alarm Console: New option to allow a history tab to show alarms associated with an enhanced service deleted in the selected time frame \[ID 28942\]
 
 Up to now, when you created a history tab with a service filter, it was only possible to select one of the active enhanced services. Now, it is also possible to select one of the enhanced services that has been deleted in the selected time frame (e.g. “last hour”).
 
 When, in the filter section, you selected “Service” and you want to be able to select an enhanced service that has been deleted in the selected time frame, then click the *Load deleted services* option, and select the deleted service from the list. That way, you will be able to create a history tab that lists the alarms associated with an enhanced service that has been deleted in the selected time frame.
 
-#### Enhanced table export \[ID_28952\]
+#### Enhanced table export \[ID 28952\]
 
 The table export mechanism has been reworked.
 
 Also, in case of paged tables, it is now possible to indicate whether you want to export only the current page or the entire table.
 
-#### New Surveyor setting: Collapse DVE elements beneath their main element \[ID_29021\]
+#### New Surveyor setting: Collapse DVE elements beneath their main element \[ID 29021\]
 
 The new Surveyor setting “Collapse DVE elements beneath their main element” now allows you to specify how DVE child elements are displayed.
 
@@ -283,11 +283,11 @@ By default, this setting is disabled, and DVE child elements are displayed in th
 - If you set this to “All DVEs”, DVE child elements will be displayed on the level below the parent elements in the tree structure, so that you can collapse and expand the list of child elements.
 - If you set this to “Only function DVEs”, this will only happen for function DVEs.
 
-#### Resources app: Enhanced UI \[ID_29086\]
+#### Resources app: Enhanced UI \[ID 29086\]
 
 The UI of the Resources app has had a complete overhaul. Look and feel are now in line with all other SRM-related apps.
 
-#### Logging of important user actions \[ID_29139\]
+#### Logging of important user actions \[ID 29139\]
 
 From now on, the following important user actions will be logged in the SLClient.txt log file:
 
@@ -300,11 +300,11 @@ From now on, the following important user actions will be logged in the SLClient
 - Alarm tab created in Alarm Console
 - Trend graph opened
 
-#### Services app: Duplicating service profile definitions and service profile instances \[ID_29262\]
+#### Services app: Duplicating service profile definitions and service profile instances \[ID 29262\]
 
 In the *Profiles* tab of the *Services* app, it is now possible to duplicate service profile definitions or service profile instances.
 
-#### Visual Overview: AlarmSettings tag of MaintenanceSettings.xml has new elementTimeoutMode attribute \[ID_29498\]
+#### Visual Overview: AlarmSettings tag of MaintenanceSettings.xml has new elementTimeoutMode attribute \[ID 29498\]
 
 Next to the serviceTimeoutMode and viewTimeoutMode attributes, the AlarmSettings tag of the *MaintenanceSettings.xml* file now also has an elementTimeoutMode attribute.
 
@@ -315,13 +315,13 @@ Similar to the other two attributes, it can be set to one of the following value
 | displayTimeout | Shapes linked to elements will only show the timeout color. The current alarm color will not be shown. (Default setting.) |
 | displayBoth | Shapes linked to elements will show both the current alarm color and the timeout color. The timeout color will be shown as a hatch pattern. |
 
-#### Visual Overview: Prevent a child shape from inheriting the service context of its parent shape \[ID_29503\]
+#### Visual Overview: Prevent a child shape from inheriting the service context of its parent shape \[ID 29503\]
 
 By default, an element shape that is a child of another element shape will inherit the service context of its parent when it does not have a service context of its own.
 
 If you want to prevent this from happening, from now on, you can add the AllowInheritance option to the child shape and set its value to false.
 
-#### Profiles app: New profile instance update errors \[ID_29546\]
+#### Profiles app: New profile instance update errors \[ID 29546\]
 
 When a ProfileInstance is updated while it is being used by one or more bookings, the following additional errors can now be returned.
 
@@ -341,11 +341,11 @@ When a ProfileInstance is updated with quarantine being forced (i.e. with forceQ
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
 
-#### Profiles app: Profile parameters can now have settings configured \[ID_29580\]
+#### Profiles app: Profile parameters can now have settings configured \[ID 29580\]
 
 It is now possible to configure a profile parameter to be hidden in scripts using the profile, with a new *Hide from scripts* checkbox for profile definitions and profile instances in the Profiles app.
 
-#### EPM: Hiding chains and chain fields based on parameter values \[ID_29640\]\[ID_29656\]
+#### EPM: Hiding chains and chain fields based on parameter values \[ID 29640\]\[ID 29656\]
 
 DataMiner Cube now supports hiding specific chains (normal chains and search chains) and chain fields in an EPM topology based on parameter values, in the sidebar as well as in EPM Manager cards.
 
@@ -421,17 +421,17 @@ Example:
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
-#### Visual Overview: New icon added to Icons stencils \[ID_29751\]
+#### Visual Overview: New icon added to Icons stencils \[ID 29751\]
 
 The following icon has been added to the Icons stencil:
 
 - TX
 
-#### Logging: New log file 'Resource Manager Storage' \[ID_29776\]
+#### Logging: New log file 'Resource Manager Storage' \[ID 29776\]
 
 The Logging module now also allows you to access the SLResourceManagerStorage.txt log file.
 
-#### New spectrum recording playback controls \[ID_29807\]\[ID_29926\] \[ID_30218\]
+#### New spectrum recording playback controls \[ID 29807\]\[ID 29926\] \[ID 30218\]
 
 While a spectrum trace recording is playing, new controls are now available at the bottom of the display section:
 
@@ -449,7 +449,7 @@ The following *SpectrumManagerHelper* methods have been implemented to support t
 - *SetSpectrumRecordingFrame (int frame)*: Sets the frame of the currently playing recording to the next available trace in the recording, starting from the given frame number.
 - *SetSpectrumRecordingTime (TimeSpan time)*: Sets the currently playing recording to a specific point in time. The specified time span indicates the amount of time after the start of the recording where the playback should go.
 
-#### Visual Overview: History mode for alarm states + culture option for datetime control \[ID_29822\]
+#### Visual Overview: History mode for alarm states + culture option for datetime control \[ID 29822\]
 
 When shapes in Visual Overview are linked to an element, parameter or service, it is now possible to show the alarm state for this linked object at a specific point in the past. To do so, you can use the new shape data *HistoryMode*, which can be added to a specific shape, or to the entire page.
 
@@ -472,17 +472,17 @@ For example:
 |------------------|-------------------------------------------|
 | SetVarOptions    | Control=DateTime\|DateTimeCulture=Current |
 
-#### EPM: Topology diagram will now display the topology cell name instead of the table name \[ID_29842\]
+#### EPM: Topology diagram will now display the topology cell name instead of the table name \[ID 29842\]
 
 An EPM topology diagram will now display the topology cell name instead of the table name.
 
 Also, table names can now be overridden in the information template. If names of column parameters contain the table name, it is advised to also override these names in order to avoid confusion.
 
-#### Generating a report based on a dashboard: New 'Include CSV' option \[ID_29933\]
+#### Generating a report based on a dashboard: New 'Include CSV' option \[ID 29933\]
 
 In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. When you click the *Configure* button, you will now notice a new “Include CSV” option. If you select this option, the email will not only include the report but also a zip file containing a CSV file for every Pivot table, GQI table and Line & area chart component in the dashboard.
 
-#### Visual Overview: History mode for spectrum thumbnails \[ID_30130\]
+#### Visual Overview: History mode for spectrum thumbnails \[ID 30130\]
 
 It is now possible to have a spectrum thumbnail in Visual Overview show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor.
 
@@ -513,7 +513,7 @@ For example:
 | Parameter        | 50016\|11\|trace_2mps\|5\|DisplayLabels;DisplayTime\| |
 | HistoryMode      | State=On\|TimeStamp=\[var:myTime\]                    |
 
-#### Visual Overview: New Collapse shape data field \[ID_30149\]
+#### Visual Overview: New Collapse shape data field \[ID 30149\]
 
 In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions) in the DataMiner Help. While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
 
@@ -521,14 +521,14 @@ This makes it a convenient alternative to the *ChildrenFilter* shape data, as it
 
 Using the *Collapse* action can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide*.This can allow you to use the "Auto" width or height more effectively.
 
-#### Visual Overview: New icons added to Icons stencils \[ID_30198\]
+#### Visual Overview: New icons added to Icons stencils \[ID 30198\]
 
 The following icons have been added to the Icons stencil:
 
 - TV streaming
 - Microservices
 
-#### Visual Overview: History mode for parameter values of element shapes \[ID_30333\]
+#### Visual Overview: History mode for parameter values of element shapes \[ID 30333\]
 
 It is now possible to make an element shape in Visual Overview show the parameter values for a specific point in the past. This time and date can optionally be selected using another Visual Overview component.
 
@@ -570,11 +570,11 @@ The following new placeholders are now also supported in an *Element* shape. The
 - \[minimum value\]
 - \[maximum value\]
 
-#### DataMiner Cube start window: Cleanup Cube Installation window \[ID_30351\]
+#### DataMiner Cube start window: Cleanup Cube Installation window \[ID 30351\]
 
 When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
 
-#### Data Display: Extended support for launching elements, services, redundancy groups and views by clicking buttons in Data Display table cells \[ID_30413\]
+#### Data Display: Extended support for launching elements, services, redundancy groups and views by clicking buttons in Data Display table cells \[ID 30413\]
 
 This feature offers a new way of adding links to elements, services, redundancy groups or views in a Data Display table.
 
@@ -605,11 +605,11 @@ If you want to specify the page to be selected by default, add a suffix to the i
 - element=MyElementName:Data:Performance
 - 212/13:Visual:MyVisioPage
 
-#### New /Bootstrap command line argument for DataMiner Cube launcher \[ID_30573\]
+#### New /Bootstrap command line argument for DataMiner Cube launcher \[ID 30573\]
 
 A new */Bootstrap* command line argument is now supported for the DataMiner Cube launcher. This argument combines the */Install* and */Silent* arguments (see [Desktop application command-line arguments](xref:Desktop_app_command_line_arguments)), and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
 
-#### Aggregation rule conditions can now be specified in the form of a regular expression \[ID_30640\]
+#### Aggregation rule conditions can now be specified in the form of a regular expression \[ID 30640\]
 
 Aggregation rule conditions can now be specified in the form of a regular expression.
 
@@ -620,11 +620,11 @@ Aggregation rule conditions can now be specified in the form of a regular expres
     - If you chose “by value” (i.e. the default setting), then enter a regular expression.
     - If you chose “by reference”, then select a single-value parameter of type “string” containing a regular expression.
 
-#### Alarm templates: Conditions based on service impact \[ID_30691\]\[ID_30763\]
+#### Alarm templates: Conditions based on service impact \[ID 30691\]\[ID 30763\]
 
 When editing an alarm template, it is now possible to configure alarm template conditions based on service impact.
 
-#### Visual Overview: New ChildrenFilter 'ResourceMapping' \[ID_30751\]
+#### Visual Overview: New ChildrenFilter 'ResourceMapping' \[ID 30751\]
 
 When, within a service context, child shapes are automatically generated, it is now possible to use a ResourceMapping filter. This will allow you to only show shapes that have a certain role (mapped, unmapped, inheritance) within the booking.
 
@@ -639,7 +639,7 @@ See the following example.
 > [!NOTE]
 > Within a data field of type *ChildrenFilter*, you can specify multiple filters separated by pipe characters (“\|”). If you do so, only shapes matching all specified filters will be shown.
 
-#### Visual Overview: Linking an element shape to a resource that is using that element \[ID_30752\]
+#### Visual Overview: Linking an element shape to a resource that is using that element \[ID 30752\]
 
 It is now possible to link an element shape to a resource that is using that element.
 
@@ -666,7 +666,7 @@ When a resource is linked to an element shape, you can use the following placeho
 | \[Resource ID\] | The ID of the resource (GUID). |
 | \[Resource Name\] | The name of the resource. |
 
-#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property 'ServiceDefinitionID' \[ID_30757\]
+#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property 'ServiceDefinitionID' \[ID 30757\]
 
 ##### New \[ServiceDefinition:\] placeholder
 
@@ -686,18 +686,18 @@ The \[Reservation:\] placeholder now allows you to retrieve the service definiti
 
 Full syntax: \[Reservation:\<Service ID or Booking ID>,ServiceDefinitionID\]
 
-#### Logging now contains more information regarding system performance \[ID_30769\]
+#### Logging now contains more information regarding system performance \[ID 30769\]
 
 The Cube log files will now contain more information regarding system performance.
 
 > [!NOTE]
 > A new checkbox at the top of System Center’s Logging page will allow you to show or hide these System Performance Indicator (SPI) log entries.
 
-#### Logging: New log file 'Sharing Manager' \[ID_30826\]
+#### Logging: New log file 'Sharing Manager' \[ID 30826\]
 
 The Logging module now also allows you to access the Sharing Manager log file.
 
-#### DataMiner Cube - Router Control: 'Direct take' mode \[ID_30865\]
+#### DataMiner Cube - Router Control: 'Direct take' mode \[ID 30865\]
 
 When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e. the default mode) or “direct take mode”.
 
@@ -710,20 +710,20 @@ When configuring a matrix in the Router Control module, you can now set it to ei
 > - selecting an output will not cause crosspoints to be created or deleted, and
 > - input selections will only be cleared when you select another output.
 
-#### Sidebar: 'Advanced search' improvements \[ID_30885\]
+#### Sidebar: 'Advanced search' improvements \[ID 30885\]
 
 Up to now, the advanced search pane was only added to the sidebar after you entered a search string in the search box in the middle of the Cube header bar and then clicked the “Advanced search for” option at the bottom of the suggestions list. From now on, you can directly open the advanced search pane by clicking the ellipsis button (“...”) in the sidebar and selecting the *Search* button.
 
 In addition, there is now a search box at the top of the advanced search pane, so you can search from directly in the pane.
 
-#### DataMiner Agent will no longer be selected by default when creating a new element on an DataMiner System with multiple agents \[ID_30889\]
+#### DataMiner Agent will no longer be selected by default when creating a new element on an DataMiner System with multiple agents \[ID 30889\]
 
 When you created an element on a DataMiner System with multiple agents, up to now, the DMA to which you were connected would by default be selected in the DMA selection box. To prevent users from all creating new elements on the same agent, from now on, whenever there are multiple agents in the DataMiner System, no agent will be selected by default.
 
 > [!NOTE]
 > When you duplicate an element, the DMA selection box will by default be set to the same DMA as the original element.
 
-#### Visual Overview: Edge/WebView2 browser engine \[ID_30940\]
+#### Visual Overview: Edge/WebView2 browser engine \[ID 30940\]
 
 In DataMiner Cube, up to now, embedded webpages could be displayed using either Chromium or Microsoft Internet Explorer. From now on, it is also possible to use Microsoft Edge (WebView2).
 
@@ -742,7 +742,7 @@ If you want a shape to display a webpage using the Edge web browser regardless o
 > - Currently, the Edge web browser engine cannot be used in DataMiner web apps like Ticketing, Dashboards, etc.
 > - The WebView2 Runtime will automatically be installed when using Office 365 Apps. It will also come pre-installed with Windows 11. It will not be included in DataMiner upgrade packages.
 
-#### Sidebar: Pinning and unpinning sidebar items \[ID_30963\] \[ID_31207\]
+#### Sidebar: Pinning and unpinning sidebar items \[ID 30963\] \[ID 31207\]
 
 It is now possible to pin and unpin items in the sidebar.
 
@@ -752,7 +752,7 @@ It is now possible to pin and unpin items in the sidebar.
 > [!NOTE]
 > One of the items you can pin after clicking the Add button (“+”) is the “Overview” button. Clicking this button after it has been pinned will open a card showing the root view (Below this view \> All).
 
-#### Visual Overview: Setting the background color of a static shape using a shape data field of type 'BackgroundColor' \[ID_30964\]
+#### Visual Overview: Setting the background color of a static shape using a shape data field of type 'BackgroundColor' \[ID 30964\]
 
 Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.
 
@@ -773,7 +773,7 @@ The \<color> value in the example above can be specified as follows:
 > - If you specified a valid color or if the placeholder resolves correctly, the color you specified will overrule the shape’s default background color. Note that if blinking was enabled, it will be disabled.
 > - If you specify a custom BackgroundColor, shape transparency will work as before.
 
-#### System Center - Analytics config: New setting 'Maximum group size' \[ID_30993\] \[ID_31093\]
+#### System Center - Analytics config: New setting 'Maximum group size' \[ID 30993\] \[ID 31093\]
 
 In the *System settings \> Analytics config* section of *System Center*, a new setting has been added for automatic incident tracking. The *Maximum group size* setting will now allow you to limit the size of the alarm groups.
 
@@ -784,7 +784,7 @@ Default value: 1000
 > [!NOTE]
 > In the *System settings \> Analytics config* section of *System Center*, the setting names have been adjusted to improve consistency. “Minimal” has been replaced with “Minimum” and “Maximal” has been replaced with “Maximum”.
 
-#### Visual Overview: New \[Element:\] placeholder \[ID_31158\]
+#### Visual Overview: New \[Element:\] placeholder \[ID 31158\]
 
 In Visual Overview, you can now use the new “\[Element:\<input>,\<output>\]” placeholder to convert an element name to an element ID and vice versa.
 
@@ -803,11 +803,11 @@ Examples:
 - \[Element:MyElement,ID\] will be resolved to the ID of the element with the name “MyElement”.
 - \[Element:2/125,Name\] will be resolved to the name of the element with ID 2/125.
 
-#### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID_31196\]
+#### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID 31196\]
 
 In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e. resources for which no enhanced elements have to be created.
 
-#### Automatic Incident Tracking: New setting 'Maximum group events rate' \[ID_31203\]
+#### Automatic Incident Tracking: New setting 'Maximum group events rate' \[ID 31203\]
 
 In *System Center*, a new setting has been added to the *Analytics config* section: “Maximum group events rate”. With this setting, you can limit the maximal number of alarm group events that will be generated and thus avoid any possible performance issues during alarm floods.
 
@@ -817,7 +817,7 @@ Each time alarm grouping enters flood mode, a notice alarm will be generated to 
 
 Default value of the “Maximum group events rate” setting: 100
 
-#### Visual Overview: New icons added to Icons stencils \[ID_31271\]
+#### Visual Overview: New icons added to Icons stencils \[ID 31271\]
 
 The following icons have been added to the Icons stencil:
 
@@ -850,7 +850,7 @@ The following icons have been added to the Icons stencil:
 - Weather Forecast
 - Wind
 
-#### Services app: Enhanced service definition security \[ID_31306\] \[ID_31428\]
+#### Services app: Enhanced service definition security \[ID 31306\] \[ID 31428\]
 
 In the Services app, a number of security enhancements have been made with regard to service definitions.
 
@@ -860,31 +860,31 @@ In the Services app, a number of security enhancements have been made with regar
 
 - Users who do not have read permission on functions will now be able to correctly save function nodes when configuring service definitions.
 
-#### Legacy Reports, Dashboards and Annotations modules will by default be hidden in new installations \[ID_31329\]
+#### Legacy Reports, Dashboards and Annotations modules will by default be hidden in new installations \[ID 31329\]
 
 In new installations, from now on, the legacy Reports, Dashboards and Annotations modules will be hidden by default.
 
 If you do not want these modules to be hidden, you can set the LegacyReportsAndDashboards and/or LegacyAnnotations soft-launch options to true.
 
-#### Alarm Console - Context menu: Links to elements, services and views in 'Open' submenu now have an element, service or view icon in front of them \[ID_31499\]
+#### Alarm Console - Context menu: Links to elements, services and views in 'Open' submenu now have an element, service or view icon in front of them \[ID 31499\]
 
 When you right-click an alarm in the Alarm Console, the *Open* submenu contains a link to the alarm card as well as links to all elements, services and views affected by the alarm. From now on, the links to the elements, services and views will each have an element, service or view icon in front of them.
 
-#### Filter will now be taken into account when exporting a table \[ID_31586\]
+#### Filter will now be taken into account when exporting a table \[ID 31586\]
 
 Up to now, when you filtered a table and then exported it, the filter would not be taken into account and the entire table would be exported. From now on, the filtered table will be exported instead.
 
-#### DataMiner Cube - Views: 'Below this view' list has a new column 'Communication protocols' \[ID_31590\]
+#### DataMiner Cube - Views: 'Below this view' list has a new column 'Communication protocols' \[ID 31590\]
 
 A “Communication protocols” column has been added to the list on the *Below this view* page of a view card. This column will show the communication protocols used by an element.
 
-#### System Center - Users/Groups: New user permission 'Monitoring web app' \[ID_31706\] \[ID_31961\]
+#### System Center - Users/Groups: New user permission 'Monitoring web app' \[ID 31706\] \[ID 31961\]
 
 In the *General* section of the user permissions list, a new “Monitoring web app” permission has now been added next to the existing “DataMiner web apps” permission. This permission can be used to control access to the Monitoring web app.
 
 This user permission is enabled by default.
 
-#### DataMiner Cube desktop app: Support for system-wide installation via a shared MSI installer \[ID_31874\] \[ID_32154\]
+#### DataMiner Cube desktop app: Support for system-wide installation via a shared MSI installer \[ID 31874\] \[ID 32154\]
 
 The DataMiner Cube desktop app, which allows side-by-side installation of different Cube versions, now supports system-wide installation via a shared MSI installer.
 
@@ -893,7 +893,7 @@ The DataMiner Cube desktop app, which allows side-by-side installation of differ
 >
 > Also, Cube will no longer attempt to download and install the CefSharp package automatically. This will now have to be installed manually using the separate CefSharp MSI installation package.
 
-#### System Center - Users/Groups: Renamed user permissions \[ID_32141\]
+#### System Center - Users/Groups: Renamed user permissions \[ID 32141\]
 
 For reasons of consistency, the following user permissions have been renamed:
 
@@ -905,7 +905,7 @@ For reasons of consistency, the following user permissions have been renamed:
 | Alarm templates \> Delete alarm templates    | Alarm templates \> Delete               |
 | Trend templates \> Configure trend templates | Trend templates \> Configure            |
 
-#### Visual Overview: \[ServiceDefinition:...\] placeholder now allows you to look up a node ID by passing a node label \[ID_32222\]
+#### Visual Overview: \[ServiceDefinition:...\] placeholder now allows you to look up a node ID by passing a node label \[ID 32222\]
 
 Inside a \[ServiceDefinition:...\] placeholder, it is now possible to look up a node ID by passing a node label. See the following example.
 
@@ -919,7 +919,7 @@ This will, for instance, allow you to find a resource by passing a label of a se
 [Reservation:[this service],ResourceID|NodeID=[ServiceDefinition:aaaa-bbb-ccc-ddd,NodeID|NodeLabel=Primary Receiver]]
 ```
 
-#### Visual Overview: URI scheme of the DataMiner Agent in question will now automatically be used when resolving the \<DMAIP> placeholder \[ID_32249\] \[ID_32349\]
+#### Visual Overview: URI scheme of the DataMiner Agent in question will now automatically be used when resolving the \<DMAIP> placeholder \[ID 32249\] \[ID 32349\]
 
 The \<DMAIP> placeholder can only be used inside another placeholder, or in a URL for a shape data field of type Link. It is replaced with the first configured value from the following list that can be found for the DMA you are connecting to: the certificate address, the hostname or the primary IP address.
 

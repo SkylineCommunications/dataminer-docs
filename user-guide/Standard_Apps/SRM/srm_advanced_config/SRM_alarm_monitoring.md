@@ -30,7 +30,7 @@ To configure SRM alarm monitoring:
 
 1. Set the *Bookings Monitoring Mode* parameter to one of the following values:
 
-   - *Non-Nominal*: The monitoring element will only show bookings in alarm state.
+   - *In Alarm Only*: The monitoring element will only show bookings in alarm state. In SRM versions prior 1.2.14, this option is displayed with the value *Non-Nominal* instead.<!-- RN 30077 -->
 
    - *All Bookings*: The monitoring element will show all bookings.
 

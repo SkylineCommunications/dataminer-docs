@@ -16,7 +16,7 @@ An Interface containing logic with regard to 'interface utilization calculations
 
 ### 1.3.0.1
 
-#### Overloads have been added for specifying primary/display key [ID_35048]
+#### Overloads have been added for specifying primary/display key [ID 35048]
 
 A number of IDmsColumn methods have been marked obsolete. They have now been replaced by new methods in which a KeyType will indicate whether a Primary Key or a Display Key is being used.
 

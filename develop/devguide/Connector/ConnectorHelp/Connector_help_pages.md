@@ -14,7 +14,7 @@ When you develop a connector using DIS, you can generate the connector documenta
 
 To make sure your page can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file name and place the file in the correct folder:
 
-- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* documentation page has to be *Microsoft_Platform.md*.
+- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* documentation page has to be *Microsoft_Platform.md*. Make sure the casing is the same, and do not replace any other characters with underscores. Any mismatch between the file name and the connector name will make the documentation **unavailable** in the Catalog.
 
   > [!IMPORTANT]
   > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the DataMiner Catalog.
@@ -59,13 +59,9 @@ In the **first paragraph** below the title, add a short paragraph explaining the
 
 ### 'About' section
 
-In the **About** section, you will need to add a number of tables, depending on the connector. You can find these tables in the [template](xref:Connector_help_template).
+**OBSOLETE**
 
-- For all connectors except exported child connectors, add the **Version Info** table.
-
-- For all connectors except virtual connectors, add the **Product Info** table.
-
-- For **all connectors**, add the **System Info** table. For exported connectors or connectors that cannot have exported connectors, you can leave out the *Exported Components* column in this table.
+Older connector documentation will contain an *About* section with tables with version info, product info, and system info, but this is no longer required as this information is now included directly within the protocol.xml via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
 
 ### 'Configuration' section
 

@@ -36,6 +36,9 @@ For example, the following table parameter defines some columns to be saved. Col
 </Param>
 ```
 
+> [!NOTE]
+> From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, The maximum number of rows in a non-partial table is limited to 105,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 85,000 rows to notify you that you are approaching this limit.
+
 ## Volatile tables
 
 In case you do not want anything to be kept in the database, you can use the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option.
@@ -58,4 +61,6 @@ You should only use this option in the following cases:
 In general, make sure to only use it on tables that are only displayed in the UI or used in a QAction, but are not used in any other way.
 
 > [!NOTE]
-> If alarm monitoring is needed even though the data is very volatile, check whether the number of rows added and deleted will remain low enough so that there are at most 7 changes per minute on the same element and at most 10 000 changes per day on the same element. If the number will be higher, this can have a severe impact on the read efficiency of the database, so the *volatile* option must be used. If the number will be low enough, you can remove the *volatile* option for the relevant alarm monitoring, but make sure that you do not add the *save* option to other columns.
+>
+> - If alarm monitoring is needed even though the data is very volatile, check whether the number of rows added and deleted will remain low enough so that there are at most 7 changes per minute on the same element and at most 10 000 changes per day on the same element. If the number will be higher, this can have a severe impact on the read efficiency of the database, so the *volatile* option must be used. If the number will be low enough, you can remove the *volatile* option for the relevant alarm monitoring, but make sure that you do not add the *save* option to other columns.
+> - From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, The maximum number of rows in a volatile table is limited to 1,005,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 805,000 rows to notify you that you are approaching this limit.

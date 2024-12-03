@@ -131,9 +131,7 @@ However, to fully disable a control, so that it cannot set session variables, na
 
 ## Allowing dynamic shape behavior
 
-Up to DataMiner 9.0.0 CU5, **ParameterControl** shapes with dynamic value placeholders only turn into a parameter control when all placeholders can be resolved. Otherwise an element shape is displayed.
-
-From DataMiner 9.0.0 CU5 onwards, **ParameterControl** shapes are by default always displayed as a parameter control. However, it is still possible to activate the legacy behavior, by adding the following option to the shape:
+**ParameterControl** shapes with dynamic value placeholders are by default always displayed as a parameter control. To instead have an element shape displayed in case not all placeholders can be resolved, add the option below:
 
 | Shape data field | Value                                  |
 | ---------------- | -------------------------------------- |

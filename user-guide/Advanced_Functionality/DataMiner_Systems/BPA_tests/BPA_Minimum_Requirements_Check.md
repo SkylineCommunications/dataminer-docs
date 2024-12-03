@@ -2,7 +2,9 @@
 uid: BPA_Minimum_Requirements_Check
 ---
 
-# Minimum Requirements Check
+# DataMiner Agent Minimum Requirements
+
+Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Minimum Requirements Check".
 
 This BPA test checks if the following minimum hardware requirements are met or exceeded, via local WMI queries using .NET Libraries:
 
@@ -15,13 +17,15 @@ This BPA test checks if the following minimum hardware requirements are met or e
 - Disk usage: Less than 50% on Cassandra drive.
 - System memory: 32 GB
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.7, 10.1.0 CU4, 10.0.0 CU15 and 9.6.0 CU24 onwards, this BPA test is available by default.
+This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
 
 For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
+If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance. As such, this BPA test cannot be run on a DaaS system. From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39929-->, this BPA test will by default have the status *Not applicable* on a DaaS system.
+
 ## Metadata
 
-- Name: Minimum Requirement Checker
+- Name: DataMiner Agent Minimum Requirements
 - Description: Uses WMI queries to verify that the system meets the minimum requirements for DataMiner.
 - Author: Skyline Communications
 - Default schedule: Every hour

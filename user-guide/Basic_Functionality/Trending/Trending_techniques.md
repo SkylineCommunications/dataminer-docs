@@ -28,4 +28,4 @@ Logging of average values only, usually across longer time spans than those used
 - Last year, with 1-hour averages (max. about 8760 data points).
 
 > [!NOTE]
-> In case of average trending, the DMS not only stores the average value for a particular time slot, but also the minimum and maximum value detected in that same time slot.
+> For average trending, the DMS stores more than just the average value for a particular time slot. For numeric parameters, it also stores the minimum and maximum value detected in that same time slot. For non-numeric parameters (such as [discrete and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters)), the DMS stores the value that occurred the most, the value that was active the longest, and the percentage of time this value was active during the time slot.

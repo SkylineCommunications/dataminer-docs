@@ -95,10 +95,13 @@
 	  "_googleAnalyticsTagId": "GTM-WD3NQGN"
     },
     "globalMetadataFiles": [],
+    "fileMetadata": {
+      "_noindex": { "404.html": true }
+    },
     "fileMetadataFiles": [],
     "template": [
       "default",
-	  "modern",
+	    "modern",
       "templates/skyline"
     ],
     "markdownEngineName": "markdig",

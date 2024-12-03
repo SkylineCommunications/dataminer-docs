@@ -16,7 +16,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
    - For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
 
    > [!IMPORTANT]
-   > Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
+   > Make sure that the time of all servers in the cluster is in sync. Even a slight time difference between servers may result in Cassandra nodes failing to join the cluster. We recommend configuring an NTP server to maintain time synchronization between the nodes.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
 
@@ -51,19 +51,19 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - Commands DMA 1:
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 8080,9042`  
 
      - Commands DMA 2:
   
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 8080,9042`  
 
      - And so on.
 
@@ -125,6 +125,8 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
      - **authenticator**: Set this to *PasswordAuthenticator*.
 
      - **data_file_directories**: The location(s) where you want to store the data.
+
+     - **auto_snapshot_ttl**: This option is available since Cassandra 4.1. Set this to the desired time to keep the automatic snapshots. For example, to keep them for a day: `auto_snapshot_ttl: 1d`.
 
      - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. Cassandra nodes use this list of hosts to find each other and learn the topology of the ring.
 

@@ -25,12 +25,38 @@ items:
         topicUid: EPM_6.0.0_D-DOCSIS
       - name: EPM 5.0.0 D-DOCSIS
         topicUid: EPM_5.0.0_D-DOCSIS
-  - name: GPON
+  - name: xPON
     items:
-      - name: EPM 1.0.1 GPON - Preview
-        topicUid: EPM_1.0.1_GPON
-  - name: I-DOCSIS
+      - name: EPM 1.0.1 xPON
+        items:
+          - name: New features and changes
+            topicUid: EPM_1.0.1_xPON
+          - name: Addendum CU6
+            topicUid: EPM_1.0.1_xPON_CU6
+  - name: Integrated DOCSIS
     items:
+      - name: EPM 7.0.8 Integrated DOCSIS
+        topicUid: EPM_7.0.8_Integrated_DOCSIS
+      - name: EPM 7.0.7 Integrated DOCSIS
+        topicUid: EPM_7.0.7_Integrated_DOCSIS
+      - name: EPM 7.0.6 Integrated DOCSIS
+        topicUid: EPM_7.0.6_Integrated_DOCSIS
+      - name: EPM 7.0.5 I-DOCSIS
+        topicUid: EPM_7.0.5_I-DOCSIS
+      - name: EPM 7.0.4 I-DOCSIS
+        items:
+          - name: New features and changes
+            topicUid: EPM_7.0.4_I-DOCSIS
+          - name: Addendum CU1
+            topicUid: EPM_7.0.4_I-DOCSIS_CU1
+      - name: EPM 7.0.3 I-DOCSIS
+        items:
+          - name: New features and changes
+            topicUid: EPM_7.0.3_I-DOCSIS
+          - name: Addendum CU1
+            topicUid: EPM_7.0.3_I-DOCSIS_CU1
+      - name: EPM 7.0.2 I-DOCSIS
+        topicUid: EPM_7.0.2_I-DOCSIS
       - name: EPM 7.0.1 I-DOCSIS
         topicUid: EPM_7.0.1_I-DOCSIS
       - name: EPM 7.0.0 I-DOCSIS
@@ -77,21 +103,5 @@ items:
         topicUid: EPM_5.0.0_I-DOCSIS
   - name: VSAT
     items:
-      - name: EPM 1.0.10 VSAT - preview
-        topicUid: EPM_1.0.10_VSAT
-      - name: EPM 1.0.9 VSAT
-        topicUid: EPM_1.0.9_VSAT
-      - name: EPM 1.0.8 VSAT
-        topicUid: EPM_1.0.8_VSAT
-      - name: EPM 1.0.7 VSAT
-        topicUid: EPM_1.0.7_VSAT
-      - name: EPM 1.0.6 VSAT
-        topicUid: EPM_1.0.6_VSAT
-      - name: EPM 1.0.5 VSAT
-        topicUid: EPM_1.0.5_VSAT
-      - name: EPM 1.0.4 VSAT
-        topicUid: EPM_1.0.4_VSAT
-      - name: EPM 1.0.3 VSAT
-        topicUid: EPM_1.0.3_VSAT
-      - name: EPM 1.0.2 VSAT
-        topicUid: EPM_1.0.2_VSAT
+      - name: EPM 1.0.1 VSAT
+        topicUid: EPM_1.0.1_VSAT

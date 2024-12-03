@@ -16,3 +16,6 @@ The decision when to switch from the active to the passive DMA can be taken eith
 
 > [!NOTE]
 > Any given DMA can only be part of one virtual DMA team. In other words, one DMA cannot act as a backup for more than one DMA.
+
+> [!IMPORTANT]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.

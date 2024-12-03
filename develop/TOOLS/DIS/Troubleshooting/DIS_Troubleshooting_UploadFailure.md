@@ -13,4 +13,4 @@ Publishing a connector or script fails, possibly with a message from DataMiner.
 
 - Make sure your account has the [required DataMiner permissions](xref:Prerequisites#required-user-permissions).
 
-- Make sure your DataMiner System uses DataMiner [10.0.9](xref:General_Feature_Release_10.0.9#dataminer-application-packages-id_25911id_26027id_26169id_26243id_26271id_26338id_26351id_26371) or higher.
+- Make sure your DataMiner System uses DataMiner [10.0.9](xref:General_Feature_Release_10.0.9#dataminer-application-packages-id-25911id-26027id-26169id-26243id-26271id-26338id-26351id-26371) or higher.

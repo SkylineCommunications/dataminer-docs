@@ -5,6 +5,7 @@ using Skyline.DataMiner.Net.Messages;
 using Skyline.DataMiner.Net.Exceptions;
 using Skyline.DataMiner.Net.Profiles;
 using System.Collections.Generic;
+using Skyline.DataMiner.Net.Messages.SLDataGateway;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -165,31 +166,51 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Acknowledges the specified alarm tree using the provided comment message.
 		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
+		/// <param name="alarmTreeID">The alarm tree to update</param>
 		/// <param name="comment">A comment.</param>
 		/// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
 		/// <example>
 		/// <code>
-		/// engine.AcknowledgeAlarm(7, 304022, "Alarm acknowledged.");
+		/// engine.AcknowledgeAlarm(new AlarmTreeID(7, 400, 304022), "Alarm acknowledged.");
 		/// </code>
 		/// </example>
-		public void AcknowledgeAlarm(int dataMinerID, int alarmID, string comment) { }
+		public void AcknowledgeAlarm(AlarmTreeID alarmTreeID, string comment) { }
 
-		/// <summary>
-		/// Acknowledges the specified alarm tree using the provided comment message.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="comment">A comment.</param>
-		/// <remarks>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</remarks>
-		/// <example>
-		/// <code>
-		/// engine.AcknowledgeAlarm(7, 400, 304022, "Alarm acknowledged.");
-		/// </code>
-		/// </example>
-		public void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment) { }
+        /// <summary>
+        /// Acknowledges the specified alarm tree using the provided comment message.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="comment">A comment.</param>
+        /// <remarks>
+        /// <para>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</para>
+        /// <para>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</para>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.AcknowledgeAlarm(7, 304022, "Alarm acknowledged.");
+        /// </code>
+        /// </example>
+        [Obsolete("Please use the overload that takes an AlarmTreeID (still supported in <= 10.6 on non-swarming systems)")]
+        public void AcknowledgeAlarm(int dataMinerID, int alarmID, string comment) { }
+
+        /// <summary>
+        /// Acknowledges the specified alarm tree using the provided comment message.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="comment">A comment.</param>
+        /// <remarks>
+        /// <para>If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.</para>
+        /// <para>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</para>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.AcknowledgeAlarm(7, 400, 304022, "Alarm acknowledged.");
+        /// </code>
+        /// </example>
+        public void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment) { }
 
 		/// <summary>
 		/// Adds an error message to the Automation script, which will eventually cause the script to fail.
@@ -795,38 +816,56 @@ namespace Skyline.DataMiner.Automation
 		/// engine.GenerateInformation("Hello World!");
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void GenerateInformation(string text) { }
 
-		/// <summary>
-		/// Retrieves the value of the specified custom alarm property.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyName">The name of the alarm property.</param>
-		/// <exception cref="ArgumentException">Alarm not found.</exception>
-		/// <returns>The value of the specified alarm property.</returns>
-		/// <example>
-		/// <code>
-		/// string propertyValue = engine.GetAlarmProperty(200, 59851, "SourceDetail");
-		/// </code>
-		/// </example>
-		public string GetAlarmProperty(int dataMinerID, int alarmID, string propertyName) { return null; }
+        /// <summary>
+        /// Retrieves the value of the specified custom alarm property.
+        /// </summary>
+        /// <param name="alarmID">The alarm ID</param>
+        /// <param name="propertyName">The name of the alarm property.</param>
+        /// <exception cref="ArgumentException">Alarm not found.</exception> 
+        /// <returns>The value of the specified alarm property.</returns>
+        /// <example>
+        /// <code>
+        /// string propertyValue = engine.GetAlarmProperty(new AlarmID(new AlarmTreeID(200, 400, 59851), 59853), "SourceDetail");
+        /// </code>
+        /// </example>
+        public string GetAlarmProperty(AlarmID alarmID, string propertyName) { return null; }
 
-		/// <summary>
-		/// Retrieves the value of the specified custom alarm property.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyName">The name of the alarm property.</param>
-		/// <exception cref="ArgumentException">Alarm not found.</exception> 
-		/// <returns>The value of the specified alarm property.</returns>
-		/// <example>
-		/// <code>
-		/// string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
-		/// </code>
-		/// </example>
-		public string GetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName) { return null; }
+        /// <summary>
+        /// Retrieves the value of the specified custom alarm property.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyName">The name of the alarm property.</param>
+        /// <exception cref="ArgumentException">Alarm not found.</exception>
+        /// <returns>The value of the specified alarm property.</returns>
+        /// <remarks>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</remarks>
+        /// <example>
+        /// <code>
+        /// string propertyValue = engine.GetAlarmProperty(200, 59851, "SourceDetail");
+        /// </code>
+        /// </example>
+        [Obsolete("Please use the overload that takes an AlarmID object (still supported in <= 10.6 on non-swarming systems)")]
+        public string GetAlarmProperty(int dataMinerID, int alarmID, string propertyName) { return null; }
+
+        /// <summary>
+        /// Retrieves the value of the specified custom alarm property.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyName">The name of the alarm property.</param>
+        /// <exception cref="ArgumentException">Alarm not found.</exception> 
+        /// <returns>The value of the specified alarm property.</returns>
+        /// <remarks>For performance reasons, we recommend using the overload that takes an AlarmID instead.</remarks>
+        /// <example>
+        /// <code>
+        /// string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
+        /// </code>
+        /// </example>
+        public string GetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName) { return null; }
 
 		/// <summary>
 		/// Retrieves an object representing one of the script dummies.
@@ -965,6 +1004,30 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public IConnection GetUserConnection() { return null; }
 
+		/// <summary>
+		/// Hides a custom-made dialog box of an interactive Automation script.
+		/// </summary>
+		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
+		/// <exception cref="DataMinerException">Hide UI failed.</exception>
+		/// <para>Feature introduced in DataMiner 10.4.7 (RN 39451/RN 39638).</para>
+		/// <para>This feature is only available for interactive Automation scripts executed in a web environment.</para>
+		/// <example>
+		/// <code>
+		/// // Build and display a form
+		/// var formUi = BuildFormUi();
+		/// var results = engine.ShowUI(formUi);
+		/// 
+		/// // Process UI results
+		/// 
+		/// // Hide the UI before starting a lengthy operation
+		/// engine.HideUI();
+		/// 
+		/// // Build and display issue information
+		/// var issueUi = BuildIssueUi();
+		/// var issueResults = engine.ShowUI(issueUi);
+		/// </code>
+		/// </example>
+		public void HideUI() { }
 
 		/// <summary>
 		/// Resets the timeout timer, extending the time the Automation script is allowed to execute.
@@ -1022,6 +1085,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message");
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void Log(string message) { }
 
 		/// <summary>
@@ -1036,6 +1100,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message", LogType.Always, 5);
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void Log(string message, LogType type, int logLevel) { }
 
 		/// <summary>
@@ -1051,6 +1116,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message", LogType.Always, 5, "Initialize");
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void Log(string message, LogType type, int logLevel, string method) { }
 
 		/// <summary>
@@ -1171,6 +1237,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendEmail(myEmailOptions);
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendEmail(EmailOptions options) { }
 
 		/// <summary>
@@ -1193,6 +1260,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendEmail("The message I want to send.","The title of my message","support@gtc.com");
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendEmail(string message, string title, string to) { }
 
 		/// <summary>
@@ -1207,6 +1275,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendPager(myPagerOptions);
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendPager(PagerOptions options) { }
 
 		/// <summary>
@@ -1228,6 +1297,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendPager("The message I want to send.","USER:ADMIN");
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendPager(string message, string to) { }
 
 		/// <summary>
@@ -1247,6 +1317,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendReport(reportOptions);
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendReport(MailReportOptions options) { }
 
 		/// <summary>
@@ -1301,6 +1372,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendSms(mySmsOptions);
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendSms(SmsOptions options) { }
 
 		/// <summary>
@@ -1321,93 +1393,141 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendSms("My Message","USER:ADMIN");
 		/// </code>
 		/// </example>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendSms(string message, string to) { }
 
 		/// <summary>
 		/// Sets the specified custom alarm properties to the specified values.
 		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyNames">The names of the properties.</param>
-		/// <param name="propertyValues">The values of the properties.</param>
-		/// <remarks>
-		/// <note type="note">
-		/// <list type="bullet">
-		/// <item><description>Feature introduced in DataMiner 8.5.2 (RN 8347).</description></item>
-		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-		/// </list>
-		/// </note>
-		/// </remarks>
-		/// <example>
-		/// <code>
-		/// engine.SetAlarmProperties(200, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
-		/// </code>
-		/// </example>
-		public void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues) { }
-
-		/// <summary>
-		/// Sets the specified custom alarm properties to the specified values.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
+		/// <param name="alarmTreeID">The alarm tree to update.</param>
 		/// <param name="propertyNames">The names of the properties.</param>
 		/// <param name="propertyValues">The values of the properties.</param>
 		/// <remarks>
 		/// <note type="note">
 		/// <list type="bullet">
 		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+		/// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
 		/// </list>
 		/// </note>
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
+		/// engine.SetAlarmProperties(new AlarmTreeID(200, 400, 521655), new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
 		/// </code>
 		/// </example>
-		public void SetAlarmProperties(int dataMinerID, int elementID, int alarmID, string[] propertyNames, string[] propertyValues) { }
+		public void SetAlarmProperties(AlarmTreeID alarmTreeID, string[] propertyNames, string[] propertyValues) { }
 
-		/// <summary>
-		/// Updates a custom alarm property.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyName">The property name.</param>
-		/// <param name="propertyValue">The value to set.</param>
-		/// <remarks>
-		/// <note type="note">
-		/// <list type="bullet">
-		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-		/// </list>
-		/// </note>
-		/// </remarks>
-		/// <example>
-		/// <code>
-		/// engine.SetAlarmProperty(200, 521655, "Property A", "Value A");
-		/// </code>
-		/// </example>
-		public void SetAlarmProperty(int dataMinerID, int alarmID, string propertyName, string propertyValue) { }
+        /// <summary>
+        /// Sets the specified custom alarm properties to the specified values.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyNames">The names of the properties.</param>
+        /// <param name="propertyValues">The values of the properties.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>Feature introduced in DataMiner 8.5.2 (RN 8347).</description></item>
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.SetAlarmProperties(200, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
+        /// </code>
+        /// </example>
+        [Obsolete("Please use the overload that takes an AlarmTreeID (still supported in <= 10.6 on non-swarming systems)")]
+        public void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues) { }
 
-		/// <summary>
-		/// Updates a custom alarm property.
-		/// </summary>
-		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
-		/// <param name="elementID">The element ID.</param>
-		/// <param name="alarmID">The alarm ID.</param>
-		/// <param name="propertyName">The name of the property.</param>
-		/// <param name="propertyValue">The value to set.</param>
-		/// <remarks>
-		/// <note type="note">
-		/// <list type="bullet">
-		/// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
-		/// <item><description>When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-		/// </list>
-		/// </note>
-		/// </remarks>
-		public void SetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName, string propertyValue) { }
+        /// <summary>
+        /// Sets the specified custom alarm properties to the specified values.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyNames">The names of the properties.</param>
+        /// <param name="propertyValues">The values of the properties.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
+        /// </code>
+        /// </example>
+        public void SetAlarmProperties(int dataMinerID, int elementID, int alarmID, string[] propertyNames, string[] propertyValues) { }
+
+        /// <summary>
+        /// Updates a custom alarm property.
+        /// </summary>
+        /// <param name="alarmTreeID">The alarm tree to update.</param>
+        /// <param name="propertyName">The property name.</param>
+        /// <param name="propertyValue">The value to set.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.SetAlarmProperty(new AlarmTreeID(200, 456, 521655), "Property A", "Value A");
+        /// </code>
+        /// </example>
+        public void SetAlarmProperty(AlarmTreeID alarmTreeID, string propertyName, string propertyValue) { }
+
+        /// <summary>
+        /// Updates a custom alarm property.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyName">The property name.</param>
+        /// <param name="propertyValue">The value to set.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// engine.SetAlarmProperty(200, 521655, "Property A", "Value A");
+        /// </code>
+        /// </example>
+		[Obsolete("Please use the overload that takes an AlarmTreeID (still supported in <= 10.6 on non-swarming systems)")]
+        public void SetAlarmProperty(int dataMinerID, int alarmID, string propertyName, string propertyValue) { }
+
+        /// <summary>
+        /// Updates a custom alarm property.
+        /// </summary>
+        /// <param name="dataMinerID">The DataMiner Agent ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="alarmID">The alarm ID.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <param name="propertyValue">The value to set.</param>
+        /// <remarks>
+        /// <note type="note">
+        /// <list type="bullet">
+        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
+        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
+        /// <item><description>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</description></item>
+        /// </list>
+        /// </note>
+        /// </remarks>
+        public void SetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName, string propertyValue) { }
 
 		/// <summary>
 		/// Allows setting <see cref="RunTimeFlags"/> at runtime.
@@ -1513,6 +1633,11 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Sleep(100);
 		/// </code>
 		/// </example>
+                /// <remarks>
+		/// <note type="note">
+		/// <description>In DataMiner versions prior to 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, this method will throw a DataMinerException when a negative time is specified.</description>
+		/// </note>
+		/// </remarks>
 		public void Sleep(int timeInMilliseconds) { }
 
 		/// <summary>

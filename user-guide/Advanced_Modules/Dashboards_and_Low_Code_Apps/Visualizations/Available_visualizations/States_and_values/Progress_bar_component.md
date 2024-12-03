@@ -6,9 +6,18 @@ uid: DashboardProgressBar
 
 This component shows the value of one or more analog parameters with a progress bar. It is available from DataMiner 10.2.0/10.1.7 onwards.
 
+![Progress bar](~/user-guide/images/Progress_Bar.png)<br>*Progress bar component in DataMiner 10.4.5*
+
 To configure the component:
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply parameter data. See [Adding data to a component](xref:Adding_data_to_component).
+
+   - Column parameter data is supported.
+
+     > [!NOTE]
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter picker](xref:DashboardParameterPicker) and link this to the state component.
+
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
 1. Optionally, customize the following component options:
 

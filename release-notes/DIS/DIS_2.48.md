@@ -12,19 +12,19 @@ uid: DIS_2.48
 
 ### IDE
 
-#### A message will now be shown when a connector or an Automation script package is being uploaded [ID_38846]
+#### A message will now be shown when a connector or an Automation script package is being uploaded [ID 38846]
 
 When a connector or an Automation script is being published, a message will now be shown to indicate that the package is being uploaded.
 
 ### Validator
 
-DIS is currently using [Validator version 1.1.3](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.3).
+DIS is currently using [Validator version 1.1.4](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.4).
 
 ## Changes
 
 ### Enhancements
 
-#### DIS settings - Account: More detailed status information [ID_39419]
+#### DIS settings - Account: More detailed status information [ID 39419]
 
 In the *Account* tab of the *DIS settings* window, you can now check the following statuses if something went wrong when you tried to log in to DIS.
 

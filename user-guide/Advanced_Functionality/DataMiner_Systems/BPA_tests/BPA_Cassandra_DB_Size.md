@@ -8,10 +8,12 @@ Cassandra has some operational limits regarding the size of its files, for examp
 
 The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.4 onwards, it is available by default.
+This BPA test is available on demand. From DataMiner 10.1.4 up to DataMiner 10.4.11/10.4.0 [CU9], it is available in System Center.<!--RN 40751-->
 
 > [!NOTE]
-> This BPA test does not work for remote Cassandra nodes or for systems with a Cassandra Cluster setup.
+>
+> - This BPA test does not work for remote Cassandra nodes or for systems with a Cassandra Cluster setup.
+> - Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test does not work if your IP address is "localhost".
 
 ## Metadata
 
@@ -33,22 +35,31 @@ None of the files in the Cassandra file system violated any of the rules.
 
 ### Error
 
-One or more of the critical rules have been violated (see [Critical rules](#critical-rules) below)
+- One or more of the critical rules have been violated (see [Critical rules](#critical-rules) below).
 
-- Result message: Cassandra DB size errors detected.
-- Impact: Cassandra operations (i.e. read/write/compaction/repair/…) will fail.
+  - Result message: Cassandra DB size errors detected.
+  - Impact: Cassandra operations (i.e. read/write/compaction/repair/…) will fail.
 
-Each rule violation will be described in detail in the *Detailed Result* and *Corrective Action* field. The following list shows what kind of detailed result will be added for each rule.
+  Each rule violation will be described in detail in the *Detailed Result* and *Corrective Action* field. The following list shows what kind of detailed result will be added for each rule.
 
-- Free disk space < Total size of table
+  - Free disk space < Total size of table
 
-  - Detailed result: Not enough disk space free on disk [Driveletter].
-  - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
+    - Detailed result: Not enough disk space free on disk [DriveLetter].
+    - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
 
-- KeySpace not found
+  - KeySpace not found
 
-  - Detailed result: Could not find the [KeySpaceName] keyspace.
-  - Corrective action: Make sure *DB.xml* is configured correctly and DataMiner was able to create the keyspace.
+    - Detailed result: Could not find the [KeySpaceName] keyspace.
+    - Corrective action: Make sure *DB.xml* is configured correctly and DataMiner was able to create the keyspace.
+
+- The BPA test is not applicable to the current setup.
+
+  - Result message: This BPA does not apply for this DataMiner Agent.
+
+    > [!NOTE]
+    > From DataMiner 10.4.12/10.5.0 onwards<!--RN 40751-->, this message no longer appears on DMAs using [STaaS](xref:STaaS).
+
+  - Impact: The test will fail.
 
 ### Warning
 
@@ -61,17 +72,17 @@ Each rule violation will be described in detail in the *Detailed Result* and *Co
 
 - Largest SSTable file for a table > 1/3 of the total installed RAM
 
-  - Detailed result: System might not have enough RAM to process [Tablename].
-  - Corrective action: Have at least [MinRamRequired] GB of RAM installed or reduce the amount of data in [Tablename].
+  - Detailed result: System might not have enough RAM to process [TableName].
+  - Corrective action: Have at least [MinRamRequired] GB of RAM installed or reduce the amount of data in [TableName].
 
 - Duplicate folders detected
 
-  - Detailed result: Duplicate folders detected for [Tablename]
+  - Detailed result: Duplicate folders detected for [TableName]
   - Corrective action: Remove unused folders
 
 - Large partitions detected
 
-  - Detailed result: Large partitions detected for table [Tablename] Partitions: [Tablename:Partition_key] - size: [Partition_size]
+  - Detailed result: Large partitions detected for table [TableName] Partitions: [TableName:Partition_key] - size: [Partition_size]
   - Corrective action: Reduce the amount of data in these tables/partitions
 
 ### Not Executed

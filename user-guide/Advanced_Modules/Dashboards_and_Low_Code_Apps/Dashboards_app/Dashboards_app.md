@@ -6,7 +6,9 @@ uid: newR_D
 
 With the Dashboards app, you can make, manage, and view dashboards that can display a wealth of information about the monitored system. You can [share your dashboards](xref:Sharing_a_dashboard) with just about anyone via dataminer.services, or [create a PDF report](xref:Generating_a_report_based_on_a_dashboard_Cube) based on them.
 
-Many different [visualizations](xref:Available_visualizations) are available, which can make use of all sorts of [data feeds](xref:Using_dashboard_feeds), including [GQI-based query feeds](xref:Creating_GQI_query).
+![Dashboards app](~/user-guide/images/Dashboards_app.png)<br>*Dashboards app in DataMiner 10.4.5*
+
+Many different [visualizations](xref:Available_visualizations) are available, which can make use of all sorts of data, including [GQI queries](xref:Creating_GQI_query).
 
 > [!NOTE]
 >

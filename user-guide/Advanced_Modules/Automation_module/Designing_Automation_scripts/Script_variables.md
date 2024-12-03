@@ -15,6 +15,7 @@ For most script actions, variables are required. There are three kinds of variab
 When you add a script action that contains a variable, a line will automatically be added in the section in question. However, depending on the script, it can be more convenient to make the variables first, and then create the script actions.
 
 > [!NOTE]
+>
 > - Prior to running a script, operators will first have to link the dummies and parameters to actual elements and values in the DMS. Therefore, it is best to give the variables a meaningful name the operators will be able to work with.
 > - To remove a variable, click the x to the right of it.
 
@@ -67,4 +68,4 @@ These files are used to hold a particular value used in a script. Within the scr
 
 Outside of a script, you can create permanent memory files that contain an array of values. For example, a permanent memory file named “Cities” could have the names of various cities as its values.
 
-These files can be managed In DataMiner Cube. Up to DataMiner 9.5.10, you can do so via the *Memory files* button in the lower left corner of the Automation card. From DataMiner 9.5.11 onwards, a separate *memory files* tab is available. See [How can I manage permanent memory files?](xref:How_can_I_manage_permanent_memory_files).
+These files can be managed in DataMiner Cube, in the *memory files* tab of the Automation module. See [How can I manage permanent memory files?](xref:How_can_I_manage_permanent_memory_files).

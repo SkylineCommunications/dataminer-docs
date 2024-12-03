@@ -10,7 +10,7 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | Name | Description | Synchronized? |
 |--|--|--|
 | BaseSubscriptions.xml | Base subscriptions, i.e. element subscriptions that remain open, so that the element info is cached in SLNet. | No |
-| Brain.xml | Correlation rules. | Yes |
+| Brain.xml | Legacy Correlation rules. (Prior to DataMiner 10.5.1/10.6.0<!--RN 40834-->) | Yes |
 | ClientApps.lic | License file for client applications. No longer used. When you upgrade to a recent DataMiner version, this file is removed during the upgrade. | No |
 | ClusterInfo.xml | Contains the ID ranges for the views of each DMA in the cluster. | Yes |
 | DataMiner.lic | DataMiner license file. | No |
@@ -42,6 +42,4 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | Views.xml | View configuration. | Yes |
 
 > [!NOTE]
->
-> - Files marked as “synchronized” in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms).
-> - From DataMiner 9.5.9 onwards, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* have been moved to the Database subfolder, along with a number of other database-related files.
+> Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms).

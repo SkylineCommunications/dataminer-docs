@@ -23,6 +23,13 @@ Some examples, assuming the next value is 10:
 | Prefix with "REF-" and [format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings) the value | REF-{0:000000} | REF-000010 |
 | When no format is set, the value is stored | | 10 |
 
+This descriptor type uses the `IncrementManager` to generate the next number. This manager ensures that there are no duplicate numbers across the DMS. As shown in the example below, you have the option to manually create a new incrementer, allowing you to customize the current number via the "Value" property. Manually creating the incrementer is not mandatory. When you assign a random `Guid` value to the `AutoIncrementerID` property, a new incrementer will be created when a value needs to be generated.
+
+> [!IMPORTANT]
+>
+> - Using the `AutoIncrementFieldDescriptor` may affect performance when creating `DomInstances` because the incrementing system needs to synchronize with other Agents in the cluster. When high-performance create actions are required, we advise against using this `FieldDescriptor` type.
+> - Because of the inherent challenges of distributed computing, incrementing numbers are calculated on a "best effort" basis across multiple systems. While the system is designed to minimize the possibility of duplicates, complete uniqueness cannot be guaranteed in all scenarios. Under conditions such as significant database issues or frequent disconnections of DataMiner Agents, there is a very small chance that duplicate numbers could occur. For critical applications where uniqueness is essential, we recommend using and storing a non-incrementing identifier, such as a GUID. The ID of the `DomInstance` could serve this purpose.
+
 ## Defining the FieldDescriptor
 
 ```csharp

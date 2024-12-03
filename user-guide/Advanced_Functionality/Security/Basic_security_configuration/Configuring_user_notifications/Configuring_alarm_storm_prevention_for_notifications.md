@@ -28,8 +28,6 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 
 1. Select the user or group for which you want to configure the settings, and go to the *Alerts* tab.
 
-1. If you are using a version of DataMiner prior to 9.5.4, in the lower right corner, click the *Edit* button.
-
 1. Expand the *Alarm storm prevention* section at the top of the tab.
 
 1. For each type of notification you wish to configure, do the following:

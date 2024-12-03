@@ -8,7 +8,7 @@ When a call is performed via the CPECollectorHelper API, a timeout is calculated
 
 `Total Timeout = ((requested number of items / EPMBulkCount) + 1) * EPMASyncTimeout`
 
-From DataMiner 10.0.9 onwards, you can fine-tune how the timeout is calculated using the SLNetClientTest tool:
+You can fine-tune how the timeout is calculated using the SLNetClientTest tool:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

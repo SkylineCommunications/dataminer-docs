@@ -19,13 +19,19 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. In the confirmation box, click *Yes*.
 
-1. On the DMA you have removed, go to the *System Center* module and select the *Agents* tab.
+1. Stop the Agent you have removed.
 
-1. In the *Manage* section, select the DMA in the list.
+   This DataMiner Agent should no longer be used, so you should decommission it.
 
-1. In the pane on the right, click *Delete cluster* (prior to DataMiner 10.0.13) or *Leave cluster* (from DataMiner 10.0.13 onwards).
+1. If your system is connected to dataminer.services, remove the corresponding node on dataminer.services:
 
-1. If you want to keep using the removed DMA as a standalone Agent, restart the DMA.
+   1. Open the [Admin app](https://admin.dataminer.services/) and go to the DxMs page.
+
+      This page shows an overview of all Agents or "nodes", with the option to remove a node from the system.
+
+   1. Click the garbage can icon next to the Agent you have just removed and confirm.
+
+1. Restart DataMiner Cube to make sure the removed Agent is no longer displayed anywhere.
 
 ## Removing a Failover DMA
 
@@ -43,4 +49,16 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. Remove all `<DMA />` and `<Redirect />` tags in *DMS.xml* that contain IP addresses from the previous cluster, and save the file.
 
-1. If you want to keep using the removed DMA as a standalone Agent, restart the DMA.
+1. Restart the DMA you want to keep.
+
+   The other DMA should no longer be used and should be decommissioned.
+
+1. If your system is connected to dataminer.services, remove the corresponding node on dataminer.services:
+
+   1. Open the [Admin app](https://admin.dataminer.services/) and go to the DxMs page.
+
+      This page shows an overview of all Agents or "nodes", with the option to remove a node from the system.
+
+   1. Click the garbage can icon next to the Agent you have just removed and confirm.
+
+1. Restart DataMiner Cube to make sure the removed Agent is no longer displayed anywhere.

@@ -363,7 +363,7 @@ uid: NTNotifyTypesOverview
 |347|NT_GET_BASE_PROTOCOL_NAMES||
 |348|NT_GET_BASE_PROTOCOL_LINKING||
 |349|NT_MAP_BASE_ID_TO_DEVICE_ID||
-|350|<xref:NT_GET_VIEW_PROPERTY>)|Retrieves the value of the specified view property.|
+|350|<xref:NT_GET_VIEW_PROPERTY>|Retrieves the value of the specified view property.|
 |351|NT_GET_KEYS_FOR_INDEX_NO_LOCK||
 |352|NT_GET_ELEMENT_TREND_WINDOWS||
 |353|<xref:NT_GET_ACTIVATED_LICENSE_COUNTERS>|Retrieves the number of activated elements, spectrum elements, protocol names and elements using the protocol.|

@@ -57,4 +57,4 @@ Retrieving a row from a **remote element**:
 
 ## Remarks
 
-- The GetRow method acts as a wrapper method for this Notify call.
+- The [GetRow (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.GetRow(System.Int32,System.String)) and [GetRow (QActionTable)](xref:Skyline.DataMiner.Scripting.QActionTable.GetRow(System.String)) method acts as a wrapper method for this Notify call.

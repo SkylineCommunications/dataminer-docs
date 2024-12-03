@@ -20,7 +20,7 @@ uid: General_Main_Release_10.2.0_new_features_3
 
 ### DMS Security
 
-#### Importing domain users and user groups from an Azure Active Directory \[ID_28444\]
+#### Importing domain users and user groups from an Azure Active Directory \[ID 28444\]
 
 DataMiner is now able to import domain users and user groups from an Azure Active Directory.
 
@@ -43,7 +43,7 @@ In the *DataMiner.xml* file, an \<AzureAD> element should be present. See the fo
 > - Currently, users imported from an Azure AD can only log in via SAML.
 > - In an upcoming release, functionality will be added so that this can be configured directly in DataMiner Cube instead.
 
-#### DataMiner Cube - System Center: New Planned Maintenance app permissions \[ID_28164\] \[ID_28541\]
+#### DataMiner Cube - System Center: New Planned Maintenance app permissions \[ID 28164\] \[ID 28541\]
 
 In the *Users/Groups* section of System Center, it is now possible to configure the following new user permissions.
 
@@ -54,7 +54,7 @@ In the *Users/Groups* section of System Center, it is now possible to configure 
 | Delete          | Permission to delete items in the PLM app.                    |
 | Configure       | Permission to configure the PLM app.                          |
 
-#### Jobs and ReservationInstances: SecurityViewID property replaced by SecurityViewIDs property \[ID_28311\]
+#### Jobs and ReservationInstances: SecurityViewID property replaced by SecurityViewIDs property \[ID 28311\]
 
 In Jobs and ReservationInstances, the single-value SecurityViewID property has now been replaced by a multiple-value SecurityViewIDs property.
 
@@ -66,7 +66,7 @@ For example, users with Read access to the view with ID 10 who display a list of
 > The values in this property can be filter using a 'Contains' filter.
 > Example: JobExposers.SecurityViewIDs.Contains(136)
 
-#### DataMiner Cube - System Center: User permissions for 'Live Sharing' and 'Cloud Connected Agents' features have been reorganized \[ID_29004\]
+#### DataMiner Cube - System Center: User permissions for 'Live Sharing' and 'Cloud Connected Agents' features have been reorganized \[ID 29004\]
 
 In the *Users/Groups* section of *System Center*, the user permissions for the Live Sharing and Cloud Connected Agents features have been reorganized.
 
@@ -88,7 +88,7 @@ Under *System configuration \> Cloud gateway*, you can now find the following us
 > - The user permissions listed under *Live sharing* are included in the *Power users* preset and higher.
 > - The user permissions under *Cloud gateway* are included in the *Administrators (read-only access to Security)* preset and higher.
 
-#### DataMiner Cube - System Center: New user permission \[ID_29097\]\[ID_29291\]
+#### DataMiner Cube - System Center: New user permission \[ID 29097\]\[ID 29291\]
 
 In the *Users/Groups* section of System Center, you can now configure the following new user permission:
 
@@ -97,7 +97,7 @@ In the *Users/Groups* section of System Center, you can now configure the follow
 > [!NOTE]
 > This user permission is included in the *Administrators (read-only access to Security)* preset and higher.
 
-#### New functions user permissions \[ID_29659\] \[ID_30114\] \[ID_30122\]
+#### New functions user permissions \[ID 29659\] \[ID 30114\] \[ID 30122\]
 
 Under *Modules* > *Functions*, you can now find the following user permissions:
 
@@ -112,18 +112,18 @@ These permissions apply to the upload and delete function options in the Protoco
 
 When upgrading to DataMiner version 10.1.7, these six permissions will automatically be granted to all user groups that have been granted the *Modules \> Resources \> Configure functions* permission.
 
-#### Automatic LDAP notifications disabled by default \[ID_30290\]
+#### Automatic LDAP notifications disabled by default \[ID 30290\]
 
 Up to now, when Active Directory was used, DataMiner would automatically receive updates whenever changes occurred in the domain. From now on, this feature will be disabled by default. Instead, DataMiner will now poll the LDAP system on an hourly basis to check for changes.
 
 > [!NOTE]
 > If you want to enable the automatic LDAP notification feature, open the *DataMiner.xml* file and set the LDAP notifications attribute to true.
 
-#### New user permission to send emails via DataMiner \[ID_30425\]
+#### New user permission to send emails via DataMiner \[ID 30425\]
 
 A new user permission *Email* > *Send via DataMiner System* is now available under the general user permissions in Users/Groups section of System Center. This user permission determines whether a user is allowed to send emails via the DataMiner System.
 
-#### DataMiner Cube: Allow users to log in with a local user account even when external authentication via SAML is activated \[ID_30981\]\[ID_31043\]
+#### DataMiner Cube: Allow users to log in with a local user account even when external authentication via SAML is activated \[ID 30981\]\[ID 31043\]
 
 By default, DataMiner Cube provides two methods to log in to a DataMiner Agent:
 
@@ -132,7 +132,7 @@ By default, DataMiner Cube provides two methods to log in to a DataMiner Agent:
 
 When external authentication is activated on a DataMiner Agent, bypassing the external authentication provider by entering an explicit username/password combination is only allowed for the Administrator user. However, from now on, when using external authentication via SAML, bypassing the external authentication by entering a username/password combination will be allowed for any local DataMiner user account.
 
-#### DataMiner Cube - System Center: New & updated user permissions \[ID_30989\]\[ID_31208\]
+#### DataMiner Cube - System Center: New & updated user permissions \[ID 30989\]\[ID 31208\]
 
 In the *Users/Groups* section of System Center, new user permissions have been added and existing user permissions have been updated.
 
@@ -158,7 +158,7 @@ In the *Users/Groups* section of System Center, new user permissions have been a
 - Users are no longer allowed to add an instance to a newly created service profile definition that has not yet been saved.
 - When a user who has been granted the Modules \> Services \> Profiles \> Definitions \> Delete permission deletes a service profile definition, all instances of that definition must also be deleted. A confirmation box will now appear to make the user aware of this. Also, a confirmation box will now appear when you try to delete definition instances.
 
-#### Users authenticated by Azure AD using SAML can now automatically be created and assigned to groups \[ID_31057\] \[ID_31184\]
+#### Users authenticated by Azure AD using SAML can now automatically be created and assigned to groups \[ID 31057\] \[ID 31184\]
 
 Users authenticated by Azure AD using SAML can now automatically be created and assigned to groups in DataMiner.
 
@@ -226,7 +226,7 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
 
 1. Restart the DataMiner Agent.
 
-#### Azure AD application query support \[ID_31059\]
+#### Azure AD application query support \[ID 31059\]
 
 DataMiner now supports Azure AD application querying.
 
@@ -237,7 +237,7 @@ For this feature to work, the following permissions must be set in Azure AD:
 - Application permission for User.Read.All and GroupMember.Read.All
 - Delegated permission for User.Read
 
-#### Web apps: Using custom HTTP headers will now be allowed \[ID_31090\]
+#### Web apps: Using custom HTTP headers will now be allowed \[ID 31090\]
 
 From now on, the DataMiner web apps will allow the use of custom HTTP headers. Up to now, custom HTTP headers would by default be deleted.
 
@@ -248,7 +248,7 @@ As a result, it will now be possible to configure custom HTTP headers in IIS Man
 
 ### DMS Protocols
 
-#### Extension methods moved from QActionHelperBaseClasses to SLManagedScripting \[ID_27995\] \[ID_28675\]
+#### Extension methods moved from QActionHelperBaseClasses to SLManagedScripting \[ID 27995\] \[ID 28675\]
 
 The following extension methods have now been moved from the QActionHelperBaseClasses library to the SLManagedScripting library and are now instance methods of the SLProtocol interface.
 
@@ -289,7 +289,7 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 >   - enum LogType
 >   - enum LogLevel
 
-#### Enhanced (direct) view column option 'view' \[ID_28448\]
+#### Enhanced (direct) view column option 'view' \[ID 28448\]
 
 The following (direct) view column option has been enhanced.
 
@@ -305,7 +305,7 @@ This option can be configured in three different ways. See the table below. In t
 | Foreign key filtering | view=1003:1105:1000:2 | The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003. |
 | No filtering | view=:1401:1000:1 | The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided). Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401. Note: If the remote elements contain duplicate keys, then this can cause data to be overwritten. |
 
-#### New 'FlushPerDatagram' option for smart-serial UDP connections \[ID_28999\]
+#### New 'FlushPerDatagram' option for smart-serial UDP connections \[ID 28999\]
 
 When configuring the port settings of a smart-serial UDP connection, it is now possible to specify a *FlushPerDatagram* option.
 
@@ -321,7 +321,7 @@ Example:
 ...
 ```
 
-#### InterfaceInfo now contains an IsInternal flag to mark whether an interface is external or internal \[ID_29314\]
+#### InterfaceInfo now contains an IsInternal flag to mark whether an interface is external or internal \[ID 29314\]
 
 The InterfaceInfo class has been extended with an IsInternal flag that allows you to specify whether an interface is external or internal.
 
@@ -347,7 +347,7 @@ Also, the Interface class in SLManagedAutomation and the ConnectivityInterface c
     Interface[] GetExternalInterfaces();
     ```
 
-#### DataMiner Connectivity Framework: DCF interfaces can now be marked internal \[ID_29326\] \[ID_29438\]
+#### DataMiner Connectivity Framework: DCF interfaces can now be marked internal \[ID 29326\] \[ID 29438\]
 
 In an element protocol, it is now possible to make a distinction between
 
@@ -369,7 +369,7 @@ By default, all DCF interfaces are considered external. Interfaces that should b
   ...
 ```
 
-#### SNMP polling: Retrieving polling delta time per row \[ID_29445\]
+#### SNMP polling: Retrieving polling delta time per row \[ID 29445\]
 
 The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, has been expanded to be able to retrieve the delta times per row when polling an SNMP table. However, this will only work for the multipleGetNext and multipleGetBulk polling schemes since only these polling schemes retrieve entire rows per request.
 
@@ -391,7 +391,7 @@ The information will be returned in the following format. If only a single key i
 > - If the requested key could not be found, or if no polling happened since the tracking was enabled, an empty array will be returned.
 > - If there were no 2 poll cycles, or if the requested key was only present in 1 poll cycle, then the delta value will be returned as -1.
 
-#### Aggregation: Using regular expressions in the filter \[ID_30199\]
+#### Aggregation: Using regular expressions in the filter \[ID 30199\]
 
 It is now possible to a regular expression in the filtering options of an aggregate action.
 
@@ -468,7 +468,7 @@ Example:
 > [!NOTE]
 > When you opt to store a regular expression in a parameter, this parameter should be a standalone, single-value parameter of type string.
 
-#### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID_30237\] \[ID_30809\]
+#### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID 30237\] \[ID 30809\]
 
 View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a “VALUE=” filter (e.g. VALUE=5 == abc).
 
@@ -478,7 +478,7 @@ View tables containing a column with view options like “view=:x:y:z” or “v
 > - When a directview table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.
 > - Combining filters with AND or OR is not supported.
 
-#### New polling scheme polls SNMP tables by row \[ID_30780\]
+#### New polling scheme polls SNMP tables by row \[ID 30780\]
 
 A new polling scheme can now be used to poll SNMP tables.
 
@@ -508,4 +508,4 @@ To use this new polling scheme, add “multipleGet” to the SNMP options of the
 >
 > - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
 > - The multipleGet keyword can be used together with options like Subtable.
-> - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, was expanded to be able to retrieve the delta times per row when polling an SNMP table. For more information, see [SNMP polling: Retrieving polling delta time per row \[ID_29445\]](#snmp-polling-retrieving-polling-delta-time-per-row-id_29445). This functionality will now also work in conjunction with the new multipleGet option.
+> - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, was expanded to be able to retrieve the delta times per row when polling an SNMP table. For more information, see [SNMP polling: Retrieving polling delta time per row \[ID 29445\]](#snmp-polling-retrieving-polling-delta-time-per-row-id-29445). This functionality will now also work in conjunction with the new multipleGet option.

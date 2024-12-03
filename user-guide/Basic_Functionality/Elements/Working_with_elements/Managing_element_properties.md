@@ -42,22 +42,18 @@ To add a custom property to a DataMiner item, which can be an element, but also 
    - **Display this property in the Surveyor**: Select this checkbox if you want the property to be visible next to the DataMiner item in the Surveyor.
 
      > [!NOTE]
-     >
-     > - By default, the property will be displayed next to the item in the Surveyor in the format *\[Property name\]*: *\[Property value\]*. However, it is possible to configure the DMA to display only the property value. See [Customizing how properties are displayed in the Surveyor](xref:PropertyConfiguration_xml#customizing-how-properties-are-displayed-in-the-surveyor).
-     > - From DataMiner 10.0.12 onwards, properties can also be displayed for views in the Surveyor of the Monitoring app.
+     > By default, the property will be displayed next to the item in the Surveyor in the format *\[Property name\]*: *\[Property value\]*. However, it is possible to configure the DMA to display only the property value. See [Customizing how properties are displayed in the Surveyor](xref:PropertyConfiguration_xml#customizing-how-properties-are-displayed-in-the-surveyor).
 
-   - **Update alarms on value changed**: If you want alarms to be updated when the value of the property changes, make sure this option is selected; otherwise make sure this checkbox is cleared.
-
-     > [!NOTE]
-     > This option is available from DataMiner 9.5.12 onwards, if *Make this property available for alarm filtering* is selected. However, note that in some cases a protocol may contain read-only properties. Disabling this option for such properties is only possible from DataMiner 9.5.14 onwards.
+   - **Update alarms on value changed**: If you want alarms to be updated when the value of the property changes, make sure this option is selected; otherwise make sure this checkbox is cleared. This option is only available if *Make this property available for alarm filtering* is selected.
 
    - **No format specified**: If you do not want to restrict the allowed values, select this option.
 
    - **Format (regular expression)**: If you want to restrict the allowed values by means of a regular expression, select this checkbox and enter a regular expression in the text box.
 
-   - **Possible values**: If you want to specify a list of allowed values, select this checkbox and add all allowed values to the list.
+   - **Possible values**: If you want to specify a list of allowed values, select this checkbox and add all allowed values to the list. Optionally, assign a metric value to each value to determine in which order the values will be displayed to the user. The lowest number will be displayed at the top of the dropdown list.
 
 1. In the *Edit* dialog box, click *OK*.
+
 1. In the *Properties* dialog box, click *OK*.
 
 ## Editing custom properties
@@ -81,9 +77,7 @@ To add a custom property to a DataMiner item, which can be an element, but also 
    The same options will be available as when adding a new property.
 
    > [!NOTE]
-   >
-   > - If you change the property name, the value of that property will be lost.
-   > - From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
+   > To change a property name, you will need to delete the property with the old name and create a property with the new name. The value of the property will be lost.
 
 ## Deleting a custom property
 

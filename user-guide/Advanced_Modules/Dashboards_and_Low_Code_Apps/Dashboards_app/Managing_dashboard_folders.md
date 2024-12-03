@@ -10,16 +10,24 @@ uid: Managing_dashboard_folders
 
 1. Either right-click the dashboards list or click the ... button in the top-right corner of the list and select *New folder*.
 
-1. Specify the name of the folder and click *OK*.
+1. Specify the name of the folder and click *Create* or *OK*, depending on your DataMiner version.
 
-> [!NOTE]
->
-> - A dashboard folder name must not start with a space.
-> - The following characters are not allowed in a dashboard folder name:
->
->   / \\ : ; \* ? \< \> \| °
->
-> - If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+   > [!NOTE]
+   >
+   > - A dashboard folder name must not start with a space.
+   > - The following characters are not allowed in a dashboard folder name:
+   >
+   >   / \\ : ; \* ? \< \> \| °
+   >
+   > - If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+
+1. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards <!--RN 40600-->, you can select whether other users should be able to view and edit the folder in the *Security* box.
+
+   ![Security level](~/user-guide/images/Security_Level_Folder.png)<br>*Setting dashboard folder security level in DataMiner 10.4.11*
+
+   > [!NOTE]
+   > - Once the folder has been created, you can further refine which users have which level of access in the dashboard folder options. See [Changing dashboard settings](xref:Configuring_dashboard_security).
+   > - The built-in Administrator account always has full access to all folders.
 
 ## Deleting a folder
 
@@ -80,3 +88,9 @@ uid: Managing_dashboard_folders
 
 > [!NOTE]
 > It is not possible to move a dashboard that is currently being shared. To move such a dashboard, you will need to temporarily stop sharing it and then share it again once it has been moved.
+
+## Configuring security for a folder
+
+From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 40501-->, user permissions can be customized for dashboard folders, allowing you to restrict access and prevent unauthorized modifications.
+
+For more information, see [Configuring security for a dashboard](xref:Configuring_dashboard_security).

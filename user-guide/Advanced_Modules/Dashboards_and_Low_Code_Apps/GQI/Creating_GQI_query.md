@@ -4,7 +4,7 @@ uid: Creating_GQI_query
 
 # Creating a GQI query
 
-From DataMiner 10.0.13 onwards, a special type of data feed is available, using the Generic Query Interface. This “Queries” data item allows you to construct a query in order to tap into the wealth of data available in your DataMiner System.
+The "Queries" data item allows you to construct a query in order to tap into the wealth of data available in your DataMiner System using the Generic Query Interface.
 
 > [!TIP]
 > See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/video/building-queries-with-dataminer-generic-query-interface-gqi/) ![Video](~/user-guide/images/video_Duo.png)
@@ -48,8 +48,12 @@ Please note the following regarding query data input:
 
 - From DataMiner 10.1.0/10.1.3 onwards, dynamic units will automatically be used when applicable for the retrieved data if this is enabled in the dashboard settings. This means that parameter units will change dynamically based on their value and protocol definition. You can override the behavior configured for the dashboard in the settings for the component.
 
-- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query feed, any view, service, or element linked to that row is also exposed as a feed. In practice, this means that a feed will be available in the *feeds* section of the data pane that will change based on the selection in the table.
+- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the data pane (depending on your DataMiner version) that will change based on the selection in the table.
 
-- From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range feed by selecting the *From feed* checkbox.
+  ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data tab in DataMiner 10.4.12*
+
+- From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range component by selecting the *From data* checkbox. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*From feed*".
 
 - From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37505-->, the culture used in your GQI query matches the client culture of the web app. Prior to DataMiner 10.3.0 [CU9]/10.3.12, the invariant culture is used.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40370-->, a maximum of 30 GQI queries can be added to a dashboard, and a maximum of 200 GQI queries can be added to a low-code app. Once this limit has been reached, no additional GQI queries can be added, imported, or duplicated until one or multiple queries have been removed.

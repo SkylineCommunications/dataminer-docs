@@ -1,10 +1,11 @@
 ---
 uid: I-DOCSIS_passives_integration
+keywords: I-DOCSIS passives integration
 ---
 
 # Passives integration
 
-The EPM I-DOCSIS solution supports the integration with passive devices. This is equipment deployed in the field that connects the headend (where the CMTS/CCAP devices are located) with the subscribers. Currently, the following passive devices are supported:
+The EPM Integrated DOCSIS solution supports the integration with passive devices. This is equipment deployed in the field that connects the headend (where the CMTS/CCAP devices are located) with the subscribers. Currently, the following passive devices are supported:
 
 - Fiber nodes
 - Amplifiers
@@ -47,7 +48,7 @@ From the above diagram, the following can be inferred:
 - The third column available for each entity indicates if the attribute is a primary key (PK) or a foreign key (FK).
 
 > [!NOTE]
-> Not all the attributes supported by the EPM I-DOCSIS solution are listed in the diagram. The mandatory attributes and one optional attribute *Name* have been included for clarity.
+> Not all the attributes supported by the EPM Integrated DOCSIS solution are listed in the diagram. The mandatory attributes and one optional attribute *Name* have been included for clarity.
 
 Below, you can find an example of the information expected per entity (in this case, per passive device):
 

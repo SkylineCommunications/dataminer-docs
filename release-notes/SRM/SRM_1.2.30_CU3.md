@@ -5,11 +5,11 @@ uid: SRM_1.2.30_CU3
 # SRM 1.2.30 CU3
 
 > [!NOTE]
-> This version requires that **DataMiner 10.3.2 or higher** is installed. It is not compatible with the DataMiner Main Release track.
+> This version requires that **DataMiner 10.3.2 or higher** is installed. The DataMiner Main Release track is not supported.
 
 ## Enhancements
 
-#### New BookingManager.ApplyServiceState overload methods that throw LSO script exception [ID_35929]
+#### New BookingManager.ApplyServiceState overload methods that throw LSO script exception [ID 35929]
 
 The following *BookingManager.ApplyServiceState* overload methods have been added, which will throw the exception thrown by the LSO script:
 
@@ -22,7 +22,7 @@ For this to work, the LSO script needs to run the method `AutomationScript.Handl
 
 ## Fixes
 
-#### Auto Select Resource property not taken into account during silent booking creation [ID_35998]
+#### Auto Select Resource property not taken into account during silent booking creation [ID 35998]
 
 When a booking was created silently, it could occur that the *Auto Select Resource* node property was not taken into account, so that resources were automatically selected even if this property was set to False.
 

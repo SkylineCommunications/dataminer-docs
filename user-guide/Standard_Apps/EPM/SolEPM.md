@@ -10,9 +10,9 @@ At present, the following different versions of the solution are available:
 
 - [DataMiner EPM D-DOCSIS](xref:EPM_D-DOCSIS)
 
-- [DataMiner EPM GPON](xref:EPM_GPON)
+- [DataMiner EPM xPON](xref:EPM_xPON)
 
-- [DataMiner EPM I-DOCSIS](xref:EPM_I-DOCSIS)
+- [DataMiner EPM Integrated DOCSIS](xref:EPM_I-DOCSIS)
 
 - [DataMiner EPM VSAT](xref:EPM_VSAT)
 

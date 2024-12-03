@@ -113,14 +113,12 @@ In order to define properties for all resources in a pool, and optionally limit 
 
    - *Concurrency*: The maximum number of times the resource can be reserved at the same time.
 
-   - *Capacity* and the corresponding *Capacity units* (up to DataMiner 9.6.6): Limits the number of bookings possible for a resource.
+   - *Capacity*: Allows you to select and configure a profile parameter defining the capacity of the resource.
 
-   - *Capacity* (available from DataMiner 9.6.7 onwards): Allows you to select and configure a profile parameter defining the capacity of the resource.
-
-   - *Capability* (available from DataMiner 9.6.7 onwards): Allows you to select and configure a profile parameter defining the capability of the resource.
+   - *Capability*: Allows you to select and configure a profile parameter defining the capability of the resource.
 
      > [!NOTE]
-     > To support time-dependent capabilities that are filled in by a script when necessary, from DataMiner 10.0.6 onwards, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
+     > To support time-dependent capabilities that are filled in by a script when necessary, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
 
 1. If any resource property definitions have been defined, fill in the values required for the additional properties.
 

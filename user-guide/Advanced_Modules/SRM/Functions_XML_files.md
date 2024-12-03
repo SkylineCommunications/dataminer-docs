@@ -9,11 +9,11 @@ In this section:
 > [!TIP]
 > See also: [Implementing virtual functions](xref:implementing_function_srm)
 
-### About functions files
+## About functions files
 
 Functions are defined in DataMiner by means of XML files linked to protocols. These files are located within the *Functions* subfolder of each relevant protocol folder in *C:\\Skyline DataMiner\\Protocols*.
 
-Based on these functions XML files, “virtual function” elements can be created for elements that use the matching protocol. Such virtual function elements, or “virtual function resources”, are created by the Service & Resource Management module when the functions are in use. It is not possible to manually delete or edit these elements, change their state (e.g. pause or stop them), mask these elements, assign alarm or trend templates to them or use them in element simulations. Overall, they act much like DVE child elements, except that they are controlled by the Service & Resource Management module instead of by a DVE parent element.
+Based on these functions XML files, "virtual function" elements can be created for elements that use the matching protocol. Such virtual function elements, or “virtual function resources”, are created by the Service & Resource Management module when the functions are in use. It is not possible to manually delete or edit these elements, change their state (e.g. pause or stop them), mask these elements, assign alarm or trend templates to them or use them in element simulations. Overall, they act much like DVE child elements, except that they are controlled by the Service & Resource Management module instead of by a DVE parent element.
 
 In the Protocols & Templates module, virtual function definitions are indicated in the same way as DVE child protocols, except with a different icon. This can be a default icon or a custom icon defined in the functions XML file. The same icon will also be used to display the virtual function elements in the Surveyor.
 
@@ -23,7 +23,7 @@ In the Protocols & Templates module, virtual function definitions are indicated 
 > - When a functions XML file is uploaded to a protocol, the system will check the validity of the XML file structure. An information event will indicate whether the upload succeeded or failed, or if there is a duplicate file name.
 > - In addition to functions XML files, the system can also contain virtual function protocols that are automatically generated based on virtual function definitions. These are listed in the *Virtual functions* section at the bottom of the first column of the Protocols & Templates module.
 
-### Functions XML structure
+## Functions XML structure
 
 A functions XML file has the following basic file structure:
 
@@ -60,16 +60,48 @@ A functions XML file has the following basic file structure:
 
 The file includes the following tags:
 
-| Tag | Description |
-|--|--|
-| Protocol.Name | Indicates the name of the protocol that the functions file depends on. This tag must be specified in order to make it possible to upload the file via the Protocols & Templates module. |
-| Version | Contains the version number of the functions file. |
-| Function | Defines a function for the protocol. This tag can have the following attributes:<br> -  **id**: The unique GUID of the function.<br> -  **name**: The name of the protocol function (e.g. encoder, decoder). The name of VFs created with this element will consist of the main protocol name followed by this name: “mainProtocolName.Name”.<br> -  **maxInstances**: Determines the maximum number of instances of this function that can be active at the same time.<br> -  **profile** (optional): The GUID of the profile corresponding to the function. |
-| Function.Parameters  | Contains a *Parameter* subtag for each parameter of the function. These are the parameters that will be exported to the function from the main protocol.<br> The *Parameter* subtags have a mandatory **id** attribute, which indicates the parameter ID. |
-| Function.EntryPoints | Links to a table in the main protocol to which the function is linked. If resources are made based on the function, they are linked to the rows of this table and its child tables.<br> This tag can have the following attributes:<br> -  **pid**: Links to a table parameter that contains the available entry points.<br> -  **type**: Reserved for future use. |
-| Function.ExportRules | This tag functions similarly to the *ExportRules* tag for a DVE element. It can have the following attributes:<br> -  **regex**: Allows you to specify regular expression to find particular tag values.<br> -  **tag**: Indicates the XML tag the rule should be applied to.<br> -  **attribute**: Specifies the attribute of the tag specified in the “tag” attribute to which this rule should be applied.<br> -  **value**: Indicates the value that should be set in the XML tag.<br> -  **whereTag**, **whereAttribute**, **whereValue**: Allow you to specify a condition determining when the export rule will be applied. <br> Note that *whereAttribute* is only available from DataMiner 9.5.10 onwards. From that version of DataMiner onwards, you can use the *ExportRules* tag to overrule the positions of exported parameters. |
-| Function.Interfaces  | Contains an *Interface* subtag for each interface available on the function.<br> The *Interface* subtags can have the following attributes:<br> -  **id** (mandatory): The unique GUID of the interface.<br> -  **name** (mandatory): The name of the interface.<br> -  **type** (mandatory): The interface type, which can be *in*, *out* or *inout*.<br> -  **parameterGroupLink** (optional): Links to a parameter group in the protocol to which the function is linked.<br> -  **profile** (optional): The GUID of the profile corresponding to the interface.<br> -  **broadcast** (optional): Available from DataMiner 9.5.7 onwards. When set to “true”, this attribute indicates that there is no actual DCF connection, but the interface acts as a broadcaster to one or more receiving interfaces. |
-| Function.Graphical   | Contains a CDATA tag with the configuration of the function’s icon. Prior to DataMiner 10.0.5, only XAML format is supported for the icons. From DataMiner 10.0.5, SVG icons are also supported. |
+- **Protocol.Name**: Indicates the name of the protocol that the functions file depends on. This tag must be specified in order to make it possible to upload the file via the Protocols & Templates module.
+
+- **Version**: Contains the version number of the functions file.
+
+- **Function**: Defines a function for the protocol. This tag can have the following attributes:
+
+  - **id**: The unique GUID of the function.
+  - **name**: The name of the protocol function (e.g. encoder, decoder). The name of VFs created with this element will consist of the main protocol name followed by this name: "mainProtocolName.Name".
+  - **maxInstances**: Determines the maximum number of instances of this function that can be active at the same time.
+  - **profile** (optional): The GUID of the profile corresponding to the function.
+
+- **Function.Parameters**: Contains a *Parameter* subtag for each parameter of the function. These are the parameters that will be exported to the function from the main protocol.
+
+  The *Parameter* subtags have a mandatory **id** attribute, which indicates the parameter ID.
+
+- **Function.EntryPoints**: Links to a table in the main protocol to which the function is linked. If resources are made based on the function, they are linked to the rows of this table and its child tables.
+
+  This tag can have the following attributes:
+
+  - **pid**: Links to a table parameter that contains the available entry points.
+  - **type**: Reserved for future use.
+
+- **Function.ExportRules**: This tag functions similarly to the *ExportRules* tag for a DVE element. It can have the following attributes:
+
+  - **regex**: Allows you to specify regular expression to find particular tag values.
+  - **tag**: Indicates the XML tag the rule should be applied to.
+  - **attribute**: Specifies the attribute of the tag specified in the "tag" attribute to which this rule should be applied.
+  - **value**: Indicates the value that should be set in the XML tag.
+  - **whereTag**, **whereAttribute**, **whereValue**: Allow you to specify a condition determining when the export rule will be applied.
+
+- **Function.Interfaces**: Contains an *Interface* subtag for each interface available on the function.
+
+  The *Interface* subtags can have the following attributes:
+
+  - **id** (mandatory): The unique GUID of the interface.
+  - **name** (mandatory): The name of the interface.
+  - **type** (mandatory): The interface type, which can be *in*, *out* or *inout*.
+  - **parameterGroupLink** (optional): Links to a parameter group in the protocol to which the function is linked.
+  - **profile** (optional): The GUID of the profile corresponding to the interface.
+  - **broadcast** (optional): When set to "true", this attribute indicates that there is no actual DCF connection, but the interface acts as a broadcaster to one or more receiving interfaces.
+
+- **Function.Graphical**: Contains a CDATA tag with the configuration of the function’s icon. Both XAML and SVG format are supported.
 
 The following example illustrates how a XAML or SVG icon can be configured:
 
@@ -124,16 +156,16 @@ The following example illustrates how a XAML or SVG icon can be configured:
 </Functions>
 ```
 
-### Uploading a functions XML file in DataMiner Cube
+## Uploading a functions XML file in DataMiner Cube
 
-From DataMiner 9.5.4 onwards, it is possible to upload functions XML files in the Protocols & Templates module.
+To upload a functions XML files, you can use the Protocols & Templates module.
 
 To do so, follow the same procedure as for a *Protocol.xml* file. See [Uploading a Protocol.xml file](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#uploading-a-protocolxml-file).
 
 > [!NOTE]
 > Uploading a functions XML file is only possible if the server has the SRM license, the name of the file is unique, and the file has the Protocol tag configured (see [Functions XML structure](#functions-xml-structure)).
 
-### Setting a functions file active
+## Setting a functions file active
 
 If there are several functions XML files for one protocol, you can select to set a different functions XML file as the active file. To do so, in the Protocols & Templates module, right-click the file in the *Functions files* list and select *Set as active functions file*.
 
@@ -148,11 +180,9 @@ If there are several functions XML files for one protocol, you can select to set
 > - changing entry points of a virtual function definition
 > - removing an interface of a virtual function definition
 
-### Deleting a functions file
+## Deleting a functions file
 
-To delete a functions file (from DataMiner 9.5.13 onwards):
-
-- In the Protocols & Templates module, right-click the functions file you want to remove and select *Delete*.
+To delete a functions file, in the Protocols & Templates module, right-click the functions file you want to remove and select *Delete*.
 
 > [!NOTE]
-> Only inactive functions files can be removed. In addition, in case the functions file is in use in the Service & Resource Management configuration, removing the file will only be possible with the [Modules > Services > Definitions > Force Updates](xref:DataMiner_user_permissions#modules--services--definitions--force-updates) (or prior to DataMiner 9.6.5 [Modules > Service Manager > Force updates](xref:DataMiner_user_permissions#modules--service-manager--definitions--force-updates)) user permission.
+> Only inactive functions files can be removed. In addition, in case the functions file is in use in the Service & Resource Management configuration, removing the file will only be possible with the [Modules > Services > Definitions > Force Updates](xref:DataMiner_user_permissions#modules--services--definitions--force-updates) user permission.

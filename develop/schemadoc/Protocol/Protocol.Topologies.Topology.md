@@ -6,6 +6,9 @@ uid: Protocol.Topologies.Topology
 
 Defines a topology.
 
+> [!TIP]
+> See also: [EPM topology configuration](xref:EPMManagerTopology)
+
 ## Parent
 
 [Topologies](xref:Protocol.Topologies)
@@ -20,8 +23,8 @@ Defines a topology.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Cell](xref:Protocol.Topologies.Topology.Cell)|[0, *]|Specifies a cell within an EPM (formerly known as CPE) topology.|
+|&nbsp;&nbsp;[Cell](xref:Protocol.Topologies.Topology.Cell)|[0, *]|Specifies a cell within an EPM topology.|
 
 ## Remarks
 
-Contains several Cell tags, each representing a cell in the diagram displayed in the EPM (formerly known as CPE) element.
+Contains several Cell tags, each representing a cell in the diagram displayed in the EPM element.

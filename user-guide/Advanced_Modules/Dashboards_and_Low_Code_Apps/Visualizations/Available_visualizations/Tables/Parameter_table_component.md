@@ -6,11 +6,13 @@ uid: DashboardParameterTable
 
 This component displays a data table of an element.
 
+![Parameter table](~/user-guide/images/Parameter_Table.png)<br>*Parameter table component in DataMiner 10.4.1*
+
 To configure the component:
 
-1. Apply a table parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply table parameter data. See [Adding data to a component](xref:Adding_data_to_component).
 
-1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *indices* section of the data pane. You can repeat this several times in order to filter on several indices.
+1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *indices* section of the data pane. You can repeat this several times in order to filter on several indices.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 

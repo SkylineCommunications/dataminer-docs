@@ -1,5 +1,6 @@
 ---
 uid: Investigating_Dataminerservices_Feature_Issues
+description: Check the cloud connection, check if all DxMs are OK, check if requirements are met, and validate the internal network configuration.
 ---
 
 # Investigating issues with dataminer.services features
@@ -27,6 +28,9 @@ You can validate this as follows:
 1. Open the Admin app and [make sure the most recent versions of the DxMs are installed](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
    This way, you avoid dealing with issues that have already been fixed.
+
+> [!NOTE]
+> If any of the DxMs are missing that are required for the upgrade from the Admin app to work, download and install the [latest Cloud Pack](https://aka.dataminer.services/cloud-pack-download) to install these manually.
 
 ## Make sure the requirements to access the DMS remotely are met
 

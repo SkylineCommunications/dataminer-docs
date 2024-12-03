@@ -20,7 +20,7 @@ The table below lists the properties of the `DomInstance` object. It also indica
 | ID | DomInstanceId | Yes | The ID of the `DomInstance`. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the `DomDefinition` that this instance is linked to. |
 | Sections | List\<Section> | Yes | The `Sections` that contain the actual values for the `FieldDescriptors` wrapped in `FieldValues` |
-| Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the `DomInstanceNameDefinition` in the `ModuleSettings`. |
+| Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) in the `ModuleSettings` or `DomDefinition`. |
 | StatusId | string | Yes | The ID of the current status of this `DomInstance` (if statuses are used). |
 
 ## Requirements
@@ -46,6 +46,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DomInstanceDoesNotContainRequiredModuleSections | The `DomInstance` does not contain exactly one `Section` for each required `SectionDefinition` defined for this module. Available properties: *DomInstance*, *MissingSections*, *InvalidSections* |
 | MultipleSectionsNotAllowedForSectionDefinition | The `DomInstance` contains more than one `Section` for a `SectionDefinition` that does not allow multiple `Sections` according to either the `SectionDefinitionLink` or the `DomStatusSectionDefinitionLink`. Available properties: *InvalidSections* |
 | ValueForSoftDeletedFieldNotAllowed | Attempted to create or update a `DomInstance` with one or multiple field values that are part of a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `StatusSectionDefinitionLink`, or the `DomInstance` has a `GenericEnumFieldDescriptor` with a soft-deleted entry as value. Available properties: *DomInstanceId*, *AssociatedFields*. |
+| ValueTooLarge | Attempted to create or update a `DomInstance` with a string value that is larger than 32 766 UTF-8 bytes. The *AssociatedFields* collection contains the IDs of the `SectionDefinition`, `Section`, and `FieldDescriptor` that point to the incorrect `FieldValue`, in addition to the *ActualSize* property that contains the actual UTF-8 size of the received string. This error message is returned from DataMiner 10.4.12/10.5.0 onwards.<!-- RN 39496 --> |
 
 The errors below are solely related to the status system. For each error, the *DomInstanceId*, *DomInstanceName*, and *StatusId* properties will be filled in alongside any others that are mentioned in the description.
 

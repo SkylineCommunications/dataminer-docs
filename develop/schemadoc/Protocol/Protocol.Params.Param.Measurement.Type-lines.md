@@ -19,7 +19,7 @@ unsignedInt
 Only to be specified in case of measurement type String.
 
 > [!NOTE]
-> From DataMiner 9.0.0 (RN 10826) onwards, read parameters with multiple lines can be displayed in the details pane of an EPM (formerly known as CPE) element. This attribute can be used to determine how many lines are displayed. See [details](xref:Protocol.Chains.Chain.Field-options#details) "details".
+> When read parameters with multiple lines are displayed in the details pane of an EPM element, this attribute can be used to determine how many lines are displayed. See [details](xref:Protocol.Chains.Chain.Field-options#details).<!-- RN 10826 -->
 
 ## Examples
 

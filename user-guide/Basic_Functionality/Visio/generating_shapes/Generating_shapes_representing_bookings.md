@@ -4,9 +4,7 @@ uid: Generating_shapes_representing_bookings
 
 # Generating shapes representing bookings
 
-From DataMiner 10.0.9 onwards, you can specify that a shape should be created automatically for each booking in a particular set of bookings.
-
-To do so:
+To specify that a shape should be created automatically for each booking in a particular set of bookings:
 
 1. Create the shape representing a booking, and add the necessary child-level shape data fields to it. See [Child-level shape data](#child-level-shape-data).
 

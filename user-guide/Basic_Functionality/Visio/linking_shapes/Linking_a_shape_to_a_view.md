@@ -46,7 +46,7 @@ View ID|tab page index
 
 ## Customizing the displayed view alarm level
 
-From DataMiner 10.0.5 onwards, you can specify which of the view's alarm levels should be reflected by the shape's background color: the alarm level of the monitored aggregation rules on the view, the alarm level of the child objects of the view, or a combination of both.
+You can specify which of the view's alarm levels should be reflected by the shape's background color: the alarm level of the monitored aggregation rules on the view, the alarm level of the child objects of the view, or a combination of both.
 
 To do so, add a shape data field of type **AlarmLevel**, and set it to one of the values specified below:
 

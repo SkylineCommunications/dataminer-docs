@@ -1,8 +1,9 @@
 ---
 uid: I-DOCSIS_GQI_Integration
+keywords: I-DOCSIS GQI integration
 ---
 
-# I-DOCSIS GQI integration
+# Integrated DOCSIS GQI integration
 
 Because of the aggregative nature of EPM, many of the tables in the front-end element have no data of their own. To query the information using GQI, you need to query the actual location where the data resides. Below is a table showing where the information of the different data levels resides.
 

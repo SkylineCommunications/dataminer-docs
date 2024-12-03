@@ -47,7 +47,7 @@ To define a date time picker, create a write parameter of type "double" and set 
 </Param>
 ```
 
-![alt text](../../images/uidatetimepicker.png "DataMiner Cube Date Time Picker UI Component")
+![alt text](~/develop/images/uidatetimepicker.png "DataMiner Cube Date Time Picker UI Component")
 
 > [!NOTE]
 >

@@ -4,6 +4,8 @@ uid: Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop
 
 # InfiniteLoop element
 
+<!-- RN 20419 -->
+
 Specifies the response handling in case an infinite loop was detected when polling a table.
 
 ## Content type
@@ -20,16 +22,10 @@ Specifies the response handling in case an infinite loop was detected when polli
 
 ## Remarks
 
-Prior to DataMiner 9.6.3, when SLSNMPManager detected an infinite loop when polling a table, it always considered the response valid.
-
-From DataMiner 9.6.3 onwards, in case of an infinite loop, the response will be rejected by default. To override this default behavior, InfiniteLoop can be configured.
-
-If you want SLSNMPManager to accept a response in case of an infinite loop, set InfiniteLoop to "Success". This tag can only be used for table parameters.
+When SLSNMPManager detects an infinite loop, the response will be rejected by default. To override this default behavior, *InfiniteLoop* can be configured. If you want SLSNMPManager to accept a response in case of an infinite loop, set *InfiniteLoop* to "Success". This tag can only be used for table parameters.
 
 > [!NOTE]
 > Regardless of the InvalidResponseHandling setting, when an infinite loop is detected, a message will be logged in the element's log file (type ERROR, level 0).
-
-*Feature introduced in DataMiner 9.6.3 (RN 20419).*
 
 ## Examples
 
