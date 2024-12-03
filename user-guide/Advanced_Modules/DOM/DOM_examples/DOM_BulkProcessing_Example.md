@@ -80,7 +80,7 @@ var updateSucceeded = domHelper.DomInstances.TryCreateOrUpdate(domInstances, out
 if (!updateSucceeded && updateResult != null)
 {
   // Log the number of DomInstances that was not updated.
-  // Also log the `TraceData` for all failing `DomInstances`. The `TraceData` contains all errors and warnings.
+  // Also log the TraceData for all failing DomInstances. The TraceData contains all errors and warnings.
   Log($"Could not perform the update for {updateResult.UnsuccessfulIds.Count} items: {updateResult.GetTraceData()}");
   return;
 }
