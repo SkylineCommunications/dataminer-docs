@@ -149,6 +149,25 @@ Visual Overview in web apps has limited functionality:
 
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
+On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in *C:\Skyline DataMiner\Files\SLHelper.exe.config*.
+
+For example:
+
+```xml
+<configuration>
+    ...
+    <appSettings>
+        ...
+        <add key="helper:load-alarms" value="false"/>
+        ...
+      </appSettings>
+    ...
+</configuration>
+```
+
+> [!NOTE]
+> When `helper:load-alarms` is set to "false", no alarms will be loaded, even when a visual overview needs alarm information to render correctly.
+
 ### Maps
 
 Check the `C:\Skyline DataMiner\Maps\ServerConfig.xml` file:
