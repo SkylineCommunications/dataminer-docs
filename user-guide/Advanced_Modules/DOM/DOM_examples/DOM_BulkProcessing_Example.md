@@ -61,7 +61,7 @@ try
   // Log what items were successfully got updated.
   Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
 }
-cath(Exception e)
+catch(Exception e)
 {
   // Log that the operation failed and use info included in the exception for a generic message of what failed.
   Log($"An unexpected issue occurred while updating: {e}");
