@@ -28,6 +28,10 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
     ///    
     /// Note: to <see cref="ToAgent">ToAgent</see> call does the actual swarming request
     /// </summary>
+    /// <remarks>
+    /// While instances of <see cref="SwarmingHelper"/> can be re-used, they are not
+    /// thread-safe.
+    /// </remarks>
     public class SwarmingHelper : ISwarmingHelper, ITargetlessSwarmingHelper
     {
         /// <summary>
