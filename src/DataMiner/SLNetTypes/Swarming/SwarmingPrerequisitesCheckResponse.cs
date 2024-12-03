@@ -10,23 +10,23 @@ namespace Skyline.DataMiner.Net.Swarming
     public class SwarmingPrerequisitesCheckResponse : ResponseMessage
     {
         /// <summary>
-        /// <code>true</code> only if the cluster config is ready for enabling Swarming.
+        /// <c>true</c> only if the cluster config is ready for enabling Swarming.
         /// An example of an incompatible configuration is a Failover setup.
         /// </summary>
         public bool SupportedDMS { get; set; }
 
         /// <summary>
-        /// <code>true</code> only if the DataMiner System uses a clustered database
+        /// <c>true</c> only if the DataMiner System uses a clustered database
         /// </summary>
         public bool SupportedDatabase { get; set; }
 
         /// <summary>
-        /// <code>true</code> only if legacy dashboards are truly disabled
+        /// <c>true</c> only if legacy dashboards are truly disabled
         /// </summary>
         public bool LegacyReportsAndDashboardsDisabled { get; set; }
 
         /// <summary>
-        /// <code>true</code> only if no central database has been configured.
+        /// <c>true</c> only if no central database has been configured.
         /// </summary>
         public bool CentralDatabaseNotConfigured { get; set; }
 
@@ -43,7 +43,7 @@ namespace Skyline.DataMiner.Net.Swarming
         public bool NoObsoleteAlarmIdUsageInProtocolQActions { get; set; }
 
         /// <summary>
-        /// <code>true</code> if enhanced services on the system are compatible with Swarming.
+        /// <c>true</c> if enhanced services on the system are compatible with Swarming.
         /// </summary>
         public bool NoIncompatibleEnhancedServicesOnDMS { get; set; }
 

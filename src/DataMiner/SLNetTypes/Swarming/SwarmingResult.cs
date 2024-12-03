@@ -4,13 +4,13 @@ using System.Text;
 namespace Skyline.DataMiner.Net.Swarming
 {
     /// <summary>
-    /// Result of a swarming operation. 
+    /// Result of a swarming operation. See <see cref="Helper.SwarmingHelper"/>
     /// </summary>
     [Serializable]
     public class SwarmingResult
     {
         /// <summary>
-        /// whether the swarming was successful or stopped somewhere for a reason
+        /// Whether the swarming was successful or stopped somewhere for a reason
         /// see <see cref="Message"/> for more the reason.
         /// </summary>
         public bool Success { get; set; }
