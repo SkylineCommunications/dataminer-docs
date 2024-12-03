@@ -58,7 +58,7 @@ try
   // Save them to the DB.
   var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
 
-  // Log what items were successfully got updated.
+  // Log what items were successfully updated.
   Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
 }
 catch(Exception e)
