@@ -68,7 +68,7 @@ catch(Exception e)
 }
 ```
 
-To more easily get the details for which items the operation failed or succeeded, `TryCreateOrUpdate` or `TryDelete` can be used. In this example using `TryCreateOrUpdate`, the number of `DomInstances` that fails is logged, together with the issues that occurred. Next, the number of `DomInstances` that succeed gets logged.
+To more easily get the details for which items the operation failed or succeeded, `TryCreateOrUpdate` or `TryDelete` can be used. In this example using `TryCreateOrUpdate`, the number of `DomInstances` that fail is logged, together with the issues that occurred. Next, the number of `DomInstances` that succeed gets logged.
 
 ```csharp
 // Update the DomInstances.
