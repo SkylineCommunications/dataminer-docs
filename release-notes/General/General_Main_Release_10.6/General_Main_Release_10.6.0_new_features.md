@@ -51,6 +51,9 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 };
 ```
 
+> [!NOTE]
+> These are SLNet messages that are subject to change without notice.
+
 #### SLNet 'GetInfo' messages for the PropertyConfiguration' and 'ViewInfo' types now support retrieving information for a specific item [ID 41169]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -67,6 +70,9 @@ If another value is specified, then all property configurations will be returned
 
 In the `ExtraData` property you can now specify ";viewId=\<ID\>" or ";viewId=\<ID\>;", where \<ID\> is the ID of the view for which you want to retrieve more information.
 
+> [!NOTE]
+> These are SLNet messages that are subject to change without notice.
+
 #### New SLNet call GetProtocolQActionsStateRequestMessage to retrieve QAction compilation warnings and errors [ID 41218]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -74,6 +80,9 @@ In the `ExtraData` property you can now specify ";viewId=\<ID\>" or ";viewId=\<I
 A new SLNet call `GetProtocolQActionsStateRequestMessage` can now be used to retrieve the compilation warnings and errors of a given protocol and version. The response, `GetProtocolQActionsStateResponseMessage`, will then contains all faulty QActions and their respective warnings and errors.
 
 In future versions, this call will be used to verify whether DataMiner Swarming can be enabled on a DataMiner System.
+
+> [!NOTE]
+> This SLNet message is subject to change without notice.
 
 #### Alarms - Proactive cap detection: User feedback [ID 41371]
 
