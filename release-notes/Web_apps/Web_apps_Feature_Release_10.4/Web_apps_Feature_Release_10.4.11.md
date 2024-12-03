@@ -283,7 +283,7 @@ When you imported a dashboard into a dashboard subfolder, the Dashboards app wou
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a large amount of feed data was requested at the same time (e.g. when you clicked CTRL+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
+When a large amount of feed data was requested at the same time (e.g. when you clicked Ctrl+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
 
 #### Low-Code Apps - GQI: Problem with persistent client subscriptions [ID 40852]
 

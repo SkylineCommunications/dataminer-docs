@@ -9,6 +9,8 @@ uid: Separate_Cassandra_setup_without_Elasticsearch
 
 With this architecture, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No indexing database is used, which means that certain DataMiner features will not be available.
 
+In DataMiner Systems that use this architecture, several DataMiner features are not available. This includes the [Swarming](xref:Swarming) feature as well as all features that require an [indexing database](xref:Indexing_Database).
+
 > [!TIP]
 > For information on how to migrate a legacy setup with MySQL/MSSQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 

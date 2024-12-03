@@ -11,6 +11,8 @@ items:
     items:
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 6.x
       topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x
+    - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 5.x
+      topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_5.x
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 4.x
       topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x
     - name: Skyline DataMiner DataSources OpenConfig Range 2.0

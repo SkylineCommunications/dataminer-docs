@@ -105,6 +105,12 @@ From now on, dynamic units can be used by default in Data Display in DataMiner C
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
 
+#### Security enhancements [ID 41542]
+
+<!-- 41542: MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Memory leaks when an element that was used in an alarm level link configuration was restarted [ID 40997]
@@ -152,6 +158,14 @@ After having upgraded to a DataMiner version that contains this fix, you can do 
 - Manually trigger the "Skyline DataMiner LDAP Resync" task in Windows Task Scheduler.
 
 All users should then be able to log in again.
+
+#### Elements with WebSocket connections: Excessive number of information events would be generated when specifying an incorrect IP address [ID 41167]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
+
+When, while adding an element, you specified an incorrect IP address in the WebSocket connection details, an excessive number of information events would be generated, each mentioning that the parameter defined in `<NotifyConnectionPIDs>` was set to "Closed".
+
+From now on, SLPort will keep track of the parameter states that get forwarded to SLProtocol. This will make sure that only a change from "Open" to "Closed" or from "Closed" to "Open" will cause (a) a parameter state to get forwarded to SLProtocol and (b) an information event of type "set parameter" to be generated.
 
 #### STaaS: Excessive number of duplicate entries added to the SLErrors.txt log file in case of connection problems [ID 41192]
 
@@ -207,3 +221,9 @@ Up to now, that list could incorrectly contain multiple entries for the same fil
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
+
+#### Failover: Offline Agent would not be able to synchronize with the online Agent [ID 41527]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+In a Failover setup, in some rare cases, the offline Agent would not be able to synchronize with the online Agent, and would throw an error with reason `Don't know version for remote agent [IP]`.

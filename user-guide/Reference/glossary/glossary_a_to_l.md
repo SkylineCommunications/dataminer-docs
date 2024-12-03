@@ -289,6 +289,7 @@ uid: glossary_a_to_l
 |------|-------------|
 | LAN | Local Area Network. Network connecting devices within a limited area. |
 | Latch level | The previous highest alarm severity level of a DataMiner object.<br>See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings). |
+| LCA | [Low-Code Apps](xref:Application_framework). DataMiner module that allows you to create custom applications to interact with data from a DataMiner System or an external source. |
 | LDAP | Lightweight Directory Access Protocol. Cross-platform protocol used for directory services authentication. |
 | Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
 | LINQ | Language Integrated Query.<br>See [Language Integrated Query](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |

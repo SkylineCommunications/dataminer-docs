@@ -9,6 +9,30 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
+
+### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
+
+### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
+
+From now on, you can create an API key on organization level with the "Retrieve usage data" permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
+
+The swagger documentation pages about the available Usage API calls are available in the following locations:
+
+- [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
+  - Get the features for which usage data might be available. Example features: `Automation`, `Storage as a Service`.
+  - Get the metrics of a feature. Example metrics: `Script Runs` for the Automation feature, `Operations` for the Storage as a Service feature.
+- [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
+  - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties or based on DataMiner System. These "splitters" can for example be `Script Name` or `Succeeded` for Automation, and `Category` or `SubCategory` for Storage as a Service.
+
+### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
+
+From now on, the emails with the download link for usage exports or audit exports will use the same template as other emails sent from dataminer.services.
+
 ### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
 
 When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
@@ -16,6 +40,10 @@ When you registered a Catalog item using a manifest that contained invalid synta
 ### 25 November 2024 - Fix - Catalog API - Registration with existing ID from other organization returned internal server error [ID 41515]
 
 When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
+
+### 25 November 2024 - New feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
+
+It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
 
 ### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
 
@@ -81,24 +109,6 @@ On the Catalog details page, if the publisher is not from your currently selecte
 ### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
-
-### 25 November 2024 - New feature - Catalog API - Service authenticated API [ID 41353]
-
-The *api/service-catalog/v1-0/* route now exposes methods that allow applications to read from the Catalog using a "ServicePrincipal-JWT-Bearer".
-
-This requires permission on the role "catalog.api.read" of the Catalog API.
-
-The following methods are now available:
-
-- /catalogs/search
-- /catalogs/{CatalogId}
-- /catalogs/{CatalogId}/ranges
-- /catalogs/{CatalogId}/versions
-- /catalogs/{CatalogId}/versions/recommended
-- /catalogs/{CatalogId}/doc
-- /catalogs/categories
-
-You can make up to 5 requests per second, with occasional bursts of up to 20 requests allowed. After you trigger a burst, you will need to wait for the system to "refill" at a rate of 5 requests per second before you can trigger a burst again. Over a full minute, this allows for up to 300 requests.
 
 ### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 

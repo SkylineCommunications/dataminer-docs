@@ -41,9 +41,9 @@ In the Credentials Library in DataMiner Cube (available via *System Center* > *S
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-It is now possible to pan vertically inside a spectrum window by CTRL+clicking and dragging.
+It is now possible to pan vertically inside a spectrum window by Ctrl+clicking and dragging.
 
-When, after pressing the CTRL key and clicking the left mouse button, you start dragging, the following will happen:
+When, after pressing the Ctrl key and clicking the left mouse button, you start dragging, the following will happen:
 
 - The spectrum trace will move up or down while being refreshed at a rate equal to the original rate.
 - The amplitude labels on the Y axis will continuously update to reflect the ongoing change.

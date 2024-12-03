@@ -35,6 +35,15 @@ When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner 
 
 The checks with regard to database compatibility have now been enhanced.
 
+#### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
+
+> [!NOTE]
+> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -64,6 +73,20 @@ From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up 
 From now on, it will no longer be allowed to perform a 10.5.x web-only upgrade on DMAs running a DataMiner version older than 10.4.x.
 
 If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 10.3.x, you will first have to upgrade that DMA to 10.4.0.
+
+#### SLAnalytics: Infinite parameter values will now be considered missing values [ID 41417]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+When a parameter is set to an infinite value, SLAnalytics will now consider this infinite value as a missing value. This will prevent parameter changes of this type from disrupting analytical models.
+
+#### SLLogCollector packages will now include the log files of the ModelHost and Copilot DxMs [ID 41464]
+
+<!-- MR 10.6.0 - FR 10.5.1 -->
+
+From now on, SLLogCollector packages will also include the log files of the *ModelHost* and *Copilot*\* DxMs.
+
+*\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
 
 ### Fixes
 

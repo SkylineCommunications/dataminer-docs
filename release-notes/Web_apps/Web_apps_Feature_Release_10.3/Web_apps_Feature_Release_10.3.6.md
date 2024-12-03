@@ -206,11 +206,11 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
 
-#### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID 36056]
+#### Dashboards app & Low-Code Apps: Clearing a State component by means of Ctrl+Click [ID 36056]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-You can now clear a *State* component by clicking it while holding down the CTRL key.
+You can now clear a *State* component by clicking it while holding down the Ctrl key.
 
 #### Dashboards app & Low-Code Apps: GQI query nodes without options would incorrectly be expanded [ID 36064]
 

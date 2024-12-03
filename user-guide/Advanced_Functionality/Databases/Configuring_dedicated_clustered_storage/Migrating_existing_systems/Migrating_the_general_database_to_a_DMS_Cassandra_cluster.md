@@ -53,7 +53,7 @@ During the migration, each DMA will go through the following stages:
 
 ### [Running a regular migration](#tab/tabid-1)
 
-If your system does not use an indexing database yet or if it already uses a OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
+If your system does not use an indexing database yet or if it already uses an OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
 
 1. If there are Failover pairs in the DataMiner System, make sure the currently active Agent in each pair is the top Agent in the Failover configuration screen.
 
@@ -62,7 +62,7 @@ If your system does not use an indexing database yet or if it already uses a Ope
 
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
-1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
+1. Initialize all the DMAs in the list using the *Initialize all agents* button.
 
    > [!NOTE]
    > If one or more DMAs fail to be initialized, please contact your Skyline Technical Account Manager to resolve this issue, or refer to the [Troubleshooting](#troubleshooting) section below for the solution.
@@ -160,7 +160,7 @@ In case your DataMiner System contains bespoke Elasticsearch data or SRM data, u
 
 1. Navigate to `C:\Skyline DataMiner\Tools\\`, and run *SLCCMigrator.exe*.
 
-1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
+1. Initialize all the DMAs in the list using the *Initialize all agents* button.
 
    > [!NOTE]
    > If one or more DMAs fail to be initialized, contact your Skyline Technical Account Manager to resolve this issue, or refer to the [Troubleshooting](#troubleshooting) section below for the solution.
@@ -245,7 +245,7 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 
   1. In the *Build Message* tab, send a *NatsCustodianResetNatsRequest* (leaving the *IsDistributed* property set to false).
 
-  1. Initialize the Agents again and continue with the migration procedure, as detailed above.
+  1. Initialize the Agents again using the *Initialize* button for these Agents in the migrator tool, and continue with the migration procedure as detailed above.
 
   > [!CAUTION]
   > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.

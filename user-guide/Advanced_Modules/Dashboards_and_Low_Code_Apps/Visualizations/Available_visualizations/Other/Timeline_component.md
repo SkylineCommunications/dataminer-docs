@@ -148,9 +148,17 @@ In read mode, you can manipulate the timeline component to navigate through the 
 
 - Adjusting the displayed time range:
 
-  - To **zoom in** on the timeline component, press CTRL while scrolling up.
+  - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
 
-  - To **zoom out**, press CTRL while scrolling down.
+    - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+
+    - When this setting is disabled: Scroll up or down to zoom in or out. This is the default option.
+
+  - Prior to DataMiner 10.4.0 [CU10]/10.5.1:
+
+    - To **zoom in** on the timeline component, press Ctrl while scrolling up.
+
+    - To **zoom out**, press Ctrl while scrolling down.
 
   > [!NOTE]
   > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.

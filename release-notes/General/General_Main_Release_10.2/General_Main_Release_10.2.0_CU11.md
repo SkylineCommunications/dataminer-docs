@@ -430,8 +430,8 @@ Up to now, the following keyboard shortcuts would not work in the dashboard edit
 
 | Shortcut | Action                          |
 |----------|---------------------------------|
-| CTRL+a   | Select all components.          |
-| DELETE   | Delete the selected components. |
+| Ctrl+A   | Select all components.          |
+| Delete   | Delete the selected components. |
 
 #### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID 35293]
 

@@ -276,6 +276,8 @@ items:
                 topicUid: SLNetClientTest_retrieving_connection_info
               - name: Retrieving DCF debug information
                 topicUid: SLNetClientTest_retrieving_dcf_debug_info
+              - name: Retrieving general information about elements
+                topicUid: SLNetClientTest_retrieving_element_info
               - name: Retrieving information on open GQI sessions
                 topicUid: SLNetClientTest_info_on_open_gqi_sessions
               - name: Tracking DMA communication

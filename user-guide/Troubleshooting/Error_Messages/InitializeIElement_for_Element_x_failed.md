@@ -20,4 +20,4 @@ SLElement was not able to read out the element settings for element "x".
 
 ## Resolution
 
-Check whether the correct settings are specified in the *element.xml* file of element "x".
+Check whether the settings of element "x" are correct.

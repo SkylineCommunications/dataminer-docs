@@ -53,11 +53,11 @@ If the component does not have this option enabled, the value will only be passe
 
 Because of a number of enhancements, from now on, all components that retrieve element/protocol parameters will do so more efficiently.
 
-#### Dashboards app & Low-Code Apps: Several components now support zooming in/out using CTRL+Scroll [ID 40017]
+#### Dashboards app & Low-Code Apps: Several components now support zooming in/out using Ctrl+Scroll [ID 40017]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-From now on, you will be able to zoom in and out using CTRL+Scroll on the following components:
+From now on, you will be able to zoom in and out using Ctrl+Scroll on the following components:
 
 - Line & area chart
 
