@@ -1023,6 +1023,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
+    - name: Skyline.DataMiner.Net.Swarming
+      topicUid: Skyline.DataMiner.Net.Swarming
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
       topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
     - name: Interop.SLDms
