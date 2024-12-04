@@ -232,6 +232,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SNMPv3 elements not loaded correctly after upgrade
+            topicuid: KI_SNMPv3_elements_broken_after_upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules
