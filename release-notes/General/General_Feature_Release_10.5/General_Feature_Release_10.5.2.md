@@ -42,3 +42,9 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In some rare cases, SLDataMiner could stop working when a connector was deleted immediately after an element using that connector had been deleted.
+
+#### DataMiner Maps: Markers that did not match the alarm level filter would become visible for a split second [ID 41555]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
