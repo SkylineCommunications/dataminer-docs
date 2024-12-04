@@ -28,13 +28,13 @@ uid: Web_apps_Feature_Release_10.5.2
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
-#### Video thumbnails will now have their default volume set to 100% [ID 41597]
+#### Video thumbnails will now have a default volume of 100% [ID 41597]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-Video thumbnails will now have their default volume set to 100%.
+Video thumbnails will now have a default volume of 100%.
 
-Up to now, when you clicked the sound icon of a video thumbnail, the video would unmute, but the volume would stay at 0%. From now on, when a video is unmuted, its volume will by default be set to 100%.
+Up to now, when you clicked the sound icon of a video thumbnail, the video would unmute, but the volume would stay at 0%. From now on, when a video is unmuted, its volume will be at 100%.
 
 ### Fixes
 
