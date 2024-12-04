@@ -35,3 +35,14 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In some cases, the boundaries of the vertical timeline sections would not be correct. For example, one-month sections would not start on the first day of the month.
+
+#### Dashboards app: Dashboard lists would incorrectly not be shown on mobile devices [ID 41548]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When you opened the Dashboards app on a mobile device, none of the following dashboard lists would be shown:
+
+- Overview
+- Recent
+- Private
+- Shared
