@@ -237,16 +237,25 @@ var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
 
 #### Call result
 
-Since DataMiner 10.5.2/10.5.0 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Unexpected issue example](xref:DOM_BulkProcessing_Example#unexpected-issue).
+The result of the bulk methods will contain:
 
-As an alternative the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will be false. The `result` output parameter will contain the necessary information:
+- A list of `DomInstances` that were successfully created or updated, when `CreateOrUpdate` is called.
 
-- When `TryCreateOrUpdate` is called, that `result` output parameter will contain a list of `DomInstances` that were successfully created or updated. The trace data is available per `DomInstance` ID.
-- When `TryDelete` is called with a list of `DomInstances`, that `result` output parameter will contain a list of `DomInstance` IDs that were successfully deleted. The trace data is also available per `DomInstance` ID.
+- A list of `DomInstance` IDs that were successfully deleted, when `Delete` is called.
+
+Since DataMiner 10.5.2/10.5.0 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Example#checking-issues).
+
+As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
+
+- The list of successful processed item, as is the case for `CreateOrUpdate` and `Delete`.
+
+- A list of `DomInstance` IDs that failed to be created, updated or deleted.
+
+- The trace data per `DomInstance` ID.
 
 For each of these methods, the trace data of that call is still available and will contain the trace data for all processed `DomInstances`.
 
-Before DataMiner 10.5.2 <!-- RN 37891 --> when such an issue occurred, no exception would be thrown (even when `ThrowExceptionsOnErrorData` is true) when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
+Before DataMiner Feature Release 10.5.2 <!-- RN 37891 --> when any validation issue would occur, no exception would be thrown (even when `ThrowExceptionsOnErrorData` is true) when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
 
 #### Maximum number of instances
 
