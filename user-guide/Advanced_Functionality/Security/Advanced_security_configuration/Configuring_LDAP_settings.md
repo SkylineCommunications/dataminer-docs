@@ -45,7 +45,7 @@ To configure custom LDAP settings in DataMiner Cube:
    - **Phone**: The user’s fixed phone number.
    - **Mobile**: The user’s mobile phone number.
    - **Pager**: The user’s pager number.
-   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as "&amp;amp;".
+   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as `&amp;`.
 
    In the *Group* tab:
 
@@ -53,7 +53,7 @@ To configure custom LDAP settings in DataMiner Cube:
    - **Name**: The name of the group.
    - **Alias**: The alias of the group.
    - **Description**: The description of the group.
-   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as "&amp;amp;".
+   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as `&amp;`.
 
    > [!NOTE]
    >
