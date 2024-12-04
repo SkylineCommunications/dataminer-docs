@@ -997,10 +997,10 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 > [!NOTE]
 > It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
 
-#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
 
-From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
