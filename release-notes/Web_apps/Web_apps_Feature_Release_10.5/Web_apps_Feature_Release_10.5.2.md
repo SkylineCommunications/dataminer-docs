@@ -46,3 +46,9 @@ When you opened the Dashboards app on a mobile device, none of the following das
 - Recent
 - Private
 - Shared
+
+#### Dashboards app: Users without access to the root folder would see a 'Loading' bar in the navigation pane [ID 41566]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When you had not been granted access to the root folder, the navigation pane would keep on showing a "Loading" bar.
