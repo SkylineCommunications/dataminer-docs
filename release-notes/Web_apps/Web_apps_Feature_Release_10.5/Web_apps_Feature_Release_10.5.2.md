@@ -47,6 +47,18 @@ When you opened the Dashboards app on a mobile device, none of the following das
 - Private
 - Shared
 
+#### Web API: Client applications would not receive any new events due to a WebSocket clean-up issue [ID 41560]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Due to a WebSocket clean-up issue, in some rare cases, client applications would incorrectly not receive any new events.
+
+#### Dashboards/Low-Code Apps - Visual overview component: Loading indicator would not be shown [ID 41565]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some cases, a *Visual overview* component would incorrectly not show any loading indicator when it was loading a visual overview.
+
 #### Dashboards app: Users without access to the root folder would see a 'Loading' bar in the navigation pane [ID 41566]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
