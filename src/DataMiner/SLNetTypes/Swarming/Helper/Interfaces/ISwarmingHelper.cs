@@ -12,8 +12,8 @@ namespace Skyline.DataMiner.Net.Swarming.Helper.Interfaces
         ITargetlessSwarmingHelper SwarmElement(ElementID element);
 
         /// <summary>
-        /// Swarms one or more elements to another hosting agent.
-        /// Chain this method together with <see cref="ITargetlessSwarmingHelper.ToAgent(int)"/>
+        /// Swarms one or more elements to another hosting Agent.
+        /// Chain this method together with <see cref="ITargetlessSwarmingHelper.ToAgent(int)"/>.
         /// </summary>
         /// <param name="elements"></param>
         /// <returns></returns>
@@ -23,8 +23,8 @@ namespace Skyline.DataMiner.Net.Swarming.Helper.Interfaces
         ITargetlessSwarmingHelper SwarmBooking(Guid booking);
 
         /// <summary>
-        /// Swarms one or more bookings to another hosting agent.
-        /// Chain this method together with <see cref="ITargetlessSwarmingHelper.ToAgent(int)"/>
+        /// Swarms one or more bookings to another hosting Agent.
+        /// Chain this method together with <see cref="ITargetlessSwarmingHelper.ToAgent(int)"/>.
         /// </summary>
         /// <param name="bookings"></param>
         /// <returns></returns>

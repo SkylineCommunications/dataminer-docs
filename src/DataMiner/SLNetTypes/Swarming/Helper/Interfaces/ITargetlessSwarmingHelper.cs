@@ -3,7 +3,7 @@
     public interface ITargetlessSwarmingHelper
     {
         /// <summary>
-        /// Swarms one or more DMAObjects to a new hosting agent. See <see cref="SwarmingHelper"/>.
+        /// Swarms one or more DMAObjects to a new hosting Agent. See <see cref="SwarmingHelper"/>.
         /// </summary>
         /// <param name="dmaId"></param>
         /// <returns></returns>

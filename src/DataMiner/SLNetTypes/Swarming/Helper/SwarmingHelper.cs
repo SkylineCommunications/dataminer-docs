@@ -12,13 +12,13 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
     /// <see cref="Create(Func&lt;DMSMessage, DMSMessage[]&gt;)" /> methods.
     /// Example usage:
     /// 
-    /// First create a helper, this can be stored somewhere and reused between requests
+    /// First create a helper. This can be stored somewhere and reused between requests.
     /// 
     /// <code>
     /// var helper = SwarmingHelper.Create(_connection);
     /// </code>
     /// 
-    /// Then do the actual swarming actions as such
+    /// Then do the actual swarming actions:
     ///
     /// <code>
     /// var results = helper
@@ -26,7 +26,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
     ///    .ToAgent(targetAgentId);
     /// </code>
     ///    
-    /// Note: to <see cref="ToAgent">ToAgent</see> call does the actual swarming request
+    /// Note: The <see cref="ToAgent">ToAgent</see> call does the actual swarming request.
     /// </summary>
     /// <remarks>
     /// While instances of <see cref="SwarmingHelper"/> can be re-used, they are not
@@ -37,7 +37,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// <summary>
         /// Creates a new <see cref="SwarmingHelper" /> instance.
         /// </summary>
-        /// <param name="connection">Active connection which can be used to send swarming requests through</param>
+        /// <param name="connection">Active connection that can be used to send swarming requests through.</param>
         /// <returns>Swarming Helper</returns>
         /// <exception cref="ArgumentNullException">No connection specified</exception>
         public static ISwarmingHelper Create(IConnection connection)
@@ -51,7 +51,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// <summary>
         /// Creates a new <see cref="SwarmingHelper" /> instance.
         /// </summary>
-        /// <param name="handleMessageFunc">Callback which the helper can use to send requests to the DataMiner Agent</param>
+        /// <param name="handleMessageFunc">Callback that the helper can use to send requests to the DataMiner Agent.</param>
         /// <returns>Swarming Helper</returns>
         /// <exception cref="ArgumentNullException">No callback handler specified</exception>
         public static ISwarmingHelper Create(Func<DMSMessage, DMSMessage[]> handleMessageFunc)
@@ -67,7 +67,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// </summary>
         /// <param name="dmaId"></param>
         /// <param name="elementId"></param>
-        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/></returns>
+        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/>.</returns>
         public ITargetlessSwarmingHelper SwarmElement(int dmaId, int elementId)
             => SwarmElements(new ElementID(dmaId, elementId));
 
@@ -76,7 +76,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// on the result to do the actual swarming.
         /// </summary>
         /// <param name="element">Element ID reference</param>
-        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/></returns>
+        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/>.</returns>
         public ITargetlessSwarmingHelper SwarmElement(ElementID element)
             => SwarmElements(element);
 
@@ -85,7 +85,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// on the result to do the actual swarming.
         /// </summary>
         /// <param name="elements">Element ID references</param>
-        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/></returns>
+        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/>.</returns>
         public ITargetlessSwarmingHelper SwarmElements(params ElementID[] elements)
         {
             return this;
@@ -96,7 +96,7 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// on the result to do the actual swarming.
         /// </summary>
         /// <param name="booking">Booking reference</param>
-        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/></returns>
+        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/>.</returns>
         public ITargetlessSwarmingHelper SwarmBooking(Guid booking)
             => SwarmBookings(booking);
 
@@ -105,16 +105,16 @@ namespace Skyline.DataMiner.Net.Swarming.Helper
         /// on the result to do the actual swarming.
         /// </summary>
         /// <param name="bookings">Booking references</param>
-        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/></returns>
+        /// <returns>An <see cref="ITargetlessSwarmingHelper"/> object on which you can call <see cref="ITargetlessSwarmingHelper.ToAgent"/>.</returns>
         public ITargetlessSwarmingHelper SwarmBookings(params Guid[] bookings)
         {
             return this;
         }
 
         /// <summary>
-        /// Swarms the objects previously prepared by calling the SwarmElements or SwarmBookings methods to the specified agent.
+        /// Swarms the objects previously prepared by calling the SwarmElements or SwarmBookings methods to the specified Agent.
         /// </summary>
-        /// <param name="dmaId">ID of the target DataMiner Agent</param>
+        /// <param name="dmaId">ID of the target DataMiner Agent.</param>
         /// <returns></returns>
         public SwarmingResult[] ToAgent(int dmaId)
         {
