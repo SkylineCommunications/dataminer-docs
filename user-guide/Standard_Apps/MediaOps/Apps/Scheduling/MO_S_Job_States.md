@@ -13,7 +13,7 @@ Draft allows you to build a potential job without booking any of the resources o
 When a job moves into a tentative state, the resources assigned in the job will be reserved to prevent other jobs to select the same resources.
 
 <div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div>
-Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for Cost & Billing. TODO LINK TO C&B
+Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for [Cost & Billing](xref:MO_Cost_Billing).
 
 <div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div>
 When a confirmed job starts it will go to the running state. This indicates the job is live.
@@ -31,18 +31,18 @@ Invoiced is the final state of a job, but it does not mean that all jobs will re
 When a job is no longer needed it can be moved to a canceled state.
 
 <div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Error</div>
-The error state indicates that something went wrong. A job can end up in this state from any state. TODO CHECK HOW IT WILL RETURN TO ANOTHER STATE?
+Job in error will be displayed with this color but will underlaying still have any of the above states which will be visible from the edit panel.
 
 ```mermaid
 graph LR
-    A[🖉 Draft] --> B[🖉 Tentative]
+    A[🖉 🗑 Draft] --> B[🖉 Tentative]
     B --> C[🖉 Confirmed]
     C --> D[🖉 Running]
     D --> E[🖉 Completed]
     E --> F[Ready for Invoice]
-    F --> G[Invoiced]
-    C --> H[Canceled]
-    B --> H[Canceled]
+    F --> G[🗑 Invoiced]
+    C --> H[🗑 Canceled]
+    B --> H[🗑 Canceled]
     H --> F[Ready for Invoice]
 
     style A fill:#9140D9,stroke:#000,stroke-width:2px,color:#ffffff
