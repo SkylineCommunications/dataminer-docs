@@ -542,11 +542,11 @@
             <param name="primaryKey">Primary key of the row to be verified.</param>
             <param name="timestampUtc">UTC time of the delete to be verified.</param>
             <param name="origin">Indication of where the data originated from.</param>
-            <returns>Boolean indicating if the row has been more recently deleted than the current timestamp.</returns>
+            <returns>Boolean indicating if the row has been deleted more recently than the current timestamp.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillMissingValues(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridRow)">
             <summary>
-            Fills the default missing values on a row.
+            Fills in the default missing values in a row.
             </summary>
             <param name="row">Row for which the missing values need to be set.</param>
         </member>
@@ -621,7 +621,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateColumns(System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn})">
             <summary>
-            Validates all columns if the content is as expected and seals it so no more changes can be done after initiating.
+            Validates if the content is as expected in all columns and seals it so no more changes can be done after initiating.
             </summary>
             <param name="columns">Columns to be validated.</param>
         </member>
@@ -639,26 +639,26 @@
             Validates the rate columns.
             </summary>
             <param name="rateColumns">Collection with rate columns.</param>
-            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when a rate column is not a customized type or if the data grid is not containing the rate column.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when a rate column is not a customized type or if the data grid does not contain the rate column.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateReferencedColumns(System.Collections.Generic.HashSet{System.Int32})">
             <summary>
             Validates the referenced columns.
             </summary>
             <param name="referencedColumns">Collection with referenced columns.</param>
-            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when a referenced column is not a customized type or if the data grid is not containing the referenced column.</exception>
-            <exception cref="T:System.ArgumentException">Exception thrown when there is no function assigned to be executed when the referenced column change value.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when a referenced column is not a customized type or if the data grid does not contain the referenced column.</exception>
+            <exception cref="T:System.ArgumentException">Exception thrown when no function is assigned to be executed when the referenced columns change value.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateReferencedColumn(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn)">
             <summary>
             Validates a destination of a referenced column.
             </summary>
             <param name="destinationColumn">Destination column to be verified</param>
-            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when the source of a destination column is not a poll type or if the data grid is not containing the source of a destination column.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when the source of a destination column is not a poll type or if the data grid does not contain the source of a destination column.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.SealColumns">
             <summary>
-            Seals the columns after initialization, so e.g. column types cannot be changed anymore during runtime.
+            Seals the columns after initialization, so e.g. column types can no longer be changed during runtime.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult">
@@ -978,7 +978,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.ThrottleInterval">
              <summary>
-             The time interval in milliseconds between applying gNMI notifications to the in-memory data model before forwarding them to SLProtocol.
+             The time interval in milliseconds between applying gNMI notifications to the in-memory data model and forwarding them to SLProtocol.
              Reduces the frequency of SLProtocol calls, potentially improving throughput.
             
              Setting it to 0 or lower will disable throttling.
@@ -987,8 +987,8 @@
              If a higher value is configured, it will automatically default to the maximum.
              </summary>
              <remarks>
-             If throttling is enabled, gNMI notifications will also be throttled before passing them along to the callback.
-             This is to assure that when the callback triggers, the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper" /> is finished processing these and the data in the parameters is up to date.
+             If throttling is enabled, gNMI notifications will also be throttled before they are passed along to the callback.
+             This ensures that when the callback triggers, the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper" /> is finished processing these and the data in the parameters is up to date.
              Throttling is never applied on a <see cref="T:Gnmi.GetResponse" />.
              </remarks>
         </member>
@@ -1055,7 +1055,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.SuppressCommunication(System.Boolean)">
             <summary>
-            Suppresses the communication, no more values will be filled in or logging will be written out.
+            Suppresses the communication. No more values will be filled in or logging will be written out.
             </summary>
             <param name="isSuppress">Boolean indicating if communication should be suppressed.</param>
         </member>
@@ -1145,7 +1145,7 @@
             </summary>
             <param name="path">Path of the value.</param>
             <param name="updateValue">Value that needs to be changed.</param>
-            <param name="isJsonIetf">Boolean indicating if the JSON object is coming from IETF format or not.</param>
+            <param name="isJsonIetf">Boolean indicating if the JSON object comes from IETF format or not.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
@@ -1153,7 +1153,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._throttler">
             <summary>
-            Will periodically flush the changes stored in the in-memory data model to the DataMiner Connector through SLProtocol calls.
+            Will periodically flush the changes stored in the in-memory data model to the DataMiner connector through SLProtocol calls.
             </summary>
             <remarks>Can be null if no throttling needs to be applied.</remarks>
         </member>
@@ -1196,7 +1196,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._name">
             <summary>
-            The name of the processor, will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
+            The name of the processor. This will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
             of the data that came in through a <see cref="T:Gnmi.GetResponse" />. 
             </summary>
         </member>
@@ -1213,7 +1213,7 @@
             <param name="dataMapper">The DataMapper that will take care of storing the incoming data.</param>
             <param name="origin">Where the data originates from.</param>
             <param name="name">
-            The name of the processor, will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
+            The name of the processor. This will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
             of the data that came in through a <see cref="T:Gnmi.GetResponse" />. 
             </param>
             <param name="action">The handler that the consumer has configured to process the messages.</param>
@@ -1291,7 +1291,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Recreated">
             <summary>
-            The row previously had the <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Deleted"/> state and was added again. This state will only appear when there is no automatic deletion. When automatic deletion is active it will result in a <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.New"/> state.
+            The row previously had the <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Deleted"/> state and was added again. This state will only appear when there is no automatic deletion. When automatic deletion is active, it will result in a <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.New"/> state.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState">
