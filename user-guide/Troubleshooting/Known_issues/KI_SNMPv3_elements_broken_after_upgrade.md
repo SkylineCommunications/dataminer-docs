@@ -22,10 +22,10 @@ After the upgrade, manually force the upgrade action to run by specifying an old
 
 1. Stop the DataMiner Agent.
 
-1. On the DMA server, go to the folder `C:\Skyline DataMiner\Upgrades\UpgradeActions\` and run the following command as administrator:
+1. On the DMA server, run the following command as administrator:
 
    ```txt
-   MigrateSNMPv3PasswordsToElementConfig.exe /oldversion:10.3.0 /newversion:10.5.0
+   "C:\Skyline DataMiner\Upgrades\UpgradeActions\MigrateSNMPv3PasswordsToElementConfig\MigrateSNMPv3PasswordsToElementConfig.exe" /oldversion:10.3.0 /newversion:10.5.0
    ```
 
    This upgrade action will cause errors to be logged on Agents where Swarming is not enabled, but you can safely ignored these.
