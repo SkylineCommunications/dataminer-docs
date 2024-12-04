@@ -52,3 +52,9 @@ When you opened the Dashboards app on a mobile device, none of the following das
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you had not been granted access to the root folder, the navigation pane would keep on showing a "Loading" bar.
+
+#### Low-Code Apps: State of newly created duplicate would be 'published' instead of 'draft' [ID 41623]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When you duplicated a published app, and then previewed the newly created duplicate, in the version history, its state would incorrectly be set to "published" instead of "draft".
