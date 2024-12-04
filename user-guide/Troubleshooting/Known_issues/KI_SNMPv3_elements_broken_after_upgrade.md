@@ -18,13 +18,19 @@ No fix is available yet.<!-- RN 41630 -->
 
 ## Workaround
 
-After the upgrade, manually force the upgrade action to run by specifying an older DataMiner version than the one currently in use. You can use the following command for this:
+After the upgrade, manually force the upgrade action to run by specifying an older DataMiner version than the one currently in use:
 
-```txt
-MigrateSNMPv3PasswordsToElementConfig.exe /oldversion:10.3.0 /newversion:10.5.0
-```
+1. Stop the DataMiner Agent.
 
-Note that this upgrade action will cause errors to be logged on Agents where Swarming is not enabled, but these can be safely ignored.
+1. On the DMA server, go to the folder `C:\Skyline DataMiner\Upgrades\UpgradeActions\` and run the following command as administrator:
+
+   ```txt
+   MigrateSNMPv3PasswordsToElementConfig.exe /oldversion:10.3.0 /newversion:10.5.0
+   ```
+
+   This upgrade action will cause errors to be logged on Agents where Swarming is not enabled, but you can safely ignored these.
+
+1. Restart the DataMiner Agent.
 
 ## Description
 
