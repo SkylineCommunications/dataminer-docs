@@ -503,7 +503,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.PartialMatch">
             <summary>
-            The data path matches but is smaller than the entity path. There is further exploration needed of the token value to have a match. The value needed for the entity will be a child token of the token value.
+            The data path matches but is smaller than the entity path. Further exploration of the token value is needed to have a match. The value needed for the entity will be a child token of the token value.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.LongerDataMatch">

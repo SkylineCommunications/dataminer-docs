@@ -118,7 +118,7 @@
             <summary>
             Constructs a <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters"/> object.
             </summary>
-            <param name="origin">Where the data is originating from.</param>
+            <param name="origin">Where the data originates from.</param>
             <param name="subscriptionName">
             The name of the subscription that took in the data.
             <see cref="F:System.String.Empty"/> if the data came from <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType.Poll"/>.
@@ -136,7 +136,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.Origin">
             <summary>
-            Where the data is originating from.
+            Where the data originates from.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.SubscriptionName">
@@ -235,7 +235,7 @@
             </summary>
             <param name="path">Path of the value.</param>
             <param name="updateValue">Value that needs to be changed.</param>
-            <param name="isJsonIetf">Boolean indicating if the JSON object is coming from IETF format or not.</param>
+            <param name="isJsonIetf">Boolean indicating if the JSON object comes from IETF format or not.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the data came in through subscription.</param>
@@ -257,7 +257,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingRows(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@)">
             <summary>
-            Removes alls rows from the table that thave the deleted status.
+            Removes all rows from the table that have the deleted status.
             </summary>
             <param name="protocol">Link with SLProtocol.</param>
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
@@ -314,7 +314,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddAllReferencedColumnChange(System.String,System.DateTime,System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Collections.Generic.HashSet{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey}})">
             <summary>
-            Indicates that a row has changed value, so primary key will be added to all columns that are referenced.
+            Indicates that a row has changed value, so the primary key will be added to all columns that are referenced.
             </summary>
             <param name="primaryKey">Primary key of the row that has changed values.</param>
             <param name="timestampUtc">The timestamp in UTC of when the primary key got changed.</param>
@@ -331,7 +331,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ClearColumnValues">
             <summary>
-            Clears the column cell values in memory when there is a rate column linked.
+            Clears the column cell values in memory when a rate column is linked.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ClearValue">
@@ -341,7 +341,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ClearOlderDeletedRows">
             <summary>
-            Removes the keys of rows that were more than 5 minutes ago deleted.
+            Removes the keys of rows that were deleted more than 5 minutes ago.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.GetMissingKeys">
@@ -408,11 +408,11 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonFromPartialDataGridPath(Newtonsoft.Json.Linq.JToken,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Gnmi.Path,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
             <summary>
-            JSON object does not fully match yet with the data grid. Parses the JSON child tokens to further map them with the data grid and data columns.
+            JSON object does not fully match with the data grid yet. Parses the JSON child tokens to further map them with the data grid and data columns.
             </summary>
             <param name="json">JSON token.</param>
             <param name="pathKeyParts">Parts of the primary key.</param>
-            <param name="entityPath">Path filter in the datagrid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
@@ -422,24 +422,24 @@
             <summary>
             Tries to get the JSON token values for the requested path filter.
             </summary>
-            <param name="entityPath">Path filter in the datagrid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
             <param name="pathKeyParts">Parts of the primary key.</param>
             <param name="token">JSON token to be investigated.</param>
             <param name="pathLevel">Location of the token value in the path filter.</param>
             <param name="rowIndex">In case the direct parent is an array, it will contain the index of the token of that array.</param>
             <param name="keysAndTokens">Found JSON token values with their key parts.</param>
-            <returns>Boolean indicating if there were token values found in the requested path.</returns>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJsonTokenForPath(Gnmi.Path,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Newtonsoft.Json.Linq.JArray,System.Int32,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken})">
             <summary>
             Tries to get the JSON token values for the requested path filter.
             </summary>
-            <param name="entityPath">Path filter in the datagrid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
             <param name="pathKeyParts">Parts of the primary key.</param>
             <param name="token">JSON array to be investigated.</param>
             <param name="pathLevel">Location of the token value in the path filter.</param>
             <param name="keysAndTokens">Found JSON token values with their key parts.</param>
-            <returns>Boolean indicating if there were token values found in the requested path.</returns>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJsonTokenForPath(Gnmi.Path,Newtonsoft.Json.Linq.JToken,System.Int32,Newtonsoft.Json.Linq.JToken@)">
             <summary>
@@ -456,21 +456,21 @@
             Processes a token property. Checks if the property matches the path filter on that level and also keeps track of a potential primary key value.
             </summary>
             <param name="property">JSON property to be processed.</param>
-            <param name="entityPath">Path filter in the datagrid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
             <param name="rowIndex">In case the direct parent is an array, it will contain the index of the token of that array.</param>
             <param name="pathLevel">Location of the token property in the path filter.</param>
             <param name="investigationResult">Result of the investigation amongst the different properties which contains found key and token.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ProcessChildrenTokenProperties(Newtonsoft.Json.Linq.JObject,Gnmi.Path,System.Int32,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken})">
             <summary>
-            Process the properties of a JSON oject.
+            Process the properties of a JSON object.
             </summary>
             <param name="objectToken">JSON object to be processed.</param>
-            <param name="entityPath">Path filter in the datagrid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
             <param name="pathLevel">Location of the JSON object in the path filter.</param>
             <param name="pathKeyParts">Parts of the primary key.</param>
             <param name="keysAndTokens">Found JSON token values with their key parts.</param>
-            <returns>Boolean indicating if the there were token values found in the requested path.</returns>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveModulePrefix(System.String)">
             <summary>
@@ -490,7 +490,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddKeyFromToken(Newtonsoft.Json.Linq.JObject,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},System.Int32)">
             <summary>
-            Looks in the properties of a token. When it contains exactly one property that is string or int, a key will be created based on that, or the index of the row will be used.
+            Looks in the properties of a token. When it contains exactly one property that is a string or int, a key will be created based on that, or the index of the row will be used.
             </summary>
             <param name="objectToken">JSON object to be processed.</param>
             <param name="pathKeyParts">Parts of the primary key.</param>
@@ -499,7 +499,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddKeyFromString(System.String,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},System.Int32,System.Boolean)">
             <summary>
-            Looks in the properties of a token. When it contains exactly one property that is string or int, a key will be created based on that, or the index of the row will be used.
+            Looks in the properties of a token. When it contains exactly one property that is a string or int, a key will be created based on that, or the index of the row will be used.
             </summary>
             <param name="key">Key to be added.</param>
             <param name="pathKeyParts">Parts of the primary key.</param>
@@ -516,7 +516,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetTokenValueAsString(Newtonsoft.Json.Linq.JToken,System.String@)">
             <summary>
-            Checks if the token is an integer or string type and return the value.
+            Checks if the token is an integer or string type and returns the value.
             </summary>
             <param name="token">JSON token to be verified.</param>
             <param name="value">Token value as string when the type is an integer or string.</param>
@@ -1029,7 +1029,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.RemoveMissingRowsForPid(System.Int32)">
             <summary>
-            Removes alls rows from the table that thave the deleted status.
+            Removes all rows from the table that have the deleted status.
             </summary>
             <param name="tablePid">Parameter ID of the table for which the rows will need to be removed.</param>
         </member>
@@ -1191,7 +1191,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._origin">
             <summary>
-            Where the data is originating from.
+            Where the data originates from.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._name">
@@ -1211,7 +1211,7 @@
             </summary>
             <param name="logger">The logger that the consumer has configured.</param>
             <param name="dataMapper">The DataMapper that will take care of storing the incoming data.</param>
-            <param name="origin">Where the data is originating from.</param>
+            <param name="origin">Where the data originates from.</param>
             <param name="name">
             The name of the processor, will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
             of the data that came in through a <see cref="T:Gnmi.GetResponse" />. 
