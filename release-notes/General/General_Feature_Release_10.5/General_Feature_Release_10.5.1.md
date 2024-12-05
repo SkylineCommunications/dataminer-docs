@@ -567,25 +567,10 @@ In a Failover setup, in some rare cases, the offline Agent would not be able to 
 #### Problem with SNMPv3 elements after upgrading from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12) [ID 41630]
 
 <!-- MR 10.5.0 - FR 10.5.1 [CU0] -->
-<!-- Not added to MR 10.5.0 -->
 
 When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12), the `MigrateSNMPv3PasswordsToElementConfig` upgrade action would incorrectly not be executed, causing SNMPv3 passwords not to be migrated correctly. As a result, SNMPv3 connections would lose access to their credentials. Also, the following critical alarm would be generated for each of the affected elements:
 
 `Error parsing SNMPv3 password for port: xxx on element: xxx`
-
-If you experience the above-mentioned issue after having performed a DataMiner upgrade from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12), manually force the upgrade action to run by specifying an older DataMiner version than the one currently in use:
-
-1. Stop the DataMiner Agent.
-
-1. On the DMA server, run the following command as administrator:
-
-   ```txt
-   "C:\Skyline DataMiner\Upgrades\UpgradeActions\MigrateSNMPv3PasswordsToElementConfig\MigrateSNMPv3PasswordsToElementConfig.exe" /oldversion:10.3.0 /newversion:10.5.0
-   ```
-
-   This upgrade action will cause errors to be logged on Agents where Swarming is not enabled, but you can safely ignored these.
-
-1. Restart the DataMiner Agent.
 
 > [!NOTE]
 > See also [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade)
