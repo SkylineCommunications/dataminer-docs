@@ -4,11 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 5 December 2024 - Enhancement - CloudGateway 2.15.0 - Improve handling and error logging of invalid certificates
-	
-This change makes sure that the configured HTTPS certificates for port 443 in IIS are verified and any problems with the certificate will be logged.
-If a certificate is valid but becomes invalid, the CloudGateway will now correctly catch this within 2 mins and make sure it is set to offline.
-Additionally the CloudGateway will also recover automatically when the certificates are valid again so the connection with dataminer.services is restored.
+#### 5 December 2024 - Enhancement - CloudGateway 2.15.0 - Improved handling and error logging of invalid certificates [ID 40746]
+
+Improvements have been implemented to ensure that the configured HTTPS certificates for port 443 in IIS are verified and any problems with a certificate will be logged. If a certificate is valid but becomes invalid, CloudGateway will now correctly notice this within 2 minutes and make sure it is set to offline. CloudGateway will also recover automatically when the certificates are valid again so the connection with dataminer.services is restored.
 
 #### 6 November 2024 - Enhancement - CloudGateway 2.14.5 - Dependencies updated [ID 41294]
 
@@ -20,7 +18,7 @@ The logging for the token refresh has been improved. Previously, it would log th
 
 #### 27 August 2024 - Enhancement - CloudGateway 2.14.1 - Syncing improvements [ID 40527]
 
-CloudGateway will no longer sync its cloud endpoint with other DxMs if it does not have internet access. 
+CloudGateway will no longer sync its cloud endpoint with other DxMs if it does not have internet access.
 
 In addition, CloudGateway will now also sync the Web API/DMA state with dataminer.services at a regular interval of approximately one minute, even if it had already been synced after a detected change. This will ensure that the connection state remains in sync and is automatically healed, even for Failover systems, where a restart of CloudGateway used to sometimes be needed to get the connection synced and working again.
 
