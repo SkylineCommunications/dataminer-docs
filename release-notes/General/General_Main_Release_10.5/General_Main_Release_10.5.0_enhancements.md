@@ -722,6 +722,14 @@ When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\S
 
 From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
 
+#### Failover - Virtual IP address check: Logging of the arp command will now also include the MAC address that claimed the IP address [ID 40703]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Since Main Release 10.3.0 [CU20]/10.4.0 [CU8] and Feature Release 10.4.11, the virtual IP address check uses both a ping and an arp command to check whether an IP address is free.
+
+The logging of the arp command will now also include the MAC address that claimed the IP address.
+
 #### Service & Resource Management: Switching master agents [ID 40712] [ID 41089]
 
 <!-- RN 40712: MR 10.5.0 - FR 10.4.11 -->

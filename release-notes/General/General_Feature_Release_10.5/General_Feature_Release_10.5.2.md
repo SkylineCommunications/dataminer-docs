@@ -26,6 +26,14 @@ uid: General_Feature_Release_10.5.2
 
 ### Enhancements
 
+#### Failover - Virtual IP address check: Logging of the arp command will now also include the MAC address that claimed the IP address [ID 40703]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Since Main Release 10.3.0 [CU20]/10.4.0 [CU8] and Feature Release 10.4.11, the virtual IP address check uses both a ping and an arp command to check whether an IP address is free.
+
+The logging of the arp command will now also include the MAC address that claimed the IP address.
+
 #### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
