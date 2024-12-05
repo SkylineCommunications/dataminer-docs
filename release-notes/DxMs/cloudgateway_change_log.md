@@ -4,6 +4,12 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 5 December 2024 - Enhancement - CloudGateway 2.15.0 - Improve handling and error logging of invalid certificates
+	
+This change makes sure that the certificates are verified and any problems with the certificate will be logged.
+If a certificate is valid but becomes invalid, the CloudGateway will now correctly catch this within 2 mins and make sure it is set to offline.
+Additionally the CloudGateway will also recover automatically when the certificates are valid again so the connection with dataminer.services is restored.
+
 #### 6 November 2024 - Enhancement - CloudGateway 2.14.5 - Dependencies updated [ID 41294]
 
 Several dependencies have been updated.
