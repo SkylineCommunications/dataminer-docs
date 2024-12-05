@@ -23,6 +23,17 @@ Usage-based services can use any of the deploy models.
 
 Perpetual-use licenses can be fully self-managed (DataMiner nodes and storage nodes) or hybrid.
 
+### Regarding hosted services, is Skyline's SaaS offering a single-tenant or multi-tenant environment?
+
+Skyline's DataMiner SaaS platform is composed of:
+
+- DataMiner nodes responsible for data collection, control and processing, and
+- storage nodes to store collected data, ensuring data persistence, redundancy, and high availability.
+
+DataMiner nodes (DaaS — DataMiner as a Service) are not multi-tenant because DaaS uses isolated compute nodes independent from other users. This offers some advantages related to increased security and isolation for access to your managed objects.
+
+Storage nodes (STaaS - Storage as a Service), on the other hands, are multi-tenant, with data for each specific DataMiner System being isolated in a logical partition. You can only ever access the logical partition dedicated to your own DataMiner System, and all partitions are strictly isolated from each other.
+
 ### Can different commercial models exist in the same organization?
 
 Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An organization can have perpetual licenses on one DMS while running usage-based services on a different DMS.
