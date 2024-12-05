@@ -18,6 +18,12 @@ uid: Cube_Feature_Release_10.5.2
 
 ## New features
 
+#### Sidebar: Community menu now contains a link to the DataMiner feedback form [ID 41605]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you click the *Community* button at the bottom of DataMiner Cube's sidebar, you can now select *Feedback* to open a [form](https://aka.dataminer.services/feedback-cube) in which you can provide us with valuable information that will help us improve our software.
+
 ## Changes
 
 ### Enhancements
