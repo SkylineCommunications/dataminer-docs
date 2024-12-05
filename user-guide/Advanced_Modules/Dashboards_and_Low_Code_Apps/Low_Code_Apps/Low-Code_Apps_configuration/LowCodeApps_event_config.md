@@ -173,6 +173,11 @@ To configure an event to change a variable:
 
    - *Update* > *Clear table*<!--RN 41324-->: Remove all rows from a table variable.
 
+   > [!NOTE]
+   >
+   > - You can only click the *Apply* button to confirm a link to dynamic data when a valid link has been configured<!--RN 41251-->.
+   > - A value linked to dynamic data can be identified by the ![Unlink](~/user-guide/images/Unlink.png) icon. To unlink dynamic data, click this icon and select *Unlink*<!--RN 41251-->.
+
 1. Optionally, add more actions for the variable if needed.
 
 1. Select *Add action*.

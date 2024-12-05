@@ -60,6 +60,9 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 };
 ```
 
+> [!NOTE]
+> These are SLNet messages that are subject to change without notice.
+
 #### SLNet 'GetInfo' messages for the PropertyConfiguration' and 'ViewInfo' types now support retrieving information for a specific item [ID 41169]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -76,6 +79,9 @@ If another value is specified, then all property configurations will be returned
 
 In the `ExtraData` property you can now specify ";viewId=\<ID\>" or ";viewId=\<ID\>;", where \<ID\> is the ID of the view for which you want to retrieve more information.
 
+> [!NOTE]
+> These are SLNet messages that are subject to change without notice.
+
 #### New SLNet call GetProtocolQActionsStateRequestMessage to retrieve QAction compilation warnings and errors [ID 41218]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -83,6 +89,9 @@ In the `ExtraData` property you can now specify ";viewId=\<ID\>" or ";viewId=\<I
 A new SLNet call `GetProtocolQActionsStateRequestMessage` can now be used to retrieve the compilation warnings and errors of a given protocol and version. The response, `GetProtocolQActionsStateResponseMessage`, will then contains all faulty QActions and their respective warnings and errors.
 
 In future versions, this call will be used to verify whether DataMiner Swarming can be enabled on a DataMiner System.
+
+> [!NOTE]
+> This SLNet message is subject to change without notice.
 
 #### Alarms - Proactive cap detection: User feedback [ID 41371]
 
@@ -278,7 +287,7 @@ From now on, the deprecated NT Notify type *NT_PING* can no longer be used.
 
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- MR 10.5.0 - FR 10.5.1 -->
 
 Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
 
@@ -391,11 +400,11 @@ If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 1
 
 When a parameter is set to an infinite value, SLAnalytics will now consider this infinite value as a missing value. This will prevent parameter changes of this type from disrupting analytical models.
 
-#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
 
-From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
 
@@ -406,6 +415,12 @@ If you want this feature to be disabled system-wide, then explicitly set the *Dy
 From now on, SLLogCollector packages will also include the log files of the *ModelHost* and *Copilot*\* DxMs.
 
 *\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
+
+#### Security enhancements [ID 41542]
+
+<!-- 41542: MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -542,3 +557,35 @@ When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean u
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
+
+#### Failover: Offline Agent would not be able to synchronize with the online Agent [ID 41527]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+In a Failover setup, in some rare cases, the offline Agent would not be able to synchronize with the online Agent, and would throw an error with reason `Don't know version for remote agent [IP]`.
+
+#### Problem with SNMPv3 elements after upgrading from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12) [ID 41630]
+
+<!-- MR 10.5.0 - FR 10.5.1 [CU0] -->
+<!-- Not added to MR 10.5.0 -->
+
+When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12), the `MigrateSNMPv3PasswordsToElementConfig` upgrade action would incorrectly not be executed, causing SNMPv3 passwords not to be migrated correctly. As a result, SNMPv3 connections would lose access to their credentials. Also, the following critical alarm would be generated for each of the affected elements:
+
+`Error parsing SNMPv3 password for port: xxx on element: xxx`
+
+If you experience the above-mentioned issue after having performed a DataMiner upgrade from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12), manually force the upgrade action to run by specifying an older DataMiner version than the one currently in use:
+
+1. Stop the DataMiner Agent.
+
+1. On the DMA server, run the following command as administrator:
+
+   ```txt
+   "C:\Skyline DataMiner\Upgrades\UpgradeActions\MigrateSNMPv3PasswordsToElementConfig\MigrateSNMPv3PasswordsToElementConfig.exe" /oldversion:10.3.0 /newversion:10.5.0
+   ```
+
+   This upgrade action will cause errors to be logged on Agents where Swarming is not enabled, but you can safely ignored these.
+
+1. Restart the DataMiner Agent.
+
+> [!NOTE]
+> See also [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade)

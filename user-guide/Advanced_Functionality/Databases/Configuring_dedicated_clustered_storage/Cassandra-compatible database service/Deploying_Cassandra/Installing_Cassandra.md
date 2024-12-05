@@ -182,6 +182,8 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 1. Configure a superuser account that will be used by DataMiner to connect to the database. See [Cassandra authentication](xref:Cassandra_authentication).
 
+1. Install and configure Cassandra Reaper on each database node. See [Installing Cassandra Reaper](xref:Installing_Cassandra_Reaper).
+
 1. Configure the Cassandra cluster database in System Center. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
 1. In this setup, the Cassandra database is not managed by DataMiner, so **it is essential that you manage it yourself**. See [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster).

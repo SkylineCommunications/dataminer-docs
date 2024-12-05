@@ -26,6 +26,9 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
   You can [use the Admin app](xref:Managing_cloud-connected_nodes) to check if the *DataMiner CloudFeed* DxM is installed.
 
+  > [!NOTE]
+  > From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages always include the most recent version of the *CloudFeed* DxM.
+
 - The option *Allow performance and usage data offload* must be enabled. See [Controlling performance and usage data offloads](xref:Controlling_cloudfeed_data_offloads).
 
 > [!NOTE]

@@ -51,6 +51,8 @@ To create a new variable:
 
      1. Enter the name of an instance in your DataMiner System or select from the dropdown list.
 
+     1. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41251-->, select *Apply* to confirm your chosen DOM module and instance.
+
    - Default text: Enter custom text.
 
    - Default number: Enter a number or use the arrow icons to increase or decrease the value.

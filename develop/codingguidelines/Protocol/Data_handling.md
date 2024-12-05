@@ -38,11 +38,11 @@ Implementation based on maximum number of rows and/or maximum time to keep:
 
 - Add a PageButton "\[Table Name\] Config…" above the table that contains:
 
-  - A toggle button "Max Table Size" (On/Off, default: On)
+  - A parameter to define the maximum allowed number of rows. Provide a well-chosen range and default value. There should be no way to disable such a maximum number of rows.
 
-  - A parameter to define the maximum allowed number of rows. (Provide a well-chosen default value).
+  - A parameter to define the maximum time to keep. Provide a well-chosen range and default value. Since the parameter above will make sure the number of rows is kept under control, you can provide an exception value allowing the disabling of this maximum time to keep logic.
 
-  - A parameter to define the maximum time to keep. (Provide a well-chosen default value.)
+  - A parameter to define how many rows should be deleted when the maximum allowed number of rows is reached. Provide a well-chosen range and default value. This will prevent that once the maximum allowed number of rows is reached, rows will keep getting deleted every time a new one comes in.
 
     > [!NOTE]
     > In this case, the table must contain a column that holds the time (in descending sort order).

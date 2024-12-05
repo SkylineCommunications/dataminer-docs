@@ -806,6 +806,17 @@ In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
 
+#### Automation: Engine methods will now use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID [ID 40773]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, the following Engine methods will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
+
+- GetAlarmProperty
+- SetAlarmProperty
+- SetAlarmProperties
+- AcknowledgeAlarm
+
 #### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
@@ -958,6 +969,14 @@ From now on, the deprecated NT Notify type *NT_PING* can no longer be used.
 
 Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
+#### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
+
+<!-- MR 10.5.0 - FR 10.5.1 -->
+
+Up to now, when blocking tasks with the same start time needed to be scheduled for several bookings, in some cases, bookings with limited start actions could get blocked by bookings with longer start actions.
+
+Because of a number of enhancements, the process of starting blocking tasks has now been optimized.
+
 #### Web apps - Visual Overview: Multiple log levels [ID 41200]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
@@ -989,10 +1008,10 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 > [!NOTE]
 > It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
 
-#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
 
-From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.

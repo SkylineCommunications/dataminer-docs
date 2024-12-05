@@ -74,7 +74,7 @@ apiRules:
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.DerivedElementID$
     type: Type
-- exclude:
+- include:
     uidRegex: ^Skyline\.DataMiner\.Net\.ElementID$
     type: Type
 - exclude:
@@ -611,3 +611,6 @@ attributeRules:
 - exclude:
     uidRegex: '^System\.Windows\.Markup\.[^.]+$'
     type: Type
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Swarming$
+    type: Namespace

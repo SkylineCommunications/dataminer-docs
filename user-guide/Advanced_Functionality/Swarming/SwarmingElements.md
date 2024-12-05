@@ -90,7 +90,7 @@ Below you can find some more information about specific parts of the code in the
 using Skyline.DataMiner.Net.Swarming.Helper;
 ```
 
-This line pulls in the appropriate namespace for the `SwarmingHelper` type, which is used further down.
+This line pulls in the appropriate namespace for the [SwarmingHelper](xref:Skyline.DataMiner.Net.Swarming.Helper.SwarmingHelper) type, which is used further down.
 
 ```csharp
 var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)

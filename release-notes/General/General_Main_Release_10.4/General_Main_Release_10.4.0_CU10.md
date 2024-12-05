@@ -97,13 +97,19 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element of type SNMPv3 does not have its user name filled in, from now on, it will go into an error state and an alarm will be generated.
 
-#### Data Display in DataMiner Cube and the Monitoring app now support dynamic units by default [ID 41436]
+#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
 
 <!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
 
-From now on, dynamic units can be used by default in Data Display, both in DataMiner Cube and the Monitoring app.
+From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
+
+#### Security enhancements [ID 41542]
+
+<!-- 41542: MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -215,3 +221,9 @@ Up to now, that list could incorrectly contain multiple entries for the same fil
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
 When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
+
+#### Failover: Offline Agent would not be able to synchronize with the online Agent [ID 41527]
+
+<!-- MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
+
+In a Failover setup, in some rare cases, the offline Agent would not be able to synchronize with the online Agent, and would throw an error with reason `Don't know version for remote agent [IP]`.

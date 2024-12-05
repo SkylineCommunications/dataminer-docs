@@ -215,6 +215,17 @@ From now on, smart-serial connections will also support non-abbreviated IPv6 loo
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
 
+#### Automation: Engine methods will now use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID [ID 40773]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, the following Engine methods will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
+
+- GetAlarmProperty
+- SetAlarmProperty
+- SetAlarmProperties
+- AcknowledgeAlarm
+
 #### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
