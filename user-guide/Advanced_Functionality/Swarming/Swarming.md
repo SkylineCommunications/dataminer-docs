@@ -34,7 +34,7 @@ In a later iteration, the Swarming feature will also be able to assist in making
 
 ## Limitations
 
-Some functionality is currently not yet supported with the Swarming feature. These are the most important limitations at the moment:
+Some functionality is not supported with the Swarming feature. These are the most important limitations at the moment:
 
 - Swarming is not available in DataMiner Systems with a [storage per DMA setup](xref:Configuring_storage_per_DMA) (Cassandra or MySQL).
 
@@ -78,6 +78,6 @@ Below you can find a complete overview of the differences between a system using
 
 To enable the Swarming feature, the [Admin Tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is required.
 
-Once the feature has been enabled, users will need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission to trigger any swarming actions. Users that previously had the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions before Swarming was enabled will automatically also get the *Swarming* user permission.
+Once the feature has been enabled, users will need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission to trigger any swarming actions. To swarm an element, users will also need config rights on the element.
 
-To swarm an element, users will also need config rights on the element.
+Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
