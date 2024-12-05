@@ -78,3 +78,9 @@ When you had not been granted access to the root folder, the navigation pane wou
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you duplicated a published app, and then previewed the newly created duplicate, in the version history, its state would incorrectly be set to "published" instead of "draft".
+
+#### Dashboards/Low-Code Apps - Visual overview component: Problem when changing the page to be displayed to the first page of the Visio file [ID 41628]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When, in the settings of a *Visual overview* component, you changed the page to be displayed to the first page of the Visio file (i.e. page 0), up to now, the component would incorrectly continue to display the page that was selected before.
