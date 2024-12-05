@@ -14,7 +14,9 @@ When upgrading from a 10.4.0 Main Release version starting from 10.4.0 [CU6] to 
 
 ## Fix
 
-No fix is available yet.<!-- RN 41630 -->
+This issue will no longer occur from DataMiner 10.5.1 onwards.<!-- RN 41630 -->
+
+However, note that once you have encountered the issue, you will need to apply the [workaround](#workaround) below to resolve this. Simply upgrading to 10.5.1 is not sufficient.
 
 ## Workaround
 
