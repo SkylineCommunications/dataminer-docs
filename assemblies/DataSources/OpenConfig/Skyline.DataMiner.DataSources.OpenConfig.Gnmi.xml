@@ -226,8 +226,8 @@
             <param name="contentType">Format of the <paramref name="value"/> parameter. It can be one of the following enum values:
             -StringValue means that the value parameter is a plain string.
             -AsciiString means that the value parameter is a plain ASCII string.
-            -JsonUtf8 means that the value parameter is a JSON encoded string that will be sent to the data source in UTF-8 encoding.
-            -JsonIetfUtf8 means that the value parameter is a JSON encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
+            -JsonUtf8 means that the value parameter is a JSON-encoded string that will be sent to the data source in UTF-8 encoding.
+            -JsonIetfUtf8 means that the value parameter is a JSON-encoded string that follows the RFC8259 standard and that will be sent to the data source in UTF-8 encoding.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentException">Argument contentType contains a type that is not supported.</exception>
         </member>
@@ -240,8 +240,8 @@
             <param name="contentType">Format of the <paramref name="value"/> parameter. It can be one of the following enum values:
             -StringValue means that the value parameter is a plain string.
             -AsciiString means that the value parameter is a plain ASCII string.
-            -JsonUtf8 means that the value parameter is a JSON encoded string that will be sent to the data source in UTF-8 encoding.
-            -JsonIetfUtf8 means that the value parameter is a JSON encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
+            -JsonUtf8 means that the value parameter is a JSON-encoded string that will be sent to the data source in UTF-8 encoding.
+            -JsonIetfUtf8 means that the value parameter is a JSON-encoded string that follows the RFC8259 standard and that will be sent to the data source in UTF-8 encoding.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">Argument contentType contains a type that is not supported.</exception>
             <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
@@ -316,21 +316,21 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Capabilities">
             <summary>
-            Get the capabilities of the endpoint.
+            Gets the capabilities of the endpoint.
             </summary>
             <returns>The gNMI CapabilityResponse object.</returns>
             <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Delete(System.String)">
             <summary>
-            Deletes a path from the data tree. When the path is specified to an element that has children, these children will be recursively deleted.
+            Deletes a path from the data tree. When the path is specified to an element that has children, these children will be deleted recursively.
             </summary>
             <param name="path">The path to delete.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Delete(Gnmi.Path)">
             <summary>
-            Deletes a path from the data tree. When the path is specified to an element that has children, these children will be recursively deleted.
+            Deletes a path from the data tree. When the path is specified to an element that has children, these children will be deleted recursively.
             </summary>
             <param name="path">The path to delete.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
@@ -349,7 +349,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.HandleUpdateResponse(System.String,Gnmi.SubscribeResponse,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
-            Processes a <see cref="T:Gnmi.SubscribeResponse"/> that we expect for a gNMI subscription from the CommunicationGateway DxM.
+            Processes a <see cref="T:Gnmi.SubscribeResponse"/> that is expected for a gNMI subscription from the CommunicationGateway DxM.
             </summary>
             <param name="subscriptionName"></param>
             <param name="subscribeResponse"></param>
@@ -407,7 +407,7 @@
             </summary>
             <param name="path">Path of the value.</param>
             <param name="updateValue">Value that needs to be changed.</param>
-            <param name="isJsonIetf">Boolean indicating if the JSON object is coming from IETF format or not.</param>
+            <param name="isJsonIetf">Boolean indicating if the JSON object comes from IETF format or not.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
@@ -417,7 +417,7 @@
             <summary>
             A <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper"/> can process gNMI notifications and automatically
             set the values on a certain <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity"/>.
-            When developing a connector, the DataMainerConnectorDataMapper can be used from
+            When developing a connector, you can use the DataMinerConnectorDataMapper from
             the Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol package.
             </summary>
         </member>
@@ -451,7 +451,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.SuppressCommunication(System.Boolean)">
             <summary>
-            Suppresses the communication, no more values will be filled in or logging will be written out.
+            Suppresses the communication. No more values will be filled in or logging will be written out.
             </summary>
             <param name="isSuppress">Boolean indicating if communication should be suppressed.</param>
         </member>
@@ -528,12 +528,12 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType.JsonUtf8">
             <summary>
-            The passed string content represents a JSON-encoded text. The text will be encoded as UTF-8 when sending to the data source.
+            The passed string content represents a JSON-encoded text. The text will be encoded as UTF-8 when sent to the data source.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType.JsonIetfUtf8">
             <summary>
-            The passed string content represents a JSON-encoded text per RFC7951. The text will be encoded as UTF-8 when sending to the data source.
+            The passed string content represents a JSON-encoded text per RFC7951. The text will be encoded as UTF-8 when sent to the data source.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue">
@@ -687,10 +687,10 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.MergePaths(Gnmi.Path,Gnmi.Path)">
             <summary>
-            Merges two Paths into one Path.
+            Merges two paths into one path.
             </summary>
-            <param name="prefixPath">First Path to be merged.</param>
-            <param name="suffixPath">Second Path to be merged.</param>
+            <param name="prefixPath">First path to be merged.</param>
+            <param name="suffixPath">Second path to be merged.</param>
             <returns>Path containing the merged paths.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.RemoveCommonPathElements(Gnmi.Path,Gnmi.Path,System.Boolean)">
@@ -699,7 +699,7 @@
             </summary>
             <param name="entityPath">Path as defined on the data entity.</param>
             <param name="dataPath">Path as present in the incoming data.</param>
-            <param name="isExactKeyValidation">Indication if all keys specified in the entity and data need to exactly match.</param>
+            <param name="isExactKeyValidation">Indication if all keys specified in the entity and data need to match exactly.</param>
             <returns>Result after filtering the entity path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.HasCommonPathElements(Gnmi.Path,Gnmi.Path)">
@@ -764,7 +764,7 @@
             </summary>
             <param name="stringPath">Path as string.</param>
             <param name="startPosition">Position to start parsing the keys.</param>
-            <param name="pathElem">Path element where the keys and values belong to.</param>
+            <param name="pathElem">Path element that the keys and values belong to.</param>
             <returns>End position index of the keys and values in the stringPath.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.GetNextPathPosition(System.String,System.Int32)">
@@ -787,7 +787,7 @@
             <summary>
             Adds a gNMI path to the stringbuilder with existing paths.
             </summary>
-            <param name="sb">Stringbuilder that is containing all the paths.</param>
+            <param name="sb">Stringbuilder that contains all the paths.</param>
             <param name="path">gNMI path to be added.</param>
             <param name="doIncludeKeys">Boolean indicating if the path element keys need to be added.</param>
         </member>
@@ -795,7 +795,7 @@
             <summary>
             Adds a gNMI path element to the stringbuilder with existing paths.
             </summary>
-            <param name="sb">Stringbuilder that is containing all the paths.</param>
+            <param name="sb">Stringbuilder that contains all the paths.</param>
             <param name="element">gNMI path element to be added.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ParseByteString(Google.Protobuf.ByteString)">
@@ -886,7 +886,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathFilterResult.FilteredPath">
             <summary>
-            Gets the path elements that are still missing or are extra added after filtering out the root path. This will only contain value if <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathFilterResult.Result"/> is equal to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.PartialMatch"/> or <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.LongerDataMatch"/>.
+            Gets the path elements that are still missing or are added after filtering out the root path. This will only contain a value if <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathFilterResult.Result"/> is equal to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.PartialMatch"/> or <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.LongerDataMatch"/>.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart">
