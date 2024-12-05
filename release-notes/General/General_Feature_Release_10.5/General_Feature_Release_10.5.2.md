@@ -35,6 +35,16 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
+#### History Manager: A clearer exception will now be thrown when the History Manager API is used after the History Manager has been stopped [ID 41500]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When the History Manager API was used to perform create, update or delete operations after the History Manager had been stopped, up to now, a `NullReferenceException` would be thrown.
+
+From now on, when the History Manager API is used after the History Manager has been stopped, the following `DataMinerException` will be thrown and logged:
+
+`There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
+
 ### Fixes
 
 #### Problem with SLDataMiner when deleting a connector [ID 41520]
