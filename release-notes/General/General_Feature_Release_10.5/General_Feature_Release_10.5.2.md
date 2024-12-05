@@ -45,6 +45,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
+
 ### Fixes
 
 #### Problem with SLDataMiner when deleting a connector [ID 41520]
