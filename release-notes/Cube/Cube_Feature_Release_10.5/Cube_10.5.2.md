@@ -53,3 +53,9 @@ When, in the *Protocols & templates* app, you had selected a protocol, a protoco
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When you opened a parameter-specific alarm, trend or information template editor for a non-table parameter in a DVE child element (which is a table parameter in the DVE parent element), up to now, the template data would not get loaded correctly.
+
+#### DataMiner Cube desktop app would not open when started from the DataMiner Taskbar Utility [ID 41556]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you tried to open the DataMiner Cube desktop app from the DataMiner Taskbar Utility by selecting *Launch > DataMiner Cube*, the DataMiner Cube icon would appear in the system tray, but the app would incorrectly not be started.
