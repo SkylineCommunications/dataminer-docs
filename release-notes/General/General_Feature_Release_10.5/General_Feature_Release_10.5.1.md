@@ -160,7 +160,7 @@ To swarm an element, users will also need config rights on the element.
 
 When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA.
 
-Swarming elements is also possible **via Automation**. For this, you will to write a script with two input parameters:
+Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following Automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
 
 - a parameter named "Element Key", containing the DMA ID/element ID pair of the element you want to swarm, and
 - a parameter named "Target Agent ID", containing the ID of the target Agent.
