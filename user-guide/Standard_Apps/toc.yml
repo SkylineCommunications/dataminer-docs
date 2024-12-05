@@ -278,6 +278,13 @@ items:
             topicUid: META_WhatsApp_Messaging_Installation
           - name: Using the META WhatsApp Messaging solution
             topicUid: Using_META_WhatsApp_Messaging
+      - name: Nevion Video IPath app
+        topicUid: Overview_NevionVideoIPath_App
+        items:
+          - name: Installing the Nevion Video IPath app
+            topicUid: Installing_NevionVideoIPath_App
+          - name: Using the Nevion Video IPath app
+            topicUid: How_to_NevionVideoIPath_App
       - name: DataMiner Objects Tool
         topicUid: DataMiner_Objects_Tool
         items:
