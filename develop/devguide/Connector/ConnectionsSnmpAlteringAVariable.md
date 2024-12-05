@@ -43,7 +43,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 </Param>
 ```
 
-1. Using a trigger and a "set parameter" action, you can perform a set via a write parameter.
+2. Using a trigger and a "set parameter" action, you can perform a set via a write parameter.
 
 ```xml
 <Param id="13">
