@@ -22,7 +22,17 @@ uid: Cube_Feature_Release_10.5.2
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Data Display: Clearer message will now be shown while an element is being swarmed [ID 41538]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+While an element was being swarmed, up to now, Cube would show the following message:
+
+`xxxx is currently switching`
+
+From now on, it will show the following message instead:
+
+`xxx is currently swarming`
 
 ### Fixes
 
@@ -37,3 +47,9 @@ When, in the Alarm Console, an alarm tab was being loaded while, at the same tim
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When, in the *Protocols & templates* app, you had selected a protocol, a protocol version and a template in order to check the list of assigned elements, up to now, other items could incorrectly get selected when an update unrelated to any of the items you selected was received from the DataMiner Agent to which you were connected.
+
+#### Parameter-specific template editor would not load the correct template data for a non-table parameter of a DVE child element [ID 41510]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you opened a parameter-specific alarm, trend or information template editor for a non-table parameter in a DVE child element (which is a table parameter in the DVE parent element), up to now, the template data would not get loaded correctly.
