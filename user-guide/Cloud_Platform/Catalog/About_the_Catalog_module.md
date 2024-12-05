@@ -35,7 +35,7 @@ A Catalog item is a small package that contains one or more artifacts that can b
 
 Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
-For Catalog items following semantic versioning, versions are grouped by **range**. A range is defined by the first three indicators of a version (e.g. **7.1.2**.33).
+For Catalog items that follow semantic versioning, versions are grouped by **range**. A range is defined by the first three indicators of a version (e.g. **7.1.2**.33).
 
 Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector. If you are a member of the organization that published an item, you can manage these tags via the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button for each item.<!-- RN 40030 -->
 
@@ -46,5 +46,4 @@ The Catalog will recommend certain versions based on the following conditions:
 - If neither of the above apply, the latest version of the highest active range will be recommended.
 
 > [!NOTE]
->
 > Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
