@@ -28,7 +28,7 @@ The following checks and error messages have been added.
 
 | Check ID | Error message name                  | Error message                                                                                                                                              |
 |----------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.23.6   | InvalidCombinationOfSyntax1And2 | Connections can not be defined simultaneously via 'Protocol/Type' and 'Protocol/Connections'.                                                              |
+| 1.23.6   | InvalidCombinationOfSyntax1And2 | Connections cannot be defined simultaneously via 'Protocol/Type' and 'Protocol/Connections'.                                                              |
 | 1.23.7   | UnrecommendedSyntax2                | Unrecommended use of the 'Protocol/Connections' syntax.                                                                                                    |
 | 3.10.1   | NonExistingParam                    | The SLProtocol.FillArrayNoDelete method references a non-existing table.                                                                                   |
 | 3.10.2   | ParamMissingHistorySet              | The SLProtocol.FillArrayNoDelete overload with DateTime argument requires the historySet attribute to be set to true.                                      |

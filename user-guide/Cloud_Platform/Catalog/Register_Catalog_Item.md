@@ -108,7 +108,7 @@ type: '<fill in type here>'
 # [Required] 
 # The ID of the Catalog item.
 # All registered versions for the same ID are shown together in the Catalog.
-# This ID can not be changed. 
+# This ID cannot be changed. 
 # If the ID is not filled in, the registration will fail with HTTP status code 500. 
 # If the ID is filled in but does not exist yet, a new Catalog item will be registered with this ID.
 # If the ID is filled in but does exist, properties of the item will be overwritten.

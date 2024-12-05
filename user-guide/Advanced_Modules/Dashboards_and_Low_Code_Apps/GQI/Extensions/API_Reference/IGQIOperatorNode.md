@@ -45,7 +45,7 @@ Tries to forward the given filter operator if it does not depend on the affected
 #### Parameters
 
 - [IGQIFilterOperator](xref:GQI_IGQIColumn) `filterOperator`: The filter operator to optimize.
-- [IGQIColumn](xref:GQI_IGQIColumn)[] `affectedColumns`: The columns on which a filter can not be forwarded.
+- [IGQIColumn](xref:GQI_IGQIColumn)[] `affectedColumns`: The columns on which a filter cannot be forwarded.
 
 #### Returns
 
