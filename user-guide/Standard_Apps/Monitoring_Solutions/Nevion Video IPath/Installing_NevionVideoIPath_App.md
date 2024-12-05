@@ -19,16 +19,3 @@ uid: Installing_NevionVideoIPath_App
 1. Click the *Deploy* button.
 
 1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
-
-## Accessing the Nevion Video IPath app
-
-To access the Nevion Video IPath application:
-
-1. Go to `http(s)://[DMA name]/root`.
-
-1. Select *Nevion Video IPath* to start using the application.
-
-   ![Nevion Video IPath](~/user-guide/images/NevionAppLogo.png)
-
-> [!TIP]
-> See also: [Use case: Nevion Video IPath – Example Use Case](https://community.dataminer.services/use-case/sony-nevion-videoipath-integration/).
