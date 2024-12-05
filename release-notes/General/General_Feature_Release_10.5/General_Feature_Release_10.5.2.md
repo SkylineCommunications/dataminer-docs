@@ -43,6 +43,12 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
+#### Security enhancements [ID 41475]
+
+<!-- 41475: MR 10.6.0 - FR 10.5.2 -->
+
+A number of security enhancements have been made.
+
 #### History Manager: A clearer exception will now be thrown when the History Manager API is used after the History Manager has been stopped [ID 41500]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->

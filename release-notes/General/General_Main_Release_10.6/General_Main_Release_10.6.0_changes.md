@@ -80,6 +80,12 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 
 *\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
 
+#### Security enhancements [ID 41475]
+
+<!-- 41475: MR 10.6.0 - FR 10.5.2 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 *No fixes have been added yet.*
