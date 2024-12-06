@@ -123,3 +123,20 @@ In some rare cases, SLDataMiner could stop working when a connector was deleted 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
+
+#### Problems with SLNet call GetProtocolQActionsStateRequestMessage [ID 41591]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- Not added to MR 10.6.0 - Introduced by RN 41218 -->
+
+In DataMiner Feature Release 10.5.1, a new SLNet call `GetProtocolQActionsStateRequestMessage` was introduced to retrieve the compilation warnings and errors of a given protocol and version.
+
+Up to now, the following issues could occur when using this SLNet call:
+
+- SLDataMiner could stop working when the DataMiner Agent did not have any elements.
+- QActions containing code other than CSharp would incorrectly also be validated, resulting in errors to be thrown.
+
+From now on, no QAction validation will be performed when the DataMiner Agent does not contain any elements, and the validation of any QAction containing code other than CSharp will return "OK".
+
+> [!NOTE]
+> The above-mentioned SLNet message is subject to change without notice.
