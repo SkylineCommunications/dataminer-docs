@@ -14,7 +14,7 @@ The [*Nevion Video IPath* package](https://catalog.dataminer.services/details/ec
 
 - The Nevion Video IPath low-code app
 
-- Nevion Video IPath connector version 1.3.0.7
+- Nevion Video IPath connector version 1.3.0.7 or higher
 
 - A Visio file that will provide extra visualization and control capabilities in the Monitoring app.
 

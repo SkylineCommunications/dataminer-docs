@@ -39,24 +39,19 @@ To establish a connection:
 
 1. Click **Connect** to link the source and destination.
 
+   Alternatively, you can also use the **Schedule** button, which allows you to perform the connect operation with a specific start and end time.
+
    The *Last Connection Status* will show whether the connection was successful.
 
    Once a source and destination have been connected, you can disconnect them again with the **Disconnect** button.
 
-   Alternatively, you can also use the **Schedule** button.
-
 ## Services page
 
-The *Services* page provides an overview of the services in the system, which correspond to established connections between sources and destinations.
+The *Services* page provides an overview of the services in the system, which correspond to established connections between sources and destinations. With the X button for each service in the overview, you can quickly delete a service.
 
 ![Overview page](~/user-guide/images/Nevion_ServicesPage.png)
-
-In addition to this overview, services can easily be deleted from this table.
 
 > [!NOTE]
 > Hover the mouse pointer over the table to access easy filtering.
 >
 > ![Easy filtering](~/user-guide/images/Nevion_ServicesHover.png)
-
-> [!IMPORTANT]
-> If you suspect missing information falls under the latter two categories, we recommend reaching out to your Technical Account Manager. They can ensure that any necessary updates are implemented in the application.
