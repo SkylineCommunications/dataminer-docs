@@ -1023,3 +1023,9 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
 
 If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
+
+#### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Up to now, a "Script started" information event would be generated each time a DOM CRUD script or DOM Action script was started. From now on, these information events will no longer be generated.

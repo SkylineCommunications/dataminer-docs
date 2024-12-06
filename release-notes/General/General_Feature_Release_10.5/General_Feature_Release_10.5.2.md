@@ -69,6 +69,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Up to now, a "Script started" information event would be generated each time a DOM CRUD script or DOM Action script was started. From now on, these information events will no longer be generated.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
