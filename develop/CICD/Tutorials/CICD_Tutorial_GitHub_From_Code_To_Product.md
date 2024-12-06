@@ -12,10 +12,8 @@ This CI/CD pipeline will ensure strict quality standards, provide you with a pri
 
 Expected duration: 10 minutes.
 
->[!TIP]
->See also: [Kata #50: Going form code to product in Github](https://community.dataminer.services/courses/kata-50/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-![image](https://github.com/user-attachments/assets/dfa1137d-d7bd-4a6b-b306-89a26878095d)
-
+> [!TIP]
+> See also: [Kata #50: Going from code to product in Github](https://community.dataminer.services/courses/kata-50/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Private versus public code
 
