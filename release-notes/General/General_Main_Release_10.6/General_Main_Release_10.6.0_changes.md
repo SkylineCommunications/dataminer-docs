@@ -66,6 +66,21 @@ From now on, it will no longer be allowed to perform a 10.5.x web-only upgrade o
 
 If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 10.3.x, you will first have to upgrade that DMA to 10.4.0.
 
+#### Service & Resource Management: More detailed trace data will now be returned when a quarantine conflict occurs [ID 41399]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+The trace data that is returned when a booking is moved to quarantine will now include more detailed information.
+
+The `QuarantineTrigger` object will now contain a `ReservationConflictType` property, which will contain one of the following reasons why bookings were moved to quarantine following a booking update:
+
+- ConcurrencyOverflow: A resource does not have enough concurrency to support all bookings.
+- CapacityOverflow: A resource does not have enough capacity to support all bookings.
+- UnavailableCapability: The booking tries to book a capability that is not available on the resource.
+- UnavailableTimeDependentCapability: The booking tries to book a time-dependent capability that is not available on the resource because another overlapping booking has already booked a different value.
+
+The string representation of the trace data has also been adjusted to provide more details. This string is logged in *SLResourceManager.txt* when a request has trace data in the response as well as in the booking log file of the SRM solution.
+
 #### SLAnalytics: Infinite parameter values will now be considered missing values [ID 41417]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->

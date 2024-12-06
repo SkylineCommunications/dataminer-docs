@@ -18,5 +18,4 @@ DMAs can send notifications toward client applications by means of two different
 > Within a DataMiner System, some connections can be configured to use eventing, while others can be configured to use polling.
 
 > [!TIP]
-> See also:
-> [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
+> See also: [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
