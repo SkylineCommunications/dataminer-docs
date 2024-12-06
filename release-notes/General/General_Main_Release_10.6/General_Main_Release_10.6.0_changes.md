@@ -80,6 +80,12 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 
 *\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
 
+#### DataMiner upgrade: '.dmapp' and '.dmprotocol' will now by default be added to the list of MIME types in 'C:\\Skyline DataMiner\\Webpages\\web.config' [ID 41469]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the *C:\\Skyline DataMiner\\Webpages\\web.config* file.
+
 #### Security enhancements [ID 41475]
 
 <!-- 41475: MR 10.6.0 - FR 10.5.2 -->
