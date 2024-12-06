@@ -6,10 +6,10 @@ uid: DOM_BulkProcessing_Example
 
 From DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->, the `DomInstance` CRUD helper component supports processing multiple `DomInstances` in one call.
 
-Since DataMiner 10.5.2/10.5.0 onwards<!-- RN 41546 --> the error handling has been reviewed. This page contains examples on how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
+In DataMiner 10.5.0/10.5.2<!-- RN 41546 -->, the error handling has been reviewed. This page contains examples on how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
 
 > [!IMPORTANT]
-> Before DataMiner Feature Release 10.5.2 <!-- RN 37891 --> when any validation issue would occur, no exception would be thrown when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call would need to be used to check for which `DomInstances` the call succeeded or failed.
+> In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2<!-- RN 37891 -->, when any validation issue occurs, no exception is thrown when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
 > The `TryCreateOrUpdate` or `TryDelete` methods are not available in those versions.
 
 ## Creating multiple DomInstances
@@ -50,7 +50,7 @@ domHelper.DomInstances.CreateOrUpdate(domInstances);
 
 ### Checking issues
 
-For some of the `DomInstances`, the creation or update might not succeed. When using `CreateOrUpdate` or `Delete`, an exception will be thrown. Like in the previous example, some `DomInstances` need to be updated:
+For some of the `DomInstances`, the creation or update might not succeed. When `CreateOrUpdate` or `Delete` is used, an exception will be thrown. Like in the previous example, some `DomInstances` need to be updated:
 
 ```csharp
 try
@@ -70,7 +70,7 @@ catch(Exception e)
 }
 ```
 
-In the above example, the validation done by `CreateOrUpdate` could fail for some of the `DomInstances`. In that case the exception that gets logged, will include:
+In the above example, the validation done by `CreateOrUpdate` could fail for some of the `DomInstances`. In that case the exception that gets logged will include:
 
 - How many items succeeded and how many items failed for that bulk CRUD operation.
 
@@ -80,7 +80,7 @@ In the above example, the validation done by `CreateOrUpdate` could fail for som
 
 - The default info about the exception, including the stacktrace.
 
-To more easily get the details for which items the operation failed or succeeded, `TryCreateOrUpdate` or `TryDelete` can be used. In this example using `TryCreateOrUpdate`, the number of `DomInstances` that fail is logged, together with the issues that occurred. Next, the number of `DomInstances` that succeed gets logged.
+To more easily get the details for which items the operation failed or succeeded, `TryCreateOrUpdate` or `TryDelete` can be used. In the example below using `TryCreateOrUpdate`, the number of `DomInstances` that fail is logged, together with the issues that occurred. Next, the number of `DomInstances` that succeed gets logged.
 
 > [!IMPORTANT]
 > In case `CreateOrUpdate` or `Delete` are completely unsuccessful, for instance because of a database issue, by default a `CrudFailedException` will be thrown. The details of the issue will be available in the `TraceData` of that exception, which will be included when that exception gets logged.
@@ -100,7 +100,7 @@ else
 {
   if (updateResult != null)
   {
-    // Log the number of DomInstances that was not updated.
+    // Log the number of DomInstances that were not updated.
     // Also log the TraceData for all failing DomInstances. The TraceData contains all errors and warnings.
     Log($"Could not perform the update for {updateResult.UnsuccessfulIds.Count} items: {updateResult.GetTraceData()}");
   }
@@ -116,10 +116,10 @@ else
 
 The result that `TryCreateOrUpdate` outputs contains `SuccessfulItems` and `SuccessfulIds` to reuse or check the `DomInstances` that are successfully created or updated. The IDs of the items that did not succeed are available in `UnsuccessfulIds`.
 
-In addition to a summarized logging using `GetTraceData()`, `TraceDataPerItem` can be used to check for errors and warnings per `DomInstanceId`.
+In addition to summarized logging using `GetTraceData()`, `TraceDataPerItem` can be used to check for errors and warnings per `DomInstanceId`.
 
 > [!IMPORTANT]
-> In case `TryCreateOrUpdate` or `TryDelete` are completely unsuccessful, for instance because of a database issue, these methods will return false and the result parameter will be null. You should use `GetTraceDataLastCall()` to identify the issue that occurred, as shown in the above example.
+> In case `TryCreateOrUpdate` or `TryDelete` are completely unsuccessful, for instance because of a database issue, these methods will return false, and the result parameter will be null. You should use `GetTraceDataLastCall()` to identify the issue that occurred, as shown in the example above.
 
 ## Remove multiple DomInstances
 
