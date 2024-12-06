@@ -41,6 +41,8 @@ All specifications are provided based on the assumption that DMAs are running on
 | 18 | Switch frequency | DataMiner Failover | 1 switch every 15 minutes ||
 | 19 | Number of concurrent active tickets | DMS | 10,000 ||
 | 20 | Number of alarm properties (usable in alarm search filters) of all types (view, element or service) | DMS | 50 | When adding for example, an element with alarm filterable properties to multiple services, this can lead to a heavy load on the DMS during alarm storm situations. Please consider your configuration carefully. |
+| 21 | Number of queries | Dashboard | 30 | Starting from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9. |
+| 22 | Number of queries | Low-code app | 200 | Starting from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9. |
 
 ## Benchmarks
 

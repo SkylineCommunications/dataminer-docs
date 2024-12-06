@@ -12,85 +12,85 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
 1. If you use the `options="snmpSet"` attribute on the write parameter, the set will be executed.
 
-```xml
-<Param id="13" options="snmpSet">
-    <Name>sysContact</Name>
-    <Description>System Contact</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
-        <Type>octetstring</Type>
-    </SNMP>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>System Info</Page>
-                <Row>2</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
-</Param>
-```
+   ```xml
+   <Param id="13" options="snmpSet">
+       <Name>sysContact</Name>
+       <Description>System Contact</Description>
+       <Type>write</Type>
+       <Interprete>
+           <RawType>other</RawType>
+           <LengthType>next param</LengthType>
+           <Type>string</Type>
+       </Interprete>
+       <SNMP>
+           <Enabled>true</Enabled>
+           <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
+           <Type>octetstring</Type>
+       </SNMP>
+       <Display>
+           <RTDisplay>true</RTDisplay>
+           <Positions>
+               <Position>
+                   <Page>System Info</Page>
+                   <Row>2</Row>
+                   <Column>0</Column>
+               </Position>
+           </Positions>
+       </Display>
+       <Measurement>
+           <Type>string</Type>
+       </Measurement>
+   </Param>
+   ```
 
 1. Using a trigger and a "set parameter" action, you can perform a set via a write parameter.
 
-```xml
-<Param id="13">
-    <Name>sysContact</Name>
-    <Description>System Contact</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
-        <Type>octetstring</Type>
-    </SNMP>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>System Info</Page>
-                <Row>2</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
-</Param>
-<Trigger id="13">
-    <Name>onWriteSysContact</Name>
-    <On id="13">parameter</On>
-    <Time>change</Time>
-    <Type>action</Type>
-    <Content>
-        <Id>13</Id>
-    </Content>
-</Trigger>
-<Action id="13">
-    <Name>setSysContact</Name>
-    <On id="13">parameter</On>
-    <Type>set</Type>
-</Action>
-```
+   ```xml
+   <Param id="13">
+       <Name>sysContact</Name>
+       <Description>System Contact</Description>
+       <Type>write</Type>
+       <Interprete>
+           <RawType>other</RawType>
+           <LengthType>next param</LengthType>
+           <Type>string</Type>
+       </Interprete>
+       <SNMP>
+           <Enabled>true</Enabled>
+           <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
+           <Type>octetstring</Type>
+       </SNMP>
+       <Display>
+           <RTDisplay>true</RTDisplay>
+           <Positions>
+               <Position>
+                   <Page>System Info</Page>
+                   <Row>2</Row>
+                   <Column>0</Column>
+               </Position>
+           </Positions>
+       </Display>
+       <Measurement>
+           <Type>string</Type>
+       </Measurement>
+   </Param>
+   <Trigger id="13">
+       <Name>onWriteSysContact</Name>
+       <On id="13">parameter</On>
+       <Time>change</Time>
+       <Type>action</Type>
+       <Content>
+           <Id>13</Id>
+       </Content>
+   </Trigger>
+   <Action id="13">
+       <Name>setSysContact</Name>
+       <On id="13">parameter</On>
+       <Type>set</Type>
+   </Action>
+   ```
 
-The method using the snmpSet option is generally preferred, as it does not require an action and trigger to be defined.
+The method using the `snmpSet` option is generally preferred, as it does not require an action and trigger to be defined.
 
 It is important to note that when an SNMP parameter (i.e. a parameter containing an SNMP tag) of type "write" is set, the corresponding read parameter is immediately set to this new value (even if the actual value set still needs to be sent to the device). As it is possible that an SNMP set fails, it is important to always perform an additional SNMP get operation to retrieve the value. This way, when a set failed, the value of the read parameter will eventually be set back to the correct value upon completion of the SNMP get request.
 
@@ -126,11 +126,10 @@ To perform this get request, a trigger on the write parameter is needed. This tr
 </Group>
 ```
 
-Since DataMiner version 8.0.1.1, it is possible to use options "snmpSetWithWait" and "snmpSetAndGetWithWait" as attributes on parameters.
+You can use the options `snmpSetWithWait` and `snmpSetAndGetWithWait` as attributes on parameters (see [options attribute](xref:Protocol.Params.Param-options)):
 
-The “snmpSetWithWait” option will perform a set and wait until the set succeeded (i.e. when the SNMP Manager received a "noError" from the device). In this case, a group to perform the SET is added to the group execution queue.
-
-The “snmpSetAndGetWithWait” option will perform a set, wait until the set succeeded and then perform a get of the read parameter and wait until the get succeeded. Note that there is no verification of the get/set value.
+- The `snmpSetWithWait` option will perform a set and wait until the set has succeeded (i.e. when the SNMP manager has received a "noError" from the device). In this case, a group to perform the set is added to the group execution queue.
+- The `snmpSetAndGetWithWait` option will perform a set, wait until the set has succeeded and then perform a get of the read parameter and wait until the get has succeeded. Note that there is no verification of the get/set value.
 
 The same options can be used for write parameters on a column: use a wildcard on the set parameter and the "instance" option on the table.
 
@@ -171,4 +170,4 @@ DataMiner Protocol Markup Language:
 - [Protocol.Params.Param@options](xref:Protocol.Params.Param-options)
 
 > [!NOTE]
-> Since DataMiner version 8.0.7, it is also possible to use the snmpSetAndGet attribute. See “snmpSetAndGet”.
+> You can also perform a set and get on a write parameter using the [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet) attribute.

@@ -21,13 +21,13 @@ uid: General_Main_Release_10.1.0_new_features_2
 
 ### DMS Cube
 
-#### Data Display: Table column layout can now be customized and saved per table \[ID_22866\]
+#### Data Display: Table column layout can now be customized and saved per table \[ID 22866\]
 
 It is now possible to save the layout of a table column after having customized it.
 
 After changing the width, the position and/or the visibility of a column, right-click its header, and select *Save layout*. To reset the column layout to the default settings, select *Reset layout*.
 
-#### Alarm Console: Alarm events without a severity change can now be consolidated in the preceding event in the alarm tree \[ID_23234\]\[ID_23526\]\[ID_24462\]\[ID_27413\]
+#### Alarm Console: Alarm events without a severity change can now be consolidated in the preceding event in the alarm tree \[ID 23234\]\[ID 23526\]\[ID 24462\]\[ID 27413\]
 
 From now on, when an alarm tree contains alarm events that did not change the severity, these events can be consolidated in the previous event.
 
@@ -38,7 +38,7 @@ When you open an alarm card that shows an alarm tree containing consolidated eve
 > - The maximum alarm limit is calculated after alarm event consolidation.
 > - Alarm consolidation is disabled by default. To enable it, add an *AlarmSettings.MustSquashAlarms* element to the *MaintenanceSettings.xml* file, and set its value to True.
 
-#### Possibility to enable SSL/TLS encryption when creating or editing TCP/IP elements \[ID_23262\]\[ID_23617\]\[ID_23836\]\[ID_23947\]
+#### Possibility to enable SSL/TLS encryption when creating or editing TCP/IP elements \[ID 23262\]\[ID 23617\]\[ID 23836\]\[ID 23947\]
 
 When creating or editing a TCP/IP element, you can now enable SSL/TLS encryption.
 
@@ -62,7 +62,7 @@ To enable TLS, do the following on every DataMiner Agent in a DataMiner System c
 > - When, on a DataMiner Agent, you replace a PKCS12 file, then all elements using the TCP/IP port in question have to be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
 
-#### Elements that request data from a device via a serial port of type TCP/IP now support SSL/TLS encryption \[ID_23462\]
+#### Elements that request data from a device via a serial port of type TCP/IP now support SSL/TLS encryption \[ID 23462\]
 
 Elements that request data from a device via a serial port of type TCP/IP now support SSL/TLS encryption.
 
@@ -76,7 +76,7 @@ If you want such an element to use SSL/TLS encryption, then do the following:
 >
 > Elements acting as SSL/TLS client will negotiate the highest supported SSL/TLS version with the server. If the server supports TLS up to version 1.2, the element will use version 1.2.
 
-#### Service & Resource Management: Clearer warning messages will now appear when trying to delete resources linked to bookings or elements linked to resources \[ID_24435\]\[ID_25085\]
+#### Service & Resource Management: Clearer warning messages will now appear when trying to delete resources linked to bookings or elements linked to resources \[ID 24435\]\[ID 25085\]
 
 From now on, clearer warning messages will appear when you try to delete
 
@@ -84,25 +84,25 @@ From now on, clearer warning messages will appear when you try to delete
 
 - an element linked to one or more resources.
 
-#### Anomaly detection configuration in alarm templates \[ID_24578\]
+#### Anomaly detection configuration in alarm templates \[ID 24578\]
 
 It is now possible to enable specific anomaly detection options for parameters in an alarm template. To do so, select the *Advanced configuration of anomaly detection* option via the cogwheel button in the alarm template editor. Three additional columns will then be displayed in the alarm template, where you can enable or disable trend monitor, variance monitor and level shift anomaly detection for each monitored parameter.
 
-#### Service & Resource Management - ListView: Alarm count column can now indicate the number of alarms as a colored icon \[ID_24598\]
+#### Service & Resource Management - ListView: Alarm count column can now indicate the number of alarms as a colored icon \[ID 24598\]
 
 In the ListView component, which is used in the Bookings and Services apps as well as in Visual Overview, the *Alarm count* column can now be configured to indicate the number of alarms as an icon taking the color of the most severe alarm.
 
-#### New setting to display a Forward button in card header bar menus \[ID_24844\]
+#### New setting to display a Forward button in card header bar menus \[ID 24844\]
 
 In the new Cube X layout, by default, cards no longer have a Forward button in their header bar menu.
 
 If you want card header bar menus to contain a Forward button, then open the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, and set the *commonServer.card.DisplayForwardButton* option to true.
 
-#### Alarm Console now fully compliant with the new Cube X style \[ID_24859\]
+#### Alarm Console now fully compliant with the new Cube X style \[ID 24859\]
 
 The Alarm Console has been redesigned and is now fully compliant with the new Cube X style.
 
-#### Alarm templates: Conditional monitoring based on a cell value from either the same table or another table \[ID_24867\]\[ID_24933\]
+#### Alarm templates: Conditional monitoring based on a cell value from either the same table or another table \[ID 24867\]\[ID 24933\]
 
 In an alarm template, it is now possible to configure a condition on a column parameter based on the value of a cell in either the same table or a different table.
 
@@ -150,7 +150,7 @@ In the example below, parameter 203 is a column of table 200, and the cell in co
 >
 > The *keyValue* attribute will always refer to the key (primary key or display key) of the table containing the column parameter used in the condition, not the key in the column parameter being monitored.
 
-#### Trending: Automatic pattern matching \[ID_24893\]\[ID_25708\]
+#### Trending: Automatic pattern matching \[ID 24893\]\[ID 25708\]
 
 On systems with a Cassandra database and an Indexing Engine, from now on, DataMiner will be able to automatically recognize recurring patterns in trend data called “tags”.
 
@@ -211,7 +211,7 @@ Also, apart from the *Left mouse button action on graph* and *Right mouse butto
 | Hotkey for mouse button action on graph    | The key that, when pressed while clicking the left mouse button, will cause the “hotkey + left mouse button action” to be performed.       |
 | Hotkey + left mouse button action on graph | Action to be performed when you press the “hotkey for mouse button action” while clicking the left mouse button: Select, Zoom, Pan or None |
 
-#### Alarm Console: Severity duration column in history alarm tabs \[ID_24942\]
+#### Alarm Console: Severity duration column in history alarm tabs \[ID 24942\]
 
 Next to active alarm tab pages, history tab pages now also allow you to display a severity duration column.
 
@@ -221,7 +221,7 @@ DataMiner Cube will calculate severity durations based on the alarms listed on t
 
 Additionally, a number of enhancements have been made with respect to severity durations. For instance, it is now also possible to display the severity duration when history tracking is disabled.
 
-#### Exporting element data to CSV: Fields added to export file \[ID_25049\]\[ID_25239\]
+#### Exporting element data to CSV: Fields added to export file \[ID 25049\]\[ID 25239\]
 
 When you export element data to a CSV file, from now on, the export file will include the following additional fields:
 
@@ -234,14 +234,14 @@ When you export element data to a CSV file, from now on, the export file will in
 | \[53\]      | TLS                  | SSL TLS setting per port (can be a list of tab-separated values)                                   |
 | \[54\]      | AllowedIpAddresses   | Comma-separated list of allowed IP addresses per interface (can be a list of tab-separated values) |
 
-#### System Center: New “Analytics config” system settings section \[ID_25124\]\[ID_26388\]\[ID_26912\]
+#### System Center: New “Analytics config” system settings section \[ID 25124\]\[ID 26388\]\[ID 26912\]
 
 In *System Center*, the *System settings* section now contains a new *Analytics config* page, which allows you to configure a number of SLAnalytics settings.
 
 > [!NOTE]
 > If you take a DMA out of a cluster, we strongly recommend to restart it in order to prevent issues with the analytics configuration in case the DMA is added to the cluster again later.
 
-#### Alarm Console: Automatic incident tracking \[ID_25162\]\[ID_25802\]\[ID_25905\]\[ID_26592\]\[ID_27027\]\[ID_27299\]\[ID_27336\]\[ID_27877\]
+#### Alarm Console: Automatic incident tracking \[ID 25162\]\[ID 25802\]\[ID 25905\]\[ID 26592\]\[ID 27027\]\[ID 27299\]\[ID 27336\]\[ID 27877\]
 
 This new DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike *Correlation tracking*, this happens completely automatically, without any configuration by the user. Based on what it has learned from past alarm activity in your system and based on a broad range of auxiliary data, DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
 
@@ -289,25 +289,25 @@ In DataMiner Cube, you can enable this feature in *System Center*, via *System s
 | Enabled | Allows you to activate or deactivate this feature. Note that when you upgrade to DataMiner 10.0.11, the feature is automatically disabled, unless it had been previously been activated as a soft-launch feature. |
 | Maximum time interval | The maximum time interval between alarms that can be grouped as one incident. If the root times of alarms are further apart than the configured interval, the alarms will not be grouped. |
 
-#### Alarm hyperlinks: \[DisplayValue\] keywords now allows to display the value of a discreet parameter \[ID_25294\]
+#### Alarm hyperlinks: \[DisplayValue\] keywords now allows to display the value of a discreet parameter \[ID 25294\]
 
 In second-generation alarm hyperlinks, you can now use the \[DISPLAYVALUE\] keyword to display the value of a discreet parameter.
 
-#### Client machines running Cube now require Microsoft .NET Framework v4.6.2 \[ID_25309\]
+#### Client machines running Cube now require Microsoft .NET Framework v4.6.2 \[ID 25309\]
 
 Client machines running DataMiner Cube now require Microsoft .NET Framework 4.6.2.
 
-#### Profiles app: Support for capability parameters of type 'text' \[ID_25345\]
+#### Profiles app: Support for capability parameters of type 'text' \[ID 25345\]
 
 The *Profiles* app now also allows you to create and edit profile parameters of category “Capability” and type “Text”.
 
-#### DataMiner Cube - Alarm templates: Conditional monitoring now support checking whether a parameter value is equal or not equal to 'Not Initialized' \[ID_25352\]\[ID_25644\]
+#### DataMiner Cube - Alarm templates: Conditional monitoring now support checking whether a parameter value is equal or not equal to 'Not Initialized' \[ID 25352\]\[ID 25644\]
 
 In an alarm template, it is now possible to configure monitoring conditions that check whether a parameter value is equal or not equal to “Not Initialized”.
 
 A drop-down box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
 
-#### Creating an element simulation file \[ID_25353\]
+#### Creating an element simulation file \[ID 25353\]
 
 On a DataMiner System, you can create simulated elements. These elements behave as if they are communicating with a physical device, but in fact they are merely displaying data from a simulation file.
 
@@ -317,19 +317,19 @@ When you open an element card, you can also access this same command via the car
 
 The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: *C:\\Skyline DataMiner\\Protocols\\NAME\\VERSION\\Simulation_ELEMENTNAME.xml*
 
-#### Resources app: Time-dependent capabilities \[ID_25409\]
+#### Resources app: Time-dependent capabilities \[ID 25409\]
 
 When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e. that the capability of the resource can change over time.
 
-#### Alarm Console: Special Indexing Engine search tab is now available without enabling the 'System configuration \> Indexing Engine \> UI Available' user permission \[ID_25429\]
+#### Alarm Console: Special Indexing Engine search tab is now available without enabling the 'System configuration \> Indexing Engine \> UI Available' user permission \[ID 25429\]
 
 On systems on which the alarms were migrated to an Indexing Engine, up to now the special Indexing Engine search tab would only be available in the Alarm Console of users who had been granted the “System configuration \> Indexing Engine \> UI Available” user permission. From now on, that search tab will be available to all users, regardless of whether they were granted the above-mentioned user permission.
 
-#### Analytics tables in Elasticsearch database can now be included or excluded in custom DataMiner backup \[ID_25572\]
+#### Analytics tables in Elasticsearch database can now be included or excluded in custom DataMiner backup \[ID 25572\]
 
 When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the checkbox *Include analytics tables in backup*. By default, this option is selected.
 
-#### View cards: New columns added to view card list view \[ID_25715\]
+#### View cards: New columns added to view card list view \[ID 25715\]
 
 On view cards, the list view now has two additional columns:
 
@@ -337,7 +337,7 @@ On view cards, the list view now has two additional columns:
 
 - *Host ID*: The ID of the DMA hosting the element, service, SLA or redundancy group.
 
-#### SNMP Managers: New alarm storm prevention option 'Group alarms with the same parameter name' \[ID_25717\]\[ID_25984\]
+#### SNMP Managers: New alarm storm prevention option 'Group alarms with the same parameter name' \[ID 25717\]\[ID 25984\]
 
 When you have enabled alarm storm prevention while configuring an SNMP manager, you can now choose to select the “Group alarms with the same parameter name” option.
 
@@ -345,22 +345,22 @@ If this option is selected, alarm storm prevention will happen based on the numb
 
 By default, this option is selected.
 
-#### Services app: New 'Profiles' tab page \[ID_26111\]
+#### Services app: New 'Profiles' tab page \[ID 26111\]
 
 The Services app now has a new “Profiles” tab page, which will allow you to manage Service Profile Definitions and Service Profile Instances.
 
-#### Services app: Profile can now be referred to by value or by reference when configuring a service definition node \[ID_26118\]
+#### Services app: Profile can now be referred to by value or by reference when configuring a service definition node \[ID 26118\]
 
 When you configure a node in a service definition, a toggle button now allows you to specify whether the selected profile will be assigned by value or by reference.
 
-#### Data Display: Number groups in numeric values will now be separated by a thin space \[ID_26251\]
+#### Data Display: Number groups in numeric values will now be separated by a thin space \[ID 26251\]
 
 In Data Display, three-digit number groups in numeric values will now by default be separated by a thin space. This will make large numbers more legible.
 
 > [!NOTE]
 > This so-called thousands separator will only be used to display numbers. Numbers that are copied, edited or exported will not contain any number group separators.
 
-#### Services app: New and updated booking state icons \[ID_26270\]
+#### Services app: New and updated booking state icons \[ID 26270\]
 
 In the *Overview* tab of the *Services* app, the booking state of a service is indicated by an icon in the *Booking state* column.
 
@@ -376,7 +376,7 @@ In the *Overview* tab of the *Services* app, the booking state of a service is
   - Future
   - Past/None
 
-#### DataMiner Cube start window: New method to install a DataMiner Cube desktop application \[ID_26282\]\[ID_26381\]\[ID_26725\]\[ID_26752\]\[ID_26788\]\[ID_26986\]
+#### DataMiner Cube start window: New method to install a DataMiner Cube desktop application \[ID 26282\]\[ID 26381\]\[ID 26725\]\[ID 26752\]\[ID 26788\]\[ID 26986\]
 
 From now on, you can use the DataMiner Cube start window to install DataMiner Cube as a desktop application.
 
@@ -419,27 +419,27 @@ The first time you open the start window, a task named “Update DataMiner Cube�
 
 The scheduled task is checked each time you open the start window, and is removed when you uninstall DataMiner Cube. Periodic updates can be suspended by disabling the task in Windows Task Scheduler.
 
-#### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID_26339\]
+#### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID 26339\]
 
 When configuring an SNMP manager, you can now add the polling IP address as a custom trap binding.
 
-#### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID_26379\]
+#### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID 26379\]
 
 Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
 
 Capability profile parameters of type discrete that were configured before this change will have no discrete type selected. For these parameters, the display value will remain equal to the raw value, unless they are reconfigured.
 
-#### Export: Selecting multiple items to be exported / New option to export data as displayed in view card \[ID_26450\]
+#### Export: Selecting multiple items to be exported / New option to export data as displayed in view card \[ID 26450\]
 
 From now on, it is possible to select multiple objects in a list and export them together in one file.
 
 Also, when indicating which data to export, it is now possible to select the *Data as displayed in view card* option.
 
-#### Service & Resource Management - Profiles app: Value of a capability of type 'text' can now be changed regardless of the 'User time-dependent' option \[ID_26538\]
+#### Service & Resource Management - Profiles app: Value of a capability of type 'text' can now be changed regardless of the 'User time-dependent' option \[ID 26538\]
 
 Up to now, when you configured a profile instance, the value of a capability of type “text” could only be changed when the “Use time-dependent" option was selected. From now on, it will be possible to change the value of a capability of type “text” regardless of the “User time-dependent" option.
 
-#### System Center - SNMP forwarding: Generate MIB file \[ID_26591\]
+#### System Center - SNMP forwarding: Generate MIB file \[ID 26591\]
 
 When an SNMP manager is configured to forward SNMPv2 or SNMPv3 traps with custom bindings, then you can now generate a MIB file containing those custom bindings.
 
@@ -452,7 +452,7 @@ To do so, go to the *Notification* tab of the SNMP manager in question, open th
 > - the list of custom bindings contains at least one entry, and
 > - all changes to the SNMP manager in question have been saved.
 
-#### Default browser engine is now Chromium \[ID_26662\]
+#### Default browser engine is now Chromium \[ID 26662\]
 
 From now on, Cube will use Chromium as the default browser engine. When that engine is not installed, it will fall back to the first installed browser (currently, on most systems, this will be Microsoft Internet Explorer).
 
@@ -463,14 +463,14 @@ When, on a Visio page, you configured a shape to display a web page, that web pa
 > [!NOTE]
 > Cube also use the default browser engine when displaying annotations.
 
-#### Alarm Console: 'Show in banner' option can now also be set in the Settings window \[ID_26993\]
+#### Alarm Console: 'Show in banner' option can now also be set in the Settings window \[ID 26993\]
 
 The *Show in banner* option, which up to now could only be set in the hamburger menu of the Alarm Console, can now also be set in *Alarm Console* section of the *Settings* window, both as a user setting and a group setting.
 
 > [!NOTE]
 > This option can only be set for one alarm tab page. When you activate the option for a particular tab page, it will automatically be deactivated for all other tab pages.
 
-#### DataMiner Cube desktop app: Update release tracks \[ID_27086\]\[ID_27121\]
+#### DataMiner Cube desktop app: Update release tracks \[ID 27086\]\[ID 27121\]
 
 To allow a phased rollout of new versions of the DataMiner Cube desktop app, multiple release tracks have now been introduced: a release track with the latest version, and 3 phased release tracks.
 
@@ -482,7 +482,7 @@ New versions are first made available in the release track with the latest versi
 
 The updates are retrieved from dataminer.services or from the most recently connected DataMiner Systems if dataminer.services cannot be reached.
 
-#### Profiles app: Converters \[ID_27264\]
+#### Profiles app: Converters \[ID 27264\]
 
 In the *Profiles* app, it is now possible to configure a converter (i.e. a mediation snippet) for a parameter linked to a profile parameter.
 
@@ -503,11 +503,11 @@ To configure a converter, do the following:
 > [!NOTE]
 > When you edit a linked parameter with a converter, the *Converter* setting will automatically be activated.
 
-#### Trending: Full-term trend prediction \[ID_27281\]\[ID_27320\]
+#### Trending: Full-term trend prediction \[ID 27281\]\[ID 27320\]
 
 On a system with a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future. Up to now, three types of trend prediction could be displayed: short-term, mid-term and long-term prediction. From now on, you can also choose to display full-term prediction, which is based on either daily data points or a server-side aggregated set of one-hour data points.
 
-#### DataMiner Cube will now display more detailed information when you try to connect to a DataMiner Agent that is starting up \[ID_27308\]\[ID_27770\]
+#### DataMiner Cube will now display more detailed information when you try to connect to a DataMiner Agent that is starting up \[ID 27308\]\[ID 27770\]
 
 When you try to connect to a DataMiner Agent that is starting up or that is being restarted, DataMiner Cube will now display more detailed information regarding the startup process.
 
@@ -517,7 +517,7 @@ Examples of messages that will be displayed:
 
 - Starting element X
 
-#### Elements, services and redundancy groups hosted by a disconnected DMA will now be indicated as being disconnected \[ID_27313\]\[ID_27611\]\[ID_27613\]\[ID_27760\]
+#### Elements, services and redundancy groups hosted by a disconnected DMA will now be indicated as being disconnected \[ID 27313\]\[ID 27611\]\[ID 27613\]\[ID 27760\]
 
 Up to now, when a DataMiner Agent disconnected from the DataMiner System, the elements, services and redundancy groups hosted by it would disappear from the Cube’s Surveyor. From now on, they will remain visible (read-only), and will be indicated as being disconnected by means of a special icon.
 
@@ -528,7 +528,7 @@ Up to now, when a DataMiner Agent disconnected from the DataMiner System, the el
 >   - When another DMA joins the DMS, the elements, services and redundancy groups of the disconnected DMA will not be available to the new DMA.
 > - Any messages sent to the disconnected DMA (e.g. to retrieve or update information) will result in an exception being thrown.
 
-#### Trending: Renaming of trend prediction types \[ID_27435\]
+#### Trending: Renaming of trend prediction types \[ID 27435\]
 
 On a system with a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future. Four types of trend prediction can be displayed. Those types have now been renamed.
 
@@ -541,15 +541,15 @@ On a system with a Cassandra database, trend graphs can show how the value of a 
 
 Also, the behavior of the “auto” setting has been enhanced.
 
-#### DataMiner Cube is now able to detect table columns containing MAC addresses \[ID_27503\]
+#### DataMiner Cube is now able to detect table columns containing MAC addresses \[ID 27503\]
 
 DataMiner Cube is now able to detect table columns containing MAC addresses and to sort them appropriately.
 
-#### Trending: Exclude gaps option in export window \[ID_27506\]\[ID_28067\]
+#### Trending: Exclude gaps option in export window \[ID 27506\]\[ID 28067\]
 
 When you export a trend graph to CSV, a new *Exclude gaps* option is now available. If you select this option, the export will skip any gaps in the trend data.
 
-#### Correlation/Automation/Scheduler: Email report configuration \[ID_27521\]\[ID_27812\]\[ID_27878\] \[ID_28032\] \[ID_28038\]\[ID_28081\]
+#### Correlation/Automation/Scheduler: Email report configuration \[ID 27521\]\[ID 27812\]\[ID 27878\] \[ID 28032\] \[ID 28038\]\[ID 28081\]
 
 In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
 
@@ -563,7 +563,7 @@ In an *Email* action of a Correlation rule, an Automation script or a scheduled
 
 - *Dashboard width*: Allows you to select a custom width for the report.
 
-#### Trending: Percentile line \[ID_27533\]
+#### Trending: Percentile line \[ID 27533\]
 
 It is now possible to visualize a percentile line on a trend graph in DataMiner Cube. To do so, right-click the graph and select *Show percentile*. By default, the 95th percentile for the data in the current range will then be calculated and visualized with a line on the graph. To the right of the line, you will see the percentile that was calculated and the value of the percentile.
 
@@ -573,7 +573,7 @@ When you click the percentile line, a refresh option is displayed that allows yo
 
 Finally, in the *Trending* tab of the Cube user settings, a new *Show percentile* setting is now available, which can be used to have the percentile line displayed by default whenever a trend graph is opened. If this option is selected, you can also select which percentile should be calculated by default.
 
-#### Alarm Console: FilterElement property of an alarm hyperlink can now include a filter that checks the existence of a dictionary key \[ID_27675\]
+#### Alarm Console: FilterElement property of an alarm hyperlink can now include a filter that checks the existence of a dictionary key \[ID 27675\]
 
 A new exposer will now allow filters to check whether a certain key exists in a dictionary.
 
@@ -597,7 +597,7 @@ In Alarm Console hyperlinks, these filters can be used in the FilterElement prop
 > - This type of filters will be applied after the data has been retrieved from the database.
 > - It is not recommended to use these filters when retrieving data from Cassandra or ElasticSearch.
 
-#### Name of the DataMiner System can now be displayed in Cube’s header bar \[ID_27714\]
+#### Name of the DataMiner System can now be displayed in Cube’s header bar \[ID 27714\]
 
 In DataMiner Cube, the name of the DataMiner System can now be displayed in the header bar.
 
@@ -607,7 +607,7 @@ In DataMiner Cube, the name of the DataMiner System can now be displayed in the 
 
 - Open the *Settings* window, go to *Computer \> Cube*, and select or clear the *Display cluster name in header* setting.
 
-#### DataMiner Cube desktop app: Silent installation, modification and uninstallation of Cube \[ID_27795\]
+#### DataMiner Cube desktop app: Silent installation, modification and uninstallation of Cube \[ID 27795\]
 
 Using the following command-line arguments, it is now possible to silently install, modify and uninstall the DataMiner Cube desktop app without any user interface.
 
@@ -655,15 +655,15 @@ PathToCubeExe.exe /Modify /Silent /ModifyOptions:ClearProtocolCache,ClearVisioCa
 | /Uninstall        | Open the uninstall window.         |
 | /Uninstall/Silent | Silently uninstall DataMiner Cube. |
 
-#### Protocols & Templates: Information template editor now also allows you to configure parameters of type Button and ToggleButton \[ID_27823\]
+#### Protocols & Templates: Information template editor now also allows you to configure parameters of type Button and ToggleButton \[ID 27823\]
 
 As to button parameters, up to now, the information template editor only allowed you to configure parameters of type PageButton. From now, it will also be possible to configure parameters of type Button and ToggleButton.
 
-#### DataMiner Cube: Buttons to join and leave cluster renamed \[ID_27863\]
+#### DataMiner Cube: Buttons to join and leave cluster renamed \[ID 27863\]
 
 On the *Agents* > *Manage* page in System Center, the *Add cluster* and *Delete cluster* buttons have been renamed to *Join cluster* and *Leave cluster*, respectively.
 
-#### New EPM card settings \[ID_27874\]
+#### New EPM card settings \[ID 27874\]
 
 In the DataMiner Cube user settings, you can now configure the following EPM card settings:
 
@@ -671,7 +671,7 @@ In the DataMiner Cube user settings, you can now configure the following EPM car
 
 - How to show EPM card Visual pages
 
-#### Trending - Pattern matching: New options when adding or editing a tag \[ID_27954\]
+#### Trending - Pattern matching: New options when adding or editing a tag \[ID 27954\]
 
 When adding or editing a tag, you can now select the following additional options:
 
@@ -683,13 +683,13 @@ When adding or editing a tag, you can now select the following additional option
 > [!NOTE]
 > When you save a tag after selecting the *Generate alarm when detected* option, a message box may appear, saying that suggestion events cannot be generated for that tag. This is due to the range of the tag being too large. The tag itself will be saved and detected.
 
-#### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID_27965\]
+#### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID 27965\]
 
 Up to now, the trend percentile was calculated using the most detailed data set that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
 
 From now on, from the moment the trend window contains average data points in its most detailed set, only average data will be used for the calculation. This is also be reflected in the percentile menu, where a warning icon will be shown. A tool tip on the warning icon will indicate when only average data will be used.
 
-#### DataMiner Cube start window: Aliases \[ID_27975\]\[ID_27999\]\[ID_28161\]
+#### DataMiner Cube start window: Aliases \[ID 27975\]\[ID 27999\]\[ID 28161\]
 
 When defining a DataMiner Agent in the start window, apart from the host name or IP address, you can now also specify an alias.
 
@@ -702,7 +702,7 @@ Command-line arguments: /Alias=Xyz /Host=hostname
 >
 > The alias will be used as long as the client is connected to the host specified in the Host argument.
 
-#### System Center: Enhanced Database section \[ID_27976\]\[ID_28196\]
+#### System Center: Enhanced Database section \[ID 27976\]\[ID 28196\]
 
 The *Database* section of *System Center* now has three main tab pages.
 
@@ -717,7 +717,7 @@ The *Database* section of *System Center* now has three main tab pages.
 > [!NOTE]
 > Throughout DataMiner Cube, the term “central database” has now been replaced by “offload database”.
 
-#### Trending: Real-time pattern matching \[ID_28054\]
+#### Trending: Real-time pattern matching \[ID 28054\]
 
 Up to now, pattern matching happened on the fly when a trend graph was opened. Now, apart from this so-called static pattern matching, DataMiner is also able to perform real-time pattern matching and generate an alarm as soon as a pattern is detected.
 

@@ -52,7 +52,7 @@ The following example defines an application package that consists of an Automat
             <RepoPath>Automation\Generic\Sample apps\Incident Manager</RepoPath>
             <Version>
                <Selection>
-                  <Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+                  <Range rangeSelection="latestRelease">1.0.0.X</Range>
                </Selection>
             </Version>
          </AutomationScript>
@@ -62,7 +62,7 @@ The following example defines an application package that consists of an Automat
             <RepoPath>CompanionFiles\Generic\Sample apps\Incident Manager</RepoPath>
             <Version>
                <Selection>
-                  <Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+                  <Range rangeSelection="latestRelease">1.0.0.X</Range>
                </Selection>
             </Version>
          </CompanionFile>
@@ -125,12 +125,12 @@ namespace Script
    using Skyline.DataMiner.Net.AppPackages;
 
    /// <summary>
-   ///     DataMiner Script Class.
+   /// DataMiner Script Class.
    /// </summary>
    internal class Script
    {
       /// <summary>
-      ///     The script entry point.
+      /// The script entry point.
       /// </summary>
       /// <param name="engine">Provides access to the Automation engine.</param>
       /// <param name="context">Provides access to the installation context.</param>
@@ -172,6 +172,6 @@ The packager tool also allows the creation of a protocol package (.dmprotocol) f
 
 ## Low-Code-App-Extensions
 
-The *Low Code App Extensions* script is an Interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
+The *Low Code App Extensions* script (or "Low-Code App Editor") is an Interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
 
 For more information on how to install and use this script, refer to [Low Code App Extensions](https://github.com/SkylineCommunications/Low-Code-App-Extensions).

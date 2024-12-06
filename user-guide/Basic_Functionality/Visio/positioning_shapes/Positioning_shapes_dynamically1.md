@@ -31,13 +31,13 @@ Suppose you have a view that contains three elements, and you want the Visio dra
    > [!NOTE]
    > If you want to manually adjust the X and Y coordinates, you can also add shape data fields of type **XPosOffSet** and **YPosOffSet**.
 
-1. To each of the three elements, add the properties “*AxisX*” and “*AxisY*”, and assign a value to them.
+1. To each of the three elements, add the properties "*AxisX*" and "*AxisY*", and assign a value to them.
 
 Result: For every element underneath the view, the drawing will contain a shape linked to that element and positioned based on the coordinates specified in the properties of that element.
 
 ### Shape data
 
-- **Element or view**: Enter the following if you want a shape to be drawn for every element, service or view specified. If you specify multiple elements, services or views, separate them by colons (”:”).
+- **Element or view**: Enter the following if you want a shape to be drawn for every element, service or view specified. If you specify multiple elements, services or views, separate them by colons (":").
 
   ```txt
   DmaID/ItemID:DmaID/ItemID:...
@@ -55,7 +55,7 @@ Result: For every element underneath the view, the drawing will contain a shape 
   [auto:includeSubViews]
   ```
 
-  Enter the following if you want a shape to be drawn for every element, service or view mentioned in the specified property of the element, service or view to which the drawing is linked. If, in a property, you want to specify multiple elements, services or views, separate them by colons (”:”).
+  Enter the following if you want a shape to be drawn for every element, service or view mentioned in the specified property of the element, service or view to which the drawing is linked. If, in a property, you want to specify multiple elements, services or views, separate them by colons (":").
 
   ```txt
   [property:PropertyName]
@@ -93,19 +93,19 @@ Result: For every element underneath the view, the drawing will contain a shape 
 
   The result will be that:
 
-  - the shape of which SubscriptionFilter contains “*value=120 == 1*” will be used to indicate a city of which the column with parameter ID 120 contains “1”, and
+  - the shape of which SubscriptionFilter contains "*value=120 == 1*" will be used to indicate a city of which the column with parameter ID 120 contains "1", and
 
-  - the shape of which SubscriptionFilter contains “*value=120 == 2*” will be used to indicate a city of which the column with parameter ID 120 contains “2”.
+  - the shape of which SubscriptionFilter contains "*value=120 == 2*" will be used to indicate a city of which the column with parameter ID 120 contains "2".
 
   > [!NOTE]
   >
   > - The circles indicating the location of the cities will bear the current alarm color of the corresponding table row.
-  > - In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+  > - In order to avoid parsing problems due to ";" separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
   > [!TIP]
   > See also: [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
-- **SelectionDetails**: If you want the shape to act as a Details pane displaying the row data, then add a shape data item to it of type **SelectionDetails** and set its value to “1”.
+- **SelectionDetails**: If you want the shape to act as a Details pane displaying the row data, then add a shape data item to it of type **SelectionDetails** and set its value to "1".
 
   > [!TIP]
   > See also: [Table configuration in the protocol](#table-configuration-in-the-protocol)
@@ -131,10 +131,10 @@ Suppose you want a Visio drawing to contain an automatically positioned shape fo
    |------------------|---------------------|
    | Xpos             | \[param:9/542,110\] |
 
-   Result: For every row in table parameter 110 of element 9/542, the drawing will contain a shape displaying the contents of the table’s display column, positioned based on the coordinates specified in the columns marked with “xpos” and “ypos” in the element protocol.
+   Result: For every row in table parameter 110 of element 9/542, the drawing will contain a shape displaying the contents of the table’s display column, positioned based on the coordinates specified in the columns marked with "xpos" and "ypos" in the element protocol.
 
 > [!NOTE]
-> If you want to refer to a parameter of the current element, you can replace the element reference by an asterisk (“\*”). Example: **Xpos** = \[param:\*,110\]
+> If you want to refer to a parameter of the current element, you can replace the element reference by an asterisk ("\*"). Example: **Xpos** = \[param:\*,110\]
 
 ### Linking the automatically positioned shapes to elements, services or views fetched from a table
 
@@ -142,7 +142,7 @@ The element, service, or view to which a shape has to be linked can also be fetc
 
 Those dynamically created shapes can be configured as ordinary element, service, or view shapes. They can be configured to show real-time parameter values, element states, etc.
 
-- In the “dynamic shape” to which you have added a shape data field of type **XPos** containing a placeholder referring to a table parameter, also add a shape data field of type **Element** (in case of elements or services) or **View** (in case of views), and set its value to “\*”.
+- In the "dynamic shape" to which you have added a shape data field of type **XPos** containing a placeholder referring to a table parameter, also add a shape data field of type **Element** (in case of elements or services) or **View** (in case of views), and set its value to "\*".
 
 - The table column from which the element has to be fetched (see below), has to contain element IDs (format: DmaID/ElementID), element names, service IDs (format: DmaID/ServiceID), service names, view IDs, or view names.
 
@@ -150,33 +150,33 @@ Those dynamically created shapes can be configured as ordinary element, service,
 
 In the protocol, check the definition of the table parameter that will supply the data to be used:
 
-- The “display column” has to be the column containing the data to be displayed in the dynamically positioned shapes.
+- The "display column" has to be the column containing the data to be displayed in the dynamically positioned shapes.
 
-- The column containing the element has to be marked as the “LinkElement” column:
+- The column containing the element has to be marked as the "LinkElement" column:
 
   ```xml
   <ColumnOption idx="..." pid="..." type="..." value="..." options=";LinkElement" />
   ```
 
-- The column containing the X coordinates has to be marked as the “xpos” column:
+- The column containing the X coordinates has to be marked as the "xpos" column:
 
   ```xml
   <ColumnOption idx="..." pid="..." type="..." value="" options=";xpos" />
   ```
 
-- The column containing the Y coordinates has to be marked as the “ypos” column:
+- The column containing the Y coordinates has to be marked as the "ypos" column:
 
   ```xml
   <ColumnOption idx="..." pid="..." type="..." value="" options=";ypos" />
   ```
 
-- Columns that should always be hidden in a Details pane have to be marked with “HideKPI”:
+- Columns that should always be hidden in a Details pane have to be marked with "HideKPI":
 
   ```xml
   <ColumnOption idx="..." pid="..." type="..." value="" options=";HideKPI" />
   ```
 
-- Columns that should only be hidden in a Details pane if the value is “Not Initialized” have to be marked with “HideKPIWhenNotInitialized”:
+- Columns that should only be hidden in a Details pane if the value is "Not Initialized" have to be marked with "HideKPIWhenNotInitialized":
 
   ```xml
   <ColumnOption idx="..." pid="..." type="..." value="" options=";HideKPIWhenNotInitialized" />
@@ -184,7 +184,7 @@ In the protocol, check the definition of the table parameter that will supply th
 
 ### Applying a row filter before dynamically positioned shapes are generated
 
-From DataMiner 9.0.5 onwards, it is possible to apply a row filter when dynamically positioning shapes based on table data. Using this filter can considerably increase overall performance.
+It is possible to apply a row filter when dynamically positioning shapes based on table data. Using this filter can considerably increase overall performance.
 
 To do so, add a shape data field of type **Filter** to the shape mentioned above, and enter a row filter, using the same syntax as for extended shape manipulation conditions.
 
@@ -196,19 +196,21 @@ For example:
 | Filter           | \<A>-A\|Element:\*\|Alarmlevel\|\>=Warning |
 
 > [!NOTE]
-> A single asterisk (“\*”) in the filter will refer to the element specified in the table’s LinkElement column (if any). A double asterisk (“\*\*”) will refer to the element that contains the table.
+> A single asterisk ("\*") in the filter will refer to the element specified in the table’s LinkElement column (if any). A double asterisk ("\*\*") will refer to the element that contains the table.
 
 > [!TIP]
 > See also: [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions)
 
 ### Dynamically selecting shape templates for dynamically positioned shapes
 
-From DataMiner 9.5.8 onwards, it is possible to specify shape templates for the creation of dynamically positioned shapes based on table data. This can be used to avoid having to define multiple dynamically positioned shapes based on the same table but with different subscription filters.
+It is possible to specify shape templates for the creation of dynamically positioned shapes based on table data. This can be used to avoid having to define multiple dynamically positioned shapes based on the same table but with different subscription filters.
 
 To do so, create template shapes as child shapes for the XPos shape. For each template shape, add a shape data field of type **Template**, and enter a filter as the value, using the same syntax as for extended shape manipulation conditions.
 
 > [!NOTE]
-> The filter allows you to specify a parameter without identifying the element. The value of the parameter will then be retrieved from the table referred to by the parameter placeholder in the XPos shape.
+>
+> - The filter allows you to specify a parameter without identifying the element. The value of the parameter will then be retrieved from the table referred to by the parameter placeholder in the XPos shape.
+> - When templates are used in combination with offsets, the *XPosOffSet* or *YPosOffSet* shape data need to be put on the template "child" shape, not on the parent shape.
 
 > [!TIP]
 > See also: [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions)
@@ -247,7 +249,7 @@ If you use shape positioning based on coordinates stored in dynamic tables, you 
 
 To do so:
 
-1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g. “InterfaceData” next to the “xpos” and “ypos” columns. In the *ColumnOptions* tag of this additional column, add the option “DynamicData”.
+1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g. "InterfaceData" next to the "xpos" and "ypos" columns. In the *ColumnOptions* tag of this additional column, add the option "DynamicData".
 
 1. To the subshapes that represent the interfaces, add a shape data field of type **Interface**, and set its value to *\[Dynamic:InterfaceName\]*.
 
@@ -257,7 +259,7 @@ To do so:
    [Dynamic:input1]
    ```
 
-1. In DataMiner Cube, open the element, go to the table that contains the positioning data, and add the necessary interface data in the “InterfaceData” column using the following syntax:
+1. In DataMiner Cube, open the element, go to the table that contains the positioning data, and add the necessary interface data in the "InterfaceData" column using the following syntax:
 
    ```txt
    InterfaceName=4;InterfaceName=34;
@@ -284,7 +286,7 @@ A number of options are available in case you use dynamic positioning of shapes:
 
 ### Disabling the automatic selection filter in an EPM environment
 
-When shapes are dynamically positioned in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. From DataMiner 9.5.1 onwards, it is possible to disable this automatic filter, so that dynamic positioning is applied to all shapes, and not just to those matching the selection filter.
+When shapes are dynamically positioned in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. It is possible to disable this automatic filter, so that dynamic positioning is applied to all shapes, and not just to those matching the selection filter.
 
 To do so, add an **Options** shape data field to the shape that has the **XPos** shape data field, and set it to *NoSelectionFilters*.
 
@@ -297,9 +299,9 @@ Example:
 
 ### Overriding the default table loading behavior
 
-From DataMiner 9.5.1 onwards, by default, DataMiner only loads those columns of a dynamic table that are needed to display the table connections and any information those shapes have to contain.
+By default, DataMiner only loads those columns of a dynamic table that are needed to display the table connections and any information those shapes have to contain.
 
-However, in some cases it can be useful to have the entire table retrieved, for example because variable values have to be displayed on the dynamically positioned shapes. In such a case, you can override the default retrieval method by adding the “*ForceFullTable*” option to the template shape. Note, however, that using this option will have a negative impact on overall performance.
+However, in some cases it can be useful to have the entire table retrieved, for example because variable values have to be displayed on the dynamically positioned shapes. In such a case, you can override the default retrieval method by adding the [ForceFullTable](xref:Overview_of_page_and_shape_options#forcefulltable) option to the template shape. Note, however, that using this option will have a negative impact on overall performance.
 
 | Shape data field | Value          |
 |------------------|----------------|
@@ -307,7 +309,7 @@ However, in some cases it can be useful to have the entire table retrieved, for 
 
 ### Positioning shapes based on their rotation point
 
-By default, the position of a dynamically positioned shape is determined based on the physical center of the shape. However, from DataMiner 9.5.12 onwards, it is possible to configure the Xpos shape so that the rotation point of the shape is used instead. To do so, add the **Options** shape data field and set it to *PositionOnCenterOfRotation*.
+By default, the position of a dynamically positioned shape is determined based on the physical center of the shape. However, it is possible to configure the *Xpos* shape so that the rotation point of the shape is used instead. To do so, add the **Options** shape data field and set it to *PositionOnCenterOfRotation*.
 
 For example:
 
@@ -353,7 +355,7 @@ Line objects that have to be used to automatically connect shapes should be assi
     | DmaID/ElementID\|FromColID\|ToColID\|EdgeModeX | Connection between left/right shape sides  |
     | DmaID/ElementID\|FromColID\|ToColID\|EdgeModeY | Connection between top/bottom shape sides. |
 
-  - By default, the lines run between the rotation centers of the shapes. If the *CenterModeX* or *CenterModeY* options (available from DataMiner 9.5.12 onwards) are specified, the lines will instead be drawn to the physical center of shapes in the X or Y direction, respectively.
+  - By default, the lines run between the rotation centers of the shapes. If the *CenterModeX* or *CenterModeY* options are specified, the lines will instead be drawn to the physical center of shapes in the X or Y direction, respectively.
 
     | Shape data field        | Description                                                         |
     |---------------------------|---------------------------------------------------------------------|
@@ -377,7 +379,7 @@ Line objects that have to be used to automatically connect shapes should be assi
   |3000
   ```
 
-- **SubscriptionFilter**: If you use different types of lines for different types of connections, then in this shape data field, you can specify a filter that will make sure that the line object in question is only used for connections of which the specified column of the row describing the connection contains a particular value. If you want to specify multiple comparisons, separate them by semicolons (”;”).
+- **SubscriptionFilter**: If you use different types of lines for different types of connections, then in this shape data field, you can specify a filter that will make sure that the line object in question is only used for connections of which the specified column of the row describing the connection contains a particular value. If you want to specify multiple comparisons, separate them by semicolons (";").
 
   ```txt
   value=[comparison]
@@ -448,5 +450,5 @@ MyVariable:[ConnectionLineDisplayIdx] ([ConnectionLineIdx]) (from '[ConnectionLi
 
 > [!NOTE]
 >
-> - If a connection has no clear direction (i.e. when both interfaces are set to “inout”), it is impossible to know which interface will be the source and which will be the destination.
-> - If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character (“\|”). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.
+> - If a connection has no clear direction (i.e. when both interfaces are set to "inout"), it is impossible to know which interface will be the source and which will be the destination.
+> - If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character ("\|"). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.

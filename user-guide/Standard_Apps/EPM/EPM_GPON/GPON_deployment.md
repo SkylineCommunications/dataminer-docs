@@ -1,10 +1,10 @@
 ---
-uid: GPON_deployment
+uid: xPON_deployment
 ---
 
-# EPM GPON deployment
+# EPM xPON deployment
 
-To deploy the GPON branch of the EPM Solution:
+To deploy the xPON branch of the EPM Solution:
 
 1. Make sure the following prerequisites are met:
 
@@ -42,11 +42,11 @@ To deploy the GPON branch of the EPM Solution:
 
      For instance:
 
-     ![GPON view structure](~/user-guide/images/EPM_GPON_views.png)
+     ![xPON view structure](~/user-guide/images/EPM_GPON_views.png)
 
      You can adjust the view names as you see fit, as long as the appropriate hierarchical structure is maintained. There will be a direct mapping between the views you created and the corresponding EPM topology. For example:
 
-     ![GPON topology](~/user-guide/images/EPM_GPON_Topology.png)
+     ![xPON topology](~/user-guide/images/EPM_GPON_Topology.png)
 
      - **Service provider** is usually your company's name
 
@@ -67,7 +67,7 @@ To deploy the GPON branch of the EPM Solution:
 
    You need to create the following elements:
 
-   - **OLT Collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for GPON](xref:GPON_supported_technologies).
+   - **OLT Collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for xPON](xref:xPON_supported_technologies).
 
      > [!IMPORTANT]
      > The DataMiner element names must match the OLT names defined in SNMP. This is required to properly link the topology visuals to the elements. To rename an OLT Platform element, first change the user-defined OLT name in SNMP to the new name, then rename the element in DataMiner Cube to match the new name.

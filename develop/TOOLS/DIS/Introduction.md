@@ -1,5 +1,6 @@
 ---
 uid: Overall_concept_of_the_DataMiner_Integration_Studio
+description: The free DIS Visual Studio extension allows you to import, create, and deploy connectors to establish connections between DataMiner and data sources.
 ---
 
 # About DataMiner Integration Studio
@@ -9,6 +10,9 @@ DataMiner Integration Studio (DIS) is a valuable extension for Microsoft Visual 
 With this extension, you can seamlessly **import, create, and deploy connectors** to establish connections between your DataMiner System (DMS) and new data sources. Additionally, the DIS extension allows you to **import Automation scripts and SRM functions**, which can be easily created and deployed to your DMS as well.
 
 ![DIS overview](https://docs.dataminer.services/develop/images/DataMinerIntegrationStudio.png)
+
+> [!TIP]
+> See also: [Kata #37: Getting started with DIS](https://community.dataminer.services/courses/kata-37/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Benefits
 

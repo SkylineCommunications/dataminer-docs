@@ -10,7 +10,7 @@ DataMiner 10.1 and higher
 
 ## Cause
 
-Introduction of inter-process communication via NATS [[ID_27496][ID_28082][ID_28131][ID_28660]](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id_27496id_28082id_28131-id_28233id_28660)
+Introduction of inter-process communication via NATS [[ID 27496][ID 28082][ID 28131][ID 28660]](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id-27496id-28082id-28131-id-28233id-28660)
 
 ## Fix
 
@@ -18,7 +18,7 @@ Manual firewall configuration
 
 ## Issue description
 
-From DataMiner 10.1.0 onwards, the NATS and NAS services are automatically installed on each NATS-enabled DataMiner Agent. More information is available in the [DataMiner v10.1.0 release notes](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id_27496id_28082id_28131-id_28233id_28660).
+From DataMiner 10.1.0 onwards, the NATS and NAS services are automatically installed on each NATS-enabled DataMiner Agent. More information is available in the [DataMiner v10.1.0 release notes](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id-27496id-28082id-28131-id-28233id-28660).
 
 However, if the firewall update fails after an upgrade to DataMiner 10.1.0 or higher, this can result in the following DataMiner run-time error message:
 

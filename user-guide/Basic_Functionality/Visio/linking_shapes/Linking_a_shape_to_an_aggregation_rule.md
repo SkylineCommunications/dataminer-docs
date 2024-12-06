@@ -4,7 +4,7 @@ uid: Linking_a_shape_to_an_aggregation_rule
 
 # Linking a shape to an aggregation rule
 
-From DataMiner 9.0.2 onwards, it is possible to display aggregated parameter values in Visual Overview by linking shapes to aggregation rules.
+It is possible to display aggregated parameter values in Visual Overview by linking shapes to aggregation rules.
 
 To do so:
 
@@ -14,11 +14,15 @@ To do so:
 
    - **Without using a placeholder**: Specify the following items, in the order specified, separated by colons:
 
-     1. The DMA ID/element ID of the hidden *Skyline Generic Aggregator* element. You can find this DMA ID/element ID by looking in the *Element.xml* file for this hidden element in the *Elements* folder on the DMA.
+     1. The DMA ID/element ID of the hidden *Skyline Generic Aggregator* element.
 
-     2. The fixed parameter ID of the aggregator element, i.e. 4005.
+        You can find this DMA ID/element ID [using SLNetClientTest tool](xref:SLNetClientTest_retrieving_element_info). Alternatively, if [Swarming](xref:Swarming) is not enabled in your system, you can find it in the *Element.xml* file for this hidden element in the *Elements* folder on the DMA.
 
-     3. The relevant aggregation index. You can find the index by going to the aggregation page of a view, selecting the aggregation rule, going to the *table* tab, right-clicking a column-header, selecting *Columns* in the right-click menu, and enabling the *Index* column.
+     1. The fixed parameter ID of the aggregator element, i.e. 4005.
+
+     1. The relevant aggregation index.
+
+        You can find the index by going to the aggregation page of a view, selecting the aggregation rule, going to the *table* tab, right-clicking a column-header, selecting *Columns* in the right-click menu, and enabling the *Index* column.
 
      | Shape data field | Value |
      |--|--|
@@ -43,4 +47,4 @@ To do so:
      ```
 
 > [!NOTE]
-> The above-mentioned *AggregationRule* placeholder can also be used in a trend component, a pie chart, a bar chart, a column chart, a stacked area chart, and a parameter summary. For more information on this placeholder, see [\[AggregationRule: ...\]](xref:Placeholders_for_variables_in_shape_data_values#aggregationrule).
+> The above-mentioned [\[AggregationRule: ...\]](xref:Placeholders_for_variables_in_shape_data_values#aggregationrule) placeholder can also be used in a trend component, a pie chart, a bar chart, a column chart, a stacked area chart, and a parameter summary.

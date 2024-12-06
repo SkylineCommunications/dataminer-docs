@@ -21,5 +21,14 @@ uid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
 > [!IMPORTANT]
 > If a DMA is connected to dataminer.services and you restore it on a new (virtual) server, additional configuration is needed. See [Maintaining the dataminer.services connection when restoring a DMA](xref:Maintaining_cloud_connection_when_restoring).
 
+> [!NOTE]
+> To also restore the database, additional steps are needed, depending on your setup:
+>
+> - OpenSearch: see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+> - Elasticsearch: see [Taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
+> - Cassandra: see [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool).
+>
+> If you are using [Storage as a Service](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+
 > [!TIP]
 > See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

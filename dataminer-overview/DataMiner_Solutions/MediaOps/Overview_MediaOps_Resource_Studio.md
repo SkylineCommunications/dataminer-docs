@@ -72,7 +72,7 @@ Aside from capabilities, users can also assign capacities to a resource. They ar
 
 - Decimals: The number of decimals allowed for values of this capacity.
 
-Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. When booking a resource, users book only a specific amount of capacity on the resource. If a resource has a concurrency higher than one, other jobs can still make use of the remaining capacity on that same resource. Contrary to capabilities, capacities can not be configured on pools, but only on individual resources.
+Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. When booking a resource, users book only a specific amount of capacity on the resource. If a resource has a concurrency higher than one, other jobs can still make use of the remaining capacity on that same resource. Contrary to capabilities, capacities cannot be configured on pools, but only on individual resources.
 
 ## Properties
 

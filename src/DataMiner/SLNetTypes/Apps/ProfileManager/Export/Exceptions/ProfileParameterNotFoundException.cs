@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Skyline.DataMiner.Net.ProfileManager.Export.Exceptions
 {
 	/// <summary>
-	/// Thrown when a profile parameter passed to the ProfileParameterExporter can not be found.
+	/// Thrown when a profile parameter passed to the ProfileParameterExporter cannot be found.
 	/// </summary>
 	[Serializable]
     public class ProfileParameterNotFoundException : Exception

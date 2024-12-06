@@ -27,11 +27,14 @@ To configure the component:
 
 ## [In the Dashboards app](#tab/tabid-2)
 
-In the Dashboards app, the soft-launch button component can be used to execute the action of a button parameter. As such, it must be configured with a button parameter data feed.
+In the Dashboards app, the soft-launch button component can be used to execute the action of a button parameter. As such, it must be configured with button parameter data.
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+> [!NOTE]
+> If the *ReportsAndDashboardsAutomationScript* soft-launch option is enabled as well, this component functions as an Automation script component, and you can link it directly to an Automation script in the *Settings* pane. However, if you add a button parameter to the component, it will still act as a parameter button even with this soft-launch option.
 
-   You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
+1. Apply parameter data. See [Adding data to a component](xref:Adding_data_to_component).
+
+   You will only be able to select button parameters for the data. Several parameters can be added in the same component.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
@@ -58,9 +61,9 @@ In the Dashboards app, the soft-launch button component can be used to execute t
      - Depending on the script configuration, it may be possible to configure the parameters and/or dummies used in the script. For each of the parameters and dummies, a checkbox allows you to select whether these are required, i.e. whether the script can be executed only if these are filled in.
 
        > [!NOTE]
-       > The input for an interactive Automation script can be specified by the user or retrieved via linked feeds. In case both are possible for the same component, user input always takes precedence.
+       > The input for an interactive Automation script can be specified by the user or retrieved via linked data. In case both are possible for the same component, user input always takes precedence.
        >
-       > In case several feeds are linked to the component, they are considered in the order they were added. For example, if 2 feeds are used and the feed that was first added is applicable, the second feed will be ignored.
+       > In case several data is linked to the component, they are considered in the order they were added. For example, if 2 data sources are used and the data that was first added is applicable, the second data input will be ignored.
 
      - The standard options for script execution can be configured. See [Script execution options](xref:Script_execution_options).
 
@@ -75,7 +78,7 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 ***
 
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) Automation script can be used as a feed for other components, for example in a GQI query.
+> From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) Automation script can be used as data for other components, for example in a GQI query.
 
 > [!TIP]
 > See also: [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

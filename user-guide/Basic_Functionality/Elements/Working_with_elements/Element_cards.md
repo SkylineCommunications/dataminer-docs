@@ -32,11 +32,11 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **VISUAL**: One or more Visual Overview pages, which show a graphic representation of the element. These pages can be completely customized in Visio.
 
-  - **DATA**: One or more data display pages, determined by the element protocol.
+  - **DATA**: One or more Data Display pages, determined by the element protocol.
 
   - **ALARMS**: An overview of the alarms for this element, displayed in the default Alarm Console layout. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console).
 
-  - **TICKETS**: Displays any tickets related to the element. Only available on DMAs using DataMiner 9.0.4 or higher with a Ticketing license.
+  - **TICKETS**: Displays any tickets related to the element. Requires DataMiner Ticketing.
 
   - **REPORTS**: A graphic representation of the alarm distribution, alarm events, alarm states, and a timeline. You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date. For more information, see [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card).
 
@@ -59,7 +59,7 @@ Element cards can look quite different depending on the element protocol. Howeve
     > [!NOTE]
     > The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
 
-  - **HELP**: Help page for the protocol of the element. This page is only displayed if such a help page is available for the protocol (from DataMiner 9.5.7 onwards).
+  - **HELP**: Help page for the protocol of the element, if available.
 
   > [!NOTE]
   > Many protocols include a web interface page as one of the data pages. However, such a web interface is only accessible when the client machine has network access to the product. Web interface pages are hidden to users who do not have the user permission [*General* > *Elements* > *Data Display* > *Device webpage access*](xref:DataMiner_user_permissions#general--elements--data-display--device-webpage-access).

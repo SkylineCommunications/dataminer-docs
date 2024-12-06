@@ -1,12 +1,13 @@
 ---
 uid: I-DOCSIS_parameters_ds_ofdm_ch
+keywords: I-DOCSIS parameters
 ---
 
-# I-DOCSIS parameters – DS OFDM CH
+# Integrated DOCSIS parameters – DS OFDM CH
 
 These parameters are only available in elements running the CISCO CBR-8 CCAP Platform connector.
 
-This page contains an overview of the DS OFDM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the DS OFDM CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 
 ## OFDM Channels
 

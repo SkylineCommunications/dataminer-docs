@@ -12,23 +12,23 @@ The following example creates a new element and then waits until the element is 
 /// <summary>
 /// The QAction entry point.
 /// </summary>
-/// <param name="slProtocol">Link with SLProtocol process.</param>
-public static void Run(SLProtocol slProtocol)
+/// <param name="protocol">Link with SLProtocol process.</param>
+public static void Run(SLProtocol protocol)
 {
     try
     {
         // Get the IDMS interface.
-        IDms dms = slProtocol.GetDms();
+        IDms dms = protocol.GetDms();
 
         // Get the DataMiner Agent on which this element is running.
-        IDma agent = dms.GetAgent(slProtocol.DataMinerID);
+        IDma agent = dms.GetAgent(protocol.DataMinerID);
 
         DmsElementId id = CreateElement(dms, agent);
 
         TimeSpan timeout = new TimeSpan(0, 1, 0);
         TimeSpan interval = new TimeSpan(0, 0, 1);
 
-        IDmsElement element = GetElementAfterStartupComplete(slProtocol, dms, id, timeout, interval);
+        IDmsElement element = GetElementAfterStartupComplete(protocol, dms, id, timeout, interval);
 
         if (element != null)
         {
@@ -37,12 +37,12 @@ public static void Run(SLProtocol slProtocol)
         }
         else
         {
-            slProtocol.Log("QA" + slProtocol.QActionID + "|Run|Element did not start in the given time frame.", LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|Element did not start in the given time frame.", LogType.Error, LogLevel.NoLogging);
         }
     }
-    catch (Exception e)
+    catch (Exception ex)
     {
-        slProtocol.Log("QA" + slProtocol.QActionID + "|Run|An exception occurred:" + e.ToString(), LogType.Error, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
     }
 }
 
@@ -73,14 +73,13 @@ private static IDmsElement GetElementAfterStartupComplete(SLProtocol protocol, I
     Stopwatch sw = new Stopwatch();
     sw.Start();
 
-    bool elementIsKnownInSLNet = false;
-
-    while (!elementIsKnownInSLNet && sw.Elapsed <= timeout)
+    bool isElementKnownInSLNet = false;
+    while (!isElementKnownInSLNet && sw.Elapsed <= timeout)
     {
         try
         {
             element = dms.GetElement(id);
-            elementIsKnownInSLNet = true;
+            isElementKnownInSLNet = true;
         }
         catch (ElementNotFoundException)
         {
@@ -88,13 +87,12 @@ private static IDmsElement GetElementAfterStartupComplete(SLProtocol protocol, I
         }
     }
 
-    bool elementStartupComplete = false;
-
-    while (!elementStartupComplete && sw.Elapsed <= timeout)
+    bool isElementStartupComplete = false;
+    while (!isElementStartupComplete && sw.Elapsed <= timeout)
     {
-        elementStartupComplete = element.IsStartupComplete();
+        isElementStartupComplete = element.IsStartupComplete();
 
-        if (!elementStartupComplete)
+        if (!isElementStartupComplete)
         {
             Thread.Sleep(interval);
         }
@@ -129,7 +127,6 @@ The following example performs a rename of an element and also sets a property.
 IDms dms = protocol.GetDms();
 
 IDmsElement element = dms.GetElement(new DmsElementId(346, 529981));
-
 
 element.Name = "Renamed Element";
 
@@ -166,7 +163,7 @@ AgentState state = agent.State;
 
 The following diagram gives an overview of the provided interfaces:
 
-![alt text](../../images/classlibrary1205_1.png "Connections class diagram")
+![Connections class diagram](~/develop/images/classlibrary1205_1.png)
 
 The following example illustrates how to create an element with an HTTP connection:
 
@@ -262,10 +259,9 @@ IDms myDms = protocol.GetDms();
 var myAgent = myDms.GetAgents().FirstOrDefault();
 var myElement = myAgent.GetElement(protocol.ElementName);
 
-
 string newServiceName = Convert.ToString(protocol.Newservicename_50);
-ServiceConfiguration serviceConfig = new ServiceConfiguration(myDms, newServiceName);
-List<ElementParamFilterConfiguration> filter = new List<ElementParamFilterConfiguration>();
+var serviceConfig = new ServiceConfiguration(myDms, newServiceName);
+var filter = new List<ElementParamFilterConfiguration>();
 filter.Add(new ElementParamFilterConfiguration(1, String.Empty, true));
 
 serviceConfig.AddElement(myElement.DmsElementId, filter);

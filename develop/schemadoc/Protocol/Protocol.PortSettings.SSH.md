@@ -4,6 +4,8 @@ uid: Protocol.PortSettings.SSH
 
 # SSH element
 
+<!-- RN 17732 -->
+
 Specifies the SSH settings.
 
 ## Parent
@@ -21,8 +23,6 @@ Specifies the SSH settings.
 ## Remarks
 
 Only applicable for serial connections of type TCP
-
-*Feature introduced in DataMiner 9.5.9 (RN 17732).*
 
 ## Examples
 

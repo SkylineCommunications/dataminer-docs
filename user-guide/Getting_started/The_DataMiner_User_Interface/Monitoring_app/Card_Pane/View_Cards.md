@@ -16,7 +16,7 @@ The following pages are available:
 
 - *Reports*: Displays the DataMiner reports related to the view.
 
-- *Histogram*: Available from DataMiner 10.0.3 onwards. Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
+- *Histogram*: Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
 
   - *Include subviews*: Only displayed in case the view contains other views. Determines whether those subviews should also be taken into account.
 

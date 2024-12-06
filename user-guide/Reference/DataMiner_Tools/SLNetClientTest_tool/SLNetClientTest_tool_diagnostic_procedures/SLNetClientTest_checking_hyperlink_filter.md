@@ -4,7 +4,7 @@ uid: SLNetClientTest_checking_hyperlink_filter
 
 # Checking a hyperlink filter
 
-From DataMiner 9.5.7 onwards, filters can be specified with a *filterElement* attribute in Hyperlink tags in *Hyperlinks.xml*. In the SLNetClientTest tool you can test such filters:
+Filters can be specified with a *filterElement* attribute in Hyperlink tags in *Hyperlinks.xml*. In the SLNetClientTest tool, you can test such filters:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_IP_network_ports
+description: Specific IP ports are always used in a DMS, others depend on your setup. Only the essential ports (80, 8004, and 162) are opened by default.
 ---
 
 # Configuring the IP network ports
@@ -29,13 +30,12 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
 | Multiple protocols | 8222/tcp | NATS Monitoring (relevant from DataMiner 10.1.1 onwards) |
 | NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
-| HTTP(S) | 5100/tcp (internal) | [dataminer.services endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner 10.3.6/10.4.0/CloudGateway 2.10.0 onwards)
-| Telnet | 23/tcp   | Stream (by default disabled from DataMiner 9.6.5 onwards) |
+| HTTP(S) | 5100/tcp (internal) | [dataminer.services endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner 10.3.6/10.4.0/CloudGateway 2.10.0 onwards) |
+| Telnet | 23/tcp   | Stream (by default disabled) |
 
 > [!NOTE]
 >
-> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml)
-> - Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
+> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml)
 > - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. In later DataMiner versions, we recommend manually opening the port in order to be able to debug NATS. With port 8222, you can extract metrics and performance indicators from the NATS message broker, which in turn may allow you to debug if required. However, for maximum security, only expose port 8222 on internal networks to prevent the leaking of sensitive information.
 
 > [!CAUTION]
@@ -53,14 +53,11 @@ Using .NET Remoting:
 
 ![DMS communication overview](~/user-guide/images/dms_ip_communication_with_DB.png)
 
-> [!NOTE]
-> We do not recommend letting a DMA connect to another DMA via Web Services. From DataMiner 10.0.11, connecting via Web Services is no longer supported.
-
 > [!TIP]
 > See also:
 >
-> - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-ports-for-net-remoting-andor-xml-web-services)
+> - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-port-for-net-remoting)
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
 
 > [!TIP]
-> To verify if your DataMiner cluster is working correctly, you can run the [Check Cluster SLNet Connections BPA test](xref:BPA_Check_Cluster_SLNet_Connections).
+> To verify if your DataMiner cluster is working correctly, you can run the [*SLNet connections between the DataMiner Agents* BPA test](xref:BPA_Check_Cluster_SLNet_Connections).

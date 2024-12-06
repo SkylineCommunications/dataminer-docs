@@ -25,8 +25,8 @@ With this feature, users can:
     > [!NOTE]
     > Files in the folder `C:\Skyline DataMiner\Webpages\public\` will be hosted without authentication on the internal network of a DMA. However, only authenticated members of the DMS will be able to access them via remote access.
 
-  - `C:\Skyline DataMiner\Documents\DMA_COMMON_DOCUMENTS`
+  - `C:\Skyline DataMiner\Documents\`
 
-    This is the [general documents folder](xref:Managing_the_document_folders) that is also available within DataMiner Cube.
+    This is the folder containing the [documents](xref:About_the_Documents_module) available within DataMiner Cube.
 
-    To access these files, use the remote access URL followed by `/Documents/DMA_COMMON_DOCUMENTS/`<!-- RN 39182 -->
+    To access these files, use the remote access URL followed by `/Documents/`<!-- RN 39182 + 39881-->

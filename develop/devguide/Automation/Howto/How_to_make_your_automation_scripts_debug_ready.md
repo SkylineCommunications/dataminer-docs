@@ -2,7 +2,7 @@
 uid: How_to_make_your_automation_scripts_debug_ready
 ---
 
-# How to make your Automation scripts debug ready
+# Making your Automation scripts debug-ready
 
 While you are working on Automation scripts, exceptions can be thrown because of all kinds of valid reasons: executing actions on a variable that is not initialized, methods that are not yet fully implemented, etc.
 

@@ -11,8 +11,7 @@ Therefore, when a String object will be modified frequently, the use of a String
 Although the StringBuilder class generally offers better performance than the String class, String should not automatically be replaced with StringBuilder whenever a string manipulation is needed. Performance depends on the size of the string, the amount of memory to be allocated for the new string, the system on which the application is executing, and the type of operation. You should be prepared to test your app to determine whether StringBuilder actually offers a significant performance improvement.
 
 > [!TIP]
-> See also:
-> <https://msdn.microsoft.com/En-Us/library/system.text.stringbuilder(v=vs.110).aspx>
+> See also: <https://msdn.microsoft.com/En-Us/library/system.text.stringbuilder(v=vs.110).aspx>
 
 Consider using the String class under the following conditions:
 
@@ -32,4 +31,3 @@ Also note that string literals can be split in order to improve readability. The
 
 > [!NOTE]
 > Often, code is needed in a protocol to generate a string that represents a list of items that are separated by a character or string (e.g. when using a parameter that uses the dependencyId attribute). An alternative implementation is to collect all items in a list (List\<T>) and then use the String.Join method (e.g. *string sDevices = string.Join(";", lsDevices);* ).
->

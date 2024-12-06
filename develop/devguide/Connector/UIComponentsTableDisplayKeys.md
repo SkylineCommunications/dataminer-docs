@@ -13,10 +13,10 @@ Please keep the following guidelines in mind for display keys:
 - In case the primary key can be used to let users identify a row, there is no need to define a display key (as by default the primary key is used). Only define a display key if there is a need to identify rows in another (more user-friendly) way.
 - Just like the primary key, the display key must be unique for every row in a table.
 - A display key must not have leading or trailing whitespace.
-- Semicolons (";"), question marks ("?") and asterisks ("*") must be avoided in display keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to the [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)
+- Semicolons (`;`), question marks (`?`) and asterisks (`*`) must be avoided in display keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to the [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)
 
 > [!NOTE]
-> From DataMiner 9.5.5 (RN 16743) onwards, all parameters used to create the display key will be saved by default (except for volatile tables).
+> All parameters used to create the display key will be saved by default (except for volatile tables).<!-- RN 16743 -->
 
 More information on how a display key can be defined can be found in the following subsections:
 
@@ -27,9 +27,9 @@ More information on how a display key can be defined can be found in the followi
 Only one approach should be used at a time and new protocols should avoid using the displayColumn attribute because it performs less well and displayColumn is not supported by Cassandra.
 
 > [!NOTE]
-> Based on the way the display key is defined, there is also an important difference in the way trend data is stored in the trend data database table. In case the displayColumn attribute is used, the display key is used in the trend data table. In case either the “naming” option or NamingFormat is used, the primary key is used in the trend data table. Therefore, it is not allowed to change existing protocols to start using naming instead of the displayColumn attribute (unless the TAM instructs to do so, as this results in a major protocol change), as this would result in the trend history becoming unavailable (even though it is still present in the database).
+> Based on the way the display key is defined, there is also an important difference in the way trend data is stored in the trend data database table. In case the displayColumn attribute is used, the display key is used in the trend data table. In case either the "naming" option or NamingFormat is used, the primary key is used in the trend data table. Therefore, it is not allowed to change existing protocols to start using naming instead of the displayColumn attribute (unless the TAM instructs to do so, as this results in a major protocol change), as this would result in the trend history becoming unavailable (even though it is still present in the database).
 
-Since DataMiner version 8.0.5, it is possible to define a column of type "displaykey" which shows the display key.
+It is possible to define a column of type "displaykey", which shows the display key:
 
 ```xml
 <ColumnOption idx="1" pid="1502" type="displaykey" value="" options=""/>
@@ -39,7 +39,7 @@ It is not allowed to set values to this column. The column will automatically be
 
 ## NamingFormat
 
-Another way to define a display key using naming is by using the NamingFormat tag:
+Another way to define a display key using naming is by using the *NamingFormat* tag:
 
 ```xml
 <Param id="2000" trending="false">
@@ -58,13 +58,13 @@ Another way to define a display key using naming is by using the NamingFormat ta
 </Param>
 ```
 
-The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like “<”, “>” and “&” that are otherwise encoded in XML.
+The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like "<", ">", and "&", which are otherwise encoded in XML.
 
 In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input 2 TS 3".
 
 ## Naming
 
-Naming can be used to define a display key for a table. The example below defines a display key using a combination of parameters from three different tables (table 1000, 2000 and 3000).
+Naming can be used to define a display key for a table. The example below defines a display key using a combination of parameters from three different tables (table 1000, 2000, and 3000).
 
 ```xml
 <Param id="3000" trending="false">
@@ -82,11 +82,12 @@ Naming can be used to define a display key for a table. The example below define
 </Param>
 ```
 
-The naming option defines the separator ("/"), followed by a comma-separated list of column parameter IDs, which together make up a unique label for a row.
+The naming option defines the separator (`/`), followed by a comma-separated list of column parameter IDs, which together make up a unique label for a row.
 
 > [!NOTE]
+>
 > - In case you want to use values from columns in other tables, make sure the necessary table links exist.
-> - All values used to compose the naming result must be filled in before the parameter value that will trigger the alarm. See Column processing order in tables (fix in DataMiner version 7.5).
+> - All values used to compose the naming result must be filled in before the parameter value that will trigger the alarm. See [Column processing order in tables](xref:InnerWorkingsSLElement#column-processing-order-in-tables).
 
 See also:
 
@@ -103,8 +104,9 @@ Using the displayColumn attribute, you can specify that values of a particular c
 ```
 
 > [!NOTE]
-> - The column referred to in the displayColumn attribute must never be the column holding the primary key, as this would result in the creation of an unnecessary mapping between primary key and display key.
-> - For performance reasons, using either the "naming" option or NamingFormat tag is favored over using the displayColumn attribute for new protocols.
+>
+> - The column referred to in the *displayColumn* attribute must never be the column holding the primary key, as this would result in the creation of an unnecessary mapping between primary key and display key.
+> - For performance reasons, using either the "naming" option or *NamingFormat* tag is favored over using the *displayColumn* attribute for new protocols.
 
 ## See also
 

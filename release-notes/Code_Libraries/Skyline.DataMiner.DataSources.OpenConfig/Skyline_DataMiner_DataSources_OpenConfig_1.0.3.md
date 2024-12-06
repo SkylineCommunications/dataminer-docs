@@ -6,7 +6,7 @@ uid: Skyline_DataMiner_DataSources_OpenConfig_1.0.3
 
 ## New features
 
-#### Support for state column parameter [ID_37526]
+#### Support for state column parameter [ID 37526]
 
 The *DataMinerConnectorData* now supports a state column parameter. This will keep track of the state of the row, similar to how this is done for SNMP parameters. However, in this case the created parameter still needs to be of type "retrieved".
 
@@ -32,7 +32,7 @@ The state parameter has the same discrete values as an SNMP state parameter. You
 
 The state "Equal" is already present in the enum but is not used yet. At present, it will have the state "Updated" even if all values are equal.
 
-#### Delete method added [ID_37548]
+#### Delete method added [ID 37548]
 
 The *Delete* method has been added to the GnmiClient, so that it is now possible to clear a parameter with an OpenConfig set. The method accepts the path as string or the path as *Gnmi.Path* object.
 
@@ -42,21 +42,21 @@ When a path is specified for an element that has child elements, these child ele
 
 ### Enhancements
 
-#### Non-basic value type now set as JSON [ID_37559]
+#### Non-basic value type now set as JSON [ID 37559]
 
 When a value enters as a type that is not basic, e.g. a string array, this value will now be passed as JSON by the data mapper. This way, *OnRawValueChange* can then be used to fully custom-process this JSON value and set the parameter as desired. Alternatively, when this method is not implemented, the parameter will be set as JSON string.
 
-#### DataMinerConnectorParameters filled in when parent container with data enters [ID_37599]
+#### DataMinerConnectorParameters filled in when parent container with data enters [ID 37599]
 
 ​When a container entered with data (e.g. system), the underlying values (e.g. system/state/current-datetime) were not mapped with a DataMinerConnectorParameter (i.e. a single parameter). This has been modified so that DataMinerConnectorParameters will be filled in when an parent container enters with data.
 
-#### Support added for Path.Origin [ID_37608]
+#### Support added for Path.Origin [ID 37608]
 
 ​When the beginning of a string path for a DataMinerConnectorDataGrid or DataMinerConnectorParameter is followed by `:/`, this first part of the path will now be used in the *Path.Origin* property. For example, if the string path is equal to `eos_native:/SysDb/ptp/status/parentDS`, *Path.Origin* will be `eos_native`, and *Path.Elem* will consist of `SysDb/ptp/status/parentDS`.
 
 ### Fixes
 
-#### Not possible to subscribe to multiple tables in a container [ID_37545]
+#### Not possible to subscribe to multiple tables in a container [ID 37545]
 
 ​When the data mapper contained a data grid with a path (e.g. interfaces/interface/state) and there was also another data grid present with a path to a subdirectory of the path of the first data grid (e.g. interfaces/interface/state/counters), not all tables were updated. In addition, when the key was part of a parent path and the value was returned in JSON format, the key was not resolved.
 

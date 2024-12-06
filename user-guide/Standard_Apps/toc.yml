@@ -1,4 +1,6 @@
 items:
+  - name: Standard Data Model (SDM)
+    topicUid: SDM
   - name: DataMiner EPM Solution
     topicUid: SolEPM
     items:
@@ -56,56 +58,58 @@ items:
                 topicUid: D-DOCSIS_parameters_cin_interface
               - name: Manufacturer
                 topicUid: D-DOCSIS_parameters_manufacturer
-      #GPON TOC
-      - name: DataMiner EPM GPON
-        topicUid: EPM_GPON
+      #xPON TOC
+      - name: DataMiner EPM xPON
+        topicUid: EPM_xPON
         items:
-          - name: EPM GPON architecture
-            topicUid: GPON_architecture
-          - name: EPM GPON components
-            topicUid: GPON_components
+          - name: EPM xPON architecture
+            topicUid: xPON_architecture
+          - name: EPM xPON components
+            topicUid: xPON_components
             items:
-              - name: EPM GPON supported technologies
-                topicUid: GPON_supported_technologies
-              - name: Standard EPM GPON ONT JSON definition
-                topicUid: GPON_ONT_Json_definition
-          - name: EPM GPON deployment
-            topicUid: GPON_deployment
-          - name: Available parameters in EPM GPON
-            topicUid: GPON_KPI
+              - name: EPM xPON supported technologies
+                topicUid: xPON_supported_technologies
+              - name: Standard EPM xPON ONT JSON definition
+                topicUid: xPON_ONT_Json_definition
+          - name: EPM xPON deployment
+            topicUid: xPON_deployment
+          - name: Available parameters in EPM xPON
+            topicUid: xPON_KPI
             items:
-              - name: EPM GPON parameter thresholds
-                topicUid: GPON_parameters_thresholds
-              - name: EPM GPON ONT parameters
-                topicUid: GPON_ONT
-      #GPON TOC END
-      - name: DataMiner EPM I-DOCSIS
+              - name: EPM xPON parameter thresholds
+                topicUid: xPON_parameters_thresholds
+              - name: EPM xPON ONT parameters
+                topicUid: xPON_ONT
+      #xPON TOC END
+      - name: DataMiner EPM Integrated DOCSIS
         topicUid: EPM_I-DOCSIS
         items:
-          - name: EPM I-DOCSIS architecture
+          - name: EPM Integrated DOCSIS architecture
             topicUid: I-DOCSIS_architecture
-          - name: EPM I-DOCSIS components
+          - name: EPM Integrated DOCSIS components
             topicUid: I-DOCSIS_components
-          - name: Supported technologies for I-DOCSIS
+          - name: Supported technologies for Integrated DOCSIS
             topicUid: I-DOCSIS_supported_technologies
-          - name: EPM I-DOCSIS deployment
+          - name: EPM Integrated DOCSIS deployment
             topicUid: I-DOCSIS_deployment
-          - name: EPM I-DOCSIS maps deployment
+          - name: EPM Integrated DOCSIS maps deployment
             topicUid: I-DOCSIS_maps_deployment
             items:
               - name: Systems with one back-end element
                 topicUid: I-DOCSIS_maps_deployment_one_backend
               - name: Systems with multiple back-end elements
                 topicUid: I-DOCSIS_maps_deployment_multiple_backends
-          - name: EPM I-DOCSIS GQI integration
+          - name: EPM Integrated DOCSIS GQI integration
             topicUid: I-DOCSIS_GQI_Integration
-          - name: EPM I-DOCSIS passives integration
+          - name: EPM Integrated DOCSIS passives integration
             topicUid: I-DOCSIS_passives_integration
-          - name: EPM I-DOCSIS upgrade
+          - name: EPM Integrated DOCSIS upgrade
             topicUid: I-DOCSIS_upgrade
           - name: Creating a new CCAP/CM pair
             topicUid: I-DOCSIS_Create_CCAP_CM_pair
-          - name: Available parameters in I-DOCSIS
+          - name: Deleting a CCAP/CM pair
+            topicUid: I-DOCSIS_Delete_CCAP_CM_pair
+          - name: Available parameters in Integrated DOCSIS
             topicUid: I-DOCSIS_parameters
             items:
               - name: Node Segment
@@ -126,6 +130,8 @@ items:
                 topicUid: I-DOCSIS_parameters_cable_modem
               - name: Thresholds
                 topicUid: I-DOCSIS_parameters_thresholds
+              - name: PTP
+                topicUid: I-DOCSIS_parameters_ptp
       - name: DataMiner EPM VSAT
         topicUid: EPM_VSAT
         items:
@@ -141,6 +147,15 @@ items:
             topicUid: VSAT_metrics
           - name: Available parameters in VSAT
             topicUid: VSAT_parameters
+      - name: DataMiner EPM Availability
+        topicUid: Availability_Overview
+        items:
+          - name: Deploying the DataMiner EPM Availability solution
+            topicUid: Availability_deployment
+          - name: Using the EPM Availability solution
+            topicUid: Availability_Using
+          - name: Available parameters in Availability
+            topicUid: Availability_parameters
   - name: DataMiner IDP app
     topicUid: SolIDP
     items:
@@ -204,6 +219,23 @@ items:
             topicUid: IDP_Tutorial_DiscoveryAndProvisioning
           - name: Getting started with configuration backups
             topicUid: IDP_Tutorial_TakeConfigurationBackup
+  - name: dataminer.MediaOps
+    topicUid: MediaOps
+    items:
+      - name: Installing dataminer.MediaOps
+        topicUid: Installing_MediaOps
+      - name: MediaOps applications
+        topicUid: MediaOps_apps
+        items:
+          - name: People & Organizations
+            topicUid: People_Organizations
+            items:
+              - name: Managing contacts
+                topicUid: PO_Managing_Contacts
+              - name: Managing teams
+                topicUid: PO_Managing_Teams
+              - name: Managing organizations
+                topicUid: PO_Managing_Organizations
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
@@ -214,6 +246,13 @@ items:
             topicUid: Installing_Asset_Management
           - name: Working with the Asset Management app
             topicUid: Working_with_Asset_Management
+      - name: EVS Cerebrum application
+        topicUid: EVS_Cerebrum
+        items:
+          - name: Installing the EVS Cerebrum app
+            topicUid: Installing_EVS_Cerebrum
+          - name: Working with the EVS Cerebrum app
+            topicUid: Using_EVS_Cerebrum
       - name: DataMiner Huawei Manager dashboard
         topicUid: Huawei_Manager_Dashboard
         items:
@@ -232,6 +271,27 @@ items:
             topicUid: Open_Putty_with_DITT
           - name: Implementing DITT in a visual overview
             topicUid: Implementing_DITT_in_Visio
+      - name: META Whatsapp Messaging solution
+        topicUid: META_WhatsApp_Messaging
+        items:
+          - name: Installing the META WhatsApp Messaging solution
+            topicUid: META_WhatsApp_Messaging_Installation
+          - name: Using the META WhatsApp Messaging solution
+            topicUid: Using_META_WhatsApp_Messaging
+      - name: DataMiner Objects Tool
+        topicUid: DataMiner_Objects_Tool
+        items:
+          - name: Installing the DataMiner Objects Tool
+            topicUid: Installing_DataMiner_Objects_Tool
+          - name: Working with the DataMiner Objects Tool
+            topicUid: Using_DataMiner_Objects_Tool
+      - name: Performance Analyzer solution
+        topicUid: Performance_Analyzer
+        items:
+          - name: Performance Analyzer library
+            topicUid: Performance_Analyzer_Library
+          - name: Performance Analyzer app
+            topicUid: Performance_Analyzer_LCA
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:
@@ -243,6 +303,8 @@ items:
             topicUid: Ping_Monitoring_UI
           - name: Managing groups and destinations
             topicUid: Ping_Monitoring_managing_groups_destinations
+          - name: Getting started tutorial
+            topicUid: Tutorial_Apps_Ping_Monitoring_App
       - name: DataMiner Planned Maintenance (PLM) tool
         topicUid: DataMiner_PLM_Tool_Overview
         items:
@@ -286,6 +348,8 @@ items:
                 topicUid: Processor_configuration
               - name: Monitoring processed traps
                 topicUid: Monitoring_Processed_Traps
+          - name: Getting started tutorial
+            topicUid: Smart_Trap_Processor_Tutorial
       - name: DataMiner TAG Management app
         topicUid: Overview_TAG_App
         items:
@@ -379,6 +443,10 @@ items:
             topicUid: srm_instantiations
           - name: SRM scripting
             topicUid: srm_scripting
+          - name: Advanced SRM concepts
+            items:
+              - name: Quarantine
+                topicUid: SRM_Quarantine
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:
@@ -531,6 +599,8 @@ items:
                 topicUid: SRM_launching_booking_wizard_pages
               - name: Launching the Service Profile Booking Wizard from a custom script
                 topicUid: SRM_launching_service_profile_wizard
+          - name: Interacting with Resource Manager
+            topicUid: srm_using_resourcemanagerhelper
           - name: Frequently asked questions related to bookings and scripting
             topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging

@@ -43,11 +43,11 @@ If the time in parentheses has elapsed twice, a full run-time error is triggered
 An RTE logged by SLWatchdog can for instance look like this:
 
 ```txt
-2021-02-27 07:48:39 8260|>>>>>>> (320) THREAD PROBLEM : SLBrain.exe - Handle Notifications Thread
-2021-02-27 07:48:39 8260|Send alarm for process SLBrain.exe (bSignaled = FALSE, bStopped = FALSE) for iCookie = 320 (RTE Count = 1)
+2021-02-27 07:48:39 8260|>>>>>>> (320) THREAD PROBLEM : SLDMS.exe - NotificationThread
+2021-02-27 07:48:39 8260|Send alarm for process SLDMS.exe (bSignaled = FALSE, bStopped = FALSE) for iCookie = 320 (RTE Count = 1)
 2021-02-27 07:48:39 8260|** Making minidump ..
-2021-02-27 07:48:48 8260|** Making minidump C:\Skyline DataMiner\Logging\MiniDump\2018_02_27 07_48_39_SLBrain.exe.zip finished.
-2021-02-27 07:48:48 8260|OPEN RTE: Runtime error in process SLBrain.exe on agent MIEKED2 in Process: SLBrain.exe for Thread: Handle Notifications Thread with notificationID: 11395
+2021-02-27 07:48:48 8260|** Making minidump C:\Skyline DataMiner\Logging\MiniDump\2018_02_27 07_48_39_SLDMS.exe.zip finished.
+2021-02-27 07:48:48 8260|OPEN RTE: Runtime error in process SLDMS.exe on agent MIEKED2 in Process: SLDMS.exe for Thread: NotificationThread with notificationID: 11395
 ```
 
 The "RTE Count" you can see in the example above refers to the number of processes with a distinct name that have an RTE. This counter will only increase when a process with a different name also has an RTE. If, for example, there are 5 SLProtocol processes with an RTE, the RTE Count is 1. However, if SLElement were to have an RTE as well, the RTE Count would increase to 2. The RTE Count will only go back to 0 when all threads are OK again and all processes are working as expected.

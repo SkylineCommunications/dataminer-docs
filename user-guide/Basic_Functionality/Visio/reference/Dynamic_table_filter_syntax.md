@@ -8,7 +8,7 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
 
 ## VALUE=
 
-Specify a value filter with the structure “ParameterID Operator Value”. For example, to only include rows where the column with parameter ID 51 contains the value “3”, specify *VALUE=51 == 3*.
+Specify a value filter with the structure "ParameterID Operator Value". For example, to only include rows where the column with parameter ID 51 contains the value "3", specify *VALUE=51 == 3*.
 
 The parameter ID can be:
 
@@ -59,7 +59,7 @@ value=DK == def
 
 This filter is similar in structure to the VALUE= filter, and is used to resolve foreign key relations to other tables or recursively. Only the == operator is allowed.
 
-For example, to only include rows that have a relation path to the row in table 2000 with primary key “xyz”, specify *fk=2000 == xyz*. You can also specify a column parameter ID from the target table instead.
+For example, to only include rows that have a relation path to the row in table 2000 with primary key "xyz", specify *fk=2000 == xyz*. You can also specify a column parameter ID from the target table instead.
 
 ## PK=
 
@@ -79,18 +79,18 @@ This filter should be followed by an integer, and determines which page is retri
 
 ## SORT=
 
-This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters (“\|”). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, *SORT=12502\|DESC*.
+This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters ("\|"). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, *SORT=12502\|DESC*.
 
-From DataMiner 10.0.0/10.0.2 onwards, you can also specify *SORT=NONE*, to avoid any kind of sorting of the results, which may improve performance.
+You can also specify *SORT=NONE* to avoid any kind of sorting of the results, which may improve performance.
 
 > [!NOTE]
-> Sorting direct view tables that combine data from different elements is only possible from DataMiner 9.6.11 onwards. However, note that it is not possible to sort by a column that is not part of the result set.
+> While it is possible to sort direct view tables that combine data from different elements, it is not possible to sort by a column that is not part of the result set.
 
 ## RESOLVE=
 
 The resolve filter will substitute values of foreign key columns with the display key of the linked table.
 
-This filter should be followed by a comma-separated string containing the parameter IDs to resolve. If all parameter IDs should be resolved, “*all*” can be specified instead.
+This filter should be followed by a comma-separated string containing the parameter IDs to resolve. If all parameter IDs should be resolved, "*all*" can be specified instead.
 
 For example, if *resolve=1005,2000* is specified, the value in column 1005 (which should be a primary key of table 2000), will be replaced by the display key of that row in table 2000.
 
@@ -100,11 +100,11 @@ This filter determines whether the filters need to be resolved non-recursively, 
 
 ## RECURSIVE
 
-While dynamic table queries on tables follow recursive links by default, they do not do so automatically when the filtered table directly has a foreign key to itself and it is not being filtered on columns from other linked tables. From DataMiner 9.5.3 onwards, you can use the “recursive” option to force recursion in this scenario. For example: *value=201 == XXXXX;recursive*.
+While dynamic table queries on tables follow recursive links by default, they do not do so automatically when the filtered table directly has a foreign key to itself and it is not being filtered on columns from other linked tables. To force recursion in this scenario, you can use the "recursive" option. For example: *value=201 == XXXXX;recursive*.
 
 When combined with NONRECURSIVE in the same query, NONRECURSIVE takes precedence.
 
-From DataMiner 9.6.5 onwards, the following recursion modes can be specified:
+The following recursion modes can be specified:
 
 - *recursive=none*, *recursive=false*, or *nonrecursive*: No recursion.
 
@@ -114,7 +114,7 @@ From DataMiner 9.6.5 onwards, the following recursion modes can be specified:
 
 - *recursive=upDown*: Follows recursion both upwards and downwards.
 
-- *recursive=upDownNoLocal*, *recursive=upNoLocal* or *recursive=downNoLocal*: Enforce recursion on the table that is being queried directly. Adding the “NoLocal” suffix allows you to specify a recursion mode without enforcing local recursion.
+- *recursive=upDownNoLocal*, *recursive=upNoLocal* or *recursive=downNoLocal*: Enforce recursion on the table that is being queried directly. Adding the "NoLocal" suffix allows you to specify a recursion mode without enforcing local recursion.
 
 In case no recursion mode is specified, *recursive=downNoLocal* is applied.
 
@@ -150,16 +150,14 @@ Example:
 columns=1005,1006,1022
 ```
 
-> [!NOTE]
-> This type of filter is supported for (direct) view tables from DataMiner 9.6.0/9.6.3 onwards.
-
-From DataMiner 9.6.4 onwards, it is possible to include additional columns that retrieve data from a table that is linked via relations (i.e. left join). To do so, add a "$" prefix to the parameter IDs of the external columns. For example:
+To include additional columns that retrieve data from a table that is linked via relations (i.e. left join), add a "$" prefix to the parameter IDs of the external columns. For example:
 
 ```txt
 columns=123,456,$567
 ```
 
 > [!NOTE]
+>
 > - A foreign key relation path must exist between the table being queried and the linked data table.
 > - The result set will not be updated when the data in the external table changes.
 
@@ -175,7 +173,7 @@ For example:
 fullFilter=((PK >= 5) AND ((101 IN_RANGE 0/10) OR (102 == 50))) OR (103 IS true)
 ```
 
-From DataMiner 9.6.6 onwards, several of these filters can be combined, and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
+Several of these filters can be combined, and a FULLFILTER= type filter can be combined with a VALUE= type filter. The resulting query will be an AND combination of the filters.
 
 From DataMiner 10.2.0/10.2.2 onwards, it is possible to use regular expressions in this type of filter. For this purpose, use the REGEX keyword to indicate that the next part of the filter, enclosed in single quotation marks, is a regular expression.
 
@@ -188,14 +186,13 @@ fullFilter=(512 REGEX '^(?:Zand|Ambachten)[\'\\\\]+straat' AND 510 == 1000)
 In the example above, the regular expression contains a single quotation mark and a backslash character that are part of the query. Since the "fullfilter" syntax requires these characters to be escaped, they have been escaped with an additional backslash character, and as a backslash character in a regular expression also needs to be escaped, four backslash characters are needed here.
 
 > [!NOTE]
+>
 > - String values should be enclosed in single quotation marks (').
-> - Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
-> - If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](xref:MaintenanceSettings_xml#filteringslelement).
 > - This type of filter is not supported to filter the list of elements from which a direct view retrieves data.
 
 ## RECURSIVEFULLFILTER
 
-Available from DataMiner 10.0.3 onwards. This filter uses the same syntax as the fullfilter component, but is applied to all keys found through recursive links when requesting a table with the recursive option.
+This filter uses the same syntax as the fullfilter component but is applied to all keys found through recursive links when requesting a table with the recursive option.
 
 For example:
 
@@ -204,7 +201,7 @@ recursivefullfilter=(1002 > 0)
 ```
 
 > [!NOTE]
-> This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](xref:Configuring_the_DataMiner_Maps).
+> This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](xref:Top-level_structure_of_a_DataMiner_Maps_configuration_file).
 
 ## NODIRECTVIEW=
 

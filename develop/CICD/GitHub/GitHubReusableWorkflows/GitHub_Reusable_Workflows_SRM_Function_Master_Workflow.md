@@ -2,7 +2,7 @@
 uid: github_reusable_workflows_srm_function_master_workflow
 ---
 
-# SRM Function master workflow
+# SRM Function Master Workflow
 
 IN DEVELOPMENT - NOT RELEASED
 

@@ -8,7 +8,7 @@ uid: DIS_2.33
 
 ### IDE
 
-#### New 'DIS Comparer' tool window \[ID_29124\]
+#### New 'DIS Comparer' tool window \[ID 29124\]
 
 The *Major Change Check* window has been replaced by a new *DIS Comparer* tool window. Also, the *Validate and compare* option has been removed.
 
@@ -27,11 +27,11 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Show Details... | Show all details of the error in a separate window. |
 | Suppress... | Suppress the error. Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
 
-#### Class Library errors will now be shown in a banner instead of a popup window \[ID_29609\]
+#### Class Library errors will now be shown in a banner instead of a popup window \[ID 29609\]
 
 When an error occurred in a class library package (base or community) or if that package was not compatible with the current DataMiner version, up to now, a popup window would appear each time a change was made to the protocol. That popup window will now be replaced by a banner.
 
-#### XML editor: Changing a QAction ID \[ID_29699\]
+#### XML editor: Changing a QAction ID \[ID 29699\]
 
 When editing a protocol in the XML editor, it is now possible to change the ID of a QAction.
 
@@ -51,7 +51,7 @@ When you change the ID of a QAction, the following items will be updated:
 
 ### Validator
 
-#### Extended checks \[ID_29088\]
+#### Extended checks \[ID 29088\]
 
 The following checks have been extended:
 
@@ -68,7 +68,7 @@ From now on, these can all return the following error messages:
 - UntrimmedTag
 - WrongCasing
 
-#### New checks and error messages \[ID_29597\]
+#### New checks and error messages \[ID 29597\]
 
 The following checks and error messages have been added.
 
@@ -78,7 +78,7 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol Schema: New elements and element attributes \[ID_29018\] \[ID_29359\] \[ID_29819\]
+#### Protocol Schema: New elements and element attributes \[ID 29018\] \[ID 29359\] \[ID 29819\]
 
 The following elements and element attributes have been added to the Protocol XML Schema:
 
@@ -88,14 +88,14 @@ The following elements and element attributes have been added to the Protocol XM
 - Protocol.PortSettings.FlushPerDatagram
 - Protocol.Ports.PortSettings.FlushPerDatagram
 
-#### UOM Schema: New units added \[ID_29159\]
+#### UOM Schema: New units added \[ID 29159\]
 
 The following units have been added to the UOM Schema:
 
 - Alarms (Alarms)
 - Wh (Watt hour)
 
-#### Protocol Schema: New syntax to conditionally show/hide chains and chain fields \[ID_29827\]
+#### Protocol Schema: New syntax to conditionally show/hide chains and chain fields \[ID 29827\]
 
 New syntax has been added to allow chains and chain fields to be shown or hidden based on parameter values.
 
@@ -146,19 +146,19 @@ See the following examples:
 
 ### Class Library
 
-#### IElementCollection now implements IEnumerable \[ID_29442\]
+#### IElementCollection now implements IEnumerable \[ID 29442\]
 
 The IElementConnectionCollection interface, which is implemented by the ElementConnectionCollection class, now extends IEnumberable\<T>, allowing it to be used, for example, in a foreach loop to iterate over the connections.
 
-#### DmsService class can now be used to manage DataMiner services \[ID_29513\]
+#### DmsService class can now be used to manage DataMiner services \[ID 29513\]
 
 The class library now includes a DmsService class that can be used to manage DataMiner services.
 
-#### Monitors added to subscribe to service alarm level and service state \[ID_29515\]
+#### Monitors added to subscribe to service alarm level and service state \[ID 29515\]
 
 Monitors have been added to subscribe to service alarm level and service state.
 
-#### Monitors that subscribe to a table can now execute code whenever data in that table is updated \[ID_30055\]
+#### Monitors that subscribe to a table can now execute code whenever data in that table is updated \[ID 30055\]
 
 Monitors that subscribe to a table can now execute code whenever data in that table is updated.
 
@@ -166,31 +166,31 @@ Monitors that subscribe to a table can now execute code whenever data in that ta
 
 ### Enhancements
 
-#### IDE: No longer possible to open a DIS macro in a protocol or Automation script solution \[ID_29093\]
+#### IDE: No longer possible to open a DIS macro in a protocol or Automation script solution \[ID 29093\]
 
 Each time you open a DIS macro, a hidden C# project is created. Up to now, when you did so while working inside a protocol or Automation script solution, that hidden C# project would also be added to the solution. As this is unwanted behavior, from now on, when you try to open a DIS macro while working inside a solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
 
-#### Class Library: Additional check to prevent elements to restart after being updated \[ID_29777\]
+#### Class Library: Additional check to prevent elements to restart after being updated \[ID 29777\]
 
 When an element is updated, it will be restarted whenever its port settings have been changed. Now, an additional check has been added to make sure an element is not restarted when, during an update, its port settings have not been changed.
 
 ### Fixes
 
-#### Class Library: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated \[ID_29440\]
+#### Class Library: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated \[ID 29440\]
 
 When an element port was updated, up to now, the IsSslTlsEnabled property of all ports of that element would incorrectly be reset to false.
 
-#### IDE - XML editor: Problems with the QAction option 'dllName' \[ID_29587\]
+#### IDE - XML editor: Problems with the QAction option 'dllName' \[ID 29587\]
 
 When you had specified the *dllName* option in the *Protocol.QActions.QAction@options* attribute, up to now, the following issues could occur:
 
 - When a solution-based protocol was compiled, QActions would incorrectly be referred to using the default DLL name "QAction.ID.dll", even when a custom DLL name had been specified.
 - When, in a non-solution-based protocol, a custom DLL name was specified in a \<QAction> tag, the Validator would incorrectly thrown a "Could not find DLL: \[ProtocolName\].\[protocolVersion\].Test.dll" error.
 
-#### Class Library: RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID_30053\]
+#### Class Library: RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID 30053\]
 
 RemotePort would throw "null reference" exceptions when trying to retrieve a replicated element.
 
-#### Class Library: SLSpectrum wrappers were missing a GetMonitor call with the correct return format \[ID_30056\]
+#### Class Library: SLSpectrum wrappers were missing a GetMonitor call with the correct return format \[ID 30056\]
 
 The SLSpectrum wrappers were missing a GetMonitor call with the correct return format.

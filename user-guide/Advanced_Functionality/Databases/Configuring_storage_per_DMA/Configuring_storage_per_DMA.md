@@ -20,11 +20,11 @@ By default, when you install a new self-hosted DataMiner System, a Cassandra dat
 ![storage per DMA](~/user-guide/images/Storage_per_DMA.svg)
 
 > [!IMPORTANT]
-> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If you prefer to keep using self-hosted storage, we highly recommend installing an [indexing database](xref:Indexing_Database) to get access to additional features such as SRM and DOM.
+> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If you prefer to keep using self-hosted storage, you will need to switch to [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 
 ## MySQL database
 
-On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to migrate to Cassandra. If you choose to keep using self-hosted storage, [migrating to Cassandra](xref:Migrating_the_general_database_to_Cassandra) is also highly recommended.
+On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to migrate to Cassandra. If you choose to keep using self-hosted storage, switching to [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) is highly recommended.
 
 > [!IMPORTANT]
 > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.

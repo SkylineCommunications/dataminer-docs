@@ -18,16 +18,9 @@ To activate follow mode:
 
    - Select *Wire* to track events after they have been pushed over an eventing callback or returned in a polling response. This can be useful to verify that events have been pushed onto the wire in diagnostic scenarios.
 
-1. Optionally, if you want a transcript to be saved at the moment when follow mode is deactivated, select *Store Transcript*.
-
-   > [!NOTE]
-   >
-   > - To open a transcript later, go to *File* > *Dump* > *Open*.
-   > - This option is no longer available from DataMiner 9.5.8 onwards. However, you can instead save a transcript via *File* > *Dump* > *Save*.
-
 1. Select what should be followed. The following options are available:
 
-   - *Hook into Active Session*: Allows you to select a particular item to follow from the current active session, e.g. SLBrain.exe
+   - *Hook into Active Session*: Allows you to select a particular item to follow from the current active session, e.g. SLDataMiner.exe
 
    - *Hook into Custom Active Session*: Allows you to specify a particular connection ID
 
@@ -35,9 +28,11 @@ To activate follow mode:
 
    - *Hook into ALL Sessions*: Follows all sessions.
 
-1. Optionally, from DataMiner 9.5.8 onwards, you can select the *Clone* option. This will follow a clone of the original event/request/response, to keep server-side changes to these objects from being included in the follow data. However, note that this option does increase the load on the server.
+1. Optionally, select the *Clone* option. This will follow a clone of the original event/request/response, to keep server-side changes to these objects from being included in the follow data. However, note that this option does increase the load on the server.
 
 1. Click *OK*.
+
+To save a transcript of the DMA communication, go to *File* > *Dump* > *Save*. You can later open this transcript via *File* > *Dump* > *Open*.
 
 To stop follow mode, in the *Follow* menu, select *Stop Following*.
 

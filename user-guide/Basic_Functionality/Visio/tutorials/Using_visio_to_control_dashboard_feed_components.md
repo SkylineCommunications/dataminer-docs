@@ -2,7 +2,7 @@
 uid: Using_visio_to_control_dashboard_feed_components
 ---
 
-# Using Visio to control dashboard feed components
+# Using Visual Overview to control dashboard feed components
 
 In this tutorial, you will learn how to feed data into a dashboard URL in order to automate selections on feed components when the dashboard is opened. The data to be fed into the URL will be defined on an element's visual overview through the clever use of shape data.
 
@@ -67,7 +67,7 @@ Expected duration: 45 minutes
 
 1. If you are not yet in edit mode, then click *Start editing*.
 
-1. Add a [Parameter feed component](xref:DashboardParameterFeed).
+1. Add a [Parameter picker component](xref:DashboardParameterPicker).
 
 1. From the *Data* pane on the right, drag the *ELEMENTS* header onto the *Parameter feed* component to be used as data.
 
@@ -164,7 +164,7 @@ Expected duration: 45 minutes
 
    1. Move the rectangle on top of the first rectangle representing a row.
 
-1. CTRL-click all three components to select them all, then right-click, and select *Group > Group*.
+1. Ctrl-click all three components to select them all, then right-click, and select *Group > Group*.
 
    You should see the following under the *Drawing Explorer*:
 
@@ -187,7 +187,7 @@ Expected duration: 45 minutes
    | ChildType   | Row |
    | ChildMargin | 5   |
 
-1. CTRL-click the grouped sheet representing the row and the existing background sheet that came with the new Visio file to select both, then right-click, and select *Group* > *Group*.
+1. Ctrl-click the grouped sheet representing the row and the existing background sheet that came with the new Visio file to select both, then right-click, and select *Group* > *Group*.
 
 1. Add the following shape data to the larger grouped sheet:
 
@@ -203,21 +203,27 @@ Expected duration: 45 minutes
 
 1. Using a publicly available web-based encoded JSON URL converter, convert the URL you copied earlier to a human-readable format.
 
-   This will allow users to understand how feed selections are represented in the dashboard's URL.
+   This will make it easier to understand how feed selections are represented in the dashboard's URL.
 
    ![URL converter](~/user-guide/images/VisioURLFeed_URLConvert.png)
 
-   With this information, certain sections of the URL can be replaced with placeholders that will allow dynamic entry based on the row index that is fed into it.
+1. Replace sections of the URL with placeholders to allow dynamic entry based on the row index that is fed into it:
+
+   ```txt
+   http://<DMAIP>/dashboard/#/db/zStaging/Visio%20URL%20Feed.dmadb?data={"version":1,"feed":null,"components":[{"cid":2,"select":{"parameters":["[cardVar:_elementId]/1202/[tableIndex]","[cardVar:_elementId]/1203/[tableIndex]","[cardVar:_elementId]/1204/[tableIndex]"],"elements":["[cardVar:_elementId]"],"indices":["[tableIndex]/[displaytableIndex]"]}}],"feedAndSelect":{}}
+   ```
+
+   > [!NOTE]
+   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the lower right corner of the component while in edit mode.
+
+1. Again use a web-based encoded JSON URL converter, this time to convert the URL back to encoded JSON.
 
 1. Add the following shape data to the button shape.
 
-   > [!NOTE]
-   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the bottom-right corner of the component while in edit mode.
-
    | Shape data field | Value |
    |---|---|
-   | Enabled | true |
-   | Link    | `http://<DMAIP>/dashboard/#/db/zStaging/Visio%20URL%20Feed.dmadb?data={"version":1,"feed":null,"components":[{"cid":2,"select":{"parameters":["[cardVar:_elementId]/1202/[tableIndex]","[cardVar:_elementId]/1203/[tableIndex]","[cardVar:_elementId]/1204/[tableIndex]"],"elements":["[cardVar:_elementId]"],"indices":["[tableIndex]/[displaytableIndex]"]}}],"feedAndSelect":{}}` |
+   | Enabled | *true* |
+   | Link    | The URL with encoded JSON |
 
 1. Make sure nothing is selected in the Visio drawing, and add the following shape data to *ThePage*:
 
@@ -236,6 +242,6 @@ For each table row that was added in [step 1](#step-1-create-a-new-virtual-conne
 - [Dashboards tutorials](xref:Tutorial_Dashboards)
 - [Visio drawings](xref:visio)
 - [Getting started with basic shapes](xref:Getting_started_with_basic_shapes)
-- [Feeds](xref:Using_dashboard_feeds)
+- [Component data](xref:Component_Data)
 - [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
 - [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows)

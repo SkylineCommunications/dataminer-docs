@@ -6,10 +6,11 @@ uid: AdvancedInterElementCommunication
 
 When implementing a protocol, it is often necessary to obtain information from another element (possibly running on another DMA). There are multiple ways to obtain parameter data from another element, detailed in the following sections:
 
-- <xref:AdvancedInterElementCommunicationElementConnections>
-- <xref:AdvancedInterElementCommunicationDataDistribution>
-- <xref:AdvancedInterElementCommunicationParameterReplication>
-- <xref:AdvancedInterElementCommunicationClassLibrary>
+- [Inter-element communication: Element connections](xref:AdvancedInterElementCommunicationElementConnections)
+- [Inter-element communication: Data distribution](xref:AdvancedInterElementCommunicationDataDistribution)
+- [Inter-element communication: Parameter replication](xref:AdvancedInterElementCommunicationParameterReplication)
+- [Inter-element communication: Class Library](xref:AdvancedInterElementCommunicationClassLibrary)
+- [About InterApp calls](xref:InterAppCalls_Introduction)
 
 ## See also
 

@@ -33,7 +33,7 @@ If you want to use existing lines to visualize connectivity, then add a shape da
 > [!NOTE]
 >
 > - Make sure the manually drawn lines are connected to the correct interfaces. If a line is connected to the parent shape of an interface instead of the interface itself, the path will not be used.
-> - If you draw a connection line to a shape that is not linked to a DataMiner object, you will need to make sure a connection point is configured on the shape, as otherwise it will not be clickable and highlightable in DataMiner. To add a connection point, in Visio, select the connection point tool in the ribbon (displayed as a blue X in the *Home* tab), select the shape, and then click the shape again while keeping the *CTRL* key pressed.
+> - If you draw a connection line to a shape that is not linked to a DataMiner object, you will need to make sure a connection point is configured on the shape, as otherwise it will not be clickable and highlightable in DataMiner. To add a connection point, in Visio, select the connection point tool in the ribbon (displayed as a blue X in the *Home* tab), select the shape, and then click the shape again while keeping the Ctrl key pressed.
 
 ## Enabling view connections
 
@@ -75,9 +75,6 @@ To do so, add a shape data field of type **Option** to the shape and set its val
 | ---------------- | ------------------------ |
 | Options          | InternalInterfaceHopping |
 
-> [!NOTE]
-> Prior to DataMiner 9.6.11, this option is not compatible with the "FollowPathColor" option. See [Making connections inherit alarm colors](#making-connections-inherit-alarm-colors).
-
 ## Displaying connection properties
 
 To have a connection property displayed on top of every connection that contains that property:
@@ -112,9 +109,7 @@ To have a connection property displayed on top of every connection that contains
     | Options          | ConnectionProperty:Speed;Avg |
 
 > [!NOTE]
->
-> - On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](xref:Extended_conditional_shape_manipulation_actions#conditional-manipulation-of-connection-shapes).
-> - Displaying connection properties between dynamically generated shapes is only supported from DataMiner 9.0.5 CU1 onwards.
+> On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection. See [Conditional manipulation of connection shapes](xref:Extended_conditional_shape_manipulation_actions#conditional-manipulation-of-connection-shapes).
 
 ## Displaying DCF connection property information
 
@@ -165,7 +160,7 @@ The following additional options are also available:
 
 ## Using a pathing algorithm to display connection lines
 
-From DataMiner 9.5.1 onwards, it is possible to use a pathing algorithm to automatically draw connection lines as clearly visible as possible, using a combination of horizontal and vertical lines.
+It is possible to use a pathing algorithm to automatically draw connection lines as clearly visible as possible, using a combination of horizontal and vertical lines.
 
 To enable this algorithm, in the **Options** shape data field of the **Connection** shape in Visio, add the "StraightLines" option.
 
@@ -190,9 +185,7 @@ The algorithm will attempt to do the following things, in order of priority:
 
 ## Making connections take the alarm color of connected interfaces
 
-From DataMiner 9.5.2 onwards, you can make connection lines take the alarm color of the interfaces they are connected to.
-
-To do so, add a shape data field of type **Options** to the **Connection** shape, and set it to one of the following values:
+To make connection lines take the alarm color of the interfaces they are connected to, add a shape data field of type **Options** to the **Connection** shape, and set it to one of the following values:
 
 | Value                             | Description                                   |
 | --------------------------------- | --------------------------------------------- |
@@ -200,12 +193,9 @@ To do so, add a shape data field of type **Options** to the **Connection** shape
 | ShowInterfaceAlarmColor:forwards  | Connection lines show the alarm color of the preceding interface, depending on the direction of the signal. |
 | ShowInterfaceAlarmColor:backwards | Connection lines show the alarm color of the upcoming interface, depending on the direction of the signal.  |
 
-> [!NOTE]
-> Using this option together with the "EnableViewConnectivity" option is only supported from DataMiner 9.5.3 onwards.
-
 ## Subscribing to internal connections when using dynamic positioning
 
-By default, from DataMiner 9.5.3 onwards, when dynamic positioning is used, internal connections are not subscribed to. If you do want to subscribe to internal connections when using dynamic positioning, specify the following shape data on the **Connectivity** shape:
+By default, when dynamic positioning is used, internal connections are not subscribed to. If you do want to subscribe to internal connections when using dynamic positioning, specify the following shape data on the **Connectivity** shape:
 
 | Shape data field | Value                        |
 | ---------------- | ---------------------------- |
@@ -213,7 +203,7 @@ By default, from DataMiner 9.5.3 onwards, when dynamic positioning is used, inte
 
 ## Linking connection properties
 
-From DataMiner 9.5.9 onwards, it is possible to link connection properties of internal connections to connection properties of external connections.
+It is possible to link connection properties of internal connections to connection properties of external connections.
 
 If you do so, internal connections will push their connection properties to the directly linked external connections along the path. The properties will not be passed from an input to an external connection. If multiple connection properties share a name, they will be separated by commas in the connection overview.
 

@@ -12,7 +12,7 @@ uid: General_Feature_Release_10.0.2_new_features
 
 ### DMS core functionality
 
-#### DataMiner Indexing \[ID_13370\]\[ID_13406\]\[ID_13504\]\[ID_13571\]\[ID_13623\] \[ID_13622\]\[ID_13629\]\[ID_13695\]\[ID_13769\]\[ID_13912\]\[ID_14001\]\[ID_14038\] \[ID_16287\]\[ID_16896\]\[ID_16915\]\[ID_16935\]\[ID_16959\]\[ID_17081\]\[ID_17166\] \[ID_17328\]\[ID_17851\]\[ID_18562\]\[ID_18714\]\[ID_19337\]\[ID_19437\]\[ID_19443\] \[ID_19691\]\[ID_20373\]\[ID_20845\]\[ID_20998\]\[ID_21205\]\[ID_21257\]\[ID_21634\] \[ID_22378\]\[ID_22927\]\[ID_23049\]\[ID_23998\]\[ID_24054\]\[ID_24158\]
+#### DataMiner Indexing \[ID 13370\]\[ID 13406\]\[ID 13504\]\[ID 13571\]\[ID 13623\] \[ID 13622\]\[ID 13629\]\[ID 13695\]\[ID 13769\]\[ID 13912\]\[ID 14001\]\[ID 14038\] \[ID 16287\]\[ID 16896\]\[ID 16915\]\[ID 16935\]\[ID 16959\]\[ID 17081\]\[ID 17166\] \[ID 17328\]\[ID 17851\]\[ID 18562\]\[ID 18714\]\[ID 19337\]\[ID 19437\]\[ID 19443\] \[ID 19691\]\[ID 20373\]\[ID 20845\]\[ID 20998\]\[ID 21205\]\[ID 21257\]\[ID 21634\] \[ID 22378\]\[ID 22927\]\[ID 23049\]\[ID 23998\]\[ID 24054\]\[ID 24158\]
 
 On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
@@ -110,13 +110,13 @@ Once DataMiner Indexing has been installed, it is possible to change the backup 
 
 Once DataMiner Indexing Engine has been installed, the *Search & Indexing* section in System Center contains an additional *Enable indexing on alarms* option. This option must be enabled in order to use the new Alarm Console features mentioned below.
 
-There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID_21935] [ID_23674] [ID_24410] [ID_24424].
+There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID 21935] [ID 23674] [ID 24410] [ID 24424].
 
 ##### Enhanced search in alarm tab pages
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left Ctrl key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 
@@ -175,11 +175,11 @@ The DataMiner HTML5 apps (e.g. Dashboards, Jobs, etc.) now all support external 
 
 ### DMS Protocols
 
-#### SLProtocol class refactored to an interface \[ID_23787\]
+#### SLProtocol class refactored to an interface \[ID 23787\]
 
 To allow for easier testing, the SLProtocol class has been refactored to an interface.
 
-#### NT_SNMP_GET (295): Possibility to specify the maximum number of repetitions \[ID_23888\]
+#### NT_SNMP_GET (295): Possibility to specify the maximum number of repetitions \[ID 23888\]
 
 When sending an NT_SNMP_GET request from within a QAction, it is now possible to pass along the maximum number of repetitions in the elementInfo array.
 
@@ -195,7 +195,7 @@ elementInfo\[13\] should contain a 32-bit integer value (Int32) of at least 1. I
 > [!NOTE]
 > Apart from the maximum value of an Int32 (2^31-1), there are no constraints as to maximum value you can specify. So, use this option with caution. The higher this value is set, the higher the stress on the network and the device in question will be.
 
-#### DataMiner Mediation Layer: Base protocols and device protocols can now contain value mappings \[ID_24127\]
+#### DataMiner Mediation Layer: Base protocols and device protocols can now contain value mappings \[ID 24127\]
 
 In base protocols and device protocols linked to base protocols, you can now specify \<ValueMapping> tags inside \<LinkTo> tags.
 
@@ -232,7 +232,7 @@ Here is example of a value mapping defined in a device protocol:
 
 ### DMS Cube
 
-#### DataMiner Analytics: Behavioral anomaly detection and suggestion events \[ID_15723\]\[ID_15914\]\[ID_15916\]\[ID_15951\]\[ID_15952\]\[ID_15976\]\[ID_16001\]\[ID_16050\]\[ID_16163\]\[ID_17279\]\[ID_17462\]\[ID_19224\]\[ID_24095\]\[ID_24126\]\[ID_24147\]
+#### DataMiner Analytics: Behavioral anomaly detection and suggestion events \[ID 15723\]\[ID 15914\]\[ID 15916\]\[ID 15951\]\[ID 15952\]\[ID 15976\]\[ID 16001\]\[ID 16050\]\[ID 16163\]\[ID 17279\]\[ID 17462\]\[ID 19224\]\[ID 24095\]\[ID 24126\]\[ID 24147\]
 
 The DataMiner Analytics software now allows you to configure behavioral anomaly detection and to display suggestion events in the Alarm Console.
 
@@ -342,7 +342,7 @@ To view these suggestion events, you can create a new tab in the Alarm Console a
 > - Suggestion events have severity “Information” and source “Suggestion Engine”.
 > - Suggestion events generated to indicate a behavioral anomaly are automatically cleared 2 hours after their creation time or their last update time.
 
-#### Possibility to enable SSL/TLS encryption when creating or editing TCP/IP elements \[ID_23262\]\[ID_23617\]\[ID_23836\]\[ID_23947\]
+#### Possibility to enable SSL/TLS encryption when creating or editing TCP/IP elements \[ID 23262\]\[ID 23617\]\[ID 23836\]\[ID 23947\]
 
 When creating or editing a TCP/IP element, you can now enable SSL/TLS encryption.
 
@@ -366,7 +366,7 @@ To enable TLS, do the following on every DataMiner Agent in a DataMiner System c
 > - When, on a DataMiner Agent, you replace a PKCS12 file, then all elements using the TCP/IP port in question have to be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
 
-#### Redesigned DataMiner Cube layout \[ID_23427\]\[ID_23486\]\[ID_23540\]\[ID_23628\]\[ID_23646\]\[ID_23813\]\[ID_23822\]\[ID_23904\]\[ID_23982\]\[ID_24036\]\[ID_24044\]\[ID_24079\]\[ID_24086\]\[ID_24129\]\[ID_24143\]\[ID_24160\]\[ID_24165\]\[ID_24189\]\[ID_24218\]\[ID_24518\]
+#### Redesigned DataMiner Cube layout \[ID 23427\]\[ID 23486\]\[ID 23540\]\[ID 23628\]\[ID 23646\]\[ID 23813\]\[ID 23822\]\[ID 23904\]\[ID 23982\]\[ID 24036\]\[ID 24044\]\[ID 24079\]\[ID 24086\]\[ID 24129\]\[ID 24143\]\[ID 24160\]\[ID 24165\]\[ID 24189\]\[ID 24218\]\[ID 24518\]
 
 The design of DataMiner Cube has been updated to be more user-friendly and more in line with other DataMiner apps. Aside from numerous small layout changes, there have been a number of large changes, as detailed below.
 
@@ -411,7 +411,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 - A number of buttons are now available, based on the status of the logon and the DMA. While you are logging onto a DMA, you can click *Back* to return to the logon screen. If a DMA is upgrading or migrating when you log on, you can click the *Monitor* button to monitor the progress. If a DMA is stopped, you can click *Start*, and if a DMA is offline, you can click *Set online*.
 
-#### DataMiner Analytics: Alarm focus \[23911\]\[ID_24083\]\[ID_24102\]\[ID_24128\]
+#### DataMiner Analytics: Alarm focus \[23911\]\[ID 24083\]\[ID 24102\]\[ID 24128\]
 
 The DataMiner Analytics software will now by default assign an estimated likelihood, called a focus score, to each active alarm after analyzing the short-term history and current behavior of incoming alarms in real time.
 
@@ -454,13 +454,13 @@ Alarm focus values will be calculated for the first time after an upgrade to Dat
 
 When calculating alarm focus values for the first time, or when recalculating them from scratch, SLAnalytics will take into account the alarm history of the last week. The time taken by such a recalculation, will depend on the amount of alarms to be updated.
 
-#### New system-wide ClientSettings.json setting to configure whether Data Display pages should be unloaded from memory when you navigate away from them \[ID_23913\]
+#### New system-wide ClientSettings.json setting to configure whether Data Display pages should be unloaded from memory when you navigate away from them \[ID 23913\]
 
 In the *ClientSettings.json* file, the new system-wide *commonServer.ui.datadisplay.PageUnloadOnNavigatingAway* setting allows you to configure whether Data Display pages should be unloaded from memory when you navigate away from them.
 
 Default value: False
 
-#### Visual Overview: New option to collapse empty rows and columns in the connectivity chain of a service instance \[ID_23941\]
+#### Visual Overview: New option to collapse empty rows and columns in the connectivity chain of a service instance \[ID 23941\]
 
 By adding a data field of type ‘ServiceInstance’ to a shape, it is possible to have the connectivity chain of a service instance drawn automatically in Visual Overview.
 
@@ -473,7 +473,7 @@ Example:
 | ServiceInstance  | \[this service\]                 |
 | Options          | CollapseEmptyRowsAndColumns=True |
 
-#### Settings: 'Table export column separator' setting replaced by 'CSV separator' setting \[ID_23986\]
+#### Settings: 'Table export column separator' setting replaced by 'CSV separator' setting \[ID 23986\]
 
 The *Table export column separator* setting (on the *User \> Data Display* page of the *Settings* window) has now been replaced by the *CSV separator* setting (on the *User \> Regional* page of the *Settings* window).
 
@@ -485,13 +485,13 @@ The separator you select in this new setting will be used in all CSV files expor
 > - Before you import a CSV file that was exported using a previous version of Cube, make sure to check the separator used in that file.
 > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of the delimiter specified in the CSV separator setting.
 
-#### Automation/Correlation/Scheduler - Email action: List of reports to be included now indicates whether a report is a legacy report or a Dashboards app report \[ID_24015\]
+#### Automation/Correlation/Scheduler - Email action: List of reports to be included now indicates whether a report is a legacy report or a Dashboards app report \[ID 24015\]
 
 When, in Automation, Correlation or Scheduler, you configure an email action, you can specify whether the email message has to include a report. To do so, you select the *Include report or dashboard* checkbox and select a report from the list.
 
 From now on, each report listed in the report selection box will have an icon that indicates whether it is a legacy report or a Dashboards app report.
 
-#### DataMiner Cube will now be built as an AnyCPU application \[ID_24168\]
+#### DataMiner Cube will now be built as an AnyCPU application \[ID 24168\]
 
 As from DataMiner X, DataMiner Cube will be built as an AnyCPU application.
 
@@ -500,20 +500,20 @@ ClickOnce StandAlone and MSI versions will run as 64-bit processes on 64-bit sys
 > [!NOTE]
 > Microsoft Internet Explorer always launches PresentationHost.exe as a 32-bit process. As a result, ClickOnce XBAP versions of Cube will always run as 32-bit processes.
 
-#### New sidebar docking position setting \[ID_24178\]
+#### New sidebar docking position setting \[ID 24178\]
 
 In the restyled Cube X, the docking position of the sidebar can now be controlled by means of the *User \> Surveyor \> Sidebar docking position* setting.
 
 Default: left
 
-#### System Center: Agent state displayed on Agents page and total number of agents displayed on Agents, Database and Backup pages \[ID_24230\]
+#### System Center: Agent state displayed on Agents page and total number of agents displayed on Agents, Database and Backup pages \[ID 24230\]
 
 In *System Center*,
 
 - the state of every agent in the DataMiner System is now displayed on the *Agents* page, and
 - the total number of agents in the DataMiner System is now displayed on the *Agents* page, the *Database* page, and the *Select Agents to back up* window (which appears when you click *Execute backup* on the *Backup* page).
 
-#### Visual Overview - Trend component: Filtering the legend’s element list and collapsing or expanding the legend by default \[ID_24349\]
+#### Visual Overview - Trend component: Filtering the legend’s element list and collapsing or expanding the legend by default \[ID 24349\]
 
 When a shape is showing a trend component, it is now possible to
 
@@ -529,7 +529,7 @@ Example:
 | ParametersOptions | CollapseLegend:true                                                  |
 | Filter            | Property:*PropertyName=PropertyValue* |
 
-#### Visual Overview: Linking a shape to an alarm via the root alarm ID \[ID_24367\]
+#### Visual Overview: Linking a shape to an alarm via the root alarm ID \[ID 24367\]
 
 From now on, a shape can also be linked to an alarm via the root alarm ID.
 
@@ -549,7 +549,7 @@ Example:
 > - If a shape is linked to an alarm, you can now also use the Info keywords in the shape text (enclosed in square brackets). For example: “The value of the alarm is \[value\].”
 > - Note that, when you link shapes to alarms, only active alarms can currently be shown.
 
-#### Visual Overview: Filtering an alarm tab by clicking an AlarmSummary shape \[ID_24380\]
+#### Visual Overview: Filtering an alarm tab by clicking an AlarmSummary shape \[ID 24380\]
 
 By linking a shape to an alarm filter using an *AlarmSummary* data item, you can show statistical information about the alarms that match the filter. From now on, it is also possible to have the alarms displayed in an alarm tab, filtered according to the filter specified in the shape.
 
@@ -562,7 +562,7 @@ When you click the shape, Cube will open the specified alarm tab (if it has a fi
 | AlarmSummary     | type\|sharedfiltername\|ApplyLinkedViewServiceOrElementFilter\|Alarm |
 | AlarmTab         | Name=AlarmTabName                                                    |
 
-#### Visual Overview: Using 'info keywords' in all data items of a shape linked to an alarm \[ID_24485\]
+#### Visual Overview: Using 'info keywords' in all data items of a shape linked to an alarm \[ID 24485\]
 
 Up to now, there were two ways to have a shape linked to an alarm show information about that alarm:
 
@@ -583,7 +583,7 @@ Example:
 > - To prevent infinite loops, do not specify alarm keywords in a shape data item of type *Alarm*.
 > - Currently, it is not yet possible to use these keywords inside other keywords.
 
-#### Visual Overview: Displaying a Visio page when the shape is not linked to an element, a view or a service \[ID_24507\]
+#### Visual Overview: Displaying a Visio page when the shape is not linked to an element, a view or a service \[ID 24507\]
 
 Up to now, it was only possible to display a page of a Visio file associated with an object linked to a shape. To have a page named “Details” of a Visio file associated with an element named “MyElement” displayed in a separate window, for example, you had to add two data items to a shape: one of type *Element* set to “MyElement”, and one of type *VdxPage* set to “Details\|Window”.
 
@@ -598,13 +598,13 @@ From now on, it is also possible to display a page from the current Visio file b
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: Quick-pick buttons added to time range feed \[ID_23133\]
+#### Dashboards app: Quick-pick buttons added to time range feed \[ID 23133\]
 
 The time range feed can now be configured to show a list of quick-pick buttons that will allow users to enter a preset time range by clicking a single button.
 
 To configure the list of quick-pick buttons to be shown when users click a time range feed, go to edit mode, select the time range feed, open the *Layout* tab, select *Use quick picks*, and select the buttons to be shown.
 
-#### Dashboards app: Enhanced theme configuration \[ID_23258\]
+#### Dashboards app: Enhanced theme configuration \[ID 23258\]
 
 In the dashboard settings page, which is now named “*Dashboards settings*”, the dashboard theme configuration has been enhanced. On this page, you can create, copy and delete themes. When editing a theme, you can now also mark it as the default theme.
 
@@ -615,13 +615,13 @@ Per dashboard, a theme can be selected in the *Layout* tab, which has now also b
 > [!NOTE]
 > When you save a customized dashboard layout as a new theme, you will be asked to confirm this save operation as this will undo all changes you made to the layout of the dashboard you are editing.
 
-#### Dashboards app: New shortcut menu option to move dashboards \[ID_23839\]
+#### Dashboards app: New shortcut menu option to move dashboards \[ID 23839\]
 
 When you right-click the name of a dashboard in the navigation pane, there is now a new option that allows you to move that dashboard to another folder.
 
 Also, that right-click menu has been optimized. The *Duplicate* option has been renamed to *Copy*, and the list of menu options has been restructured.
 
-#### Dashboards app: Line chart component can now visualize resource capacity \[ID_23901\]
+#### Dashboards app: Line chart component can now visualize resource capacity \[ID 23901\]
 
 When you add a line chart component to a dashboard and drag resources onto it, it will display the resource capacity parameters as a stacked trend chart.
 
@@ -629,15 +629,15 @@ If you then click the chart and select a point in time, the legend will list all
 
 The resource capacity parameters displayed in the chart can be grouped by parameter or by resource.
 
-#### Dashboards app: Separator used in CSV exports based on CSV separator setting in Cube \[ID_24161\]
+#### Dashboards app: Separator used in CSV exports based on CSV separator setting in Cube \[ID 24161\]
 
 The separator used in the CSV exports is based on the “CSV separator” setting in Cube. If this setting cannot be retrieved, in Internet Explorer the system will fall back to the Windows regional settings, while other browsers will fall back to the local browser settings.
 
-#### Dashboards app: UI adapted to new DataMiner X style \[ID_24171\]
+#### Dashboards app: UI adapted to new DataMiner X style \[ID 24171\]
 
 The header, sidebar and login screen of the Dashboards app have now been adapted to the new DataMiner X style.
 
-#### Dashboards app: New 'Clear all' action + settings to pin actions \[ID_24356\]
+#### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
 In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
 
@@ -647,7 +647,7 @@ It is possible to view this new action even when the dashboard is embedded, if "
 
 For example: `http://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true`
 
-#### Dashboards app: New 'Node edge graph' visualization \[ID_24433\]
+#### Dashboards app: New 'Node edge graph' visualization \[ID 24433\]
 
 A new *Node edge graph* visualization is now available in the *Other* category in the Dashboards app. This visualization can be used to display a service definition as a node edge graph. It can display the graph based on a service data filter, based on a service definition ID, or based on a reservation instance ID. If several of these inputs are specified, the input that was specified last will be used.
 
@@ -655,7 +655,7 @@ Several options are available to fine-tune the layout of the component. You can 
 
 ### DMS Automation
 
-#### Possibility to add, update or clear the script output \[ID_23936\]
+#### Possibility to add, update or clear the script output \[ID 23936\]
 
 Up to now, when a parent script added keys to the script output and then ran a subscript that also added keys to the script output, the keys added by the parent script would be deleted. From now on, the keys added by the parent script will by default no longer be deleted. If you want those keys to be deleted, then have the parent script call the engine.ClearScriptResult() method before starting the subscript.
 
@@ -704,7 +704,7 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID_23950\]\[ID_24144\]\[ID_24164\]
+#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
 In an interactive Automation script, it is now possible to upload files from a client computer.
 
@@ -727,7 +727,7 @@ When you have selected a file, the actual upload will only start after you click
 
 All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnsetFlag method to clear run-time flags \[ID_23961\]
+#### New engine.UnsetFlag method to clear run-time flags \[ID 23961\]
 
 In an Automation script, you can now use the engine.UnsetFlag method to clear the following run-time flags:
 
@@ -750,7 +750,7 @@ public void SetParameterSilent(int pid, object value) {
 
 ### DMS Web Services
 
-#### Web Services API v1: 'GetTableForParameterV2' method has new 'as-kpi' table filter option \[ID_23928\]
+#### Web Services API v1: 'GetTableForParameterV2' method has new 'as-kpi' table filter option \[ID 23928\]
 
 The GetTableForParameterV2 method now supports filtering based on the following table column KPI options:
 
@@ -765,7 +765,7 @@ To enable KPI option filtering when calling the *GetTableForParameterV2* method,
 
 ### DMS Mobile apps
 
-#### New Monitoring & Control app \[ID_21736\]\[ID_22023\]\[ID_22209\]\[ID_22750\]\[ID_22801\]\[ID_22888\]\[ID_22943\]\[ID_23025\]\[ID_23036\]\[ID_23090\]\[ID_23387\]\[ID_23798\]\[ID_23874\]\[ID_24017\]\[ID_24059\]\[ID_24072\]\[ID_24080\]\[ID_24114\]\[ID_24134\]\[ID_24180\]\[ID_24192\]
+#### New Monitoring & Control app \[ID 21736\]\[ID 22023\]\[ID 22209\]\[ID 22750\]\[ID 22801\]\[ID 22888\]\[ID 22943\]\[ID 23025\]\[ID 23036\]\[ID 23090\]\[ID 23387\]\[ID 23798\]\[ID 23874\]\[ID 24017\]\[ID 24059\]\[ID 24072\]\[ID 24080\]\[ID 24114\]\[ID 24134\]\[ID 24180\]\[ID 24192\]
 
 The DataMiner HTML5 app has now been replaced by the new Monitoring & Control app, of which the overall look and feels closely resembles that of the newly redesigned Cube X.
 
@@ -793,15 +793,15 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 >
 > Alternatively, you can go to the landing page of the DataMiner Agent (by entering its IP address), and then click the *Monitoring & Control* button.
 
-#### Legacy Monitoring & Control app: New settings to specify the default page for element, service and view cards \[ID_24017\]
+#### Legacy Monitoring & Control app: New settings to specify the default page for element, service and view cards \[ID 24017\]
 
 In the *Settings* window of the legacy Monitoring & Control app, it is now possible to specify the default pages for element, service and view cards.
 
-#### Jobs app: UI adapted to new DataMiner X style \[ID_24157\]
+#### Jobs app: UI adapted to new DataMiner X style \[ID 24157\]
 
 The header and login screen of the Jobs app have now been adapted to the new DataMiner X style.
 
-#### New DataMiner landing page \[ID_24239\]
+#### New DataMiner landing page \[ID 24239\]
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
@@ -811,7 +811,7 @@ Clicking the user menu in the upper-right corner will allow you to open the Tool
 
 ### DMS Service & Resource Management
 
-#### DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID_21935] [ID_23674] [ID_24410] [ID_24424]
+#### DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID 21935] [ID 23674] [ID 24410] [ID 24424]
 
 In DataMiner Cube, a new wizard has been added to the *Search & Indexing* section of *System Center*. This wizard allows you to migrate booking data from the Cassandra database to the Indexing database.
 
@@ -826,7 +826,7 @@ When you have successfully migrated all booking data, the button to start the wi
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the ServiceManagerHelper and ResourceManagerHelper classes have been adapted to allow them to manage booking data stored in an Indexing database.
 
-#### Improvements ResourceManagerHelper class for deletion of resources \[ID_24002\]\[ID_24563\]
+#### Improvements ResourceManagerHelper class for deletion of resources \[ID 24002\]\[ID 24563\]
 
 If there is an error deleting resources using the *ResourceManagerHelper* class, additional feedback is now returned:
 
@@ -840,7 +840,7 @@ In addition, the following new method is now available in the *ResourceManagerHe
 
 If *ignorePastReservations* is false, this method works in the same way as existing calls to remove resources. If it is set to true, past bookings will be ignored during the deletion checks. This can be used to delete resources that are only used in past bookings; however, note that these bookings may then contain invalid references to resources.
 
-#### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID_24329\]
+#### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
 From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
 

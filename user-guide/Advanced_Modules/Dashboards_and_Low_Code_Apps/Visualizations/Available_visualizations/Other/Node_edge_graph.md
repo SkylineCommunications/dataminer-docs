@@ -11,9 +11,9 @@ Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is 
 
 This component allows you to visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
-![Node edge graph](~/user-guide/images/Node_Edge_Graph.png)<br>*Node edge graph component in DataMiner 10.4.6*
+![Node edge graph](~/user-guide/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
-The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects). Clicking items in the node edge graph also makes these available as a feed for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
+The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects). Clicking items in the node edge graph also makes these available as data for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
 
 When edges are closely grouped together, edge labels may become minimized. If you hover the mouse pointer over the edge, the label becomes visible again. From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, you can press Ctrl+Space to display all labels in the node edge graph.
 
@@ -27,7 +27,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
 ## Basic component configuration
 
-1. Add the query data feeds that will represent the nodes and edges.
+1. Add the query data that will represent the nodes and edges.
 
 1. In the *Settings* pane, assign the queries as nodes or edges:
 
@@ -89,6 +89,14 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
+1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
+
+   - Enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+
+   - Disabled: Scroll up or down to zoom in or out. This is the default option.
+
+   This setting is only available if the *Zooming* setting is enabled in the [*Layout* pane](#layout-configuration).
+
 ## Component actions configuration
 
 If you add a node edge graph to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
@@ -111,7 +119,7 @@ You can configure the following [**component actions**](xref:LowCodeApps_event_c
 
 - *Fetch the data*: Fetches the data for the component. Available from DataMiner 10.2.10/10.3.0 onwards.
 
-- *Clear selection*: Clear the feed status of the component. Available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->.
+- *Clear selection*: Clear the data status of the component. Available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->.
 
 > [!NOTE]
 > You can also override the default action for a node or edge using the *Add override* option.
@@ -130,7 +138,7 @@ You can fine-tune the layout of the component with the following settings in the
 
   - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-- *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [*Query filter* component](xref:DashboardQueryFilterFeed), available from DataMiner 10.3.9/10.4.0 onwards.
+- *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [*Query filter* component](xref:DashboardQueryFilter), available from DataMiner 10.3.9/10.4.0 onwards.
 
   - *Conditional coloring*: (Replaces the *Column filters* option from prior to 10.1.11.) This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
 
@@ -178,7 +186,9 @@ You can fine-tune the layout of the component with the following settings in the
 
   - *Upwards*: Nodes are displayed from bottom to top in order of importance
 
-- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can use the scroll wheel of the mouse to zoom in or out. Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
+- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can zoom in or out by pressing Ctrl while using the scroll wheel. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->, you can use the scroll wheel of the mouse to zoom in or out.
+
+  Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
 
 - *Edge style*: Select whether the connections should be displayed as curly or straight lines.
 

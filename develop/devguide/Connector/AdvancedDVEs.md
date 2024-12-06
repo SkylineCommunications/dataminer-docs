@@ -38,6 +38,6 @@ DataMiner Class Library:
 
 - [NT_DVE_CREATION_FLAG (340)](xref:NT_DVE_CREATION_FLAG)
 
-Coding guidelines:
+Best practices:
 
-- [DVE](xref:DVE)
+- [DVE](xref:ConnectorBestPracticesDVEs)

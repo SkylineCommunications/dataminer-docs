@@ -45,6 +45,73 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
+In addition, you can also build a `FilterElement` and add it to the list of subscription filters. This allows you to only receive updates for `DomInstances` that meet very specific conditions (e.g. only receive updates for `DomInstances` linked to a specific `DomDefinition`). Do note that you will currently receive events of type `DomCrudEvent<T>` instead of the actual specific event type when using this additional filtering.
+
+```csharp
+using System;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
+using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.Messages.SLDataGateway;
+using Skyline.DataMiner.Net.SubscriptionFilters;
+
+
+namespace DOM_FilteredEventExample
+{
+    public class Script
+    {
+        private readonly string _subscriptionSetId = Guid.NewGuid().ToString(); // Generate a unique set ID
+
+        public void Run(Engine engine)
+        {
+            var domInstanceFilter = DomInstanceExposers.DomDefinitionId.Equal(Guid.Parse("4849d8c7-ba9a-4ada-8cc8-ba9367dadd79"));
+
+            var subscriptionFilters = new SubscriptionFilter[]
+            {
+                new ModuleEventSubscriptionFilter<DomInstancesChangedEventMessage>("assets"),
+                new SubscriptionFilter<DomInstancesChangedEventMessage, DomInstance>(domInstanceFilter)
+            };
+
+            var connection = engine.GetUserConnection();
+            connection.OnNewMessage += ConnectionOnOnNewMessage;
+
+            connection.AddSubscription(_subscriptionSetId, subscriptionFilters);
+            try
+            {
+                // Do something blocking for a while and that needs to be subscribed...
+            }
+            finally
+            {
+                // Ensure the subscription is removed and cleaned up
+                connection.RemoveSubscription(_subscriptionSetId, subscriptionFilters);
+                connection.OnNewMessage -= ConnectionOnOnNewMessage;
+            }
+        }
+
+        private void ConnectionOnOnNewMessage(object sender, NewMessageEventArgs e)
+        {
+            if (!e.FromSet(_subscriptionSetId))
+            {
+                // Not for our subscription, ignore...
+                return;
+            }
+
+            if (e.Message is DomCrudEvent<DomInstance> crudEvent)
+            {
+                // Handle event
+                var createdInstances = crudEvent.Created;
+                var updatedInstances = crudEvent.Updated;
+                var deletedInstances = crudEvent.Deleted;
+            }
+        }
+    }
+}
+```
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40621-->, client applications will be notified when a DOM instance no longer matches the subscription filter.
+
 ## Status transition event
 
 From DataMiner 10.2.5/10.3.0 onwards, in addition to the CRUD events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a `DomInstance` (see [status system](xref:DOM_status_system).
@@ -70,6 +137,7 @@ Apart from the [module filter](#filtering-crud-events), which can also be used f
 
 > [!NOTE]
 >
+> - From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40621-->, client applications will be notified when a DOM instance no longer matches the subscription filter.
 > - Only one `ModuleEventSubscriptionFilter` is supported for each subscription set. If you want to subscribe to events of multiple DOM managers, you will have to create another subscription for each one.
 > - The ***ModuleEventSubscriptionFilter* takes precedence over any other filter for a module event** (e.g. DOM CRUD or status events). When such a filter is defined and the module event does not match the specified module ID, it will never be returned for that subscription. If it is a match, it will be returned depending on the remaining filters. If there are no other filters, it is simply returned. This does not influence non-module events.
 

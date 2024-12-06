@@ -17,3 +17,4 @@ uid: FAQs_General
 - [How does Skyline define the DMA element capacity?](xref:FAQ_DMA_element_capacity)
 - [How much bandwidth must be provided for data acquisition on data sources?](xref:FAQ_Bandwidth_data_acquisition)
 - [Which languages are available in the DataMiner Cube client?](xref:FAQ_DataMiner_Cube_languages)
+- [How can I view DataMiner documentation or learning materials in a different language?](xref:FAQ_doc_change_language)

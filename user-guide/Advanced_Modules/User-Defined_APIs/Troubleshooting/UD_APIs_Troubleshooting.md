@@ -50,13 +50,20 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Could not find AspNetCore installed on this system**
 
-  DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer can generate this error.
+  The required ASP.NET Core version must be installed, depending on the [DxM version](xref:UD_APIs_UserDefinableApiEndpoint#versions). DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer will generate this error. .NET 8 must be installed manually.
 
   To fix this:
 
-  1. Go to the [.NET 6 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) and download the latest ASP.NET Core Runtime 6.
+  1. Go to the [.NET download page](https://dotnet.microsoft.com/en-us/download/dotnet).
 
-  1. On the DMA, got to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint 1.X.X.X.msi`.
+  1. Click the name of the .NET version that matches your DxM version.
+
+     > [!NOTE]
+     > To find the .NET version that matches your DxM version, see [Versions](xref:UD_APIs_UserDefinableApiEndpoint#versions).
+
+  1. Under *ASP.NET Core Runtime x.x.x*, select *Hosting Bundle*.
+
+  1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint X.X.X.X.msi`.
 
 - **Found rewrite rule, but it has inconsistencies:**
 
@@ -71,6 +78,19 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 - **Files are still locked after 60 seconds. Continuing installation, but this may fail. Processes locking the files:**
 
   When the DxM is upgraded or automatically repaired during the execution of a DataMiner upgrade package, it can occur that the files in question are locked. This prevents the installer from continuing until they are unlocked. The installer will log a message if this is the case, and it will continuously check every 5 seconds for a maximum of 60 seconds until the files are unlocked. If they are still locked, this message is logged, and the installer will try to continue. This may result in files not being copied, and other errors may occur. The log lines mentioned should contain the names of the process or processes that are locking the files. You may need to terminate these and try the upgrade again.
+
+- **Service 'DataMiner UserDefinableApiEndpoint' failed to start. Verify that you have sufficient privileges to start system services.**
+
+  This is a generic error message that can have multiple causes, often related to incorrect .NET installation. Make sure you have installed the ASP.NET Core Runtime Hosting Bundle of the .NET version that matches your DxM version:
+
+  1. Go to the [.NET download page](https://dotnet.microsoft.com/en-us/download/dotnet).
+
+  1. Click the name of your preferred .NET version.
+
+  1. Under *ASP.NET Core Runtime x.x.x*, select *Hosting Bundle*.
+
+  > [!NOTE]
+  > To find the .NET version that matches your DxM version, see [Versions](xref:UD_APIs_UserDefinableApiEndpoint#versions).
 
 ## Issues when triggering user-defined APIs
 
@@ -128,7 +148,7 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
 
    - For the manager in SLNet, you can check the [SLUserDefinableApiManager.txt](#logging) log file and check for a log line with the exact same message. After that, you should also see a line stating that a subscription was made on a subject ending with "UserDefinableApiTriggerRequest".
 
-   - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If you do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [investigating NATS issues](xref:Investigating_NATS_Issues).
+   - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If you do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [Troubleshooting – NATS](xref:Investigating_NATS_Issues).
 
 1. Make sure the **version of the UserDefinableApiEndpoint DxM is compatible with the DMA**.
 

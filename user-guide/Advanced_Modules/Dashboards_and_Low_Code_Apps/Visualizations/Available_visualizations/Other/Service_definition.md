@@ -4,22 +4,22 @@ uid: DashboardServiceDefinition
 
 # Service definition
 
-This component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
+This component displays a service definition as a node edge graph. It can display the graph based on service definition data or booking data. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
 To configure the component:
 
 1. Add an input for the data:
 
-   - Add a service definition feed, or
+   - Add a service definition data, or
 
-   - Add a booking feed, or
+   - Add booking data, or
 
-   - Add a service feed (supported from DataMiner 10.2.0/10.1.3 onwards), or
+   - Add service data (supported from DataMiner 10.2.0/10.1.3 onwards), or
 
-   - Add a feed based on a feed component, which can use a bookings feed filtered by a service definition feed.
+   - Add component data, which can use bookings data filtered by service definition data.
 
    > [!NOTE]
-   > If you use a service feed, in addition to the service definition, by default, the current booking will be displayed. To display bookings for a different time range, add a time range filter.
+   > If you use service data, in addition to the service definition, by default, the current booking will be displayed. To display bookings for a different time range, add a time range filter.
 
 1. Optionally, configure one or more actions for nodes of the service definition. An action is a script that is executed when a user clicks a specific icon in the component.
 
@@ -51,6 +51,16 @@ To configure the component:
    - *Visible nodes*: Allows you to select which nodes should be displayed. Below this option, a tree view is displayed, showing the nodes in the service definition. Only the selected nodes will be displayed in the component.
 
    - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph.
+
+     - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
+
+       - Enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+
+       - Disabled: Scroll up or down to zoom in or out. This is the default option.
+
+     - From DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12, you can zoom in or out by pressing Ctrl while using the scroll wheel.
+
+     - Prior to DataMiner 10.3.0[CU18]/10.4.0 [CU6]/10.4.9, you can zoom in or out using the scroll wheel.
 
    - *Edge style*: Determines whether curly or straight edges are used in the graph.
 

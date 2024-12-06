@@ -96,7 +96,7 @@ To turn a DMA into a time client, do the following.
 
 1. Open a command prompt window via *Start \> Run... \> cmd*.
 
-1. Enter *net time /set*, followed by the IP address of the time server, and press *Enter*.
+1. Enter *w32tm /config /update /manualpeerlist:*, followed by the IP address of the time server, and press *Enter*.
 
 ### Other time-related commands
 
@@ -105,20 +105,23 @@ The following table contains a few other commands that may be useful when synchr
 To retrieve the time server that is being used by a particular DMA, execute the following command on that DMA:
 
 ```txt
-net time /querysntp
+w32tm /query /source
 ```
 
 To get the current time from a specific time server, execute the following command, replacing the “192.9.200.1” placeholder with the actual IP address of the time server:
 
 ```txt
-net time \\192.9.200.1
+w32tm /stripchart /computer:192.9.200.1 /samples:1 /dataonly
 ```
 
-To get the current time from the time server, together with a detailed report, execute the following command (which will also adjust the clock of the time client on which you execute the command):
+To get a detailed report about the most recent time synchronization, execute the following command:
 
 ```txt
-w32tm -once -v
+w32tm /query /status /verbose
 ```
+
+> ![TIP]
+> See also: [Windows Time service tools and settings](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config)
 
 ## How do I keep DataMiner Cube from disconnecting automatically?
 

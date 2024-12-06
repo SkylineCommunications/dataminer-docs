@@ -20,7 +20,7 @@ This general parameter indicates whether the element is locked or unlocked.
 
 ### [Lock owner]
 
-If an element is locked, this general parameter indicates the user who locked the element. Otherwise the parameter is “Not initialized”.
+If an element is locked, this general parameter indicates the user who locked the element. Otherwise the parameter is "Not initialized".
 
 ### [Number of active alarms]
 
@@ -65,7 +65,7 @@ This parameter can be used to adjust the polling speed of the element.
 
 ### [Alarm System Type]
 
-Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a monitored parameter, the value of the alarm property “System Type” will be set to the value of this general parameter.
+If no topology cell is defined for a monitored parameter, the value of the alarm property "System Type" will be set to the value of this general parameter.
 
 > [!NOTE]
 >
@@ -76,7 +76,7 @@ Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a mo
 
 ### [Alarm System Name]
 
-Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a monitored parameter, the value of the alarm property “System Name” will be set to the value of this general parameter.
+If no topology cell is defined for a monitored parameter, the value of the alarm property "System Name" will be set to the value of this general parameter.
 
 > [!NOTE]
 >

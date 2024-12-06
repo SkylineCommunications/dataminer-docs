@@ -11,7 +11,7 @@ Using a shape data field of type **Alarm**, you can link a shape to an active al
 > - Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 > - If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > ALARM]* page.
-> - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: "The value of the alarm is **\[value\]**." See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
+> - If a shape is linked to an alarm, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: "The value of the alarm is **\[value\]**." See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 ## Configuring the shape data field
 
@@ -44,7 +44,7 @@ Add a shape data field of type **Alarm** to the shape.
   DmaID/RootAlarmID
   ```
 
-  This syntax is available from DataMiner 10.0.2 onwards. The IDs are typically retrieved from session variables. If the configured alarm is not found, the shape will not be displayed.
+  The IDs are typically retrieved from session variables. If the configured alarm is not found, the shape will not be displayed.
 
 ### ElementReference
 

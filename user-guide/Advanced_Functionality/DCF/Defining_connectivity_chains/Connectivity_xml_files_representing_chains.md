@@ -104,7 +104,7 @@ A *\<Link>* tag can have the following attributes:
 
   - A random service identifier (If *type*=*”Service”*).
 
-  From DataMiner 9.5.2 onwards, you can use an asterisk (“\*”) wildcard in this attribute, for instance to specify a rule for all encountered protocols.
+  You can use an asterisk ("\*") wildcard in this attribute, for instance to specify a rule for all encountered protocols.
 
   > [!NOTE]
   > Usually, this is the name of the folder containing the *Connectivity.xml* file.
@@ -113,17 +113,17 @@ A *\<Link>* tag can have the following attributes:
 
   Should be set to the name of a protocol.
 
-  From DataMiner 9.5.2 onwards, you can use an asterisk (“\*”) wildcard in this attribute, for instance to specify a rule for all encountered protocols.
+  You can use an asterisk ("\*") wildcard in this attribute, for instance to specify a rule for all encountered protocols.
 
 - **itemRelation**
 
   This attribute can have the following values:
 
-  - “*internalMatching*”: Link between two internal connections of the same element.
+  - *internalMatching*: Link between two internal connections of the same element.
 
-  - “*externalMatching*”: Link between two internal connections of different elements.
+  - *externalMatching*: Link between two internal connections of different elements.
 
-  - “*physicalMatching*”: Physical link between two internal connections of the same element.
+  - *physicalMatching*: Physical link between two internal connections of the same element.
 
   Example:
 
@@ -151,21 +151,21 @@ A *\<Link>* tag can have the following attributes:
 
   This attribute can have the following values:
 
-  - “*Protocol*”
+  - "Protocol"
 
-  - “*Service*”
+  - "Service"
 
   > [!NOTE]
   >
-  > - The type of the first link of a chain, i.e. the entry point, should always be “Service”.
+  > - The type of the first link of a chain, i.e. the entry point, should always be "Service".
   > - If itemA and itemB are both specified, always add `type="protocol"`.
 
 - **includeValueInContext**
 
-  If you want the value for the service entry point to be saved, set this attribute to “true”.
+  If you want the value for the service entry point to be saved, set this attribute to "true".
 
   > [!NOTE]
-  > When the *RedundancyGroupConnectivity* tag is set to “true”, always set the *includeValueInContext* attribute to “true”.
+  > When the *RedundancyGroupConnectivity* tag is set to "true", always set the *includeValueInContext* attribute to "true".
 
 - **hop**
 
@@ -175,7 +175,7 @@ A *\<Link>* tag can have the following attributes:
 
 ### \<Map> tag
 
-Inside a *\<Link>* tag, you can add a number of *\<Map>* tags, in which you can look up and compare properties of internal connections. If all *\<Map>* tag comparisons inside a *\<Link>* are “true”, the internal connections in question will be linked.
+Inside a *\<Link>* tag, you can add a number of *\<Map>* tags, in which you can look up and compare properties of internal connections. If all *\<Map>* tag comparisons inside a *\<Link>* are "true", the internal connections in question will be linked.
 
 A *\<Map>* tag can have the following attributes:
 
@@ -188,39 +188,41 @@ A *\<Map>* tag can have the following attributes:
   > [!NOTE]
   >
   > - The *propertyB* attribute is not mandatory.
-  > - While resolving multiple external connections on the same interface is supported from DataMiner 9.5.5 onwards, matching property connections on external connections is currently not yet supported.
+  > - Though resolving multiple external connections on the same interface is supported, matching property connections on external connections is currently not yet supported.
 
 - **match**
 
   This attribute can have the following values:
 
-  - “*Exact*”: An exact match is required (culture invariant, case-insensitive).
+  - *Exact*: An exact match is required (culture invariant, case-insensitive).
 
-  - “*Wildcard*”: A partial match suffices (i.e. *value* contains a wildcard expression containing \* and/or ? wildcard characters).
+  - *Wildcard*: A partial match suffices (i.e. *value* contains a wildcard expression containing \* and/or ? wildcard characters).
 
-  - “*Regex*”: *value* contains a regular expression.
+  - *Regex*: *value* contains a regular expression.
 
-  - “*List*”: Both items to be compared contain a list of values separated by semicolons. If all values in item A are found in item B, then there is a match.
+  - *List*: Both items to be compared contain a list of values separated by semicolons. If all values in item A are found in item B, then there is a match.
 
-  - “*Presence*”: The internal connection must have a property with the specified name.
+  - *Presence*: The internal connection must have a property with the specified name.
 
 - **type**
 
   This attribute can have the following values:
 
-  - “*Mandatory*”: The properties to be compared must exist on both internal connections. Otherwise, the Map result will be “false”.
+  - *Mandatory*: The properties to be compared must exist on both internal connections. Otherwise, the Map result will be "false".
 
-  - “*MandatoryA*”: The connection will only be added if it has property A, regardless of whether it has property B.
+  - *MandatoryA*: The connection will only be added if it has property A, regardless of whether it has property B.
 
-  - “*MandatoryB*”: The connection will only be added if it has property B, regardless of whether it has property A.
+  - *MandatoryB*: The connection will only be added if it has property B, regardless of whether it has property A.
 
-  - “*Optional*”: If the properties to be compared do not exist on both internal connections, then the Map result will be “true”.
+  - *Optional*: If the properties to be compared do not exist on both internal connections, then the Map result will be "true".
 
-  - “*MandatoryInElement*”: (Available from DataMiner 9.6.3 onwards.) When the internal connections have no more connections attached, or when an external connection is reached, the rule will be enforced. If no match is found up until that connection, the match (or mismatch) will cause the final connection to be added (or removed).
+  - *MandatoryInElement*: When the internal connections have no more connections attached, or when an external connection is reached, the rule will be enforced. If no match is found up until that connection, the match (or mismatch) will cause the final connection to be added (or removed).
 
 - **value**
 
-  If you want to compare the value of a property (of which the name is specified in *propertyA* or *propertyB*) to a given value, then *value* must contain that value. It can be a fixed value (e.g. “10”, “true”, etc.) or a dynamic value (e.g. “\*\[PROPERTYB\]\*”).     In case of a dynamic value, the following placeholders can be used:
+  If you want to compare the value of a property (of which the name is specified in *propertyA* or *propertyB*) to a given value, then *value* must contain that value. It can be a fixed value (e.g. "10", "true", etc.) or a dynamic value (e.g. "\*\[PROPERTYB\]\*").
+
+  In case of a dynamic value, the following placeholders can be used:
 
   - \[PROPERTYA\]
 
@@ -236,23 +238,23 @@ A *\<Map>* tag can have the following attributes:
 
   With this setting you can indicate the direction in which connectivity has to be resolved:
 
-  - “*InputToOutput*”: From input to output.
+  - *InputToOutput*: From input to output.
 
-  - “*OutputToInput*”: From output to input.
+  - *OutputToInput*: From output to input.
 
-  - “*Undefined*”: Both ways.
+  - *Undefined*: Both ways.
 
 - **invert**
 
   This attribute can have the following values:
 
-  - “*true*”: The result of the comparison will be inverted, i.e. a “NOT” will be placed in front of it.
+  - *true*: The result of the comparison will be inverted, i.e. a "NOT" will be placed in front of it.
 
-  - “*false*”: The result of the comparison will not be inverted.
+  - *false*: The result of the comparison will not be inverted.
 
 - **referenceValue**
 
-  This attribute contains one or more reference values that will be resolved at runtime. Multiple values are separated by pipe characters (“\|”).
+  This attribute contains one or more reference values that will be resolved at runtime. Multiple values are separated by pipe characters ("\|").
 
   For more information on the reference values, refer to [referenceValue](#referencevalue).
 
@@ -260,49 +262,49 @@ A *\<Map>* tag can have the following attributes:
 
   This attribute can have the following values:
 
-  - “*Save*” (default): If the property cannot be found, then the value in memory will be used.
+  - *Save* (default): If the property cannot be found, then the value in memory will be used.
 
-  - “*Forget*”: If the property cannot be found, then the value in memory will be flushed.
+  - *Forget*: If the property cannot be found, then the value in memory will be flushed.
 
 - **behaviorOnEmptyProperty**
 
   This attribute can have the following values:
 
-  - “*Save*” (default): If the property is empty, then the value in memory will be used.
+  - *Save* (default): If the property is empty, then the value in memory will be used.
 
-  - “*Forget*”: If the property is empty, then the value in memory will be flushed.
+  - *Forget*: If the property is empty, then the value in memory will be flushed.
 
 - **behaviorOnMatchProperty**
 
   Determines what happens when the properties match. This attribute can have the following values:
 
-  - “*Save*” (default): If the property has been found, the value in memory will be used.
+  - *Save* (default): If the property has been found, the value in memory will be used.
 
-  - “*Forget*”: If the property has been found, the new value will be used. When the map check has already been executed within the same element, it will be skipped on the next connection with the same property.
+  - *Forget*: If the property has been found, the new value will be used. When the map check has already been executed within the same element, it will be skipped on the next connection with the same property.
 
-  - “*ForgetExternal*”: If the property has been found, the new value will be used. When the map check has already been executed on another element, it will be skipped on the next connection with the same property.
+  - *ForgetExternal*: If the property has been found, the new value will be used. When the map check has already been executed on another element, it will be skipped on the next connection with the same property.
 
 - **behaviorOnMismatchProperty**
 
   Determines what happens when the properties do not match. This attribute can have the following values:
 
-  - “*Remove*” (default): Remove only this connection from the active path.
+  - *Remove* (default): Remove only this connection from the active path.
 
-  - “*RemovePath*”: Remove all the connections that have been found earlier from the path.
+  - *RemovePath*: Remove all the connections that have been found earlier from the path.
 
 - **conditions**
 
-  This attribute contains one or more IDs of conditions configured in the *\<Conditions>* tag, combined into a single expression using the logical operators *and*, *not* and *or*.     Example: “*1 and not (2 or 3)*”
+  This attribute contains one or more IDs of conditions configured in the *\<Conditions>* tag, combined into a single expression using the logical operators *and*, *not* and *or*.
+
+  Example: "1 and not (2 or 3)"
 
 - **operator**
-
-  Available from DataMiner 9.5.2 onwards.
 
   Determines the logical operator that is used for the tag. By default, this is AND, but you can also set this to OR. In that case, multiple rules will be checked, and if one matches, the connection is added.
 
 ### \<Chains> tag
 
-This tag can be used from DataMiner 9.6.4 onwards, in order to configure an external DCF chain of protocols. Specifying such a chain can improve the stability of the generated DCF chain.
+This tag can be used in order to configure an external DCF chain of protocols. Specifying such a chain can improve the stability of the generated DCF chain.
 
 The *Chains* tag is used in conjunction with the *Protocols* tag. In each of that tag’s *Protocol* subtags, a "*chainId*" attribute can be defined. The *Chain* tags within *DCF.Chains* will each contain several *Id* subtags that refer to these chain IDs.
 
@@ -339,7 +341,7 @@ A new read-only service property, *Connectivity Status*, will be added as soon a
 
 ### \<Conditions> tag
 
-Inside the *\<Conditions>* tag, you can add a number of *\<Condition>* tags, which each have their own unique ID, indicated in the “*id*” attribute.
+Inside the *\<Conditions>* tag, you can add a number of *\<Condition>* tags, which each have their own unique ID, indicated in the "id" attribute.
 
 Inside a *\<Condition>* tag, you can add the following tags:
 
@@ -387,7 +389,7 @@ Inside a *\<Condition>* tag, you can add the following tags:
 
   - If *\<Field>* contains any other value, *\<Value>* can contain any character string, with or without the wildcard characters \* and/or ?
 
-  Alternatively, from DataMiner 9.5.2 onwards, you can specify multiple references (e.g. \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
+  Alternatively, you can specify multiple references (e.g. \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
 
   > [!NOTE]
   > Wildcards in the *Condition.Value* tag will only be applied if the *Condition.Compare* tag is set to *equal to masked* or *not equal to masked*.
@@ -468,7 +470,7 @@ Examples:
 
 ### \<Protocols> tag
 
-This tag can be used from DataMiner 9.5.5 onwards, to avoid chain resolving issues when a new external connection is added between elements that were already part of an operational connectivity chain and another element based on a protocol that was not yet described in the *Connectivity.xml* file.
+This tag can be used to avoid chain resolving issues when a new external connection is added between elements that were already part of an operational connectivity chain and another element based on a protocol that was not yet described in the *Connectivity.xml* file.
 
 This tag contains a number of *\<Protocol>* subtags that provide a list of allowed protocols. During the chain resolution process, the system will only take elements based on the listed protocols into account.
 
@@ -486,11 +488,11 @@ For example:
 ```
 
 > [!NOTE]
-> From DataMiner 9.6.4 onwards, a *chainId* attribute can be defined in a *Protocol* tag. For more information, see [\<Chains> tag](#chains-tag).
+> A *chainId* attribute can be defined in a *Protocol* tag. For more information, see [\<Chains> tag](#chains-tag).
 
 ### referenceValue
 
-If, in *referenceValue*, you specify e.g. “*SVCNAME:///*”, this will be replaced at runtime by the name of the current service. If you want to refer to e.g. one particular service instead, you can specify “*SVCNAME:dmaId/serviceId//*”.
+If, in *referenceValue*, you specify e.g. "*SVCNAME:///*", this will be replaced at runtime by the name of the current service. If you want to refer to e.g. one particular service instead, you can specify "*SVCNAME:dmaId/serviceId//*".
 
 See the following table to find out which items can be entered after each placeholder (separated by forward slashes).
 

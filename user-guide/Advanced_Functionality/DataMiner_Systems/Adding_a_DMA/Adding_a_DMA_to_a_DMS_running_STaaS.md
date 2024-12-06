@@ -4,43 +4,30 @@ uid: Adding_a_DMA_to_a_DMS_running_STaaS
 
 # Adding a DataMiner Agent to a DMS running STaaS
 
-Follow these steps below to connect a DMA to an existing DMS running STaaS:
+To add a DataMiner Agent to a DMS running STaaS:
 
-1. Ensure the DMA you are adding is online and empty.
+1. Make sure that the DMA you are adding is a clean DMA, meaning that it is a newly installed DMA or a DMA that has been [fully reset](xref:Factory_reset_tool).
 
-1. Disconnect the DMA you are adding from dataminer.services.
+1. Install the [DataMiner Cloud Pack](xref:CloudPackages) on the new DMA.
 
-   To make sure the DMA is disconnected, follow the procedure on [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices).
+1. Stop DataMiner and stop CloudGateway on the new DMA.
 
-   > [!IMPORTANT]
-   > Only disconnect the DMA you are adding, NOT the cluster you are adding it to.
+1. From a DMA in the cluster where CloudGateway is running, copy the folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data\CcaGatewayPersisted` and place it in the same location on the new DMA.
 
-1. Make sure STaaS is not enabled in *DB.xml* for the DMA you are adding:
+1. Remove the following files from the folder you just copied to the new DMA:
 
-   1. Stop the DataMiner Agent.
+   - DmsAccessToken.data
+   - DmsAccessTokenExpiration.data
+   - DmsRefreshToken.data
+   - DmsRefreshTokenExpiration.data
 
-   1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml*.
+1. Start CloudGateway on the new DMA.
 
-   1. Make sure that the *Database* tag with *type="CloudStorage"* has the *active* attribute set to **false**:
+1. Configure *DB.xml* to use STaaS:
 
-      ```xml
-      <?xml version="1.0"?>
-      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
-         <DataBase active="false" local="true" search="true" cloud="true" type="CloudStorage"/>
-      </DataBases>
-      ```
+   1. In the `C:\Skyline DataMiner` folder, open *DB.xml*.
 
-   1. Restart the DMA.
-
-1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
-
-1. Once the DMA has successfully joined the cluster, enable STaaS in *DB.xml*:
-
-   1. Stop the DataMiner Agent.
-
-   1. In the `C:\Skyline DataMiner` folder of the DMA, open the file *DB.xml*.
-
-   1. Configure the *Database* tag with *type="CloudStorage"* as follows:
+   1. Configure the *Database* tag with *type="CloudStorage"* as illustrated below:
 
       ```xml
       <?xml version="1.0"?>
@@ -49,6 +36,8 @@ Follow these steps below to connect a DMA to an existing DMS running STaaS:
       </DataBases>
       ```
 
-   1. Restart the DMA.
+1. Start DataMiner on the new DMA.
+
+1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a Failover Agent.
 
 The DMA should now be connected to the DMS running STaaS.

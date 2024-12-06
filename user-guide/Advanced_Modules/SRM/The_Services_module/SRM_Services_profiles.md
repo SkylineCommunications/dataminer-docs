@@ -4,7 +4,7 @@ uid: SRM_Services_profiles
 
 # Using the profiles tab
 
-The *profiles* tab of the Services module is available from DataMiner 10.0.8 onwards. This tab allows you to manage service profile definitions and service profile instances. These make it possible to immediately have the right profile instances assigned to the nodes of a service definition, so that it is not necessary to make a selection for every node and interface of the service definition when making a booking. One single service profile definition can apply to several similar service definitions.
+In the *profiles* tab of the Services module, you can manage service profile definitions and service profile instances. These make it possible to immediately have the right profile instances assigned to the nodes of a service definition, so that it is not necessary to make a selection for every node and interface of the service definition when making a booking. One single service profile definition can apply to several similar service definitions.
 
 The tab consists of two panes: a tree view pane on the left listing the available service profile definitions and service profile instances, and a configuration pane on the right. At the bottom of the tree view pane, three buttons allow you to delete an item in the tree view, add a service profile instance and add a service profile definition. These options are also available via the right-click menu of the pane, which also contains a *Duplicate* option (from DataMiner 10.2.0/10.1.5 onwards).
 

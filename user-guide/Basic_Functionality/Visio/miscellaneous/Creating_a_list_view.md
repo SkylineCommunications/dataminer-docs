@@ -51,9 +51,9 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   >   | Light | #E5E5E5 (RGB: 229,229,229) |
   >   | Black | #333333 (RGB: 51,51,51)    |
 
-- **DisableInUseItems=true/false**: When a list view is in edit mode, all list items have a checkbox in front of them. If *DisableInUseItems* is set to “true”, the checkboxes that should not be accessible will be shown as disabled. Default: false.
+- **DisableInUseItems=true/false**: When a list view is in edit mode, all list items have a checkbox in front of them. If *DisableInUseItems* is set to "true", the checkboxes that should not be accessible will be shown as disabled. Default: false.
 
-- **EditMode=true/false**: This option can be used to enable or disable the list view’s edit mode. If set to “true”, checkboxes will appear in front of every row.
+- **EditMode=true/false**: This option can be used to enable or disable the list view’s edit mode. If set to "true", checkboxes will appear in front of every row.
 
 - **Recursive**: This option can be used to link a list view to another list view. If, for example, a *ListView* component lists the services, and two other *ListView* components list the source and destination resources available and in use for the services in the first *ListView* component, then the *Recursive* option will allow the source and destination resource *ListView* components to link to the service *ListView* component, supporting any type of service hierarchy.
 
@@ -85,7 +85,7 @@ In the Filters shape data field, it is possible to filter which information is d
 
 ### Source: Reservations or Bookings
 
-If you set the *Source* shape data field to “Reservations” or “Bookings”, the *Filter* shape data field can contain a booking filter based on any field or property. For example:
+If you set the *Source* shape data field to "Reservations" or "Bookings", the *Filter* shape data field can contain a booking filter based on any field or property. For example:
 
 ```txt
 ReservationInstance.Name[string]== 'Encoder 2'
@@ -150,7 +150,7 @@ ReservationInstance.ReservationInstanceType[Int32] == 1
 
 ### Source: Elements or Services
 
-If you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can contain different kinds of filters:
+If you set the *Source* shape data field to "Elements" or "Services", the *Filter* shape data field can contain different kinds of filters:
 
 - A **view filter**, to make the list view only show items from one specific view.
 
@@ -166,7 +166,7 @@ If you set the *Source* shape data field to “Elements” or “Services”, th
     View=MyView
     ```
 
-  - An alternative syntax, *ViewName=\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
+  - You can also use the alternative syntax *ViewName=\<name>*, or use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
 
   - Session variables can be used in the filter. For example:
 
@@ -176,13 +176,13 @@ If you set the *Source* shape data field to “Elements” or “Services”, th
 
 - A **filter on the service name**.
 
-  - The filter should contain the exposer "Service.Name" and the operator "not Contains" or "contains". The filter can be combined with a view filter, using a pipe (“\|”) character as separator. For example:
+  - The filter should contain the exposer "Service.Name" and the operator "not Contains" or "contains". The filter can be combined with a view filter, using a pipe ("\|") character as separator. For example:
 
     ```txt
     View=[var:ViewFilter]|Service.Name notContains '1'|Service.Name notContains 'copy'
     ```
 
-- An **element or service filter** (from DataMiner 10.0.5 onwards).
+- An **element or service filter**.
 
   - The following operators are supported: "*==*" (equals), "*!=*" (does not equal), "*contains*", "*notContains*", "*startswith*", "*notStartswith*", "*endsWith*", "*notEndsWith*", "*\<*" (smaller than, only usable with numbers) and "*\>*" (greater than, only usable with numbers). The value that is being compared with should always be included in single quotes.
 
@@ -249,7 +249,7 @@ If you set the *Source* shape data field to “Elements” or “Services”, th
 
 ### Source: Resources
 
-If you set the *Source* shape data field to “Resources”, the *Filter* shape data field can contain filters on the name, the ID, or any other field or property of the resources. For example:
+If you set the *Source* shape data field to "Resources", the *Filter* shape data field can contain filters on the name, the ID, or any other field or property of the resources. For example:
 
 ```txt
 Resource.Name[string]== 'Encoder'
@@ -307,7 +307,7 @@ The following session variables can be used in conjunction with the *ListView* c
 
 - **DynamicList_CheckedItems**: When a list view is in edit mode, all list items have a checkbox in front of them. This session variable will contain the ID and the values of all editable columns of all list items of which the checkbox is selected.
 
-- **FilterMode**: In situations with multiple linked *ListView* components, set the *FilterMode* variable to “true” if you want a second, linked list view to be filtered based on the item selected in the first list view. Default: false.
+- **FilterMode**: In situations with multiple linked *ListView* components, set the *FilterMode* variable to "true" if you want a second, linked list view to be filtered based on the item selected in the first list view. Default: false.
 
 - **ListViewCheckingChanged**: When a list view is in edit mode, all list items have a checkbox in front of them. This session variable will contain the ID and the values of all editable columns of all list items of which the checkbox state has been changed.
 
@@ -362,7 +362,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
    - Select *Change column name* and specify a new column name.
 
-   - Select *Manage column configuration* (from DataMiner 10.0.4 onwards) or *Add/Remove column* \> *More* (up to DataMiner 10.0.3) to open a window where you can do the following:
+   - Select *Manage column configuration* to open a window where you can do the following:
 
      - Show or hide a column by selecting or clearing its checkbox, or by selecting it and clicking *Show* or *Hide*.
 

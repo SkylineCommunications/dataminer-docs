@@ -51,19 +51,19 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - Commands DMA 1:
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 8080,9042`  
 
      - Commands DMA 2:
   
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 8080,9042`  
 
-       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 9042`  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 8080,9042`  
 
      - And so on.
 
@@ -126,6 +126,8 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - **data_file_directories**: The location(s) where you want to store the data.
 
+     - **auto_snapshot_ttl**: This option is available since Cassandra 4.1. Set this to the desired time to keep the automatic snapshots. For example, to keep them for a day: `auto_snapshot_ttl: 1d`.
+
      - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. Cassandra nodes use this list of hosts to find each other and learn the topology of the ring.
 
        > [!TIP]
@@ -179,6 +181,8 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
      If the node does note state UN (Up & Normal) in the *nodetool status* command, evaluate the logging. The logging is located at */var/log/cassandra/system.log*.
 
 1. Configure a superuser account that will be used by DataMiner to connect to the database. See [Cassandra authentication](xref:Cassandra_authentication).
+
+1. Install and configure Cassandra Reaper on each database node. See [Installing Cassandra Reaper](xref:Installing_Cassandra_Reaper).
 
 1. Configure the Cassandra cluster database in System Center. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
