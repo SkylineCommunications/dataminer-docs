@@ -14,7 +14,7 @@ When upgrading from a 10.4.0 Main Release version starting from 10.4.0 [CU6] to 
 
 ## Fix
 
-No fix is available yet.<!-- RN 41630 -->
+Install DataMiner 10.5.0 or 10.5.1.<!-- RN 41630 -->
 
 ## Workaround
 
