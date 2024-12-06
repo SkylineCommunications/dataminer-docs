@@ -60,6 +60,12 @@ When, in the *Protocols & templates* app, you had selected a protocol, a protoco
 
 When you opened a parameter-specific alarm, trend or information template editor for a non-table parameter in a DVE child element (which is a table parameter in the DVE parent element), up to now, the template data would not get loaded correctly.
 
+#### Visual Overview: Problem with counter showing the number of masked alarms when a shape was linked to all alarms [ID 41513]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you had linked a shape to all alarms (i.e. active alarms, masked alarms and information events) by adding a data field of type *Alarm* set to "All", the counter showing the number of masked alarms in the shape text (i.e. "#Masked") would show an incorrect number of alarms.
+
 #### DataMiner Cube desktop app would not open when started from the DataMiner Taskbar Utility [ID 41556]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
