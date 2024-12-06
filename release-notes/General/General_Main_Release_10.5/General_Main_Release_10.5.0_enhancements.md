@@ -1016,16 +1016,16 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 > [!NOTE]
 > It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
 
-#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
-
-<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
-
-From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
-
-If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
-
 #### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
 Up to now, a "Script started" information event would be generated each time a DOM CRUD script or DOM Action script was started. From now on, these information events will no longer be generated.
+
+#### Protocols: Enhanced protection of table data [ID 41539]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Up to now, when a protocol performed multiple actions on a table, SLProtocol would not properly lock the array in which the data was stored. This could then lead to concurrent access to the array, causing the entries to get corrupted and SLProtocol to stop working when those corrupted entries were accessed.
+
+The above-mentioned array will now be locked to prevent the data from getting corrupted.

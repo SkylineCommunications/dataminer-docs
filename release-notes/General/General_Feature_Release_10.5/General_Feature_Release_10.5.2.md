@@ -75,6 +75,14 @@ From now on, when the History Manager API is used after the History Manager has 
 
 Up to now, a "Script started" information event would be generated each time a DOM CRUD script or DOM Action script was started. From now on, these information events will no longer be generated.
 
+#### Protocols: Enhanced protection of table data [ID 41539]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Up to now, when a protocol performed multiple actions on a table, SLProtocol would not properly lock the array in which the data was stored. This could then lead to concurrent access to the array, causing the entries to get corrupted and SLProtocol to stop working when those corrupted entries were accessed.
+
+The above-mentioned array will now be locked to prevent the data from getting corrupted.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->

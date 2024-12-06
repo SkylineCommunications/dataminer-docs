@@ -400,14 +400,6 @@ If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 1
 
 When a parameter is set to an infinite value, SLAnalytics will now consider this infinite value as a missing value. This will prevent parameter changes of this type from disrupting analytical models.
 
-#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
-
-<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
-
-From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
-
-If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
-
 #### SLLogCollector packages will now include the log files of the ModelHost and Copilot DxMs [ID 41464]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->

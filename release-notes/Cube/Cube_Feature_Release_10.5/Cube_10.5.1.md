@@ -190,6 +190,14 @@ Up to now, when resources would get assigned to or unassigned from the booking i
 
 From now on, the comma-separated list of resource GUIDs stored in the *ResourcesInSelectedReservation* variable will be updated automatically while the booking is selected.
 
+#### Data Display in DataMiner Cube now supports dynamic units by default [ID 41436]
+
+<!-- MR 10.4.0 [CU10]/10.5.0 [CU0] - FR 10.5.1 -->
+
+From now on, dynamic units can be used by default in Data Display in DataMiner Cube.
+
+If you want this feature to be disabled system-wide, then explicitly set the *DynamicUnits* option to false in the *SoftLaunchOptions.xml* file.
+
 #### Visual Overview: Enhanced rendering of embedded visual overviews [ID 41437]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
