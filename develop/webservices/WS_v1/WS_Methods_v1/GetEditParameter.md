@@ -17,6 +17,6 @@ Use this method to retrieve all the information necessary to be able to present 
 
 ## Output
 
-| Item                   | Format                                                           | Description                                |
-|------------------------|------------------------------------------------------------------|--------------------------------------------|
+| Item                   | Format                                    | Description                                |
+|------------------------|-------------------------------------------|--------------------------------------------|
 | GetEditParameterResult | [DMAParameterEdit](xref:DMAParameterEdit) | The properties of the specified parameter. |

@@ -19,4 +19,4 @@ uid: DMAAlarmColors
 | Timeout | [DMAColor](xref:DMAColor) | The color used for timeouts. |
 | Undefined | [DMAColor](xref:DMAColor) | The color used for undefined values. |
 | Warning | [DMAColor](xref:DMAColor) | The color used for warnings. |
-| LastChangeUTC | [DMAColor](xref:DMAColor) | The time when the object was last changed, in UTC format <br>(milliseconds since midnight January 1, 1970 GMT). |
+| LastChangeUTC | Long integer | The time when the object was last changed, in UTC format<br>(milliseconds since midnight January 1, 1970 GMT). |

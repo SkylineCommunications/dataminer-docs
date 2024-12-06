@@ -7,9 +7,7 @@ uid: GetAlarmHistory
 Use this method to retrieve:
 
 - one specific alarm,
-
 - all alarms in the alarm tree of a specific alarm, or
-
 - alarm details of a cleared non-root alarm.
 
 ## Input
@@ -23,6 +21,6 @@ Use this method to retrieve:
 
 ## Output
 
-| Item                  | Format                                                                   | Description                                |
-|-----------------------|--------------------------------------------------------------------------|--------------------------------------------|
+| Item                  | Format                             | Description                                |
+|-----------------------|------------------------------------|--------------------------------------------|
 | GetAlarmHistoryResult | Array of [DMAAlarm](xref:DMAAlarm) | The alarm history for the specified alarm. |

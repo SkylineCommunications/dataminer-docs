@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of parameters on a particular Data
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
 | dmaID      | Integer | The DataMiner Agent ID.                                                          |
 | elementID  | Integer | The element ID.                                                                  |
 | pageName   | String  | The name of the Data Display page.                                               |

@@ -41,3 +41,14 @@ uid: DMASecurity
 | ShareItem | Boolean | Whether or not the user is allowed to share DataMiner items via dataminer.services. |
 | UnshareItem | Boolean | Whether or not the user is allowed to stop the sharing of DataMiner items via dataminer.services. |
 | UpdateSharedItems | Boolean | Whether or not the user is allowed to make changes to a share of DataMiner items via dataminer.services. |
+| SendEmail | Boolean | Whether or not the user is allowed to send emails. |
+| MonitoringUI | Boolean | Whether or not the user is allowed to access the Monitoring app. |
+| UserDefinableAppPublish | Boolean | Whether or not the user is allowed to publish user-defined apps. |
+| UserDefinableAppEdit | Boolean | Whether or not the user is allowed to edit user-defined apps. |
+| UserDefinableAppDelete | Boolean | Whether or not the user is allowed to delete user-defined apps. |
+| UserDefinableAppAdd | Boolean | Whether or not the user is allowed to create user-defined apps. |
+| UserDefinableAppView | Boolean | Whether or not the user is allowed to view user-defined apps. |
+| ViewSharedItems | Boolean | Whether or not the user is allowed to view items shared via dataminer.services. |
+| Security | Boolean | Whether or not the user is allowed to modify security settings. |
+| SDAutomation | Boolean | Whether or not the user is allowed to open the Automation module in DataMiner Cube and view the list of available Automation scripts in web apps. |
+| AutomationExecuteScripts | Boolean | Whether or not the user is allowed to execute Automation scripts. |

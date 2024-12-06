@@ -17,6 +17,6 @@ Available from DataMiner 9.6.6 onwards.
 
 ## Output
 
-| Item                 | Format                                                       | Description                 |
-|----------------------|--------------------------------------------------------------|-----------------------------|
+| Item                 | Format                                | Description                 |
+|----------------------|---------------------------------------|-----------------------------|
 | GetJobTemplateResult | [DMAJobTemplate](xref:DMAJobTemplate) | The requested job template. |

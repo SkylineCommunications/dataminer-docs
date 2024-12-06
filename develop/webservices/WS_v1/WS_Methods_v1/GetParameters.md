@@ -8,12 +8,12 @@ Use this method to retrieve a number of element parameters by ID and name.
 
 ## Input
 
-| Item       | Format          | Description                                                                      |
-|------------|-----------------|----------------------------------------------------------------------------------|
+| Item       | Format          | Description                                           |
+|------------|-----------------|-------------------------------------------------------|
 | connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer         | The DataMiner Agent ID.                                                          |
-| elementID  | Integer         | The element ID.                                                                  |
-| parameters | Array of string | The IDs and names of the parameters to be retrieved.                             |
+| dmaID      | Integer         | The DataMiner Agent ID.                               |
+| elementID  | Integer         | The element ID.                                       |
+| parameters | Array of string | The IDs and names of the parameters to be retrieved.  |
 
 ## Output
 

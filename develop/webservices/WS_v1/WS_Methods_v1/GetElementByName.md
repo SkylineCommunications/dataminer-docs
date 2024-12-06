@@ -15,6 +15,6 @@ Use this method to retrieve the data of a particular element by name.
 
 ## Output
 
-| Item                    | Format                                               | Description                        |
-|-------------------------|------------------------------------------------------|------------------------------------|
+| Item                    | Format                       | Description                        |
+|-------------------------|------------------------------|------------------------------------|
 | GetElementByNameResult | [DMAElement](xref:DMAElement) | The data of the specified element. |

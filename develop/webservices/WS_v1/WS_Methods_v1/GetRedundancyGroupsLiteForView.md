@@ -10,11 +10,11 @@ This method is a faster alternative to the method *GetRedundancyGroupsForView*, 
 
 ## Input
 
-| Item            | Format  | Description                                                                      |
-|-----------------|---------|----------------------------------------------------------------------------------|
-| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| viewID          | Integer | The view ID.                                                                     |
-| includeSubViews | Boolean | Indicates whether redundancy groups from subviews are included.                  |
+| Item            | Format  | Description                                                     |
+|-----------------|---------|-----------------------------------------------------------------|
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).           |
+| viewID          | Integer | The view ID.                                                    |
+| includeSubViews | Boolean | Indicates whether redundancy groups from subviews are included. |
 
 ## Output
 
