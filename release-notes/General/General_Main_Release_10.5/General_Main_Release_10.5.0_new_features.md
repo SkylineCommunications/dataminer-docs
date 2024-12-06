@@ -456,6 +456,16 @@ uib.SkipAbortConfirmation = true;
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
+#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and an alarm of type "error" will be generated.
+
+These alarms will be generated per DataMiner Agent for every Automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular Automation script, only one alarm will be generated on the DataMiner Agent in question.
+
+This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
+
 ### DataMiner modules
 
 #### User-defined APIs: Query string support [ID 37733]
