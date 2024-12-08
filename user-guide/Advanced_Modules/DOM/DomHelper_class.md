@@ -247,7 +247,7 @@ From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for an
 
 As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
 
-- The list of successful processed item, as is the case for `CreateOrUpdate` and `Delete`.
+- The list of successfully processed items, as is the case for `CreateOrUpdate` and `Delete`.
 
 - A list of `DomInstance` IDs that failed to be created, updated, or deleted.
 
