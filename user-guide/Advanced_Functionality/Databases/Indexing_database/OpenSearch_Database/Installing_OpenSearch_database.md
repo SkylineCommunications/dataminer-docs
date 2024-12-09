@@ -451,3 +451,15 @@ To configure the connection to an OpenSearch database:
 - If you are using a dedicated clustered storage setup, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
 
 - If you are using a setup with storage per DMA, [manually connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
+
+### Monitoring expiry dates of TLS certificates
+
+Once DataMiner is connected to an OpenSearch database via TLS, it is important to renew TLS certificates before they expire to prevent loss of connection to the database. We recommend using the connector [Skyline SSL Certificate Monitor](https://catalog.dataminer.services/details/382d6771-5162-47ce-aa2a-0f4a0d7ecd6d) for that purpose: 
+
+1. Create an element and assign it the protocol Skyline SSL Certificate Monitor.
+
+1. Enter the full URL of the OpenSearch node in the parameter "New Site URL" and click the button "Add Site" in the General page of the element.
+
+1. Enter your OpenSearch logon credentials in the fields "User" and "Password" in the Sites table.
+
+1. Assign an alarm template to the element and enable alarms on the parameter "Remaining Days".
