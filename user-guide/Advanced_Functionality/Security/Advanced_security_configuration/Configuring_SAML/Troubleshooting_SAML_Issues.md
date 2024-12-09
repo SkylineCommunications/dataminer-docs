@@ -186,4 +186,4 @@ AADSTS700016: Application with identifier '\<ID>' was not found in the directory
 Certificate from identity provider has been revoked.
 
 - Application: Cube
-- Cause: On the linked enteprise application on Azure, the SAML Certificate is expired.
+- Cause: On the linked enterprise application on Azure, the SAML certificate is expired.
