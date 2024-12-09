@@ -9,13 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - Native link element for app titles [ID 51524]
+### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - Click on app title opens new tab of the app [ID 41524]
 
-The app title of the following apps: Admin, Catalog, Home, Marketplace & Sharing now use native link element, allowing users to open the apps in a new tab using middle-click or right-click options.
+From now on, you can open Admin, Catalog, Home, Marketplace, and Sharing in a new tab using middle-click or right-click options. This update makes their titles behave like regular links.
 
 ### 9 December 2024 - Enhancement - Home - Updated terms of service and conditions for DaaS deployments [ID 41651]
 
-The link to the correct terms of service and conditions for DaaS deployments has been updated.
+The link to the terms of service and conditions for DaaS deployments has been updated.
 
 ### 9 December 2024 - Enhancement - Remote Access - Improved upload speed [ID 41662]
 
