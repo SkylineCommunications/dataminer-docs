@@ -28,8 +28,8 @@ A fixed field is defined using a parameter of type "fixed". The content of fixed
 
 ```xml
 <Param id="100">
-   <Name>Space</Name>
-   <Description>Space</Description>
+   <Name>Fixed_Space</Name>
+   <Description>Fixed Space</Description>
    <Type>fixed</Type>
    <Interprete>
       <RawType>other</RawType>
@@ -63,7 +63,7 @@ The following example defines a command implementing an HTTP GET request:
 ```xml
 <Command id="2">
    <Name>HTTP_getSysConfig</Name>
-   <Description>HTTP_getSysConfig</Description>
+   <Description>HTTP - Get System Config</Description>
    <Content>
       <Param>10000</Param><!-- GET-->
       <Param>10001</Param><!-- 0x20 -->
@@ -109,7 +109,7 @@ As in this case no automatic "make" action is performed, the protocol should def
 
 ```xml
 <Trigger id="11">
-   <Name>Before Command</Name>
+   <Name>Before Command Each</Name>
    <On id="each">command</On>
    <Time>before</Time>
    <Type>action</Type>
@@ -119,7 +119,7 @@ As in this case no automatic "make" action is performed, the protocol should def
 </Trigger>
 
 <Action id="10">
-   <Name>Make Command Action</Name>
+   <Name>Make Command</Name>
    <On>command</On>
    <Type>make</Type>
 </Action>
@@ -138,8 +138,8 @@ Defining a response is very similar to defining a command: specify which paramet
 
 ```xml
 <Response id="2">
-   <Name>setSysConfigResponse</Name>
-   <Description>Set System Configuration Response</Description>
+   <Name>setSysConfig</Name>
+   <Description>Set System Configuration</Description>
    <Content>
       <Param>10030</Param>
       <Param>10002</Param>
@@ -157,7 +157,7 @@ In case a response contains parameters that have LengthType set to "next param",
 
 ```xml
 <Trigger id="12">
-   <Name>Before Response</Name>
+   <Name>Before Response Each</Name>
    <On id="each">response</On>
    <Time>before</Time>
    <Type>action</Type>
@@ -167,7 +167,7 @@ In case a response contains parameters that have LengthType set to "next param",
 </Trigger>
 
 <Action id="12">
-   <Name>Read Response Action</Name>
+   <Name>Read Response</Name>
    <On>response</On>
    <Type>read</Type>
 </Action>
@@ -199,7 +199,7 @@ For example:
 ```xml
 <Response id="300">
   <Name>responseCWithLengthAndDataAtEndWithoutTrailer</Name>
-  <Description>ResponseC With Length And Data At End Without Trailer</Description>
+  <Description>Response C With Length And Data at End Without Trailer</Description>
   <Content>
      <Param>300</Param><!-- ResponseC Key Field -->
      <Param>301</Param><!-- ResponseC Variable Data -->
@@ -213,10 +213,9 @@ For example:
 The length parameter (ID 303) contains a definition as shown below.
 
 ```xml
-<Param id="303" trending="false">
+<Param id="303">
   <Name>ResponseCLengthField</Name>
-  <Description>ResponseC Length Field</Description>
-  <Information>...</Information>
+  <Description>Response C Length Field</Description>
   <Type>length</Type>
   <Interprete>
      <RawType>numeric text</RawType>
@@ -229,10 +228,6 @@ The length parameter (ID 303) contains a definition as shown below.
         <Param>4</Param>
      </Content>
   </Length>
-   <!--- SuppressValidator 2.11.1 Range not applicable -->
-   <!--- SuppressValidator 2.9.7 Unit not applicable -->
-  <Display>...</Display>
-  <Measurement>...</Measurement>
 </Param>
 ```
 
@@ -249,16 +244,17 @@ When the number of bytes is larger or smaller than defined, the response process
 ```xml
 <Trigger id="13">
    <Name>beforeResponse300</Name>
-   <On id="300">response</On> <!-- ResponseC With Length and Data At End Without Trailer -->
+   <On id="300">response</On> <!-- ResponseC With Length and Data at End Without Trailer -->
    <Time>before</Time>
    <Type>action</Type>
    <Content>
-      <Id>3</Id> <!-- On Response: Read --> 
+      <Id>3</Id> <!-- Response Read --> 
       <Id>4</Id> <!-- Response Length --> 
    </Content>
 </Trigger>
+
 <Action id="3">
-   <Name>On Response: Read</Name>
+   <Name>Response Read</Name>
    <On>response</On>
    <Type>read</Type>
 </Action>
@@ -315,7 +311,7 @@ In the example below, the Interprete.Length will be defined at runtime by the co
 ```xml
 <Response id="500">
   <Name>ResponseEWithOtherParam</Name>
-  <Description>ResponseEWithOtherParam</Description>
+  <Description>Response E With Other Param</Description>
   <Content>
      <Param>500</Param><!-- ResponseE Key Field -->
      <Param>501</Param><!-- ResponseE Variable Data -->
@@ -324,10 +320,10 @@ In the example below, the Interprete.Length will be defined at runtime by the co
      <Param>504</Param><!-- ResponseE Variable Length Data Field -->
   </Content>
 </Response>
-<Param id="503" trending="false">
+
+<Param id="503">
   <Name>ResponseELengthField</Name>
-  <Description>ResponseE Length Field</Description>
-  <Information>...</Information>
+  <Description>Response E Length Field</Description>
   <Type>read</Type>
   <Interprete>
      <RawType>numeric text</RawType>
@@ -335,14 +331,10 @@ In the example below, the Interprete.Length will be defined at runtime by the co
      <Length>2</Length>
      <Type>double</Type>
   </Interprete>
-   <!--- SuppressValidator 2.11.1 Range not applicable -->
-   <!--- SuppressValidator 2.9.7 Unit not applicable -->
-  <Display>...</Display>
-  <Measurement>...</Measurement>
 </Param>
-<Param id="504" trending="false">
+<Param id="504">
   <Name>responseEVariableLengthDataField</Name>
-  <Description>ResponseE Variable Length Data Field</Description>
+  <Description>Response E Variable Length Data Field</Description>
   <Type>read</Type>
   <Information>...</Information>
   <Interprete>
@@ -421,7 +413,7 @@ The following protocol fragment triggers a "crc response" action:
 
 ```xml
 <Trigger id="4">
-  <Name>CalculateCRC</Name>
+  <Name>BeforeResponse_410</Name>
   <On id="410">response</On>
   <Time>before</Time>
   <Type>action</Type>
@@ -431,7 +423,7 @@ The following protocol fragment triggers a "crc response" action:
 </Trigger>
 
 <Action id="410">
-  <Name>CalculateCRC</Name>
+  <Name>Response CRC</Name>
   <On>response</On>
   <Type>crc</Type>
 </Action>
@@ -488,7 +480,7 @@ The byte or bytes in question need to be stored in a parameter of type "group" w
 
 ```xml
 <Param id="1000">
-  <Name>status Bytes</Name>
+  <Name>statusBytes</Name>
   <Description>Status Bytes</Description>
   <Type>group</Type>
   <Interprete>
@@ -533,7 +525,7 @@ A parameter of type "write bit" can be used to change a bit from a byte that is 
 
 ```xml
 <Param id="147">
-  <Name>log tx power mask</Name>
+  <Name>logTxPowerMask</Name>
   <Description>Log Tx Power Mask</Description>
   <Type id="179">write bit</Type>
   <Interprete>
@@ -575,7 +567,7 @@ Note that a protocol will typically define 2 parameters of type "group"; one use
 
 ```xml
 <Param id="113">
-  <Name>fault history mask binary</Name>
+  <Name>faultHistoryMaskBinary</Name>
   <Description>Fault history Mask Binary</Description>
   <Type>group</Type>
   <Interprete>
@@ -586,7 +578,7 @@ Note that a protocol will typically define 2 parameters of type "group"; one use
   </Interprete>
 </Param>
 <Param id="179">
-  <Name>fault history mask binary write</Name>
+  <Name>faultHistoryMaskBinaryWrite</Name>
   <Description>Fault history Mask Binary Write</Description>
   <Type>group</Type>
   <Interprete>
@@ -655,8 +647,8 @@ Parameter 100 is now defined as follows:
 
 ```xml
 <Param id="100">
-   <Name>audio gain response parameter</Name>
-   <Description>audio gain response parameter</Description>
+   <Name>audioGain_ResponseParameter</Name>
+   <Description>Audio Gain - Response Parameter</Description>
    <Type id="3000">response</Type>
    <Interprete>
       <RawType>other</RawType>
@@ -672,8 +664,8 @@ This is a response that is not used in a pair, but is used to define the structu
 
 ```xml
 <Response id="3000">
-   <Name>response parameter audio gain</Name>
-   <Description>response parameter audio gain</Description>
+   <Name>Audio gain</Name>
+   <Description>Audio gain</Description>
    <Content optional="0+++;4">
       <Param>67</Param>
       <Param>62</Param>
@@ -693,6 +685,7 @@ A "read response" action is needed that must be triggered on this response.
 
 ```xml
 <Trigger id="58">
+   <Name>BeforeResponse_3000</Name>
    <On id="3000">response</On>
    <Time>before</Time>
    <Type>action</Type>
