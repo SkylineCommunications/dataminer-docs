@@ -48,9 +48,9 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
    - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade, unless it is already the default policy)
 
-   - *Upgrade backup Agent first, switch over and upgrade main* (legacy and not recommended, as it may lead to issues caused by differing software versions within your cluster)
+   - *Upgrade backup Agent first, switch over and upgrade main* (legacy, and not recommended as it may lead to issues caused by different software versions within the cluster)
 
-   - *Upgrade backup Agent first, switch over, upgrade main, then switch back again* (legacy and not recommended, as it may lead to issues caused by differing software versions within your cluster)
+   - *Upgrade backup Agent first, switch over, upgrade main, then switch back again* (legacy, and not recommended as it may lead to issues caused by different software versions within the cluster)
 
 1. Click *Upgrade* to start the upgrade procedure.
 
