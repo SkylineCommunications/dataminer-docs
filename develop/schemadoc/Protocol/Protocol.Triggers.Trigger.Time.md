@@ -38,7 +38,7 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |pair|timeout|The trigger will go off when a timeout occurs on the specified pair.|
 |pair|timeout after retries|The trigger will go off after the last retry.<!-- RN 8573 -->|
 |parameter|change|The trigger will go off when the value of the specified parameter has changed.|
-|parameter|change after response|The trigger will go off when the value of the specified parameter has changed and the incoming response has been fully received.|
+|parameter|change after response|The trigger will go off when the value of the specified parameter has changed and the incoming response has been fully received. This is typically used on serial response parameters when the trigger should go off only if and when the response fully matches.|
 |parameter|timeout|The trigger will go off when a timeout occurs on the specified parameter.|
 |parameter|timeout after retries|The trigger will go off after the last retry.<!-- RN 8573 -->|
 |protocol|after startup|The trigger will go off when the element running the protocol has (re)started. For example: Restart or Activate after stop. It will not trigger after a Pause. Note that at least one group must be defined in the protocol, as otherwise the trigger will not work.|
