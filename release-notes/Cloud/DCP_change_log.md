@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - Click on app title opens new tab of the app [ID 41524]
+### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41524]
 
-From now on, you can open Admin, Catalog, Home, Marketplace, and Sharing in a new tab using middle-click or right-click options. This update makes their titles behave like regular links.
+When you click the title of the Admin, Catalog, Home, Marketplace, or Sharing apps with the middle mouse button, this will now open the app again in a new tab. In addition, you can now also right-click the title to among others open the app in a new tab or in a new window.
 
 ### 9 December 2024 - Enhancement - Home - Updated terms of service and conditions for DaaS deployments [ID 41651]
 
