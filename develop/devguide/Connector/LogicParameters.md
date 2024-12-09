@@ -13,7 +13,7 @@ A protocol parameter is a versatile component. A parameter can represent a table
 
 The following subsections introduce the different types of parameters that are defined in DPML
 
-### Read, write, fixed and dummy parameters
+### Read, write, fixed, and dummy parameters
 
 |Type  |Description  |
 |---------|---------|
@@ -43,6 +43,9 @@ A **fixed** parameter acts as a data placeholder that will not change. Though it
 In the example above, the Interprete tag is used to define the length of the fixed parameter and the value. For more information, see [Protocol.Params.Param.Interprete](xref:Protocol.Params.Param.Interprete).
 
 A parameter of type dummy is typically used to hold data that is not of real interest, e.g. to hold part of the response that is not processed or to trigger a QAction.
+
+> [!NOTE]
+> The units of measure for numeric parameters can be automatically adjusted to a more readable format if the dynamic units feature is enabled. This depends on the DataMiner version and the configuration of the *DynamicUnits* element. See [DynamicUnits](xref:Protocol.Params.Param.Display.DynamicUnits).
 
 ### Element information
 

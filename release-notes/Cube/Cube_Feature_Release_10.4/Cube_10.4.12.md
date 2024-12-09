@@ -2,17 +2,15 @@
 uid: Cube_Feature_Release_10.4.12
 ---
 
-# DataMiner Cube Feature Release 10.4.12 – Preview
+# DataMiner Cube Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.12](xref:Web_apps_Feature_Release_10.4.12).
 
 ## New features
 

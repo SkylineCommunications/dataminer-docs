@@ -108,7 +108,7 @@ In the *Failover Config* window as well as the *Status* dialog box, the current 
 
 In the timeline of an embedded Resource Manager component, it is now possible to select multiple resource bands.
 
-To select more than one resource band, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive resource bands, click the first one and then click the last one while holding down the SHIFT key.
+To select more than one resource band, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive resource bands, click the first one and then click the last one while holding down the Shift key.
 
 When you select more than one resource band, the SelectedResource session variable will contain the GUIDs of all selected resources, separated by commas.
 

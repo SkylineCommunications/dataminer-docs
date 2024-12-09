@@ -2,13 +2,16 @@
 uid: General_Main_Release_10.3.0_CU21
 ---
 
-# General Main Release 10.3.0 CU21 – Preview
+# General Main Release 10.3.0 CU21
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU21](xref:Cube_Main_Release_10.3.0_CU21).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU21](xref:Web_apps_Main_Release_10.3.0_CU21).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
@@ -69,7 +72,7 @@ When a DataMiner Agent that was part of a Failover setup started up, in some cas
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur.
+When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur. This will now be prevented. In addition, information events will no longer be generated for the [Clients connected] parameter.
 
 #### Incomplete CorrelationDetailsEvent messages after a DMA had reconnected to the DMS [ID 40934]
 

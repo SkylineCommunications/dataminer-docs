@@ -2,17 +2,20 @@
 uid: Web_apps_Feature_Release_10.4.12
 ---
 
-# DataMiner web apps Feature Release 10.4.12 – Preview
+# DataMiner web apps Feature Release 10.4.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.12](xref:Cube_Feature_Release_10.4.12).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: Flows [ID 40974]](#dashboardslow-code-apps-flows-id-40974)
+- [Dashboards/Low-Code Apps: Variables [ID 41039] [ID 41063] [ID 41132]](#dashboardslow-code-apps-variables-id-41039-id-41063-id-41132)
 
 ## New features
 
@@ -205,7 +208,7 @@ The following changes have been made:
 
 - URL data, previously included under *Feeds* in the *Data* tab, now has its own section named "URL".
 
-- The syntax for [dynamically referencing data in text](xref:Feed_Link) has been updated. For example:
+- The syntax for [dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text) has been updated. For example:
 
   - Old: `{Feed."Table 1"."Selected rows"...}`
 
@@ -382,18 +385,41 @@ Uploaded images shown in an *Image* component would incorrectly not be synchroni
 
 #### Low-Code Apps: Additions, updates and removals would not be synchronized among the DMAs in the DMS [ID 41228]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When you created, updated or deleted a low-code app, this would incorrectly not be synchronized among the DataMiner Agents in the DMS.
 
 #### Dashboards/Low-Code Apps - Web component: Default margin would incorrectly no longer be 0px when showing custom HTML [ID 41241]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
 
 #### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
 
-<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU1] - FR 10.4.12 [CU0] -->
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
 When a GQI query was run multiple times in quick succession, in some cases, a `Session does not exist` error could appear.
+
+#### Dashboards/Low-Code Apps: No chart data would be shown when a parameter value was fed to a Line & area chart component linked to a Time range component [ID 41252]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
+
+When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
+
+#### Monitoring/Dashboards/Low-Code Apps - Line & area chart component: Changes would not always be detected and processed properly [ID 41470]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 [CU0] -->
+
+Up to now, in some cases, changes made to a *Line & area chart* component would not be reflected corrected in the UI. This could lead to the following problems:
+
+- Trend cards in the *Monitoring* app would be empty or would not update properly.
+- Trend cards in the *Monitoring* app would not use the proper *Monitoring* app color as trend line color.
+- Data changes in dashboards would not always be applied in *Line & area chart* components:
+
+  - Time ranges would not always be applied correctly.
+  - The trend lines would not always correctly reflect the actual trend of a parameter.
+  - Scrolling fast through a trend chart could result in that chart getting stuck in a loading state.
+  - etc.
+
+Also, an issue has been fixed regarding errors coming from trend requests. Up to now, in some cases, "[Object object]" would be displayed instead of the actual error message.

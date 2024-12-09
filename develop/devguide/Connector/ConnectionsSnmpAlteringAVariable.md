@@ -12,83 +12,83 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
 1. If you use the `options="snmpSet"` attribute on the write parameter, the set will be executed.
 
-```xml
-<Param id="13" options="snmpSet">
-    <Name>sysContact</Name>
-    <Description>System Contact</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
-        <Type>octetstring</Type>
-    </SNMP>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>System Info</Page>
-                <Row>2</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
-</Param>
-```
+   ```xml
+   <Param id="13" options="snmpSet">
+       <Name>sysContact</Name>
+       <Description>System Contact</Description>
+       <Type>write</Type>
+       <Interprete>
+           <RawType>other</RawType>
+           <LengthType>next param</LengthType>
+           <Type>string</Type>
+       </Interprete>
+       <SNMP>
+           <Enabled>true</Enabled>
+           <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
+           <Type>octetstring</Type>
+       </SNMP>
+       <Display>
+           <RTDisplay>true</RTDisplay>
+           <Positions>
+               <Position>
+                   <Page>System Info</Page>
+                   <Row>2</Row>
+                   <Column>0</Column>
+               </Position>
+           </Positions>
+       </Display>
+       <Measurement>
+           <Type>string</Type>
+       </Measurement>
+   </Param>
+   ```
 
 1. Using a trigger and a "set parameter" action, you can perform a set via a write parameter.
 
-```xml
-<Param id="13">
-    <Name>sysContact</Name>
-    <Description>System Contact</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
-        <Type>octetstring</Type>
-    </SNMP>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>System Info</Page>
-                <Row>2</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
-</Param>
-<Trigger id="13">
-    <Name>onWriteSysContact</Name>
-    <On id="13">parameter</On>
-    <Time>change</Time>
-    <Type>action</Type>
-    <Content>
-        <Id>13</Id>
-    </Content>
-</Trigger>
-<Action id="13">
-    <Name>setSysContact</Name>
-    <On id="13">parameter</On>
-    <Type>set</Type>
-</Action>
-```
+   ```xml
+   <Param id="13">
+       <Name>sysContact</Name>
+       <Description>System Contact</Description>
+       <Type>write</Type>
+       <Interprete>
+           <RawType>other</RawType>
+           <LengthType>next param</LengthType>
+           <Type>string</Type>
+       </Interprete>
+       <SNMP>
+           <Enabled>true</Enabled>
+           <OID type="complete">1.3.6.1.2.1.1.4.0</OID>
+           <Type>octetstring</Type>
+       </SNMP>
+       <Display>
+           <RTDisplay>true</RTDisplay>
+           <Positions>
+               <Position>
+                   <Page>System Info</Page>
+                   <Row>2</Row>
+                   <Column>0</Column>
+               </Position>
+           </Positions>
+       </Display>
+       <Measurement>
+           <Type>string</Type>
+       </Measurement>
+   </Param>
+   <Trigger id="13">
+       <Name>onWriteSysContact</Name>
+       <On id="13">parameter</On>
+       <Time>change</Time>
+       <Type>action</Type>
+       <Content>
+           <Id>13</Id>
+       </Content>
+   </Trigger>
+   <Action id="13">
+       <Name>setSysContact</Name>
+       <On id="13">parameter</On>
+       <Type>set</Type>
+   </Action>
+   ```
 
 The method using the `snmpSet` option is generally preferred, as it does not require an action and trigger to be defined.
 

@@ -4,13 +4,15 @@ uid: AdvancedDVEsTogglingCreation
 
 # Toggling DVE creation
 
-In the *Element.xml* file for a parent DVE element (C:\Skyline DataMiner\Elements\[Element Name]\), you can define the enabling or disabling of DVE child element creation.
+If [Swarming](xref:Swarming) is not enabled, in the *Element.xml* file for a parent DVE element (C:\Skyline DataMiner\Elements\[Element Name]\), you can define the enabling or disabling of DVE child element creation.
 
 ```xml
 <Element>
    <Name dvecreate="false">DVE Main Element</Name>
 </Element>
 ```
+
+If Swarming is enabled, this configuration is stored in the database instead.
 
 By default, this setting is set to true in memory. Using a NotifyDataMiner ([NT_DVE_CREATION_FLAG (340)](xref:NT_DVE_CREATION_FLAG)), the creation of DVEs can be enabled or disabled.
 

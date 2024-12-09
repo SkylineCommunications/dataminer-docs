@@ -238,6 +238,8 @@ It is not possible to use the *ParentNode* alarm property from the previous step
 
    1. Open the *configuration.xml* file.
 
+   1. Make sure that parameter and view grouping is disabled as explained in [step 4](#step-4-switch-off-parameter-and-view-grouping).
+
    1. Scroll down to the *GenericProperties* property.
 
       ![Grouping on custom property](~/user-guide/images/customPropertyGrouping.png)

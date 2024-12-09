@@ -16,8 +16,8 @@ Element "x" is not active.
 
 ## Possible cause
 
-Element "x" could not be loaded because the *element.xml* file of element "x" contains invalid tags.
+Element "x" could not be loaded because the settings for element "x" include invalid tags.
 
 ## Resolution
 
-Check whether the correct tags were specified in the *element.xml* file of element "x".
+Check whether the settings of element "x" are correct.

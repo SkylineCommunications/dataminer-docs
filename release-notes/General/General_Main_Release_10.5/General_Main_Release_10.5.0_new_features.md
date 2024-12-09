@@ -162,6 +162,67 @@ This method will return an [IConnection](xref:Skyline.DataMiner.Net.IConnection)
 > [!NOTE]
 > The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
 
+#### Table sizes will now be limited [ID 39836]
+
+<!-- MR 10.5.0 - FR 10.4.9 -->
+
+Table sizes will now be limited to protect DataMiner against ever-growing tables in elements.
+
+> [!NOTE]
+> These limits do not apply to logger tables, partial tables, and general parameter tables.
+
+##### Row count limit for non-partial tables
+
+If a table reaches 85&thinsp;000 rows:
+
+- A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
+
+If a table reaches 105&thinsp;000 rows:
+
+- The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
+- An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
+- The following entry will be added to the log file of the element:
+
+  `Table [<table description> [table id]]: Reached maximum number of rows, adding new rows is not allowed. Current number of rows [<row count>]`
+
+If the row count of a table drops:
+
+- If the row count of a table drops below 100&thinsp;000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
+- If the row count of a table drops below 80&thinsp;000, both the notice alarm and the notice alarm banner will be removed.
+
+##### Alarms for volatile tables with RTDisplay set to false
+
+If a table reaches 805&thinsp;000 rows:
+
+- A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
+
+if a table reaches 1&thinsp;005&thinsp;000 rows:
+
+- The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
+- An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
+- The following entry will be added to the log file of the element:
+
+  `Table [<table description> [table id]]: Reached maximum number of rows, adding new rows is not allowed. Current number of rows [<row count>]`
+
+If the row count of a table drops:
+
+- If the row count of a table drops below 1&thinsp;000&thinsp;000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
+- If the row count of a table drops below 800&thinsp;000, both the notice alarm and the notice alarm banner will be removed.
+
+##### Format of alarms and banner messages
+
+The notice alarm and banner message will have the following format:
+
+`Table [<table description> [table id]] on page [<page name>] contains over [80K or 800K] rows. While there is no operational impact now, no more rows will be added once the table contains over [100K or 1000K] rows.`
+
+The error alarm and banner message will have the following format:
+
+`Table [<table description> [table id]] on page [<page name>] contains over [100K or 1000K] rows. No more rows will be added to this table until the number of rows drops below [100K or 1000K].`
+
+When multiple tables generate an alarm for the same element, the banner will display the following message:
+
+`Multiple tables have exceeded the row limit. Please check the alarms.`
+
 #### Failover: New SLNettypes message to check whether Pcap is installed on a DataMiner Agent [ID 40257]
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
@@ -394,6 +455,16 @@ uib.SkipAbortConfirmation = true;
 
 > [!TIP]
 > See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
+
+#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and an alarm of type "error" will be generated.
+
+These alarms will be generated per DataMiner Agent for every Automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular Automation script, only one alarm will be generated on the DataMiner Agent in question.
+
+This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 
 ### DataMiner modules
 

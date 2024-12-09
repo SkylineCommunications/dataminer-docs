@@ -123,7 +123,7 @@ It is possible to manually freeze and unfreeze the trace. To do so:
   > [!NOTE]
   > Zooming horizontally is only possible if the spectrum protocol includes the *Start frequency*, *Stop frequency*, and *Frequency span* parameters.
 
-- To zoom **vertically**, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+- To zoom **vertically**, scroll up and down while pressing the Ctrl key. This has the same effect as altering the amplitude scale.
 
   > [!NOTE]
   > Zooming vertically is only possible if the spectrum protocol includes the *Amplitude scale* parameter.

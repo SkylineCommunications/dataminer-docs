@@ -104,7 +104,7 @@ This control always shows the path towards the node that is currently selected i
 - If you click a breadcrumb (e.g. “Params”), the corresponding (parent) node will be selected in the tree view (e.g. “Params”).
 - If you click an arrow next to a breadcrumb, a drop-down list will open, allowing you to immediately navigate to one of the child nodes.
 
-Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
+Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. Ctrl+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
 
 ### Validator
 

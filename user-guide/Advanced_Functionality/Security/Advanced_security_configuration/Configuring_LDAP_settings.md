@@ -11,7 +11,10 @@ DataMiner supports any LDAP-compatible directory (e.g. OpenLDAP) as an alternati
 
 ## Configuring LDAP settings in DataMiner Cube
 
-Most custom LDAP settings can be configured in DataMiner Cube:
+> [!NOTE]
+> Most custom LDAP settings can be configured in DataMiner Cube. However, if a DMA has not joined a Windows Active Directory domain, it is not possible to set up the initial configuration in Cube. In that case, you will first need to manually configure the `<LDAP nonDomainLDAP="true" ... >` tag in *DataMiner.xml* and restart the DMA. Afterwards, you can further edit the settings in DataMiner Cube as detailed below.
+
+To configure custom LDAP settings in DataMiner Cube:
 
 1. Go to *System Center* > *System settings* > *LDAP*.
 
@@ -42,7 +45,7 @@ Most custom LDAP settings can be configured in DataMiner Cube:
    - **Phone**: The user’s fixed phone number.
    - **Mobile**: The user’s mobile phone number.
    - **Pager**: The user’s pager number.
-   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as "&amp;".
+   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as `&amp;`.
 
    In the *Group* tab:
 
@@ -50,7 +53,7 @@ Most custom LDAP settings can be configured in DataMiner Cube:
    - **Name**: The name of the group.
    - **Alias**: The alias of the group.
    - **Description**: The description of the group.
-   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as "&amp;".
+   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as `&amp;`.
 
    > [!NOTE]
    >

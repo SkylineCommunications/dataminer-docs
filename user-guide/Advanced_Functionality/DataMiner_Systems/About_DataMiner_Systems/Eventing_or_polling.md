@@ -4,7 +4,7 @@ uid: Eventing_or_polling
 
 # Eventing or polling
 
-Unless the *gRPC* connection type is used (supported from DataMiner 10.3.0/10.3.2 onwards,) connections between a client application and a DMA as well as connections between two DMAs are established via a single user-defined TCP port over .NET Remoting.
+Unless the *gRPC* connection type is used (supported from DataMiner 10.3.0/10.3.2 onwards), connections between a client application and a DMA as well as connections between two DMAs are established via a single user-defined TCP port over .NET Remoting.
 
 DMAs can send notifications toward client applications by means of two different methods:
 
@@ -18,5 +18,4 @@ DMAs can send notifications toward client applications by means of two different
 > Within a DataMiner System, some connections can be configured to use eventing, while others can be configured to use polling.
 
 > [!TIP]
-> See also:
-> [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
+> See also: [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)

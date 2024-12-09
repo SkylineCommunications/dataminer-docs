@@ -4,6 +4,16 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x
 
 # Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 4.x
 
+## 4.2.1
+
+#### Enhanced performance for NATS message processing [ID 41263]
+
+The OpenConfig library has been updated to version 3.2.3 of *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig*. This update eliminates the creation of queues and workers for internal subscriptions (e.g. heartbeats), reducing unnecessary overhead. Since the volume of events on these subscriptions is predictable, they are processed immediately without queuing. Additionally, worker signaling has been improved to eliminate periodic polling, freeing up CPU resources for other tasks.
+
+#### Improved memory efficiency for NATS message processing [ID 41033]
+
+The OpenConfig library has been updated to version 3.2.3 of *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig*. This update replaces the previous feature-rich queues and worker implementation with a solution tailored specifically to our requirements. The new design significantly improves memory efficiency, reducing the memory usage of a fully populated queue by up to 80%.
+
 ## 4.2.0
 
 #### Extra step added to the connection process [ID 39548]

@@ -47,7 +47,7 @@ By default, the *DIS MIB Browser* window will open undocked. Dock it just as you
 
 ![MIB Browser-Loading](~/develop/images/DIS_ToolWindow_MibBrowser_LoadingFiles.gif)
 
-When you want to remove files from the list, select them and click *Remove*. To select more than one file, click one, and then click another while holding down the CTRL key. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the SHIFT key.
+When you want to remove files from the list, select them and click *Remove*. To select more than one file, click one, and then click another while holding down the Ctrl key. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the Shift key.
 
 ## Generating parameters
 

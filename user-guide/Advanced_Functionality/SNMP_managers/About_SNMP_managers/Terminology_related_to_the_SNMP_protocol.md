@@ -31,5 +31,6 @@ When dealing with the SNMP protocol, you have to be familiar with the following 
 - **SNMP trap**: An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element.
 
   > [!NOTE]
+  >
   > - SNMP traps are unsolicited UDP messages. They are forwarded by an SNMP agent to an SNMP manager without establishing any connection with that SNMP manager. There is no verification whatsoever. If, for some reason, an SNMP trap gets lost, neither the SNMP manager nor the SNMP agent will be aware of it.
   > - When a DataMiner Agent in a cluster receives an SNMP trap (or an inform message), this trap will be distributed to other DataMiner Agents in the cluster that have at least one element that is interested in the trap.

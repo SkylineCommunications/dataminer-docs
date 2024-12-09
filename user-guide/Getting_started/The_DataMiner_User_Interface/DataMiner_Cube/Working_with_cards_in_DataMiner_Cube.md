@@ -72,7 +72,7 @@ The pane consists of a tree view with several fixed nodes:
 
 - **DATA**: Contains all available Data Display pages.
 
-  ![Data Display pages](~/user-guide/images/Data_Display.png)<br>*Data Display page in DataMiner 10.4.5*
+  ![Data Display pages](~/user-guide/images/Data_Display.png)<br>*Data Display page in DataMiner 10.5.1*
 
   > [!NOTE]
   >

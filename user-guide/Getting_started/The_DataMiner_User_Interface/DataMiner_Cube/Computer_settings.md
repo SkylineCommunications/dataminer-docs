@@ -104,6 +104,10 @@ On the main *Advanced* page, the following settings are available:
   > [!NOTE]
   > Enabling this setting involves a potential security risk: If multiple DataMiner users share the same Windows account on a particular computer, they will also share the same browser cache and, as a consequence, the same authentication on third-party websites.
 
+- **Clear browser cache on signout**: Available from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41026-->.  Select this checkbox to clear the Edge WebView2 browser cache upon signing out. This ensures that the SAML authentication window will appear the next time you log on. We strongly recommend enabling this setting on computers where different DataMiner users share the same Windows user desktop session to allow these users to sign in when SAML authentication is used.
+
+  To manually clear the Edge WebView2 browser cache, click ***Clear cache now***.
+
 - **DataMiner Cube computer \[computername\] reset**: Click the button next to this setting to reset all computer settings back to default. In normal circumstances, this option should never have to be used.
 
 There are also two subpages: *Logging* and *Communication*.

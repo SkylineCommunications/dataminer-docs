@@ -87,6 +87,11 @@ From now on, when the virtual IP address check has concluded that the IP address
 
 Because of a number of enhancements, the image quality of visual overviews during zoom operations in web applications has improved.
 
+Limitations:
+
+- In visual overviews shown on mobile devices, unlike in DataMiner Cube, grouped shapes will not ungroup when zooming.
+- Scrolling on *Children* shapes that extend their boundaries will cause the visual overview to zoom instead of scroll. If you want the visual overview to scroll, you will have to use the scrollbar.
+
 #### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
 
 <!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
@@ -209,6 +214,17 @@ From now on, smart-serial connections will also support non-abbreviated IPv6 loo
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
 Because of a number of enhancements, overall performance has increased when loading newly created elements into SLDataMiner.
+
+#### Automation: Engine methods will now use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID [ID 40773]
+
+<!-- MR 10.5.0 - FR 10.4.11 -->
+
+From now on, the following Engine methods will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
+
+- GetAlarmProperty
+- SetAlarmProperty
+- SetAlarmProperties
+- AcknowledgeAlarm
 
 #### DataMiner backup: nats-server.config file by default added to backup packages [ID 40812]
 

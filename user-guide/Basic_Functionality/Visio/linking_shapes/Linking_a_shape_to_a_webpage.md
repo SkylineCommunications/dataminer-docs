@@ -57,7 +57,7 @@ By default, webpages displayed inside a shape do not have a Back and Forward but
 By default, webpages displayed inside a shape do not display a refresh button. If you want to add a refresh button to an embedded browser, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "RefreshButtonVisibility=true".
 
 > [!NOTE]
-> To force refresh the page (i.e. clear the cache), click the refresh button while pressing CTRL.
+> To force refresh the page (i.e. clear the cache), click the refresh button while pressing Ctrl.
 
 ### SingleSignOn
 
@@ -168,7 +168,7 @@ To do so, use the following configuration in the webpage:
 
 You can link to a dashboard or low-code app in the same way as you would link to another webpage.
 
-In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify a feed for the dashboard or low-code app.
+In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify data for the dashboard or low-code app.
 
 > [!TIP]
 > For more information about the URL syntax, refer to [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).

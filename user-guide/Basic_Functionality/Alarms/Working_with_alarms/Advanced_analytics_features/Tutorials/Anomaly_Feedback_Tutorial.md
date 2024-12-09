@@ -15,10 +15,13 @@ By default, behavioral anomaly detection is enabled on trended parameters. Simil
 Estimated duration: 25 minutes.
 
 > [!NOTE]
-> The content and screenshots for this tutorial were created in DataMiner 10.4.11.
+> The content and screenshots for this tutorial were created in **DataMiner 10.4.11**.
 
 > [!TIP]
-> See also: [Providing feedback on behavioral anomalies](xref:Providing_feedback_on_behavioral_anomalies)
+> See also:
+>
+> - [Providing user feedback](xref:Providing_user_feedback)
+> - [Kata #46: Improve anomaly detection with feedback](https://community.dataminer.services/courses/kata-46/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -80,7 +83,7 @@ In this step, you will **give negative feedback to unwanted level shift anomalie
    Just below the bit rate drop, two dark gray blocks are displayed, indicating two detected changes in behavior, or change points. This means two anomalies were detected at that moment. If you hover the mouse over them, you will see that one is a variance change, corresponding to the parameter becoming less stable, and the other is a level shift, corresponding to the drop.
 
    > [!NOTE]
-   > Since the two anomalies occur around the same time, the labels that appear when you hover over the change points might overlap, causing one label to be hidden. To view both labels clearly, zoom in by pressing CTRL while scrolling up. After zooming in, you can revert back by clicking the *Week to date* button again.
+   > Since the two anomalies occur around the same time, the labels that appear when you hover over the change points might overlap, causing one label to be hidden. To view both labels clearly, zoom in by pressing Ctrl while scrolling up. After zooming in, you can revert back by clicking the *Week to date* button again.
 
    ![Bit rate with drop and transition from stable signal to less stable signal](~/user-guide/images/Audio_Bit_Rate_CBR_VBR_double_anomaly.png)
 
@@ -228,7 +231,7 @@ In this step, you will use the light bulb feature to configure an alarm template
 
    In this case, it suggests enabling smart alarming for level increases, as you just provided positive feedback for this type of anomaly. This means that, in the future, an alarm will be generated when this type of anomaly is detected, rather than just a suggestion event.
 
-   ![Popup suggesting to turn on alarming for level increases](~/user-guide/images/Memory_Usage_Task_Manager_Template_Improvement.gif)
+   ![Pop-up window with proposed configuration](~/user-guide/images/Memory_Usage_Task_Manager_Template_Improvement.gif)
 
 1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
 

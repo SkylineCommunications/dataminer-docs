@@ -20,4 +20,4 @@ SLProtocol was not able to read out the element settings of element "x".
 
 ## Resolution
 
-Check whether the correct tags were specified in the *element.xml* file of element "x".
+Check whether the settings of element "x" are correct.

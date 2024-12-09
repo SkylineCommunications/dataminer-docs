@@ -485,9 +485,6 @@ article ul li, article ol li {
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
-	.container {
-	width: 100%;
-	}
 	.sidefilter {
 	  width: 33.3%;
 	}
@@ -500,9 +497,6 @@ article ul li, article ol li {
 }
 
 @media (min-width: 992px) and (max-width: 1768px) {
-  .container {
-    width: 100%;
-  }
   .sidefilter {
     width: 25%;
   }
@@ -517,9 +511,6 @@ article ul li, article ol li {
 }
 
 @media (min-width: 1769px) {
-  .container {
-    width: 1752px;
-  }
   .sidefilter {
     width: 438px;
   }
@@ -531,6 +522,12 @@ article ul li, article ol li {
   }
   .col-md-10{width:75%}
   .col-md-2{width:25%}
+}
+
+@media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1768px;
+    }
 }
 
 a.backtotoplink

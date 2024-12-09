@@ -228,9 +228,6 @@ items:
         items:
           - name: Behavioral anomaly detection
             topicUid: Behavioral_anomaly_detection
-            items:
-              - name: Providing feedback on behavioral anomalies
-                topicUid: Providing_feedback_on_behavioral_anomalies
           - name: Proactive cap detection
             topicUid: Proactive_cap_detection
           - name: Automatic incident tracking
@@ -240,6 +237,8 @@ items:
               topicUid: Customizing_alarm_grouping_rules
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
+          - name: Providing user feedback
+            topicUid: Providing_user_feedback
           - name: Tutorials
             items:
             - name: Detecting anomalies with DataMiner
@@ -412,7 +411,7 @@ items:
                 topicUid: Configuring_alarm_template_information_message
               - name: Using conditions in an alarm template
                 topicUid: Using_conditions_in_an_alarm_template
-              - name: Configuring anomaly detection alarms for specific parameters
+              - name: Configuring Augmented Operations alarm settings
                 topicUid: Configuring_anomaly_detection_alarms
               - name: Setting the autoclear options for alarms in an alarm template
                 topicUid: Setting_the_autoclear_option_in_alarm_template

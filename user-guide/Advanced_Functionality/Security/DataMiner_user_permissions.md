@@ -943,6 +943,10 @@ Available from DataMiner 10.2.0/10.1.12 onwards. Permission to add or edit servi
 
 Available from DataMiner 10.2.0/10.1.12 onwards. Permission to delete profile instances.
 
+#### Modules \> Swarming
+
+Available from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> Permission to trigger [swarming](xref:Swarming).
+
 ### Modules \> System configuration \> Agents
 
 #### Modules \> System configuration \> Agents \> UI available

@@ -13,6 +13,7 @@ RCA is supported on:
 - a collection of parameters of one specific element (internal chain).
 
 > [!NOTE]
+>
 > - Virtual functions are supported in RCA chains from DataMiner 10.1.11/10.2.0 onwards.
 > - Virtual function alarms reside on the main element. When multiple virtual functions are defined in different element connectivity chains, the RCA with the highest severity will be shown in the element RCA of the alarm.
 

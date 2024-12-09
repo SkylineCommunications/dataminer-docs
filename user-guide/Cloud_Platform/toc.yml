@@ -68,6 +68,8 @@ items:
     items:
     - name: Best practices when documenting Catalog items
       topicUid: Best_Practices_When_Documenting_Catalog_Items
+  - name: Changing the publishing state of a Catalog item
+    topicUid: Change_Catalog_Publishing_State
   - name: Deploying a Catalog item
     topicUid: Deploying_a_catalog_item
   - name: Tutorials
@@ -161,4 +163,3 @@ items:
     topicUid: Disconnecting_from_dataminer.services
   - name: Enabling kernel response buffering for DataMiner APIGateway
     topicUid: Enabling_kernel_response_buffering
-

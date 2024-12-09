@@ -33,6 +33,13 @@ Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-s
 - **Minimum version**: 10.2.7
 - **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id-33215-id-36489))
 
+### BookingSwarming
+
+Makes it possible to [swarm bookings](xref:SwarmingBookings).
+
+- **Minimum version**: 10.5.1
+- **Release version**: To be determined
+
 ### BrokerGateway
 
 Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.
@@ -92,10 +99,22 @@ Enables the use of DOM data in dashboards and applications.
 
 ### DynamicUnits
 
-Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
+Allows you to enable dynamic units in Data Display in DataMiner Cube. When enabled, many numerical values are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.4 GB.
+
+The following units are automatically converted:
+
+- Bytes: B, kB, MB, GB, TB, PB, EB, ZB, YB
+- Kibibytes: KiB, MiB, GiB, TiB, PiB, EiB, ZiB, YiB
+- Bits: b, kb, Mb, Gb, Tb, Pb, Eb, Zb, Yb
+- Bits per second: bps, kbps, Mbps, Gbps, Tbps, Pbps, Ebps, Zbps, Ybps
+- Bytes per second: Bps, kBps, MBps, GBps, TBps, PBps, ZBps, YBps
+
+From DataMiner 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 onwards<!--RN 41436-->, this soft-launch feature is released and is enabled by default. To disable it, set this soft-launch option to *false*.
+
+In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, this feature is disabled by default. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
-- **Estimated release version**: To be determined.
+- **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
 ### Functions
 
@@ -152,14 +171,16 @@ Enables the alarm list component in the Dashboards app.
 
 ### ReportsAndDashboardsAutomationScript
 
-Enables the Automation script component in the Dashboards app.
+Enables the Automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters. If the *ReportsAndDashboardsButton* option is also enabled, one button component will be available that can be used with an Automation script or with a button parameter.
 
 - **Minimum version**: 9.6.8
 - **Estimated release version**: To be determined
 
 ### ReportsAndDashboardsButton
 
-Enables the button component in the Dashboards app.
+Enables the parameter button component in the Dashboards app. This component requires button parameters as data and can be used to trigger button parameters.
+
+If the *ReportsAndDashboardsAutomationScript* option is also enabled, the button acts as an Automation script component instead unless a button parameter is added.
 
 - **Minimum version**: 10.0.3
 - **Estimated release version**: To be determined
@@ -190,7 +211,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.12
+- **Estimated release version**: 10.5.2
 
 ### ReportsAndDashboardsPTP
 
@@ -256,6 +277,10 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 Enables [Swarming](xref:Swarming) support for eligible systems.
 
 - **Minimum version**: 10.3.11
+- **Release version**: DataMiner 10.5.1/10.6.0<!-- RN 41490 -->
+
+> [!NOTE]
+> This soft-launch option is not supported in the Main Release track.<!-- RN 38016+41258 -->
 
 ### UseWebIAS
 

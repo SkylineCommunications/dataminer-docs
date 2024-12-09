@@ -9,6 +9,143 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
+
+### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
+
+### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
+
+From now on, you can create an API key on organization level with the "Retrieve usage data" permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
+
+The swagger documentation pages about the available Usage API calls are available in the following locations:
+
+- [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
+  - Get the features for which usage data might be available. Example features: `Automation`, `Storage as a Service`.
+  - Get the metrics of a feature. Example metrics: `Script Runs` for the Automation feature, `Operations` for the Storage as a Service feature.
+- [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
+  - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties or based on DataMiner System. These "splitters" can for example be `Script Name` or `Succeeded` for Automation, and `Category` or `SubCategory` for Storage as a Service.
+
+### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
+
+From now on, the emails with the download link for usage exports or audit exports will use the same template as other emails sent from dataminer.services.
+
+### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
+
+When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
+
+### 25 November 2024 - Fix - Catalog API - Registration with existing ID from other organization returned internal server error [ID 41515]
+
+When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
+
+### 25 November 2024 - New feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
+
+It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
+
+### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
+
+On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Admin - Warning in case DataMiner version dependency is not met for DxM [ID 41459]
+
+On the *DxMs* page in the Admin app, when a DataMiner version dependency is not met for a DxM, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
+
+On the Catalog browse page, the *Type* filter will now group its available values by category.
+
+The following Catalog types have been updated or introduced:
+
+ Category               | Type (before)      | Type (new)         |
+------------------------|--------------------|--------------------|
+ Data Ingest            | Connector          | Connector          |
+ Data Ingest            | Scripted Connector | Scripted Connector |
+ Data Processing        | Ad Hoc Data Source | Ad Hoc Data Source |
+ Data Processing        | Automation Script  | Automation         |
+ Data Processing        | Data Transformer   | Data Transformer   |
+ Data Processing        | Data Query         | Data Query         |
+ Data Consumption       | ChatOps Extension  | ChatOps Extension  |
+ Data Consumption       | Dashboard          | Dashboard          |
+ Data Consumption       | User-Defined API   | User-Defined API   |
+ Data Consumption       | Visual Overview    | Visual Overview    |
+ Solutions              | /                  | Product Solution   |
+ Solutions              | Standard Solution  | Standard Solution  |
+ Solutions              | Solution           | Custom Solution    |
+ Productivity & Utility | /                  | DevTool           |
+ Productivity & Utility | /                  | System Health      |
+
+The following types have been removed:
+
+- Best Practices Analyzer
+- Enhanced Service Model
+- Function Definition
+- Life Cycle Service Orchestration
+- Low-Code App
+- Process Activity
+- Profile-Load Script (now considered Automation)
+- Sample Solution
+- SLA Model
+- Testing Solution
+
+### 25 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
+
+On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
+
+### 25 November 2024 - New feature - Catalog API - Get Catalog item categories [ID 41411]
+
+The user, service, and public Catalog APIs have been extended with a categories call to obtain all categories supported in Catalog:
+
+- "/api/user-catalog/v2-0/catalogs/categories"
+- "/api/public-catalog/v2-0/catalogs/categories"
+- "/api/service-catalog/v1-0/catalogs/categories"
+
+### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
+
+On the Catalog details page, if the publisher is not from your currently selected organization or Skyline Communications, the tag "External" will be shown next to the publisher in the side panel.
+
+### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
+
+On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
+
+### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
+
+Up to now, when you opened the versions section of an item without any versions, it would stay in a loading state. This has now been fixed: an info message will be shown saying this item does not have any versions.
+
+### 7 November 2024 - Enhancement - Catalog - Permalinks shown for titles of a Catalog description [ID 41322]
+
+The description of an item will now show a link next to the titles in the form of a "#". This link can be copied and shared with other users and will open the current page at the selected title.
+
+### 7 November 2024 - Enhancement - Catalog - Support for relative (local) links in the description of an item [ID 41319]
+
+On the Catalog details page, headings can now be linked to. You can link to the heading using the relative link from their markdown source. If a fragment link (indicated by # in the URL) is detected, the details page will scroll to the corresponding heading.
+
+### 7 November 2024 - Enhancement - Sharing - Email now set when user leaves input field [ID 41244]
+
+After a user fills in the email input field and leaves it, the email will now be saved and the share button will be enabled.
+
+### 7 November 2024 - Fix - Sharing - Share button not enabled after setting expiration date [ID 41244]
+
+Previously, when you enabled the expiration date for a share and then set a date, the share button would still be disabled. This has now been fixed: as soon as you set an expiration date, the share button will be enabled.
+
+### 7 November 2024 - Enhancement - Admin app - Audit export rephrased [ID 41234]
+
+From now on, the audit export entry will have a better title, e.g. "Usage export by ...".
+
+#### 7 November 2024 - Fix - Catalog API - Missing search results [ID 41226]
+
+When items had no reference to a vendor, it could occur that they were not included in search results.
+
+#### 7 November 2024 - Enhancement - Catalog - Catalog versioning format updated [ID 41225]
+
+​The Catalog API now allows all formats when registering a version of a Catalog item.
+
+- Versions following semantic version A.B.C.D will be displayed in an A.B.C range.
+- Versions following semantic version A.B.C will be displayed in an A range
+- All other version formats will be displayed in the "Other" range.
+
 #### 28 October 2024 - Enhancement - Admin app - Audit export file download with a trusted dataminer.services URL [ID 41239]
 
 From now on, the audit export emails will contain a trusted dataminer.services URL for the file download.
@@ -17,6 +154,22 @@ From now on, the audit export emails will contain a trusted dataminer.services U
 
 Enhancements have been implemented to the *Audit* page in the [Admin app](https://admin.dataminer.services), improving the stability, availability, and performance with immediate effect.
 
+#### 24 October 2024 - Enhancement - Catalog API - Catalog registration using a DMS key [ID 41215]
+
+The Catalog API can now be used with a DMS key for authentication providing compatibility with existing pipelines that deployed a Catalog item on a DMS.
+
+#### 24 October 2024 - Enhancement - Catalog - Improved the way tags of a Catalog item are displayed [ID 41182]
+
+Tags of a Catalog item will now be shown based on the available space. If a tag is too large, it will be grouped in a "+x" tag that will show the values of the grouped tags when hovered over.
+
+#### 24 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
+
+The style of the headings in the Catalog has been adjusted to match the overall style of the application.
+
+#### 24 October 2024 - Enhancement - Catalog - Catalog description supports markdown alert styling [ID 41053]
+
+Alert styling in the Catalog description readme.md is now supported. The currently supported types are "Caution", "Important", "Note", "Tip", and "Warning".
+
 #### 22 October 2024 - Enhancement - Admin app - Irrelevant modules no longer shown on DxMs page [ID 41187]
 
 Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) will no longer be shown.
@@ -24,10 +177,6 @@ Modules for which no updates are provided on the DxMs page in the [Admin app](ht
 #### 18 October 2024 - Enhancement - ChatOps - Enhanced stability and performance of Teams Chat Integration [ID 41149]
 
 Enhancements have been implemented to the Teams Chat Integration feature, ensuring improvements in stability, availability, and performance with immediate effect.
-
-#### 17 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
-
-The style of the headings in the Catalog has been adjusted to match the overall style of the application.
 
 #### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
 
@@ -80,6 +229,15 @@ When a search is performed in the Catalog, the search result items will now cont
 #### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40948]
 
 When you searched or browsed in the Catalog using the visibility setting "All", DVE connectors were included in the results, while this should not happen because these do not have versions that can be deployed.
+
+#### 8 October 2024 - Enhancement - Catalog API - V1 APIs removed [ID 41016]
+
+The following APIs are no longer available:
+
+- PublicCatalog V1
+- UserCatalog V1
+
+Instead, the V2 versions of these APIs should now be used.
 
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
@@ -289,11 +447,11 @@ Users can now view documentation for all items, if provided.
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
-#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
+#### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 
 It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
 
-#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID 40144]
+#### 23 July 2024 - New feature - Catalog - Support for more Catalog types [ID 40144]
 
 The following new Catalog types are now supported:
 

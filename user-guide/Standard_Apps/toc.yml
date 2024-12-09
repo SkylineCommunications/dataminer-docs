@@ -292,6 +292,13 @@ items:
             topicUid: Installing_DataMiner_Objects_Tool
           - name: Working with the DataMiner Objects Tool
             topicUid: Using_DataMiner_Objects_Tool
+      - name: Performance Analyzer solution
+        topicUid: Performance_Analyzer
+        items:
+          - name: Performance Analyzer library
+            topicUid: Performance_Analyzer_Library
+          - name: Performance Analyzer app
+            topicUid: Performance_Analyzer_LCA
       - name: DataMiner Ping Monitoring
         topicUid: PingMonitoring
         items:
@@ -303,6 +310,8 @@ items:
             topicUid: Ping_Monitoring_UI
           - name: Managing groups and destinations
             topicUid: Ping_Monitoring_managing_groups_destinations
+          - name: Getting started tutorial
+            topicUid: Tutorial_Apps_Ping_Monitoring_App
       - name: DataMiner Planned Maintenance (PLM) tool
         topicUid: DataMiner_PLM_Tool_Overview
         items:
@@ -346,6 +355,8 @@ items:
                 topicUid: Processor_configuration
               - name: Monitoring processed traps
                 topicUid: Monitoring_Processed_Traps
+          - name: Getting started tutorial
+            topicUid: Smart_Trap_Processor_Tutorial
       - name: DataMiner TAG Management app
         topicUid: Overview_TAG_App
         items:

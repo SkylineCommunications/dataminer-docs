@@ -4,6 +4,9 @@ uid: Setting_up_an_offload_database
 
 # Setting up an offload database
 
+> [!NOTE]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.
+
 ## Server configuration
 
 The first step in setting up an offload or "central" database is the configuration of the server that will host the offload database.
