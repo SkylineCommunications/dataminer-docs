@@ -18,6 +18,7 @@ uid: General_Feature_Release_10.5.1
 
 ## Highlights
 
+- [Alarms - Proactive cap detection: User feedback [ID 41371]](#alarms---proactive-cap-detection-user-feedback-id-41371)
 - [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490)
 
 ## New features
