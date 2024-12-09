@@ -4,7 +4,12 @@ uid: Feature_overview
 
 # Feature overview
 
-Below you can find an overview of the main features that have been added to DataMiner in recent versions. Features that were already included in versions prior to the [currently supported DataMiner versions](xref:Software_support_life_cycles) are not included in the overview.
+Below you can find an overview of the main features that have been added to DataMiner in recent versions. Features that were released in versions prior to the [currently supported DataMiner versions](xref:Software_support_life_cycles) are not included in the overview.
+
+> [!NOTE]
+>
+> - From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically be upgraded to the latest version if [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions) and depending on the selected [Cube update track](xref:Managing_the_start_window#selecting-your-cube-update-track). This way you can have access to the latest Cube features even if you still use an older DataMiner version on the server.
+> - For many DataMiner web apps features, it is sufficient to [upgrade the web apps only](xref:Upgrading_Downgrading_Webapps). However, to upgrade to a 10.5.x version of the web apps, the server must first be upgraded to at least version 10.4.0/10.4.1. If other server limitations apply, these are listed below.
 
 |Feature | Minimum required version(s) |
 |---|---|
@@ -14,6 +19,7 @@ Below you can find an overview of the main features that have been added to Data
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
 | Automation: [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) property | DataMiner web 10.4.1/10.5.0 <!-- [ID 37659] -->|
 | Automation: [SkipAbortConfirmation](xref:Skyline.DataMiner.Automation.UIBuilder.SkipAbortConfirmation) property | DataMiner 10.4.12/10.5.0<!-- [ID 40720] --> |
+| Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
 | Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
 | Dashboards/Low-Code Apps: [Variables](xref:Variables) | DataMiner web 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 <!-- [ID 41039] [ID 41063] [ID 41132] -->|
@@ -35,8 +41,11 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
+| Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
 | Visual Overview: [*RegexMatch* placeholder](xref:Placeholders_for_variables_in_shape_data_values#regexmatchxyoptions) | DataMiner Cube 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 <!-- [ID 39763] -->|
+
+<!-- to be confirmed by cloud team: | Storage as a Service (STaaS) | 10.3.10 [CU1]/10.4.0 [CU0] | -->
 
 ## Connectors
 
@@ -67,12 +76,6 @@ Below you can find an overview of the main features that have been added to Data
 |---|---|---|---|
 | Automatic Cube updates | 10.2.0 [CU3]/10.2.6 |   | |
 
-## dataminer.services
-
-|Feature | Minimum DataMiner version | Minimum soft-launch version | Notes |
-|---|---|---|---|
-| Storage as a Service (STaaS) | 10.3.10 [CU1] |   | |
-
 ## Security
 
 |Feature | Minimum DataMiner version | Minimum soft-launch version | Notes |
@@ -92,7 +95,6 @@ Below you can find an overview of the main features that have been added to Data
 |Feature | Minimum DataMiner version | Minimum soft-launch version | Notes |
 |---|---|---|---|
 | Alarm list component | 10.1.5/10.2.0 | 9.6.8 | |
-| [Automatic backup of all dashboards and low-code apps during DMA upgrade or Web upgrade](xref:Upgrading_Downgrading_Webapps#automatic-backup) | 10.3.11/10.3.0 [CU8] |   | |
 | Button panel component | 10.3.9/10.4.0 | 10.0.3 | |
 | [DataMiner web upgrades](xref:Upgrading_Downgrading_Webapps) | 10.3.0/10.3.3 |   | |
 | Export to PDF (in Dashboards app) | 10.2.12/10.3.0 | 9.6.4 | |
