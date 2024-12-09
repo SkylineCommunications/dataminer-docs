@@ -9,8 +9,7 @@ From DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->, the `DomInstance` CRUD he
 In DataMiner 10.5.0/10.5.2<!-- RN 41546 -->, the error handling has been reviewed. This page contains examples on how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
 
 > [!IMPORTANT]
-> In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2<!-- RN 37891 -->, when any validation issue occurs, no exception is thrown when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
-> The `TryCreateOrUpdate` or `TryDelete` methods are not available in those versions.
+> In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2<!-- RN 41546 -->, when any validation issue occurs, no exception is thrown when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed. The `TryCreateOrUpdate` or `TryDelete` methods are not yet available in those versions.
 
 ## Creating multiple DomInstances
 
