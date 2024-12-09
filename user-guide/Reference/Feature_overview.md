@@ -15,8 +15,16 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
 | Dashboards/Low-Code Apps: [Variables](xref:Variables) | DataMiner web 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 <!-- [ID 41039] [ID 41063] [ID 41132] -->|
 | Dashboards/Low-Code Apps: [*Search input* component](xref:DashboardSearchInput) | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 <!-- [ID 39555] -->|
+| DOM: [Calculating changes to a DOM instance](xref:ExecuteScriptOnDomInstanceActionSettings#calculating-changes-done-to-a-dom-instance-in-a-crud-script) | DataMiner 10.4.3/10.5.0 <!-- [ID 38364] -->|
+| [Elasticsearch to OpenSearch migration tool](xref:Migrating_from_Elasticsearch_to_OpenSearch) | DataMiner 10.4.0 [CU2]/10.4.4<!-- [ID 37994] --> |
+| GQI: [Custom sort order](xref:GQI_Redirect_Sort_Tutorial) | DataMiner 10.4.5/10.5.0 <!-- [ID 39136] -->|
+| GQI: [Logging](xref:GQI_Logging) | DataMiner 10.4.0/10.4.4 <!-- [ID 38870] --> |
+| GQI: [Logging of metrics](xref:GQI_Logging#metrics) | DataMiner 10.4.0 [CU3]/10.4.5 <!-- [ID 39098] -->|
+| GQI: [Real-time updates for ad hoc data sources](xref:GQI_IGQIUpdateable) | DataMiner 10.4.4/10.5.0 <!-- [ID 38643] --> |
 | Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
 | Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
+| Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
+| Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with soft-launch option (Feature Release only)<!-- [ID 41490] --> |
 | Visual Overview: [*RegexMatch* placeholder](xref:Placeholders_for_variables_in_shape_data_values#regexmatchxyoptions) | DataMiner Cube 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 <!-- [ID 39763] -->|
 
@@ -38,8 +46,6 @@ Below you can find an overview of the main features that have been added to Data
 | Data offload to multiple OpenSearch clusters | 10.3.0/10.3.3 |   | |
 | Elasticsearch TLS | 10.3.7/10.3.0 [CU4] |   | |
 | Exporting/importing logger table data saved in an indexing database | 10.1.4/10.2.0 |   | |
-| Migrating data to STaaS via a proxy | 10.4.6 |   |   |
-| [Migrating from Elasticsearch to OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch) | 10.4.0 [CU2]/10.4.4 |   | |
 | [Migrating SRM resources to the indexing database](xref:Resources_migration_to_elastic) | 10.3.0/10.3.2 |   | |
 | OpenSearch cluster | 10.3.0/10.3.3 |   | |
 | [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch) | 10.2.0/10.1.8 |   | |
@@ -98,7 +104,5 @@ Below you can find an overview of the main features that have been added to Data
 | DataMiner Object Models (DOM) | 10.1.2/10.2.0 |   | |
 | Failover using a shared hostname instead of virtual IP addresses | 10.2.0/10.1.8 |   | |
 | gRPC connections between DMAs and between DMAs and client applications | 10.3.2/10.3.0 |   | |
-| NATS using TLS | 10.4.3 |   | |
-| Real-time updates in ad hoc data sources | 10.4.4/10.5.0 |   | |
 | SLProtocol as a 64-bit process | 10.3.9 | 10.1.8 | |
 | User-defined APIs | 10.3.6/10.4.0 | 10.3.5 | |
