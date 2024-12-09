@@ -9,9 +9,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.2.2
 
-#### Clear cached property definitions when calling PropertyExists [ID 41610]
+#### Cached property definitions cleared when PropertyExists is called [ID 41610]
 
-​The property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted on DataMiner would still be present in the cache of the class library.
+​The property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted in DataMiner would still be present in the cache of the class library.
 
 ### 1.1.2.1
 
