@@ -451,6 +451,8 @@ items:
         topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
+  - name: Feature overview
+    topicUid: Feature_overview
   - name: Soft-launch options
     topicUid: SoftLaunchOptions
     items:
