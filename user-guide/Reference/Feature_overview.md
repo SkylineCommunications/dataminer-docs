@@ -9,6 +9,7 @@ Below you can find an overview of the main features that have been added to Data
 |Feature | Minimum required version(s) |
 |---|---|
 | Augmented operations: [Anomaly feedback](xref:Providing_user_feedback) | DataMiner 10.4.11/10.5.0<br>DataMiner 10.4.4 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#anomalyfeedback)<!-- [ID 38707] [ID 38980] [ID 39944] --> |
+| Augmented operations: [Configuration of behavioral anomaly alarms](xref:Configuring_anomaly_detection_alarms) | DataMiner 10.3.12/10.4.0 <!-- [ID 36857] [ ID 37148] -->|
 | Augmented operations: [Proactive cap detection feedback](xref:Providing_user_feedback) | DataMiner 10.5.1/10.6.0<!-- [ID 41371] --> |
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
 | Automation: [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) property | DataMiner web 10.4.1/10.5.0 <!-- [ID 37659] -->|
