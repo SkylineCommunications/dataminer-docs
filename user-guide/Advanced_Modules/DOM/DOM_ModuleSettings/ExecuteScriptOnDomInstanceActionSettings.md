@@ -82,7 +82,7 @@ public class Script
 
 ### Calculating changes done to a DOM instance in a CRUD script
 
-From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
+From DataMiner 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
 
 The `GetDifferences` method returns an object `DomInstanceDifferences`. This contains the differences of the `DomInstance`:
 
