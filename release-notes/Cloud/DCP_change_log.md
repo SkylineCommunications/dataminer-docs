@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 9 December 2024 - Enhancement - Remote Access - Improved upload speed [ID 41662]
 
-From now on, there will be an improved upload speed for remote access requests. This will mainly affect file uploads, for example in cube when uploading a protocol or upgrade package.
+The upload speed for remote access requests has been improved. This will mainly affect file uploads, for example in Cube when uploading a protocol or upgrade package.
 
 ### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
 
