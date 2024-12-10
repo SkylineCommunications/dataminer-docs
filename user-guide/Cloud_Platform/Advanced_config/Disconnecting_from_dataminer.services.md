@@ -78,7 +78,5 @@ To disconnect a DataMiner System from dataminer.services:
       > [!WARNING]
       > This action is **irreversible** and can have far-reaching consequences for your DataMiner System. Always consult with a Skyline DevOps Engineer before you use this option.
 
-   1. Contact Skyline Communications to remove the remaining information for your DMS from dataminer.services.
-
 > [!NOTE]
 > Performing either of the two main steps above is already enough to disconnect the DMS. However, if you only delete the DMS on dataminer.services, the DMS will still try to reach dataminer.services, and if you only unregister the DMS, the information related to the DMS will still be displayed on dataminer.services.
