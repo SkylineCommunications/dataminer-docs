@@ -18,6 +18,19 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ## New features
 
+#### Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In dashboards and low-code apps, you can now use a new variable `DMAIP`, which contains the hostname and the IP port of the URL.
+
+Examples:
+
+| URL | DMAIP value |
+|-----|-------------|
+| `https://myaddress.skyline.local/dashboard/#/db/SLC/QA%20tables.dmadb` | myaddress.skyline.local |
+| `https://localhost:4200/#/db/SLC/QA%20tables.dmadb` | localhost:4200 |
+
 ## Changes
 
 ### Enhancements

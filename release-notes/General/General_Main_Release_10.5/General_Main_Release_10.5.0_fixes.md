@@ -265,6 +265,12 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 
+#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
+
 #### Problem with SNMPv3 elements after upgrading from Main Release version 10.4.0 CU6 (or later) to Feature Release version 10.4.x (10.4.9 to 10.4.12) [ID 41630]
 
 <!-- MR 10.5.0 - FR 10.5.1 [CU0] -->

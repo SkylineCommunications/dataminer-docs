@@ -33,6 +33,12 @@ Because of a number of enhancements, overall performance has increased when upda
 
 ### Fixes
 
+#### SLNet could stop working due to NATS throwing an exception [ID 41396]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, SLNet could stop working due to NATS throwing an exception.
+
 #### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
@@ -45,6 +51,8 @@ A cast and type check has now been added to the following calls in order to prev
 - `protocol.FillArray(...)`
 - `protocol.FillArrayNoDelete(...)`
 - `protocol.NotifyProtocol(220, ...)`
+
+From now on, when an invalid type is passed to one of these methods, the error that is thrown will automatically be logged in the element's log file.
 
 #### Problem with SLDataMiner when deleting a connector [ID 41520]
 
