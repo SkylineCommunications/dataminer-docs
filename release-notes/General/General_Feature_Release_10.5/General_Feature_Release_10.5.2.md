@@ -133,6 +133,12 @@ From now on, when an invalid type is passed to one of these methods, the error t
 
 In some rare cases, SLDataMiner could stop working when a connector was deleted immediately after an element using that connector had been deleted.
 
+#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
+
 #### DataMiner Maps: Markers that did not match the alarm level filter would become visible for a split second [ID 41555]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
