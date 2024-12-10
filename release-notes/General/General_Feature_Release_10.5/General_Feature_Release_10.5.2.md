@@ -125,6 +125,8 @@ A cast and type check has now been added to the following calls in order to prev
 - `protocol.FillArrayNoDelete(...)`
 - `protocol.NotifyProtocol(220, ...)`
 
+From now on, when an invalid type is passed to one of these methods, the error that is thrown will automatically be logged in the element's log file.
+
 #### Problem with SLDataMiner when deleting a connector [ID 41520]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
