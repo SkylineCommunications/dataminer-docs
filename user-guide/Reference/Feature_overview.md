@@ -13,7 +13,8 @@ Below you can find an overview of the main features that have been added to Data
 
 |Feature | Minimum required version(s) |
 |---|---|
-| Augmented operations: [Alarm Console light bulb](xref:Light_Bulb_Feature) | DataMiner 10.3.10/10.4.0<!-- [ID 36777] --> |
+| Augmented operations: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph) | DataMiner Cube 10.2.12/10.3.0 <!-- [ID 34432] -->|
+| Augmented operations:[Alarm Console light bulb](xref:Light_Bulb_Feature) | DataMiner 10.3.10/10.4.0<!-- [ID 36777] --> |
 | Augmented operations: [Anomaly feedback](xref:Providing_user_feedback) | DataMiner 10.4.11/10.5.0<br>DataMiner 10.4.4 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#anomalyfeedback)<!-- [ID 38707] [ID 38980] [ID 39944] --> |
 | Augmented operations: [Configuration of behavioral anomaly alarms](xref:Configuring_anomaly_detection_alarms) | DataMiner 10.3.12/10.4.0 <!-- [ID 36857] [ ID 37148] -->|
 | Augmented operations: [Managing pattern definitions](xref:Managing_pattern_definitions) | DataMiner Cube 10.3.6/10.4.0 <!-- [ID 35694] [ID 36114] -->|
@@ -27,11 +28,13 @@ Below you can find an overview of the main features that have been added to Data
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
 | Cube: [Hiding the close button](xref:Working_with_cards_in_DataMiner_Cube#marking-cards-as-non-closable) and [Selecting a Master card](xref:Working_with_cards_in_DataMiner_Cube#selecting-a-master-card) | DataMiner Cube 10.3.9/10.4.0 <!-- [ID 36912] [ID 36956] --> |
 | Cube: [*UseInitialArgumentsAfterDisconnect* argument](xref:Options_for_opening_DataMiner_Cube#useinitialargumentsafterdisconnecttrue) | DataMiner Cube 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 <!-- [ID 37888] --> |
+| Dashboards: [PDF export](xref:Sharing_PDF_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
 | Dashboards/Low-Code Apps: [*Form* component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
 | Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
+| Dashboards/Low-Code Apps: [*Icon* component](xref:DashboardIcon) | DataMiner 10.3.1/10.4.0 <!-- [ID 34867] -->|
 | Dashboards/Low-Code Apps: [*Numeric input* component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
 | Dashboards/Low-Code Apps: [*Query filter* component](xref:DashboardQueryFilter) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.4 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) <!-- [ID 33530] --> |
 | Dashboards/Low-Code Apps: [*Search input* component](xref:DashboardSearchInput) | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 <!-- [ID 39555] -->|
@@ -41,6 +44,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [Variables](xref:Variables) | DataMiner web 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 <!-- [ID 41039] [ID 41063] [ID 41132] -->|
 | Dashboards/Low-Code Apps: [*Timeline* component](xref:DashboardTimeline) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.1.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) <!-- [ID 37812] -->|
 | Dashboards/Low-Code Apps: [*Table* component column customization](xref:DashboardTable#column-appearance) | DataMiner web 10.4.1/10.5.0 <!-- [ID 37522] -->|
+| [Data Aggregator](xref:Data_Aggregator_DxM) | 10.2.12/10.3.0 |
 | Database: [OpenSearch indexing database](xref:OpenSearch_database) | DataMiner 10.3.0/10.3.3 |
 | Database: [Resource migration to Elasticsearch](xref:Resources_migration_to_elastic) | DataMiner 10.3.0/10.3.2 <!-- [ID 33797] -->|
 | DOM: [Calculating changes to a DOM instance](xref:ExecuteScriptOnDomInstanceActionSettings#calculating-changes-done-to-a-dom-instance-in-a-crud-script) | DataMiner 10.4.3/10.5.0 <!-- [ID 38364] -->|
@@ -66,9 +70,11 @@ Below you can find an overview of the main features that have been added to Data
 | Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
 | [Storage as a Service (STaaS)](xref:STaaS) | DataMiner 10.4.0/10.4.1 |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
+| [Table-based matrix](xref:UIComponentsTableMatrix) | DataMiner 10.3.1/10.4.0 <!-- [ID 34645] -->|
 | Visual Overview: [*BookingData* component](xref:Linking_a_shape_to_a_booking#making-the-booking-shape-display-booking-information) | DataMiner Cube 10.3.8/10.4.0<br>DataMiner 10.2.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#bookingdata)<!-- [ID 33215] [ID 36489] --> |
 | Visual Overview: [EPM statistics](xref:Linking_a_shape_to_an_EPM_object#showing-statistics-for-the-epm-object-in-the-shape-text) | DataMiner Cube 10.3.2/10.4.0 <!-- [ID 35222] --> |
 | Visual Overview: [*RegexMatch* placeholder](xref:Placeholders_for_variables_in_shape_data_values#regexmatchxyoptions) | DataMiner Cube 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 <!-- [ID 39763] -->|
+
 
 
 
@@ -109,7 +115,6 @@ Below you can find an overview of the main features that have been added to Data
 |Feature | Minimum DataMiner version | Minimum soft-launch version | Notes |
 |---|---|---|---|
 | Alarm list component | 10.1.5/10.2.0 | 9.6.8 | |
-| Export to PDF (in Dashboards app) | 10.2.12/10.3.0 | 9.6.4 | |
 | Low-code apps | 10.2.5/10.3.0 | 10.0.8 | |
 | Message throttling | 10.2.0/10.1.2 |   | |
 | Monitoring app | 10.0.2/10.0.0 | 9.6.7 ||
@@ -118,7 +123,5 @@ Below you can find an overview of the main features that have been added to Data
 
 |Feature | Minimum DataMiner version | Minimum soft-launch version | Notes |
 |---|---|---|---|
-| Data Aggregator DxM | 10.2.12 |   | |
 | DataMiner Object Models (DOM) | 10.1.2/10.2.0 |   | |
 | Failover using a shared hostname instead of virtual IP addresses | 10.2.0/10.1.8 |   | |
-
