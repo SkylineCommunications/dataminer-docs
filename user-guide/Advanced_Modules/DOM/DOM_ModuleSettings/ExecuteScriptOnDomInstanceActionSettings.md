@@ -22,7 +22,7 @@ There are currently two types of script, which each have their own unique entry 
 1. [**Full CRUD meta**](#full-crud-meta-type): Recommended. Uses the `OnDomInstanceCrudWithFullMeta` entry point method. Gives you access to the CRUD type and the full `DomInstance` object(s). Available from DataMiner version 10.3.10/10.4.0 onwards.
 
 > [!NOTE]
-> Prior to DataMiner versions 10.5.2/10.5.0<!-- RN 41536 -->, a "Script started" information event is generated when any of the configured scripts are launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
+> Prior to DataMiner versions 10.5.0/10.5.2<!-- RN 41536 -->, a "Script started" information event is generated when any of the configured scripts are launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
 
 ## ID Only type
 
