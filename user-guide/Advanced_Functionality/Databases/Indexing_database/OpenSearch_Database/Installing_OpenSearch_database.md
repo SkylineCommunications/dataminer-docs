@@ -106,7 +106,6 @@ These are the main steps of the setup:
   discovery.type: zen
   
   indices.query.bool.max_clause_count: 2147483647
-
   ```
 
   > [!NOTE]
@@ -451,3 +450,21 @@ To configure the connection to an OpenSearch database:
 - If you are using a dedicated clustered storage setup, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
 
 - If you are using a setup with storage per DMA, [manually connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
+
+## Monitoring the expiry dates of TLS certificates
+
+Once DataMiner is connected to an OpenSearch database via TLS (see [TLS and user configuration](#tls-and-user-configuration)), it is important that the TLS certificates get **renewed before they expire** to prevent loss of connection to the database.
+
+To monitor expiry dates, we recommend using the **Skyline SSL Certificate Monitor** connector:
+
+1. Make sure the [Skyline SSL Certificate Monitor](https://catalog.dataminer.services/details/382d6771-5162-47ce-aa2a-0f4a0d7ecd6d) connector is [deployed in your DataMiner System](xref:Deploying_a_catalog_item).
+
+1. [Create an element](xref:Adding_elements), selecting *Skyline SSL Certificate Monitor* as the protocol.
+
+1. On the *General* data page of the element, enter the full URL of the OpenSearch node in the *New Site URL* parameter, and click *Add Site*.
+
+1. In the *Sites* table, enter your OpenSearch logon credentials in the *User* and *Password* fields.
+
+1. [Create an alarm template](xref:Creating_an_alarm_template) to monitor the parameter *Remaining Days* of the protocol, and [assign it to the element](xref:Assigning_an_alarm_template).
+
+   ![Alarm template configuration](~/user-guide/images/Skyline_SSL_Certificate_Monitor_thresholds.png)
