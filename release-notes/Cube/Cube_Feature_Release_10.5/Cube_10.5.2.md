@@ -40,6 +40,12 @@ From now on, it will show the following message instead:
 
 `xxx is currently swarming`
 
+#### About box: Enhancements made to 'License' tab [ID 41654]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made with regard to the listing of license information in the *License* tab of the *About* box.
+
 #### Security enhancements [ID 41655]
 
 <!-- 41655: MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
