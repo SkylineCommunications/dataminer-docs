@@ -40,6 +40,12 @@ From now on, it will show the following message instead:
 
 `xxx is currently swarming`
 
+#### Security enhancements [ID 41655]
+
+<!-- 41655: MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Alarm Console: Problem when an alarm tab and an AlarmSummary shape were being loaded simultaneously [ID 41484]
