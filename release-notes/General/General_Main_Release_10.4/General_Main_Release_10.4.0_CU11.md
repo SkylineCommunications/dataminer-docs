@@ -65,3 +65,9 @@ In some rare cases, SLDataMiner could stop working when a connector was deleted 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
+
+#### NATS: A large number of "duplicate route" and "created route" entries would get added to the NATS server logging [ID 41616]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When a DataMiner System included agents in a Failover setup, in some cases, a very large number of "duplicate route" and "created route" entries would get added to the NATS server logging.
