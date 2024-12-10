@@ -4,28 +4,6 @@ uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 
 # Designing a matrix tab page in the Router Control module
 
-This section consists of the following topics:
-
-- [Adding a matrix to a configuration tab page](#adding-a-matrix-to-a-configuration-tab-page)
-
-- [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters)
-
-- [Creating a dynamic tab control](#creating-a-dynamic-tab-control)
-
-- [Adding a component to a matrix tab page](#adding-a-component-to-a-matrix-tab-page)
-
-- [Configuring a component on a matrix tab page](#configuring-a-component-on-a-matrix-tab-page)
-
-- [Deleting a component from a matrix tab page](#deleting-a-component-from-a-matrix-tab-page)
-
-- [Moving a component on a matrix tab page](#moving-a-component-on-a-matrix-tab-page)
-
-- [Attaching a matrix tab page to another matrix element](#attaching-a-matrix-tab-page-to-another-matrix-element)
-
-- [Editing the custom theme of a matrix tab page](#editing-the-custom-theme-of-a-matrix-tab-page)
-
-- [Deleting a matrix tab page](#deleting-a-matrix-tab-page)
-
 ## Adding a matrix to a configuration tab page
 
 1. Select the configuration by clicking its tab to the right of the “Default” tab.
