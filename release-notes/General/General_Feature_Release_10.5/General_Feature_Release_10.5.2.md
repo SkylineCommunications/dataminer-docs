@@ -116,6 +116,12 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
 
+#### SLLogCollector packages will now include a memory dump of the w3wp process [ID 41664]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+From now on, SLLogCollector packages will also include a memory dump of the *w3wp* process. This memory dump will allow you to investigate any issues with the web API.
+
 ### Fixes
 
 #### SLNet could stop working due to NATS throwing an exception [ID 41396]
@@ -178,4 +184,4 @@ From now on, no QAction validation will be performed when the DataMiner Agent do
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-When a DataMiner System included agents in a Failover setup, in some cases, a very large number of "duplicate route" and "created route" entries would get added to the NATS server logging.
+When a large DataMiner System included agents in a Failover setup, the more agents were present in this DMS, the more "duplicate route" and "created route" entries would get added to the NATS server logging.
