@@ -42,10 +42,9 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
+| [Storage as a Service (STaaS)](xref:STaaS) | DataMiner 10.4.0/10.4.1 |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
 | Visual Overview: [*RegexMatch* placeholder](xref:Placeholders_for_variables_in_shape_data_values#regexmatchxyoptions) | DataMiner Cube 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 <!-- [ID 39763] -->|
-
-<!-- to be confirmed by cloud team: | Storage as a Service (STaaS) | 10.3.10 [CU1]/10.4.0 [CU0] | -->
 
 ## Connectors
 
