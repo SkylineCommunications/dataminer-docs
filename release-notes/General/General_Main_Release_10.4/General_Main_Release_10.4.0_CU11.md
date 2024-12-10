@@ -33,6 +33,12 @@ Because of a number of enhancements, overall performance has increased when upda
 
 ### Fixes
 
+#### SLNet could stop working due to NATS throwing an exception [ID 41396]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, SLNet could stop working due to NATS throwing an exception.
+
 #### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
