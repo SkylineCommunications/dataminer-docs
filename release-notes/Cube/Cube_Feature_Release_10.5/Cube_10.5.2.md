@@ -89,3 +89,11 @@ When you tried to open the DataMiner Cube desktop app from the DataMiner Taskbar
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When one of the base alarms of an incident alarm got cleared, in some cases, the incident alarm would incorrectly still show the cleared alarm as a base alarm.
+
+#### System Center - Agents: Problems when sending messages to the DMA that has to perform clustering compatibility checks [ID 41627]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Unhandled exceptions could be thrown when Cube sent messages to the DataMiner Agent that had to perform the necessary clustering compatibility checks before adding a DataMiner Agent to the DMS.
+
+When you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added. Since DataMiner Feature Release 10.5.1, these compatibility checks are no longer performed by Cube but by the DataMiner Agent to which Cube is connected.
