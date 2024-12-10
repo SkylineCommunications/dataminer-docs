@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 10 December 2024 - Enhancement - CloudGateway 2.16.0 - Dependencies updated [ID 41681]
 
-An important dependency has been updated where the cloud connection is based on to proxy most remote access requests over.
+An important dependency has been updated that the dataminer.services connection uses to proxy most remote access requests.
 
 #### 5 December 2024 - Enhancement - CloudGateway 2.15.0 - Improved handling and error logging of invalid certificates [ID 40746]
 
