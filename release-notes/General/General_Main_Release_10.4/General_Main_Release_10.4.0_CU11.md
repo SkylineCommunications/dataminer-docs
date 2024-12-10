@@ -33,6 +33,19 @@ Because of a number of enhancements, overall performance has increased when upda
 
 ### Fixes
 
+#### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When an NT_FILL_ARRAY_WITH_COLUMN call was performed in a QAction, up to now, it would silently fail when providing a string[] (or any other type of object that is allowed in an object[]) instead of an object[] for the keys and values. This would also affect all wrapper methods that accept an object[] argument.
+
+A cast and type check has now been added to the following calls in order to prevent this type mismatch issue from going unnoticed:
+
+- `protocol.FillArrayWithColumn(...)`
+- `protocol.FillArray(...)`
+- `protocol.FillArrayNoDelete(...)`
+- `protocol.NotifyProtocol(220, ...)`
+
 #### Problem with SLDataMiner when deleting a connector [ID 41520]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
