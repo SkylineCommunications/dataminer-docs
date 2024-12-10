@@ -465,4 +465,6 @@ To monitor expiry dates, we recommend using the **Skyline SSL Certificate Monito
 
 1. In the *Sites* table, enter your OpenSearch logon credentials in the *User* and *Password* fields.
 
-1. [Create an alarm template](xref:Creating_an_alarm_template) to monitor the parameter *Remaining Days* of the protocol, and [assign it](xref:Assigning_an_alarm_template) to the element.
+1. [Create an alarm template](xref:Creating_an_alarm_template) to monitor the parameter *Remaining Days* of the protocol, and [assign it to the element](xref:Assigning_an_alarm_template).
+
+   ![Alarm template configuration](~/user-guide/images/Skyline_SSL_Certificate_Monitor_thresholds.png)
