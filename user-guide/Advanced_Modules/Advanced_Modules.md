@@ -46,7 +46,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/user-guide/Advanced_Modules/EPM/EPM.html" title="Experience and Performance Management" target="_self"><img src="~/user-guide/images/Experience_Performance_Management.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Inventory_and_Asset_Management/Inventory_and_Asset_Management.html" title="Inventory & Asset Management" target="_self"><img src="~/user-guide/images/Inventory_Asset_Management.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Inventory_and_Asset_Management/About_DMS_Inventory_Asset_Management.html" title="Inventory & Asset Management" target="_self"><img src="~/user-guide/images/Inventory_Asset_Management.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Job_Manager/Job_Manager.html" title="Job Manager" target="_self"><img src="~/user-guide/images/Job_Manager.svg" style="width:100%"></a>

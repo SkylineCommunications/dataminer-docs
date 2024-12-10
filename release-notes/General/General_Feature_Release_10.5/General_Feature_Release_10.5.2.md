@@ -167,3 +167,9 @@ From now on, no QAction validation will be performed when the DataMiner Agent do
 
 > [!NOTE]
 > The above-mentioned SLNet message is subject to change without notice.
+
+#### NATS: A large number of "duplicate route" and "created route" entries would get added to the NATS server logging [ID 41616]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When a DataMiner System included agents in a Failover setup, in some cases, a very large number of "duplicate route" and "created route" entries would get added to the NATS server logging.

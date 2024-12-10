@@ -16,7 +16,7 @@ uid: General_Main_Release_10.0.0_new_features_1
 
 On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
-##### **Indexing system requirements**
+##### Indexing system requirements
 
 DataMiner Indexing Engine can only be installed on DataMiner Agents with the following characteristics:
 
@@ -151,13 +151,13 @@ In the Users / Groups module, in the category *Modules* > *System configuration
 
 - *Configure*: Determines whether the user can make any changes to the Indexing Engine configuration.
 
-##### **Indexing log information**
+##### Indexing log information
 
 Log information about the Indexing Engine can be found in a new “Search” log file in the *Logging* section of *System Center*.
 
 In addition, the system will continuously monitor the connection with the Indexing database. If for some reason a node of the Indexing database goes down, an alarm will be displayed in the Alarm Console.
 
-##### **GetIndexCountRequest method**
+##### GetIndexCountRequest method
 
 A new *GetIndexCountRequest* method has been added in DataMiner, which can be used to retrieve the number of documents in the indexing database.
 

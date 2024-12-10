@@ -333,7 +333,7 @@ When, after selecting a component in edit mode, you open the *Data* tab and go t
 
 It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
-##### **Configuring an external data source in a query**
+##### Configuring an external data source in a query
 
 This is the most basic procedure to use an external data source in a query:
 

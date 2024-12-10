@@ -40,6 +40,18 @@ From now on, it will show the following message instead:
 
 `xxx is currently swarming`
 
+#### About box: Enhancements made to 'License' tab [ID 41654]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made with regard to the listing of license information in the *License* tab of the *About* box.
+
+#### Security enhancements [ID 41655]
+
+<!-- 41655: MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Alarm Console: Problem when an alarm tab and an AlarmSummary shape were being loaded simultaneously [ID 41484]
@@ -65,6 +77,12 @@ When you opened a parameter-specific alarm, trend or information template editor
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When you had linked an *AlarmSummary* shape to all alarms (i.e. active alarms, masked alarms and information events) by adding a data field of type *AlarmSummary* set to "all", the counter showing the number of masked alarms in the shape text (i.e. "#Masked") would show an incorrect number of alarms.
+
+#### Alarm Console: Linked alarm tab could have incorrect alarm counters when a correlation alarm was cleared [ID 41547]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When, in a linked alarm tab, a correlation rule and its base alarms all matched the linked object, the alarm counters of that alarm tab would be incorrect when the correlation alarm was cleared while (some of) the base alarms remained active.
 
 #### DataMiner Cube desktop app would not open when started from the DataMiner Taskbar Utility [ID 41556]
 
