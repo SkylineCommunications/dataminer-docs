@@ -1016,6 +1016,12 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 > [!NOTE]
 > It will still be possible to install newer versions via the [dataminer.services admin app](https://admin.dataminer.services/).
 
+#### Security Advisory BPA test: Enhancements [ID 41385]
+
+<!-- MR 10.5.0 / 10.4.0 [CU11] - FR 10.5.2 -->
+
+A number of minor enhancements have been made to the *Security Advisory* BPA test.
+
 #### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->

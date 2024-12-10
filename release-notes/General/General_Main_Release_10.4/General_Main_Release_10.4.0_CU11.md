@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU11
 
 ### Enhancements
 
+#### Security Advisory BPA test: Enhancements [ID 41385]
+
+<!-- MR 10.5.0 / 10.4.0 [CU11] - FR 10.5.2 -->
+
+A number of minor enhancements have been made to the *Security Advisory* BPA test.
+
 #### History Manager: A clearer exception will now be thrown when the History Manager API is used after the History Manager has been stopped [ID 41500]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
