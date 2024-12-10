@@ -250,7 +250,6 @@ items:
             - name: Fine-tuning incident tracking
               topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality
-        topicUid: Advanced_alarm_functionality
         items:
           - name: Changing the default alarm colors
             topicUid: Changing_the_default_alarm_colors
