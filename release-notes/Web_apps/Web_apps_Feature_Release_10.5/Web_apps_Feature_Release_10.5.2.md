@@ -103,3 +103,9 @@ When, in the settings of a *Visual overview* component, you changed the page to 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When a custom time zone was configured in a *Timeline* component, up to now, that time zone would not be taken into account by the *Set viewport* action.
+
+#### Dashboards/Low-Code Apps: Table and Grid components could incorrectly keep fetching data after the session had been closed [ID 41670]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some cases, *Table* and *Grid* components could incorrectly keep fetching data from the database after the session had been closed, eventually causing the web page to become unresponsive.
