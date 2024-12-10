@@ -30,7 +30,7 @@ These are the most important things to keep in mind:
 1. Clone the repo *Custom Solutions/Generic/Skyline.DataMiner.Core/DataMinerSystem*.
 
     >[!NOTE]
-    > If you are working remotely and the clone takes longer than 15 minutes, please ask Data Acquisition for assistance (by sending an email to [domain.create.data-acquisition@skyline.be](mailto:domain.create.data-acquisition@skyline.be)).
+    > If you are working remotely and the clone takes longer than 15 minutes, please ask BOOST for assistance (by sending an email to [support.boost@skyline.be](mailto:support.boost@skyline.be)).
 
 1. Select the master branch you want to start with.
 

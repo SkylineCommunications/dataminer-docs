@@ -101,4 +101,4 @@ If you want to provide a starter workflow that can be shared across different or
 In either case, you can then start making changes and finalize them with a pull request.
 
 > [!TIP]
-> If you have any questions concerning a pull request, contact the Skyline Communications [Data Acquisition Domain](mailTo:support.data-acquisition@skyline.be?subject=Pull%20Request%20-%20GitHub%20Workflow%20Contribution&body=Hello,).
+> If you have any questions concerning a pull request, contact the Skyline Communications [BOOST team](mailTo:support.boost@skyline.be?subject=Pull%20Request%20-%20GitHub%20Workflow%20Contribution&body=Hello,).
