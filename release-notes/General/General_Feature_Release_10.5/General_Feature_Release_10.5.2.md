@@ -163,6 +163,17 @@ During start-up, in some cases, DataMiner would use an incorrect IP address when
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
 
+#### DataMiner installer: Problem when upgrading a Hotfix or Cumulative Update version to Feature Version 10.5.1 [ID 41579]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+<!-- Not added MR 10.5.0. CloudFeed added to DataMiner upgrade packages in 10.5.0/10.5.1 (RN 41357)  -->
+
+When DataMiner was upgraded from an older Hotfix or Cumulative Update version to Feature Version 10.5.1, the following would happen:
+
+- An error would occur when trying to parse the version number of the Hotfix or Cumulative Update.
+
+- When checking the DataMiner version, the CloudFeed DxM installer would incorrectly check the current DataMiner version instead of the new DataMiner version.
+
 #### Problems with SLNet call GetProtocolQActionsStateRequestMessage [ID 41591]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
