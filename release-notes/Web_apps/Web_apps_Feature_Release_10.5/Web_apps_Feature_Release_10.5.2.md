@@ -109,3 +109,9 @@ When a custom time zone was configured in a *Timeline* component, up to now, tha
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In some cases, *Table* and *Grid* components could incorrectly keep fetching query rows after the session had been closed, eventually causing the web page to become unresponsive.
+
+#### Web API: DOMHelper could stop working when a DOM instance was updated while a client connection was being closed [ID 41677]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When a DOM instance was updated while a client connection was being closed, in some cases, the DOMHelper could stop working.
