@@ -116,11 +116,11 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
 
-#### SLLogCollector packages will now include a memory dump of the w3wp process [ID 41664]
+#### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-From now on, SLLogCollector packages will also include a memory dump of the *w3wp* process. This memory dump will allow you to investigate any issues with the web API.
+From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
 
 ### Fixes
 
