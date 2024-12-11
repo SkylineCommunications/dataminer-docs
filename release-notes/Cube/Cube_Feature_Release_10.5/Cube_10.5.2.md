@@ -107,3 +107,9 @@ When one of the base alarms of an incident alarm got cleared, in some cases, the
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When a number of correlation rules were updated in bulk, in some cases, some would either be skipped or not processed correctly.
+
+#### Data Display: Thresholds shown in 'Templates' tab would be incorrect when the alarm template was part of a template group [ID 41645]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When, in Data Display, you double-clicked a parameter and then opened the *Templates* tab, the parameter thresholds would be incorrect when the alarm template was part of a template group.
