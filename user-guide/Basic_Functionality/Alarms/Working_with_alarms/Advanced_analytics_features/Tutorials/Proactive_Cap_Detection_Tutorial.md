@@ -8,7 +8,7 @@ In this tutorial, you will learn how to use DataMiner's [proactive cap detection
 
 By default, proactive cap detection is enabled for all trended parameters. Trending is activated by default for the parameters used in this tutorial. For more information about the technical limitations, see the [proactive cap detection](xref:Proactive_cap_detection) page.
 
-Estimated duration: TODO
+Estimated duration: 30 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial were created in **DataMiner 10.5.1**.
@@ -124,7 +124,7 @@ In the previous step, we showed what proactive cap detection can detect out-of-t
 
 1. Click the *Generate Extra Data* button on the element *Proactive Tutorial - SFP Monitor*.
 
-   This will generate data a few more data points for *Optical RX Power* of *Port 1*, causing DataMiner to re-evaluate its prediction. This is equivalent to waiting a few minutes for more data points to come in.
+   This will generate a few more data points for *Optical RX Power* of *Port 1*, causing DataMiner to re-evaluate its prediction. This is equivalent to waiting a few minutes for more data points to come in.
 
    > [!IMPORTANT]
    > Throughout the rest of this tutorial, when generating data, always wait until the *Data Generated?* parameter displays *Yes* before proceeding to the next step.
