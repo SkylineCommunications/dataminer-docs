@@ -26,7 +26,7 @@ Below you can find an overview of the main features that have been added to Data
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
 | Automation: [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) property | DataMiner web 10.4.1/10.5.0 <!-- [ID 37659] -->|
 | Automation: [SkipAbortConfirmation](xref:Skyline.DataMiner.Automation.UIBuilder.SkipAbortConfirmation) property | DataMiner 10.4.12/10.5.0<!-- [ID 40720] --> |
-| Automation: [TriggeredByName](xref:Skyline.DataMiner.Automation.Engine.TriggeredByName) property | 10.2.6/10.3.0 <!-- [ID 33122] -->|
+| Automation: [TriggeredByName](xref:Skyline.DataMiner.Automation.Engine.TriggeredByName) property | DataMiner 10.2.6/10.3.0 <!-- [ID 33122] -->|
 | [Cache for SNMP inform messages](xref:Adjusting_the_SNMP_inform_message_cache_size) | DataMiner 10.1.4/10.2.0 <!-- [ID 29034] -->|
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
@@ -55,7 +55,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [Variables](xref:Variables) | DataMiner web 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 <!-- [ID 41039] [ID 41063] [ID 41132] -->|
 | Dashboards/Low-Code Apps: [*Timeline* component](xref:DashboardTimeline) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.1.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) <!-- [ID 37812] -->|
 | Dashboards/Low-Code Apps: [*Table* component column customization](xref:DashboardTable#column-appearance) | DataMiner web 10.4.1/10.5.0 <!-- [ID 37522] -->|
-| [Data Aggregator](xref:Data_Aggregator_DxM) | 10.2.12/10.3.0 |
+| [Data Aggregator](xref:Data_Aggregator_DxM) | DataMiner 10.2.12/10.3.0 |
 | Databases: [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) | DataMiner 10.1.3/10.2.0 <!-- [ID 28473] -->|
 | Databases: [Dedicated clustered storage](xref:Dedicated_clustered_storage) | DataMiner 10.1.2/10.2.0 <!-- [ID 28406] -->|
 | Databases: [Elasticsearch to OpenSearch migration tool](xref:Migrating_from_Elasticsearch_to_OpenSearch) | DataMiner 10.4.0 [CU2]/10.4.4<!-- [ID 37994] --> |
