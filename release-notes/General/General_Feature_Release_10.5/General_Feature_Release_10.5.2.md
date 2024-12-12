@@ -46,7 +46,7 @@ The logging of the arp command will now also include the MAC address that claime
 
 #### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.5.0 - FR 10.5.2 -->
 
 All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
 
