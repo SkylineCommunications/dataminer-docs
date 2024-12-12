@@ -71,13 +71,12 @@ For more information, see [Data resilience and backups](xref:STaaS#data-resilien
 
 ### Is it possible to make a local backup of all data?
 
-You can set up your own offload or "central" database in your DaaS system at no additional subscription cost. That database will contain an offline copy of all (or some of) the data in the general DMA databases.
-
-See also: [Offload database](xref:Offload_database).
+This is currently not possible. We are taking regular backups of all systems that can be used by us to restore systems.
+You can always contact support if you would like to get access to a backup of your system.
 
 ### Is it possible to copy data from Azure and store it locally?
 
-You can use the DataMiner API to copy data from Azure at no additional subscription cost.
+You can use the DataMiner API to copy data from Azure at no additional subscription cost. Note that you will need a Site-To-Site VPN to gain access to the DataMiner API.
 
 ### How can a DaaS system connect to on-premises and cloud resources?
 
